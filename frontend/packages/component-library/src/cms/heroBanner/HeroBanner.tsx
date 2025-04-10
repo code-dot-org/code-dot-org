@@ -22,6 +22,9 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   videoProps?: VideoProps;
   /** HeroBanner link */
   buttonProps?: LinkButtonProps;
+  /** HeroBanner custom background color.
+   *  backgroundImageUrl is higher priority then backgroundColor. */
+  backgroundColor?: string;
   /** HeroBanner custom background url */
   backgroundImageUrl?: string;
   /** HeroBanner theme value.
@@ -60,6 +63,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   buttonProps,
   imageProps,
   videoProps,
+  backgroundColor,
   backgroundImageUrl,
   removeBackground = false,
   withWideText = false,
@@ -74,6 +78,9 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
     data-theme={HTMLAttributes['data-theme']}
     style={{
       ...(HTMLAttributes.style ?? {}),
+      backgroundColor: backgroundColor
+        ? backgroundColor
+        : HTMLAttributes.style?.backgroundColor,
       backgroundImage: backgroundImageUrl
         ? `url(${backgroundImageUrl})`
         : HTMLAttributes.style?.backgroundImage,

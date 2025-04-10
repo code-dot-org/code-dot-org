@@ -87,6 +87,30 @@ export const LongContent: Story = {
   },
 };
 
+export const WithBackgroundColor: Story = {
+  args: {
+    heading: 'Custom Background Color',
+    subHeading: 'This hero has a background color set via hex code',
+    description:
+      'You can use the `backgroundColor` prop to apply any hex or CSS color value.',
+    backgroundColor: '#E3F2FD', // Light blue as an example
+    imageProps: {
+      src: imageFile,
+      altText: 'Decorative image for hero section',
+    },
+  },
+};
+
+WithBackgroundColor.parameters = {
+  docs: {
+    description: {
+      story:
+        'This story shows how to apply a custom background color using the `backgroundColor` prop.' +
+        ' This is useful when a design calls for specific color values outside of design tokens.',
+    },
+  },
+};
+
 export const WithBackgroundImage: Story = {
   args: {
     heading: 'Background Image Example',
