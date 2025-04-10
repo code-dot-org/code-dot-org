@@ -35,12 +35,12 @@ jobs:
           script: |
             async function assertWorkflowNotPending(workflow_id) {
               const result = await github.rest.actions.listWorkflowRuns({
-              const { data: { workflow_runs } } = result;
                 workflow_id,
                 head_sha: context.sha,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
               });
+              const { data: { workflow_runs } } = result;
 
               if (workflow_runs.length === 0) {
                 console.log(`Workflow ${workflow_id} was not triggered by this commit, ignoring`);
