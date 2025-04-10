@@ -10,11 +10,11 @@ $mobileBreakpoint: 970px;
   background-size: cover;
 
   &.heroBanner-withWideText {
-    .heroBannerDescriptiveSection {
+    .heroBannerTextContainer {
       flex: 2;
     }
 
-    .heroBannerVisualSection {
+    .heroBannerMediaContainer {
       flex: 1;
     }
   }
@@ -33,7 +33,7 @@ $mobileBreakpoint: 970px;
     padding-inline: 1.5rem;
     gap: 2rem;
 
-    .heroBannerVisualSection figure {
+    .heroBannerMediaContainer figure {
       height: unset;
     }
   }
