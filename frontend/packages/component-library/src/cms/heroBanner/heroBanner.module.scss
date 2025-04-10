@@ -71,8 +71,6 @@ $mobileBreakpoint: 970px;
   width: 100%;
 
   figure {
-    max-width: 11.9375rem;
-    max-height: 1.875rem;
     width: auto;
   }
 }
@@ -81,15 +79,15 @@ $mobileBreakpoint: 970px;
   display: flex;
   align-items: center;
   gap: 4.375rem;
-  flex: 1 0 0;
+  flex: 1;
   align-self: stretch;
 
   figure {
     display: flex;
-    height: 18.75rem;
+    max-height: 28.125rem;
     justify-content: center;
     align-items: center;
-    flex: 1 0 0;
+    flex: 1;
     border-radius: variables.$regular-border-radius;
     background: var(--background-neutral-primary);
   }
