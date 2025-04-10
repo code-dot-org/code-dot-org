@@ -64,7 +64,7 @@ describe('Layout', () => {
   });
 
   it('renders the layout with children', async () => {
-    const brand = 'exampleBrand';
+    const brand = 'code.org';
 
     (headers as jest.Mock).mockResolvedValue({
       get: jest.fn().mockReturnValue('example.com'),
