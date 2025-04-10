@@ -30,7 +30,7 @@ $mobileBreakpoint: 970px;
 
   @media (max-width: $mobileBreakpoint) {
     flex-direction: column;
-    padding: 2rem 1rem;
+    padding-inline: 1.5rem;
     gap: 2rem;
 
     .heroBannerVisualSection figure {
