@@ -3,8 +3,7 @@ require 'json'
 class OpenaiEvaluateController < ApplicationController
   authorize_resource class: false
 
-  #API_KEY = CDO.openai_measures_of_learning_api_key
-  API_KEY = CDO.openai_student_learning_api_key
+  API_KEY = CDO.openai_measures_of_learning_api_key
   MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
 
   # POST /openai/evaluate

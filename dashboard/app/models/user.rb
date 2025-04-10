@@ -1290,6 +1290,10 @@ class User < ApplicationRecord
     permission?(UserPermission::LEVELBUILDER)
   end
 
+  # Students can always access their own work, and teachers can access the work of
+  # students in their sections. This is specifically for the student work sample API
+  # which allows pulling student work samples to make datasets to gauge accuracy of
+  # our AI evaluation tools internally.
   def can_access_student_work?
     permission?(UserPermission::STUDENT_WORK_ACCESS)
   end

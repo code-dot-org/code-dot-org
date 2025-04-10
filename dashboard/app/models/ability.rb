@@ -365,9 +365,6 @@ class Ability
       can [:tools], :ai_iteration
     end
 
-    # Students can always access their own work, and teachers can access the work of students in their sections.
-    # This is specifically for the student work sample API which allows pulling student work samples to make
-    # datasets to gauge accuracy of our AI evaluation tools.
     if user.persisted? && user.can_access_student_work?
       can [:fetch_student_code_samples], :student_work_sample
       can [:fetch_free_response_answers], :student_work_sample
