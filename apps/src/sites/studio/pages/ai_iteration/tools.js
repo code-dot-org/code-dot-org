@@ -9,7 +9,7 @@ $(document).ready(() => {
   ReactDOM.render(
     <AIIterationTools
       aiTutorAccess={aiIterationToolsData.aiTutorAccess}
-      datasetMaker={aiIterationToolsData.datasetMaker}
+      studentWorkAccess={aiIterationToolsData.studentWorkAccess}
     />,
     document.getElementById('ai-iteration-tools')
   );

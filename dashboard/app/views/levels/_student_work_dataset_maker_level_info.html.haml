@@ -1,4 +1,4 @@
-- if current_user && current_user.dataset_maker?
+- if current_user && current_user.can_access_student_work?
   = render layout: 'shared/extra_links' do
     %strong= @level.key
     %br
@@ -7,7 +7,6 @@
       %li= "level type: #{@level.type}"
       %li= "This level is in #{@level.levels_parent_levels.count} other levels"
       %li= "This level contains #{@level.child_levels.count} other levels"
-    
       - if @level.child_levels.count > 0
         %h4 Child levels
         %ul

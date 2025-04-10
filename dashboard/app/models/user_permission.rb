@@ -47,7 +47,7 @@ class UserPermission < ApplicationRecord
     # Grants access to use AI Tutor which uses AI Chat API
     AI_TUTOR_ACCESS = 'ai_tutor_access'.freeze,
     #  Grants access to an internal tool to pull AI-evaluated samples of student work
-    DATASET_MAKER = 'dataset_maker'.freeze,
+    STUDENT_WORK_ACCES = 'student_work_access'.freeze,
   ].freeze
 
   # Do not log the granting/removal of these permissions to slack

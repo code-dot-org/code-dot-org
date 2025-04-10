@@ -8,14 +8,14 @@ import styles from './ai-tutor/ai-tutor-tester.module.scss';
 
 interface AIIterationToolsProps {
   aiTutorAccess: boolean;
-  datasetMaker: boolean;
+  studentWorkAccess: boolean;
 }
 
 const AIIterationTools: React.FC<AIIterationToolsProps> = ({
   aiTutorAccess,
-  datasetMaker,
+  studentWorkAccess,
 }) => {
-  const allowed = aiTutorAccess || datasetMaker;
+  const allowed = aiTutorAccess || studentWorkAccess;
   return (
     <div>
       <h1>AI Iteration Tools</h1>
@@ -28,7 +28,7 @@ const AIIterationTools: React.FC<AIIterationToolsProps> = ({
         </h3>
       )}
       <div>
-        {datasetMaker && (
+        {studentWorkAccess && (
           <div>
             <StudentCodeDatasetMaker />
             <br />

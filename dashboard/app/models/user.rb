@@ -1290,8 +1290,8 @@ class User < ApplicationRecord
     permission?(UserPermission::LEVELBUILDER)
   end
 
-  def dataset_maker?
-    permission?(UserPermission::DATASET_MAKER)
+  def can_access_student_work?
+    permission?(UserPermission::STUDENT_WORK_ACCESS)
   end
 
   # A user is a verified instructor if you are a universal_instructor, plc_reviewer,
