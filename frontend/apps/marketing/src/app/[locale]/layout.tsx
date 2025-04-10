@@ -3,7 +3,10 @@ import {headers} from 'next/headers';
 
 import {getBrandFromHostname} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
+import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
 import {getStage} from '@/config/stage';
+import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
+import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
 import StatsigProvider from '@/providers/statsig/StatsigProvider';
 
@@ -25,16 +28,22 @@ export default async function Layout({
 
   return (
     <>
-      {googleAnalyticsMeasurementId && (
-        <GoogleAnalytics gaId={googleAnalyticsMeasurementId} />
-      )}
-      <StatsigProvider
-        stage={getStage()}
-        clientKey={statsigClientKey}
-        values={statsigBootstrapValues}
-      >
-        {children}
-      </StatsigProvider>
+      <OneTrustLoader brand={brand} />
+
+      <OneTrustProvider>
+        {googleAnalyticsMeasurementId && (
+          <GoogleAnalytics gaId={googleAnalyticsMeasurementId} />
+        )}
+        <StatsigProvider
+          stage={getStage()}
+          clientKey={statsigClientKey}
+          values={statsigBootstrapValues}
+        >
+          {children}
+        </StatsigProvider>
+      </OneTrustProvider>
+
+      <OrganizationJsonLd brand={brand} />
     </>
   );
 }

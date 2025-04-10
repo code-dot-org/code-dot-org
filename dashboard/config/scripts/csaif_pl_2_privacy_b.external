@@ -1,0 +1,33 @@
+name 'csaif_pl_2_privacy_b'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Video: Convenience vs Privacy
+
+#### There are privacy trade-offs inherent in many modern computing innovations. 
+
+#### As you watch the following video on facial recognition think about:
+- #### *What are the benefits of the technology? What does it make more convenient/fun?*
+- #### *What are the privacy concerns that arise?*
+- #### *Why would governments or businesses be interested in this technology?*
+
+##### **Note**: This video opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://youtu.be/f5qgOqNQ7zY" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/34ba699c087baaf16a779ae6d1b31c28-Screenshot 2025-03-31 at 2.41.03 PM.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 80%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
+___
+
+##### "Is Facial Recognition Invading Your Privacy?" by Above The Noise, YouTube (https://youtu.be/f5qgOqNQ7zY).
+MARKDOWN

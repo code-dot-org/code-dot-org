@@ -311,7 +311,12 @@ class ApiController < ApplicationController
     page = [params[:page].to_i, 1].max
     per = params[:per].to_i || 50
 
-    paged_students = section.students.page(page).per(per)
+    # Occassionaly, students will be double-added to a section. When this happens, errors can
+    # occur when we get the progress for the student twice.  We saw two issues that were caused by
+    # having duplicate students in a section AND the number of students being a multiple of the page amount
+    # Deduplicating students ensures all data for all students is pulled.
+    deduplicated_students = section.students.distinct
+    paged_students = deduplicated_students.page(page).per(per)
     # As designed, if there are 50 students, the client will ask for both
     # page 1 and page 2, even though page 2 is out of range. However, it should
     # never ask for page 3
@@ -442,7 +447,29 @@ class ApiController < ApplicationController
 
   def unit_summary
     unit_name = params[:unit_name]
-    unit = Unit.get_from_cache(unit_name)
+    unit_position = params[:unit_position]
+    course_name = params[:course_name]
+    unless unit_name || (unit_position && course_name)
+      return render json: {error: 'Must specify either unit_name or unit_position and course_name'}, status: :bad_request
+    end
+    unit = nil
+
+    if unit_name
+      context = Queries::Courses.get_course_context(unit_name)
+      if context
+        unit = context[:unit]
+        course_name = context[:course].name
+        unit_position = context[:unit_group_unit].position
+      else
+        # Unit hasn't been migrated to have a Course/UnitGroup
+        unit = Unit.get_from_cache(unit_name)
+      end
+    else
+      course_name = params[:course_name]
+      unit_position = params[:unit_position]&.to_i
+      context = Queries::Courses.get_unit_context(course_name, unit_position)
+      unit = context[:unit]
+    end
 
     redirect_unit_url = unit.redirect_to_unit_url(current_user, locale: request.locale)
 
@@ -453,8 +480,9 @@ class ApiController < ApplicationController
       locale_code: request.locale,
       course_link: unit.course_link(params[:section_id]),
       course_title: unit.course_title || I18n.t('view_all_units'),
-      course_name: unit.unit_group&.name,
+      course_name: course_name,
       redirect_unit_url: redirect_unit_url,
+      unit_position: unit_position,
     }
 
     if unit.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: unit.plc_course_unit.plc_course)

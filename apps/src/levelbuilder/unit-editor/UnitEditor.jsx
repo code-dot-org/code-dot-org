@@ -19,9 +19,7 @@ import Button from '@cdo/apps/legacySharedComponents/Button';
 import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import AnnouncementsEditor from '@cdo/apps/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/levelbuilder/CollapsibleEditorSection';
-import CourseTypeEditor from '@cdo/apps/levelbuilder/course-editor/CourseTypeEditor';
 import ResourcesEditor from '@cdo/apps/levelbuilder/course-editor/ResourcesEditor';
-import CourseVersionPublishingEditor from '@cdo/apps/levelbuilder/CourseVersionPublishingEditor';
 import SaveBar from '@cdo/apps/levelbuilder/SaveBar';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
@@ -71,6 +69,7 @@ class UnitEditor extends React.Component {
     initialProjectWidgetTypes: PropTypes.arrayOf(PropTypes.string),
     initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
+    initialHasUnnumberedLessons: PropTypes.bool,
     initialHasVerifiedResources: PropTypes.bool,
     initialCurriculumPath: PropTypes.string,
     initialPilotExperiment: PropTypes.string,
@@ -146,6 +145,7 @@ class UnitEditor extends React.Component {
       projectWidgetTypes: this.props.initialProjectWidgetTypes,
       lastUpdatedAt: this.props.initialLastUpdatedAt,
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
+      hasUnnumberedLessons: this.props.initialHasUnnumberedLessons,
       hasVerifiedResources: this.props.initialHasVerifiedResources,
       curriculumPath: this.props.initialCurriculumPath,
       pilotExperiment: this.props.initialPilotExperiment,
@@ -186,14 +186,6 @@ class UnitEditor extends React.Component {
 
   handleFamilyNameChange = event => {
     this.setState({familyName: event.target.value});
-  };
-
-  handleStandaloneUnitChange = () => {
-    this.setState({
-      isCourse: !this.state.isCourse,
-      familyName: null,
-      versionYear: null,
-    });
   };
 
   handleShowCalendarChange = () => {
@@ -238,20 +230,6 @@ class UnitEditor extends React.Component {
         isSaving: false,
         error:
           'Please provide a pilot experiment in order to save with published state as pilot.',
-      });
-      return;
-    } else if (
-      !this.props.hasCourse &&
-      this.state.deeperLearningCourse === '' &&
-      this.state.publishedState !== PublishedState.in_development &&
-      (!this.state.isCourse ||
-        this.state.versionYear === '' ||
-        this.state.familyName === '')
-    ) {
-      this.setState({
-        isSaving: false,
-        error:
-          'Standalone units that are not in development must be a standalone unit with family name and version year.',
       });
       return;
     } else if (
@@ -357,6 +335,7 @@ class UnitEditor extends React.Component {
       lesson_groups:
         this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
       last_updated_at: this.state.lastUpdatedAt,
+      has_unnumbered_lessons: this.state.hasUnnumberedLessons,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
       pilot_experiment: this.state.pilotExperiment,
@@ -658,33 +637,6 @@ class UnitEditor extends React.Component {
           </MultiCheckboxSelector>
         </CollapsibleEditorSection>
 
-        {this.props.hasCourse && (
-          <CollapsibleEditorSection title="Course Type Settings">
-            <p>
-              Settings in this section change depending on whether this unit is
-              grouped with other units in a course. If this does not look as
-              expected, please add or remove this unit from a course.
-            </p>
-          </CollapsibleEditorSection>
-        )}
-        {!this.props.hasCourse && (
-          <CourseTypeEditor
-            instructorAudience={this.state.instructorAudience}
-            participantAudience={this.state.participantAudience}
-            instructionType={this.state.instructionType}
-            handleInstructionTypeChange={e =>
-              this.setState({instructionType: e.target.value})
-            }
-            handleInstructorAudienceChange={e =>
-              this.setState({instructorAudience: e.target.value})
-            }
-            handleParticipantAudienceChange={e =>
-              this.setState({participantAudience: e.target.value})
-            }
-            allowMajorCurriculumChanges={allowMajorCurriculumChanges}
-          />
-        )}
-
         <CollapsibleEditorSection title="Publishing Settings">
           {this.props.isLevelbuilder && (
             <div>
@@ -801,40 +753,6 @@ class UnitEditor extends React.Component {
                     </label>
                   </div>
                 )}
-              {!this.props.hasCourse && (
-                // eslint-disable-next-line react/forbid-dom-props
-                <div data-testid="course-version-publishing-editor">
-                  <CourseVersionPublishingEditor
-                    pilotExperiment={this.state.pilotExperiment}
-                    versionYear={this.state.versionYear}
-                    familyName={this.state.familyName}
-                    updatePilotExperiment={pilotExperiment =>
-                      this.setState({pilotExperiment})
-                    }
-                    updateFamilyName={familyName => this.setState({familyName})}
-                    updateVersionYear={versionYear =>
-                      this.setState({versionYear})
-                    }
-                    families={this.props.unitFamilies}
-                    versionYearOptions={this.props.versionYearOptions}
-                    isCourse={this.state.isCourse}
-                    updateIsCourse={this.handleStandaloneUnitChange}
-                    showIsCourseSelector
-                    initialPublishedState={this.props.initialPublishedState}
-                    publishedState={this.state.publishedState}
-                    updatePublishedState={publishedState =>
-                      this.setState({publishedState})
-                    }
-                    preventCourseVersionChange={
-                      this.state.savedVersionYear !== '' ||
-                      this.state.savedFamilyName !== ''
-                    }
-                    courseOfferingEditorLink={
-                      this.props.courseOfferingEditorLink
-                    }
-                  />
-                </div>
-              )}
             </div>
           )}
         </CollapsibleEditorSection>
@@ -958,6 +876,25 @@ class UnitEditor extends React.Component {
               </HelpTip>
             </label>
           )}
+          <label>
+            Lesson Numbering
+            <HelpTip>
+              <p>
+                Automatically provide numbers in lesson names in the order
+                listed below.
+              </p>
+            </HelpTip>
+            <input
+              type="checkbox"
+              defaultChecked={!this.state.hasUnnumberedLessons}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({
+                  hasUnnumberedLessons: !this.state.hasUnnumberedLessons,
+                })
+              }
+            />
+          </label>
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Resources Dropdowns">

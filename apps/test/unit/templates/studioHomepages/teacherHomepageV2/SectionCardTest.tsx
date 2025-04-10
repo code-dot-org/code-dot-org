@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 import {
@@ -10,6 +10,8 @@ import {
 } from 'react-router-dom';
 import {Store} from 'redux';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SectionCard} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCard';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
@@ -54,8 +56,11 @@ describe('SectionCard', () => {
   };
 
   const store: Store = getStore();
+  let sendEventSpy: jest.SpyInstance;
 
-  beforeEach(() => {});
+  beforeEach(() => {
+    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+  });
 
   afterEach(() => {
     jest.restoreAllMocks();
@@ -71,6 +76,7 @@ describe('SectionCard', () => {
                 path={TEACHER_NAVIGATION_PATHS.home}
                 element={
                   <SectionCard
+                    id={section.id}
                     section={section}
                     onDeleteClickCallback={() => {}}
                   />
@@ -88,11 +94,18 @@ describe('SectionCard', () => {
     renderComponent();
     screen.getByText('Period 1');
   });
+
   it('renders section class code with login info link', () => {
     renderComponent();
     const link = screen.getByRole('link', {name: 'ABCDEF'});
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('href', '/join/ABCDEF');
+    fireEvent.click(link);
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
   });
 
   it('renders section options dropdown', () => {
@@ -103,5 +116,10 @@ describe('SectionCard', () => {
   it('renders section options dropdown', () => {
     renderComponent();
     screen.getByLabelText('Section options dropdown');
+  });
+
+  it('renders the SectionAvatar component', () => {
+    renderComponent();
+    screen.getByText('☔');
   });
 });

@@ -7,7 +7,6 @@
       "content_area": "other",
       "curriculum_umbrella": "Other",
       "is_migrated": true,
-      "pilot_experiment": "hoc-music-ai-pilot-3",
       "topic_tags": [
         "ai",
         "music_lab"
@@ -15,8 +14,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 23:13:36 UTC",
-    "published_state": "pilot",
+    "serialized_at": "2025-03-28 09:29:30 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,

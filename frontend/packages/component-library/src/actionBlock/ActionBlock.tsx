@@ -1,7 +1,7 @@
 import classNames from 'classnames';
-import {HTMLAttributes} from 'react';
 
 import {LinkButton, LinkButtonProps} from '@/button';
+import Image, {ImageProps} from '@/image';
 import {
   Heading3,
   BodyThreeText,
@@ -9,41 +9,13 @@ import {
   StrongText,
 } from '@/typography';
 
+import {ActionBlockProps} from './types';
+
 import moduleStyles from './actionBlock.module.scss';
 
-export interface ActionBlockProps extends HTMLAttributes<HTMLDivElement> {
-  /** Action Block title */
-  title?: string;
-  /** Action Block description */
-  description?: string;
-  /** Action Block image */
-  image?: string;
-  /** Action Block overline */
-  overline?: string;
-  /** Action Block Details */
-  details?: {
-    /** Detail label */
-    label: string;
-    /** Detail text */
-    description: string;
-  };
-  /** Primary button props */
-  primaryButton?: LinkButtonProps;
-  /** Secondary button props */
-  secondaryButton?: LinkButtonProps;
-  /** Action Block background */
-  background?: 'primary' | 'secondary';
-  /** Action Block custom className */
-  className?: string;
-}
-
-export const getImage = (image?: string) => {
+export const getImage = (image?: ImageProps) => {
   if (!image) return null;
-  return (
-    <figure>
-      <img src={image} alt="" loading={'lazy'} />
-    </figure>
-  );
+  return <Image src={image.src} loading="lazy" alt="" />;
 };
 
 export const getDetail = (details?: {label: string; description: string}) => {

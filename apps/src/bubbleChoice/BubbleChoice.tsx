@@ -12,10 +12,15 @@ import React, {useEffect, useMemo, useRef} from 'react';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {levelById} from '@cdo/apps/code-studio/progressReduxSelectors';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
-import {LabProps, BubbleChoiceLevelData} from '@cdo/apps/lab2/types';
+import {
+  LabProps,
+  BubbleChoiceLevelData,
+  BubbleChoiceSublevel,
+} from '@cdo/apps/lab2/types';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {getCurrentLesson} from '../code-studio/progressReduxSelectors';
 import {commonI18n} from '../types/locale';
@@ -27,7 +32,7 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
   const background = useAppSelector(
     state => getCurrentLesson(state)?.background || null
   );
-  const backgroundSuffix = capitalizeFirstLetter(background || 'dark');
+  const backgroundSuffix = capitalizeFirstLetter(background || 'light');
   const levelBubbleChoice = levelProperties.levelData as BubbleChoiceLevelData;
   const sublevelsStatus = useAppSelector(state =>
     levelBubbleChoice.sublevels.map(
@@ -36,8 +41,11 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
           state.progress,
           state.progress.currentLessonId,
           sublevel.level_id
-        ).status
+        )?.status || LevelStatus.not_tried
     )
+  );
+  const currentLessonId = useAppSelector(
+    state => state.progress.currentLessonId
   );
 
   const [containerWidth, setContainerWidth] = React.useState(0);
@@ -106,6 +114,14 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
     return level;
   };
 
+  const navigateToSublevel = (sublevel: BubbleChoiceSublevel) => {
+    if (currentLessonId) {
+      dispatch(navigateToLevelId(sublevel.level_id));
+    } else {
+      window.location.href = sublevel.url;
+    }
+  };
+
   return (
     <div id="bubble-choice" className={styles.bubbleChoiceContainer}>
       <div>
@@ -136,7 +152,7 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
               styles.sublevelButton,
               styles[`sublevelButton${backgroundSuffix}`]
             )}
-            onClick={() => dispatch(navigateToLevelId(sublevel.level_id))}
+            onClick={() => navigateToSublevel(sublevel)}
           >
             <div className={styles.sublevelImageContainer}>
               <img

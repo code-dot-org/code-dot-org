@@ -7,14 +7,11 @@
       "content_area": "skills_focused_self_paced_pl",
       "curriculum_umbrella": "Self-paced PL - Pedagogy special topics",
       "is_migrated": true,
-      "topic_tags": [
-        "ai"
-      ],
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-27 15:17:38 UTC",
+    "serialized_at": "2025-03-31 13:24:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

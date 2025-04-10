@@ -1,0 +1,19 @@
+# This is an experiment with triggering a GitHub worfklow AFTER Drone CI completes.
+#
+# Delete this file if the date is after July 2025 and this comment is not removed,
+# or if https://github.com/code-dot-org/code-dot-org/pull/65111 is closed.
+#
+# This file is aprt of https://github.com/code-dot-org/code-dot-org/pull/65111, but
+# we cannot test the GitHub action until this workflow file exists and is merged
+# into `staging`. We override the contents of the file in the PR.
+name: on-droneci-complete
+
+on:
+  workflow_dispatch:
+
+jobs:
+  replaceme:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: true

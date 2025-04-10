@@ -2536,6 +2536,10 @@
     banner:
       heading: "Create music with code"
       desc: "Get creative with your favorite artist's music and code new songs and mixes!"
+    banner2:
+      heading: "Make Music. Learn Code."
+      desc: "Get creative with your favorite artist's music by coding new songs and mixes!"
+      overline: "New artists added to Music Lab"
     featuring_songs_by: "Featuring songs by:"
     artist_list: "%{artist_list} and more!"
     artist:

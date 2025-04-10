@@ -12,10 +12,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 56.25%; // This maintains a 16:9 aspect ratio
+    aspect-ratio: 16 / 9; // Default aspect ratio for videos
     border: 1px solid var(--background-neutral-tertiary);
     border-radius: variables.$regular-border-radius;
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: block;
 
     iframe,
@@ -29,6 +29,10 @@
       width: 100%;
       height: 100%;
       border: 0;
+    }
+
+    .cookieConsentButton {
+      margin-top: 1.5rem;
     }
   }
 }
@@ -119,10 +123,25 @@ $playButtonIconSize: 64px;
 
   .playButton {
     font-size: 2rem;
-    color: var(--text-brand-purple-primary);
+    color: var(--text-brand-purple-primary-fixed);
     // Since the play button is the same in RTL, use margin-left
     // instead of margin-inline-start which changes based on direction.
     // This keeps the play button visually centered.
     margin-left: 4px;
   }
+}
+
+// Facade Styles
+.facade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

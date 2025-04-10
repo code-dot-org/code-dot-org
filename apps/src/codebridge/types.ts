@@ -32,15 +32,7 @@ export type SideBarItem = {
 };
 
 export type ConfigType = {
-  activeLeftNav: string;
-  sideBar: SideBarItem[];
-  instructions?: string;
-  Instructions?: () => JSX.Element;
   defaultTheme?: EditorTheme;
-  leftNav: LeftNavElement[];
-  gridLayout?: string;
-  gridLayoutRows?: string;
-  gridLayoutColumns?: string;
   editableFileTypes: string[];
   previewFileTypes?: string[];
   PreviewComponents?: {[key: string]: PreviewComponent};
@@ -49,9 +41,9 @@ export type ConfigType = {
   showFileBrowser: boolean;
   validMimeTypes?: string[];
   layoutComponents: {
-    horizontal: React.ReactNode;
-    vertical: React.ReactNode;
-    share?: React.ReactNode;
+    horizontal: React.FunctionComponent<LayoutProps>;
+    vertical: React.FunctionComponent<LayoutProps>;
+    share?: React.FunctionComponent<LayoutProps>;
   };
 };
 
@@ -86,4 +78,13 @@ export interface MazeCell {
   tileType: number;
   value: number;
   assetId: number;
+}
+
+export interface LayoutProps {
+  isProjectLevel?: boolean;
+}
+
+export interface ProjectPickerSettings {
+  currentType: string;
+  showProjectTypePicker: () => void;
 }

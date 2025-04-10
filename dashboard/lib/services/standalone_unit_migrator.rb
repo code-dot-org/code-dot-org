@@ -44,6 +44,12 @@ module Services
       @unit.reload
       @unit_group.reload
 
+      if @unit_group.course_version.nil?
+        log "New UnitGroup's course version not found: #{@unit_group.name}", type: "error"
+        @unit_group.destroy!
+        return false
+      end
+
       # Clear "course" settings from the unit
       @unit.update!(is_course: false, version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil, skip_name_format_validation: true)
 
@@ -125,6 +131,7 @@ module Services
         instruction_type: @unit.instruction_type,
         instructor_audience: @unit.instructor_audience,
         participant_audience: @unit.participant_audience,
+        pilot_experiment: @unit.pilot_experiment,
         has_numbered_units: false
       )
       unless @unit_group.save
@@ -143,6 +150,7 @@ module Services
           instruction_type: @unit.instruction_type,
           instructor_audience: @unit.instructor_audience,
           participant_audience: @unit.participant_audience,
+          pilot_experiment: @unit.pilot_experiment,
           has_numbered_units: false
         )
         @name_changed = true
@@ -220,7 +228,7 @@ module Services
       @unit.update!(is_course: true, version_year: @unit_group.version_year, family_name: @unit_group.family_name,
                     published_state: @unit_group.published_state, instruction_type: @unit_group.instruction_type,
                     instructor_audience: @unit_group.instructor_audience, participant_audience: @unit_group.participant_audience,
-                    skip_name_format_validation: true
+                    pilot_experiment: @unit_group.pilot_experiment, skip_name_format_validation: true
       )
     end
 

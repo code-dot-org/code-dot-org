@@ -14,10 +14,13 @@ class TeacherDashboardController < ApplicationController
 
   def show
     @sections = current_user.sections_instructed.map(&:concise_summarize)
-    if @section.nil?
-      @section = Section.find(@sections.first[:id])
+    unless @sections.empty?
+      if @section.nil?
+        @section = Section.find(@sections.first[:id])
+      end
+      @section_summary = @section.selected_section_summarize
     end
-    @section_summary = @section.selected_section_summarize
+    @section_order = UserPreference.find_by(user_id: current_user.id)&.section_order
     @locale_code = request.locale
     view_options(full_width: true, no_padding_container: true)
   end

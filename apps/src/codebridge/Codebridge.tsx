@@ -4,7 +4,7 @@ import {
   SOURCE_REDUCER_ACTIONS,
   useSourceUtilities,
 } from '@codebridge/codebridgeContext';
-import {useReducerWithCallback} from '@codebridge/hooks';
+import {useReducerWithCallback, useZoomTracker} from '@codebridge/hooks';
 import {
   ConfigType,
   SetProjectFunction,
@@ -12,6 +12,7 @@ import {
   OnRunFunction,
   SendConsoleInputFunction,
   CodebridgeLevelProperties,
+  ProjectPickerSettings,
 } from '@codebridge/types';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useReducer, useRef} from 'react';
@@ -36,6 +37,7 @@ type CodebridgeProps = {
   labConfig?: LabConfig;
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
+  projectPickerSettings?: ProjectPickerSettings;
 };
 
 export const Codebridge = React.memo(
@@ -51,6 +53,7 @@ export const Codebridge = React.memo(
     labConfig,
     sendConsoleInput,
     levelProperties,
+    projectPickerSettings,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       sourceReducer,
@@ -70,7 +73,7 @@ export const Codebridge = React.memo(
       }
     }, [currentProjectVersion, sourceUtilities, projectVersion, source]);
 
-    const innerLayout = useMemo(() => {
+    const InnerLayout = useMemo(() => {
       if (isShareView && config.layoutComponents.share) {
         return config.layoutComponents.share;
       }
@@ -88,6 +91,9 @@ export const Codebridge = React.memo(
       [appName]
     );
 
+    // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
+    useZoomTracker(appName);
+
     return (
       <CodebridgeContextProvider
         value={{
@@ -102,11 +108,12 @@ export const Codebridge = React.memo(
           labConfig,
           sendConsoleInput,
           levelProperties,
+          projectPickerSettings,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>
           <div className={classNames(moduleStyles.codebridgeContainer)}>
-            {innerLayout}
+            <InnerLayout isProjectLevel={levelProperties.isProjectLevel} />
           </div>
         </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>

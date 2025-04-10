@@ -2,7 +2,7 @@ import {fireEvent, render, screen, within} from '@testing-library/react';
 
 import '@testing-library/jest-dom';
 import {LinkButtonProps} from '@/button';
-import {ImageProps} from '@/cms/image';
+import {ImageProps} from '@/image';
 
 import TabGroup, {TabGroupProps, TabGroupTabModel} from './../TabGroup';
 

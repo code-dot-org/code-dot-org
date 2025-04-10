@@ -1,6 +1,7 @@
 import $ from 'jquery';
 
 import firehoseClient from '@cdo/apps/metrics/firehose';
+import {getGlobalEditionRegion} from '@cdo/apps/util/globalEdition';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
@@ -2114,6 +2115,11 @@ function redirectFromHashUrl() {
  */
 function parsePath() {
   var pathname = utils.currentLocation().pathname;
+
+  const geRegion = getGlobalEditionRegion();
+  if (geRegion) {
+    pathname = pathname.replace(`/global/${geRegion}/`, '/');
+  }
 
   // We have a hash based route. Replace the hash with a slash, and append to
   // our existing path

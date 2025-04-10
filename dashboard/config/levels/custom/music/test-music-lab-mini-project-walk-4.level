@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-03-19T18:57:13.000Z",
   "level_num": "custom",
@@ -51,7 +50,74 @@
         }
       },
       "allowChangeStartingPlayheadPosition": true,
-      "packId": "default"
+      "packId": "default",
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "electro/drum_beat_cowbell"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "id": "play_rest_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "set_effect_at_current_location_simple2",
+            "id": "set_effect_at_current_location_simple2",
+            "fields": {
+              "effects_name": "<field name=\"effects_name\">volume</field>",
+              "effects_value": "<field name=\"effects_value\">normal</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "triggered_at_simple2",
+            "id": "triggered_at_simple2",
+            "fields": {
+              "trigger": "<field name=\"trigger\">trigger1</field>",
+              "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      }
     },
     "long_instructions": "### Partner Game\r\nFind out what others think of your songs! \r\n\r\n**Do This:**\r\n- Tell your partners who your three characters are and describe the character's personalities.\r\n- Play one of your Walk-Up songs without saying which character it belongs to.\r\n- Allow your partner to match the song to a character.\r\n- Ask them to explain their choice.\r\n- If they guess wrong, listen to their explanation and adjust your code to make the song fit the character better.\r\n- Repeat with new partners until someone guesses all three correctly!",
     "exemplar_settings": {
@@ -61,7 +127,8 @@
     "project_template_level_name": "test-music-lab-mini-project-walk-template",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-19T18:57:13.943+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-3\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-3\"},{\"changed_at\":\"2025-03-19 19:03:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-19 19:06:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-19T18:57:13.943+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-3\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-3\"},{\"changed_at\":\"2025-03-19 19:03:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-19 19:06:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-05 23:36:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

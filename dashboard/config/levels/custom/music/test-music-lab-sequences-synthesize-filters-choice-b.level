@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
@@ -141,12 +141,56 @@
       },
       "allowChangeStartingPlayheadPosition": true
     },
-    "long_instructions": "### Make a song that will make you fall asleep\r\nUse effects to create a lullaby that gently puts the listener to sleep. ",
+    "long_instructions": "### Lullaby Song\r\n\r\n**Define:** A client has asked you to make a baby lullaby using classical music that helps them go to sleep. The song should gradually lower in volume before \"fading out\" tracks one at a time.\r\n\r\n**Prepare:** Pick the tracks and effects you want to use and imagine what you want the timeline to look like. Consider how you want to plan the \"fade out\" effect!\r\n\r\n**Try:** Create your lullaby!\r\n\r\n**Reflect:** In order to pass this level, make sure your code has:\r\n- At least 6 tracks\r\n- At least 3 effects\r\n- A \"lowering\" volume and a fade out effect",
     "display_name": "Time to go to sleep",
     "thumbnail_url": "https://images.code.org/119ef3955b83bfd95d2a078f03cce047-Screenshot 2025-03-12 at 12.56.21 PM.png",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-choice-b_63d4fa5a-255b-43d8-8428-c036bea1f7e1",
+        "message": "Your code seems on the right track! Make sure you meet all of the other requirements!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "set_volume_effect_at_current_location_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-choice-b_c509912a-f4cd-4ef1-bd48-38b828ba4f21",
+        "message": "Make sure your code has at least 3 effects!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-choice-b_c7c6292b-4703-4b45-aa6d-ef3d8d7c93f9",
+        "message": "Make sure your code has at least 6 tracks!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "bubble_choice_description": "A client has asked you to make a baby lullaby",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-12T16:11:48.612+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-choice-a\"},{\"changed_at\":\"2025-03-12 16:12:10 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 19:52:34 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:00:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:06:57 +0000\",\"changed\":[\"level_data\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:07:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:08:51 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:09:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:10:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:39:00 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T16:11:48.612+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-choice-a\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-choice-a\"},{\"changed_at\":\"2025-03-12 16:12:10 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 19:52:34 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:00:14 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:06:57 +0000\",\"changed\":[\"level_data\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:07:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:08:51 +0000\",\"changed\":[\"long_instructions\",\"display_name\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:09:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-12 20:10:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:39:00 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-09 03:52:40 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 03:54:08 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
