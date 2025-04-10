@@ -1,0 +1,59 @@
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+
+// Header common styles
+.headerNavigation {
+  background-color: var(--background-brand-teal-primary);
+  padding: 0.25rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+// Main links styles
+.mainLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.875rem;
+
+  ul {
+    all: unset;
+    display: flex;
+    gap: 1.875rem;
+
+    li {
+      all: unset;
+      margin: 0;
+    }
+
+    a {
+      @include typography.body-three;
+      color: var(--text-neutral-white-fixed);
+      text-decoration: none;
+    }
+  }
+}
+
+// Button links styles
+.buttonLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  body & .signIn,
+  body & .newProject {
+    background: none;
+  }
+
+  body & .createAccount,
+  body & .goToDashboard {
+    color: var(--text-brand-teal-primary-fixed);
+  }
+
+  // New project styles
+  body & button.newProject > i {
+    font-size: 1.25rem;
+    width: unset;
+    line-height: unset;
+  }
+}
