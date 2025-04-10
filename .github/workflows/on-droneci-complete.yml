@@ -18,55 +18,96 @@ permissions:
   statuses: write
 
 jobs:
-  # This one should pass
-  cms-followup:
+  # We use applitools eyes, with the same batch id, from drone, from marketing-app-ci.yml and from
+  # component-library-ci.yml. We need to close the batch after all of these are completed.
+  #
+  # This code assumes Drone will be the last to finish, a good assumption in 2025, but throws an error
+  # if any of the others are still pending.
+  complete-applitools-eyes-batch:
     runs-on: ubuntu-24.04
     if: ${{ inputs.drone_build_status == 'success' }}
-    # uses: ./.github/workflows/cms-followup.yml
     steps:
       - run: |
           echo "Triggered by Drone, on commit: ${{ inputs.github_sha }} on branch ${{ github.ref }}"
           echo "This job should succeed"
           true
 
-      # Need to update commit status manually, or the result won't be visible within the PR:
+      - name: Assert other eyes-using workflows are already complete
+        uses: actions/github-script@v7
+        with:
+          script: |
+            async function assertWorkflowNotPending(workflow_id) {
+              const { data } = await github.rest.actions.listWorkflowRuns({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                workflow_id,
+                head_sha: context.sha
+              });
+
+              if (data.workflow_runs.length === 0) {
+                console.log(`Workflow ${workflow_id} was not triggered by this commit, ignoring`);
+                return;
+              }
+
+              const latest = data.workflow_runs[0];
+              if (latest.status !== 'completed') {
+                core.setFailed(`Error: We currently assume Drone will be the last eyes-using test suite to finish, and close the batch when it completes. However, ${workflow_id} has not yet finished (status: ${latest.status}), this may cause it problems.`);
+                process.exit(1);
+              }
+            }
+
+            await assertWorkflowNotPending('marketing-app-ci.yml');
+            await assertWorkflowNotPending('component-library-ci.yml');
+
+      # Close the eyes batch after all distributed eyes tests have completed
+      - name: Mark Applitools Eyes batch as complete
+        if: always()
+        shell: bash
+        env:
+          APPLITOOLS_BATCH_ID: ${{ inputs.github_sha }}
+        run: |
+          curl -X POST "https://eyesapi.applitools.com/api/externals/github/servers/github.com/commit/${{ env.APPLITOOLS_BATCH_ID }}/${{ github.run_id }}/complete?apiKey=${{secrets.APPLITOOLS_API_KEY}}"
+
+
+      # OPTIONAL: running this step lets you see in the PR if the complete-applitools-eyes-batch job succeeded or failed
+      # This will always be visible inside the GitHub actions view, but surfacing it as a PR status might not be worth
+      # the developer UI clutter. Judgement call, not sure which is right.
       - uses: actions/github-script@v7
         if: always()
         with:
           script: |
             await github.rest.repos.createCommitStatus({
-              context: 'CMS Followup',
-              description: 'this job should succeed',
+              context: 'Mark Applitools Eyes batch as complete',
               owner: context.repo.owner,
               repo: context.repo.repo,
               sha: '${{ inputs.github_sha }}',
               state: '${{ job.status == 'success' && 'success' || 'failure' }}'
             })
 
-  # This one should fail
-  k8s-followup:
-    runs-on: ubuntu-24.04
-    if: ${{ inputs.drone_build_status == 'success' }}
-    # uses: ./.github/workflows/k8s-followup.yml
-    steps:
-      - run: |
-          echo "Triggered by Drone, on commit: ${{ inputs.github_sha }} on branch ${{ github.ref }}"
-          echo "This job should fail"
-          false
+  # # This one should fail
+  # k8s-followup:
+  #   runs-on: ubuntu-24.04
+  #   if: ${{ inputs.drone_build_status == 'success' }}
+  #   # uses: ./.github/workflows/k8s-followup.yml
+  #   steps:
+  #     - run: |
+  #         echo "Triggered by Drone, on commit: ${{ inputs.github_sha }} on branch ${{ github.ref }}"
+  #         echo "This job should fail"
+  #         false
 
-      - if: always()
-        run: echo "k"
+  #     - if: always()
+  #       run: echo "k"
 
-      # Need to update commit status manually, or the result won't be visible within the PR:
-      - uses: actions/github-script@v7
-        if: always()
-        with:
-          script: |
-            await github.rest.repos.createCommitStatus({
-              context: 'K8S Followup',
-              description: 'this job should fail',
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              sha: '${{ inputs.github_sha }}',
-              state: '${{ job.status == 'success' && 'success' || 'failure' }}'
-            })
+  #     # Need to update commit status manually, or the result won't be visible within the PR:
+  #     - uses: actions/github-script@v7
+  #       if: always()
+  #       with:
+  #         script: |
+  #           await github.rest.repos.createCommitStatus({
+  #             context: 'K8S Followup',
+  #             description: 'this job should fail',
+  #             owner: context.repo.owner,
+  #             repo: context.repo.repo,
+  #             sha: '${{ inputs.github_sha }}',
+  #             state: '${{ job.status == 'success' && 'success' || 'failure' }}'
+  #           })
