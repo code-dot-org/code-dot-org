@@ -123,6 +123,65 @@ describe('SessionsEditor', () => {
       });
     });
   });
+
+  it('does not allow deleting the last session', async () => {
+    render(
+      <SessionsEditor
+        sessions={initialSessions}
+        dispatchSessions={mockDispatchSessions}
+        errors={{}}
+        fields={config.session_fields}
+      />
+    );
+
+    const [firstSessionDeleteButton] = screen.getAllByRole('button', {
+      name: 'delete workshop session',
+    });
+    expect(firstSessionDeleteButton).toBeDisabled();
+    await user.click(firstSessionDeleteButton);
+
+    await waitFor(() => {
+      expect(mockDispatchSessions).toHaveBeenCalledTimes(0);
+    });
+  });
+
+  it('allows deleting any but the last session', async () => {
+    render(
+      <SessionsEditor
+        sessions={[
+          ...initialSessions,
+          {
+            id: 'new-456-def',
+            date: '2025-03-29',
+            start: '8:00am',
+            end: '5:00pm',
+            locationAddress: '123 Main St',
+            locationName: 'Test Location',
+            meetingLink: '',
+            format: 'in_person',
+            sameAsPrevious: false,
+          },
+        ]}
+        dispatchSessions={mockDispatchSessions}
+        errors={{}}
+        fields={config.session_fields}
+      />
+    );
+
+    const [firstSessionDeleteButton] = screen.getAllByRole('button', {
+      name: 'delete workshop session',
+    });
+    expect(firstSessionDeleteButton).not.toBeDisabled();
+    await user.click(firstSessionDeleteButton);
+
+    await waitFor(() => {
+      expect(mockDispatchSessions).toHaveBeenCalledTimes(1);
+      expect(mockDispatchSessions).toHaveBeenCalledWith({
+        type: 'DELETE_SESSION',
+        id: initialSessions[0].id,
+      });
+    });
+  });
 });
 
 describe('SessionPart', () => {
