@@ -11,19 +11,18 @@ import {getExperience} from '@/contentful/get-experience';
 import {getSeoMetadata} from '@/metadata/seo';
 import {getPageHeading} from '@/selectors/contentful/getExperienceEntryFields';
 
-export const dynamic = 'force-static'; // Ensure marketing pages are fully static with ISR and not SSR
-export const revalidate = 600; // Cache for five minutes until on-demand revalidation works
-
 type ExperiencePageProps = {
   params: Promise<{locale?: string; slug?: string; preview?: string}>;
   searchParams: Promise<{[key: string]: string | string[] | undefined}>;
 };
 
-async function getPageProps({params}: ExperiencePageProps) {
+async function getPageProps({params, searchParams}: ExperiencePageProps) {
   const {locale = 'en-US', slug = 'home-page'} = (await params) || {};
+  const {expEditorMode} = await searchParams;
+  const editorMode = expEditorMode === 'true';
 
   return {
-    experienceResult: await getExperience(slug, locale),
+    experienceResult: await getExperience(slug, locale, editorMode),
     locale,
     slug,
   };

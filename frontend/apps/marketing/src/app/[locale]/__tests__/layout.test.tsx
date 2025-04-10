@@ -1,7 +1,7 @@
 import {render} from '@testing-library/react';
 import {headers} from 'next/headers';
 
-import {Brand, getBrandFromHostname} from '@/config/brand';
+import {getBrandFromHostname} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
 import {getStage} from '@/config/stage';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
@@ -64,7 +64,7 @@ describe('Layout', () => {
   });
 
   it('renders the layout with children', async () => {
-    const brand = 'code.org';
+    const brand = 'exampleBrand';
 
     (headers as jest.Mock).mockResolvedValue({
       get: jest.fn().mockReturnValue('example.com'),
@@ -75,10 +75,7 @@ describe('Layout', () => {
     (generateBootstrapValues as jest.Mock).mockResolvedValue({});
 
     const {findByText} = render(
-      await Layout({
-        children: <div>Child Component</div>,
-        params: Promise.resolve({brand: 'code.org' as Brand}),
-      }),
+      await Layout({children: <div>Child Component</div>}),
     );
 
     expect(await findByText('OneTrustLoader')).toBeInTheDocument();
@@ -101,10 +98,7 @@ describe('Layout', () => {
     (generateBootstrapValues as jest.Mock).mockResolvedValue({});
 
     const {queryByText} = render(
-      await Layout({
-        children: <div>Child Component</div>,
-        params: Promise.resolve({brand: 'code.org' as Brand}),
-      }),
+      await Layout({children: <div>Child Component</div>}),
     );
 
     expect(queryByText('GoogleAnalytics')).not.toBeInTheDocument();
