@@ -112,6 +112,7 @@ export class WorkshopIndex extends React.Component {
         <ButtonToolbar>
           {canCreate && (
             <DropdownButton
+              id="new-workshop-button"
               title={
                 <span>
                   New Workshop&nbsp;&nbsp; <FontAwesomeV6Icon iconName="plus" />
