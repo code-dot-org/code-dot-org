@@ -5,7 +5,7 @@ import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
 import {LOOK_ID, SVG_ID} from '@cdo/apps/maze/constants';
 import commonI18n from '@cdo/locale';
 
-import {NeighborhoodSignalType} from './constants';
+import {CONSOLE_LOG_KEY, NeighborhoodSignalType} from './constants';
 import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
 import {ConsoleSignal, NeighborhoodSignal} from './types';
 
@@ -106,8 +106,8 @@ export default class Neighborhood {
     }
     // Add next signal to our queue of signals.
     this.signals.push(signal);
-    // if this is the first signal, send a starting painter message
-    if (!this.seenFirstSignal) {
+    // if this is the first non-console signal, send a starting painter message
+    if (!this.seenFirstSignal && signal.value !== CONSOLE_LOG_KEY) {
       this.seenFirstSignal = true;
       this.onOutputMessage(
         `${this.statusMessagePrefix} ${commonI18n.startingPainter()}`
