@@ -111,8 +111,9 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def sessions_must_start_on_separate_days
-    if sessions.all(&:valid?)
-      unless sessions.map {|session| session.start_time.to_date}.uniq.length == sessions.length
+    new_sessions = sessions.reject(&:marked_for_destruction?)
+    if new_sessions.all?(&:valid?)
+      unless new_sessions.map {|session| session.start_time.to_date}.uniq.length == new_sessions.length
         errors.add(:sessions, 'must start on separate days')
       end
     else
