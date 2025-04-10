@@ -58,11 +58,12 @@ export async function runPythonCode(
   validationFile?: ProjectFile
 ) {
   try {
-    if (isNeighborhoodLevel()) {
+    const isNeighborhoodRun = isNeighborhoodLevel();
+    if (isNeighborhoodRun) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
       CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
     }
-    return await asyncRun(mainFile, source, validationFile);
+    return await asyncRun(mainFile, source, validationFile, isNeighborhoodRun);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     console.log(

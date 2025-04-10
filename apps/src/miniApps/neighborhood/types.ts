@@ -11,3 +11,8 @@ export interface NeighborhoodSignal {
     paint?: number;
   };
 }
+
+export interface ConsoleSignal {
+  value: 'CONSOLE_LOG';
+  detail: string;
+}

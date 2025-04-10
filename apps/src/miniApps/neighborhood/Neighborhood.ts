@@ -7,7 +7,7 @@ import commonI18n from '@cdo/locale';
 
 import {NeighborhoodSignalType} from './constants';
 import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
-import {NeighborhoodSignal} from './types';
+import {ConsoleSignal, NeighborhoodSignal} from './types';
 
 const Direction = tiles.Direction;
 
@@ -26,7 +26,7 @@ export default class Neighborhood {
   private onNewlineMessage: () => void;
   private setIsRunning: (isRunning: boolean) => void;
   private statusMessagePrefix: string;
-  private signals: NeighborhoodSignal[];
+  private signals: (NeighborhoodSignal | ConsoleSignal)[];
   private nextSignalIndex: number;
   private speedTracker: NeighborhoodSpeedTracker;
 
@@ -100,7 +100,7 @@ export default class Neighborhood {
     }
   }
 
-  handleSignal(signal: NeighborhoodSignal | null) {
+  handleSignal(signal: NeighborhoodSignal | ConsoleSignal | null) {
     if (!signal) {
       return;
     }
@@ -134,7 +134,11 @@ export default class Neighborhood {
         timeForSignal + PAUSE_BETWEEN_SIGNALS * this.getPegmanSpeedMultiplier();
 
       const beginTime = Date.now();
-      this.mazeCommand(signal, timeForSignal);
+      if (signal.value === 'CONSOLE_LOG') {
+        this.onOutputMessage(signal.detail);
+      } else {
+        this.mazeCommand(signal, timeForSignal);
+      }
       this.nextSignalIndex++;
       const remainingTime = totalSignalTime - (Date.now() - beginTime);
 
@@ -214,7 +218,10 @@ export default class Neighborhood {
     }
   }
 
-  getAnimationTime(signal: NeighborhoodSignal) {
+  getAnimationTime(signal: NeighborhoodSignal | ConsoleSignal) {
+    if (signal.value === 'CONSOLE_LOG') {
+      return 0;
+    }
     return ANIMATED_STEPS.includes(signal.value) ? ANIMATED_STEP_SPEED : 0;
   }
 

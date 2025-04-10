@@ -24,6 +24,7 @@ const appName = 'pythonlab';
 let inputServiceWorker: ServiceWorker | undefined;
 let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
+let isNeighborhoodRun = false;
 
 const setUpPyodideWorker = () => {
   // The web worker is versioned to ensure the correct version is loaded.
@@ -42,6 +43,7 @@ const setUpPyodideWorker = () => {
     const {type, id, message} = event.data as PyodideMessage;
     const onSuccess = callbacks[id];
     const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
     switch (type) {
       case 'sysout':
       case 'syserr':
@@ -54,8 +56,6 @@ const setUpPyodideWorker = () => {
           break;
         }
         if (message.startsWith(MessageTag.NEIGHBORHOOD_SIGNAL)) {
-          const neighborhood =
-            CodebridgeRegistry.getInstance().getNeighborhood();
           if (neighborhood) {
             // Parse message string to NeighborhoodSignal.
             const data = parseMessageToNeighborhoodSignal(message);
@@ -68,13 +68,20 @@ const setUpPyodideWorker = () => {
           consoleManager?.writePartialLine(prompt);
           break;
         }
-        consoleManager?.writeConsoleMessage(message);
+        isNeighborhoodRun
+          ? neighborhood?.handleSignal({value: 'CONSOLE_LOG', detail: message})
+          : consoleManager?.writeConsoleMessage(message);
         break;
       case 'run_complete':
-        consoleManager?.writeSystemMessage(
-          pythonlabI18n.programCompleted(),
-          appName
-        );
+        isNeighborhoodRun
+          ? neighborhood?.handleSignal({
+              value: 'CONSOLE_LOG',
+              detail: `[PYTHON LAB] ${pythonlabI18n.programCompleted()}`,
+            })
+          : consoleManager?.writeSystemMessage(
+              pythonlabI18n.programCompleted(),
+              appName
+            );
         delete callbacks[id];
         onSuccess(event.data);
         break;
@@ -203,7 +210,8 @@ const asyncRun = (() => {
   return async (
     script: string,
     source: MultiFileSource,
-    validationFile?: ProjectFile
+    validationFile?: ProjectFile,
+    isNeighborhood?: boolean
   ) => {
     id = createUuid();
 
@@ -211,6 +219,7 @@ const asyncRun = (() => {
     await initializeServiceWorker();
     // Reset error state
     getStore().dispatch(setHasError(false));
+    isNeighborhoodRun = !!isNeighborhood;
 
     return new Promise<PyodideMessage>(onSuccess => {
       callbacks[id] = onSuccess;
