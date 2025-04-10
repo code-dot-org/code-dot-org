@@ -1,13 +1,6 @@
 @import '@code-dot-org/component-library-styles/colors.scss';
 @import '@code-dot-org/component-library-styles/variables.scss';
 
-@mixin error-or-helper-message {
-  position: absolute;
-  top: 100%;
-  white-space: pre-line;
-  line-height: 1.5;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -25,8 +18,8 @@
   .row {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1.5rem;
     width: 100%;
+    align-items: flex-start;
 
     > * {
       min-width: unset;
@@ -42,6 +35,10 @@
       flex-direction: column;
       gap: 0.75rem;
       width: 100%;
+    }
+
+    .plTopicsContainer {
+      gap: 0.5rem;
     }
 
     &.formSubmitRow {
@@ -77,7 +74,7 @@
 
   .card {
     border-radius: $regular-border-radius;
-    padding: 1rem 1rem 0;
+    padding: 1rem;
     background-color: var(--background-neutral-secondary);
     border: 1px solid var(--borders-neutral-primary);
     gap: 1rem;
@@ -113,24 +110,20 @@
       }
     }
 
-    &.textField {
-      > div {
-        @include error-or-helper-message;
-      }
-    }
-
     &.customDropdown {
       gap: 0.125rem;
       width: 100%;
-
-      > div:nth-of-type(3) {
-        @include error-or-helper-message;
-      }
 
       ul + div {
         span {
           text-align: center;
         }
+      }
+
+      div:nth-of-type(2) {
+        top: 100%;
+        padding: 0;
+        margin-top: 4px;
       }
 
       > button {
@@ -140,20 +133,6 @@
           overflow: hidden;
           white-space: nowrap;
           width: 100%;
-        }
-      }
-    }
-
-    &.simpleDropdown {
-      > div:nth-of-type(2) {
-        @include error-or-helper-message;
-      }
-    }
-
-    &.multiSelect {
-      label {
-        > div:nth-of-type(2) {
-          @include error-or-helper-message;
         }
       }
     }
@@ -177,6 +156,13 @@
     flex-wrap: wrap;
     row-gap: 0.5rem;
     margin-top: 0.5rem;
+
+    > div {
+      // didn't want to add !important here but had to to override the default tag styles
+      padding-inline-end: 0.75rem !important;
+      padding-inline-start: 0.75rem !important;
+      max-width: unset;
+    }
   }
 }
 
