@@ -113,8 +113,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
 
   /**
    * Fetch the user's console font size selection.
-   * @param {string} fontSize
-   * @param {string} appType
+   * @param {string} appName
    */
   async getConsoleFontSize(appName) {
     const consoleFontSizeResponse = await HttpClient.fetchJson(
@@ -127,8 +126,7 @@ export default class UserPreferences extends Record({userId: 'me'}) {
 
   /**
    * Fetch the user's editor font size selection.
-   * @param {string} editorFontSize
-   * @param {string} appType
+   * @param {string} appName
    */
   async getEditorFontSize(appName) {
     const editorFontSizeResponse = await HttpClient.fetchJson(
