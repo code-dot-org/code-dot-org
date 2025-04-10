@@ -38,8 +38,8 @@ class ScriptsController < ApplicationController
         end
         return
       end
-      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.original_unit_group&.default_units&.any? {|u| u.id == @script.id}}
-        most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.original_unit_group&.default_units&.any? {|u| u.id == @script.id}}.last
+      if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}
+        most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}.last
         if !params[:section_id]
           redirect_to "/teacher_dashboard/sections/#{most_recent_section.id}/unit/#{@script.name}"
           return
@@ -429,8 +429,8 @@ class ScriptsController < ApplicationController
     redirect_unit ||= Unit.latest_stable_version(unit.family_name, locale: locale)
 
     if unit.original_unit_group&.single_unit_course?
-      redirect_unit_group = UnitGroup.latest_assigned_version(unit.unit_group.family_name, current_user)
-      redirect_unit_group ||= UnitGroup.latest_stable_version(unit.unit_group.family_name, locale: locale)
+      redirect_unit_group = UnitGroup.latest_assigned_version(unit.original_unit_group.family_name, current_user)
+      redirect_unit_group ||= UnitGroup.latest_stable_version(unit.original_unit_group.family_name, locale: locale)
       redirect_unit = redirect_unit_group.units_for_user(current_user).first if redirect_unit_group&.single_unit_course?
     end
 
