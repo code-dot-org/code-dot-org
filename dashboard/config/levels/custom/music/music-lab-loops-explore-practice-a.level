@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-28T20:02:45.000Z",
   "level_num": "custom",
@@ -519,8 +520,19 @@
     "validations": [
       {
         "key": "music-lab-loops-explore-practice-e_b5fe9770-6083-4deb-ac57-b8b91472a6fa",
-        "message": "[Check for 4 loops]",
+        "message": "[exemplar]",
         "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "repeat_simple2:4"
+          }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practice-a_40e88252-ad3d-464b-8a87-0ce25260d137",
+        "message": "Make sure your code uses 4 loops!",
+        "next": false,
         "conditions": [
 
         ]
@@ -531,8 +543,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-28T20:02:45.225+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-e\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-e\"},{\"changed_at\":\"2025-03-28 20:09:01 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"display_name\",\"exemplar_settings\",\"bubble_choice_description\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:10:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:11:21 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-28T20:02:45.225+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-explore-practice-e\\\"\"],\"cloned_from\":\"music-lab-loops-explore-practice-e\"},{\"changed_at\":\"2025-03-28 20:09:01 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"display_name\",\"exemplar_settings\",\"bubble_choice_description\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:10:34 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:11:21 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 21:51:11 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

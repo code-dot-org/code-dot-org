@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-08 22:58:51 UTC",
+    "serialized_at": "2025-04-09 16:15:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -229,6 +229,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-video_a"
+        ],
         "progression": "Into video"
       },
       "bonus": false,
@@ -501,6 +504,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Version A Survey_a"
+        ],
         "progression": "Lesson Survey"
       },
       "bonus": false,

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-08 16:13:20 UTC",
+    "serialized_at": "2025-04-09 15:22:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -93,7 +93,7 @@
       "key": "fabfaefc-0fff-4687-bd4e-cb26d746de98",
       "position": 2,
       "properties": {
-        "progression_name": "Prompting AI Chat"
+        "progression_name": "Prompting in AI Chat"
       },
       "seeding_key": {
         "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98",
@@ -119,6 +119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ai_00b"
+        ],
         "progression": "Getting Started with AI Chat"
       },
       "bonus": false,
@@ -369,7 +372,7 @@
         "level_keys": [
           "csaif_pl_ai_02"
         ],
-        "progression": "Prompting AI Chat"
+        "progression": "Prompting in AI Chat"
       },
       "bonus": false,
       "seeding_key": {
@@ -394,7 +397,7 @@
         "level_keys": [
           "csaif_pl_ai_02_02"
         ],
-        "progression": "Prompting AI Chat"
+        "progression": "Prompting in AI Chat"
       },
       "bonus": false,
       "seeding_key": {
@@ -419,7 +422,7 @@
         "level_keys": [
           "csaif_pl_ai_02_03b"
         ],
-        "progression": "Prompting AI Chat"
+        "progression": "Prompting in AI Chat"
       },
       "bonus": false,
       "seeding_key": {
@@ -444,7 +447,7 @@
         "level_keys": [
           "csaif_pl_ai_02_04b"
         ],
-        "progression": "Prompting AI Chat"
+        "progression": "Prompting in AI Chat"
       },
       "bonus": false,
       "seeding_key": {
@@ -469,7 +472,7 @@
         "level_keys": [
           "csaif_pl_ai_02_05"
         ],
-        "progression": "Prompting AI Chat"
+        "progression": "Prompting in AI Chat"
       },
       "bonus": false,
       "seeding_key": {
@@ -491,10 +494,54 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "progression": "Prompting in AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_05_02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_05_02"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompting in AI Chat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_05_03"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      },
+      "level_keys": [
+        "csaif_pl_ai_02_05_03"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "csaif_pl_ai_02_06b"
         ],
-        "progression": "Prompting AI Chat"
+        "progression": "Prompting in AI Chat"
       },
       "bonus": false,
       "seeding_key": {
@@ -511,15 +558,15 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 17,
-      "activity_section_position": 7,
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csaif_pl_ai_02_07"
         ],
-        "progression": "Prompting AI Chat"
+        "progression": "Prompting in AI Chat"
       },
       "bonus": false,
       "seeding_key": {
@@ -536,15 +583,15 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 18,
-      "activity_section_position": 8,
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
           "csaif_pl_ai_02_08"
         ],
-        "progression": "Prompting AI Chat"
+        "progression": "Prompting in AI Chat"
       },
       "bonus": false,
       "seeding_key": {
@@ -561,8 +608,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 19,
+      "chapter": 21,
+      "position": 21,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -586,8 +633,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 20,
+      "chapter": 22,
+      "position": 22,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -611,8 +658,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 21,
+      "chapter": 23,
+      "position": 23,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -636,20 +683,17 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 22,
+      "chapter": 24,
+      "position": 24,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csaif_pl_ai_03_03b"
-        ],
         "progression": "Using AI"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif_pl_ai_03_03b"
+          "csaif_pl_ai_03_03c"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",
@@ -657,12 +701,12 @@
         "activity_section.key": "dc8bab06-475b-4c43-8913-8c80e603c945"
       },
       "level_keys": [
-        "csaif_pl_ai_03_03b"
+        "csaif_pl_ai_03_03c"
       ]
     },
     {
-      "chapter": 23,
-      "position": 23,
+      "chapter": 25,
+      "position": 25,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -686,8 +730,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 24,
+      "chapter": 26,
+      "position": 26,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -711,8 +755,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 25,
+      "chapter": 27,
+      "position": 27,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
@@ -736,8 +780,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 26,
+      "chapter": 28,
+      "position": 28,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
@@ -761,8 +805,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 27,
+      "chapter": 29,
+      "position": 29,
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
@@ -786,8 +830,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 28,
+      "chapter": 30,
+      "position": 30,
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
@@ -811,8 +855,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 29,
+      "chapter": 31,
+      "position": 31,
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
@@ -836,8 +880,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 30,
+      "chapter": 32,
+      "position": 32,
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
@@ -1044,6 +1088,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "csaif_pl_ai_02_05_02",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_05_02"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_02_05_03",
+        "script_level.level_keys": [
+          "csaif_pl_ai_02_05_03"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-ai",
+        "activity_section.key": "fabfaefc-0fff-4687-bd4e-cb26d746de98"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csaif_pl_ai_02_06b",
         "script_level.level_keys": [
           "csaif_pl_ai_02_06b"
@@ -1116,9 +1184,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_ai_03_03b",
+        "level.key": "csaif_pl_ai_03_03c",
         "script_level.level_keys": [
-          "csaif_pl_ai_03_03b"
+          "csaif_pl_ai_03_03c"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

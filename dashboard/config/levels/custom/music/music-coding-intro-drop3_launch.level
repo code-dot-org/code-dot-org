@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:56:39.000Z",
   "level_num": "custom",
@@ -226,7 +227,7 @@
     "long_instructions": "####Make the beat drop!\r\n\r\n1. Add a beat drop to the end\r\n\t- You can use the beat drop in the toolbox or make your own.\r\n2. Press Run to hear your creation\r\n3. Press Continue when you are done experimenting",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "display_name": "Something Just Like This",
     "bubble_choice_description": "By The Chainsmokers & Coldplay",
     "validations": [
@@ -243,10 +244,16 @@
       }
     ],
     "name_suffix": "_launch",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:39.192+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop3\\\"\"],\"cloned_from\":\"music-coding-intro-drop3\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:39.192+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop3\\\"\"],\"cloned_from\":\"music-coding-intro-drop3\"},{\"changed_at\":\"2025-04-09 17:27:28 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

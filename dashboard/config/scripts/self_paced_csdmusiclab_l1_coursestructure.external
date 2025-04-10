@@ -3,84 +3,85 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Course Structure
+# Curriculum Structure
 
-<div style="display: flex; align-items: center; border: 2px solid black; border-radius: 20px; padding: 20px 10px; margin: 20px 0;">
+#### The Programming with Music Lab curriculum begins with an introductory lesson, <a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/1" target="blank" rel="noopener noreferrer">Introduction to Music Lab</a>, which introduces the Problem-Solving Process and primes them to create music.
 
-    
-<img src="https://images.code.org/dbedbfcaab19f5e6b172d54f0a4cdf51-image-1740597203712.png" 
-         style="width: auto; height: 70px; margin-right: 15px;" 
-         alt="An icon of a teacher at a board.">
+#### The rest of the curriculum is divided into three chunks, each covering one of the major computer science concepts: **sequences**, **loops**, and **functions**.
 
-    
-<div style="background-color: #FFFFFF; border-radius: 20px; color: #000000; width: 90%; padding: 10px;">
-        <h3 style="margin: 0;"><b>Role of the Teacher</b></h3>
-        <p style="color: black; line-height: 1.25; font-size: 18px; margin: 5px 0 0 0;">
-            All lessons within the unit are intended to be <strong>facilitated by a teacher</strong>. These lessons are <strong>not designed as self-paced experiences for students</strong> to work through at their own pace.
-        </p>
-    </div>
-
+<div style="display: flex; justify-content: space-between; width: 90%; margin: 20px auto;">
+  <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <img src="https://images.code.org/f0fb524e2dec8f439e109d79ecdf8b03-image-1744232422066.png" alt="Icon representing problem solving" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;"><b>Intro to Music Lab</b></h4>
+    <h4 style="text-align: center;">Lesson 1</h4>
+  </div>
+  <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <img src="https://images.code.org/da2dd5271ff04184bbf9cccbd0d2a26c-image-1744231978726.png" alt="Icon representing sequences" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;"><b>Sequences</b></h4>
+    <h4 style="text-align: center;">Lessons 2-5</h4>
+  </div>
+  <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <img src="https://images.code.org/c33ec7d74c1b0feaac4564126929c96a-image-1744231976974.png" alt="Icon representing loops" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;"><b>Loops</b></h4>
+    <h4 style="text-align: center;">Lessons 6-9</h4>
+  </div>
+  <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
+    <img src="https://images.code.org/15cbf8c68b662b83b5b2f1d836da4cbd-image-1744231975051.png" alt="Icon representing functions" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
+    <h4 style="text-align: center;"><b>Functions</b></h4>
+    <h4 style="text-align: center;">Lessons 10 - 13</h4>
+  </div>
 </div>
 
+## Curriculum Chunks
+
+#### Each chunk of the curriculum follows a predictable four-lesson format. This sequence allows for a gradual release of responsibility from the teacher to the student.
 
 
-## Lessons
-#### The lessons are designed for **45-minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.
+#### **Explore-Practice-Synthesize-Project** is a structure that gradually moves students from exposure to mastery to creativity. This progression is designed to support all learners, especially those new to computer science, and allows students to build confidence before applying concepts independently.
 
-### **Lesson Components**
+##### Click on the arrows below to expand each section.
+
+<details style="background-color: #ececec; padding: 10px; margin-top: 20px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🔍 Explore</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+
+#### Explore lessons help students investigate existing code before creating their own. These levels use structured scaffolding guide students step-by-step to feel confident in the coding skill.
+</div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Warm Up</summary>
+<summary style="font-size: 18px; font-weight: bold;">🛠️ Practice</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
 
-
-#### Each lesson starts with a brief warm-up, offering a shared experience to highlight the need for the lesson's skills and concepts. 
-</p></div>
-</details>
+#### Practice lessons introduce new strategies or tools students might not discover on their own.
+</div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💃 Activity</summary>
+<summary style="font-size: 18px; font-weight: bold;">🧠 Synthesize</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
 
-
-#### Students spend most of their time on lesson activities, exploring new computing concepts. These activities are scaffolded to provide just-in-time support, helping students build the knowledge and skills needed for computing.
-</p></div>
-</details>
+#### Synthesize lessons help students review past concepts, learn a new technique or context related to a featured career in music, and apply their skills through creative tasks.
+</div></details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🏁 Wrap Up</summary>
+<summary style="font-size: 18px; font-weight: bold;">🎼 Project</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
 
+#### The sequences and loops chunks end with a mini-project, while the functions chunk ends with an end-of-unit project.
+</div></details>
 
-#### Every lesson ends with a wrap-up, allowing students to reflect on key skills and concepts. 
-</p></div>
-</details>
-
-### **Lesson Types**
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">✍🏽 Non-Programming Lessons</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-#### Non-programming lessons emphasize process skills and computing concepts, mostly through offline activities guided by an activity sheet. They include opportunities for group collaboration, discussion, and individual reflection, with some online components.
-</p></div>
-</details>
+## Projects
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">👩‍💻 Project Lessons</summary>
+<summary style="font-size: 18px; font-weight: bold;">🎶 Mini-Projects</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
 
+#### **Mini-Projects** are opportunities for students to apply what they have learned by creating something new in a more open-ended setting. They are opportunities for students to practice open-ended application of a small set of new skills. 
+</div></details>
 
-#### ***Mini-projects*** let students apply their learning in an open-ended way, practicing new skills. These flexible projects appear throughout the unit and can be adjusted based on available class time.
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🎼 End-of-Unit Projects</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### ***Projects*** are multi-day, open-ended lessons at the end of each unit, where students use learned skills to plan, create, and reflect.
-</p></div>
-</details>
-
-
+#### **End-of Unit Projects** are multi-day, open-ended lessons. They challenge students to create using skills developed throughout the unit with opportunities for planning, creation, and reflection.
+</div></details>
 MARKDOWN

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:56:37.000Z",
   "level_num": "custom",
@@ -7,8 +8,8 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### <i class=\"fa-solid fa-repeat\"></i> Loop it!\r\n\r\n\r\n1. Drag a play [sound](#clickable=play-sound-block) block inside of the [repeat loop](#clickable=id-up-left:repeat_simple2).\r\n2. Choose how many [times](#clickable=repeat-block-field-workspace) the sound repeats.\r\n",
-    "hide_share_and_remix": "false",
+    "long_instructions": "#### <i class=\"fa-solid fa-repeat\"></i> Loop it!\r\n\r\n\r\n1. Drag a play [sound](#clickable=play-sound-block) block inside of the [repeat loop](#clickable=id-up-left:repeat_simple2).\r\n2. Choose how many [times](#clickable=repeat-block-field-workspace) the sound repeats.\r\n\r\n**[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=repeat-block-field-workspace)**\r\n",
+    "hide_share_and_remix": "true",
     "level_data": {
       "validationTimeout": 4,
       "library": "launch2024",
@@ -49,12 +50,10 @@
           ]
         }
       },
-      "packId": "will_i_am_i_like_to_move_it",
+      "packId": "mc_hammer_u_cant_touch_this",
       "sounds": {
-        "will_i_am_i_like_to_move_it": [
-          "vocals_little_dance",
-          "drums_kick_perc_snare",
-          "bass_guitar_slap"
+        "mc_hammer_u_cant_touch_this": [
+          "main_loop"
         ]
       }
     },
@@ -97,10 +96,16 @@
     "use_secondary_finish_button": "false",
     "hint_prompt_attempts_threshold": "1",
     "name_suffix": "_launch",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:37.408+00:00\",\"changed\":[\"cloned from \\\"music-coding-ingro-loop1\\\"\"],\"cloned_from\":\"music-coding-ingro-loop1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:37.408+00:00\",\"changed\":[\"cloned from \\\"music-coding-ingro-loop1\\\"\"],\"cloned_from\":\"music-coding-ingro-loop1\"},{\"changed_at\":\"2025-04-09 17:02:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:05:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:08:49 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:11:24 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:13:13 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:14:24 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:15:22 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:25:53 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:34:09 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
