@@ -41,13 +41,12 @@ class ValidationTestResult(TextTestResult):
       super(ValidationTestResult, self).addUnexpectedSuccess(test)
       self.simplified_results.append({'name': self.getDescription(test), 'result': "UNEXPECTED_SUCCESS"})
 
-  def _exc_info_to_string(self, err, test):
-      """Convert an exception to a string."""
-      # This is a copy of the original implementation in unittest.TextTestResult
-      # but we don't want to call it because it will print the traceback to the stream.
-      # We just want to return the exception value.
-      return self.parseError(err)
 
-  def parseError(self, err):
-     exception_type, value, traceback = err
-     return f"\x1b[38;5;203m{value}\x1b[0m"
+  # Override of unittest.TextTestResult.
+  # The original method prints the stack trace and error message,
+  # we just print the error message, colored in red.
+  def _exc_info_to_string(self, err, test):
+    """Convert an exception to a string."""
+    exception_type, value, traceback = err
+    return f"\x1b[38;5;203m{value}\x1b[0m"
+
