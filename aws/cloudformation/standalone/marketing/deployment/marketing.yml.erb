@@ -572,8 +572,8 @@ Resources:
               - "s3:PutObject"
               - "s3:ListBucket"
             Resource:
-              - !Sub "arn:aws:s3:::cdo-marketing-static-assets-${Environment}"
-              - !Sub "arn:aws:s3:::cdo-marketing-static-assets-${Environment}/*"
+              - !GetAtt MarketingStaticAssetsBucket.Arn
+              - !Sub "${MarketingStaticAssetsBucket.Arn}/*"
 
   MarketingGithubDeployerAccessKey:
     Type: AWS::IAM::AccessKey
@@ -612,12 +612,6 @@ Resources:
         RestrictPublicBuckets: true
       VersioningConfiguration:
         Status: Enabled
-      IntelligentTieringConfigurations:
-        - Id: EntireBucket
-          Status: Enabled
-          Tierings:
-            - AccessTier: ARCHIVE_ACCESS
-              Days: 90
       LifecycleConfiguration:
         Rules:
           - Id: ExpireOldVersions
