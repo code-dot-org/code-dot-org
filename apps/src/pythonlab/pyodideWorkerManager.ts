@@ -25,7 +25,7 @@ const appName = 'pythonlab';
 let inputServiceWorker: ServiceWorker | undefined;
 let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
-let isNeighborhoodRun = false;
+let outputToNeighborhood = false;
 
 const setUpPyodideWorker = () => {
   // The web worker is versioned to ensure the correct version is loaded.
@@ -69,7 +69,7 @@ const setUpPyodideWorker = () => {
           consoleManager?.writePartialLine(prompt);
           break;
         }
-        isNeighborhoodRun
+        outputToNeighborhood
           ? neighborhood?.handleSignal({
               value: CONSOLE_LOG_KEY,
               detail: message,
@@ -77,7 +77,7 @@ const setUpPyodideWorker = () => {
           : consoleManager?.writeConsoleMessage(message);
         break;
       case 'run_complete':
-        isNeighborhoodRun
+        outputToNeighborhood
           ? neighborhood?.handleSignal({
               value: CONSOLE_LOG_KEY,
               detail: `[PYTHON LAB] ${pythonlabI18n.programCompleted()}`,
@@ -215,7 +215,7 @@ const asyncRun = (() => {
     script: string,
     source: MultiFileSource,
     validationFile?: ProjectFile,
-    isNeighborhood?: boolean
+    shouldOutputToNeighborhood?: boolean
   ) => {
     id = createUuid();
 
@@ -223,7 +223,7 @@ const asyncRun = (() => {
     await initializeServiceWorker();
     // Reset error state
     getStore().dispatch(setHasError(false));
-    isNeighborhoodRun = !!isNeighborhood;
+    outputToNeighborhood = !!shouldOutputToNeighborhood;
 
     return new Promise<PyodideMessage>(onSuccess => {
       callbacks[id] = onSuccess;

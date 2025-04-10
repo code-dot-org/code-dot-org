@@ -63,7 +63,15 @@ export async function runPythonCode(
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
       CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
     }
-    return await asyncRun(mainFile, source, validationFile, isNeighborhoodRun);
+    // We only send all output to the neighborhood if this is a neighborhood level and
+    // we are not running validation, as validation does not render to the neighborhood.
+    const outputToNeighborhood = isNeighborhoodRun && !validationFile;
+    return await asyncRun(
+      mainFile,
+      source,
+      validationFile,
+      outputToNeighborhood
+    );
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     console.log(
