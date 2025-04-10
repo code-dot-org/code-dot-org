@@ -62,14 +62,19 @@ export interface Organizer {
 export type SessionFormat = 'virtual' | 'in_person';
 
 export interface Session {
-  id: number;
+  id?: number;
   start: string;
   end: string;
   code?: string;
   location_address?: string;
   location_name?: string;
   meeting_link?: string;
-  session_format?: SessionFormat;
+  session_format: SessionFormat;
+}
+
+export interface DestroyedSession {
+  id: number;
+  _destroy: true;
 }
 
 export interface SessionFormState {
@@ -85,10 +90,10 @@ export interface SessionFormState {
 }
 
 export interface Workshop {
-  id: number;
-  course: string;
-  name: string;
-  capacity: number;
+  id?: number;
+  course?: string;
+  name?: string;
+  capacity?: number;
   grades?: string[];
   description?: string;
   notes?: string;
@@ -188,6 +193,8 @@ export interface BasicsProps
 export interface PartnerFacilitatorProps
   extends SectionProps,
     Pick<WorkshopFormState, PartnerFacilitatorKeys> {
+  regionalPartnerData: RegionalPartner[] | null;
+  facilitatorData: Facilitator[] | null;
   errors: WorkshopErrors;
 }
 

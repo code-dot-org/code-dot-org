@@ -48,6 +48,8 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resource :user_preference, only: [:update]
+
     resources :survey_results, only: [:create], defaults: {format: 'json'}
 
     resource :pairing, only: [:show, :update]

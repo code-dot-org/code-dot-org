@@ -653,59 +653,53 @@ Resources:
         Name: "waf_logs_db"
         Description: "Database for WAF WebACL logs"
   GlobalWebACLLogsTable:
-    Type: "AWS::Glue::Table"
+    Type: AWS::Glue::Table
     Properties:
-      CatalogId: !Ref "AWS::AccountId"
       DatabaseName: !Ref WAFLogsDatabase
+      CatalogId: !Ref "AWS::AccountId"
       TableInput:
-        Name: "waf_logs_code_dot_org"
-        Description: "WAF WebACL logs table for code-dot-org Global WebACL"
-        TableType: "EXTERNAL_TABLE"
-        Parameters: {
-          "classification": "json",
-          "projection.enabled": "true",
-          "projection.year.type": "integer",
-          "projection.year.range": "2020,2030",
-          "projection.month.type": "integer",
-          "projection.month.range": "1,12",
-          "projection.day.type": "integer",
-          "projection.day.range": "1,31"
-        }
+        Name: waf_logs_code_dot_org
+        Description: WAF WebACL logs table for code-dot-org Global WebACL
+        TableType: EXTERNAL_TABLE
+        Parameters:
+          classification: json
+          projection.enabled: "true"
+          projection.timestamp_folder.format: "yyyy/MM/dd/HH/mm"
+          projection.timestamp_folder.interval: "1"
+          projection.timestamp_folder.interval.unit: "MINUTES"
+          projection.timestamp_folder.range: "2024/01/01/00/00,NOW"
+          projection.timestamp_folder.type: "date"
+          storage.location.template: !Sub "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org/${!timestamp_folder}"
+          transient_lastDdlTime: "1733787890"
         PartitionKeys:
-          - Name: "year"
-            Type: "int"
-          - Name: "month"
-            Type: "int"
-          - Name: "day"
-            Type: "int"
+          - Name: timestamp_folder
+            Type: string
         StorageDescriptor:
-          Location: !Sub "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org/"
-          InputFormat: "org.apache.hadoop.mapred.TextInputFormat"
-          OutputFormat: "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat"
-          SerdeInfo:
-            SerializationLibrary: "org.openx.data.jsonserde.JsonSerDe"
+          Location: !Sub "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org"
           Columns:
-            - Name: "timestamp"
-              Type: "bigint"
-            - Name: "formatVersion"
-              Type: "int"
-            - Name: "webaclId"
-              Type: "string"
-            - Name: "terminatingRuleId"
-              Type: "string"
-            - Name: "terminatingRuleType"
-              Type: "string"
-            - Name: "action"
-              Type: "string"
-            - Name: "httpSourceName"
-              Type: "string"
-            - Name: "httpSourceId"
-              Type: "string"
-            - Name: "ruleGroupList"
-              Type: "array<struct<ruleGroupId:string,terminatingRule:struct<ruleId:string,action:string,ruleMatchDetails:array<struct<conditionType:string,sensitivityLevel:string,location:string,matchedData:array<string>>>>,nonTerminatingMatchingRules:array<struct<ruleId:string,action:string,ruleMatchDetails:array<struct<conditionType:string,sensitivityLevel:string,location:string,matchedData:array<string>>>>>>"
-            - Name: "rateBasedRuleList"
-              Type: "array<struct<rateBasedRuleId:string,limitKey:string,maxRateAllowed:int>>"
-            - Name: "nonTerminatingMatchingRules"
-              Type: "array<struct<ruleId:string,action:string,ruleMatchDetails:array<struct<conditionType:string,sensitivityLevel:string,location:string,matchedData:array<string>>>>>"
-            - Name: "httpRequest"
-              Type: "struct<clientIp:string,country:string,headers:array<struct<name:string,value:string>>,uri:string,args:string,httpVersion:string,httpMethod:string,requestId:string>"
+            - Name: timestamp
+              Type: bigint
+            - Name: formatversion
+              Type: int
+            - Name: webaclid
+              Type: string
+            - Name: terminatingruleid
+              Type: string
+            - Name: terminatingruletype
+              Type: string
+            - Name: action
+              Type: string
+            - Name: httpsourcename
+              Type: string
+            - Name: httpsourceid
+              Type: string
+            - Name: responsecodesent
+              Type: string
+            - Name: httprequest
+              Type: struct<clientip:string,country:string,headers:array<struct<name:string,value:string>>,uri:string,args:string,httpmethod:string,requestid:string>
+            - Name: ja3fingerprint
+              Type: string
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          SerdeInfo:
+            SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
