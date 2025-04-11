@@ -42,10 +42,10 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const fontSizeKey = useAppSelector(state => state.lab2View.editorFontSizeKey);
   const {signInState} = useAppSelector(state => state.currentUser);
 
-  // User preference for selected font size is saved on the backend
-  // per signed-in user per app type (currently either pythonlab or weblab).
-  // Note that When the user selects a different font size from settings, fontSizeKey
-  // is updated and saved on the backend.
+  // Load the user's preferred editor font size from the backend which is saved
+  // per app type (currently either pythonlab or weblab) for signed-in users.
+  // When the user selects a different font size from settings, it's saved on the backend.
+  // We mark font size is loaded once the value is fetched (signed-in) or skipped (signed-out).
   useEffect(() => {
     if (signInState !== SignInState.SignedIn) {
       setFontSizeLoaded(true);
