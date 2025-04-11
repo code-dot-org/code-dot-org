@@ -18,20 +18,18 @@ export interface MainLinksProps extends HTMLAttributes<HTMLElement> {
 
 const MainLinks: React.FC<MainLinksProps> = ({mainLinks, className}) => {
   return (
-    <div className={moduleStyles.mainLinks}>
-      <ul
-        className={classNames(moduleStyles.mainLinks, className)}
-        aria-label="Main site links"
-      >
-        {mainLinks?.map(({key, label, href, ...link}) => (
-          <li key={key}>
-            <a href={href} {...link}>
-              {label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <ul
+      className={classNames(moduleStyles.mainLinks, className)}
+      aria-label="Main site links"
+    >
+      {mainLinks?.map(({key, label, href, ...link}) => (
+        <li key={key}>
+          <a href={href} {...link}>
+            {label}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 };
 

@@ -1,28 +1,40 @@
 @use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 @use '@code-dot-org/component-library-styles/typography.module.scss' as
   typography;
 
 // Header common styles
 .headerNavigation {
   background-color: var(--background-brand-teal-primary);
-  padding: 0.25rem 1rem;
+  padding: 0.375rem 0.875rem;
   display: flex;
   justify-content: space-between;
 }
 
 // Main links styles
-.mainLinks {
+.mainWrapper {
   display: flex;
   align-items: center;
-  gap: 1.875rem;
+  gap: 0.75rem;
 
   .logo {
     color: transparent;
     text-decoration: none;
 
+    @include mixins.transition-all;
+
+    &:hover {
+      opacity: 90%;
+    }
+
+    &:focus-visible {
+      @include mixins.focus-styles;
+      outline-color: var(--neutral-white-alpha-70);
+      border-radius: 1px;
+    }
+
     & > figure {
-      width: 42px;
-      height: 42px;
+      height: 2.375rem;
       border-radius: unset;
     }
   }
@@ -30,17 +42,29 @@
   ul {
     all: unset;
     display: flex;
-    gap: 1.875rem;
 
     li {
       all: unset;
-      margin: 0;
     }
 
     a {
       @include typography.body-three;
       color: var(--text-neutral-white-fixed);
       text-decoration: none;
+      padding: 1rem;
+      border-inline: 2px solid transparent;
+
+      @include mixins.transition-all;
+
+      &:hover,
+      &:active {
+        background-color: var(--background-brand-teal-strong);
+      }
+
+      &:focus-visible {
+        border-inline: 2px solid var(--neutral-white-alpha-70);
+        outline: none;
+      }
     }
   }
 }
@@ -54,12 +78,31 @@
 
   body & .signIn,
   body & .newProject {
-    background: none;
+    background: transparent;
+
+    &:hover {
+      background: var(--background-brand-teal-strong);
+    }
   }
 
   body & .createAccount,
   body & .goToDashboard {
     color: var(--text-brand-teal-primary-fixed);
+
+    &:hover {
+      background: var(--neutral-white-alpha-90);
+    }
+  }
+
+  button,
+  a {
+    &:focus-visible {
+      outline-color: var(--neutral-white-alpha-70);
+    }
+
+    span {
+      font-weight: 500;
+    }
   }
 }
 
@@ -78,9 +121,15 @@ body .buttonLinks > button.helpButton {
   padding: 0;
   background: transparent;
   min-width: unset;
+  border-radius: 100%;
+
+  & > i {
+    font-size: 1.25rem;
+  }
 
   &:hover,
   &:focus {
+    color: var(--neutral-white-alpha-90);
     background: transparent;
   }
 }
