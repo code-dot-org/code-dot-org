@@ -89,6 +89,7 @@
   flex: 1;
 
   h5 {
+    height: 28px;
     margin-bottom: 0;
     overflow: hidden;
     white-space: nowrap;
@@ -111,7 +112,7 @@
 
 .sectionCardHeaderRight {
   display: flex;
-  margin-left: 8px;
+  margin-inline-start: 6px;
 }
 
 // SectionOptionsDropdown
