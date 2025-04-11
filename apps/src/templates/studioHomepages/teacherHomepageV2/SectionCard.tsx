@@ -64,6 +64,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               icon={{iconName: 'grip-vertical'}}
               color="gray"
               size="s"
+              aria-label={i18n.dragSection()}
               type="tertiary"
               style={{
                 cursor: isDragging ? 'grabbing' : 'grab',
