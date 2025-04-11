@@ -80,8 +80,6 @@ class RegistrationsController < Devise::RegistrationsController
     @age_options = [{value: '', text: ''}] + User::AGE_DROPDOWN_OPTIONS.map do |age|
       {value: age.to_s, text: age.to_s}
     end
-    location = Geocoder.search(request.ip).try(:first)
-    @country_code = location&.country_code.to_s.upcase
     @us_ip = ['US', 'RD'].include?(@country_code)
     @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
       {value: code, text: name}
