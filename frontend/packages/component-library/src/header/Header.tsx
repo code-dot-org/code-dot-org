@@ -31,7 +31,7 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   /** Is user logged in */
   isLoggedIn: AccountLinksProps['isLoggedIn'];
   /** Help menu label */
-  helpMenuLabel: HelpMenuProps['helpMenuLabel'];
+  helpButtonLabel: HelpMenuProps['helpButtonLabel'];
   /** Help menu links */
   helpLinks: HelpMenuProps['helpLinks'];
   /** Header custom class name */
@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({
   projectsLinks,
   accountLinks,
   isLoggedIn = false,
-  helpMenuLabel,
+  helpButtonLabel,
   helpLinks,
   className,
   ...HTMLAttributes
@@ -72,7 +72,7 @@ const Header: React.FC<HeaderProps> = ({
         goToDashboard={accountLinks.goToDashboard}
         isLoggedIn={isLoggedIn}
       />
-      <HelpMenu helpMenuLabel={helpMenuLabel} helpLinks={helpLinks} />
+      <HelpMenu helpButtonLabel={helpButtonLabel} helpLinks={helpLinks} />
     </div>
   </nav>
 );

@@ -110,7 +110,7 @@ const defaultArgs: HeaderProps = {
     },
   },
   isLoggedIn: false,
-  helpMenuLabel: 'Help',
+  helpButtonLabel: 'Help',
   helpLinks: [
     {
       key: 'helpAndSupport',
