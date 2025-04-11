@@ -133,6 +133,12 @@ export const PopUpButton = ({
               tabIndex={-1}
               className={moduleStyles['popup-button-menu']}
               onClick={() => setIsOpen(false)}
+              onKeyDown={event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  setIsOpen(false);
+                }
+              }}
               style={dropdownStyleProps}
               ref={dropdownRef}
               role="menu"
