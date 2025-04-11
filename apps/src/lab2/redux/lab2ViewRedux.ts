@@ -7,11 +7,13 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 export interface Lab2ViewState {
   consoleFontSizeKey: keyof typeof FontSize;
   editorFontSizeKey: keyof typeof FontSize;
+  editorFontSizeLoaded: boolean;
 }
 
 const initialState: Lab2ViewState = {
   consoleFontSizeKey: 'Small',
   editorFontSizeKey: 'Small',
+  editorFontSizeLoaded: false,
 };
 
 // THUNKS
@@ -43,6 +45,7 @@ export const fetchAndSaveEditorFontSize = createAsyncThunk<
   );
   if (savedEditorFontSize) {
     dispatch(setEditorFontSize(savedEditorFontSize));
+    dispatch(setEditorFontSizeLoaded(true));
   }
 });
 
@@ -57,9 +60,13 @@ const lab2ViewSlice = createSlice({
     setEditorFontSize(state, action: PayloadAction<keyof typeof FontSize>) {
       state.editorFontSizeKey = action.payload;
     },
+    setEditorFontSizeLoaded(state, action: PayloadAction<boolean>) {
+      state.editorFontSizeLoaded = action.payload;
+    },
   },
 });
 
-export const {setConsoleFontSize, setEditorFontSize} = lab2ViewSlice.actions;
+export const {setConsoleFontSize, setEditorFontSize, setEditorFontSizeLoaded} =
+  lab2ViewSlice.actions;
 
 export default lab2ViewSlice.reducer;

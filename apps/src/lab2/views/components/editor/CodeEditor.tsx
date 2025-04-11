@@ -6,7 +6,10 @@ import React, {useEffect, useMemo, useRef, useState} from 'react';
 
 import {FontSize} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
-import {fetchAndSaveEditorFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import {
+  fetchAndSaveEditorFontSize,
+  setEditorFontSizeLoaded,
+} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {AppName} from '@cdo/apps/lab2/types';
 import i18n from '@cdo/apps/pythonlab/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -35,11 +38,12 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   const editorRef = useRef<HTMLDivElement>(null);
   const dispatch = useAppDispatch();
   const [didInit, setDidInit] = useState(false);
-  const [fontSizeLoaded, setFontSizeLoaded] = useState(false);
   const [editorView, setEditorView] = useState<EditorView | null>(null);
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const fontSizeKey = useAppSelector(state => state.lab2View.editorFontSizeKey);
+  const {editorFontSizeKey, editorFontSizeLoaded} = useAppSelector(
+    state => state.lab2View
+  );
   const {signInState} = useAppSelector(state => state.currentUser);
 
   // Load the user's preferred editor font size from the backend which is saved
@@ -48,11 +52,10 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   // We mark font size is loaded once the value is fetched (signed-in) or skipped (signed-out).
   useEffect(() => {
     if (signInState !== SignInState.SignedIn) {
-      setFontSizeLoaded(true);
+      dispatch(setEditorFontSizeLoaded(true));
       return;
     }
     dispatch(fetchAndSaveEditorFontSize({appName}));
-    setFontSizeLoaded(true);
   }, [dispatch, signInState, appName]);
 
   // These two compartments control read-only settings.
@@ -72,7 +75,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     });
   };
   useEffect(() => {
-    if (!fontSizeLoaded || editorRef.current === null || didInit) {
+    if (!editorFontSizeLoaded || editorRef.current === null || didInit) {
       return;
     }
 
@@ -93,7 +96,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorExtensions.push(
       editorReadOnlyCompartment.of(EditorState.readOnly.of(isReadOnly)),
       editorEditableCompartment.of(EditorView.editable.of(!isReadOnly)),
-      fontSizeCompartment.of(getFontSizeTheme(FontSize[fontSizeKey]))
+      fontSizeCompartment.of(getFontSizeTheme(FontSize[editorFontSizeKey]))
     );
     if (darkMode) {
       editorExtensions.push(darkModeTheme);
@@ -125,8 +128,8 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     isReadOnly,
     editorEditableCompartment,
     fontSizeCompartment,
-    fontSizeKey,
-    fontSizeLoaded,
+    editorFontSizeKey,
+    editorFontSizeLoaded,
   ]);
 
   // When we have a new fontSizeKey, reset font size.
@@ -135,12 +138,12 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
       editorView.dispatch({
         effects: [
           fontSizeCompartment.reconfigure(
-            getFontSizeTheme(FontSize[fontSizeKey])
+            getFontSizeTheme(FontSize[editorFontSizeKey])
           ),
         ],
       });
     }
-  }, [editorView, fontSizeCompartment, fontSizeKey]);
+  }, [editorView, fontSizeCompartment, editorFontSizeKey]);
 
   // When we have a new channelId and/or start code, reset the editor with the start code.
   // A new channelId means we are loading a new project, and we need to reset the editor.
@@ -184,7 +187,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     }
   }, []);
 
-  if (!fontSizeLoaded) {
+  if (!editorFontSizeLoaded) {
     return null;
   }
 
