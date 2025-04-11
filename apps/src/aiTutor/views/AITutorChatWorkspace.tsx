@@ -94,19 +94,21 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
       >
         {storedMessages.map((message, index) => {
           const isLastAssistantMessage = index === lastAssistantMessageIndex;
-          return (
-            <div
-              key={message.id ?? `message-${index}`}
-              ref={isLastAssistantMessage ? lastAssistantMessageRef : null}
-            >
-              <ChatMessage
-                text={message.chatMessageText}
-                role={message.role}
-                customStyles={style}
-                footer={null}
-              />
-            </div>
-          );
+          if (message.role !== 'user') {
+            return (
+              <div
+                key={message.id ?? `message-${index}`}
+                ref={isLastAssistantMessage ? lastAssistantMessageRef : null}
+              >
+                <ChatMessage
+                  text={message.chatMessageText}
+                  role={message.role}
+                  customStyles={style}
+                  footer={null}
+                />
+              </div>
+            );
+          }
         })}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
         <AITutorSuggestedPrompts innerRef={handleSuggestedPromptsRef} />
