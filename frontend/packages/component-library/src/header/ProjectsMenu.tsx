@@ -3,6 +3,7 @@ import {Key, AnchorHTMLAttributes, HTMLAttributes, useState} from 'react';
 
 import {Button} from '@/button';
 import {Image, ImageProps} from '@/image';
+import {BodyFourText} from '@/typography';
 
 import moduleStyles from './header.module.scss';
 
@@ -11,6 +12,7 @@ export interface ProjectLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   label: string;
   href: string;
   image: Extract<ImageProps['src'], string>;
+  description?: string;
 }
 
 export interface ProjectsMenuProps extends HTMLAttributes<HTMLElement> {
@@ -47,11 +49,24 @@ const ProjectsMenu: React.FC<ProjectsMenuProps> = ({
       />
 
       {isOpen && (
-        <ul className={moduleStyles.newProjectMenu}>
-          {projectsLinks.map(({href, label, image}) => (
+        <ul
+          className={classNames(
+            moduleStyles.menu,
+            moduleStyles.newProjectMenu,
+            className,
+          )}
+        >
+          {projectsLinks.map(({href, label, image, description}) => (
             <li key={label}>
-              <Image src={image} />
-              <a href={href}>{label}</a>
+              <a href={href}>
+                <Image src={image} />
+                <div>
+                  {label}
+                  <BodyFourText className={moduleStyles.description}>
+                    {description}
+                  </BodyFourText>
+                </div>
+              </a>
             </li>
           ))}
         </ul>

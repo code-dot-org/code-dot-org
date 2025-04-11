@@ -45,7 +45,13 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
       />
 
       {isOpen && (
-        <ul className={classNames(moduleStyles.helpMenu, className)}>
+        <ul
+          className={classNames(
+            moduleStyles.menu,
+            moduleStyles.helpMenu,
+            className,
+          )}
+        >
           {helpLinks.map(({href, label}) => (
             <li key={label}>
               <a href={href}>{label}</a>
