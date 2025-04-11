@@ -5477,8 +5477,8 @@ class UserTest < ActiveSupport::TestCase
     let(:strict_country) {User::PASSWORD_STRICT_COUNTRIES.first}
 
     before do
+      allow(DCDO).to receive(:get).and_call_original
       allow(DCDO).to receive(:get).with('strict-password-country', false).and_return(true)
-      allow(DCDO).to receive(:get).with('migration_service_enabled', false).and_return(false)
     end
 
     describe 'when creating a teacher in a strict country' do
