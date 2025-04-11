@@ -13,7 +13,7 @@ export interface HelpLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 export interface HelpMenuProps extends HTMLAttributes<HTMLElement> {
   /** Help menu label */
-  helpMenuLabel: string;
+  helpButtonLabel: string;
   /** Help links */
   helpLinks: HelpLink[];
   /** Project custom class name */
@@ -21,7 +21,7 @@ export interface HelpMenuProps extends HTMLAttributes<HTMLElement> {
 }
 
 const HelpMenu: React.FC<HelpMenuProps> = ({
-  helpMenuLabel,
+  helpButtonLabel,
   helpLinks,
   className,
 }) => {
@@ -31,7 +31,7 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
     <>
       <Button
         className={classNames(moduleStyles.helpButton, className)}
-        ariaLabel={helpMenuLabel || 'Help'}
+        ariaLabel={helpButtonLabel || 'Help'}
         icon={{
           iconName: 'question-circle',
           iconStyle: 'solid',
