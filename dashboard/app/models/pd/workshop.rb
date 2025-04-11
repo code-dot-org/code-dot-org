@@ -94,6 +94,7 @@ class Pd::Workshop < ApplicationRecord
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
   validate :virtual_only_subjects_must_be_virtual
   validate :not_funded_subjects_must_not_be_funded
+  validate :valid_registration_link_format, if: :registration_link
 
   validate :config_validation
 
@@ -181,6 +182,12 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
+  def valid_registration_link_format
+    unless valid_url?(registration_link)
+      errors.add(:registration_link, "is not a valid URL")
+    end
+  end
+
   def virtual?
     sessions.any? {|session| session.session_format == "virtual"}
   end
@@ -192,6 +199,12 @@ class Pd::Workshop < ApplicationRecord
     else
       Pd::SharedWorkshopConstants::WORKSHOP_FORMATS[:in_person]
     end
+  end
+
+  def valid_url?(url)
+    uri = URI.parse(url)
+  rescue URI::InvalidURIError
+    false
   end
 
   def sanitize_time_zone
