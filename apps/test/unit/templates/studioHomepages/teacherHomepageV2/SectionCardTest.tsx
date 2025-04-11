@@ -53,6 +53,8 @@ describe('SectionCard', () => {
     syncEnabled: false,
     ttsAutoplayEnabled: false,
     unitId: null,
+    avatar_color: 1,
+    avatar_emoji: 1,
   };
 
   const store: Store = getStore();
@@ -120,6 +122,6 @@ describe('SectionCard', () => {
 
   it('renders the SectionAvatar component', () => {
     renderComponent();
-    screen.getByText('☔');
+    screen.getByText('🐧');
   });
 });
