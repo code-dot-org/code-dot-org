@@ -66,7 +66,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
           request.stored_messages,
           request.new_message,
           request.level_id,
-          storage_encrypt_channel_id(storage_id_for_user_id(request.user_id), request.project_id),
+          request.project_id,
           request.user_id
         ) :
         AichatSagemakerHelper.get_sagemaker_assistant_response(
