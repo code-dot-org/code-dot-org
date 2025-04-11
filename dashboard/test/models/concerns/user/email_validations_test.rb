@@ -3,7 +3,7 @@ require 'test_helper'
 class EmailValidationsTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  context 'when building a new user without a password' do
+  context 'when building a new user without an email' do
     let(:user) {build(:user, email: nil)}
     it 'is invalid' do
       user.valid?
@@ -19,7 +19,7 @@ class EmailValidationsTest < ActiveSupport::TestCase
     end
   end
 
-  context 'when building a new user with an invalid password' do
+  context 'when building a new user with an invalid email' do
     let(:user) {build(:user, email: "foo@bar@com")}
     it 'is invalid' do
       user.valid?
@@ -27,7 +27,7 @@ class EmailValidationsTest < ActiveSupport::TestCase
     end
   end
 
-  context 'when building a new user with a valid password' do
+  context 'when building a new user with a valid email' do
     let(:user) {build(:user, email: "valid@example.net")}
     it 'is valid' do
       user.valid?
