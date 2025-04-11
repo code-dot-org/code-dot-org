@@ -1,0 +1,15 @@
+.sectionCodeBox {
+  line-height: 30px;
+  display: flex;
+}
+
+.sectionCode {
+  margin-left: 5px;
+  font-weight: bold;
+  cursor: copy;
+}
+
+.sectionCodeText {
+  display: flex;
+  flex-direction: row;
+}

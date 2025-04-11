@@ -49,6 +49,7 @@ import SharingControlActionsHeaderCell from '@cdo/apps/templates/manageStudents/
 import ShowSecret from '@cdo/apps/templates/manageStudents/ShowSecret';
 import UsStateColumn from '@cdo/apps/templates/manageStudents/Table/UsStateColumn';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import JoinLinkCopyButton from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/joinLinkCopyButton/JoinLinkCopyButton';
 import {
   tableLayoutStyles,
   sortableOptions,
@@ -63,7 +64,6 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -159,7 +159,6 @@ class ManageStudentsTable extends Component {
     this.getSortingColumns = this.getSortingColumns.bind(this);
     this.onSort = this.onSort.bind(this);
     this.getColumns = this.getColumns.bind(this);
-    this.copySectionCode = this.copySectionCode.bind(this);
     this.onPrintLoginCards = this.onPrintLoginCards.bind(this);
     this.showSectionCodeDialog = this.showSectionCodeDialog.bind(this);
     this.handleSaveAllClick = this.handleSaveAllClick.bind(this);
@@ -173,7 +172,6 @@ class ManageStudentsTable extends Component {
         position: 0,
       },
     },
-    showCopiedMsg: false,
     showSectionCodeDialog: false,
     showPasswordLengthFailure: false,
   };
@@ -770,28 +768,6 @@ class ManageStudentsTable extends Component {
     };
   }
 
-  copySectionCode() {
-    const {sectionId, sectionCode, studioUrlPrefix} = this.props;
-    const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
-    copyToClipboard(joinLink);
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'copy-section-code-join-link',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
-    this.setState({showCopiedMsg: true});
-    setTimeout(() => {
-      this.setState({showCopiedMsg: false});
-    }, 5000);
-    clearTimeout();
-  }
-
   onPrintLoginCards() {
     const {sectionId} = this.props;
     const url =
@@ -850,6 +826,7 @@ class ManageStudentsTable extends Component {
       sectionCode,
       studentData,
       isSectionAssignedCSA,
+      studioUrlPrefix,
     } = this.props;
 
     const noSectionCode = [
@@ -947,26 +924,16 @@ class ManageStudentsTable extends Component {
             />
           )}
           {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
-            <div
+            <JoinLinkCopyButton
+              sectionId={sectionId}
+              sectionCode={sectionCode}
+              studioUrlPrefix={studioUrlPrefix}
               style={styles.sectionCodeBox}
-              data-for="section-code"
-              data-tip
-              onClick={this.copySectionCode}
-            >
-              {!this.state.showCopiedMsg && (
-                <span>
-                  <span>{i18n.sectionCodeWithColon()}</span>
-                  <span style={styles.sectionCode}>{sectionCode}</span>
-                  <ReactTooltip id="section-code" role="tooltip" effect="solid">
-                    <div>{i18n.copySectionCodeTooltip()}</div>
-                  </ReactTooltip>
-                </span>
-              )}
-              {this.state.showCopiedMsg && (
-                <span>{i18n.copySectionCodeSuccess()}</span>
-              )}
-            </div>
+              textStyles={styles.sectionCodeText}
+            />
           )}
+
+          {/* TODO monday - also extract this to a component*/}
           {noSectionCode.includes(loginType) && (
             <div style={styles.sectionCodeBox}>
               {i18n.sectionCodeWithColon()}
@@ -1038,13 +1005,9 @@ const styles = {
   },
   sectionCodeBox: {
     float: 'right',
-    lineHeight: '30px',
   },
-  sectionCode: {
-    marginLeft: 5,
-    color: color.teal,
-    ...fontConstants['main-font-bold'],
-    cursor: 'copy',
+  sectionCodeText: {
+    fontSize: '13px',
   },
   noSectionCode: {
     color: color.teal,
