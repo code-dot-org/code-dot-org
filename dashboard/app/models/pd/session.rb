@@ -53,7 +53,7 @@ class Pd::Session < ApplicationRecord
   end
 
   def valid_meeting_link_format
-    unless valid_url?(meeting_link)
+    unless workshop.valid_url?(meeting_link)
       errors.add(:meeting_link, "is not a valid URL")
     end
   end
@@ -145,13 +145,6 @@ class Pd::Session < ApplicationRecord
 
   def too_soon_for_link?
     workshop.started_at.nil? || start - 48.hours > Time.zone.now
-  end
-
-  def valid_url?(url)
-    uri = URI.parse(url)
-    uri.is_a?(URI::HTTP) || uri.is_a?(URI::HTTPS)
-  rescue URI::InvalidURIError
-    false
   end
 
   private def unused_random_code
