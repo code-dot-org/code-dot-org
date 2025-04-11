@@ -50,6 +50,7 @@ const InnerFileBrowser = React.memo(
               <Droppable
                 data={{id: f.id}}
                 key={f.id + f.open}
+                Component="div"
                 className={classNames(moduleStyles.droppableArea, {
                   [moduleStyles.acceptingDrop]:
                     f.id === dropData?.id && dragData?.parentId !== f.id,
@@ -63,13 +64,15 @@ const InnerFileBrowser = React.memo(
                     enableMenu={!isReadOnly && !dragData?.id}
                   />
                   {f.open && (
-                    <InnerFileBrowser
-                      folders={folders}
-                      parentId={f.id}
-                      files={files}
-                      setFileType={setFileType}
-                      appName={appName}
-                    />
+                    <div className={moduleStyles.folder}>
+                      <InnerFileBrowser
+                        folders={folders}
+                        parentId={f.id}
+                        files={files}
+                        setFileType={setFileType}
+                        appName={appName}
+                      />
+                    </div>
                   )}
                 </MaybeDraggable>
               </Droppable>
@@ -92,6 +95,7 @@ const InnerFileBrowser = React.memo(
               <MaybeDraggable
                 data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
                 key={f.id}
+                Component="div"
               >
                 <FileRow {...fileRowProps} />
               </MaybeDraggable>

@@ -94,7 +94,7 @@ export const FileBrowser = React.memo(() => {
                 }
               )}
             >
-              <div id="uitest-files-list">
+              <div id="uitest-files-list" className={moduleStyles.folder}>
                 <InnerFileBrowser
                   parentId={DEFAULT_FOLDER_ID}
                   folders={source.folders}
