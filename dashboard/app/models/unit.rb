@@ -2170,6 +2170,10 @@ class Unit < ApplicationRecord
     user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
+  def has_ai_tutor_level?
+    levels&.any?(&:ai_tutor_available?)
+  end
+
   private def teacher_feedback_enabled?
     initiative = get_course_version&.course_offering&.marketing_initiative
     TEACHER_FEEDBACK_INITIATIVES.include? initiative

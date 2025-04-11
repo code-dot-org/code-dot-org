@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-10 06:26:36 UTC",
+    "serialized_at": "2025-04-11 04:11:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -272,7 +272,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**What vulnerabilities exist in networks, and what strategies can mitigate their impact?**\n\nIn this lesson, students take on the role of cybersecurity analysts to investigate real-world network security threats and identify effective defenses. Through an interactive simulation, they explore vulnerabilities such as phishing, weak passwords, default credentials, and social engineering. After investigating each vulnerability, students propose a mitigation strategy that can be applied in a real-world context.",
-        "preparation": "- Preview Level 1 to familiarize yourself with the scenarios, decision points, and key takeaways",
+        "preparation": "- Preview Level 1 to familiarize yourself with the scenarios, decision points, and key takeaways\n- Label the four corners of the room: Phishing, Weak Passwords, Social Engineering, Default Credentials for the lesson wrap up.",
         "student_overview": "**What vulnerabilities exist in networks, and what strategies can mitigate their impact?**\n\nIn this less, you step into the role of a cyber security analyst in order to investigate real-world network security threats and determine how to defend against them. Through an interactive simulation, you explore common security vulnerabilities—phishing, weak passwords, default credentials, and social engineering—and propose defensive strategies  to help protect against future attacks."
       },
       "seeding_key": {
@@ -3778,6 +3778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson8-level1_2025"
+        ],
         "progression": "Final Project Reflection"
       },
       "bonus": false,
