@@ -6,7 +6,7 @@ import {Image, ImageProps} from '@/image';
 
 import moduleStyles from './header.module.scss';
 
-export interface ProjectsLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface ProjectLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   key: Key;
   label: string;
   href: string;
@@ -17,7 +17,7 @@ export interface ProjectsMenuProps extends HTMLAttributes<HTMLElement> {
   /** Projects menu label */
   projectsButtonLabel: string;
   /** Projects links */
-  projectsLinks: ProjectsLink[];
+  projectsLinks: ProjectLink[];
   /** Project custom class name */
   className?: string;
 }
