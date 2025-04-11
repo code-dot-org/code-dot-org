@@ -16,14 +16,11 @@ export const PublishSettings: FC<PublishSettingsProps> = ({
   errors,
   dispatchWorkshop,
 }) => {
-  const handleChange = (
-    event: ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
-  ) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const {value, checked, name} = event.target;
     dispatchWorkshop({
       type: 'UPDATE_WORKSHOP',
-      payload: {[event.target.name]: event.target.value},
+      payload: {[name]: name === fields.hidden?.stateKey ? checked : value},
     });
   };
 
