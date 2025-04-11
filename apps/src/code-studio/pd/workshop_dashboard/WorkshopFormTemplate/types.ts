@@ -66,9 +66,9 @@ export interface Session {
   start: string;
   end: string;
   code: string;
-  location_address?: string;
-  location_name?: string;
-  meeting_link?: string;
+  location_address?: string | null;
+  location_name?: string | null;
+  meeting_link?: string | null;
   session_format: SessionFormat;
 }
 
@@ -95,25 +95,25 @@ export interface SessionFormState {
 
 export interface Workshop {
   id: number;
-  course?: string;
-  name?: string;
-  capacity?: number;
+  course?: string | null;
+  name?: string | null;
+  capacity?: number | null;
   grades?: string[];
-  description?: string;
-  notes?: string;
+  description?: string | null;
+  notes?: string | null;
   suppress_email?: boolean;
-  regional_partner_id?: number;
+  regional_partner_id?: number | null;
   organizer?: Organizer;
   facilitators?: Facilitator[];
-  subject?: string;
-  fee?: string;
-  prereq?: string;
+  subject?: string | null;
+  fee?: string | null;
+  prereq?: string | null;
   hidden?: boolean;
-  registration_link?: string;
+  registration_link?: string | null;
   sessions: Session[];
   course_offerings?: number[];
-  participant_group_type?: string;
-  time_zone?: string;
+  participant_group_type?: string | null;
+  time_zone?: string | null;
 }
 
 export interface WorkshopRequest

@@ -56,26 +56,26 @@ export const sessionDataToState = (
 export const workshopStateToApi = (
   workshop: WorkshopFormState
 ): Omit<WorkshopRequest, 'sessions'> => ({
-  course: workshop.course || undefined,
+  course: workshop.course || null,
   capacity:
     workshop.capacity && !isNaN(Number(workshop.capacity))
       ? Number(workshop.capacity)
-      : undefined,
-  description: workshop.description || undefined,
+      : null,
+  description: workshop.description || null,
   facilitators: workshop.facilitators,
-  fee: workshop.fee || undefined,
+  fee: workshop.fee || null,
   grades: workshop.grades,
   hidden: workshop.hidden,
-  name: workshop.name || undefined,
-  notes: workshop.notes || undefined,
-  prereq: workshop.hasPrereq ? workshop.prereq : undefined,
-  regional_partner_id: workshop.regionalPartnerId ?? undefined,
-  registration_link: workshop.registrationLink || undefined,
-  subject: workshop.subject || undefined,
+  name: workshop.name || null,
+  notes: workshop.notes || null,
+  prereq: workshop.hasPrereq ? workshop.prereq : null,
+  regional_partner_id: workshop.regionalPartnerId ?? null,
+  registration_link: workshop.registrationLink || null,
+  subject: workshop.subject || null,
   suppress_email: workshop.suppressEmail,
   course_offerings: workshop.courseOfferings.map(offering => Number(offering)),
-  participant_group_type: workshop.participantGroupType,
-  time_zone: workshop.timeZone,
+  participant_group_type: workshop.participantGroupType || null,
+  time_zone: workshop.timeZone || null,
 });
 
 export const sessionStateToApi = (
@@ -109,17 +109,11 @@ export const sessionStateToApi = (
         .utc()
         .toISOString(),
       location_address:
-        session.format === 'in_person'
-          ? session.locationAddress || undefined
-          : undefined,
+        session.format === 'in_person' ? session.locationAddress || null : null,
       location_name:
-        session.format === 'in_person'
-          ? session.locationName || undefined
-          : undefined,
+        session.format === 'in_person' ? session.locationName || null : null,
       meeting_link:
-        session.format === 'virtual'
-          ? session.meetingLink || undefined
-          : undefined,
+        session.format === 'virtual' ? session.meetingLink || null : null,
     });
   });
 
