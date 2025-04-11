@@ -208,7 +208,18 @@ Resources:
           FromPort: 443
           ToPort: 443
           SourceSecurityGroupId: {Ref: ELBSecurityGroup}
-        # Enable Dashboard Puma to listen on a TCP port (in addition to receiving HTTP requests via a Unix socket from nginx).
+        # nginx listens for incoming HTTP requests from daemon (for debugging with tools like curl).
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          SourceSecurityGroupId: {Ref: DaemonSecurityGroup}
+        # nginx listens for incoming HTTP requests from gateway (for debugging with tools like curl).
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          SourceSecurityGroupId: {Ref: GatewaySecurityGroup}
+        # Dashboard Puma listens for incoming HTTP requests forwarded by Load Balancer
+        # (in addition to receiving HTTP requests via a Unix socket from nginx).
         - IpProtocol: tcp
           FromPort: 9000
           ToPort: 9000
@@ -217,7 +228,8 @@ Resources:
           FromPort: 9000
           ToPort: 9000
           SourceSecurityGroupId: {Ref: ELBSecurityGroup}
-        # Enable Pegasus Puma to listen on a TCP port (in addition to receiving HTTP requests via a Unix socket from nginx).
+        # Pegasus Puma listens for incoming HTTP requests forwarded by Load Balancer
+        # (in addition to receiving HTTP requests via a Unix socket from nginx).
         - IpProtocol: tcp
           FromPort: 9001
           ToPort: 9001
