@@ -3769,6 +3769,7 @@ __metadata:
     dompurify: "npm:^3.2.4"
     lodash: "npm:^4.17.21"
     react-player: "npm:^3.0.0-canary.4"
+    react-schemaorg: "npm:^2.0.0"
   peerDependencies:
     classnames: ^2.5.1
     dompurify: ^3.2.4
@@ -24307,6 +24308,17 @@ canvg@gabelerner/canvg:
   peerDependencies:
     react: ">=16.8"
   checksum: 10/d0c79a0f95a88730c0d2bfd098da9d6bdd4d7f08d4e1ddd152b5d013d3c01064afdd6fed57d4d3fa50c42c412e6d00e9217b2abd6cdbf4aaf810b7c33e728400
+  languageName: node
+  linkType: hard
+
+"react-schemaorg@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "react-schemaorg@npm:2.0.0"
+  peerDependencies:
+    react: ">=16.3.0"
+    schema-dts: ">=0.7.4"
+    typescript: ">=3.1.6"
+  checksum: 10/7bccee0982e3d90188a6ca70eef6705ac75961eb43d090b8e8a56ea1c0105c4eb04970996903c2ad5d75933bb7f5d0b087a109f5536ab5c45d44e7d77805a640
   languageName: node
   linkType: hard
 
