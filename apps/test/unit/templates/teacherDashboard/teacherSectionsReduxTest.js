@@ -101,6 +101,8 @@ const sections = [
       email: 'teacher@code.org',
       ltiRosterSyncEnabled: false,
     },
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
   {
     id: 12,
@@ -153,6 +155,8 @@ const sections = [
       email: 'teacher@code.org',
       ltiRosterSyncEnabled: false,
     },
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
   {
     id: 13,
@@ -200,6 +204,8 @@ const sections = [
       email: 'teacher@code.org',
       ltiRosterSyncEnabled: false,
     },
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
   {
     id: 307,
@@ -241,6 +247,8 @@ const sections = [
     },
     at_risk_age_gated_date: undefined,
     at_risk_age_gated_us_state: undefined,
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
 ];
 
@@ -596,6 +604,8 @@ describe('teacherSectionsRedux', () => {
         anyStudentHasProgress: undefined,
         atRiskAgeGatedDate: null,
         atRiskAgeGatedUsState: undefined,
+        avatar_color: 1,
+        avatar_emoji: 1,
       });
     });
   });
@@ -952,6 +962,8 @@ describe('teacherSectionsRedux', () => {
           anyStudentHasProgress: undefined,
           atRiskAgeGatedDate: null,
           atRiskAgeGatedUsState: undefined,
+          avatar_color: undefined,
+          avatar_emoji: undefined,
         },
       });
     });
