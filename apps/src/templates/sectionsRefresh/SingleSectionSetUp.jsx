@@ -5,6 +5,8 @@ import React from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionAvatar';
+import experiments from '@cdo/apps/util/experiments';
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -37,6 +39,20 @@ export default function SingleSectionSetUp({
           />
         </label>
       </div>
+      {experiments.isEnabled('teacher-homepage-v2') &&
+        !isNewSection &&
+        section.avatar_color && (
+          <div className={moduleStyles.avatarContainer}>
+            <label className={moduleStyles.typographyLabelTwo}>
+              {i18n.sectionAvatar()}
+              <SectionAvatar
+                color={section.avatar_color}
+                emoji={section.avatar_emoji}
+              />
+            </label>
+            {i18n.sectionAvatarNotice()}
+          </div>
+        )}
       {participantType === ParticipantAudience.student && (
         <div className={moduleStyles.containerWithMarginTop}>
           <Chips

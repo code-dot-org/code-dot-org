@@ -2650,6 +2650,8 @@
   "score": "score",
   "secretWords": "Secret words",
   "section": "Section",
+  "sectionAvatar": "Section Avatar",
+  "sectionAvatarNotice": "This is the avatar that will be displayed for this section. Editing for section avatars will be available in a future update!",
   "sectionWithColon": "Section:",
   "sectionCode": "Section Code",
   "sectionCodeWithColon": "Section Code:",
