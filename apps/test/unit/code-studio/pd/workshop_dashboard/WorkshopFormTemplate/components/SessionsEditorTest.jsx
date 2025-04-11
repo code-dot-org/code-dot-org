@@ -8,12 +8,12 @@ import {
   DATE_FORMAT,
   TIME_FORMAT,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
-import {sessionsReducer} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate';
 import {
   SessionsEditor,
   generateNewSession,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/SessionsEditor';
 import {SessionPart} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/components/SessionsEditor/components/SessionPart';
+import {sessionsReducer} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/reducers/sessionsReducer';
 import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 const config = WorkshopCourseConfigs.find(

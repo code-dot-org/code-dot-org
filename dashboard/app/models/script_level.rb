@@ -268,7 +268,7 @@ class ScriptLevel < ApplicationRecord
   end
 
   def long_assessment?
-    assessment && level.is_a?(LevelGroup)
+    assessment && level.is_a?(LevelGroup) && !activity_guide_level?
   end
 
   def anonymous?

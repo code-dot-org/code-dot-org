@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-09 16:15:55 UTC",
+    "serialized_at": "2025-04-10 15:21:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -100,7 +100,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa-solid fa-video\"></i> **Video:** Show the short video, CS is Everything\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say**: Think about careers that work on ideas and things in the video.",
-        "progression_name": "Into video"
+        "progression_name": "Intro video"
       },
       "seeding_key": {
         "activity_section.key": "d716974e-2258-47b6-a0fd-1d831844d685",
@@ -169,7 +169,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Differentiation:** Level 8 has choices for students to expand their Sprite Lab skills.\n\nStudents do not need any of the skills in level 8 to finish their project but they are great extension ideas for those who are ready for a challenge and more coding! \n"
+            "markdown": "**Differentiation:** Level 9 has choices for students to expand their Sprite Lab skills.\n\nStudents do not need any of the skills in level 9 to finish their project but they are great extension ideas for those who are ready for a challenge and more coding! \n"
           }
         ]
       },
@@ -232,7 +232,7 @@
         "level_keys": [
           "test-elem-career-journeys-video_a"
         ],
-        "progression": "Into video"
+        "progression": "Intro video"
       },
       "bonus": false,
       "seeding_key": {
