@@ -137,7 +137,7 @@ const LoginTypeSelection: React.FunctionComponent<{
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
-    if (event.target.value.length >= 6) {
+    if (event.target.value.length >= passwordMinLength) {
       setPasswordIcon(CHECK_ICON);
       setPasswordIconClass(style.teal);
     } else {
