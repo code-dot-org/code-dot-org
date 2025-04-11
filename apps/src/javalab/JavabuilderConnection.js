@@ -277,9 +277,7 @@ export default class JavabuilderConnection {
         this.onTimeout();
         break;
       case StatusMessageType.EXITED:
-        //if (this.miniAppType !== CsaViewMode.NEIGHBORHOOD) {
         this.onNewlineMessage();
-        //}
         this.onExit();
         break;
       case StatusMessageType.RUNNING_PROJECT_TESTS:
@@ -313,14 +311,7 @@ export default class JavabuilderConnection {
         this.onStatusMessage(data.value, data.detail);
         break;
       case WebSocketMessageType.SYSTEM_OUT:
-        // if (this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
-        //   this.miniApp.handleSignal({
-        //     value: CONSOLE_LOG_KEY,
-        //     detail: data.value,
-        //   });
-        // } else {
         this.onOutputMessage(data.value);
-        //}
         break;
       case WebSocketMessageType.TEST_RESULT:
         testResult = onTestResult(

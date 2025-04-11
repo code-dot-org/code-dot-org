@@ -1,5 +1,11 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ConsoleManager from '@codebridge/Console/ConsoleManager';
+import {
+  getErrorMessage,
+  getImageMessage,
+  getSystemError,
+  getSystemMessage,
+} from '@codebridge/Console/MessageHelpers';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -8,18 +14,11 @@ import {
   setLoadedCodeEnvironment,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {ConsoleSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
-
-import {
-  getErrorMessage,
-  getImageMessage,
-  getSystemError,
-  getSystemMessage,
-} from '../codebridge/Console/MessageHelpers';
-import {ConsoleSignalType} from '../miniApps/neighborhood/constants';
 
 import {AWAITING_INPUT, SENDING_INPUT} from './pythonHelpers/constants';
 import {
@@ -68,6 +67,12 @@ const getMessageHandlers = (
   }
 };
 
+let {writeConsoleMessage, writePartialLine} = getMessageHandlers(
+  null,
+  null,
+  false
+);
+
 const setUpPyodideWorker = () => {
   // The web worker is versioned to ensure the correct version is loaded.
   // Update the version if you update the web worker.
@@ -85,13 +90,7 @@ const setUpPyodideWorker = () => {
     const {type, id, message} = event.data as PyodideMessage;
     const onSuccess = callbacks[id];
 
-    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
     const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
-    const {writeConsoleMessage, writePartialLine} = getMessageHandlers(
-      consoleManager,
-      neighborhood,
-      outputToNeighborhood
-    );
 
     switch (type) {
       case 'sysout':
@@ -262,6 +261,15 @@ const asyncRun = (() => {
     // Reset error state
     getStore().dispatch(setHasError(false));
     outputToNeighborhood = !!shouldOutputToNeighborhood;
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+    const messageHandlers = getMessageHandlers(
+      consoleManager,
+      neighborhood,
+      outputToNeighborhood
+    );
+    writeConsoleMessage = messageHandlers.writeConsoleMessage;
+    writePartialLine = messageHandlers.writePartialLine;
 
     return new Promise<PyodideMessage>(onSuccess => {
       callbacks[id] = onSuccess;
@@ -282,14 +290,6 @@ const restartPyodideIfProgramIsRunning = () => {
   if (Object.keys(callbacks).length > 0) {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
-
-    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
-    const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
-    const {writeConsoleMessage} = getMessageHandlers(
-      consoleManager,
-      neighborhood,
-      outputToNeighborhood
-    );
 
     writeConsoleMessage(
       getSystemMessage(pythonlabI18n.programStopped(), appName)
