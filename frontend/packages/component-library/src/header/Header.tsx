@@ -28,6 +28,8 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
     /** Go to Dashboard button */
     goToDashboard: AccountLinksProps['goToDashboard'];
   };
+  /** Is user logged in */
+  isLoggedIn: AccountLinksProps['isLoggedIn'];
   /** Help menu label */
   helpMenuLabel: HelpMenuProps['helpMenuLabel'];
   /** Help menu links */
@@ -42,6 +44,7 @@ const Header: React.FC<HeaderProps> = ({
   projectsButtonLabel,
   projectsLinks,
   accountLinks,
+  isLoggedIn = false,
   helpMenuLabel,
   helpLinks,
   className,
@@ -51,11 +54,12 @@ const Header: React.FC<HeaderProps> = ({
     {...HTMLAttributes}
     className={classNames(moduleStyles.headerNavigation, className)}
   >
-    <a href="/" className={moduleStyles.logo} aria-label="Go to home">
-      <Image src={logo} alt={'Code.org logo'} loading={'eager'} />
-    </a>
-
-    <MainLinks mainLinks={mainLinks} />
+    <div className={moduleStyles.mainWrapper}>
+      <a href="/" className={moduleStyles.logo} aria-label="Go to home">
+        <Image src={logo} alt={'Code.org logo'} loading={'eager'} />
+      </a>
+      <MainLinks mainLinks={mainLinks} />
+    </div>
 
     <div className={moduleStyles.buttonLinks}>
       <ProjectsMenu
@@ -66,7 +70,7 @@ const Header: React.FC<HeaderProps> = ({
         signIn={accountLinks.signIn}
         createAccount={accountLinks.createAccount}
         goToDashboard={accountLinks.goToDashboard}
-        isLoggedIn={false}
+        isLoggedIn={isLoggedIn}
       />
       <HelpMenu helpMenuLabel={helpMenuLabel} helpLinks={helpLinks} />
     </div>
