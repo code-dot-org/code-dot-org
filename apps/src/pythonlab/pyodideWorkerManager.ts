@@ -34,6 +34,7 @@ const appName = 'pythonlab';
 let inputServiceWorker: ServiceWorker | undefined;
 let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
+let outputToNeighborhood = false;
 
 const getMessageHandlers = (
   consoleManager: ConsoleManager | null,
@@ -55,8 +56,9 @@ const getMessageHandlers = (
     };
   } else if (consoleManager) {
     return {
-      writeConsoleMessage: consoleManager.writeConsoleMessage,
-      writePartialLine: consoleManager.writePartialLine,
+      writeConsoleMessage:
+        consoleManager.writeConsoleMessage.bind(consoleManager),
+      writePartialLine: consoleManager.writePartialLine.bind(consoleManager),
     };
   } else {
     return {
@@ -65,12 +67,6 @@ const getMessageHandlers = (
     };
   }
 };
-
-let {writeConsoleMessage, writePartialLine} = getMessageHandlers(
-  null,
-  null,
-  false
-);
 
 const setUpPyodideWorker = () => {
   // The web worker is versioned to ensure the correct version is loaded.
@@ -88,7 +84,14 @@ const setUpPyodideWorker = () => {
   worker.onmessage = event => {
     const {type, id, message} = event.data as PyodideMessage;
     const onSuccess = callbacks[id];
+
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
     const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+    const {writeConsoleMessage, writePartialLine} = getMessageHandlers(
+      consoleManager,
+      neighborhood,
+      outputToNeighborhood
+    );
 
     switch (type) {
       case 'sysout':
@@ -258,16 +261,7 @@ const asyncRun = (() => {
     await initializeServiceWorker();
     // Reset error state
     getStore().dispatch(setHasError(false));
-
-    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
-    const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
-    const messageHandlers = getMessageHandlers(
-      consoleManager,
-      neighborhood,
-      !!shouldOutputToNeighborhood
-    );
-    writeConsoleMessage = messageHandlers.writeConsoleMessage;
-    writePartialLine = messageHandlers.writePartialLine;
+    outputToNeighborhood = !!shouldOutputToNeighborhood;
 
     return new Promise<PyodideMessage>(onSuccess => {
       callbacks[id] = onSuccess;
@@ -288,6 +282,14 @@ const restartPyodideIfProgramIsRunning = () => {
   if (Object.keys(callbacks).length > 0) {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
+
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+    const {writeConsoleMessage} = getMessageHandlers(
+      consoleManager,
+      neighborhood,
+      outputToNeighborhood
+    );
 
     writeConsoleMessage(
       getSystemMessage(pythonlabI18n.programStopped(), appName)
