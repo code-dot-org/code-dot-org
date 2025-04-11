@@ -1,0 +1,104 @@
+import {sessionsReducer} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/reducers/sessionsReducer';
+import {
+  SessionFormState,
+  SessionAction,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
+
+describe('sessionsReducer', () => {
+  const initialState: SessionFormState[] = [
+    {
+      id: '1',
+      date: '2024-01-01',
+      start: '09:00',
+      end: '10:00',
+      locationAddress: '',
+      locationName: '',
+      meetingLink: '',
+      format: 'in_person',
+      sameAsPrevious: false,
+    },
+  ];
+
+  it('should handle ADD_SESSION', () => {
+    const action: SessionAction = {type: 'ADD_SESSION'};
+    const newState = sessionsReducer(initialState, action);
+    expect(newState.length).toEqual(2);
+  });
+
+  it('should handle UPDATE_SESSION', () => {
+    const action: SessionAction = {
+      type: 'UPDATE_SESSION',
+      id: '1',
+      payload: {locationName: 'New Location'},
+    };
+    const newState = sessionsReducer(initialState, action);
+    expect(newState[0].locationName).toEqual('New Location');
+  });
+
+  it('should handle UPDATE_SESSION_SAME_AS_PREVIOUS', () => {
+    const stateWithPrevious: SessionFormState[] = [
+      {
+        id: '0',
+        date: '2024-01-01',
+        start: '09:00',
+        end: '10:00',
+        locationAddress: '123 Main St',
+        locationName: 'Previous Location',
+        meetingLink: '',
+        format: 'in_person',
+        sameAsPrevious: false,
+      },
+      {
+        id: '1',
+        date: '2024-01-02',
+        start: '11:00',
+        end: '12:00',
+        locationAddress: '',
+        locationName: '',
+        meetingLink: '',
+        format: 'in_person',
+        sameAsPrevious: false,
+      },
+    ];
+    const action: SessionAction = {
+      type: 'UPDATE_SESSION_SAME_AS_PREVIOUS',
+      id: '1',
+    };
+    const newState = sessionsReducer(stateWithPrevious, action);
+    expect(newState[0].id).not.toEqual(newState[1].id);
+    expect(newState[1].locationAddress).toEqual('123 Main St');
+    expect(newState[1].locationName).toEqual('Previous Location');
+    expect(newState[1].sameAsPrevious).toEqual(true);
+  });
+
+  it('should handle DELETE_SESSION', () => {
+    const action: SessionAction = {type: 'DELETE_SESSION', id: '1'};
+    const newState = sessionsReducer(initialState, action);
+    expect(newState.length).toEqual(0);
+  });
+
+  it('should handle SET_SESSIONS', () => {
+    const newSessions: SessionFormState[] = [
+      {
+        id: '2',
+        date: '2024-01-02',
+        start: '11:00',
+        end: '12:00',
+        locationAddress: '',
+        locationName: '',
+        meetingLink: '',
+        format: 'in_person',
+        sameAsPrevious: false,
+      },
+    ];
+    const action: SessionAction = {type: 'SET_SESSIONS', payload: newSessions};
+    const newState = sessionsReducer(initialState, action);
+    expect(newState).toEqual(newSessions);
+  });
+
+  it('should return the current state for unknown actions', () => {
+    const action = {type: 'UNKNOWN_ACTION'} as unknown as SessionAction;
+    const newState = sessionsReducer(initialState, action);
+    expect(newState).toEqual(initialState);
+  });
+});
