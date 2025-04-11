@@ -71,7 +71,10 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               }}
             />
           )}
-          <SectionAvatar seed={section.id} />
+          <SectionAvatar
+            color={section.avatar_color || 0}
+            emoji={section.avatar_emoji || 0}
+          />
           <div className={styles.sectionCardHeaderText}>
             <Heading5 id={`section-card-title-${section.id}`}>
               {section.name}
