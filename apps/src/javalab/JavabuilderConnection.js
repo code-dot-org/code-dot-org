@@ -68,6 +68,19 @@ export default class JavabuilderConnection {
     this.allValidationPassed = true;
     this.seenMessage = false;
     this.hadWebsocketConnectionError = false;
+
+    if (this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
+      this.onOutputMessage = message =>
+        this.miniApp.handleSignal({
+          value: CONSOLE_LOG_KEY,
+          detail: message,
+        });
+      this.onNewlineMessage = () =>
+        this.miniApp.handleSignal({
+          value: CONSOLE_LOG_KEY,
+          detail: '\n',
+        });
+    }
   }
 
   // Get the access token to connect to javabuilder and then open the websocket connection.
@@ -265,9 +278,9 @@ export default class JavabuilderConnection {
         this.onTimeout();
         break;
       case StatusMessageType.EXITED:
-        if (this.miniAppType !== CsaViewMode.NEIGHBORHOOD) {
-          this.onNewlineMessage();
-        }
+        //if (this.miniAppType !== CsaViewMode.NEIGHBORHOOD) {
+        this.onNewlineMessage();
+        //}
         this.onExit();
         break;
       case StatusMessageType.RUNNING_PROJECT_TESTS:
@@ -301,14 +314,14 @@ export default class JavabuilderConnection {
         this.onStatusMessage(data.value, data.detail);
         break;
       case WebSocketMessageType.SYSTEM_OUT:
-        if (this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
-          this.miniApp.handleSignal({
-            value: CONSOLE_LOG_KEY,
-            detail: data.value,
-          });
-        } else {
-          this.onOutputMessage(data.value);
-        }
+        // if (this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
+        //   this.miniApp.handleSignal({
+        //     value: CONSOLE_LOG_KEY,
+        //     detail: data.value,
+        //   });
+        // } else {
+        this.onOutputMessage(data.value);
+        //}
         break;
       case WebSocketMessageType.TEST_RESULT:
         testResult = onTestResult(
