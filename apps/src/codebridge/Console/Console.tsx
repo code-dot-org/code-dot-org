@@ -5,19 +5,17 @@ import {FitAddon} from '@xterm/addon-fit';
 import {ImageAddon} from '@xterm/addon-image';
 import {Terminal} from '@xterm/xterm';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {useDispatch} from 'react-redux';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {FontSize} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {setConsoleFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import {fetchAndSaveConsoleFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import '@xterm/xterm/css/xterm.css';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import ConsoleManager from './ConsoleManager';
 import ControlButtons from './ControlButtons';
@@ -36,7 +34,7 @@ const Console: React.FunctionComponent = () => {
     state => state.lab2View.consoleFontSizeKey
   );
   const {signInState} = useAppSelector(state => state.currentUser);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const clearOutput = useCallback(
     (sendAnalytics: boolean) => {
@@ -167,18 +165,10 @@ const Console: React.FunctionComponent = () => {
   // Note that when the user selects a different font size from settings, fontSizeKey
   // is updated and saved on the backend.
   useEffect(() => {
-    const fetchFontSize = async () => {
-      if (signInState !== SignInState.SignedIn) {
-        return;
-      }
-      const savedConsoleFontSize =
-        await new UserPreferences().getConsoleFontSize(appName);
-      if (savedConsoleFontSize) {
-        dispatch(setConsoleFontSize(savedConsoleFontSize));
-      }
-    };
-
-    fetchFontSize();
+    if (signInState !== SignInState.SignedIn) {
+      return;
+    }
+    dispatch(fetchAndSaveConsoleFontSize({appName}));
   }, [signInState, appName, dispatch]);
 
   return (

@@ -1,7 +1,9 @@
-import {PayloadAction, createSlice} from '@reduxjs/toolkit';
+import {PayloadAction, createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 
 import {FontSize} from '@cdo/apps/lab2/constants';
-
+import {AppName} from '@cdo/apps/lab2/types';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 export interface Lab2ViewState {
   consoleFontSizeKey: keyof typeof FontSize;
   editorFontSizeKey: keyof typeof FontSize;
@@ -11,6 +13,39 @@ const initialState: Lab2ViewState = {
   consoleFontSizeKey: 'Small',
   editorFontSizeKey: 'Small',
 };
+
+// THUNKS
+
+// This thunk fetches the user's last selected console font size from the backend, then saves
+// it in redux.
+export const fetchAndSaveConsoleFontSize = createAsyncThunk<
+  void,
+  {appName: AppName},
+  {dispatch: AppDispatch}
+>('lab2View/fetchAndSaveConsoleFontSize', async ({appName}, {dispatch}) => {
+  const savedConsoleFontSize = await new UserPreferences().getConsoleFontSize(
+    appName
+  );
+  if (savedConsoleFontSize) {
+    dispatch(setConsoleFontSize(savedConsoleFontSize));
+  }
+});
+
+// This thunk fetches the user's last selected editor font size from the backend, then saves
+// it in redux.
+export const fetchAndSaveEditorFontSize = createAsyncThunk<
+  void,
+  {appName: AppName},
+  {dispatch: AppDispatch}
+>('lab2View/fetchAndSaveEditorFontSize', async ({appName}, {dispatch}) => {
+  const savedEditorFontSize = await new UserPreferences().getEditorFontSize(
+    appName
+  );
+  console.log('savedEditorFontSize', savedEditorFontSize);
+  if (savedEditorFontSize) {
+    dispatch(setEditorFontSize(savedEditorFontSize));
+  }
+});
 
 // SLICE
 const lab2ViewSlice = createSlice({
