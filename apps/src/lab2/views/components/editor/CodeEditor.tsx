@@ -3,16 +3,14 @@ import {Compartment, EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef, useState} from 'react';
-import {useDispatch} from 'react-redux';
 
 import {FontSize} from '@cdo/apps/lab2/constants';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
-import {setEditorFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import {fetchAndSaveEditorFontSize} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {AppName} from '@cdo/apps/lab2/types';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import i18n from '@cdo/apps/pythonlab/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {editorConfig} from './editorConfig';
 import {darkMode as darkModeTheme} from './editorThemes';
@@ -35,7 +33,7 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   darkMode = true,
 }) => {
   const editorRef = useRef<HTMLDivElement>(null);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [didInit, setDidInit] = useState(false);
   const [fontSizeLoaded, setFontSizeLoaded] = useState(false);
   const [editorView, setEditorView] = useState<EditorView | null>(null);
@@ -49,21 +47,12 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
   // Note that When the user selects a different font size from settings, fontSizeKey
   // is updated and saved on the backend.
   useEffect(() => {
-    const fetchFontSize = async () => {
-      if (signInState !== SignInState.SignedIn) {
-        setFontSizeLoaded(true);
-        return;
-      }
-      const savedEditorFontSize = await new UserPreferences().getEditorFontSize(
-        appName
-      );
-      if (savedEditorFontSize) {
-        dispatch(setEditorFontSize(savedEditorFontSize));
-      }
+    if (signInState !== SignInState.SignedIn) {
       setFontSizeLoaded(true);
-    };
-
-    fetchFontSize();
+      return;
+    }
+    dispatch(fetchAndSaveEditorFontSize({appName}));
+    setFontSizeLoaded(true);
   }, [dispatch, signInState, appName]);
 
   // These two compartments control read-only settings.
