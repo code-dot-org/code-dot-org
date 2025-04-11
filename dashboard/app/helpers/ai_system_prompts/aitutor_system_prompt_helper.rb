@@ -8,23 +8,14 @@ module AiSystemPrompts::AitutorSystemPromptHelper
     system_prompt << AiSystemPrompts::SystemPromptHelper.get_level_instructions(level) if level
     system_prompt << AiSystemPrompts::SystemPromptHelper.get_validated_level_test_file_contents(level) if level
 
-    end_of_prompt = "next message should start with [fixed-code-solution], followed by [pedagogical-guiding-answer-markdown], and end with [end-of-response]."
-    system_prompt << "\n\n#{end_of_prompt}"
+    #end_of_prompt = "next message should start with [fixed-code-solution], followed by [pedagogical-guiding-answer-markdown], and end with [end-of-response]."
+    #system_prompt << "\n\n#{end_of_prompt}"
 
     system_prompt
   end
 
   def self.get_base_system_prompt
-    base_system_prompt = "You are responding to a student's query about programming.
-
-    Target the reading age of an American 7th grader.
-
-    Use the Socratic method to guide the student to the answer, but do not give them the answer directly.
-
-    Just focus on the biggest single issue you find.  Use plain English in the answer.
-
-    I don't want multiple steps, points, or questions.  Just one question that helps the student to make progress.
-    "
+    base_system_prompt = "You are responding to a query about programming.  Target the reading age of an American 7th grader.  Use the Socratic method to guide the student to the answer, but do not give them the answer directly.  Just focus on the biggest single issue you find.  Use plain English in the answer.  I don't want multiple steps, points, or questions.  Just one question that helps the student to make progress."
     base_system_prompt
   end
 
