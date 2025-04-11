@@ -934,6 +934,7 @@ GEM
     unf_ext (0.0.7.4)
     unicode-display_width (2.5.0)
     unicode_utils (1.4.0)
+    uri (1.0.3)
     user_agent_parser (2.15.0)
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
