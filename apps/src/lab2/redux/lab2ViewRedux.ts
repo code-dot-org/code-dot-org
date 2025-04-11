@@ -45,8 +45,8 @@ export const fetchAndSaveEditorFontSize = createAsyncThunk<
   );
   if (savedEditorFontSize) {
     dispatch(setEditorFontSize(savedEditorFontSize));
-    dispatch(setEditorFontSizeLoaded(true));
   }
+  dispatch(setEditorFontSizeLoaded(true));
 });
 
 // SLICE

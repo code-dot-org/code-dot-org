@@ -1,8 +1,8 @@
 import {Record} from 'immutable';
 import $ from 'jquery';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import HttpClient from '@cdo/apps/util/HttpClient';
-
 export default class UserPreferences extends Record({userId: 'me'}) {
   /**
    * Save the using_text_mode user preference
@@ -116,12 +116,25 @@ export default class UserPreferences extends Record({userId: 'me'}) {
    * @param {string} appName
    */
   async getConsoleFontSize(appName) {
-    const consoleFontSizeResponse = await HttpClient.fetchJson(
-      '/user_preference/font_size/console'
-    );
-    const consoleFontSize =
-      consoleFontSizeResponse.value.console_font_size[appName];
-    return consoleFontSize;
+    try {
+      const consoleFontSizeResponse = await HttpClient.fetchJson(
+        '/user_preference/font_size/console'
+      );
+      const consoleFontSize =
+        consoleFontSizeResponse.value.console_font_size[appName];
+      return consoleFontSize;
+    } catch (error) {
+      // Don't log error if console font size for 'Not found'.
+      // User did not save preferred console font size yet.
+      if (error.response.status !== 404) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error fetching console font size', undefined, {
+            message: error.response,
+          });
+      }
+      return null;
+    }
   }
 
   /**
@@ -129,11 +142,24 @@ export default class UserPreferences extends Record({userId: 'me'}) {
    * @param {string} appName
    */
   async getEditorFontSize(appName) {
-    const editorFontSizeResponse = await HttpClient.fetchJson(
-      '/user_preference/font_size/editor'
-    );
-    const editorFontSize =
-      editorFontSizeResponse.value.editor_font_size[appName];
-    return editorFontSize;
+    try {
+      const editorFontSizeResponse = await HttpClient.fetchJson(
+        '/user_preference/font_size/editor'
+      );
+      const editorFontSize =
+        editorFontSizeResponse.value.editor_font_size[appName];
+      return editorFontSize;
+    } catch (error) {
+      // Don't log error if editor font size for 'Not found'.
+      // User did not save preferred editor font size yet.
+      if (error.response.status !== 404) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error fetching editor font size', undefined, {
+            message: error.response,
+          });
+      }
+      return null;
+    }
   }
 }
