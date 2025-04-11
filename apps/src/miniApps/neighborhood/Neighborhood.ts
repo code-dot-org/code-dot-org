@@ -111,9 +111,8 @@ export default class Neighborhood {
       this.seenFirstSignal = true;
       this.signals.push({
         value: CONSOLE_LOG_KEY,
-        detail: `${this.statusMessagePrefix} ${commonI18n.startingPainter()}`,
+        detail: `${this.statusMessagePrefix} ${commonI18n.startingPainter()}\n`,
       });
-      this.signals.push({value: CONSOLE_LOG_KEY, detail: ''});
     }
   }
 
@@ -127,6 +126,7 @@ export default class Neighborhood {
         // we are done processing commands and can stop checking for signals.
         // Set isRunning to false, add a blank line to the console, and return
         this.setIsRunning(false);
+        this.onNewlineMessage();
         return;
       }
       const timeForSignal =

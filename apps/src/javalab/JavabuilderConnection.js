@@ -265,7 +265,9 @@ export default class JavabuilderConnection {
         this.onTimeout();
         break;
       case StatusMessageType.EXITED:
-        this.onNewlineMessage();
+        if (this.miniAppType !== CsaViewMode.NEIGHBORHOOD) {
+          this.onNewlineMessage();
+        }
         this.onExit();
         break;
       case StatusMessageType.RUNNING_PROJECT_TESTS:
