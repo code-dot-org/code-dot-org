@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:56:37.000Z",
   "level_num": "custom",
@@ -9,7 +8,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hide_share_and_remix": "true",
-    "long_instructions": "####<i class=\"fa-solid fa-repeat\"></i> Repeat layers\r\n\r\n1. Change the number of [times](#clickable=repeat-block-field-workspace) the layered sounds repeat.\r\n2. Then press [Run](#clickable=run-button).\r\n\r\n**<i class=\"fa-solid fa-lightbulb-on\"></i> [Hint](#clickable=repeat-block-field-workspace)**",
+    "long_instructions": "####<i class=\"fa-solid fa-repeat\"></i> Repeat layers\r\n\r\n1. Change the number of [times](#clickable=repeat-block-field-workspace) the layered sounds repeat.\r\n2. Then press [Run](#clickable=run-button).\r\n\r\n**[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=repeat-block-field-workspace)**",
     "level_data": {
       "validationTimeout": 6,
       "startSources": {
@@ -33,7 +32,7 @@
                     "disableNextConnection": true
                   },
                   "fields": {
-                    "times": 1
+                    "times": 2
                   },
                   "inputs": {
                     "code": {
@@ -42,6 +41,7 @@
                         "id": "play_sounds_together",
                         "deletable": false,
                         "movable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": true
                         },
@@ -52,11 +52,12 @@
                               "id": "play_sound_at_current_location_simple2",
                               "deletable": false,
                               "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
                               "fields": {
-                                "sound": "benson_boone_in_the_stars/piano_verse_1"
+                                "sound": "rosa_linn_snap/chorus_1"
                               },
                               "next": {
                                 "block": {
@@ -64,11 +65,12 @@
                                   "id": "B;uG]HL1K=]aZ1LvxAIn",
                                   "deletable": false,
                                   "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
                                   "fields": {
-                                    "sound": "benson_boone_in_the_stars/drums_kick_beat"
+                                    "sound": "rosa_linn_snap/rhythm_full"
                                   },
                                   "next": {
                                     "block": {
@@ -76,11 +78,12 @@
                                       "id": "$%^Gz~U0$crxYII3(iH*",
                                       "deletable": false,
                                       "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": true
                                       },
                                       "fields": {
-                                        "sound": "benson_boone_in_the_stars/vocals_choir"
+                                        "sound": "rosa_linn_snap/guitar_and_banjo"
                                       }
                                     }
                                   }
@@ -105,59 +108,6 @@
       },
       "library": "launch2024",
       "sounds": {
-        "benson_boone_in_the_stars": [
-          "drums_kick_beat",
-          "drums_stomp_beat",
-          "drums_hats",
-          "drums_fill",
-          "crash",
-          "bass_chorus_1",
-          "bass_chorus_2",
-          "bass_chorus_3",
-          "bass_chorus_4",
-          "bass_chorus_5",
-          "piano_verse_1",
-          "piano_verse_2",
-          "piano_verse_3",
-          "piano_verse_4",
-          "piano_chorus_1",
-          "piano_chorus_2",
-          "piano_chorus_3",
-          "piano_chorus_4",
-          "piano_chorus_5",
-          "piano_chorus_6",
-          "small_synth_chorus_1",
-          "small_synth_chorus_2",
-          "ambience_chorus_1",
-          "ambience_chorus_2",
-          "ambience_chorus_3",
-          "ambience_chorus_4",
-          "ambience_chorus_5",
-          "acoustic_chorus_1",
-          "acoustic_chorus_2",
-          "acoustic_chorus_3",
-          "acoustic_chorus_4",
-          "acoustic_chorus_5",
-          "vocals_verse_1",
-          "vocals_verse_2",
-          "vocals_verse_3",
-          "vocals_verse_4",
-          "vocals_verse_5",
-          "vocals_verse_6",
-          "vocals_verse_7",
-          "vocals_verse_8",
-          "vocals_chorus_1",
-          "vocals_chorus_2",
-          "vocals_chorus_3",
-          "vocals_chorus_4",
-          "vocals_chorus_5",
-          "vocals_chorus_6",
-          "vocals_chorus_backups_1",
-          "vocals_chorus_backups_2",
-          "vocals_chorus_backups_3",
-          "vocals_chorus_backups_4",
-          "vocals_choir"
-        ],
         "hiphop": [
           "drum_beat_808",
           "drum_beat_bounce",
@@ -201,9 +151,43 @@
           "kick_impact",
           "bubble",
           "vibraslap"
+        ],
+        "rosa_linn_snap": [
+          "its_4_am",
+          "wishing_these_memories",
+          "turns_out_people_lied",
+          "as_if_it_was",
+          "prechorus",
+          "chorus_1",
+          "chorus_2",
+          "chorus_3",
+          "chorus_4",
+          "snap",
+          "backup_1",
+          "backup_2",
+          "backup_3",
+          "backup_4",
+          "backup_ohs_1",
+          "backup_ohs_2",
+          "kick",
+          "rhythm_soft",
+          "rhythm_full",
+          "soft_bass",
+          "chorus_bass",
+          "verse_bass",
+          "piano",
+          "soft_piano",
+          "dramatic_piano",
+          "driving_piano",
+          "guitar",
+          "soft_guitar",
+          "driving_guitar",
+          "guitar_and_banjo",
+          "lead_in_guitar",
+          "synth"
         ]
       },
-      "packId": "benson_boone_in_the_stars"
+      "packId": "rosa_linn_snap"
     },
     "validations": [
       {
@@ -243,7 +227,8 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:37.620+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-5sounds\\\"\"],\"cloned_from\":\"music-coding-intro-5sounds\"},{\"changed_at\":\"2025-04-09 17:06:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:26:09 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:37.620+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-5sounds\\\"\"],\"cloned_from\":\"music-coding-intro-5sounds\"},{\"changed_at\":\"2025-04-09 17:06:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:26:09 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 15:38:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:25:18 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:29:16 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:31:48 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:34:02 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:34:21 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:36:40 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:39:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

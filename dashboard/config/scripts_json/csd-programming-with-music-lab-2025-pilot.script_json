@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-10 04:16:30 UTC",
+    "serialized_at": "2025-04-11 03:50:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1429,7 +1429,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students open the Explore level and read the instructions. Students are asked to complete a series of tasks to help them become familiar with navigating Music Lab. Give students time to explore and experiment on their own.",
-        "progression_name": "Explore"
+        "progression_name": "Explore",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Play Together - an Impossible Task:** This level purposefully challenges students to do something that is not possible with the set of blocks they have: play 3 sounds simultaneously. This is the last challenge on the list and the only one that is not possible to do. While this may initially confuse students, it can be used as motivation for the next level which introduces the Play Together block. Once you notice students are starting to work on this challenge, regroup the class to explain this level and then continue to the next one where this block is introduced."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9ac1d7a0-0474-43cb-b2cd-791a27c69828",
