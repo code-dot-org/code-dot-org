@@ -4,6 +4,7 @@ import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import ConfirmationDialog from '../components/confirmation_dialog';
 
@@ -67,6 +68,11 @@ export default class DetailsPanel extends React.Component {
       header = <NotStartedHeader handleEdit={this.handleEditClick} />;
     } else if (isWorkshopAdmin) {
       header = <AdminHeader handleEdit={this.handleAdminEditClick} />;
+    }
+    if (
+      !WorkshopCourseConfigs.some(config => config.label === workshop.course)
+    ) {
+      header = <DetailsPanelHeader />;
     }
     return (
       <WorkshopPanel header={header}>
