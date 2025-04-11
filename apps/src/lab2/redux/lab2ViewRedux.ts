@@ -41,7 +41,6 @@ export const fetchAndSaveEditorFontSize = createAsyncThunk<
   const savedEditorFontSize = await new UserPreferences().getEditorFontSize(
     appName
   );
-  console.log('savedEditorFontSize', savedEditorFontSize);
   if (savedEditorFontSize) {
     dispatch(setEditorFontSize(savedEditorFontSize));
   }
