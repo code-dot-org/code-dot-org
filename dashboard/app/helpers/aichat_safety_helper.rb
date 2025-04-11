@@ -47,7 +47,7 @@ module AichatSafetyHelper
       attempts = 1
       Retryable.retryable(tries: 2) do
         messages = safety_check_messages(text, level_id)
-        response = client.request_chat_completion(messages, 1)
+        response = client.request_chat_completion(messages: messages, temperature: 1)
         raise "OpenAI request failed with status #{response.code}: #{response.body}" unless response.success?
 
         evaluation = JSON.parse(response.body)['choices'][0]['message']['content']

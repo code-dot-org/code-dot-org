@@ -131,8 +131,8 @@ class AichatSafetyHelperTest < ActionView::TestCase
   test "Open AI safety check uses American safety prompt if not in Spanish script" do
     stub_safety_services('openai', 'user')
 
-    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).with do |messages, _|
-      assert_includes messages[0][:content], "American"
+    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).with do |kwargs|
+      assert_includes kwargs[:messages][0][:content], "American"
       return true
     end
 
@@ -142,8 +142,8 @@ class AichatSafetyHelperTest < ActionView::TestCase
   test "Open AI safety check uses Spanish safety prompt if in Spanish script" do
     stub_safety_services('openai', 'user')
 
-    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).with do |messages, _|
-      assert_includes messages[0][:content], "Spanish"
+    OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).with do |kwargs|
+      assert_includes kwargs[:messages][0][:content], "Spanish"
       return true
     end
 

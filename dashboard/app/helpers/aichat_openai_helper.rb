@@ -60,7 +60,7 @@ module AichatOpenaiHelper
   end
 
   def self.request_chat_completion(messages, temperature)
-    http_response = client.request_chat_completion(messages, temperature)
+    http_response = client.request_chat_completion(messages: messages, temperature: temperature, timeout: 60)
     body = JSON.parse(http_response.body)
     raise StandardError.new(body['error']) if body['error']
     response = body&.dig("choices")&.first&.dig('message', 'content')
