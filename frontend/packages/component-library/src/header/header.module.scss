@@ -16,6 +16,17 @@
   align-items: center;
   gap: 1.875rem;
 
+  .logo {
+    color: transparent;
+    text-decoration: none;
+
+    & > figure {
+      width: 42px;
+      height: 42px;
+      border-radius: unset;
+    }
+  }
+
   ul {
     all: unset;
     display: flex;
@@ -36,6 +47,7 @@
 
 // Button links styles
 .buttonLinks {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -49,11 +61,32 @@
   body & .goToDashboard {
     color: var(--text-brand-teal-primary-fixed);
   }
+}
 
-  // New project styles
-  body & button.newProject > i {
-    font-size: 1.25rem;
-    width: unset;
-    line-height: unset;
+// New Project menu styles
+body .buttonLinks > button.newProject i {
+  width: unset;
+}
+
+.newProjectMenu {
+  position: absolute;
+  top: 2rem;
+}
+
+// Help menu styles
+body .buttonLinks > button.helpButton {
+  padding: 0;
+  background: transparent;
+  min-width: unset;
+
+  &:hover,
+  &:focus {
+    background: transparent;
   }
+}
+
+.helpMenu {
+  position: absolute;
+  top: 2rem;
+  right: 0;
 }

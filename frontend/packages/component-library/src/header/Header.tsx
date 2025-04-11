@@ -1,67 +1,49 @@
 import classNames from 'classnames';
-import {Key, HTMLAttributes, AnchorHTMLAttributes, useState} from 'react';
+import {HTMLAttributes} from 'react';
 
-import {Button, LinkButton} from '@/button';
+import {Image} from '@/image';
+
+import AccountLinks, {AccountLinksProps} from './AccountLinks';
+import HelpMenu, {HelpMenuProps} from './HelpMenu';
+import MainLinks, {MainLinksProps} from './MainLinks';
+import ProjectsMenu, {ProjectsMenuProps} from './ProjectsMenu';
 
 import moduleStyles from './header.module.scss';
-
-export interface SiteLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  key: Key;
-  label: string;
-  href: string;
-}
 
 export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   /** Site logo */
   logo: string;
   /** Header links */
-  siteLinks: SiteLink[];
-  /** Button labels */
-  buttonLabel: {
-    /** New project label */
-    newProject: 'New project' | string;
-    /** Sign in label */
-    signIn: 'Sign in' | string;
-    /** Create account label */
-    createAccount: 'Create account' | string;
-    /** Go to dashboard label */
-    goToDashboard: 'Go to dashboard' | string;
+  mainLinks: MainLinksProps['mainLinks'];
+  /** Projects button label */
+  projectsButtonLabel: string;
+  /** Projects menu links */
+  projectsLinks: ProjectsMenuProps['projectsLinks'];
+  /** Account links */
+  accountLinks: {
+    /** Sign In button */
+    signIn: AccountLinksProps['signIn'];
+    /** Create Account button */
+    createAccount: AccountLinksProps['createAccount'];
+    /** Go to Dashboard button */
+    goToDashboard: AccountLinksProps['goToDashboard'];
   };
-  /** Is user logged in */
-  isLoggedIn?: boolean;
+  /** Help menu label */
+  helpMenuLabel: HelpMenuProps['helpMenuLabel'];
+  /** Help menu links */
+  helpLinks: HelpMenuProps['helpLinks'];
   /** Header custom class name */
   className?: string;
 }
 
-const getNewProjectMenu = ({
-  buttonLabel,
-}: {
-  buttonLabel: HeaderProps['buttonLabel'];
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  return (
-    <Button
-      text={buttonLabel.newProject}
-      className={classNames(moduleStyles.newProject)}
-      type="secondary"
-      size="s"
-      color="white"
-      iconRight={{
-        iconName: isOpen ? 'caret-up' : 'caret-down',
-        iconStyle: 'solid',
-      }}
-      onClick={() => {
-        setIsOpen(!isOpen);
-      }}
-    />
-  );
-};
-
 const Header: React.FC<HeaderProps> = ({
   logo,
-  siteLinks,
-  buttonLabel,
-  isLoggedIn = false,
+  mainLinks,
+  projectsButtonLabel,
+  projectsLinks,
+  accountLinks,
+  helpMenuLabel,
+  helpLinks,
   className,
   ...HTMLAttributes
 }) => (
@@ -69,51 +51,24 @@ const Header: React.FC<HeaderProps> = ({
     {...HTMLAttributes}
     className={classNames(moduleStyles.headerNavigation, className)}
   >
-    <div className={moduleStyles.mainLinks}>
-      <img src={logo} alt="Code.org" />
-      <ul aria-label="Main site links">
-        {siteLinks?.map(({key, label, href, ...link}) => (
-          <li key={key}>
-            <a href={href} {...link}>
-              {label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <a href="/" className={moduleStyles.logo} aria-label="Go to home">
+      <Image src={logo} alt={'Code.org logo'} loading={'eager'} />
+    </a>
+
+    <MainLinks mainLinks={mainLinks} />
 
     <div className={moduleStyles.buttonLinks}>
-      {getNewProjectMenu({buttonLabel})}
-      <LinkButton
-        text={buttonLabel.signIn}
-        className={classNames(moduleStyles.signIn)}
-        type="secondary"
-        href="https://studio.code.org/users/sign_in"
-        size="s"
-        color="white"
+      <ProjectsMenu
+        projectsLinks={projectsLinks}
+        projectsButtonLabel={projectsButtonLabel}
       />
-      <LinkButton
-        text={buttonLabel.createAccount}
-        className={classNames(moduleStyles.createAccount)}
-        type="primary"
-        href="https://studio.code.org/users/sign_up/account_type"
-        size="s"
-        color="white"
+      <AccountLinks
+        signIn={accountLinks.signIn}
+        createAccount={accountLinks.createAccount}
+        goToDashboard={accountLinks.goToDashboard}
+        isLoggedIn={false}
       />
-      {!isLoggedIn && (
-        <LinkButton
-          text={buttonLabel.goToDashboard}
-          className={classNames(moduleStyles.goToDashboard)}
-          type="primary"
-          href="https://studio.code.org/users/sign_up/account_type"
-          size="s"
-          color="white"
-          iconRight={{
-            iconName: 'arrow-right-to-line',
-            iconStyle: 'solid',
-          }}
-        />
-      )}
+      <HelpMenu helpMenuLabel={helpMenuLabel} helpLinks={helpLinks} />
     </div>
   </nav>
 );
