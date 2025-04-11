@@ -54,6 +54,12 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
                [params[:grade].to_s]
              end
 
+    # Get avatars data from other sections to prevent duplicates
+    last_color = current_user.sections_instructed.select(&:avatar_color)&.max_by(&:id)&.avatar_color || -1
+    last_emoji = current_user.sections_instructed.select(&:avatar_emoji)&.max_by(&:id)&.avatar_emoji || -1
+    color = (last_color + 1) % 20
+    emoji = (last_emoji + 1) % 20
+
     section = Section.create(
       {
         user_id: current_user.id,
@@ -67,7 +73,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
         tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
         ai_tutor_enabled: params[:ai_tutor_enabled].nil? ? false : params[:ai_tutor_enabled],
-        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section]
+        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
+        avatar_color: color,
+        avatar_emoji: emoji,
       }
     )
     return head :bad_request unless section.persisted?
@@ -118,6 +126,14 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
     fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
     fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
+
+    # Get avatars data from other sections to prevent duplicates
+    last_color = current_user.sections_instructed.select(&:avatar_color)&.max_by(&:id)&.avatar_color || -1
+    last_emoji = current_user.sections_instructed.select(&:avatar_emoji)&.max_by(&:id)&.avatar_emoji || -1
+
+    # Sets the avatar color and emoji if not already present
+    fields[:avatar_color] = (last_color + 1) % 20 if section[:avater_color].nil?
+    fields[:avatar_emoji] = (last_emoji + 1) % 20 if section[:avatar_emoji].nil?
 
     section.update!(fields)
     if @unit

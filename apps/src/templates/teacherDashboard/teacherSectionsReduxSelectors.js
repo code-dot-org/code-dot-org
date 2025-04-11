@@ -203,6 +203,8 @@ export const sectionFromServerSection = serverSection => ({
     ? new Date(serverSection.at_risk_age_gated_date)
     : null,
   atRiskAgeGatedUsState: serverSection.at_risk_age_gated_us_state,
+  avatar_color: serverSection.avatar_color,
+  avatar_emoji: serverSection.avatar_emoji,
 });
 
 /**
