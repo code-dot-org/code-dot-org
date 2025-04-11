@@ -19,6 +19,17 @@ describe('DetailsPanel', () => {
     assert.isOk(editButton, 'Edit button was rendered');
   });
 
+  it('does not show an edit button when the workshop course config is not found', () => {
+    const wrapper = shallowDetailsPanel({
+      workshop: Factory.build('workshop', {course: 'Not in config'}),
+    });
+    const editButton = wrapper
+      .find('Connect(WorkshopForm)')
+      .find('Button')
+      .filterWhere(n => 'Edit' === n.text());
+    assert.isFalse(editButton.exists(), 'Edit button was not rendered');
+  });
+
   it('does not show an edit button when the workshop is not in "Not Started" state', () => {
     States.filter(s => 'Not Started' !== s).forEach(state => {
       const wrapper = shallowDetailsPanel({
