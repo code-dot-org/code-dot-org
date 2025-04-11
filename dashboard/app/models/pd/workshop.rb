@@ -112,12 +112,8 @@ class Pd::Workshop < ApplicationRecord
 
   def sessions_must_start_on_separate_days
     new_sessions = sessions.reject(&:marked_for_destruction?)
-    if new_sessions.all?(&:valid?)
-      unless new_sessions.map {|session| session.start_time.to_date}.uniq.length == new_sessions.length
-        errors.add(:sessions, 'must start on separate days')
-      end
-    else
-      errors.add(:sessions, "must each have a valid start and end")
+    unless new_sessions.map {|session| session.start_time.to_date}.uniq.length == new_sessions.length
+      errors.add(:sessions, 'must start on separate days')
     end
   end
 
@@ -203,7 +199,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def valid_url?(url)
-    uri = URI.parse(url)
+    URI.parse(url)
   rescue URI::InvalidURIError
     false
   end
