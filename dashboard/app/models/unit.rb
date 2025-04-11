@@ -1506,7 +1506,7 @@ class Unit < ApplicationRecord
     get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us', unit_group: nil)
+  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us')
     ActiveRecord::Base.connected_to(role: :reading) do
       # TODO: Set up peer reviews to be more consistent with the rest of the system
       # so that they don't need a bunch of one off cases (example peer reviews
@@ -1622,7 +1622,6 @@ class Unit < ApplicationRecord
   end
 
   def summarize_for_lesson_materials_view(user, unit_group)
-    # DAYNE SHOULD I DELETE UNIT_GROUP OR CHANGE IT TO RETURN THE FIRST UNIT_GROUP_UNITS?
     summary = {
       unitId: id,
       title: title_for_display,
@@ -1887,6 +1886,15 @@ class Unit < ApplicationRecord
     # If a boolean prop was missing from the input, it'll get populated in the result hash as false.
     boolean_keys.each {|k| result[k] = !!unit_data[k]}
     result
+  end
+
+  # A unit is considered to have a matching course if there is exactly one
+  # unit_group for this unit
+  # @deprecated - This method should no longer be used. This from a time when
+  # Units could only be in max 1 UnitGroup.
+  def unit_group
+    return nil if unit_group_units.length != 1
+    UnitGroup.get_from_cache(unit_group_units[0].course_id)
   end
 
   # If this unit is a standalone unit, returns its CourseVersion. Otherwise,
