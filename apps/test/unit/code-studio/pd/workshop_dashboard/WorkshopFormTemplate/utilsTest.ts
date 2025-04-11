@@ -139,6 +139,8 @@ describe('sessionStateToApi', () => {
           .utc()
           .toISOString(),
         meeting_link: 'https://test.meeting',
+        location_address: null,
+        location_name: null,
       },
       {
         id: undefined,
@@ -151,6 +153,7 @@ describe('sessionStateToApi', () => {
           .tz('2024-03-16 4:00pm', DATETIME_FORMAT, timeZone)
           .utc()
           .toISOString(),
+        meeting_link: null,
         location_address: '456 New St',
         location_name: 'New Location',
       },
@@ -188,9 +191,9 @@ describe('sessionStateToApi', () => {
           .tz('2024-03-15 12:00pm', DATETIME_FORMAT, timeZone)
           .utc()
           .toISOString(),
-        location_address: undefined,
-        location_name: undefined,
-        meeting_link: undefined,
+        location_address: null,
+        location_name: null,
+        meeting_link: null,
       },
     ];
 
@@ -258,6 +261,8 @@ describe('sessionStateToApi', () => {
           .utc()
           .toISOString(),
         meeting_link: 'https://test.meeting',
+        location_address: null,
+        location_name: null,
       },
       {
         id: undefined,
@@ -270,6 +275,7 @@ describe('sessionStateToApi', () => {
           .tz('2024-03-17 4:00pm', DATETIME_FORMAT, timeZone)
           .utc()
           .toISOString(),
+        meeting_link: null,
         location_address: '789 New St',
         location_name: 'New Location',
       },
@@ -360,22 +366,22 @@ describe('workshopStateToApi', () => {
     };
 
     const expectedApiFormat = {
-      course: undefined,
-      capacity: undefined,
-      description: undefined,
+      course: null,
+      capacity: null,
+      description: null,
       facilitators: [],
-      fee: undefined,
+      fee: null,
       grades: [],
       hidden: false,
-      name: undefined,
-      notes: undefined,
-      prereq: undefined,
-      regional_partner_id: undefined,
-      registration_link: undefined,
-      subject: undefined,
+      name: null,
+      notes: null,
+      prereq: null,
+      regional_partner_id: null,
+      registration_link: null,
+      subject: null,
       suppress_email: false,
       course_offerings: [],
-      participant_group_type: '',
+      participant_group_type: null,
       time_zone: 'America/Denver',
     };
 
@@ -407,22 +413,22 @@ describe('workshopStateToApi', () => {
     };
 
     const expectedApiFormat = {
-      course: undefined,
-      capacity: undefined,
-      description: undefined,
+      course: null,
+      capacity: null,
+      description: null,
       facilitators: [],
-      fee: undefined,
+      fee: null,
       grades: [],
       hidden: false,
-      name: undefined,
-      notes: undefined,
-      prereq: undefined,
-      regional_partner_id: undefined,
-      registration_link: undefined,
-      subject: undefined,
+      name: null,
+      notes: null,
+      prereq: null,
+      regional_partner_id: null,
+      registration_link: null,
+      subject: null,
       suppress_email: false,
       course_offerings: [],
-      participant_group_type: '',
+      participant_group_type: null,
       time_zone: 'America/Denver',
     };
 
