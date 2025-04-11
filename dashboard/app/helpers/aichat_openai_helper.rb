@@ -40,7 +40,7 @@ module AichatOpenaiHelper
     )
 
     [
-      {role: "system", content: instructions},
+      {role: "system", content: [{type: "text", text: instructions}]},
       *stored_messages.map {|message| format_message(message, encrypted_channel_id, level_name)},
       format_message(new_message, encrypted_channel_id, level_name)
     ]
@@ -81,10 +81,15 @@ module AichatOpenaiHelper
   def self.report_usage_metrics(usage, messages, level_id, project_id, user_id)
     return unless usage
 
-    filtered = messages.reject {|message| message[:content].is_a?(String)}
-    messages_with_assets_count = filtered.count {|message| message[:content].any? {|c| c[:type] != 'text'}}
-    pdfs_count = filtered.sum {|message| message[:content].count {|c| c[:type] == 'file'}}
-    images_count = filtered.sum {|message| message[:content].count {|c| c[:type] == 'image_url'}}
+    messages_with_assets_count = messages.count do |message|
+      message[:content].any? {|c| c[:type] != 'text'}
+    end
+    pdfs_count = messages.sum do |message|
+      message[:content].count {|c| c[:type] == 'file'}
+    end
+    images_count = messages.sum do |message|
+      message[:content].count {|c| c[:type] == 'image_url'}
+    end
 
     is_multimodal = messages_with_assets_count > 0
 

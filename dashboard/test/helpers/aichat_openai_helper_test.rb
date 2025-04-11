@@ -23,7 +23,7 @@ class AichatOpenaiHelperTest < ActionView::TestCase
 
   test 'formats messages with level system prompt' do
     expected_messages = [
-      {role: 'system', content: "Be safe. test prompt test retrieval"},
+      {role: 'system', content: [{type: 'text', text: "Be safe. test prompt test retrieval"}]},
       {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
       {role: 'assistant', content: [{type: 'text', text: 'assistant response'}]},
       {role: 'user', content: [{type: 'text', text: 'new message from user'}]}
@@ -42,7 +42,7 @@ class AichatOpenaiHelperTest < ActionView::TestCase
 
   test 'formats messages without level system prompt' do
     expected_messages = [
-      {role: 'system', content: "test prompt test retrieval"},
+      {role: 'system', content: [{type: 'text', text: "test prompt test retrieval"}]},
       {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
       {role: 'assistant', content: [{type: 'text', text: 'assistant response'}]},
       {role: 'user', content: [{type: 'text', text: 'new message from user'}]}
@@ -73,7 +73,7 @@ class AichatOpenaiHelperTest < ActionView::TestCase
     }.deep_stringify_keys
 
     expected_messages = [
-      {role: 'system', content: "test prompt test retrieval"},
+      {role: 'system', content: [{type: 'text', text: "test prompt test retrieval"}]},
       {role: 'user', content: [{type: 'text', text: 'hello from user'}]},
       {role: 'assistant', content: [{type: 'text', text: 'assistant response'}]},
       {role: 'user', content: [
