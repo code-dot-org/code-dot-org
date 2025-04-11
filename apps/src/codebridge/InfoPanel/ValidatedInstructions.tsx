@@ -2,6 +2,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {getSystemMessage} from '@codebridge/Console/MessageHelpers';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import classNames from 'classnames';
 import React, {useContext, useEffect, useMemo, useRef} from 'react';
@@ -37,8 +38,6 @@ import {
   UserLevelInteractions,
 } from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
-
-import {getSystemMessage} from '../Console/MessageHelpers';
 
 import MainInstructionsContent from './MainInstructionsContent';
 import ValidationResults from './ValidationResults';
