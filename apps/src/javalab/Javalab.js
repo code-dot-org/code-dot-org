@@ -145,7 +145,8 @@ Javalab.prototype.init = function (config) {
         this.onOutputMessage,
         this.onNewlineMessage,
         this.setIsRunning,
-        STATUS_MESSAGE_PREFIX
+        STATUS_MESSAGE_PREFIX,
+        this.onOutputMessage
       );
       config.afterInject = () =>
         this.miniApp.afterInject(

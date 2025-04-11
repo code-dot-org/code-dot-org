@@ -71,7 +71,11 @@ const NeighborhoodPreview: React.FunctionComponent<
           .getConsoleManager()
           ?.writeConsoleMessage(''),
       isRunning => dispatch(setIsRunning(isRunning)),
-      '[PYTHON LAB]'
+      '[PYTHON LAB]',
+      message =>
+        CodebridgeRegistry.getInstance()
+          .getConsoleManager()
+          ?.writePartialLine(message)
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
     return neighborhoodRef;

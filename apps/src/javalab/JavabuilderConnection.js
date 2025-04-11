@@ -2,10 +2,9 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import logToCloud from '@cdo/apps/logToCloud';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {ConsoleSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import javalabMsg from '@cdo/javalab/locale';
-
-import {CONSOLE_LOG_KEY} from '../miniApps/neighborhood/constants';
 
 import {
   WebSocketMessageType,
@@ -72,12 +71,12 @@ export default class JavabuilderConnection {
     if (this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
       this.onOutputMessage = message =>
         this.miniApp.handleSignal({
-          value: CONSOLE_LOG_KEY,
+          value: ConsoleSignalType.CONSOLE_LOG,
           detail: message,
         });
       this.onNewlineMessage = () =>
         this.miniApp.handleSignal({
-          value: CONSOLE_LOG_KEY,
+          value: ConsoleSignalType.CONSOLE_LOG,
           detail: '\n',
         });
     }

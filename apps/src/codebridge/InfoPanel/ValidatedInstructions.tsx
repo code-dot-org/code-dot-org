@@ -38,6 +38,8 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import commonI18n from '@cdo/locale';
 
+import {getSystemMessage} from '../Console/MessageHelpers';
+
 import MainInstructionsContent from './MainInstructionsContent';
 import ValidationResults from './ValidationResults';
 
@@ -178,7 +180,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeSystemMessage(codebridgeI18n.cannotTest(), appType);
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.cannotTest(), appType)
+        );
     }
   };
 
@@ -189,7 +193,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeSystemMessage(codebridgeI18n.cannotStop(), appType);
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.cannotStop(), appType)
+        );
       dispatch(setIsValidating(false));
     }
   };

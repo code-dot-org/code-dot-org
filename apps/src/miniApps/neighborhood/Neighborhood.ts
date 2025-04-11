@@ -5,7 +5,7 @@ import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
 import {LOOK_ID, SVG_ID} from '@cdo/apps/maze/constants';
 import commonI18n from '@cdo/locale';
 
-import {CONSOLE_LOG_KEY, NeighborhoodSignalType} from './constants';
+import {ConsoleSignalType, NeighborhoodSignalType} from './constants';
 import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
 import {ConsoleSignal, NeighborhoodSignal} from './types';
 
@@ -13,7 +13,9 @@ const Direction = tiles.Direction;
 
 const PAUSE_BETWEEN_SIGNALS = 200;
 const ANIMATED_STEP_SPEED = 500;
-const ANIMATED_STEPS = [NeighborhoodSignalType.MOVE];
+const ANIMATED_STEPS: (ConsoleSignalType | NeighborhoodSignalType)[] = [
+  NeighborhoodSignalType.MOVE,
+];
 const SIGNAL_CHECK_TIME = 200;
 
 // We are relying on old maze skins here, which are not typed.
@@ -24,6 +26,7 @@ export default class Neighborhood {
   private seenFirstSignal: boolean;
   private onOutputMessage: (message: string) => void;
   private onNewlineMessage: () => void;
+  private onPartialOutputMessage: (message: string) => void;
   private setIsRunning: (isRunning: boolean) => void;
   private statusMessagePrefix: string;
   private signals: (NeighborhoodSignal | ConsoleSignal)[];
@@ -34,7 +37,8 @@ export default class Neighborhood {
     onOutputMessage: (message: string) => void,
     onNewlineMessage: () => void,
     setIsRunning: (isRunning: boolean) => void,
-    statusMessagePrefix: string
+    statusMessagePrefix: string,
+    onPartialOutputMessage: (message: string) => void
   ) {
     this.controller = null;
     this.seenFirstSignal = false;
@@ -45,6 +49,7 @@ export default class Neighborhood {
     this.signals = [];
     this.nextSignalIndex = -1;
     this.speedTracker = NeighborhoodSpeedTracker.getInstance();
+    this.onPartialOutputMessage = onPartialOutputMessage;
   }
 
   afterInject(
@@ -107,10 +112,10 @@ export default class Neighborhood {
     // Add next signal to our queue of signals.
     this.signals.push(signal);
     // if this is the first non-console signal, send a starting painter message
-    if (!this.seenFirstSignal && signal.value !== CONSOLE_LOG_KEY) {
+    if (!this.seenFirstSignal && !(signal.value in ConsoleSignalType)) {
       this.seenFirstSignal = true;
       this.signals.push({
-        value: CONSOLE_LOG_KEY,
+        value: ConsoleSignalType.CONSOLE_LOG,
         detail: `${this.statusMessagePrefix} ${commonI18n.startingPainter()}\n`,
       });
     }
@@ -135,10 +140,12 @@ export default class Neighborhood {
         timeForSignal + PAUSE_BETWEEN_SIGNALS * this.getPegmanSpeedMultiplier();
 
       const beginTime = Date.now();
-      if (signal.value === CONSOLE_LOG_KEY) {
+      if (signal.value === ConsoleSignalType.CONSOLE_LOG) {
         this.onOutputMessage(signal.detail);
+      } else if (signal.value === ConsoleSignalType.PARTIAL_LOG) {
+        this.onPartialOutputMessage(signal.detail);
       } else {
-        this.mazeCommand(signal, timeForSignal);
+        this.mazeCommand(signal as NeighborhoodSignal, timeForSignal);
       }
       this.nextSignalIndex++;
       const remainingTime = totalSignalTime - (Date.now() - beginTime);
@@ -220,9 +227,6 @@ export default class Neighborhood {
   }
 
   getAnimationTime(signal: NeighborhoodSignal | ConsoleSignal) {
-    if (signal.value === CONSOLE_LOG_KEY) {
-      return 0;
-    }
     return ANIMATED_STEPS.includes(signal.value) ? ANIMATED_STEP_SPEED : 0;
   }
 

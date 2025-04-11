@@ -10,6 +10,7 @@ import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 
 import {getValidationFromSource} from '../codebridge';
+import {getSystemMessage} from '../codebridge/Console/MessageHelpers';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {
@@ -29,7 +30,9 @@ export async function handleRunClick(
 ) {
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
   if (!source) {
-    consoleManager?.writeSystemMessage(pythonlabI18n.noCode(), appName);
+    consoleManager?.writeConsoleMessage(
+      getSystemMessage(pythonlabI18n.noCode(), appName)
+    );
     return;
   }
   if (runTests) {
@@ -38,13 +41,17 @@ export async function handleRunClick(
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
     if (!code) {
-      consoleManager?.writeSystemMessage(
-        pythonlabI18n.noFileToRun({fileName: MAIN_PYTHON_FILE}),
-        appName
+      consoleManager?.writeConsoleMessage(
+        getSystemMessage(
+          pythonlabI18n.noFileToRun({fileName: MAIN_PYTHON_FILE}),
+          appName
+        )
       );
       return;
     }
-    consoleManager?.writeSystemMessage(pythonlabI18n.runningProgram(), appName);
+    consoleManager?.writeConsoleMessage(
+      getSystemMessage(pythonlabI18n.runningProgram(), appName)
+    );
     await runPythonCode(code, source);
     if (isNeighborhoodLevel()) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
@@ -99,9 +106,8 @@ export async function runAllTests(
   const validationToRun = validationFile || getValidationFromSource(source);
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
   if (validationToRun) {
-    consoleManager?.writeSystemMessage(
-      pythonlabI18n.runningLevelTests(),
-      appName
+    consoleManager?.writeConsoleMessage(
+      getSystemMessage(pythonlabI18n.runningLevelTests(), appName)
     );
     progressManager?.resetValidation();
     // We only send the separate validation file, because otherwise the
@@ -124,9 +130,8 @@ export async function runAllTests(
       }
     }
   } else {
-    consoleManager?.writeSystemMessage(
-      pythonlabI18n.runningProjectTests(),
-      appName
+    consoleManager?.writeConsoleMessage(
+      getSystemMessage(pythonlabI18n.runningProjectTests(), appName)
     );
     // Otherwise, we look for files that follow the regex 'test*.py' and run those.
     await runPythonCode(runStudentTests(), source);
