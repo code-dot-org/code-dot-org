@@ -110,6 +110,15 @@ button.validationButton {
   margin-top: 8px;
 }
 
+code {
+  //color: $light_primary_700;
+
+  //background-color: initial;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: rgba(255 255 255 / 0.3);
+}
+
 .markdownText {
   line-height: 0;
   user-select: text;
@@ -134,6 +143,10 @@ button.validationButton {
 
   code {
     color: $light_primary_700;
+
+    background-color: initial;
+    color: white;
+    border-color: rgba(255 255 255 / 0.3);
   }
 
   p {

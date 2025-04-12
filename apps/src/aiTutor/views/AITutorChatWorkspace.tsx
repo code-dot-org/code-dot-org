@@ -99,6 +99,7 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
               <div
                 key={message.id ?? `message-${index}`}
                 ref={isLastAssistantMessage ? lastAssistantMessageRef : null}
+                style={{opacity: index === storedMessages.length - 1 ? 1 : 0.7}}
               >
                 <ChatMessage
                   text={message.chatMessageText}
@@ -121,6 +122,8 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
 const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
   shouldDisplay,
 }) => {
+  return null;
+
   if (shouldDisplay) {
     return (
       <div className={style.waitingAnimationWrapper}>
