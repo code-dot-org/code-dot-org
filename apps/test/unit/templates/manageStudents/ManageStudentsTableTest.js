@@ -504,8 +504,8 @@ describe('ManageStudentsTable', () => {
         wrapper.find('NoSectionCodeDialog').props().typeClassroom
       ).to.equal(SectionLoginType.google_classroom);
       expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.false;
-      const mainTable = wrapper.find('ManageStudentsTable');
-      mainTable.setState({showSectionCodeDialog: true});
+
+      wrapper.find('#uitest-why-link').simulate('click');
       expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.true;
     });
 
@@ -527,8 +527,8 @@ describe('ManageStudentsTable', () => {
         wrapper.find('NoSectionCodeDialog').props().typeClassroom
       ).to.equal(SectionLoginType.clever);
       expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.false;
-      const mainTable = wrapper.find('ManageStudentsTable');
-      mainTable.setState({showSectionCodeDialog: true});
+
+      wrapper.find('#uitest-why-link').simulate('click');
       expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.equal(true);
     });
 

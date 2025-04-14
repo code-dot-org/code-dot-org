@@ -91,7 +91,7 @@ export const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
         className={styles.sectionCodeNotApplicable}
       >{` ${i18n.notApplicable()}. `}</span>
       <span className={styles.noSectionCode}>
-        <a onClick={() => showSectionCodeDialog()}>
+        <a onClick={() => showSectionCodeDialog()} id="uitest-why-link">
           {i18n.whyWithQuestionMark()}
         </a>
       </span>
