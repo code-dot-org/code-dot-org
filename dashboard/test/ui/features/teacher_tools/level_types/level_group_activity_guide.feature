@@ -34,7 +34,7 @@ Scenario: Teacher can view student summary of responses on level marked as asses
   And I type "sample response" into ".free-response > textarea"
   And I press ".submitButton" using jQuery to load a new page
 
-  # Teacher can view summary
+  # Teacher can view summary, specifically on a level marked as an assessment in levelbuilder
   When I sign in as "Teacher_Lilian"
   And I am on "http://studio.code.org/s/allthethings/lessons/53/levels/2"
   And I wait until element "a:contains(View student responses)" is visible
