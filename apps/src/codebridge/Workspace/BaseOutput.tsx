@@ -20,7 +20,6 @@ interface OutputProps {
   isVertical: boolean;
   maximizeMiniApp: () => void;
   minimizeMiniApp: () => void;
-  resetMiniApp: () => void;
   miniAppSeparatorProps: SeparatorProps;
   resizeContainerRef: React.RefObject<HTMLDivElement>;
   isMaximized: boolean;
@@ -39,7 +38,6 @@ const BaseOutput: React.FunctionComponent<OutputProps> = ({
   isVertical,
   maximizeMiniApp,
   minimizeMiniApp,
-  resetMiniApp,
   miniAppSeparatorProps,
   resizeContainerRef,
   isMaximized,
@@ -91,7 +89,6 @@ const BaseOutput: React.FunctionComponent<OutputProps> = ({
         <MiniAppPreview
           maximizeMiniApp={maximizeMiniApp}
           minimizeMiniApp={minimizeMiniApp}
-          resetMiniApp={resetMiniApp}
           isMaximized={isMaximized}
           style={{opacity: previewOpacity}}
         />

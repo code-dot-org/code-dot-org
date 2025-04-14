@@ -7,10 +7,11 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import ControlButtons from '@codebridge/Console/ControlButtons';
 import {MiniApps} from '@codebridge/constants';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import NeighborhoodPreview from './NeighborhoodPreview';
 
@@ -20,7 +21,6 @@ import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 interface MiniAppPreviewProps {
   maximizeMiniApp: () => void;
   minimizeMiniApp: () => void;
-  resetMiniApp: () => void;
   isMaximized: boolean;
   style?: React.CSSProperties;
   showMaximizeButton?: boolean;
@@ -30,13 +30,26 @@ interface MiniAppPreviewProps {
 const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   maximizeMiniApp,
   minimizeMiniApp,
-  resetMiniApp,
   isMaximized,
   style,
   showMaximizeButton = true,
   handleScaling,
 }) => {
   const {labConfig} = useCodebridgeContext();
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [isReset, setIsReset] = useState(true);
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+
+  useEffect(() => {
+    if (isRunning) {
+      setIsDisabled(true);
+      setIsReset(false);
+    } else if (isReset) {
+      setIsDisabled(true);
+    } else {
+      setIsDisabled(false);
+    }
+  }, [isRunning, isReset]);
 
   const miniApp = labConfig?.miniApp?.name;
 
@@ -51,6 +64,10 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
     direction: 'onLeft',
     tooltipId: 'reset-preview-tooltip',
     className: darkModeStyles.tooltipLeft,
+  };
+
+  const resetMiniApp = () => {
+    setIsReset(true);
   };
 
   return (
@@ -74,6 +91,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
               className={classNames(darkModeStyles.tertiaryButton)}
               isIconOnly={true}
               ariaLabel={codebridgeI18n.resetPreview()}
+              disabled={isDisabled}
             />
           </WithTooltip>
           {showMaximizeButton && (

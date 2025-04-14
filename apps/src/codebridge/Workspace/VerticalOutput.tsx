@@ -140,10 +140,6 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
     throttledResize(width, miniApp, miniAppHeight);
   };
 
-  const resetMiniApp = () => {
-    console.log('reset mini app');
-  };
-
   return (
     <BaseOutput
       style={style}
@@ -153,7 +149,6 @@ const VerticalOutput: React.FunctionComponent<VerticalOutputProps> = ({
       isVertical={true}
       maximizeMiniApp={maximizeMiniApp}
       minimizeMiniApp={minimizeMiniApp}
-      resetMiniApp={resetMiniApp}
       miniAppSeparatorProps={miniAppSeparatorProps}
       resizeContainerRef={resizeContainerRef}
       isMaximized={isMaximized}

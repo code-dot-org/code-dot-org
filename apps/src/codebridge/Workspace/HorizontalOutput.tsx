@@ -141,10 +141,6 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
     throttledResize(height, width, miniApp, miniAppWidth);
   };
 
-  const resetMiniApp = () => {
-    console.log('reset mini app');
-  };
-
   useEffect(() => {
     if (
       height !== undefined ||
@@ -164,7 +160,6 @@ const HorizontalOutput: React.FunctionComponent<HorizontalOutputProps> = ({
       isVertical={false}
       maximizeMiniApp={maximizeMiniApp}
       minimizeMiniApp={minimizeMiniApp}
-      resetMiniApp={resetMiniApp}
       miniAppSeparatorProps={miniAppSeparatorProps}
       resizeContainerRef={resizeContainerRef}
       isMaximized={isMaximized}
