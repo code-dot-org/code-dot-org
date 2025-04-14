@@ -44,8 +44,8 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   showMaximizeButton = true,
   handleScaling,
 }) => {
-  const {labConfig} = useCodebridgeContext();
-  const [isDisabled, setIsDisabled] = useState(false);
+  const {labConfig, levelProperties} = useCodebridgeContext();
+  const [isDisabled, setIsDisabled] = useState(true);
   const [isReset, setIsReset] = useState(true);
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
 
@@ -57,6 +57,11 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
       setIsReset(false);
     }
   }, [isRunning, isReset]);
+
+  useEffect(() => {
+    setIsReset(true);
+    setIsDisabled(true);
+  }, [levelProperties.id]);
 
   const miniApp = labConfig?.miniApp?.name;
 
