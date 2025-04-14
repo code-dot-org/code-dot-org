@@ -1,3 +1,4 @@
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import {
   TooltipOverlay,
   WithTooltip,
@@ -8,7 +9,6 @@ import React from 'react';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
-import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
@@ -47,9 +47,10 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     setShouldShowDialog(true);
   };
 
-  const close = () => {
-    setShouldShowDialog(false);
-  };
+  const classroomType =
+    loginType === SectionLoginType.google_classroom
+      ? i18n.loginTypeGoogleClassroom()
+      : i18n.loginTypeClever();
 
   const handleCopySectionCode = () => {
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
@@ -113,11 +114,17 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
           {i18n.whyWithQuestionMark()}
         </a>
       </span>
-      <NoSectionCodeDialog
-        typeClassroom={loginType}
-        handleClose={close}
-        isOpen={shouldShowDialog}
-      />
+      {shouldShowDialog && (
+        <Dialog
+          title={i18n.noSectionDialogHeader({classroom: classroomType})}
+          description={i18n.noSectionDialogBody({classroom: classroomType})}
+          primaryButtonProps={{
+            onClick: () => setShouldShowDialog(false),
+            text: i18n.ok(),
+          }}
+          onClose={() => setShouldShowDialog(false)}
+        />
+      )}
     </div>
   );
 };
