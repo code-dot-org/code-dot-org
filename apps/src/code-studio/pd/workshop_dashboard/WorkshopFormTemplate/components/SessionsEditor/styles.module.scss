@@ -35,11 +35,3 @@
 .addDateButton {
   border: 1px dashed var(--borders-neutral-primary);
 }
-
-.copyPreviousCheckbox {
-  display: inline-block;
-  margin-top: 0.75rem;
-  i::before {
-    background-color: var(--background-neutral-primary);
-  }
-}
