@@ -1,8 +1,9 @@
 import classNames from 'classnames';
-import {HTMLAttributes, useState} from 'react';
+import {HTMLAttributes, useState, useRef} from 'react';
 
 import {Button} from '@/button';
 
+import closeOnEvent from './hooks/closeOnEvent';
 import {Link} from './types';
 
 import moduleStyles from './header.module.scss';
@@ -21,15 +22,17 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  closeOnEvent(menuRef, () => setIsOpen(false), isOpen);
 
   return (
-    <>
+    <div
+      ref={menuRef}
+      className={classNames(moduleStyles.helpMenuWrapper, className)}
+    >
       <Button
-        className={classNames(
-          moduleStyles.helpButton,
-          moduleStyles.iconButton,
-          className,
-        )}
+        className={classNames(moduleStyles.helpButton, moduleStyles.iconButton)}
         ariaLabel={helpButtonLabel || 'Help menu'}
         icon={{
           iconName: 'question-circle',
@@ -39,7 +42,7 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
         type="primary"
         size="l"
         onClick={() => {
-          setIsOpen(!isOpen);
+          setIsOpen(prev => !prev);
         }}
       />
 
@@ -60,7 +63,7 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
           ))}
         </ul>
       )}
-    </>
+    </div>
   );
 };
 
