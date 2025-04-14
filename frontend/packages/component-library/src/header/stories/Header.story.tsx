@@ -134,7 +134,7 @@ const defaultArgs: HeaderProps = {
       href: 'https://studio.code.org/home',
     },
   },
-  isLoggedIn: true,
+  isLoggedIn: false,
   helpButtonLabel: 'Help',
   helpLinks: [
     {
