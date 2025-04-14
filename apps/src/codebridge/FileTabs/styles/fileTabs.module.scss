@@ -5,14 +5,29 @@
   justify-content: flex-start;
   gap: 6px;
   align-items: flex-end;
-  overflow-x: scroll;
+  overflow-x: auto;
   max-width: 100%;
   background-color: $light_gray_900;
-  scrollbar-width: none;
-  min-height: 32px;
+  scrollbar-width: thin;
+  box-sizing: border-box;
   font-size: 14px;
   font-weight: 600;
   color: $light_gray_100;
+
+  scrollbar-color: $light_gray_600 $light_black;
+  // webkit-scrollbar is only used by Safari. Chrome and Firefox use scrollbar-color.
+  ::-webkit-scrollbar {
+    background: $light_gray_950;
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $light_gray_600;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-corner {
+    background: $light_gray_950;
+  }
 }
 
 .fileTab {
