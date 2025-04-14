@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 const workshopShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   sessions: PropTypes.array.isRequired,
-  location_name: PropTypes.string.isRequired,
+  location_name: PropTypes.string,
   location_address: PropTypes.string,
-  on_map: PropTypes.bool.isRequired,
-  funded: PropTypes.bool.isRequired,
+  on_map: PropTypes.bool,
+  funded: PropTypes.bool,
   course: PropTypes.string.isRequired,
   subject: PropTypes.string,
   course_offering_names: PropTypes.string,
