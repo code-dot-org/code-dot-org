@@ -8,6 +8,7 @@ import {
   PointerSensor,
   useSensor,
   useSensors,
+  KeyboardSensor,
 } from '@dnd-kit/core';
 import {
   restrictToFirstScrollableAncestor,
@@ -59,7 +60,8 @@ export const FileBrowser = React.memo(() => {
       activationConstraint: {
         distance: 2,
       },
-    })
+    }),
+    useSensor(KeyboardSensor)
   );
 
   return (
