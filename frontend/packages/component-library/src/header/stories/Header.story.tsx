@@ -20,7 +20,6 @@ export default {
 } as Meta<HeaderProps>;
 
 const defaultArgs: HeaderProps = {
-  isLoggedIn: false,
   logo: logoImage,
   mainLinks: [
     {
@@ -135,6 +134,7 @@ const defaultArgs: HeaderProps = {
       href: 'https://studio.code.org/home',
     },
   },
+  isLoggedIn: true,
   helpButtonLabel: 'Help',
   helpLinks: [
     {
