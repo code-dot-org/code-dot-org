@@ -61,7 +61,7 @@ const Header: React.FC<HeaderProps> = ({
     {...HTMLAttributes}
     className={classNames(moduleStyles.headerNavigation, className)}
   >
-    <div className={moduleStyles.mainWrapper}>
+    <div className={moduleStyles.mainLinksWrapper}>
       <a href="/" className={moduleStyles.logo} aria-label="Go to home">
         <Image src={logo} alt={'Code.org logo'} loading={'eager'} />
       </a>

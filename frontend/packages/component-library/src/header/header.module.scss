@@ -17,7 +17,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 }
 
 // Main links styles
-.mainWrapper {
+.mainLinksWrapper {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -125,10 +125,10 @@ body .buttonLinks > button.iconButton {
 
   & > i {
     font-size: 1.25rem;
+  }
 
-    [dir='rtl'] & {
-      transform: scaleX(-1);
-    }
+  [dir='rtl'] &.helpButton {
+    transform: scaleX(-1);
   }
 
   &:hover,
@@ -266,7 +266,7 @@ body .buttonLinks > button.newProject i {
 // Tablet
 @media (max-width: $tablet-breakpoint) {
   // Hide Main links and New Project menu
-  .mainWrapper .mainLinks,
+  .mainLinksWrapper .mainLinks,
   body .newProject {
     display: none;
   }
