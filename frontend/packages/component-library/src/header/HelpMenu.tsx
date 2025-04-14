@@ -35,7 +35,7 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
           moduleStyles.iconButton,
           className,
         )}
-        ariaLabel={helpButtonLabel || 'Help'}
+        ariaLabel={helpButtonLabel || 'Help menu'}
         icon={{
           iconName: 'question-circle',
           iconStyle: 'solid',
@@ -56,8 +56,8 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
             className,
           )}
         >
-          {helpLinks.map(({href, label, ...link}) => (
-            <li key={label}>
+          {helpLinks.map(({key, href, label, ...link}) => (
+            <li key={key}>
               <a href={href} {...link}>
                 {label}
               </a>

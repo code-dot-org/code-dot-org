@@ -16,9 +16,9 @@ export interface HamburgerMenuLink
 }
 
 export interface HamburgerMenuProps extends HTMLAttributes<HTMLElement> {
-  /** Help menu label */
+  /** Hamburger menu label */
   hamburgerButtonLabel: string;
-  /** Help links */
+  /** Hamburger links */
   hamburgerLinks: HamburgerMenuLink[];
   /** Account links */
   accountLinks: {
@@ -52,7 +52,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           moduleStyles.iconButton,
           className,
         )}
-        ariaLabel={hamburgerButtonLabel || 'Help'}
+        ariaLabel={hamburgerButtonLabel || 'Hamburger menu'}
         icon={{
           iconName: isOpen ? 'xmark' : 'bars',
           iconStyle: 'solid',
@@ -77,16 +77,20 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
             />
           </div>
           <ul className={moduleStyles.menu}>
-            {hamburgerLinks.map(({href, hasDisplayLogic, label, ...link}) => (
-              <li
-                key={label}
-                className={hasDisplayLogic ? moduleStyles.hasDisplayLogic : ''}
-              >
-                <a href={href} {...link}>
-                  {label}
-                </a>
-              </li>
-            ))}
+            {hamburgerLinks.map(
+              ({key, href, hasDisplayLogic, label, ...link}) => (
+                <li
+                  key={key}
+                  className={
+                    hasDisplayLogic ? moduleStyles.hasDisplayLogic : ''
+                  }
+                >
+                  <a href={href} {...link}>
+                    {label}
+                  </a>
+                </li>
+              ),
+            )}
           </ul>
         </div>
       )}
