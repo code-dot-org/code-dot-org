@@ -1,6 +1,6 @@
 name 'programming-fundamentals-lesson5-level3_2025-launch'
 display_name 'level display_name here'
-description 'level description here'
+description 'give a partially complete program and asked to add code so the Painter reaches the intended location'
 
 sublevels
 level 'programming-fundamentals-lesson5-level3a_2025-launch'

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:56:39.000Z",
   "level_num": "custom",
@@ -34,18 +35,6 @@
         "contents": [
           {
             "kind": "block",
-            "type": "play_sound_at_current_location_simple2",
-            "id": "play_sound_at_current_location_simple2",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "fields": {
-              "sound": "electro/drum_beat_cowbell"
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
             "type": "play_rest_at_current_location_simple2",
             "id": "play_rest_at_current_location_simple2",
             "extraState": {
@@ -58,19 +47,45 @@
           },
           {
             "kind": "block",
-            "type": "play_sounds_together",
-            "id": "play_sounds_together",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
             "type": "play_sounds_sequential",
             "id": "play_sounds_sequential",
             "extraState": {
               "disableNextConnection": false
+            },
+            "inputs": {
+              "code": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "electro/drum_beat_cowbell"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "electro/synth_wiggle"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "electro/crackle"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             },
             "enabled": true
           },
@@ -82,13 +97,71 @@
               "disableNextConnection": false
             },
             "fields": {
-              "times": 1
+              "times": 3
+            },
+            "inputs": {
+              "code": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "electro/drum_beat_cowbell"
+                  }
+                }
+              }
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "inputs": {
+              "code": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "electro/drum_beat_cowbell"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "electro/synth_wiggle"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "fields": {
+                            "sound": "electro/crackle"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             },
             "enabled": true
           }
         ],
         "kind": "flyoutToolbox"
-      }
+      },
+      "allowChangeStartingPlayheadPosition": true
     },
     "name_suffix": "_launch",
     "predict_settings": {
@@ -100,8 +173,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:39.487+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-make\\\"\"],\"cloned_from\":\"music-coding-intro-make\"},{\"changed_at\":\"2025-04-10 15:59:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 16:00:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 16:04:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 17:36:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:39.487+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-make\\\"\"],\"cloned_from\":\"music-coding-intro-make\"},{\"changed_at\":\"2025-04-10 15:59:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 16:00:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 16:04:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 17:36:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:47:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:59:20 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-09 23:21:35 UTC",
+    "serialized_at": "2025-04-11 20:50:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -290,7 +290,7 @@
       "key": "cab331d7-7c83-4c1a-9181-b1f4accff58a",
       "position": 6,
       "properties": {
-        "progression_name": "Freeplay"
+        "progression_name": "Inspire & Try"
       },
       "seeding_key": {
         "activity_section.key": "cab331d7-7c83-4c1a-9181-b1f4accff58a",
@@ -531,31 +531,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "music-coding-intro-seq-panel_launch"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-coding-intro-seq-panel_launch"
-        ],
-        "lesson.key": "Songwriter's Toolbox",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
-      },
-      "level_keys": [
-        "music-coding-intro-seq-panel_launch"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "music-coding-intro-together1_launch"
         ],
         "progression": "Skill Building"
@@ -575,9 +550,9 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 5,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -600,9 +575,9 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -625,20 +600,17 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-seq-panel-rests_launch"
-        ],
         "progression": "Music Integration Video"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music-coding-intro-seq-panel-rests_launch"
+          "music-coding-intro-timing-video"
         ],
         "lesson.key": "Songwriter's Toolbox",
         "lesson_group.key": "",
@@ -646,12 +618,12 @@
         "activity_section.key": "615167db-875e-4764-9486-c336c00b7785"
       },
       "level_keys": [
-        "music-coding-intro-seq-panel-rests_launch"
+        "music-coding-intro-timing-video"
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -675,8 +647,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -700,8 +672,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -725,8 +697,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -750,12 +722,15 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Freeplay"
+        "level_keys": [
+          "music-coding-intro-inspiration"
+        ],
+        "progression": "Inspire & Try"
       },
       "bonus": false,
       "seeding_key": {
@@ -772,12 +747,15 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 14,
+      "chapter": 13,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Freeplay"
+        "level_keys": [
+          "music-coding-intro-make_launch"
+        ],
+        "progression": "Inspire & Try"
       },
       "bonus": false,
       "seeding_key": {
@@ -794,7 +772,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -819,7 +797,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -844,7 +822,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -869,7 +847,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -894,7 +872,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -919,7 +897,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -944,7 +922,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -969,7 +947,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -994,7 +972,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -1019,7 +997,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1044,7 +1022,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -1069,7 +1047,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -1094,7 +1072,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1119,7 +1097,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1144,7 +1122,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1169,7 +1147,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -1194,7 +1172,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -1219,7 +1197,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -1244,7 +1222,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -1269,7 +1247,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -1294,7 +1272,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -1319,7 +1297,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1344,7 +1322,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -1408,18 +1386,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-coding-intro-seq-panel_launch",
-        "script_level.level_keys": [
-          "music-coding-intro-seq-panel_launch"
-        ],
-        "lesson.key": "Songwriter's Toolbox",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "2698fc62-190e-4a71-9734-1ac159a987fc"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "music-coding-intro-together1_launch",
         "script_level.level_keys": [
           "music-coding-intro-together1_launch"
@@ -1456,9 +1422,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-coding-intro-seq-panel-rests_launch",
+        "level.key": "music-coding-intro-timing-video",
         "script_level.level_keys": [
-          "music-coding-intro-seq-panel-rests_launch"
+          "music-coding-intro-timing-video"
         ],
         "lesson.key": "Songwriter's Toolbox",
         "lesson_group.key": "",
