@@ -20,14 +20,14 @@ markdown <<MARKDOWN
     </ul>
   </div>
   <div>
-    <img src="https://images.code.org/384395754f9060f684fba88efd6d679b-image-1724077977393.png" 
+    <img src="https://images.code.org/815dee7807bf638ac35521cd09c3d16e-coding-with-ai-banner.png" 
          alt="Icon with computer and data symbols" 
          style="border-radius: 10px; width: 300px; height: auto;">
   </div>
 </div>
 
 
-#### This unit consists of 12 lessons, takes about three weeks to complete, and does not have Python programming.
+#### This unit consists of 13 lessons, takes about three weeks to complete, and does not have Python programming.
 
 <div style="clear:both;"></div>
 
@@ -36,7 +36,7 @@ markdown <<MARKDOWN
 </p>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ Preview the full <a href='google.com' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit</a>.
+    ➡️ Preview the full <a href='https://studio.code.org/s/pswai-pilot-2024' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit</a>.
 </p>
 
 MARKDOWN

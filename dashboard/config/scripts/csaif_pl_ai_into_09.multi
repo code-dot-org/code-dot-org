@@ -1,16 +1,16 @@
 name 'csaif_pl_ai_into_09'
 editor_experiment ''
-title 'Check for Understanding: Cybersecurity or NOT Cybersecurity'
-type 'multi2'
-question 'Select the scenarios that NOT are examples of Cybersecurity.'
+title 'Check for Understanding: Large Language Models'
+type 'multi1'
+question 'Which of the following best describes a Large Language Model (LLM)?'
 
 
 
-right ' A company trains employees on customer service etiquette to improve communication.'
-wrong 'A website requires users to verify their identity using two-factor authentication before logging in.'
-right 'A chef stores recipes in a physical cookbook to keep track of ingredients.'
-wrong 'A bank encrypts online transactions to protect customers from fraud and cyberattacks.'
-wrong 'A school district installs content filtering software to prevent students from accessing harmful websites.'
+wrong 'A type of calculator that can perform complex mathematical operations.'
+wrong 'A software program designed to edit and enhance images.'
+right 'A computer program trained to understand and generate human language.'
+wrong 'A robotic device used for manufacturing and assembly lines'
+
 
 
 teacher_markdown <<MARKDOWN

@@ -65,6 +65,8 @@ Dashboard::Application.routes.draw do
 
     resources :student_work_evaluations, only: [:create]
 
+    resources :student_work_evaluation_summaries, only: [:create]
+
     resources :user_level_interactions, only: [:create]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
@@ -865,6 +867,7 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning#workshops_as_facilitator_for_pl_page'
     get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
     get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
+    get 'regional_workshop_data/:zip_code', to: 'pd/professional_learning#regional_workshop_data'
     post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
     post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 

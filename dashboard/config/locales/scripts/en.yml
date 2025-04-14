@@ -9907,6 +9907,8 @@ en:
               name: AI Draft Levels
             lesson-11:
               name: Python Lab
+            lesson-12:
+              name: Lesson 10 - Data Visualization
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -21307,6 +21309,23 @@ en:
           student_description: Learn how chatbots and large-language models work behind the scenes!
           description_short: Builds a foundational understanding of text-based generative AI models
           description_audience: ''
+          lessons:
+            lesson-10:
+              name: 1.2 How Smart Is It, Really?
+            lesson-2:
+              name: 3.2 Is It Fair?
+            lesson-3:
+              name: 6.2 Who's Making the Choices?
+            lesson-4:
+              name: 9.2 Can You Trust the Bot?
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Foundations of Generative AI
+            lessonGroup-3:
+              display_name: Optional Lessons
+            lessonGroup-4:
+              display_name: "[Temp] New AI Chat Lessons"
+          name: exploring-gen-ai1-2025
         exploring-gen-ai2-2025:
           lesson_groups:
             lessonGroup-2:

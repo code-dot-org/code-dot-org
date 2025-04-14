@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-11 04:11:59 UTC",
+    "serialized_at": "2025-04-14 07:01:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4387,7 +4387,7 @@
   "resources": [
     {
       "name": "[KEY] AI Networks Chat",
-      "url": "https://docs.google.com/document/d/16CuO8QmWyk8-ARN--1S2znGx4KDn10GEf3HjN82D5-g/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/17m_80EDQvotN8ywKsOwArdgbBh_Df1z55c6yK0wp3Qw/edit?usp=sharing",
       "key": "_key_ai_networks_chat",
       "properties": {
         "audience": "Verified Teacher",
@@ -4410,8 +4410,20 @@
       }
     },
     {
+      "name": "[KEY] Network Diagram Analysis",
+      "url": "https://docs.google.com/document/d/15Nsh7tO7d7RVvheQSpd-5nBYLwXCfNtlVaUSG2zC8es/edit?usp=sharing",
+      "key": "_key_network_diagram_analysis",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_network_diagram_analysis"
+      }
+    },
+    {
       "name": "[KEY] Packets and Protocols",
-      "url": "https://docs.google.com/document/d/1sQMOZ6gLHiHRer8ODhdNEpd1nJff_jMnP7GjDUFTVpc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1HkXJBHGsC5mKmd18poO5cWdeKR0mHRmWl0z0YsXQK6k/edit?usp=sharing",
       "key": "_key_packets_and_protocols",
       "properties": {
         "audience": "Verified Teacher",
@@ -4447,7 +4459,7 @@
     },
     {
       "name": "AI Networks Chat",
-      "url": "https://docs.google.com/document/d/1aZKiP8iWpEHYO8y19GfwrbGsV7xQkm4P5khDwrhrrjo/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1EIf-YBvg0X8jMjJnj812sRHTjPnVkbWArbUqfo_ffms/edit?usp=sharing",
       "key": "ai_networks_chat",
       "properties": {
         "audience": "Student",
@@ -4497,7 +4509,7 @@
     },
     {
       "name": "Emerging Technologies",
-      "url": "https://docs.google.com/presentation/d/1nZxByfhwdrBpd5H6s5BwrXtO7JbDQraYbBMHfX8WxUI/view",
+      "url": "https://docs.google.com/presentation/d/1HwhwDDb-ZPDK2lUmy27fHEgONwuOuBX_LSvLAEhbKeA/edit?usp=sharing",
       "key": "emerging_technologies",
       "properties": {
         "audience": "Verified Teacher",
@@ -4534,7 +4546,7 @@
     },
     {
       "name": "HTTP and DNS",
-      "url": "https://docs.google.com/presentation/d/14yh9K9HBUzFKx4tVjaFYpfaYwQ_ajJSIYGc-H3EVnR4/view#slide=id.gca418c6afa_0_1070",
+      "url": "https://docs.google.com/presentation/d/1ainHdptvrQYfCXXkOUcw0hAay3-YlcTTf7hHBmsCERA/edit?usp=sharing",
       "key": "http_and_dns",
       "properties": {
         "audience": "Verified Teacher",
@@ -4545,8 +4557,20 @@
       }
     },
     {
+      "name": "HTTP Observations",
+      "url": "https://docs.google.com/document/d/1HZ3Yp1Kh0fUh94gaQq460MQPS9BpeBQO7Hh4aIqYzIw/edit?usp=sharing",
+      "key": "http_observations",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "http_observations"
+      }
+    },
+    {
       "name": "Internet Access Advocacy Campaign Project",
-      "url": "https://docs.google.com/presentation/d/1W0OAHCaHHrI1tNtkT_mFcK8rG2r5Cqg2_TBYfY8_ptE/view",
+      "url": "https://docs.google.com/presentation/d/1sFJilkpDqhGOswoce844_s--kcr4DsaK-FN8zornsfg/edit?usp=sharing",
       "key": "internet_access_advocacy_campaign_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -4558,7 +4582,7 @@
     },
     {
       "name": "Internet Access Advocacy Campaign Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1RsqhCd02leQ8SNFPEI2j_eWpwoXBZ55dwwXN264b394/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/10LJg4_NeHINJ1QKh6n2lGkOfTjwEJwdlns86B-alUJ4/edit?usp=sharing",
       "key": "internet_access_advocacy_campaign_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -4571,7 +4595,7 @@
     },
     {
       "name": "Internet Access IRL",
-      "url": "https://docs.google.com/document/d/1OqSxvU3q5NAJ2YuEneVg_QA_iCmZdYOaiMKj5awv-aU/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/1CI1AWCzg52fqn8JHihj8_ml6sn1L8t1m8MjJ07WOMzc/edit?usp=sharing",
       "key": "internet_access_irl",
       "properties": {
         "audience": "Student",
@@ -4584,7 +4608,7 @@
     },
     {
       "name": "Introduction to the Internet",
-      "url": "https://docs.google.com/presentation/d/1QFSZUiEc4s5ad9AqK-h2py41grOD3C7QfQFMm3a2-xc/view",
+      "url": "https://docs.google.com/presentation/d/1y4HXx4STFnWr7kmzoccIlEc6xT85c4mkxvwGcU4n5v8/edit?usp=sharing",
       "key": "introduction_to_the_internet",
       "properties": {
         "audience": "Verified Teacher",
@@ -4609,7 +4633,7 @@
     },
     {
       "name": "IP Addresses",
-      "url": "https://docs.google.com/presentation/d/1PNJfxfYIRlAUbYpAW8a2aH9ntCl-l4zTuGXWmApasUo/view",
+      "url": "https://docs.google.com/presentation/d/1EPFMI_UeE4f6FomxqWhoQcSxYgi4M34i5RdehBHmoLE/edit?usp=sharing",
       "key": "ip_addresses",
       "properties": {
         "audience": "Verified Teacher",
@@ -4645,7 +4669,7 @@
     },
     {
       "name": "Network Diagram Analysis",
-      "url": "https://docs.google.com/document/d/1QVGtMnSYeBE_fhsWKsbkw5q1gM7ZAyCtA8ip3xF-F4E/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1at4atqY76knT627ag5-o_YZkouYdWotn2Q43rjl6fQA/edit?usp=sharing",
       "key": "network_diagram_analysis",
       "properties": {
         "audience": "Student",
@@ -4658,7 +4682,7 @@
     },
     {
       "name": "Network Security",
-      "url": "https://docs.google.com/presentation/d/1t6wUVbPMjbV5bCARrFALcsaEK7SjeXhqIfRDBx0_c8k/view",
+      "url": "https://docs.google.com/presentation/d/1xsiVpdyk9D9w5lHjLuuvP7V4YsLvQClENkp-lKwmN6c/edit?usp=sharing",
       "key": "network_security",
       "properties": {
         "audience": "Verified Teacher",
@@ -4670,7 +4694,7 @@
     },
     {
       "name": "Network Security Risk Assessment Project",
-      "url": "https://docs.google.com/presentation/d/1aNzIdeBDW95Ze_qzNvuqPNz7dSHuPBqUQNeeLc3MEE0/view",
+      "url": "https://docs.google.com/presentation/d/1puVxPTQEPoUTPQkdS7XDSLn-HoM53Of85G9siddUVc8/edit?usp=sharing",
       "key": "network_security_risk_assessment_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -4682,7 +4706,7 @@
     },
     {
       "name": "Network Security Risk Assessment Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1LI2oF-XT5qutbPPjb_Y8BO0qcZxGb0dHcyTjl3Zxk3c/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1IO-DrZ7fRuMFXCzr7Xaq7aULq38qHmu4qOmpfAFyEm4/edit?usp=sharing",
       "key": "network_security_risk_assessment_project_planning_guide",
       "properties": {
         "audience": "Student",
@@ -4695,7 +4719,7 @@
     },
     {
       "name": "Networks and the Internet Unit Guide",
-      "url": "https://docs.google.com/document/d/1zTfZ1CxCdX1Kk-n195UEn2Fu_SVZ9RJO0sPJ5nGDCTE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/14YiuNXo8xwD2aQcmt2sBY0Oway5hI4RBHUez_CcWI4w/edit?usp=sharing",
       "key": "networks_and_the_internet_unit_guide",
       "properties": {
         "audience": "Student",
@@ -4708,7 +4732,7 @@
     },
     {
       "name": "Packets",
-      "url": "https://docs.google.com/presentation/d/1AM8LkR7PwcDyQvGh622HhH0F7wpBcFw41H2QISBA1c4/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1-jVNvpCrxU_p33rrnbLe7XvVIQwsTicio9r-dm38t3w/edit?usp=sharing",
       "key": "packets",
       "properties": {
         "audience": "Verified Teacher",
@@ -4720,7 +4744,7 @@
     },
     {
       "name": "Packets and Protocols",
-      "url": "https://docs.google.com/document/d/1Kv3ohVDHlzFqtNr6G8dUOQ3pDXgVhe366w3JxGGeufE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/12XtxAe5Dm03Ei6ICdALTDYFinY0GA9ma0rE6p1lphOE/edit?usp=sharing",
       "key": "packets_and_protocols",
       "properties": {
         "audience": "Student",
@@ -4757,8 +4781,20 @@
       }
     },
     {
+      "name": "Role Cards for Challenge 1 and 2",
+      "url": "https://docs.google.com/document/d/1ntvGt1aXcCQIlhDMPO3zxYJBFQbVANp5dzRDC092DJs/edit?usp=sharing",
+      "key": "role_cards_for_challenge_1_and_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "role_cards_for_challenge_1_and_2"
+      }
+    },
+    {
       "name": "Routers and Redundancy",
-      "url": "https://docs.google.com/presentation/d/1hCYLx0XdBCgBmr6yxpnsXwDO-yiD2JdnYZ-FYCsTd5U/view",
+      "url": "https://docs.google.com/presentation/d/1GQuN1mbYNeRTsPtELYx6hqDuvp93QmSquUrQmvgw6qk/edit?usp=sharing",
       "key": "routers_and_redundancy",
       "properties": {
         "audience": "Verified Teacher",
@@ -4770,7 +4806,7 @@
     },
     {
       "name": "Sending Bits",
-      "url": "https://docs.google.com/presentation/d/1RUE_8CTlRQTZMuF2M-DA7z67IM9qRurvd7al9fAblJA/view",
+      "url": "https://docs.google.com/presentation/d/1tcj5mMbuhGW7x6rGHDhwqmyjIK8hsG-y6Y_fR8jogvA/edit?usp=sharing",
       "key": "sending_bits",
       "properties": {
         "audience": "Verified Teacher",
@@ -4794,7 +4830,7 @@
     },
     {
       "name": "Teaching Guide: Human Network Bit Transmission Challenge",
-      "url": "https://docs.google.com/document/d/1duJnaaklwB8OEnGcLeqxCFzZxSgARKcElcjekD8RQYk/edit?tab=t.0",
+      "url": "https://docs.google.com/document/d/1u-E0Suv0CV69qy70-6NudPs7uPGR1NeiOqgoAiTQm-k/edit?usp=drive_link",
       "key": "teaching_guide_human_network_bit_transmission_challenge",
       "properties": {
         "audience": "Verified Teacher",
@@ -4830,7 +4866,7 @@
     },
     {
       "name": "The Internet's Hidden Barriers",
-      "url": "https://docs.google.com/presentation/d/1LFVl5CTM7_FZz5pVOjboyV07ssQ1vmaK8slIq7xhQuk/view",
+      "url": "https://docs.google.com/presentation/d/1qG0k-bOzjQKAhB6ReuypH9y5p1dFqXjJYSOYnRwc5YY/edit?usp=sharing",
       "key": "the_internet_s_hidden_barriers",
       "properties": {
         "audience": "Verified Teacher",
@@ -4866,7 +4902,7 @@
     },
     {
       "name": "Threat Detection Guided Notes",
-      "url": "https://docs.google.com/document/d/1vsJRsFkGW7Y5ZGHk4rG2sEcB12xKr3BH__X0haXxNlE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1k846UL_chsUrkPwDgxHZcprycp-YpSoAEr6F1F-7b9A/edit?usp=sharing",
       "key": "threat_detection_guided_notes",
       "properties": {
         "audience": "Student",
@@ -4930,6 +4966,12 @@
     {
       "seeding_key": {
         "lesson.key": "HTTP and DNS",
+        "resource.key": "http_observations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
         "resource.key": "ip_address_collection"
       }
     },
@@ -5086,6 +5128,12 @@
     {
       "seeding_key": {
         "lesson.key": "Routers and Redundancy",
+        "resource.key": "_key_network_diagram_analysis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
         "resource.key": "network_diagram_analysis"
       }
     },
@@ -5105,6 +5153,12 @@
       "seeding_key": {
         "lesson.key": "Sending Bits",
         "resource.key": "challenge_2_binary_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sending Bits",
+        "resource.key": "role_cards_for_challenge_1_and_2"
       }
     },
     {
