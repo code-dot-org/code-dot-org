@@ -68,25 +68,15 @@ import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import {
+  LOGIN_TYPES_WITH_ACTIONS_COLUMN,
+  LOGIN_TYPES_WITH_GENDER_COLUMN,
+  LOGIN_TYPES_WITH_NO_SECTION_CODE,
+  LOGIN_TYPES_WITH_PASSWORD_COLUMN,
+  NON_LMS_LOGIN_TYPES,
+  PICTURE_OR_WORD_LOGIN_TYPES,
+} from '../../teacherDashboard/LoginTypeConstants';
 import {showV2TeacherDashboard} from '../../teacherNavigation/TeacherNavFlagUtils';
-
-const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
-  SectionLoginType.word,
-  SectionLoginType.picture,
-  SectionLoginType.email,
-];
-const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
-  SectionLoginType.word,
-  SectionLoginType.picture,
-  SectionLoginType.email,
-  SectionLoginType.google_classroom,
-  SectionLoginType.clever,
-  SectionLoginType.lti_v1,
-];
-const LOGIN_TYPES_WITH_GENDER_COLUMN = [
-  SectionLoginType.word,
-  SectionLoginType.picture,
-];
 
 const MANAGE_STUDENTS_TABLE = 'ManageStudentsTable';
 
@@ -212,11 +202,7 @@ class ManageStudentsTable extends Component {
 
   isMoveStudentsEnabled() {
     const {loginType} = this.props;
-    return (
-      loginType === SectionLoginType.word ||
-      loginType === SectionLoginType.picture ||
-      loginType === SectionLoginType.email
-    );
+    return NON_LMS_LOGIN_TYPES.includes(loginType);
   }
 
   // Helper function to determine if user is a teacher
@@ -290,8 +276,7 @@ class ManageStudentsTable extends Component {
                 }
               />
             )}
-            {(rowData.loginType === SectionLoginType.word ||
-              rowData.loginType === SectionLoginType.picture) && (
+            {PICTURE_OR_WORD_LOGIN_TYPES.includes(rowData.loginType) && (
               <ShowSecret
                 initialIsShowing={false}
                 secretWord={rowData.secretWords}
@@ -852,11 +837,6 @@ class ManageStudentsTable extends Component {
       isSectionAssignedCSA,
     } = this.props;
 
-    const noSectionCode = [
-      SectionLoginType.google_classroom,
-      SectionLoginType.clever,
-    ];
-
     return (
       <div>
         {addStatus.status === AddStatus.SUCCESS && (
@@ -896,8 +876,7 @@ class ManageStudentsTable extends Component {
         {transferStatus.status === TransferStatus.SUCCESS &&
           this.renderTransferSuccessNotification()}
         <div>
-          {(loginType === SectionLoginType.word ||
-            loginType === SectionLoginType.picture) && (
+          {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
             <div style={styles.buttonWithMargin}>
               <AddMultipleStudents sectionId={this.props.sectionId} />
             </div>
@@ -911,8 +890,7 @@ class ManageStudentsTable extends Component {
               />
             </div>
           )}
-          {(loginType === SectionLoginType.word ||
-            loginType === SectionLoginType.picture) && (
+          {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
             <div style={styles.button}>
               <PrintLoginCards
                 sectionId={this.props.sectionId}
@@ -967,7 +945,7 @@ class ManageStudentsTable extends Component {
               )}
             </div>
           )}
-          {noSectionCode.includes(loginType) && (
+          {LOGIN_TYPES_WITH_NO_SECTION_CODE.includes(loginType) && (
             <div style={styles.sectionCodeBox}>
               {i18n.sectionCodeWithColon()}
               <span
