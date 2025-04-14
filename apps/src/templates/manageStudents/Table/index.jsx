@@ -47,7 +47,7 @@ import SharingControlActionsHeaderCell from '@cdo/apps/templates/manageStudents/
 import ShowSecret from '@cdo/apps/templates/manageStudents/ShowSecret';
 import UsStateColumn from '@cdo/apps/templates/manageStudents/Table/UsStateColumn';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {JoinLinkCopyButton} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/JoinLink/JoinLinkCopyButton';
+import JoinLinkCopyButton from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/JoinLink/JoinLinkCopyButton';
 import {
   tableLayoutStyles,
   sortableOptions,

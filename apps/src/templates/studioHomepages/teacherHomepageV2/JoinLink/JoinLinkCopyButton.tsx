@@ -1,7 +1,12 @@
+import {
+  TooltipOverlay,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
+import {OverlineOneText} from '@code-dot-org/component-library/typography';
 import React from 'react';
-// @ts-expect-error (lfm) because old react-tooltip version is untyped. Will update soon.
-import ReactTooltip from 'react-tooltip';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
@@ -12,13 +17,13 @@ import i18n from '@cdo/locale';
 import styles from './joinLinkCopyButton.module.scss';
 
 interface JoinLinkCopyButtonProps {
-  loginType: keyof typeof SectionLoginType;
+  loginType?: keyof typeof SectionLoginType;
   sectionCode: string;
   sectionId: number;
   studioUrlPrefix: string;
 }
 
-export const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
+const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   loginType,
   sectionCode,
   sectionId,
@@ -46,7 +51,7 @@ export const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     setShouldShowDialog(false);
   };
 
-  const copySectionCode = () => {
+  const handleCopySectionCode = () => {
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
     copyToClipboard(joinLink);
     firehoseClient.putRecord(
@@ -60,27 +65,40 @@ export const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
       },
       {includeUserId: true}
     );
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
     setShowCopiedMsg(true);
     setTimeout(() => {
       setShowCopiedMsg(false);
     }, 5000);
   };
 
-  return (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (
-    <div
-      className={styles.sectionCodeBox}
-      data-for="section-code"
-      data-tip
-      onClick={copySectionCode}
-    >
+  return loginType &&
+    (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (
+    <div className={styles.sectionCodeBox} data-for="section-code" data-tip>
       {!showCopiedMsg && (
-        <span>
-          <span>{i18n.sectionCodeWithColon()}</span>
-          <span className={styles.sectionCode}>{sectionCode}</span>
-          <ReactTooltip id="section-code" role="tooltip" effect="solid">
-            <div>{i18n.copySectionCodeTooltip()}</div>
-          </ReactTooltip>
-        </span>
+        <TooltipOverlay>
+          <OverlineOneText className={styles.sectionCodeText}>
+            <span>{i18n.sectionCodeWithColon()}</span>
+            <WithTooltip
+              tooltipProps={{
+                tooltipId: 'section-code',
+                role: 'tooltip',
+                text: i18n.copySectionCodeTooltip(),
+                direction: 'onLeft',
+                size: 's',
+                iconLeft: {iconName: 'copy'},
+              }}
+            >
+              <a className={styles.sectionCode} onClick={handleCopySectionCode}>
+                {sectionCode}
+              </a>
+            </WithTooltip>
+          </OverlineOneText>
+        </TooltipOverlay>
       )}
       {showCopiedMsg && <span>{i18n.copySectionCodeSuccess()}</span>}
     </div>
@@ -103,3 +121,5 @@ export const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     </div>
   );
 };
+
+export default JoinLinkCopyButton;
