@@ -4,6 +4,7 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ControlButtons from '@codebridge/Console/ControlButtons';
 import {MiniApps} from '@codebridge/constants';
 import classNames from 'classnames';
@@ -68,6 +69,9 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
 
   const resetMiniApp = () => {
     setIsReset(true);
+    if (labConfig?.miniApp.name === MiniApps.Neighborhood) {
+      CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
+    }
   };
 
   return (
