@@ -68,17 +68,28 @@ export default class JavabuilderConnection {
     this.seenMessage = false;
     this.hadWebsocketConnectionError = false;
 
-    if (this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
-      this.onOutputMessage = message =>
-        this.miniApp.handleSignal({
-          value: ConsoleSignalType.CONSOLE_LOG,
-          detail: message,
-        });
-      this.onNewlineMessage = () =>
-        this.miniApp.handleSignal({
-          value: ConsoleSignalType.CONSOLE_LOG,
-          detail: '\n',
-        });
+    if (this.miniApp && this.miniAppType === CsaViewMode.NEIGHBORHOOD) {
+      this.onOutputMessage = message => {
+        if (this.miniApp.isRunning()) {
+          this.miniApp.handleSignal({
+            value: ConsoleSignalType.CONSOLE_LOG,
+            detail: message,
+          });
+        } else {
+          onMessage(message);
+        }
+      };
+
+      this.onNewlineMessage = () => {
+        if (this.miniApp.isRunning()) {
+          this.miniApp.handleSignal({
+            value: ConsoleSignalType.CONSOLE_LOG,
+            detail: '\n',
+          });
+        } else {
+          onNewlineMessage();
+        }
+      };
     }
   }
 

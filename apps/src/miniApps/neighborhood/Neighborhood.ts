@@ -32,6 +32,7 @@ export default class Neighborhood {
   private signals: (NeighborhoodSignal | ConsoleSignal)[];
   private nextSignalIndex: number;
   private speedTracker: NeighborhoodSpeedTracker;
+  private isProcessingSignals: boolean;
 
   constructor(
     onOutputMessage: (message: string) => void,
@@ -50,6 +51,7 @@ export default class Neighborhood {
     this.nextSignalIndex = -1;
     this.speedTracker = NeighborhoodSpeedTracker.getInstance();
     this.onPartialOutputMessage = onPartialOutputMessage;
+    this.isProcessingSignals = false;
   }
 
   afterInject(
@@ -240,6 +242,7 @@ export default class Neighborhood {
 
   setProcessSignals() {
     this.controller.hideDefaultPegman();
+    this.isProcessingSignals = true;
     // start checking for signals after the specified wait time
     timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
   }
@@ -266,6 +269,11 @@ export default class Neighborhood {
     this.signals = [];
     this.nextSignalIndex = 0;
     this.seenFirstSignal = false;
+    this.isProcessingSignals = false;
+  }
+
+  isRunning() {
+    return this.isProcessingSignals;
   }
 
   // Multiplier on the time per action or step at execution time.
