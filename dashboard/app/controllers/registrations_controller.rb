@@ -653,9 +653,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   private def us_ip?
     # Get the request location
-    location = Geocoder.search(request.ip).try(:first)
-    country_code = location&.country_code.to_s.upcase
-    ['US', 'RD'].include?(country_code)
+    ['US', 'RD'].include?(request.country_code)
   end
 
   private def assign_country_code
