@@ -1,0 +1,19 @@
+name 'csaif_pl_ai_04_04'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Check for Understanding: Answer
+
+#### **abstraction:** the process of focusing on only the essential details of a problem and ignoring everything else.
+
+#### **artificial intelligence:** a technology that mimics human intelligence.
+
+#### **neural network:** an interconnected network that makes decisions using weights and hidden layers.
+
+#### **hallucination:** when the model makes up false or misleading information that sounds real but isn’t true.
+
+#### **contradiction:** when an AI generates conflicting or opposing responses based on a similar input.
+
+#### **AI bias:** when a model favors certain information over others.
+MARKDOWN

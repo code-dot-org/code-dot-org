@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_09_201643) do
+ActiveRecord::Schema.define(version: 2025_04_11_155821) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1953,6 +1953,7 @@ ActiveRecord::Schema.define(version: 2025_04_09_201643) do
     t.string "community_type", limit: 16, comment: "Urban-centric community type"
     t.integer "student_female"
     t.integer "student_male"
+    t.string "status"
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id"
   end
 

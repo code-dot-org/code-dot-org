@@ -206,4 +206,44 @@ describe('Video Component', () => {
     );
     expect(screen.getByText('Cookie Settings')).toBeInTheDocument();
   });
+
+  it('renders no JSON-LD script by default', () => {
+    const {container} = render(<Video {...defaultProps} />);
+    const jsonLdScript = container.querySelector(
+      'script[type="application/ld+json"]',
+    );
+    expect(jsonLdScript).not.toBeInTheDocument();
+  });
+
+  it('renders JSON-LD script when videoTitle, youTubeId and uploadDate are provided', () => {
+    const uploadDate = '1970-10-01T00:00:00Z';
+    const videoDesc = 'Sample Video Description';
+    const youTubeId = 'dQw4w9WgXcQ';
+
+    const {container} = render(
+      <Video
+        {...defaultProps}
+        uploadDate={uploadDate}
+        videoDesc={videoDesc}
+        youTubeId={youTubeId}
+      />,
+    );
+    const jsonLdScript = container.querySelector(
+      'script[type="application/ld+json"]',
+    );
+
+    expect(jsonLdScript).toBeInTheDocument();
+    expect(jsonLdScript).toHaveTextContent(
+      JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'VideoObject',
+        name: defaultProps.videoTitle,
+        description: videoDesc,
+        thumbnailUrl: `//i.ytimg.com/vi/${youTubeId}/hqdefault.jpg`,
+        uploadDate: uploadDate,
+        embedUrl: `https://www.youtube-nocookie.com/watch?v=${youTubeId}`,
+        contentUrl: defaultProps.videoFallback,
+      }),
+    );
+  });
 });

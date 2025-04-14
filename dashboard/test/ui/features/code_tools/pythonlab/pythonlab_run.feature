@@ -16,6 +16,7 @@ Scenario: Can run and see output of Python program
 
 Scenario: Continue button and progress status shows up correctly
   # Level 1 is not validated; continue button will show up after editing and running code.
+  And I wait to see ".cm-content"
   And I verify progress in the header of the current page is "not_tried" for level 1
   And I focus selector ".cm-content"
   And I press keys "print('more code')\n"

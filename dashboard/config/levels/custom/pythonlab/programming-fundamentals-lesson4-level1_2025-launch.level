@@ -7,7 +7,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Welcome to your first line of real Python code!\r\n\r\n## Do This:\r\n\r\n1. Look at the code -- it uses a command called `print()`.\r\n\r\n2. Click **Run** to see what this program does.\r\n\r\n3. After you run it, **change the message** to something you want it to say -- like a greeting, a favorite quote, or a lyric you like.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAnything inside the quotation marks is called a **string** -- it's a type of data Python uses for text.",
+    "long_instructions": "Welcome to your first line of real Python code!\r\n\r\n## Do This:\r\n\r\n1. Look at the code -- it uses a command called `print()`.\r\n\r\n2. Click **Run** to see what this program does.\r\n\r\n3. After you run it, **change the message** to something you want it to say -- like a greeting, a favorite quote, or a lyric you like.\r\n\r\n   <i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Click the eraser icon on the Console anytime you want to clear previous program runs.\r\n   \r\n   ![clear console icon](https://images.code.org/562213f1f8bd4f314bf395d83045aed7-image-1744468492316.png)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAnything inside the quotation marks is called a **string** -- it's a type of data Python uses for text.",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -31,6 +31,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-02 01:15:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:11:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:11:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:16:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-02 01:15:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:11:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:11:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:16:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-12 14:35:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -1,7 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Heading1} from '@code-dot-org/component-library/typography';
 import {isEmpty} from 'lodash';
-import moment from 'moment-timezone';
 import React, {
   FC,
   useCallback,
@@ -15,10 +14,9 @@ import {useNavigate, useParams} from 'react-router-dom';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {workshopLabel} from '../utils/workshopLabel';
-import {DATE_FORMAT, DATETIME_FORMAT, TIME_FORMAT} from '../workshopConstants';
-
 import {generateNewSession} from './components/SessionsEditor';
+import {sessionsReducer} from './reducers/sessionsReducer';
+import {workshopReducer} from './reducers/workshopReducer';
 import AdditionalInfo from './sections/AdditionalInfo';
 import Basics from './sections/Basics';
 import EmailsReminders from './sections/EmailsReminders';
@@ -31,209 +29,25 @@ import {
   FieldConfig,
   Facilitator,
   RegionalPartner,
-  Session,
-  SessionAction,
   SessionErrors,
   SessionFormState,
   Workshop,
-  WorkshopAction,
   WorkshopFormState,
   WorkshopFormTemplateProps,
-  DestroyedSession,
 } from './types';
+import {
+  workshopDataToState,
+  sessionDataToState,
+  workshopLabel,
+  sessionStateToApi,
+  workshopStateToApi,
+} from './utils';
 
 import styles from './styles.module.scss';
 
 export const REQUIRED_ERROR = 'Required';
 export const VALIDATION_ERROR =
   'Your form contains validation errors that must be corrected';
-
-export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
-  course: data.course ?? '',
-  capacity: data.capacity?.toString() ?? '',
-  description: data.description ?? '',
-  facilitators: data.facilitators ?? [],
-  fee: data.fee ?? '',
-  grades: data.grades ?? [],
-  hidden: data.hidden ?? false,
-  name: data.name ?? '',
-  notes: data.notes ?? '',
-  organizerId: data.organizer?.id ?? null,
-  prereq: data.prereq ?? '',
-  hasPrereq: data.prereq ? true : false,
-  regionalPartnerId: data.regional_partner_id ?? null,
-  registrationLink: data.registration_link ?? '',
-  subject: data.subject ?? '',
-  suppressEmail: data.suppress_email ?? false,
-  courseOfferings: data.course_offerings?.map(n => n.toString()) ?? [],
-  participantGroupType: data.participant_group_type ?? '',
-  timeZone: data.time_zone ?? Intl.DateTimeFormat().resolvedOptions().timeZone,
-});
-
-export const sessionDataToState = (
-  data: Session[],
-  timeZone: string
-): SessionFormState[] =>
-  data.map(session => ({
-    id: session.id?.toString() ?? '',
-    date: moment(session.start).tz(timeZone).format(DATE_FORMAT),
-    start: moment(session.start).tz(timeZone).format(TIME_FORMAT),
-    end: moment(session.end).tz(timeZone).format(TIME_FORMAT),
-    locationAddress: session.location_address ?? '',
-    locationName: session.location_name ?? '',
-    meetingLink: session.meeting_link ?? '',
-    format: session.session_format ?? 'in_person',
-    sameAsPrevious: false,
-  }));
-
-export const workshopStateToApi = (
-  workshop: WorkshopFormState
-): Omit<Workshop, 'sessions' | 'organizer'> => ({
-  course: workshop.course || undefined,
-  capacity:
-    workshop.capacity && !isNaN(Number(workshop.capacity))
-      ? Number(workshop.capacity)
-      : undefined,
-  description: workshop.description || undefined,
-  facilitators: workshop.facilitators,
-  fee: workshop.fee || undefined,
-  grades: workshop.grades,
-  hidden: workshop.hidden,
-  name: workshop.name || undefined,
-  notes: workshop.notes || undefined,
-  prereq: workshop.hasPrereq ? workshop.prereq : undefined,
-  regional_partner_id: workshop.regionalPartnerId ?? undefined,
-  registration_link: workshop.registrationLink || undefined,
-  subject: workshop.subject || undefined,
-  suppress_email: workshop.suppressEmail,
-  course_offerings: workshop.courseOfferings.map(offering => Number(offering)),
-  participant_group_type: workshop.participantGroupType,
-  time_zone: workshop.timeZone,
-});
-
-export const sessionStateToApi = (
-  sessions: SessionFormState[],
-  timeZone: string,
-  existingSessions?: Array<Session>
-): Array<Session | DestroyedSession> => {
-  const newOrUpdatedSessions: Array<Session | DestroyedSession> = [];
-  const sessionsMap = new Map(sessions.map(s => [s.id, s]));
-  const sessionsToDestroy =
-    existingSessions?.reduce((acc: DestroyedSession[], curr) => {
-      if (curr.id && !sessionsMap.get(curr.id.toString())) {
-        acc.push({
-          id: curr.id,
-          _destroy: true,
-        });
-      }
-      return acc;
-    }, []) ?? [];
-
-  sessions.forEach(session => {
-    newOrUpdatedSessions.push({
-      id: session.id.startsWith('new')
-        ? undefined
-        : Number(session.id.replace(/\D/g, '')),
-      session_format: session.format,
-      start: moment
-        .tz(`${session.date} ${session.start}`, DATETIME_FORMAT, timeZone)
-        .utc()
-        .toISOString(),
-      end: moment
-        .tz(`${session.date} ${session.end}`, DATETIME_FORMAT, timeZone)
-        .utc()
-        .toISOString(),
-      location_address: session.locationAddress || undefined,
-      location_name: session.locationName || undefined,
-      meeting_link: session.meetingLink || undefined,
-    });
-  });
-
-  return newOrUpdatedSessions.concat(sessionsToDestroy);
-};
-
-export const workshopReducer = (
-  state: WorkshopFormState,
-  action: WorkshopAction
-): WorkshopFormState => {
-  switch (action.type) {
-    case 'UPDATE_WORKSHOP':
-      return {...state, ...action.payload};
-    case 'ADD_GRADE': {
-      const newGrades = state.grades.concat(action.payload);
-      newGrades.sort((a, b) => {
-        // sort 'K' to beginning
-        if (a === 'K') return -1;
-        if (b === 'K') return 1;
-        // sort 'Other' to end
-        if (a === 'Other') return 1;
-        if (b === 'Other') return -1;
-        const numA = Number(a);
-        const numB = Number(b);
-        if (isNaN(numA) || isNaN(numB)) return 0;
-        return numA - numB;
-      });
-      return {...state, grades: newGrades};
-    }
-    case 'REMOVE_GRADE':
-      return {
-        ...state,
-        grades: state.grades.filter(grade => grade !== action.payload),
-      };
-    case 'ADD_COURSE_OFFERING':
-      return {
-        ...state,
-        courseOfferings: [...state.courseOfferings, action.payload],
-      };
-    case 'REMOVE_COURSE_OFFERING':
-      return {
-        ...state,
-        courseOfferings: state.courseOfferings.filter(
-          offering => offering !== action.payload
-        ),
-      };
-    case 'SET_COURSE_OFFERINGS':
-      return {
-        ...state,
-        courseOfferings: action.payload,
-      };
-    case 'SET_WORKSHOP':
-      return action.payload;
-    default:
-      return state;
-  }
-};
-
-export const sessionsReducer = (
-  state: SessionFormState[],
-  action: SessionAction
-): SessionFormState[] => {
-  switch (action.type) {
-    case 'ADD_SESSION':
-      return state.concat(generateNewSession(state[state.length - 1]));
-
-    case 'UPDATE_SESSION':
-      return state.map(session =>
-        session.id === action.id ? {...session, ...action.payload} : session
-      );
-
-    case 'UPDATE_SESSION_SAME_AS_PREVIOUS':
-      return state.map((session, i) =>
-        session.id === action.id
-          ? {...session, ...(state[i - 1] ?? {}), sameAsPrevious: true}
-          : session
-      );
-
-    case 'DELETE_SESSION':
-      return state.filter(session => session.id !== action.id);
-
-    case 'SET_SESSIONS':
-      return action.payload;
-
-    default:
-      return state;
-  }
-};
 
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,

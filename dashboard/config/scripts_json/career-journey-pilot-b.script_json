@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-09 22:28:16 UTC",
+    "serialized_at": "2025-04-10 15:26:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -152,7 +152,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Differentiation:** Level 9 has choices for students to expand their Sprite Lab skills.\n\nStudents do not need any of the skills in level 9 to finish their project but they are great extension ideas for those who are ready for a challenge and more coding!"
+            "markdown": "**Differentiation:** Level 10 has choices for students to expand their Sprite Lab skills.\n\nStudents do not need any of the skills in level 10 to finish their project but they are great extension ideas for those who are ready for a challenge and more coding!"
           }
         ]
       },
@@ -305,6 +305,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-video-choice4"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -324,28 +327,6 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Career Exploration"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-elem-career-journeys-video-choice4_b"
-        ],
-        "lesson.key": "Career Journeys B",
-        "lesson_group.key": "",
-        "script.name": "career-journey-pilot-b",
-        "activity_section.key": "5ac55abc-a62e-4d82-9287-885a4001744e"
-      },
-      "level_keys": [
-        "test-elem-career-journeys-video-choice4_b"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -369,8 +350,8 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -394,8 +375,8 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -419,8 +400,8 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -444,8 +425,8 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -469,8 +450,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
+      "chapter": 11,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -494,8 +475,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 13,
+      "chapter": 12,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -573,18 +554,6 @@
         "level.key": "test-elem-career-journeys-video-choice4",
         "script_level.level_keys": [
           "test-elem-career-journeys-video-choice4"
-        ],
-        "lesson.key": "Career Journeys B",
-        "lesson_group.key": "",
-        "script.name": "career-journey-pilot-b",
-        "activity_section.key": "5ac55abc-a62e-4d82-9287-885a4001744e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "test-elem-career-journeys-video-choice4_b",
-        "script_level.level_keys": [
-          "test-elem-career-journeys-video-choice4_b"
         ],
         "lesson.key": "Career Journeys B",
         "lesson_group.key": "",
