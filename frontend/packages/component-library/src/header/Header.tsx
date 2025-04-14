@@ -4,6 +4,7 @@ import {HTMLAttributes} from 'react';
 import {Image} from '@/image';
 
 import AccountLinks, {AccountLinksProps} from './AccountLinks';
+import HamburgerMenu, {HamburgerMenuProps} from './HamburgerMenu';
 import HelpMenu, {HelpMenuProps} from './HelpMenu';
 import MainLinks, {MainLinksProps} from './MainLinks';
 import ProjectsMenu, {ProjectsMenuProps} from './ProjectsMenu';
@@ -34,6 +35,10 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   helpButtonLabel: HelpMenuProps['helpButtonLabel'];
   /** Help menu links */
   helpLinks: HelpMenuProps['helpLinks'];
+  /** Hamburger menu label */
+  hamburgerButtonLabel: HamburgerMenuProps['hamburgerButtonLabel'];
+  /** Hamburger menu links */
+  hamburgerLinks: HamburgerMenuProps['hamburgerLinks'];
   /** Header custom class name */
   className?: string;
 }
@@ -47,6 +52,8 @@ const Header: React.FC<HeaderProps> = ({
   isLoggedIn = false,
   helpButtonLabel,
   helpLinks,
+  hamburgerButtonLabel,
+  hamburgerLinks,
   className,
   ...HTMLAttributes
 }) => (
@@ -71,8 +78,15 @@ const Header: React.FC<HeaderProps> = ({
         createAccount={accountLinks.createAccount}
         goToDashboard={accountLinks.goToDashboard}
         isLoggedIn={isLoggedIn}
+        isInHamburger={false}
       />
       <HelpMenu helpButtonLabel={helpButtonLabel} helpLinks={helpLinks} />
+      <HamburgerMenu
+        hamburgerButtonLabel={hamburgerButtonLabel}
+        hamburgerLinks={hamburgerLinks}
+        accountLinks={accountLinks}
+        isLoggedIn={isLoggedIn}
+      />
     </div>
   </nav>
 );

@@ -3,6 +3,11 @@
   typography;
 @use '@code-dot-org/component-library-styles/variables.scss' as variables;
 
+$desktop-breakpoint: 1268px;
+$tablet-breakpoint: 1023px;
+$mobile-breakpoint: 425px;
+$box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
+
 // Header common styles
 .headerNavigation {
   background-color: var(--background-brand-teal-primary);
@@ -107,15 +112,37 @@
   }
 }
 
+// Icon button styles
+body .buttonLinks > button.iconButton {
+  padding: 0;
+  margin-inline-start: 0.25rem;
+  background: transparent;
+  min-width: unset;
+  border-radius: 100%;
+
+  & > i {
+    font-size: 1.25rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--neutral-white-alpha-90);
+    background: transparent;
+  }
+}
+
 // Menu styles
 .menu {
   @include mixins.border-styles;
   list-style: none;
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   padding: 0.375rem;
+  margin: 0;
+  min-width: 228px;
+  max-width: 300px;
   background: var(--background-neutral-primary);
-  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
+  box-shadow: $box-shadow;
   display: flex;
   flex-direction: column;
   text-align: initial;
@@ -127,13 +154,13 @@
     font-weight: 500;
     margin-bottom: 0;
     text-decoration: none;
-    padding: 0.375rem 0.75rem;
+    padding: 0.5rem 0.75rem;
 
     @include mixins.transition-all;
 
     &:hover {
       border-radius: variables.$regular-border-radius;
-      background: var(--background-neutral-tertiary, #e4e6e9);
+      background: var(--background-neutral-tertiary);
     }
 
     &:focus-visible {
@@ -150,48 +177,116 @@ body .buttonLinks > button.newProject i {
 }
 
 .newProjectMenu {
-  top: 2rem;
-  min-width: 228px;
-
   a {
     margin: 0;
     padding-inline: 0.375rem;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     gap: 0.625rem;
 
     figure {
       width: 2.5rem;
     }
 
-    .description {
-      font-size: 0.75rem;
-      margin: 0;
-      color: var(--text-neutral-tertiary);
+    & > div {
+      flex: 2;
+
+      .description {
+        font-size: 0.75rem;
+        margin: 0;
+        color: var(--text-neutral-tertiary);
+      }
     }
   }
+
+  li:last-child > a {
+    align-items: center;
+  }
+}
+
+// Account links styles
+.accountLinks {
+  display: flex;
+  gap: 0.5rem;
 }
 
 // Help menu styles
-body .buttonLinks > button.helpButton {
-  padding: 0;
-  background: transparent;
-  min-width: unset;
-  border-radius: 100%;
-
-  & > i {
-    font-size: 1.25rem;
-  }
-
-  &:hover,
-  &:focus {
-    color: var(--neutral-white-alpha-90);
-    background: transparent;
-  }
-}
-
 .helpMenu {
   right: 0;
   min-width: 208px;
+}
+
+// Hamburger styles
+.hamburgerMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 248px;
+
+  .hamburgerButtonWrapper {
+    display: none;
+  }
+}
+
+// Breakpoint styles
+// Large desktop
+@media (max-width: ($desktop-breakpoint - 1px)) {
+  // Show Help menu
+  body .helpButton {
+    display: none;
+  }
+}
+
+// Small desktop
+@media (min-width: $desktop-breakpoint) {
+  // Show Hamburger menu
+  body .hamburgerButton {
+    display: none;
+  }
+}
+
+// Tablet
+@media (max-width: $tablet-breakpoint) {
+  // Hide Main links and New Project menu
+  body .mainLinks,
+  body .newProject {
+    display: none;
+  }
+}
+
+// Mobile
+@media (max-width: $mobile-breakpoint) {
+  // Hide Account links
+  body .accountLinks {
+    display: none;
+  }
+
+  .hamburgerMenu {
+    top: 3rem;
+    box-shadow: $box-shadow;
+
+    .hamburgerButtonWrapper {
+      display: block;
+      background: var(--background-neutral-secondary);
+
+      @include mixins.border-styles;
+      padding: 0.375rem;
+      border-radius: 0.25rem 0.25rem 0 0;
+      border-bottom: 0;
+    }
+
+    .accountLinks {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    ul {
+      position: relative;
+      top: unset;
+      margin: 0;
+      border-radius: 0 0 0.25rem 0.25rem;
+      box-shadow: none;
+    }
+  }
 }

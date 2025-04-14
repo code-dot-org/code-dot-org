@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import {HTMLAttributes} from 'react';
 
 import {LinkButton} from '@/button';
@@ -23,6 +22,8 @@ export interface AccountLinksProps extends HTMLAttributes<HTMLElement> {
   };
   /** Is user logged in */
   isLoggedIn: boolean;
+  /** Is button in Hamburger Menu */
+  isInHamburger: boolean;
 }
 
 const AccountLinks: React.FC<AccountLinksProps> = ({
@@ -30,40 +31,44 @@ const AccountLinks: React.FC<AccountLinksProps> = ({
   createAccount,
   goToDashboard,
   isLoggedIn = false,
+  isInHamburger,
 }) => {
   return (
-    <>
-      <LinkButton
-        text={signIn.label || 'Sign In'}
-        className={classNames(moduleStyles.signIn)}
-        type="secondary"
-        href={signIn.href}
-        size="s"
-        color="white"
-      />
-      <LinkButton
-        text={createAccount.label || 'Create Account'}
-        className={classNames(moduleStyles.createAccount)}
-        type="primary"
-        href={createAccount.href}
-        size="s"
-        color="white"
-      />
-      {!isLoggedIn && (
+    <div className={moduleStyles.accountLinks}>
+      {isLoggedIn ? (
         <LinkButton
           text={goToDashboard.label || 'Go to Dashboard'}
-          className={classNames(moduleStyles.goToDashboard)}
+          className={isInHamburger ? '' : moduleStyles.goToDashboard}
           type="primary"
           href={goToDashboard.href}
           size="s"
-          color="white"
+          color={isInHamburger ? 'purple' : 'white'}
           iconRight={{
             iconName: 'arrow-right-to-line',
             iconStyle: 'solid',
           }}
         />
+      ) : (
+        <>
+          <LinkButton
+            text={signIn.label || 'Sign In'}
+            className={isInHamburger ? '' : moduleStyles.signIn}
+            type="secondary"
+            href={signIn.href}
+            size="s"
+            color={isInHamburger ? 'gray' : 'white'}
+          />
+          <LinkButton
+            text={createAccount.label || 'Create Account'}
+            className={isInHamburger ? '' : moduleStyles.createAccount}
+            type="primary"
+            href={createAccount.href}
+            size="s"
+            color={isInHamburger ? 'purple' : 'white'}
+          />
+        </>
       )}
-    </>
+    </div>
   );
 };
 
