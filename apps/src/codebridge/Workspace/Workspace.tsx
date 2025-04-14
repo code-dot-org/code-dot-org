@@ -83,9 +83,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
           >
             <ToggleFileBrowserButton />
           </div>
-          <div>
-            <FileTabs />
-          </div>
+          <FileTabs />
 
           {config.showFileBrowser && <FileBrowser />}
 
