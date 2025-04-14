@@ -1,6 +1,7 @@
+import classNames from 'classnames';
 import {HTMLAttributes} from 'react';
 
-import {LinkButton} from '@/button';
+import {LinkButton, LinkButtonProps} from '@/button';
 
 import moduleStyles from './header.module.scss';
 
@@ -33,41 +34,70 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
   isLoggedIn = false,
   isInHamburger,
 }) => {
+  const renderDashboardButton = () => (
+    <LinkButton
+      text={goToDashboard.label || 'Go to Dashboard'}
+      className={classNames(
+        isInHamburger ? moduleStyles.hamburger : moduleStyles.mainMenu,
+        moduleStyles.goToDashboard,
+      )}
+      type="primary"
+      href={goToDashboard.href}
+      size="s"
+      color={isInHamburger ? 'purple' : 'white'}
+      iconRight={{
+        iconName: 'arrow-right-to-line',
+        iconStyle: 'solid',
+      }}
+    />
+  );
+
+  const renderSignInButtons = () => {
+    const buttons = [
+      {
+        key: 'signIn',
+        props: {
+          text: signIn.label || 'Sign In',
+          href: signIn.href,
+          type: 'secondary',
+          color: isInHamburger ? 'gray' : 'white',
+          className: classNames(
+            isInHamburger ? moduleStyles.hamburger : moduleStyles.mainMenu,
+            moduleStyles.signIn,
+          ),
+        },
+      },
+      {
+        key: 'createAccount',
+        props: {
+          text: createAccount.label || 'Create Account',
+          href: createAccount.href,
+          type: 'primary',
+          color: isInHamburger ? 'purple' : 'white',
+          className: classNames(
+            isInHamburger ? moduleStyles.hamburger : moduleStyles.mainMenu,
+            moduleStyles.createAccount,
+          ),
+        },
+      },
+    ];
+
+    // Render Create Account first in the Hamburger menu
+    // Doing it this way instead of with CSS for better accessibility
+    const orderedButtons = isInHamburger ? buttons.reverse() : buttons;
+
+    return (
+      <>
+        {orderedButtons.map(({key, props}) => (
+          <LinkButton key={key} size="s" {...(props as LinkButtonProps)} />
+        ))}
+      </>
+    );
+  };
+
   return (
     <div className={moduleStyles.accountLinks}>
-      {isLoggedIn ? (
-        <LinkButton
-          text={goToDashboard.label || 'Go to Dashboard'}
-          className={isInHamburger ? '' : moduleStyles.goToDashboard}
-          type="primary"
-          href={goToDashboard.href}
-          size="s"
-          color={isInHamburger ? 'purple' : 'white'}
-          iconRight={{
-            iconName: 'arrow-right-to-line',
-            iconStyle: 'solid',
-          }}
-        />
-      ) : (
-        <>
-          <LinkButton
-            text={signIn.label || 'Sign In'}
-            className={isInHamburger ? '' : moduleStyles.signIn}
-            type="secondary"
-            href={signIn.href}
-            size="s"
-            color={isInHamburger ? 'gray' : 'white'}
-          />
-          <LinkButton
-            text={createAccount.label || 'Create Account'}
-            className={isInHamburger ? '' : moduleStyles.createAccount}
-            type="primary"
-            href={createAccount.href}
-            size="s"
-            color={isInHamburger ? 'purple' : 'white'}
-          />
-        </>
-      )}
+      {isLoggedIn ? renderDashboardButton() : renderSignInButtons()}
     </div>
   );
 };
