@@ -29,10 +29,20 @@ export const PopUpButtonOption = ({
   return (
     <div
       onClick={clickHandler}
+      onKeyDown={event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          if (clickHandler) {
+            clickHandler();
+          }
+        }
+      }}
       className={classNames(
         darkModeStyles.dropdownItem,
         moduleStyles.dropdownItem
       )}
+      role="button"
+      tabIndex={0}
       id={id}
     >
       <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />

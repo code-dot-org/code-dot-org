@@ -430,7 +430,8 @@
   "dependencies": {
     "dompurify": "^3.2.4",
     "lodash": "^4.17.21",
-    "react-player": "^3.0.0-canary.4"
+    "react-player": "^3.0.0-canary.4",
+    "react-schemaorg": "^2.0.0"
   },
   "devDependencies": {
     "@code-dot-org/changelogs": "workspace:*",
@@ -468,6 +469,7 @@
     "react-dom": "^18.3.1",
     "release-it": "^18.1.2",
     "rimraf": "^6.0.1",
+    "schema-dts": "^1.1.5",
     "stylelint": "^16.14.1",
     "swiper": "^11.0.5",
     "tsc-alias": "^1.8.11",

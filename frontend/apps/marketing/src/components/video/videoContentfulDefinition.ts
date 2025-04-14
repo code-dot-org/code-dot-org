@@ -23,6 +23,18 @@ export const VideoContentfulComponentDefinition: ComponentDefinition = {
       description:
         'The title of the video. This will double as the caption under the video player.',
     },
+    videoDesc: {
+      displayName: 'Description',
+      type: 'Text',
+      group: 'content',
+      description: 'The description of the video. Helpful for SEO.',
+    },
+    uploadDate: {
+      displayName: 'Published Date',
+      type: 'Date',
+      group: 'content',
+      description: 'The upload date of the video. Required for SEO.',
+    },
     youTubeId: {
       displayName: 'YouTube ID',
       type: 'Text',

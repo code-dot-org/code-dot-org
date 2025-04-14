@@ -1065,6 +1065,7 @@
   "downloadUnitLessonPlans": "Download all lesson plans for unit",
   "downloadUnitHandouts": "Download all handouts for unit",
   "dragBlocksToMatch": "Drag the blocks to match",
+  "dragSection": "Drag section to reorder",
   "draw": "Draw",
   "dropletBlock_addOperator_description": "Add two numbers",
   "dropletBlock_addOperator_signatureOverride": "Add operator",

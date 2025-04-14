@@ -65,6 +65,8 @@ Dashboard::Application.routes.draw do
 
     resources :student_work_evaluations, only: [:create]
 
+    resources :student_work_evaluation_summaries, only: [:create]
+
     resources :user_level_interactions, only: [:create]
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
@@ -741,8 +743,10 @@ Dashboard::Application.routes.draw do
     post '/sms/send', to: 'sms#send_to_phone', as: 'send_to_phone'
 
     # Experiments are get requests so that a user can click on a link to join or leave an experiment
-    get '/experiments/set_single_user_experiment/:experiment_name', to: 'experiments#set_single_user_experiment'
-    get '/experiments/disable_single_user_experiment/:experiment_name', to: 'experiments#disable_single_user_experiment'
+    resource :experiments, only: [] do
+      get 'set_single_user_experiment/:experiment_name', action: :set_single_user_experiment
+      get 'disable_single_user_experiment/:experiment_name', action: :disable_single_user_experiment
+    end
 
     get '/peer_reviews/dashboard', to: 'peer_reviews#dashboard'
     resources :peer_reviews
@@ -863,6 +867,7 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning#workshops_as_facilitator_for_pl_page'
     get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
     get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
+    get 'regional_workshop_data/:zip_code', to: 'pd/professional_learning#regional_workshop_data'
     post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
     post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
