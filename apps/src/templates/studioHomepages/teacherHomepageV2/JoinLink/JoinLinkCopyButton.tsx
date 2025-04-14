@@ -66,7 +66,7 @@ export const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     }, 5000);
   };
 
-  return LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) ? (
+  return (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (
     <div
       className={styles.sectionCodeBox}
       data-for="section-code"
