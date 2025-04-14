@@ -147,7 +147,6 @@ class ManageStudentsTable extends Component {
     this.getColumns = this.getColumns.bind(this);
     this.onPrintLoginCards = this.onPrintLoginCards.bind(this);
     this.handleSaveAllClick = this.handleSaveAllClick.bind(this);
-    this.close = this.close.bind(this);
   }
 
   state = {

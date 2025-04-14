@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-expect-error (lfm) because old react-tooltip version is untyped. Will update soon.
 import ReactTooltip from 'react-tooltip';
 
 import firehoseClient from '@cdo/apps/metrics/firehose';
@@ -65,7 +66,7 @@ export const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     }, 5000);
   };
 
-  return (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (
+  return LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) ? (
     <div
       className={styles.sectionCodeBox}
       data-for="section-code"
