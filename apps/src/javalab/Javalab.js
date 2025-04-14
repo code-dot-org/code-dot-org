@@ -146,6 +146,9 @@ Javalab.prototype.init = function (config) {
         this.onNewlineMessage,
         this.setIsRunning,
         STATUS_MESSAGE_PREFIX,
+        // In Java Lab we don't distinguish between partial lines and full lines,
+        // the provided message should have a newline at the end to be treated as
+        // a full line.
         this.onOutputMessage
       );
       config.afterInject = () =>

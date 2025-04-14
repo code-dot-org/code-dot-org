@@ -62,16 +62,19 @@ const NeighborhoodPreview: React.FunctionComponent<
 
   const neighborhood = useMemo(() => {
     const neighborhoodRef = new Neighborhood(
+      // onOutputMessage
       message =>
         CodebridgeRegistry.getInstance()
           .getConsoleManager()
           ?.writeConsoleMessage(message),
+      // onNewlineMessage
       () =>
         CodebridgeRegistry.getInstance()
           .getConsoleManager()
           ?.writeConsoleMessage(''),
       isRunning => dispatch(setIsRunning(isRunning)),
       '[PYTHON LAB]',
+      // onPartialLineMessage
       message =>
         CodebridgeRegistry.getInstance()
           .getConsoleManager()
