@@ -1,9 +1,10 @@
 import classNames from 'classnames';
-import {HTMLAttributes, useState} from 'react';
+import {HTMLAttributes, useState, useRef} from 'react';
 
 import {Button} from '@/button';
 
 import AccountButtons, {AccountButtonsProps} from './AccountButtons';
+import closeOnEvent from './hooks/closeOnEvent';
 import {Link} from './types';
 
 import moduleStyles from './header.module.scss';
@@ -36,14 +37,19 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  closeOnEvent(menuRef, () => setIsOpen(false), isOpen);
 
   return (
-    <>
+    <div
+      ref={menuRef}
+      className={classNames(moduleStyles.hamburgerMenuWrapper, className)}
+    >
       <Button
         className={classNames(
           moduleStyles.hamburgerButton,
           moduleStyles.iconButton,
-          className,
         )}
         ariaLabel={hamburgerButtonLabel || 'Hamburger menu'}
         icon={{
@@ -87,7 +93,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           </ul>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -1,10 +1,11 @@
 import classNames from 'classnames';
-import {HTMLAttributes, useState} from 'react';
+import {HTMLAttributes, useState, useRef} from 'react';
 
 import {Button} from '@/button';
 import {Image, ImageProps} from '@/image';
 import {BodyFourText} from '@/typography';
 
+import closeOnEvent from './hooks/closeOnEvent';
 import {Link} from './types';
 
 import moduleStyles from './header.module.scss';
@@ -29,11 +30,17 @@ const ProjectsMenu: React.FC<ProjectsMenuProps> = ({
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  closeOnEvent(menuRef, () => setIsOpen(false), isOpen);
 
   return (
-    <>
+    <div
+      ref={menuRef}
+      className={classNames(moduleStyles.projectsMenuWrapper, className)}
+    >
       <Button
-        className={classNames(moduleStyles.newProject, className)}
+        className={classNames(moduleStyles.newProject)}
         text={projectsButtonLabel || 'New Project'}
         type="secondary"
         size="s"
@@ -72,7 +79,7 @@ const ProjectsMenu: React.FC<ProjectsMenuProps> = ({
           )}
         </ul>
       )}
-    </>
+    </div>
   );
 };
 
