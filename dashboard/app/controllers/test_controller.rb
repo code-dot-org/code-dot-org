@@ -116,6 +116,34 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def assign_course_as_student
+    return unless (user = current_user)
+    course = UnitGroup.find_by_name(params.require(:course_name))
+
+    teacher_email = params[:teacher_email]
+    if teacher_email
+      teacher_user = User.find_by_email(teacher_email)
+    else
+      name = "Fake User"
+      email = "user#{Time.now.to_i}_#{rand(1_000_000)}@test.xx"
+      password = name + "password"
+      attributes = {
+        name: name,
+        email: email,
+        password: password,
+        user_type: "teacher",
+        age: "21+"
+      }
+      teacher_user = User.create!(attributes)
+    end
+
+    section_name = params[:section_name] || "New Section"
+    section = Section.create(name: section_name, user: teacher_user, course_id: course.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section.students << user
+    section.save!
+    head :ok
+  end
+
   def assign_script_as_student
     return unless (user = current_user)
     script = Unit.find_by_name(params.require(:script_name))
