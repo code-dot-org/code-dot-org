@@ -5,7 +5,7 @@
   justify-content: flex-start;
   gap: 6px;
   align-items: flex-end;
-  overflow-x: scroll;
+  overflow-x: auto;
   max-width: 100%;
   background-color: $light_gray_900;
   scrollbar-width: thin;
@@ -14,7 +14,7 @@
   font-weight: 600;
   color: $light_gray_100;
 
-  scrollbar-color: $light_gray_600 $light_black;
+  scrollbar-color: $light_gray_700 $light_black;
   // webkit-scrollbar is only used by Safari. Chrome and Firefox use scrollbar-color.
   ::-webkit-scrollbar {
     background: $light_black;

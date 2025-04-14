@@ -4,7 +4,7 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {ProjectFile} from '@codebridge/types';
 import {getFileIconNameAndStyle} from '@codebridge/utils';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
@@ -24,12 +24,20 @@ const FileTab = ({file}: FileTabProps) => {
   const className = classNames(moduleStyles.fileTab, {
     [moduleStyles.active]: isActive,
   });
+  const tabRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isActive) {
+      tabRef.current?.scrollIntoView({block: 'end', inline: 'start'});
+    }
+  }, [isActive]);
 
   return (
     <div className={className} key={file.id}>
       <div
         className={moduleStyles.label}
         onClick={() => setActiveFile(file.id)}
+        ref={tabRef}
       >
         <FontAwesomeV6Icon
           iconName={iconName}
