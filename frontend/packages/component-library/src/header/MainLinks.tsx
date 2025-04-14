@@ -7,6 +7,7 @@ export interface MainLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   key: Key;
   label: string;
   href: string;
+  hasDisplayLogic?: boolean;
 }
 
 export interface MainLinksProps extends HTMLAttributes<HTMLElement> {
@@ -22,8 +23,11 @@ const MainLinks: React.FC<MainLinksProps> = ({mainLinks, className}) => {
       className={classNames(moduleStyles.mainLinks, className)}
       aria-label="Main site links"
     >
-      {mainLinks?.map(({key, label, href, ...link}) => (
-        <li key={key}>
+      {mainLinks?.map(({key, label, href, hasDisplayLogic, ...link}) => (
+        <li
+          key={key}
+          className={hasDisplayLogic ? moduleStyles.hasDisplayLogic : ''}
+        >
           <a href={href} {...link}>
             {label}
           </a>

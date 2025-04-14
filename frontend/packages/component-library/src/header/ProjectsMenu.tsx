@@ -56,9 +56,9 @@ const ProjectsMenu: React.FC<ProjectsMenuProps> = ({
             className,
           )}
         >
-          {projectsLinks.map(({href, label, image, description}) => (
+          {projectsLinks.map(({href, label, image, description, ...link}) => (
             <li key={label}>
-              <a href={href}>
+              <a href={href} {...link}>
                 <Image src={image} />
                 <div>
                   {label}

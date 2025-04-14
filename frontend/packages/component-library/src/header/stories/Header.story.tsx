@@ -20,6 +20,7 @@ export default {
 } as Meta<HeaderProps>;
 
 const defaultArgs: HeaderProps = {
+  isLoggedIn: false,
   logo: logoImage,
   mainLinks: [
     {
@@ -41,21 +42,25 @@ const defaultArgs: HeaderProps = {
       key: 'stats',
       label: 'Stats',
       href: '/promote',
+      hasDisplayLogic: true,
     },
     {
       key: 'helpUs',
       label: 'Help Us',
       href: '/help',
+      hasDisplayLogic: true,
     },
     {
       key: 'incubator',
       label: 'Incubator',
       href: '/incubator',
+      hasDisplayLogic: true,
     },
     {
       key: 'about',
       label: 'About',
       href: '/about',
+      hasDisplayLogic: true,
     },
   ],
   projectsButtonLabel: 'New Project',
@@ -130,9 +135,59 @@ const defaultArgs: HeaderProps = {
       href: 'https://studio.code.org/home',
     },
   },
-  isLoggedIn: false,
   helpButtonLabel: 'Help',
   helpLinks: [
+    {
+      key: 'helpAndSupport',
+      label: 'Help and support',
+      href: 'https://support.code.org/',
+    },
+    {
+      key: 'reportAProblem',
+      label: 'Report a problem',
+      href: 'https://support.code.org/hc/en-us/requests/new',
+    },
+  ],
+  hamburgerButtonLabel: 'Hamburger',
+  hamburgerLinks: [
+    {
+      key: 'learn',
+      label: 'Learn',
+      href: '/students',
+      hasDisplayLogic: true,
+    },
+    {
+      key: 'teach',
+      label: 'Teach',
+      href: '/teach',
+      hasDisplayLogic: true,
+    },
+    {
+      key: 'districts',
+      label: 'Districts',
+      href: '/administrators',
+      hasDisplayLogic: true,
+    },
+    {
+      key: 'stats',
+      label: 'Stats',
+      href: '/promote',
+    },
+    {
+      key: 'donate',
+      label: 'Donate',
+      href: '/help',
+    },
+    {
+      key: 'incubator',
+      label: 'Incubator',
+      href: '/incubator',
+    },
+    {
+      key: 'about',
+      label: 'About',
+      href: '/about',
+    },
     {
       key: 'helpAndSupport',
       label: 'Help and support',

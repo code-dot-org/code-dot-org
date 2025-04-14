@@ -46,11 +46,14 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
   }
 
   ul {
-    all: unset;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     display: flex;
 
     li {
-      all: unset;
+      margin: 0;
+      padding: 0;
     }
 
     a {
@@ -246,12 +249,23 @@ body .buttonLinks > button.newProject i {
   }
 }
 
+// Between 1268px and 1024px
+@media (max-width: ($desktop-breakpoint - 1px)) and (min-width: ($tablet-breakpoint + 1px)) {
+  .hasDisplayLogic {
+    display: none;
+  }
+}
+
 // Tablet
 @media (max-width: $tablet-breakpoint) {
   // Hide Main links and New Project menu
   body .mainLinks,
   body .newProject {
     display: none;
+  }
+
+  .hasDisplayLogic {
+    display: block;
   }
 }
 

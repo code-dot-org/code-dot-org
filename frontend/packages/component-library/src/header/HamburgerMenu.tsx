@@ -12,6 +12,7 @@ export interface HamburgerMenuLink
   key: Key;
   label: string;
   href: string;
+  hasDisplayLogic?: boolean;
 }
 
 export interface HamburgerMenuProps extends HTMLAttributes<HTMLElement> {
@@ -76,9 +77,14 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
             />
           </div>
           <ul className={moduleStyles.menu}>
-            {hamburgerLinks.map(({href, label}) => (
-              <li key={label}>
-                <a href={href}>{label}</a>
+            {hamburgerLinks.map(({href, hasDisplayLogic, label, ...link}) => (
+              <li
+                key={label}
+                className={hasDisplayLogic ? moduleStyles.hasDisplayLogic : ''}
+              >
+                <a href={href} {...link}>
+                  {label}
+                </a>
               </li>
             ))}
           </ul>
