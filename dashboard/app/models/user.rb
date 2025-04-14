@@ -98,8 +98,20 @@ class User < ApplicationRecord
 
   self.inheritance_column = :user_type
 
+  # :user_type is locked. Use the :permissions property for more granular user permissions.
+  USER_TYPE_OPTIONS = [
+    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
+    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
+  ].freeze
+
+  TYPE_TO_STI_CLASS_MAP = {
+    TYPE_TEACHER => ::Teacher,
+    TYPE_STUDENT => ::Student,
+    'staff' => ::Teacher # Powerschool sends through 'staff' instead of 'teacher'
+  }.freeze
+
   def self.find_sti_class(type_name)
-    type_name.classify.constantize
+    TYPE_TO_STI_CLASS_MAP[type_name]
   end
 
   # Notes:
@@ -150,12 +162,6 @@ class User < ApplicationRecord
   # using the next increasing natural number.
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
-  ].freeze
-
-  # :user_type is locked. Use the :permissions property for more granular user permissions.
-  USER_TYPE_OPTIONS = [
-    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
-    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
   ].freeze
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
@@ -2430,13 +2436,10 @@ class User < ApplicationRecord
     unless omniauth_user
       omniauth_user = create
       initialize_new_oauth_user(omniauth_user, auth, params)
-      klass_map = {
-        ::User::TYPE_TEACHER => ::Teacher,
-        ::User::TYPE_STUDENT => ::Student,
-        'staff' => ::Teacher # Powerschool sends through 'staff' instead of 'teacher'
-      }
-      klass = klass_map.fetch(omniauth_user.user_type, ::User)
-      omniauth_user = omniauth_user.becomes!(klass)
+
+      sti_class = find_sti_class(omniauth_user.user_type)
+      omniauth_user = omniauth_user.becomes!(sti_class) if sti_class
+
       omniauth_user.save
     end
 

@@ -10,13 +10,11 @@ module Services
       end
 
       def call
-        klass_map = {
-          ::User::TYPE_TEACHER => ::Teacher,
-          ::User::TYPE_STUDENT => ::Student
-        }
+        user = ::User.new_with_session(user_params, session)
 
-        klass = klass_map.fetch(user_params[:user_type], ::User)
-        user  = klass.new_with_session(user_params, session)
+        sti_class = ::User.find_sti_class(user_params[:user_type])
+        user = user.becomes!(sti_class) if sti_class
+
         user.save!
         user
       end
