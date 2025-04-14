@@ -1,0 +1,53 @@
+name 'csaif_pl_ai_04_01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit Project: AI Time Capsule
+
+#### In this project, students work with AI to develop a future prediction and create a presentation that explains their process. They collaborate with AI to generate and refine ideas, evaluate outputs for accuracy and bias, and reflect on how they shaped the final prediction. The project centers on ethical reasoning, student voice, and thoughtful use of multimodal inputs to support transparency and agency in AI collaboration.
+
+## Project Calendar
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 15px;">
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 1
+    </p>
+    
+    <p style="font-size: 14px">
+	Students begin working with AI to explore possible futures
+    </p>
+    
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 2
+    </p>
+    
+    <p style="font-size: 14px">
+	Students create a presentation that documents their own process of working with AI.
+    </p>
+    
+</div>
+
+<div style="background: #fff; padding: 15px; text-align: center; border-radius: 8px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); border: 2px solid #5a2ca0; font-size: 18px">
+	<p style="text-align: center; font-weight: bold; font-size: 18px">
+    	Day 3
+    </p>
+    
+    <p style="font-size: 14px">
+	Students finalize and present their predictions.
+    </p>
+
+</div>
+</div>
+
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ If you have time, check out the full <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/11' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+MARKDOWN

@@ -47,6 +47,7 @@ const {
   localeCode,
   hasSeenStandardsReportInfo,
   canViewStudentAIChatMessages,
+  sectionOrder,
 } = scriptData;
 
 $(document).ready(function () {
@@ -73,7 +74,7 @@ $(document).ready(function () {
   store.dispatch(
     setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
   );
-  store.dispatch(setSections(sections, false));
+  store.dispatch(setSections(sections, false, sectionOrder));
   store.dispatch(setLocaleCode(localeCode));
 
   const showAITutorTab = canViewStudentAIChatMessages;

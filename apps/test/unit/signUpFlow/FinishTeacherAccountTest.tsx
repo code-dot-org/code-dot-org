@@ -96,7 +96,7 @@ describe('FinishTeacherAccount', () => {
     });
 
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      '/users/sign_up/login_type'
+      `/users/sign_up/login_type?user_type=${UserTypes.TEACHER}`
     );
   });
 

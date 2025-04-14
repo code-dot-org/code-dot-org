@@ -5473,6 +5473,52 @@ class UserTest < ActiveSupport::TestCase
     assert_equal new_us_state, student.reload.us_state
   end
 
+  describe 'strict password requirements by country' do
+    let(:strict_country) {User::PASSWORD_STRICT_COUNTRIES.first}
+
+    before do
+      allow(DCDO).to receive(:get).and_call_original
+      allow(DCDO).to receive(:get).with('strict-password-country', false).and_return(true)
+    end
+
+    describe 'when creating a teacher in a strict country' do
+      context 'when using a short password' do
+        let(:user) {build(:teacher, country_code: strict_country, password: 'short', password_confirmation: 'short')}
+        it 'rejects passwords' do
+          _(user).wont_be :valid?
+          user.valid?
+          _(user.errors[:password]).must_include 'is too short (minimum is 14 characters)'
+        end
+      end
+      context 'when using a long password' do
+        let(:user) {create(:teacher, country_code: strict_country, password: 'longlongpassword', password_confirmation: 'longlongpassword')}
+
+        it 'accepts passwords that are at least 14 characters' do
+          _(user).must_be :valid?
+          user.valid?
+          _(user.errors[:password]).must_be :empty?
+        end
+      end
+    end
+
+    describe 'when updating a teacher in a strict country' do
+      let(:teacher) {build(:teacher, country_code: strict_country)}
+
+      it 'rejects a too-short password' do
+        result = teacher.update(password: 'tooshort', password_confirmation: 'tooshort')
+        _(result).must_equal false
+        _(teacher.errors[:password]).must_include 'is too short (minimum is 14 characters)'
+      end
+
+      it 'accepts a sufficiently long password' do
+        result = teacher.update(password: 'longlongpassword', password_confirmation: 'longlongpassword')
+        _(result).must_equal true
+        _(teacher.errors[:password]).must_be :empty?
+        _(teacher.password).must_equal 'longlongpassword'
+      end
+    end
+  end
+
   test "teacher with oauth account can access AI Chat" do
     teacher = create :teacher, :google_sso_provider
     assert teacher.teacher_can_access_ai_chat?

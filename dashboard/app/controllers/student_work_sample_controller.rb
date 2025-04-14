@@ -116,8 +116,6 @@ class StudentWorkSampleController < ApplicationController
     user_level_evaluations.shuffle.each do |ule|
       unless have_enough_samples
         student_code = get_student_code(ule.user_id, level, unit_id, ule.code_version)
-        user_level_skill_evaluation_ids = StudentWorkEvaluationSummary.where(student_work_evaluation_summary_id: ule.id).pluck(:student_work_evaluation_id)
-        user_level_skill_evaluations = UserLevelSkillEvaluation.where(id: user_level_skill_evaluation_ids)
         if student_code[:student_code]
           code_sample = {
             level_id: level.id,
@@ -130,13 +128,17 @@ class StudentWorkSampleController < ApplicationController
             reasoning: ule.reasoning,
             evaluation_criteria: ule.evaluation_criteria,
           }
-          # TODO: Use skill id instead of counter when we have Skills
-          counter = 1
-          user_level_skill_evaluations.each do |ulse|
-            code_sample["skill_evaluation_#{counter}"] = ulse.evaluation
-            code_sample["skill_evaluation_criteria_#{counter}"] = ulse.evaluation_criteria
-            code_sample["skill_evaluation_reasoning_#{counter}"] = ulse.reasoning
-            counter += 1
+          user_level_skill_evaluation_ids = StudentWorkEvaluationSummary.where(student_work_evaluation_summary_id: ule.id).pluck(:student_work_evaluation_id)
+          if user_level_skill_evaluation_ids.any?
+            user_level_skill_evaluations = UserLevelSkillEvaluation.where(id: user_level_skill_evaluation_ids)
+            # TODO: Use skill id instead of counter when we have Skills
+            counter = 1
+            user_level_skill_evaluations.each do |ulse|
+              code_sample["skill_evaluation_#{counter}"] = ulse.evaluation
+              code_sample["skill_evaluation_criteria_#{counter}"] = ulse.evaluation_criteria
+              code_sample["skill_evaluation_reasoning_#{counter}"] = ulse.reasoning
+              counter += 1
+            end
           end
         end
         code_samples << code_sample

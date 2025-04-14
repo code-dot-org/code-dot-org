@@ -13,7 +13,7 @@ module Cdo::CloudFormation
     # Inline a single javascript file into a CloudFormation template for a Lambda function resource.
     # Raises an error if the minified file is too large.
     # Use UglifyJS to compress code if `uglify` parameter is set.
-    def js(filename, uglify: true, max: ZIPFILE_MAX)
+    def inline_js(filename, uglify: true, max: ZIPFILE_MAX)
       str =
         if uglify
           RakeUtils.yarn_install
@@ -30,7 +30,7 @@ module Cdo::CloudFormation
     def js_erb(filename, **args)
       Tempfile.open do |tmp|
         File.write(tmp, erb_file(filename))
-        js(tmp.path, **args)
+        inline_js(tmp.path, **args)
       end
     end
 

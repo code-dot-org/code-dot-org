@@ -8,18 +8,18 @@
     "uses_lab2": true,
     "background": "music-black",
     "encrypted": "false",
-    "video_key": "music-lab-roxanne-interview-k-5",
+    "video_key": "music-lab-roxanne-sound-designer",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
     "video_full_width": true,
     "name_suffix": "_a",
-    "bubble_choice_description": "<i class=\"fa-solid fa-video\"></i> **A video to explore:**\n\n- Live coding",
+    "bubble_choice_description": "<i class=\"fa-solid fa-video\"></i> **A video to explore:**\n\n- Sound Designer",
     "thumbnail_url": "https://images.code.org/e14550a6ebbf5f3e0d3efd018cd2bb18-roxanne.jpg",
-    "display_name": "Artist and Creator"
+    "display_name": "Sound Designer"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-08T00:04:50.301+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-video-choice4\\\"\"],\"cloned_from\":\"test-elem-career-journeys-video-choice4\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-08T00:04:50.301+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-video-choice4\\\"\"],\"cloned_from\":\"test-elem-career-journeys-video-choice4\"},{\"changed_at\":\"2025-04-10 15:51:10 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 15:53:37 +0000\",\"changed\":[\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

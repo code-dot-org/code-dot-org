@@ -50,7 +50,8 @@ const getUserType = () => {
 
 const LoginTypeSelection: React.FunctionComponent<{
   isSignedOut: boolean;
-}> = ({isSignedOut}) => {
+  passwordMinLength: number;
+}> = ({isSignedOut, passwordMinLength}) => {
   const [userType, setUserType] = useState(getUserType());
   const [password, setPassword] = useState('');
   const [passwordIcon, setPasswordIcon] = useState(X_ICON);
@@ -136,7 +137,7 @@ const LoginTypeSelection: React.FunctionComponent<{
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
-    if (event.target.value.length >= 6) {
+    if (event.target.value.length >= passwordMinLength) {
       setPasswordIcon(CHECK_ICON);
       setPasswordIconClass(style.teal);
     } else {
@@ -174,6 +175,7 @@ const LoginTypeSelection: React.FunctionComponent<{
         email: email,
         password: password,
         password_confirmation: password,
+        user_type: userType,
       },
     };
     try {
@@ -368,7 +370,9 @@ const LoginTypeSelection: React.FunctionComponent<{
                   className={passwordIconClass}
                   iconName={passwordIcon}
                 />
-                <BodyThreeText>{locale.minimum_six_chars()}</BodyThreeText>
+                <BodyThreeText>
+                  {locale.minimum_num_chars({minChars: passwordMinLength})}
+                </BodyThreeText>
               </div>
             </div>
             <div>

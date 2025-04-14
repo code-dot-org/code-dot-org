@@ -8,6 +8,8 @@ export type RenderState =
 export interface VideoProps {
   /** Video title */
   videoTitle?: string;
+  /** Video description */
+  videoDesc?: string;
   /** Video YouTube ID */
   youTubeId?: string;
   /** Video fallback */
@@ -16,6 +18,8 @@ export interface VideoProps {
   showCaption?: boolean;
   /** Label for Download button */
   downloadLabel?: string;
+  /** The date and time the video was first published, in ISO 8601 format. */
+  uploadDate?: string;
   /** Error heading for placeholder  */
   errorHeading?: string;
   /** Error body for placeholder */
