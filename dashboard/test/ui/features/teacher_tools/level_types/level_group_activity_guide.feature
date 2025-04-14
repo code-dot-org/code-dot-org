@@ -13,6 +13,8 @@ Scenario: Submit activity guide and go to next level.
 Scenario: Teacher can view student summary of responses.
   Given I create a teacher-associated student named "Lilian"
   Given I am on "http://studio.code.org/s/allthethings/lessons/53/levels/1"
+  And I wait until element "span:contains(1)" is visible
+
   Then I press "unchecked_0"
   And I type "sample response" into ".free-response > textarea"
   And I press ".submitButton" using jQuery to load a new page
@@ -39,3 +41,12 @@ Scenario: Teacher can view student summary of responses on level marked as asses
   And I click selector "a:contains(View student responses)"
   And I wait until current URL contains "/summary"
   And I wait until element "#summary-container" is visible
+
+Scenario: Student can see level numbers for level group levels in header.
+  Given I create a teacher-associated student named "Lilian"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/53/levels/1"
+  And I wait until element "span:contains(1)" is visible
+
+  # Check that the student can see this numbering on an "assessment" level too.
+  Given I am on "http://studio.code.org/s/allthethings/lessons/53/levels/2"
+  And I wait until element "span:contains(2)" is visible
