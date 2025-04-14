@@ -28,13 +28,10 @@ export const generateNewSession = (
   end: prevSession
     ? prevSession.end
     : moment().startOf('day').add(19, 'hours').format(TIME_FORMAT),
-  locationAddress: prevSession?.sameAsPrevious
-    ? prevSession.locationAddress
-    : '',
-  locationName: prevSession?.sameAsPrevious ? prevSession.locationName : '',
-  meetingLink: prevSession?.sameAsPrevious ? prevSession.meetingLink : '',
+  locationAddress: '',
+  locationName: '',
+  meetingLink: '',
   format: prevSession?.format ?? 'in_person',
-  sameAsPrevious: prevSession?.sameAsPrevious ?? false,
 });
 
 export const SessionsEditor: FC<{
@@ -52,7 +49,6 @@ export const SessionsEditor: FC<{
       {sessions.map((session, i) => (
         <SessionPart
           key={session.id}
-          showSameAsPrevious={i > 0}
           deleteDisabled={sessions.length <= 1}
           dispatchSessions={dispatchSessions}
           fields={fields}

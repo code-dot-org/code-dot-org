@@ -40,7 +40,6 @@ describe('sessionDataToState', () => {
         locationName: 'Test Location',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
       },
     ];
     const state = sessionDataToState(sessionData, timeZone);
@@ -111,7 +110,6 @@ describe('sessionStateToApi', () => {
         locationName: 'Test Location',
         meetingLink: 'https://test.meeting',
         format: 'virtual',
-        sameAsPrevious: false,
       },
       {
         id: 'new-2',
@@ -122,7 +120,6 @@ describe('sessionStateToApi', () => {
         locationName: 'New Location',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
       },
     ];
 
@@ -175,7 +172,6 @@ describe('sessionStateToApi', () => {
         locationName: '',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
       },
     ];
 
@@ -213,7 +209,6 @@ describe('sessionStateToApi', () => {
         locationName: 'Test Location',
         meetingLink: 'https://test.meeting',
         format: 'virtual',
-        sameAsPrevious: false,
       },
       {
         id: 'new-3',
@@ -224,7 +219,6 @@ describe('sessionStateToApi', () => {
         locationName: 'New Location',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
       },
     ];
 

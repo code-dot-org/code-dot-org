@@ -1,5 +1,4 @@
 import Button from '@code-dot-org/component-library/button';
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
@@ -36,8 +35,6 @@ export const SessionPart: FC<{
   locationName: SessionFormState['locationName'];
   locationAddress: SessionFormState['locationAddress'];
   meetingLink: SessionFormState['meetingLink'];
-  sameAsPrevious: SessionFormState['sameAsPrevious'];
-  showSameAsPrevious: boolean;
   deleteDisabled: boolean;
   fields: SessionFields;
   errors?: Errors<keyof SessionFormState>;
@@ -51,8 +48,6 @@ export const SessionPart: FC<{
   locationName,
   locationAddress,
   meetingLink,
-  sameAsPrevious,
-  showSameAsPrevious,
   deleteDisabled,
   fields,
   errors,
@@ -73,17 +68,6 @@ export const SessionPart: FC<{
     return timeOptions;
   }, []);
 
-  const sameAsPreviousLabel = useMemo(() => {
-    switch (format) {
-      case 'in_person':
-        return 'Location';
-      case 'virtual':
-        return 'Meeting link';
-      default:
-        return '';
-    }
-  }, [format]);
-
   const handleSession = useCallback(
     (update: Partial<SessionFormState>) => {
       dispatchSessions({type: 'UPDATE_SESSION', id, payload: update});
@@ -94,20 +78,6 @@ export const SessionPart: FC<{
   const deleteSession = useCallback(() => {
     dispatchSessions({type: 'DELETE_SESSION', id});
   }, [dispatchSessions, id]);
-
-  const handleSameAsPrevious = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => {
-      if (event.target.checked) {
-        dispatchSessions({
-          type: 'UPDATE_SESSION_SAME_AS_PREVIOUS',
-          id,
-        });
-      } else {
-        handleSession({sameAsPrevious: false});
-      }
-    },
-    [dispatchSessions, handleSession, id]
-  );
 
   const updateSession = useCallback(
     (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -273,17 +243,6 @@ export const SessionPart: FC<{
               </>
             )}
           </div>
-          {showSameAsPrevious && (
-            <div className={styles.copyPreviousCheckbox}>
-              <Checkbox
-                label={`${sameAsPreviousLabel} same as previous`}
-                name={`${sameAsPreviousLabel} same as previous`}
-                checked={sameAsPrevious}
-                size="s"
-                onChange={handleSameAsPrevious}
-              />
-            </div>
-          )}
         </div>
       )}
     </div>

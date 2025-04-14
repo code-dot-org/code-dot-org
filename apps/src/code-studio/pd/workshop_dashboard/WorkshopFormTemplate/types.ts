@@ -90,7 +90,6 @@ export interface SessionFormState {
   locationName: string;
   meetingLink: string;
   format: SessionFormat;
-  sameAsPrevious: boolean;
 }
 
 export interface Workshop {
@@ -242,8 +241,7 @@ export type SessionAction =
   | {type: 'ADD_SESSION'}
   | {type: 'UPDATE_SESSION'; payload: Partial<SessionFormState>; id: string}
   | {type: 'SET_SESSIONS'; payload: SessionFormState[]}
-  | {type: 'DELETE_SESSION'; id: string}
-  | {type: 'UPDATE_SESSION_SAME_AS_PREVIOUS'; id: string};
+  | {type: 'DELETE_SESSION'; id: string};
 
 export type WorkshopAction =
   | {type: 'UPDATE_WORKSHOP'; payload: Partial<WorkshopFormState>}

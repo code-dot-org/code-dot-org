@@ -50,7 +50,6 @@ export const sessionDataToState = (
     locationName: session.location_name ?? '',
     meetingLink: session.meeting_link ?? '',
     format: session.session_format ?? 'in_person',
-    sameAsPrevious: false,
   }));
 
 export const workshopStateToApi = (
