@@ -38,6 +38,7 @@ class OpenaiEvaluateControllerTest < ActionController::TestCase
 
   # student response contains profanity
   test 'evaluate returns custom `Profanity detected` for free response with profanity",' do
+    ProfanityFilter.stubs(:find_potential_profanity).returns 'shit'
     student = create(:student)
     sign_in(student)
     csp_course_offering = create(:csp_course_offering, :with_units)
