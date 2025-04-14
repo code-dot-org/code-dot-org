@@ -12,6 +12,7 @@ import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionPro
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
+import SkillsEvaluations from '@cdo/apps/templates/teacherDashboard/SkillsEvaluations';
 
 import firehoseClient from '../../metrics/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
@@ -224,6 +225,18 @@ function TeacherDashboard({
           path="/roster"
           element={
             <Navigate to={TEACHER_DASHBOARD_PATHS.manageStudents} replace />
+          }
+        />
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.skills}
+          element={
+            <EmptySectionV1
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(
+                <SkillsEvaluations sectionId={sectionId} />
+              )}
+            />
           }
         />
       </Routes>

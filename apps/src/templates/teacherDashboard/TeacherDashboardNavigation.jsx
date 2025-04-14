@@ -17,6 +17,7 @@ export const TEACHER_DASHBOARD_PATHS = {
   loginInfo: '/login_info',
   standardsReport: '/standards_report',
   aiTutorChatMessages: '/ai_tutor',
+  skills: '/skills',
 };
 
 export const LABELED_TEACHER_DASHBOARD_PATHS = [
@@ -55,9 +56,19 @@ export default function TeacherDashboardNavigation({links, showAITutorTab}) {
         },
       ]
     : [];
+  const showSkillsTab = true;
+  const skillsLinks = showSkillsTab
+    ? [
+        {
+          label: 'Skills',
+          url: TEACHER_DASHBOARD_PATHS.skills,
+        },
+      ]
+    : [];
   const renderedLinks = [
     ...(links || LABELED_TEACHER_DASHBOARD_PATHS),
     ...aiTutorLinks,
+    ...skillsLinks,
   ];
 
   return (
