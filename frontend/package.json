@@ -44,5 +44,8 @@
   "packageManager": "yarn@4.6.0",
   "engines": {
     "node": ">=20"
+  },
+  "dependencies": {
+    "focus-trap-react": "^11.0.3"
   }
 }

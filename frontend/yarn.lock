@@ -1052,6 +1052,7 @@ __metadata:
   dependencies:
     "@axe-core/playwright": "npm:^4.10.1"
     "@storybook/test-runner": "npm:^0.19.1"
+    focus-trap-react: "npm:^11.0.3"
     lint-staged: "npm:^15.4.3"
     prettier: "npm:3.4.2"
     rimraf: "npm:^6.0.1"
@@ -10461,6 +10462,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"focus-trap-react@npm:^11.0.3":
+  version: 11.0.3
+  resolution: "focus-trap-react@npm:11.0.3"
+  dependencies:
+    focus-trap: "npm:^7.6.4"
+    tabbable: "npm:^6.2.0"
+  peerDependencies:
+    "@types/react": ^18.0.0 || ^19.0.0
+    "@types/react-dom": ^18.0.0 || ^19.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  checksum: 10c0/5a4829720901e32ef8cb0783a91e06262e079ab4a0537ffa21d866b1b70d6d383a4ee14baa19e84d952a304b4b08814a1c1fbdb2307d79a2995977735376ae45
+  languageName: node
+  linkType: hard
+
+"focus-trap@npm:^7.6.4":
+  version: 7.6.4
+  resolution: "focus-trap@npm:7.6.4"
+  dependencies:
+    tabbable: "npm:^6.2.0"
+  checksum: 10c0/ed810d47fd904a5e0269e822d98e634c6cbdd7222046c712ef299bdd26a422db754e3cec04e6517065b12be4b47f65c21f6244e0c07a308b1060985463d518cb
+  languageName: node
+  linkType: hard
+
 "follow-redirects@npm:^1.0.0, follow-redirects@npm:^1.15.6":
   version: 1.15.9
   resolution: "follow-redirects@npm:1.15.9"
@@ -17703,6 +17728,13 @@ __metadata:
     "@pkgr/core": "npm:^0.1.0"
     tslib: "npm:^2.6.2"
   checksum: 10c0/e0c262817444e5b872708adb6f5ad37951ba33f6b2d1d4477d45db1f57573a784618ceed5e6614e0225db330632b1f6b95bb74d21e4d013e45ad4bde03d0cb59
+  languageName: node
+  linkType: hard
+
+"tabbable@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "tabbable@npm:6.2.0"
+  checksum: 10c0/ced8b38f05f2de62cd46836d77c2646c42b8c9713f5bd265daf0e78ff5ac73d3ba48a7ca45f348bafeef29b23da7187c72250742d37627883ef89cbd7fa76898
   languageName: node
   linkType: hard
 

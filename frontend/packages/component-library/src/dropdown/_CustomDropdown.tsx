@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import {FocusTrap} from 'focus-trap-react';
 import {
   useCallback,
   useMemo,
@@ -240,7 +241,16 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         </button>
       )}
       {/** Dropdown menu content is rendered here as children props*/}
-      {children}
+      <FocusTrap
+        focusTrapOptions={{
+          clickOutsideDeactivates: true,
+          fallbackFocus: '#fallback-element',
+        }}
+      >
+        <div id="fallback-element" tabIndex={-1}>
+          {children}
+        </div>
+      </FocusTrap>
 
       {!errorMessage && (helperMessage || helperIcon) && (
         <div className={moduleStyles.helperSection}>
