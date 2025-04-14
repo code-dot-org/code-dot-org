@@ -56,19 +56,21 @@ const ProjectsMenu: React.FC<ProjectsMenuProps> = ({
             className,
           )}
         >
-          {projectsLinks.map(({href, label, image, description, ...link}) => (
-            <li key={label}>
-              <a href={href} {...link}>
-                <Image src={image} />
-                <div>
-                  {label}
-                  <BodyFourText className={moduleStyles.description}>
-                    {description}
-                  </BodyFourText>
-                </div>
-              </a>
-            </li>
-          ))}
+          {projectsLinks.map(
+            ({key, href, label, image, description, ...link}) => (
+              <li key={key}>
+                <a href={href} {...link}>
+                  <Image src={image} />
+                  <div>
+                    {label}
+                    <BodyFourText className={moduleStyles.description}>
+                      {description}
+                    </BodyFourText>
+                  </div>
+                </a>
+              </li>
+            ),
+          )}
         </ul>
       )}
     </>
