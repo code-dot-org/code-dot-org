@@ -8,7 +8,7 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ControlButtons from '@codebridge/Console/ControlButtons';
 import {MiniApps} from '@codebridge/constants';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -28,6 +28,14 @@ interface MiniAppPreviewProps {
   handleScaling?: boolean;
 }
 
+const tooltipProps: TooltipProps = {
+  text: codebridgeI18n.resetPreview(),
+  size: 'xs',
+  direction: 'onLeft',
+  tooltipId: 'reset-preview-tooltip',
+  className: darkModeStyles.tooltipLeft,
+};
+
 const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   maximizeMiniApp,
   minimizeMiniApp,
@@ -42,30 +50,22 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
 
   useEffect(() => {
+    const disabled = isRunning || isReset;
+    setIsDisabled(disabled);
+
     if (isRunning) {
-      setIsDisabled(true);
       setIsReset(false);
-    } else if (isReset) {
-      setIsDisabled(true);
-    } else {
-      setIsDisabled(false);
     }
   }, [isRunning, isReset]);
 
   const miniApp = labConfig?.miniApp?.name;
 
-  const miniAppComponent =
-    miniApp === MiniApps.Neighborhood ? (
-      <NeighborhoodPreview handleScaling={handleScaling} />
-    ) : null;
-
-  const tooltipProps: TooltipProps = {
-    text: codebridgeI18n.resetPreview(),
-    size: 'xs',
-    direction: 'onLeft',
-    tooltipId: 'reset-preview-tooltip',
-    className: darkModeStyles.tooltipLeft,
-  };
+  const miniAppComponent = useMemo(() => {
+    if (miniApp === MiniApps.Neighborhood) {
+      return <NeighborhoodPreview handleScaling={handleScaling} />;
+    }
+    return null;
+  }, [handleScaling, miniApp]);
 
   const resetMiniApp = () => {
     setIsReset(true);
