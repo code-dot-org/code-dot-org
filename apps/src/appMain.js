@@ -98,6 +98,7 @@ export default function (app, levels, options) {
         ...levelCustomBlocksConfig,
       ];
       if (customBlocksConfig.length > 0) {
+        // Install custom blocks for this level
         const blocksByCategory = installCustomBlocks({
           blockly: Blockly,
           blockDefinitions: customBlocksConfig,

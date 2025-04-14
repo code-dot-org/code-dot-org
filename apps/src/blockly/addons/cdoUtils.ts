@@ -7,6 +7,7 @@ import {
   processIndividualBlock,
   removeIdsFromBlocks,
 } from '@cdo/apps/blockly/addons/cdoXml';
+import Localization from '@cdo/apps/localization';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -845,6 +846,27 @@ export function getCategoryBlocksJson(category: string) {
   const blocksConvertedJson = convertXmlToJson(
     levelToolboxBlocks.documentElement
   );
+
+  // Localize the flyout variables
+  // These are sourced from the XML and are always in the source language
+  (blocksConvertedJson.variables || []).forEach(variable => {
+    Blockly.SourceVariables[variable.id] ||= variable.name;
+    const oldName = Blockly.SourceVariables[variable.id];
+    let newName: string = Localization.translate(`[variable] ${oldName}`, [
+      'blockly-variable',
+      'blockly-block',
+    ]);
+    if (newName.startsWith('[variable] ')) {
+      newName = newName.substring(11);
+    } else {
+      console.log(
+        'Global variable translation does not have the [variable] tag',
+        oldName,
+        newName
+      );
+    }
+    variable.name = newName;
+  });
   const flyoutJson = getSimplifiedStateForFlyout(blocksConvertedJson);
 
   return flyoutJson;

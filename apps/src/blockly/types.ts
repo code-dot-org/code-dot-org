@@ -6,6 +6,8 @@ import {FieldColour} from '@blockly/field-colour';
 import * as GoogleBlockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
+import {CustomInputTypes} from '@cdo/apps/block_utils';
+
 import BlockSvgFrame from './addons/blockSvgFrame';
 import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
 import CdoAngleHelper from './addons/cdoAngleHelper';
@@ -29,6 +31,8 @@ import {
   WORKSPACE_EVENTS,
 } from './constants';
 
+type GoogleBlocklyType = typeof GoogleBlockly;
+
 export interface BlockDefinition {
   category: string;
   config: BlockConfig;
@@ -37,12 +41,18 @@ export interface BlockDefinition {
   pool: string;
 }
 
+export interface BlocksByCategory {
+  [key: string]: string[];
+}
+
 export interface BlockConfig {
   args: arg[];
   blockText: string;
   color: [number, number, number];
   func: string;
   style: string;
+  docFunc?: string;
+  returnType?: string;
 }
 
 export interface arg {
@@ -64,7 +74,6 @@ interface AnalyticsData {
   levelId?: number;
 }
 
-type GoogleBlocklyType = typeof GoogleBlockly;
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
   isDarkTheme: boolean | undefined;
@@ -182,6 +191,26 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   blockIdOverrides: {
     [originalBlockId: string]: string;
   };
+  SourceMsg: {[key: string]: string};
+  SourceVariables: {[key: string]: string};
+  SourceCustomInputTypes: CustomInputTypes;
+  SourceCustomBlocks: {
+    blockDefinitionsByName: {
+      [key: string]: BlockDefinition;
+    };
+    blockTexts: {
+      [key: string]: string;
+    };
+    inputTypes: CustomInputTypes;
+  };
+  localizeVariables: (workspace: ExtendedWorkspaceSvg) => void;
+  unlocalizeVariables: (workspace: ExtendedWorkspaceSvg) => void;
+  refreshWorkspace: (workspace: ExtendedWorkspaceSvg) => void;
+  registerCustomBlocks: (
+    blockDefinitions: BlockDefinition[],
+    inputTypes: CustomInputTypes
+  ) => BlocksByCategory;
+  updateLocale: () => void;
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;
@@ -255,6 +284,7 @@ export interface ExtendedWorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   previousViewWidth: number;
   flyoutParentBlock: GoogleBlockly.Block | null;
   globalVariables: string[];
+  sourceGlobalVariables: string[];
   noFunctionBlockFrame: boolean;
   events: {
     dispatchEvent: () => void;

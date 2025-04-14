@@ -1112,6 +1112,10 @@ exports.installCustomBlocks = function ({
   blockDefinitions,
   customInputTypes,
 }) {
+  if (blockly.registerCustomBlocks) {
+    return blockly.registerCustomBlocks(blockDefinitions, customInputTypes);
+  }
+
   const createJsWrapperBlock = exports.createJsWrapperBlockCreator(
     blockly,
     [
