@@ -85,7 +85,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
   align-items: center;
   gap: 0.5rem;
 
-  body & .signIn,
+  body & .signIn.mainMenu,
   body & .newProject {
     background: transparent;
 
@@ -94,8 +94,8 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
     }
   }
 
-  body & .createAccount,
-  body & .goToDashboard {
+  body & .createAccount.mainMenu,
+  body & .goToDashboard.mainMenu {
     color: var(--text-brand-teal-primary-fixed);
 
     &:hover {
@@ -125,6 +125,10 @@ body .buttonLinks > button.iconButton {
 
   & > i {
     font-size: 1.25rem;
+
+    [dir='rtl'] & {
+      transform: scaleX(-1);
+    }
   }
 
   &:hover,
@@ -151,10 +155,9 @@ body .buttonLinks > button.iconButton {
   text-align: initial;
 
   a {
-    display: block;
-
     @include typography.body-three;
     font-weight: 500;
+    display: block;
     margin-bottom: 0;
     text-decoration: none;
     padding: 0.5rem 0.75rem;
@@ -212,11 +215,15 @@ body .buttonLinks > button.newProject i {
 .accountLinks {
   display: flex;
   gap: 0.5rem;
+
+  [dir='rtl'] & .goToDashboard i {
+    transform: scaleX(-1);
+  }
 }
 
 // Help menu styles
 .helpMenu {
-  right: 0;
+  inset-inline-end: 0;
   min-width: 208px;
 }
 
@@ -224,7 +231,7 @@ body .buttonLinks > button.newProject i {
 .hamburgerMenu {
   position: absolute;
   top: 0;
-  right: 0;
+  inset-inline-end: 0;
   min-width: 248px;
 
   .hamburgerButtonWrapper {
@@ -282,18 +289,21 @@ body .buttonLinks > button.newProject i {
     box-shadow: $box-shadow;
 
     .hamburgerButtonWrapper {
-      display: block;
-      background: var(--background-neutral-secondary);
-
       @include mixins.border-styles;
+      display: block;
       padding: 0.375rem;
+      background: var(--background-neutral-secondary);
       border-radius: 0.25rem 0.25rem 0 0;
       border-bottom: 0;
     }
 
     .accountLinks {
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
+
+      & > a:focus-visible {
+        @include mixins.focus-styles;
+      }
     }
 
     ul {
