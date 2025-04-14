@@ -56,9 +56,11 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
             className,
           )}
         >
-          {helpLinks.map(({href, label}) => (
+          {helpLinks.map(({href, label, ...link}) => (
             <li key={label}>
-              <a href={href}>{label}</a>
+              <a href={href} {...link}>
+                {label}
+              </a>
             </li>
           ))}
         </ul>
