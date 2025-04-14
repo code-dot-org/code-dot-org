@@ -1,16 +1,15 @@
 import classNames from 'classnames';
-import {Key, AnchorHTMLAttributes, HTMLAttributes, useState} from 'react';
+import {HTMLAttributes, useState} from 'react';
 
 import {Button} from '@/button';
 import {Image, ImageProps} from '@/image';
 import {BodyFourText} from '@/typography';
 
+import {Link} from './types';
+
 import moduleStyles from './header.module.scss';
 
-export interface ProjectLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  key: Key;
-  label: string;
-  href: string;
+export interface ProjectLink extends Link {
   image: Extract<ImageProps['src'], string>;
   description?: string;
 }

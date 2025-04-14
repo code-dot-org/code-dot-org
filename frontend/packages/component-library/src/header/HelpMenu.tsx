@@ -1,21 +1,16 @@
 import classNames from 'classnames';
-import {Key, AnchorHTMLAttributes, HTMLAttributes, useState} from 'react';
+import {HTMLAttributes, useState} from 'react';
 
 import {Button} from '@/button';
 
+import {Link} from './types';
+
 import moduleStyles from './header.module.scss';
-
-export interface HelpLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  key: Key;
-  label: string;
-  href: string;
-}
-
 export interface HelpMenuProps extends HTMLAttributes<HTMLElement> {
   /** Help menu label */
   helpButtonLabel: string;
   /** Help links */
-  helpLinks: HelpLink[];
+  helpLinks: Link[];
   /** Project custom class name */
   className?: string;
 }

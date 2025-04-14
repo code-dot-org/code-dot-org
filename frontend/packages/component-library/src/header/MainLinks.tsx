@@ -1,18 +1,13 @@
 import classNames from 'classnames';
-import {Key, AnchorHTMLAttributes, HTMLAttributes} from 'react';
+import {HTMLAttributes} from 'react';
+
+import {Link} from './types';
 
 import moduleStyles from './header.module.scss';
 
-export interface MainLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  key: Key;
-  label: string;
-  href: string;
-  hasDisplayLogic?: boolean;
-}
-
 export interface MainLinksProps extends HTMLAttributes<HTMLElement> {
   /** Main links */
-  mainLinks: MainLink[];
+  mainLinks: Link[];
   /** Main links custom class name */
   className?: string;
 }

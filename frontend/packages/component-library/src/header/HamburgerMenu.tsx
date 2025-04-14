@@ -1,25 +1,18 @@
 import classNames from 'classnames';
-import {Key, AnchorHTMLAttributes, HTMLAttributes, useState} from 'react';
+import {HTMLAttributes, useState} from 'react';
 
 import {Button} from '@/button';
 
 import AccountButtons, {AccountButtonsProps} from './AccountButtons';
+import {Link} from './types';
 
 import moduleStyles from './header.module.scss';
-
-export interface HamburgerMenuLink
-  extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  key: Key;
-  label: string;
-  href: string;
-  hasDisplayLogic?: boolean;
-}
 
 export interface HamburgerMenuProps extends HTMLAttributes<HTMLElement> {
   /** Hamburger menu label */
   hamburgerButtonLabel: string;
   /** Hamburger links */
-  hamburgerLinks: HamburgerMenuLink[];
+  hamburgerLinks: Link[];
   /** Account links */
   accountLinks: {
     /** Sign In button */
