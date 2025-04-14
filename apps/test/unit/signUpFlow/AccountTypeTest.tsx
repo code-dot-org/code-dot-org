@@ -5,7 +5,6 @@ import AccountType from '@cdo/apps/signUpFlow/AccountType';
 import locale from '@cdo/apps/signUpFlow/locale';
 import {OAUTH_LOGIN_TYPE_SESSION_KEY} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import {navigateToHref} from '@cdo/apps/utils';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/utils', () => ({
   ...jest.requireActual('@cdo/apps/utils'),
@@ -39,10 +38,7 @@ describe('SelectAccountType', () => {
     fireEvent.click(studentButton);
     fireEvent.click(teacherButton);
     expect(navigateToHrefMock).toHaveBeenCalledWith(
-      `/users/sign_up/login_type?user_type=${UserTypes.STUDENT}`
-    );
-    expect(navigateToHrefMock).toHaveBeenCalledWith(
-      `/users/sign_up/login_type?user_type=${UserTypes.TEACHER}`
+      '/users/sign_up/login_type'
     );
     expect(navigateToHrefMock).toHaveBeenCalledTimes(2);
   });

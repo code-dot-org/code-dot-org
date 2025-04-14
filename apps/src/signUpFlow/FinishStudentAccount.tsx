@@ -79,9 +79,7 @@ const FinishStudentAccount: React.FunctionComponent<{
       sessionStorage.getItem(EMAIL_SESSION_KEY) === null &&
       sessionStorage.getItem(OAUTH_LOGIN_TYPE_SESSION_KEY) === null
     ) {
-      navigateToHref(
-        `/users/sign_up/login_type?user_type=${UserTypes.STUDENT}`
-      );
+      navigateToHref('/users/sign_up/login_type');
     }
 
     analyticsReporter.sendEvent(

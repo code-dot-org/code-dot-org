@@ -426,7 +426,6 @@ class RegistrationsControllerTest < ActionController::TestCase
   end
 
   test "create causes UserGeo creation" do
-    ActionController::TestRequest.any_instance.stubs(:country_code)
     request.remote_addr = '1.2.3.4'
     user_params = set_up_partial_registration(@default_params)
     assert_creates(UserGeo) do
