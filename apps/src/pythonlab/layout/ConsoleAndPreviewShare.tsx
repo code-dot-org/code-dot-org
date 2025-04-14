@@ -27,6 +27,7 @@ const ConsoleAndPreviewShare: React.FunctionComponent<
       showMaximizeButton={false}
       maximizeMiniApp={() => {}}
       minimizeMiniApp={() => {}}
+      resetMiniApp={() => {}}
       isMaximized={false}
       handleScaling={true}
     />
