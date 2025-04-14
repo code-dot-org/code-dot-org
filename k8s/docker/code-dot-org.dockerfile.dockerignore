@@ -39,6 +39,8 @@ i18n/
 
 
 **/.git
+!.git/HEAD
+!.git/refs/heads/**
 
 # Why can't I find this in .gitignore? Anyway, it changes whenever vscode does its automatic 
 # `bundle install` which triggers constant surprise skaffold rebuilds (ugh)

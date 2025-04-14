@@ -1,3 +1,4 @@
+LATEST_BUILD_TAG=`docker images ghcr.io/code-dot-org/code-dot-org --format '{{.Tag}}' | grep -v _ | head -n1`
 kubectl delete job dashboard-unit-test --ignore-not-found
 kubectl apply -f - <<EOF
 apiVersion: batch/v1
@@ -12,7 +13,7 @@ spec:
       enableServiceLinks: false
       containers:
       - name: dashboard
-        image: ghcr.io/code-dot-org/code-dot-org:f5b2b5ab6c7742c9316bd65c9f4f42b26f348d1bdeece24bac7d7333ae31d7e7
+        image: ghcr.io/code-dot-org/code-dot-org:$LATEST_BUILD_TAG
         command: ["zsh", "-c"]
         args:
           - |
@@ -26,18 +27,22 @@ spec:
             export DISABLE_SPRING=1
             export LD_LIBRARY_PATH=/usr/local/lib
 
+            echo “The power of Isengard is at your command, Sauron, Lord of the Earth.”
+            
             set -x
 
+            git remote add origin https://github.com/code-dot-org/code-dot-org.git
+            branch=$(git symbolic-ref --short HEAD)
+            git fetch --depth=1 origin "$branch"
+            git update-ref -m "rehydrate" "refs/heads/$branch" FETCH_HEAD
+
+            sleep infinity
             {
-              git init
-              git remote add origin https://github.com/code-dot-org/code-dot-org.git
-              git fetch --depth=1 origin HEAD
-              git reset --hard FETCH_HEAD
               bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
               bundle exec rake ci:run_tests
             } || true
 
-            sleep infinity
+            
         tty: true
         env:
           - name: RAILS_ENV
