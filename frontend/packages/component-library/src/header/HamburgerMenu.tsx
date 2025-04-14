@@ -3,7 +3,7 @@ import {Key, AnchorHTMLAttributes, HTMLAttributes, useState} from 'react';
 
 import {Button} from '@/button';
 
-import AccountLinks, {AccountLinksProps} from './AccountLinks';
+import AccountButtons, {AccountButtonsProps} from './AccountButtons';
 
 import moduleStyles from './header.module.scss';
 
@@ -23,14 +23,14 @@ export interface HamburgerMenuProps extends HTMLAttributes<HTMLElement> {
   /** Account links */
   accountLinks: {
     /** Sign In button */
-    signIn: AccountLinksProps['signIn'];
+    signIn: AccountButtonsProps['signIn'];
     /** Create Account button */
-    createAccount: AccountLinksProps['createAccount'];
+    createAccount: AccountButtonsProps['createAccount'];
     /** Go to Dashboard button */
-    goToDashboard: AccountLinksProps['goToDashboard'];
+    goToDashboard: AccountButtonsProps['goToDashboard'];
   };
   /** Is user logged in */
-  isLoggedIn: AccountLinksProps['isLoggedIn'];
+  isLoggedIn: AccountButtonsProps['isLoggedIn'];
   /** Project custom class name */
   className?: string;
 }
@@ -68,7 +68,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
       {isOpen && (
         <div className={moduleStyles.hamburgerMenu}>
           <div className={moduleStyles.hamburgerButtonWrapper}>
-            <AccountLinks
+            <AccountButtons
               signIn={accountLinks.signIn}
               createAccount={accountLinks.createAccount}
               goToDashboard={accountLinks.goToDashboard}

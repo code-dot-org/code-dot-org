@@ -3,7 +3,7 @@ import {HTMLAttributes} from 'react';
 
 import {Image} from '@/image';
 
-import AccountLinks, {AccountLinksProps} from './AccountLinks';
+import AccountButtons, {AccountButtonsProps} from './AccountButtons';
 import HamburgerMenu, {HamburgerMenuProps} from './HamburgerMenu';
 import HelpMenu, {HelpMenuProps} from './HelpMenu';
 import MainLinks, {MainLinksProps} from './MainLinks';
@@ -23,14 +23,14 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   /** Account links */
   accountLinks: {
     /** Sign In button */
-    signIn: AccountLinksProps['signIn'];
+    signIn: AccountButtonsProps['signIn'];
     /** Create Account button */
-    createAccount: AccountLinksProps['createAccount'];
+    createAccount: AccountButtonsProps['createAccount'];
     /** Go to Dashboard button */
-    goToDashboard: AccountLinksProps['goToDashboard'];
+    goToDashboard: AccountButtonsProps['goToDashboard'];
   };
   /** Is user logged in */
-  isLoggedIn: AccountLinksProps['isLoggedIn'];
+  isLoggedIn: AccountButtonsProps['isLoggedIn'];
   /** Help menu label */
   helpButtonLabel: HelpMenuProps['helpButtonLabel'];
   /** Help menu links */
@@ -73,7 +73,7 @@ const Header: React.FC<HeaderProps> = ({
         projectsLinks={projectsLinks}
         projectsButtonLabel={projectsButtonLabel}
       />
-      <AccountLinks
+      <AccountButtons
         signIn={accountLinks.signIn}
         createAccount={accountLinks.createAccount}
         goToDashboard={accountLinks.goToDashboard}

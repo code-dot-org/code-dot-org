@@ -4,7 +4,7 @@ import {LinkButton} from '@/button';
 
 import moduleStyles from './header.module.scss';
 
-export interface AccountLinksProps extends HTMLAttributes<HTMLElement> {
+export interface AccountButtonsProps extends HTMLAttributes<HTMLElement> {
   /** Sign In button */
   signIn: {
     label: string;
@@ -26,7 +26,7 @@ export interface AccountLinksProps extends HTMLAttributes<HTMLElement> {
   isInHamburger: boolean;
 }
 
-const AccountLinks: React.FC<AccountLinksProps> = ({
+const AccountButtons: React.FC<AccountButtonsProps> = ({
   signIn,
   createAccount,
   goToDashboard,
@@ -72,4 +72,4 @@ const AccountLinks: React.FC<AccountLinksProps> = ({
   );
 };
 
-export default AccountLinks;
+export default AccountButtons;
