@@ -18,6 +18,7 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   description?: string | ReactNode;
   /** HeroBanner image */
   imageProps?: ImageProps;
+  VideoComponent: typeof Video;
   /** HeroBanner video */
   videoProps?: VideoProps;
   /** HeroBanner link */
@@ -62,6 +63,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   partner,
   buttonProps,
   imageProps,
+  VideoComponent,
   videoProps,
   backgroundColor,
   backgroundImageUrl,
@@ -110,7 +112,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       {(imageProps || videoProps) && (
         <div className={moduleStyles.heroBannerMediaContainer}>
           {imageProps && !videoProps && <Image {...imageProps} />}
-          {videoProps && <Video {...videoProps} />}
+          {videoProps && <VideoComponent {...videoProps} />}
         </div>
       )}
     </div>

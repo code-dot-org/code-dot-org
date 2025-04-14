@@ -1,11 +1,10 @@
-'use client';
-
 import React from 'react';
 
 import DSCOHeroBanner from '@code-dot-org/component-library/cms/heroBanner';
 import {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import {externalLinkIconProps} from '@/components/common/constants';
+import Video from '@/components/video';
 
 type HeroBannerProps = {
   /** HeroBanner content mode (theme) value */
@@ -70,6 +69,7 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
       subHeading={subHeading}
       description={description}
       imageProps={sectionImage ? {src: sectionImage} : undefined}
+      VideoComponent={Video}
       buttonProps={{
         text: buttonLabel,
         href: buttonUrl,
@@ -82,7 +82,7 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
           : undefined
       }
       backgroundImageUrl={backgroundImage}
-      // videoProps={videoProps}
+      videoProps={{youTubeId: 'Ok-xpKjKp2g'}}
       removeBackground={removeBackground}
     />
   );
