@@ -30,7 +30,11 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
   return (
     <>
       <Button
-        className={classNames(moduleStyles.helpButton, className)}
+        className={classNames(
+          moduleStyles.helpButton,
+          moduleStyles.iconButton,
+          className,
+        )}
         ariaLabel={helpButtonLabel || 'Help'}
         icon={{
           iconName: 'question-circle',
