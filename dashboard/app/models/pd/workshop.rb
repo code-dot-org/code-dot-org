@@ -74,6 +74,7 @@ class Pd::Workshop < ApplicationRecord
     # If the subject is not in the MUST_SUPPRESS_EMAIL_SUBJECTS constant, this attribute
     # can be set to be true or false from the UI
     'suppress_email',
+    # TODO: ACQ-3081
     # temporary flag that skips some of the config based workshop validation if the
     # workshop is submitted from the legacy form
     'legacy'
@@ -87,8 +88,9 @@ class Pd::Workshop < ApplicationRecord
   validates_length_of :location_name, :location_address, maximum: 255
   validate :sessions_must_start_on_separate_days
   validate :subject_must_be_valid_for_course
-  validates_inclusion_of :on_map, in: [true, false]
-  validates_inclusion_of :funded, in: [true, false]
+  # TODO: ACQ-3081 remove on_map & funded validation when we are ready to remove the legacy form
+  validates_inclusion_of :on_map, in: [true, false], if: :legacy?
+  validates_inclusion_of :funded, in: [true, false], if: :legacy?
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
   validate :virtual_only_subjects_must_be_virtual
   validate :not_funded_subjects_must_not_be_funded
