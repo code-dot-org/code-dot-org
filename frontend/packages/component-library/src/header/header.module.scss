@@ -45,7 +45,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
     }
   }
 
-  ul {
+  .mainLinks {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -174,7 +174,7 @@ body .buttonLinks > button.iconButton {
   }
 }
 
-// Project menu styles
+// New Project menu styles
 body .buttonLinks > button.newProject i {
   width: unset;
 }
@@ -259,7 +259,7 @@ body .buttonLinks > button.newProject i {
 // Tablet
 @media (max-width: $tablet-breakpoint) {
   // Hide Main links and New Project menu
-  body .mainLinks,
+  .mainWrapper .mainLinks,
   body .newProject {
     display: none;
   }
@@ -276,6 +276,7 @@ body .buttonLinks > button.newProject i {
     display: none;
   }
 
+  // Mobile Hamburger menu styles
   .hamburgerMenu {
     top: 3rem;
     box-shadow: $box-shadow;
