@@ -241,17 +241,18 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
         </button>
       )}
       {/** Dropdown menu content is rendered here as children props*/}
-      <FocusTrap
-        focusTrapOptions={{
-          clickOutsideDeactivates: true,
-          fallbackFocus: '#fallback-element',
-        }}
-      >
-        <div id="fallback-element" tabIndex={-1}>
-          {children}
-        </div>
-      </FocusTrap>
-
+      {isOpen && (
+        <FocusTrap
+          focusTrapOptions={{
+            clickOutsideDeactivates: true,
+            fallbackFocus: '#fallback-element',
+          }}
+        >
+          <div id="fallback-element" tabIndex={-1}>
+            {children}
+          </div>
+        </FocusTrap>
+      )}
       {!errorMessage && (helperMessage || helperIcon) && (
         <div className={moduleStyles.helperSection}>
           {helperIcon && <FontAwesomeV6Icon {...helperIcon} />}
