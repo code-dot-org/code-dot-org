@@ -78,7 +78,7 @@ describe('RichText component', () => {
 
     const paragraph = screen.getByText(paragraphText);
     expect(paragraph).toBeVisible();
-    expect(paragraph.tagName).toBe('B');
+    expect(paragraph.tagName).toBe('STRONG');
     expect(paragraph.parentElement).toHaveRole('paragraph');
   });
 

@@ -19,7 +19,10 @@ import Link from '@code-dot-org/component-library/link';
 import SimpleList, {
   SimpleListItem,
 } from '@code-dot-org/component-library/list/simpleList';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {
+  BodyTwoText,
+  StrongText,
+} from '@code-dot-org/component-library/typography';
 
 import moduleStyles from './richText.module.scss';
 
@@ -46,7 +49,13 @@ const extractNodeContent = (node: RichTextNode): ReactNode[] => {
   switch (node.nodeType) {
     case 'text':
       return node.value
-        ? [isBold(node) ? <b key={node.value}>{node.value}</b> : node.value]
+        ? [
+            isBold(node) ? (
+              <StrongText key={node.value}>{node.value}</StrongText>
+            ) : (
+              node.value
+            ),
+          ]
         : [];
     case INLINES.HYPERLINK: {
       const linkContent = getContent();
