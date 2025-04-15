@@ -3,6 +3,9 @@
   "script_names": [
     "csf-2022-pilot"
   ],
+  "original_script_names": [
+    "csf-2022-pilot"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

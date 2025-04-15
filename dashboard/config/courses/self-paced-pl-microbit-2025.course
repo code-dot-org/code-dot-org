@@ -4,6 +4,10 @@
     "self-paced-pl-microbit0-2025",
     "self-paced-pl-microbit1-2025"
   ],
+  "original_script_names": [
+    "self-paced-pl-microbit0-2025",
+    "self-paced-pl-microbit1-2025"
+  ],
   "published_state": "in_development",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

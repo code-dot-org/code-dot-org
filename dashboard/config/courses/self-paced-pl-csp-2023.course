@@ -6,6 +6,12 @@
     "self-paced-pl-csp3-2023",
     "self-paced-pl-csp4-2023"
   ],
+  "original_script_names": [
+    "self-paced-pl-csp1-2023",
+    "self-paced-pl-csp2-2023",
+    "self-paced-pl-csp3-2023",
+    "self-paced-pl-csp4-2023"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

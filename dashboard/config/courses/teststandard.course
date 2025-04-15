@@ -3,6 +3,9 @@
   "script_names": [
     "teststandard"
   ],
+  "original_script_names": [
+    "teststandard"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

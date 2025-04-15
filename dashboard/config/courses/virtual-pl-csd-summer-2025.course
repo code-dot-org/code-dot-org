@@ -7,6 +7,13 @@
     "virtual-pl-csd-summer-2025-day4",
     "virtual-pl-csd-summer-2025-day5"
   ],
+  "original_script_names": [
+    "virtual-pl-csd-summer-2025-day1",
+    "virtual-pl-csd-summer-2025-day2",
+    "virtual-pl-csd-summer-2025-day3",
+    "virtual-pl-csd-summer-2025-day4",
+    "virtual-pl-csd-summer-2025-day5"
+  ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",

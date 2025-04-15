@@ -3,6 +3,9 @@
   "script_names": [
     "coursea-2019"
   ],
+  "original_script_names": [
+    "coursea-2019"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

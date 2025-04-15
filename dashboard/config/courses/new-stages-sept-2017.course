@@ -3,6 +3,9 @@
   "script_names": [
     "new-stages-sept-2017"
   ],
+  "original_script_names": [
+    "new-stages-sept-2017"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

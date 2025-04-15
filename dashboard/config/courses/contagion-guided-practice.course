@@ -3,6 +3,9 @@
   "script_names": [
     "contagion-guided-practice"
   ],
+  "original_script_names": [
+    "contagion-guided-practice"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
