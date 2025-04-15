@@ -6,17 +6,23 @@ import {Link} from './types';
 import moduleStyles from './header.module.scss';
 
 export interface MainLinksProps extends HTMLAttributes<HTMLElement> {
+  /** Main links label */
+  mainLinksLabel: 'Main site links' | string;
   /** Main links */
   mainLinks: Link[];
   /** Main links custom class name */
   className?: string;
 }
 
-const MainLinks: React.FC<MainLinksProps> = ({mainLinks, className}) => {
+const MainLinks: React.FC<MainLinksProps> = ({
+  mainLinksLabel,
+  mainLinks,
+  className,
+}) => {
   return (
     <ul
       className={classNames(moduleStyles.mainLinks, className)}
-      aria-label="Main site links"
+      aria-label={mainLinksLabel || 'Main site links'}
     >
       {mainLinks?.map(({key, label, href, hasDisplayLogic, ...link}) => (
         <li

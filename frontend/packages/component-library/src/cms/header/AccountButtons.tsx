@@ -8,17 +8,23 @@ import moduleStyles from './header.module.scss';
 export interface AccountButtonsProps extends HTMLAttributes<HTMLElement> {
   /** Sign In button */
   signIn: {
+    /** Sign In button label */
     label: string;
+    /** Sign In button href */
     href: string;
   };
   /** Create Account button */
   createAccount: {
+    /** Create Account button label */
     label: string;
+    /** Create Account button href */
     href: string;
   };
   /** Go to Dashboard button */
   goToDashboard: {
+    /** Go to Dashboard button label */
     label: string;
+    /** Go to Dashboard button href */
     href: string;
   };
   /** Is user logged in */

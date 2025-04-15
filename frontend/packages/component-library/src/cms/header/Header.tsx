@@ -21,7 +21,16 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   };
   /** Site logo */
   logo: Pick<ImageProps, 'src' | 'altText'>;
-  /** Header links */
+  /** Nav labels */
+  navLabel: {
+    /** Main nav label */
+    main: 'Main navigation' | string;
+    /** Secondary nav label */
+    secondary: 'Secondary navigation' | string;
+  };
+  /** Main links label */
+  mainLinksLabel: MainLinksProps['mainLinksLabel'];
+  /** Main links */
   mainLinks: MainLinksProps['mainLinks'];
   /** Projects button label */
   projectsButtonLabel: ProjectsMenuProps['projectsButtonLabel'];
@@ -62,6 +71,8 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
 const Header: React.FC<HeaderProps> = ({
   homeLink,
   logo,
+  navLabel,
+  mainLinksLabel,
   mainLinks,
   projectsButtonLabel,
   projectsButtonAriaLabel,
@@ -81,7 +92,7 @@ const Header: React.FC<HeaderProps> = ({
   >
     <nav
       className={moduleStyles.mainLinksWrapper}
-      aria-label={'Main navigation'}
+      aria-label={navLabel.main || 'Main navigation'}
     >
       <a
         href={homeLink.href}
@@ -90,12 +101,12 @@ const Header: React.FC<HeaderProps> = ({
       >
         <Image src={logo.src} alt={logo.altText} loading={'eager'} />
       </a>
-      <MainLinks mainLinks={mainLinks} />
+      <MainLinks mainLinksLabel={mainLinksLabel} mainLinks={mainLinks} />
     </nav>
 
     <nav
       className={moduleStyles.buttonLinks}
-      aria-label={'Secondary navigation'}
+      aria-label={navLabel.secondary || 'Secondary navigation'}
     >
       <ProjectsMenu
         projectsLinks={projectsLinks}
