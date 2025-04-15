@@ -763,6 +763,7 @@ module Services
         :instruction_type,
         :instructor_audience,
         :participant_audience,
+        :original_unit_group_name,
         :seeding_key
       )
 
@@ -785,6 +786,10 @@ module Services
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
+      end
+
+      def original_unit_group_name
+        object.original_unit_group.name
       end
     end
 

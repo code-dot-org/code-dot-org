@@ -33,6 +33,7 @@ class UnitGroup < ApplicationRecord
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {order(:position)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_units, through: :default_unit_group_units, source: :script
+  has_many :original_units, class_name: 'Unit', foreign_key: 'original_unit_group_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
@@ -125,6 +126,7 @@ class UnitGroup < ApplicationRecord
 
   def self.seed_from_hash(hash)
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
+    unit_group.update_original_scripts(hash['original_script_names'])
     unit_group.update_scripts(hash['script_names'])
     unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
@@ -166,6 +168,7 @@ class UnitGroup < ApplicationRecord
       {
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
+        original_script_names: original_units.map(&:name),
         published_state: published_state,
         instruction_type: instruction_type,
         participant_audience: participant_audience,
@@ -191,6 +194,26 @@ class UnitGroup < ApplicationRecord
     # Only save non-plc course, and only in LB mode
     return unless Rails.application.config.levelbuilder_mode && !plc_course
     File.write(UnitGroup.file_path(name), serialize)
+  end
+
+  def update_original_scripts(original_scripts)
+    return if original_scripts.nil?
+    original_scripts  = original_scripts.reject(&:empty?)
+    original_units_objects = original_scripts.map {|s| Unit.find_by_name!(s)}
+
+    units_to_remove = original_units - original_units_objects
+    unremovable_unit_names = units_to_remove.map(&:name)
+    raise "Cannot remove units from their original unit group: #{unremovable_unit_names}" if unremovable_unit_names.any?
+
+    unaddable_unit_names = original_units_objects.select do |unit|
+      !unit.original_unit_group.nil? && unit.original_unit_group != self
+    end.map(&:name)
+    raise "Cannot add original units if they already have an original unit group: #{unaddable_unit_names}" if unaddable_unit_names.any?
+
+    original_units_objects.each do |unit|
+      unit.update(original_unit_group_id: id)
+      unit.reload
+    end
   end
 
   # @param new_units [Array<String>]
