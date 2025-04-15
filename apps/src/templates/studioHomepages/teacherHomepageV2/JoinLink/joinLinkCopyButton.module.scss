@@ -23,8 +23,14 @@
       margin: 0;
     }
 
-    a {
+    button {
       color: var(--brand-teal-50);
+      margin: 0;
+      margin-inline-start: 5px;
+      padding: 0;
+      border: 0 !important;;
+      background-color: inherit;
+      font-size: inherit;
     }
   }
 }

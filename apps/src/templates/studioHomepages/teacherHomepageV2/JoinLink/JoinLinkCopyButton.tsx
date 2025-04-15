@@ -117,13 +117,15 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
       >
         <OverlineOneText>
           {`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}.`}
-          <a
+          <button
             onClick={() => showSectionCodeDialog()}
             id="uitest-why-link"
             className={styles.noSectionCode}
+            aria-label={i18n.whyWithQuestionMark()}
+            type="button"
           >
             <FontAwesomeV6Icon iconName="question-circle" iconStyle="regular" />
-          </a>
+          </button>
         </OverlineOneText>
       </div>
       {shouldShowDialog && (
