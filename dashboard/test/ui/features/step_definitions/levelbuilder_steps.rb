@@ -192,6 +192,15 @@ Given(/^the temp data doc is not visible$/) do
   }
 end
 
+Given(/^I create a temp course$/) do
+  response = browser_request(
+    url: '/api/test/create_course',
+    method: 'POST'
+  )
+  data = JSON.parse(response)
+  @temp_course_name = data['course_name']
+end
+
 Given(/^I enter a temp family name$/) do
   @temp_family_name = "temp-course-#{Time.now.to_i}-#{rand(1_000_000)}"
   puts "temp family name: #{@temp_family_name}"
@@ -218,9 +227,16 @@ Given(/^I select the version year "([^"]*)"$/) do |version_year|
   @temp_course_name = "#{@temp_family_name}-#{version_year}"
 end
 
-Given(/^I wait for the temp course edit page to load$/) do
+Given(/^I view the temp course overview page$/) do
   steps %{
-    And I wait until I am on "http://studio.code.org/courses/#{@temp_course_name}/edit"
+    Given I am on "http://studio.code.org/courses/#{@temp_course_name}"
+    And I wait until element "#course_overview" is visible
+  }
+end
+
+Given(/^I view the temp course edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/courses/#{@temp_course_name}/edit"
     And I wait until element ".edit_unit_group" is visible
   }
 end
@@ -229,6 +245,13 @@ Given(/^I wait for the temp course overview page to load$/) do
   steps %{
     And I wait until I am on "http://studio.code.org/courses/#{@temp_course_name}"
     And I wait until element "#course_overview" is visible
+  }
+end
+
+Given(/^I wait for the temp course edit page to load$/) do
+  steps %{
+    And I wait until I am on "http://studio.code.org/courses/#{@temp_course_name}/edit"
+    And I wait until element ".edit_unit_group" is visible
   }
 end
 

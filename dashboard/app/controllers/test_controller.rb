@@ -229,6 +229,15 @@ class TestController < ApplicationController
     render json: {script_name: script.name, lesson_id: lesson.id, lesson_without_lesson_plan_id: lesson_without_lesson_plan.id}
   end
 
+  def create_course
+    course = Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
+      course_name = "temp-course-#{Time.now.to_i}-#{rand(1_000_000)}"
+      UnitGroup.create!(name: course_name, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    end
+    course.save!
+    render json: {course_name: course.name}
+  end
+
   # invalidate the specified script from the script cache, so that it will be
   # reloaded from the DB the next time it is requested.
   def invalidate_script
