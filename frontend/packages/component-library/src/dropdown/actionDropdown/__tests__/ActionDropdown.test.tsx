@@ -39,7 +39,8 @@ describe('Design System - Action Dropdown Component', () => {
     allOptions.forEach(option => (option.onClick as jest.Mock).mockClear());
   });
 
-  it('renders with correct label and options', () => {
+  it('renders with correct label and options', async () => {
+    const user = userEvent.setup();
     render(
       <ActionDropdown
         name="test1-dropdown"
@@ -50,6 +51,7 @@ describe('Design System - Action Dropdown Component', () => {
     );
 
     const triggerButton = screen.getByRole('button', {name: 'Dropdown label'});
+    await user.click(triggerButton);
     const option1 = screen.getByText('option1');
     const option2 = screen.getByText('option2');
     const option3 = screen.getByText('option3');
@@ -84,7 +86,7 @@ describe('Design System - Action Dropdown Component', () => {
     expect(allOptions[1].onClick).toHaveBeenCalledTimes(1);
   });
 
-  it("doesn't call onClick when dropdown is disabled", async () => {
+  it("doesn't display options when dropdown is disabled", async () => {
     const user = userEvent.setup();
     render(
       <ActionDropdown
@@ -99,14 +101,11 @@ describe('Design System - Action Dropdown Component', () => {
     const triggerButton = screen.getByRole('button', {name: 'Dropdown2 label'});
     await user.click(triggerButton);
 
-    const option1 = screen.getByText('option1');
-    const option2 = screen.getByText('option2');
+    const option1 = screen.queryByText('option1');
+    const option2 = screen.queryByText('option2');
 
-    await user.click(option1);
-    expect(allOptions[0].onClick).not.toHaveBeenCalled();
-
-    await user.click(option2);
-    expect(allOptions[1].onClick).not.toHaveBeenCalled();
+    expect(option1).not.toBeInTheDocument();
+    expect(option2).not.toBeInTheDocument();
   });
 
   it('renders trigger button with custom props', () => {
@@ -127,7 +126,8 @@ describe('Design System - Action Dropdown Component', () => {
     expect(triggerButton).toHaveAttribute('aria-hidden', 'false');
   });
 
-  it('renders the correct icons for options', () => {
+  it('renders the correct icons for options', async () => {
+    const user = userEvent.setup();
     render(
       <ActionDropdown
         name="test4-dropdown"
@@ -136,6 +136,11 @@ describe('Design System - Action Dropdown Component', () => {
         triggerButtonProps={triggerButtonProps}
       />,
     );
+
+    const triggerButton = screen.getByRole('button', {
+      name: 'Dropdown with icons',
+    });
+    await user.click(triggerButton);
 
     const icon1 = screen.getByTitle('Option 1 Icon');
     const icon2 = screen.getByTitle('Option 2 Icon');
