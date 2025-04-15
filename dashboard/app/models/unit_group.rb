@@ -211,7 +211,7 @@ class UnitGroup < ApplicationRecord
     raise "Cannot add original units if they already have an original unit group: #{unaddable_unit_names}" if unaddable_unit_names.any?
 
     original_units_objects.each do |unit|
-      unit.update(original_unit_group_id: id)
+      unit.update(original_unit_group_id: id, skip_name_format_validation: true)
       unit.reload
     end
   end
@@ -237,7 +237,7 @@ class UnitGroup < ApplicationRecord
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
         unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil, skip_name_format_validation: true)
-        unit.update!(original_unit_group_id: id) if unit.original_unit_group.nil?
+        unit.update!(original_unit_group_id: id, skip_name_format_validation: true) if unit.original_unit_group.nil?
         unit.course_version&.destroy unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
 
         unit.reload
