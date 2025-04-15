@@ -43,20 +43,13 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
 }) => {
   const {labConfig, levelProperties} = useCodebridgeContext();
   const [isResetButtonDisabled, setIsResetButtonDisabled] = useState(true);
-  const [isReset, setIsReset] = useState(true);
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
 
   useEffect(() => {
-    const disabled = isRunning || isReset;
-    setIsResetButtonDisabled(disabled);
-
-    if (isRunning) {
-      setIsReset(false);
-    }
-  }, [isRunning, isReset]);
+    setIsResetButtonDisabled(isRunning);
+  }, [isRunning]);
 
   useEffect(() => {
-    setIsReset(true);
     setIsResetButtonDisabled(true);
   }, [levelProperties.id]);
 
@@ -70,7 +63,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   }, [handleScaling, miniApp]);
 
   const resetMiniApp = () => {
-    setIsReset(true);
+    setIsResetButtonDisabled(true);
     if (labConfig?.miniApp.name === MiniApps.Neighborhood) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
     }
