@@ -7,7 +7,6 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ControlButtons from '@codebridge/Console/ControlButtons';
 import {MiniApps} from '@codebridge/constants';
-import classNames from 'classnames';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -17,7 +16,6 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import NeighborhoodPreview from './NeighborhoodPreview';
 
 import moduleStyles from './mini-app-preview.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface MiniAppPreviewProps {
   maximizeMiniApp: () => void;
@@ -33,7 +31,6 @@ const tooltipProps: TooltipProps = {
   size: 'xs',
   direction: 'onLeft',
   tooltipId: 'reset-preview-tooltip',
-  className: darkModeStyles.tooltipLeft,
 };
 
 const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
@@ -97,10 +94,10 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
               }}
               size={'xs'}
               type={'tertiary'}
-              className={classNames(darkModeStyles.tertiaryButton)}
               isIconOnly={true}
               ariaLabel={codebridgeI18n.resetPreview()}
               disabled={isDisabled}
+              className={moduleStyles.resetPreviewButton}
             />
           </WithTooltip>
           {showMaximizeButton && (
@@ -112,7 +109,6 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
               }}
               size={'xs'}
               type={'tertiary'}
-              className={classNames(darkModeStyles.tertiaryButton)}
               isIconOnly={true}
               ariaLabel={
                 isMaximized
