@@ -95,7 +95,7 @@ class Pd::Workshop < ApplicationRecord
   validate :not_funded_subjects_must_not_be_funded
   validate :valid_registration_link_format, if: :registration_link
 
-  validate :config_validation
+  validate :config_validation, unless: :legacy?
 
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
@@ -129,8 +129,6 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def config_validation
-    return if ARCHIVED_COURSES.include?(course)
-
     config = Pd::SharedWorkshopConstants::WORKSHOP_COURSE_CONFIGS.find do |c|
       c[:label] == course
     end
@@ -139,8 +137,6 @@ class Pd::Workshop < ApplicationRecord
       errors.add(:course, "#{course} is not a valid workshop course")
       return
     end
-
-    return if legacy?
 
     check_fields_exist(config)
     required_validation(config)
