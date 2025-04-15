@@ -343,6 +343,14 @@
       "import": "./dist/esm/slider/index.mjs",
       "require": "./dist/cjs/slider/index.js"
     },
+    "./spacer": {
+      "types": {
+        "import": "./dist/esm/spacer/index.d.ts",
+        "require": "./dist/cjs/spacer/index.d.ts"
+      },
+      "import": "./dist/esm/spacer/index.mjs",
+      "require": "./dist/cjs/spacer/index.js"
+    },
     "./tabs": {
       "types": {
         "import": "./dist/esm/tabs/index.d.ts",
