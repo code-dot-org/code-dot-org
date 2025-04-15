@@ -8,7 +8,7 @@ def add_course_offering_for_all
   raise unless Rails.application.config.levelbuilder_mode
 
   Unit.all.each do |script|
-    next if script.unit_groups.length == 1
+    next if script.unit_group
     next if script.old_professional_learning_course?
     next if script.published_state == "in_development"
 

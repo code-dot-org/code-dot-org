@@ -697,8 +697,13 @@ class Unit < ApplicationRecord
     latest_assigned_version.link
   end
 
-  def link
-    Rails.application.routes.url_helpers.script_path(self)
+  def link(unit_group = nil)
+    unit_path = script_path(self)
+    if Policies::Courses.modularity_enabled?
+      ugu = Queries::Courses.unit_group_unit(self, unit_group)
+      unit_path = course_unit_path(ugu.unit_group, ugu.position) if ugu
+    end
+    unit_path
   end
 
   # @param user [User]
@@ -1507,7 +1512,7 @@ class Unit < ApplicationRecord
     get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us')
+  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us', unit_group: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       # TODO: Set up peer reviews to be more consistent with the rest of the system
       # so that they don't need a bunch of one off cases (example peer reviews
@@ -1541,6 +1546,12 @@ class Unit < ApplicationRecord
       # If the current user is assigned to this unit, get the section
       # that assigned it.
       assigned_section_id = user&.assigned_script?(self) ? user.section_for_script(self)&.id : nil
+
+      unit_path = script_path(self)
+      if Policies::Courses.modularity_enabled?
+        ugu = Queries::Courses.unit_group_unit(self, unit_group)
+        unit_path = course_unit_path(ugu.unit_group, ugu.position) if ugu
+      end
 
       summary = {
         id: id,
@@ -1592,7 +1603,7 @@ class Unit < ApplicationRecord
         deprecated: deprecated?,
         is_course: is_course?,
         is_migrated: is_migrated?,
-        scriptPath: script_path(self),
+        scriptPath: unit_path,
         showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
         weeklyInstructionalMinutes: weekly_instructional_minutes,
         includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
@@ -1623,7 +1634,7 @@ class Unit < ApplicationRecord
     lessons.none?(&:has_lesson_plan)
   end
 
-  def summarize_for_lesson_materials_view(user, unit_group)
+  def summarize_for_lesson_materials_view(user)
     summary = {
       unitId: id,
       title: title_for_display,

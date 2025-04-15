@@ -39,4 +39,12 @@ class Queries::Courses
     course = UnitGroup.get_from_cache(unit_group_unit.course_id)
     {course: course, unit_group_unit: unit_group_unit, unit: unit}
   end
+
+  def self.unit_group_unit(unit, unit_group)
+    if unit_group && unit
+      unit.unit_group_units.find {|ugu| ugu.unit_group == unit_group}
+    elsif unit
+      unit.unit_group_units.first
+    end
+  end
 end

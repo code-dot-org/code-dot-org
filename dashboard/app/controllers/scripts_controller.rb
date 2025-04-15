@@ -100,7 +100,7 @@ class ScriptsController < ApplicationController
       sections: @sections
     }
 
-    @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)
+    @script_data = @script.summarize(true, current_user, false, request.locale, unit_group: @course).merge(additional_script_data)
 
     @page_title = "Unit: #{@script.localized_title}"
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
