@@ -42,13 +42,13 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   handleScaling,
 }) => {
   const {labConfig, levelProperties} = useCodebridgeContext();
-  const [isDisabled, setIsDisabled] = useState(true);
+  const [isResetButtonDisabled, setIsResetButtonDisabled] = useState(true);
   const [isReset, setIsReset] = useState(true);
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
 
   useEffect(() => {
     const disabled = isRunning || isReset;
-    setIsDisabled(disabled);
+    setIsResetButtonDisabled(disabled);
 
     if (isRunning) {
       setIsReset(false);
@@ -57,7 +57,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
 
   useEffect(() => {
     setIsReset(true);
-    setIsDisabled(true);
+    setIsResetButtonDisabled(true);
   }, [levelProperties.id]);
 
   const miniApp = labConfig?.miniApp?.name;
@@ -96,7 +96,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
               type={'tertiary'}
               isIconOnly={true}
               ariaLabel={codebridgeI18n.resetPreview()}
-              disabled={isDisabled}
+              disabled={isResetButtonDisabled}
               className={moduleStyles.resetPreviewButton}
             />
           </WithTooltip>
