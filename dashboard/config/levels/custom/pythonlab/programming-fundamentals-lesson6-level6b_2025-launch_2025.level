@@ -1,0 +1,22 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-04-14T23:13:33.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "are are given two small functions that are already defined and must write a new function that calls both in order\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAnything inside the quotation marks is called a **string** -- it's a type of data Python uses for text.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:33.616+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level6b_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level6b_2025-launch\"},{\"changed_at\":\"2025-04-15 02:52:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

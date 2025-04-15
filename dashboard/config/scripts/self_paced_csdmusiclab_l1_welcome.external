@@ -4,7 +4,7 @@ description 'description here'
 
 markdown <<MARKDOWN
 <div style="position: relative; text-align: center; color: white; margin-top: 20px;">
-    <img src="https://images.code.org/052b5fc25308b850001f547503386322-image-1743815060120.png" alt="Banner Image" style="width: 100%; border-radius: 10px;">
+    <img src="https://images.code.org/052b5fc25308b850001f547503386322-image-1743815060120.png" alt="Banner image that says, Welcome to Teaching Programming with Music Lab" style="width: 100%; border-radius: 10px;">
     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
     </div>
 </div>

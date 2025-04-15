@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson12-level2_2025-launch_2025'
+display_name 'level display_name here'
+description 'level description here'
+
+sublevels
+level 'programming-fundamentals-lesson12-level2a_2025-launch_2025'
+level 'programming-fundamentals-lesson12-level2b_2025-launch_2025'
+level 'programming-fundamentals-lesson12-level2c_2025-launch_2025'
+level 'programming-fundamentals-lesson12-level2d_2025-launch_2025'

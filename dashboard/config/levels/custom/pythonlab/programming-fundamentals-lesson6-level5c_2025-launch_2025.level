@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-04-14T23:13:32.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're bringing a pack of cookies to share with your friends. You want your program to show how many cookies each person gets. The code already shows how many cookies you brought. Now you just need to show how they'll be split.\r\n\r\n1. Inside the function, create a new variable called `friends` and assign it a number (for example, `4`).\r\n\r\n   Make sure your new lines are indented to stay inside the function.\r\n\r\n2. Create another variable called `cookies_per_person` and calculate how many cookies each person gets by dividing `cookies` by `friends`.\r\n\r\n3. Add a `print()` line that uses the `cookies_per_person` variable to display how the cookies are shared.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAll the lines inside a function must be indented the same amount. This tells Python what belongs to the function.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_2025",
+    "display_name": "Snack Splitter",
+    "bubble_choice_description": "You're bringing a pack of cookies to share with your friends. You want your program to show how many cookies each person gets. The code already shows how many cookies you brought. Now you just need to show how they'll be split.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def snack_splitter():\n    cookies = 12\n    # TODO - Add a variable for number of friends\n\n    # TODO - Divide cookies by the number of friends\n    \n    # TODO - Print how many cookies each person gets\n    \n\nsnack_splitter()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzjnrtD7NC5ssQxqgbFpg+8Um2CSM+EhJ\ncNSUaY3QCx3a51Wv8iXwQWg0aXstaExrbi9jYjPrlN9WgasvrODwLtm4Sh3f\n7q95bJfeHelXBiE7Nt3/3+I3O1I965JIcQ8rWQJmwehRfi/oLcsTmYGW/L4G\niqw6TznKZP0/Pj1D9uiPYQ6Z12P00RpleL0VpOkKAR7m7wg2k+6/dcx0GfBL\nTM5CsQAnYkuy866aRAJZIX+zCrzlH9H7pprTSXTZA/olbA+kc7AqnQTBjPN+\nRG1f4+RMzopzJeGd5rlIr1o9GKBMZzCu8KI9sZgbCsyXa77z3tjmn/V0bgq+\nTBU3UA5rKUs=\n",
+    "thumbnail_url": "https://images.code.org/c693bd74d087583cd5d6f8cb8716c083-snack.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:32.596+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level5c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level5c_2025-launch\"},{\"changed_at\":\"2025-04-15 02:51:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:23:10 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:23:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:24:19 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:24:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:33:48 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:34:43 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:38:27 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

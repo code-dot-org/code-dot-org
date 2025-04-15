@@ -19,15 +19,17 @@ markdown <<MARKDOWN
     <p style="font-size: 12pt; margin-top: 5px;">When checking student progress, assessment levels will have a black star next to their numbers.</p>
 </div>
 
-## Formative Assessment: Check-In Levels
+#### For an introduction to checking student progress, watch our video, <a href="https://www.youtube.com/watch?v=h5PvLB5gZkg" target="blank" rel="noopener noreferrer">Getting Started with Code.org: Progress Feedback & Assessment</a>.
 
-#### Check-in levels happen after students have had some initial practice with a skill, and allow for you, as the educator, to gauge how content is landing with your students. After releasing students to do independent work, sample their progress on check-in levels to understand how you might support your class.
+## Check-In Levels
 
-## Summative Assessment: Assessment Levels
+#### Check-in levels happen after students have had some initial practice with a skill, and allow for you, as the educator, to gauge how content is landing with your students om real time. They are for **formative assessment**. After releasing students to do independent work, sample their progress on check-in levels to understand how you might support your class.
 
-#### Assessment levels happen toward the end of a level progression, giving you data to review after a lesson has completed. Use these levels to gain a holistic view of student understanding and direction for how to adjust future instruction.
+## Assessment Levels
+
+#### Assessment levels happen toward the end of a level progression, giving you data to review after a lesson has completed. They are for **summative assessment**. Use these levels to gain a holistic view of student understanding and direction for how to adjust future instruction.
 
 ## Projects
 
-![]()
+#### Mini-Projects and the End-of-Unit Project allow for additional **summative assessment**, but based on a student's understanding of computer science concepts - like sequences, loops, and functions - on a holistic level. We provide rubrics for these levels to capture student learning.
 MARKDOWN
