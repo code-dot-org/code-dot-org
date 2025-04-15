@@ -10,8 +10,15 @@ import {Link} from './types';
 import moduleStyles from './header.module.scss';
 
 export interface HamburgerMenuProps extends HTMLAttributes<HTMLElement> {
-  /** Hamburger menu label */
-  hamburgerButtonLabel: string;
+  /** Hamburger menu labels */
+  hamburgerButtonLabel: {
+    /** Open label */
+    open: 'Open Hamburger menu' | string;
+    /** Close label */
+    close: 'Close Hamburger menu' | string;
+    /** Menu label */
+    menu: 'Hamburger menu' | string;
+  };
   /** Hamburger links */
   hamburgerLinks: Link[];
   /** Account links */
@@ -51,7 +58,11 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
           moduleStyles.hamburgerButton,
           moduleStyles.iconButton,
         )}
-        ariaLabel={hamburgerButtonLabel || 'Hamburger menu'}
+        ariaLabel={
+          isOpen
+            ? hamburgerButtonLabel.close || 'Close Hamburger menu'
+            : hamburgerButtonLabel.open || 'Open Hamburger menu'
+        }
         icon={{
           iconName: isOpen ? 'xmark' : 'bars',
           iconStyle: 'solid',
@@ -65,7 +76,10 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
       />
 
       {isOpen && (
-        <div className={moduleStyles.hamburgerMenu}>
+        <nav
+          className={moduleStyles.hamburgerMenu}
+          aria-label={hamburgerButtonLabel.menu || 'Hamburger menu'}
+        >
           <div className={moduleStyles.hamburgerButtonWrapper}>
             <AccountButtons
               signIn={accountLinks.signIn}
@@ -91,7 +105,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
               ),
             )}
           </ul>
-        </div>
+        </nav>
       )}
     </div>
   );

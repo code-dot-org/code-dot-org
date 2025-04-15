@@ -16,8 +16,17 @@ export interface ProjectLink extends Link {
 }
 
 export interface ProjectsMenuProps extends HTMLAttributes<HTMLElement> {
-  /** Projects menu label */
+  /** Projects button label */
   projectsButtonLabel: string;
+  /** Projects menu labels */
+  projectsButtonAriaLabel: {
+    /** Open label */
+    open: 'Open Projects menu' | string;
+    /** Close label */
+    close: 'Close Projects menu' | string;
+    /** Menu label */
+    menu: 'Projects menu' | string;
+  };
   /** Projects links */
   projectsLinks: ProjectLink[];
   /** Project custom class name */
@@ -25,8 +34,9 @@ export interface ProjectsMenuProps extends HTMLAttributes<HTMLElement> {
 }
 
 const ProjectsMenu: React.FC<ProjectsMenuProps> = ({
-  projectsLinks,
   projectsButtonLabel,
+  projectsButtonAriaLabel,
+  projectsLinks,
   className,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +51,12 @@ const ProjectsMenu: React.FC<ProjectsMenuProps> = ({
     >
       <Button
         className={classNames(moduleStyles.newProject)}
-        text={projectsButtonLabel || 'New Project'}
+        text={projectsButtonLabel}
+        ariaLabel={
+          isOpen
+            ? projectsButtonAriaLabel.close || 'Close Projects menu'
+            : projectsButtonAriaLabel.open || 'Open Projects menu'
+        }
         type="secondary"
         size="s"
         color="white"
@@ -61,6 +76,7 @@ const ProjectsMenu: React.FC<ProjectsMenuProps> = ({
             moduleStyles.newProjectMenu,
             className,
           )}
+          aria-label={projectsButtonAriaLabel.menu || 'Projects menu'}
         >
           {projectsLinks.map(
             ({key, href, label, image, description, ...link}) => (
