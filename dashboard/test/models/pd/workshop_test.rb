@@ -93,7 +93,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'exclude_summer scope' do
     summer_workshop = create :summer_workshop
-    teachercon = create :workshop, :teachercon
+    teachercon = build :workshop, :teachercon
+    teachercon.save(validate: false)
 
     assert Pd::Workshop.exclude_summer.exclude? summer_workshop
     assert Pd::Workshop.exclude_summer.exclude? teachercon
@@ -411,7 +412,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'send_exit_surveys sends no surveys for FiT workshops' do
     # Make a FiT workshop that's ended and has attendance;
     # these are the conditions under which we'd normally send a survey.
-    workshop = create :fit_workshop, :ended
+    workshop = build :fit_workshop, :ended
+    workshop.save(validate: false)
     create(:pd_workshop_participant, workshop: workshop, enrolled: true, attended: true)
 
     # Ensure no exit surveys are sent
@@ -760,17 +762,19 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   end
 
   test 'teacherCon workshops are capped at 33.5 hours' do
-    workshop_csd_teachercon = create :workshop,
+    workshop_csd_teachercon = build :workshop,
       course: Pd::Workshop::COURSE_CSD,
       subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON,
       num_sessions: 5,
       each_session_hours: 8
+    workshop_csd_teachercon.save(validate: false)
 
-    workshop_csp_teachercon = create :workshop,
+    workshop_csp_teachercon = build :workshop,
       course: Pd::Workshop::COURSE_CSD,
       subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON,
       num_sessions: 5,
       each_session_hours: 8
+    workshop_csp_teachercon.save(validate: false)
 
     assert_equal 33.5, workshop_csd_teachercon.effective_num_hours
     assert_equal 33.5, workshop_csp_teachercon.effective_num_hours
@@ -1132,17 +1136,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'suppress_reminders? is true for certain subjects by default' do
     suppressed = [
-      create(:fit_workshop, course: Pd::Workshop::COURSE_CSF),
-      create(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON),
-      create(:fit_workshop, course: Pd::Workshop::COURSE_CSD),
-      create(:workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON),
-      create(:fit_workshop, course: Pd::Workshop::COURSE_CSP),
-      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_WELCOME),
-      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_INTRO),
-      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1),
-      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL2),
-      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL3),
-      create(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL4)
+      build(:fit_workshop, course: Pd::Workshop::COURSE_CSF).tap {|w| w.save(validate: false)},
+      build(:workshop, course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON).tap {|w| w.save(validate: false)},
+      build(:fit_workshop, course: Pd::Workshop::COURSE_CSD).tap {|w| w.save(validate: false)},
+      build(:workshop, course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON).tap {|w| w.save(validate: false)},
+      build(:fit_workshop, course: Pd::Workshop::COURSE_CSP).tap {|w| w.save(validate: false)},
+      build(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_WELCOME).tap {|w| w.save(validate: false)},
+      build(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_INTRO).tap {|w| w.save(validate: false)},
+      build(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL1).tap {|w| w.save(validate: false)},
+      build(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL2).tap {|w| w.save(validate: false)},
+      build(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL3).tap {|w| w.save(validate: false)},
+      build(:admin_counselor_workshop, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_CALL4).tap {|w| w.save(validate: false)}
     ]
 
     refute @workshop.suppress_reminders?
@@ -1440,7 +1444,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create :pd_enrollment, :from_user, user: user, workshop: same_subject_farther
 
     different_subject_closer = create :workshop, sessions_from: Time.zone.today,
-      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_TEACHER_CON
+      course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1
     create :pd_enrollment, :from_user, user: user, workshop: different_subject_closer
 
     # closer, not enrolled
@@ -1635,6 +1639,33 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
   test 'bad time_zone value results in nil' do
     workshop = create :workshop, time_zone: 'Bad/Zone'
     assert_equal nil, workshop.time_zone
+  end
+
+  test 'config_validation is skipped when legacy is true' do
+    workshop = build :pd_workshop, legacy: true
+
+    # Ensure the workshop is valid even if it would fail config_validation
+    assert workshop.valid?
+  end
+
+  test 'config_validation is called when legacy is false' do
+    workshop = build :pd_workshop, legacy: false
+
+    # newly required fields missing in factory definition of workshop
+    refute workshop.valid?
+    assert_includes workshop.errors.full_messages, 'Please select at least one grade level'
+    assert_includes workshop.errors.full_messages, 'Name is required'
+    assert_includes workshop.errors.full_messages, 'Description is required'
+  end
+
+  test 'config_validation is called when legacy is nil' do
+    workshop = build :pd_workshop, legacy: nil
+
+    # newly required fields missing in factory definition of workshop
+    refute workshop.valid?
+    assert_includes workshop.errors.full_messages, 'Please select at least one grade level'
+    assert_includes workshop.errors.full_messages, 'Name is required'
+    assert_includes workshop.errors.full_messages, 'Description is required'
   end
 
   private def session_on_day(day_offset)

@@ -65,7 +65,8 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
 
   test 'FiT workshops do not show up as pending exit surveys' do
     # Fake FiT workshop, which should not produce an exit survey
-    fit_workshop = create :fit_workshop, :ended
+    fit_workshop = build :fit_workshop, :ended
+    fit_workshop.save(validate: false)
 
     # Given a teacher that attended the workshop, such that they would get
     # a survey for any other workshop subject.
@@ -107,7 +108,8 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     csf_workshop = create :csf_workshop, :ended, ended_at: Time.zone.today - 1.day
 
     # Fake FiT workshop, which should not produce an exit survey
-    fit_workshop = create :fit_workshop, :ended
+    fit_workshop = build :fit_workshop, :ended
+    fit_workshop.save(validate: false)
 
     # Given a teacher that attended both workshops
     teacher = create :teacher
