@@ -20,6 +20,13 @@ jobs:
             frontend
             .github
 
+      - name: Debug Disk
+        run: |
+          df -h
+          docker images -a
+          docker ps -a
+          docker volume ls
+
       - name: Setup Frontend
         uses: ./.github/actions/frontend/setup
 
@@ -91,6 +98,13 @@ jobs:
           
           # Tail the docker logs
           docker logs -f marketing &
+
+      - name: Debug Disk 2
+        run: |
+          df -h
+          docker images -a
+          docker ps -a
+          docker volume ls
 
       - name: UI Tests
         uses: ./.github/actions/frontend/marketing/ui-tests
