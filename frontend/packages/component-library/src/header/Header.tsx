@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import {HTMLAttributes} from 'react';
 
-import {Image} from '@/image';
+import {Image, ImageProps} from '@/image';
 
 import AccountButtons, {AccountButtonsProps} from './AccountButtons';
 import HamburgerMenu, {HamburgerMenuProps} from './HamburgerMenu';
@@ -12,8 +12,15 @@ import ProjectsMenu, {ProjectsMenuProps} from './ProjectsMenu';
 import moduleStyles from './header.module.scss';
 
 export interface HeaderProps extends HTMLAttributes<HTMLElement> {
+  /** Home link */
+  homeLink: {
+    /** Home link url */
+    url: string;
+    /** Home link aria-label */
+    ariaLabel: string;
+  };
   /** Site logo */
-  logo: string;
+  logo: Pick<ImageProps, 'src' | 'altText'>;
   /** Header links */
   mainLinks: MainLinksProps['mainLinks'];
   /** Projects button label */
@@ -44,6 +51,7 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
 }
 
 const Header: React.FC<HeaderProps> = ({
+  homeLink,
   logo,
   mainLinks,
   projectsButtonLabel,
@@ -62,8 +70,12 @@ const Header: React.FC<HeaderProps> = ({
     className={classNames(moduleStyles.headerNavigation, className)}
   >
     <div className={moduleStyles.mainLinksWrapper}>
-      <a href="/" className={moduleStyles.logo} aria-label="Go to home">
-        <Image src={logo} alt={'Code.org logo'} loading={'eager'} />
+      <a
+        href={homeLink.url}
+        className={moduleStyles.homeLink}
+        aria-label={homeLink.ariaLabel}
+      >
+        <Image src={logo.src} alt={logo.altText} loading={'eager'} />
       </a>
       <MainLinks mainLinks={mainLinks} />
     </div>

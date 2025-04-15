@@ -14,7 +14,7 @@ import Header, {HeaderProps} from '../Header';
 type Story = StoryObj<typeof Header>;
 
 export default {
-  title: 'CMS/Header',
+  title: 'DesignSystem/Header',
   component: Header,
   parameters: {
     a11y: {
@@ -35,7 +35,14 @@ export default {
 } as Meta<HeaderProps>;
 
 const defaultArgs: HeaderProps = {
-  logo: logoImage,
+  homeLink: {
+    url: 'https://code.org',
+    ariaLabel: 'Go to homepage',
+  },
+  logo: {
+    src: logoImage,
+    altText: 'Code.org logo',
+  },
   mainLinks: [
     {
       key: 'learn',
@@ -150,7 +157,7 @@ const defaultArgs: HeaderProps = {
     },
   },
   isLoggedIn: false,
-  helpButtonLabel: 'Help',
+  helpButtonLabel: 'Help Menu',
   helpLinks: [
     {
       key: 'helpAndSupport',
@@ -163,7 +170,7 @@ const defaultArgs: HeaderProps = {
       href: 'https://support.code.org/hc/en-us/requests/new',
     },
   ],
-  hamburgerButtonLabel: 'Hamburger',
+  hamburgerButtonLabel: 'Hamburger Menu',
   hamburgerLinks: [
     {
       key: 'learn',
