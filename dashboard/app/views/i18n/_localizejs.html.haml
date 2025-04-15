@@ -65,10 +65,10 @@
 
         // This function ensures that the dropdowns show the requested language
         const handleChange = (event) => {
-          console.log("handleChange:", event.target, event.target.selectedOptions[0]);
-          Localize.cdoSetLanguage(event.target.selectedOptions[0].value);
           event.stopPropagation();
           event.preventDefault();
+          console.log("handleChange:", event.target, event.target.selectedOptions[0]);
+          Localize.cdoSetLanguage(event.target.selectedOptions[0].value);
         };
 
         // When the site loads, ensure the language selector has the correct value
@@ -85,6 +85,7 @@
                 }
               });
             });
+            localeSelect.removeAttribute('onchange');
             localeSelect.addEventListener('change', handleChange);
           }
           console.log(cdoLanguage);
