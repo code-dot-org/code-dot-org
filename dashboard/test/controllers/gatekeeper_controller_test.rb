@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class GatekeeperControllerTest < ActionController::TestCase
+class GatekeeperControllerTest < ActionDispatch::IntegrationTest
   ACTIONS = [:show, :update, :destroy]
 
   # The routes currently defined by this controller are pretty consistently
