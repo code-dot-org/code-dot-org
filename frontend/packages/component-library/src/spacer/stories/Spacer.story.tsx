@@ -36,10 +36,10 @@ export default {
 // STORIES
 //
 export const Playground: Story = {
-  args: {role: 'row'},
+  args: {role: 'separator'},
   play: ({canvasElement}: {canvasElement: HTMLElement}) => {
     const canvas = within(canvasElement);
-    expect(canvas.getByRole('row')).toHaveStyle('height: 32px');
+    expect(canvas.getByRole('separator')).toHaveStyle('height: 32px');
   },
 };
 
