@@ -60,6 +60,8 @@ experiments.FREE_RESPONSE_AI_ANALYSIS = 'free_response_ai_analysis';
 experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
 // Use glow effect for Blockly block highlighting
 experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
+// Use nested course URLs like /courses/csd-2024/units/1/...
+experiments.MODULARITY = 'modularity';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
