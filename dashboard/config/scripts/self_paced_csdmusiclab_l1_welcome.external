@@ -12,68 +12,35 @@ markdown <<MARKDOWN
 
 # Welcome!
 
-#### Welcome! Code.org’s Equity in Computer Science professional learning experience is designed to help educators reflect and take action to make their classrooms **diverse**, **accessible**, and **inclusive** for all students.
+#### This professional learning module is designed to prepare you to teach Code.org's Programming with Music Lab curriculum. This curriculum is an engaging, hands-on dive into the worlds of computer science, music, and problem solving.
 
-## Course Overview
+___
 
-### **What's included in this course?**
-
-<div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-    <div style="background-color: #ffffff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 10px; width: 45%;">
-    <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="https://images.code.org/7f9f49bb33623ac2d0aefbdf927f49ec-image-1732314462425.png" alt="A icon of a person holding up a lightbulb as if they have an idea." style="width: 80px; height: 80px; margin-bottom: 10px;">
-        </div>
-    <p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Module 1:</b> Understanding Equity in Computer Science (📍 You are here!)</p>
-<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px">The first module in this course will provide you with a conceptual foundation for equity. You'll reflect on your own personal journeys and orient yourself toward equity in the classroom.</p>
-<br>
-<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Module 1 is made up of three lessons:</b></p>
-
-* #### What is Equity in CS?
-* #### Looking at Data
-* #### Reflecting on Personal Experiences
-    </div>
-
-<div style="background-color: #ffffff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 10px; width: 45%;">
-    <div style="display: flex; justify-content: center; align-items: center;">
-            <img src="https://images.code.org/2791d97403ebd52030b55642aa6e8d1d-image-1732314232992.png" alt="An icon of a school house." style="width: 80px; height: 80px; margin-bottom: 10px;">
-    </div>
-        <p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Module 2:</b> Strategies to Promote Equity in Computer Science</p>
-        <p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px">The second module in this course will get concrete about strategies you can use with your students. This unit is oriented toward resources to bridge professional learning to the classroom.</p>
-
-<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Module 2 is made up of four lessons:</b></p>
-
-* #### Expanding Access to Computer Science
-* #### Cultivating an Inclusive Classroom Culture
-* #### Bias and Stereotype Threat
-* #### Equity in Code.org’s Curriculum
-</div>
+<div style="display: flex; justify-content: space-between; width: 95%; margin: 20pt auto; padding: 0 5px;">
+  <img src="https://images.code.org/8e7227d109471dbc27897577943895b1-image-1744063906640.04.48%E2%80%AFPM.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/5f29fc424c02eede282a4b09cd16835d-image-1744063906639.04.07%E2%80%AFPM.png" style="border-radius: 5pt; width: 32%;">
+  <img src="https://images.code.org/5f3188d66d020c6edff10c622c1915d8-image-1744063906638.10.49%E2%80%AFPM.png" style="border-radius: 5pt; width: 32%;">
 </div>
 
-<div style="display: flex; align-items: left; border: 1px solid black; border-radius: 20px 20px 20px 20px; padding: 20px 10px 10px 10px; margin: 20px 0px 20px 0px">
+___
 
-<a href="https://drive.google.com/file/d/1Fr4K4ZtWmDh0XWzPLUYka_8x2HStDTaO/view?usp=sharing" target="blank" rel="noopener noreferrer"><img src="https://images.code.org/b3228ff3b84aeb85ec00b47136800a8f-image-1731959884476.png" style="width: auto; height: 50px;" alt="A piece of paper with lines and a pencil."></a>
 
-<div style="background-color: #FFFFFF;  border-radius: 20px 20px 20px 20px; color: #000000; width: 90%; margin-left: 0%; margin-right: 0%; padding: 5px 5px 0px 5px;">
+#### By the end of this professional learning module, you will be able to:
 
-<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 10px; font-size: 18px"><b>Activity Guide</b></p>
-<p style="color: black; line-height: 1.25; margin-left: 10px; margin-right: 0px; font-size: 18px">This professional learning experience has an associated <a href="https://drive.google.com/file/d/1Fr4K4ZtWmDh0XWzPLUYka_8x2HStDTaO/view?usp=sharing" target="blank" rel="noopener noreferrer"><b>Activity Guide</b></a>. We recommend you make a digital or physical copy of this resource, which includes key information and space to reflect. Click the icon to the left or the link above to access this resource.
-</p>
-
-</div>
-</div>
-
+* #### Code sequences, loops, and functions in Music Lab. 
+* #### Utilize the unit structure and lesson structure of the curriculum facilitate a gradual release of responsibility for students.
+* #### Implement the unit with students with diverse learning needs.
+* #### Guide students through unit projects to synthesize their learning.
 
 ## Take Our Pre-Survey
 
-#### To better gauge your learning and improve this professional learning course, please take our <a href="https://studio.code.org/form/selfpaced_pd_equity_cs_pilot_pre_survey" target="blank" rel="noopener noreferrer">Equity in Computer Science pre-survey</a>.
+#### To better gauge your learning and improve this professional learning course, please take our pre-survey - it will take fewer than five minutes to complete.
 
 <div style="margin: 20px 0px">
 <a class="btn btn-large btn-primary" href="https://studio.code.org/form/selfpaced_pd_equity_cs_pilot_pre_survey" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
 </div>
 
-<!-- 4/1 Launch pre-survey link: https://studio.code.org/form/selfpaced_pd_equity_cs_pre_survey -->
+### **Suggested total time for this course:** <mark>XX</mark> minutes
 
-### **Suggested total time for this course:** 225 minutes
 
-![]()
 MARKDOWN

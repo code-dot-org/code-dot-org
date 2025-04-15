@@ -15,7 +15,7 @@
       "zValidationHelperFunctions"
     ],
     "use_default_sprites": "false",
-    "hide_animation_mode": "true",
+    "hide_animation_mode": "false",
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -69,16 +69,17 @@
     "bubble_choice_description": "Learn how to play sounds.",
     "callout_json": "[{\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"4\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"4\\\"]\",\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "thumbnail_url": "https://images.code.org/540ecaf95b065aa6ae78425427a7bd12-sound.jpg",
-    "instructions_icon": "emoji",
+    "instructions_icon": "rikki",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel10();",
     "skip_autosave": true,
     "standalone_app_name": "spritelab",
-    "enable_big_playspace": "false",
+    "enable_big_playspace": "true",
+    "project_template_level_name": "testB-elem-career-journeys-template",
     "preload_asset_list": null,
-    "project_template_level_name": "testB-elem-career-journeys-template"
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"You can choose any sound with this block: <xml>\\n  <block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_playSoundOptions\\\">\\n    <field name=\\\"SOUND\\\" config=\\\"'sound://category_collect/trill_stings.mp3', 'sound://category_instrumental/harpe_pluck_1.mp3', 'sound://category_tap/vibrant_positive_tap_1.mp3', 'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3', 'sound://category_digital/boing_2.mp3', 'sound://category_swish/quick_swing.mp3', 'sound://category_accent/puzzle_game_accent_a_01.mp3'\\\">'sound://category_digital/boing_2.mp3'</field>\\n  </block>\\n</xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f313e19a2df222be8fb4c0da2cbea2bb/testB-elem-career-journeys-sound.mp3\"}]"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-03T23:25:20.766+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-sounds\\\"\"],\"cloned_from\":\"test-elem-career-journeys-sounds\"},{\"changed_at\":\"2025-04-03 23:28:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-03T23:25:20.766+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-sounds\\\"\"],\"cloned_from\":\"test-elem-career-journeys-sounds\"},{\"changed_at\":\"2025-04-03 23:28:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-07 22:30:41 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"enable_big_playspace\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-07 23:08:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-07 23:20:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"hide_animation_mode\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

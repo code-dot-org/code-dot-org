@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 23:29:19 UTC",
+    "serialized_at": "2025-04-07 23:48:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4161,6 +4161,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-video"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -4183,6 +4186,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-video-choices"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -4205,6 +4211,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-panel-choices"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -4227,6 +4236,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-example-choices"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -4246,9 +4258,34 @@
     {
       "chapter": 118,
       "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-elem-career-journeys-video-choice4"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
+      },
+      "level_keys": [
+        "test-elem-career-journeys-video-choice4"
+      ]
+    },
+    {
+      "chapter": 119,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-sprite-location"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4266,11 +4303,14 @@
       ]
     },
     {
-      "chapter": 119,
-      "position": 6,
+      "chapter": 120,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-backgrounds"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4288,11 +4328,14 @@
       ]
     },
     {
-      "chapter": 120,
-      "position": 7,
+      "chapter": 121,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-event-say"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4310,8 +4353,8 @@
       ]
     },
     {
-      "chapter": 121,
-      "position": 8,
+      "chapter": 122,
+      "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -4335,11 +4378,14 @@
       ]
     },
     {
-      "chapter": 122,
-      "position": 9,
+      "chapter": 123,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-planning"
+        ],
         "progression": "Project"
       },
       "bonus": false,
@@ -4357,11 +4403,14 @@
       ]
     },
     {
-      "chapter": 123,
-      "position": 10,
+      "chapter": 124,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-project"
+        ],
         "progression": "Project"
       },
       "bonus": false,
@@ -4379,11 +4428,36 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Version A Survey"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "c6169d46-2fec-4ee4-8c29-79c80b37561d"
+      },
+      "level_keys": [
+        "Version A Survey"
+      ]
+    },
+    {
+      "chapter": 126,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-video"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -4401,11 +4475,14 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 127,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-panels"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -4423,11 +4500,14 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 128,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-videos"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -4445,11 +4525,14 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 129,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-explore-projects"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -4467,11 +4550,14 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 130,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-plan"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -4489,11 +4575,14 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 131,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-sprite-location"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -4511,11 +4600,14 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 132,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-backgrounds"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -4533,11 +4625,14 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 133,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-event-say"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -4555,11 +4650,14 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 134,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-extra-skills"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -4577,11 +4675,14 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 135,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "testB-elem-career-journeys-share"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,
@@ -4596,6 +4697,28 @@
       },
       "level_keys": [
         "testB-elem-career-journeys-share"
+      ]
+    },
+    {
+      "chapter": 136,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": true,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Version B Survey"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      },
+      "level_keys": [
+        "Version B Survey"
       ]
     }
   ],
@@ -6006,6 +6129,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "test-elem-career-journeys-video-choice4",
+        "script_level.level_keys": [
+          "test-elem-career-journeys-video-choice4"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "8c485723-5891-4651-92a8-8d41dfe83aec"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "test-elem-career-journeys-sprite-location",
         "script_level.level_keys": [
           "test-elem-career-journeys-sprite-location"
@@ -6069,6 +6204,18 @@
         "level.key": "test-elem-career-journeys-project",
         "script_level.level_keys": [
           "test-elem-career-journeys-project"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "c6169d46-2fec-4ee4-8c29-79c80b37561d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Version A Survey",
+        "script_level.level_keys": [
+          "Version A Survey"
         ],
         "lesson.key": "lesson-16",
         "lesson_group.key": "",
@@ -6189,6 +6336,18 @@
         "level.key": "testB-elem-career-journeys-share",
         "script_level.level_keys": [
           "testB-elem-career-journeys-share"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "",
+        "script.name": "katies-playground",
+        "activity_section.key": "94e8975e-a474-4778-ae5e-bb40c2b119b7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Version B Survey",
+        "script_level.level_keys": [
+          "Version B Survey"
         ],
         "lesson.key": "lesson-17",
         "lesson_group.key": "",

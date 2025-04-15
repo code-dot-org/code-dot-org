@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-05 17:53:13 UTC",
+    "serialized_at": "2025-04-07 16:49:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6892,6 +6892,28 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Unused Loops 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-level-group-bubble"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "810b9963-23e2-41f1-9d6a-4bd39b4308b4"
+      },
+      "level_keys": [
+        "test-level-group-bubble"
+      ]
+    },
+    {
+      "chapter": 154,
+      "position": 31,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "test-music-lab-loops-practice-multi"
         ],
@@ -6912,9 +6934,9 @@
       ]
     },
     {
-      "chapter": 154,
-      "position": 31,
-      "activity_section_position": 3,
+      "chapter": 155,
+      "position": 32,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -6937,8 +6959,8 @@
       ]
     },
     {
-      "chapter": 155,
-      "position": 32,
+      "chapter": 156,
+      "position": 33,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6962,7 +6984,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 157,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6987,7 +7009,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 158,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7012,7 +7034,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 159,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7037,7 +7059,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 160,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7062,7 +7084,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 161,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7087,7 +7109,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 162,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7112,7 +7134,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 163,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7137,7 +7159,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 164,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -7162,7 +7184,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 165,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7187,7 +7209,7 @@
       ]
     },
     {
-      "chapter": 165,
+      "chapter": 166,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -7212,7 +7234,7 @@
       ]
     },
     {
-      "chapter": 166,
+      "chapter": 167,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7237,7 +7259,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 168,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -7262,7 +7284,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 169,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -7287,7 +7309,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 170,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -7312,7 +7334,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 171,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -7337,7 +7359,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 172,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -7362,7 +7384,7 @@
       ]
     },
     {
-      "chapter": 172,
+      "chapter": 173,
       "position": 17,
       "activity_section_position": 1,
       "assessment": false,
@@ -9205,6 +9227,18 @@
         "level.key": "test-music-lab-loops-practice-recap",
         "script_level.level_keys": [
           "test-music-lab-loops-practice-recap"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "musiclab-6-12-playground",
+        "activity_section.key": "810b9963-23e2-41f1-9d6a-4bd39b4308b4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-level-group-bubble",
+        "script_level.level_keys": [
+          "test-level-group-bubble"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

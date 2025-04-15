@@ -11,6 +11,7 @@ import {
   OnStopFunction,
   SendConsoleInputFunction,
   CodebridgeLevelProperties,
+  ProjectPickerSettings,
 } from '../types';
 
 import {
@@ -56,6 +57,7 @@ export type CodebridgeContextType = {
   labConfig?: LabConfig;
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
+  projectPickerSettings?: ProjectPickerSettings;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

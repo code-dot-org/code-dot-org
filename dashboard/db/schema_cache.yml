@@ -6068,6 +6068,7 @@ columns:
     default_function: 
     collation: 
     comment: 
+  - *104
   schools:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: id
@@ -6496,6 +6497,22 @@ columns:
     sql_type_metadata: *13
     'null': true
     default: '0'
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: avatar_color
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: avatar_emoji
+    sql_type_metadata: *2
+    'null': true
+    default: 
     default_function: 
     collation: 
     comment: 
@@ -7266,6 +7283,22 @@ columns:
     comment: 
   - *14
   - *15
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: editor_font_size
+    sql_type_metadata: *20
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: console_font_size
+    sql_type_metadata: *20
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   user_proficiencies:
   - *5
   - *11
@@ -14342,7 +14375,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250403150349
+version: 20250411155821
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

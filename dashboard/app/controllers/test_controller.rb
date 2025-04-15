@@ -75,7 +75,10 @@ class TestController < ApplicationController
     return unless (user = current_user)
     script = Unit.find_by_name(params.require(:script_name))
 
-    section = Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    section = script.unit_group&.single_unit_course? ?
+                Section.create!(name: "New Section", user: user, script: script, course_id: script.unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
+                Section.create!(name: "New Section", user: user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+
     render json: {section_code: section.code}
   end
 
@@ -134,7 +137,10 @@ class TestController < ApplicationController
       teacher_user = User.create!(attributes)
     end
 
-    section = Section.create(name: "New Section", user: teacher_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    # Need to also assign the course if the script is a part of a single-unit course
+    section = script.unit_group&.single_unit_course? ?
+                Section.create(name: "New Section", user: teacher_user, script: script, course_id: script.unit_group.id, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student) :
+                Section.create(name: "New Section", user: teacher_user, script: script, participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     section.students << user
     section.save!
     head :ok

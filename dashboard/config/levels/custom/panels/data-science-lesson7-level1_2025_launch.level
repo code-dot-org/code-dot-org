@@ -1,0 +1,52 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-04-09T21:24:26.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Copy the Dataset\n\n- Click **File** -> **Make a copy**\n- Save it to your personal account",
+        "imageUrl": "https://images.code.org/d121991adae987340a655333ce2d3873-yes.gif",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Make a Chart\n- Highlight a column\n- Click **Insert** -> **Chart** \n",
+        "imageUrl": "https://images.code.org/b6042703403f38487c31c55e8e9f238b-makechart.gif",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Create a Bar Chart\n- Click **Chart type**\n- Select **Column chart**",
+        "imageUrl": "https://images.code.org/a4442a1a8a173b14462946c8d447164d-barchart.gif",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Change Title and Axis Label\n\nDouble click on the title to rename it",
+        "imageUrl": "https://images.code.org/dd69ce0f004b8eaa50d1a6b708717bf2-title.gif",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/bcedab807b4e542a062c364b21c21cff-mygif.gif",
+        "key": "data-science-lesson7-level1_2025_launch-6009960e-f3c5-438e-8af4-13d4801af88b"
+      }
+    ],
+    "name_suffix": "_2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-09T21:24:26.071+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson2-level1_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson2-level1_2025\"},{\"changed_at\":\"2025-04-09 21:25:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:33:32 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:55:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:10:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:11:53 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:24:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:30:35 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:34:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:35:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 18:24:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

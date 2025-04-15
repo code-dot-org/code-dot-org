@@ -6,7 +6,11 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import {asyncLoadTeacherHomepageSectionData} from '../../teacherDashboard/teacherSectionsRedux';
+import {
+  asyncLoadTeacherHomepageSectionData,
+  asyncLoadCoteacherInvite,
+} from '../../teacherDashboard/teacherSectionsRedux';
+import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {EmptyHomepage} from './EmptyHomepage';
 import {Header} from './Header';
@@ -24,6 +28,7 @@ export const TeacherHomepage: React.FC = () => {
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
+    dispatch(asyncLoadCoteacherInvite());
   }, [dispatch]);
 
   React.useEffect(() => {
@@ -70,6 +75,7 @@ export const TeacherHomepage: React.FC = () => {
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
+            <CoteacherInviteNotification isForPl={false} />
             {numSections === 0 ? (
               <EmptyHomepage showHiddenOnly={showHiddenOnly} />
             ) : (

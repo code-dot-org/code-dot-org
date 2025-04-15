@@ -64,13 +64,19 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               icon={{iconName: 'grip-vertical'}}
               color="gray"
               size="s"
+              aria-label={i18n.dragSection()}
               type="tertiary"
               style={{
                 cursor: isDragging ? 'grabbing' : 'grab',
               }}
             />
           )}
-          <SectionAvatar seed={section.id} />
+          {section.avatar_color && (
+            <SectionAvatar
+              color={section.avatar_color || 0}
+              emoji={section.avatar_emoji || 0}
+            />
+          )}
           <div className={styles.sectionCardHeaderText}>
             <Heading5 id={`section-card-title-${section.id}`}>
               {section.name}

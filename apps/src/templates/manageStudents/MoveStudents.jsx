@@ -11,8 +11,9 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import color from '@cdo/apps/util/color';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import {NON_LMS_LOGIN_TYPES} from '../teacherDashboard/LoginTypeConstants';
 
 import {
   updateStudentTransfer,
@@ -105,11 +106,9 @@ class MoveStudents extends Component {
 
   isValidDestinationSection = section => {
     const isSameAsSource = section.id === this.props.currentSectionId;
-    const isExternallyRostered = ![
-      SectionLoginType.word,
-      SectionLoginType.picture,
-      SectionLoginType.email,
-    ].includes(section.loginType);
+    const isExternallyRostered = !NON_LMS_LOGIN_TYPES.includes(
+      section.loginType
+    );
 
     return !isSameAsSource && !isExternallyRostered;
   };

@@ -9907,6 +9907,8 @@ en:
               name: AI Draft Levels
             lesson-11:
               name: Python Lab
+            lesson-12:
+              name: Lesson 10 - Data Visualization
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -21307,6 +21309,23 @@ en:
           student_description: Learn how chatbots and large-language models work behind the scenes!
           description_short: Builds a foundational understanding of text-based generative AI models
           description_audience: ''
+          lessons:
+            lesson-10:
+              name: 1.2 How Smart Is It, Really?
+            lesson-2:
+              name: 3.2 Is It Fair?
+            lesson-3:
+              name: 6.2 Who's Making the Choices?
+            lesson-4:
+              name: 9.2 Can You Trust the Bot?
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Foundations of Generative AI
+            lessonGroup-3:
+              display_name: Optional Lessons
+            lessonGroup-4:
+              display_name: "[Temp] New AI Chat Lessons"
+          name: exploring-gen-ai1-2025
         exploring-gen-ai2-2025:
           lesson_groups:
             lessonGroup-2:
@@ -21668,7 +21687,7 @@ en:
           title: Introduction to Data Science
           description_audience: ''
           description_short: Students are introduced to foundational data science concepts, data collection strategies, and effective ways to communicate insights through data stories.
-          description: "In this unit, students explore the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis. Through hands-on activities, they use spreadsheets for basic data analysis, explore ethical data practices, and learn how to communicate their findings using various visualization techniques. The unit begins with an introduction to data science concepts and progresses through lessons on data cleaning, visualization, and interpretation, concluding with a project that encourages students to tell a compelling data story using their newly acquired skills.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n  <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n   <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> \n  <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p> \n\n* Understand the foundations of data science and its interdisciplinary nature. \n* Create and refine data questions to guide investigations. \n* Analyze data using CODAP and apply various analysis techniques. \n* Develop visualizations to help answer data questions. \n* Use analysis results to tell a compelling data story. \n* Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n</div> \n</details>"
+          description: "In this unit, students explore the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis. Through hands-on activities, they use spreadsheets for basic data analysis, explore ethical data practices, and learn how to communicate their findings using various visualization techniques. The unit begins with an introduction to data science concepts and progresses through lessons on data cleaning, visualization, and interpretation, concluding with a project that encourages students to tell a compelling data story using their newly acquired skills.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n  <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n   <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> \n  <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p> \n\n* Understand the foundations of data science and its interdisciplinary nature. \n* Create and refine data questions to guide investigations. \n* Analyze datasets and apply various analysis techniques. \n* Develop visualizations to help answer data questions. \n* Use analysis results to tell a compelling data story. \n* Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n</div> \n</details>"
           student_description: "This unit introduces you to the foundational concepts of data science, including developing effective data questions, collecting data, and using spreadsheets to analyze and visualize data. You will work on creating various visualizations such as bar charts, scatter plots, and dot plots to communicate data insights. Additionally, you will explore the ethical implications of data collection and analysis. The unit culminates in a project where you will tell a compelling data story, using data visualizations to present your findings to your peers.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> \n<p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n* Understand the foundations of data science and its interdisciplinary nature. \n* Create and refine data questions to guide investigations. \n* Analyze data using CODAP and apply various analysis techniques. \n* Develop visualizations to help answer data questions. \n* Use analysis results to tell a compelling data story. \n* Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n</div> \n</details>"
         pswai-pilot-2024:
           lessons:
@@ -23129,4 +23148,35 @@ en:
           description_audience: ''
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
+          student_description: ''
+        career-journey-pilot-a:
+          lessons:
+            lesson-1:
+              name: Career Journeys Pilot Lesson
+          lesson_groups: {}
+          name: career-journey-pilot-a
+          title: Career Journey Pilot Lesson (Version A)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        career-journey-pilot-b:
+          lessons:
+            lesson-1:
+              name: Career Journeys Lesson B
+          lesson_groups: {}
+          name: career-journey-pilot-b
+          title: Career Journey Pilot Lesson (Version B)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ui-test-unnumbered-lessons:
+          lessons: {}
+          lesson_groups: {}
+          name: ui-test-unnumbered-lessons
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
           student_description: ''

@@ -8,10 +8,48 @@ import {
 } from '@code-dot-org/component-library/typography';
 import React, {useState} from 'react';
 
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+
 import style from './regionalWorkshopCatalog.module.scss';
 
 export default function RegionalWorkshopCatalog() {
   const [zipCode, setZipCode] = useState('');
+  const [hasValidRP, setHasValidRP] = useState(false);
+  const [regionalPartnerText, setRegionalPartnerText] =
+    useState('Zip code required');
+  const [availableWorkshops, setAvailableWorkshops] = useState([]);
+
+  const handleSubmitZip = async () => {
+    try {
+      const response = await fetch(`/regional_workshop_data/${zipCode}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': await getAuthenticityToken(),
+        },
+      });
+
+      if (response.ok) {
+        const jsonData = await response.json();
+        const rpName = jsonData.regional_workshop_data.regional_partner?.name;
+        if (rpName) {
+          setHasValidRP(true);
+          setRegionalPartnerText(rpName);
+        } else {
+          setHasValidRP(false);
+          setRegionalPartnerText('No regional partner found');
+        }
+        setAvailableWorkshops(
+          jsonData.regional_workshop_data.available_workshops
+        );
+      }
+    } catch (error) {
+      console.error(
+        'Error fetching regional partner and available workshops:',
+        error
+      );
+    }
+  };
 
   return (
     <div className={style.workshopCatalog}>
@@ -34,15 +72,17 @@ export default function RegionalWorkshopCatalog() {
               maxLength={255}
               placeholder="12345"
             />
-            <Button text="Submit" color="purple" onClick={() => {}} />
+            <Button text="Submit" color="purple" onClick={handleSubmitZip} />
           </div>
           <div className={style.rpInfoContainer}>
             <OverlineTwoText className={style.rpInfoHeader}>
               Your Regional Partner
             </OverlineTwoText>
             <div className={style.rpInfo}>
-              <BodyTwoText className={style.rpName}>
-                Sample Regional Partner Name
+              <BodyTwoText
+                className={hasValidRP ? style.rpName : style.rpNameMissing}
+              >
+                {regionalPartnerText}
               </BodyTwoText>
               <div className={style.rpInfoButtons}>
                 <LinkButton
@@ -72,6 +112,23 @@ export default function RegionalWorkshopCatalog() {
             are looking for check back again soon or{' '}
             <a href="/">contact your regional partner</a>.
           </BodyTwoText>
+          {availableWorkshops && (
+            <div>
+              <ul>
+                {availableWorkshops.map(workshop => (
+                  <li key={workshop.id}>{`Id: ${workshop.id}, Title: ${
+                    workshop.name
+                      ? workshop.name
+                      : workshop.course + ' - ' + workshop.subject
+                  }, Location: ${
+                    workshop.location_name
+                  }, Participant Group Type: ${
+                    workshop.participant_group_type
+                  }`}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </section>
     </div>

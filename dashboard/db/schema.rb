@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_03_150349) do
+ActiveRecord::Schema.define(version: 2025_04_11_155821) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1953,6 +1953,7 @@ ActiveRecord::Schema.define(version: 2025_04_03_150349) do
     t.string "community_type", limit: 16, comment: "Urban-centric community type"
     t.integer "student_female"
     t.integer "student_male"
+    t.string "status"
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id"
   end
 
@@ -2108,6 +2109,8 @@ ActiveRecord::Schema.define(version: 2025_04_03_150349) do
     t.string "participant_type", default: "student", null: false
     t.bigint "lti_integration_id"
     t.boolean "ai_tutor_enabled", default: false
+    t.integer "avatar_color"
+    t.integer "avatar_emoji"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"
@@ -2414,6 +2417,8 @@ ActiveRecord::Schema.define(version: 2025_04_03_150349) do
     t.json "section_order"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.json "editor_font_size"
+    t.json "console_font_size"
     t.index ["user_id"], name: "index_user_preferences_on_user_id"
   end
 

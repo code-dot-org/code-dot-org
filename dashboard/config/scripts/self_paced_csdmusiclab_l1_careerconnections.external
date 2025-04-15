@@ -1,0 +1,11 @@
+name 'self-paced-CSDMusicLab-L1-careerconnections'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Career Connections
+
+## What are Career Connections?
+
+
+MARKDOWN

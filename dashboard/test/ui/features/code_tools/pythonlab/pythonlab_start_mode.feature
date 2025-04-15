@@ -14,6 +14,7 @@ Background:
   And I wait to see "#uitest-codebridge-run"
 
 Scenario: Correct file types are in the dropdown
+  And I wait to see ".cm-content"
   And I open the dropdown for file 0
   And element "#uitest-file-0-popup" contains text "Make validation file"
   And element "#uitest-file-0-popup" contains text "Make starter file"
