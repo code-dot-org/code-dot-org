@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-11 03:50:24 UTC",
+    "serialized_at": "2025-04-14 21:04:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2033,7 +2033,7 @@
       "key": "185e350d-e4ba-4689-9e0f-e2b78df65ded",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, they can continue to the next levels."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, hand out a copy of the [Walk Up Songs Rubric](https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0) for students to use while coding. Then they can continue to the next levels."
       },
       "seeding_key": {
         "activity_section.key": "185e350d-e4ba-4689-9e0f-e2b78df65ded",
@@ -2679,7 +2679,7 @@
       "key": "2671e45f-3a29-49b0-a0dd-42f66fd70a68",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, they can continue to the next levels.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, hand out a copy of the [Cat GIF Loops Rubric](https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0). Then they can continue to the next levels.",
         "progression_name": "Musical Cat GIFs"
       },
       "seeding_key": {
@@ -3287,7 +3287,7 @@
       "key": "ef8b24c9-d31f-470d-af4a-bcf15fd34c69",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, they can continue to the next levels.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Prepare steps. They should check in with you before continuing to try and code their genre mashups.\n\nOnce you've approved students progress so far, pass out the [Genre Mashup Rubric](https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0). Then they can continue to the next levels.",
         "progression_name": "Genre Mashup"
       },
       "seeding_key": {
@@ -8012,6 +8012,18 @@
       }
     },
     {
+      "name": "Cat GIF Loops Rubric",
+      "url": "https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0",
+      "key": "cat_gif_loops_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "cat_gif_loops_rubric"
+      }
+    },
+    {
       "name": "Client Stories",
       "url": "https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/view",
       "key": "client_stories",
@@ -8070,6 +8082,18 @@
       },
       "seeding_key": {
         "resource.key": "genre_mashup"
+      }
+    },
+    {
+      "name": "Genre Mashup Rubric",
+      "url": "https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0",
+      "key": "genre_mashup_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "genre_mashup_rubric"
       }
     },
     {
@@ -8304,6 +8328,18 @@
       "seeding_key": {
         "resource.key": "walk_up_songs"
       }
+    },
+    {
+      "name": "Walk Up Songs Rubric",
+      "url": "https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0",
+      "key": "walk_up_songs_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "walk_up_songs_rubric"
+      }
     }
   ],
   "lessons_resources": [
@@ -8394,6 +8430,12 @@
     {
       "seeding_key": {
         "lesson.key": "Mini Project: Cat GIF Loops",
+        "resource.key": "cat_gif_loops_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Cat GIF Loops",
         "resource.key": "mini_project_-_cat_gif_loops"
       }
     },
@@ -8411,8 +8453,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "resource.key": "walk_up_songs_rubric"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project: Genre Mash-Up",
         "resource.key": "genre_mashup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "genre_mashup_rubric"
       }
     },
     {

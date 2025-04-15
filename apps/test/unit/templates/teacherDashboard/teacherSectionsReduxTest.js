@@ -81,6 +81,7 @@ const sections = [
     course_version_id: 3,
     script: {name: null},
     unitName: null,
+    unitPosition: null,
     unit_id: null,
     isAssignedStandaloneCourse: false,
     createdAt: createdAt,
@@ -101,6 +102,8 @@ const sections = [
       email: 'teacher@code.org',
       ltiRosterSyncEnabled: false,
     },
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
   {
     id: 12,
@@ -126,6 +129,7 @@ const sections = [
       version_id: 2017,
     },
     unitName: 'coursea-2017',
+    unitPosition: 1,
     unit_id: null,
     isAssignedStandaloneCourse: true,
     script: {name: null},
@@ -153,6 +157,8 @@ const sections = [
       email: 'teacher@code.org',
       ltiRosterSyncEnabled: false,
     },
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
   {
     id: 13,
@@ -178,6 +184,7 @@ const sections = [
       version_id: 14,
     },
     unitName: 'Single Unit 2026',
+    unitPosition: 1,
     unit_id: 18,
     isAssignedStandaloneCourse: false,
     is_assigned_single_unit_course: true,
@@ -200,6 +207,8 @@ const sections = [
       email: 'teacher@code.org',
       ltiRosterSyncEnabled: false,
     },
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
   {
     id: 307,
@@ -218,6 +227,7 @@ const sections = [
     course_offering_id: 3,
     course_version_id: 5,
     unitName: null,
+    unitPosition: 1,
     unit_id: 7,
     isAssignedStandaloneCourse: false,
     script: {name: null},
@@ -241,6 +251,8 @@ const sections = [
     },
     at_risk_age_gated_date: undefined,
     at_risk_age_gated_us_state: undefined,
+    avatar_color: 1,
+    avatar_emoji: 1,
   },
 ];
 
@@ -561,6 +573,7 @@ describe('teacherSectionsRedux', () => {
           textToSpeechEnabled: false,
         },
         unitName: 'coursea-2017',
+        unitPosition: 1,
         unitId: null,
         isAssignedStandaloneCourse: true,
         isAssignedSingleUnitCourse: undefined,
@@ -596,6 +609,8 @@ describe('teacherSectionsRedux', () => {
         anyStudentHasProgress: undefined,
         atRiskAgeGatedDate: null,
         atRiskAgeGatedUsState: undefined,
+        avatar_color: 1,
+        avatar_emoji: 1,
       });
     });
   });
@@ -923,6 +938,7 @@ describe('teacherSectionsRedux', () => {
           courseVersionId: undefined,
           courseDisplayName: undefined,
           unitName: undefined,
+          unitPosition: undefined,
           unitId: undefined,
           course: null,
           isAssignedStandaloneCourse: undefined,
@@ -952,6 +968,8 @@ describe('teacherSectionsRedux', () => {
           anyStudentHasProgress: undefined,
           atRiskAgeGatedDate: null,
           atRiskAgeGatedUsState: undefined,
+          avatar_color: undefined,
+          avatar_emoji: undefined,
         },
       });
     });

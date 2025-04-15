@@ -70,10 +70,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@amplitude/ua-parser-js@npm:0.7.31, @amplitude/ua-parser-js@npm:^0.7.31":
-  version: 0.7.31
-  resolution: "@amplitude/ua-parser-js@npm:0.7.31"
-  checksum: 10/2bec7dd1470c469f905b94a33e07dbd47a1df7546493589cd48324cc343d04066f889ffbb887d5aeac84206b358529433f36741ef0489c3c80afd1ea0ba5d12d
+"@amplitude/ua-parser-js@npm:^0.7.33":
+  version: 0.7.33
+  resolution: "@amplitude/ua-parser-js@npm:0.7.33"
+  checksum: 10/54e0344746cb1fe556f008464599c72de17ebeba012c577137c2a90c9e0915a18588704c60c5ac4138cb3d89973e95132d014ff0896062c98f4e9b3547dda2fe
   languageName: node
   linkType: hard
 
@@ -28570,7 +28570,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"ua-parser-js@npm:^0.7.18, ua-parser-js@npm:^0.7.30":
+"ua-parser-js@npm:^0.7.40":
   version: 0.7.40
   resolution: "ua-parser-js@npm:0.7.40"
   bin:

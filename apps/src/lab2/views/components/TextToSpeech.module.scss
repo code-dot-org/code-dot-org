@@ -12,6 +12,10 @@
   transition: opacity 0.2s ease;
   color: $neutral_dark;
 
+  &HigherPosition {
+    bottom: 58px;
+  }
+
   &Playing {
     opacity: 100%;
   }

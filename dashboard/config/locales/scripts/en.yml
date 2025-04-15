@@ -23180,3 +23180,341 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        coursea-2025:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+            lessonGroup-5:
+              display_name: End of Course Project
+          title: Course A (2024)
+          description: "Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. \n\n**New to teaching CS?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023)."
+          student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers.
+          description_audience: 'Ages: 4-7'
+        courseb-2025:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_impacts:
+              display_name: Impacts of Computing
+            csf_events:
+              display_name: Events
+            lessonGroup-6:
+              display_name: End of Course Project
+          title: Course B (2024)
+          description: |-
+            We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023).
+          student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
+          description_audience: 'Ages: 5-8'
+        coursec-2025:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            csf_loops:
+              display_name: Loops
+            csf_events:
+              display_name: Events
+            csf_data:
+              display_name: Data
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Course C (2024)
+          description: |-
+            We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023).
+          student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          description_short: Learn the basics of computer science and create your own art, stories, and games.
+          description_audience: 'Ages: 6-10'
+        coursed-2025:
+          lesson_groups:
+            lessonGroup-6:
+              display_name: Digital Citizenship
+            csf_sequencing:
+              display_name: Sequencing
+            lessonGroup-7:
+              display_name: Computing Systems
+            csf_events:
+              display_name: Events
+            csf_loops:
+              display_name: Loops
+            csf_conditionals:
+              display_name: Conditionals
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Course D (2024)
+          description: "We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. \n\n**New to teaching CS?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023)."
+          student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
+          description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
+          description_audience: 'Ages: 7-11'
+        coursee-2025:
+          lesson_groups:
+            csf_digcit:
+              display_name: Digital Citizenship
+            csf_sprites:
+              display_name: Sprites
+            ramp_up:
+              display_name: Variables & Data Analysis
+            csf_functions:
+              display_name: Functions
+            csf_nested_loops:
+              display_name: Conditionals
+            lessonGroup-7:
+              display_name: Impacts of Computing
+            end_of_course_project:
+              display_name: End of Course Project
+          title: Course E (2024)
+          description: |-
+            We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023).
+          student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
+          description_short: Learn the basics of sprites, nested loops, and functions.
+          description_audience: 'Ages: 8-12'
+        coursef-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Digital Citizenship
+            lessonGroup-3:
+              display_name: Sprites
+            lessonGroup-4:
+              display_name: Variables
+            lessonGroup-5:
+              display_name: Data and Simulations
+            lessonGroup-6:
+              display_name: End of Course Project
+          title: Course F (2024)
+          description: |-
+            We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023).
+          student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+          description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
+          description_audience: 'Ages: 9-13'
+        express-2025:
+          lesson_groups:
+            csf_sequencing:
+              display_name: Sequencing
+            lessonGroup-2:
+              display_name: Sprites
+            lessonGroup-3:
+              display_name: Events
+            lessonGroup-4:
+              display_name: Loops
+            lessonGroup-5:
+              display_name: Conditionals
+            lessonGroup-6:
+              display_name: Functions
+            lessonGroup-7:
+              display_name: Variables
+            lessonGroup-8:
+              display_name: For Loops
+            lessonGroup-9:
+              display_name: End of Course Project
+          title: Express Course (2024)
+          description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_short: 'An introduction to computer science: combines the best of our elementary school curriculum for older students.'
+          description_audience: 'Ages: 9-18'
+        pre-express-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sequencing
+            lessonGroup-3:
+              display_name: Loops
+            lessonGroup-4:
+              display_name: Events
+          title: Pre-reader Express (2024)
+          description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
+          description_audience: 'Ages: 4-8'
+        aif1-2025:
+          title: Problem Solving with AI
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        aif2-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
+            lessonGroup-6:
+              display_name: Alternate Level Progressions (Console Only)
+          title: Programming Fundamentals
+          description: |-
+            This unit introduces you to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, you write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. You analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering you to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+          student_description: |-
+            This unit introduces students to programming, algorithms, and ethical computing, exploring how Python programs are designed, debugged, and influenced by societal considerations. Through hands-on activities, students write, test, and refine programs using sequence, selection, iteration, and modular functions while applying human-centered design for inclusivity. They analyze the ethical implications of computing, including privacy, fairness, and accessibility, and propose risk mitigation strategies. Career-focused discussions connect programming skills to real-world pathways. Grounded in ethics, inclusivity, and computational thinking, this unit fosters persistence, critical thinking, and curiosity, empowering students to use technology for real-world problem-solving.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Define and explain the purpose of algorithms and their applications.
+            - Design algorithms using sequence, selection, and iteration.
+            - Analyze the functionality of algorithms and propose improvements.
+            - Write Python programs using variables, conditional statements, loops, and functions.
+            - Debug and test Python programs systematically to ensure correctness and reliability.
+            - Use modular design principles to write reusable functions with parameters and return values.
+            - Use AI tools to support problem-solving, algorithm design, and debugging, while recognizing their limitations and biases
+            - Evaluate the ethical implications of using AI in programming and implement strategies for ethical and fair implementation.
+            - Identify career pathways in computing and connect programming skills to real-world opportunities.
+            - Use computational thinking principles to design, analyze, and troubleshoot programs.
+            - Apply abstraction, decomposition, and pattern recognition to solve problems effectively.
+            :::
+          description_short: ''
+          description_audience: ''
+        aif3-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
+          title: Computer Systems and Devices
+          description: |-
+            This unit explores how AI and computing systems process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, you design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. AI Chat supports your learning by unpacking system layers, optimizing software, and evaluating AI-generated content for accuracy and fairness. Discussions on bias and debates on AI’s role in society encourage creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit helps you develop a deeper understanding of AI and its potential for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
+          student_description: |-
+            This unit introduces students to AI and computing systems, exploring how they process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, students design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. Using AI Chat, they unpack abstracted system layers, optimize software, and critique AI-generated outputs for accuracy and fairness. Activities like examining bias, and debating AI’s societal role foster creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit equips students to engage critically with AI, explore career pathways, and leverage technology for equitable solutions.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Explain how computational systems process data and how hardware, software, and operating systems collaborate to perform tasks.
+            - Investigate and optimize computing systems to improve performance and achieve specific goals.
+            - Design computing solutions that integrate hardware and software to collect and exchange data.
+            - Apply human-centered design principles to create effective and inclusive systems or protocols.
+            - Analyze the societal and ethical implications of AI and emerging technologies, including issues related to privacy, fairness, and accessibility.
+            - Assess the benefits and risks of AI in various industries and real-world applications.
+            - Use AI tools to investigate problems, generate solutions, and evaluate the accuracy, fairness, and reliability of outputs.
+            - Apply AI to analyze data, improve workflows, and develop creative solutions.
+            - Describe the role of data in AI applications and how different types of data (e.g., audio, visual, environmental) are collected and used computationally.
+            - Engage in inclusive collaboration by valuing diverse perspectives and addressing ethical concerns in computing projects.
+            - Identify career pathways in computing and describe how AI and emerging technologies are transforming industries and disciplines.
+            - Explore the interdisciplinary applications of computing concepts in solving real-world problems.
+            :::
+          description_short: ''
+          description_audience: ''
+        aif4-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content, Part 1
+            lessonGroup-4:
+              display_name: Mid-Unit Project
+            lessonGroup-5:
+              display_name: Content, Part 2
+            lessonGroup-6:
+              display_name: End of Unit Project
+            lessonGroup-7:
+              display_name: End of Unit Assessment
+          title: Networks and the Internet
+          description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. You examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, you analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help you propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing you to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, you will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
+          student_description: |-
+            This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. Students examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, they analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help students propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing students to engage with networking technologies and their societal implications.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Describe how data is transmitted, routed, and reassembled over the Internet.
+            - Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.
+            - Analyze the role of AI in enhancing network security.
+            - Assess the implications of the digital divide and propose strategies to promote equitable Internet access.
+            - Evaluate the ethical considerations of AI in network security and propose responsible solutions.
+            - Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.
+            - Analyze how these careers contribute to addressing societal challenges and improving technology.
+            - Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.
+            - Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.
+            :::
+          description_short: ''
+          description_audience: ''
+        aif5-2025:
+          title: Cybersecurity and Global Impacts
+          description: In this unit, students learn how computing innovations have impacted the world in beneficial and harmful ways. Students explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit, they participate in a "school of the future" conference in which they make a proposal for how best to improve school life with computing innovations.
+          student_description: In this unit, you will learn how computing innovations have impacted our world in beneficial and harmful ways. You'll explore how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit, you will participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
+          description_short: ''
+          description_audience: ''
+        aif6-2025:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
+          title: Introduction to Data Science
+          description: "In this unit, students explore the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis. Through hands-on activities, they use spreadsheets for basic data analysis, explore ethical data practices, and learn how to communicate their findings using various visualization techniques. The unit begins with an introduction to data science concepts and progresses through lessons on data cleaning, visualization, and interpretation, concluding with a project that encourages students to tell a compelling data story using their newly acquired skills.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n  <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n   <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> \n  <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p> \n\n* Understand the foundations of data science and its interdisciplinary nature. \n* Create and refine data questions to guide investigations. \n* Analyze datasets and apply various analysis techniques. \n* Develop visualizations to help answer data questions. \n* Use analysis results to tell a compelling data story. \n* Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n</div> \n</details>"
+          student_description: "This unit introduces you to the foundational concepts of data science, including developing effective data questions, collecting data, and using spreadsheets to analyze and visualize data. You will work on creating various visualizations such as bar charts, scatter plots, and dot plots to communicate data insights. Additionally, you will explore the ethical implications of data collection and analysis. The unit culminates in a project where you will tell a compelling data story, using data visualizations to present your findings to your peers.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\"> \n<summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\"> \n<p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p> \n\n* Understand the foundations of data science and its interdisciplinary nature. \n* Create and refine data questions to guide investigations. \n* Analyze data using CODAP and apply various analysis techniques. \n* Develop visualizations to help answer data questions. \n* Use analysis results to tell a compelling data story. \n* Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n</div> \n</details>"
+          description_short: Students are introduced to foundational data science concepts, data collection strategies, and effective ways to communicate insights through data stories.
+          description_audience: ''
