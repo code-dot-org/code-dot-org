@@ -1,9 +1,11 @@
 import {Dialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   TooltipOverlay,
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import {OverlineOneText} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
 import React from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -82,38 +84,48 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     <div className={styles.sectionCodeBox} data-for="section-code" data-tip>
       {!showCopiedMsg && (
         <TooltipOverlay>
-          <OverlineOneText className={styles.sectionCodeText}>
-            <span>{i18n.sectionCodeWithColon()}</span>
-            <WithTooltip
-              tooltipProps={{
-                tooltipId: 'section-code',
-                role: 'tooltip',
-                text: i18n.copySectionCodeTooltip(),
-                direction: 'onLeft',
-                size: 's',
-                iconLeft: {iconName: 'copy'},
-              }}
-            >
-              <a className={styles.sectionCode} onClick={handleCopySectionCode}>
-                {sectionCode}
-              </a>
-            </WithTooltip>
-          </OverlineOneText>
+          <span className={styles.sectionCodeText}>
+            <OverlineOneText>
+              <span>{i18n.sectionCodeWithColon()}</span>
+              <WithTooltip
+                tooltipProps={{
+                  tooltipId: 'section-code',
+                  role: 'tooltip',
+                  text: i18n.copySectionCodeTooltip(),
+                  direction: 'onLeft',
+                  size: 's',
+                  iconLeft: {iconName: 'copy'},
+                }}
+              >
+                <a
+                  className={styles.sectionCode}
+                  onClick={handleCopySectionCode}
+                >
+                  {sectionCode}
+                </a>
+              </WithTooltip>
+            </OverlineOneText>
+          </span>
         </TooltipOverlay>
       )}
       {showCopiedMsg && <span>{i18n.copySectionCodeSuccess()}</span>}
     </div>
   ) : (
-    <div className={styles.sectionCodeBox}>
-      {i18n.sectionCodeWithColon()}
-      <span
-        className={styles.sectionCodeNotApplicable}
-      >{` ${i18n.notApplicable()}. `}</span>
-      <span className={styles.noSectionCode}>
-        <a onClick={() => showSectionCodeDialog()} id="uitest-why-link">
-          {i18n.whyWithQuestionMark()}
-        </a>
-      </span>
+    <>
+      <div
+        className={classNames(styles.sectionCodeBox, styles.sectionCodeText)}
+      >
+        <OverlineOneText>
+          {`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}.`}
+          <a
+            onClick={() => showSectionCodeDialog()}
+            id="uitest-why-link"
+            className={styles.noSectionCode}
+          >
+            <FontAwesomeV6Icon iconName="question-circle" iconStyle="regular" />
+          </a>
+        </OverlineOneText>
+      </div>
       {shouldShowDialog && (
         <Dialog
           title={i18n.noSectionDialogHeader({classroom: classroomType})}
@@ -125,7 +137,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
           onClose={() => setShouldShowDialog(false)}
         />
       )}
-    </div>
+    </>
   );
 };
 

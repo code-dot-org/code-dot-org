@@ -13,11 +13,24 @@
 }
 
 .sectionCodeText {
-  display: flex;
-  flex-direction: row;
+  p {
+    height: 22px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      color: var(--brand-teal-50);
+    }
+  }
 }
 
 .noSectionCode {
+  margin-left: 5px;
   color: $teal;
   text-decoration: none;
   cursor: pointer;

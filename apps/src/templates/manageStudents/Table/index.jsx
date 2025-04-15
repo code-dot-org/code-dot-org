@@ -6,7 +6,6 @@ import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -929,9 +928,6 @@ const styles = {
   verticalAlign: {
     display: 'flex',
     alignItems: 'center',
-  },
-  sectionCodeNotApplicable: {
-    ...fontConstants['main-font-bold'],
   },
   v2TableWidth: {
     width: '100%',
