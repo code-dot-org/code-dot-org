@@ -910,6 +910,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     assert_equal 0, workshop.sessions.count
   end
 
+  # Add and remove facilitators
+
   test 'organizers can add and remove facilitators' do
     sign_in @workshop_organizer
     new_facilitator = create :facilitator
@@ -917,7 +919,17 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     assert_equal @facilitator, @organizer_workshop.facilitators.first
 
     params = workshop_params.merge(
-      {facilitators: [new_facilitator.id]}
+      {facilitators: [new_facilitator.id, @facilitator.id]}
+    )
+    put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
+    assert_response :success
+    @organizer_workshop.reload
+    assert_equal 2, @organizer_workshop.facilitators.length
+    assert_equal new_facilitator, @organizer_workshop.facilitators.last
+    assert_equal @facilitator, @organizer_workshop.facilitators.first
+
+    params = workshop_params.merge(
+      {facilitators: [new_facilitator.id], sessions_attributes: []}
     )
     put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
     assert_response :success
@@ -933,13 +945,127 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     assert_equal @facilitator, @workshop.facilitators.first
 
     params = workshop_params.merge(
-      {facilitators: [new_facilitator.id]}
+      {facilitators: [new_facilitator.id, @facilitator.id]}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 2, @workshop.facilitators.length
+    assert_equal new_facilitator, @workshop.facilitators.last
+    assert_equal @facilitator, @workshop.facilitators.first
+
+    params = workshop_params.merge(
+      {facilitators: [new_facilitator.id], sessions_attributes: []}
     )
     put :update, params: {id: @workshop.id, pd_workshop: params}
     assert_response :success
     @workshop.reload
     assert_equal 1, @workshop.facilitators.length
     assert_equal new_facilitator, @workshop.facilitators.first
+  end
+
+  # Add and remove course offerings
+
+  test 'organizers can add and remove course offerings' do
+    sign_in @workshop_organizer
+    course_offering_1 = create :course_offering
+    course_offering_2 = create :course_offering
+
+    params = workshop_params.merge(
+      {course_offerings: [course_offering_1.id, course_offering_2.id]}
+    )
+    put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
+    assert_response :success
+    @organizer_workshop.reload
+    assert_equal 2, @organizer_workshop.course_offerings.length
+    assert_equal course_offering_1, @organizer_workshop.course_offerings.first
+    assert_equal course_offering_2, @organizer_workshop.course_offerings.last
+
+    params = workshop_params.merge(
+      {course_offerings: [course_offering_1.id], sessions_attributes: []}
+    )
+    put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
+    assert_response :success
+    @organizer_workshop.reload
+    assert_equal 1, @organizer_workshop.course_offerings.length
+    assert_equal course_offering_1, @organizer_workshop.course_offerings.first
+  end
+
+  test 'program manager organizers can add and remove course offerings' do
+    sign_in @organizer
+    course_offering_1 = create :course_offering
+    course_offering_2 = create :course_offering
+
+    params = workshop_params.merge(
+      {course_offerings: [course_offering_1.id, course_offering_2.id]}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 2, @workshop.course_offerings.length
+    assert_equal course_offering_1, @workshop.course_offerings.first
+    assert_equal course_offering_2, @workshop.course_offerings.last
+
+    params = workshop_params.merge(
+      {course_offerings: [course_offering_1.id], sessions_attributes: []}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 1, @workshop.course_offerings.length
+    assert_equal course_offering_1, @workshop.course_offerings.first
+  end
+
+  # Add and remove grade levels
+
+  test 'organizers can add and remove grade levels' do
+    sign_in @workshop_organizer
+    kindergarten = 'k'
+    first_grade = '1'
+
+    params = workshop_params.merge(
+      {grades: [kindergarten, first_grade]}
+    )
+    put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
+    assert_response :success
+    @organizer_workshop.reload
+    assert_equal 2, @organizer_workshop.grades.length
+    assert_equal kindergarten, @organizer_workshop.grades.first
+    assert_equal first_grade, @organizer_workshop.grades.last
+
+    params = workshop_params.merge(
+      {grades: [kindergarten], sessions_attributes: []}
+    )
+    put :update, params: {id: @organizer_workshop.id, pd_workshop: params}
+    assert_response :success
+    @organizer_workshop.reload
+    assert_equal 1, @organizer_workshop.grades.length
+    assert_equal kindergarten, @organizer_workshop.grades.first
+  end
+
+  test 'program manager organizers can add and remove grade levels' do
+    sign_in @organizer
+    kindergarten = 'k'
+    first_grade = '1'
+
+    params = workshop_params.merge(
+      {grades: [kindergarten, first_grade]}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 2, @workshop.grades.length
+    assert_equal kindergarten, @workshop.grades.first
+    assert_equal first_grade, @workshop.grades.last
+
+    params = workshop_params.merge(
+      {grades: [kindergarten], sessions_attributes: []}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 1, @workshop.grades.length
+    assert_equal kindergarten, @workshop.grades.first
   end
 
   # Actions: Start, End
@@ -1243,7 +1369,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
       sessions_attributes: [
         {
           start: session_start,
-          end: session_end
+          end: session_end,
+          session_format: 'in_person',
         }
       ]
     }
