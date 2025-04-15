@@ -4,7 +4,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
   describe '#next_unpassed_visible_progression_level' do
-    subject {user.next_unpassed_visible_progression_level(script)}
+    subject(:next_unpassed_visible_progression_level) {user.next_unpassed_visible_progression_level(script)}
 
     context 'when none of the lessons are hidden' do
       let(:user) {create(:user)}
@@ -12,7 +12,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
       context 'when the user has no progress' do
         it 'returns the first visible level' do
-          _(subject.chapter).must_equal 1
+          _(next_unpassed_visible_progression_level.chapter).must_equal 1
         end
       end
 
@@ -29,7 +29,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
           )
         end
         it 'returns the next visible level' do
-          _(subject.chapter).must_equal 3
+          _(next_unpassed_visible_progression_level.chapter).must_equal 3
         end
       end
 
@@ -54,7 +54,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
         end
 
         it 'returns the skipped level' do
-          _(subject.chapter).must_equal 4
+          _(next_unpassed_visible_progression_level.chapter).must_equal 4
         end
       end
 
@@ -90,7 +90,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
         end
 
         it 'returns the next visible level' do
-          _(subject.chapter).must_equal 4
+          _(next_unpassed_visible_progression_level.chapter).must_equal 4
         end
       end
 
@@ -107,7 +107,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
           end
         end
         it 'returns the first visible level' do
-          _(subject.chapter).must_equal 1
+          _(next_unpassed_visible_progression_level.chapter).must_equal 1
         end
       end
 
@@ -125,7 +125,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
           end
         end
         it 'returns nil' do
-          _(subject).must_be_nil
+          _(next_unpassed_visible_progression_level).must_be_nil
         end
       end
     end
@@ -190,7 +190,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
   end
 
   describe '#next_unpassed_progression_level' do
-    subject {user.next_unpassed_progression_level(script)}
+    subject(:next_unpassed_progression_level) {user.next_unpassed_progression_level(script)}
 
     context 'when the user has made no progress' do
       let(:user) {create :user}
@@ -204,7 +204,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
         create :user_script, user: user, script: script
       end
       it 'returns the first level' do
-        _(subject.chapter).must_equal 1
+        _(next_unpassed_progression_level.chapter).must_equal 1
       end
     end
 
@@ -233,7 +233,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
       end
 
       it 'returns the most recently submitted level' do
-        _(subject.chapter).must_equal 4
+        _(next_unpassed_progression_level.chapter).must_equal 4
       end
     end
 
@@ -255,7 +255,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
       end
 
       it 'is not tainting current user progress' do
-        _(subject.chapter).must_equal 1
+        _(next_unpassed_progression_level.chapter).must_equal 1
       end
     end
 
@@ -278,7 +278,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
       it 'returns most recent not passed level' do
         # The level we most recently had progress on we did not pass, so that's
         # where we should go
-        _(subject.chapter).must_equal 3
+        _(next_unpassed_progression_level.chapter).must_equal 3
       end
     end
 
@@ -300,7 +300,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
       it 'returns the last level' do
         # User's most recent progress is on last level in script. There's nothing
         # following it, so just return to the last level
-        _(subject.chapter).must_equal script_level.chapter
+        _(next_unpassed_progression_level.chapter).must_equal script_level.chapter
       end
     end
 
@@ -332,7 +332,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
       it 'returns the the next uncompleted progression level' do
         # User's most recent progress is on unplugged level, that is followed by another
         # unplugged level. We should end up at the first non unplugged level
-        _(subject.chapter).must_equal 4
+        _(next_unpassed_progression_level.chapter).must_equal 4
       end
     end
 
@@ -370,7 +370,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
         )
       end
       it 'returns a non-nil script level' do
-        _(subject).wont_be_nil
+        _next_unpassed_progression_level.wont_be_nil
       end
     end
   end
