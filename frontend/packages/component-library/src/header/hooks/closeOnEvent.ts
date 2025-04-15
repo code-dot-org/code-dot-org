@@ -1,6 +1,6 @@
 import {useEffect, RefObject} from 'react';
 
-const useCloseOnEvent = (
+const closeOnEvent = (
   ref: RefObject<HTMLElement>,
   onClose: () => void,
   isActive: boolean,
@@ -32,4 +32,4 @@ const useCloseOnEvent = (
   }, [ref, onClose, isActive]);
 };
 
-export default useCloseOnEvent;
+export default closeOnEvent;
