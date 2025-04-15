@@ -78,6 +78,7 @@ describe('SectionCard', () => {
                 path={TEACHER_NAVIGATION_PATHS.home}
                 element={
                   <SectionCard
+                    studioUrlPrefix="https://studio.code.org"
                     id={section.id}
                     section={section}
                     onDeleteClickCallback={() => {}}
