@@ -3,22 +3,6 @@ require 'test_helper'
 class LevelProgressableTest < ActiveSupport::TestCase
   include Minitest::RSpecMocks
 
-  def create_level_group(sub_level_name)
-    level_group_dsl = <<~DSL
-      name 'LevelGroupLevel1'
-
-      page
-      level '#{sub_level_name}'
-    DSL
-    LevelGroup.create_from_level_builder({}, {name: 'LevelGroupLevel1', dsl_text: level_group_dsl})
-  end
-
-  def put_participant_in_section(participant, instructor, script, unit_group = nil, participant_type = 'student')
-    section = create :section, user_id: instructor.id, script_id: script.try(:id), course_id: unit_group.try(:id), participant_type: participant_type, grades: participant_type == 'student' ? ['9'] : ['pl']
-    Follower.create!(section_id: section.id, student_user_id: participant.id, user: instructor)
-    section
-  end
-
   describe '#next_unpassed_visible_progression_level' do
     subject {user.next_unpassed_visible_progression_level(script)}
 
@@ -150,9 +134,11 @@ class LevelProgressableTest < ActiveSupport::TestCase
       let(:student) {create :student}
       let(:teacher) {create :teacher}
       let(:script) {create(:script, :with_levels, lessons_count: 3, levels_count: 1)}
+      let(:section) {create(:section, user_id: teacher.id, script_id: script.try(:id), participant_type: 'student', grades: ['9'])}
 
       context 'when a student has completed the first lesson' do
         before do
+          student.sections_as_student << section
           # User completed the first lesson
           script.lessons[0].script_levels.each do |sl|
             UserLevel.create(
@@ -166,7 +152,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
           # Hide the second lesson
           SectionHiddenLesson.create(
-            section_id: put_participant_in_section(student, teacher, script).id,
+            section_id: section.id,
             stage_id: script.lessons[1].id
           )
         end
@@ -177,6 +163,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
       context 'when the last level is completed but the script is not complete' do
         before do
+          student.sections_as_student << section
           refute_empty student.visible_script_levels(script)
 
           UserLevel.create(
@@ -189,7 +176,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
 
           # Hide the first lesson
           SectionHiddenLesson.create(
-            section_id: put_participant_in_section(student, teacher, script).id,
+            section_id: section.id,
             stage_id: script.lessons.first.id
           )
         end
@@ -355,9 +342,9 @@ class LevelProgressableTest < ActiveSupport::TestCase
       let(:sub_level_name) {'sublevel1'}
       let(:lesson_group) {create :lesson_group, script: script}
       let(:lesson) {create :lesson, script: script, lesson_group: lesson_group}
+      let(:level_group) {create(:level_group, :with_sublevels, name: 'LevelGroupLevel1')}
 
       let!(:sub_level1) {create :text_match, name: sub_level_name}
-      let!(:level_group) {create_level_group(sub_level_name)}
 
       before do
         create :script_level, script: script, levels: [level_group], lesson: lesson

@@ -1,8 +1,10 @@
+# This concern adds progression-tracking methods to the User model for navigating scripted curriculum.
 module User::LevelProgressable
   extend ActiveSupport::Concern
 
-  # Returns the next visible script_level for the next progression level in the # given script that hasn't yet been passed, starting at the last level the
-  # the user most recently submitted
+  # Returns the next visible script_level for the next progression level in the
+  # given script that hasn't yet been passed, starting at the last level the
+  # user most recently submitted.
   def next_unpassed_visible_progression_level(script)
     # If all levels in the script are complete, no need to find the next level,
     # will be redirected to /congrats.
@@ -60,7 +62,7 @@ module User::LevelProgressable
   end
 
   # Returns the next script_level for the next progression level in the given
-  # script that hasn't yet been passed, starting its search at the last level we submitted
+  # script that hasn't yet been passed, starting its search at the last level we submitted.
   def next_unpassed_progression_level(script)
     # some of our user_levels may be for levels within level_groups, or for levels
     # that are no longer in this script. we want to ignore those, and only look
@@ -93,7 +95,7 @@ module User::LevelProgressable
   end
 
   # Returns true if all progression levels in the provided script have a passing
-  # result
+  # result.
   def completed_progression_levels?(script)
     num_unpassed_progression_levels(script) == 0
   end
@@ -120,7 +122,7 @@ module User::LevelProgressable
   end
 
   # Return true if script_level is a valid_progression_level and every
-  # user_level is either missing or not passing
+  # user_level is either missing or not passing.
   def unpassed_progression_level?(script_level, user_levels)
     script_level.valid_progression_level? && user_levels.all? do |user_level|
       !(user_level && user_level.passing?)
