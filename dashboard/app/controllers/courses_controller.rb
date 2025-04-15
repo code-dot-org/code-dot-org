@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
   include VersionRedirectOverrider
   include TeacherDashboardUtils
 
-  before_action :require_levelbuilder_mode, except: [:index, :show, :vocab, :resources, :code, :standards]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
   check_authorization except: [:index]
   before_action :set_unit_group, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :get_rollup_resources]
