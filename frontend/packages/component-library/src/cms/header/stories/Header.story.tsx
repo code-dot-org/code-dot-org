@@ -36,7 +36,7 @@ export default {
 
 const defaultArgs: HeaderProps = {
   homeLink: {
-    url: 'https://code.org',
+    href: 'https://code.org',
     ariaLabel: 'Go to homepage',
   },
   logo: {
@@ -85,60 +85,65 @@ const defaultArgs: HeaderProps = {
     },
   ],
   projectsButtonLabel: 'New Project',
+  projectsButtonAriaLabel: {
+    open: 'Open Projects menu',
+    close: 'Close Projects menu',
+    menu: 'Projects menu',
+  },
   projectsLinks: [
     {
       key: 'spriteLab',
       label: 'Sprite Lab',
-      href: '/projects',
+      href: 'https://studio.code.org/projects/spritelab/new',
       image: spriteLabImage,
       description: 'Build simple animations',
     },
     {
       key: 'artist',
       label: 'Artist',
-      href: '/lessons',
+      href: 'https://studio.code.org/projects/artist/new',
       image: artistImage,
       description: 'Create art with code',
     },
     {
       key: 'appLab',
       label: 'App Lab',
-      href: '/curriculum',
+      href: 'https://studio.code.org/projects/applab/new',
       image: appLabImage,
       description: 'Make apps with Javascript',
     },
     {
       key: 'gameLab',
       label: 'Game Lab',
-      href: '/resources',
+      href: 'https://studio.code.org/projects/gamelab/new',
       image: gameLabImage,
       description: 'Build simple games',
     },
     {
       key: 'musicLab',
       label: 'Music Lab',
-      href: '/resources',
+      href: 'https://studio.code.org/projects/dance/new',
       image: musicLabImage,
       description: 'Create music with code',
     },
     {
       key: 'danceParty',
       label: 'Dance Party',
-      href: '/resources',
+      href: 'https://code.org/music',
       image: dancePartyImage,
       description: 'Make a dance party with AI',
     },
     {
       key: 'pythonLab',
       label: 'Python Lab',
-      href: '/resources',
+      href: 'https://studio.code.org/projects/pythonlab/new',
       image: pythonLabImage,
       description: 'Code using Python',
     },
     {
       key: 'viewAllProjects',
       label: 'View All Projects',
-      href: '/resources',
+      href: 'https://studio.code.org/projects',
       image: allProjectsImage,
     },
   ],
@@ -157,7 +162,11 @@ const defaultArgs: HeaderProps = {
     },
   },
   isLoggedIn: false,
-  helpButtonLabel: 'Help Menu',
+  helpButtonLabel: {
+    open: 'Open Help menu',
+    close: 'Close Help menu',
+    menu: 'Help menu',
+  },
   helpLinks: [
     {
       key: 'helpAndSupport',
@@ -170,7 +179,11 @@ const defaultArgs: HeaderProps = {
       href: 'https://support.code.org/hc/en-us/requests/new',
     },
   ],
-  hamburgerButtonLabel: 'Hamburger Menu',
+  hamburgerButtonLabel: {
+    open: 'Open Hamburger menu',
+    close: 'Close Hamburger menu',
+    menu: 'Hamburger menu',
+  },
   hamburgerLinks: [
     {
       key: 'learn',

@@ -8,8 +8,15 @@ import {Link} from './types';
 
 import moduleStyles from './header.module.scss';
 export interface HelpMenuProps extends HTMLAttributes<HTMLElement> {
-  /** Help menu label */
-  helpButtonLabel: string;
+  /** Help menu labels */
+  helpButtonLabel: {
+    /** Open label */
+    open: 'Open Help menu' | string;
+    /** Close label */
+    close: 'Close Help menu' | string;
+    /** Menu label */
+    menu: 'Help menu' | string;
+  };
   /** Help links */
   helpLinks: Link[];
   /** Project custom class name */
@@ -33,7 +40,11 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
     >
       <Button
         className={classNames(moduleStyles.helpButton, moduleStyles.iconButton)}
-        ariaLabel={helpButtonLabel || 'Help menu'}
+        ariaLabel={
+          isOpen
+            ? helpButtonLabel.close || 'Close Help menu'
+            : helpButtonLabel.open || 'Open Help menu'
+        }
         icon={{
           iconName: 'question-circle',
           iconStyle: 'solid',
@@ -53,6 +64,7 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
             moduleStyles.helpMenu,
             className,
           )}
+          aria-label={helpButtonLabel.menu || 'Help menu'}
         >
           {helpLinks.map(({key, href, label, ...link}) => (
             <li key={key}>

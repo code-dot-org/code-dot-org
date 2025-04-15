@@ -15,7 +15,7 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   /** Home link */
   homeLink: {
     /** Home link url */
-    url: string;
+    href: string;
     /** Home link aria-label */
     ariaLabel: string;
   };
@@ -24,7 +24,16 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   /** Header links */
   mainLinks: MainLinksProps['mainLinks'];
   /** Projects button label */
-  projectsButtonLabel: string;
+  projectsButtonLabel: ProjectsMenuProps['projectsButtonLabel'];
+  /** Projects button aria-label */
+  projectsButtonAriaLabel: {
+    /** Open label */
+    open: 'Open Projects menu' | string;
+    /** Close label */
+    close: 'Close Projects menu' | string;
+    /** Menu label */
+    menu: 'Projects menu' | string;
+  };
   /** Projects menu links */
   projectsLinks: ProjectsMenuProps['projectsLinks'];
   /** Account links */
@@ -55,6 +64,7 @@ const Header: React.FC<HeaderProps> = ({
   logo,
   mainLinks,
   projectsButtonLabel,
+  projectsButtonAriaLabel,
   projectsLinks,
   accountLinks,
   isLoggedIn = false,
@@ -65,25 +75,32 @@ const Header: React.FC<HeaderProps> = ({
   className,
   ...HTMLAttributes
 }) => (
-  <nav
+  <header
     {...HTMLAttributes}
     className={classNames(moduleStyles.headerNavigation, className)}
   >
-    <div className={moduleStyles.mainLinksWrapper}>
+    <nav
+      className={moduleStyles.mainLinksWrapper}
+      aria-label={'Main navigation'}
+    >
       <a
-        href={homeLink.url}
+        href={homeLink.href}
         className={moduleStyles.homeLink}
         aria-label={homeLink.ariaLabel}
       >
         <Image src={logo.src} alt={logo.altText} loading={'eager'} />
       </a>
       <MainLinks mainLinks={mainLinks} />
-    </div>
+    </nav>
 
-    <div className={moduleStyles.buttonLinks}>
+    <nav
+      className={moduleStyles.buttonLinks}
+      aria-label={'Secondary navigation'}
+    >
       <ProjectsMenu
         projectsLinks={projectsLinks}
         projectsButtonLabel={projectsButtonLabel}
+        projectsButtonAriaLabel={projectsButtonAriaLabel}
       />
       <AccountButtons
         signIn={accountLinks.signIn}
@@ -99,8 +116,8 @@ const Header: React.FC<HeaderProps> = ({
         accountLinks={accountLinks}
         isLoggedIn={isLoggedIn}
       />
-    </div>
-  </nav>
+    </nav>
+  </header>
 );
 
 export default Header;
