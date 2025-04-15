@@ -14,6 +14,7 @@ import {
   DATE_ORDER_DESC,
 } from '@cdo/apps/code-studio/pd/constants';
 import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 import ServerSortWorkshopTable from './components/server_sort_workshop_table';
 import {
@@ -25,6 +26,10 @@ import {
   ProgramManager,
 } from './permission';
 import SubmissionsDownloadForm from './reports/foorm/submissions_download_form';
+
+const newWorkshopFormEnabled = experiments.isEnabled(
+  experiments.NEW_WORKSHOP_FORM
+);
 
 const FILTER_API_URL = '/api/v1/pd/workshops/filter';
 const defaultFilters = {
@@ -59,7 +64,8 @@ export class WorkshopIndex extends React.Component {
 
   handleNewWorkshopClick = (e, slug) => {
     e.preventDefault();
-    this.context.router.push(`/workshops/new/${slug}`);
+    const urlEnd = newWorkshopFormEnabled ? `/${slug}` : '';
+    this.context.router.push(`/workshops/new${urlEnd}`);
   };
 
   handleAttendanceReportsClick = e => {
@@ -111,28 +117,42 @@ export class WorkshopIndex extends React.Component {
         <h1>Your Workshops</h1>
         <ButtonToolbar>
           {canCreate && (
-            <DropdownButton
-              id="new-workshop-button"
-              title={
-                <span>
-                  New Workshop&nbsp;&nbsp; <FontAwesomeV6Icon iconName="plus" />
-                </span>
-              }
-              bsStyle="primary"
-              noCaret
-              className="newWorkshopButton"
-            >
-              {WorkshopCourseConfigs.map(({label, slug, icon}) => (
-                <MenuItem
-                  key={slug}
-                  href={`pd/workshop_dashboard/workshops/${slug}/new`}
-                  onClick={e => this.handleNewWorkshopClick(e, slug)}
+            <>
+              {newWorkshopFormEnabled ? (
+                <DropdownButton
+                  id="new-workshop-button"
+                  title={
+                    <span>
+                      New Workshop&nbsp;&nbsp;{' '}
+                      <FontAwesomeV6Icon iconName="plus" />
+                    </span>
+                  }
+                  bsStyle="primary"
+                  noCaret
+                  className="newWorkshopButton"
                 >
-                  <FontAwesomeV6Icon iconName={icon} /> {label}
-                </MenuItem>
-              ))}
-            </DropdownButton>
+                  {WorkshopCourseConfigs.map(({label, slug, icon}) => (
+                    <MenuItem
+                      key={slug}
+                      href={`pd/workshop_dashboard/workshops/${slug}/new`}
+                      onClick={e => this.handleNewWorkshopClick(e, slug)}
+                    >
+                      <FontAwesomeV6Icon iconName={icon} /> {label}
+                    </MenuItem>
+                  ))}
+                </DropdownButton>
+              ) : (
+                <Button
+                  className="btn-primary"
+                  href={this.context.router.createHref('/workshops/new')}
+                  onClick={this.handleNewWorkshopClick}
+                >
+                  New Workshop
+                </Button>
+              )}
+            </>
           )}
+
           {canSeeAttendanceReports && (
             <Button
               href={this.context.router.createHref('/reports')}
