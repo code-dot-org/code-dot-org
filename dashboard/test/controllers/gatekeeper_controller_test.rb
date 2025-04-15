@@ -12,14 +12,18 @@ class GatekeeperControllerTest < ActionDispatch::IntegrationTest
   def request_default(action)
     case action.to_sym
     when :show
-      get :show
+      get gatekeeper_path
     when :update
-      patch :update, params: {feature: 'test access', where: {foo: 'bar'}.to_json, value: 'true'}
+      patch gatekeeper_path, params: {feature: 'test access', where: {foo: 'bar'}.to_json, value: 'true'}
     when :destroy
-      delete :destroy, params: {feature: 'test access', where: {foo: 'bar'}.to_json}
+      delete gatekeeper_path, params: {feature: 'test access', where: {foo: 'bar'}.to_json}
     else
       raise "Don't know what the default HTTP interaction is for #{action.inspect}"
     end
+  end
+
+  setup do
+    @admin = create(:admin)
   end
 
   test 'inaccessible by non-admins' do
@@ -39,7 +43,7 @@ class GatekeeperControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'accessible by admins' do
-    sign_in(create(:admin))
+    sign_in(@admin)
 
     request_default(:show)
     assert_response(:success)
@@ -52,7 +56,7 @@ class GatekeeperControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'can update gatekeeper values' do
-    sign_in(create(:admin))
+    sign_in(@admin)
     refute Gatekeeper.allows('test access', where: {foo: 'bar'})
     request_default(:update)
     assert_response :redirect # this endpoint redirects on successful update
@@ -61,7 +65,7 @@ class GatekeeperControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'can delete gatekeeper values' do
-    sign_in(create(:admin))
+    sign_in(@admin)
     Gatekeeper.set('test access', where: {foo: 'bar'}, value: true)
     assert Gatekeeper.allows('test access', where: {foo: 'bar'})
     request_default(:destroy)
