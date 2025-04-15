@@ -90,7 +90,6 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
               isIconOnly={true}
               ariaLabel={codebridgeI18n.resetPreview()}
               disabled={isResetButtonDisabled}
-              className={moduleStyles.resetPreviewButton}
             />
           </WithTooltip>
           {showMaximizeButton && (

@@ -17,11 +17,3 @@
   width: 100%;
   box-sizing: border-box;
 }
-
-.resetPreviewButton {
-  // We use important here because the disabled style used by Button
-  // is more specific than a single class.
-  &:disabled {
-    border-color: transparent !important;
-  }
-}
