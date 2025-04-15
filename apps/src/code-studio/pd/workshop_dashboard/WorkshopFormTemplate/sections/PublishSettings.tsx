@@ -13,6 +13,7 @@ export const PublishSettings: FC<PublishSettingsProps> = ({
   config: {fields},
   registrationLink,
   hidden,
+  errors,
   dispatchWorkshop,
 }) => {
   const handleChange = (
@@ -25,38 +26,50 @@ export const PublishSettings: FC<PublishSettingsProps> = ({
       payload: {[event.target.name]: event.target.value},
     });
   };
+
+  if (!fields.registration_link && !fields.hidden) {
+    return null;
+  }
+
   return (
-    <>
+    <section>
       <Heading2 visualAppearance="heading-sm">Publish Settings</Heading2>
-      <div className={commonStyles.row}>
-        {fields.registration_link && (
-          <TextField
-            name="registrationLink"
-            helperMessage="You can provide a custom URL for registration. Participants must still enroll in our system later for attendance and surveys. Leave blank to use the default process."
-            onChange={handleChange}
-            value={registrationLink}
-            label="Custom registration link"
-            size="s"
-            className={classNames(commonStyles.item, {
-              [commonStyles.required]: fields.registration_link.required,
-            })}
-          />
-        )}
-        {fields.hidden ? (
-          <FormFieldWrapper label="Catalog visibility" size="s">
-            <Checkbox
-              label="Hide this workshop from the public workshop catalog"
-              name="hidden"
-              checked={hidden}
-              size="s"
+      {(fields.registration_link || fields.hidden) && (
+        <div className={commonStyles.row}>
+          {fields.registration_link && (
+            <TextField
+              name={fields.registration_link.stateKey}
+              helperMessage={fields.registration_link.helperMessage}
               onChange={handleChange}
+              value={registrationLink}
+              label={fields.registration_link.label}
+              size="s"
+              className={classNames(commonStyles.item, {
+                [commonStyles.required]: fields.registration_link.required,
+              })}
+              errorMessage={errors.registrationLink}
             />
-          </FormFieldWrapper>
-        ) : (
-          <div className={commonStyles.item} />
-        )}
-      </div>
-    </>
+          )}
+          {fields.hidden ? (
+            <FormFieldWrapper
+              label={fields.hidden.label}
+              size="s"
+              errorMessage={errors.hidden}
+            >
+              <Checkbox
+                label={fields.hidden.helperMessage}
+                name={fields.hidden.stateKey}
+                checked={hidden}
+                size="s"
+                onChange={handleChange}
+              />
+            </FormFieldWrapper>
+          ) : (
+            <div className={commonStyles.item} />
+          )}
+        </div>
+      )}
+    </section>
   );
 };
 

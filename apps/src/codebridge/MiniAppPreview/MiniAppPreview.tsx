@@ -58,7 +58,6 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
             type={'tertiary'}
             className={classNames(darkModeStyles.tertiaryButton)}
             isIconOnly={true}
-            color={'white'}
             ariaLabel={
               isMaximized
                 ? codebridgeI18n.minimizePreview()

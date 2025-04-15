@@ -2177,7 +2177,7 @@ StudioApp.prototype.configureDom = function (config) {
     if (!runButtonWasClicked) {
       analyticsReporter.sendEvent(
         eventName,
-        {signedIn: config.isSignedIn},
+        {signedIn: config.isSignedIn, unitName: config.scriptName},
         PLATFORMS.BOTH
       );
       runButtonWasClicked = true;

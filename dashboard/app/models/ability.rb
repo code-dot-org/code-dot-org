@@ -96,6 +96,7 @@ class Ability
       can :create, UserLevel, user_id: user.id
       can :update, UserLevel, user_id: user.id
       can :create, StudentWorkEvaluation, user_id: user.id
+      can :create, StudentWorkEvaluationSummary
       can :create, UserLevelInteraction, user_id: user.id
       can :create, Follower, student_user_id: user.id
       can :destroy, Follower do |follower|
@@ -361,8 +362,11 @@ class Ability
       can :extra_links, ProjectsController
     end
 
-    if user.persisted? && user.can_use_ai_iteration_tools?
+    if user.persisted? && (user.can_use_ai_iteration_tools? || user.can_access_student_work?)
       can [:tools], :ai_iteration
+    end
+
+    if user.persisted? && user.can_access_student_work?
       can [:fetch_student_code_samples], :student_work_sample
       can [:fetch_free_response_answers], :student_work_sample
     end

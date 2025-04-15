@@ -1,14 +1,22 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {Heading1} from '@code-dot-org/component-library/typography';
-import moment from 'moment-timezone';
-import React, {FC, useCallback, useEffect, useMemo, useReducer} from 'react';
-import {useParams} from 'react-router-dom';
+import {isEmpty} from 'lodash';
+import React, {
+  FC,
+  useCallback,
+  useEffect,
+  useMemo,
+  useReducer,
+  useState,
+} from 'react';
+import {useNavigate, useParams} from 'react-router-dom';
 
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {workshopLabel} from '../utils/workshopLabel';
-import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
-
 import {generateNewSession} from './components/SessionsEditor';
+import {sessionsReducer} from './reducers/sessionsReducer';
+import {workshopReducer} from './reducers/workshopReducer';
 import AdditionalInfo from './sections/AdditionalInfo';
 import Basics from './sections/Basics';
 import EmailsReminders from './sections/EmailsReminders';
@@ -17,141 +25,34 @@ import PublishCancelButtons from './sections/PublishCancelButtons';
 import PublishSettings from './sections/PublishSettings';
 import Schedule from './sections/Schedule';
 import {
-  Session,
-  SessionAction,
+  Errors,
+  FieldConfig,
+  Facilitator,
+  RegionalPartner,
+  SessionErrors,
   SessionFormState,
   Workshop,
-  WorkshopAction,
   WorkshopFormState,
   WorkshopFormTemplateProps,
 } from './types';
+import {
+  workshopDataToState,
+  sessionDataToState,
+  workshopLabel,
+  sessionStateToApi,
+  workshopStateToApi,
+} from './utils';
 
 import styles from './styles.module.scss';
 
-export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
-  course: data.course ?? '',
-  capacity: data.capacity?.toString() ?? '',
-  description: data.description ?? '',
-  facilitators: data.facilitators ?? [],
-  fee: data.fee ?? '',
-  grades: data.grades ?? [],
-  hidden: data.hidden ?? false,
-  name: data.name ?? '',
-  notes: data.notes ?? '',
-  organizerId: data.organizer?.id ?? null,
-  prereq: data.prereq ?? '',
-  hasPrereq: data.prereq ? true : false,
-  regionalPartnerId: data.regional_partner_id ?? null,
-  registrationLink: data.registration_link ?? '',
-  subject: data.subject ?? '',
-  suppressEmail: data.suppress_email ?? false,
-  courseOfferings: data.course_offerings?.map(n => n.toString()) ?? [],
-  participantGroupType: data.participant_group_type ?? '',
-  timeZone: data.time_zone ?? Intl.DateTimeFormat().resolvedOptions().timeZone,
-});
-
-export const sessionDataToState = (
-  data: Session[],
-  timeZone: string
-): SessionFormState[] =>
-  data.map(session => ({
-    id: `existing-${session.id}`,
-    date: moment(session.start).tz(timeZone).format(DATE_FORMAT),
-    start: moment(session.start).tz(timeZone).format(TIME_FORMAT),
-    end: moment(session.end).tz(timeZone).format(TIME_FORMAT),
-    locationAddress: session.location_address ?? '',
-    locationName: session.location_name ?? '',
-    meetingLink: session.meeting_link ?? '',
-    format: session.session_format ?? 'in_person',
-    sameAsPrevious: false,
-  }));
-
-export const workshopReducer = (
-  state: WorkshopFormState,
-  action: WorkshopAction
-): WorkshopFormState => {
-  switch (action.type) {
-    case 'UPDATE_WORKSHOP':
-      return {...state, ...action.payload};
-    case 'ADD_GRADE': {
-      const newGrades = state.grades.concat(action.payload);
-      newGrades.sort((a, b) => {
-        // sort 'K' to beginning
-        if (a === 'K') return -1;
-        if (b === 'K') return 1;
-        // sort 'Other' to end
-        if (a === 'Other') return 1;
-        if (b === 'Other') return -1;
-        const numA = Number(a);
-        const numB = Number(b);
-        if (isNaN(numA) || isNaN(numB)) return 0;
-        return numA - numB;
-      });
-      return {...state, grades: newGrades};
-    }
-    case 'REMOVE_GRADE':
-      return {
-        ...state,
-        grades: state.grades.filter(grade => grade !== action.payload),
-      };
-    case 'ADD_COURSE_OFFERING':
-      return {
-        ...state,
-        courseOfferings: [...state.courseOfferings, action.payload],
-      };
-    case 'REMOVE_COURSE_OFFERING':
-      return {
-        ...state,
-        courseOfferings: state.courseOfferings.filter(
-          offering => offering !== action.payload
-        ),
-      };
-    case 'SET_COURSE_OFFERINGS':
-      return {
-        ...state,
-        courseOfferings: action.payload,
-      };
-    case 'SET_WORKSHOP':
-      return action.payload;
-    default:
-      return state;
-  }
-};
-
-export const sessionsReducer = (
-  state: SessionFormState[],
-  action: SessionAction
-): SessionFormState[] => {
-  switch (action.type) {
-    case 'ADD_SESSION':
-      return state.concat(generateNewSession(state[state.length - 1]));
-
-    case 'UPDATE_SESSION':
-      return state.map(session =>
-        session.id === action.id ? {...session, ...action.payload} : session
-      );
-
-    case 'UPDATE_SESSION_SAME_AS_PREVIOUS':
-      return state.map((session, i) =>
-        session.id === action.id
-          ? {...session, ...(state[i - 1] ?? {}), sameAsPrevious: true}
-          : session
-      );
-
-    case 'DELETE_SESSION':
-      return state.filter(session => session.id !== action.id);
-
-    case 'SET_SESSIONS':
-      return action.payload;
-
-    default:
-      return state;
-  }
-};
+export const REQUIRED_ERROR = 'Required';
+export const VALIDATION_ERROR =
+  'Your form contains validation errors that must be corrected';
 
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,
 }) => {
+  const navigate = useNavigate();
   const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const {workshopId} = useParams();
 
@@ -159,8 +60,16 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
   );
 
+  const {data: regionalPartnerData} = useFetch<RegionalPartner[]>(
+    '/api/v1/regional_partners'
+  );
+
+  const {data: facilitatorData} = useFetch<Facilitator[]>(
+    `/api/v1/pd/course_facilitators?course=${encodeURIComponent(config.label)}`
+  );
+
   const [workshopFormState, dispatchWorkshop] = useReducer(workshopReducer, {
-    course: '',
+    course: config.label,
     capacity: '',
     description: '',
     facilitators: [],
@@ -185,6 +94,14 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     generateNewSession(),
   ]);
 
+  const [workshopErrors, setWorkshopErrors] = useState<
+    Errors<keyof WorkshopFormState>
+  >({});
+
+  const [sessionErrors, setSessionErrors] = useState<SessionErrors>({});
+
+  const [responseErrors, setResponseErrors] = useState<string[]>([]);
+
   useEffect(() => {
     if (workshop) {
       dispatchWorkshop({
@@ -201,8 +118,111 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     }
   }, [workshop, userTimeZone]);
 
-  const publish = useCallback(() => {}, []);
-  const cancel = useCallback(() => {}, []);
+  const getWorkshopErrors = useCallback(
+    () =>
+      Object.values(config.fields).reduce(
+        (
+          acc: Errors<keyof WorkshopFormState>,
+          field: FieldConfig<WorkshopFormState>
+        ) => {
+          const {stateKey} = field;
+          const required =
+            field.required ||
+            (stateKey === 'prereq' && workshopFormState.hasPrereq);
+          if (required && isEmpty(workshopFormState[stateKey])) {
+            acc[stateKey] = REQUIRED_ERROR;
+          }
+          return acc;
+        },
+        {}
+      ),
+    [config.fields, workshopFormState]
+  );
+
+  const getSessionErrors = useCallback(
+    () =>
+      Object.values(config.session_fields).reduce(
+        (acc: SessionErrors, field: FieldConfig<SessionFormState>) => {
+          const {stateKey, required} = field;
+          sessionFormState.forEach(session => {
+            if (required && isEmpty(session[stateKey])) {
+              acc[session.id] = {
+                ...(acc[session.id] ?? {}),
+                [stateKey]: REQUIRED_ERROR,
+              };
+            }
+          });
+
+          return acc;
+        },
+        {}
+      ),
+    [config.session_fields, sessionFormState]
+  );
+
+  const publish = useCallback(async () => {
+    try {
+      setResponseErrors([]);
+      const workshopValidationErrors = getWorkshopErrors();
+      setWorkshopErrors(workshopValidationErrors);
+      const sessionValidationErrors = getSessionErrors();
+      setSessionErrors(sessionValidationErrors);
+      if (
+        Object.keys({...workshopValidationErrors, ...sessionValidationErrors})
+          .length
+      ) {
+        return;
+      }
+      const workshopData = workshopStateToApi(workshopFormState);
+      const sessionData = sessionStateToApi(
+        sessionFormState,
+        workshopFormState.timeZone,
+        workshop?.sessions
+      );
+
+      const method = workshop ? 'PATCH' : 'POST';
+      const url = workshop
+        ? `/api/v1/pd/workshops/${workshop.id}`
+        : '/api/v1/pd/workshops';
+
+      const response = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': await getAuthenticityToken(),
+        },
+        body: JSON.stringify({
+          pd_workshop: {...workshopData, sessions_attributes: sessionData},
+        }),
+      });
+
+      const responseData = await response.json();
+
+      if (responseData.errors || responseData.error) {
+        const allErrors = [responseData.error]
+          .concat(responseData.errors)
+          .filter(e => !!e);
+        setResponseErrors(allErrors);
+      }
+
+      if (response.ok) {
+        navigate(`/workshops/${responseData.id}`);
+      }
+    } catch (error) {
+      setResponseErrors([
+        'There was a problem processing your request. Please try again or contact support@code.org',
+      ]);
+    }
+  }, [
+    getSessionErrors,
+    getWorkshopErrors,
+    navigate,
+    sessionFormState,
+    workshop,
+    workshopFormState,
+  ]);
+
+  const cancel = useCallback(() => navigate('/workshops'), [navigate]);
 
   const heading = workshopLabel(`New ${config.label}`);
 
@@ -212,6 +232,14 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       config,
     }),
     [dispatchWorkshop, config]
+  );
+
+  const allErrors = useMemo(
+    () =>
+      isEmpty({...workshopErrors, ...sessionErrors})
+        ? responseErrors
+        : [VALIDATION_ERROR, ...responseErrors],
+    [workshopErrors, sessionErrors, responseErrors]
   );
 
   return (
@@ -226,17 +254,22 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         grades={workshopFormState.grades}
         courseOfferings={workshopFormState.courseOfferings}
         name={workshopFormState.name}
+        errors={workshopErrors}
         {...sectionProps}
       />
       <Schedule
         timeZone={workshopFormState.timeZone}
         sessions={sessionFormState}
         dispatchSessions={dispatchSessions}
+        errors={sessionErrors}
         {...sectionProps}
       />
       <PartnerFacilitator
         facilitators={workshopFormState.facilitators}
         regionalPartnerId={workshopFormState.regionalPartnerId}
+        errors={workshopErrors}
+        regionalPartnerData={regionalPartnerData}
+        facilitatorData={facilitatorData}
         {...sectionProps}
       />
       <EmailsReminders
@@ -247,13 +280,19 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         fee={workshopFormState.fee}
         participantGroupType={workshopFormState.participantGroupType}
         notes={workshopFormState.notes}
+        errors={workshopErrors}
         {...sectionProps}
       />
       <PublishSettings
         registrationLink={workshopFormState.registrationLink}
         hidden={workshopFormState.hidden}
+        errors={workshopErrors}
         {...sectionProps}
       />
+      {allErrors.length > 0 &&
+        allErrors.map(error => (
+          <Alert key={error} type="danger" text={error} />
+        ))}
       <PublishCancelButtons publish={publish} cancel={cancel} />
     </form>
   );

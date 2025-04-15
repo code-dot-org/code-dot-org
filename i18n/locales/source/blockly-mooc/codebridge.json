@@ -90,6 +90,7 @@
   "systemCodeError": "We're sorry, we hit an issue running your program. Please refresh the page and try again.",
   "testName": "Test Name",
   "testsDidNotPass": "Tests did not all pass.",
+  "textEditorFontSize": "Text editor font size",
   "toggleFileBrowser": "Toggle File Browser",
   "uploadFile": "Upload",
   "validate": "Validate",

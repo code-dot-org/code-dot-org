@@ -37,7 +37,12 @@ describe('FullWidthActionBlock', () => {
   });
 
   it('renders an image', () => {
-    render(<FullWidthActionBlock {...defaultProps} image="image.png" />);
+    render(
+      <FullWidthActionBlock
+        {...defaultProps}
+        image={{src: 'image.png', alt: ''}}
+      />,
+    );
 
     expect(screen.getByAltText('')).toHaveAttribute('src', 'image.png');
   });

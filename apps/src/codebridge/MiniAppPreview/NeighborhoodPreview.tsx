@@ -125,7 +125,7 @@ const NeighborhoodPreview: React.FunctionComponent<
 
   return (
     <div ref={containerRef} className={moduleStyles.miniAppContainer}>
-      <NeighborhoodVisualization isDarkMode={true} useProtectedDiv={false} />
+      <NeighborhoodVisualization useProtectedDiv={false} />
     </div>
   );
 };

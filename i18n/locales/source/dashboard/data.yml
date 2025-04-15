@@ -900,6 +900,7 @@ en:
         career_pharmacist_hold: Career Journey - Pharmacist
         career_data_security_hold: Career Journey - Data Security
         career_data_tech_hold: Career Journey - Data Operations Technician
+        ai-and-ethics-privacy-and-the-future: 'Ethics and AI: Privacy and the Future'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

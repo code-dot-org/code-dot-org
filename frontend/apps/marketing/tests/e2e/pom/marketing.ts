@@ -59,4 +59,26 @@ export class MarketingPage {
       {fn: loadFonts.toString(), fonts: FONT_FAMILY_NAMES},
     );
   }
+
+  async getMetatag(name: string) {
+    return this.page.locator(`meta[name="${name}"]`)?.getAttribute('content');
+  }
+
+  async getOpenGraph(name: string) {
+    return this.page
+      .locator(`meta[property="og:${name}"]`)
+      ?.getAttribute('content');
+  }
+
+  get pageTitle() {
+    return this.page.title();
+  }
+
+  get description() {
+    return this.getMetatag('description');
+  }
+
+  get robots() {
+    return this.getMetatag('robots');
+  }
 }

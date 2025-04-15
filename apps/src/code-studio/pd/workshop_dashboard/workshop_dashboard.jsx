@@ -4,8 +4,8 @@
 import PropTypes from 'prop-types';
 import React, {useContext, useEffect} from 'react';
 import {Provider} from 'react-redux';
-import {BrowserRouter, Routes, Route, Navigate, Outlet} from 'react-router-dom';
-import {createStore, combineReducers} from 'redux';
+import {BrowserRouter, Navigate, Outlet, Route, Routes} from 'react-router-dom';
+import {combineReducers, createStore} from 'redux';
 
 import {
   RouterContext,
@@ -17,13 +17,13 @@ import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 
 import Header from '../components/header';
 import {
-  RegionalPartnerShape,
   ALL_PARTNERS_OPTION,
+  RegionalPartnerShape,
 } from '../components/regional_partner_dropdown';
 import regionalPartnerReducers, {
-  setRegionalPartners,
-  setRegionalPartnerFilter,
   getInitialRegionalPartnerFilter,
+  setRegionalPartnerFilter,
+  setRegionalPartners,
 } from '../components/regional_partners_reducers';
 
 import WorkshopAttendance from './attendance/workshop_attendance';
@@ -31,17 +31,17 @@ import LegacySurveySummaries from './legacy_survey_summaries.jsx';
 import NewWorkshop from './new_workshop';
 import {WorkshopAdmin} from './permission';
 import workshopDashboardReducers, {
-  setPermission,
   setFacilitatorCourses,
+  setPermission,
 } from './reducers';
 import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
 import DailySurveyResultsLoader from './reports/local_summer_workshop_daily_survey/results_loader';
 import ReportView from './reports/report_view';
-import {workshopLabel} from './utils/workshopLabel';
 import Workshop from './workshop';
 import WorkshopFilter from './workshop_filter';
 import WorkshopIndex from './workshop_index';
 import {WorkshopFormTemplate} from './WorkshopFormTemplate';
+import {workshopLabel} from './WorkshopFormTemplate/utils';
 
 export const ROOT_PATH = '/pd/workshop_dashboard';
 

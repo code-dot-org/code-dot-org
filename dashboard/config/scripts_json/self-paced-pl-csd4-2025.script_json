@@ -1,0 +1,1483 @@
+{
+  "script": {
+    "name": "self-paced-pl-csd4-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "self_paced_pl_6_8",
+      "curriculum_umbrella": "Self-paced PL - CSD",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-04-04 03:15:43 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-csd4-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Teaching and Learning CS Discoveries"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Role of the Teacher",
+      "name": "Role of the Teacher",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes",
+        "student_overview": "**You will:**\n* Consider the role of the teacher in a CS Discoveries classroom. \n\n\n**Suggested Time:** 5 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Role of the Teacher",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025"
+      }
+    },
+    {
+      "key": "Learning CS Discoveries",
+      "name": "Learning CS Discoveries",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Learn about authentic CS practices that students will develop throughout the CS Discoveries course.\n\n**Suggested Time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025"
+      }
+    },
+    {
+      "key": "Teaching CS Discoveries",
+      "name": "Teaching CS Discoveries",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion. \n\n**Suggested Time:** 15 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025"
+      }
+    },
+    {
+      "key": "Connect with the CS Community",
+      "name": "Connect with the CS Community",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**You will**:\n\n* Learn about opportunities to connect with the broader CS community.\n\n**Suggested Time**: 10 minutes",
+        "student_overview": "**You will**:\n\n* Learn about opportunities to connect with the broader CS community.\n\n**Suggested Time**: 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "35fba575-5337-48b0-8c78-a65b3370abe5",
+      "position": 1,
+      "properties": {
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "35fba575-5337-48b0-8c78-a65b3370abe5",
+        "lesson.key": "Role of the Teacher",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025"
+      }
+    },
+    {
+      "key": "9c66a0f4-b8d2-4b4e-991a-7673d4536951",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9c66a0f4-b8d2-4b4e-991a-7673d4536951",
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025"
+      }
+    },
+    {
+      "key": "43e5eee8-bac0-45a1-aded-f6584a873a52",
+      "position": 1,
+      "properties": {
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "43e5eee8-bac0-45a1-aded-f6584a873a52",
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025"
+      }
+    },
+    {
+      "key": "5b6cc143-dad0-4555-b89b-fc8ce18a81ae",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5b6cc143-dad0-4555-b89b-fc8ce18a81ae",
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "39ddb433-f565-49d9-bb9f-0893ca4f1e2c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "39ddb433-f565-49d9-bb9f-0893ca4f1e2c",
+        "lesson_activity.key": "35fba575-5337-48b0-8c78-a65b3370abe5"
+      }
+    },
+    {
+      "key": "d25a2380-ec62-46b7-b0cc-d5f9c768b723",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lead Learner"
+      },
+      "seeding_key": {
+        "activity_section.key": "d25a2380-ec62-46b7-b0cc-d5f9c768b723",
+        "lesson_activity.key": "35fba575-5337-48b0-8c78-a65b3370abe5"
+      }
+    },
+    {
+      "key": "ae0a6f63-4ce4-4603-be72-51260faae05e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae0a6f63-4ce4-4603-be72-51260faae05e",
+        "lesson_activity.key": "9c66a0f4-b8d2-4b4e-991a-7673d4536951"
+      }
+    },
+    {
+      "key": "0c21b0d8-4162-48fe-9a78-e4d15f799e10",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pair Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c21b0d8-4162-48fe-9a78-e4d15f799e10",
+        "lesson_activity.key": "9c66a0f4-b8d2-4b4e-991a-7673d4536951"
+      }
+    },
+    {
+      "key": "f3fd638c-e7e3-42a1-877c-5ec178b08443",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3fd638c-e7e3-42a1-877c-5ec178b08443",
+        "lesson_activity.key": "9c66a0f4-b8d2-4b4e-991a-7673d4536951"
+      }
+    },
+    {
+      "key": "da9676c1-5102-4d7a-8e6f-d80384120d9d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Debugging"
+      },
+      "seeding_key": {
+        "activity_section.key": "da9676c1-5102-4d7a-8e6f-d80384120d9d",
+        "lesson_activity.key": "9c66a0f4-b8d2-4b4e-991a-7673d4536951"
+      }
+    },
+    {
+      "key": "9026e3b4-4571-4a12-89b9-19a35d027836",
+      "position": 5,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "9026e3b4-4571-4a12-89b9-19a35d027836",
+        "lesson_activity.key": "9c66a0f4-b8d2-4b4e-991a-7673d4536951"
+      }
+    },
+    {
+      "key": "76878b3d-743f-428b-9e16-9f48fa3afe52",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "76878b3d-743f-428b-9e16-9f48fa3afe52",
+        "lesson_activity.key": "43e5eee8-bac0-45a1-aded-f6584a873a52"
+      }
+    },
+    {
+      "key": "2766467f-611c-476e-a850-dcef742f7666",
+      "position": 2,
+      "properties": {
+        "progression_name": "Inclusion"
+      },
+      "seeding_key": {
+        "activity_section.key": "2766467f-611c-476e-a850-dcef742f7666",
+        "lesson_activity.key": "43e5eee8-bac0-45a1-aded-f6584a873a52"
+      }
+    },
+    {
+      "key": "d2ab0b4c-e094-445c-9c39-bdc1a807b8f1",
+      "position": 3,
+      "properties": {
+        "progression_name": "Differentiation"
+      },
+      "seeding_key": {
+        "activity_section.key": "d2ab0b4c-e094-445c-9c39-bdc1a807b8f1",
+        "lesson_activity.key": "43e5eee8-bac0-45a1-aded-f6584a873a52"
+      }
+    },
+    {
+      "key": "eeca79fb-1793-4174-ab77-4dba20045266",
+      "position": 4,
+      "properties": {
+        "progression_name": "Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "eeca79fb-1793-4174-ab77-4dba20045266",
+        "lesson_activity.key": "43e5eee8-bac0-45a1-aded-f6584a873a52"
+      }
+    },
+    {
+      "key": "8c6d45ee-0a5f-4a9f-a8d8-3216ebfd6e49",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c6d45ee-0a5f-4a9f-a8d8-3216ebfd6e49",
+        "lesson_activity.key": "5b6cc143-dad0-4555-b89b-fc8ce18a81ae"
+      }
+    },
+    {
+      "key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb",
+      "position": 2,
+      "properties": {
+        "progression_name": "Connect with the CS community"
+      },
+      "seeding_key": {
+        "activity_section.key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb",
+        "lesson_activity.key": "5b6cc143-dad0-4555-b89b-fc8ce18a81ae"
+      }
+    },
+    {
+      "key": "4326bb32-a617-46f7-b719-cb7d47a5235e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "4326bb32-a617-46f7-b719-cb7d47a5235e",
+        "lesson_activity.key": "5b6cc143-dad0-4555-b89b-fc8ce18a81ae"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-TeachingLearning_25"
+        ],
+        "lesson.key": "Role of the Teacher",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "39ddb433-f565-49d9-bb9f-0893ca4f1e2c"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Overview-TeachingLearning_25"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lead Learner"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-LeadLearner_25"
+        ],
+        "lesson.key": "Role of the Teacher",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "d25a2380-ec62-46b7-b0cc-d5f9c768b723"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-LeadLearner_25"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lead Learner"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-LeadLearner-vid_25"
+        ],
+        "lesson.key": "Role of the Teacher",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "d25a2380-ec62-46b7-b0cc-d5f9c768b723"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-LeadLearner-vid_25"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-Learning_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "ae0a6f63-4ce4-4603-be72-51260faae05e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Overview-Learning_25"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Pair Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgramming_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "0c21b0d8-4162-48fe-9a78-e4d15f799e10"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-PairProgramming_25"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Pair Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgramming-vid_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "0c21b0d8-4162-48fe-9a78-e4d15f799e10"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-PairProgramming-vid_25"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Pair Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgrammingPart2_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "0c21b0d8-4162-48fe-9a78-e4d15f799e10"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-PairProgrammingPart2_25"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Pair Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgramming-TipVid_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "0c21b0d8-4162-48fe-9a78-e4d15f799e10"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-PairProgramming-TipVid_25"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Resources_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "f3fd638c-e7e3-42a1-877c-5ec178b08443"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Resources_25"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Using Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-Resources-practice-lc_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "f3fd638c-e7e3-42a1-877c-5ec178b08443"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-Resources-practice-lc_25"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "da9676c1-5102-4d7a-8e6f-d80384120d9d"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Debugging_25"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging-vid_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "da9676c1-5102-4d7a-8e6f-d80384120d9d"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Debugging-vid_25"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging-task_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "da9676c1-5102-4d7a-8e6f-d80384120d9d"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Debugging-task_25"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging-TipVid_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "da9676c1-5102-4d7a-8e6f-d80384120d9d"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Debugging-TipVid_25"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod4-MakeAPlan-SupportingStudentPractices_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "9026e3b4-4571-4a12-89b9-19a35d027836"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod4-MakeAPlan-SupportingStudentPractices_25"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-teacher_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "76878b3d-743f-428b-9e16-9f48fa3afe52"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Overview-teacher_25"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Inclusion"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Inclusion_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "2766467f-611c-476e-a850-dcef742f7666"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Inclusion_25"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Inclusion"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-inclusion-c4u_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "2766467f-611c-476e-a850-dcef742f7666"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-inclusion-c4u_25"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Inclusion"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod4-MakeAPlan-Inclusion_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "2766467f-611c-476e-a850-dcef742f7666"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod4-MakeAPlan-Inclusion_25"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Differentiation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Differentiation_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "d2ab0b4c-e094-445c-9c39-bdc1a807b8f1"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Differentiation_25"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Differentiation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-DifferentiationContinued_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "d2ab0b4c-e094-445c-9c39-bdc1a807b8f1"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-DifferentiationContinued_25"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Differentiation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod4-MakeAPlan-Differentiation_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "d2ab0b4c-e094-445c-9c39-bdc1a807b8f1"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod4-MakeAPlan-Differentiation_25"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Assessment_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "eeca79fb-1793-4174-ab77-4dba20045266"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Assessment_25"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-AssessmentPlan_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "eeca79fb-1793-4174-ab77-4dba20045266"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-AssessmentPlan_25"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 10,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Task-Assessment_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "eeca79fb-1793-4174-ab77-4dba20045266"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod4-Task-Assessment_25"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 11,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod4-CSD-MakeAPlan-Assessment_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "eeca79fb-1793-4174-ab77-4dba20045266"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod4-CSD-MakeAPlan-Assessment_25"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod4-Connect_CSD22_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "8c6d45ee-0a5f-4a9f-a8d8-3216ebfd6e49"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod4-Connect_CSD22_25"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Connect with the CS community"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod4-CSJourneys_CSD22_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod4-CSJourneys_CSD22_25"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Connect with the CS community"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-CSJourneys-Vid_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod3-CSJourneys-Vid_25"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Connect with the CS community"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod4-CSJourneys2_CSD22_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod4-CSJourneys2_CSD22_25"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Connect with the CS community"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod4-CSJourneysResources_CSD22_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod4-CSJourneysResources_CSD22_25"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Connect with the CS community"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-22-mod4-LocalCommunity_CSD22_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb"
+      },
+      "level_keys": [
+        "SP-VPL-22-mod4-LocalCommunity_CSD22_25"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSP-22-mod4-WrapUp_CSD23_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "4326bb32-a617-46f7-b719-cb7d47a5235e"
+      },
+      "level_keys": [
+        "SP-VPL-CSP-22-mod4-WrapUp_CSD23_25"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Overview-TeachingLearning_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-TeachingLearning_25"
+        ],
+        "lesson.key": "Role of the Teacher",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "39ddb433-f565-49d9-bb9f-0893ca4f1e2c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-LeadLearner_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-LeadLearner_25"
+        ],
+        "lesson.key": "Role of the Teacher",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "d25a2380-ec62-46b7-b0cc-d5f9c768b723"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-LeadLearner-vid_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-LeadLearner-vid_25"
+        ],
+        "lesson.key": "Role of the Teacher",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "d25a2380-ec62-46b7-b0cc-d5f9c768b723"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Overview-Learning_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-Learning_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "ae0a6f63-4ce4-4603-be72-51260faae05e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-PairProgramming_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgramming_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "0c21b0d8-4162-48fe-9a78-e4d15f799e10"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-PairProgramming-vid_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgramming-vid_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "0c21b0d8-4162-48fe-9a78-e4d15f799e10"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-PairProgrammingPart2_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgrammingPart2_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "0c21b0d8-4162-48fe-9a78-e4d15f799e10"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-PairProgramming-TipVid_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-PairProgramming-TipVid_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "0c21b0d8-4162-48fe-9a78-e4d15f799e10"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Resources_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Resources_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "f3fd638c-e7e3-42a1-877c-5ec178b08443"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-Resources-practice-lc_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-Resources-practice-lc_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "f3fd638c-e7e3-42a1-877c-5ec178b08443"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Debugging_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "da9676c1-5102-4d7a-8e6f-d80384120d9d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Debugging-vid_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging-vid_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "da9676c1-5102-4d7a-8e6f-d80384120d9d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Debugging-task_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging-task_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "da9676c1-5102-4d7a-8e6f-d80384120d9d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Debugging-TipVid_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Debugging-TipVid_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "da9676c1-5102-4d7a-8e6f-d80384120d9d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod4-MakeAPlan-SupportingStudentPractices_25",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod4-MakeAPlan-SupportingStudentPractices_25"
+        ],
+        "lesson.key": "Learning CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "9026e3b4-4571-4a12-89b9-19a35d027836"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Overview-teacher_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Overview-teacher_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "76878b3d-743f-428b-9e16-9f48fa3afe52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Inclusion_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Inclusion_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "2766467f-611c-476e-a850-dcef742f7666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-inclusion-c4u_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-inclusion-c4u_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "2766467f-611c-476e-a850-dcef742f7666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod4-MakeAPlan-Inclusion_25",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod4-MakeAPlan-Inclusion_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "2766467f-611c-476e-a850-dcef742f7666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Differentiation_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Differentiation_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "d2ab0b4c-e094-445c-9c39-bdc1a807b8f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-DifferentiationContinued_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-DifferentiationContinued_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "d2ab0b4c-e094-445c-9c39-bdc1a807b8f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod4-MakeAPlan-Differentiation_25",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod4-MakeAPlan-Differentiation_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "d2ab0b4c-e094-445c-9c39-bdc1a807b8f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Assessment_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Assessment_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "eeca79fb-1793-4174-ab77-4dba20045266"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-AssessmentPlan_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-AssessmentPlan_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "eeca79fb-1793-4174-ab77-4dba20045266"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod4-Task-Assessment_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod4-Task-Assessment_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "eeca79fb-1793-4174-ab77-4dba20045266"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod4-CSD-MakeAPlan-Assessment_25",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod4-CSD-MakeAPlan-Assessment_25"
+        ],
+        "lesson.key": "Teaching CS Discoveries",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "eeca79fb-1793-4174-ab77-4dba20045266"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod4-Connect_CSD22_25",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod4-Connect_CSD22_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "8c6d45ee-0a5f-4a9f-a8d8-3216ebfd6e49"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod4-CSJourneys_CSD22_25",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod4-CSJourneys_CSD22_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod3-CSJourneys-Vid_25",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod3-CSJourneys-Vid_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod4-CSJourneys2_CSD22_25",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod4-CSJourneys2_CSD22_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod4-CSJourneysResources_CSD22_25",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod4-CSJourneysResources_CSD22_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-22-mod4-LocalCommunity_CSD22_25",
+        "script_level.level_keys": [
+          "SP-VPL-22-mod4-LocalCommunity_CSD22_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "5eaa9e95-7b00-48ac-9bdc-4d4daba071fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSP-22-mod4-WrapUp_CSD23_25",
+        "script_level.level_keys": [
+          "SP-VPL-CSP-22-mod4-WrapUp_CSD23_25"
+        ],
+        "lesson.key": "Connect with the CS Community",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-csd4-2025",
+        "activity_section.key": "4326bb32-a617-46f7-b719-cb7d47a5235e"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

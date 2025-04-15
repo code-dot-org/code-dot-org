@@ -17,6 +17,7 @@ import reducer, {
   setRosterProvider,
   setCourseOfferings,
   setSections,
+  setSectionOrder,
   selectSection,
   beginCreatingSection,
   beginEditingSection,
@@ -47,6 +48,7 @@ import {
   sortedSectionsList,
   sortSectionsList,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -1925,6 +1927,43 @@ describe('teacherSectionsRedux', () => {
     it('sorts an array of sections by descending id', () => {
       const expected = sections.reverse();
       assert.deepEqual(sortSectionsList(sections), expected);
+    });
+  });
+
+  describe('setSectionOrder', () => {
+    let putSpy;
+
+    beforeEach(() => {
+      putSpy = sinon
+        .stub(HttpClient, 'put')
+        .returns(Promise.resolve(new Response()));
+    });
+
+    afterEach(() => {
+      putSpy.restore();
+    });
+
+    it('sets the order of sections', () => {
+      const state = reducer(initialState, setSections(sections));
+      const orderedSections = [11, 12, 13, 307];
+      const newState = reducer(state, setSectionOrder(orderedSections));
+      assert.deepEqual(newState.sectionOrder, orderedSections);
+    });
+
+    it('saves the order of sections to the BE if order is different', () => {
+      const state = reducer(initialState, setSections(sections));
+      const orderedSections = [11, 12, 13];
+      const newState = reducer(state, setSectionOrder(orderedSections, true));
+      assert.deepEqual(newState.sectionOrder, [307, ...orderedSections]);
+      expect(putSpy).to.be.called.once;
+    });
+
+    it('does not save the order of sections to the BE if order is the same', () => {
+      const state = reducer(initialState, setSections(sections));
+      const orderedSections = [11, 12, 13, 307];
+      const newState = reducer(state, setSectionOrder(orderedSections, true));
+      assert.deepEqual(newState.sectionOrder, orderedSections);
+      expect(putSpy).not.to.be.called;
     });
   });
 

@@ -35,11 +35,11 @@ export const DefaultBreadcrumbs = SingleTemplate.bind({});
 DefaultBreadcrumbs.args = {
   name: 'test-Breadcrumbs',
   breadcrumbs: [
-    {text: 'Breadcrumb1', href: 'https://studio.code.org/home'},
-    {text: 'Breadcrumb2', href: 'https://studio.code.org/home'},
-    {text: 'Breadcrumb3', href: 'https://studio.code.org/home'},
-    {text: 'Breadcrumb4', href: 'https://studio.code.org/home'},
-    {text: 'Breadcrumb5', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb 1', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb 2', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb 3', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb 4', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb 5', href: 'https://studio.code.org/home'},
   ],
 };
 
@@ -50,45 +50,56 @@ GroupOfSizesOfBreadcrumbs.args = {
       name: 'test-Breadcrumbsl',
       size: 'l',
       breadcrumbs: [
-        {text: 'LBreadcrumb1', href: 'https://studio.code.org/home'},
-        {text: 'LBreadcrumb2', href: 'https://studio.code.org/home'},
-        {text: 'LBreadcrumb3', href: 'https://studio.code.org/home'},
-        {text: 'LBreadcrumb4', href: 'https://studio.code.org/home'},
-        {text: 'LBreadcrumb5', href: 'https://studio.code.org/home'},
+        {text: 'L Breadcrumb 1', href: 'https://studio.code.org/home'},
+        {text: 'L Breadcrumb 2', href: 'https://studio.code.org/home'},
+        {text: 'L Breadcrumb 3', href: 'https://studio.code.org/home'},
+        {text: 'L Breadcrumb 4', href: 'https://studio.code.org/home'},
+        {text: 'L Breadcrumb 5', href: 'https://studio.code.org/home'},
       ],
     },
     {
       name: 'test-Breadcrumbsm',
       size: 'm',
       breadcrumbs: [
-        {text: 'MBreadcrumb1', href: 'https://studio.code.org/home'},
-        {text: 'MBreadcrumb2', href: 'https://studio.code.org/home'},
-        {text: 'MBreadcrumb3', href: 'https://studio.code.org/home'},
-        {text: 'MBreadcrumb4', href: 'https://studio.code.org/home'},
-        {text: 'MBreadcrumb5', href: 'https://studio.code.org/home'},
+        {text: 'M Breadcrumb 1', href: 'https://studio.code.org/home'},
+        {text: 'M Breadcrumb 2', href: 'https://studio.code.org/home'},
+        {text: 'M Breadcrumb 3', href: 'https://studio.code.org/home'},
+        {text: 'M Breadcrumb 4', href: 'https://studio.code.org/home'},
+        {text: 'M Breadcrumb 5', href: 'https://studio.code.org/home'},
       ],
     },
     {
       name: 'test-Breadcrumbs3',
       size: 's',
       breadcrumbs: [
-        {text: 'SBreadcrumb1', href: 'https://studio.code.org/home'},
-        {text: 'SBreadcrumb2', href: 'https://studio.code.org/home'},
-        {text: 'SBreadcrumb3', href: 'https://studio.code.org/home'},
-        {text: 'SBreadcrumb4', href: 'https://studio.code.org/home'},
-        {text: 'SBreadcrumb5', href: 'https://studio.code.org/home'},
+        {text: 'S Breadcrumb 1', href: 'https://studio.code.org/home'},
+        {text: 'S Breadcrumb 2', href: 'https://studio.code.org/home'},
+        {text: 'S Breadcrumb 3', href: 'https://studio.code.org/home'},
+        {text: 'S Breadcrumb 4', href: 'https://studio.code.org/home'},
+        {text: 'S Breadcrumb 5', href: 'https://studio.code.org/home'},
       ],
     },
     {
       name: 'test-Breadcrumbs4',
       size: 'xs',
       breadcrumbs: [
-        {text: 'XSBreadcrumb1', href: 'https://studio.code.org/home'},
-        {text: 'XSBreadcrumb2', href: 'https://studio.code.org/home'},
-        {text: 'XSBreadcrumb3', href: 'https://studio.code.org/home'},
-        {text: 'XSBreadcrumb4', href: 'https://studio.code.org/home'},
-        {text: 'XSBreadcrumb5', href: 'Breadcrumb5'},
+        {text: 'XS Breadcrumb 1', href: 'https://studio.code.org/home'},
+        {text: 'XS Breadcrumb 2', href: 'https://studio.code.org/home'},
+        {text: 'XS Breadcrumb 3', href: 'https://studio.code.org/home'},
+        {text: 'XS Breadcrumb 4', href: 'https://studio.code.org/home'},
+        {text: 'XS Breadcrumb 5', href: 'Breadcrumb5'},
       ],
     },
+  ],
+};
+
+export const BreadcrumbsWithHomeIcon = SingleTemplate.bind({});
+BreadcrumbsWithHomeIcon.args = {
+  name: 'test-breadcrumbs-with-home',
+  showHomeIcon: true,
+  breadcrumbs: [
+    {text: 'Breadcrumb 1', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb 2', href: 'https://studio.code.org/home'},
+    {text: 'Breadcrumb 3', href: 'https://studio.code.org/home'},
   ],
 };

@@ -14,7 +14,7 @@ import {Store} from 'redux';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import {SectionOptionsDropdown} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionOptionsDropdown';
+import SectionOptionsDropdown from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionOptionsDropdown';
 import teacherSections, {
   setSections,
   selectSection,

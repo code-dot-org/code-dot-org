@@ -375,6 +375,7 @@ class ScriptsController < ApplicationController
       :student_detail_progress_view,
       :project_widget_visible,
       :lesson_extras_available,
+      :has_unnumbered_lessons,
       :has_verified_resources,
       :tts,
       :is_course,

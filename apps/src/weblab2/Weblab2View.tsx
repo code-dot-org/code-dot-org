@@ -22,45 +22,17 @@ const weblabLangMapping: {[key: string]: LanguageSupport} = {
 };
 
 const defaultConfig: ConfigType = {
-  activeLeftNav: 'Files',
   languageMapping: weblabLangMapping,
   editableFileTypes: ['html', 'css'],
-  leftNav: [
-    {
-      icon: 'fa-square-check',
-      component: 'Instructions',
-    },
-    {
-      icon: 'fa-file',
-      component: 'Files',
-    },
-    {
-      icon: 'fa-solid fa-magnifying-glass',
-      component: 'Search',
-    },
-  ],
-  sideBar: [
-    {
-      icon: 'fa-circle-question',
-      label: 'Help',
-      action: () => window.alert('Help is not currently implemented'),
-    },
-    {
-      icon: 'fa-folder',
-      label: 'Files',
-      action: () => window.alert('You are already on the file browser'),
-    },
-  ],
   activeLayout: 'vertical',
-  showFileBrowser: true,
   layoutComponents: {
     vertical: VerticalLayout,
     horizontal: HorizontalLayout,
   },
+  showFileBrowser: true,
 };
 
 const defaultSource: MultiFileSource = {
-  // folders: {},
   folders: {
     '1': {id: '1', name: 'foo', parentId: '0'},
     '2': {id: '2', name: 'bar', parentId: '1'},
@@ -147,7 +119,7 @@ const Weblab2View: React.FC<
   );
 
   return (
-    <div className="app-wrapper">
+    <div data-theme="Dark" className="app-wrapper">
       <div className="app-ide">
         {source && (
           <Codebridge

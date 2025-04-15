@@ -76,6 +76,7 @@ describe('SectionCard', () => {
                 path={TEACHER_NAVIGATION_PATHS.home}
                 element={
                   <SectionCard
+                    id={section.id}
                     section={section}
                     onDeleteClickCallback={() => {}}
                   />
@@ -115,5 +116,10 @@ describe('SectionCard', () => {
   it('renders section options dropdown', () => {
     renderComponent();
     screen.getByLabelText('Section options dropdown');
+  });
+
+  it('renders the SectionAvatar component', () => {
+    renderComponent();
+    screen.getByText('☔');
   });
 });

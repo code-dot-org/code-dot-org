@@ -28,10 +28,12 @@ describe('AIDiffFloatingActionButton', () => {
   beforeEach(() => {
     window.HTMLElement.prototype.scrollIntoView = () => {};
     sessionStorage.clear();
+    localStorage.clear();
   });
 
   afterEach(() => {
     sessionStorage.clear();
+    localStorage.clear();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -55,9 +57,15 @@ describe('AIDiffFloatingActionButton', () => {
     );
   }
 
-  it('begins closed', () => {
+  it('begins closed if has been opened before', () => {
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
     renderDefault();
     expect(screen.getByText('AI Teaching Assistant')).not.toBeVisible();
+  });
+
+  it('begins open if no session storage and has not been opened before', () => {
+    renderDefault({});
+    expect(screen.getByText('AI Teaching Assistant')).toBeVisible();
   });
 
   it('begins open if open set in session storage', () => {
@@ -67,6 +75,7 @@ describe('AIDiffFloatingActionButton', () => {
   });
 
   it('opens on click', () => {
+    localStorage.setItem('AiDiffHasOpenedKey', 'true');
     renderDefault();
     fireEvent.click(
       screen.getByRole('button', {name: i18n.openOrCloseTeachingAssistant()})
@@ -75,8 +84,9 @@ describe('AIDiffFloatingActionButton', () => {
   });
 
   describe('pulse animation', () => {
-    it('renders pulse animation when session storage is empty', () => {
-      renderDefault();
+    it('renders pulse animation when hasOpenedDiff is false and window is closed', () => {
+      sessionStorage.setItem('AiDiffFabOpenStateKey', 'false');
+      renderDefault({});
       const fab = screen.getByRole('button', {
         name: i18n.openOrCloseTeachingAssistant(),
       });
@@ -87,8 +97,9 @@ describe('AIDiffFloatingActionButton', () => {
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(true);
     });
 
-    it('does not render pulse animation when open state is present in session storage', () => {
+    it('does not render pulse animation when hasOpenedDiff is true', () => {
       sessionStorage.setItem('AiDiffFabOpenStateKey', 'false');
+      localStorage.setItem('AiDiffHasOpenedKey', 'true');
       renderDefault();
       const image = screen.getByRole('img', {name: 'AI bot'});
       fireEvent.load(image);

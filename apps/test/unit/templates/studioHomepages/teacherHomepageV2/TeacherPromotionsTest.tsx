@@ -52,7 +52,7 @@ describe('TeacherPromotions', () => {
   it('renders loading state initially', () => {
     fetchSpy.mockResolvedValue({value: [], response: new Response()});
     render(<TeacherPromotions />);
-    screen.getByText('Loading...');
+    screen.getByLabelText('Loading...');
   });
 
   it('renders promotions after loading', async () => {

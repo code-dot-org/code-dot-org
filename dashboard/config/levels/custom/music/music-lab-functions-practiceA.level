@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-14T22:15:06.000Z",
   "level_num": "custom",
@@ -392,10 +393,22 @@
     "long_instructions": "Amy made a plan to create a song that combines different genres. Here was her algorithm:\r\n- First play a `groove` track\r\n- Then play a `hip hop` track **twice**\r\n- Then play a `rock` track\r\n- And finally, play an `electro` track **twice**\r\n\r\nCan you follow her steps to recreate her song? Listen to the example below to make sure you're on the right track!",
     "bubble_choice_description": "Help Amy use an algorithm to construct a song with functions.",
     "display_name": "Amy's Genre Combo",
+    "validations": [
+      {
+        "key": "music-lab-functions-practiceA_05b39f2f-5b97-4553-9cb7-7f1801056d8e",
+        "message": "Auto-pass for exemplar validation",
+        "next": true,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-14T22:15:06.984+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-template\\\"\"],\"cloned_from\":\"music-lab-functions-template\"},{\"changed_at\":\"2025-03-14 22:15:10 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 22:59:34 +0000\",\"changed\":[\"level_data\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 23:00:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 23:01:21 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 23:02:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 23:02:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 23:08:35 +0000\",\"changed\":[\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-16 18:24:25 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-16 18:27:36 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 16:41:48 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 16:42:32 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 16:42:35 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-14T22:15:06.984+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-template\\\"\"],\"cloned_from\":\"music-lab-functions-template\"},{\"changed_at\":\"2025-03-14 22:15:10 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 22:59:34 +0000\",\"changed\":[\"level_data\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 23:00:17 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 23:01:21 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 23:02:04 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 23:02:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-14 23:08:35 +0000\",\"changed\":[\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-16 18:24:25 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-16 18:27:36 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 16:41:48 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 16:42:32 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 16:42:35 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-06 15:49:31 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

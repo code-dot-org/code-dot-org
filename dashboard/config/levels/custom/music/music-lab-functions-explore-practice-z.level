@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-28T20:49:55.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Recreate With Functions\r\n\r\nEvie has been working on the same remix for a while. Now that she knows about functions, she wants to use them to make her code more organized:\r\n\r\n> First I used loops to simplify my code. Now I want to use functions to represent the little combinations I found and make my code even simpler!\r\n\r\nUse **abstraction** to identify the parts of Evie's code that can be turned into functions. You'll need to **define** 3 new functions and **call** them in your code!\r\n\r\nAll of the blocks you need are already in the workspace. Some of the blocks are locked, but you can replace parts of her old code with new functions you create by dragging-and-dropping on top of it!",
+    "long_instructions": "### Recreate With Functions\r\n\r\nEvie has been working on the same remix for a while. Now that she knows about functions, she wants to use them to make her code more organized:\r\n\r\n> First I used loops to simplify my code. Now I want to use functions to represent the little combinations I found and make my code even simpler!\r\n\r\nUse **abstraction** to identify the parts of Evie's code that can be turned into functions: \r\n- Update the `play` blocks in the workspace to match Evie's original song\r\n- **define** 3 new functions for each combination of blocks\r\n- **call** each function by dragging it over the shadow blocks in Evie's code\r\n\r\nAll of the blocks you need are already in the workspace. Some of the blocks are locked, but you can replace parts of her old code with new functions you create by dragging-and-dropping on top of it!",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -459,8 +460,7 @@
     "display_name": "Evie's Remix V2",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-28T20:49:55.112+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-modify-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-modify-2\"},{\"changed_at\":\"2025-03-28 20:53:39 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"validations\",\"predict_settings\",\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:57:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:59:14 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-28T20:49:55.112+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-modify-2\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-modify-2\"},{\"changed_at\":\"2025-03-28 20:53:39 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"validations\",\"predict_settings\",\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:57:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:59:14 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-06 15:54:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

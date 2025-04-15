@@ -13,6 +13,7 @@ jest.mock('next/headers', () => ({
 }));
 
 jest.mock('@/config/brand', () => ({
+  ...jest.requireActual('@/config/brand'),
   getBrandFromHostname: jest.fn(),
 }));
 
@@ -51,16 +52,24 @@ jest.mock(
     ),
 );
 
+jest.mock(
+  '@/config/jsonLd/OrganizationJsonLd',
+  () =>
+    ({brand}: {brand: string}) => <div>OrganizationJsonLd for {brand}</div>,
+);
+
 describe('Layout', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
   it('renders the layout with children', async () => {
+    const brand = 'exampleBrand';
+
     (headers as jest.Mock).mockResolvedValue({
       get: jest.fn().mockReturnValue('example.com'),
     });
-    (getBrandFromHostname as jest.Mock).mockReturnValue('exampleBrand');
+    (getBrandFromHostname as jest.Mock).mockReturnValue(brand);
     (getGoogleAnalyticsMeasurementId as jest.Mock).mockReturnValue('GA-123456');
     (getStage as jest.Mock).mockReturnValue('production');
     (generateBootstrapValues as jest.Mock).mockResolvedValue({});
@@ -74,6 +83,9 @@ describe('Layout', () => {
     expect(await findByText('GoogleAnalytics GA-123456')).toBeInTheDocument();
     expect(await findByText('StatsigProvider')).toBeInTheDocument();
     expect(await findByText('Child Component')).toBeInTheDocument();
+    expect(
+      await findByText(`OrganizationJsonLd for ${brand}`),
+    ).toBeInTheDocument();
   });
 
   it('does not render GoogleAnalytics if measurement ID is missing', async () => {

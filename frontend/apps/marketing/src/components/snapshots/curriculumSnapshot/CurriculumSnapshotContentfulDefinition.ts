@@ -17,6 +17,14 @@ export const CurriculumSnapshotContentfulComponentDefinition: ComponentDefinitio
     // Adding an empty array here so no default style options show in the Design tab.
     builtInStyles: [],
     variables: {
+      label: {
+        displayName: 'Aria Label',
+        type: 'Text',
+        group: 'content',
+        validations: {
+          bindingSourceType: ['entry', 'manual'],
+        },
+      },
       grades: {
         displayName: 'Grades',
         type: 'Array',
@@ -57,7 +65,7 @@ export const CurriculumSnapshotContentfulComponentDefinition: ComponentDefinitio
           bindingSourceType: ['entry'],
         },
       },
-      programmingTools: {
+      devTools: {
         displayName: 'Programming Tools',
         type: 'Array',
         group: 'content',
@@ -65,7 +73,7 @@ export const CurriculumSnapshotContentfulComponentDefinition: ComponentDefinitio
           bindingSourceType: ['entry'],
         },
       },
-      professionalLearning: {
+      proLearning: {
         displayName: 'Professional Learning',
         type: 'Array',
         group: 'content',
@@ -81,7 +89,7 @@ export const CurriculumSnapshotContentfulComponentDefinition: ComponentDefinitio
           bindingSourceType: ['entry'],
         },
       },
-      languagesSupported: {
+      languages: {
         displayName: 'Languages supported',
         type: 'Array',
         group: 'content',

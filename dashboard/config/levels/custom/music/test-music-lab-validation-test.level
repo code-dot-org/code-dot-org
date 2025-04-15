@@ -1,0 +1,73 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-04-03T23:50:23.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "dan testing",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": true,
+      "toolbox": {
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
+      },
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      }
+    },
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-validation-test_ea3d9ac3-a9c0-4447-bf96-0969b2db8371",
+        "message": "You played a track!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-03T23:50:23.176+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-intro-try\\\"\"],\"cloned_from\":\"test-music-lab-intro-try\"},{\"changed_at\":\"2025-04-03 23:51:17 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 23:52:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 23:52:08 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 23:52:32 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 23:52:52 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 23:53:17 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 23:54:39 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-04 11:57:32 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-04-04 12:13:58 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

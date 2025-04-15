@@ -313,66 +313,117 @@ module Pd
     }.freeze
 
     SESSION_FIELDS = {
+      date: {
+        required: true,
+        stateKey: 'date',
+        label: 'Date',
+      },
       start: {
-        required: true
+        required: true,
+        stateKey: 'start',
+        label: 'Start time',
       },
       end: {
-        required: true
+        required: true,
+        stateKey: 'end',
+        label: 'End time',
       },
       session_format: {
         required: true,
+        stateKey: 'format',
+        label: 'Format',
         options: PD_SESSION_FORMATS
       },
       location_name: {
-        required: false
+        required: false,
+        stateKey: 'locationName',
+        label: 'Location name',
       },
       location_address: {
-        required: false
+        required: false,
+        stateKey: 'locationAddress',
+        label: 'Location address',
       },
       meeting_link: {
-        required: false
+        required: false,
+        stateKey: 'meetingLink',
+        label: 'Meeting link',
       },
     }
 
     COMMON_COURSE_FIELDS = {
       name: {
-        required: true
+        required: true,
+        stateKey: 'name',
+        label: 'Workshop name',
+        helperMessage: 'Name of the workshop for public and internal use.'
       },
       capacity: {
-        required: true
+        required: true,
+        stateKey: 'capacity',
+        label: 'Capacity',
+        helperMessage: 'Maximum number of attendees allowed.'
       },
       grades: {
-        required: true
+        required: true,
+        stateKey: 'grades',
+        label: 'Grade levels',
+        helperMessage: 'Select applicable grade levels for this workshop.'
       },
       description: {
-        required: true
+        required: true,
+        stateKey: 'description',
+        label: 'Workshop description'
       },
       notes: {
-        required: false
+        required: false,
+        stateKey: 'notes',
+        label: 'Attendee notes',
+        helperMessage: 'Notes for logistics like food, parking, or other event details.'
       },
       suppress_email: {
-        required: false
+        required: false,
+        stateKey: 'suppressEmail',
+        label: '3 and 10-days prior to start date',
       },
       regional_partner_id: {
-        required: true
-      },
-      organizer_id: {
-        required: false
+        required: false,
+        stateKey: 'regionalPartnerId',
+        label: 'Regional partner'
       },
       facilitators: {
-        required: false
+        required: false,
+        stateKey: 'facilitators',
+        label: 'Select facilitator(s)'
       },
       fee: {
-        required: false
+        required: false,
+        stateKey: 'fee',
+        label: 'Workshop cost',
+        helperMessage: 'You can leave this field blank if the workshop is free.'
       },
       prereq: {
-        required: false
+        required: false,
+        stateKey: 'prereq',
+        label: 'Experience needed',
+        helperMessage: 'Indicate if this workshop requires previous experience.'
       },
       hidden: {
-        required: false
+        required: false,
+        stateKey: 'hidden',
+        label: 'Catalog visibility',
+        helperMessage: 'Hide this workshop from the public workshop catalog.'
       },
       registration_link: {
-        required: false
+        required: false,
+        stateKey: 'registrationLink',
+        label: 'Custom registration link',
+        helperMessage: 'You can provide a custom URL for registration. Participants must still enroll in our system later for attendance and surveys. Leave blank to use the default process.'
+      },
+      time_zone: {
+        required: false,
+        stateKey: 'timeZone',
+        label: 'Workshop time(s) will be set to your timezone:'
       },
     }
 
@@ -381,39 +432,45 @@ module Pd
         slug: COURSE_CSF.parameterize(separator: "_"),
         label: COURSE_CSF,
         session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSF].map {|s| {value: s, label: s}}})
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSF].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSP.parameterize(separator: "_"),
         label: COURSE_CSP,
         session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSP].map {|s| {value: s, label: s}}})
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSP].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSD.parameterize(separator: "_"),
         label: COURSE_CSD,
         session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSD].map {|s| {value: s, label: s}}})
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSD].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSA.parameterize(separator: "_"),
         label: COURSE_CSA,
         session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_ADMIN_COUNSELOR.parameterize(separator: "_"),
         label: COURSE_ADMIN_COUNSELOR,
         session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, options: SUBJECTS[COURSE_ADMIN_COUNSELOR].map {|s| {value: s, label: s}}})
+        fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_ADMIN_COUNSELOR].map {|s| {value: s, label: s}}})
+      },
+      {
+        slug: COURSE_FACILITATOR.parameterize(separator: "_"),
+        label: COURSE_FACILITATOR,
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS
       },
       {
         slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
         label: COURSE_BUILD_YOUR_OWN,
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(
-          course_offerings: {required: true},
-          participant_group_type: {required: true, options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
+          course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
+          participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
         )
       }
     ].freeze

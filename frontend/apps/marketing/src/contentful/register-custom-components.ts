@@ -48,6 +48,9 @@ import SimpleList, {
 import CurriculumSnapshot, {
   CurriculumSnapshotContentfulComponentDefinition,
 } from '@/components/snapshots/curriculumSnapshot';
+import LabSnapshot, {
+  LabSnapshotContentfulComponentDefinition,
+} from '@/components/snapshots/labSnapshot';
 import TabGroup, {
   TabGroupContentfulComponentDefinition,
 } from '@/components/tabGroup';
@@ -107,6 +110,10 @@ defineComponents(
     {
       component: Image,
       definition: ImageContentfulComponentDefinition,
+    },
+    {
+      component: LabSnapshot,
+      definition: LabSnapshotContentfulComponentDefinition,
     },
     {
       component: Link,

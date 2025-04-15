@@ -51,4 +51,26 @@ describe('ActionBlock', () => {
     // check for secondary button
     expect(queryByText('Test Secondary Button')).not.toBeInTheDocument();
   });
+
+  it('renders external link icon for buttons when isThisAnExternalLink is true', () => {
+    const {queryAllByTestId} = render(
+      <ActionBlock
+        {...defaultProps}
+        primaryButton={{
+          fields: {
+            ...defaultProps.primaryButton.fields,
+            isThisAnExternalLink: true,
+          },
+        }}
+        secondaryButton={{
+          fields: {
+            ...defaultProps.primaryButton.fields,
+            isThisAnExternalLink: true,
+          },
+        }}
+      />,
+    );
+
+    expect(queryAllByTestId('font-awesome-v6-icon')).toHaveLength(2);
+  });
 });

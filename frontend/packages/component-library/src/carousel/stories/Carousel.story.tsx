@@ -315,7 +315,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 1"
           description={DESCRIPTION}
-          image={image1}
+          image={{src: image1}}
           overline={'Overline 1'}
           primaryButton={{
             text: 'Primary Button',
@@ -330,7 +330,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 2"
           description={DESCRIPTION_MED}
-          image={image2}
+          image={{src: image2}}
           overline={'Overline 2'}
           primaryButton={{
             text: 'Primary Button',
@@ -345,7 +345,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 3"
           description={DESCRIPTION}
-          image={image3}
+          image={{src: image3}}
           overline={'Overline 3'}
           primaryButton={{
             text: 'Primary Button',
@@ -360,7 +360,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 4"
           description={DESCRIPTION_MED}
-          image={image4}
+          image={{src: image4}}
           overline={'Overline 4'}
           primaryButton={{
             text: 'Primary Button',
@@ -375,7 +375,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 5"
           description={DESCRIPTION}
-          image={image5}
+          image={{src: image5}}
           overline={'Overline 5'}
           primaryButton={{
             text: 'Primary Button',
@@ -390,7 +390,7 @@ ActionBlockCarousel.args = {
         <ActionBlock
           title="Action Block 6"
           description={DESCRIPTION_MED}
-          image={image6}
+          image={{src: image6}}
           overline={'Overline 6'}
           primaryButton={{
             text: 'Primary Button',

@@ -37,8 +37,8 @@ export enum WARNING_BANNER_MESSAGES {
 export const PREDICT_FREE_RESPONSE_DEFAULT_HEIGHT = 50;
 
 export enum FontSize {
-  Tiny = 11,
-  Small = 14, // Default font size
+  Tiny = 10,
+  Small = 13, // Default font size
   Medium = 17,
   Large = 22,
   Huge = 27,
