@@ -43,6 +43,11 @@ const defaultArgs: HeaderProps = {
     src: logoImage,
     altText: 'Code.org logo',
   },
+  navLabel: {
+    main: 'Main navigation',
+    secondary: 'Secondary navigation',
+  },
+  mainLinksLabel: 'Main site links',
   mainLinks: [
     {
       key: 'learn',
