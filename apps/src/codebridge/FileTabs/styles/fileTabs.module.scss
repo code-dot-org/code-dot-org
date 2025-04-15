@@ -13,21 +13,6 @@
   font-size: 14px;
   font-weight: 600;
   color: $light_gray_100;
-
-  scrollbar-color: $light_gray_700 $light_black;
-  // webkit-scrollbar is only used by Safari. Chrome and Firefox use scrollbar-color.
-  ::-webkit-scrollbar {
-    background: $light_black;
-    width: 10px;
-    height: 10px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: $light_gray_600;
-    border-radius: 10px;
-  }
-  ::-webkit-scrollbar-corner {
-    background: $light_black;
-  }
 }
 
 .fileTab {
