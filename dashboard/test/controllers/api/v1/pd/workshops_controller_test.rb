@@ -964,6 +964,30 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     assert_equal new_facilitator, @workshop.facilitators.first
   end
 
+  test 'invalid facilitators cannot be added to a workshop' do
+    sign_in @organizer
+    invalid_facilitator = create :teacher
+    assert_equal 1, @workshop.facilitators.length
+    assert_equal @facilitator, @workshop.facilitators.first
+
+    params = workshop_params.merge(
+      {facilitators: [@facilitator.id, invalid_facilitator.id]}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 1, @workshop.facilitators.length
+    assert_equal @facilitator, @workshop.facilitators.first
+
+    params = workshop_params.merge(
+      {facilitators: [invalid_facilitator.id], sessions_attributes: []}
+    )
+    put :update, params: {id: @workshop.id, pd_workshop: params}
+    assert_response :success
+    @workshop.reload
+    assert_equal 0, @workshop.facilitators.length
+  end
+
   # Add and remove course offerings
 
   test 'organizers can add and remove course offerings' do
