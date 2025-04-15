@@ -7,6 +7,7 @@ import gameLabImage from '@public/images/header-game-lab-icon.png';
 import musicLabImage from '@public/images/header-music-lab-icon.png';
 import pythonLabImage from '@public/images/header-python-lab-icon.png';
 import spriteLabImage from '@public/images/header-sprite-lab-icon.png';
+import {INITIAL_VIEWPORTS} from '@storybook/addon-viewport';
 import type {Meta, StoryObj} from '@storybook/react';
 
 import Header, {HeaderProps} from '../Header';
@@ -244,8 +245,64 @@ const defaultArgs: HeaderProps = {
 //
 // STORIES
 //
-export const Playground: Story = {
+export const LoggedOut: Story = {
   args: {
     ...defaultArgs,
+  },
+  parameters: {
+    layout: 'fullscreen',
+    viewport: {
+      defaultViewport: 'desktop',
+    },
+  },
+};
+
+export const LoggedIn: Story = {
+  args: {
+    ...defaultArgs,
+    isLoggedIn: true,
+  },
+  parameters: {
+    layout: 'fullscreen',
+    viewport: {
+      defaultViewport: 'desktop',
+    },
+  },
+};
+
+export const SmallDesktop: Story = {
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    layout: 'fullscreen',
+    viewport: {
+      viewports: INITIAL_VIEWPORTS,
+      defaultViewport: 'ipad12p',
+    },
+  },
+};
+
+export const Tablet: Story = {
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    layout: 'fullscreen',
+    viewport: {
+      defaultViewport: 'tablet',
+    },
+  },
+};
+
+export const Mobile: Story = {
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    layout: 'fullscreen',
+    viewport: {
+      defaultViewport: 'mobile1',
+    },
   },
 };
