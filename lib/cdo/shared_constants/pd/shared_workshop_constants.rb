@@ -120,10 +120,6 @@ module Pd
       ]
     }.freeze
 
-    VIRTUAL_ONLY_SUBJECTS = [
-      SUBJECT_VIRTUAL_KICKOFF
-    ].freeze
-
     CSD_CUSTOM_WORKSHOP_MODULES = [
       CS_BASICS_FOR_K5_TEACHERS = 'Computer Science Basics for K-5 Teachers'.freeze,
       CS_FUNDAMENTALS_MAKER_MICROBIT = 'CS Fundamentals Maker with micro:bit'.freeze,

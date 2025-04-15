@@ -1562,21 +1562,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
-  test 'virtual specific subjects must be virtual' do
-    workshop = build :pd_workshop,
-      course: COURSE_CSP,
-      subject: SUBJECT_CSP_WORKSHOP_1,
-      suppress_email: true
-
-    assert workshop.valid?
-
-    workshop.subject = VIRTUAL_ONLY_SUBJECTS.first
-    refute workshop.valid?
-
-    workshop.sessions.first.session_format = 'virtual'
-    assert workshop.valid?
-  end
-
   test 'workshops third_party_provider must be nil or from specified list' do
     workshop = build :workshop, third_party_provider: 'unknown_pd_provider'
     refute workshop.valid?
@@ -1602,11 +1587,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
 
   test 'CSF workshop must not require teacher application' do
     workshop = create :csf_workshop, regional_partner: @regional_partner
-    refute workshop.require_application?
-  end
-
-  test 'virtual CSD workshop must not require teacher application' do
-    workshop = create :csd_virtual_workshop, regional_partner: @regional_partner
     refute workshop.require_application?
   end
 

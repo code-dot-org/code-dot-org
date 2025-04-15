@@ -92,7 +92,6 @@ class Pd::Workshop < ApplicationRecord
   validates_inclusion_of :on_map, in: [true, false], if: :legacy?
   validates_inclusion_of :funded, in: [true, false], if: :legacy?
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
-  validate :virtual_only_subjects_must_be_virtual
   validate :not_funded_subjects_must_not_be_funded
   validate :valid_registration_link_format, if: :registration_link
 
@@ -126,12 +125,6 @@ class Pd::Workshop < ApplicationRecord
   def not_funded_subjects_must_not_be_funded
     if NOT_FUNDED_SUBJECTS.include?(subject) && funded?
       errors.add :properties, 'Admin/Counselor - Welcome workshop must not be funded'
-    end
-  end
-
-  def virtual_only_subjects_must_be_virtual
-    if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
-      errors.add :properties, "Workshops with the subject #{subject} must be virtual"
     end
   end
 
