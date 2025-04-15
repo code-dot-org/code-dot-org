@@ -138,14 +138,7 @@ class Pd::Workshop < ApplicationRecord
       return
     end
 
-    check_fields_exist(config)
     required_validation(config)
-  end
-
-  def check_fields_exist(config)
-    config[:fields].each_key do |field_name|
-      errors.add(field_name, "is not a valid field") unless respond_to?(field_name)
-    end
   end
 
   def required_validation(config)
