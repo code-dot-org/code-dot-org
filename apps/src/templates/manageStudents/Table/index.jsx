@@ -877,6 +877,7 @@ class ManageStudentsTable extends Component {
             sectionCode={sectionCode}
             loginType={loginType}
             studioUrlPrefix={this.props.studioUrlPrefix}
+            sourceName="ManageStudentsTable"
           />
         </div>
         <div style={tableStyle}>

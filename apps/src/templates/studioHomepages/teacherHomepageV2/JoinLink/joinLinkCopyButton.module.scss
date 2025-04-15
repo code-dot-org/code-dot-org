@@ -7,9 +7,14 @@
 }
 
 .sectionCode {
-  margin-left: 5px;
   font-weight: bold;
   cursor: copy;
+  margin: 0;
+  margin-inline-start: 5px;
+  padding: 0;
+  border: 0 !important;
+  background-color: inherit;
+  font-size: inherit;
 }
 
 .sectionCodeText {
@@ -28,7 +33,7 @@
       margin: 0;
       margin-inline-start: 5px;
       padding: 0;
-      border: 0 !important;;
+      border: 0 !important;
       background-color: inherit;
       font-size: inherit;
     }

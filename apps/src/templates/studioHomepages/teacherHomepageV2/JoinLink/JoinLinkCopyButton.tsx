@@ -23,6 +23,7 @@ interface JoinLinkCopyButtonProps {
   sectionCode: string;
   sectionId: number;
   studioUrlPrefix: string;
+  sourceName?: string;
 }
 
 const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
@@ -30,6 +31,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   sectionCode,
   sectionId,
   studioUrlPrefix,
+  sourceName = 'teacherHomepage',
 }) => {
   const [shouldShowDialog, setShouldShowDialog] = React.useState(false);
   const [showCopiedMsg, setShowCopiedMsg] = React.useState(false);
@@ -70,7 +72,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     );
     analyticsReporter.sendEvent(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
-      {},
+      {source: sourceName},
       PLATFORMS.BOTH
     );
     setShowCopiedMsg(true);
@@ -97,12 +99,13 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
                   iconLeft: {iconName: 'copy'},
                 }}
               >
-                <a
+                <button
                   className={styles.sectionCode}
                   onClick={handleCopySectionCode}
+                  type="button"
                 >
                   {sectionCode}
-                </a>
+                </button>
               </WithTooltip>
             </OverlineOneText>
           </span>
@@ -114,9 +117,10 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     <>
       <div
         className={classNames(styles.sectionCodeBox, styles.sectionCodeText)}
+        id="uitest-no-section-code"
       >
         <OverlineOneText>
-          {`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}.`}
+          {`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}`}
           <button
             onClick={() => showSectionCodeDialog()}
             id="uitest-why-link"
