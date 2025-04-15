@@ -147,22 +147,24 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     teacher = create :teacher
     sign_in(teacher)
 
-    teachercon = create :workshop,
+    teachercon = build :workshop,
       :teachercon,
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
+    teachercon.save(validate: false)
 
-    fit_weekend = create :fit_workshop,
+    fit_weekend = build :fit_workshop,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
+    fit_weekend.save(validate: false)
 
     create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
     create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
 
-    teachercon.start!
+    teachercon.update_column(:started_at, Time.zone.now)
 
     assert teachercon.state == Pd::Workshop::STATE_IN_PROGRESS
     assert fit_weekend.state == Pd::Workshop::STATE_NOT_STARTED
@@ -178,19 +180,21 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     teacher = create :teacher
     sign_in(teacher)
 
-    teachercon = create :workshop,
+    teachercon = build :workshop,
       :ended,
       :teachercon,
       :funded,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
+    teachercon.save(validate: false)
 
-    fit_weekend = create :fit_workshop,
+    fit_weekend = build :fit_workshop,
       :ended,
       organizer: @organizer,
       facilitators: [@facilitator],
       regional_partner: @regional_partner
+    fit_weekend.save(validate: false)
 
     teachercon_enrollment = create(:pd_enrollment, workshop: teachercon, email: teacher.email, user_id: teacher.id)
     fit_weekend_enrollment = create(:pd_enrollment, workshop: fit_weekend, email: teacher.email, user_id: teacher.id)
@@ -1127,20 +1131,22 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
   end
 
   test 'Admins can view all Teachercon workshops' do
-    phoenix = create(
+    phoenix = build(
       :workshop,
       course: Pd::Workshop::COURSE_CSD,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
       location_address: "Phoenix"
     )
-    atlanta = create(
+    phoenix.save(validate: false)
+    atlanta = build(
       :workshop,
       course: Pd::Workshop::COURSE_CSD,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
       location_address: "Atlanta"
     )
+    atlanta.save(validate: false)
 
     sign_in create :admin
 
@@ -1152,18 +1158,20 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
   end
 
   test 'Teachercon workshops can be filtered by course' do
-    csd = create(
+    csd = build(
       :workshop,
       course: Pd::Workshop::COURSE_CSD,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
     )
-    csp = create(
+    csd.save(validate: false)
+    csp = build(
       :workshop,
       course: Pd::Workshop::COURSE_CSP,
       organizer: @organizer,
       subject: Pd::Workshop::SUBJECT_TEACHER_CON,
     )
+    csp.save(validate: false)
 
     sign_in create :admin
 
