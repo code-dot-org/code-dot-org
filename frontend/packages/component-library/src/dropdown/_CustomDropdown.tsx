@@ -248,7 +248,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
             fallbackFocus: '#fallback-element',
           }}
         >
-          <div id="fallback-element" tabIndex={-1}>
+          <div id="fallback-element" tabIndex={-1} role="menu">
             {children}
           </div>
         </FocusTrap>
