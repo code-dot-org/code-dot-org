@@ -49,7 +49,7 @@ class OpenaiEvaluateController < ApplicationController
       # mimic the format of the response from AI
       json_response = {"content" => no_attempt_response.to_json}
       return render(status: :ok, json: json_response)
-    elsif ProfanityFilter.find_potential_profanities(student_work, "en", {})
+    elsif ProfanityFilter.find_potential_profanity(student_work, "en", {})
       json_response = {"content" => profanity_detected_response.to_json}
       return render(status: :ok, json: json_response)
     else
