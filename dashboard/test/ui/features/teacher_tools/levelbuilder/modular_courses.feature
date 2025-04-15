@@ -3,9 +3,9 @@ Feature: Creating and Editing Modular Courses
 
   Scenario: Create a new course assigned to a shared unit
     Given I create a levelbuilder named "Levi"
-    And I create a temp migrated unit with lessons
     And I am on "http://studio.code.org/courses/new"
     And I wait until element ".familyNameSelector" is visible
+    And I create a temp migrated unit with lessons
 
     And I enter a temp family name
     And I select that this course will not get updated yearly
