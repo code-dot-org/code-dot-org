@@ -6,6 +6,9 @@ image: code-dot-org:latest
 command: ["bin/dashboard-server"]
 args:
 
+test:
+  image: code-dot-org-test:latest
+
 # Override to set RAILS_ENV
 RAILS_ENV:
 

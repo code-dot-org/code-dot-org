@@ -68,6 +68,17 @@ build:
       dependencies:
         dockerfile:
           path: k8s/docker/code-dot-org-db-seed.dockerfile
+  - image: code-dot-org-test
+    custom:
+      buildCommand: |
+        k8s/bin/docker-buildx -f k8s/docker/code-dot-org-test.dockerfile \
+          --build-arg CODE_DOT_ORG="$CODE_DOT_ORG"
+      dependencies:
+        dockerfile:
+          path: k8s/docker/code-dot-org-test.dockerfile
+    requires:
+    - image: code-dot-org
+      alias: CODE_DOT_ORG
 
 deploy:
   helm:
@@ -76,6 +87,7 @@ deploy:
         chartPath: ./k8s/helm
         setValueTemplates:
           image: "{{.IMAGE_FULLY_QUALIFIED_code_dot_org}}"
+          test.image: "{{.IMAGE_FULLY_QUALIFIED_code_dot_org_test}}"
           # skaffold sync only works when the user is root 😤:
           # https://github.com/GoogleContainerTools/skaffold/issues/2479
           # If we find a solution, we can drop this override:

@@ -15,7 +15,7 @@ spec:
           backoffLimit: 0
           containers:
           - name: dashboard
-            image: "{{ .Values.image }}"
+            image: "{{ .Values.test.image }}"
 
             command: ["zsh", "-c"]
             args:
