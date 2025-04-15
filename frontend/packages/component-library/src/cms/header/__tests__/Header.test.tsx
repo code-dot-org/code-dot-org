@@ -26,6 +26,11 @@ describe('Header Component', () => {
       src: 'code-logo.svg',
       altText: 'Code.org logo',
     },
+    navLabel: {
+      main: 'Main navigation',
+      secondary: 'Secondary navigation',
+    },
+    mainLinksLabel: 'Main site links',
     mainLinks: [
       {
         key: 'learn',
