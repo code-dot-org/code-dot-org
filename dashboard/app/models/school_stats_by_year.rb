@@ -37,6 +37,7 @@
 #  community_type     :string(16)
 #  student_female     :integer
 #  student_male       :integer
+#  status             :string(255)
 #
 # Indexes
 #
