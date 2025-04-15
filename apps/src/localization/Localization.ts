@@ -8,11 +8,14 @@ export type Translatable = string[] | string | HTMLElement | TranslatableHash;
 
 export type TranslationCallback = (code: string) => void;
 
+import {get} from 'js-cookie';
+
 import Localize, {
   LocalizeOptions,
   LocalizeSetLanguageData,
 } from '@cdo/apps/localization/Localize';
 import experiments from '@cdo/apps/util/experiments';
+import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 
 /**
  * This class handles our dynamic localization engine.
@@ -62,7 +65,11 @@ export class Localization {
    * Gets the current locale as a region code.
    */
   get locale(): string {
-    return Localize?.getLanguage() || 'en-US';
+    if (!Localize) {
+      // If not using LocalizeJS, then pull from the language cookie
+      return get('language_') || DefaultLocale;
+    }
+    return Localize?.getLanguage() || DefaultLocale;
   }
 
   /**
