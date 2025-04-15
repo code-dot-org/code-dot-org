@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-04-14T23:13:32.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're tracking your score during game night. The program already prints your score, but you want to compare it to your friend's and calculate the difference.\r\n\r\n1. Inside the function, create a new variable called `rival_score` and assign it a number (for example, `31`).\r\n\r\n   Be sure everything inside the function is indented the same amount.\r\n\r\n2. Create another variable called `score_difference` and calculate the difference between your score and your rival's score.\r\n\r\n3. Add a `print()` line that uses the `score_difference` variable to show how far ahead or behind you are.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAll the lines inside a function must be indented the same amount. This tells Python what belongs to the function.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_2025",
+    "display_name": "Game Night Scoreboard",
+    "bubble_choice_description": "You're tracking your score during game night. The program already prints your score, but you want to compare it to your friend's and calculate the difference.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def game_score():\n    my_score = 38\n    print(\"Your score is\", my_score)\n    # TODO - Add a rival_score\n\n    # TODO - Calculate the difference\n\n    # TODO - Print the result\n    \n\ngame_score()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzouAlDWQ8JuoPAnR1DeJrMPkgmL7mkX5\nzhB1j6RByo5QGu8bVn9tWYVZnajCEvjKY53vngo2VtJQsuw8DI9ifVNzpNLn\n7Ce6c8hxaGN6o0ptLgXhxGT9y110+YG12lHtF67rErxqNX+B+nsR6JEi0HJk\nGGrBU4utVIE+2Yh43/WudNe30DJiaddfO/17HLJWbGB4amG6xpHhiM1QD8lz\nmGigRPNxtSZbvaKjrSajHncUia4aIE+PGtfTVQaivGPEsHjNkqaaurOBkfe3\nSNWZeagJXojcAOgKwY9UWNuR6oqOm/o+ksVfRO6jNc6MIuE2mJwvIbExp5fw\nExjinAIC5NzY2Mps4zIiVcDNaD5+mXXMuMJopiNZtm0dcL9pdsBtqw==\n",
+    "thumbnail_url": "https://images.code.org/3365aa1195e66c5ef3c739a913dd4abb-board-game.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:32.788+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level5d_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level5d_2025-launch\"},{\"changed_at\":\"2025-04-15 02:51:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:26:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:27:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:28:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:31:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:34:06 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:38:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

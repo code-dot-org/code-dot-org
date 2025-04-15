@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-04-02T01:16:29.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "You're building a fitness app that tracks a user's daily step goal. Your app needs to remember how many steps the user is aiming for each day.\r\n\r\n## Do This:\r\n\r\n1. Create a variable called `step_goal`.\r\n\r\n2. Assign it a number, like `8000` or `10000`.\r\n\r\n3. Use `print()` to show a message like `Your daily step goal is 10000 steps.`\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can use **commas** in a `print()` statement to combine text and variables. For example:\r\n\r\n```\r\nprint(\"Name:\", first_name)\r\n```",
+    "long_instructions": "You're building a fitness app that tracks a user's daily step goal. Your app needs to remember how many steps the user is aiming for each day.\r\n\r\n## Do This:\r\n\r\n1. Create a variable called `step_goal`.\r\n\r\n2. Assign it a number, like `8000` or `10000`.\r\n\r\n3. Use `print()` to show a message like\r\n\r\n   ```\r\n   Your daily step goal is 10000 steps.\r\n   ```\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can use **commas** in a `print()` statement to combine text and variables. For example:\r\n\r\n```\r\nprint(\"Name:\", first_name)\r\n```",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -33,7 +34,6 @@
     },
     "thumbnail_url": "https://images.code.org/57a1914da3135b2ca2e49ec13863996b-fitness-tracker.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-02 01:19:48 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:36:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:39:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:49:49 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-02 01:19:48 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:36:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:39:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:49:49 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-12 00:35:56 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-12 00:37:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

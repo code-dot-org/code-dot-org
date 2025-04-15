@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson8-level7_2025-launch_2025'
+display_name 'level display_name here'
+description 'level description here'
+
+sublevels
+level 'programming-fundamentals-lesson8-level7a_2025-launch_2025'
+level 'programming-fundamentals-lesson8-level7b_2025-launch_2025'
+level 'programming-fundamentals-lesson8-level7c_2025-launch_2025'
+level 'programming-fundamentals-lesson8-level7d_2025-launch_2025'

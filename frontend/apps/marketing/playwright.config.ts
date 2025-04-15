@@ -57,4 +57,15 @@ export default defineConfig<EyesFixture>({
       use: {...devices['Desktop Safari']},
     },
   ],
+
+  /* Run your local dev server before starting the tests */
+  ...(process.env.STAGE === 'pr'
+    ? {
+        webServer: {
+          command: 'cd ../../ && yarn dev --filter @code-dot-org/marketing',
+          url: 'http://localhost:3001',
+          reuseExistingServer: true,
+        },
+      }
+    : undefined),
 });

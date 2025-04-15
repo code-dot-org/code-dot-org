@@ -257,6 +257,21 @@ const optionsList = [
       },
     ],
   },
+  {
+    name: 'exemplar-player-bottom',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Exemplar player appears at bottom of main instructions text. (default).',
+      },
+      {
+        value: 'true',
+        description: 'Exemplar player appears at bottom of instructions panel.',
+      },
+    ],
+  },
 ];
 
 export default class MusicMenu extends React.Component {

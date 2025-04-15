@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import {useState} from 'react';
 import ReactPlayer from 'react-player/file';
+import {JsonLd} from 'react-schemaorg';
+import type {VideoObject} from 'schema-dts';
 
 import {Button, LinkButton} from '@/button';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
@@ -30,9 +32,11 @@ import moduleStyles from './video.module.scss';
 const Video: React.FC<VideoProps> = ({
   youTubeId,
   videoTitle,
+  videoDesc,
   videoFallback,
   showCaption,
   downloadLabel,
+  uploadDate,
   errorHeading,
   errorBody,
   className,
@@ -171,6 +175,23 @@ const Video: React.FC<VideoProps> = ({
           />
         )}
       </div>
+
+      {/* JSON-LD for structured data. Needed for Google SEO.
+      (see https://developers.google.com/search/docs/appearance/structured-data/video#json-ld) */}
+      {videoTitle && posterThumbnail && uploadDate && (
+        <JsonLd<VideoObject>
+          item={{
+            '@context': 'https://schema.org',
+            '@type': 'VideoObject',
+            name: videoTitle,
+            description: videoDesc,
+            thumbnailUrl: posterThumbnail,
+            uploadDate: uploadDate,
+            embedUrl: youtubeVideoUrl,
+            contentUrl: videoFallback,
+          }}
+        />
+      )}
     </figure>
   );
 };

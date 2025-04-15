@@ -2,7 +2,7 @@ Given(/^block "([^"]*)" is at a ((?:blockly )?)location "([^"]*)"$/) do |block, 
   id_selector = get_id_selector
   @locations ||= {}
   block_id = get_block_id(block)
-  @block = @browser.find_element(:css, "g[#{id_selector}='#{block_id}']")
+  @block = @browser.find_element(:css, ".blocklySvg g[#{id_selector}='#{block_id}']")
   x = is_blockly ? get_block_workspace_left(block_id) : get_block_absolute_left(block_id)
   y = is_blockly ? get_block_workspace_top(block_id) : get_block_absolute_top(block_id)
   @locations[identifier] = BlocklyHelpers::Point.new(x, y)
@@ -21,7 +21,7 @@ end
 
 When(/^I click block "([^"]*)"$/) do |block|
   id_selector = get_id_selector
-  @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
+  @browser.execute_script("$(\".blocklySvg [#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
 end
 
 # This helps click on a field in Google Blockly. It always picks the first element from the list generated
@@ -43,12 +43,6 @@ end
 # Note: this is an offset relative to the current position of the block
 When /^I drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |block_id, dx, dy|
   drag_block_relative(get_block_id(block_id), dx, dy)
-end
-
-# Note: this is an offset relative to the current position of the block
-When /^I begin to drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |from, dx, dy|
-  id_selector = get_id_selector
-  @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(from)}']\").simulate( 'drag', {skipDrop: true, handle: 'corner', dx: #{dx}, dy: #{dy}, moves: 5});")
 end
 
 When /^I drag block "([^"]*)" to block "([^"]*)"$/ do |from, to|
@@ -78,16 +72,6 @@ end
 
 When /^I drag block "([^"]*)" to block "([^"]*)" plus offset (\d+), (\d+)$/ do |from, to, dx, dy|
   code = generate_drag_code(get_block_id(from), get_block_id(to), dx, dy)
-  @browser.execute_script code
-end
-
-When /^I drag block "([^"]*)" above block "([^"]*)"$/ do |from, to|
-  id_selector = get_id_selector
-  from_id = get_block_id(from)
-  to_id = get_block_id(to)
-  height = @browser.execute_script("return $(\"[#{id_selector}='#{from_id}']\")[0].getBoundingClientRect().height;") - 10
-  destination_has_parent = @browser.execute_script("return $(\"[#{id_selector}='#{to_id}']\").parent().attr('#{id_selector}') !== undefined;")
-  code = generate_drag_code(from_id, to_id, 0, destination_has_parent ? 0 : -height)
   @browser.execute_script code
 end
 
@@ -172,7 +156,7 @@ end
 
 Then /^block "([^"]*)" is child of block "([^"]*)"$/ do |child, parent|
   id_selector = get_id_selector
-  @child_item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(child)}']")
+  @child_item = @browser.find_element(:css, ".blocklySvg g[#{id_selector}='#{get_block_id(child)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
   # check for block id without relying on selenium element equality.
   actual_parent_id = @actual_parent_item.attribute(id_selector)
@@ -181,7 +165,7 @@ end
 
 Then /^block "([^"]*)" is not child of block "([^"]*)"$/ do |child, parent|
   id_selector = get_id_selector
-  @child_item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(child)}']")
+  @child_item = @browser.find_element(:css, ".blocklySvg g[#{id_selector}='#{get_block_id(child)}']")
   @actual_parent_item = @child_item.find_element(:xpath, "..")
   # check for block id without relying on selenium element equality.
   actual_parent_id = @actual_parent_item.attribute(id_selector)
@@ -273,7 +257,7 @@ end
 
 Then /^block "([^"]*)" has class "(.*?)"$/ do |block_id, class_name|
   id_selector = get_id_selector
-  item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(block_id)}']")
+  item = @browser.find_element(:css, ".blocklySvg g[#{id_selector}='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
   expect(classes.include?(class_name)).to eq(true)
 end
@@ -281,7 +265,7 @@ end
 When /^I wait until block "([^"]*)" has class "(.*?)"$/ do |block_id, class_name|
   id_selector = get_id_selector
   wait_until do
-    item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(block_id)}']")
+    item = @browser.find_element(:css, ".blocklySvg g[#{id_selector}='#{get_block_id(block_id)}']")
     classes = item.attribute("class")
     classes.include?(class_name)
   end
@@ -289,17 +273,9 @@ end
 
 Then /^block "([^"]*)" doesn't have class "(.*?)"$/ do |block_id, class_name|
   id_selector = get_id_selector
-  item = @browser.find_element(:css, "g[#{id_selector}='#{get_block_id(block_id)}']")
+  item = @browser.find_element(:css, ".blocklySvg g[#{id_selector}='#{get_block_id(block_id)}']")
   classes = item.attribute("class")
   expect(classes.include?(class_name)).to eq(false)
-end
-
-Then /^block "([^"]*)" contains text "(.*?)"$/ do |block_id, text|
-  id_selector = get_id_selector
-  block = @browser.find_element(:css, "[#{id_selector}='#{get_block_id(block_id)}']")
-  # Replace non-breaking spaces with normal spaces
-  given_text = block.attribute('textContent').tr("\u00A0", ' ')
-  expect(given_text).to include(text)
 end
 
 Then /^the modal function editor is closed$/ do

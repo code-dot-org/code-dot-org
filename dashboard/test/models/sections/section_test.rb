@@ -464,6 +464,7 @@ class SectionTest < ActiveSupport::TestCase
         name: section.name,
         courseVersionName: 'somecourse',
         unitName: nil,
+        unitPosition: nil,
         isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
@@ -488,6 +489,8 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -509,6 +512,7 @@ class SectionTest < ActiveSupport::TestCase
         name: section.name,
         courseVersionName: 'jigsaw',
         unitName: script.name,
+        unitPosition: nil,
         isAssignedStandaloneCourse: true,
         login_type: "email",
         grades: nil,
@@ -533,6 +537,8 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -558,6 +564,7 @@ class SectionTest < ActiveSupport::TestCase
         name: section.name,
         courseVersionName: nil,
         unitName: nil,
+        unitPosition: nil,
         isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
@@ -583,6 +590,8 @@ class SectionTest < ActiveSupport::TestCase
                              {id: coteacher_section_instructor.id, status: "invited", instructor_name: nil, instructor_email: coteacher_user.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -595,6 +604,7 @@ class SectionTest < ActiveSupport::TestCase
     # Use an existing script so that it has a translation
     script = Unit.find_by_name('jigsaw')
     unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     CourseOffering.add_course_offering(unit_group)
 
     Timecop.freeze(Time.zone.now) do
@@ -607,6 +617,7 @@ class SectionTest < ActiveSupport::TestCase
         name: section.name,
         courseVersionName: 'somecourse',
         unitName: script.name,
+        unitPosition: 1,
         isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
@@ -631,6 +642,8 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -648,6 +661,7 @@ class SectionTest < ActiveSupport::TestCase
         name: section.name,
         courseVersionName: nil,
         unitName: nil,
+        unitPosition: nil,
         isAssignedStandaloneCourse: false,
         login_type: "email",
         grades: nil,
@@ -672,6 +686,8 @@ class SectionTest < ActiveSupport::TestCase
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
         sync_enabled: nil,
         ai_tutor_enabled: false,
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -731,6 +747,8 @@ class SectionTest < ActiveSupport::TestCase
           unit_id: section.unit_group ? section.script_id : nil,
         },
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -763,6 +781,8 @@ class SectionTest < ActiveSupport::TestCase
           unit_id: section.unit_group ? section.script_id : nil,
         },
         primaryInstructor: {email: section.teacher.email, name: section.teacher.name, ltiRosterSyncEnabled: nil},
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -850,6 +870,7 @@ class SectionTest < ActiveSupport::TestCase
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: nil,
+        unitPosition: nil,
         course_id: unit_group.id,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
@@ -868,6 +889,8 @@ class SectionTest < ActiveSupport::TestCase
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -908,6 +931,7 @@ class SectionTest < ActiveSupport::TestCase
         course_offering_id: script.course_version.course_offering.id,
         course_version_id: script.course_version.id,
         unit_id: nil,
+        unitPosition: nil,
         course_id: nil,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
@@ -926,6 +950,8 @@ class SectionTest < ActiveSupport::TestCase
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -970,6 +996,7 @@ class SectionTest < ActiveSupport::TestCase
         course_offering_id: nil,
         course_version_id: nil,
         unit_id: nil,
+        unitPosition: nil,
         course_id: nil,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
@@ -989,6 +1016,8 @@ class SectionTest < ActiveSupport::TestCase
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1001,6 +1030,7 @@ class SectionTest < ActiveSupport::TestCase
     # Use an existing script so that it has a translation
     script = Unit.find_by_name('jigsaw')
     unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     CourseOffering.add_course_offering(unit_group)
 
     Timecop.freeze(Time.zone.now) do
@@ -1032,6 +1062,7 @@ class SectionTest < ActiveSupport::TestCase
         course_offering_id: unit_group.course_version.course_offering.id,
         course_version_id: unit_group.course_version.id,
         unit_id: script.id,
+        unitPosition: 1,
         course_id: unit_group.id,
         script: {id: script.id, name: script.name, project_sharing: nil},
         studentCount: 0,
@@ -1041,7 +1072,7 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         is_assigned_csa: false,
-        is_assigned_single_unit_course: false,
+        is_assigned_single_unit_course: true,
         post_milestone_disabled: false,
         code_review_expires_at: nil,
         sectionInstructors: [{id: section.section_instructors[0].id, status: "active", instructor_name: section.teacher.name, instructor_email: section.teacher.email}],
@@ -1050,6 +1081,8 @@ class SectionTest < ActiveSupport::TestCase
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1086,6 +1119,7 @@ class SectionTest < ActiveSupport::TestCase
         course_offering_id: nil,
         course_version_id: nil,
         unit_id: nil,
+        unitPosition: nil,
         course_id: nil,
         script: {id: nil, name: nil, project_sharing: nil},
         studentCount: 0,
@@ -1104,6 +1138,8 @@ class SectionTest < ActiveSupport::TestCase
         ai_tutor_enabled: false,
         at_risk_age_gated_date: nil,
         at_risk_age_gated_us_state: nil,
+        avatar_color: nil,
+        avatar_emoji: nil,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1240,6 +1276,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'any_student_has_progress? returns true if student has progress on unit assigned to section' do
     script = Unit.find_by_name('jigsaw')
     unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     CourseOffering.add_course_offering(unit_group)
 
     section = create :section, script: script, unit_group: unit_group
@@ -1253,6 +1290,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'any_student_has_progress? returns true if student has progress on unit not assigned to section' do
     script = Unit.find_by_name('jigsaw')
     unit_group = create :unit_group, name: 'somecourse', version_year: '1991', family_name: 'some-family'
+    create :unit_group_unit, unit_group: unit_group, script: script, position: 1
     CourseOffering.add_course_offering(unit_group)
 
     section = create :section, script: nil, unit_group: nil

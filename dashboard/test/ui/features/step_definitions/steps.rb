@@ -1425,7 +1425,7 @@ end
 # Place files in dashboard/test/fixtures
 # Note: Safari webdriver does not support file uploads (https://code.google.com/p/selenium/issues/detail?id=4220)
 Then /^I upload the file named "(.*?)"$/ do |filename|
-  unless ENV['TEST_LOCAL'] == 'true'
+  unless test_local?
     # Needed for remote (Sauce Labs) uploads
     @browser.file_detector = lambda do |args|
       str = args.first.to_s
@@ -1439,7 +1439,7 @@ Then /^I upload the file named "(.*?)"$/ do |filename|
   element.send_keys filename
   @browser.execute_script('$("input[type=file]").hide()')
 
-  unless ENV['TEST_LOCAL'] == 'true'
+  unless test_local?
     @browser.file_detector = nil
   end
 end

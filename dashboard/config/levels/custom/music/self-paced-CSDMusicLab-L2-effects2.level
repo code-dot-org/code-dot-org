@@ -1,0 +1,104 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2025-04-14T21:48:37.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "### Sequence the Effects \r\n\r\nYou have one sound to manipulate with effects. \r\n\r\nDo this:\r\n- Use at least one delay effect (high or low) \r\n- Use at least one filter effect (medium or low)",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "true",
+    "level_data": {
+      "library": "launch2024",
+      "packId": "default",
+      "sounds": {
+        "electro": [
+          "drum_beat_edm"
+        ]
+      },
+      "toolbox": {
+        "type": "flyout",
+        "blocks": {
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Effects": [
+            "set_volume_effect_at_current_location_simple2",
+            "set_filter_effect_at_current_location_simple2",
+            "set_delay_effect_at_current_location_simple2"
+          ]
+        }
+      },
+      "allowChangeStartingPlayheadPosition": true,
+      "showSoundFilters": false
+    },
+    "reference_links": [
+      "/courses/alloftheplaygrounds/guides/music-lab-effects/"
+    ],
+    "map_reference": "/courses/alloftheplaygrounds/guides/music-lab-effects/",
+    "validations": [
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-1_38cadd17-85f9-4907-8a7b-f48e9976a303",
+        "message": "You Did It!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          },
+          {
+            "name": "used_effect_non_default"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-1_797319c6-1966-4164-84ea-6f73bebd7625",
+        "message": "You played a sound with an effect! Try changing from the default value!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          },
+          {
+            "name": "used_effect"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-1_482a4714-d2af-4bd2-aca1-e801c6985a65",
+        "message": "You played a sound! Be sure to add an effect!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-sequences-synthesize-filters-1_55602d65-6e0a-407a-8f99-957c654b7333",
+        "message": "Play at least one track!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-14T21:48:37.597+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-filters-1\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-filters-1\"}]"
+}]]></config>
+  <blocks/>
+</Music>

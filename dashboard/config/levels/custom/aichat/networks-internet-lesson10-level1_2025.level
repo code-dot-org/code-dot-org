@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-03-22T01:38:52.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## AI Threat Detection  \r\n\r\nThis chatbot is a cybersecurity expert AI assistant trained to provide security analysis based on different scenarios you give it.\r\n\r\n### Do This:\r\n\r\n1. Choose a card from your Threat Detected! card deck. \r\n2. Ask the chatbot:\r\n   - How did AI detect this threat?\r\n   - What mitigation strategy does AI recommend?\r\n   - How would this threat have been handled without AI?\r\n3. Use your \"Threat Detection Notetaker\" and answer the prompts. ",
+    "long_instructions": "## AI Threat Detection  \r\n\r\nThis chatbot is a cybersecurity expert AI assistant trained to provide security analysis based on different scenarios you give it.\r\n\r\n### Do This:\r\n\r\n1. Choose a card from your Threat Detected! card deck. \r\n2. Ask the chatbot:\r\n   - How did AI detect this threat?\r\n   - What mitigation strategy does AI recommend?\r\n   - How would this threat have been handled without AI?\r\n3. Use your \"Threat Detection Notetaker\" and answer the prompts. \r\n\r\n\r\n::: details [**Not sure what context to add?**]\r\nUse these prompts to guide your discussion with the AI: \r\n- What is the most likely threat in this scenario?\r\n- How would AI respond differently than a human? \r\n- Why might this be hard for AI to detect?\r\n- What is the best way to stop this threat? \r\n- Could AI ever make a mistake here? What would that look like?\r\n:::",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -46,7 +47,6 @@
     },
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-22T01:38:52.284+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson10-level1-2024\\\"\"],\"cloned_from\":\"networks-internet-lesson10-level1-2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:38:52.284+00:00\",\"changed\":[\"cloned from \\\"networks-internet-lesson10-level1-2024\\\"\"],\"cloned_from\":\"networks-internet-lesson10-level1-2024\"},{\"changed_at\":\"2025-04-11 05:36:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Aichat>

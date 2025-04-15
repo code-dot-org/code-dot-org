@@ -6068,6 +6068,7 @@ columns:
     default_function: 
     collation: 
     comment: 
+  - *104
   schools:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: id
@@ -14374,7 +14375,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250409201643
+version: 20250411155821
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

@@ -73,6 +73,8 @@ class Section < ApplicationRecord
   has_many :instructors, through: :active_section_instructors, class_name: 'User'
   has_one :lti_section
   has_one :lti_course, through: :lti_section
+  before_validation :strip_emoji_from_name
+  before_create :assign_code
   after_destroy :soft_delete_lti_section
 
   has_many :followers, dependent: :destroy
@@ -106,8 +108,6 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
-
-  before_validation :strip_emoji_from_name
 
   scope :visible, -> {where(hidden: false)}
 
@@ -176,7 +176,7 @@ class Section < ApplicationRecord
   TYPES = [
     # Insert non-workshop section types here.
   ].concat(Pd::Workshop::SECTION_TYPES).freeze
-  validates_inclusion_of :section_type, in: TYPES, allow_nil: true
+  validates :section_type, inclusion: {in: TYPES, allow_nil: true}
 
   VALID_GRADES = [
     SharedConstants::STUDENT_GRADE_LEVELS,
@@ -234,13 +234,12 @@ class Section < ApplicationRecord
     [LOGIN_TYPE_EMAIL, LOGIN_TYPE_PICTURE, LOGIN_TYPE_WORD].exclude? login_type
   end
 
-  validates_presence_of :user, unless: -> {deleted?}
+  validates :user, presence: {unless: -> {deleted?}}
   def user_must_be_teacher
     errors.add(:user_id, 'must be a teacher') unless user.try(:teacher?)
   end
   validate :user_must_be_teacher, unless: -> {deleted?}
 
-  before_create :assign_code
   def assign_code
     self.code = unused_random_code unless code
   end
@@ -397,6 +396,7 @@ class Section < ApplicationRecord
         name: name,
         courseVersionName: unit_group ? unit_group.name : script&.name,
         unitName: script&.name,
+        unitPosition: unit_group_unit&.position,
         isAssignedStandaloneCourse: !unit_group && !!script,
         createdAt: created_at,
         login_type: login_type,
@@ -423,6 +423,8 @@ class Section < ApplicationRecord
         sectionInstructors: serialized_section_instructors,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
         ai_tutor_enabled: ai_tutor_enabled,
+        avatar_color: avatar_color,
+        avatar_emoji: avatar_emoji,
       }
     end
   end
@@ -466,6 +468,8 @@ class Section < ApplicationRecord
         any_student_has_progress: any_student_has_progress?,
         is_assigned_single_unit_course: unit_group&.single_unit_course?,
         primaryInstructor: primary_instructor,
+        avatar_color: avatar_color,
+        avatar_emoji: avatar_emoji,
       }
     end
   end
@@ -489,12 +493,25 @@ class Section < ApplicationRecord
         course_version_name = unit_group.name
         if script_id
           title_of_current_unit = script.title_for_display
-          link_to_current_unit = script_path(script)
+          link_to_current_unit = if Policies::Courses.modularity_enabled?
+                                   course_unit_path(unit_group, unit_group_unit.position)
+                                 else
+                                   script_path(script)
+                                 end
         end
       elsif script_id
         title = script.title_for_display
-        link_to_assigned = script_path(script)
-        course_version_name = script.name
+        if unit_group_unit
+          link_to_assigned = if Policies::Courses.modularity_enabled?
+                               course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+                             else
+                               script_path(script)
+                             end
+          course_version_name = unit_group_unit.unit_group.name
+        else
+          course_version_name = script.name
+          link_to_assigned = script_path(script)
+        end
       end
 
       selected_unit = unit_group&.single_unit_course? ? unit_group.default_units.first : script
@@ -547,6 +564,7 @@ class Section < ApplicationRecord
         course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         unit_id: unit_group ? script_id : nil,
+        unitPosition: unit_group_unit&.position,
         course_id: course_id,
         script: {
           id: selected_unit&.id,
@@ -568,6 +586,8 @@ class Section < ApplicationRecord
         ai_tutor_enabled: ai_tutor_enabled,
         at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
         at_risk_age_gated_us_state: at_risk_student&.us_state,
+        avatar_color: avatar_color,
+        avatar_emoji: avatar_emoji,
       }
     end
   end
@@ -789,5 +809,13 @@ class Section < ApplicationRecord
 
     # If dropping emoji resulted in a blank name, use a default
     self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
+  end
+
+  private def unit_group_unit
+    if unit_group && script
+      script.unit_group_units.find {|ugu| ugu.unit_group == unit_group}
+    elsif script
+      script.unit_group_units.first
+    end
   end
 end

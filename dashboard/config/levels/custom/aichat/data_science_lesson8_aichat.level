@@ -7,7 +7,7 @@
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Ask AI for  Cleaning Tips\r\n\r\nUse AI Chat to clean a messy data entry and compare its approach to yours.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. Ask AI Chat:\r\n   - *How would you clean this messy pizza topping entry: \"don’t like pepperonni but i'll eat peproni if itz there\"?*\r\n   - *Should this entry be deleted or changed? Why?*\r\n2. Review AI Chat’s answer.\r\n3. Compare it to your own decision and your partner's.\r\n",
+    "long_instructions": "## Ask AI for Cleaning Tips\r\n\r\nUse AI Chat to clean a messy data entry and compare its approach to yours.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. Ask AI Chat:\r\n   - *How would you clean this messy pizza topping entry: \"don’t like pepperonni but i'll eat peproni if itz there\"?*\r\n   - *Should this entry be deleted or changed? Why?*\r\n2. Review AI Chat’s answer.\r\n3. Compare it to your own decision and your partner's.\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -41,8 +41,11 @@
         "gpt-4o-mini"
       ],
       "multimodalEnabled": true
+    },
+    "starter_assets": {
+      "Pizza Topping Survey Data.pdf": "80960f7a-f37e-4049-b579-ad3bd19330fa.pdf"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-09T17:42:27.241+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson5_aichat\\\"\"],\"cloned_from\":\"data_science_lesson5_aichat\"},{\"changed_at\":\"2025-04-09 18:19:27 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-09 18:20:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-09 18:20:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-09T17:42:27.241+00:00\",\"changed\":[\"cloned from \\\"data_science_lesson5_aichat\\\"\"],\"cloned_from\":\"data_science_lesson5_aichat\"},{\"changed_at\":\"2025-04-09 18:19:27 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-09 18:20:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-09 18:20:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-10 21:00:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

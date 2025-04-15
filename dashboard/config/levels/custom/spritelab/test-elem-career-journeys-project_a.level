@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2025-04-08T00:04:56.000Z",
   "level_num": "custom",
@@ -40,7 +41,7 @@
     "parent_level_id": 28361,
     "short_instructions": "It's time to create whatever you want!",
     "mini_rubric": "false",
-    "long_instructions": "##Code your Future!\r\n\r\n**1. Add a sprits & background** – Use the Costumes tab to customize.\r\n\r\n**2. Use an event** – Make the sprite respond to clicks or other actions.\r\n\r\n**3. Showcase your career** – Use say blocks to explain the job.\r\n\r\n**4. Enhance your project** – Try animations, sound, or movement.\r\n\r\n**5. Check your work** – Use the Project Checklist to make sure it’s complete.\r\n\r\n**6. Share!** - Share your career-inspired project!",
+    "long_instructions": "##Code your Future!\r\n\r\n**1. Add a sprites & background** – Use the Costumes tab to customize.\r\n\r\n**2. Use an event** – Make the sprite respond to clicks or other actions.\r\n\r\n**3. Showcase your career** – Use say blocks to explain the job.\r\n\r\n**4. Enhance your project** – Try animations, sound, or movement.\r\n\r\n**5. Check your work** – Use the Project Checklist to make sure it’s complete.\r\n\r\n**6. Share!** - Share your career-inspired project!",
     "encrypted": "false",
     "soft_buttons": [
       "leftButton",
@@ -65,9 +66,8 @@
     "enable_big_playspace": "true",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-08T00:04:56.630+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-project\\\"\"],\"cloned_from\":\"test-elem-career-journeys-project\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-08T00:04:56.630+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-project\\\"\"],\"cloned_from\":\"test-elem-career-journeys-project\"},{\"changed_at\":\"2025-04-10 15:18:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

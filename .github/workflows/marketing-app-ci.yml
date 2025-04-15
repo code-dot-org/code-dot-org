@@ -80,7 +80,6 @@ jobs:
           CONTENTFUL_API_HOST=cdn.contentful.com
           CONTENTFUL_TOKEN=${{ secrets.CONTENTFUL_TOKEN }}
           CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID=experience
-          CONTENTFUL_REVALIDATE_TOKEN=ci-revalidate-test
           HOSTNAME=0.0.0.0
           " > .env
 
