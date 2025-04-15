@@ -93,7 +93,7 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
               onClick={resetMiniApp}
               icon={{
                 iconStyle: 'solid',
-                iconName: 'rotate-right',
+                iconName: 'rotate-left',
               }}
               size={'xs'}
               type={'tertiary'}
