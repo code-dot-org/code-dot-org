@@ -41,7 +41,7 @@ describe('JoinLinkCopyButton', () => {
       />
     );
 
-    screen.getByText(`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}.`);
+    screen.getByText(`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}`);
     screen.getByRole('button', {name: 'Why?'});
   });
 
@@ -50,7 +50,7 @@ describe('JoinLinkCopyButton', () => {
       <JoinLinkCopyButton {...mockProps} loginType={SectionLoginType.clever} />
     );
 
-    screen.getByText(`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}.`);
+    screen.getByText(`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}`);
     screen.getByRole('button', {name: 'Why?'});
   });
 
@@ -77,7 +77,7 @@ describe('JoinLinkCopyButton', () => {
     );
     expect(analyticsReporter.sendEvent).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
-      {},
+      {source: 'teacherHomepage'},
       PLATFORMS.BOTH
     );
 
