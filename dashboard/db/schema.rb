@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2025_04_08_170908) do
-=======
 ActiveRecord::Schema.define(version: 2025_04_09_155126) do
->>>>>>> 847be9fbe3a (Add editor/console font size columns to UserPreferences table (#65157))
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
