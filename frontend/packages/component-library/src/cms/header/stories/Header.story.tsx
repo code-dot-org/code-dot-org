@@ -14,7 +14,7 @@ import Header, {HeaderProps} from '../Header';
 type Story = StoryObj<typeof Header>;
 
 export default {
-  title: 'DesignSystem/Header',
+  title: 'CMS/Header',
   component: Header,
   parameters: {
     a11y: {
