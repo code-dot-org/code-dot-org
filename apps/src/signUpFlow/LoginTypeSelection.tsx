@@ -5,7 +5,6 @@ import {
   Heading3,
   BodyThreeText,
 } from '@code-dot-org/component-library/typography';
-import classnames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect} from 'react';
 
@@ -343,7 +342,7 @@ const LoginTypeSelection: React.FunctionComponent<{
           <Heading3 className={style.headers}>
             {locale.or_sign_up_with_email()}
           </Heading3>
-          <div className={classnames(style.inputContainer)}>
+          <div className={style.inputContainer}>
             <div>
               <TextField
                 label={locale.email_address()}

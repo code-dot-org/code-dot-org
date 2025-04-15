@@ -102,7 +102,7 @@ export default function SchoolDataInputs({
   );
 
   return (
-    <div id={SCHOOL_INFO_ID} className={`${computedStyleClass}`}>
+    <div id={SCHOOL_INFO_ID} className={computedStyleClass}>
       {includeHeaders && (
         <div className={style.headerContainer}>
           <Heading2>{i18n.censusHeading()}</Heading2>
