@@ -44,6 +44,6 @@
 #####################
 
 # Should Approve changes to:
-/frontend/packages/component-library-styles/             @code-dot-org/component-library-engineering-reviewers @code-dot-org/component-library-design-reviewers
-/frontend/packages/component-library/                    @code-dot-org/component-library-engineering-reviewers @code-dot-org/component-library-design-reviewers 
-/frontend/packages/fonts/                                @code-dot-org/component-library-engineering-reviewers @code-dot-org/component-library-design-reviewers 
+/frontend/packages/component-library-styles/             @code-dot-org/component-library-engineering-reviewers
+/frontend/packages/component-library/                    @code-dot-org/component-library-engineering-reviewers 
+/frontend/packages/fonts/                                @code-dot-org/component-library-engineering-reviewers 
