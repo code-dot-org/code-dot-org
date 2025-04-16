@@ -243,7 +243,7 @@
     "@xterm/addon-image": "^0.8.0",
     "@xterm/xterm": "^5.5.0",
     "aws-sdk": "2.1231.0",
-    "blockly": "12.0.0-beta.3",
+    "blockly": "12.0.0-beta.4",
     "bootstrap-sass": "^3.4.1",
     "buffer": "^6.0.3",
     "canvg": "gabelerner/canvg",
