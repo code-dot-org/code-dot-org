@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-08 22:58:51 UTC",
+    "serialized_at": "2025-04-11 22:38:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -100,7 +100,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa-solid fa-video\"></i> **Video:** Show the short video, CS is Everything\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say**: Think about careers that work on ideas and things in the video.",
-        "progression_name": "Into video"
+        "progression_name": "Intro video"
       },
       "seeding_key": {
         "activity_section.key": "d716974e-2258-47b6-a0fd-1d831844d685",
@@ -169,7 +169,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Differentiation:** Level 8 has choices for students to expand their Sprite Lab skills.\n\nStudents do not need any of the skills in level 8 to finish their project but they are great extension ideas for those who are ready for a challenge and more coding! \n"
+            "markdown": "**Differentiation:** Level 9 has choices for students to expand their Sprite Lab skills.\n\nStudents do not need any of the skills in level 9 to finish their project but they are great extension ideas for those who are ready for a challenge and more coding! \n"
           }
         ]
       },
@@ -229,7 +229,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Into video"
+        "level_keys": [
+          "test-elem-career-journeys-video_a"
+        ],
+        "progression": "Intro video"
       },
       "bonus": false,
       "seeding_key": {
@@ -326,15 +329,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-elem-career-journeys-video-choice4_a"
-        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-elem-career-journeys-video-choice4_a"
+          "test-elem-career-journeys-video-journey"
         ],
         "lesson.key": "Career Journeys A",
         "lesson_group.key": "",
@@ -342,7 +342,7 @@
         "activity_section.key": "3825f657-3604-4824-853a-118fde4fd2c8"
       },
       "level_keys": [
-        "test-elem-career-journeys-video-choice4_a"
+        "test-elem-career-journeys-video-journey"
       ]
     },
     {
@@ -501,6 +501,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Version A Survey_a"
+        ],
         "progression": "Lesson Survey"
       },
       "bonus": false,
@@ -569,9 +572,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-elem-career-journeys-video-choice4_a",
+        "level.key": "test-elem-career-journeys-video-journey",
         "script_level.level_keys": [
-          "test-elem-career-journeys-video-choice4_a"
+          "test-elem-career-journeys-video-journey"
         ],
         "lesson.key": "Career Journeys A",
         "lesson_group.key": "",

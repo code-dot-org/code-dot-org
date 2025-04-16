@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-03-18T19:56:54.000Z",
   "level_num": "custom",
@@ -9,39 +10,30 @@
     "offer_browser_tts": "true",
     "panels": [
       {
-        "text": "<i class=\"fa-duotone fa-solid fa-list-music\"></i> **Music is made of patterns that play again and again.** Like a catchy ***chorus*** or a steady backbeat in the ***verses***.\n",
+        "text": "<i class=\"fa-duotone fa-solid fa-list-music\"></i> **Music is made of patterns that play again and again.** \n\n\nYou can use **functions** to reuse sections of code and build songs!\n",
         "imageUrl": "https://images.code.org/c4134a7f75e95803c50919e240387078-repeatWaves.png",
         "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
-        "layout": "text-top-center",
-        "fadeInOverPrevious": true
-      },
-      {
-        "text": "The **chorus** is the catchy and memorable part of the song that is repeated. Look at this example of a simple song where the chorus plays twice.",
-        "imageUrl": "https://images.code.org/27bad14f4b2dcd614b40682df637a301-Lesson 2 Level 2a (7).png",
-        "key": "music-coding-intro-functions-panel-87999923-90be-4ba3-b5cd-5e9bd22da67c",
-        "layout": "text-top-center",
-        "typing": true,
-        "fadeInOverPrevious": true
-      },
-      {
-        "text": "The **verses** build the story in the song. \n\nEach verse is a little different. There are two in this song example.",
-        "imageUrl": "https://images.code.org/4f506c6b231b88f65f47200cfa6333a6-Lesson 2 Level 2a (5).png",
-        "key": "music-coding-intro-functions-panel-49030dba-ec10-4f22-8e94-295c2c104f6d",
         "layout": "text-top-center",
         "fadeInOverPrevious": true,
         "typing": true
       },
       {
-        "text": "To build songs, you can use **functions** to reuse sections of code!\n\n- Functions are **defined separately** from when run. \n\n- **Call functions** from the main program under `when run`.",
-        "imageUrl": "https://images.code.org/ef1bb3bafd1a7bf50a78cfbfa6943f63-music-panels-function-drag.gif",
+        "text": "###First, **name** your function. \n\n###Then, **define** your function by adding code into it. ",
+        "imageUrl": "https://images.code.org/292fa3af9699877dd28a8746e174e1ea-FunctionGif1.gif",
         "key": "music-coding-intro-functions-panel-c494188a-95c3-4c6a-bee1-130500907756",
         "typing": false,
-        "fadeInOverPrevious": true
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###**Call** your function by bringing it into the main program! \n\n**Every time the function is called, it will play the code you defined it with.**",
+        "imageUrl": "https://images.code.org/4bc7894943a70648d856396d104d3c0b-FunctionGif2.gif",
+        "key": "music-coding-intro-functions-panel_launch-1effe82f-f674-4edd-b3bb-d4b2726cbe4d",
+        "layout": "text-bottom-right"
       }
     ],
     "name_suffix": "_launch"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:54.024+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:54.024+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel\"},{\"changed_at\":\"2025-04-14 18:00:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 18:02:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 18:34:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 18:44:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 18:53:42 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 20:13:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 20:14:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 20:16:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 20:25:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 20:28:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:22:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:23:15 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:56:39.000Z",
   "level_num": "custom",
@@ -84,6 +85,53 @@
                         }
                       }
                     }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "U[TROR#1T/kkdIGvhR55",
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "^C8YoI!oXY:N|Xv9-EHs",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "chainsmokers_coldplay_something_just_like_this/drums_drop_beat"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "4)gmJEN=hUbEt:gGKUoi",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
+                                "fields": {
+                                  "sound": "chainsmokers_coldplay_something_just_like_this/synth_drop_1"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "BBI=3cBb`%(e#0yM.1Eu",
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "chainsmokers_coldplay_something_just_like_this/vocals_hook_high"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -130,6 +178,7 @@
           {
             "kind": "block",
             "type": "play_sound_at_current_location_simple2",
+            "id": "w`@T?q/eD5YPshpz3BSR",
             "extraState": {
               "disableNextConnection": false
             },
@@ -141,6 +190,10 @@
           {
             "kind": "block",
             "type": "play_rest_at_current_location_simple2",
+            "id": "Sn#zCXvzwKusNEaxNOxe",
+            "extraState": {
+              "disableNextConnection": false
+            },
             "fields": {
               "rest_duration": "<field name=\"rest_duration\">1</field>"
             },
@@ -149,6 +202,7 @@
           {
             "kind": "block",
             "type": "play_sounds_together",
+            "id": "PwQW[U[#a9(0XxV-P?2?",
             "extraState": {
               "disableNextConnection": false
             },
@@ -157,6 +211,7 @@
           {
             "kind": "block",
             "type": "play_sounds_sequential",
+            "id": "iPn8PY=De}SehQ|#5D7d",
             "extraState": {
               "disableNextConnection": false
             },
@@ -165,54 +220,12 @@
           {
             "kind": "block",
             "type": "repeat_simple2",
+            "id": ".+Q(|wX8]{cD$pi8!imf",
             "extraState": {
               "disableNextConnection": false
             },
             "fields": {
               "times": 1
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "play_sounds_together",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "inputs": {
-              "code": {
-                "block": {
-                  "type": "play_sound_at_current_location_simple2",
-                  "extraState": {
-                    "disableNextConnection": false
-                  },
-                  "fields": {
-                    "sound": "chainsmokers_coldplay_something_just_like_this/drums_drop_beat"
-                  },
-                  "next": {
-                    "block": {
-                      "type": "play_sound_at_current_location_simple2",
-                      "extraState": {
-                        "disableNextConnection": false
-                      },
-                      "fields": {
-                        "sound": "chainsmokers_coldplay_something_just_like_this/synth_drop_1"
-                      },
-                      "next": {
-                        "block": {
-                          "type": "play_sound_at_current_location_simple2",
-                          "extraState": {
-                            "disableNextConnection": false
-                          },
-                          "fields": {
-                            "sound": "chainsmokers_coldplay_something_just_like_this/vocals_hook_high"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
             },
             "enabled": true
           }
@@ -223,10 +236,10 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "long_instructions": "####Make the beat drop!\r\n\r\n1. Add a beat drop to the end\r\n\t- You can use the beat drop in the toolbox or make your own.\r\n2. Press Run to hear your creation\r\n3. Press Continue when you are done experimenting",
+    "long_instructions": "####<i class=\"fa-solid fa-sparkles\"></i> Get inspired!\r\n\r\n1. Play this beat drop\r\n2. Explore and tinker with the code\r\n3. Press Continue when you are done ",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "display_name": "Something Just Like This",
     "bubble_choice_description": "By The Chainsmokers & Coldplay",
     "validations": [
@@ -243,10 +256,16 @@
       }
     ],
     "name_suffix": "_launch",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:39.192+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop3\\\"\"],\"cloned_from\":\"music-coding-intro-drop3\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:39.192+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop3\\\"\"],\"cloned_from\":\"music-coding-intro-drop3\"},{\"changed_at\":\"2025-04-09 17:27:28 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:22:03 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:25:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:26:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:28:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:28:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:29:09 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

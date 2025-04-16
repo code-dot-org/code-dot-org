@@ -1,0 +1,38 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-04-14T23:13:40.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're coding a tool that generates a music playlist for a friend. The function is supposed to print a message that says it's creating a playlist for the person whose name you pass in. But right now, the code crashes, and your program can't even get started!\r\n\r\n1. Look at the function `make_playlist(user)`. It's supposed to print a message that uses the person's name.\r\n\r\n2. Try running the code. Read the error message carefully.\r\n\r\n3. Figure out what's wrong and fix the function so it prints the message correctly.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can only use a parameter inside the function where it’s defined. And you must use the exact name of the parameter — spelling matters!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_2025",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def make_playlist(user):\n  # Print a message that a playlist is being created for a user\n  print(\"Making a playlist for \" + name)\n\nmake_playlist(\"Jordan\")\n\nprint(\"Playlist created for \" + user)\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nziEqtwNc8szNOEvpyQWrLMnWV60h14pH\ng5kRKu4TAXhYXOH2Q8pyfTGQ4NmojbYmjyPkQ5n9Y53/3CENxNKom3RnrVhQ\n0OscU9hW1ww2gXKJmxlC/RXQadF4r13szVZxxQyd/ZEKA7gha57OIbe2aH8b\noUXyp4/TZWOPNeIfzch6FzwWyOP4PAewoX4nTS7orf8+mMJbDTO1kgj+j+GT\nhsE8u0ylvdE2ZhekFofLiV2QxL2wOkA6pftuk0losI64rWIBzzu82364c/B2\ng1I7QvuSxVo+u2Ud8Mzx0GzSyMqDUNBdQCQaF2IfbRZayC77mWp4yoquXxIj\n7/Zmt1bAMggiCSUexh1YXAz7UXm6xMhx\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:40.262+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level3_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level3_2025-launch\"},{\"changed_at\":\"2025-04-15 21:17:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 21:19:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 21:20:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 21:20:48 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

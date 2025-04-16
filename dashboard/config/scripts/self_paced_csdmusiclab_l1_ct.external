@@ -3,84 +3,87 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Course Structure
+# Computational Thinking
 
-<div style="display: flex; align-items: center; border: 2px solid black; border-radius: 20px; padding: 20px 10px; margin: 20px 0;">
+#### In the last level, you learned more about Explore-Practice-Synthesize-Project as a **structure** for a gradual release of responsibility for students.
 
-    
-<img src="https://images.code.org/dbedbfcaab19f5e6b172d54f0a4cdf51-image-1740597203712.png" 
-         style="width: auto; height: 70px; margin-right: 15px;" 
-         alt="An icon of a teacher at a board.">
+#### In this level, we'll introduce **computational thinking**. Computational thinking is an **approach** to computer science that centers around four key practices that students espouse when programming: **decomposition, pattern recognition, abstraction,** and **algorithms**.
 
-    
-<div style="background-color: #FFFFFF; border-radius: 20px; color: #000000; width: 90%; padding: 10px;">
-        <h3 style="margin: 0;"><b>Role of the Teacher</b></h3>
-        <p style="color: black; line-height: 1.25; font-size: 18px; margin: 5px 0 0 0;">
-            All lessons within the unit are intended to be <strong>facilitated by a teacher</strong>. These lessons are <strong>not designed as self-paced experiences for students</strong> to work through at their own pace.
-        </p>
+<div style="width: 100%; max-width: 95%; box-sizing: border-box; border: 2px solid #009EB0; padding: 10px; border-radius: 10px; margin: 30px 20px 20px 30px;">
+  <div style="width: 100%; max-width: 100%; box-sizing: border-box; margin-bottom: 5px; padding: 20px 10px 10px 10px; background-color: #F7F8FA; border-radius: 10px; text-align: center;">
+    <p style="font-size: 16pt; font-weight: bold; margin-bottom: 10px;">What is Computational Thinking?</p><br>
+    <p style="font-size: 14pt; margin-bottom: 15px;">Computational thinking is an interrelated set of skills and practices for solving complex problems. <sup>1</sup></p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 10px; margin-bottom: 5px; width: 100%; max-width: 100%; box-sizing: border-box;">
+    <!-- Decomposition -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/199f369578811ff11f8dc88b6d40f3f5-image-1736535589828.png" alt="A flowchart showing a central item being broken down into three." style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Decomposition</p>
+      <p style="font-size: 14pt; margin: 0;">Breaking down a complex problem or system into smaller, more manageable parts. <sup>2</sup></p>
     </div>
+    <!-- Pattern Recognition -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/bcb4304d866a4ec46e036423fc0d79b0-image-1736535593030.png" alt="A magnifying glass showing three repeating items." style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Pattern Recognition</p>
+      <p style="font-size: 14pt; margin: 0;">Looking for similarities among and within problems.<sup>7</sup</p>
+    </div>
+    <!-- Abstraction -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/53e922f8a75ee840f0e7989d9cfdfd35-image-1736535595178.png" alt="A highlighter marking up a piece of paper" style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Abstraction</p>
+      <p style="font-size: 14pt; margin: 0;">Focusing on the important information only, ignoring irrelevant detail. <sup>2</sup></p>
+    </div>
+    <!-- Algorithms -->
+    <div style="text-align: center; width: 23%; background-color: #F7F8FA; padding: 15px; border-radius: 10px;">
+      <img src="https://images.code.org/c41c2a800a5ad39838d6d7d37325f288-image-1736535608844.png" alt="A flowchart showing multiple steps" style="width: 40px; height: 40px; margin-bottom: 10px;">
+      <p style="font-size: 14pt; font-weight: bold; margin-bottom: 10px;">Algorithms</p>
+      <p style="font-size: 14pt; margin: 0;">Developing a step-by-step solution to the problem, or the rules to follow to solve the problem. <sup>2</sup></p>
+    </div>
+  </div>
+</div>
 
+## Computational Thinking in the Curriculum
+
+#### The Programming with Music Lab curriculum prompts students to utilize the above practices while they code. While it's not necessary to teach each of these practices in-depth, it will be valuable to recognize them and model them in your thinking.
+
+#### For example:
+
+<!-- Quote 1 (image left, bubble right) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+  <img src="https://images.code.org/4086844cf82c87eb1c9faf23d2d5f227-image-1744318038281.png" alt="Teacher avatar" style="width: 70px; height: 70px; border-radius: 50%;">
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 20px 0;">
+  Hm, this coding level seems pretty complex. I'm going to <b>decompose it</b>, or break it down, into a couple of simple steps that I can check off one-by-one to make it easier.
+  </div>
+</div>
+
+<!-- Quote 2 (image right, bubble left) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px; flex-direction: row-reverse;">
+  <img src="https://images.code.org/aceef16fd20a958bf4ea438db569fad1-image-1744318027547.png" alt="Teacher avatar" style="width: 70px; height: 70px; border-radius: 50%;">
+  <div style="background-color: #DECEEA; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 0 20px;">
+    I've seen this kind of bug before. Let me look for a <b>pattern</b> so I can reuse a solution that worked last time.
+  </div>
+</div>
+
+<!-- Quote 3 (image left, bubble right) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+  <img src="https://images.code.org/2cd1158362bb55adf308b2a5c8c352a5-image-1744318029997.png" alt="Teacher avatar" style="width: 70px; height: 70px; border-radius: 50%;">
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 20px 0;">
+    There’s a lot happening in this code. I'm going to use <b>abstraction</b> by focusing only on what the blocks do together, not every single detail.
+  </div>
+</div>
+<!-- Quote 4: Algorithms (image right, bubble left) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px; flex-direction: row-reverse;">
+  <img src="https://images.code.org/65067c2c052f9307003507603b1d0d1f-image-1744318025103.png" alt="Teacher avatar" style="width: 70px; height: 70px; border-radius: 50%;">
+  <div style="background-color: #DECEEA; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 0 20px;">
+  To solve this, I’m going to come up with a list of steps the computer can follow — almost like a recipe. That’s called building an <b>algorithm</b>.
+  </div>
 </div>
 
 
+#### In later sections of this module, we'll call out each of the computational thinking practices when they're applied to get you in the habit of noticing them.
+___
 
-## Lessons
-#### The lessons are designed for **45-minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.
-
-### **Lesson Components**
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Warm Up</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-#### Each lesson starts with a brief warm-up, offering a shared experience to highlight the need for the lesson's skills and concepts. 
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💃 Activity</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-#### Students spend most of their time on lesson activities, exploring new computing concepts. These activities are scaffolded to provide just-in-time support, helping students build the knowledge and skills needed for computing.
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🏁 Wrap Up</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-#### Every lesson ends with a wrap-up, allowing students to reflect on key skills and concepts. 
-</p></div>
-</details>
-
-### **Lesson Types**
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">✍🏽 Non-Programming Lessons</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-#### Non-programming lessons emphasize process skills and computing concepts, mostly through offline activities guided by an activity sheet. They include opportunities for group collaboration, discussion, and individual reflection, with some online components.
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">👩‍💻 Project Lessons</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-#### ***Mini-projects*** let students apply their learning in an open-ended way, practicing new skills. These flexible projects appear throughout the unit and can be adjusted based on available class time.
-
-#### ***Projects*** are multi-day, open-ended lessons at the end of each unit, where students use learned skills to plan, create, and reflect.
-</p></div>
-</details>
-
-
+##### <sup>1</sup>“What Is Computational Thinking?” Digital Promise, 13 May 2022, <a href="https://digitalpromise.org/initiative/computational-thinking/computational-thinking-for-next-generation-science/what-is-computational-thinking/" target="blank" rel="noopener noreferrer">https://digitalpromise.org/initiative/computational-thinking/computational-thinking-for-next-generation-science/what-is-computational-thinking/</a>. 
+##### <sup>2</sup>“What Is Computational Thinking? - Introduction to Computational Thinking.” BBC Bitesize, BBC, 5 Sept. 2023, <a href="www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1" target="blank" rel="noopener noreferrer">www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1</a>. 
 MARKDOWN

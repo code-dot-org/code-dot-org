@@ -9,7 +9,8 @@ module AichatOpenaiHelper
   API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
 
-  def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, encrypted_channel_id, user_id)
+  def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
+    encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id)
     messages = format_messages(
       aichat_model_customizations,
       stored_messages,
@@ -23,7 +24,7 @@ module AichatOpenaiHelper
       messages,
       aichat_model_customizations['temperature'].to_f * 2
     )
-    report_usage_metrics(usage, messages, level_id, encrypted_channel_id, user_id)
+    report_usage_metrics(usage, messages, level_id, project_id, user_id)
     response
   end
 
@@ -39,7 +40,7 @@ module AichatOpenaiHelper
     )
 
     [
-      {role: "system", content: instructions},
+      {role: "system", content: [{type: "text", text: instructions}]},
       *stored_messages.map {|message| format_message(message, encrypted_channel_id, level_name)},
       format_message(new_message, encrypted_channel_id, level_name)
     ]
@@ -77,20 +78,32 @@ module AichatOpenaiHelper
   end
 
   # Reports and logs usage metrics to Cloudwatch
-  def self.report_usage_metrics(usage, messages, level_id, encrypted_channel_id, user_id)
+  def self.report_usage_metrics(usage, messages, level_id, project_id, user_id)
     return unless usage
 
-    filtered = messages.reject {|message| message[:content].is_a?(String)}
-    messages_with_assets_count = filtered.count {|message| message[:content].any? {|c| c[:type] != 'text'}}
-    pdfs_count = filtered.sum {|message| message[:content].count {|c| c[:type] == 'file'}}
-    images_count = filtered.sum {|message| message[:content].count {|c| c[:type] == 'image_url'}}
+    messages_with_assets_count = messages.count do |message|
+      message[:content].any? {|c| c[:type] != 'text'}
+    end
+    pdfs_count = messages.sum do |message|
+      message[:content].count {|c| c[:type] == 'file'}
+    end
+    images_count = messages.sum do |message|
+      message[:content].count {|c| c[:type] == 'image_url'}
+    end
 
     is_multimodal = messages_with_assets_count > 0
 
+    # Pull out token counts and calculate costs
+    prompt_tokens = usage['prompt_tokens'] || 0
+    completion_tokens = usage['completion_tokens'] || 0
+    cached_tokens = usage.dig('prompt_tokens_details', 'cached_tokens') || 0
+
     input_rate = 0.15 / 1_000_000 # $0.15 per million tokens
+    cached_input_rate = 0.075 / 1_000_000 # $0.075 per million tokens
     output_rate = 0.60 / 1_000_000 # $0.60 per million tokens
-    input_cost = usage['prompt_tokens'] * input_rate
-    output_cost = usage['completion_tokens'] * output_rate
+
+    input_cost = (prompt_tokens * input_rate) + (cached_tokens * cached_input_rate)
+    output_cost = completion_tokens * output_rate
     total_cost = input_cost + output_cost
 
     log_payload = {
@@ -109,16 +122,18 @@ module AichatOpenaiHelper
         total: "$#{format("%.6f", total_cost)}"
       },
       levelId: level_id,
-      channelId: encrypted_channel_id,
+      projectId: project_id,
       userId: user_id
     }
 
-    CDO.log.info log_payload.to_json.to_s if DCDO.get('log_aichat_openai_usage', true)
+    CDO.log.info log_payload.to_json.to_s if DCDO.get('log_aichat_openai_usage', false)
 
-    metrics = ['prompt_tokens', 'completion_tokens'].map do |key|
+    metrics = [
+      ['PromptTokens', prompt_tokens], ['CompletionTokens', completion_tokens], ['CachedTokens', cached_tokens]
+    ].map do |key, value|
       {
-        metric_name: "AichatOpenaiRequest.#{key.camelize(:upper)}",
-        value: usage[key],
+        metric_name: "AichatOpenaiRequest.#{key}",
+        value: value,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: [

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:56:54.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "#### <i class=\"fa-duotone fa-regular fa-file-music\"></i> Create the chorus\r\n\r\n\r\nAdd sounds to the [chorus](#clickable=id-up-left:chorus_workspace) function. \r\n \r\n *Hint: Don't forget the [play together](#clickable=id-up-left:play_sounds_together) block if you want to layer the sounds*.\r\n\r\n\r\n",
+    "long_instructions": "#### <i class=\"fa-duotone fa-regular fa-file-music\"></i> Name & define the function!\r\n\r\n1. Change the function's name to `chorus`.\r\n2. Add sounds into the [function](#clickable=id-up-left:chorus_workspace) \r\n2. Press Run and watch how the sounds in the function play every time it is called. \r\n\r\n---\r\n\r\n*Timeline example:*\r\n\r\n![expandable](https://images.code.org/bd795739062a4432ffe154080d445196-image-1744666281605.png)\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -56,7 +57,7 @@
                   "deletable": false,
                   "movable": false,
                   "extraState": {
-                    "name": "chorus"
+                    "name": "name"
                   },
                   "next": {
                     "block": {
@@ -120,7 +121,7 @@
                           "id": "m/AZZXb*QTEZ(0ytQ+Lg",
                           "movable": false,
                           "extraState": {
-                            "name": "chorus",
+                            "name": "name",
                             "disableNextConnection": true
                           }
                         }
@@ -136,15 +137,27 @@
               "x": 270,
               "y": 50,
               "deletable": false,
-              "editable": false,
               "extraState": {
                 "procedureId": "chorus_workspace",
                 "initialDeleteConfig": false,
-                "initialEditConfig": false,
+                "initialEditConfig": true,
                 "initialMoveConfig": true
               },
               "fields": {
-                "NAME": "chorus"
+                "NAME": "name"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "z;sDgk--w*7#|^u*Rhv,",
+                    "deletable": false,
+                    "movable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    }
+                  }
+                }
               }
             }
           ]
@@ -152,7 +165,7 @@
         "procedures": [
           {
             "id": "chorus_workspace",
-            "name": "chorus",
+            "name": "name",
             "returnTypes": null
           }
         ]
@@ -288,16 +301,48 @@
           "vocals_chorus_2",
           "vocals_beautiful"
         ]
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play_sound_at_current_location_simple2",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "alessia_cara_scars_to_your_beautiful/drums_chorus"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "play_sounds_together",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
       }
     },
     "name_suffix": "_launch",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hint_prompt_attempts_threshold": "1",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:54.429+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-define\\\"\"],\"cloned_from\":\"music-coding-intro-functions-define\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:54.429+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-define\\\"\"],\"cloned_from\":\"music-coding-intro-functions-define\"},{\"changed_at\":\"2025-04-14 20:31:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 20:32:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:25:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:26:30 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:29:51 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:30:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:31:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:42:08 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-15 22:06:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

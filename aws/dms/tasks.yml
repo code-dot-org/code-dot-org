@@ -64,7 +64,8 @@ cron-pii:
 - dashboard.aidiff_messages
 - dashboard.aidiff_threads
 - dashboard.lti_deployments_user_identities
-- dashboard.user_level_evaluations
+- dashboard.student_work_evaluations
+- dashboard.ai_interaction_feedbacks
 
 
 # All tables in this section are exported to the Redshift `dashboard_production` schema. Do NOT export columns containing
@@ -91,6 +92,8 @@ cron:
     remove_column: [other_content]
 - dashboard.rubrics
 - dashboard.rubric_ai_evaluations
+- dashboard.learning_goals
+- dashboard.learning_goal_evidence_levels
 - dashboard.level_sources_multi_types
 - dashboard.paired_user_levels
 - dashboard.parental_permission_requests:

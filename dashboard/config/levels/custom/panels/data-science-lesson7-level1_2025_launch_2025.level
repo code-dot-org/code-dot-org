@@ -1,0 +1,52 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-04-14T23:15:31.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Copy the Dataset\n\n- Click **File** -> **Make a copy**\n- Save it to your personal account",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Duplicate the Data\n\n- Make a new tab and duplicate your data\n- Every new chart should have a new tab\n- Rename the tab to reflect the purpose of your chart",
+        "imageUrl": "",
+        "key": "data-science-lesson7-level1_2025_launch_2025-ab5a1fd9-ffed-4919-af24-b52d392408be"
+      },
+      {
+        "text": "### Make a Chart\n- Highlight a column\n- Click **Insert** -> **Chart** \n",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Create a Bar Chart\n- Click **Chart type**\n- Select **Column chart**",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
+        "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Change Title and Axis Label\n\nDouble click on the title to rename it",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": true
+      }
+    ],
+    "name_suffix": "_2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:31.508+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-level1_2025_launch\\\"\"],\"cloned_from\":\"data-science-lesson7-level1_2025_launch\"},{\"changed_at\":\"2025-04-15 19:13:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-15 19:14:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-15 19:19:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

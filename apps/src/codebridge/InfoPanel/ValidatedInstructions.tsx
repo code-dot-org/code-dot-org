@@ -2,6 +2,7 @@ import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {getSystemMessage} from '@codebridge/Console/MessageHelpers';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import classNames from 'classnames';
 import React, {useContext, useEffect, useMemo, useRef} from 'react';
@@ -178,7 +179,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeSystemMessage(codebridgeI18n.cannotTest(), appType);
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.cannotTest(), appType)
+        );
     }
   };
 
@@ -189,7 +192,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeSystemMessage(codebridgeI18n.cannotStop(), appType);
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.cannotStop(), appType)
+        );
       dispatch(setIsValidating(false));
     }
   };

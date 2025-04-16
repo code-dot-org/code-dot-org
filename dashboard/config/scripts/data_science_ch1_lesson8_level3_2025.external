@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 ###At the following link:
 
-###[CODAP - Pizza Choice](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FdWwulootxTIlVBkHuHWu%2Ffile.json)
+###[Google Sheets - Pizza Choice](https://docs.google.com/spreadsheets/d/1MMsZwVwDaGNSol6RMsQk9NklsYBtgQyiEIxuSwmykIA/edit?usp=drive_link)
 
 ####For each response, decide if you want to:
 - ####Keep it the same
@@ -15,5 +15,5 @@ markdown <<MARKDOWN
 - ####Change it
 ####Put your cleaned data in the second column--and graph it!
 
-![](https://images.code.org/6c462ee743bd36e5570e7467da253e03-image-1721315101092.png)
+![Data set showing pizza topping preferences](https://images.code.org/cb75c03c37adc495d1449c90558e41db-image-1744317884747.40.15 PM.png)
 MARKDOWN

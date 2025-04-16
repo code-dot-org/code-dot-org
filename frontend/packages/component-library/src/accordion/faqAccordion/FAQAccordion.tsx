@@ -1,5 +1,6 @@
-import {default as DOMPurify} from 'dompurify';
 import {ReactNode} from 'react';
+import {JsonLd} from 'react-schemaorg';
+import type {FAQPage} from 'schema-dts';
 
 import Accordion, {AccordionProps} from './../Accordion';
 
@@ -43,21 +44,18 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({
 
       {/* JSON-LD for structured data. Needed for Google SEO.
       (see https://developers.google.com/search/docs/appearance/structured-data/faqpage#json-ld) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: items.map(item => ({
-              '@type': 'Question',
-              name: DOMPurify.sanitize(item.questionString),
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: DOMPurify.sanitize(item.answerString),
-              },
-            })),
-          }),
+      <JsonLd<FAQPage>
+        item={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: items.map(item => ({
+            '@type': 'Question',
+            name: item.questionString,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.answerString,
+            },
+          })),
         }}
       />
     </>

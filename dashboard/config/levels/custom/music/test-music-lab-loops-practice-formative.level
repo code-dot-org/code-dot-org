@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-03-13T22:02:58.000Z",
   "level_num": "custom",
@@ -32,10 +31,13 @@
               "y": 30,
               "deletable": false,
               "movable": false,
+              "editable": false,
               "next": {
                 "shadow": {
                   "type": "play_sounds_together",
                   "id": "B[(O9UEy=9w,sq3Ip{@,",
+                  "deletable": false,
+                  "editable": false,
                   "extraState": {
                     "disableNextConnection": false
                   },
@@ -44,6 +46,8 @@
                       "shadow": {
                         "type": "play_sounds_sequential",
                         "id": "m(Np,zFzxlMosk*KEnhK",
+                        "deletable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
@@ -52,6 +56,8 @@
                             "shadow": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "mWvf4qzOLf~HmzQuyBe-",
+                              "deletable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -62,6 +68,8 @@
                                 "shadow": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "V(Fs!zfAvG35ht2@D+4-",
+                                  "deletable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": true
                                   },
@@ -77,6 +85,8 @@
                           "shadow": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": "MoHeW9[mqL8BPQ}Vb=$i",
+                            "deletable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": true
                             },
@@ -92,6 +102,8 @@
                     "shadow": {
                       "type": "play_sounds_together",
                       "id": "fTw)3_NP.8-mLy7U|Wtc",
+                      "deletable": false,
+                      "editable": false,
                       "extraState": {
                         "disableNextConnection": false
                       },
@@ -100,6 +112,8 @@
                           "shadow": {
                             "type": "play_sounds_sequential",
                             "id": "v|,mW!PX]dG!w-T.]MNh",
+                            "deletable": false,
+                            "editable": false,
                             "extraState": {
                               "disableNextConnection": false
                             },
@@ -108,6 +122,8 @@
                                 "shadow": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "`STY#v{@},B+~Xy%chLq",
+                                  "deletable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -118,6 +134,8 @@
                                     "shadow": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "Moa;EZcO~CE#0B{AaWMd",
+                                      "deletable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": true
                                       },
@@ -133,6 +151,8 @@
                               "shadow": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "dlCv7_vNV`v5Nq|$uN8Z",
+                                "deletable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": true
                                 },
@@ -148,6 +168,8 @@
                         "shadow": {
                           "type": "play_sounds_together",
                           "id": "Qt@f90!iX1wM[E]h!%*{",
+                          "deletable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": true
                           },
@@ -156,6 +178,8 @@
                               "shadow": {
                                 "type": "play_sounds_sequential",
                                 "id": "UULKhxlN;:ZY9|O6]x_m",
+                                "deletable": false,
+                                "editable": false,
                                 "extraState": {
                                   "disableNextConnection": false
                                 },
@@ -164,6 +188,8 @@
                                     "shadow": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "^y+S72:glWq88nRUto|4",
+                                      "deletable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": false
                                       },
@@ -174,6 +200,8 @@
                                         "shadow": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": "-+Ly;]49cAs$I,Cm0o!(",
+                                          "deletable": false,
+                                          "editable": false,
                                           "extraState": {
                                             "disableNextConnection": true
                                           },
@@ -189,6 +217,8 @@
                                   "shadow": {
                                     "type": "play_sound_at_current_location_simple2",
                                     "id": "bi(Lphu_0nn^cEOTeEx.",
+                                    "deletable": false,
+                                    "editable": false,
                                     "extraState": {
                                       "disableNextConnection": true
                                     },
@@ -215,6 +245,8 @@
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
+              "deletable": false,
+              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               }
@@ -227,6 +259,8 @@
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
+              "deletable": false,
+              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               },
@@ -242,6 +276,8 @@
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
+              "deletable": false,
+              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               },
@@ -257,6 +293,8 @@
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
+              "deletable": false,
+              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               },
@@ -272,6 +310,8 @@
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
+              "deletable": false,
+              "editable": false,
               "extraState": {
                 "disableNextConnection": false
               },
@@ -319,7 +359,8 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-13T22:02:58.273+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-formative\\\"\"],\"cloned_from\":\"music-lab-loops-practice-formative\"},{\"changed_at\":\"2025-04-06 02:06:13 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-08 14:10:25 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-13T22:02:58.273+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-practice-formative\\\"\"],\"cloned_from\":\"music-lab-loops-practice-formative\"},{\"changed_at\":\"2025-04-06 02:06:13 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-08 14:10:25 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-04-09 22:57:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,6 +1,6 @@
 name 'programming-fundamentals-lesson4-level5_2025-launch'
 display_name 'Do the Math!'
-description 'Choose one of the scenarios where you\'ll use math operations on two numbers stored in variables. Try out addition, subtraction, multiplication, and division — and use `print()` to show each result.'
+description 'Choose **ONE** of the scenarios, where you\'ll use math operations on two numbers stored in variables. Try out addition, subtraction, multiplication, and division — and use `print()` to show each result.'
 
 sublevels
 level 'programming-fundamentals-lesson4-level5a_2025-launch'

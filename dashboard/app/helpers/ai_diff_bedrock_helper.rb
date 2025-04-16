@@ -165,6 +165,30 @@ module AiDiffBedrockHelper
     response = create_bedrock_client.retrieve_and_generate(
       config
     )
+
+    format_rag_response(response)
+  end
+
+  def self.format_rag_response(response)
+    text = response.output.text
+
+    # Remove useless references such as '(Sources 1 and 7)' from the response
+    text.gsub!(/ ?\([Ss]ource[^)]+\)/, '')
+
+    # Gather and append links
+    reference_urls = response.citations.flat_map do |citation|
+      citation.retrieved_references.map do |ref|
+        ref.metadata&.[]('url')
+      end
+    end.sort.uniq
+
+    if reference_urls.any?
+      text << "\n\n**See also:**"
+      reference_urls.each_with_index do |url, index|
+        text << "\n- [Link #{index+1}](#{url})"
+      end
+    end
+
     response
   end
 end

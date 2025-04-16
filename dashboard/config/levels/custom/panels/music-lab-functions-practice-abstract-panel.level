@@ -1,6 +1,5 @@
 <Panels>
   <config><![CDATA[{
-  "published": true,
   "game_id": 73,
   "created_at": "2025-03-19T23:33:15.000Z",
   "level_num": "custom",
@@ -49,8 +48,10 @@
         "fadeInOverPrevious": true,
         "typing": true
       }
-    ]
+    ],
+    "display_name": "Abstraction"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-19T23:33:15.764+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-parallel-panels\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-parallel-panels\"},{\"changed_at\":\"2025-03-19 23:33:32 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:14:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:15:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:17:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:20:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-19T23:33:15.764+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-parallel-panels\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-parallel-panels\"},{\"changed_at\":\"2025-03-19 23:33:32 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:14:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:15:55 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:17:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-03 19:20:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-10 04:29:38 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

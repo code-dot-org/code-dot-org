@@ -1,0 +1,33 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-04-14T23:15:31.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Make a Pie Chart\n- Highlight a column\n- Click **Insert** -> **Chart** \n",
+        "imageUrl": "https://images.code.org/e4bf6884d77e699e4c8a8f9ed38e4528-piechart.gif",
+        "key": "hardware-components-3d887b32-d501-4032-b990-2a51ae5b4de8",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Change Title and Axis Label\n\nDouble click on the title to rename it",
+        "imageUrl": "https://images.code.org/ab139129b976d92b4a59bd13b0202068-addtitle.gif",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": true
+      }
+    ],
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:31.882+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-panel3_2025_launch\\\"\"],\"cloned_from\":\"data-science-lesson7-panel3_2025_launch\"}]"
+}]]></config>
+</Panels>
