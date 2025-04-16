@@ -94,7 +94,12 @@ describe('SectionList', () => {
             createRoutesFromElements([
               <Route
                 path={TEACHER_NAVIGATION_PATHS.home}
-                element={<SectionList showHiddenOnly={false} />}
+                element={
+                  <SectionList
+                    showHiddenOnly={false}
+                    studioUrlPrefix="https://studio.code.org"
+                  />
+                }
               />,
             ]),
             {initialEntries: [initialRoute], basename: '/teacher_dashboard'}

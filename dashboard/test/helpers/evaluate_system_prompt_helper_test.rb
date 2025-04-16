@@ -21,5 +21,6 @@ class AiSystemPrompts::EvaluateSystemPromptHelperTest < ActionView::TestCase
     assert_includes system_prompt, 'Write a loop.'
     assert_includes system_prompt, 'no tests'
     assert_includes system_prompt, @level_instructions
+    refute_includes system_prompt, 'skillEvaluations'
   end
 end

@@ -4,6 +4,8 @@ import imageFile from '@public/images/image-component.png';
 import {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
+import Video from '@/video';
+
 import HeroBanner from './../HeroBanner';
 
 export default {
@@ -22,6 +24,7 @@ export const Default: Story = {
     subHeading: 'Empowering the next generation of coders',
     description:
       'Join millions of students learning computer science around the world.',
+    VideoComponent: Video,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -40,6 +43,7 @@ export const WithImage: Story = {
       altText: 'Decorative image for hero section',
       className: 'custom-image-class',
     },
+    VideoComponent: Video,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -58,6 +62,7 @@ export const WithVideo: Story = {
       youTubeId: 'dQw4w9WgXcQ',
       videoTitle: 'Watch our intro video',
     },
+    VideoComponent: Video,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -83,6 +88,7 @@ export const WithPartnerAndCTA: Story = {
       text: 'Learn More',
       href: '#',
     },
+    VideoComponent: Video,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -98,6 +104,7 @@ export const TextOnly: Story = {
   args: {
     heading: 'Minimalist Hero',
     subHeading: 'Simple and elegant',
+    VideoComponent: Video,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -114,6 +121,8 @@ export const LongContent: Story = {
       'Subheading can also be multiline and should be styled correctly across breakpoints.',
     description:
       'The description here is intentionally long to ensure text flows properly across viewports and doesn’t break layout.',
+
+    VideoComponent: Video,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -134,6 +143,7 @@ export const WithBackgroundColor: Story = {
       src: imageFile,
       altText: 'Decorative image for hero section',
     },
+    VideoComponent: Video,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -151,6 +161,7 @@ export const WithBackgroundImage: Story = {
       'The background image should not interfere with the text readability.',
     backgroundImageUrl: customBackgroundImage,
     'data-theme': 'Dark',
+    VideoComponent: Video,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -169,6 +180,7 @@ export const WithoutBackground: Story = {
     description:
       'The content should be clearly visible without any background distractions.',
     removeBackground: true,
+    VideoComponent: Video,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -190,6 +202,7 @@ export const WithWideText: Story = {
       className: 'custom-image-class',
     },
     withWideText: true,
+    VideoComponent: Video,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
@@ -244,6 +257,7 @@ export const WithCustomStyles: Story = {
     description:
       'We apply a dashed border and fixed height using a custom class injected in the Storybook play function.',
     className: 'customHeroBannerClass',
+    VideoComponent: Video,
   },
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
