@@ -2,8 +2,7 @@ name: Component-Library-Tag-Design
 
 on:
   pull_request:
-    types:
-      - opened
+    types: [opened, synchronize]
     paths:
       - 'frontend/packages/component-library-styles/**'
       - 'frontend/packages/component-library/**'
