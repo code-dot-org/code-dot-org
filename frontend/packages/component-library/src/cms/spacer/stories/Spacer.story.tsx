@@ -1,12 +1,12 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect} from '@storybook/test';
 
-import Spacer, {SpacerProps} from '..';
+import Spacer, {SpacerProps} from './../Spacer';
 
 type Story = StoryObj<SpacerProps | SpacerProps[]>;
 
 export default {
-  title: 'DesignSystem/Spacer',
+  title: 'CMS/Spacer',
   component: Spacer,
   render: args => {
     const components: SpacerProps[] = args[0] ? Object.values(args) : [args];

@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import Spacer, {SpacerProps} from '../Spacer';
+import Spacer, {SpacerProps} from './../Spacer';
 
 describe('Spacer', () => {
   const title = 'Spacer';
