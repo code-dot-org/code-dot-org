@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-14 23:15:18 UTC",
+    "serialized_at": "2025-04-16 07:09:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -850,7 +850,7 @@
       "key": "7a20fb0f-ca2e-40ff-a00a-d7f6ee150a14",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the *AI Networks Chat* activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1.\n- **Level 1:** Students interact with an AI Chatbot to complete their activity guide. \n- **Level 2:** Students complete a check for understanding.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the *AI Networks Chat* activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to get basic information using the AI chatbot.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate using more specific prompts in order to get more helpful information. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demonstrate prompts that make connections between topics in order to show relationships.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display troubleshooting strategies for AI chatbot interactions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1.\n- **Level 1:** Students interact with an AI Chatbot to complete their activity guide. \n- **Level 2:** Students complete a check for understanding.",
         "duration": "20",
         "name": "AI Networks Chat",
         "progression_name": "AI Networks Chat"
@@ -1162,7 +1162,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Allow students to talk and work together to discover what their fully connected network should look like. Provide guidance to any groups who are struggling. See the Teaching Guide - Human Network Bit Transmission Challenge handout for an example of what this should look like.  "
+            "markdown": "Allow students to talk and work together to discover what their fully connected network should look like. Provide guidance to any groups who are struggling. See the Teaching Guide - Human Network Bit Transmission Challenge handout for an example of what this should look like.\n\nStudents will need to maintain their connections to engage in the transmission challenge on next slide."
           },
           {
             "type": "assessmentOpportunity",
@@ -1189,13 +1189,7 @@
       "key": "7fac9cf4-8ae3-4ce2-91bb-ebf0bc8378e3",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once groups have their fully connected network, instruct them to assign roles. Explain what each role involves and provide the Sender with the Transmission Challenge 1 card so they know what bits they need to send. ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to use the metronome on the slide to keep transmission time consistent, transmitting one bit by holding up a 1 or 0 every second. If students miss a bit or get confused, don’t correct them right away—this will help highlight the need for protocols like TCP later."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once groups have their fully connected network, instruct them to assign roles. Explain what each role involves and provide the Sender with the Transmission Challenge 1 card so they know what bits they need to send. \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give Challenge 1 Role Cards to each student in the group and review the assigned task for each role. \n"
       },
       "seeding_key": {
         "activity_section.key": "7fac9cf4-8ae3-4ce2-91bb-ebf0bc8378e3",
@@ -1203,8 +1197,25 @@
       }
     },
     {
-      "key": "ff4fa9b9-df93-43f3-abc7-cc69e01a60d4",
+      "key": "d6381cd7-6e94-48ed-8c5a-2bcba4c2cd51",
       "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once groups have their assigned roles, ensure that the sender and receiver are ready to transmit and receive messages. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Check that students understand their roles and responsibilities before starting the activity on the next slide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d6381cd7-6e94-48ed-8c5a-2bcba4c2cd51",
+        "lesson_activity.key": "7a8a0b7f-8d61-4782-8e9b-a9af490d71aa"
+      }
+    },
+    {
+      "key": "ff4fa9b9-df93-43f3-abc7-cc69e01a60d4",
+      "position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -1214,13 +1225,13 @@
     },
     {
       "key": "3de7e8fa-ad2b-4349-9465-bb18c48c6723",
-      "position": 9,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have the sender transmit a full message (HEY) using binary while the receiver writes it down.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage Network Monitors to be actively engaged—they should note if a bit is dropped, arrives late, or is recorded incorrectly. Observe whether students fall behind or misinterpret bits. If errors occur, discuss why protocols are needed to correct mistakes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups translate their binary message to ASCII using the table.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for groups who get the wrong translation and ask them where the error occurred in transmission.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have the sender transmit a full message (HEY) using binary while the receiver writes it down.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage Network Monitors to be actively engaged—they should note if a bit is dropped, arrives late, or is recorded incorrectly. Observe whether students fall behind or misinterpret bits. If errors occur, discuss why protocols are needed to correct mistakes.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If students notice errors in their message, have them reflect: How could an automated system detect and correct errors? This sets up the need for protocols like TCP."
+            "markdown": "Encourage students to use the metronome on the slide to keep transmission time consistent, transmitting one bit by holding up a 1 or 0 every second. If students miss a bit or get confused, don’t correct them right away—this will help highlight the need for protocols like TCP later."
           }
         ]
       },
@@ -1230,8 +1241,25 @@
       }
     },
     {
+      "key": "90c64636-7f23-4d39-8c78-0871dbd31ada",
+      "position": 11,
+      "properties": {
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups translate their binary message to ASCII using the table.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for groups who get the wrong translation and ask them where the error occurred in transmission.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students notice errors in their message, have them reflect: How could an automated system detect and correct errors? This sets up the need for protocols like TCP."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "90c64636-7f23-4d39-8c78-0871dbd31ada",
+        "lesson_activity.key": "7a8a0b7f-8d61-4782-8e9b-a9af490d71aa"
+      }
+    },
+    {
       "key": "a29ae272-cce8-433b-8a7d-cb72b3bbe77a",
-      "position": 10,
+      "position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -1241,7 +1269,7 @@
     },
     {
       "key": "5ad5ab13-9a70-408b-938d-7d0d2bc89585",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you notice about this fully connected network?*\n- *Would it be realistic for the Internet to work this way?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize:\n- **Advantage:** Transmission was **quick** and **direct** since every device was connected.\n- **Disadvantages:**\n   - **Not scalable**—too many direct connections make large networks impractical.\n   - **Still prone to errors**—even with direct paths, mistakes in transmission can still occur.\n   - **Real networks don’t work like this**—instead of every device connecting directly, **the Internet relies on routers and paths to relay messages efficiently**.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this second challenge, the same rules apply: each string represents a direct connection between two devices. Each student can have multiple connections but can only be directly linked to another person through one string at a time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this second challenge, students must remove unnecessary connections while still ensuring that everyone can communicate indirectly. Have students reduce their connections, ensuring that even if one string is cut, all students can still communicate.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for groups struggling to maintain connectivity. Ask: If you remove too many connections, will everyone still receive data?",
         "tips": [
@@ -1257,9 +1285,20 @@
       }
     },
     {
-      "key": "092cb5eb-0057-47d8-8169-257991c688c4",
-      "position": 12,
+      "key": "c48cae4c-f828-4610-9939-7161ea73901a",
+      "position": 14,
       "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c48cae4c-f828-4610-9939-7161ea73901a",
+        "lesson_activity.key": "7a8a0b7f-8d61-4782-8e9b-a9af490d71aa"
+      }
+    },
+    {
+      "key": "092cb5eb-0057-47d8-8169-257991c688c4",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once groups have built their more efficient network, instruct them to assign roles. Explain what each role involves and provide the Sender with the bit cards for “hi” so they know what to send—one card per second.\n\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give Challenge 2 Role Cards to each student in the group and review the assigned task for each role. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "092cb5eb-0057-47d8-8169-257991c688c4",
@@ -1267,41 +1306,41 @@
       }
     },
     {
-      "key": "9e775d08-2a2d-40a9-b46f-2717a0ab9e08",
-      "position": 13,
+      "key": "13aa427b-7fbd-4d97-a84d-55029abf13e7",
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once groups have their more efficient network, instruct them to assign roles. Explain what each role involves and provide the Sender with the Transmission Challenge 2 cards that need to be sent to the Receiver. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Sender, Router, and Receiver roles using the slide. Ensure the Sender has the bit cards in the correct order. ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to use the metronome on the slide to keep transmission time consistent, transmitting one card every second. Remind students to only hold one card at a time, however, it is okay to allow students (routers) to hold too many bits as this creates network congestion and is fin for students to experience this firsthand. "
+            "markdown": "Remind students that routers pass only to others not holding a card and should only pass one card at a time—but let some students break this rule to simulate congestion. Use that confusion to build a bridge to real-world delays and packet handling"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "9e775d08-2a2d-40a9-b46f-2717a0ab9e08",
+        "activity_section.key": "13aa427b-7fbd-4d97-a84d-55029abf13e7",
         "lesson_activity.key": "7a8a0b7f-8d61-4782-8e9b-a9af490d71aa"
       }
     },
     {
-      "key": "17f621ad-d70b-4fd0-ad41-55c48ab9c2ad",
-      "position": 14,
+      "key": "795acf92-0e32-4910-9543-5ca513d978ac",
+      "position": 17,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "17f621ad-d70b-4fd0-ad41-55c48ab9c2ad",
+        "activity_section.key": "795acf92-0e32-4910-9543-5ca513d978ac",
         "lesson_activity.key": "7a8a0b7f-8d61-4782-8e9b-a9af490d71aa"
       }
     },
     {
       "key": "db228a33-77a0-424d-be9f-06ebcbe5f305",
-      "position": 15,
+      "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to send the binary message through the network using the \"not busy\" rule for routers. Ensure each bit card is passed at a rate of one per second using the metronome for pacing.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe if routers get backed up (this mimics real-world Internet congestion) so that you can discuss this during the activity discussion debrief.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups check if they successfully transmitted the message by translating the binary to ASCII using the table.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for groups who get the wrong translation and encourage them to reflect on where the error occurred in transmission.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to send the binary message through the network using the \"not busy\" rule for routers. Ensure each bit card is passed at a rate of one per second using the metronome for pacing.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe if routers get backed up (this mimics real-world Internet congestion) so that you can discuss this during the activity discussion debrief.\n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If errors occur, have students identify where the transmission failed—did a router delay a bit? Did packets arrive out of order? Relate this to real-world network errors—like when a video buffers or an image loads slowly on a website."
+            "markdown": "Encourage students to use the metronome on the slide to keep transmission time consistent, transmitting one card every second. Remind students to only hold one card at a time, however, it is okay to allow students (routers) to hold too many bits as this creates network congestion and is fin for students to experience this firsthand. "
           }
         ]
       },
@@ -1311,8 +1350,35 @@
       }
     },
     {
+      "key": "69af2f62-b73b-4f46-bb28-1d967a3f8a32",
+      "position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "69af2f62-b73b-4f46-bb28-1d967a3f8a32",
+        "lesson_activity.key": "7a8a0b7f-8d61-4782-8e9b-a9af490d71aa"
+      }
+    },
+    {
+      "key": "d4e2de8f-ea8d-430d-ab1e-dde047e6eaa0",
+      "position": 20,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups check if they successfully transmitted the message by translating the binary to ASCII using the table.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for groups who get the wrong translation and encourage them to reflect on where the error occurred in transmission.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If errors occur, have students identify where the transmission failed—did a router delay a bit? Did packets arrive out of order? Relate this to real-world network errors—like when a video buffers or an image loads slowly on a website."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d4e2de8f-ea8d-430d-ab1e-dde047e6eaa0",
+        "lesson_activity.key": "7a8a0b7f-8d61-4782-8e9b-a9af490d71aa"
+      }
+    },
+    {
       "key": "ef3e852a-be46-441b-bcd4-ea7e7c4f983f",
-      "position": 16,
+      "position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -1322,7 +1388,7 @@
     },
     {
       "key": "51f4c013-b53c-4510-b830-3e595aa9b321",
-      "position": 17,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts.\n- *How does the network setup compare to the real Internet?*\n- *What delays occurred? How does this reflect real-world networks?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand:\n- Real networks face delays, congestion, and packet loss.\n- Messages may arrive out of order, requiring reassembly (similar to how TCP works).\n- More efficient networks still experience bottlenecks.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one way we might check if some bits were missing or not received in the right order?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify error-checking methods (like sequence numbers), resending messing data if a bit is lost, or confirming receipt before moving on (acknowledgements in networking). ",
         "tips": [
@@ -1339,7 +1405,7 @@
     },
     {
       "key": "1bb6e8cb-7efc-46a5-9d70-2fcbbec93160",
-      "position": 18,
+      "position": 23,
       "properties": {
       },
       "seeding_key": {
@@ -1349,7 +1415,7 @@
     },
     {
       "key": "0e0f0739-0992-4514-8e13-b57a905fb446",
-      "position": 19,
+      "position": 24,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Transmission Control Protocol (TCP)*. ",
         "tips": [
@@ -1366,7 +1432,7 @@
     },
     {
       "key": "c44310b4-976b-4137-bfaf-342c0dff4894",
-      "position": 20,
+      "position": 25,
       "properties": {
       },
       "seeding_key": {
@@ -1376,7 +1442,7 @@
     },
     {
       "key": "c6282d07-a837-40dd-bc1e-cf29ebd70df2",
-      "position": 21,
+      "position": 26,
       "properties": {
         "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the second half of the video \"The Internet: Wire, Cables, & WiFi\" .\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why might we use one transmission method over another in different situations?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that different transmission methods (electricity, light, and radio waves) have trade-offs in speed, range, and reliability. The internet choose transmission methods based on the situation (e.g., WiFi for mobility, fiber optics for speed)."
       },
@@ -1387,7 +1453,7 @@
     },
     {
       "key": "e1d2f060-4337-493b-bee3-6240899b2956",
-      "position": 22,
+      "position": 27,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -1414,6 +1480,43 @@
       },
       "seeding_key": {
         "activity_section.key": "36450743-606d-49f2-a87d-5ef2f9c6cec8",
+        "lesson_activity.key": "51616592-e5e2-49c3-8f5e-17c9894143f2"
+      }
+    },
+    {
+      "key": "f8a6cfb5-ec7a-463a-a0db-9d298d46ce20",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f8a6cfb5-ec7a-463a-a0db-9d298d46ce20",
+        "lesson_activity.key": "51616592-e5e2-49c3-8f5e-17c9894143f2"
+      }
+    },
+    {
+      "key": "4780ab29-7ecb-4381-ac7f-92a07c14b3dd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the sentence starters for the Question of the Day for students who may need extra scaffolding for reflection.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While all students may not need these sentence starters, displaying them for the class provides optional support without singling anyone out. Encourage students to use a starter if they’re unsure how to begin their response, and remind them to include specific examples from the activity.\n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4780ab29-7ecb-4381-ac7f-92a07c14b3dd",
+        "lesson_activity.key": "51616592-e5e2-49c3-8f5e-17c9894143f2"
+      }
+    },
+    {
+      "key": "1ff12ae7-e9bd-4ab5-9cc3-bf94f5cd7fab",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1ff12ae7-e9bd-4ab5-9cc3-bf94f5cd7fab",
         "lesson_activity.key": "51616592-e5e2-49c3-8f5e-17c9894143f2"
       }
     },
@@ -1580,9 +1683,31 @@
       "key": "bad327c4-c875-4de5-ada7-56d4b2091dc6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Provide each student with a copy of *Network Diagram Analysis* activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Internet Simulator and how students should join. They can choose any of the the routers as long as it's not the same as their partner's.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Provide each student with a copy of *Network Diagram Analysis* activity guide.\n",
         "duration": "30",
-        "name": "Internet Simulator and Networks Diagram Analysis",
+        "name": "Internet Simulator and Networks Diagram Analysis"
+      },
+      "seeding_key": {
+        "activity_section.key": "bad327c4-c875-4de5-ada7-56d4b2091dc6",
+        "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
+      }
+    },
+    {
+      "key": "4fcc7f7e-37c8-4193-8359-db42a428bd7d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 and 2.\n- **Level 1:** Students use the Internet Simulator to diagram messages sent through the network. \n- **Level 2:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Before students begin to work, use slides 9-15 to review the instructions for the activity in order to demonstrate how to use the Internet Simulator in order to diagram the path their messages take.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "4fcc7f7e-37c8-4193-8359-db42a428bd7d",
+        "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
+      }
+    },
+    {
+      "key": "8587810a-b4b4-441c-bab3-f2888d8884be",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Internet Simulator and how students should join. They can choose any of the the routers as long as it's not the same as their partner's.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1591,13 +1716,13 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "bad327c4-c875-4de5-ada7-56d4b2091dc6",
+        "activity_section.key": "8587810a-b4b4-441c-bab3-f2888d8884be",
         "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
       }
     },
     {
       "key": "47882857-09b8-42e2-9954-118c5807d20f",
-      "position": 2,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -1606,19 +1731,19 @@
       }
     },
     {
-      "key": "2c4320c2-d147-4b08-978a-507552dc70df",
-      "position": 3,
+      "key": "82d517a7-0bd4-46e6-90cd-55f7169e1631",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students need to know the IP address to send their partner a message.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how to send a message to their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how to navigate to the \"Log Browser\" from the \"Router\" tab to access the message data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to read the logs."
       },
       "seeding_key": {
-        "activity_section.key": "2c4320c2-d147-4b08-978a-507552dc70df",
+        "activity_section.key": "82d517a7-0bd4-46e6-90cd-55f7169e1631",
         "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
       }
     },
     {
       "key": "231c42f3-d8a9-490d-95f8-074cfdb8ea11",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "First, choose the \"show traffic to me\" option in the first dropdown menu and \"show all routers\" in the second dropdown menu. The path that these messages take are what you will be diagramming. If we look at this message that asks \"What’s your favorite color?\", we see that the message starts at Router 1 because this person has an id of router 1.1, then it goes to router 8, 6, and finally Router 2. This person’s partner is at Router 2.12, so the message got to them. If you’re unsure which router was pinged first, look at the timestamp in the first column. "
       },
@@ -1629,7 +1754,7 @@
     },
     {
       "key": "8bb4c38d-1a6d-4b41-95ab-673fe015f223",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students should diagram the path their message took on their activity guide for up to three messages.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate adding the nodes and IP addresses of their device and their partner's device."
       },
@@ -1640,7 +1765,7 @@
     },
     {
       "key": "dc04abca-267e-4801-9305-5a4e8667bee5",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "A node represents any device that connects to a network—this could be a phone, computer, printer, router, or even a smart thermostat. Routers play a crucial role in networking because they connect multiple devices (or nodes) to the Internet and help direct data between them. While routers themselves are also considered nodes, their primary function is to manage network traffic and assign local IP addresses to devices within a network.",
         "remarks": true
@@ -1652,7 +1777,7 @@
     },
     {
       "key": "19c9661b-d1b2-4d81-84ec-ff743d395f2e",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to complete Levels 1 and 2.\n- **Level 1:** Students use the Internet Simulator to diagram messages sent through the network. \n- **Level 2:** Students complete a check for understanding.",
         "progression_name": "Internet Simulator and Networks Diagram Analysis"
@@ -1664,7 +1789,7 @@
     },
     {
       "key": "e161b563-9a64-4ab0-87b6-200442154752",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they send messages. While they will diagram all messages sent over the network, ensure they only send messages to their partner. Check that they use the router logs correctly to follow the path each message took and ensure their diagrams accurately represent those paths. ",
         "tips": [
@@ -1685,7 +1810,7 @@
     },
     {
       "key": "98d55598-d74a-4ef3-ae5c-22cc68e079e5",
-      "position": 9,
+      "position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -1695,7 +1820,7 @@
     },
     {
       "key": "e2365f5c-ab35-4e74-8ba7-175d5682e252",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How did the redundancy in your network help prevent complete failure?*\n- *What might have happened if no redundant paths were available?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students explain how redundancy in a network helps maintain connectivity by providing alternative paths when a connection fails. They describe specific examples of how redundant paths allow data to continue flowing, such as rerouting traffic through different nodes or links. Additionally, students discuss the potential consequences of having no redundancy, including total network failure, loss of communication, or disruptions in internet access.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why do you think routers chose new paths for some messages?*\n- *How might redundant paths be important during high-traffic events, like streaming live sports or during natural disasters?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for and guide students to the following points:\nRouters often choose new paths for messages to avoid problems like traffic jams or broken connections. If one path is too busy or isn’t working well, the router can send the message along a different route so it still reaches its destination quickly and reliably. This process is similar to taking a detour on the way to school when your usual road is closed or too congested.\nRedundant paths are like backup routes on a map. During high-traffic events, such as live sports streaming when many people are online, or during natural disasters when some parts of the network might be damaged, these extra routes help keep the network working smoothly. If one path gets overloaded or fails, data can still travel through another route, ensuring that information gets to its destination without interruption.",
         "duration": "5",
@@ -1708,7 +1833,7 @@
     },
     {
       "key": "6d3aadf9-2586-44ca-a6db-29981f2a00f1",
-      "position": 11,
+      "position": 13,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -1826,7 +1951,7 @@
       "key": "58cf797d-2e0c-4ffd-b6a4-d1eea47deebb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to look across the room to find a partner - they can point at or make eye contact with someone.  (Students in the middle should find partners who aren’t at the middle table). Once each student has a partner, ask students to tell their partner their IP address.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to address each of their pieces. Students should write their partner’s IP address on each piece of paper that makes up their drawing, clearly indicating that it is going to that address. For example - \"To: 4.2\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the rules to the students, and check that all students understand what they need to do.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Call \"Go!\" to begin the activity! ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to look across the room to find a partner - they can point at or make eye contact with someone.  (Students in the middle should find partners who aren’t at the middle table). Once each student has a partner, ask students to tell their partner their IP address.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to address each of their pieces. Students should write their partner’s IP address on each piece of paper that makes up their drawing, clearly indicating that it is going to that address. For example - \"To: 4.2\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the rules to the students, and check that all students understand what they need to do.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to demonstrate paths a message might take, and explain that messages may go missing or arrive out of order. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Call \"Go!\" to begin the activity! ",
         "tips": [
           {
             "type": "teachingTip",
@@ -2181,8 +2306,19 @@
       }
     },
     {
-      "key": "c0e98f22-c820-46a5-88ef-7930b64e265f",
+      "key": "f9cee444-20d1-4a23-8b40-036d3b72c4b5",
       "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Before students begin the chatbot activity, show the example conversation on the slide to model effective questioning."
+      },
+      "seeding_key": {
+        "activity_section.key": "f9cee444-20d1-4a23-8b40-036d3b72c4b5",
+        "lesson_activity.key": "21f4e8d6-4666-4b5d-8896-d6033f430e45"
+      }
+    },
+    {
+      "key": "c0e98f22-c820-46a5-88ef-7930b64e265f",
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts.\n- *What problem does DNS solve?*\n- *What did you notice about how GET requests work to retrieve information?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for answers that point out how DNS converts human-friendly usernames (or domain names) into machine-readable IP addresses and that GET requests structure how information is requested. DNS makes our lives easier by automatically handling the translation of names to IP addresses—just like a phone book.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts:\n- *What do you notice about the DNS hierarchy?*\n- *What do you wonder about how it the hierarchy works?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Emphasize to students that this distributed hierarchy ensures scalability and efficiency, allowing DNS to handle billions of requests daily. Facilitate a discussion to clarify roles and highlight key points:\n- Recursive Resolver starts the process and queries other servers.\n- Root Servers guide the request to the correct TLD server.\n- TLD Servers handle requests for .com, .org, etc., and direct them to the Authoritative Server.\n- Authoritative Servers provide the IP address."
       },
@@ -2193,7 +2329,7 @@
     },
     {
       "key": "e199d7e1-18a6-4c5b-9c7d-88fedeeb749b",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.",
         "duration": "10",
@@ -2207,7 +2343,7 @@
     },
     {
       "key": "9887a596-58cc-4888-bfcb-8faf7b16cc15",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to user their Unit Guide to record observations about types of files that are being loaded and why it might be important for the browser to request only the files it needs.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to help students open the Inspect Tool, navigate to the Network tab, and identify different file types and status codes.",
         "tips": [
@@ -2228,7 +2364,7 @@
     },
     {
       "key": "8334a118-fb80-4d20-a45a-59e8044400c6",
-      "position": 12,
+      "position": 13,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -2337,7 +2473,7 @@
       "key": "4325f997-2dd9-4806-a938-3c8e91b5539d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to make direct connections between each scenario and net neutrality. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "4325f997-2dd9-4806-a938-3c8e91b5539d",
@@ -2388,12 +2524,12 @@
       }
     },
     {
-      "key": "51433d89-59f4-4ef5-a03d-40b355245224",
+      "key": "7ac21da7-fc07-47a8-93e2-be4142720493",
       "position": 4,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "51433d89-59f4-4ef5-a03d-40b355245224",
+        "activity_section.key": "7ac21da7-fc07-47a8-93e2-be4142720493",
         "lesson_activity.key": "e9e9ec51-f4e2-449d-a051-ced97ba4761e"
       }
     },
@@ -2401,7 +2537,7 @@
       "key": "5f25ecee-3c4f-4fa9-acdf-6cb9de1a9cda",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about Internet access across different groups (e.g., income, geography, age)?*\n- *How might these disparities impact education, employment, or civic participation?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that Internet access is not distributed equally and that disparities exist based on income, geography, education, and age. Encourage students to connect these inequalities to opportunities in education, employment, and civic engagement, considering how limited access can reinforce existing societal divides. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the digital divide to students."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display possible answers to the annotated graph and discuss what students notice and are surprised by.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about Internet access across different groups (e.g., income, geography, age)?*\n- *How might these disparities impact education, employment, or civic participation?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that Internet access is not distributed equally and that disparities exist based on income, geography, education, and age. Encourage students to connect these inequalities to opportunities in education, employment, and civic engagement, considering how limited access can reinforce existing societal divides. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the digital divide to students."
       },
       "seeding_key": {
         "activity_section.key": "5f25ecee-3c4f-4fa9-acdf-6cb9de1a9cda",
@@ -2478,13 +2614,13 @@
       "key": "08fa860e-ada4-4cad-92b7-906c699416bd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of 2-3.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each group a copy of the Internet Access Advocacy Campaign Project Planning Guide. This will guide them through all three days of the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain to students that for the next three days, they will work as Internet Access Advocates. This means they will explore real-world challenges related to equitable Internet access, the digital divide, and net neutrality. They will analyze case studies, assess the societal and ethical impacts of these issues, and develop persuasive advocacy campaigns with actionable and AI-driven solutions. Along the way, they will refine their messages through peer review and collaborative discussions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the first part of the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the rest of the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.*What do you notice about the project rubric?\n- *What does success look like for this project?*\n- *What do you notice about the project rubric?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Gallery Walk Info Tracker.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four. These groups should be different than who they are working with on the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Go over the activity instructions with students. Explain that their group will visit each station, read the scenario, and record key information on their project planning guide. Emphasize the importance of focusing on examples, evidence, and key issues for their advocacy campaign.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Assign each corner a persona (Diego, Lisa, Mr. Johnson, Aisha) and direct groups to visit stations, read scenarios, and record key issues, evidence, and examples on their project guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students explore the personas, ask: ‘How does this individual’s experience reflect a larger issue with Internet access? What groups face similar barriers?’ If students are only summarizing without analyzing, prompt them to think about solutions: ‘What policies or technologies could improve this person’s access to the Internet?",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of 2-3.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each group a copy of the Internet Access Advocacy Campaign Project Planning Guide. This will guide them through all three days of the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain to students that for the next three days, they will work as Internet Access Advocates. This means they will explore real-world challenges related to equitable Internet access, the digital divide, and net neutrality. They will analyze case studies, assess the societal and ethical impacts of these issues, and develop persuasive advocacy campaigns with actionable and AI-driven solutions. Along the way, they will refine their messages through peer review and collaborative discussions.\n\n",
         "duration": "35",
         "name": "Activity",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Adjust structure as needed—assign starting stations, use a timer for rotations, or provide a digital version with links to each station."
+            "markdown": "Depending on your class schedule and student pacing, this project may take 3 to 5 class periods to complete. If you're aiming to complete it in 3 days, consider these in-class adjustments:\n- Use timers to keep groups on track during Gallery Walk and Design Sprint\n- Offer 2–3 focused campaign format options to streamline production\n- Keep the pitch draft informal (bullet points, not full scripts) during peer feedback\n"
           }
         ]
       },
@@ -2494,8 +2630,35 @@
       }
     },
     {
-      "key": "4b758d8c-3b27-42be-bfa5-3f3785422991",
+      "key": "f42696cb-8666-4691-99e3-d14a349d1dbe",
       "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f42696cb-8666-4691-99e3-d14a349d1dbe",
+        "lesson_activity.key": "18413d23-2b33-4a52-b8f2-05ba4d21a839"
+      }
+    },
+    {
+      "key": "761d25fc-d869-4659-9052-21d0c87c6527",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the first part of the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the rest of the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.*What do you notice about the project rubric?\n- *What does success look like for this project?*\n- *What do you notice about the project rubric?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Gallery Walk Info Tracker.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four. These groups should be different than who they are working with on the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Go over the activity instructions with students. Explain that their group will visit each station, read the scenario, and record key information on their project planning guide. Emphasize the importance of focusing on examples, evidence, and key issues for their advocacy campaign.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Assign each corner a persona (Diego, Lisa, Mr. Johnson, Aisha) and direct groups to visit stations, read scenarios, and record key issues, evidence, and examples on their project guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  As students explore the personas, ask: ‘How does this individual’s experience reflect a larger issue with Internet access? What groups face similar barriers?’ If students are only summarizing without analyzing, prompt them to think about solutions: ‘What policies or technologies could improve this person’s access to the Internet?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Adjust structure as needed—assign starting stations, use a timer for rotations, or provide a digital version with links to each station."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "761d25fc-d869-4659-9052-21d0c87c6527",
+        "lesson_activity.key": "18413d23-2b33-4a52-b8f2-05ba4d21a839"
+      }
+    },
+    {
+      "key": "4b758d8c-3b27-42be-bfa5-3f3785422991",
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -2505,7 +2668,7 @@
     },
     {
       "key": "0786aa16-4fe1-4b99-97bf-671d5af1011a",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students should move into their project groups and prepare to discuss insights from the gallery walk. Assign or review team roles (Manager, Summarizer, Recorder, Time Keeper). They will use their notes to identify key issues, examples, and target groups for their advocacy campaign.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to debrief their Gallery Walks with their group. Ensure group Recorders are recording responses in the group’s Project Planning Guide.  \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups are discussing, use probing questions to support groups who may be stuck (e.g., “How does this evidence connect to your focus?”). Check shared notes and provide feedback to strengthen their ideas. Keep groups on track by reminding Time Keepers of the schedule.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to discuss different types of advocacy campaigns with students. Briefly explain each format (e.g., social media video, PSA, infographic) and ask students to consider which format would best suit their message and audience. Encourage them to think about clarity, reach, and impact when selecting a campaign type.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to turn to the Design Sprint page in their Advocacy Project Planning Guide. Instruct them to discuss each prompt as a group and record a common answer. Remind them to use team roles (Manager, Summarizer, Recorder, Time Keeper) to stay organized and ensure everyone contributes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to move beyond identifying problems and focus on action. Ask: ‘What specific change do you want to see? How will your campaign convince others to care about this issue?’ If students struggle with persuasion, suggest they include a real-world example or statistic to strengthen their argument."
       },
@@ -2516,7 +2679,7 @@
     },
     {
       "key": "6ded7758-8e59-4c0f-8b20-480e5c45a7e0",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What stood out to you the most today? Why does this issue matter? What can we do about it?*\n- Use the Three W's protocol to facilitate this discussion. First, students discuss answers in pairs or small groups. Then , select three or four students to share a takeaway.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on key takeaways from the lesson and connect the digital divide to real-world impacts. Guide them to recognize who is affected, why it matters, and how advocacy can drive change. This discussion will set the stage for their advocacy campaigns by helping them consider how to make their message compelling and actionable.",
         "duration": "10",
@@ -2557,7 +2720,13 @@
       "key": "749df665-294c-4547-8046-38bf430a1a9b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to remind students of the steps students will take today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete**Narrowing Your Focus** in their activity guide (page 4). Remind them to clarify their focus, audience, evidence, and solutions before drafting their campaign message. Display the guiding questions to keep them on track.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n in their activity guide (page 4). Remind them to clarify their focus, audience, evidence, and solutions before drafting their campaign message. Display the guiding questions to keep them on track.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check for clear, concise messaging and ask guiding questions like, “What is your key message?” and “Is your solution realistic and actionable?” Encourage students to refine their ideas for a strong, persuasive pitch.**Teaching Tip**\n\n**Teaching Tip**\n\nConsider having students choose new roles for today’s tasks. Let the Timekeeper know that they should give their group about seven minutes for this step.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 1 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n**Teaching Tip:**If you suspect you will be short on time, you might choose to provide printed copies of these example pitch slides to groups as a reference while drafting their own pitch.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 2 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 3 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to use their responses from Narrowing Your Focus to draft a 1-minute pitch summarizing their focus, audience, evidence, and solutions using bullet points, visuals, or full paragraphs.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Instruct students to use their responses from Narrowing Your Focus to draft a 1-minute pitch summarizing their focus, audience, evidence, and solutions using bullet points, visuals, or full paragraphs.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are structuring their pitch clearly and including key elements. Ask guiding questions like, “Does your pitch clearly communicate your message?” and “Would your audience understand what action to take?” Provide quick feedback to help students refine their ideas.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Teaching Tip:**Consider using a timer (about 7 minutes) to keep students on track. Encourage students to focus on clarity and persuasion rather than perfection—this is a draft for feedback.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to gather peer feedback using the “One Stay, Two Stray” protocol. Use the slide to explain the procedure to students.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Instruct students to gather peer feedback using the “One Stay, Two Stray” protocol. Use the slide to explain the procedure to students.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to give specific feedback by asking: ‘What was strong about this campaign? What could be improved?’ If a campaign lacks a clear call to action, prompt reviewers to ask: ‘What specific action does this campaign want people to take?\n\n**Teaching Tip**Depending on group size, you may want to have two students stay—one to present and one to take notes—while the others rotate.\nDepending on classroom structure, you may want to assign group numbers before the activity to ensure students rotate in sequence (e.g., Group 1 moves to Group 2, Group 2 moves to Group 3, etc.) for a smoother transition.\n\n- Depending on group size, you may want to have two students stay—one to present and one to take notes—while the others rotate.\n\n- Depending on classroom structure, you may want to assign group numbers before the activity to ensure students rotate in sequence (e.g., Group 1 moves to Group 2, Group 2 moves to Group 3, etc.) for a smoother transition.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to review their Peer Review Feedback Checklist and discuss which feedback was most helpful. Have them decide what revisions will improve clarity, persuasiveness, and feasibility, then make adjustments to their campaign. Remind them they will have 20 minutes next class for final touches before presenting.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Direct students to review their Peer Review Feedback Checklist and discuss which feedback was most helpful. Have them decide what revisions will improve clarity, persuasiveness, and feasibility, then make adjustments to their campaign. Remind them they will have 20 minutes next class for final touches before presenting.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to prioritize impactful revisions and refine their messaging. If a group is struggling, ask guiding questions like, “What change would make your argument stronger?” or “How can you make your message clearer for your audience?”"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to remind students of the steps students will take today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete**Narrowing Your Focus** in their activity guide (page 4). Remind them to clarify their focus, audience, evidence, and solutions before drafting their campaign message. Display the guiding questions to keep them on track.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n in their activity guide (page 4). Remind them to clarify their focus, audience, evidence, and solutions before drafting their campaign message. Display the guiding questions to keep them on track.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check for clear, concise messaging and ask guiding questions like, “What is your key message?” and “Is your solution realistic and actionable?” Encourage students to refine their ideas for a strong, persuasive pitch.**Teaching Tip**\n\n**Teaching Tip**\n\nConsider having students choose new roles for today’s tasks. Let the Timekeeper know that they should give their group about seven minutes for this step.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 1 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n**Teaching Tip:**If you suspect you will be short on time, you might choose to provide printed copies of these example pitch slides to groups as a reference while drafting their own pitch.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 2 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display part 3 of the example pitch and ask for volunteers to read it aloud or have students read it silently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to use their responses from Narrowing Your Focus to draft a 1-minute pitch summarizing their focus, audience, evidence, and solutions using bullet points, visuals, or full paragraphs.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Instruct students to use their responses from Narrowing Your Focus to draft a 1-minute pitch summarizing their focus, audience, evidence, and solutions using bullet points, visuals, or full paragraphs.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are structuring their pitch clearly and including key elements. Ask guiding questions like, “Does your pitch clearly communicate your message?” and “Would your audience understand what action to take?” Provide quick feedback to help students refine their ideas.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Teaching Tip:**Consider using a timer (about 7 minutes) to keep students on track. Encourage students to focus on clarity and persuasion rather than perfection—this is a draft for feedback.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to gather peer feedback using the “One Stay, Two Stray” protocol. Use the slide to explain the procedure to students.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Instruct students to gather peer feedback using the “One Stay, Two Stray” protocol. Use the slide to explain the procedure to students.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to give specific feedback by asking: ‘What was strong about this campaign? What could be improved?’ If a campaign lacks a clear call to action, prompt reviewers to ask: ‘What specific action does this campaign want people to take?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "- Depending on group size, you may want to have two students stay—one to present and one to take notes—while the others rotate.\n- Depending on classroom structure, you may want to assign group numbers before the activity to ensure students rotate in sequence (e.g., Group 1 moves to Group 2, Group 2 moves to Group 3, etc.) for a smoother transition."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "749df665-294c-4547-8046-38bf430a1a9b",
@@ -2565,8 +2734,39 @@
       }
     },
     {
-      "key": "582dc2c1-c1f7-4638-8174-0844d93418a2",
+      "key": "673a950b-ec94-41a8-b6b9-91a160dc6475",
       "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "673a950b-ec94-41a8-b6b9-91a160dc6475",
+        "lesson_activity.key": "1e46ffbd-5624-4f10-8b10-80963e18ef59"
+      }
+    },
+    {
+      "key": "51e36a98-86e1-4b43-954f-e26ff5565933",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the sample peer feedback responses to model effective peer feedback and clarify any confusion students might have.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the sample peer feedback responses to model effective peer feedback and clarify any confusion students might have.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the sample peer feedback responses to model effective peer feedback and clarify any confusion students might have.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to review their Peer Review Feedback Checklist and discuss which feedback was most helpful. Have them decide what revisions will improve clarity, persuasiveness, and feasibility, then make adjustments to their campaign. Remind them they will have 20 minutes next class for final touches before presenting.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> \n\n Direct students to review their Peer Review Feedback Checklist and discuss which feedback was most helpful. Have them decide what revisions will improve clarity, persuasiveness, and feasibility, then make adjustments to their campaign. Remind them they will have 20 minutes next class for final touches before presenting.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to prioritize impactful revisions and refine their messaging. If a group is struggling, ask guiding questions like, “What change would make your argument stronger?” or “How can you make your message clearer for your audience?”"
+      },
+      "seeding_key": {
+        "activity_section.key": "51e36a98-86e1-4b43-954f-e26ff5565933",
+        "lesson_activity.key": "1e46ffbd-5624-4f10-8b10-80963e18ef59"
+      }
+    },
+    {
+      "key": "beff3109-6268-4172-b562-5333b82aab7a",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "beff3109-6268-4172-b562-5333b82aab7a",
+        "lesson_activity.key": "1e46ffbd-5624-4f10-8b10-80963e18ef59"
+      }
+    },
+    {
+      "key": "582dc2c1-c1f7-4638-8174-0844d93418a2",
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *What made your campaign compelling and actionable? What could be improved to make it even more effective?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students recognize strengths and areas for improvement in their campaigns while connecting their work to real-world advocacy strategies.",
         "duration": "5",
@@ -2634,7 +2834,7 @@
       "key": "f9a17fc0-37f2-41ea-955e-2f1ed5f74f28",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the End of Project Reflection in their Project Planning Guide. If time allows, you can have students share their responses with a partner or do a whole class share-out.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the End of Project Reflection in their Project Planning Guide as well as on Code Studio, Level 1. If time allows, you can have students share their responses with a partner or do a whole class share-out.",
         "duration": "10",
         "name": "Wrap Up",
         "tips": [
@@ -2727,8 +2927,19 @@
       }
     },
     {
-      "key": "851bb574-21b7-47f7-b0ca-eb9bfdfe9242",
+      "key": "a3548c27-baf5-46a4-9fa0-b53063278fd8",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the four key security threats students will encounter in the simulation.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through the sample notes. Point out what kind of info goes in each column, emphasizing quick notes and ideas they might want to return to later. "
+      },
+      "seeding_key": {
+        "activity_section.key": "a3548c27-baf5-46a4-9fa0-b53063278fd8",
+        "lesson_activity.key": "3ddd2068-f617-4caa-b88a-4c97d2a2e464"
+      }
+    },
+    {
+      "key": "851bb574-21b7-47f7-b0ca-eb9bfdfe9242",
+      "position": 4,
       "properties": {
         "description": "Today, you'll step into the role of a cybersecurity analyst, investigating real-world security threats and deciding how to defend against them. Follow the instructions in the interactive slide deck, record your observations in your Unit Guide, and think critically about how to protect networks from cyber attacks",
         "remarks": true
@@ -2740,7 +2951,7 @@
     },
     {
       "key": "a7a987ff-8846-435f-b7e1-39d31ac53cc6",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 9, Level 1. Lead the class through a demonstration of the first “round” of the interactive slide show. Walk them through one scenario and model how to navigate through the slides and record notes in the unit guide. Then, release students to work with their partners to complete the remaining scenarios. ",
         "progression_name": "Identify, Defend, Reflect!"
@@ -2752,7 +2963,7 @@
     },
     {
       "key": "c61a1ff8-7581-4a60-84df-af175c39fb21",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the slides, check that students are following the instructions and recording observations. Listen for discussions between partners—are they just clicking through, or are they analyzing the scenarios. When students are selecting defenses, ask probing questions about what made them choose certain options.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you were a cybersecurity analyst for Cybershield Inc., which mitigation strategy would you prioritize implementing first, and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students think critically about the mitigation strategies they encountered in the interactive slideshow. They discuss the importance of a variety of mitigation strategies and the consequences of not having those strategies in place.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 2 to complete the Check for Understanding.",
         "progression_name": "Check for Understanding"
@@ -2764,7 +2975,7 @@
     },
     {
       "key": "fd95ae60-0115-43ee-abff-31d07bc64281",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -2921,7 +3132,7 @@
       "key": "25834266-8fbf-42fb-b137-d4cd2b0c3043",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of four. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to choose one scenario from their activity and discuss with their group how AI detected the threat and how that compared to traditional methods.**\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Encourage students to move beyond ‘AI is faster’ as their key argument. Ask: ‘Does AI replace human analysts completely? What tasks might still require human decision-making?’ Look for responses that mention AI’s adaptability, scalability, and data processing power while recognizing that human oversight is still necessary.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n- *What patterns did you notice in AI’s responses to each threat?*\n- *How did AI improve security compared to traditional methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students analyze patterns in AI’s responses to security threats and evaluate its strengths and weaknesses. Encourage them to consider what AI does well (speed, data analysis, automation) and where it struggles (bias, detecting new types of threats, false positives). Guide them to recognize that AI is a tool, not a replacement for human decision-making in cybersecurity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain to students that the next slides will have a statement about AI and cybersecurity. Students will hold a thumbs up for True, thumbs down for False, or thumbs sideways for unsure. Once students have held up their answer, you will reveal the correct answer and explain why.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: AI is powerful, but it’s not perfect—some scams still slip through. Hackers continuously adapt their methods, and AI can sometimes generate false positives or miss subtle attacks. Human judgement should be the first line of defense. Remind students that if they are unsure whether something is a scam, take a step back and cross-check with a trusted source, like speaking to the person who sent the message in person.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Social engineering works because it looks convincing—attackers impersonate real people, use familiar logos, and create a sense of urgency. Remind students to always examine the sender details, such as looking to see if the email address matches the school or company’s domain. Other ways you can tell are any red flags, like urgent requests, odd grammar, or messages that ask for personal information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Even responding to a scam email can be dangerous—attackers confirm active accounts based on responses and might target students again. Remind students that when in doubt, use this approach: ‘STOP-THINK-VERIFY’ before interacting with any suspicious message. Never respond to a message with any personal information before verifying that it is actually the person they say they are. The best way to do this is to ask the person in real life."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Show the model threat detection notes, emphasizing short, clear notes instead of full sentences. Remind students that they don’t need to capture every word from the chatbot, just the gist of its response.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of four. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to choose one scenario from their activity and discuss with their group how AI detected the threat and how that compared to traditional methods.**\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Encourage students to move beyond ‘AI is faster’ as their key argument. Ask: ‘Does AI replace human analysts completely? What tasks might still require human decision-making?’ Look for responses that mention AI’s adaptability, scalability, and data processing power while recognizing that human oversight is still necessary.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n- *What patterns did you notice in AI’s responses to each threat?*\n- *How did AI improve security compared to traditional methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students analyze patterns in AI’s responses to security threats and evaluate its strengths and weaknesses. Encourage them to consider what AI does well (speed, data analysis, automation) and where it struggles (bias, detecting new types of threats, false positives). Guide them to recognize that AI is a tool, not a replacement for human decision-making in cybersecurity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain to students that the next slides will have a statement about AI and cybersecurity. Students will hold a thumbs up for True, thumbs down for False, or thumbs sideways for unsure. Once students have held up their answer, you will reveal the correct answer and explain why.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: AI is powerful, but it’s not perfect—some scams still slip through. Hackers continuously adapt their methods, and AI can sometimes generate false positives or miss subtle attacks. Human judgement should be the first line of defense. Remind students that if they are unsure whether something is a scam, take a step back and cross-check with a trusted source, like speaking to the person who sent the message in person.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Social engineering works because it looks convincing—attackers impersonate real people, use familiar logos, and create a sense of urgency. Remind students to always examine the sender details, such as looking to see if the email address matches the school or company’s domain. Other ways you can tell are any red flags, like urgent requests, odd grammar, or messages that ask for personal information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Even responding to a scam email can be dangerous—attackers confirm active accounts based on responses and might target students again. Remind students that when in doubt, use this approach: ‘STOP-THINK-VERIFY’ before interacting with any suspicious message. Never respond to a message with any personal information before verifying that it is actually the person they say they are. The best way to do this is to ask the person in real life."
       },
       "seeding_key": {
         "activity_section.key": "25834266-8fbf-42fb-b137-d4cd2b0c3043",
@@ -3082,8 +3293,19 @@
       }
     },
     {
-      "key": "d0f416e5-4214-4850-ac96-f0491fd4537b",
+      "key": "5420af55-b4cd-41b8-8603-9293b7c1cae9",
       "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Describe each of the AI-Driven solutions and ask students to connect a tool to their company’s biggest risk."
+      },
+      "seeding_key": {
+        "activity_section.key": "5420af55-b4cd-41b8-8603-9293b7c1cae9",
+        "lesson_activity.key": "b08fa003-cc19-4977-a1a0-44cca5d97332"
+      }
+    },
+    {
+      "key": "d0f416e5-4214-4850-ac96-f0491fd4537b",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to begin drafting their Network Security Risk Assessment using their Project Planning Guide. Encourage students to focus on clear, specific details about their chosen scenario, vulnerabilities, mitigation strategies, and societal impacts.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students are working, check for depth and specificity—are they identifying vulnerabilities with enough detail? Ask questions like: “How does this vulnerability affect the company and its customers?” Guide students struggling with AI solutions by prompting: \"Which AI-driven strategy fits best with this risk? Why?\" Redirect students who list solutions without explanation by asking: “How does this mitigation strategy actually reduce the risk?”",
         "tips": [
@@ -3104,7 +3326,7 @@
     },
     {
       "key": "97cc47af-4e9e-47d0-88e5-40ce09c3c984",
-      "position": 6,
+      "position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -3114,7 +3336,7 @@
     },
     {
       "key": "812cac0b-7688-44d0-8e3d-ba2ebf88c9cc",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *How can AI enhance network security?*\n- Use the Modified Whip Around protocol to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should evaluate how AI-driven security tools improve threat detection and mitigation. Encourage them to compare AI’s capabilities to traditional security methods and consider how AI can support (but not replace) human decision-making in cybersecurity. Guide students to connect these insights to real-world applications in their risk assessments.",
         "duration": "10",
@@ -3203,6 +3425,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-preassessment_2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -3225,6 +3450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level1_2025"
+        ],
         "progression": "AI Networks Chat"
       },
       "bonus": false,
@@ -3247,6 +3475,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level2_2025"
+        ],
         "progression": "AI Networks Chat"
       },
       "bonus": false,
@@ -3269,6 +3500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson1-level3_2025"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -3291,6 +3525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level1_2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3313,6 +3550,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level2_2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3335,6 +3575,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level3_2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -3362,6 +3605,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "networks-internet-lesson3-level3.5_2025"
+        ],
+        "lesson.key": "IP Addresses",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif4-2025",
+        "activity_section.key": "e3d8eb1f-b493-4eef-8172-97c94e0eec38"
+      },
+      "level_keys": [
+        "networks-internet-lesson3-level3.5_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level4_2025"
+        ],
+        "progression": "IP Addressing and Visualizing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "networks-internet-lesson3-level4_2025"
         ],
         "lesson.key": "IP Addresses",
@@ -3374,11 +3642,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson4-level1_2025"
+        ],
         "progression": "Internet Simulator and Networks Diagram Analysis"
       },
       "bonus": false,
@@ -3396,11 +3667,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson4-level2_2025"
+        ],
         "progression": "Internet Simulator and Networks Diagram Analysis"
       },
       "bonus": false,
@@ -3418,11 +3692,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson5-level1_2025"
+        ],
         "progression": "Internet Simulator: Packets"
       },
       "bonus": false,
@@ -3440,11 +3717,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson5-level2_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3462,11 +3742,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level1_2025"
+        ],
         "progression": "Internet Simulator: DNS Queries"
       },
       "bonus": false,
@@ -3484,11 +3767,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level2_2025"
+        ],
         "progression": "DNS Hierarchy Chatbot"
       },
       "bonus": false,
@@ -3506,11 +3792,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level3_2025"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -3528,11 +3817,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level4_2025"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -3550,11 +3842,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson6-level5_2025"
+        ],
         "progression": "HTTP Requests Exploration"
       },
       "bonus": false,
@@ -3572,11 +3867,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level1_2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3594,11 +3892,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level2_2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3616,11 +3917,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level3_2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3638,11 +3942,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level4_2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3660,11 +3967,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level5_2025"
+        ],
         "progression": "Pew Research Center: Internet Access"
       },
       "bonus": false,
@@ -3682,11 +3992,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson7-level6_2025"
+        ],
         "progression": "Choose a Persona"
       },
       "bonus": false,
@@ -3704,11 +4017,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson8-level1_2025"
+        ],
         "progression": "Final Project Reflection"
       },
       "bonus": false,
@@ -3726,11 +4042,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson9-level1_2025"
+        ],
         "progression": "Identify, Defend, Reflect!"
       },
       "bonus": false,
@@ -3748,11 +4067,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson9-level2_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3770,11 +4092,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson10-level1_2025"
+        ],
         "progression": "Threat Detection Chatbot"
       },
       "bonus": false,
@@ -3792,11 +4117,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson10-level2_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3814,11 +4142,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level1_2025"
+        ],
         "progression": "Company Case Study Choices"
       },
       "bonus": false,
@@ -3836,11 +4167,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level2_2025"
+        ],
         "progression": "AI-Driven Solution Chatbots"
       },
       "bonus": false,
@@ -3858,11 +4192,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson11-level3_2025"
+        ],
         "progression": "Final Risk Assessment"
       },
       "bonus": false,
@@ -3880,11 +4217,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "networks-postassessment_2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -3980,6 +4320,18 @@
         "level.key": "networks-internet-lesson3-level3_2025",
         "script_level.level_keys": [
           "networks-internet-lesson3-level3_2025"
+        ],
+        "lesson.key": "IP Addresses",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif4-2025",
+        "activity_section.key": "e3d8eb1f-b493-4eef-8172-97c94e0eec38"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "networks-internet-lesson3-level3.5_2025",
+        "script_level.level_keys": [
+          "networks-internet-lesson3-level3.5_2025"
         ],
         "lesson.key": "IP Addresses",
         "lesson_group.key": "lessonGroup-3",

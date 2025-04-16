@@ -1,0 +1,47 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-04-15T21:31:15.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/73a4fec29b56b6a262081407122eaef6-Panel Levels Slide Deck (2).png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Choose your data\n- **Choose two numerical columns** you want to compare.\n-  **Filter out any blank cells** in those columns.",
+        "imageUrl": "",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Create your chart\n- **Highlight both columns** of values. (Use Command/Ctrl to select non-adjacent columns.)\n- Go to **Insert → Chart** and choose **Scatter chart** as the chart type.",
+        "imageUrl": "",
+        "key": "emma-scatter-plot-panel-data-science-lesson7-_2025_launch-d8015b75-22a2-49f3-a063-be193119fab1"
+      },
+      {
+        "text": "### If needed, change axes\n-  If you need to, **switch the X and Y axes**, click the chart and adjust the settings under **X-axis** and **Series**.",
+        "imageUrl": "",
+        "key": "emma-scatter-plot-panel-data-science-lesson7-_2025_launch-ca1375da-1974-4c82-be0a-5ae54aa3bdac"
+      },
+      {
+        "text": "### Add in a title and customize axes labels\n- Go to the **Customize** tab \n- Open the **Chart & axis titles** toggle and update these parts of your chart",
+        "imageUrl": "",
+        "key": "emma-scatter-plot-panel-data-science-lesson7-_2025_launch-d3540300-0c30-4ab5-a3ff-b173eb7d56f4"
+      }
+    ],
+    "name_suffix": "_2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-15T21:31:15.316+00:00\",\"changed\":[\"cloned from \\\"emma-scatter-plot-panel-data-science-lesson7-_2025_launch\\\"\"],\"cloned_from\":\"emma-scatter-plot-panel-data-science-lesson7-_2025_launch\"},{\"changed_at\":\"2025-04-15 21:31:20 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

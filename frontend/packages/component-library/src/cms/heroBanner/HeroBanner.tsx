@@ -1,13 +1,25 @@
 import classNames from 'classnames';
 import {ReactNode, HTMLAttributes} from 'react';
 
+import Alert from '@/alert';
 import {LinkButton, LinkButtonProps} from '@/button';
 import {Theme} from '@/common/contexts';
+import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import Image, {ImageProps} from '@/image';
+import {LinkProps} from '@/link';
 import {Heading1, BodyOneText, BodyTwoText} from '@/typography';
 import Video, {VideoProps} from '@/video';
 
 import moduleStyles from './heroBanner.module.scss';
+
+type AnnouncementBannerProps = {
+  /** AnnouncementBanner icon */
+  icon?: FontAwesomeV6IconProps;
+  /** AnnouncementBanner text */
+  text: string;
+  /** AnnouncementBanner link */
+  link?: LinkProps;
+};
 
 export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   /** HeroBanner heading */
@@ -22,6 +34,8 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   videoProps?: VideoProps;
   /** HeroBanner link */
   buttonProps?: LinkButtonProps;
+  /** HeroBanner announcementBanner */
+  announcementBannerProps?: AnnouncementBannerProps;
   /** HeroBanner custom background color.
    *  backgroundImageUrl is higher priority then backgroundColor. */
   backgroundColor?: string;
@@ -63,6 +77,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   buttonProps,
   imageProps,
   videoProps,
+  announcementBannerProps,
   backgroundColor,
   backgroundImageUrl,
   removeBackground = false,
@@ -88,6 +103,15 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       ...(removeBackground ? {background: 'none'} : {}),
     }}
   >
+    {announcementBannerProps && (
+      <Alert
+        data-theme={HTMLAttributes['data-theme'] === 'Dark' ? 'Light' : 'Dark'}
+        className={moduleStyles.heroBannerAnnouncementBanner}
+        text={announcementBannerProps.text}
+        icon={announcementBannerProps.icon}
+        link={announcementBannerProps.link}
+      />
+    )}
     <div className={classNames(moduleStyles.heroBannerContainer)}>
       <div className={moduleStyles.heroBannerTextContainer}>
         <Heading1>{heading}</Heading1>

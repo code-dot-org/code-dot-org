@@ -1,6 +1,6 @@
 name 'programming-fundamentals-lesson7-level4_2025-launch_2025'
-display_name 'level display_name here'
-description 'level description here'
+display_name 'Moving and Painting'
+description 'Choose **ONE** scenario and use `Painter` methods to navigate and paint in The Neighborhood.'
 
 sublevels
 level 'programming-fundamentals-lesson7-level4a_2025-launch_2025'

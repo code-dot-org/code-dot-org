@@ -2,6 +2,7 @@
 # Re-enable ticket: https://codedotorg.atlassian.net/browse/TEACH-1751
 Feature: Level Progress
 
+  @properties_encryption_key
   Scenario: Progress is saved for signed-in student
     Given I am a student
 
@@ -19,6 +20,7 @@ Feature: Level Progress
     Then I verify progress for lesson 2 level 1 is "perfect"
     And I verify progress for lesson 2 level 2 is "not_tried"
 
+  @properties_encryption_key
   Scenario: Progress is saved for signed-out student
     Given I am not signed in
 

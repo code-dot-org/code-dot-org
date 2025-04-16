@@ -6,7 +6,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "instructions",
+    "long_instructions": "## Do This:\r\n\r\nYou're programming a voice assistant that responds when someone says its wake word (like \"Hey, Assistant!\"). To simulate the assistant \"waking up\" multiple times day during the day, you'll write a function that prints the response and call it each time the assistant is triggered.\r\n\r\n1. Define a function called `wake_up_response()` that prints a message like:\r\n\r\n   ```\r\n   🔊 I'm listening...\r\n   ```\r\n\r\n2. Call the function **three times** to represent the assistant activated three times in a day.\r\n\r\n3. Make sure the message appears exactly three times.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nFunctions let you program consistent behavior. If you ever want to update the message, you only need to do it in one place.\r\n\r\nUse the **UMPIRE** strategy to understand what the assistant should say, plan your message, test it, and explain your code.",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,9 +14,28 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "display_name": "Voice Assistant Wake Word",
+    "bubble_choice_description": "You're programming a voice assistant that responds when someone says its wake word (like \"Hey, Assistant!\"). To simulate the assistant \"waking up\" multiple times day during the day, you'll write a function that prints the response and call it each time the assistant is triggered.",
+    "thumbnail_url": "https://images.code.org/2d3188b8488b7d66ef11d5c693d70252-voice-assistant.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# TODO - Write the function wake_up_response()\n\n\n\n# TODO - Call the wake_up_response() function three times\n\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nztnjo2+hVztBBALW8QjuTqx8BsElGjHi\nS/MTRmVsoQOIgAqD8Co1Qfm6AJYccpo5CjEiS8Baa/yG8nt2/1m9GlEsmHP+\nqYyWOfpcrdMwxsJ8VE6EZryU4WQmkHLfJbfhQkl1wr4FelelHz9PoLpVqZ5N\nYr2S706mq9KIX59ouPKI43muFGQZcPjsawCuYKCp7prDYm1/VtIviimx7aZr\n7YOz/8+CzHs1X5QXNX554IeE9jLiZyP40QpR134AnampCjbubo5jFOcgQk6l\nCyaOG1TMfsZbJo6CvWZQZ9bk6gLe2365QMRbndI7Hl/IUmkBVC0TTPgbKC+F\naeDlXH3W+vJKGYH/Tq/SxhrsYDrgMEIA4qdbIMfSdvcON7HqcWsY8dikmMZL\ngaUpoh1GWPcuXAU=\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:36.876+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9c_2025-launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:36.876+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9c_2025-launch\"},{\"changed_at\":\"2025-04-15 17:46:48 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 17:54:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 17:56:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

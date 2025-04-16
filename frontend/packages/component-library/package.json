@@ -428,7 +428,6 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "dompurify": "^3.2.4",
     "lodash": "^4.17.21",
     "react-player": "^3.0.0-canary.4",
     "react-schemaorg": "^2.0.0"
@@ -479,7 +478,6 @@
   },
   "peerDependencies": {
     "classnames": "^2.5.1",
-    "dompurify": "^3.2.4",
     "react": ">=16",
     "react-dom": ">=16",
     "swiper": "^11.0.5"

@@ -1,7 +1,8 @@
-@import '@code-dot-org/component-library-styles/primitiveColors.scss';
-@import '@code-dot-org/component-library-styles/variables.scss';
-@import '@code-dot-org/component-library-styles/mixins.scss';
-@import '@code-dot-org/component-library-styles/typography.module.scss';
+@use '@code-dot-org/component-library-styles/primitiveColors.scss';
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 
 // Dropdown common styles
 .dropdownContainer {
@@ -10,7 +11,7 @@
   margin: 0;
 
   &.styleAsFormField {
-    width: $form-field-width;
+    width: variables.$form-field-width;
     text-wrap: nowrap;
     text-overflow: ellipsis;
 
@@ -72,7 +73,7 @@
   }
 
   .helperSection {
-    @include field-helper-section-common;
+    @include mixins.field-helper-section-common;
     margin-top: 0.125rem;
   }
 
@@ -251,12 +252,12 @@
   }
 
   .helperSection {
-    @include field-helper-section-black;
+    @include mixins.field-helper-section-black;
   }
 
   &.hasError {
     .errorSection {
-      @include field-error-section-black;
+      @include mixins.field-error-section-black;
     }
 
     .dropdownButton {
@@ -301,22 +302,22 @@
 
     .helperSection,
     .errorSection {
-      @include field-helper-section-black-disabled;
+      @include mixins.field-helper-section-black-disabled;
     }
   }
 
   &.readOnly {
     .dropdownButton:disabled {
-      @include field-read-only-black-colors;
+      @include mixins.field-read-only-black-colors;
 
       .dropdownLabel {
-        @include field-read-only-black-colors;
+        @include mixins.field-read-only-black-colors;
       }
     }
 
     .helperSection,
     .errorSection {
-      @include field-read-only-black-colors;
+      @include mixins.field-read-only-black-colors;
     }
   }
 }
@@ -327,11 +328,11 @@
   }
 
   .helperSection {
-    @include field-helper-section-black;
+    @include mixins.field-helper-section-black;
   }
 
   &.hasError .errorSection {
-    @include field-error-section-black;
+    @include mixins.field-error-section-black;
   }
 
   .dropdownButton {
@@ -372,22 +373,22 @@
 
     .helperSection,
     .errorSection {
-      @include field-helper-section-black-disabled;
+      @include mixins.field-helper-section-black-disabled;
     }
   }
 
   &.readOnly {
     .dropdownButton:disabled {
-      @include field-read-only-black-colors;
+      @include mixins.field-read-only-black-colors;
 
       .dropdownLabel {
-        @include field-read-only-black-colors;
+        @include mixins.field-read-only-black-colors;
       }
     }
 
     .helperSection,
     .errorSection {
-      @include field-read-only-black-colors;
+      @include mixins.field-read-only-black-colors;
     }
   }
 }
@@ -398,12 +399,12 @@
   }
 
   .helperSection {
-    @include field-helper-section-white;
+    @include mixins.field-helper-section-white;
   }
 
   &.hasError {
     .errorSection {
-      @include field-error-section-black;
+      @include mixins.field-error-section-black;
     }
 
     .dropdownButton {
@@ -448,22 +449,22 @@
 
     .helperSection,
     .errorSection {
-      @include field-helper-section-white-disabled;
+      @include mixins.field-helper-section-white-disabled;
     }
   }
 
   &.readOnly {
     .dropdownButton:disabled {
-      @include field-read-only-white-colors;
+      @include mixins.field-read-only-white-colors;
 
       .dropdownLabel {
-        @include field-read-only-white-colors;
+        @include mixins.field-read-only-white-colors;
       }
     }
 
     .helperSection,
     .errorSection {
-      @include field-read-only-white-colors;
+      @include mixins.field-read-only-white-colors;
     }
   }
 }
@@ -471,22 +472,22 @@
 // Sizes
 .dropdownContainer-l {
   .dropdownFieldLabel {
-    @include label-one;
+    @include mixins.label-one;
     margin-bottom: 0.125rem;
   }
 
   .dropdownLabel-thick {
-    @include button-one-text;
+    @include mixins.button-one-text;
     margin-bottom: 0;
   }
 
   .dropdownLabel-thin {
-    @include body-one;
+    @include typography.body-one;
     margin-bottom: 0;
   }
 
   .dropdownButton {
-    @include button-one-text;
+    @include mixins.button-one-text;
     height: 3rem;
     padding: 0.625rem 1rem;
     margin-bottom: 0;
@@ -499,7 +500,7 @@
   }
 
   .helperSection {
-    @include field-helper-section-l;
+    @include mixins.field-helper-section-l;
   }
 
   .dropdownMenuContainer {
@@ -519,7 +520,7 @@
           }
 
           span {
-            @include body-one;
+            @include typography.body-one;
             color: inherit;
             margin-bottom: 0;
           }
@@ -531,22 +532,22 @@
 
 .dropdownContainer-m {
   .dropdownFieldLabel {
-    @include label-two;
+    @include mixins.label-two;
     margin-bottom: 0.125rem;
   }
 
   .dropdownLabel-thick {
-    @include button-two-text;
+    @include mixins.button-two-text;
     margin-bottom: 0;
   }
 
   .dropdownLabel-thin {
-    @include body-two;
+    @include typography.body-two;
     margin-bottom: 0;
   }
 
   .dropdownButton {
-    @include button-two-text;
+    @include mixins.button-two-text;
     height: 2.5rem;
     padding: 0.5rem 1rem;
     margin-bottom: 0;
@@ -559,7 +560,7 @@
   }
 
   .helperSection {
-    @include field-helper-section-m;
+    @include mixins.field-helper-section-m;
   }
 
   .dropdownMenuContainer {
@@ -579,7 +580,7 @@
           }
 
           span {
-            @include body-two;
+            @include typography.body-two;
             color: inherit;
             margin-bottom: 0;
           }
@@ -591,22 +592,22 @@
 
 .dropdownContainer-s {
   .dropdownFieldLabel {
-    @include label-three;
+    @include mixins.label-three;
     margin-bottom: 0.125rem;
   }
 
   .dropdownLabel-thick {
-    @include button-three-text;
+    @include mixins.button-three-text;
     margin-bottom: 0;
   }
 
   .dropdownLabel-thin {
-    @include body-three;
+    @include typography.body-three;
     margin-bottom: 0;
   }
 
   .dropdownButton {
-    @include button-three-text;
+    @include mixins.button-three-text;
     height: 2rem;
     padding: 0.3125rem 1rem;
     margin-bottom: 0;
@@ -619,7 +620,7 @@
   }
 
   .helperSection {
-    @include field-helper-section-s;
+    @include mixins.field-helper-section-s;
   }
 
   .dropdownMenuContainer {
@@ -639,7 +640,7 @@
           }
 
           span {
-            @include body-three;
+            @include typography.body-three;
             color: inherit;
             margin-bottom: 0;
           }
@@ -651,22 +652,22 @@
 
 .dropdownContainer-xs {
   .dropdownFieldLabel {
-    @include label-four;
+    @include mixins.label-four;
     margin-bottom: 0.125rem;
   }
 
   .dropdownLabel-thick {
-    @include button-four-text;
+    @include mixins.button-four-text;
     margin-bottom: 0;
   }
 
   .dropdownLabel-thin {
-    @include body-four;
+    @include typography.body-four;
     margin-bottom: 0;
   }
 
   .dropdownButton {
-    @include button-four-text;
+    @include mixins.button-four-text;
     height: 1.5rem;
     padding: 0.125rem 0.5rem;
     margin-bottom: 0;
@@ -695,7 +696,7 @@
           }
 
           span {
-            @include body-four;
+            @include typography.body-four;
             color: inherit;
             margin-bottom: 0;
           }

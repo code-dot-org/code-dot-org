@@ -11,15 +11,19 @@
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "show_calendar": true,
+      "supported_locales": [
+        "es-MX"
+      ],
       "topic_tags": [
         "ai"
       ],
       "tts": true,
+      "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-22 19:00:19 UTC",
+    "serialized_at": "2025-04-15 18:06:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

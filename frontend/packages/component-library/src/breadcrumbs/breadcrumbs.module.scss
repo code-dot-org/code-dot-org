@@ -1,6 +1,4 @@
-@import '@code-dot-org/component-library-styles/font.scss';
-@import '@code-dot-org/component-library-styles/mixins.scss';
-@import '@code-dot-org/component-library-styles/typography.module.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
 // Breadcrumbs common styles
 .breadcrumbs {
@@ -62,7 +60,7 @@
 // Breadcrumbs sizes
 .breadcrumbs-l {
   .breadcrumb {
-    @include label-one;
+    @include mixins.label-one;
     margin: 0;
 
     .homeIcon {
@@ -80,7 +78,7 @@
 
 .breadcrumbs-m {
   .breadcrumb {
-    @include label-two;
+    @include mixins.label-two;
     margin: 0;
 
     .homeIcon {
@@ -98,7 +96,7 @@
 
 .breadcrumbs-s {
   .breadcrumb {
-    @include label-three;
+    @include mixins.label-three;
     margin: 0;
 
     .homeIcon {
@@ -116,7 +114,7 @@
 
 .breadcrumbs-xs {
   .breadcrumb {
-    @include label-four;
+    @include mixins.label-four;
     margin: 0;
 
     .homeIcon {

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-14 23:15:43 UTC",
+    "serialized_at": "2025-04-15 21:31:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2718,12 +2718,12 @@
       }
     },
     {
-      "key": "e9025018-5356-486e-a0d1-7b02b719c4a5",
+      "key": "54ca7978-5c00-42a4-a623-efb43aea7cdf",
       "position": 3,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "e9025018-5356-486e-a0d1-7b02b719c4a5",
+        "activity_section.key": "54ca7978-5c00-42a4-a623-efb43aea7cdf",
         "lesson_activity.key": "632c24ac-2ff5-4d83-96d7-a51292ba641e"
       }
     },
@@ -2793,10 +2793,42 @@
       }
     },
     {
-      "key": "0cb6b5e6-77de-4f04-af57-e35101635b66",
+      "key": "9d051fed-3bbc-40a0-a5ac-7446808c5a55",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Visualization Techniques activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to complete Levels 5 through 8.",
+        "progression_name": "Histogram Panel"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d051fed-3bbc-40a0-a5ac-7446808c5a55",
+        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
+      }
+    },
+    {
+      "key": "276b9349-c490-4d59-a6a4-1f958a2af7d0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Scatterplot Panel"
+      },
+      "seeding_key": {
+        "activity_section.key": "276b9349-c490-4d59-a6a4-1f958a2af7d0",
+        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
+      }
+    },
+    {
+      "key": "4b9bfccc-4bea-452a-84bf-0758779c67ff",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4b9bfccc-4bea-452a-84bf-0758779c67ff",
+        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
+      }
+    },
+    {
+      "key": "0cb6b5e6-77de-4f04-af57-e35101635b66",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Visualization Techniques activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to complete Levels 5 through 7.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2806,7 +2838,7 @@
     },
     {
       "key": "79401015-3a19-4c76-910b-882f82453c48",
-      "position": 2,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check if students understand how to apply the new techniques in CODAP. Ensure they are not just following steps mechanically but are grasping why they are using specific features for their visualizations.",
         "tips": [
@@ -2823,7 +2855,7 @@
     },
     {
       "key": "47c80efc-0123-4648-83d9-6c78fdbd9931",
-      "position": 3,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -2832,10 +2864,42 @@
       }
     },
     {
-      "key": "05869b80-a423-4d13-ace3-7aedff30212e",
-      "position": 4,
+      "key": "f2f5e2aa-3387-4f38-a5fc-8c33e62b02b1",
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the check-in question on Level 9.",
+        "progression_name": "Formulas Panel"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2f5e2aa-3387-4f38-a5fc-8c33e62b02b1",
+        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
+      }
+    },
+    {
+      "key": "ff93d60e-81cb-47cf-81c6-e4a1a6fb0bb7",
+      "position": 8,
+      "properties": {
+        "progression_name": "Practice with Formulas"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff93d60e-81cb-47cf-81c6-e4a1a6fb0bb7",
+        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
+      }
+    },
+    {
+      "key": "7326321e-5058-4bfc-83f3-79fbc46a3419",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7326321e-5058-4bfc-83f3-79fbc46a3419",
+        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
+      }
+    },
+    {
+      "key": "05869b80-a423-4d13-ace3-7aedff30212e",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the check-in question on Level 8.",
         "progression_name": "Check for Understanding",
         "tips": [
           {
@@ -2851,7 +2915,7 @@
     },
     {
       "key": "719df67d-dea0-4500-8dbb-c166f551d21c",
-      "position": 5,
+      "position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -2861,9 +2925,9 @@
     },
     {
       "key": "8ed2a578-eb19-489c-aca5-e3cca9eae312",
-      "position": 6,
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete at least two of the choices on Level 10. Students may complete more than two if they have time.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete at least two of the choices on Level 9. Students may complete more than two if they have time.",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2873,7 +2937,7 @@
     },
     {
       "key": "05eecaa6-1719-488c-bda6-d32e3f28b563",
-      "position": 7,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check if students understand how to apply the new techniques in CODAP. Ensure they are not just following steps mechanically but are grasping why they are using specific features for their visualizations.",
         "tips": [
@@ -2890,7 +2954,7 @@
     },
     {
       "key": "d4febc92-b04d-41e1-930b-ea094805edc3",
-      "position": 8,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -2900,7 +2964,7 @@
     },
     {
       "key": "f092ea5d-252f-4cc0-a9e6-2b6f0f643a28",
-      "position": 9,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the ethical framework introduced in Lesson 3.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some additional ethical concerns we should keep in mind when using the visualization tools and techniques we learned today?*\n\n* Use a Think/Pair/Share and call on students to provide their responses.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to identify and articulate potential ethical issues arising from the use of data visualization tools, such as bias and misinformation. They should also be able to suggest responsible practices that mitigate these risks, demonstrating a thoughtful approach to ethical considerations in data science. If students are struggling to think of additional concerns, here are some example responses you could use with students to help them get started:\n* In today's lesson, when we created histograms, I realized how choosing different bin sizes could change how the data looked. This made me think about accuracy and how important it is to represent data truthfully without manipulating the viewer’s perception.\n* You mentioned privacy concerns with mapping data. In our exercise, we didn't use personal data, but it made me think about how companies might use similar techniques with personal data. We should always ensure data anonymization before creating such visualizations to protect individual identities.\n* You mentioned misuse of data. When we use powerful tools like CODAP to analyze data, it's crucial to think about the consequences of our analysis. For instance, if we're identifying trends that might influence decision-making in businesses or government, we need to be extra cautious about confirming our findings."
       },
@@ -3602,6 +3666,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-preassessment_2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -3624,6 +3691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level1_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3646,6 +3716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level2_2025"
+        ],
         "progression": "Data Scientists"
       },
       "bonus": false,
@@ -3668,6 +3741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level1_2025"
+        ],
         "progression": "Read 1: Context"
       },
       "bonus": false,
@@ -3690,6 +3766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level2_2025"
+        ],
         "progression": "Read 2: Quantities"
       },
       "bonus": false,
@@ -3712,6 +3791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level3_2025"
+        ],
         "progression": "Read 3: Questions"
       },
       "bonus": false,
@@ -3734,6 +3816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson2_ai_chat_2025"
+        ],
         "progression": "Analyze Data with AI"
       },
       "bonus": false,
@@ -3756,6 +3841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level4_2025"
+        ],
         "progression": "Pizza Slice Data Set"
       },
       "bonus": false,
@@ -3778,6 +3866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level1_2025"
+        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -3800,6 +3891,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level2_2025"
+        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -3822,6 +3916,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level3_2025"
+        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -3844,6 +3941,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level4_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3866,6 +3966,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson4-level1-choice_2025"
+        ],
         "progression": "Choose a Stakeholder"
       },
       "bonus": false,
@@ -3888,6 +3991,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level1-v2_2025"
+        ],
         "progression": "Read 1: Context"
       },
       "bonus": false,
@@ -3910,6 +4016,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level2-v2_2025"
+        ],
         "progression": "Read 2: Quantities"
       },
       "bonus": false,
@@ -3932,6 +4041,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level3-v2_2025"
+        ],
         "progression": "Read 3: Questions"
       },
       "bonus": false,
@@ -3954,6 +4066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci - Ch1L5 match criteria_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3976,6 +4091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson5_aichat_2025"
+        ],
         "progression": "Evaluate Data Questions with AI"
       },
       "bonus": false,
@@ -3998,6 +4116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level1_2025"
+        ],
         "progression": "Expository Data Story"
       },
       "bonus": false,
@@ -4020,6 +4141,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson6_ai_chat_2025"
+        ],
         "progression": "Expository Data Story"
       },
       "bonus": false,
@@ -4042,6 +4166,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level2_2025"
+        ],
         "progression": "Persuasive Data Story"
       },
       "bonus": false,
@@ -4064,6 +4191,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson6_ai_chat_2_2025"
+        ],
         "progression": "Persuasive Data Story"
       },
       "bonus": false,
@@ -4086,6 +4216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level3_2025"
+        ],
         "progression": "Party Planning Datasets"
       },
       "bonus": false,
@@ -4108,6 +4241,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson6_ai_chat_3_2025"
+        ],
         "progression": "Party Planning Datasets"
       },
       "bonus": false,
@@ -4130,6 +4266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level1_2025"
+        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -4152,6 +4291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level2_2025"
+        ],
         "progression": "Shape of Distribution"
       },
       "bonus": false,
@@ -4174,6 +4316,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-level1_2025_launch_2025"
+        ],
         "progression": "Panel Levels"
       },
       "bonus": false,
@@ -4196,6 +4341,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-panel2_2025_launch_2025"
+        ],
         "progression": "Panel Levels"
       },
       "bonus": false,
@@ -4218,6 +4366,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-panel3_2025_launch_2025"
+        ],
         "progression": "Panel Levels"
       },
       "bonus": false,
@@ -4240,6 +4391,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-panel4_2025_launch_2025"
+        ],
         "progression": "Panel Levels"
       },
       "bonus": false,
@@ -4262,6 +4416,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-panel5-2025-launch_2025"
+        ],
         "progression": "Panel Levels"
       },
       "bonus": false,
@@ -4284,6 +4441,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-panel6-2025-launch_2025"
+        ],
         "progression": "Panel Levels"
       },
       "bonus": false,
@@ -4306,6 +4466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level3_2025"
+        ],
         "progression": "CODAP Graphs"
       },
       "bonus": false,
@@ -4328,6 +4491,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level4_2025"
+        ],
         "progression": "CODAP Graphs"
       },
       "bonus": false,
@@ -4350,6 +4516,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level5_2025"
+        ],
         "progression": "CODAP Graphs"
       },
       "bonus": false,
@@ -4372,6 +4541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level6_2025"
+        ],
         "progression": "Applying Filters"
       },
       "bonus": false,
@@ -4394,6 +4566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson7_ai_chat_2025"
+        ],
         "progression": "AI Chat: Data Visualizations"
       },
       "bonus": false,
@@ -4416,6 +4591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson8-level1_2025"
+        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -4438,6 +4616,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson8-level3_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4460,6 +4641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_lesson8_aichat_2025"
+        ],
         "progression": "Ask AI for Cleaning Tips"
       },
       "bonus": false,
@@ -4482,6 +4666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level1_2025"
+        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -4504,6 +4691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level2-choice_2025"
+        ],
         "progression": "CODAP Level"
       },
       "bonus": false,
@@ -4526,6 +4716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level3_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4548,6 +4741,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level4_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4570,6 +4766,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4592,6 +4791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level1-v2_2025"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4614,6 +4816,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level2_2025"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4636,6 +4841,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level3_2025"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4658,6 +4866,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level4_2025"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4680,28 +4891,53 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Skill Building"
+        "progression": "Histogram Panel"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "data-science-ch1-lesson10-level5-v2_2025"
+          "data-science-ch1-lesson10-histogram-panel_2025_launch"
         ],
         "lesson.key": "More Visualization Techniques",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "0cb6b5e6-77de-4f04-af57-e35101635b66"
+        "activity_section.key": "9d051fed-3bbc-40a0-a5ac-7446808c5a55"
       },
       "level_keys": [
-        "data-science-ch1-lesson10-level5-v2_2025"
+        "data-science-ch1-lesson10-histogram-panel_2025_launch"
       ]
     },
     {
       "chapter": 51,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Scatterplot Panel"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-scatter-plot-panel_2025_launch"
+        ],
+        "lesson.key": "More Visualization Techniques",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "276b9349-c490-4d59-a6a4-1f958a2af7d0"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-scatter-plot-panel_2025_launch"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level6_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4719,11 +4955,14 @@
       ]
     },
     {
-      "chapter": 52,
-      "position": 7,
-      "activity_section_position": 3,
+      "chapter": 53,
+      "position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level7_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4741,11 +4980,14 @@
       ]
     },
     {
-      "chapter": 53,
-      "position": 8,
-      "activity_section_position": 4,
+      "chapter": 54,
+      "position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level8_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4763,11 +5005,58 @@
       ]
     },
     {
-      "chapter": 54,
-      "position": 9,
+      "chapter": 55,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Formulas Panel"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-formulas-panel_2025_launch"
+        ],
+        "lesson.key": "More Visualization Techniques",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "f2f5e2aa-3387-4f38-a5fc-8c33e62b02b1"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-formulas-panel_2025_launch"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice with Formulas"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-formulas-free-response_2025"
+        ],
+        "lesson.key": "More Visualization Techniques",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "ff93d60e-81cb-47cf-81c6-e4a1a6fb0bb7"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-formulas-free-response_2025"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level9_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4785,11 +5074,14 @@
       ]
     },
     {
-      "chapter": 55,
-      "position": 10,
+      "chapter": 58,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level10_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4807,11 +5099,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datasci-U1L12-projectL1_pilot2024_2025"
+        ],
         "progression": "Data Set Choices"
       },
       "bonus": false,
@@ -4829,11 +5124,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-u1-lesson12-level2_2025"
+        ],
         "progression": "Data Decisions and Visualizations"
       },
       "bonus": false,
@@ -4851,11 +5149,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-u1-lesson12-level3_2025"
+        ],
         "progression": "Your Data Story"
       },
       "bonus": false,
@@ -4873,11 +5174,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-u1-lesson12-level4fr_2025"
+        ],
         "progression": "The Data Cycle"
       },
       "bonus": false,
@@ -4895,11 +5199,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_aichat_datacoach_2025"
+        ],
         "progression": "AI Data Coach"
       },
       "bonus": false,
@@ -4917,11 +5224,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-postassessment_2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -5530,14 +5840,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "data-science-ch1-lesson10-level5-v2_2025",
+        "level.key": "data-science-ch1-lesson10-histogram-panel_2025_launch",
         "script_level.level_keys": [
-          "data-science-ch1-lesson10-level5-v2_2025"
+          "data-science-ch1-lesson10-histogram-panel_2025_launch"
         ],
         "lesson.key": "More Visualization Techniques",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "0cb6b5e6-77de-4f04-af57-e35101635b66"
+        "activity_section.key": "9d051fed-3bbc-40a0-a5ac-7446808c5a55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-scatter-plot-panel_2025_launch",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-scatter-plot-panel_2025_launch"
+        ],
+        "lesson.key": "More Visualization Techniques",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "276b9349-c490-4d59-a6a4-1f958a2af7d0"
       }
     },
     {
@@ -5574,6 +5896,30 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
         "activity_section.key": "0cb6b5e6-77de-4f04-af57-e35101635b66"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-formulas-panel_2025_launch",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-formulas-panel_2025_launch"
+        ],
+        "lesson.key": "More Visualization Techniques",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "f2f5e2aa-3387-4f38-a5fc-8c33e62b02b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-formulas-free-response_2025",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-formulas-free-response_2025"
+        ],
+        "lesson.key": "More Visualization Techniques",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "ff93d60e-81cb-47cf-81c6-e4a1a6fb0bb7"
       }
     },
     {

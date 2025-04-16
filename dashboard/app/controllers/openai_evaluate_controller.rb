@@ -33,6 +33,12 @@ class OpenaiEvaluateController < ApplicationController
       evaluationCriteria: "Did the student attempt the level?",
     }
 
+    profanity_detected_response = {
+      aiEvaluation: "Profanity detected",
+      evaluationCriteria: "Did the student use profanity?",
+      aiReasoning: "The response contains profanity and could not be evaluated.",
+    }
+
     if level.is_a?(FreeResponse) && student_work.delete(' ').empty?
       no_attempt_response[:aiReasoning] = "The student response was blank."
       # mimic the format of the response from AI
@@ -42,6 +48,9 @@ class OpenaiEvaluateController < ApplicationController
       no_attempt_response[:aiReasoning] = "The student did not change the starter code."
       # mimic the format of the response from AI
       json_response = {"content" => no_attempt_response.to_json}
+      return render(status: :ok, json: json_response)
+    elsif ProfanityFilter.find_potential_profanity(student_work, "en", {})
+      json_response = {"content" => profanity_detected_response.to_json}
       return render(status: :ok, json: json_response)
     else
       system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(level, unit, evaluation_type)

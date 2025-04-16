@@ -148,7 +148,8 @@ module Curriculum
         csf: 'CSF',
         csa: 'CSA',
         csp: 'CSP',
-        csd: 'CSD'
+        csd: 'CSD',
+        aif: 'AIF'
       }
     )
 

@@ -10,22 +10,27 @@
     "offer_browser_tts": "false",
     "panels": [
       {
+        "text": "",
+        "imageUrl": "https://images.code.org/4d5fcbe2fe7860394d778400df4537e3-Panel Levels Slide Deck (1).png",
+        "key": "emma-panel-data-science-lesson7-level1_2025_launch-792cbca6-98d6-48e9-b16f-c71ec6499310"
+      },
+      {
         "text": "### What Are Formulas?\nRather than do calculations by hand, Google Sheets has countless built-in formulas we can use to analyze the data.",
         "imageUrl": "",
         "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
         "layout": "text-bottom-right",
         "typing": false,
-        "fadeInOverPrevious": true
+        "fadeInOverPrevious": false
       },
       {
         "text": "### Sum\nWhen we want the **sum total** of elements in a given range we can use the `=SUM` function.\n",
         "imageUrl": "",
         "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
         "layout": "text-bottom-right",
-        "fadeInOverPrevious": true
+        "fadeInOverPrevious": false
       },
       {
-        "text": "### How to use the SUM function\nWe want to find the total number of inversions in Ohio:\n- Use `=SUM` to call the sum function\n- Specify the range by typing it in `=SUM(N92:N105)`",
+        "text": "### How to use the SUM function\nWe want to find the total number of inversions in Ohio:\n- Use `=SUM` to call the sum function\n- Specify the range by typing it in `=SUM(N92:N105)`\n- Press **Enter** to escape out of the cell and run your formula",
         "imageUrl": "",
         "key": "emma-panel-data-science-lesson7-level1_2025_launch-4342e1cd-90f7-4f8e-9415-72e83c812088"
       },
@@ -39,10 +44,10 @@
         "imageUrl": "",
         "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
         "layout": "text-bottom-right",
-        "fadeInOverPrevious": true
+        "fadeInOverPrevious": false
       },
       {
-        "text": "### How to use COUNTIF\nWe want to know how many roller coasters go faster than 60 mph:\n- Remember to use the formula `=COUNTIF(range, criteria)`\n- First, specify the range: `=COUNTIF(D2:D158, criteria)`\n- Then, specific the criteria of greater than 60 mph: `=COUNTIF(D2:D158, \">60\")`",
+        "text": "### How to use COUNTIF\nWe want to know how many roller coasters go faster than 60 mph:\n- Remember to use the formula `=COUNTIF(range, criteria)`\n- First, specify the range: `=COUNTIF(D2:D158, criteria)`\n- Then, specific the criteria of greater than 60 mph: `=COUNTIF(D2:D158, \">60\")`\n- Press **Enter** to escape out of the cell and run your formula",
         "imageUrl": "",
         "key": "emma-panel-data-science-lesson7-level1_2025_launch-23e257fa-ba98-4eaf-84d4-e58c1d4a9c79"
       },
@@ -52,7 +57,7 @@
         "key": "data-science-lesson7-level1_2025_launch-6009960e-f3c5-438e-8af4-13d4801af88b"
       },
       {
-        "text": "### How to use AVG\nWe want to find the average length of roller coasters\n- Use `=AVERAGE` to call the sum function\n- Specify the range by typing it in `=AVERAGE(G2:G158)`\n\n",
+        "text": "### How to use AVG\nWe want to find the average length of roller coasters\n- Use `=AVERAGE` to call the sum function\n- Specify the range by typing it in `=AVERAGE(G2:G158)`\n- Press **Enter** to escape out of the cell and run your formula\n",
         "imageUrl": "",
         "key": "emma-panel-data-science-lesson7-level1_2025_launch-8482159f-0e02-4de6-a6bb-209364d96693"
       },
@@ -64,6 +69,6 @@
     ],
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-11T17:52:37.854+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-level1_2025_launch\\\"\"],\"cloned_from\":\"data-science-lesson7-level1_2025_launch\"},{\"changed_at\":\"2025-04-11 17:52:40 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 18:36:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 18:37:44 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 18:51:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 18:54:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:30:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:48:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-11T17:52:37.854+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-level1_2025_launch\\\"\"],\"cloned_from\":\"data-science-lesson7-level1_2025_launch\"},{\"changed_at\":\"2025-04-11 17:52:40 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 18:36:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 18:37:44 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 18:51:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 18:54:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:30:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:48:13 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-15 18:30:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-15 19:21:26 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

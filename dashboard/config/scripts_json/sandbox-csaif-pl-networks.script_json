@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-26 17:24:39 UTC",
+    "serialized_at": "2025-04-15 17:03:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -477,6 +477,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_interent"
+        ],
         "progression": "The Internet"
       },
       "bonus": false,
@@ -549,6 +552,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_interent_05"
+        ],
         "progression": "The Internet"
       },
       "bonus": false,
@@ -576,6 +582,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "csaif_pl_nets_interent_06"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "22cc55f7-6f74-4907-95e2-d5957b3dcfea"
+      },
+      "level_keys": [
+        "csaif_pl_nets_interent_06"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_nets_interent_0X"
+        ],
+        "progression": "The Internet"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "csaif_pl_nets_interent_0X"
         ],
         "lesson.key": "lesson-2",
@@ -588,8 +619,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 7,
+      "chapter": 19,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -613,8 +644,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 8,
+      "chapter": 20,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -638,8 +669,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 9,
+      "chapter": 21,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -663,11 +694,14 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 10,
+      "chapter": 22,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_security_02"
+        ],
         "progression": "Network Security"
       },
       "bonus": false,
@@ -685,8 +719,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 11,
+      "chapter": 23,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -710,11 +744,14 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 12,
+      "chapter": 24,
+      "position": 13,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_nets_security_03"
+        ],
         "progression": "Network Security"
       },
       "bonus": false,
@@ -732,8 +769,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 13,
+      "chapter": 25,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -757,8 +794,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 14,
+      "chapter": 26,
+      "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -968,6 +1005,18 @@
         "level.key": "csaif_pl_nets_interent_05",
         "script_level.level_keys": [
           "csaif_pl_nets_interent_05"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-networks",
+        "activity_section.key": "22cc55f7-6f74-4907-95e2-d5957b3dcfea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_nets_interent_06",
+        "script_level.level_keys": [
+          "csaif_pl_nets_interent_06"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

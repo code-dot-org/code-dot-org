@@ -1,6 +1,7 @@
 @no_phone
 Feature: Self Paced PL Instructor in Training - Verified Instructor
 
+  @properties_encryption_key
   Scenario: View Instructor In Training Applab Level as Verified Teacher
     Given I create an authorized teacher-associated student named "Manuel"
     And I sign in as "Teacher_Manuel"
@@ -28,6 +29,7 @@ Feature: Self Paced PL Instructor in Training - Verified Instructor
     And element ".editor-column" contains text "Some teacher only content yay!"
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
 
+@properties_encryption_key
   @no_mobile
   Scenario: View Instructor In Training Free Response Level as Verified Teacher
     Given I create an authorized teacher-associated student named "Manuel"
@@ -65,6 +67,7 @@ Feature: Self Paced PL Instructor in Training - Verified Instructor
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
 
   @no_mobile
+  @properties_encryption_key
   Scenario: View Instructor In Training LevelGroup Level as Verified Teacher
     Given I create an authorized teacher-associated student named "Manuel"
     And I sign in as "Teacher_Manuel"
