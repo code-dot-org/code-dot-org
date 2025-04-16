@@ -89,16 +89,18 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
           <span className={styles.sectionCodeText}>
             <OverlineOneText>
               <span>{i18n.sectionCodeWithColon()}</span>
-              <WithTooltip
-                tooltipProps={{
-                  tooltipId: 'section-code',
-                  role: 'tooltip',
-                  text: i18n.copySectionCodeTooltip(),
-                  direction: 'onLeft',
-                  size: 's',
-                  iconLeft: {iconName: 'copy'},
-                }}
-              >
+            </OverlineOneText>
+            <WithTooltip
+              tooltipProps={{
+                tooltipId: 'section-code',
+                role: 'tooltip',
+                text: i18n.copySectionCodeTooltip(),
+                direction: 'onLeft',
+                size: 's',
+                iconLeft: {iconName: 'copy'},
+              }}
+            >
+              <OverlineOneText>
                 <button
                   className={styles.sectionCode}
                   onClick={handleCopySectionCode}
@@ -106,8 +108,8 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
                 >
                   {sectionCode}
                 </button>
-              </WithTooltip>
-            </OverlineOneText>
+              </OverlineOneText>
+            </WithTooltip>
           </span>
         </TooltipOverlay>
       )}
