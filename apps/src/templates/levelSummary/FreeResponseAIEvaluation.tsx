@@ -59,6 +59,9 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       aiEvaluation: aiResponse.aiEvaluation,
       aiReasoning: aiResponse.aiReasoning,
       evaluationCriteria: aiResponse.evaluationCriteria,
+      levelId: levelData.levelId,
+      unitId: levelData.unitId,
+      id: aiResponse.id,
     };
     setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
     setEvaluationCount(prevCount => prevCount + 1);

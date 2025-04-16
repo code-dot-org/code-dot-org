@@ -3,6 +3,10 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {
+  FeedbackData,
+  logUserFeedbackOnStudentEvaluation,
+} from '@cdo/apps/aiEvaluation/aiFeedbackApi';
 
 import {FEEDBACK_TYPE} from './AiFeedbackType';
 import FeedbackToggle from './FeedbackToggle';
@@ -78,6 +82,18 @@ const FreeResponseStudentResponseRow: React.FC<
     }
   };
 
+  const handleFeedbackClick = async (thumbsUp: boolean) => {
+    const feedbackData: FeedbackData = {
+      aiInteractionType: 'StudentWorkEvaluation',
+      aiInteractionId: studentWorkEvaluation?.id,
+      thumbsUp,
+      levelId: studentWorkEvaluation?.levelId,
+      scriptId: studentWorkEvaluation?.unitId,
+    };
+
+    logUserFeedbackOnStudentEvaluation(feedbackData);
+  };
+
   return (
     <div className={styles.rowContainer}>
       <BodyThreeText className={styles.aiAnalysisNameColumn}>
@@ -92,12 +108,8 @@ const FreeResponseStudentResponseRow: React.FC<
       >{`${studentWorkEvaluation?.aiEvaluation}. ${studentWorkEvaluation?.aiReasoning}`}</BodyThreeText>
       <div>
         <FeedbackToggle
-          onThumbsUpClick={() => {
-            console.log('thumbsUp');
-          }}
-          onThumbsDownClick={() => {
-            console.log('thumbsDown');
-          }}
+          onThumbsUpClick={() => handleFeedbackClick(true)}
+          onThumbsDownClick={() => handleFeedbackClick(false)}
           size="xs"
           color="gray"
         />

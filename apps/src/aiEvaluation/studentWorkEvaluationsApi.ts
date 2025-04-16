@@ -22,6 +22,7 @@ export async function logStudentWorkEvaluations(
     evaluation: parsedResponse.aiEvaluation,
     reasoning: parsedResponse.aiReasoning,
   });
+
   // For each specific skill-based evaluation, log a UserLevelSkillEvaluation
   if (parsedResponse.skillEvaluations) {
     await Promise.all(
@@ -36,6 +37,7 @@ export async function logStudentWorkEvaluations(
           evaluation: skillEvaluation.aiEvaluation,
           reasoning: skillEvaluation.aiReasoning,
         });
+
         logStudentWorkEvaluationSummary({
           studentWorkEvaluationId: ulse.id,
           studentWorkEvaluationSummaryId: ule.id,
@@ -43,6 +45,8 @@ export async function logStudentWorkEvaluations(
       })
     );
   }
+
+  return ule.id;
 }
 
 type StudentWorkEvaluation = UserLevelEvaluation | UserLevelSkillEvaluation;
