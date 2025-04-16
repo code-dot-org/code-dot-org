@@ -1,10 +1,16 @@
 import {useEffect, RefObject} from 'react';
 
+import useEscapeKeyHandler from '@/common/hooks/useEscapeKeyHandler';
+
 const closeOnEvent = (
   ref: RefObject<HTMLElement>,
   onClose: () => void,
   isActive: boolean,
 ): void => {
+  // Handle escape key press
+  useEscapeKeyHandler(onClose);
+
+  // Handle click and keyboard events
   useEffect(() => {
     if (!isActive) return;
 
@@ -14,20 +20,12 @@ const closeOnEvent = (
       }
     };
 
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        onClose();
-      }
-    };
-
     document.addEventListener('mousedown', handleClickOutside);
     document.addEventListener('focusin', handleClickOutside);
-    document.addEventListener('keydown', handleKeyDown);
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('focusin', handleClickOutside);
-      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [ref, onClose, isActive]);
 };
