@@ -23,8 +23,6 @@ FactoryBot.define do
       num_enrollments {0}
       enrolled_and_attending_users {0}
       enrolled_unattending_users {0}
-      num_completed_surveys {0}
-      randomized_survey_answers {false}
       assign_session_code {false}
     end
 
@@ -104,15 +102,6 @@ FactoryBot.define do
 
       evaluator.num_facilitators.times do
         workshop.facilitators << (create :facilitator, course: workshop.course)
-      end
-
-      evaluator.num_completed_surveys.times do
-        enrollment = create :pd_enrollment, workshop: workshop
-        if workshop.teachercon?
-          create :pd_teachercon_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
-        else
-          raise 'Num_completed_surveys trait unsupported for this workshop type'
-        end
       end
     end
 

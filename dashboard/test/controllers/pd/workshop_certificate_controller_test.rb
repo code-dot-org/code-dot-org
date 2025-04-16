@@ -79,10 +79,11 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   end
 
   test 'Generates certificate for CSD teachercon' do
-    workshop = create :workshop,
+    workshop = build :workshop,
       num_sessions: 1,
       course: Pd::Workshop::COURSE_CSD,
       subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON
+    workshop.save(validate: false)
     enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
 
     mock_image = expect_renders_certificate
@@ -101,10 +102,11 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   end
 
   test 'Generates certificate for CSP teachercon' do
-    workshop = create :workshop,
+    workshop = build :workshop,
       num_sessions: 1,
       course: Pd::Workshop::COURSE_CSP,
       subject: Pd::Workshop::SUBJECT_CSP_TEACHER_CON
+    workshop.save(validate: false)
     enrollment = create :pd_enrollment, :with_attendance, workshop: workshop
 
     mock_image = expect_renders_certificate
