@@ -446,6 +446,8 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   Infrastructure::Logger.put('runner_feature_tests_count', run_results.count, extra_dimensions)
   Infrastructure::Logger.flush
 
+  ChatClient.log "Skipped tests tagged with: #{skipped_tags.to_a.join(', ')}"
+
   test_report =  "\n#{test_type.upcase} TEST REPORT: #{failures.any? ? "*❌ FAILED*" : "*✅ PASSED*"}\n"
   test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
   test_report += "\n"
@@ -667,7 +669,10 @@ def tag(tag, run = true)
   " -t #{tag}"
 end
 
+def skipped_tags = $skipped_tags ||= Set.new
+
 def skip_tag(tag)
+  skipped_tags << tag
   " -t 'not #{tag}'"
 end
 
@@ -712,6 +717,8 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
   arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
+  arguments += skip_tag('@properties_encryption_key') if CDO.properties_encryption_key.blank?
+  arguments += skip_tag('@cloudfront_key') if CDO.cloudfront_key_pair_id.blank?
   arguments
 end
 

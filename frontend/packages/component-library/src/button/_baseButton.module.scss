@@ -1,5 +1,5 @@
 @use '@code-dot-org/component-library-styles/colors';
-@import '@code-dot-org/component-library-styles/mixins.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
 // Button common styles
 .button,
@@ -370,7 +370,7 @@ a.button-l {
   gap: 0.5rem;
 
   span {
-    @include button-one-text;
+    @include mixins.button-one-text;
     margin: 1px 0 0;
   }
 
@@ -392,7 +392,7 @@ a.button-m {
   gap: 0.5rem;
 
   span {
-    @include button-two-text;
+    @include mixins.button-two-text;
     margin: 1px 0 0;
   }
 
@@ -414,7 +414,7 @@ a.button-s {
   gap: 0.5rem;
 
   span {
-    @include button-three-text;
+    @include mixins.button-three-text;
     margin: 1px 0 0;
   }
 
@@ -436,7 +436,7 @@ a.button-xs {
   gap: 0.25rem;
 
   span {
-    @include button-four-text;
+    @include mixins.button-four-text;
     margin: 1px 0 0;
   }
 
