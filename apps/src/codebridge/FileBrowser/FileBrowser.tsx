@@ -64,8 +64,6 @@ export const FileBrowser = React.memo(() => {
       return;
     }
     event.preventDefault();
-    console.log(`hello from keyboardCoordinateGetter`);
-    console.log({context});
     // need to find closest droppable container in the direction of the key press
     // and return the coordinates of that container
     const orderedRects = Array.from(droppableRects.keys());
@@ -90,6 +88,9 @@ export const FileBrowser = React.memo(() => {
     }
 
     const newRectId = orderedRects[nextIndex];
+    if (newRectId === over?.id) {
+      return;
+    }
     const newRect = droppableRects.get(orderedRects[nextIndex]);
     if (newRect) {
       const x = newRect.left;
@@ -102,17 +103,7 @@ export const FileBrowser = React.memo(() => {
         y,
       };
 
-      console.log({
-        currentIndex,
-        newX: newCoordinates.x,
-        newY: newCoordinates.y,
-        rect: newRect,
-        nextIndex,
-        over,
-      });
       return newCoordinates;
-    } else {
-      console.log(`no new rect found`);
     }
   };
 
