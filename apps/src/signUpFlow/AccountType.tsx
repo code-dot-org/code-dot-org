@@ -6,7 +6,6 @@ import React, {useState, useEffect} from 'react';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import StatsigSessionReplay from '@cdo/apps/metrics/StatsigSessionReplay';
 import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 
@@ -64,14 +63,6 @@ const AccountType: React.FunctionComponent<{
       }
     }
   }, [isSignedOut]);
-
-  useEffect(() => {
-    const statsigSessionReplay = new StatsigSessionReplay();
-    statsigSessionReplay.startRecording();
-    return () => {
-      statsigSessionReplay.stopRecording();
-    };
-  }, []);
 
   const selectAccountType = (accountType: string) => {
     analyticsReporter.sendEvent(

@@ -102,8 +102,3 @@ class StatsigSessionReplay {
 }
 
 export default StatsigSessionReplay;
-
-// Mask does NOT work on text inputs, see https://github.com/rrweb-io/rrweb/issues/874.
-// It does however work on selects.
-export const REPLAY_MASK_CLASS = 'rr-mask';
-export const REPLAY_BLOCK_CLASS = 'rr-block';

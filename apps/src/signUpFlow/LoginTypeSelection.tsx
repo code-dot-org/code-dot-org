@@ -13,9 +13,6 @@ import OldButton from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import StatsigSessionReplay, {
-  REPLAY_BLOCK_CLASS,
-} from '@cdo/apps/metrics/StatsigSessionReplay';
 import canvas from '@cdo/apps/signUpFlow/images/canvas.png';
 import schoology from '@cdo/apps/signUpFlow/images/schoology.png';
 import locale from '@cdo/apps/signUpFlow/locale';
@@ -137,14 +134,6 @@ const LoginTypeSelection: React.FunctionComponent<{
       setCreateAccountButtonDisabled(true);
     }
   }, [passwordIcon, showConfirmPasswordError, confirmPassword, email]);
-
-  useEffect(() => {
-    const statsigSessionReplay = new StatsigSessionReplay();
-    statsigSessionReplay.startRecording();
-    return () => {
-      statsigSessionReplay.stopRecording();
-    };
-  }, []);
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
@@ -353,7 +342,6 @@ const LoginTypeSelection: React.FunctionComponent<{
                 name="emailInput"
                 id="uitest-email"
                 onKeyDown={handleKeyDown}
-                className={REPLAY_BLOCK_CLASS}
               />
               {showEmailError && (
                 <div className={style.validationMessage}>

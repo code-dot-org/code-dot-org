@@ -15,9 +15,6 @@ import React, {useState, useEffect, useMemo} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import StatsigSessionReplay, {
-  REPLAY_BLOCK_CLASS,
-} from '@cdo/apps/metrics/StatsigSessionReplay';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {isEmail} from '@cdo/apps/util/formatValidation';
@@ -116,14 +113,6 @@ const FinishStudentAccount: React.FunctionComponent<{
     if (userReturnToHref) {
       setUserReturnTo(userReturnToHref);
     }
-  }, []);
-
-  useEffect(() => {
-    const statsigSessionReplay = new StatsigSessionReplay();
-    statsigSessionReplay.startRecording();
-    return () => {
-      statsigSessionReplay.stopRecording();
-    };
   }, []);
 
   // GDPR is valid if
@@ -313,7 +302,6 @@ const FinishStudentAccount: React.FunctionComponent<{
                     value={parentEmail}
                     placeholder={locale.parentEmailPlaceholder()}
                     onChange={onParentEmailChange}
-                    className={REPLAY_BLOCK_CLASS}
                   />
                   {showParentEmailError && (
                     <BodyThreeText className={style.errorMessage}>
@@ -344,7 +332,6 @@ const FinishStudentAccount: React.FunctionComponent<{
               value={name}
               placeholder={locale.coder()}
               onChange={onNameChange}
-              className={REPLAY_BLOCK_CLASS}
             />
             {nameErrorMessage && (
               <BodyThreeText className={style.errorMessage}>
@@ -370,7 +357,7 @@ const FinishStudentAccount: React.FunctionComponent<{
             )}
           </div>
           {usIp && (
-            <div className={REPLAY_BLOCK_CLASS}>
+            <div>
               <SimpleDropdown
                 name="userState"
                 id="uitest-user-state"
@@ -393,7 +380,6 @@ const FinishStudentAccount: React.FunctionComponent<{
             label={locale.what_is_your_gender()}
             value={gender}
             onChange={e => setGender(e.target.value)}
-            className={REPLAY_BLOCK_CLASS}
           />
           {showGDPR && (
             <div>
