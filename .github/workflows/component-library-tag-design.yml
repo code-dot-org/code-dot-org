@@ -2,8 +2,7 @@ name: Component-Library-Tag-Design
 
 on:
   pull_request:
-    types:
-      - opened
+    types: [ready_for_review, synchronize]
     paths:
       - 'frontend/packages/component-library-styles/**'
       - 'frontend/packages/component-library/**'
@@ -12,12 +11,23 @@ on:
 jobs:
   request:
     name: Request review from design team on opened Component Library PRs
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Request Review
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          url: ${{ github.event.pull_request.html_url }}
-        run: |
-          gh pr edit "$url" --add-reviewer @code-dot-org/component-library-design-reviewers
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.DEPENDABOT_REVIEWER_GH_TOKEN }}
+          script: |
+            const inDraft = !!github.event.pull_request.draft
+
+            if (!inDraft) {
+              await github.rest.pulls.requestReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.issue.number,
+                team_reviewers: ['component-library-design-reviewers'],
+              });
+            }
+
+
