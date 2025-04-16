@@ -4,12 +4,10 @@ import '@testing-library/jest-dom';
 import Spacer, {SpacerProps} from './../Spacer';
 
 describe('Spacer', () => {
-  const title = 'Spacer';
-
   const renderSpacer = (props: SpacerProps = {}) =>
-    render(<Spacer {...props} title={title} />);
+    render(<Spacer {...props} />);
 
-  const getSpacer = () => screen.getByTitle(title);
+  const getSpacer = () => screen.getByRole('presentation');
 
   it('renders spacer', () => {
     renderSpacer();

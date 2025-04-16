@@ -19,12 +19,15 @@ export default {
 
         {components.map((component, index) => (
           <section>
-            {component.title ? <h5>{component.title}</h5> : <br />}
-            <Spacer
-              key={index}
-              style={{background: '#E4E6E9'}}
-              {...component}
-            />
+            {component.size ? (
+              <h5>Size {component.size.toUpperCase()}</h5>
+            ) : (
+              <br />
+            )}
+
+            <div style={{background: '#E4E6E9'}}>
+              <Spacer key={index} {...component} />
+            </div>
           </section>
         ))}
       </>
@@ -36,25 +39,20 @@ export default {
 // STORIES
 //
 export const Playground: Story = {
-  args: {role: 'separator'},
+  args: {},
   play: ({canvasElement}: {canvasElement: HTMLElement}) => {
-    const canvas = within(canvasElement);
-    expect(canvas.getByRole('separator')).toHaveStyle('height: 32px');
+    const spacer = within(canvasElement).getByRole('presentation');
+    expect(getComputedStyle(spacer).height).toBe('32px');
   },
 };
 
 export const Sizes: Story = {
-  args: [
-    {size: 'xs', title: 'Size XS - 8px (0.5rem)'},
-    {size: 's', title: 'Size S - 16px (1rem)'},
-    {size: 'm', title: 'Size M - 32px (2rem)'},
-    {size: 'l', title: 'Size L - 64px (4rem)'},
-  ],
+  args: [{size: 'xs'}, {size: 's'}, {size: 'm'}, {size: 'l'}],
   play: ({canvasElement}: {canvasElement: HTMLElement}) => {
-    const canvas = within(canvasElement);
-    expect(canvas.getByTitle(/Size XS/)).toHaveStyle('height: 8px');
-    expect(canvas.getByTitle(/Size S /)).toHaveStyle('height: 16px');
-    expect(canvas.getByTitle(/Size M /)).toHaveStyle('height: 32px');
-    expect(canvas.getByTitle(/Size L /)).toHaveStyle('height: 64px');
+    const spacers = within(canvasElement).getAllByRole('presentation');
+    expect(getComputedStyle(spacers[0]).height).toBe('8px');
+    expect(getComputedStyle(spacers[1]).height).toBe('16px');
+    expect(getComputedStyle(spacers[2]).height).toBe('32px');
+    expect(getComputedStyle(spacers[3]).height).toBe('64px');
   },
 };

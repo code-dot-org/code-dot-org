@@ -1,11 +1,10 @@
 import classNames from 'classnames';
-import {HTMLAttributes} from 'react';
 
 import type {ComponentSizeXSToL} from '@/common/types';
 
 import moduleStyles from './spacer.module.scss';
 
-export interface SpacerProps extends HTMLAttributes<HTMLDivElement> {
+export interface SpacerProps {
   /** Spacer size */
   size?: ComponentSizeXSToL;
 }
@@ -23,10 +22,9 @@ export interface SpacerProps extends HTMLAttributes<HTMLDivElement> {
  * Design System: Spacer Component.
  * Acts as a spacer between elements.
  */
-const Spacer: React.FC<SpacerProps> = ({size = 'm', ...HTMLAttributes}) => (
+const Spacer: React.FC<SpacerProps> = ({size = 'm'}) => (
   <div
     role="presentation"
-    {...HTMLAttributes}
     className={classNames(
       moduleStyles.spacer,
       moduleStyles[`spacer-size-${size}`],
