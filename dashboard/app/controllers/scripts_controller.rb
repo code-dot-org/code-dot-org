@@ -100,12 +100,12 @@ class ScriptsController < ApplicationController
       sections: @sections
     }
 
-    @script_data = @script.summarize(true, current_user, false, request.locale, unit_group: @course).merge(additional_script_data)
+    @script_data = @script.summarize(true, current_user, false, request.locale, unit_group_unit: @unit_group_unit).merge(additional_script_data)
 
     @page_title = "Unit: #{@script.localized_title}"
     @page_description = @script.localized_description.truncate(200, separator: '.', omission: '.')
 
-    link = Unit.latest_stable_version(@script.family_name)&.link
+    link = Unit.latest_stable_version(@script.family_name)&.link(unit_group_unit: @unit_group_unit)
     @canonical_url = CDO.studio_url(link) if @script.unit_group&.single_unit_course? && link
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
@@ -336,8 +336,8 @@ class ScriptsController < ApplicationController
       @course = UnitGroup.get_from_cache(course_name)
       raise ActiveRecord::RecordNotFound unless @course
       @unit_position = params[:position]
-      unit_group_unit = UnitGroupUnit.get_with_position_from_cache(@course.id, @unit_position)
-      @script = Unit.get_from_cache(unit_group_unit.script_id) if unit_group_unit
+      @unit_group_unit = UnitGroupUnit.get_with_position_from_cache(@course.id, @unit_position)
+      @script = Unit.get_from_cache(@unit_group_unit.script_id) if @unit_group_unit
     else
       @script = get_unit_by_name
     end

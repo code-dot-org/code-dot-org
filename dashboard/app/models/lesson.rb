@@ -88,10 +88,10 @@ class Lesson < ApplicationRecord
   # absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
-  validates_uniqueness_of(
-    :key, scope: :script_id, case_sensitive: true, message: lambda do |object, _data|
+  validates(
+    :key, uniqueness: {scope: :script_id, case_sensitive: true, message: lambda do |object, _data|
       "lesson with key #{object.key.inspect} is already taken within unit #{object.script&.name.inspect}"
-    end
+    end}
   )
 
   include CodespanOnlyMarkdownHelper
@@ -189,9 +189,9 @@ class Lesson < ApplicationRecord
   # If there is a script_level, build_script_level_path will provide the correct url,
   # even if it's a lockable lesson. Otherwise, we give the url to the student resources
   # page, and the lesson plan pdf as a backup.
-  def start_url
+  def start_url(course_name: nil, unit_position: nil)
     if script_levels.first
-      return url_from_path(build_script_level_path(script_levels.first), CDO.default_scheme)
+      return url_from_path(build_script_level_path(script_levels.first, course_name: course_name, unit_position: unit_position), CDO.default_scheme)
     elsif script.include_student_lesson_plans && script.is_migrated
       return url_from_path(script_lesson_student_path(script, self), CDO.default_scheme)
     elsif student_lesson_plan_pdf_url
@@ -273,14 +273,16 @@ class Lesson < ApplicationRecord
     script.get_course_version&.all_standards_url
   end
 
-  def summarize(include_bonus_levels = false, for_edit: false)
-    lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}") do
+  def summarize(include_bonus_levels = false, for_edit: false, unit_group_unit: nil)
+    lesson_summary = Rails.cache.fetch("#{cache_key}/lesson_summary/#{I18n.locale}/#{include_bonus_levels}/#{unit_group_unit&.unit_group&.name}") do
       cached_levels = include_bonus_levels ? cached_script_levels : cached_script_levels.reject(&:bonus)
 
       description_student = get_localized_property('student_overview') || ''
       description_student = render_codespan_only_markdown(description_student) unless script.is_migrated?
       description_teacher = get_localized_property('overview') || ''
       description_teacher = render_codespan_only_markdown(description_teacher) unless script.is_migrated?
+      course_name = unit_group_unit&.unit_group&.name
+      unit_position = unit_group_unit&.position
 
       lesson_data = {
         script_id: script.id,
@@ -297,12 +299,12 @@ class Lesson < ApplicationRecord
         lockable: !!lockable,
         hasLessonPlan: has_lesson_plan,
         numberedLesson: numbered_lesson?,
-        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit)},
+        levels: cached_levels.map {|sl| sl.summarize(false, for_edit: for_edit, unit_group_unit: unit_group_unit)},
         description_student: description_student,
         description_teacher: description_teacher,
         unplugged: unplugged,
         lessonEditPath: get_uncached_edit_path,
-        lessonStartUrl: start_url,
+        lessonStartUrl: start_url(course_name: course_name, unit_position: unit_position),
         duration: total_lesson_duration,
         background: background,
       }
@@ -369,7 +371,13 @@ class Lesson < ApplicationRecord
     lesson_activities.map(&:summarize).sum {|activity| activity[:duration] || 0}
   end
 
-  def summarize_for_calendar
+  def summarize_for_calendar(unit_group_unit: nil)
+    url = script_lesson_path(script, self)
+    if Policies::Courses.modularity_enabled? && unit_group_unit
+      course = unit_group_unit.unit_group
+      unit_position = unit_group_unit.position
+      url = course_unit_lesson_path(course, unit_position, self)
+    end
     {
       id: id,
       lessonNumber: relative_position,
@@ -377,7 +385,7 @@ class Lesson < ApplicationRecord
       duration: total_lesson_duration,
       assessment: !!assessment,
       unplugged: unplugged,
-      url: script_lesson_path(script, self)
+      url: url,
     }
   end
 
@@ -443,10 +451,10 @@ class Lesson < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show(user, can_view_teacher_markdown)
+  def summarize_for_lesson_show(user, can_view_teacher_markdown, unit_group_unit: nil)
     {
       id: id,
-      unit: script.summarize_for_lesson_show,
+      unit: script.summarize_for_lesson_show(unit_group_unit: unit_group_unit),
       position: relative_position,
       lockable: lockable,
       key: key,

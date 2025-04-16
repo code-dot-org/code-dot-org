@@ -42,10 +42,14 @@ module LevelsHelper
     end
   end
 
-  def build_script_level_path(script_level, params = {}, course_name: nil, unit_position: nil)
+  def build_script_level_path(script_level, params = {}, course_name: nil, unit_position: nil, unit_group_unit: nil)
     params ||= {}
+    if unit_group_unit
+      course_name = unit_group_unit.unit_group.name
+      unit_position = unit_group_unit.position
+    end
     # if course_name is not defined, then this is a deprecated /s/ URL
-    return build_script_level_path_deprecated(script_level, params) unless course_name && unit_position
+    return build_script_level_path_deprecated(script_level, params) unless course_name && unit_position && Policies::Courses.modularity_enabled?
     # /courses/.../units/...
     if script_level.script.name == Unit::HOC_NAME
       hoc_chapter_path(script_level.chapter, params)
@@ -71,8 +75,8 @@ module LevelsHelper
     end
   end
 
-  def build_script_level_url(script_level, params = {})
-    url_from_path(build_script_level_path(script_level, params))
+  def build_script_level_url(script_level, params = {}, unit_group_unit: nil)
+    url_from_path(build_script_level_path(script_level, params, unit_group_unit: unit_group_unit))
   end
 
   def url_from_path(path, scheme = '')

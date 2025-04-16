@@ -454,14 +454,16 @@ class ApiController < ApplicationController
     end
     unit = nil
     course = nil
+    unit_group_unit = nil
 
     if unit_name
       context = Queries::Courses.get_course_context(unit_name)
       if context
         unit = context[:unit]
         course = context[:course]
+        unit_group_unit = context[:unit_group_unit]
         course_name = course.name
-        unit_position = context[:unit_group_unit].position
+        unit_position = unit_group_unit.position
       else
         # Unit hasn't been migrated to have a Course/UnitGroup
         unit = Unit.get_from_cache(unit_name)
@@ -471,6 +473,7 @@ class ApiController < ApplicationController
       unit_position = params[:unit_position]&.to_i
       context = Queries::Courses.get_unit_context(course_name, unit_position)
       unit = context[:unit]
+      unit_group_unit = context[:unit_group_unit]
     end
 
     redirect_unit_url = unit.redirect_to_unit_url(current_user, locale: request.locale)
@@ -492,7 +495,7 @@ class ApiController < ApplicationController
     end
 
     render json: {
-      unitData: unit.summarize(true, current_user, false, request.locale).merge(additional_script_data),
+      unitData: unit.summarize(true, current_user, false, request.locale, unit_group_unit: unit_group_unit).merge(additional_script_data),
       plcBreadcrumb: plc_breadcrumb
     }
   end
