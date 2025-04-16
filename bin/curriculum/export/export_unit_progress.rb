@@ -64,6 +64,25 @@ def fetch_progress(unit_name:, level_id:, output_dir:)
   end
 end
 
+def fetch_ai_evals(unit_name:, level_id:, output_dir:)
+  if Rails.env.production?
+    filename = 'export_ai_evals.sql.erb'
+    pathname = File.expand_path(filename, __dir__)
+    query_template = File.read(pathname)
+    params = {
+      unit_name: unit_name,
+      level_id: level_id,
+      output_dir: output_dir
+    }
+    query = ERB.new(query_template).result_with_hash(params)
+    client = RedshiftClient.instance
+    start_time = Time.now
+    puts "Querying redshift using #{filename} with #{params}..."
+    execute_redshift_query(client, query)
+    puts "Redshift ai_evals query executed in: #{(Time.now - start_time).round(2)} seconds"
+  end
+end
+
 def execute_redshift_query(client, query)
   client.exec(query)
 rescue => exception
@@ -81,6 +100,12 @@ def main
   output_dir = $options[:output_dir].presence || unit_name
 
   fetch_progress(
+    unit_name: unit_name,
+    level_id: level_id,
+    output_dir: output_dir
+  )
+
+  fetch_ai_evals(
     unit_name: unit_name,
     level_id: level_id,
     output_dir: output_dir
