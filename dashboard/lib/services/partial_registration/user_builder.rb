@@ -10,10 +10,7 @@ module Services
       end
 
       def call
-        params = user_params
-        user_class = ::User.find_sti_class(params[:user_type]) || ::User
-        user = user_class.new_with_session(params, session)
-
+        user = ::User.new_with_session(user_params, session)
         user.save!
         user
       end
