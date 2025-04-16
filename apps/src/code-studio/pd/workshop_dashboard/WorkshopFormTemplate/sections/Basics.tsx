@@ -317,7 +317,7 @@ export const Basics: FC<BasicsProps> = ({
               )}
               errorMessage={errors.courseOfferings}
             />
-            {courseOfferingsById && (
+            {courseOfferingsById && courseOfferings.length > 0 && (
               <Tags
                 size="s"
                 className={commonStyles.wrapContainer}

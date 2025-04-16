@@ -7,7 +7,11 @@
   margin: 0 auto;
   width: 100%;
   max-width: 1200px;
-  gap: 1.5rem;
+  gap: 2.5rem;
+
+  h2 {
+    margin: 0;
+  }
 
   section {
     gap: 1rem;
