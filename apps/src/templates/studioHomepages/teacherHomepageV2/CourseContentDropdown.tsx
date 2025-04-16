@@ -101,6 +101,7 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
           size="m"
           dropdownTextThickness="thin"
           onChange={args => onDropdownChange(args)}
+          disabled={lessonList.length === 0}
         />
       ) : (
         <TaskButton
