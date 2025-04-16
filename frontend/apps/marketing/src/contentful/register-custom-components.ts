@@ -18,6 +18,9 @@ import ActionBlockCarousel, {
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
+import HeroBanner, {
+  HeroBannerContentfulComponentDefinition,
+} from '@/components/contentful/heroBanner';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
@@ -95,6 +98,13 @@ defineComponents(
     {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
+    },
+    {
+      component: HeroBanner,
+      definition: HeroBannerContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: IconHighlight,
