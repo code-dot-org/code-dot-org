@@ -17,7 +17,7 @@ export interface CustomDialogProps extends HTMLAttributes<HTMLDivElement> {
   onClose?: () => void;
   /** CustomDialog close button aria label */
   closeLabel?: string;
-  /** CustomDialog z-index for the background overlay. Defaults to 10. */
+  /** CustomDialog z-index for the background overlay. See variables.scss for default. */
   zIndex?: number;
   /** CustomDialog content */
   children?: ReactNode;

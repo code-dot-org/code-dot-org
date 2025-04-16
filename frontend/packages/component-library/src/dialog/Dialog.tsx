@@ -38,7 +38,7 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   icon?: FontAwesomeV6IconProps;
   /** Dialog image url */
   imageUrl?: string;
-  /** z-index for the background overlay. Defaults to 10. */
+  /** z-index for the background overlay. See variables.scss for default. */
   zIndex?: number;
 }
 
