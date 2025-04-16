@@ -23,7 +23,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: context.issue.number,
-              team_reviewers: ['component-library-design-reviewers'],
+              team_reviewers: ['code-dot-org/component-library-design-reviewers'],
             });
 
 
