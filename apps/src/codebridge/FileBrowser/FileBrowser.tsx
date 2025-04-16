@@ -89,14 +89,27 @@ export const FileBrowser = React.memo(() => {
       nextIndex = Math.max(currentIndex - 1, 0);
     }
 
+    const newRectId = orderedRects[nextIndex];
     const newRect = droppableRects.get(orderedRects[nextIndex]);
     if (newRect) {
+      const x = newRect.left;
+      let y = newRect.top + 8;
+      if (newRectId === DEFAULT_FOLDER_ID) {
+        y = newRect.bottom;
+      }
       const newCoordinates = {
-        x: newRect.left,
-        y: newRect.top, // need to add offset, and if this is the default folder, y should be the bottom, not the top
+        x,
+        y,
       };
 
-      console.log({currentIndex, newCoordinates, nextIndex});
+      console.log({
+        currentIndex,
+        newX: newCoordinates.x,
+        newY: newCoordinates.y,
+        rect: newRect,
+        nextIndex,
+        over,
+      });
       return newCoordinates;
     } else {
       console.log(`no new rect found`);
