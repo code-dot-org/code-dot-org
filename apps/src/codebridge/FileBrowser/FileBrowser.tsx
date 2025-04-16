@@ -60,6 +60,9 @@ export const FileBrowser = React.memo(() => {
   const keyboardCoordinateGetter: KeyboardCoordinateGetter = (event, args) => {
     const {context} = args;
     const {droppableRects, over} = context;
+    if (event.code !== KeyboardCode.Up && event.code !== KeyboardCode.Down) {
+      return;
+    }
     event.preventDefault();
     console.log(`hello from keyboardCoordinateGetter`);
     console.log({context});
@@ -81,19 +84,19 @@ export const FileBrowser = React.memo(() => {
     const currentIndex = orderedRects.indexOf(over?.id as string);
     let nextIndex = currentIndex;
     if (event.code === KeyboardCode.Down) {
-      nextIndex = Math.max(currentIndex + 1, orderedRects.length - 1);
+      nextIndex = Math.min(currentIndex + 1, orderedRects.length - 1);
     } else if (event.code === KeyboardCode.Up) {
       nextIndex = Math.max(currentIndex - 1, 0);
     }
 
-    const newRect = droppableRects.get(nextIndex);
+    const newRect = droppableRects.get(orderedRects[nextIndex]);
     if (newRect) {
       const newCoordinates = {
         x: newRect.left,
-        y: newRect.top,
+        y: newRect.top, // need to add offset, and if this is the default folder, y should be the bottom, not the top
       };
 
-      console.log({newCoordinates});
+      console.log({currentIndex, newCoordinates, nextIndex});
       return newCoordinates;
     } else {
       console.log(`no new rect found`);
