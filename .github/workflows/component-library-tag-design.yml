@@ -12,6 +12,7 @@ jobs:
   request:
     name: Request review from design team on opened Component Library PRs
     runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
 
     steps:
       - name: Request Review
@@ -19,15 +20,11 @@ jobs:
         with:
           github-token: ${{ secrets.DEPENDABOT_REVIEWER_GH_TOKEN }}
           script: |
-            const inDraft = !!github.event.pull_request.draft
-
-            if (!inDraft) {
-              await github.rest.pulls.requestReviewers({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: context.issue.number,
-                team_reviewers: ['component-library-design-reviewers'],
-              });
-            }
+            await github.rest.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              team_reviewers: ['component-library-design-reviewers'],
+            });
 
 
