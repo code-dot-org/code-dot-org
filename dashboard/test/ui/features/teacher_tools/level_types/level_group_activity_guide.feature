@@ -45,8 +45,8 @@ Scenario: Teacher can view student summary of responses on level marked as asses
 Scenario: Student can see level numbers for level group levels in header.
   Given I create a teacher-associated student named "Lilian"
   Given I am on "http://studio.code.org/s/allthethings/lessons/53/levels/1"
-  And I wait until element "span:contains(1)" is visible
+  And I wait until element ".progress-bubble.enabled span:contains(1)" is visible
 
   # Check that the student can see this numbering on an "assessment" level too.
   Given I am on "http://studio.code.org/s/allthethings/lessons/53/levels/2"
-  And I wait until element "span:contains(2)" is visible
+  And I wait until element ".progress-bubble.enabled span:contains(2)" is visible
