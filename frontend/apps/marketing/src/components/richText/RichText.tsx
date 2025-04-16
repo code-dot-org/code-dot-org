@@ -74,6 +74,8 @@ const richTextRenderOptions: Options = {
   renderNode: {
     [BLOCKS.PARAGRAPH]: (paragraphNode: RichTextNode) => {
       const paragraphContent = extractNodeContent(paragraphNode);
+      // The Rich Text Editor wraps each line in a <p> tag, which acts as a spacer.
+      // Replaces empty paragraphs with a <br /> To comply with HTML a11y guidelines.
       return paragraphContent.length ? (
         <BodyTwoText>{paragraphContent}</BodyTwoText>
       ) : (
