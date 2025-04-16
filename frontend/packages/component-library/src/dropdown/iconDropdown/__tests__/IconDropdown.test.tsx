@@ -47,10 +47,12 @@ describe('Design System - Icon Dropdown Component', () => {
     );
   };
 
-  it('renders with correct label and options', () => {
+  it('renders with correct label and options', async () => {
+    const user = userEvent.setup();
     render(<TestIconDropdown labelText="Dropdown label" />);
 
     const label = screen.getByText('Dropdown label');
+    await user.click(label);
     const option1 = screen.getByText('option1');
     const option2 = screen.getByText('option2');
     const option3 = screen.getByText('option3');
@@ -68,6 +70,9 @@ describe('Design System - Icon Dropdown Component', () => {
     render(
       <TestIconDropdown labelText="Dropdown2 label" onChange={spyOnChange} />,
     );
+
+    const label = screen.getByText('Dropdown2 label');
+    await user.click(label);
 
     const option1 = screen.getByText('option1');
     const option2 = screen.getByText('option2');
@@ -88,8 +93,7 @@ describe('Design System - Icon Dropdown Component', () => {
     expect(spyOnChange).toHaveBeenCalledWith(allOptions[1]);
   });
 
-  it("doesn't change value when dropdown is disabled", async () => {
-    const user = userEvent.setup();
+  it("doesn't render options when dropdown is disabled", async () => {
     const spyOnChange = jest.fn();
 
     render(
@@ -100,21 +104,19 @@ describe('Design System - Icon Dropdown Component', () => {
       />,
     );
 
-    const option1 = screen.getByText('option1');
-    const option2 = screen.getByText('option2');
+    const option1 = screen.queryByText('option1');
+    const option2 = screen.queryByText('option2');
 
-    expect(option1).toBeInTheDocument();
-    expect(option2).toBeInTheDocument();
-
-    // Try clicking the options
-    await user.click(option1);
-    await user.click(option2);
-
-    expect(spyOnChange).not.toHaveBeenCalled();
+    expect(option1).not.toBeInTheDocument();
+    expect(option2).not.toBeInTheDocument();
   });
 
-  it('renders the correct icons for options', () => {
+  it('renders the correct icons for options', async () => {
+    const user = userEvent.setup();
     render(<TestIconDropdown labelText="Dropdown with icons" />);
+
+    const label = screen.getByText('Dropdown with icons');
+    await user.click(label);
 
     const icon1 = screen.getByTitle('Option 1 Icon');
     const icon2 = screen.getByTitle('Option 2 Icon');

@@ -65,10 +65,14 @@ describe('Design System - Checkbox Dropdown Component', () => {
     }
   };
 
-  it('renders with correct text and options', () => {
+  it('renders with correct text and options', async () => {
+    const user = userEvent.setup();
     render(<TestCheckboxDropdown />);
 
-    expect(screen.getByText('Dropdown label')).toBeInTheDocument();
+    const label = screen.getByText('Dropdown label');
+    expect(label).toBeInTheDocument();
+    await user.click(label);
+
     allOptions.forEach(option =>
       expect(screen.getByText(option.label)).toBeInTheDocument(),
     );
@@ -77,6 +81,9 @@ describe('Design System - Checkbox Dropdown Component', () => {
   it('changes selected value when an option is selected', async () => {
     const user = userEvent.setup();
     render(<TestCheckboxDropdown />);
+
+    const label = screen.getByText('Dropdown label');
+    await user.click(label);
 
     const option1 = screen.getByLabelText('option1') as HTMLInputElement;
     const option2 = screen.getByLabelText('option2') as HTMLInputElement;
@@ -95,25 +102,22 @@ describe('Design System - Checkbox Dropdown Component', () => {
     expect(option2.checked).toBe(true);
   });
 
-  it("doesn't change selected value when disabled", async () => {
-    const user = userEvent.setup();
+  it("doesn't display selected value when disabled", async () => {
     render(<TestCheckboxDropdown disabled />);
 
-    const option1 = screen.getByLabelText('option1') as HTMLInputElement;
-    const option2 = screen.getByLabelText('option2') as HTMLInputElement;
+    const option1 = screen.queryByText('option1');
+    const option2 = screen.queryByText('option2');
 
-    expect(option1.checked).toBe(false);
-    expect(option2.checked).toBe(false);
-
-    await user.click(option1);
-
-    expect(option1.checked).toBe(false);
-    expect(option2.checked).toBe(false);
+    expect(option1).not.toBeInTheDocument();
+    expect(option2).not.toBeInTheDocument();
   });
 
   it('handles Select All and Clear All actions', async () => {
     const user = userEvent.setup();
     render(<TestCheckboxDropdown />);
+
+    const label = screen.getByText('Dropdown label');
+    await user.click(label);
 
     const option1 = screen.getByLabelText('option1') as HTMLInputElement;
     const option2 = screen.getByLabelText('option2') as HTMLInputElement;
@@ -140,9 +144,11 @@ describe('Design System - Checkbox Dropdown Component', () => {
   });
 
   it('Checkbox Dropdown - renders with no Select all and Clear all controls', async () => {
+    const user = userEvent.setup();
     render(<TestCheckboxDropdown hideControls />);
 
     const label = screen.getByText('Dropdown label');
+    await user.click(label);
     const option1 = screen.getByDisplayValue('option-1');
     const option2 = screen.getByDisplayValue('option-2');
     const option3 = screen.getByDisplayValue('option-3');

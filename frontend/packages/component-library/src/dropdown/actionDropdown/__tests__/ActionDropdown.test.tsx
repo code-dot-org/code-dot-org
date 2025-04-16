@@ -87,7 +87,6 @@ describe('Design System - Action Dropdown Component', () => {
   });
 
   it("doesn't display options when dropdown is disabled", async () => {
-    const user = userEvent.setup();
     render(
       <ActionDropdown
         name="test2-dropdown"
@@ -98,12 +97,11 @@ describe('Design System - Action Dropdown Component', () => {
       />,
     );
 
-    const triggerButton = screen.getByRole('button', {name: 'Dropdown2 label'});
-    await user.click(triggerButton);
-
+    const triggerButton = screen.queryByText('Dropdown2 label');
     const option1 = screen.queryByText('option1');
     const option2 = screen.queryByText('option2');
 
+    expect(triggerButton).not.toBeInTheDocument();
     expect(option1).not.toBeInTheDocument();
     expect(option2).not.toBeInTheDocument();
   });
