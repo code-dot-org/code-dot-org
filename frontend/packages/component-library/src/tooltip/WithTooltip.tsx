@@ -60,16 +60,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
     if (!isTooltip) {
       setNodePosition(show ? (event.target as HTMLElement) : null);
     }
-    if (show) {
-      updateTooltipStyles();
-    }
   };
-
-  useEffect(() => {
-    if (showTooltip) {
-      updateTooltipPositionIfShown();
-    }
-  }, [showTooltip]);
 
   const handleHideTooltip = () => {
     hideTimeoutRef.current = window.setTimeout(() => {
@@ -79,13 +70,6 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   };
 
   const tailLength = tailLengths[tooltipProps.size || 'm'];
-
-  const updateTooltipPositionIfShown = () => {
-    if (showTooltip) {
-      setNodePosition(null);
-      updateTooltipStyles();
-    }
-  };
 
   const updateTooltipStyles = useCallback(
     () =>
@@ -100,6 +84,22 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
       }),
     [nodePosition, tailLength, actualDirection],
   );
+
+  // Effect to update tooltip styles when the tooltip is shown
+  useEffect(() => {
+    const updateTooltipPositionIfShown = () => {
+      if (showTooltip) {
+        updateTooltipStyles();
+      }
+    };
+
+    updateTooltipPositionIfShown();
+
+    window.addEventListener('resize', updateTooltipPositionIfShown);
+    return () => {
+      window.removeEventListener('resize', updateTooltipPositionIfShown);
+    };
+  }, [showTooltip, nodePosition, actualDirection, updateTooltipStyles]);
 
   // Detect external updates to tooltipProps.direction and handle them
   useEffect(() => {
