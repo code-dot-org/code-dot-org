@@ -2511,9 +2511,15 @@ class User < ApplicationRecord
 
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
-    new_from_partial_registration session do |user|
-      Services::User.assign_form_params(user, params)
-    end
+
+    user = new_from_partial_registration(session)
+
+    sti_class = find_sti_class(params[:user_type] || params['user_type'])
+    user = user.becomes!(sti_class) if sti_class && !user.instance_of?(sti_class)
+
+    Services::User.assign_form_params(user, params)
+
+    user
   end
 
   # Override how devise tries to find users by email to reset password

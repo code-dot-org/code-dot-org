@@ -10,10 +10,7 @@ module Services
       end
 
       def call
-        params = user_params
-        user_class = ::User.find_sti_class(params[:user_type]) || ::User
-        user = user_class.new_with_session(params, session)
-
+        user = ::User.new_with_session(user_params, session)
         user.save!
         user
       end
@@ -35,7 +32,6 @@ module Services
             user_params[:school_info_attributes].permit(:school_id, :school_name, :school_type, :zip, :country)
           end
         when ::User::TYPE_STUDENT
-          # binding.pry
           if user_params[:parent_email_preference_email].present?
             user_params[:parent_email_preference_opt_in_required] = '1'
             user_params[:parent_email_preference_opt_in] = ActiveModel::Type::Boolean.new.cast(user_params[:parent_email_preference_opt_in]) ? 'yes' : 'no'
