@@ -14,6 +14,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SectionCard} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCard';
+import {setStudioUrlPrefix} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -65,6 +66,8 @@ describe('SectionCard', () => {
 
   beforeEach(() => {
     sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+
+    store.dispatch(setStudioUrlPrefix('https://studio.code.org'));
   });
 
   afterEach(() => {
@@ -81,7 +84,6 @@ describe('SectionCard', () => {
                 path={TEACHER_NAVIGATION_PATHS.home}
                 element={
                   <SectionCard
-                    studioUrlPrefix="https://studio.code.org"
                     id={section.id}
                     section={section}
                     onDeleteClickCallback={() => {}}

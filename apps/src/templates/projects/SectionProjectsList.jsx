@@ -12,9 +12,6 @@ class SectionProjectsList extends Component {
     localeCode: PropTypes.string,
     projectsData: PropTypes.array.isRequired,
     showProjectThumbnails: PropTypes.bool.isRequired,
-    // The prefix for the code studio url in the current environment,
-    // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
-    studioUrlPrefix: PropTypes.string.isRequired,
   };
 
   constructor(props) {
@@ -78,7 +75,6 @@ class SectionProjectsList extends Component {
           localeCode={this.props.localeCode}
           projectsData={filteredProjectsData}
           showProjectThumbnails={this.props.showProjectThumbnails}
-          studioUrlPrefix={this.props.studioUrlPrefix}
         />
       </div>
     );

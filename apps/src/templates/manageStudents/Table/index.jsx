@@ -107,8 +107,6 @@ export const COLUMNS = {
 
 class ManageStudentsTable extends Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string,
-
     // Provided by redux
     currentUser: PropTypes.object,
     sectionId: PropTypes.number,
@@ -876,7 +874,6 @@ class ManageStudentsTable extends Component {
             sectionId={sectionId}
             sectionCode={sectionCode}
             loginType={loginType}
-            studioUrlPrefix={this.props.studioUrlPrefix}
             sourceName="ManageStudentsTable"
           />
         </div>
@@ -900,7 +897,6 @@ class ManageStudentsTable extends Component {
             studentData: studentData,
             loginType: loginType,
             sectionCode: this.props.sectionCode,
-            studioUrlPrefix: this.props.studioUrlPrefix,
             providePrivacyLetter: true,
           }}
         />

@@ -23,6 +23,7 @@ import currentUser, {
 import {TeacherHomepage} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import teacherSections, {
   setSections,
+  setStudioUrlPrefix,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
@@ -142,6 +143,7 @@ describe('TeacherHomepage', () => {
     registerReducers({teacherSections, currentUser});
     store.dispatch(setInitialData({id: 1, display_name: 'Rubber Ducky'}));
     store.dispatch(setSections(initialSections));
+    store.dispatch(setStudioUrlPrefix('https://studio.code.org'));
     return render(
       <Provider store={store}>
         <RouterProvider
@@ -149,9 +151,7 @@ describe('TeacherHomepage', () => {
             createRoutesFromElements([
               <Route
                 path={TEACHER_NAVIGATION_PATHS.home}
-                element={
-                  <TeacherHomepage studioUrlPrefix="https://studio.code.org" />
-                }
+                element={<TeacherHomepage />}
               />,
             ]),
             {initialEntries: [INITIAL_ROUTE], basename: '/teacher_dashboard'}

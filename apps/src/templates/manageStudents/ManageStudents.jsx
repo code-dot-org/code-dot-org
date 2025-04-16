@@ -7,18 +7,15 @@ import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 import ManageStudentsTable from './Table';
 
-function ManageStudents({studioUrlPrefix, sectionId, isLoadingStudents}) {
+function ManageStudents({sectionId, isLoadingStudents}) {
   return (
     // eslint-disable-next-line react/forbid-dom-props
     <div data-testid={'manage-students-tab'}>
       {isLoadingStudents && <Spinner />}
       {!isLoadingStudents && (
         <div>
-          <SyncOmniAuthSectionControl
-            sectionId={sectionId}
-            studioUrlPrefix={studioUrlPrefix}
-          />
-          <ManageStudentsTable studioUrlPrefix={studioUrlPrefix} />
+          <SyncOmniAuthSectionControl sectionId={sectionId} />
+          <ManageStudentsTable />
         </div>
       )}
     </div>

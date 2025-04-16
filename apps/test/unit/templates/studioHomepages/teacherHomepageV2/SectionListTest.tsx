@@ -15,6 +15,7 @@ import {SectionList} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2
 import teacherSections, {
   setSectionOrder,
   setSections,
+  setStudioUrlPrefix,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
@@ -84,6 +85,7 @@ describe('SectionList', () => {
     registerReducers({teacherSections});
     store.dispatch(setSections(serverSections));
     store.dispatch(setSectionOrder([11, 12, 13, 14]));
+    store.dispatch(setStudioUrlPrefix('https://studio.code.org'));
   });
 
   function renderComponent(initialRoute = '/teacher_dashboard/home') {
@@ -94,12 +96,7 @@ describe('SectionList', () => {
             createRoutesFromElements([
               <Route
                 path={TEACHER_NAVIGATION_PATHS.home}
-                element={
-                  <SectionList
-                    showHiddenOnly={false}
-                    studioUrlPrefix="https://studio.code.org"
-                  />
-                }
+                element={<SectionList showHiddenOnly={false} />}
               />,
             ]),
             {initialEntries: [initialRoute], basename: '/teacher_dashboard'}

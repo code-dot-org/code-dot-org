@@ -1,6 +1,7 @@
 import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
@@ -47,11 +48,12 @@ const thumbnailFormatter = thumbnailUrl => {
   );
 };
 
-class ProjectsList extends React.Component {
+class UnconnectedProjectsList extends React.Component {
   static propTypes = {
     localeCode: PropTypes.string,
     projectsData: PropTypes.array.isRequired,
     showProjectThumbnails: PropTypes.bool.isRequired,
+    // Props provided by redux.
     // The prefix for the code studio url in the current environment,
     // e.g. '//studio.code.org' or '//localhost-studio.code.org:3000'.
     studioUrlPrefix: PropTypes.string.isRequired,
@@ -242,4 +244,6 @@ const styles = {
   },
 };
 
-export default ProjectsList;
+export default connect(state => ({
+  studioUrlPrefix: state.studioUrlPrefix,
+}))(UnconnectedProjectsList);

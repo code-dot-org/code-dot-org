@@ -31,7 +31,6 @@ const applyV1TeacherDashboardWidth = children => {
 };
 
 function TeacherDashboard({
-  studioUrlPrefix,
   sectionId,
   sectionName,
   studentCount,
@@ -116,17 +115,12 @@ function TeacherDashboard({
       <Routes>
         <Route
           path={TEACHER_DASHBOARD_PATHS.manageStudents}
-          element={applyV1TeacherDashboardWidth(
-            <ManageStudents studioUrlPrefix={studioUrlPrefix} />
-          )}
+          element={applyV1TeacherDashboardWidth(<ManageStudents />)}
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.loginInfo}
           element={applyV1TeacherDashboardWidth(
-            <SectionLoginInfo
-              studioUrlPrefix={studioUrlPrefix}
-              sectionProviderName={sectionProviderName}
-            />
+            <SectionLoginInfo sectionProviderName={sectionProviderName} />
           )}
         />
         <Route
@@ -147,9 +141,7 @@ function TeacherDashboard({
               // Don't show no curriculum assigned error for projects tab.
               hasCurriculumAssigned={true}
               element={applyV1TeacherDashboardWidth(
-                <SectionProjectsListWithData
-                  studioUrlPrefix={studioUrlPrefix}
-                />
+                <SectionProjectsListWithData />
               )}
             />
           }

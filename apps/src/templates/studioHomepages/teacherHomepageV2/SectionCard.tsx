@@ -15,14 +15,12 @@ import SectionOptionsDropdown from './SectionOptionsDropdown';
 import styles from './teacherHomepage.module.scss';
 
 interface SectionCardProps {
-  studioUrlPrefix: string;
   section: Section;
   onDeleteClickCallback: (sectionId: number) => void;
   id: number;
 }
 
 export const SectionCard: React.FC<SectionCardProps> = ({
-  studioUrlPrefix,
   section,
   onDeleteClickCallback,
   id,
@@ -75,7 +73,6 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               loginType={section.loginType}
               sectionCode={section.code}
               sectionId={section.id}
-              studioUrlPrefix={studioUrlPrefix}
             />
           </div>
         </div>

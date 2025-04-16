@@ -6,11 +6,7 @@ import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 import SectionProjectsList from './SectionProjectsList';
 
-const SectionProjectsListWithData = ({
-  sectionId,
-  localeCode,
-  studioUrlPrefix,
-}) => {
+const SectionProjectsListWithData = ({sectionId, localeCode}) => {
   const [projectsData, setProjectsData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
@@ -35,7 +31,6 @@ const SectionProjectsListWithData = ({
         <SectionProjectsList
           localeCode={localeCode}
           projectsData={projectsData}
-          studioUrlPrefix={studioUrlPrefix}
           showProjectThumbnails={true}
         />
       )}
@@ -44,8 +39,6 @@ const SectionProjectsListWithData = ({
 };
 
 SectionProjectsListWithData.propTypes = {
-  studioUrlPrefix: PropTypes.string,
-
   // Props provided by redux.
   localeCode: PropTypes.string,
   sectionId: PropTypes.number,

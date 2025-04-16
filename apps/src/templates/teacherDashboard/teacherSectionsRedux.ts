@@ -116,6 +116,7 @@ export interface TeacherSectionState {
   coteacherInvite?: SectionInstructor;
   coteacherInviteForPl?: SectionInstructor;
   needsReload?: boolean;
+  studioUrlPrefix: string;
 }
 
 /** @const {null} null used to indicate no section selected */
@@ -169,6 +170,7 @@ const initialState: TeacherSectionState = {
   initialUnitName: null,
   // used to track if data about the section has changed
   needsReload: false,
+  studioUrlPrefix: '',
 };
 
 // Maps authentication provider to OAuthSectionTypes for ease of comparison
@@ -711,6 +713,9 @@ const sectionSlice = createSlice({
         };
       },
     },
+    setStudioUrlPrefix(state, action: PayloadAction<string>) {
+      state.studioUrlPrefix = action.payload;
+    },
   },
 });
 
@@ -1225,6 +1230,7 @@ export const {
   sectionDoesNotHaveNewData,
   archiveAllSections,
   setSectionOrder,
+  setStudioUrlPrefix,
 } = sectionSlice.actions;
 
 export default sectionSlice.reducer;

@@ -33,6 +33,7 @@ import teacherSections, {
   setRosterProviderName,
   setSections,
   setStudentsForCurrentSection,
+  setStudioUrlPrefix,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
@@ -76,6 +77,7 @@ $(document).ready(function () {
   );
   store.dispatch(setSections(sections, false, sectionOrder));
   store.dispatch(setLocaleCode(localeCode));
+  store.dispatch(setStudioUrlPrefix(scriptData.studioUrlPrefix));
 
   const showAITutorTab = canViewStudentAIChatMessages;
 
@@ -116,7 +118,6 @@ $(document).ready(function () {
     return (
       <BrowserRouter basename={baseUrl}>
         <TeacherDashboard
-          studioUrlPrefix={scriptData.studioUrlPrefix}
           sectionId={selectedSection.id}
           sectionName={selectedSection.name}
           studentCount={selectedSection.students.length}
@@ -148,12 +149,7 @@ $(document).ready(function () {
 
       setSelectedSectionData(selectedSection);
 
-      return (
-        <TeacherNavigationRouter
-          studioUrlPrefix={scriptData.studioUrlPrefix}
-          showAITutorTab={showAITutorTab}
-        />
-      );
+      return <TeacherNavigationRouter showAITutorTab={showAITutorTab} />;
     }
   };
 

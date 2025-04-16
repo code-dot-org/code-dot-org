@@ -29,7 +29,6 @@ const getManageStudentsUrl = sectionId => {
  */
 class SectionLoginInfo extends React.Component {
   static propTypes = {
-    studioUrlPrefix: PropTypes.string.isRequired,
     sectionProviderName: PropTypes.string,
 
     // Provided by redux.
@@ -39,6 +38,7 @@ class SectionLoginInfo extends React.Component {
       code: PropTypes.string,
     }).isRequired,
     students: PropTypes.array.isRequired,
+    studioUrlPrefix: PropTypes.string.isRequired,
   };
 
   render() {
@@ -90,6 +90,7 @@ export default connect(state => ({
   section:
     state.teacherSections.sections[state.teacherSections.selectedSectionId],
   students: state.teacherSections.selectedStudents,
+  studioUrlPrefix: state.teacherSections.studioUrlPrefix,
 }))(SectionLoginInfo);
 
 export class LtiLogins extends React.Component {

@@ -13,6 +13,7 @@ import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
 import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -22,7 +23,6 @@ interface JoinLinkCopyButtonProps {
   loginType?: keyof typeof SectionLoginType;
   sectionCode: string;
   sectionId: number;
-  studioUrlPrefix: string;
   sourceName?: string;
 }
 
@@ -30,11 +30,14 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   loginType,
   sectionCode,
   sectionId,
-  studioUrlPrefix,
   sourceName = 'teacherHomepage',
 }) => {
   const [shouldShowDialog, setShouldShowDialog] = React.useState(false);
   const [showCopiedMsg, setShowCopiedMsg] = React.useState(false);
+
+  const studioUrlPrefix = useAppSelector(
+    state => state.teacherSections.studioUrlPrefix
+  );
 
   const showSectionCodeDialog = () => {
     firehoseClient.putRecord(
