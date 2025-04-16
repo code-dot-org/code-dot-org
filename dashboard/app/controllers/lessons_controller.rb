@@ -21,7 +21,9 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1
   def show
-    script = get_unit(params)
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+    unit_group_unit = unit_context[:unit_group_unit]
     return render :forbidden unless script.is_migrated
 
     if script.is_deprecated
@@ -50,7 +52,9 @@ class LessonsController < ApplicationController
 
   # GET /s/script-name/lessons/1/student
   def student_lesson_plan
-    script = get_unit(params)
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+    unit_group_unit = unit_context[:unit_group_unit]
     return render :forbidden unless script.is_migrated && script.include_student_lesson_plans
 
     @lesson = script.lessons.find do |l|
@@ -59,13 +63,14 @@ class LessonsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @lesson
     return render :forbidden unless can?(:read, @lesson)
 
-    @lesson_data = @lesson.summarize_for_student_lesson_plan
+    @lesson_data = @lesson.summarize_for_student_lesson_plan(unit_group_unit: unit_group_unit)
     @script_name = script.name
   end
 
   # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
   def edit_with_lesson_position
-    script = get_unit(params)
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
     @lesson = script.lessons.find do |l|
       l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
     end
@@ -170,7 +175,8 @@ class LessonsController < ApplicationController
 
   # Return true if request is one that can be publicly cached.
   def cachable_request?(request)
-    script = get_unit(params)
+    unit_context = get_unit_context(request.params)
+    script = unit_context[:unit]
     script && ScriptConfig.allows_public_caching_for_script(script.name) &&
       !ScriptConfig.uncached_script_level_path?(request.path)
   end
@@ -240,17 +246,14 @@ class LessonsController < ApplicationController
     end
   end
 
-  private def get_unit(params)
+  private def get_unit_context(params)
     # /s/.../lessons/... URL
-    return Unit.get_from_cache(params[:script_id]) if params[:script_id]
+    return Queries::Courses.get_course_context(params[:script_id]) if params[:script_id]
     # /courses/.../unit/.../lessons/...
     course_name = params[:course_course_name]
-    if course_name
-      course = UnitGroup.get_from_cache(course_name)
-      unit_position = params[:unit_position]
-      raise ActiveRecord::RecordNotFound unless course && unit_position
-      unit_group_unit = UnitGroupUnit.get_with_position_from_cache(course.id, unit_position)
-      return Unit.get_from_cache(unit_group_unit.script_id) if unit_group_unit
+    unit_position = params[:unit_position]
+    if course_name && unit_position
+      return Queries::Courses.get_unit_context(course_name, unit_position)
     end
     raise ActiveRecord::RecordNotFound
   end

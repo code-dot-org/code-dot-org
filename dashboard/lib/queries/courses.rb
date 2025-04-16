@@ -36,7 +36,7 @@ class Queries::Courses
     return nil unless unit
     unit_group_unit = unit.unit_group_units&.first
     return nil unless unit_group_unit
-    course = UnitGroup.get_from_cache(unit_group_unit.course_id)
+    course = unit_group_unit.unit_group
     {course: course, unit_group_unit: unit_group_unit, unit: unit}
   end
 

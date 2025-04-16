@@ -420,8 +420,9 @@ class ApiController < ApplicationController
 
   def lesson_materials
     unit_id = params[:unit_id]
-    script = Unit.get_from_cache(unit_id)
-    render json: script.summarize_for_lesson_materials_view(current_user)
+    context = Queries::Courses.get_course_context(unit_id)
+    script = context[:unit]
+    render json: script.summarize_for_lesson_materials_view(current_user, unit_group_unit: context[:unit_group_unit])
   end
 
   def course_summary

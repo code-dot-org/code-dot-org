@@ -44,11 +44,15 @@ module ScriptLevelsHelper
     video_info_response
   end
 
-  def script_completion_redirect(user, script)
+  def script_completion_redirect(user, script, unit_group_unit: nil)
     if Policies::ScriptActivity.can_view_congrats_page?(user, script)
-      script.finish_url
+      script.finish_url(unit_group_unit: unit_group_unit)
     else
-      script_path(script)
+      if Policies::Courses.modularity_enabled? && unit_group_unit
+        course_unit_path(unit_group_unit.course, unit_group_unit.position)
+      else
+        script_path(script)
+      end
     end
   end
 

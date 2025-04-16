@@ -1486,10 +1486,13 @@ class Unit < ApplicationRecord
     end
   end
 
-  def finish_url
+  def finish_url(unit_group_unit: nil)
     return hoc_finish_url if hoc?
     return csf_finish_url if csf?
-    return CDO.code_org_url "/congrats/#{unit_group.name}" if unit_group
+    course = unit_group_unit&.unit_group || unit_group
+    if course
+      return CDO.code_org_url "/congrats/#{course.name}"
+    end
     CDO.code_org_url "/congrats/#{name}"
   end
 
@@ -1632,23 +1635,31 @@ class Unit < ApplicationRecord
     lessons.none?(&:has_lesson_plan)
   end
 
-  def summarize_for_lesson_materials_view(user)
+  def summarize_for_lesson_materials_view(user, unit_group_unit: nil)
+    unit_position = unit_number
+    has_numbered_units = unit_group&.has_numbered_units?
+    course_version_year = unit_group&.version_year || version_year
+    if unit_group_unit
+      unit_position = unit_group_unit.position
+      has_numbered_units = unit_group_unit.unit_group.has_numbered_units?
+      course_version_year = unit_group_unit.unit_group.version_year || version_year
+    end
     summary = {
       unitId: id,
       title: title_for_display,
       name: name,
-      unitNumber: unit_number,
+      unitNumber: unit_position,
       unitName: title_for_display,
       scriptOverviewPdfUrl: get_unit_overview_pdf_url,
       scriptResourcesPdfUrl: get_unit_resources_pdf_url,
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
-      hasNumberedUnits: unit_group&.has_numbered_units?,
+      hasNumberedUnits: has_numbered_units,
       hasUnnumberedLessons: has_unnumbered_lessons?,
-      versionYear: unit_group&.version_year || version_year,
+      versionYear: course_version_year,
     }
     # Only get lessons with lesson plans
-    summary[:lessons] = lessons.map {|lesson| lesson.summarize_for_lesson_materials(user)}
+    summary[:lessons] = lessons.map {|lesson| lesson.summarize_for_lesson_materials(user, unit_group_unit: unit_group_unit)}
 
     summary
   end
@@ -1722,7 +1733,7 @@ class Unit < ApplicationRecord
     {
       displayName: title_for_display,
       link: link(unit_group_unit: unit_group_unit),
-      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)},
+      lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student, unit_group_unit: unit_group_unit)},
       publishedState: get_published_state,
       hasUnnumberedLessons: has_unnumbered_lessons?,
     }
