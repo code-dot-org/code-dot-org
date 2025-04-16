@@ -58,6 +58,19 @@ class AichatRequestChatCompletionJob < ApplicationJob
     user_pii = find_pii(request.new_message['chatMessageText'], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
+    messages = request.stored_messages + [request.new_message]
+    messages_with_assets_count = messages.count do |message|
+      message[:content].any? {|c| c[:type] != 'text'}
+    end
+    @pdfs_count = messages.sum do |message|
+      message[:content].count {|c| c[:type] == 'file'}
+    end
+    @images_count = messages.sum do |message|
+      message[:content].count {|c| c[:type] == 'image_url'}
+    end
+
+    @is_multimodal = messages_with_assets_count > 0
+
     # Make the request.
     begin
       response = request.model_customizations['selectedModelId'] == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] ?
@@ -135,6 +148,9 @@ class AichatRequestChatCompletionJob < ApplicationJob
             {name: 'Environment', value: CDO.rack_env},
             {name: 'ModelId', value: get_model_id(request)},
             {name: 'ExecutionStatus', value: status_name},
+            {name: 'Multimodal', value: @is_multimodal.to_s},
+            {name: 'pdfs', value: @pdfs_count.to_s},
+            {name: 'images', value: @images_count.to_s},
           ],
         },
         {
@@ -145,6 +161,9 @@ class AichatRequestChatCompletionJob < ApplicationJob
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
             {name: 'ModelId', value: get_model_id(request)},
+            {name: 'Multimodal', value: @is_multimodal.to_s},
+            {name: 'pdfs', value: @pdfs_count.to_s},
+            {name: 'images', value: @images_count.to_s},
           ],
         }
       ]
