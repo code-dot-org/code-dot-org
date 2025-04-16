@@ -14,8 +14,16 @@ Feature: Send and receive messages in the AI differentiation chat
     And I am on "http://studio.code.org/home"
     And I wait until element "#homepage-container" is visible
     And element "#sign_in_or_user" contains text "Stilgar"
+    # Close the FAB
+    And I wait until element "#ui-floatingActionButton" is visible
+    When I click selector "#ui-floatingActionButton"
+    And I wait until element "button:contains(Get Started)" is not visible
+
+    #Go to curriculum page
     And I am on "http://studio.code.org/courses/csp-2019"
     And I wait until element "#ui-floatingActionButton" is visible
+    #wait for pulse to finish
+    And I wait for 5 seconds
     And I open my eyes to test "ai diff welcome and chat"
     Then I see no difference for "ai diff floating action button icon"
 
@@ -59,6 +67,7 @@ Feature: Send and receive messages in the AI differentiation chat
     Then I close my eyes
 
   @chrome
+  @properties_encryption_key
   Scenario: Teacher can type messages and leave feedback in AI Differentiation chat
     Given I create a teacher named "Stilgar"
     And I add the current user to the "ai-differentiation" single user experiment
@@ -73,7 +82,6 @@ Feature: Send and receive messages in the AI differentiation chat
     And I wait until element "#ui-floatingActionButton" is visible
 
     # Teacher sees and skips AI Diff chat welcome
-    When I click selector "#ui-floatingActionButton"
     And I wait until element "button:contains(Get Started)" is visible
     And I click selector "button:contains(Get Started)"
     And I wait until element "button:contains(Create)" is visible
@@ -110,7 +118,6 @@ Feature: Send and receive messages in the AI differentiation chat
     And element "#ui-floatingActionButton" is visible
 
     # Teacher sees and skips AI Diff chat welcome
-    When I click selector "#ui-floatingActionButton"
     And I wait until element "button:contains(Get Started)" is visible
     And I click selector "button:contains(Get Started)"
     And I click selector "a:contains('Skip the tutorial')" once I see it

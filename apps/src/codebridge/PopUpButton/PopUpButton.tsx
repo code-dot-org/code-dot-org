@@ -1,5 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import classNames from 'classnames';
+import FocusTrap from 'focus-trap-react';
 import React, {useState, useCallback, useRef, useEffect} from 'react';
 import {createPortal} from 'react-dom';
 
@@ -118,15 +119,33 @@ export const PopUpButton = ({
       />
       {isOpen &&
         // We use a portal so the dropdown can appear above all other elements.
+        // The children take a moment to render in the portal, so we need a
+        // fallbackFocus to bridge the load time gap and prevent a load error.
         createPortal(
-          <div
-            className={moduleStyles['popup-button-menu']}
-            onClick={() => setIsOpen(false)}
-            style={dropdownStyleProps}
-            ref={dropdownRef}
+          <FocusTrap
+            focusTrapOptions={{
+              clickOutsideDeactivates: true,
+              fallbackFocus: '#fallback-element',
+            }}
           >
-            {children}
-          </div>,
+            <div
+              id="fallback-element"
+              tabIndex={-1}
+              className={moduleStyles['popup-button-menu']}
+              onClick={() => setIsOpen(false)}
+              onKeyDown={event => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  setIsOpen(false);
+                }
+              }}
+              style={dropdownStyleProps}
+              ref={dropdownRef}
+              role="menu"
+            >
+              {children}
+            </div>
+          </FocusTrap>,
           document.body
         )}
     </>

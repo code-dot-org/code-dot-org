@@ -9,19 +9,20 @@ import ActionBlock, {
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
 import {externalLinkIconProps} from '@/components/common/constants';
-import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
-import {ContentfulEntry} from '@/contentful/types/entries/ContentfulEntry';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {Entry} from '@/types/contentful/Entry';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 type ActionBlockCarouselFields = {
   actionBlockOverline: EntryFields.Text;
   title: EntryFields.Text;
   shortDescription: EntryFields.Text;
-  image: ImageAssetEntry;
+  image: ExperienceAsset;
   primaryLinkRef: LinkEntry;
   secondaryLinkRef: LinkEntry;
 };
 
-type ActionBlockCarouselEntry = ContentfulEntry<ActionBlockCarouselFields>;
+type ActionBlockCarouselEntry = Entry<ActionBlockCarouselFields>;
 
 export type ActionBlockCarouselProps = {
   /** Carousel content w/ fields from Contentful */

@@ -8,7 +8,7 @@ module BlocklyHelpers
 
   def generate_drag_code(from, to, target_dx, target_dy)
     id_selector = get_id_selector
-    generate_selector_drag_code "[#{id_selector}='#{from}']:last", "[#{id_selector}='#{to}']", target_dx, target_dy
+    generate_selector_drag_code "[#{id_selector}='#{from}']:last", ".blocklySvg [#{id_selector}='#{to}']", target_dx, target_dy
   end
 
   def generate_selector_drag_code(from, to, target_dx, target_dy)
@@ -17,15 +17,6 @@ module BlocklyHelpers
     "var drag_dx = #{to_offset}.left - #{from_offset}.left;" \
         "var drag_dy = #{to_offset}.top  - #{from_offset}.top;" \
         "$(\"#{from}\").simulate( 'drag', {handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
-  end
-
-  def generate_begin_to_drag_code(from, to, target_dx, target_dy)
-    id_selector = get_id_selector
-    to_offset = generate_offset_code("[#{id_selector}='#{to}']")
-    from_offset = generate_offset_code("[#{id_selector}='#{from}']")
-    "var drag_dx = #{to_offset}.left - #{from_offset}.left;" \
-        "var drag_dy = #{to_offset}.top  - #{from_offset}.top;" \
-        "$(\"[#{id_selector}='#{from}']\").simulate( 'drag', {justDrag: true, handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
   end
 
   def get_indexed_blockly_draggable_selector(index)
@@ -51,7 +42,7 @@ module BlocklyHelpers
     id_selector = get_id_selector
     # For IE compatability, uses the SVG DOM binding technique from:
     #   http://stackoverflow.com/questions/10349811/how-to-manipulate-translate-transforms-on-a-svg-element-with-javascript-in-chrom
-    js = "var xforms = $(\"[#{id_selector}='#{block_id}']\")[0].transform.baseVal; var firstXForm = xforms.getItem(0); if (firstXForm.type == SVGTransform.SVG_TRANSFORM_TRANSLATE){ var firstX = firstXForm.matrix.e; var firstY = firstXForm.matrix.f; }; return [firstX, firstY];"
+    js = "var xforms = $(\".blocklySvg [#{id_selector}='#{block_id}']\")[0].transform.baseVal; var firstXForm = xforms.getItem(0); if (firstXForm.type == SVGTransform.SVG_TRANSFORM_TRANSLATE){ var firstX = firstXForm.matrix.e; var firstY = firstXForm.matrix.f; }; return [firstX, firstY];"
     coordinate_pair = @browser.execute_script(js)
     Point.new(coordinate_pair[0], coordinate_pair[1])
   end
@@ -79,12 +70,12 @@ module BlocklyHelpers
 
   def get_block_absolute_left(block_id)
     id_selector = get_id_selector
-    @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\").position().left")
+    @browser.execute_script("return $(\".blocklySvg [#{id_selector}='#{block_id}']\").position().left")
   end
 
   def get_block_absolute_top(block_id)
     id_selector = get_id_selector
-    @browser.execute_script("return $(\"[#{id_selector}='#{block_id}']\").position().top")
+    @browser.execute_script("return $(\".blocklySvg [#{id_selector}='#{block_id}']\").position().top")
   end
 
   def get_block_workspace_left(block_id)
@@ -133,6 +124,11 @@ def move_block_to_jigsaw_ghost(id)
   "var workspace = Blockly.getMainWorkspace();" \
   "var blockToMove = workspace.getBlockById('#{id}');" \
   "blockToMove.moveTo(appOptions.level.ghost);"
+end
+
+def load_json_blocks(blocks_json)
+  script = "Blockly.serialization.workspaces.load(#{blocks_json}, Blockly.getMainWorkspace());"
+  @browser.execute_script(script)
 end
 
 World(BlocklyHelpers)

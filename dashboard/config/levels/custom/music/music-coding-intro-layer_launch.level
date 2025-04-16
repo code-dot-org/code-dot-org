@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:56:38.000Z",
   "level_num": "custom",
@@ -8,33 +9,23 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "long_instructions": "####<i class=\"fa-solid fa-timer\"></i> Timing the layers\r\n\r\nTo time these layers, there is a rest block before the vocals. \r\n- Add a play vocal block after the [rest](#clickable=id-left:play_rest_at_current_location_simple2) inside the [play sequential](#clickable=id-up-left:play_sounds_sequential) block.",
+    "long_instructions": "####<i class=\"fa-solid fa-layer-plus\"></i> A sequence of layers\r\n**Add the instruments to play with the chorus vocals.** \r\n\r\nTo match the timing of the vocals, should the instruments:\r\n\r\n- `play together`?\r\n- Or `play sequential`?\r\n\r\n---\r\n\r\n*Timeline example:*\r\n\r\n![](https://images.code.org/876150bd244fac59d92150d923da8c5e-image-1744323616660.jpg)\r\n\r\n*<i class=\"fa-solid fa-music\"></i> Sound example (press play):*",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "validationTimeout": 3,
-      "library": "launch2024",
+      "library": "launch2024-preview",
       "toolbox": {
         "blocks": {
-          "Play": [
-            "play_sound_at_current_location_simple2"
+          "Control": [
+            "play_sounds_sequential",
+            "play_sounds_together"
           ]
         },
         "type": "flyout"
       },
-      "packId": "mc_hammer_u_cant_touch_this",
-      "sounds": {
-        "mc_hammer_u_cant_touch_this": [
-          "stop_hammer_time",
-          "cant_touch_this",
-          "mymymy",
-          "break_it_down",
-          "i_told_ya",
-          "beat",
-          "main_loop"
-        ]
-      },
+      "packId": "benson_boone_beautiful_things",
       "startSources": {
         "blocks": {
           "languageVersion": 0,
@@ -48,8 +39,9 @@
               "movable": false,
               "next": {
                 "block": {
-                  "type": "play_sounds_together_no_next",
+                  "type": "play_sounds_together",
                   "id": "play_sounds_together",
+                  "deletable": false,
                   "movable": false,
                   "extraState": {
                     "disableNextConnection": true
@@ -57,45 +49,34 @@
                   "inputs": {
                     "code": {
                       "block": {
-                        "type": "play_sound_at_current_location_simple2",
-                        "id": "wlN~AgBJwU]b8VJ%..~w",
+                        "type": "play_sounds_sequential",
+                        "id": "play_sounds_sequential",
+                        "deletable": false,
                         "movable": false,
                         "editable": false,
                         "extraState": {
                           "disableNextConnection": false
                         },
-                        "fields": {
-                          "sound": "mc_hammer_u_cant_touch_this/beat"
-                        },
-                        "next": {
-                          "block": {
-                            "type": "play_sound_at_current_location_simple2",
-                            "id": "F{+ztn7-)#{gXJii+DzB",
-                            "movable": false,
-                            "extraState": {
-                              "disableNextConnection": false
-                            },
-                            "fields": {
-                              "sound": "mc_hammer_u_cant_touch_this/main_loop"
-                            },
-                            "next": {
-                              "block": {
-                                "type": "play_sounds_sequential",
-                                "id": "play_sounds_sequential",
-                                "movable": false,
-                                "extraState": {
-                                  "disableNextConnection": true
-                                },
-                                "inputs": {
-                                  "code": {
-                                    "block": {
-                                      "type": "play_rest_at_current_location_simple2",
-                                      "id": "play_rest_at_current_location_simple2",
-                                      "movable": false,
-                                      "fields": {
-                                        "rest_duration": "<field name=\"rest_duration\">1</field>"
-                                      }
-                                    }
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "81ylRvba@erw_r/$-=M3",
+                              "extraState": {
+                                "disableNextConnection": false
+                              },
+                              "fields": {
+                                "sound": "benson_boone_beautiful_things/vocals_big_chorus_1"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "@bWaeE_om]A4F4fHiCoJ",
+                                  "extraState": {
+                                    "disableNextConnection": true
+                                  },
+                                  "fields": {
+                                    "sound": "benson_boone_beautiful_things/vocals_big_chorus_2"
                                   }
                                 }
                               }
@@ -110,6 +91,113 @@
             }
           ]
         }
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sounds_sequential",
+            "id": "b2gd::1e./Sxl5};2x{`",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": true
+            },
+            "inputs": {
+              "code": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "benson_boone_beautiful_things/drums_chorus_build"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "benson_boone_beautiful_things/electric_guitar_chorus_build"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": true
+                          },
+                          "fields": {
+                            "sound": "benson_boone_beautiful_things/bass_chorus_build"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_together",
+            "id": "Hgnv}]iL1,jMY+R+46}M",
+            "editable": false,
+            "extraState": {
+              "disableNextConnection": true
+            },
+            "inputs": {
+              "code": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "fields": {
+                    "sound": "benson_boone_beautiful_things/drums_chorus_build"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "fields": {
+                        "sound": "benson_boone_beautiful_things/electric_guitar_chorus_build"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": true
+                          },
+                          "fields": {
+                            "sound": "benson_boone_beautiful_things/bass_chorus_build"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
       }
     },
     "validations": [
@@ -194,10 +282,21 @@
       }
     ],
     "name_suffix": "_launch",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": true,
+      "validationEnabled": true,
+      "validationSuccessMessage": "",
+      "validationFailureMessage": "",
+      "validationMode": "default",
+      "playerTitle": "Example"
+    },
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor6BCPkf6utFvuIj3W7tTG5Be81z3rwi0UJuctz78mOQv4\nh0WOnZ1OAR3zAoHtp499SbIuCEChopt2BUka5LPbQ7EPAyWey8kP658x9a9x\nprUVBsYlcjdpGvnm81/SqL3FgD2dEUvlojdJiKv7ByxN0hm0mENW/PkWa07n\n+5CG3HvQP70xry40Uu7iBgZepdLA70XIbIWYsi5DXGI49phd0M8uHFYmSlbN\nM6JqjgcDQaWOoi2CDQcjoUN1X6sr+B+3IlNi1FEI4aEdkjQzoNOw4w/kLKWA\npW+flNYn2u2HfxqLxxJuHhVAyMj3cvwwq8lAlfNQqpDGAEVKYs/tT0QWW8eG\nHWR57vjR6iIlkVj6aQr4zwkSxGFm+pN5KUXD/LQooLbo1C9GiTncJj9X+NDa\ntQaU5C812gWLrhodLWyTy279PP1mANIsaSF9RTsD+xeniZQBGEfOrOsiH6FF\n40SeUsapgmnboqyj7Koj2Iwd6i8sK9MeWNv7qfmhkMsLoTQRseMxKhWkW7lM\n4u5f0ikUKPMG5tHebpSYlcPPUuuctbmu46H7gwR9isFpnaSENDXxziNb3TOd\nRPGaMOYFt94EXbGP9aGSDwyDeTRDmNWtz5r02jzxwJppmosoxC2rCUgZ1nAC\nLkbjxyIgdSOUJnbcrNhgyTGbV89SrUOSY8fxtL+JUzhqFaZ6rWBdQvXfio95\nzXITd34Ie8jU7+Gt98/kcSyoWyoUAWF3qOIfsy/VbBlSn6c59zI0SpjXYmR3\nTcYoytCO531wE38YU3mw8eBQ3uQEqqidjSBIfMibYzNQevcA2+OhIuGP2OcS\nYFIgmqhwb3k4PRzSLzKnp028vcOsF+JWqVGYm9CzK8MzFQKjOW4+C2uah3HC\na0Joh84xBeYIgzG3g6wUvZSnoY51Emw/zZh0fxZsSsih8SBoUlRPYuYy9kay\nxYIcgfn6c5CFvn7Fzr2bt2XX7K2HPyatUa8FwC1JNi+/U8MDjD4FrgghV4Iw\nZgepswM3Cx8514Ed1Y14VLft8j9/0VSdm+xuPVLmqfjP/HfJagYf89K0ZJ2h\ndAanadoRh7GPkVlxvzWL78DFHQSMB/TxdPvJF320Dh+y/bn18XuI3ZW1gnoM\njGWuQm+V6CoRb5FDjsq0m/wbCnmDjRRpGiiX+htzsv2yL6jxp/G/KhbVB3RY\nI24CBTFE6qfubwgE7GVUUtEqLEPkNA0MG3rUrjvvSBDxsx6aAZ6SieuJUEQE\ntQBDMsfuznCp0ytja1kWSVJxEOKeJQjViVdiGchuTH0Nn6sgWNfS9P8q3Cb+\nJ61jPYG9oTJRPGoi4wxpUB7Ig+TfPDzonRvZ4miOARldO6sMQmdMM0ezTf0q\noJR9gD0Xy6YWuyGIWVDt7GH9IEOyQIdQyoLNPdBjkQlP8VID2eCWmAFCSBtL\n6iq6nqVOz9Zj+OBGtybzxpVdDXwQwIF67Blv9YVdAylGIEscFsJHLBCz3+Md\n3xUVRMUDdk7OUy4tq1axeLIVAywNlAATnTPFMvBAeTU28cA92/ed\n",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:38.309+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-layer\\\"\"],\"cloned_from\":\"music-coding-intro-layer\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:38.309+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-layer\\\"\"],\"cloned_from\":\"music-coding-intro-layer\"},{\"changed_at\":\"2025-04-09 17:26:43 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:49:00 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:04:22 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:04:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:05:31 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:08:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:10:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:11:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:12:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:14:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:18:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:29:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:51:47 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:00:41 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:11:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:13:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:13:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:15:38 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:24:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:25:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:26:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:28:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:29:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:30:21 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:32:09 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:33:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:48:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 21:51:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:18:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:19:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:21:03 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:22:58 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:37:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:38:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:39:34 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:41:27 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:48:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:50:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:51:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:55:11 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:58:43 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 22:59:45 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 23:00:46 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 23:01:38 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 23:03:05 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 23:04:25 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 23:04:59 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 23:05:59 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 23:06:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 23:06:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 23:07:35 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 23:08:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 15:40:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 15:41:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 15:44:03 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 15:46:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 21:20:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:13:54 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:14:13 +0000\",\"changed\":[\"predict_settings\",\"exemplar_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:16:52 +0000\",\"changed\":[\"predict_settings\",\"exemplar_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:20:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:41:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:42:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:44:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:45:20 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 22:45:33 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 20:03:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"exemplar_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 20:09:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 16:14:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

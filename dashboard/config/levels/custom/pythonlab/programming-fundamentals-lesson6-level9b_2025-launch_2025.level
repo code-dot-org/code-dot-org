@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-04-14T23:13:36.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're creating a program to help a digital crossing guard remind people to look both ways before crossing the street. Every time a pedestrian approaches, the program should deliver the same safety reminder. You'll define the reminder once and reuse it for each crossing.\r\n\r\n1. Define a function called `look_both_ways()` that prints a safety message.\r\n\r\n2. Call the function **four times** to represent four people crossing the street.\r\n\r\n3. Make sure the same message prints each time.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nWhen you need to do the same task over and over, a function helps you keep your code short and easy to read. You can call the function as many times as you need.\r\n\r\nUse the **UMPIRE** strategy to understand what's happening, make a plan, test your output, and explain your thinking.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_2025",
+    "display_name": "Crossing Guard Reminder",
+    "bubble_choice_description": "You're creating a program to help a digital crossing guard remind people to look both ways before crossing the street. Every time a pedestrian approaches, the program should deliver the same safety reminder. You'll define the reminder once and reuse it for each crossing.",
+    "thumbnail_url": "https://images.code.org/14aec96e7b1ed57c93ca47c9ca1a78b8-crossing.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# TODO - Write the function look_both_ways()\n\n\n\n# TODO - Call the look_both_ways() function four times\n\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzo0zAk3BjpdxCyHEEH56ePLNRfyC/fuV\ngz0fD54n4VvvmlHA7RFBQBL+yD6aQcHz+mmFhoaoPdrWDk4tyXeNGifzCawU\n0XULucdNuVJkBU+WyVX0GzPwnfkQOmF8UkvwnJeIgXxPx6XgCTwJiKJTi5aJ\no91zdIqo0Gn8ofr8yqS1XxxIMtf4CK9zZNiOEshZuTE3mRzN8b4/IzXLDcXu\ni3fwxY9sgsknVBlTLG9GNajOqC0cgCi5DBj8cdBWAqdC+UonuB38jRh8PttC\nv3EY/XxWd5KY5lLq7A1jU6NMVB9xeDTd5eP1Oit1YiTw8FmzIfE+ZBdffmYC\n184npA2YCqbWjOaztptx2u/KRWz7wp48wHJW2dcOeCiWKG/dpmVk6eUTbO/p\nGqboX/oRIumA7/ydUBKwlYPguzOlyvyGmOfg\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:36.698+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9b_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9b_2025-launch\"},{\"changed_at\":\"2025-04-15 18:31:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:32:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:35:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -298,6 +298,11 @@ svg text[fill] {
   margin-bottom: 0 !important;
 }
 
+.detailedAnalysisContainer {
+  border-radius: 4px;
+  border: 1px solid var(--borders-neutral-primary);
+}
+
 .aiSummaryContainer {
   display: flex;
   padding: 16px;
@@ -306,6 +311,8 @@ svg text[fill] {
   gap: 40px;
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 20px;
+  border-radius: 4px;
 
   .leftSide {
     width: 200px;
@@ -319,6 +326,12 @@ svg text[fill] {
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+
+  .feedbackQuestion {
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 
   .botImage {
@@ -409,6 +422,18 @@ svg text[fill] {
   color: var(--text-neutral-primary) !important;
 }
 
+.flaggedTag div {
+  background-color: var(--background-error-extra-light, #ffe1dd) !important;
+}
+
+.flaggedTag div i {
+  color: var(--text-error-primary) !important;
+}
+
+.flaggedTag div span {
+  color: var(--text-neutral-primary) !important;
+}
+
 .proficientIcon {
   color: var(--text-success-primary);
 }
@@ -439,18 +464,6 @@ svg text[fill] {
   border-left: 1px solid var(--borders-neutral-primary, #d1d4d8);
 }
 
-.closeButton {
-  background: transparent !important;
-
-  &:hover {
-    background: var(--background-neutral-quaternary, #e4e6e9) !important;
-  }
-
-  i {
-    font-size: 16px !important;
-  }
-}
-
 .evaluateButton {
   padding-left: 8px !important;
   padding-right: 8px !important;
@@ -458,4 +471,16 @@ svg text[fill] {
 
 .viewAnalysisLink {
   color: var(--text-neutral-primary) !important;
+}
+
+.summaryBoxHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.feedbackText {
+  color: var(--text-neutral-quaternary, #727a83) !important;
+  margin-bottom: 0 !important;
 }

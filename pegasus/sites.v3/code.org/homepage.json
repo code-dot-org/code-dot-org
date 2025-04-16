@@ -4,11 +4,35 @@
       "hoc2024-soon-hoc",
       "pl-launch-superhero",
       "curriculum-launch-2024",
-      "best-of-stem-2024"
+      "best-of-stem-2024",
+      "music-lab-banner"
     ]
   },
 
   "banners": {
+    "music-lab-banner": {
+      "dcdo": "music-lab-banner",
+      "class": "music-lab-banner homepage",
+      "desktopImage": "/images/music-lab/music-lab-homepage-banner-bg.png",
+      "mobileImage": "/images/music-lab/music-lab-homepage-banner-bg.png",
+      "leftImage": "/images/music-lab/music-lab-homepage-banner-left.png",
+      "rightImage": "/images/music-lab/music-lab-homepage-banner-right.png",
+      "actions": [
+        {
+          "type": "music-lab-banner",
+          "text_overline": "music_lab.banner2.overline",
+          "text_h1": "music_lab.banner2.heading",
+          "text_desc": "music_lab.banner2.desc",
+          "button_label_primary": "music_lab.button.try_music_lab",
+          "button_url_primary": "https://studio.code.org/s/music-jam-2024/reset",
+          "button_label_secondary": "music_lab.button.learn_more",
+          "button_url_secondary": "/music",
+          "text_desc_02": "music_lab.in_partnership_with",
+          "logo_list_01": "/images/avatars/amazon_future_engineer_light.png",
+          "logo_list_01_alt": "music_lab.amazon_future_engineer"
+        }
+      ]
+    },
     "hoc2024-soon-hoc": {
       "hoc_modes": ["soon-hoc"],
       "class": "hoc-banner homepage",

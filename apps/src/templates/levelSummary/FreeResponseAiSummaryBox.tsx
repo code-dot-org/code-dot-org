@@ -1,7 +1,10 @@
 import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import {
+  BodyTwoText,
+  BodyThreeText,
+} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
@@ -9,6 +12,7 @@ import i18n from '@cdo/locale';
 
 import aiBot from './AI-Bot-default.png';
 import {FEEDBACK_TYPE} from './AiFeedbackType';
+import FeedbackToggle from './FeedbackToggle';
 import FreeResponseSummaryDataBox from './FreeResponseSummaryDataBox';
 
 import styles from './summary.module.scss';
@@ -99,12 +103,15 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     ? countEvaluationsByType(studentWorkEvaluations, ['needs revision'])
     : 0;
 
-  // TO DO: Update this with perhaps different logic for "flagged students"
   const flaggedStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['Cant Evaluate'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['Profanity detected'])
     : 0;
+
+  // A student can have "no response" if they have not started the level yet OR
+  // if they have submitted a response but it is empty.
   const noResponseStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['No attempt'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['No attempt']) +
+      (totalNumberOfStudents - studentWorkEvaluations.length)
     : 0;
 
   const showEvaluationSummary = studentWorkEvaluations && evaluationComplete;
@@ -112,7 +119,20 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   const aiSummaryContent = () => {
     return (
       <>
-        {aiSummaryTag(proficientStudentCount)}
+        <div className={styles.summaryBoxHeader}>
+          {aiSummaryTag(proficientStudentCount)}
+          <div className={styles.feedbackQuestion}>
+            <BodyThreeText className={styles.feedbackText}>
+              {i18n.aiFeedbackQuestion()}
+            </BodyThreeText>
+            <FeedbackToggle
+              onThumbsUpClick={() => {}}
+              onThumbsDownClick={() => {}}
+              size="xs"
+              color="gray"
+            />
+          </div>
+        </div>
         {aiSummaryMessage(proficientStudentCount)}
         <FreeResponseSummaryDataBox
           totalStudentCount={totalNumberOfStudents}

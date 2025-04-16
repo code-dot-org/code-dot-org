@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Effective Data Questions
 
-#### In lesson 6, students will complete the **Three Reads** strategy again, but this time focus on improving their questions using the ***RSAIR*** approach.
+#### In lesson 5, students will complete the **Three Reads** strategy again, but this time focus on improving their questions using the ***RSAIR*** approach.
 
 ## RSAIR Criteria 
 <br>
@@ -45,6 +45,10 @@ markdown <<MARKDOWN
 
 <div style="clear:both;"></div>
 <br>
+
+## AI and Data Questions 
+
+#### In this lesson, students will engage with the AI Chatbot again to help formulate and assess effective data questions. 
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 

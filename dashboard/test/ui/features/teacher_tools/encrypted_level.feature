@@ -1,5 +1,6 @@
 Feature: Encrypted Level
 
+@properties_encryption_key
 Scenario: Load Encrypted Play Lab Level
   When I am on "http://studio.code.org/s/allthethings/lessons/5/levels/6"
   And I wait until element "#runButton" is visible

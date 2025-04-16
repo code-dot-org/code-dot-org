@@ -1635,6 +1635,7 @@ class Unit < ApplicationRecord
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       hasNumberedUnits: unit_group&.has_numbered_units?,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: unit_group&.version_year || version_year,
     }
     # Only get lessons with lesson plans
@@ -1703,7 +1704,8 @@ class Unit < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
-      show_sign_in_callout: csf? || csc?
+      show_sign_in_callout: csf? || csc?,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
     }
   end
 
@@ -1712,7 +1714,8 @@ class Unit < ApplicationRecord
       displayName: title_for_display,
       link: link,
       lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)},
-      publishedState: get_published_state
+      publishedState: get_published_state,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
     }
   end
 
@@ -2165,6 +2168,10 @@ class Unit < ApplicationRecord
   def show_ai_assessments_announcement?(user)
     # limit to CSD to avoid showing on allthethings
     user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
+  end
+
+  def has_ai_tutor_level?
+    levels&.any?(&:ai_tutor_available?)
   end
 
   private def teacher_feedback_enabled?

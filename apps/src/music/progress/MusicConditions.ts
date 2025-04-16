@@ -1,5 +1,5 @@
-import {defaultMaps} from '../blockly/toolbox/definitions';
-import {BlockMode} from '../constants';
+import * as simple2Blocks from '../blockly/blocks/simple2';
+import {BlockTypes} from '../blockly/blockTypes';
 
 import {ConditionNames} from './MusicValidator';
 
@@ -9,7 +9,13 @@ export const MusicConditions: ConditionNames = {
     valueType: 'string:number',
     description:
       'Counts blocks on the workspace of a given type. Blocks must be enabled on the workspace. Ex. Value: [repeatSimple2, 2]',
-    valueOptions: Object.values(defaultMaps[BlockMode.SIMPLE2]).flat(),
+    valueOptions: Array.from(
+      new Set([
+        ...Object.values(simple2Blocks).map(b => b.definition.type),
+        BlockTypes.FUNCTION_DEFINITION,
+        BlockTypes.FUNCTION_CALL,
+      ])
+    ),
   },
   PLAYED_SOUNDS_TOGETHER: {
     name: 'played_sounds_together',

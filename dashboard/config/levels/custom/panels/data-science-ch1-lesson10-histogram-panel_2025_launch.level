@@ -1,0 +1,57 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-04-15T21:31:04.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/62da2b403717a7e3923424b414dfd2af-Panel Levels Slide Deck.png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Choose Your Data\nSelect the **numerical** data you want to turn into a histogram.\n",
+        "imageUrl": "",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Make a Chart\n- Highlight a column or data range\n- Click **Insert** -> **Chart** ",
+        "imageUrl": "",
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-bacd1c1d-cd37-4d2c-b166-94d0c6070205"
+      },
+      {
+        "text": "### Create a Histogram\n- Click **Chart type**\n- Under **Other**, select **Histogram chart**",
+        "imageUrl": "",
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-52a7128c-1a97-41fe-8640-3833bd1948c7"
+      },
+      {
+        "text": "### Add a Title\n\n- Click **Customize**\n- Open the toggle **Chart & axis titles**\n- Add your title in **Title text**",
+        "imageUrl": "",
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-4150a755-c790-45ba-8b7f-33ceab36bbd3"
+      },
+      {
+        "text": "### Visualize Individual Data Points\n\n- Click **Customize**\n- Open the toggle **Histogram**\n- Click **Show item dividers**",
+        "imageUrl": "",
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-fa2e7a18-309e-43e6-8c32-9e5d06ff0e37"
+      },
+      {
+        "text": "### Change Bucket Size\n\n- Click **Customize**\n- Open the toggle **Histogram**\n- Play around with different sizes from the **Bucket size** dropdown until you find one that suits your dataset",
+        "imageUrl": "",
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-6226dd2a-06d3-4d8a-8aad-60fc4f7ca9fc"
+      }
+    ],
+    "name_suffix": "_2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-15T21:31:04.900+00:00\",\"changed\":[\"cloned from \\\"emma-histogram-panel-data-science-lesson7-_2025_launch\\\"\"],\"cloned_from\":\"emma-histogram-panel-data-science-lesson7-_2025_launch\"},{\"changed_at\":\"2025-04-15 21:31:18 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

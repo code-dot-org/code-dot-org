@@ -15,31 +15,23 @@ markdown <<MARKDOWN
 </div>
 
 <!-- Welcome Section -->
-<div style="margin: 10px auto; width: 95%; max-width: 900px; font-family: Arial, sans-serif; line-height: 1.6; font-size: 14pt; color: #333;">
+<div style="margin: 10px auto; width: 95%; max-width: 900px; line-height: 1.6; font-size: 14pt; color: #333;">
     <h2>Welcome!</h2>
     
        <img src="https://images.code.org/47e212f6f6c3e22f16ad0ed154eb1947-image-1734623597426.png" 
          alt="Students discussing work around computers" 
-         style="border-radius: 10px; float: right; margin-left: 20px; height: 200px;">
+         style="border-radius: 10px; float: right; margin-left: 20px; height: 180px;">
     <p style = "font-size: 14pt">
         This professional learning module is designed to help you prepare to teach Code.org’s 
         <strong>Data Science</strong> content.
     </p>
    
     <p style = "font-size: 14pt">
-        The Data Science content is designed for 9th - 12th grade students and consists of two units:
+        The Data Science content is designed for 9th - 12th grade students and is part of the <b>AI Foundations Course </b> but can be taught as a stand alone unit. 
     </p>
   
-    <ul style="list-style-type: none; padding: 0;">
-        <li><p style = "font-size: 14pt"><b>Unit 1: Introduction to Data Science</b><p></li>
-        <li><p style = "font-size: 14pt"><b>Unit 2: Data Science with Python</b></p></li>
-    </ul>
-    <div style="clear:both;"></div>
-    <br>
-    <p style = "font-size: 14pt">
-        You can teach Data Science as a complete unit, or choose to teach only one of the parts, 
-        offering flexibility to meet your educational needs.
-    </p>
+<div style="clear:both;"></div>
+    
 </div>
 
 <!-- Goals Section -->
@@ -47,9 +39,9 @@ markdown <<MARKDOWN
     <h2>In this module, you will:</h2>
     <ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt">
         <li>Get an introduction to teaching Data Science</li>
-        <li>Define and explore foundational concepts of data science</li>
-        <li>Utilize Python and Pandas libraries to analyze, manipulate, and visualize data</li>
-        <li>Explore Data Science lessons</li>
+        <li>Develop and refine data questions to guide investigations.</li>
+        <li>Use spreadsheets to perform basic data analysis.</li>
+        <li>Explore Data Science lessons and projects</li>
     </ul>
 </div>
 
@@ -62,7 +54,7 @@ markdown <<MARKDOWN
 </div>
 
 <!-- Pre-Survey Section -->
-<div style="margin: 10px auto; width: 95%; max-width: 900px; text-align: center; font-size: 14pt;">
+<div style="margin: 10px auto; width: 95%; max-width: 900px; text-align: left; font-size: 14pt;">
     <h2>Take the Pre-Survey</h2>
     <p style = "font-size: 14pt">
         Code.org values and is responsive to feedback. Please fill out 

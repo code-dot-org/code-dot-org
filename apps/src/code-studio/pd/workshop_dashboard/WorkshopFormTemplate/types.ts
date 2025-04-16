@@ -65,11 +65,20 @@ export interface Session {
   id: number;
   start: string;
   end: string;
-  code?: string;
+  code: string;
   location_address?: string;
   location_name?: string;
   meeting_link?: string;
-  session_format?: SessionFormat;
+  session_format: SessionFormat;
+}
+
+export interface SessionRequest extends Omit<Session, 'id' | 'code'> {
+  id?: number;
+}
+
+export interface DestroyedSession {
+  id: number;
+  _destroy: true;
 }
 
 export interface SessionFormState {
@@ -86,16 +95,16 @@ export interface SessionFormState {
 
 export interface Workshop {
   id: number;
-  course: string;
-  name: string;
-  capacity: number;
+  course?: string;
+  name?: string;
+  capacity?: number;
   grades?: string[];
   description?: string;
   notes?: string;
   suppress_email?: boolean;
   regional_partner_id?: number;
   organizer?: Organizer;
-  facilitators?: number[];
+  facilitators?: Facilitator[];
   subject?: string;
   fee?: string;
   prereq?: string;
@@ -105,6 +114,13 @@ export interface Workshop {
   course_offerings?: number[];
   participant_group_type?: string;
   time_zone?: string;
+}
+
+export interface WorkshopRequest
+  extends Omit<Workshop, 'id' | 'facilitators' | 'organizer'> {
+  id?: number;
+  facilitators: number[];
+  organizer?: number;
 }
 
 export interface CourseOffering {
@@ -188,6 +204,8 @@ export interface BasicsProps
 export interface PartnerFacilitatorProps
   extends SectionProps,
     Pick<WorkshopFormState, PartnerFacilitatorKeys> {
+  regionalPartnerData: RegionalPartner[] | null;
+  facilitatorData: Facilitator[] | null;
   errors: WorkshopErrors;
 }
 

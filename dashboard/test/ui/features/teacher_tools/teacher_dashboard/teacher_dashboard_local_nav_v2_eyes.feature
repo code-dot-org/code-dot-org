@@ -6,6 +6,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
     Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
     Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
 
+  @properties_encryption_key
   Scenario: Local navigation on Progress v2
     When I open my eyes to test "teacher local nav v2 - progress"
     Given I create an authorized teacher-associated student named "Sally"
@@ -45,6 +46,7 @@ Feature: Using the V2 teacher dashboard local navigation - Eyes
 
     And I close my eyes
 
+  @properties_encryption_key
   Scenario: Local navigation on Unit and Course overview pages
     When I open my eyes to test "teacher local nav v2 - unit/course overview"
     Given I create an authorized teacher-associated student named "Sally"

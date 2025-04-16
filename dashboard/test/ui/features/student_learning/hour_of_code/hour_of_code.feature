@@ -6,7 +6,7 @@ Background:
 Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appears as solved
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I wait for the lab page to fully load
-  And I drag block "moveForward" to block "startBlock"
+  And I've initialized the workspace with two move forward blocks
   And I press "runButton"
   Then I wait to see ".modal"
   And element ".modal .congrats" contains text "You completed Puzzle 1."

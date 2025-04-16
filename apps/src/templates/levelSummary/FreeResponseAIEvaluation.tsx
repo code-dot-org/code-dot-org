@@ -12,6 +12,8 @@ import FreeResponseAiStudentResponseHeader from './FreeResponseAiStudentResponse
 import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
 import FreeResponseStudentResponseRow from './FreeResponseStudentResponseRow';
 
+import styles from './summary.module.scss';
+
 interface LevelData {
   levelId: number;
   unitId: number;
@@ -100,9 +102,9 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         openDetailedAnalysis={() => setShowDetailedAnalysis(true)}
       />
       {evaluationComplete && aiSummary && showDetailedAnalysis && (
-        <div>
+        <div className={styles.detailedAnalysisContainer}>
           <FreeResponseAiStudentResponseHeader
-            closeStudentResponses={() => {}}
+            closeStudentResponses={() => setShowDetailedAnalysis(false)}
           />
           {evaluations.map(evaluation => (
             <FreeResponseStudentResponseRow

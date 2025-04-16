@@ -6,6 +6,7 @@ Feature: Views the pages on the teacher dashboard that are untested elsewhere
     Given I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I use a cookie to mock the DCDO key "ai-tutor-teacher-nav-v2" as "false"
 
+  @properties_encryption_key
   Scenario: Viewing teacher dashboard pages
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"

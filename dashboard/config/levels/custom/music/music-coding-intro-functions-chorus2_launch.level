@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:56:55.000Z",
   "level_num": "custom",
@@ -8,12 +9,12 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "####<i class=\"fa-solid fa-list-music\"></i> Chorus music \r\n\r\nThe same sounds should play with each part of the chorus. \r\n- Add the [chorusMusic](#clickable=flyout-third-block) function to accompany each part of the lyrics\r\n\r\n\r\n",
+    "long_instructions": "####<i class=\"fa-solid fa-list-music\"></i> Add chorus music \r\n\r\n1. Add the [chorus music](#clickable=flyout-third-block) function to accompany each part of the lyrics.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-third-block)\r\n\r\n---\r\n\r\n*Example timeline:*\r\n\r\n![](https://images.code.org/224560938f7973318874f351508d9a2b-image-1744664311095.png)\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
         "key": "music-ai-skill-function-verse_fc9881f2-7571-49f1-8971-dcab68a657a9",
-        "message": "Great work! That beat is a great addition to each of the lyrics. ",
+        "message": "**Great work!** That music is a great addition to the lyrics. ",
         "next": true,
         "conditions": [
           {
@@ -84,6 +85,7 @@
                       "block": {
                         "type": "play_sound_at_current_location_simple2",
                         "id": "play_sound_at_current_location_simple2",
+                        "deletable": false,
                         "movable": false,
                         "editable": false,
                         "extraState": {
@@ -108,6 +110,7 @@
                           "block": {
                             "type": "play_sound_at_current_location_simple2",
                             "id": "=^*2zE/Lqg@?_xS$l%e0",
+                            "deletable": false,
                             "movable": false,
                             "editable": false,
                             "extraState": {
@@ -132,6 +135,7 @@
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
                                 "id": "%aDt;:n)me?hcJW#JF8~",
+                                "deletable": false,
                                 "movable": false,
                                 "editable": false,
                                 "extraState": {
@@ -171,7 +175,9 @@
                   "block": {
                     "type": "play_sounds_together",
                     "id": "play_sounds_together",
+                    "deletable": false,
                     "movable": false,
+                    "editable": false,
                     "extraState": {
                       "disableNextConnection": true
                     },
@@ -180,7 +186,9 @@
                         "block": {
                           "type": "play_sound_at_current_location_simple2",
                           "id": "FjUk;Qs-hq,EfK@I1CqZ",
+                          "deletable": false,
                           "movable": false,
+                          "editable": false,
                           "extraState": {
                             "disableNextConnection": false
                           },
@@ -191,7 +199,9 @@
                             "block": {
                               "type": "play_sound_at_current_location_simple2",
                               "id": "5|(x/Zq5i_Rz4T^4[I-$",
+                              "deletable": false,
                               "movable": false,
+                              "editable": false,
                               "extraState": {
                                 "disableNextConnection": false
                               },
@@ -202,7 +212,9 @@
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "*F#%p_K%HSl#IP/lc.Vz",
+                                  "deletable": false,
                                   "movable": false,
+                                  "editable": false,
                                   "extraState": {
                                     "disableNextConnection": false
                                   },
@@ -213,7 +225,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "D1`93s{!o`O_Zz%jS)}j",
+                                      "deletable": false,
                                       "movable": false,
+                                      "editable": false,
                                       "extraState": {
                                         "disableNextConnection": true
                                       },
@@ -325,10 +339,16 @@
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hint_prompt_attempts_threshold": "1",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:55.146+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-chorus2\\\"\"],\"cloned_from\":\"music-coding-intro-functions-chorus2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:55.146+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-chorus2\\\"\"],\"cloned_from\":\"music-coding-intro-functions-chorus2\"},{\"changed_at\":\"2025-04-14 20:58:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 20:59:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:43:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:44:18 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:44:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:45:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:44:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:44:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:45:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:50:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

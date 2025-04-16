@@ -6,6 +6,12 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: Marketing App AWS resources
 
 Parameters:
+  BaseDomainName:
+    Type: String
+    Description: Base domain name (e.g. 'code.org' in 'marketing.code.org').
+  SubdomainName:
+    Type: String
+    Description: Subdomain name for marketing (e.g. 'marketing' in 'marketing.code.org').
   Environment:
     Type: String
     Default: "test"
@@ -14,6 +20,8 @@ Parameters:
     Type: String
     Description: "The sha256sum of the marketing container image."
 
+Conditions:
+  IsDevCondition: !Equals [!Ref BaseDomainName, "dev-code.org"]
 Resources:
   # Route 53 root hosted zone for marketing.dev-code.org
   RootHostedZone:
@@ -306,6 +314,11 @@ Resources:
           PortMappings:
             - ContainerPort: 3000
               Protocol: tcp
+          MountPoints:
+            # More details: https://nextjs.org/docs/app/building-your-application/caching#full-route-cache
+            - SourceVolume: code-dot-org-full-page-router-cache
+              ContainerPath: /app/apps/marketing/.next/server/app/code.org
+              ReadOnly: false
           Secrets:
             - Name: CONTENTFUL_TOKEN
               ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_TOKEN::'
@@ -327,6 +340,15 @@ Resources:
         Fn::GetAtt:
           - FargateServiceTaskDefTaskRole
           - Arn
+      Volumes:
+        # More details: https://nextjs.org/docs/app/building-your-application/caching#full-route-cache
+        - Name: code-dot-org-full-page-router-cache
+          EFSVolumeConfiguration:
+            FilesystemId: !Ref MarketingCacheFileSystem
+            AuthorizationConfig:
+              AccessPointId: !Ref CDOMarketingCacheAccessPoint
+              IAM: ENABLED
+            TransitEncryption: ENABLED
 
   FargateServiceTaskDefExecutionRole:
     Type: AWS::IAM::Role
@@ -423,6 +445,65 @@ Resources:
   ###########################
 
   ###########################
+  # Start AWS EFS Resources #
+  ###########################
+
+  MarketingCacheFileSystem:
+    Type: AWS::EFS::FileSystem
+    Properties:
+      Encrypted: true
+      PerformanceMode: generalPurpose
+      ThroughputMode: bursting
+      LifecyclePolicies:
+        - TransitionToIA: AFTER_30_DAYS
+      FileSystemTags:
+        - Key: Name
+          Value: Marketing-EFS-Cache
+
+<% Config::AVAILABILITY_ZONES.each_with_index do |region, index| %>
+  # Mount Target for <%= region  %>
+  MarketingCacheMountTarget<%= index %>:
+    Type: AWS::EFS::MountTarget
+    Properties:
+      FileSystemId: !Ref MarketingCacheFileSystem
+      SubnetId: !Ref VpcPrivateSubnet<%= index %>
+      SecurityGroups: [!Ref MarketingCacheEFSSecurityGroup]
+<% end %>
+
+  CDOMarketingCacheAccessPoint:
+    Type: AWS::EFS::AccessPoint
+    Properties:
+      FileSystemId: !Ref MarketingCacheFileSystem
+      PosixUser:
+        Uid: "1001" # Refer to the Dockerfile at frontend/apps/marketing/Dockerfile
+        Gid: "1001" # Refer to the Dockerfile at frontend/apps/marketing/Dockerfile
+      RootDirectory:
+        Path: "/cache/code.org"
+        CreationInfo:
+          OwnerUid: "1001"
+          OwnerGid: "1001"
+          Permissions: "755"
+
+  MarketingCacheEFSSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow Marketing ECS to connect to EFS
+      VpcId:
+        Ref: Vpc
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 2049
+          ToPort: 2049
+          SourceSecurityGroupId:         
+            Fn::GetAtt:
+              - FargateServiceSecurityGroup
+              - GroupId
+
+  ###########################
+  # End AWS EFS Resources   #
+  ###########################
+
+  ###########################
   # Start AWS ECS Resources #
   ###########################
 
@@ -484,6 +565,13 @@ Resources:
               - 'ecs:DescribeServices'
               - 'ecs:UpdateService'
             Resource: !Ref FargateService
+          - Effect: Allow
+            Action:
+              - "s3:PutObject"
+              - "s3:ListBucket"
+            Resource:
+              - !GetAtt MarketingStaticAssetsBucket.Arn
+              - !Sub "${MarketingStaticAssetsBucket.Arn}/*"
 
   MarketingGithubDeployerAccessKey:
     Type: AWS::IAM::AccessKey
@@ -506,6 +594,28 @@ Resources:
             - '"}'
     UpdateReplacePolicy: Delete
     DeletionPolicy: Delete
+
+  MarketingStaticAssetsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !If [IsDevCondition, !Sub "cdo-dev-${SubdomainName}-static-assets", !Sub "cdo-${SubdomainName}-static-assets"]
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "AES256"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      VersioningConfiguration:
+        Status: Enabled
+      LifecycleConfiguration:
+        Rules:
+          - Id: ExpireOldVersions
+            Status: Enabled
+            NoncurrentVersionExpiration:
+              NoncurrentDays: 90
 
 Outputs:
   FargateServiceLoadBalancerDNS:
