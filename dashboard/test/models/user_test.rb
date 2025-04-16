@@ -3787,6 +3787,7 @@ class UserTest < ActiveSupport::TestCase
     assert (create :facilitator).lesson_extras_enabled?(script)
   end
 
+  #TODO: Move HiddenIds tests cases to integration/end-to-end tests https://codedotorg.atlassian.net/browse/P20-1477
   class HiddenIds < ActiveSupport::TestCase
     setup_all do
       @teacher = create :teacher
@@ -3890,6 +3891,58 @@ class UserTest < ActiveSupport::TestCase
 
       # script 3 hidden in section 2
       SectionHiddenScript.create(section_id: section2.id, script_id: @script3.id)
+    end
+
+    test 'can get next_unpassed_visible_progression_level, progress, hidden' do
+      student = create :student
+      teacher = create :teacher
+      script = create(:script, :with_levels, lessons_count: 3, levels_count: 1)
+
+      # User completed the first lesson
+      script.lessons[0].script_levels.each do |sl|
+        UserLevel.create(
+          user: student,
+          level: sl.level,
+          script: script,
+          attempts: 1,
+          best_result: Activity::MINIMUM_PASS_RESULT
+        )
+      end
+
+      # Hide the second lesson
+      SectionHiddenLesson.create(
+        section_id: put_participant_in_section(student, teacher, script).id,
+        stage_id: script.lessons[1].id
+      )
+
+      # Should get the third lesson, since the second is hidden
+      assert_equal(script.lessons[2].script_levels.first, student.next_unpassed_visible_progression_level(script))
+    end
+
+    test 'can get next_unpassed_visible_progression_level, last level complete, but script not complete, first hidden' do
+      student = create :student
+      teacher = create :teacher
+      script = create(:script, :with_levels, lessons_count: 3, levels_count: 1)
+
+      refute_empty student.visible_script_levels(script)
+
+      UserLevel.create(
+        user: student,
+        level: script.script_levels.last.level,
+        script: script,
+        attempts: 1,
+        best_result: Activity::MINIMUM_PASS_RESULT
+      )
+
+      # Hide the first lesson
+      SectionHiddenLesson.create(
+        section_id: put_participant_in_section(student, teacher, script).id,
+        stage_id: script.lessons.first.id
+      )
+
+      # Find the second lesson, since the 1st is hidden
+      refute_nil student.next_unpassed_visible_progression_level(script)
+      assert_equal(2, student.next_unpassed_visible_progression_level(script).chapter)
     end
 
     test "script_level_hidden? if can be instructor for course" do

@@ -547,52 +547,60 @@ class LevelProgressableTest < ActiveSupport::TestCase
   describe '#script_level_hidden?' do
     subject(:script_level_hidden?) {user.script_level_hidden?(script_level)}
 
-    let(:student) {create :student}
+    let(:user) {create :user}
     let(:teacher) {create :teacher}
-    let(:script) {create(:script)}
+    let(:script) {create :script}
     let(:lesson_group) {create :lesson_group, script: script}
     let(:lesson) {create :lesson, script: script, lesson_group: lesson_group}
-    let(:script_level) {create(:script_level, script: script, lesson: lesson, levels: [create(:level)])}
+    let(:script_level) {create :script_level, script: script, lesson: lesson, levels: [create(:level)]}
 
-    context 'when user is a teacher' do
+    context 'when user can be an instructor' do
+      let(:section) {create :section, user: teacher, script: nil}
+
+      before do
+        # Forcing the user to be an instructor
+        allow(script).to receive(:can_be_instructor?).and_return(true)
+        # Setting the user be in a section that hides the script
+        allow(user).to receive(:sections_as_student).and_return([section])
+        allow(script_level).to receive(:hidden_for_section?).with(section.id).and_return(true)
+      end
+
       it 'returns false' do
-        _(teacher.script_level_hidden?(script_level)).must_equal false
+        _script_level_hidden?.must_equal false
       end
     end
 
     context 'when user has no sections' do
       it 'returns false' do
-        _(student.script_level_hidden?(script_level)).must_equal false
+        _script_level_hidden?.must_equal false
       end
     end
 
     context 'when user sections have no script assigned and the lesson is hidden for at least one section' do
-      let(:section1) {create(:section, user: teacher, script: nil)}
-      let(:section2) {create(:section, user: teacher, script: nil)}
+      let(:section1) {create :section, user: teacher, script: nil}
+      let(:section2) {create :section, user: teacher, script: nil}
 
       before do
-        student.sections_as_student << section1
-        student.sections_as_student << section2
-
-        create :section_hidden_lesson, lesson: script_level.lesson, section: section1
+        allow(user).to receive(:sections_as_student).and_return([section1, section2])
+        allow(script_level).to receive(:hidden_for_section?).with(section1.id).and_return(true)
+        allow(script_level).to receive(:hidden_for_section?).with(section2.id).and_return(false)
       end
 
       it 'returns true' do
-        _(student.script_level_hidden?(script_level)).must_equal true
+        _script_level_hidden?.must_equal true
       end
     end
 
     context 'when a user section has a visible script assigned' do
-      let(:section1) {create(:section, user: teacher, script: script)}
-      let(:section2) {create(:section, user: teacher, script: nil)}
+      let(:section1) {create :section, user: teacher, script: script}
+      let(:section2) {create :section, user: teacher, script: nil}
 
       before do
-        student.sections_as_student << section1
-        student.sections_as_student << section2
+        allow(user).to receive(:sections_as_student).and_return([section1, section2])
       end
 
       it 'returns false' do
-        _(student.script_level_hidden?(script_level)).must_equal false
+        _script_level_hidden?.must_equal false
       end
     end
 
@@ -601,14 +609,13 @@ class LevelProgressableTest < ActiveSupport::TestCase
       let(:section2) {create(:section, user: teacher, script: script)}
 
       before do
-        student.sections_as_student << section1
-        student.sections_as_student << section2
-
-        create :section_hidden_lesson, lesson: script_level.lesson, section: section1
+        allow(user).to receive(:sections_as_student).and_return([section1, section2])
+        allow(script_level).to receive(:hidden_for_section?).with(section1.id).and_return(true)
+        allow(script_level).to receive(:hidden_for_section?).with(section2.id).and_return(false)
       end
 
       it 'returns false if any matching section does not hide the script_level' do
-        _(student.script_level_hidden?(script_level)).must_equal false
+        _script_level_hidden?.must_equal false
       end
     end
 
@@ -617,14 +624,12 @@ class LevelProgressableTest < ActiveSupport::TestCase
       let(:section2) {create(:section, user: teacher, script: script)}
 
       before do
-        student.sections_as_student << section1
-        student.sections_as_student << section2
-
-        create :section_hidden_lesson, lesson: script_level.lesson, section: section1
-        create :section_hidden_lesson, lesson: script_level.lesson, section: section2
+        allow(user).to receive(:sections_as_student).and_return([section1, section2])
+        allow(script_level).to receive(:hidden_for_section?).with(section1.id).and_return(true)
+        allow(script_level).to receive(:hidden_for_section?).with(section2.id).and_return(true)
       end
       it 'returns true' do
-        _(student.script_level_hidden?(script_level)).must_equal true
+        _script_level_hidden?.must_equal true
       end
     end
   end
