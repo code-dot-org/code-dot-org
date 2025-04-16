@@ -80,7 +80,7 @@
   .dropdownMenuContainer {
     position: absolute;
     bottom: auto;
-    z-index: $zindex-modal-backdrop;
+    z-index: variables.$zindex-modal-backdrop;
     display: none;
     float: left;
     margin: 0.25rem 0;
