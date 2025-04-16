@@ -10,7 +10,7 @@ import experiments from '@cdo/apps/util/experiments';
 import ConfirmationDialog from '../components/confirmation_dialog';
 
 import WorkshopForm from './components/workshop_form';
-import {DATE_FORMAT, TIME_FORMAT} from './workshopConstants';
+import {TIME_FORMAT} from './workshopConstants';
 import WorkshopPanel from './WorkshopPanel';
 
 const newWorkshopFormEnabled = experiments.isEnabled(
@@ -116,14 +116,16 @@ export default class DetailsPanel extends React.Component {
         {newWorkshopFormEnabled ? (
           <Row style={styles.container}>
             <Col style={styles.section} md={4}>
-              <h2 style={styles.header}>
+              <h3 style={styles.header}>
                 <strong>Workshop Name</strong>
-              </h2>
+              </h3>
               <p style={styles.truncate}>{workshop.name || workshop.course}</p>
 
-              <h2 style={styles.header}>
+              <div style={styles.colDivider} />
+
+              <h3 style={styles.header}>
                 <strong>Subject/Topics</strong>
-              </h2>
+              </h3>
               <ul style={{...styles.list, ...styles.truncate}}>
                 {workshop.subject && <li>{workshop.subject}</li>}
                 {workshop.course_offering_names &&
@@ -137,36 +139,36 @@ export default class DetailsPanel extends React.Component {
 
             <Col style={styles.section} md={4}>
               <Row>
-                <Col xs={4}>
-                  <h2 style={styles.header}>
+                <Col xs={3}>
+                  <h3 style={styles.header}>
                     <strong>Date</strong>
-                  </h2>
+                  </h3>
                 </Col>
                 <Col xs={4}>
-                  <h2 style={styles.header}>
+                  <h3 style={styles.header}>
                     <strong>Time</strong>
-                  </h2>
+                  </h3>
                 </Col>
-                <Col xs={4}>
-                  <h2 style={styles.header}>
+                <Col xs={5}>
+                  <h3 style={styles.header}>
                     <strong>Location</strong>
-                  </h2>
+                  </h3>
                 </Col>
               </Row>
               {workshop.sessions.map(session => (
                 <Row key={session.id}>
-                  <Col style={styles.noWrap} xs={4}>
+                  <Col style={styles.truncate} xs={3}>
                     {moment
                       .tz(session.start, this.timeZone)
-                      .format(DATE_FORMAT)}
+                      .format('MM/DD/YYYY')}
                   </Col>
-                  <Col style={styles.noWrap} xs={4}>
+                  <Col style={styles.truncate} xs={4}>
                     {moment
                       .tz(session.start, this.timeZone)
                       .format(TIME_FORMAT)}
                     -{moment.tz(session.end, this.timeZone).format(TIME_FORMAT)}
                   </Col>
-                  <Col style={styles.truncate} xs={4}>
+                  <Col style={styles.truncate} xs={5}>
                     {session.session_format === 'in_person'
                       ? session.location_name ?? 'N/A'
                       : 'Virtual'}
@@ -190,6 +192,8 @@ export default class DetailsPanel extends React.Component {
               ) : (
                 <p>N/A</p>
               )}
+
+              <div style={styles.colDivider} />
 
               <h2 style={styles.header}>
                 <strong>Regional Partner</strong>
@@ -234,6 +238,8 @@ export default class DetailsPanel extends React.Component {
 const styles = {
   header: {
     fontSize: '13px',
+    marginBottom: '4px',
+    marginTop: 0,
   },
   container: {
     display: 'flex',
@@ -246,13 +252,15 @@ const styles = {
     flex: 1,
     borderRight: '1px solid #D1D4D8',
   },
-  noWrap: {
-    whiteSpace: 'nowrap',
+  colDivider: {
+    marginBottom: '8px',
   },
   truncate: {
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
+    marginBottom: '2px',
+    paddingRight: 0,
   },
   list: {
     listStyleType: 'none',
