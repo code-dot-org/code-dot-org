@@ -51,6 +51,7 @@ export const calculatePositionedElementStyles = ({
   isPositionFixed?: boolean;
 }) => {
   const styles: React.CSSProperties = {};
+  let effectiveDirection = direction;
 
   if (nodePosition && positionedElementRef.current && direction !== 'none') {
     const rect = nodePosition.getBoundingClientRect();
@@ -81,7 +82,7 @@ export const calculatePositionedElementStyles = ({
         styles.left = isLtr ? horizontalRightPosition : horizontalLeftPosition;
         // Adjust if the tooltip goes offscreen on the right
         if (styles.left + tooltipRect.width > window.innerWidth) {
-          styles.left = horizontalLeftPosition;
+          effectiveDirection = 'onLeft';
         }
         break;
       case 'onBottom':
@@ -89,7 +90,7 @@ export const calculatePositionedElementStyles = ({
         styles.left = horizontalMiddlePosition;
         // Adjust if the tooltip goes offscreen at the bottom
         if (styles.top + tooltipRect.height > window.innerHeight) {
-          styles.top = verticalTopPosition;
+          effectiveDirection = 'onTop';
         }
         break;
       case 'onLeft':
@@ -97,7 +98,7 @@ export const calculatePositionedElementStyles = ({
         styles.left = isLtr ? horizontalLeftPosition : horizontalRightPosition;
         // Adjust if the tooltip goes offscreen on the left
         if (styles.left < 0) {
-          styles.left = horizontalRightPosition;
+          effectiveDirection = 'onRight';
         }
         break;
       case 'onTop':
@@ -106,26 +107,13 @@ export const calculatePositionedElementStyles = ({
         styles.left = horizontalMiddlePosition;
         // Adjust if the tooltip goes offscreen at the top
         if (styles.top < 0) {
-          styles.top = verticalBottomPosition;
+          effectiveDirection = 'onBottom';
         }
         break;
     }
-    // Ensure the tooltip stays within the viewport horizontally
-    if (styles.left + tooltipRect.width > window.innerWidth) {
-      styles.left = window.innerWidth - tooltipRect.width - tailOffset;
-    } else if (styles.left < 0) {
-      styles.left = tailOffset;
-    }
-
-    // Ensure the tooltip stays within the viewport vertically
-    if (styles.top + tooltipRect.height > window.innerHeight) {
-      styles.top = window.innerHeight - tooltipRect.height - tailOffset;
-    } else if (styles.top < 0) {
-      styles.top = tailOffset;
-    }
   }
 
-  return styles;
+  return {styles, effectiveDirection};
 };
 /**
  * Shortcut function to update React state for the positioned element styles based on the node position
@@ -135,6 +123,7 @@ export const calculatePositionedElementStyles = ({
  * @param positionedElementRef
  * @param direction
  * @param setPositionedElementStyles
+ * @param setPositionedElementDirection
  * @param tailOffset
  * @param tailLength
  * @param isPositionFixed
@@ -144,6 +133,7 @@ export const updatePositionedElementStyles = ({
   positionedElementRef,
   direction,
   setPositionedElementStyles,
+  setPositionedElementDirection,
   tailOffset,
   tailLength,
   isPositionFixed = false,
@@ -154,20 +144,31 @@ export const updatePositionedElementStyles = ({
   setPositionedElementStyles: React.Dispatch<
     React.SetStateAction<React.CSSProperties>
   >;
+  setPositionedElementDirection: React.Dispatch<
+    React.SetStateAction<ComponentPlacementDirection>
+  >;
   tailOffset: number;
   tailLength: number;
   isPositionFixed?: boolean;
 }) => {
-  setPositionedElementStyles(
-    calculatePositionedElementStyles({
-      nodePosition,
-      positionedElementRef,
-      direction,
-      tailOffset,
-      tailLength,
-      isPositionFixed,
-    }),
-  );
+  const {styles, effectiveDirection} = calculatePositionedElementStyles({
+    nodePosition,
+    positionedElementRef,
+    direction,
+    tailOffset,
+    tailLength,
+    isPositionFixed,
+  });
+
+  if (
+    effectiveDirection &&
+    effectiveDirection !== 'none' &&
+    effectiveDirection !== direction
+  ) {
+    setPositionedElementDirection(effectiveDirection);
+  } else {
+    setPositionedElementStyles(styles);
+  }
 };
 
 // Check to see if a URL is blocked.
