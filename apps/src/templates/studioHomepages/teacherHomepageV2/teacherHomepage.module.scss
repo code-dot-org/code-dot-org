@@ -288,6 +288,10 @@
   &.promotion-orange {
     background-color: var(--background-accent-orange-light);
   }
+
+  &.promotion-skeleton {
+    border: 1px solid var(--borders-neutral-primary);
+  }
 }
 
 .promotionType {
