@@ -2392,14 +2392,14 @@ class User < ApplicationRecord
     user = User.find_by_email_or_hashed_email(params[:email])
 
     if user
-      user.update!(params.merge(user_type: TYPE_TEACHER))
+      user = user.becomes!(Teacher) unless user.instance_of?(Teacher)
+      user.update!(params)
     else
       # initialize new users with name and school
       if params[:ops_first_name] || params[:ops_last_name]
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
       params[:school] ||= params[:ops_school]
-      params[:user_type] = TYPE_TEACHER
       params[:age] ||= 21
 
       # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
@@ -2407,7 +2407,7 @@ class User < ApplicationRecord
       ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
         raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
       end
-      user = User.invite!(attributes: params)
+      user = Teacher.invite!(attributes: params)
       user.update!(invited_by: invited_by_user)
     end
 
