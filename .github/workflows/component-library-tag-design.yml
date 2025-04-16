@@ -1,0 +1,23 @@
+name: Component-Library-Tag-Design
+
+on:
+  pull_request:
+    types:
+      - opened
+    paths:
+      - 'frontend/packages/component-library-styles/**'
+      - 'frontend/packages/component-library/**'
+      - 'frontend/packages/fonts/**'
+
+jobs:
+  request:
+    name: Request review from design team on opened Component Library PRs
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Request Review
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          url: ${{ github.event.pull_request.html_url }}
+        run: |
+          gh pr edit "$url" --add-reviewer @code-dot-org/component-library-design-reviewers
