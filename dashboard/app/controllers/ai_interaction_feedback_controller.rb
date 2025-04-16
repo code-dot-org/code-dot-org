@@ -7,8 +7,6 @@ class AiInteractionFeedbackController < ApplicationController
     feedback.user_id = current_user.id
     feedback.school_year = school_year
 
-    puts feedback.user_id
-
     if feedback.save
       render json: {status: 'success', message: 'Feedback saved successfully'}, status: :created
     else
