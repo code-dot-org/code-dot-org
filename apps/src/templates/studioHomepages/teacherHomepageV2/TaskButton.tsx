@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import {useNavigate, NavLink} from 'react-router-dom';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -32,7 +32,7 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
 }) => {
   const navigate = useNavigate();
 
-  const onButtonClick = () => {
+  const onNavigate = () => {
     const navEvent =
       path === 'progress'
         ? EVENTS.SECTION_CARD_VIEW_PROGRESS_CLICKED
@@ -44,10 +44,10 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
   };
 
   return (
-    <button
-      type={'button'}
+    <NavLink
       className={styles.taskButtons}
-      onClick={onButtonClick}
+      onClick={onNavigate}
+      to={`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`}
     >
       <div className={styles.taskButtonLeft}>
         <FontAwesomeV6Icon
@@ -62,6 +62,6 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
         iconName={'arrow-right'}
         iconStyle={'solid'}
       />
-    </button>
+    </NavLink>
   );
 };
