@@ -9,8 +9,6 @@ import {
   useSensor,
   useSensors,
   KeyboardSensor,
-  KeyboardCoordinateGetter,
-  KeyboardCode,
 } from '@dnd-kit/core';
 import {
   restrictToFirstScrollableAncestor,
@@ -27,6 +25,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {DndDataContextProvider} from './DnDDataContextProvider';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
+import FileBrowserKeyboardCoordinateGetter from './FileBrowserKeyboardCoordinateGetter';
 import {useHandleDragEnd} from './hooks';
 import InnerFileBrowser from './InnerFileBrowser';
 import {DragDataType, DropDataType} from './types';
@@ -57,63 +56,15 @@ export const FileBrowser = React.memo(() => {
 
   const handleDragEnd = useHandleDragEnd();
 
-  const keyboardCoordinateGetter: KeyboardCoordinateGetter = (event, args) => {
-    const {context} = args;
-    const {droppableRects, over} = context;
-    if (event.code !== KeyboardCode.Up && event.code !== KeyboardCode.Down) {
-      return;
-    }
-    event.preventDefault();
-    // need to find closest droppable container in the direction of the key press
-    // and return the coordinates of that container
-    const orderedRects = Array.from(droppableRects.keys());
-    orderedRects.sort((a, b) => {
-      // DEFAULT_FOLDER_ID should always be last in the list, because it is the root folder
-      // and contains all other folders.
-      if (a === DEFAULT_FOLDER_ID) {
-        return 1;
-      } else if (b === DEFAULT_FOLDER_ID) {
-        return -1;
-      }
-      return (
-        (droppableRects.get(a)?.top || 0) - (droppableRects.get(b)?.top || 0)
-      );
-    });
-    const currentIndex = orderedRects.indexOf(over?.id as string);
-    let nextIndex = currentIndex;
-    if (event.code === KeyboardCode.Down) {
-      nextIndex = Math.min(currentIndex + 1, orderedRects.length - 1);
-    } else if (event.code === KeyboardCode.Up) {
-      nextIndex = Math.max(currentIndex - 1, 0);
-    }
-
-    const newRectId = orderedRects[nextIndex];
-    if (newRectId === over?.id) {
-      return;
-    }
-    const newRect = droppableRects.get(orderedRects[nextIndex]);
-    if (newRect) {
-      const x = newRect.left;
-      let y = newRect.top + 8;
-      if (newRectId === DEFAULT_FOLDER_ID) {
-        y = newRect.bottom;
-      }
-      const newCoordinates = {
-        x,
-        y,
-      };
-
-      return newCoordinates;
-    }
-  };
-
   const sensors = useSensors(
     useSensor(PointerSensor, {
       activationConstraint: {
         distance: 2,
       },
     }),
-    useSensor(KeyboardSensor, {coordinateGetter: keyboardCoordinateGetter})
+    useSensor(KeyboardSensor, {
+      coordinateGetter: FileBrowserKeyboardCoordinateGetter,
+    })
   );
 
   return (
