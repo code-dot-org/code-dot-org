@@ -851,7 +851,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       options
     ) as ExtendedWorkspaceSvg;
 
-    GoogleBlockly.utils.dom.addClass(workspace.getSvgGroup(), 'noFocusOutline');
     workspace.defs = Blockly.createSvgElement(
       'defs',
       {id: 'blocklySvgDefs'},

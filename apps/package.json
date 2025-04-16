@@ -183,7 +183,7 @@
     "@blockly/field-bitmap": "^5.0.9",
     "@blockly/field-colour": "^5.0.9",
     "@blockly/field-grid-dropdown": "~5.0.9",
-    "@blockly/keyboard-experiment": "^0.0.6",
+    "@blockly/keyboard-experiment": "^0.0.7",
     "@blockly/plugin-cross-tab-copy-paste": "~6.0.9",
     "@blockly/plugin-scroll-options": "~6.0.9",
     "@blockly/theme-dark": "7.0.7",
