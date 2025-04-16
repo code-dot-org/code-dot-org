@@ -68,7 +68,7 @@
 
 %div#hoc_features
 
-  = form_tag(action: 'update') do
+  = form_tag(action: 'update', method: 'patch') do
     %table{cellpadding: '4'}
       - FeatureModeManager::MODES.each do |mode|
         %tr{class: mode}
