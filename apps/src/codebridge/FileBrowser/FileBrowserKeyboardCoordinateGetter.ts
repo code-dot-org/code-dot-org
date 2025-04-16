@@ -23,9 +23,9 @@ const FileBrowserKeyboardCoordinateGetter: KeyboardCoordinateGetter = (
       return -1;
     }
     // Otherwise, sort based on the top coordinate.
-    return (
-      (droppableRects.get(a)?.top || 0) - (droppableRects.get(b)?.top || 0)
-    );
+    const aTop = droppableRects.get(a)?.top || 0;
+    const bTop = droppableRects.get(b)?.top || 0;
+    return aTop - bTop;
   });
   const currentIndex = orderedRects.indexOf(over?.id as string);
   let nextIndex = currentIndex;
@@ -40,7 +40,6 @@ const FileBrowserKeyboardCoordinateGetter: KeyboardCoordinateGetter = (
     // top or bottom of the browser).
     return;
   }
-
   const newRectId = orderedRects[nextIndex];
   const newRect = droppableRects.get(orderedRects[nextIndex]);
   if (newRect) {
