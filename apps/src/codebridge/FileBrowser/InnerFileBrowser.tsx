@@ -88,6 +88,7 @@ const InnerFileBrowser = React.memo(
               item: f,
               hasValidationFile,
               enableMenu: !isReadOnly && (!dragData?.id || isDraggingLocked),
+              isDragging: dragData?.id === f.id,
             };
             const MaybeDraggable = isDraggingLocked ? NotDraggable : Draggable;
             return (
