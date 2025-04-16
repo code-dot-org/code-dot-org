@@ -6,11 +6,11 @@ import {Image, ImageProps} from '@/image';
 import {BodyFourText} from '@/typography';
 
 import closeOnEvent from './hooks/closeOnEvent';
-import {Link} from './types';
+import {HeaderLink} from './types';
 
 import moduleStyles from './header.module.scss';
 
-export interface ProjectLink extends Link {
+export interface ProjectLink extends HeaderLink {
   image: Extract<ImageProps['src'], string>;
   description?: string;
 }

@@ -86,8 +86,8 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
   align-items: center;
   gap: 0.5rem;
 
-  body & .signIn.mainMenu,
-  body & .newProject {
+  .signIn.mainMenu,
+  .newProject {
     background: transparent;
 
     &:hover {
@@ -95,8 +95,8 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
     }
   }
 
-  body & .createAccount.mainMenu,
-  body & .goToDashboard.mainMenu {
+  .createAccount.mainMenu,
+  .goToDashboard.mainMenu {
     color: var(--text-brand-teal-primary-fixed);
 
     &:hover {
@@ -117,7 +117,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 }
 
 // Icon button styles
-body .buttonLinks button.iconButton {
+.buttonLinks .iconButton {
   padding: 0;
   background: transparent;
   min-width: unset;
@@ -188,10 +188,6 @@ body .buttonLinks button.iconButton {
 }
 
 // New Project menu styles
-body .buttonLinks > button.newProject i {
-  width: unset;
-}
-
 .newProjectMenu {
   a {
     margin: 0;
@@ -253,7 +249,7 @@ body .buttonLinks > button.newProject i {
 // Large desktop
 @media (max-width: ($desktop-breakpoint - 1px)) {
   // Show Help menu
-  body .helpButton {
+  .helpButton {
     display: none;
   }
 }
@@ -261,7 +257,7 @@ body .buttonLinks > button.newProject i {
 // Small desktop
 @media (min-width: $desktop-breakpoint) {
   // Show Hamburger menu
-  body .hamburgerButton {
+  .hamburgerButton {
     display: none;
   }
 }
@@ -277,7 +273,7 @@ body .buttonLinks > button.newProject i {
 @media (max-width: $tablet-breakpoint) {
   // Hide Main links and New Project menu
   .mainLinksWrapper .mainLinks,
-  body .newProject {
+  .newProject {
     display: none;
   }
 
@@ -289,7 +285,7 @@ body .buttonLinks > button.newProject i {
 // Mobile
 @media (max-width: $mobile-breakpoint) {
   // Hide Account links
-  body .accountLinks {
+  .accountLinks {
     display: none;
   }
 

@@ -251,9 +251,7 @@ export const LoggedOut: Story = {
   },
   parameters: {
     layout: 'fullscreen',
-    viewport: {
-      defaultViewport: 'desktop',
-    },
+    viewport: 'desktop',
   },
 };
 
@@ -264,9 +262,7 @@ export const LoggedIn: Story = {
   },
   parameters: {
     layout: 'fullscreen',
-    viewport: {
-      defaultViewport: 'desktop',
-    },
+    viewport: 'desktop',
   },
 };
 

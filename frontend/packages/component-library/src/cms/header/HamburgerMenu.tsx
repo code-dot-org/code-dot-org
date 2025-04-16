@@ -5,7 +5,7 @@ import {Button} from '@/button';
 
 import AccountButtons, {AccountButtonsProps} from './AccountButtons';
 import closeOnEvent from './hooks/closeOnEvent';
-import {Link} from './types';
+import {HeaderLink} from './types';
 
 import moduleStyles from './header.module.scss';
 
@@ -20,7 +20,7 @@ export interface HamburgerMenuProps extends HTMLAttributes<HTMLElement> {
     menu: 'Hamburger menu' | string;
   };
   /** Hamburger links */
-  hamburgerLinks: Link[];
+  hamburgerLinks: HeaderLink[];
   /** Account links */
   accountLinks: {
     /** Sign In button */

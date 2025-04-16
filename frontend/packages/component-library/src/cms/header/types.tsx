@@ -1,6 +1,6 @@
 import {Key, AnchorHTMLAttributes} from 'react';
 
-export interface Link extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface HeaderLink extends AnchorHTMLAttributes<HTMLAnchorElement> {
   /** Unique key for the link */
   key: Key;
   /** Link label */

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import {HTMLAttributes} from 'react';
 
-import {Link} from './types';
+import {HeaderLink} from './types';
 
 import moduleStyles from './header.module.scss';
 
@@ -9,7 +9,7 @@ export interface MainLinksProps extends HTMLAttributes<HTMLElement> {
   /** Main links label */
   mainLinksLabel: 'Main site links' | string;
   /** Main links */
-  mainLinks: Link[];
+  mainLinks: HeaderLink[];
   /** Main links custom class name */
   className?: string;
 }

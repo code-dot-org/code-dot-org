@@ -4,9 +4,10 @@ import {HTMLAttributes, useState, useRef} from 'react';
 import {Button} from '@/button';
 
 import closeOnEvent from './hooks/closeOnEvent';
-import {Link} from './types';
+import {HeaderLink} from './types';
 
 import moduleStyles from './header.module.scss';
+
 export interface HelpMenuProps extends HTMLAttributes<HTMLElement> {
   /** Help menu labels */
   helpButtonLabel: {
@@ -18,7 +19,7 @@ export interface HelpMenuProps extends HTMLAttributes<HTMLElement> {
     menu: 'Help menu' | string;
   };
   /** Help links */
-  helpLinks: Link[];
+  helpLinks: HeaderLink[];
   /** Project custom class name */
   className?: string;
 }
