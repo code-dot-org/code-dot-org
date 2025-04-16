@@ -17,13 +17,13 @@ jobs:
       - name: Request Review
         uses: actions/github-script@v7
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.DEPENDABOT_REVIEWER_GH_TOKEN }}
           script: |
             await github.rest.pulls.requestReviewers({
               owner: context.repo.owner,
               repo: context.repo.repo,
               pull_number: context.issue.number,
-              team_reviewers: ['code-dot-org/component-library-design-reviewers'],
+              team_reviewers: ['component-library-design-reviewers'],
             });
 
 
