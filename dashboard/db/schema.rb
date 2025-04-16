@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2025_04_16_140513) do
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
   end
 
-  create_table "ai_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "ai_interaction_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id"
     t.integer "script_id"
@@ -2198,7 +2198,7 @@ ActiveRecord::Schema.define(version: 2025_04_16_140513) do
     t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
   end
 
-  create_table "student_work_evaluation_summaries", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "student_work_evaluation_summaries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "student_work_evaluation_id", null: false
     t.bigint "student_work_evaluation_summary_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -2207,7 +2207,7 @@ ActiveRecord::Schema.define(version: 2025_04_16_140513) do
     t.index ["student_work_evaluation_summary_id"], name: "fk_rails_d50fa61780"
   end
 
-  create_table "student_work_evaluations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "student_work_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "type", null: false
     t.integer "student_id"
     t.integer "requester_id"
@@ -2396,7 +2396,7 @@ ActiveRecord::Schema.define(version: 2025_04_16_140513) do
     t.index ["user_id", "permission"], name: "index_user_permissions_on_user_id_and_permission", unique: true
   end
 
-  create_table "user_preferences", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "user_preferences", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.json "section_order"
     t.datetime "created_at", precision: 6, null: false
