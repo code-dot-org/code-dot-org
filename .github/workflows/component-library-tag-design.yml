@@ -17,6 +17,7 @@ jobs:
       - name: Request Review
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             await github.rest.pulls.requestReviewers({
               owner: context.repo.owner,
