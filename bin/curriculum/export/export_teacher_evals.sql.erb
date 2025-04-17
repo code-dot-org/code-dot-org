@@ -1,0 +1,41 @@
+--
+-- this is an analytics query, to be run against the redshift database.
+--
+UNLOAD ($$
+  WITH
+    teacher_evals AS (
+      SELECT
+        lgte.id learning_goal_teacher_evaluation_id
+        , r.lesson_id
+        , r.level_id
+        , lg.position learning_goal_position
+        , lg.learning_goal learning_goal_text
+        , lg.tips learning_goal_tips
+        , lgte.*
+      FROM dashboard_production.rubrics r
+        JOIN dashboard_production.learning_goals lg ON r.id = lg.rubric_id
+        JOIN dashboard_production_pii.learning_goal_teacher_evaluations lgte ON lg.id = lgte.learning_goal_id
+    )
+  SELECT
+    cs.level_id
+    , cs.script_id
+    , cs.script_name
+    , cs.relative_position
+    , cs.level_number
+    , teacher_evals.user_id
+    , teacher_evals.project_id
+    , teacher_evals.project_version
+    , teacher_evals.understanding
+    , teacher_evals.feedback
+    , teacher_evals.submitted_at
+  FROM teacher_evals
+    JOIN analysis.course_structure cs ON cs.level_id = teacher_evals.level_id AND cs.stage_id = teacher_evals.lesson_id
+  WHERE
+    cs.script_name = '<%=unit_name%>'
+    <%= level_id && "and cs.level_id = #{level_id}" %>
+$$)
+TO 's3://cdo-data-sharing-internal/unloaded-teacher-evals/<%=output_dir%>/<%=unit_name%>_teacher_evals_'
+FORMAT JSON
+EXTENSION 'jsonl'
+IAM_ROLE 'arn:aws:iam::475661607190:role/redshift-s3';
+;
