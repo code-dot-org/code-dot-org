@@ -149,7 +149,9 @@ describe('TeacherHomepage', () => {
             createRoutesFromElements([
               <Route
                 path={TEACHER_NAVIGATION_PATHS.home}
-                element={<TeacherHomepage />}
+                element={
+                  <TeacherHomepage studioUrlPrefix="https://studio.code.org" />
+                }
               />,
             ]),
             {initialEntries: [INITIAL_ROUTE], basename: '/teacher_dashboard'}
