@@ -54,10 +54,10 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
       setHasConsoleOutput(!!lines && lines.length > 0);
     };
 
-    consoleManager.addListener(handleUpdate);
+    consoleManager.addTerminalLinesListener(handleUpdate);
 
     return () => {
-      consoleManager.removeListener(handleUpdate);
+      consoleManager.removeTerminalLinesListener(handleUpdate);
     };
   }, [consoleManager]);
 
