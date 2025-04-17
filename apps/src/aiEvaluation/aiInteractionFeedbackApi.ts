@@ -2,7 +2,7 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 export interface FeedbackData {
   aiInteractionType: string;
-  aiInteractionId?: number;
+  aiInteractionId: number;
   thumbsUp?: boolean;
   levelId?: number;
   scriptId?: number;

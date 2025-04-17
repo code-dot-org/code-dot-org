@@ -87,8 +87,8 @@ const FreeResponseStudentResponseRow: React.FC<
       aiInteractionType: 'UserLevelEvaluation',
       aiInteractionId: studentWorkEvaluation.id,
       thumbsUp,
-      levelId: studentWorkEvaluation?.levelId,
-      scriptId: studentWorkEvaluation?.unitId,
+      levelId: studentWorkEvaluation.levelId,
+      scriptId: studentWorkEvaluation.unitId,
     };
 
     logUserFeedbackOnStudentEvaluation(feedbackData);
