@@ -49,7 +49,6 @@ export default class ConsoleManager {
   public writeConsoleMessage(message: string) {
     const lines = message.split('\n');
     lines.forEach(l => this.appendTerminalLine(l));
-    this.executeTerminalLinesListeners();
   }
 
   public writePartialLine(message: string) {
@@ -58,7 +57,6 @@ export default class ConsoleManager {
     this.terminal.write(message);
     this.terminal.scrollToBottom();
     this.terminal.focus();
-    this.executeTerminalLinesListeners();
   }
 
   public appendToInputBuffer(data: string) {
@@ -80,7 +78,6 @@ export default class ConsoleManager {
     this.updateTerminalLines(this.inputBuffer);
     this.lastLineIsPartial = false;
     this.inputBuffer = '';
-    this.executeTerminalLinesListeners();
   }
 
   public addTerminalLinesListener(listener: () => void) {
@@ -111,5 +108,6 @@ export default class ConsoleManager {
     } else {
       this.terminalLines.push(message);
     }
+    this.executeTerminalLinesListeners();
   }
 }
