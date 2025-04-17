@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import Localization from '@cdo/apps/localization';
+
 import headerVignetteStyles from './HeaderVignette';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
 
@@ -31,6 +33,7 @@ class ScriptName extends React.Component {
 
   componentDidMount() {
     this.setDesiredWidth();
+    Localization.on('change', this.setDesiredWidth.bind(this));
   }
 
   componentDidUpdate() {
