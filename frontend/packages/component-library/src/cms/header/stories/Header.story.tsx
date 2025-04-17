@@ -128,14 +128,14 @@ const defaultArgs: HeaderProps = {
     {
       key: 'musicLab',
       label: 'Music Lab',
-      href: 'https://studio.code.org/projects/dance/new',
+      href: '/music',
       image: musicLabImage,
       description: 'Create music with code',
     },
     {
       key: 'danceParty',
       label: 'Dance Party',
-      href: 'https://code.org/music',
+      href: 'https://studio.code.org/projects/dance/new',
       image: dancePartyImage,
       description: 'Make a dance party with AI',
     },
