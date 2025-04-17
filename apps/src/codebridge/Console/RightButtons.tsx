@@ -32,23 +32,23 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   consoleManager,
 }) => {
   const isShareView = useAppSelector(state => state.lab.isShareView);
-
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const consoleManagerRef = useRef<ConsoleManager | null>(null);
-  const [isClearButtonDisabled, setIsClearButtonDisabled] = useState(true);
   const [hasConsoleOutput, setHasConsoleOutput] = useState(false);
 
   useEffect(() => {
     consoleManagerRef.current = consoleManager;
   }, [consoleManager]);
 
+  const isClearButtonDisabled = isRunning || !hasConsoleOutput;
   useEffect(() => {
     if (!consoleManager) return;
 
     setHasConsoleOutput(consoleManager.getTerminalLines().length > 0);
 
     const handleUpdate = () => {
-      const consoleManager = consoleManagerRef.current;
-      const lines = consoleManager?.getTerminalLines();
+      const manager = consoleManagerRef.current;
+      const lines = manager?.getTerminalLines();
       setHasConsoleOutput(!!lines && lines.length > 0);
     };
 
@@ -59,28 +59,22 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
     };
   }, [consoleManager]);
 
-  useEffect(() => {
-    setIsClearButtonDisabled(!hasConsoleOutput);
-  }, [hasConsoleOutput]);
-
   return (
-    <>
-      <div className={moduleStyles.buttonContainer}>
-        <WithTooltip tooltipProps={tooltipProps}>
-          <Button
-            isIconOnly
-            icon={{iconStyle: 'solid', iconName: 'eraser'}}
-            ariaLabel={codebridgeI18n.clearConsole()}
-            onClick={clearOutput}
-            size={'xs'}
-            type={'tertiary'}
-            className={darkModeStyles.tertiaryButton}
-            disabled={isClearButtonDisabled}
-          />
-        </WithTooltip>
-        {!isShareView && <SwapLayoutDropdown />}
-      </div>
-    </>
+    <div className={moduleStyles.buttonContainer}>
+      <WithTooltip tooltipProps={tooltipProps}>
+        <Button
+          isIconOnly
+          icon={{iconStyle: 'solid', iconName: 'eraser'}}
+          ariaLabel={codebridgeI18n.clearConsole()}
+          onClick={clearOutput}
+          size={'xs'}
+          type={'tertiary'}
+          className={darkModeStyles.tertiaryButton}
+          disabled={isClearButtonDisabled}
+        />
+      </WithTooltip>
+      {!isShareView && <SwapLayoutDropdown />}
+    </div>
   );
 };
 
