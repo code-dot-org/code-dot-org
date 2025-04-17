@@ -262,7 +262,6 @@ class UnitGroup < ApplicationRecord
         participant_audience: participant_audience,
         instructor_audience: instructor_audience
       )
-      unit.update!(original_unit_group_id: nil) if unit.original_unit_group == self
 
       UnitGroupUnit.where(unit_group: self, script: unit).destroy_all
     end

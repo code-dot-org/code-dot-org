@@ -357,6 +357,52 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 'unit2', unit_group.default_unit_group_units[1].script.name
     end
 
+    test "add original unit if unit does not have original unit" do
+      # Original unit group = the first unit group the unit was assigned
+      unit_group = create :unit_group
+
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert_equal 2, unit_group.default_unit_group_units.length
+      assert_equal 1, unit_group.default_unit_group_units[0].position
+      assert_equal 'unit1', unit_group.default_unit_group_units[0].script.name
+      assert_equal 2, unit_group.default_unit_group_units[1].position
+      assert_equal 'unit2', unit_group.default_unit_group_units[1].script.name
+      assert_equal 2, unit_group.original_units.length
+      assert_equal unit_group, unit1.original_unit_group
+      assert_equal unit_group, unit2.original_unit_group
+    end
+
+    test "do not add original unit group if a unit already has an original unit group" do
+      unit_group1 = create :unit_group
+
+      unit1 = create(:script, name: 'unit1')
+
+      unit_group1.update_original_scripts(['unit1'])
+      unit_group1.reload
+      unit1.reload
+
+      assert_equal 1, unit_group1.original_units.length
+      assert_equal unit_group1, unit1.original_unit_group
+
+      unit_group2 = create :unit_group
+      unit_group2.update_scripts(['unit1'])
+
+      unit_group2.reload
+      unit1.reload
+
+      assert_equal 0, unit_group2.original_units.length
+      assert_equal 1, unit_group2.default_units.length
+      assert_equal unit_group1, unit1.original_unit_group
+    end
+
     test "removes course version for new UnitGroupUnits" do
       unit_group = create :unit_group
 
