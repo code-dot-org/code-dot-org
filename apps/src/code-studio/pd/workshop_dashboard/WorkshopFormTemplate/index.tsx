@@ -58,6 +58,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   const {workshopId} = useParams();
   const [workshopConfig, setWorkshopConfig] = useState(config);
+  const [loading, setLoading] = useState(false);
 
   const {data: workshop} = useFetch<Workshop>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
@@ -175,6 +176,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
 
   const publish = useCallback(async () => {
     try {
+      setLoading(true);
       setResponseErrors([]);
       const workshopValidationErrors = getWorkshopErrors();
       setWorkshopErrors(workshopValidationErrors);
@@ -225,6 +227,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       setResponseErrors([
         'There was a problem processing your request. Please try again or contact support@code.org',
       ]);
+    } finally {
+      setLoading(false);
     }
   }, [
     getSessionErrors,
@@ -308,7 +312,11 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         allErrors.map(error => (
           <Alert key={error} type="danger" text={error} />
         ))}
-      <PublishCancelButtons publish={publish} cancel={cancel} />
+      <PublishCancelButtons
+        publish={publish}
+        cancel={cancel}
+        loading={loading}
+      />
     </form>
   );
 };

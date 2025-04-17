@@ -235,6 +235,7 @@ export interface ScheduleProps
 export interface PublishCancelButtonsProps {
   publish: () => void;
   cancel: () => void;
+  loading: boolean;
 }
 
 export type SessionAction =
