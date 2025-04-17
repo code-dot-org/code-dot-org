@@ -6,11 +6,15 @@ import {
   useEffect,
   AriaAttributes,
   KeyboardEvent,
+  memo,
 } from 'react';
 
 import {Button, ButtonProps} from '@/button';
 import {dropdownColors} from '@/common/constants';
-import {useDropdownContext} from '@/common/contexts/DropdownContext';
+import {
+  DropdownProviderWrapper,
+  useDropdownContext,
+} from '@/common/contexts/DropdownContext';
 import {getAriaPropsFromProps} from '@/common/helpers';
 import {ComponentSizeXSToL, DropdownColor} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -247,8 +251,10 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
         </button>
       )}
-      {/** Dropdown menu content is rendered here as children props*/}
-      {children}
+      <div className={moduleStyles.dropdownMenuContainer}>
+        {/** Dropdown menu content is rendered here as children props*/}
+        {children}
+      </div>
 
       {!errorMessage && (helperMessage || helperIcon) && (
         <div className={moduleStyles.helperSection}>
@@ -271,4 +277,10 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   );
 };
 
-export default CustomDropdown;
+const WrappedCustomDropdown = (props: CustomDropdownProps) => (
+  <DropdownProviderWrapper>
+    <CustomDropdown {...props} />
+  </DropdownProviderWrapper>
+);
+
+export default memo(WrappedCustomDropdown);
