@@ -223,15 +223,8 @@ class UnitGroup < ApplicationRecord
     # we want to delete existing unit group units that aren't in our new list
     units_to_remove = default_unit_group_units.map(&:script) - new_units_objects
 
-    unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
-    raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
-
-    unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
-      unaddable_unit_names = new_units_objects.select do |s|
-        s.unit_group != self && s.prevent_course_version_change?
-      end.map(&:name)
-      raise "Cannot add units that have resources or vocabulary: #{unaddable_unit_names}" if unaddable_unit_names.any?
-    end
+    unremovable_unit_names = units_to_remove.select {|unit| unit.original_unit_group == self}.map(&:name)
+    raise "Cannot remove units from their original course: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
