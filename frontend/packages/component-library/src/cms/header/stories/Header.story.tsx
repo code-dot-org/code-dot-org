@@ -252,6 +252,12 @@ export const LoggedOut: Story = {
   parameters: {
     layout: 'fullscreen',
     viewport: 'desktop',
+    docs: {
+      description: {
+        story:
+          'The large desktop view of the header when the user is logged out. The header contains the logo, main navigation links, New Project button/menu, Sign In and Create Account buttons, and a Help icon button/menu.',
+      },
+    },
   },
 };
 
@@ -263,6 +269,12 @@ export const LoggedIn: Story = {
   parameters: {
     layout: 'fullscreen',
     viewport: 'desktop',
+    docs: {
+      description: {
+        story:
+          'The large desktop view of the header when the user is logged in. The header contains the logo, main navigation links, New Project button/menu, Go to Dashboard button, and a Help icon button/menu.',
+      },
+    },
   },
 };
 
@@ -276,6 +288,12 @@ export const SmallDesktop: Story = {
       viewports: INITIAL_VIEWPORTS,
       defaultViewport: 'ipad12p',
     },
+    docs: {
+      description: {
+        story:
+          'The small desktop view of the header includes the logo, a shortened list of main navigation links, the New Project button/menu, account buttons, and a Hamburger menu. The Hamburger menu contains the remaining main navigation links and Help menu links.',
+      },
+    },
   },
 };
 
@@ -288,6 +306,12 @@ export const Tablet: Story = {
     viewport: {
       defaultViewport: 'tablet',
     },
+    docs: {
+      description: {
+        story:
+          'The tablet view of the header displays the logo, account buttons, and a Hamburger menu. The New Project button/menu is removed, and the Hamburger menu includes all main navigation links and Help menu links.',
+      },
+    },
   },
 };
 
@@ -299,6 +323,12 @@ export const Mobile: Story = {
     layout: 'fullscreen',
     viewport: {
       defaultViewport: 'mobile1',
+    },
+    docs: {
+      description: {
+        story:
+          'The mobile view of the header displays the logo and a Hamburger menu. The Hamburger menu includes account buttons, all main navigation links, and links from the Help menu.',
+      },
     },
   },
 };
