@@ -131,7 +131,7 @@ module AiDiffBedrockHelper
     }
   end
 
-  def self.filter_for_context(config, lesson_number, unit_num, course_name, section_contexts)
+  def self.filter_for_context(config, lesson_number, unit_num, course_names, section_contexts)
     and_all_filters = []
     or_all_filters = []
     unless lesson_number.nil?
@@ -150,12 +150,12 @@ module AiDiffBedrockHelper
         ]
       )
     end
-    and_all_filters.push({equals: {key: "course", value: course_name}}) unless course_name.nil?
+    and_all_filters.push({in: {key: "course", value: course_names}}) unless course_names.nil?
 
-    if lesson_number.nil? && unit_num.nil? && course_name.nil?
+    if lesson_number.nil? && unit_num.nil? && course_names.nil?
       or_all_filters.push({equals: {key: "scope", value: "general"}})
       section_contexts&.each do |section_context|
-        or_all_filters.push({equals: {key: "course", value: section_context[:course_name]}})
+        or_all_filters.push({in: {key: "course", value: section_context[:course_names]}})
       end
     end
 

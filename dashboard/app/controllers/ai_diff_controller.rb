@@ -70,11 +70,12 @@ class AiDiffController < ApplicationController
     contexts = @current_user&.sections&.where(hidden: false, updated_at: 1.year.ago..Time.now)&.select {|s| s.script_id || s.course_id}&.map do |section|
       context_scope = SharedConstants::AI_DIFF_CONTEXT[:COURSE]
       course_display_name = CourseOffering.find_by(id: section.course_offering_id)&.display_name
-      course_name = section.unit_group&.name
+      course_names = [section.unit_group&.name]
+      course_names.push(section.unit_group&.family_name) unless section.unit_group&.family_name.nil?
       {
         context: context_scope,
         course_display_name: course_display_name,
-        course_name: course_name
+        course_names: course_names
       }
     end
     contexts
@@ -144,12 +145,12 @@ class AiDiffController < ApplicationController
 
     unit_num = @unit&.unit_group_units&.first&.position
 
-    course_name = @unit_group.present? ? @unit_group.name : @unit&.name
+    course_names = @unit_group.present? ? [@unit_group.name, @unit_group.family_name] : ([@unit&.name] if @unit.present?)
 
     course_display_name = CourseOffering.find_by(id: @unit_group&.course_version&.course_offering_id)&.display_name
     prompt = AiDiffBedrockHelper.get_prompt_for_context(params[:context], course_display_name, params[:unitDisplayName], lesson_name, params[:isPreset], @section_contexts)
 
-    bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_name, session_id, @section_contexts)
+    bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], prompt, lesson_num, unit_num, course_names, session_id, @section_contexts)
     #TODO: check for profanity/PII in model response
 
     {
