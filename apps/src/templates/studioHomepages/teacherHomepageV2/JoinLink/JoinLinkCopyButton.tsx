@@ -85,38 +85,45 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
 
   return loginType &&
     (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (
-    <div className={styles.sectionCodeBox} data-for="section-code" data-tip>
-      {!showCopiedMsg && (
-        <TooltipOverlay>
-          <span className={styles.sectionCodeText}>
-            <OverlineOneText>
-              <span>{i18n.sectionCodeWithColon()}</span>
-            </OverlineOneText>
-            <WithTooltip
-              tooltipProps={{
-                tooltipId: 'section-code',
-                role: 'tooltip',
-                text: i18n.copySectionCodeTooltip(),
-                direction: 'onLeft',
-                size: 's',
-                iconLeft: {iconName: 'copy'},
-              }}
-            >
+    hidden ? (
+      <OverlineOneText>
+        <span>{i18n.sectionCodeWithColon()}</span>{' '}
+        <span className={styles.sectionCodeText}>{sectionCode}</span>
+      </OverlineOneText>
+    ) : (
+      <div className={styles.sectionCodeBox} data-for="section-code" data-tip>
+        {!showCopiedMsg && (
+          <TooltipOverlay>
+            <span className={styles.sectionCodeText}>
               <OverlineOneText>
-                <button
-                  className={styles.sectionCode}
-                  onClick={handleCopySectionCode}
-                  type="button"
-                >
-                  {sectionCode}
-                </button>
+                <span>{i18n.sectionCodeWithColon()}</span>
               </OverlineOneText>
-            </WithTooltip>
-          </span>
-        </TooltipOverlay>
-      )}
-      {showCopiedMsg && <span>{i18n.copySectionCodeSuccess()}</span>}
-    </div>
+              <WithTooltip
+                tooltipProps={{
+                  tooltipId: 'section-code',
+                  role: 'tooltip',
+                  text: i18n.copySectionCodeTooltip(),
+                  direction: 'onLeft',
+                  size: 's',
+                  iconLeft: {iconName: 'copy'},
+                }}
+              >
+                <OverlineOneText>
+                  <button
+                    className={styles.sectionCode}
+                    onClick={handleCopySectionCode}
+                    type="button"
+                  >
+                    {sectionCode}
+                  </button>
+                </OverlineOneText>
+              </WithTooltip>
+            </span>
+          </TooltipOverlay>
+        )}
+        {showCopiedMsg && <span>{i18n.copySectionCodeSuccess()}</span>}
+      </div>
+    )
   ) : (
     <>
       <div

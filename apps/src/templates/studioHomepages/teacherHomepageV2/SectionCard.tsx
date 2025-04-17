@@ -1,8 +1,5 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {
-  Heading5,
-  OverlineOneText,
-} from '@code-dot-org/component-library/typography';
+import {Heading5} from '@code-dot-org/component-library/typography';
 import {useSortable} from '@dnd-kit/sortable';
 import {CSS} from '@dnd-kit/utilities';
 import React from 'react';
@@ -74,20 +71,13 @@ export const SectionCard: React.FC<SectionCardProps> = ({
             <Heading5 id={`section-card-title-${section.id}`}>
               {section.name}
             </Heading5>
-            {section.hidden ? (
-              <OverlineOneText>
-                <span>{i18n.sectionCodeWithColon()}</span>{' '}
-                <span className={styles.sectionCodeText}>{section.code}</span>
-              </OverlineOneText>
-            ) : (
-              <JoinLinkCopyButton
-                loginType={section.loginType}
-                sectionCode={section.code}
-                sectionId={section.id}
-                studioUrlPrefix={studioUrlPrefix}
-                hidden={section.hidden}
-              />
-            )}
+            <JoinLinkCopyButton
+              loginType={section.loginType}
+              sectionCode={section.code}
+              sectionId={section.id}
+              studioUrlPrefix={studioUrlPrefix}
+              hidden={section.hidden}
+            />
           </div>
         </div>
         <div className={styles.sectionCardHeaderRight}>
