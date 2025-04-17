@@ -83,6 +83,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         aiEvaluation: 'Uh oh!',
         aiReasoning: 'Something went wrong',
         evaluationCriteria: 'unknown',
+        id: -1,
       });
     }
   };

@@ -6,7 +6,7 @@ import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {
   FeedbackData,
   logUserFeedbackOnStudentEvaluation,
-} from '@cdo/apps/aiEvaluation/aiFeedbackApi';
+} from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
 
 import {FEEDBACK_TYPE} from './AiFeedbackType';
 import FeedbackToggle from './FeedbackToggle';
@@ -14,7 +14,7 @@ import FeedbackToggle from './FeedbackToggle';
 import styles from './summary.module.scss';
 
 type FreeResponseStudentResponseRowProps = {
-  studentWorkEvaluation: StudentWorkEvaluation | null;
+  studentWorkEvaluation: StudentWorkEvaluation;
 };
 
 const FreeResponseStudentResponseRow: React.FC<
@@ -84,8 +84,8 @@ const FreeResponseStudentResponseRow: React.FC<
 
   const handleFeedbackClick = async (thumbsUp: boolean) => {
     const feedbackData: FeedbackData = {
-      aiInteractionType: 'StudentWorkEvaluation',
-      aiInteractionId: studentWorkEvaluation?.id,
+      aiInteractionType: 'UserLevelEvaluation',
+      aiInteractionId: studentWorkEvaluation.id,
       thumbsUp,
       levelId: studentWorkEvaluation?.levelId,
       scriptId: studentWorkEvaluation?.unitId,

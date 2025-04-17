@@ -17,13 +17,13 @@ export interface AIResponse {
   aiReasoning: string;
   evaluationCriteria: string;
   skillEvaluations?: [AIResponse];
-  id?: number;
+  id: number;
 }
 
 export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {
   levelId: number;
   unitId: number;
-  id?: number;
+  id: number;
 }
 
 export async function evaluateStudentWork(
