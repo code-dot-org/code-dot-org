@@ -11,6 +11,7 @@ import {
   useLocation,
   generatePath,
   useParams,
+  ScrollRestoration,
 } from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
@@ -127,6 +128,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               />
               <div>
                 <TeacherHomepage studioUrlPrefix={studioUrlPrefix} />
+                <ScrollRestoration />
               </div>
             </>
           }
@@ -140,6 +142,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               />
               <div className={styles.pageAndSidebar}>
                 <TeacherNavigationBar showAITutorTab={showAITutorTab} />
+                <ScrollRestoration />
                 <Outlet />
               </div>
             </>
