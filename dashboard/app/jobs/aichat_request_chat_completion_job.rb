@@ -136,6 +136,9 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   private def report_job_finish(request)
     execution_time = Time.now - @start_time
+    is_multimodal = @is_multimodal || false
+    pdfs_count = @pdfs_count || 0
+    images_count = @images_count || 0
     status_name = SharedConstants::AI_REQUEST_EXECUTION_STATUS.key(request.execution_status).to_s
     Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
       [
@@ -161,9 +164,9 @@ class AichatRequestChatCompletionJob < ApplicationJob
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
             {name: 'ModelId', value: get_model_id(request)},
-            {name: 'Multimodal', value: @is_multimodal.to_s},
-            {name: 'pdfs', value: @pdfs_count.to_s},
-            {name: 'images', value: @images_count.to_s},
+            {name: 'Multimodal', value: is_multimodal.to_s},
+            {name: 'pdfs', value: pdfs_count.to_s},
+            {name: 'images', value: images_count.to_s},
           ],
         }
       ]

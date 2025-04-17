@@ -189,7 +189,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert_equal "#{AichatRequestChatCompletionJob.name}.Finish", finish_metric[:metric_name]
     assert_equal 1, finish_metric[:value]
     assert_equal 'Count', finish_metric[:unit]
-    assert_equal 3, finish_metric[:dimensions].length
+    assert_equal 6, finish_metric[:dimensions].length
     assert_equal 'FAILURE', finish_metric[:dimensions][2][:value]
   end
 
