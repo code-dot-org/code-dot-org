@@ -1645,6 +1645,7 @@ class UnitTest < ActiveSupport::TestCase
     create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
     create :unit_group_unit, position: 1, unit_group: other_unit_group, script: unit
 
+    unit.reload
     assert_equal '/courses/csp', unit.course_link
   end
 

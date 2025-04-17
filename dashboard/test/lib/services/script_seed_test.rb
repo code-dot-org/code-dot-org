@@ -158,6 +158,7 @@ module Services
       script.resources.destroy_all
       script.student_resources.destroy_all
       script.freeze
+      script.unit_group.course_version.resources.destroy_all
       expected_counts = get_counts
 
       # destroy the script and its unit group, so that no course version will
