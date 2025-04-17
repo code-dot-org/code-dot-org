@@ -92,6 +92,10 @@ jobs:
           # Tail the docker logs
           docker logs -f marketing &
 
+      - name: Clean unused docker build artifacts
+        run: |
+          docker system prune --all --force
+
       - name: UI Tests
         uses: ./.github/actions/frontend/marketing/ui-tests
         with:

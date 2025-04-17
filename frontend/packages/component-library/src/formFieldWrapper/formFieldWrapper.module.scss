@@ -1,7 +1,8 @@
-@import '@code-dot-org/component-library-styles/mixins.scss';
-@import '@code-dot-org/component-library-styles/colors.scss';
-@import '@code-dot-org/component-library-styles/primitiveColors.scss';
-@import '@code-dot-org/component-library-styles/typography.module.scss';
+@use '@code-dot-org/component-library-styles/primitiveColors.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 
 // FromFieldWrapper common styles
 .formFieldWrapper {
@@ -76,12 +77,12 @@
 .formFieldWrapper-size {
   &-l {
     .formFieldWrapperLabel {
-      @include label-one;
+      @include mixins.label-one;
       margin-bottom: 0;
     }
 
     .formFieldWrapperHelper {
-      @include body-two;
+      @include typography.body-two;
       margin-bottom: 0;
       gap: 0.375rem;
     }
@@ -89,12 +90,12 @@
 
   &-m {
     .formFieldWrapperLabel {
-      @include label-two;
+      @include mixins.label-two;
       margin-bottom: 0;
     }
 
     .formFieldWrapperHelper {
-      @include body-three;
+      @include typography.body-three;
       margin-bottom: 0;
       gap: 0.375rem;
     }
@@ -102,12 +103,12 @@
 
   &-s {
     .formFieldWrapperLabel {
-      @include label-three;
+      @include mixins.label-three;
       margin-bottom: 0;
     }
 
     .formFieldWrapperHelper {
-      @include body-four;
+      @include typography.body-four;
       margin-bottom: 0;
       gap: 0.25rem;
     }

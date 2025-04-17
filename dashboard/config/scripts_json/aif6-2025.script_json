@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-15 21:31:48 UTC",
+    "serialized_at": "2025-04-16 21:22:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -213,8 +213,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**How do we create data visualizations that help us better understand the data?**\n\nIn this lesson, students create charts in CODAP to practice building basic data visualizations – bar charts, dot plots, and scatter plots. As they practice building each sort of data visualization, they also discuss when and where each type of visualization might be useful. Finally, they will learn how to filter their data in CODAP.",
-        "student_overview": "**How do we create data visualizations that help us better understand the data?**\n\nIn this lesson, you'll get to dive into the world of data visualizations, making several of your own in CODAP."
+        "overview": "**How do we create data visualizations that help us better understand the data?**\n\nIn this lesson, students create charts in a spreadsheet editor to practice building basic data visualizations – bar charts and pie charts. As they practice building each sort of data visualization, they also discuss when and where each type of visualization might be useful. Finally, they will learn how to sort and filter their data in a spreadsheet.",
+        "student_overview": "**How do we create data visualizations that help us better understand the data?**\n\nIn this lesson, you'll get to dive into the world of data visualizations, making several of your own in a spreadsheet editor."
       },
       "seeding_key": {
         "lesson.key": "Introduction to Data Visualization",
@@ -266,9 +266,8 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "**How can we gain deeper insights into our data?**\n\nIn this lesson, students will deepen their understanding of data visualization by using additional features in CODAP to analyze various datasets. They learn to use formulas and other visualization tools to interpret data through different lenses and discuss ethical considerations such as bias and privacy. The lesson aims to enhance their skills in technical data handling and critical thinking about the impacts of data analysis.",
-        "preparation": "* Print copies of the Visualization Techniques activity guide (one for each student)",
-        "student_overview": "**How can we gain deeper insights into our data?**\n\nIn this lesson,  you'll dive into advanced data visualization techniques using CODAP! You'll learn how to reveal deeper insights from data and discuss the importance of using these tools responsibly. Get ready to uncover the hidden stories data can tell!"
+        "overview": "**How can we gain deeper insights into our data?**\n\nIn this lesson, students will deepen their understanding of data visualization by using additional features available in spreadsheets to analyze various datasets. They learn to use formulas and other visualization tools to interpret data through different lenses and discuss ethical considerations such as bias and privacy. The lesson aims to enhance their skills in technical data handling and critical thinking about the impacts of data analysis.",
+        "student_overview": "**How can we gain deeper insights into our data?**\n\nIn this lesson,  you'll dive into advanced data visualization techniques with a spreadsheet. You'll learn how to reveal deeper insights from data and discuss the importance of using these tools responsibly. Get ready to uncover the hidden stories data can tell!"
       },
       "seeding_key": {
         "lesson.key": "More Visualization Techniques",
@@ -2046,7 +2045,7 @@
       "key": "5d1d0c03-f402-4bfa-be23-9594ce284fb6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete a Data Talk with their partner on the party data set. Students record what they notice and what they wonder about the visualizations in the level. This should be done individually first. After students have had a chance to write down a couple things they noticed and wondered, instruct students to share with their partner. Give students a few minutes to share before bringing the class back together.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Chart Match Questions activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly explain that students will explore visualizations based on fictional Spotify data and that each chart is designed to answer a specific question. Emphasize that a data visualization is a graphical representation of information and data.\n",
         "progression_name": "Data Talk"
       },
       "seeding_key": {
@@ -2058,8 +2057,14 @@
       "key": "7b8966bd-b1de-4f08-9161-5fa63f060024",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to write about the shape of distribution of the party dataset on Level 2.",
-        "progression_name": "Shape of Distribution"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to begin walking around the room to match each question on their guide to a visualization. Remind them to write down why they made that match and anything they notice or wonder about the chart.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students discussing reasoning with their partners. Ask probing questions like, “What in the chart made you pick this one for your question?” or “What’s something interesting you noticed?”",
+        "progression_name": "Shape of Distribution",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider modeling one match as a think-aloud before students begin. This helps students understand the type of connections they should make between questions and visuals."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7b8966bd-b1de-4f08-9161-5fa63f060024",
@@ -2070,7 +2075,7 @@
       "key": "2f4db4b8-63ea-41c3-9255-9a6794baf399",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students understand what the sentence starters are asking of them. If needed, help them by explaining what the three sentences are asking, for example let them know what a “peaks” in the data means.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Go over student answers from Level 2. They do not need to completely understand the shape of distribution yet as they will learn about this more next lesson. This level is meant to give students an easy and accessible exposure to the concept. \n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "2f4db4b8-63ea-41c3-9255-9a6794baf399",
@@ -2081,7 +2086,7 @@
       "key": "f2537dbd-b5a1-41bc-b91d-5f667a7521b5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce data visualizations and explain that these are used to quickly identify trends and patterns."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the term data visualizations and explain that these visuals help us spot patterns and trends more quickly than reading rows of numbers. Direct students to fill in their Unit Guide"
       },
       "seeding_key": {
         "activity_section.key": "f2537dbd-b5a1-41bc-b91d-5f667a7521b5",
@@ -2089,21 +2094,10 @@
       }
     },
     {
-      "key": "9c9b5e15-b5f3-451b-94b4-871e5090effe",
+      "key": "d763cef7-eae8-43eb-99a2-89bfa2c41942",
       "position": 2,
       "properties": {
-        "description": "Today, we'll focus on three types of data visualizations – dot plots, bar charts, and scatter plots.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "9c9b5e15-b5f3-451b-94b4-871e5090effe",
-        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
-      }
-    },
-    {
-      "key": "d763cef7-eae8-43eb-99a2-89bfa2c41942",
-      "position": 3,
-      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce bar charts. Explain that bar charts are one of the most common ways to visualize data. They help us compare quantities across different categories.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to watch for the steps they’ll use in their own charts as they watch the brief video— especially how to select data and choose a chart type.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"*How to Make a Chart in Google Sheets*\"\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d763cef7-eae8-43eb-99a2-89bfa2c41942",
@@ -2112,9 +2106,10 @@
     },
     {
       "key": "555daebc-46ab-43d3-a0fd-2574c98d9470",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "progression_name": "Panel Levels"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 1 - 2. \n* **Level 1:** Students review bar chart basics. \n* **Level 2:** Students use Google Sheets to make a unique bar chart using the school pizza party dataset.",
+        "progression_name": "Creating Bar Charts"
       },
       "seeding_key": {
         "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470",
@@ -2122,11 +2117,45 @@
       }
     },
     {
-      "key": "1c3084f2-cefc-45a9-8dc9-14bb3b1f841c",
+      "key": "81f27f8a-799e-4753-bd33-2120881585b2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students understand how to select the correct column for charting. Ask, “What question are you trying to answer with this chart?” Listen for students identifying unexpected findings. Encourage them to think about what the chart tells them that a table of numbers would not.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to title their chart clearly and check that axis labels make sense. Provide feedback on this as you circulate.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81f27f8a-799e-4753-bd33-2120881585b2",
+        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
+      }
+    },
+    {
+      "key": "5c5d13d8-37d9-41d8-8174-cf9b10b4e11f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce dot plots.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce bar charts.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce scatter plots.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to complete Levels 3, 4, and 5.\n* **Level 3:** Students explore CODAP and create a dot plot.\n* **Level 4:** Students create a bar chart.\n* **Level 5:** Students create a scatter plot.",
-        "progression_name": "CODAP Graphs"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What did the bar chart help you notice about the data?\n\n- Turn and Talk\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that bar charts make it easier to compare categories (e.g., favorite pizza types, number of friends). Students may learn what the most and least popular pizza topping is, or the most common music preference, etc. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider jotting down a couple strong student observations on the board to model good insight."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5c5d13d8-37d9-41d8-8174-cf9b10b4e11f",
+        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
+      }
+    },
+    {
+      "key": "1c3084f2-cefc-45a9-8dc9-14bb3b1f841c",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce pie charts. Explain that pie charts show how a whole is broken into parts. They're good for understanding proportions, but less precise than bar charts when comparing exact counts.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"*Create a Pie Chart in Google Sheets*\"\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 3 - 4. \n* **Level 3:** Students review how to make pie charts.  \n* **Level 4:** Students use Google Sheets to make a unique pie chart using the school pizza party dataset.",
+        "progression_name": "Creating Pie Charts"
       },
       "seeding_key": {
         "activity_section.key": "1c3084f2-cefc-45a9-8dc9-14bb3b1f841c",
@@ -2134,14 +2163,31 @@
       }
     },
     {
-      "key": "0dd72350-ef7d-4ec3-92d2-405b29bed8b2",
-      "position": 6,
+      "key": "e67060a7-f3aa-4bf9-bc83-0d95cc53fe9a",
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did the bar chart help you notice about the data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Bar charts are good at comparing amounts of categories. Students may learn what the most and least popular activity is, pizza topping, or any attribute.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students what question they are trying to answer with their pie chart. Check that their chart categories make up a whole (e.g., types of pizza, not individual soda amounts).\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If you have time to discuss with your class, you may wish to ask what they notice the differences are between the bar charts and the dot plots, and separately when they might use each. For example, bar charts tend to show all the quantities in one bar, so they are more directly comparable, but dot plots are easier to count directly if your data consists of numbers that can be counted."
+            "markdown": "Encourage students to choose a column with repeated categories (like \"What kind of pizza do you like best?\") so that the pie chart groups values into meaningful slices. If students are unsure, suggest they look for columns with text answers that repeat often — these work best for pie charts.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e67060a7-f3aa-4bf9-bc83-0d95cc53fe9a",
+        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
+      }
+    },
+    {
+      "key": "0dd72350-ef7d-4ec3-92d2-405b29bed8b2",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What are the similarities and differences between a bar chart and a pie chart?\n- Think - Pair - Share\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that both charts show categorical data. Bar charts are better for comparing exact values across categories, while pie charts show relative proportions of a whole. Example responses: “Bar charts make it easier to see the biggest and smallest categories,” or “Pie charts are helpful for seeing how the total is divided.”\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You could create a quick side-by-side chart comparison with the same data on the board to reinforce differences."
           }
         ]
       },
@@ -2151,9 +2197,27 @@
       }
     },
     {
-      "key": "69063bf2-c69a-44b7-b0af-990555140ef0",
-      "position": 7,
+      "key": "8ce03ab8-b0ed-4de1-a4df-360f2f800b01",
+      "position": 9,
       "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"*How to Sort in Google Sheets*\"\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to review how to sort their dataset and creating visualizations."
+      },
+      "seeding_key": {
+        "activity_section.key": "8ce03ab8-b0ed-4de1-a4df-360f2f800b01",
+        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
+      }
+    },
+    {
+      "key": "69063bf2-c69a-44b7-b0af-990555140ef0",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to create two visualizations using the same column — one sorted, one unsorted — and reflect on which one is easier to understand.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": " If students are stuck, suggest they sort by \"Estimated Cups of Soda\" or \"Energy Level at Parties\" and look for outliers or trends."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "69063bf2-c69a-44b7-b0af-990555140ef0",
@@ -2161,8 +2225,19 @@
       }
     },
     {
+      "key": "f259f20a-1db4-4527-9174-2f3932c9f2ca",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"*How to Use Filters in Google Sheets*\""
+      },
+      "seeding_key": {
+        "activity_section.key": "f259f20a-1db4-4527-9174-2f3932c9f2ca",
+        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
+      }
+    },
+    {
       "key": "6b265407-468a-4d40-a9e1-0f1fc4cb87b7",
-      "position": 8,
+      "position": 12,
       "properties": {
         "description": "Sometimes we want to focus on certain aspects of our dataset instead of visualizing everything. We can do this using a filter.",
         "remarks": true
@@ -2173,21 +2248,50 @@
       }
     },
     {
-      "key": "f259f20a-1db4-4527-9174-2f3932c9f2ca",
-      "position": 9,
+      "key": "1c9dc65a-b470-436e-b5b4-3b677519839e",
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between a bar chart and a dot plot?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should note that the bar chart shows all the quantities in one bar, which makes it easier to directly compare the values. Dot plots are easier to count when the data consists of numbers.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What relationship did you find when using the scatter plot?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Scatter plots are good at finding connections between attributes. Sometimes, there is no relationship between the attributes at all, which is fine! Scatter plots are also good at finding that!\n\nSome relationships the students might find:\n* Most of the students who are most excited about music have a favorite song of Baby Shark\n* Cheese lovers particularly like Dominos; pepperoni lovers have a lot of different places they like\n* People who are most excited about games tend to be most interested in having the party during lunch, but it isn’t that big of a difference"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce filter as a tool to focus on just part of the dataset — like seeing what only 7th graders think or what songs a certain group prefers.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Ask students to share examples of times they’ve “filtered” something in real life (e.g., Netflix genres, online shopping, playlists).\n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "f259f20a-1db4-4527-9174-2f3932c9f2ca",
+        "activity_section.key": "1c9dc65a-b470-436e-b5b4-3b677519839e",
+        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
+      }
+    },
+    {
+      "key": "34e7e320-87f4-4f16-89d0-26e78f6f6a03",
+      "position": 14,
+      "properties": {
+        "description": "Imagine you're planning a pizza party. How might filtering the data by grade or party personality change your decisions about music, food, or activities?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "34e7e320-87f4-4f16-89d0-26e78f6f6a03",
+        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
+      }
+    },
+    {
+      "key": "d295aa55-3e6f-426f-8f8d-69bd2639f683",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How might filtering the data by grade level or personality type change your party planning choices?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify how different groups might prefer different songs, pizza types, or party durations. Example: “7th graders might want quieter music” or “Social Butterflies invite more friends.”"
+      },
+      "seeding_key": {
+        "activity_section.key": "d295aa55-3e6f-426f-8f8d-69bd2639f683",
         "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
       }
     },
     {
       "key": "2f9d2aa7-0270-4bdb-a938-1e504d3c8b7f",
-      "position": 10,
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce filter.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6 to apply filters to the dataset and create new data visualizations.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 6 - 7.\n* **Level 6:** Students review the basics of applying filters. \n* **Level 7:** Students use Google Sheets to apply filters and to make visualizations using the school pizza party dataset.\n",
         "progression_name": "Applying Filters"
       },
       "seeding_key": {
@@ -2196,24 +2300,73 @@
       }
     },
     {
-      "key": "db070f20-f1d4-4ca5-ba2a-811e5f1521c7",
-      "position": 11,
+      "key": "28cae1b1-7213-4be1-80ef-6e7588ab70e8",
+      "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to create two different visualizations with the same axis – one filtered and the other not.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine you're planning a party. What would filtering change about what music you played?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should notice that Baby Shark is very popular, but without Friday it isn’t popular, so they shouldn’t play it.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What other changes do you notice with Friday filtered out?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may notice that most of the people who are interested in music aren't going to be available on Friday and the popularity of \"during lunch\" also goes down significantly. The type of pizza people want doesn’t change significantly."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students what group they filtered by and what changed in the chart compared to the unfiltered version. Encourage students to try multiple filters and compare — what changes when you filter for Performers vs. Relaxers?   \n"
       },
       "seeding_key": {
-        "activity_section.key": "db070f20-f1d4-4ca5-ba2a-811e5f1521c7",
+        "activity_section.key": "28cae1b1-7213-4be1-80ef-6e7588ab70e8",
         "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
       }
     },
     {
       "key": "9a0c40b4-48b2-4c88-af30-106c0004db6b",
-      "position": 12,
+      "position": 18,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to screenshot one of their charts in order to upload it to the AI Assistant for feedback.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 8 in order to get AI-assisted feedback on one of their visualizations. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students with snipping, screenshotting, or saving an image of one of the charts that they have created. They might also need assistance with uploading this image into the AI Chat.\n",
         "progression_name": "AI Chat: Data Visualizations"
       },
       "seeding_key": {
         "activity_section.key": "9a0c40b4-48b2-4c88-af30-106c0004db6b",
+        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
+      }
+    },
+    {
+      "key": "b3d84ace-187c-4fd3-9321-a100682b7ec5",
+      "position": 19,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students aren’t sure what to ask the AI, suggest something like, “How can I make this chart easier to understand?”"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b3d84ace-187c-4fd3-9321-a100682b7ec5",
+        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
+      }
+    },
+    {
+      "key": "89eff5c8-66fb-4624-a04f-ca97902a35db",
+      "position": 20,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students revise their original chart using the feedback they received.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 9 to upload a revised visualization and complete a reflection.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for charts with clear improvements — updated titles, better axis labels, changed chart types — and ask students to explain what they changed and why.\n",
+        "progression_name": "AI Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "89eff5c8-66fb-4624-a04f-ca97902a35db",
+        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
+      }
+    },
+    {
+      "key": "a61af6a2-6e08-4e1e-92b7-b3b9d20b0134",
+      "position": 21,
+      "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the revised chart and student reflection as a formative check of their understanding of chart creation, appropriate chart selection, and clarity of communication. If students struggle with labeling or chart choice, revisit slides on chart types (Slides 10 and 14) and allow time for more practice in Levels 2–4"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Use the revised chart and student reflection as a formative check of their understanding of chart creation, appropriate chart selection, and clarity of communication. If students struggle with labeling or chart choice, revisit slides on chart types (Slides 10 and 14) and allow time for more practice in Levels 2–4"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a61af6a2-6e08-4e1e-92b7-b3b9d20b0134",
         "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
       }
     },
@@ -2285,11 +2438,10 @@
       }
     },
     {
-      "key": "1b5a10d5-4e95-4c8d-b3ef-66d5ea25de51",
+      "key": "5442d8be-a10f-4789-aaab-bf34c1012694",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the pizza party topping problem.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Is this data useful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should highlight issues with this data that make it less useful, such as the comments that are not related to pizza toppings and the duplicate responses. If no one mentions it, point out that this data looks a lot like one of the graphs they saw in the warm up, where there isn’t a very clear pattern. Tell students that data scientists call data like this \"raw data\" or \"messy data\".\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to the students that the data needs to be cleaned to make it more usable and ways that data scientists do this.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student add data cleaning to the Word Wall.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2. For each entry in the first column, students should decide if they want to keep it the same, delete it, or change it.",
-        "progression_name": "Check for Understanding",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the pizza party topping problem.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Is this data useful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should highlight issues with this data that make it less useful, such as the comments that are not related to pizza toppings and the duplicate responses. If no one mentions it, point out that this data looks a lot like one of the graphs they saw in the warm up, where there isn’t a very clear pattern. Tell students that data scientists call data like this \"raw data\" or \"messy data\".\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to the students that the data needs to be cleaned to make it more usable and ways that data scientists do this.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student add data cleaning to the Word Wall.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2298,13 +2450,57 @@
         ]
       },
       "seeding_key": {
+        "activity_section.key": "5442d8be-a10f-4789-aaab-bf34c1012694",
+        "lesson_activity.key": "9229c353-aa0a-4575-9fbd-0aa87f40c371"
+      }
+    },
+    {
+      "key": "8cfd6ed6-b49b-4f18-a2e0-cdbf375606b6",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8cfd6ed6-b49b-4f18-a2e0-cdbf375606b6",
+        "lesson_activity.key": "9229c353-aa0a-4575-9fbd-0aa87f40c371"
+      }
+    },
+    {
+      "key": "67cc9eb3-d9f0-458f-843e-af028a5e6779",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use the panels in Level 2 to review how to copy and clean a dataset.",
+        "progression_name": "Cleaning Data Panel"
+      },
+      "seeding_key": {
+        "activity_section.key": "67cc9eb3-d9f0-458f-843e-af028a5e6779",
+        "lesson_activity.key": "9229c353-aa0a-4575-9fbd-0aa87f40c371"
+      }
+    },
+    {
+      "key": "db28f41f-e248-4910-bf7f-b89d96d432a1",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "db28f41f-e248-4910-bf7f-b89d96d432a1",
+        "lesson_activity.key": "9229c353-aa0a-4575-9fbd-0aa87f40c371"
+      }
+    },
+    {
+      "key": "1b5a10d5-4e95-4c8d-b3ef-66d5ea25de51",
+      "position": 5,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3. For each entry in the first column, students should decide if they want to keep it the same, delete it, or change it.",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
         "activity_section.key": "1b5a10d5-4e95-4c8d-b3ef-66d5ea25de51",
         "lesson_activity.key": "9229c353-aa0a-4575-9fbd-0aa87f40c371"
       }
     },
     {
       "key": "e607073d-5a8c-4bb8-8396-e813cdbd3835",
-      "position": 2,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -2314,7 +2510,7 @@
     },
     {
       "key": "d7e970cf-8545-4c06-bdbc-f12ad6b1ca8a",
-      "position": 3,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around the classroom and prompt students to make a new graph of the \"Clean Data\" column once they are done.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have pairs engage in the Compare and Connect protocol using the dataset they just cleaned.",
         "tips": [
@@ -2331,7 +2527,7 @@
     },
     {
       "key": "d2e2554b-e0c8-4d0e-b130-f73827b1c3e9",
-      "position": 4,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -2341,7 +2537,7 @@
     },
     {
       "key": "b08d23b1-41aa-44aa-ab3c-c081756ba85b",
-      "position": 5,
+      "position": 9,
       "properties": {
         "description": "You’ve seen how you and your partner cleaned messy data entries. Now let’s bring in AI as a third voice. How would it clean a given messy data entry and do you agree with it?",
         "remarks": true
@@ -2353,9 +2549,9 @@
     },
     {
       "key": "2463efa3-ba79-4bf5-9f29-ba8879992c67",
-      "position": 6,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 and ask AI Chat how it would clean a given messy entry. Then compare and discuss its answer with a partner.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 and ask AI Chat how it would clean a given messy entry. Then compare and discuss its answer with a partner.",
         "progression_name": "Ask AI for Cleaning Tips"
       },
       "seeding_key": {
@@ -2365,7 +2561,7 @@
     },
     {
       "key": "115c39f1-72e3-44fd-bc91-bf6881db2dde",
-      "position": 7,
+      "position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -2375,7 +2571,7 @@
     },
     {
       "key": "1e6f8616-8a64-4d90-b17f-4c7d5831d0c8",
-      "position": 8,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which approach feels more accurate or respectful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. Students might say revising the entry preserves the intent, while deleting it removes a valid opinion. The goal is for students to recognize that respectful data cleaning means balancing clarity with the original meaning of the response.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What assumptions did AI make that you didn’t?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. The goal is to prompt students to reflect on how AI may have interpreted the tone, intent, or meaning differently than they did.\n"
       },
@@ -2386,7 +2582,7 @@
     },
     {
       "key": "ef8a3125-cd51-49dc-b819-883ed8cc59e2",
-      "position": 9,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which do you think should be prioritized when deciding how to clean data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion is a chance for the class to wrestle with the ambiguities that come up when cleaning data , (i.e. how valuable information can get lost when cleaning the data to make it more usable by computers and readable by people.) "
       },
@@ -2397,7 +2593,7 @@
     },
     {
       "key": "cb1cf5f4-5ef3-4a42-9c00-33451b11df0a",
-      "position": 10,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the ethical framework introduced in Lesson 3.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which do you think should be prioritized when deciding how to clean data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion is a chance for the class to wrestle with the ambiguities that come up when cleaning data , (i.e. how valuable information can get lost when cleaning the data to make it more usable by computers and readable by people.) \n\nFor Accuracy and Bias, students may bring up things like:\n* Changing the format allows the cleaners bias to enter the picture\n* Cleaned data is not accurately what the person wanted\n* Cleaned Data helps form a more accurate picture -- someone who misspelled pepperoni still wants pepperoni pizza\n\nFor Privacy, students may bring up things like:\n* Creating categories can unintentionally identify certain members of a group\n\nFor Misuse and Consent, students may bring up things like:\n* It’s possible that people have not consented to their data being used in this altered, cleaned, format",
         "tips": [
@@ -2414,7 +2610,7 @@
     },
     {
       "key": "7d76bcc8-39f6-4556-986d-088a41753f17",
-      "position": 11,
+      "position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -2424,7 +2620,7 @@
     },
     {
       "key": "f21197fe-5d6a-469a-b964-dad7b19bc686",
-      "position": 12,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Synthesize the discussion by having students help you summarize ideas about the following on an anchor chart:\n* How data scientists clean data\n* Important considerations for cleaning data",
         "tips": [
@@ -2441,7 +2637,7 @@
     },
     {
       "key": "f6347606-2fd2-4b3c-8828-2839cf9ccdf2",
-      "position": 13,
+      "position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -2451,7 +2647,7 @@
     },
     {
       "key": "5850407f-44c1-4c7d-bff2-f3d0a8c3e58c",
-      "position": 14,
+      "position": 18,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce shape of distribution.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce bell curve.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce skewed distribution.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce skewed distribution.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the shape of distribution sentence starters.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which sentence starter would you use to describe the shape of distribution for this chart?*\n\n* Give students a moment to think about their response before they share with a partner and then with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** For the provided dot plot, most of the sentence starters in the word bank will work. Guide students to effectively use the sentence starters to describe and discuss the shape of a data distribution. The goal is to help them learn how to accurately apply these phrases when analyzing and communicating about the distribution patterns observed in charts, enhancing their ability to articulate data insights clearly and correctly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce measures of center.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the measures of center sentence starters.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which sentence starter would you use to describe the measures of center for this chart?*\n\n* Give students a moment to think about their response before they share with a partner and then with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to accurately utilize the provided sentence starters to identify and discuss measures of center such as the mean, median, and mode, based on the data distribution shown in the chart."
       },
@@ -2538,12 +2734,12 @@
       }
     },
     {
-      "key": "691c81b4-5b39-49f0-a339-6bbe872b7ebc",
+      "key": "462874cd-b25e-4432-b432-0d34bdf1ae4e",
       "position": 5,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "691c81b4-5b39-49f0-a339-6bbe872b7ebc",
+        "activity_section.key": "462874cd-b25e-4432-b432-0d34bdf1ae4e",
         "lesson_activity.key": "7f833fee-a6d0-4907-a308-e527ca660e8e"
       }
     },
@@ -2567,10 +2763,6 @@
           {
             "type": "teachingTip",
             "markdown": "The jigsaw activity consists of two parts. In Part 1 students will work with a partner to create a visualization of their assigned dataset and discuss and answer questions about their chart or graph. Although they are working with a partner, each student will need to record their responses to Part 1 individually since partners will part ways during Part 2. For Part 2, students will form groups of 6, ensuring that each member of the group has worked with a different dataset from Part 1. Check that all datasets from 1 to 6 are represented within each group."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The activity guide can be collected at the end of the lesson as a way to formatively assess students ability to create a visual representation and answer questions about a dataset."
           }
         ]
       },
@@ -2580,12 +2772,18 @@
       }
     },
     {
-      "key": "6f3d47fb-0319-4529-b426-52fe91f26c65",
+      "key": "80b7327c-9622-4dd5-a0c5-11ac17187d2c",
       "position": 2,
       "properties": {
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The activity guide can be collected at the end of the lesson as a way to formatively assess students ability to create a visual representation and answer questions about a dataset."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "6f3d47fb-0319-4529-b426-52fe91f26c65",
+        "activity_section.key": "80b7327c-9622-4dd5-a0c5-11ac17187d2c",
         "lesson_activity.key": "598b98b4-2486-4dbc-9b42-c3ef03008767"
       }
     },
@@ -2602,8 +2800,18 @@
       }
     },
     {
-      "key": "814d15c9-1ffb-49d0-9dea-84bdbf912dde",
+      "key": "6f3d47fb-0319-4529-b426-52fe91f26c65",
       "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6f3d47fb-0319-4529-b426-52fe91f26c65",
+        "lesson_activity.key": "598b98b4-2486-4dbc-9b42-c3ef03008767"
+      }
+    },
+    {
+      "key": "814d15c9-1ffb-49d0-9dea-84bdbf912dde",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, ensure that students are creating the desired visualizations (see the Exemplar Jigsaw Graphs). Prompt students to go beyond simple observations by asking probing questions that encourage them to think about the \"why\" and \"how\" behind the data patterns they observe. Ensure that both students in each pair are engaged and contributing to the discussions.",
         "tips": [
@@ -2620,7 +2828,7 @@
     },
     {
       "key": "788d1a7a-1981-461e-aa52-34ca59d06eb7",
-      "position": 5,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -2630,7 +2838,7 @@
     },
     {
       "key": "8783d942-3169-4095-a73c-3106cdcec33c",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to separate from their partner and form a new group of 6, making sure each member of the group has worked with a different dataset from Part 1. Check that all datasets from 1 to 6 are represented within each group. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to use Part 2 of their activity guide to help them share, discuss and explore the connections, common themes, and conflicting data points among their datasets and implications of each visualization. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share and discuss in their groups, circulate to ensure they are engaging in meaningful discussions and staying on task. Prompt students to delve deeper during both analysis and group discussions, ensuring they explore beyond surface level observations. For those groups who might need the additional assistance, guide them to consider the implications of their findings not just on Micah’s habits but as a reflection of broader data analysis challenges.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to think about everything they have seen and learned about Micah and their cleaning habits. Based on the group’s combined insights, direct students to work together to create a comprehensive Expository Data Story that explains Micah’s cleaning habits over time. Let students know that they only have five minutes to create this story, so they should keep it short and to the point, ensuring that their decisions are based on their datasets. Students should use their activity guide to jot down their story ideas but do not need to write full sentences or paragraphs yet - they just need to make sure they know what their narrative is as they will be recording it on Level 3 during the Wrap Up.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, ensure students effectively integrate data insights from various datasets to form a coherent story. Encourage them to delve beyond surface-level descriptions by asking probing questions that stimulate exploration of underlying causes and broader implications. Monitor for accuracy and consistency in students' narratives, ensuring claims are supported by data. Additionally, guide students who need additional support on structuring their narratives clearly, perhaps using simple narrative frameworks like chronological order or cause and effect, can help maintain logical flow and clarity.",
         "tips": [
@@ -2651,7 +2859,7 @@
     },
     {
       "key": "a01bd90a-3d1a-46db-bdf0-28985b833c5c",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 3-5.\n* **Level 3:** Students record their expository data story.\n* **Level 4:** Students answer reflection questions.\n* **Level 5:** Students practice identifying trends, patterns, and outliers in a data visualization.",
         "progression_name": "Check for Understanding",
@@ -2692,7 +2900,7 @@
       "key": "aca022c6-52d5-446f-94df-eb6d7cca8bc2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to create a graph using the Roller Coaster dataset. Students should then move on to Levels 2, 3, and 4 to answer the questions about the context, shape of distribution and measures of center about their graph. Finally, have students compare with a neighbor.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to analyze a provided histogram using the Roller Coaster dataset. Students should then move on to Levels 2, 3, and 4 to answer the questions about the context, shape of distribution and measures of center about the histogram. Finally, have students compare with a neighbor.",
         "progression_name": "Roller Coasters"
       },
       "seeding_key": {
@@ -2704,7 +2912,7 @@
       "key": "8227c449-382e-47f5-80b3-f523e0d81f75",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you describe the context for your graph?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should have created the displayed dot plot and for which, most of the sentence starters in the word bank will work. Guide students to effectively use the sentence starters to describe and discuss the context. The goal is to help them learn how to accurately apply these phrases when communicating about the context, enhancing their ability to articulate data insights clearly and correctly.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you describe the context for this graph?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to effectively use the sentence starters to describe and discuss the context. The goal is to help them learn how to accurately apply these phrases when communicating about the context, enhancing their ability to articulate data insights clearly and correctly.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2731,7 +2939,7 @@
       "key": "65e9f0c7-84ad-45bb-9316-11c3b41c73fe",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you describe the shape of distribution for your graph?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should have created the displayed dot plot and for which, most of the sentence starters in the word bank will work. Guide students to effectively use the sentence starters to describe and discuss the shape of distribution. The goal is to help them learn how to accurately apply these phrases when analyzing and communicating about the shape of distribution, enhancing their ability to articulate data insights clearly and correctly.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you describe the shape of distribution for this graph?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to effectively use the sentence starters to describe and discuss the shape of distribution. The goal is to help them learn how to accurately apply these phrases when analyzing and communicating about the shape of distribution, enhancing their ability to articulate data insights clearly and correctly.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2745,20 +2953,10 @@
       }
     },
     {
-      "key": "abdc71d0-75d1-41de-99db-aced34476f86",
+      "key": "0b1bce05-6f4a-462c-ae9d-dba1bb8e9598",
       "position": 5,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "abdc71d0-75d1-41de-99db-aced34476f86",
-        "lesson_activity.key": "632c24ac-2ff5-4d83-96d7-a51292ba641e"
-      }
-    },
-    {
-      "key": "0b1bce05-6f4a-462c-ae9d-dba1bb8e9598",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you describe the measures of center for your graph?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should have created the displayed dot plot and for which, most of the sentence starters in the word bank will work. Guide students to effectively use the sentence starters to describe and discuss the measures of center. The goal is to help them learn how to accurately apply these phrases when analyzing and communicating about the measures of center, enhancing their ability to articulate data insights clearly and correctly.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you describe the measures of center for this graph?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to effectively use the sentence starters to describe and discuss the measures of center. The goal is to help them learn how to accurately apply these phrases when analyzing and communicating about the measures of center, enhancing their ability to articulate data insights clearly and correctly.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2772,18 +2970,8 @@
       }
     },
     {
-      "key": "37f975df-d7f2-42d4-b5f8-30dece850792",
-      "position": 7,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "37f975df-d7f2-42d4-b5f8-30dece850792",
-        "lesson_activity.key": "632c24ac-2ff5-4d83-96d7-a51292ba641e"
-      }
-    },
-    {
       "key": "c121b1b9-4beb-41ab-8db9-6a29e44ea0f4",
-      "position": 8,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -2796,7 +2984,8 @@
       "key": "9d051fed-3bbc-40a0-a5ac-7446808c5a55",
       "position": 1,
       "properties": {
-        "progression_name": "Histogram Panel"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce **histograms**. Explain that histograms condense a data into an easily interpreted visual by taking many data points and grouping them into logical ranges or bins similar in appearance to a bar graph.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to watch for the steps they’ll use to create their own histogram.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"*How to Create a Histogram in Google Sheets*\"\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 5-6.\n* **Level 5:** Students review the basics of histogram creation.\n* **Level 6:** Students use Google Sheets to create histograms for the top speed of both steel and wood rollercoasters.",
+        "progression_name": "Creating Histograms"
       },
       "seeding_key": {
         "activity_section.key": "9d051fed-3bbc-40a0-a5ac-7446808c5a55",
@@ -2804,10 +2993,28 @@
       }
     },
     {
-      "key": "276b9349-c490-4d59-a6a4-1f958a2af7d0",
+      "key": "eef2efc4-24cd-4772-ad91-4b2af6bce955",
       "position": 2,
       "properties": {
-        "progression_name": "Scatterplot Panel"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students understand how to select the correct column for charting. Ask, “What question are you trying to answer with this chart?” Listen for students identifying unexpected findings.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to title their chart clearly and check that axis labels make sense. Provide feedback on this as you circulate."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eef2efc4-24cd-4772-ad91-4b2af6bce955",
+        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
+      }
+    },
+    {
+      "key": "276b9349-c490-4d59-a6a4-1f958a2af7d0",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce **scatter plot**. Explain that scatter plots are data visualizations that use dots to represent the values of two different variables, whose values are plotted along the X and Y axis.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to watch for the steps they’ll use to create their own scatter plots\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"*How to Make a Scatter Plot in Google Sheets*\"\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 7-8. \n* **Level 7:** Students review the basics of scatter plot creation.\n* **Level 8:** Students use Google Sheets to create scatter plots which answer several data questions.",
+        "progression_name": "Creating Scatterplots"
       },
       "seeding_key": {
         "activity_section.key": "276b9349-c490-4d59-a6a4-1f958a2af7d0",
@@ -2815,59 +3022,22 @@
       }
     },
     {
-      "key": "4b9bfccc-4bea-452a-84bf-0758779c67ff",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "4b9bfccc-4bea-452a-84bf-0758779c67ff",
-        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
-      }
-    },
-    {
-      "key": "0cb6b5e6-77de-4f04-af57-e35101635b66",
+      "key": "bc79212b-674b-4c94-ac00-73990a0375f3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Visualization Techniques activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to complete Levels 5 through 7.",
-        "progression_name": "Skill Building"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students understand how to select the correct columns for charting. Ask, “What two variables are you trying to compare?” Listen for students identifying unexpected findings. Make sure that the students are using numerical values for the best outcome in Sheets\n"
       },
       "seeding_key": {
-        "activity_section.key": "0cb6b5e6-77de-4f04-af57-e35101635b66",
-        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
-      }
-    },
-    {
-      "key": "79401015-3a19-4c76-910b-882f82453c48",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check if students understand how to apply the new techniques in CODAP. Ensure they are not just following steps mechanically but are grasping why they are using specific features for their visualizations.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "While students will be working independently on their own computers, it is important to remind them that they should still be talking and comparing what they do on each level with a thought partner. "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "79401015-3a19-4c76-910b-882f82453c48",
-        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
-      }
-    },
-    {
-      "key": "47c80efc-0123-4648-83d9-6c78fdbd9931",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "47c80efc-0123-4648-83d9-6c78fdbd9931",
+        "activity_section.key": "bc79212b-674b-4c94-ac00-73990a0375f3",
         "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
       }
     },
     {
       "key": "f2f5e2aa-3387-4f38-a5fc-8c33e62b02b1",
-      "position": 7,
+      "position": 5,
       "properties": {
-        "progression_name": "Formulas Panel"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the concept of **spreadsheet formulas**. Explain that spreadsheets often have functions that you can use in order to quickly summarize and analyze data attributes and cases.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 9-10. \n* **Level 9:** Students review how to use formulas in a spreadsheet.\n* **Level 10:** Students utilize formulas to summarize data statistics.",
+        "progression_name": "Using Formulas with Datasets"
       },
       "seeding_key": {
         "activity_section.key": "f2f5e2aa-3387-4f38-a5fc-8c33e62b02b1",
@@ -2875,60 +3045,22 @@
       }
     },
     {
-      "key": "ff93d60e-81cb-47cf-81c6-e4a1a6fb0bb7",
-      "position": 8,
+      "key": "4b9bfccc-4bea-452a-84bf-0758779c67ff",
+      "position": 6,
       "properties": {
-        "progression_name": "Practice with Formulas"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students understand how to use formulas within cells. Make sure that they understand how to select a range of data. Check if students understand how to apply the new techniques in Google Sheets. Ensure they are not just following steps mechanically but are grasping why they are using specific features for their visualizations."
       },
       "seeding_key": {
-        "activity_section.key": "ff93d60e-81cb-47cf-81c6-e4a1a6fb0bb7",
-        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
-      }
-    },
-    {
-      "key": "7326321e-5058-4bfc-83f3-79fbc46a3419",
-      "position": 9,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7326321e-5058-4bfc-83f3-79fbc46a3419",
-        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
-      }
-    },
-    {
-      "key": "05869b80-a423-4d13-ace3-7aedff30212e",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the check-in question on Level 8.",
-        "progression_name": "Check for Understanding",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "This level can be used to assess students’ practical skills in using CODAP, their ability to derive insights from visual data, and their understanding of how these insights relate to the underlying data. It also prompts students to articulate the significance of their findings, helping you assess the depth of their data comprehension."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "05869b80-a423-4d13-ace3-7aedff30212e",
-        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
-      }
-    },
-    {
-      "key": "719df67d-dea0-4500-8dbb-c166f551d21c",
-      "position": 11,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "719df67d-dea0-4500-8dbb-c166f551d21c",
+        "activity_section.key": "4b9bfccc-4bea-452a-84bf-0758779c67ff",
         "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
       }
     },
     {
       "key": "8ed2a578-eb19-489c-aca5-e3cca9eae312",
-      "position": 12,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete at least two of the choices on Level 9. Students may complete more than two if they have time.",
-        "progression_name": "Practice"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete at least two of the choices on Level 11. Students may complete more than two if they have time.",
+        "progression_name": "Independent Practice"
       },
       "seeding_key": {
         "activity_section.key": "8ed2a578-eb19-489c-aca5-e3cca9eae312",
@@ -2937,15 +3069,9 @@
     },
     {
       "key": "05eecaa6-1719-488c-bda6-d32e3f28b563",
-      "position": 13,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check if students understand how to apply the new techniques in CODAP. Ensure they are not just following steps mechanically but are grasping why they are using specific features for their visualizations.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "While students will be working independently on their own computers, it is important to remind them that they should still be talking and comparing what they do on each level with a thought partner."
-          }
-        ]
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check if students understand how to apply the new techniques in Google Sheets. Ensure they are not just following steps mechanically but are grasping why they are using specific features for their visualizations.\n"
       },
       "seeding_key": {
         "activity_section.key": "05eecaa6-1719-488c-bda6-d32e3f28b563",
@@ -2953,20 +3079,10 @@
       }
     },
     {
-      "key": "d4febc92-b04d-41e1-930b-ea094805edc3",
-      "position": 14,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d4febc92-b04d-41e1-930b-ea094805edc3",
-        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
-      }
-    },
-    {
       "key": "f092ea5d-252f-4cc0-a9e6-2b6f0f643a28",
-      "position": 15,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the ethical framework introduced in Lesson 3.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some additional ethical concerns we should keep in mind when using the visualization tools and techniques we learned today?*\n\n* Use a Think/Pair/Share and call on students to provide their responses.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to identify and articulate potential ethical issues arising from the use of data visualization tools, such as bias and misinformation. They should also be able to suggest responsible practices that mitigate these risks, demonstrating a thoughtful approach to ethical considerations in data science. If students are struggling to think of additional concerns, here are some example responses you could use with students to help them get started:\n* In today's lesson, when we created histograms, I realized how choosing different bin sizes could change how the data looked. This made me think about accuracy and how important it is to represent data truthfully without manipulating the viewer’s perception.\n* You mentioned privacy concerns with mapping data. In our exercise, we didn't use personal data, but it made me think about how companies might use similar techniques with personal data. We should always ensure data anonymization before creating such visualizations to protect individual identities.\n* You mentioned misuse of data. When we use powerful tools like CODAP to analyze data, it's crucial to think about the consequences of our analysis. For instance, if we're identifying trends that might influence decision-making in businesses or government, we need to be extra cautious about confirming our findings."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the ethical framework introduced in Lesson 3.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some additional ethical concerns we should keep in mind when using the visualization tools and techniques we learned today?*\n\n* Use a Think/Pair/Share and call on students to provide their responses.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to identify and articulate potential ethical issues arising from the use of data visualization tools, such as bias and misinformation. They should also be able to suggest responsible practices that mitigate these risks, demonstrating a thoughtful approach to ethical considerations in data science. If students are struggling to think of additional concerns, here are some example responses you could use with students to help them get started:\n* In today's lesson, when we created histograms, I realized how choosing different bin sizes could change how the data looked. This made me think about accuracy and how important it is to represent data truthfully without manipulating the viewer’s perception.\n* You mentioned privacy concerns with mapping data. In our exercise, we didn't use personal data, but it made me think about how companies might use similar techniques with personal data. We should always ensure data anonymization before creating such visualizations to protect individual identities.\n* You mentioned misuse of data. When we use powerful tools like Google Sheets to analyze data, it's crucial to think about the consequences of our analysis. For instance, if we're identifying trends that might influence decision-making in businesses or government, we need to be extra cautious about confirming our findings."
       },
       "seeding_key": {
         "activity_section.key": "f092ea5d-252f-4cc0-a9e6-2b6f0f643a28",
@@ -4267,59 +4383,9 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "data-science-ch1-lesson7-level1_2025"
-        ],
-        "progression": "Data Talk"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-ch1-lesson7-level1_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "5d1d0c03-f402-4bfa-be23-9594ce284fb6"
-      },
-      "level_keys": [
-        "data-science-ch1-lesson7-level1_2025"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson7-level2_2025"
-        ],
-        "progression": "Shape of Distribution"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-ch1-lesson7-level2_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "7b8966bd-b1de-4f08-9161-5fa63f060024"
-      },
-      "level_keys": [
-        "data-science-ch1-lesson7-level2_2025"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "data-science-lesson7-level1_2025_launch_2025"
         ],
-        "progression": "Panel Levels"
+        "progression": "Creating Bar Charts"
       },
       "bonus": false,
       "seeding_key": {
@@ -4336,140 +4402,12 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 4,
+      "chapter": 26,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-lesson7-panel2_2025_launch_2025"
-        ],
-        "progression": "Panel Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-lesson7-panel2_2025_launch_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
-      },
-      "level_keys": [
-        "data-science-lesson7-panel2_2025_launch_2025"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-lesson7-panel3_2025_launch_2025"
-        ],
-        "progression": "Panel Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-lesson7-panel3_2025_launch_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
-      },
-      "level_keys": [
-        "data-science-lesson7-panel3_2025_launch_2025"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 6,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-lesson7-panel4_2025_launch_2025"
-        ],
-        "progression": "Panel Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-lesson7-panel4_2025_launch_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
-      },
-      "level_keys": [
-        "data-science-lesson7-panel4_2025_launch_2025"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 7,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-lesson7-panel5-2025-launch_2025"
-        ],
-        "progression": "Panel Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-lesson7-panel5-2025-launch_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
-      },
-      "level_keys": [
-        "data-science-lesson7-panel5-2025-launch_2025"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 8,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-lesson7-panel6-2025-launch_2025"
-        ],
-        "progression": "Panel Levels"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-lesson7-panel6-2025-launch_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
-      },
-      "level_keys": [
-        "data-science-lesson7-panel6-2025-launch_2025"
-      ]
-    },
-    {
-      "chapter": 33,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson7-level3_2025"
-        ],
-        "progression": "CODAP Graphs"
+        "progression": "Creating Bar Charts"
       },
       "bonus": false,
       "seeding_key": {
@@ -4479,71 +4417,105 @@
         "lesson.key": "Introduction to Data Visualization",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "1c3084f2-cefc-45a9-8dc9-14bb3b1f841c"
+        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
       },
       "level_keys": [
         "data-science-ch1-lesson7-level3_2025"
       ]
     },
     {
-      "chapter": 34,
-      "position": 10,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson7-level4_2025"
-        ],
-        "progression": "CODAP Graphs"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-ch1-lesson7-level4_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "1c3084f2-cefc-45a9-8dc9-14bb3b1f841c"
-      },
-      "level_keys": [
-        "data-science-ch1-lesson7-level4_2025"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 11,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson7-level5_2025"
-        ],
-        "progression": "CODAP Graphs"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-ch1-lesson7-level5_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "1c3084f2-cefc-45a9-8dc9-14bb3b1f841c"
-      },
-      "level_keys": [
-        "data-science-ch1-lesson7-level5_2025"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 12,
+      "chapter": 27,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson7-level6_2025"
+        "progression": "Creating Pie Charts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-lesson7-panel3_2025_launch_2025"
         ],
+        "lesson.key": "Introduction to Data Visualization",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "1c3084f2-cefc-45a9-8dc9-14bb3b1f841c"
+      },
+      "level_keys": [
+        "data-science-lesson7-panel3_2025_launch_2025"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating Pie Charts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level4"
+        ],
+        "lesson.key": "Introduction to Data Visualization",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "1c3084f2-cefc-45a9-8dc9-14bb3b1f841c"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson7-level4"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-lesson7-panel5-2025-launch_2025"
+        ],
+        "lesson.key": "Introduction to Data Visualization",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "8ce03ab8-b0ed-4de1-a4df-360f2f800b01"
+      },
+      "level_keys": [
+        "data-science-lesson7-panel5-2025-launch_2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Applying Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-lesson7-panel6-2025-launch_2025"
+        ],
+        "lesson.key": "Introduction to Data Visualization",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "2f9d2aa7-0270-4bdb-a938-1e504d3c8b7f"
+      },
+      "level_keys": [
+        "data-science-lesson7-panel6-2025-launch_2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "progression": "Applying Filters"
       },
       "bonus": false,
@@ -4561,8 +4533,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 13,
+      "chapter": 32,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4586,7 +4558,29 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 33,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-lesson7-Free_Response-2025-launch"
+        ],
+        "lesson.key": "Introduction to Data Visualization",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "89eff5c8-66fb-4624-a04f-ca97902a35db"
+      },
+      "level_keys": [
+        "data-science-lesson7-Free_Response-2025-launch"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4611,8 +4605,30 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 35,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Cleaning Data Panel"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson8-cleaning-data-panel_2025_launch"
+        ],
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "67cc9eb3-d9f0-458f-843e-af028a5e6779"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson8-cleaning-data-panel_2025_launch"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4636,8 +4652,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 3,
+      "chapter": 37,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4661,7 +4677,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4686,7 +4702,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4711,7 +4727,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4736,7 +4752,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4761,7 +4777,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -4786,7 +4802,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4811,7 +4827,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4836,7 +4852,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4861,7 +4877,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4886,12 +4902,15 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Histogram Panel"
+        "level_keys": [
+          "data-science-ch1-lesson10-histogram-panel_2025_launch"
+        ],
+        "progression": "Creating Histograms"
       },
       "bonus": false,
       "seeding_key": {
@@ -4908,12 +4927,37 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 48,
       "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Creating Histograms"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level6_2025"
+        ],
+        "lesson.key": "More Visualization Techniques",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "9d051fed-3bbc-40a0-a5ac-7446808c5a55"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-level6_2025"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Scatterplot Panel"
+        "level_keys": [
+          "data-science-ch1-lesson10-scatter-plot-panel_2025_launch"
+        ],
+        "progression": "Creating Scatterplots"
       },
       "bonus": false,
       "seeding_key": {
@@ -4930,40 +4974,12 @@
       ]
     },
     {
-      "chapter": 52,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level6_2025"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-ch1-lesson10-level6_2025"
-        ],
-        "lesson.key": "More Visualization Techniques",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "0cb6b5e6-77de-4f04-af57-e35101635b66"
-      },
-      "level_keys": [
-        "data-science-ch1-lesson10-level6_2025"
-      ]
-    },
-    {
-      "chapter": 53,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level7_2025"
-        ],
-        "progression": "Skill Building"
+        "progression": "Creating Scatterplots"
       },
       "bonus": false,
       "seeding_key": {
@@ -4973,44 +4989,22 @@
         "lesson.key": "More Visualization Techniques",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "0cb6b5e6-77de-4f04-af57-e35101635b66"
+        "activity_section.key": "276b9349-c490-4d59-a6a4-1f958a2af7d0"
       },
       "level_keys": [
         "data-science-ch1-lesson10-level7_2025"
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 51,
       "position": 9,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level8_2025"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-ch1-lesson10-level8_2025"
-        ],
-        "lesson.key": "More Visualization Techniques",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "0cb6b5e6-77de-4f04-af57-e35101635b66"
-      },
-      "level_keys": [
-        "data-science-ch1-lesson10-level8_2025"
-      ]
-    },
-    {
-      "chapter": 55,
-      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Formulas Panel"
+        "level_keys": [
+          "data-science-ch1-lesson10-formulas-panel_2025_launch"
+        ],
+        "progression": "Using Formulas with Datasets"
       },
       "bonus": false,
       "seeding_key": {
@@ -5027,12 +5021,12 @@
       ]
     },
     {
-      "chapter": 56,
-      "position": 11,
-      "activity_section_position": 1,
+      "chapter": 52,
+      "position": 10,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Practice with Formulas"
+        "progression": "Using Formulas with Datasets"
       },
       "bonus": false,
       "seeding_key": {
@@ -5042,47 +5036,22 @@
         "lesson.key": "More Visualization Techniques",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "ff93d60e-81cb-47cf-81c6-e4a1a6fb0bb7"
+        "activity_section.key": "f2f5e2aa-3387-4f38-a5fc-8c33e62b02b1"
       },
       "level_keys": [
         "data-science-ch1-lesson10-formulas-free-response_2025"
       ]
     },
     {
-      "chapter": 57,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level9_2025"
-        ],
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-ch1-lesson10-level9_2025"
-        ],
-        "lesson.key": "More Visualization Techniques",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "05869b80-a423-4d13-ace3-7aedff30212e"
-      },
-      "level_keys": [
-        "data-science-ch1-lesson10-level9_2025"
-      ]
-    },
-    {
-      "chapter": 58,
-      "position": 13,
+      "chapter": 53,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "data-science-ch1-lesson10-level10_2025"
         ],
-        "progression": "Practice"
+        "progression": "Independent Practice"
       },
       "bonus": false,
       "seeding_key": {
@@ -5099,7 +5068,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5124,7 +5093,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5149,7 +5118,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5174,7 +5143,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5199,7 +5168,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5224,7 +5193,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5540,93 +5509,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "data-science-ch1-lesson7-level1_2025",
-        "script_level.level_keys": [
-          "data-science-ch1-lesson7-level1_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "5d1d0c03-f402-4bfa-be23-9594ce284fb6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "data-science-ch1-lesson7-level2_2025",
-        "script_level.level_keys": [
-          "data-science-ch1-lesson7-level2_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "7b8966bd-b1de-4f08-9161-5fa63f060024"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "data-science-lesson7-level1_2025_launch_2025",
         "script_level.level_keys": [
           "data-science-lesson7-level1_2025_launch_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "data-science-lesson7-panel2_2025_launch_2025",
-        "script_level.level_keys": [
-          "data-science-lesson7-panel2_2025_launch_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "data-science-lesson7-panel3_2025_launch_2025",
-        "script_level.level_keys": [
-          "data-science-lesson7-panel3_2025_launch_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "data-science-lesson7-panel4_2025_launch_2025",
-        "script_level.level_keys": [
-          "data-science-lesson7-panel4_2025_launch_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "data-science-lesson7-panel5-2025-launch_2025",
-        "script_level.level_keys": [
-          "data-science-lesson7-panel5-2025-launch_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "data-science-lesson7-panel6-2025-launch_2025",
-        "script_level.level_keys": [
-          "data-science-lesson7-panel6-2025-launch_2025"
         ],
         "lesson.key": "Introduction to Data Visualization",
         "lesson_group.key": "lessonGroup-3",
@@ -5643,14 +5528,14 @@
         "lesson.key": "Introduction to Data Visualization",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "1c3084f2-cefc-45a9-8dc9-14bb3b1f841c"
+        "activity_section.key": "555daebc-46ab-43d3-a0fd-2574c98d9470"
       }
     },
     {
       "seeding_key": {
-        "level.key": "data-science-ch1-lesson7-level4_2025",
+        "level.key": "data-science-lesson7-panel3_2025_launch_2025",
         "script_level.level_keys": [
-          "data-science-ch1-lesson7-level4_2025"
+          "data-science-lesson7-panel3_2025_launch_2025"
         ],
         "lesson.key": "Introduction to Data Visualization",
         "lesson_group.key": "lessonGroup-3",
@@ -5660,14 +5545,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "data-science-ch1-lesson7-level5_2025",
+        "level.key": "data-science-ch1-lesson7-level4",
         "script_level.level_keys": [
-          "data-science-ch1-lesson7-level5_2025"
+          "data-science-ch1-lesson7-level4"
         ],
         "lesson.key": "Introduction to Data Visualization",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
         "activity_section.key": "1c3084f2-cefc-45a9-8dc9-14bb3b1f841c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-lesson7-panel5-2025-launch_2025",
+        "script_level.level_keys": [
+          "data-science-lesson7-panel5-2025-launch_2025"
+        ],
+        "lesson.key": "Introduction to Data Visualization",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "8ce03ab8-b0ed-4de1-a4df-360f2f800b01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-lesson7-panel6-2025-launch_2025",
+        "script_level.level_keys": [
+          "data-science-lesson7-panel6-2025-launch_2025"
+        ],
+        "lesson.key": "Introduction to Data Visualization",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "2f9d2aa7-0270-4bdb-a938-1e504d3c8b7f"
       }
     },
     {
@@ -5696,6 +5605,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-science-lesson7-Free_Response-2025-launch",
+        "script_level.level_keys": [
+          "data-science-lesson7-Free_Response-2025-launch"
+        ],
+        "lesson.key": "Introduction to Data Visualization",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "89eff5c8-66fb-4624-a04f-ca97902a35db"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-science-ch1-lesson8-level1_2025",
         "script_level.level_keys": [
           "data-science-ch1-lesson8-level1_2025"
@@ -5704,6 +5625,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
         "activity_section.key": "95bfc685-1607-4d85-9821-8e55a5c357fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson8-cleaning-data-panel_2025_launch",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson8-cleaning-data-panel_2025_launch"
+        ],
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "67cc9eb3-d9f0-458f-843e-af028a5e6779"
       }
     },
     {
@@ -5852,6 +5785,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-level6_2025",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level6_2025"
+        ],
+        "lesson.key": "More Visualization Techniques",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif6-2025",
+        "activity_section.key": "9d051fed-3bbc-40a0-a5ac-7446808c5a55"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-science-ch1-lesson10-scatter-plot-panel_2025_launch",
         "script_level.level_keys": [
           "data-science-ch1-lesson10-scatter-plot-panel_2025_launch"
@@ -5864,18 +5809,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "data-science-ch1-lesson10-level6_2025",
-        "script_level.level_keys": [
-          "data-science-ch1-lesson10-level6_2025"
-        ],
-        "lesson.key": "More Visualization Techniques",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "0cb6b5e6-77de-4f04-af57-e35101635b66"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "data-science-ch1-lesson10-level7_2025",
         "script_level.level_keys": [
           "data-science-ch1-lesson10-level7_2025"
@@ -5883,19 +5816,7 @@
         "lesson.key": "More Visualization Techniques",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "0cb6b5e6-77de-4f04-af57-e35101635b66"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "data-science-ch1-lesson10-level8_2025",
-        "script_level.level_keys": [
-          "data-science-ch1-lesson10-level8_2025"
-        ],
-        "lesson.key": "More Visualization Techniques",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "0cb6b5e6-77de-4f04-af57-e35101635b66"
+        "activity_section.key": "276b9349-c490-4d59-a6a4-1f958a2af7d0"
       }
     },
     {
@@ -5919,19 +5840,7 @@
         "lesson.key": "More Visualization Techniques",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "ff93d60e-81cb-47cf-81c6-e4a1a6fb0bb7"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "data-science-ch1-lesson10-level9_2025",
-        "script_level.level_keys": [
-          "data-science-ch1-lesson10-level9_2025"
-        ],
-        "lesson.key": "More Visualization Techniques",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "05869b80-a423-4d13-ace3-7aedff30212e"
+        "activity_section.key": "f2f5e2aa-3387-4f38-a5fc-8c33e62b02b1"
       }
     },
     {
@@ -6526,19 +6435,6 @@
       "seeding_key": {
         "resource.key": "unit_overview"
       }
-    },
-    {
-      "name": "Visualization Techniques",
-      "url": "https://docs.google.com/document/d/1dQM0oBAF7E69ji75o0GOncvCe-hPk_fXAqGo0HKOa8Y/edit?usp=sharing",
-      "key": "visualization_techniques",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "visualization_techniques"
-      }
     }
   ],
   "lessons_resources": [
@@ -6750,12 +6646,6 @@
       "seeding_key": {
         "lesson.key": "More Visualization Techniques",
         "resource.key": "more_visualization_techniques"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More Visualization Techniques",
-        "resource.key": "visualization_techniques"
       }
     }
   ],
@@ -6974,16 +6864,6 @@
       }
     },
     {
-      "key": "dot_plot",
-      "word": "dot plot",
-      "definition": "a graph where each data point is represented by a dot along an axis",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dot_plot"
-      }
-    },
-    {
       "key": "expository_data_story",
       "word": "expository data story",
       "definition": "tells a story about a person, place, thing, or event using data",
@@ -7001,6 +6881,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "filter"
+      }
+    },
+    {
+      "key": "histogram",
+      "word": "histogram",
+      "definition": "a data visualization that organizes a group of data points into user-specified ranges",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "histogram"
       }
     },
     {
@@ -7041,6 +6931,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "persuasive_data_story"
+      }
+    },
+    {
+      "key": "pie_chart",
+      "word": "Pie Chart",
+      "definition": "Represents data in a circular form, showing how a whole group is broken down into different parts or categories.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pie_chart"
       }
     },
     {
@@ -7228,19 +7128,13 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Data Visualization",
-        "vocabulary.key": "dot_plot"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Data Visualization",
         "vocabulary.key": "filter"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Data Visualization",
-        "vocabulary.key": "scatter_plot"
+        "vocabulary.key": "pie_chart"
       }
     },
     {
@@ -7277,6 +7171,18 @@
       "seeding_key": {
         "lesson.key": "Making Sense of Data",
         "vocabulary.key": "spreadsheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
+        "vocabulary.key": "histogram"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
+        "vocabulary.key": "scatter_plot"
       }
     }
   ],
@@ -7387,7 +7293,7 @@
     {
       "key": "4f67bbc4-fd23-49b4-ab35-7cd73c18467b",
       "properties": {
-        "description": "Explain the purpose of filtering data"
+        "description": "Filter and sort data to gain new insights from visualizations"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Data Visualization",
@@ -7397,7 +7303,7 @@
     {
       "key": "5712ae95-be77-4c80-975e-35398c7a5484",
       "properties": {
-        "description": "Create dot plots, bar charts, and scatter plots"
+        "description": "Create bar charts and pie charts to describe data"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Data Visualization",
@@ -7422,6 +7328,16 @@
       "seeding_key": {
         "lesson.key": "More Visualization Techniques",
         "objective.key": "690a6473-3de5-45ba-b217-4f4d4b790896"
+      }
+    },
+    {
+      "key": "8754dc43-dd8a-4fa0-9ab5-86c3820a9fef",
+      "properties": {
+        "description": "Explain different shapes of distribution and measures of center"
+      },
+      "seeding_key": {
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "objective.key": "8754dc43-dd8a-4fa0-9ab5-86c3820a9fef"
       }
     },
     {
@@ -7457,7 +7373,7 @@
     {
       "key": "b7125b32-8d79-403f-952e-df93a3c9f7ba",
       "properties": {
-        "description": "Perform essential data cleaning tasks, such as fixing errors, creating categories, and removing unnecessary data, to prepare data for accurate and effective analysis"
+        "description": "Perform essential data cleaning tasks to prepare data for accurate and effective analysis"
       },
       "seeding_key": {
         "lesson.key": "Data Cleaning and Analysis Techniques",
@@ -7477,7 +7393,7 @@
     {
       "key": "c00ffde0-2b67-4385-ace0-3c2ae7efc7bf",
       "properties": {
-        "description": "Differentiate between a bar chart, dot plot, and scatter plot"
+        "description": "Utilize visualizations to answer data questions"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Data Visualization",

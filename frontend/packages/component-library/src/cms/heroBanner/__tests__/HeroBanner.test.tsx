@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react';
 
 import {LinkButtonProps} from '@/button';
 import {ImageProps} from '@/image';
-import {VideoProps} from '@/video';
+import Video, {VideoProps} from '@/video';
 
 import HeroBanner from './../HeroBanner';
 
@@ -18,9 +18,13 @@ jest.mock('@/video', () => ({
 
 describe('HeroBanner', () => {
   const defaultHeading = 'Welcome to Code.org';
+  const defaultProps = {
+    heading: defaultHeading,
+    VideoComponent: Video,
+  };
 
   it('renders heading', () => {
-    render(<HeroBanner heading={defaultHeading} />);
+    render(<HeroBanner {...defaultProps} />);
     expect(
       screen.getByRole('heading', {name: defaultHeading}),
     ).toBeInTheDocument();
@@ -29,7 +33,7 @@ describe('HeroBanner', () => {
   it('renders subheading and description', () => {
     render(
       <HeroBanner
-        heading={defaultHeading}
+        {...defaultProps}
         subHeading="Subheading here"
         description="Description text"
       />,
@@ -43,7 +47,7 @@ describe('HeroBanner', () => {
       src: '/test-image.jpg',
       altText: 'Test Image',
     };
-    render(<HeroBanner heading={defaultHeading} imageProps={imageProps} />);
+    render(<HeroBanner {...defaultProps} imageProps={imageProps} />);
     expect(screen.getByAltText('Test Image')).toBeInTheDocument();
   });
 
@@ -52,7 +56,7 @@ describe('HeroBanner', () => {
       youTubeId: 'dQw4w9WgXcQ',
       videoTitle: 'Test Video Title',
     };
-    render(<HeroBanner heading={defaultHeading} videoProps={videoProps} />);
+    render(<HeroBanner {...defaultProps} videoProps={videoProps} />);
     expect(
       screen.getByLabelText('Play video Test Video Title'),
     ).toBeInTheDocument();
@@ -63,7 +67,7 @@ describe('HeroBanner', () => {
       text: 'Click me!',
       href: '/link',
     };
-    render(<HeroBanner heading={defaultHeading} buttonProps={buttonProps} />);
+    render(<HeroBanner {...defaultProps} buttonProps={buttonProps} />);
     expect(screen.getByRole('link', {name: 'Click me!'})).toBeInTheDocument();
   });
 
@@ -74,7 +78,7 @@ describe('HeroBanner', () => {
     };
     render(
       <HeroBanner
-        heading={defaultHeading}
+        {...defaultProps}
         partner={{
           title: 'Partner Title',
           logo: partnerLogo,
@@ -87,7 +91,7 @@ describe('HeroBanner', () => {
 
   it('applies custom className', () => {
     const {container} = render(
-      <HeroBanner heading={defaultHeading} className="custom-class" />,
+      <HeroBanner {...defaultProps} className="custom-class" />,
     );
     expect(container.firstChild).toHaveClass('custom-class');
   });
@@ -103,7 +107,7 @@ describe('HeroBanner', () => {
     };
     render(
       <HeroBanner
-        heading="Test"
+        {...defaultProps}
         videoProps={videoProps}
         imageProps={imageProps}
       />,

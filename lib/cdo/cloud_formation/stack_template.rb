@@ -39,13 +39,12 @@ module Cdo::CloudFormation
     end
 
     # Generate boilerplate Trust Policy for an AWS Service Role.
-    private def service_role(services)
-      services = Array(services)
+    private def service_role(service)
       document = {
         Statement: [
           Effect: 'Allow',
           Action: 'sts:AssumeRole',
-          Principal: {Service: services.map {|service| "#{service}.amazonaws.com"}},
+          Principal: {Service: ["#{service}.amazonaws.com"]}
         ]
       }
       "AssumeRolePolicyDocument: #{document.to_json}"

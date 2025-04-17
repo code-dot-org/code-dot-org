@@ -117,8 +117,9 @@ AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools_public.csv") do |fi
       student_tr_count:   row['Two or More Races Students [Public School] ' + SURVEY_YEAR_HEADER].to_i,
       title_i_status:     previous_title_1_status,
       frl_eligible_total: row['Free and Reduced Lunch Students [Public School] ' + SURVEY_YEAR_HEADER].to_i,
-      student_female: row['Female Students [Public School] ' + SURVEY_YEAR_HEADER].to_i,
-      student_male: row['Male Students [Public School] ' + SURVEY_YEAR_HEADER].to_i
+      student_female:     row['Female Students [Public School] ' + SURVEY_YEAR_HEADER].to_i,
+      student_male:       row['Male Students [Public School] ' + SURVEY_YEAR_HEADER].to_i,
+      status:             row['Updated Status [Public School] ' + SURVEY_YEAR_HEADER]
     }
   end
 end

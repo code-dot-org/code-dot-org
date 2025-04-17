@@ -126,7 +126,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 needsReload={needsReload ? needsReload : false}
               />
               <div>
-                <TeacherHomepage />
+                <TeacherHomepage studioUrlPrefix={studioUrlPrefix} />
               </div>
             </>
           }
