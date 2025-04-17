@@ -3,9 +3,6 @@
   "script_names": [
     "csc-function-machines-pilot"
   ],
-  "original_script_names": [
-    "csc-function-machines-pilot"
-  ],
   "published_state": "sunsetting",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

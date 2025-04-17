@@ -3,9 +3,6 @@
   "script_names": [
     "outbreakmodule"
   ],
-  "original_script_names": [
-    "outbreakmodule"
-  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

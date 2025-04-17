@@ -3,9 +3,6 @@
   "script_names": [
     "basketball"
   ],
-  "original_script_names": [
-    "basketball"
-  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

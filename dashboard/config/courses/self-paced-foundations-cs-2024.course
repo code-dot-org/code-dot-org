@@ -9,15 +9,6 @@
     "self-paced-pl-foundations-unit2",
     "self-paced-pl-foundations-unit3"
   ],
-  "original_script_names": [
-    "self-paced-pl-foundations-getting-started",
-    "self-paced-pl-foundations-intro",
-    "self-paced-pl-foundations-teaching-cs",
-    "self-paced-pl-foundations-unit1",
-    "self-paced-pl-foundations-unit2",
-    "self-paced-pl-foundations-unit3",
-    "self-paced-pl-foundations-unit4"
-  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

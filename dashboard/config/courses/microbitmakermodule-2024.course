@@ -9,15 +9,6 @@
     "k5maker5thgrade",
     "self-paced-pl-microbit-2024-2"
   ],
-  "original_script_names": [
-    "getting-started-with-code-maker",
-    "k5maker",
-    "k5maker4thgrade",
-    "k5maker5thgrade",
-    "k5microbitmaker",
-    "sandbox-welcome-to-maker",
-    "self-paced-pl-microbit-2024-2"
-  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

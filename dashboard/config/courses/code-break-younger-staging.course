@@ -3,9 +3,6 @@
   "script_names": [
     "code-break-younger-staging"
   ],
-  "original_script_names": [
-    "code-break-younger-staging"
-  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -3,9 +3,6 @@
   "script_names": [
     "csa-preview"
   ],
-  "original_script_names": [
-    "csa-preview"
-  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
