@@ -214,7 +214,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
 
   # POST /api/v1/pd/workshops/1/unstart (admin only)
   def unstart
-    @workshop.update!(started_at: nil)
+    @workshop.update_column(:started_at, nil)
     head :no_content
   end
 
@@ -226,7 +226,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
 
   # POST /api/v1/pd/workshops/1/reopen (admin only)
   def reopen
-    @workshop.update!(ended_at: nil)
+    @workshop.update_column(:ended_at, nil)
     head :no_content
   end
 

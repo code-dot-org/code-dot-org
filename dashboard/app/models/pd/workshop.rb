@@ -466,18 +466,17 @@ class Pd::Workshop < ApplicationRecord
     raise 'Workshop must have at least one session to start.' if sessions.empty?
 
     sessions.each(&:assign_code)
-    update!(started_at: Time.zone.now)
+    update_column(:started_at, Time.zone.now)
 
     # return nil in case any callers are still expecting a section
     nil
   end
 
   # Ends the workshop, or no-op if it's already ended.
-  # The return value is undefined.
+  # The return value is nil.
   def end!
     return unless ended_at.nil?
-    self.ended_at = Time.zone.now
-    save!
+    update_column(:ended_at, Time.zone.now)
 
     # We want to send exit surveys now, but that needs to be done on the
     # production-daemon machine, so we'll let the process_pd_workshop_emails
@@ -498,7 +497,7 @@ class Pd::Workshop < ApplicationRecord
       next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at
       workshop.send_exit_surveys
       workshop.send_facilitator_post_surveys
-      workshop.update!(processed_at: Time.zone.now)
+      workshop.update_column(:processed_at, Time.zone.now)
     end
   end
 
