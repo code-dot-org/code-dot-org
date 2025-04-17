@@ -10,11 +10,11 @@ import {
   DropdownFormFieldRelatedProps,
 } from '@/common/types';
 
-import CustomDropdown, {_CustomDropdownOption} from '../CustomDropdown';
+import CustomDropdown, {CustomDropdownOption} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
-export type CheckboxDropdownOption = _CustomDropdownOption;
+export type CheckboxDropdownOption = CustomDropdownOption;
 
 interface BaseCheckboxDropdownProps
   extends DropdownFormFieldRelatedProps,

@@ -26,7 +26,7 @@ export interface TriggerComponentProps extends AriaAttributes {
   'data-toggle': string;
 }
 
-export interface _CustomDropdownOption {
+export interface CustomDropdownOption {
   value: string;
   label: string;
   isOptionDisabled?: boolean;

@@ -9,11 +9,11 @@ import {
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
-import CustomDropdown, {_CustomDropdownOption} from '../CustomDropdown';
+import CustomDropdown, {CustomDropdownOption} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
-export interface ActionDropdownOption extends _CustomDropdownOption {
+export interface ActionDropdownOption extends CustomDropdownOption {
   onClick: () => void;
   isOptionDestructive?: boolean;
   icon: FontAwesomeV6IconProps;

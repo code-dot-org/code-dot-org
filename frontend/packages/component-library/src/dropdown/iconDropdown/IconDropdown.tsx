@@ -13,11 +13,11 @@ import {
 } from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
-import CustomDropdown, {_CustomDropdownOption} from '../CustomDropdown';
+import CustomDropdown, {CustomDropdownOption} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
-export interface IconDropdownOption extends _CustomDropdownOption {
+export interface IconDropdownOption extends CustomDropdownOption {
   icon: FontAwesomeV6IconProps;
 }
 
