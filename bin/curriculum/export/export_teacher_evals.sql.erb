@@ -17,7 +17,8 @@ UNLOAD ($$
         JOIN dashboard_production_pii.learning_goal_teacher_evaluations lgte ON lg.id = lgte.learning_goal_id
     )
   SELECT
-    cs.level_id
+    ul.id user_level_id
+    , cs.level_id
     , cs.script_id
     , cs.script_name
     , cs.relative_position
@@ -30,6 +31,7 @@ UNLOAD ($$
     , teacher_evals.submitted_at
   FROM teacher_evals
     JOIN analysis.course_structure cs ON cs.level_id = teacher_evals.level_id AND cs.stage_id = teacher_evals.lesson_id
+    JOIN dashboard_production.user_levels ul ON teacher_evals.user_id = ul.user_id AND cs.level_id = ul.level_id AND cs.script_id = ul.script_id
   WHERE
     cs.script_name = '<%=unit_name%>'
     <%= level_id && "and cs.level_id = #{level_id}" %>

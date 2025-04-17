@@ -37,12 +37,14 @@ UNLOAD ($$
         rae.status = 2 -- SUCCESS
     )
   SELECT
-    cs.script_name
+    ul.id user_level_id
+    , cs.script_name
     , cs.relative_position lesson_position
     , cs.level_number
     , ai_evals.*
   FROM ai_evals
     JOIN analysis.course_structure cs ON cs.level_id = ai_evals.level_id AND cs.stage_id = ai_evals.lesson_id
+    JOIN dashboard_production.user_levels ul ON ai_evals.user_id = ul.user_id AND cs.level_id = ul.level_id AND cs.script_id = ul.script_id
   WHERE
     <%= "cs.script_name = '#{unit_name}'" %>
     <%= level_id && "and cs.level_id = #{level_id}" %>
