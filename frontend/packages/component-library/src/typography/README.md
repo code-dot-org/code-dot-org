@@ -1,7 +1,5 @@
 # `componentLibrary/typography`
 
-Test comment
-
 This is a set of Typography components for use in the Code.org component library.
 Implements Typography components with our rebranded styles. Part of global rebranding.
 At some point it will be moved to (https://github.com/code-dot-org/dsco_), however the signature of the components should
