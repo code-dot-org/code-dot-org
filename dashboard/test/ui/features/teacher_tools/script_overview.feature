@@ -4,6 +4,7 @@
 @no_mobile
 Feature: Unit overview page
 
+  @properties_encryption_key
   Scenario: Viewing student progress
     Given I create an authorized teacher-associated student named "Sally"
 
@@ -37,6 +38,7 @@ Feature: Unit overview page
     # Make sure we only see student progress, not teacher progress.
     Then I verify progress for lesson 29 level 4 is "not_tried"
 
+  @properties_encryption_key
   Scenario: Unit overview contents
     Given I create a student named "Jean"
     And I am on "http://studio.code.org/s/allthethings"

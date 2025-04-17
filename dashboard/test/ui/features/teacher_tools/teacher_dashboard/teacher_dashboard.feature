@@ -1,6 +1,7 @@
 @no_mobile
 Feature: Using the teacher dashboard
 
+  @properties_encryption_key
   Scenario: Visiting student name URLs in teacher dashboard
     Given I am on "http://studio.code.org"
     When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
@@ -50,6 +51,7 @@ Feature: Using the teacher dashboard
     And I wait until element ".project_name.header_text" is visible
     And element ".project_name.header_text" contains text "thumb wars"
 
+  @properties_encryption_key
   Scenario: Toggling student progress
     Given I create an authorized teacher-associated student named "Sally"
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"

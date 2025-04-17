@@ -6,11 +6,9 @@ import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import Notification, {
   NotificationType,
@@ -42,18 +40,25 @@ import {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import ManageStudentsSharingCell from '@cdo/apps/templates/manageStudents/ManageStudentsSharingCell';
 import MoveStudents from '@cdo/apps/templates/manageStudents/MoveStudents';
-import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import PasswordReset from '@cdo/apps/templates/manageStudents/PasswordReset';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
 import SharingControlActionsHeaderCell from '@cdo/apps/templates/manageStudents/SharingControlActionsHeaderCell';
 import ShowSecret from '@cdo/apps/templates/manageStudents/ShowSecret';
 import UsStateColumn from '@cdo/apps/templates/manageStudents/Table/UsStateColumn';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import JoinLinkCopyButton from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/JoinLink/JoinLinkCopyButton';
 import {
   tableLayoutStyles,
   sortableOptions,
 } from '@cdo/apps/templates/tables/tableConstants';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import {
+  LOGIN_TYPES_WITH_ACTIONS_COLUMN,
+  LOGIN_TYPES_WITH_GENDER_COLUMN,
+  LOGIN_TYPES_WITH_PASSWORD_COLUMN,
+  NON_LMS_LOGIN_TYPES,
+  PICTURE_OR_WORD_LOGIN_TYPES,
+} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
 import {
   selectedSectionSelector,
   syncEnabled,
@@ -62,31 +67,11 @@ import {
   sectionUnitName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import color from '@cdo/apps/util/color';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {showV2TeacherDashboard} from '../../teacherNavigation/TeacherNavFlagUtils';
-
-const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
-  SectionLoginType.word,
-  SectionLoginType.picture,
-  SectionLoginType.email,
-];
-const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
-  SectionLoginType.word,
-  SectionLoginType.picture,
-  SectionLoginType.email,
-  SectionLoginType.google_classroom,
-  SectionLoginType.clever,
-  SectionLoginType.lti_v1,
-];
-const LOGIN_TYPES_WITH_GENDER_COLUMN = [
-  SectionLoginType.word,
-  SectionLoginType.picture,
-];
 
 const MANAGE_STUDENTS_TABLE = 'ManageStudentsTable';
 
@@ -159,11 +144,8 @@ class ManageStudentsTable extends Component {
     this.getSortingColumns = this.getSortingColumns.bind(this);
     this.onSort = this.onSort.bind(this);
     this.getColumns = this.getColumns.bind(this);
-    this.copySectionCode = this.copySectionCode.bind(this);
     this.onPrintLoginCards = this.onPrintLoginCards.bind(this);
-    this.showSectionCodeDialog = this.showSectionCodeDialog.bind(this);
     this.handleSaveAllClick = this.handleSaveAllClick.bind(this);
-    this.close = this.close.bind(this);
   }
 
   state = {
@@ -173,8 +155,6 @@ class ManageStudentsTable extends Component {
         position: 0,
       },
     },
-    showCopiedMsg: false,
-    showSectionCodeDialog: false,
     showPasswordLengthFailure: false,
   };
 
@@ -212,11 +192,7 @@ class ManageStudentsTable extends Component {
 
   isMoveStudentsEnabled() {
     const {loginType} = this.props;
-    return (
-      loginType === SectionLoginType.word ||
-      loginType === SectionLoginType.picture ||
-      loginType === SectionLoginType.email
-    );
+    return NON_LMS_LOGIN_TYPES.includes(loginType);
   }
 
   // Helper function to determine if user is a teacher
@@ -290,8 +266,7 @@ class ManageStudentsTable extends Component {
                 }
               />
             )}
-            {(rowData.loginType === SectionLoginType.word ||
-              rowData.loginType === SectionLoginType.picture) && (
+            {PICTURE_OR_WORD_LOGIN_TYPES.includes(rowData.loginType) && (
               <ShowSecret
                 initialIsShowing={false}
                 secretWord={rowData.secretWords}
@@ -770,53 +745,11 @@ class ManageStudentsTable extends Component {
     };
   }
 
-  copySectionCode() {
-    const {sectionId, sectionCode, studioUrlPrefix} = this.props;
-    const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
-    copyToClipboard(joinLink);
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'copy-section-code-join-link',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
-    this.setState({showCopiedMsg: true});
-    setTimeout(() => {
-      this.setState({showCopiedMsg: false});
-    }, 5000);
-    clearTimeout();
-  }
-
   onPrintLoginCards() {
     const {sectionId} = this.props;
     const url =
       teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
     window.open(url, '_blank', 'noopener,noreferrer');
-  }
-
-  showSectionCodeDialog() {
-    const {sectionId} = this.props;
-    firehoseClient.putRecord(
-      {
-        study: 'teacher-dashboard',
-        study_group: 'manage-students-actions',
-        event: 'no-section-code-link',
-        data_json: JSON.stringify({
-          sectionId: sectionId,
-        }),
-      },
-      {includeUserId: true}
-    );
-    this.setState({showSectionCodeDialog: true});
-  }
-
-  close() {
-    this.setState({showSectionCodeDialog: false});
   }
 
   render() {
@@ -851,11 +784,6 @@ class ManageStudentsTable extends Component {
       studentData,
       isSectionAssignedCSA,
     } = this.props;
-
-    const noSectionCode = [
-      SectionLoginType.google_classroom,
-      SectionLoginType.clever,
-    ];
 
     return (
       <div>
@@ -896,8 +824,7 @@ class ManageStudentsTable extends Component {
         {transferStatus.status === TransferStatus.SUCCESS &&
           this.renderTransferSuccessNotification()}
         <div>
-          {(loginType === SectionLoginType.word ||
-            loginType === SectionLoginType.picture) && (
+          {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
             <div style={styles.buttonWithMargin}>
               <AddMultipleStudents sectionId={this.props.sectionId} />
             </div>
@@ -911,8 +838,7 @@ class ManageStudentsTable extends Component {
               />
             </div>
           )}
-          {(loginType === SectionLoginType.word ||
-            loginType === SectionLoginType.picture) && (
+          {PICTURE_OR_WORD_LOGIN_TYPES.includes(loginType) && (
             <div style={styles.button}>
               <PrintLoginCards
                 sectionId={this.props.sectionId}
@@ -946,45 +872,13 @@ class ManageStudentsTable extends Component {
               buttonContainerStyle={styles.button}
             />
           )}
-          {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
-            <div
-              style={styles.sectionCodeBox}
-              data-for="section-code"
-              data-tip
-              onClick={this.copySectionCode}
-            >
-              {!this.state.showCopiedMsg && (
-                <span>
-                  <span>{i18n.sectionCodeWithColon()}</span>
-                  <span style={styles.sectionCode}>{sectionCode}</span>
-                  <ReactTooltip id="section-code" role="tooltip" effect="solid">
-                    <div>{i18n.copySectionCodeTooltip()}</div>
-                  </ReactTooltip>
-                </span>
-              )}
-              {this.state.showCopiedMsg && (
-                <span>{i18n.copySectionCodeSuccess()}</span>
-              )}
-            </div>
-          )}
-          {noSectionCode.includes(loginType) && (
-            <div style={styles.sectionCodeBox}>
-              {i18n.sectionCodeWithColon()}
-              <span
-                style={styles.sectionCodeNotApplicable}
-              >{` ${i18n.notApplicable()}. `}</span>
-              <span style={styles.noSectionCode}>
-                <a onClick={() => this.showSectionCodeDialog()}>
-                  {i18n.whyWithQuestionMark()}
-                </a>
-              </span>
-              <NoSectionCodeDialog
-                typeClassroom={loginType}
-                handleClose={this.close}
-                isOpen={this.state.showSectionCodeDialog}
-              />
-            </div>
-          )}
+          <JoinLinkCopyButton
+            sectionId={sectionId}
+            sectionCode={sectionCode}
+            loginType={loginType}
+            studioUrlPrefix={this.props.studioUrlPrefix}
+            sourceName="ManageStudentsTable"
+          />
         </div>
         <div style={tableStyle}>
           <Table.Provider
@@ -1035,24 +929,6 @@ const styles = {
   verticalAlign: {
     display: 'flex',
     alignItems: 'center',
-  },
-  sectionCodeBox: {
-    float: 'right',
-    lineHeight: '30px',
-  },
-  sectionCode: {
-    marginLeft: 5,
-    color: color.teal,
-    ...fontConstants['main-font-bold'],
-    cursor: 'copy',
-  },
-  noSectionCode: {
-    color: color.teal,
-    textDecoration: 'none',
-    cursor: 'pointer',
-  },
-  sectionCodeNotApplicable: {
-    ...fontConstants['main-font-bold'],
   },
   v2TableWidth: {
     width: '100%',

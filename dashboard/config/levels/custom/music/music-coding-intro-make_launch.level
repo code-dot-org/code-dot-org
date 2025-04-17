@@ -19,8 +19,6 @@
         "blocks": {
           "Play": [
             "play_sound_at_current_location_simple2",
-            "play_pattern_at_current_location_simple2",
-            "play_chord_at_current_location_simple2",
             "play_rest_at_current_location_simple2"
           ],
           "Control": [
@@ -30,136 +28,6 @@
           ]
         },
         "type": "flyout"
-      },
-      "toolboxDefinition": {
-        "contents": [
-          {
-            "kind": "block",
-            "type": "play_rest_at_current_location_simple2",
-            "id": "play_rest_at_current_location_simple2",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "fields": {
-              "rest_duration": "<field name=\"rest_duration\">1</field>"
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "play_sounds_sequential",
-            "id": "play_sounds_sequential",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "inputs": {
-              "code": {
-                "block": {
-                  "type": "play_sound_at_current_location_simple2",
-                  "extraState": {
-                    "disableNextConnection": false
-                  },
-                  "fields": {
-                    "sound": "electro/drum_beat_cowbell"
-                  },
-                  "next": {
-                    "block": {
-                      "type": "play_sound_at_current_location_simple2",
-                      "extraState": {
-                        "disableNextConnection": false
-                      },
-                      "fields": {
-                        "sound": "electro/synth_wiggle"
-                      },
-                      "next": {
-                        "block": {
-                          "type": "play_sound_at_current_location_simple2",
-                          "extraState": {
-                            "disableNextConnection": false
-                          },
-                          "fields": {
-                            "sound": "electro/crackle"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "repeat_simple2",
-            "id": "repeat_simple2",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "fields": {
-              "times": 3
-            },
-            "inputs": {
-              "code": {
-                "block": {
-                  "type": "play_sound_at_current_location_simple2",
-                  "extraState": {
-                    "disableNextConnection": false
-                  },
-                  "fields": {
-                    "sound": "electro/drum_beat_cowbell"
-                  }
-                }
-              }
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "play_sounds_together",
-            "id": "play_sounds_together",
-            "extraState": {
-              "disableNextConnection": false
-            },
-            "inputs": {
-              "code": {
-                "block": {
-                  "type": "play_sound_at_current_location_simple2",
-                  "extraState": {
-                    "disableNextConnection": false
-                  },
-                  "fields": {
-                    "sound": "electro/drum_beat_cowbell"
-                  },
-                  "next": {
-                    "block": {
-                      "type": "play_sound_at_current_location_simple2",
-                      "extraState": {
-                        "disableNextConnection": false
-                      },
-                      "fields": {
-                        "sound": "electro/synth_wiggle"
-                      },
-                      "next": {
-                        "block": {
-                          "type": "play_sound_at_current_location_simple2",
-                          "extraState": {
-                            "disableNextConnection": false
-                          },
-                          "fields": {
-                            "sound": "electro/crackle"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "enabled": true
-          }
-        ],
-        "kind": "flyoutToolbox"
       },
       "allowChangeStartingPlayheadPosition": true
     },
@@ -173,7 +41,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:39.487+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-make\\\"\"],\"cloned_from\":\"music-coding-intro-make\"},{\"changed_at\":\"2025-04-10 15:59:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 16:00:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 16:04:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 17:36:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:47:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:59:20 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:39.487+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-make\\\"\"],\"cloned_from\":\"music-coding-intro-make\"},{\"changed_at\":\"2025-04-10 15:59:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 16:00:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 16:04:00 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 17:36:22 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:47:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-11 21:59:20 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 16:15:31 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

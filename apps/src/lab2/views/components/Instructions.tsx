@@ -35,6 +35,8 @@ interface InstructionsProps {
   manageNavigation?: boolean;
   /** Optional classname for the container */
   className?: string;
+  /** Optional component to render at the bottom of the main instructions. */
+  bottomComponent?: React.ReactNode;
 }
 
 /**
@@ -50,6 +52,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
   manageNavigation = true,
+  bottomComponent,
 }) => {
   const instructionsText = useAppSelector(
     state => state.lab.levelProperties?.longInstructions
@@ -105,6 +108,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       hasNextLevel={hasNextLevel}
       useSecondaryFinishButton={useSecondaryFinishButton}
       onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
+      bottomComponent={bottomComponent}
     />
   );
 };
@@ -135,6 +139,7 @@ interface InstructionsPanelProps {
   hasNextLevel: boolean;
   useSecondaryFinishButton: boolean;
   onContinueOrFinish: () => void;
+  bottomComponent?: React.ReactNode;
 }
 
 /**
@@ -163,6 +168,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   hasNextLevel,
   useSecondaryFinishButton,
   onContinueOrFinish,
+  bottomComponent,
 }) => {
   const vertical = layout === 'vertical';
 
@@ -231,7 +237,9 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
-            {offerBrowserTts && <TextToSpeech text={text} />}
+            {offerBrowserTts && (
+              <TextToSpeech text={text} higherPosition={!!bottomComponent} />
+            )}
             <div
               id="instructions-text-content"
               className={moduleStyles.textContent}
@@ -254,6 +262,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   </div>
                 </InstructorsOnly>
               )}
+              {bottomComponent && <div>{bottomComponent}</div>}
             </div>
           </div>
         )}

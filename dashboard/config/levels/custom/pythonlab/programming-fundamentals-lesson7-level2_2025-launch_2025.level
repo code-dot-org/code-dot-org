@@ -1,0 +1,38 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-04-14T23:13:40.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're building an app that automatically sends personalized text messages. But something's not working! The app crashes when it tries to run the code.\r\n\r\n1. Look at the fnction `send_text(name)`. This function is supposed to print a message to someone by name.\r\n\r\n2. Try running the code. Notice the error that appears.\r\n\r\n3. Figure out what's wrong with the function call and fix it so the message sends correctly.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nIf your function uses a parameter in the definition, check that you're giving it everything it needs when you call it.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_2025",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def send_text(name):\n  print(\"Hey \" + name + \", you have a new message!\")\n\nsend_text()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzgo6kB7zTrrH+Xh2S1yyZudsAusft802\nImNlRhI8O7JLx0D1WSHZSTPS1dqr5raQmRxGID3bL1efdBtiF/pOsVfamQod\naK7h5+5Pnyr//35EEsLRErGSIEWxYgsY0KbbdQYov0scMsHinbNgLQKHOGs9\nGH66HGHJd9rZfQh9NyMk9P1QKzDueVKdX9lQDMO1bPfHklgy2Kh4Ls9P/Hbc\nW/GzryAFM/WuOZakHQ2TcKKi\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:40.089+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level2_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level2_2025-launch\"},{\"changed_at\":\"2025-04-15 21:15:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 21:15:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 21:15:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

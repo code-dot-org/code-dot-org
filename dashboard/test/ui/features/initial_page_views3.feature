@@ -19,6 +19,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 3
       | http://code.org/                                                  | code.org homepage          |
       | https://studio.code.org/s/allthethings/lessons/13/levels/1?noautoplay=true | embedded blocks     |
 
+  @properties_encryption_key
   Scenario Outline: Logged out simple page view without instructions dialog
     Given I am on "http://studio.code.org/"
     When I open my eyes to test "<test_name>"

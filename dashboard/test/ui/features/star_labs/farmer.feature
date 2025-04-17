@@ -15,10 +15,7 @@ Scenario: Loading the first level
   Then there's 1 dirt at (4, 4)
 
 Scenario: Winning the first level
-  And I drag block "moveForward" to block "topBlock"
-  And I drag block "moveForward" to block "topBlock"
-  And I drag block "moveForward" to block "topBlock"
-  And I drag block "remove" to block "startBlock"
+  And I've initialized the workspace with winning farmer blocks
   And there's 1 dirt at (4, 4)
   Then I press "runButton"
   And element "#resetButton" is visible
@@ -30,7 +27,7 @@ Scenario: Winning the first level
 
 @no_mobile
 Scenario: Losing the first level
-  When I drag block "moveForward" to block "startBlock"
+  When I've initialized the workspace with losing farmer blocks
   And I press "runButton"
   And element "#resetButton" is visible
   Then I wait until element ".uitest-topInstructions-inline-feedback" is visible

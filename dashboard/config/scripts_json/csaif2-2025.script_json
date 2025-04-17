@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-12 14:41:19 UTC",
+    "serialized_at": "2025-04-14 15:37:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2058,17 +2058,6 @@
       }
     },
     {
-      "key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706",
-      "position": 5,
-      "properties": {
-        "progression_name": "Painter Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706",
-        "lesson_activity.key": "8a4a79ac-ca8f-479a-857c-5bd885783dcf"
-      }
-    },
-    {
       "key": "71bb069e-41f6-4c0a-834d-f577c6688ced",
       "position": 1,
       "properties": {
@@ -3843,6 +3832,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson4-vocab_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4040,6 +4032,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level6_2025-launch"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4137,6 +4132,28 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "progression": "Moving and Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-vocab_2025"
+        ],
+        "lesson.key": "Working with Objects",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "03ef816d-3618-49c9-8fa6-e44dd3da6dfd"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson5-vocab_2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
         "level_keys": [
           "programming-fundamentals-lesson5-level10_2025-launch"
         ],
@@ -4157,79 +4174,7 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Painter Challenges"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson5-vocab_2025"
-        ],
-        "lesson.key": "Working with Objects",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif2-2025",
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson5-vocab_2025"
-      ]
-    },
-    {
       "chapter": 37,
-      "position": 12,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson5-level11_2025-launch"
-        ],
-        "progression": "Painter Challenges"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson5-level11_2025-launch"
-        ],
-        "lesson.key": "Working with Objects",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif2-2025",
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson5-level11_2025-launch"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 13,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson5-level12_2025-launch"
-        ],
-        "progression": "Painter Challenges"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson5-level12_2025-launch"
-        ],
-        "lesson.key": "Working with Objects",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif2-2025",
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson5-level12_2025-launch"
-      ]
-    },
-    {
-      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4254,7 +4199,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4279,7 +4224,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4304,7 +4249,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4329,7 +4274,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4354,7 +4299,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -4379,11 +4324,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-vocab_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4401,11 +4349,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-level7_2025-launch"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4423,7 +4374,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4448,7 +4399,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -4473,7 +4424,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -4498,7 +4449,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 12,
       "activity_section_position": 4,
       "assessment": true,
@@ -4523,7 +4474,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4548,7 +4499,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4573,7 +4524,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4598,7 +4549,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4623,7 +4574,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4648,7 +4599,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 54,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -4673,7 +4624,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 55,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -4698,11 +4649,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 56,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-vocab_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4720,11 +4674,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 57,
       "position": 9,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level8_2025-launch"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4742,7 +4699,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 58,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4767,7 +4724,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 59,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -4792,7 +4749,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 60,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -4817,7 +4774,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 61,
       "position": 13,
       "activity_section_position": 4,
       "assessment": true,
@@ -4842,7 +4799,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4867,7 +4824,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4892,7 +4849,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4917,7 +4874,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4942,7 +4899,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4967,11 +4924,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 67,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-vocab_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4989,11 +4949,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 68,
       "position": 7,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level6_2025-launch"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5011,7 +4974,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 69,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5036,7 +4999,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 70,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -5061,7 +5024,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 71,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -5086,7 +5049,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 72,
       "position": 11,
       "activity_section_position": 4,
       "assessment": true,
@@ -5111,7 +5074,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5136,7 +5099,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5161,7 +5124,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 75,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5186,7 +5149,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 76,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5211,7 +5174,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 77,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5236,7 +5199,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 78,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -5261,11 +5224,14 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 79,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-vocab_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5283,11 +5249,14 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 80,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level7_2025-launch"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5305,7 +5274,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 81,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5330,7 +5299,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 82,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -5355,7 +5324,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 83,
       "position": 11,
       "activity_section_position": 3,
       "assessment": true,
@@ -5380,7 +5349,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5405,7 +5374,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5430,7 +5399,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5455,7 +5424,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5480,7 +5449,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5505,7 +5474,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5530,11 +5499,14 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 90,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-vocab_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5552,11 +5524,14 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 91,
       "position": 7,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level6_2025-launch"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5574,7 +5549,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 92,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5599,7 +5574,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 93,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -5624,7 +5599,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 94,
       "position": 10,
       "activity_section_position": 3,
       "assessment": true,
@@ -5649,7 +5624,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5674,7 +5649,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5699,7 +5674,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5724,7 +5699,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5749,7 +5724,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5774,7 +5749,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5799,7 +5774,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 101,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5824,7 +5799,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 102,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5849,7 +5824,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 103,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5874,7 +5849,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 104,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5899,7 +5874,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 105,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5924,7 +5899,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 106,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5949,7 +5924,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 107,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5974,7 +5949,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 108,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -5999,7 +5974,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 109,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6024,7 +5999,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 110,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -6049,7 +6024,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6074,7 +6049,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 112,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6099,7 +6074,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 113,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6124,7 +6099,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 114,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6149,7 +6124,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 115,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6174,7 +6149,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 116,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6199,7 +6174,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 117,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -6224,7 +6199,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 118,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -6249,7 +6224,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 119,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6274,7 +6249,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 120,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6299,7 +6274,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 121,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6324,7 +6299,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 122,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6349,7 +6324,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 123,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6374,7 +6349,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 124,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6399,7 +6374,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 125,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6424,7 +6399,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 126,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -6449,7 +6424,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 127,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6474,7 +6449,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 128,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -6499,7 +6474,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 129,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6524,7 +6499,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 130,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6549,7 +6524,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 131,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6574,7 +6549,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 132,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6599,7 +6574,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 133,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6624,7 +6599,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 134,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6649,7 +6624,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 135,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6674,7 +6649,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 136,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -6699,7 +6674,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 137,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6724,7 +6699,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6749,7 +6724,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 139,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6774,7 +6749,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 140,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6799,7 +6774,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 141,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6824,7 +6799,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 142,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6849,7 +6824,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 143,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6874,7 +6849,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 144,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7310,9 +7285,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson5-level10_2025-launch",
+        "level.key": "programming-fundamentals-lesson5-vocab_2025",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson5-level10_2025-launch"
+          "programming-fundamentals-lesson5-vocab_2025"
         ],
         "lesson.key": "Working with Objects",
         "lesson_group.key": "lessonGroup-3",
@@ -7322,38 +7297,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson5-vocab_2025",
+        "level.key": "programming-fundamentals-lesson5-level10_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson5-vocab_2025"
+          "programming-fundamentals-lesson5-level10_2025-launch"
         ],
         "lesson.key": "Working with Objects",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "programming-fundamentals-lesson5-level11_2025-launch",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson5-level11_2025-launch"
-        ],
-        "lesson.key": "Working with Objects",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif2-2025",
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "programming-fundamentals-lesson5-level12_2025-launch",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson5-level12_2025-launch"
-        ],
-        "lesson.key": "Working with Objects",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif2-2025",
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706"
+        "activity_section.key": "03ef816d-3618-49c9-8fa6-e44dd3da6dfd"
       }
     },
     {

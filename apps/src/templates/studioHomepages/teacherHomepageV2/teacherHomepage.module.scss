@@ -39,6 +39,10 @@
   gap: 6px;
 }
 
+.feedbackAlert {
+  margin-bottom: 20px;
+}
+
 // SectionList
 .sectionList {
   display: flex;
@@ -69,6 +73,8 @@
 
 .sectionCardHeaderLeft {
   display: flex;
+  flex: 1;
+  min-width: 0;
 
   button {
     margin-inline-end: 6px;
@@ -83,7 +89,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: calc(100% - 32px);
+  min-width: 0;
+  flex: 1;
 
   h5 {
     height: 28px;
@@ -91,26 +98,12 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width: 720px;
-    width: 100%;
-  }
-
-  p {
-    height: 22px;
-    margin-bottom: 0;
-
-    p {
-      margin: 0;
-    }
-
-    a {
-      color: var(--brand-teal-50);
-    }
   }
 }
 
 .sectionCardHeaderRight {
   display: flex;
+  margin-inline-start: 6px;
 }
 
 // SectionOptionsDropdown
@@ -126,20 +119,27 @@
   flex-direction: row;
   gap: 16px;
   justify-content: space-between;
+
+  a:hover {
+    text-decoration: none;
+    background-color: var(--neutral-gray-10);
+  }
 }
 
 .sectionCardBodyLeft {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .sectionCardBodyRight {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
   gap: 16px;
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
 .studentsAddedAlert {
@@ -152,7 +152,6 @@
   align-items: center;
   justify-content: space-between;
   margin: 0;
-  width: 100%;
   border-radius: 4px;
   background-color: var(--sentiment-success-10);
 }
@@ -168,12 +167,12 @@
   flex-direction: row;
   background-color: var(--neutral-base-white);
   gap: 8px;
-  height: 40px;
+  height: 38px;
   padding: 0 12px;
   align-items: center;
   justify-content: space-between;
   margin: 0;
-  width: 100%;
+  border-radius: 4px;
 }
 
 .taskButtonLeft {
@@ -205,8 +204,8 @@
   border: 1px solid var(--neutral-gray-20);
   border-radius: 4px;
   padding: 12px;
-  width: 100%;
   gap: 8px;
+  height: 100%;
 
   p {
     margin: 0;
@@ -229,12 +228,11 @@
   display: flex;
   flex-direction: row;
   gap: 8px;
-  height: 40px;
+  height: 38px;
   padding: 0 12px;
   align-items: center;
   justify-content: space-between;
   margin: 0;
-  width: 100%;
   border: 1px dashed var(--brand-purple-50);
   border-radius: 4px;
   background-color: var(--neutral-gray-5);

@@ -61,17 +61,27 @@ const NeighborhoodPreview: React.FunctionComponent<
   }, [throttledScaleNeighborhood, handleScaling]);
 
   const neighborhood = useMemo(() => {
+    // We can't store consoleManager in a variable for reuse because
+    // it may not exist on neighborhood creation.
+    const onOutputMessage = (message: string) =>
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeConsoleMessage(message);
+    const onNewlineMessage = () =>
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writeConsoleMessage('');
+    const onPartialLineMessage = (message: string) =>
+      CodebridgeRegistry.getInstance()
+        .getConsoleManager()
+        ?.writePartialLine(message);
+
     const neighborhoodRef = new Neighborhood(
-      message =>
-        CodebridgeRegistry.getInstance()
-          .getConsoleManager()
-          ?.writeConsoleMessage(message),
-      () =>
-        CodebridgeRegistry.getInstance()
-          .getConsoleManager()
-          ?.writeConsoleMessage(''),
+      onOutputMessage,
+      onNewlineMessage,
       isRunning => dispatch(setIsRunning(isRunning)),
-      '[PYTHON LAB]'
+      '[PYTHON LAB]',
+      onPartialLineMessage
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);
     return neighborhoodRef;
