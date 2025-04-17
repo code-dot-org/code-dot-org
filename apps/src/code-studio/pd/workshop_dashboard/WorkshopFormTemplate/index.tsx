@@ -121,10 +121,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       });
       dispatchSessions({
         type: 'SET_SESSIONS',
-        payload: sessionDataToState(
-          workshop.sessions,
-          workshop.time_zone ?? userTimeZone
-        ),
+        payload: sessionDataToState(workshop.sessions, workshop.time_zone),
       });
       setWorkshopConfig(
         (WorkshopCourseConfigs as WorkshopCourseConfig[]).find(

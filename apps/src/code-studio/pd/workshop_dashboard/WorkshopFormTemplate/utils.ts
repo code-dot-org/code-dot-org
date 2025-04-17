@@ -34,18 +34,27 @@ export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
   suppressEmail: data.suppress_email ?? false,
   courseOfferings: data.course_offerings?.map(n => n.toString()) ?? [],
   participantGroupType: data.participant_group_type ?? '',
-  timeZone: data.time_zone ?? Intl.DateTimeFormat().resolvedOptions().timeZone,
+  timeZone: data.time_zone ?? '',
 });
 
 export const sessionDataToState = (
   data: Session[],
-  timeZone: string
+  timeZone: Workshop['time_zone']
 ): SessionFormState[] =>
   data.map(session => ({
     id: session.id.toString(),
-    date: moment(session.start).tz(timeZone).format(DATE_FORMAT),
-    start: moment(session.start).tz(timeZone).format(TIME_FORMAT),
-    end: moment(session.end).tz(timeZone).format(TIME_FORMAT),
+    date: moment
+      .utc(session.start)
+      .tz(timeZone || 'UTC')
+      .format(DATE_FORMAT),
+    start: moment
+      .utc(session.start)
+      .tz(timeZone || 'UTC')
+      .format(TIME_FORMAT),
+    end: moment
+      .utc(session.end)
+      .tz(timeZone || 'UTC')
+      .format(TIME_FORMAT),
     locationAddress: session.location_address ?? '',
     locationName: session.location_name ?? '',
     meetingLink: session.meeting_link ?? '',
@@ -101,11 +110,19 @@ export const sessionStateToApi = (
       id: session.id.startsWith('new') ? undefined : Number(session.id),
       session_format: session.format,
       start: moment
-        .tz(`${session.date} ${session.start}`, DATETIME_FORMAT, timeZone)
+        .tz(
+          `${session.date} ${session.start}`,
+          DATETIME_FORMAT,
+          timeZone || 'UTC'
+        )
         .utc()
         .toISOString(),
       end: moment
-        .tz(`${session.date} ${session.end}`, DATETIME_FORMAT, timeZone)
+        .tz(
+          `${session.date} ${session.end}`,
+          DATETIME_FORMAT,
+          timeZone || 'UTC'
+        )
         .utc()
         .toISOString(),
       location_address:

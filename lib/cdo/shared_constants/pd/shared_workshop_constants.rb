@@ -429,7 +429,7 @@ module Pd
       time_zone: {
         required: false,
         stateKey: 'timeZone',
-        label: 'Workshop time(s) will be set to your timezone:'
+        label: 'Workshop time(s) will be set to timezone:'
       },
     }
 

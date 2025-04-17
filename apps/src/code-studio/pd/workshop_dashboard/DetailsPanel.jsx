@@ -46,11 +46,11 @@ export default class DetailsPanel extends React.Component {
   };
 
   get timeZone() {
-    return (
-      Intl.DateTimeFormat().resolvedOptions().timeZone ||
-      this.props.workshop?.time_zone ||
-      'UTC'
-    );
+    // if the workshop has a time zone, render the times in the user's local time zone
+    // otherwise, render in UTC
+    return this.props.workshop?.time_zone
+      ? Intl.DateTimeFormat().resolvedOptions().timeZone
+      : 'UTC';
   }
 
   getToday = () => {
