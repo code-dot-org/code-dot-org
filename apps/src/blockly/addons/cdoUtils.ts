@@ -860,7 +860,7 @@ export function getCategoryBlocksJson(category: string) {
       newName = newName.substring(11);
     } else {
       console.log(
-        'Global variable translation does not have the [variable] tag',
+        'Global variable translation does not have the [variable] tag (category block variable)',
         oldName,
         newName
       );

@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import Localization from '@cdo/apps/localization';
+
 import LessonProgress from '../progress/LessonProgress';
 
 import HeaderFinish from './HeaderFinish';
@@ -51,6 +53,9 @@ class HeaderMiddle extends React.Component {
     this.updateLayoutListener = _.throttle(this.updateLayout, 200);
     window.addEventListener('resize', this.updateLayoutListener);
     window.addEventListener('scroll', this.updateLayoutListener);
+
+    // Ensure that we redraw when the locale changes
+    Localization.on('change', this.updateLayoutListener);
   }
 
   getWidth() {
