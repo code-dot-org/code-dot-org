@@ -71,26 +71,39 @@ describe('Design System - Icon Dropdown Component', () => {
       <TestIconDropdown labelText="Dropdown2 label" onChange={spyOnChange} />,
     );
 
+    // Open the dropdown
     const label = screen.getByText('Dropdown2 label');
     await user.click(label);
 
+    // Verify options are visible
     const option1 = screen.getByText('option1');
     const option2 = screen.getByText('option2');
-
     expect(option1).toBeInTheDocument();
     expect(option2).toBeInTheDocument();
 
     // Select the first option
     await user.click(option1);
-
     expect(spyOnChange).toHaveBeenCalledTimes(1);
     expect(spyOnChange).toHaveBeenCalledWith(allOptions[0]);
 
-    // Select the second option
-    await user.click(option2);
+    // Verify the dropdown closes
+    expect(option1).not.toBeInTheDocument();
+    expect(option2).not.toBeInTheDocument();
 
+    // Reopen the dropdown
+    await user.click(label);
+
+    // Verify options are visible again
+    const option2Reopened = await screen.findByText('option2');
+    expect(option2Reopened).toBeInTheDocument();
+
+    // Select the second option
+    await user.click(option2Reopened);
     expect(spyOnChange).toHaveBeenCalledTimes(2);
     expect(spyOnChange).toHaveBeenCalledWith(allOptions[1]);
+
+    // Verify the dropdown closes again
+    expect(option2Reopened).not.toBeInTheDocument();
   });
 
   it("doesn't render options when dropdown is disabled", async () => {

@@ -77,11 +77,12 @@ describe('Design System - Action Dropdown Component', () => {
     await user.click(triggerButton);
 
     const option1 = screen.getByText('option1');
-    const option2 = screen.getByText('option2');
 
     await user.click(option1);
     expect(allOptions[0].onClick).toHaveBeenCalledTimes(1);
 
+    await user.click(triggerButton);
+    const option2 = screen.getByText('option2');
     await user.click(option2);
     expect(allOptions[1].onClick).toHaveBeenCalledTimes(1);
   });
