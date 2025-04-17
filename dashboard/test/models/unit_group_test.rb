@@ -277,6 +277,65 @@ class UnitGroupTest < ActiveSupport::TestCase
     refute unit_group.stable?
   end
 
+  class UpdateOriginalScriptsTests < ActiveSupport::TestCase
+    setup do
+      File.stubs(:write)
+    end
+
+    test "update original scripts" do
+      unit_group = create :unit_group
+
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_original_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert_equal 2, unit_group.original_units.length
+      assert_equal unit_group, unit1.original_unit_group
+      assert_equal unit_group, unit2.original_unit_group
+    end
+
+    test "cannot remove original scripts" do
+      unit_group = create :unit_group
+
+      create(:script, name: 'unit1')
+      create(:script, name: 'unit2')
+
+      unit_group.update_original_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+
+      assert_equal 2, unit_group.original_units.length
+
+      error = assert_raises RuntimeError do
+        unit_group.update_original_scripts(['unit1'])
+      end
+      assert_includes error.message, 'Cannot remove units from their original unit group'
+    end
+
+    test "cannot add original scripts that already have an original unit group" do
+      unit_group1 = create :unit_group
+
+      create(:script, name: 'unit1')
+      create(:script, name: 'unit2')
+
+      unit_group1.update_original_scripts(['unit1', 'unit2'])
+      unit_group1.reload
+      assert_equal 2, unit_group1.original_units.length
+
+      unit_group2 = create :unit_group
+
+      error = assert_raises RuntimeError do
+        unit_group2.update_original_scripts(['unit1'])
+      end
+      assert_includes error.message, 'Cannot add original units if they already have an original unit group'
+    end
+  end
+
   class UpdateScriptsTests < ActiveSupport::TestCase
     setup do
       File.stubs(:write)

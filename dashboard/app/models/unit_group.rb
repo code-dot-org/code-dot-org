@@ -211,7 +211,7 @@ class UnitGroup < ApplicationRecord
     raise "Cannot add original units if they already have an original unit group: #{unaddable_unit_names}" if unaddable_unit_names.any?
 
     original_units_objects.each do |unit|
-      unit.update(original_unit_group_id: id, skip_name_format_validation: true)
+      unit.update!(original_unit_group_id: id, skip_name_format_validation: true)
       unit.reload
     end
   end
