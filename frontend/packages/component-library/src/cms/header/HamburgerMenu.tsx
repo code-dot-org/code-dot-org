@@ -94,9 +94,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
               ({key, href, hasDisplayLogic, label, ...link}) => (
                 <li
                   key={key}
-                  className={
-                    hasDisplayLogic ? moduleStyles.hasDisplayLogic : ''
-                  }
+                  className={hasDisplayLogic && moduleStyles.hasDisplayLogic}
                 >
                   <a href={href} {...link}>
                     {label}
