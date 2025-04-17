@@ -35,14 +35,16 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const consoleManagerRef = useRef<ConsoleManager | null>(null);
   const [hasConsoleOutput, setHasConsoleOutput] = useState(false);
+  const isClearButtonDisabled = isRunning || !hasConsoleOutput;
 
   useEffect(() => {
     consoleManagerRef.current = consoleManager;
   }, [consoleManager]);
 
-  const isClearButtonDisabled = isRunning || !hasConsoleOutput;
   useEffect(() => {
-    if (!consoleManager) return;
+    if (!consoleManager) {
+      return;
+    }
 
     setHasConsoleOutput(consoleManager.getTerminalLines().length > 0);
 
