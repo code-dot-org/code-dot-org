@@ -23,6 +23,7 @@ type FilesComponentProps = {
   parentId?: FolderId;
   setFileType: setFileType;
   appName?: string;
+  isParentBeingDroppedOver?: boolean;
 };
 
 /**
@@ -30,7 +31,14 @@ type FilesComponentProps = {
  * (there is an implicit root folder with a default parentId).
  */
 const InnerFileBrowser = React.memo(
-  ({parentId, folders, files, setFileType, appName}: FilesComponentProps) => {
+  ({
+    parentId,
+    folders,
+    files,
+    setFileType,
+    appName,
+    isParentBeingDroppedOver,
+  }: FilesComponentProps) => {
     const {dragData, dropData} = useDndDataContext();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -41,18 +49,21 @@ const InnerFileBrowser = React.memo(
 
     return (
       <>
+        {isParentBeingDroppedOver && <div className={moduleStyles.row} />}
         {Object.values(folders)
           .filter(f => f.parentId === parentId)
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => {
             const MaybeDraggable = isReadOnly ? NotDraggable : Draggable;
+            const isBeingDroppedOver = f.id === dropData?.id;
+            const isOpen = f.open || isBeingDroppedOver;
             return (
               <Droppable
                 data={{id: f.id}}
                 key={f.id + f.open}
                 Component="div"
                 className={classNames(moduleStyles.droppableArea, {
-                  [moduleStyles.acceptingDrop]: f.id === dropData?.id,
+                  [moduleStyles.acceptingDrop]: isBeingDroppedOver,
                 })}
               >
                 <MaybeDraggable
@@ -62,7 +73,7 @@ const InnerFileBrowser = React.memo(
                     item={f}
                     enableMenu={!isReadOnly && !dragData?.id}
                   />
-                  {f.open && (
+                  {isOpen && (
                     <div className={moduleStyles.folder}>
                       <InnerFileBrowser
                         folders={folders}
@@ -70,6 +81,7 @@ const InnerFileBrowser = React.memo(
                         files={files}
                         setFileType={setFileType}
                         appName={appName}
+                        isParentBeingDroppedOver={isBeingDroppedOver}
                       />
                     </div>
                   )}

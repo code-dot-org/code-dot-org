@@ -5,9 +5,8 @@ import {
   CollisionDetection,
   rectIntersection,
 } from '@dnd-kit/core';
-import {RectMap} from '@dnd-kit/core/dist/store';
 
-const FOLDER_DROP_OFFSET = 8;
+const FOLDER_DROP_OFFSET = 12;
 
 export const fileBrowserKeyboardCoordinateGetter: KeyboardCoordinateGetter = (
   event,
@@ -70,19 +69,39 @@ export const fileBrowserCollisionDetector: CollisionDetection = args => {
   if (rectangleCollisions.length <= 1) {
     return rectangleCollisions;
   }
-  return rectangleCollisions;
-  // const {droppableRects} = args;
-  // // If the item is over multiple files/folders, we should pick the one
-  // // that is closest to the top of the screen.
-  // rectangleCollisions.sort((a, b) => {
-  //   // DEFAULT_FOLDER_ID should always be last in the list, because it is the root folder
-  //   // and contains all other folders.
-  //   if (a.id === DEFAULT_FOLDER_ID) {
-  //     return 1;
-  //   } else if (b.id === DEFAULT_FOLDER_ID) {
-  //     return -1;
-  //   }
-  // });
+  const {droppableRects, active} = args;
+  rectangleCollisions.sort((a, b) => {
+    // DEFAULT_FOLDER_ID should always be last in the list, because it is the root folder
+    // and contains all other folders.
+    if (a.id === DEFAULT_FOLDER_ID) {
+      return 1;
+    } else if (b.id === DEFAULT_FOLDER_ID) {
+      return -1;
+    }
+    const activeRect = droppableRects.get(active.id);
+    const aRect = droppableRects.get(a.id);
+    const bRect = droppableRects.get(b.id);
+    // idk why this would happen
+    if (!activeRect || !aRect || !bRect) {
+      return 0;
+    }
+    // If active is below the top of both rects, pick the one that is lower
+    if (aRect.top >= activeRect.bottom && bRect.top >= activeRect.bottom) {
+      return bRect.top - aRect.top;
+    } else if (
+      aRect.top >= activeRect.bottom &&
+      bRect.top < activeRect.bottom
+    ) {
+      // If active is only below the top of aRect, bRect is higher priority
+      return -1;
+    } else if (bRect.top >= activeRect.bottom) {
+      // If only bRect is above active, bRect is higher priority
+      return 1;
+    } else {
+      // active is above both rects--pick the higher one
+      return aRect.top - bRect.top;
+    }
+  });
 
-  // return [rectangleCollisions[0]];
+  return [rectangleCollisions[0]];
 };
