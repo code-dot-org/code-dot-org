@@ -108,6 +108,14 @@
       "import": "./dist/esm/closeButton/index.mjs",
       "require": "./dist/cjs/closeButton/index.js"
     },
+    "./cms/editorialCard": {
+      "types": {
+        "import": "./dist/esm/cms/editorialCard/index.d.ts",
+        "require": "./dist/cjs/cms/editorialCard/index.d.ts"
+      },
+      "import": "./dist/esm/cms/editorialCard/index.mjs",
+      "require": "./dist/cjs/cms/editorialCard/index.js"
+    },
     "./cms/footer": {
       "types": {
         "import": "./dist/esm/cms/footer/index.d.ts",
