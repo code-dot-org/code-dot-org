@@ -37,5 +37,6 @@ $$)
 TO 's3://cdo-data-sharing-internal/unloaded-teacher-evals/<%=output_dir%>/<%=unit_name%>_teacher_evals_'
 FORMAT JSON
 EXTENSION 'jsonl'
-IAM_ROLE 'arn:aws:iam::475661607190:role/redshift-s3';
+IAM_ROLE 'arn:aws:iam::475661607190:role/redshift-s3'
+PARALLEL OFF
 ;
