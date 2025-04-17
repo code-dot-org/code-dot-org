@@ -57,9 +57,22 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
     [panels]
   );
 
-  const addPanel = useCallback(() => {
-    setPanels([...panels, {text: '', imageUrl: '', key: createKey(levelName)}]);
-  }, [panels, levelName]);
+  const createNewPanel = useCallback(
+    () => ({
+      text: '',
+      imageUrl: '',
+      key: createKey(levelName),
+    }),
+    [levelName]
+  );
+
+  const prependPanel = useCallback(() => {
+    setPanels([createNewPanel(), ...panels]);
+  }, [panels, createNewPanel]);
+
+  const appendPanel = useCallback(() => {
+    setPanels([...panels, createNewPanel()]);
+  }, [panels, createNewPanel]);
 
   const movePanel = useCallback(
     (key: string, direction: 'up' | 'down') => {
@@ -132,6 +145,17 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
           />
         </div>
       </div>
+      {panels.length > 0 && (
+        <div className={moduleStyles.addButtonContainer}>
+          <Button
+            type="button"
+            onClick={prependPanel}
+            text="Add Panel"
+            color="gray"
+            icon="plus"
+          />
+        </div>
+      )}
       <div className={moduleStyles.panelEditors}>
         {panels.map((panel, index) => (
           <EditPanel
@@ -148,7 +172,7 @@ const EditPanels: React.FunctionComponent<EditPanelsProps> = ({
       <div className={moduleStyles.addButtonContainer}>
         <Button
           type="button"
-          onClick={addPanel}
+          onClick={appendPanel}
           text="Add Panel"
           color="gray"
           icon="plus"

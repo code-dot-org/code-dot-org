@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-04-15T18:00:27.000Z",
   "level_num": "custom",
@@ -37,7 +38,7 @@
       "validationEnabled": false
     },
     "project_template_level_name": "test-music-lab-loops-sythesize-skill-template",
-    "long_instructions": "### Getting started with a backtrack\r\n\r\nA backtrack is a pre-made audio track that plays during a live performance to add extra layers of sound. It supports the live musician by providing a beat, harmony, or atmosphere while they perform and add new elements in real-time.\r\n\r\n**Do this:** \r\n- Create a simple backtrack with at least one drum and one bass sound played together. \r\n- Loop that backtrack so it plays for at least 30 measures. ",
+    "long_instructions": "##### **Teacher Note**: Let's get started with live coding! The next six levels will be linked together, so your work will be saved across levels. This is Lesson 8, level 4 in the curriculum.\r\n\r\n___\r\n\r\n### Getting started with a backtrack\r\n\r\nA backtrack is a pre-made audio track that plays during a live performance to add extra layers of sound. It supports the live musician by providing a beat, harmony, or atmosphere while they perform and add new elements in real-time.\r\n\r\n**Do this:** \r\n- Create a simple backtrack with at least one drum and one bass sound played together. \r\n- Loop that backtrack so it plays for at least 30 measures. ",
     "predict_settings": {
       "isPredictLevel": false
     },
@@ -101,8 +102,7 @@
     ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-15T18:00:27.378+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-15T18:00:27.378+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-1\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-1\"},{\"changed_at\":\"2025-04-17 02:04:45 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

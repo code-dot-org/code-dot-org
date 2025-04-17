@@ -2,6 +2,7 @@ name 'problem-solving-with-ai-lesson10-level4_2024'
 
 submittable 'false'
 anonymous 'false'
+activity_guide_level 'true'
 
 page
 text 'problem-solving-with-ai-lesson10-level4-text_2024'

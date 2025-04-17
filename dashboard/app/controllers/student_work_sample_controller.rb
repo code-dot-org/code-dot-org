@@ -114,7 +114,7 @@ class StudentWorkSampleController < ApplicationController
     code_samples = []
     have_enough_samples = false
     user_level_evaluations.shuffle.each do |ule|
-      unless have_enough_samples
+      unless have_enough_samples || ule.code_version.nil?
         student_code = get_student_code(ule.user_id, level, unit_id, ule.code_version)
         if student_code[:student_code]
           code_sample = {

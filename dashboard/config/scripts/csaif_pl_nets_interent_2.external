@@ -1,0 +1,32 @@
+name 'csaif_pl_nets_interent_2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sending Bits
+
+#### The Internet is a massive network of networks that allows computers around the world to communicate with each other. When information like websites, emails, or videos is sent across the Internet, it’s broken down into small pieces called packets. These packets travel through different paths in the network and are reassembled at their destination.
+
+#### All the data sent over the Internet is ultimately represented in **binary** — ones and zeros. This binary data is what makes up the packets and allows digital information to be stored, processed, and transmitted.
+
+<p align="center">
+<img src="https://images.code.org/10df7962c5b3ab87ca85db1c3f6534e6-Screenshot 2025-04-16 at 12.26.27 PM.png" alt="lesson plan diagram" width="70%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>TCP/IP</strong> a protocol that ensures that all parts of a message are received and ordered correctly.</p>
+</div>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> A common misconception is that the Internet is the same as the World Wide Web. The <i>Internet</i> is the physical and structural system behind online communication, while the <i>Web</i> is just one of many services that run on it.
+g.
+</p>
+</div>
+
+<br>
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Students explore bits in an unplugged activity. If you have time, check out the <a href='https://docs.google.com/document/d/1duJnaaklwB8OEnGcLeqxCFzZxSgARKcElcjekD8RQYk/edit?tab=t.0#heading=h.bfop92qafrad' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Teacher Guide</a> for this activity.
+</p>
+MARKDOWN
