@@ -18,12 +18,12 @@ markdown <<MARKDOWN
   <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
     <img src="https://images.code.org/da2dd5271ff04184bbf9cccbd0d2a26c-image-1744231978726.png" alt="" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
     <h4 style="text-align: center;"><b>Sequencing</b></h4>
-    <h4 style="text-align: center;">Lessons 2-5</h4>
+    <h4 style="text-align: center;">Lessons 2 - 5</h4>
   </div>
   <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
     <img src="https://images.code.org/c33ec7d74c1b0feaac4564126929c96a-image-1744231976974.png" alt="" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
     <h4 style="text-align: center;"><b>Loops</b></h4>
-    <h4 style="text-align: center;">Lessons 6-9</h4>
+    <h4 style="text-align: center;">Lessons 6 - 9</h4>
   </div>
   <div style="background: #B7E0E5; width: 23%; padding: 15px; box-sizing: border-box; border-radius: 5px">
     <img src="https://images.code.org/15cbf8c68b662b83b5b2f1d836da4cbd-image-1744231975051.png" alt="" style="width: 70px; height: 70px; display: block; margin: 0 auto 10px;">
@@ -66,7 +66,7 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">🎼 Project</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### The sequences and loops chunks end with a mini-project, while the functions chunk ends with an end-of-unit project.
+#### The sequencing and loops chunks end with a mini-project, while the functions chunk ends with an end-of-unit project.
 </div></details>
 
 ## Projects

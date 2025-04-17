@@ -6,7 +6,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "instructions",
+    "long_instructions": "## Do This:\r\n\r\nYou're helping a civic engagement nonprofit build a personalized text bot. It needs to send reminders to register that include both the person's name and their registration deadline.\r\n\r\n1. Add **two parameters** to the function: one for the name and one for the deadline.\r\n\r\n2. Update the message to say something like:\r\n\r\n   ```\r\n   Samira, your voter registration deadline is April 15!\r\n   ```\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nA **parameter** is a placeholder in the function definition. When you call the function, you pass in an argument that fills that placeholder.\r\n\r\nTo include a variable like a name in your message, you can combine strings using the `+` operator. Here's an example:\r\n\r\n```\r\nprint(\"Hi, \" + name + \"!\")\r\n```\r\n\r\nMake sure to include spaces **inside the quotes**, like `\"Hi, \"` and `\"!\"`, or the message will get squished together.",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,9 +14,28 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "display_name": "Registration Text Bot",
+    "bubble_choice_description": "You're helping a civic engagement nonprofit build a personalized text bot. It needs to send reminders to register that include both the person's name and their registration deadline.",
+    "thumbnail_url": "https://images.code.org/32fc1e1d48ad3b2c6c016ee44c6e583b-verify.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# TODO - Add name and deadline parameters\ndef send_registration_reminder():\n  # Prints a reminder message\n\n  # TODO - Update the print statement to use the parameters\n  print(\"Alex, don't forget to register to vote!\")\n\n# TODO - Call the function with a name and deadline\nsend_registration_reminder()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzv7BD9HGh4Qc5utzGY+z4wy3jI18XcFl\nbmRP6DVrRAL/vEhKF03v5hm1iVFM2PD3USxKN7sRThfPfeZIisBSjehB75Lt\n16nEUXKdJRDKty8w1zzcBzBBkOHwGolGKA4OnyLbajP3HZ2q/8t4l7iR61n3\nuY29EuH6iBRpwnHHR4I8aXxFYchuZljRWl0FK4eZD2/N+ilWY6dKJMK/AhD9\nk8Yp0HO6L6Q9jUfaR7f3S7wwuJVpCzNlMNCNYaG4CpxknCEKtOj/3s5JTQqj\nOxr1k4t1a8W9QO85GV6cii1Ewjtu3mOAbtIhRySixeVNMURw9MOByY2Y596Q\nqr0CcIWbnKOkVoAyQ/BTsYL1K2/RRAEONluVYuFxcfxR/5Enl6E0wGFPLu4c\nmUExfrYIbrMHaADG3TQlpK8rfWY8mBc5sxQezwouSATnbEnJY9LUFUTDPUds\nUojiilQheKYZKiEGneWQ1C8ohM7TO+rjweJsCzIUpHhRGd+Wf4ztg0j/L42P\n6eyQs9ZnzP9wU7o9spPoaFc/L+G/yM8mZNiFbHyXiYosTK7672QWGiiYQXZn\nM+V/9Q==\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:39.752+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level1d_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level1d_2025-launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:39.752+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level1d_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level1d_2025-launch\"},{\"changed_at\":\"2025-04-15 21:05:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 21:08:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 21:09:26 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

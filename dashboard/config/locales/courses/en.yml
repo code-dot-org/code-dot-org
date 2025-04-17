@@ -4306,7 +4306,7 @@ en:
             This self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features. Educators will learn how to set up their classrooms, navigate the platform’s resources, and implement Code.org’s beginner-friendly coding curriculum. The module combines instructional videos, interactive activities, and practical assignments to help teachers gain confidence in using Code.org effectively in their classrooms. Upon completing this module, teachers will have a pathway to start using Code.org with their students immediately.
           version_title: ''
         facilitator-access-csaif-2025:
-          title: Facilitator Early Access - CSAIF
+          title: Facilitator Early Access - AIF
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -4320,8 +4320,30 @@ en:
         self-paced-pl-csp-2025:
           title: Teaching CS Principles
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: |-
+            ## Welcome
+
+            ##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.
+
+            ###Find the learning that works for you
+
+            ##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
+
+            ### Pick your content
+
+            ##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started.
+          description_teacher: |-
+            ## Welcome
+
+            ##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.
+
+            ###Find the learning that works for you
+
+            ##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
+
+            ### Pick your content
+
+            ##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started.
           version_title: ''
         vpl-csa-2025:
           title: CSA Virtual Professional Learning '25-'26
@@ -5345,7 +5367,7 @@ en:
             * Become a part of a network of teachers who are doing similar work.
           version_title: ''
         faciliators-ea-pl-python-2025:
-          title: faciliators-ea-pl-python-2025
+          title: AIF - Programming Fundamentals PL - EARLY ACCESS
           description_short: ''
           description_student: ''
           description_teacher: ''

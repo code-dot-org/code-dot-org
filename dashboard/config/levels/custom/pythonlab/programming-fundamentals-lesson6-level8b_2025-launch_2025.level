@@ -6,7 +6,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "instructions",
+    "long_instructions": "## Do This:\r\n\r\nYou're a content creator working on a video intro. You always start your videos with the same catchphrase, but right now, the code repeats the line three times using copy/paste. Clean it up by putting your signature intro into a function so you can reuse it anywhere in your content.\r\n\r\n1. Look at the three repeated lines of code.\r\n\r\n2. Define a function called `intro_line()` that prints the catchphrase once.\r\n\r\n3. Replace the repeated code by calling your function three times.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nPay close attention to indentation, and use the UMPIRE strategy:\r\n\r\n* **U**nderstand: What message are you repeating?\r\n\r\n* **M**ake a plan: Which messages go in which function?\r\n\r\n* **P**roduce: Write and call both functions.\r\n\r\n* **I**nspect: Does it run as expected?\r\n\r\n* **E**xplain: How did using functions improve the code?",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,9 +14,28 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "display_name": "Video Intro Catchphrase",
+    "bubble_choice_description": "You're a content creator working on a video intro. You always start your videos with the same catchphrase, but right now, the code repeats the line three times using copy/paste. Clean it up by putting your signature intro into a function so you can reuse it anywhere in your content.",
+    "thumbnail_url": "https://images.code.org/18d9d93d51c6cf1ce8d17aa63a402e39-video.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# TODO - Write the intro_line() function that prints the catchphrase once\n\n\n\n\n\n# TODO - Replace the repeated code by calling your new function\nprint(\"🎬 What's up, everyone! Welcome back to the channel!\")\nprint(\"🎬 What's up, everyone! Welcome back to the channel!\")\nprint(\"🎬 What's up, everyone! Welcome back to the channel!\")\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzv1kLcEIUfbJp7v9slpkaO9gq6li9xyn\nPJLfJHgMGL3Q+W+0xwVde9/Xmz2di7KRUymOqax9Y1RTCES6CguMbxu3sD+f\n9SB+PczlarW1tLq4ecqbGNErecnyikZFCNCzSn4XY7brD20NdrsKu0s7ZkH5\nZC7GhGOEHQgixN0MuqQI79PwNRYKYWFqq/2kymPNzNwvjP/ZCRMC8G4PQ2+T\nTMZI9whappZ9KM8gzuLepOwwZVEhf2UJ2nBTCicXI4thDchT8qb0NdE8+N2P\nkEGDqogP6H2ghivXkinJK79ccmh5/NW69Xip/VRsqpouSus2mPrFpYkp8Aai\nuYvUSl2rV8McSjq7c+58Jmvv2jay4hoR89G81CUkdf/lwZdLFcoHMquRrato\njXa2u3Du0RGirkmEZ0FV4ngqX/BYj7/Ey42fZcvWAtFTKnWGUO5LoNGGqQ==\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:35.477+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level8b_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level8b_2025-launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:35.477+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level8b_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level8b_2025-launch\"},{\"changed_at\":\"2025-04-15 14:46:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:48:29 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:48:57 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

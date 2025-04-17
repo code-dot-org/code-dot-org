@@ -1,16 +1,12 @@
 PUZZLE_SOLUTIONS = {
   "http://studio.code.org/s/allthethings/lessons/2/levels/1" => %{
-    And I drag block "moveWest" to block "whenRun"
-    And I drag block "moveWest" to block "moveWest" plus offset 0, 20
+    And I've initialized the workspace with k1 maze blocks
   },
   "http://studio.code.org/s/allthethings/lessons/29/levels/1?level_name=2-3 Maze 1" => %{
-    And I drag block "moveForward" to block "whenRun"
-    And I drag block "moveForward" to block "moveForward"
+    And I've initialized the workspace with two move forward blocks
   },
   "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new" => %{
-    And I drag block "moveForward" to block "topBlock"
-    And I drag block "turnRight" to block "moveForward"
-    And I drag block "moveForward" to block "turnRight"
+    And I've initialized the workspace with winning artist blocks
   },
 }
 

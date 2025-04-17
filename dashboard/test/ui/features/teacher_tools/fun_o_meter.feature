@@ -5,7 +5,7 @@ Scenario: Rate a Puzzle
   Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/4?noautoplay=true"
   And I wait for the lab page to fully load
 
-  When I drag block "getNectar" to block "ifNectar" plus offset 35, 30
+  When I've initialized the workspace with bee conditional blocks
   And I press "runButton"
   And I wait to see ".congrats"
 

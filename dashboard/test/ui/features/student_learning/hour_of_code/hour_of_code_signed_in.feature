@@ -4,7 +4,7 @@ Feature: Hour of Code tests for users that are signed in
 Scenario:
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I wait for the lab page to fully load
-  And I drag block "moveForward" to block "startBlock"
+  And I've initialized the workspace with two move forward blocks
   And I press "runButton"
   Then I wait to see ".modal"
   And element ".modal .congrats" contains text "You completed Puzzle 1."

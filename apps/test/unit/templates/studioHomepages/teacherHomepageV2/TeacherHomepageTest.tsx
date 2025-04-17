@@ -27,6 +27,7 @@ import teacherSections, {
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
 
 const INITIAL_ROUTE = '/teacher_dashboard/home';
 
@@ -148,7 +149,9 @@ describe('TeacherHomepage', () => {
             createRoutesFromElements([
               <Route
                 path={TEACHER_NAVIGATION_PATHS.home}
-                element={<TeacherHomepage />}
+                element={
+                  <TeacherHomepage studioUrlPrefix="https://studio.code.org" />
+                }
               />,
             ]),
             {initialEntries: [INITIAL_ROUTE], basename: '/teacher_dashboard'}
@@ -260,5 +263,11 @@ describe('TeacherHomepage', () => {
     renderComponent();
     await act(async () => await new Promise(process.nextTick));
     screen.getByText('Accept');
+  });
+
+  it('renders feedback alert', async () => {
+    renderComponent();
+    await act(async () => await new Promise(process.nextTick));
+    screen.getByText(i18n.teacherHomePageFeedback());
   });
 });

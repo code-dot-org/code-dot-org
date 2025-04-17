@@ -1,7 +1,8 @@
-@import '@code-dot-org/component-library-styles/primitiveColors.scss';
-@import '@code-dot-org/component-library-styles/variables.scss';
-@import '@code-dot-org/component-library-styles/mixins.scss';
-@import '@code-dot-org/component-library-styles/typography.module.scss';
+@use '@code-dot-org/component-library-styles/primitiveColors.scss';
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 
 // Dropdown common styles
 .dropdownContainer {
@@ -13,7 +14,7 @@
   margin: 0;
 
   &.styleAsFormField {
-    width: $form-field-width;
+    width: variables.$form-field-width;
     text-wrap: nowrap;
     text-overflow: ellipsis;
 
@@ -157,16 +158,16 @@
 
   &:has(select.readOnly) {
     select {
-      @include field-read-only-black-colors;
+      @include mixins.field-read-only-black-colors;
     }
 
     .dropdownArrowDiv:after {
-      @include field-read-only-black-colors;
+      @include mixins.field-read-only-black-colors;
     }
 
     .helperSection,
     .errorSection {
-      @include field-read-only-black-colors;
+      @include mixins.field-read-only-black-colors;
     }
   }
 }
@@ -237,16 +238,16 @@
 
   &:has(select.readOnly) {
     select {
-      @include field-read-only-black-colors;
+      @include mixins.field-read-only-black-colors;
     }
 
     .dropdownArrowDiv:after {
-      @include field-read-only-black-colors;
+      @include mixins.field-read-only-black-colors;
     }
 
     .helperSection,
     .errorSection {
-      @include field-read-only-black-colors;
+      @include mixins.field-read-only-black-colors;
     }
   }
 }
@@ -311,16 +312,16 @@
 
   &:has(select.readOnly) {
     select {
-      @include field-read-only-white-colors;
+      @include mixins.field-read-only-white-colors;
     }
 
     .dropdownArrowDiv:after {
-      @include field-read-only-white-colors;
+      @include mixins.field-read-only-white-colors;
     }
 
     .helperSection,
     .errorSection {
-      @include field-read-only-white-colors;
+      @include mixins.field-read-only-white-colors;
     }
   }
 }
@@ -329,20 +330,20 @@
 .dropdownContainer-l {
   &.dropdownContainer-thick {
     select {
-      @include button-one-text;
+      @include mixins.button-one-text;
       margin-bottom: 0;
     }
   }
 
   &.dropdownContainer-thin {
     select {
-      @include body-one;
+      @include typography.body-one;
       margin-bottom: 0;
     }
   }
 
   .dropdownLabel {
-    @include label-one;
+    @include mixins.label-one;
     margin-bottom: 0;
   }
 
@@ -377,7 +378,7 @@
   }
 
   .helperSection {
-    @include body-two;
+    @include typography.body-two;
     margin-bottom: 0;
     gap: 0.375rem;
 
@@ -390,21 +391,21 @@
 .dropdownContainer-m {
   &.dropdownContainer-thick {
     select {
-      @include button-two-text;
+      @include mixins.button-two-text;
       margin-bottom: 0;
     }
   }
 
   &.dropdownContainer-thin {
     select {
-      @include body-two;
+      @include typography.body-two;
       color: inherit;
       margin-bottom: 0;
     }
   }
 
   .dropdownLabel {
-    @include label-two;
+    @include mixins.label-two;
     margin-bottom: 0;
   }
 
@@ -439,7 +440,7 @@
   }
 
   .helperSection {
-    @include body-three;
+    @include typography.body-three;
     margin-bottom: 0;
     gap: 0.375rem;
 
@@ -452,20 +453,20 @@
 .dropdownContainer-s {
   &.dropdownContainer-thick {
     select {
-      @include button-three-text;
+      @include mixins.button-three-text;
       margin-bottom: 0;
     }
   }
 
   &.dropdownContainer-thin {
     select {
-      @include body-three;
+      @include typography.body-three;
       margin-bottom: 0;
     }
   }
 
   .dropdownLabel {
-    @include label-three;
+    @include mixins.label-three;
     margin-bottom: 0;
   }
 
@@ -500,7 +501,7 @@
   }
 
   .helperSection {
-    @include body-four;
+    @include typography.body-four;
     margin-bottom: 0;
     gap: 0.25rem;
 
@@ -513,20 +514,20 @@
 .dropdownContainer-xs {
   &.dropdownContainer-thick {
     select {
-      @include button-four-text;
+      @include mixins.button-four-text;
       margin-bottom: 0;
     }
   }
 
   &.dropdownContainer-thin {
     select {
-      @include body-four;
+      @include typography.body-four;
       margin-bottom: 0;
     }
   }
 
   .dropdownLabel {
-    @include label-four;
+    @include mixins.label-four;
     margin-bottom: 0;
   }
 
@@ -561,7 +562,7 @@
   }
 
   .helperSection {
-    @include body-four;
+    @include typography.body-four;
     margin-bottom: 0;
     gap: 0.25rem;
 

@@ -23,7 +23,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "def morning_routine():\n    print(\"Get out of bed\")\n    # TODO - Add another step in your morning routine here\n\nmorning_routine()\n",
+          "contents": "def morning_routine():\n  # Prints a morning routine\n  print(\"Get out of bed\")\n  # TODO - Add another step in your morning routine here\n  \n\nmorning_routine()\n",
           "folderId": "0",
           "active": true,
           "open": true
@@ -32,10 +32,10 @@
       "folders": {
       }
     },
-    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzkCQvEJyy5uQYWfJ3zu9LzJzXIVZMFIX\nYeB9npp9+Q7g1cQcLWStLEN1kQprnMGb8l0pcOL21jNOBCZ05akjoa2AwM0/\nl2TopzFPwm3bRHB6uwln9DtPZMvIVjTmUmCFS1cYU/vbH69xP0J60TFEc4ip\nkMyGOljoKEUwoIMxPZxvrcF6YbErUT29NfpQqMTs4wDiuUzUGWHRJu0t4h5X\n1UrjV7RzApmOMVwGGZJX2G1r\n",
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzqSQYEK5CevEx/di3nZaU92HzVGAEePT\nfMlJY4QG07GRGqpeUYYStdeRJDc0qDga1oX8aJRkFhfz3hg6B9i/V5H00tEW\nqik7ZV1DlqrMLpabP2AWXqBYVgEcgqRQoilx6U3cDliLhmHwetEStqjJq+Ba\nlFqiYFP8xb/mc3xQ7S4t6TGHxBdcQM/LdVzisAYDPPiAX1RuhhWjQiZckhWx\nrY7SLA9daz9d79rjH5XW8DYRXAeTV87X6HMLxIoNkcH0RFpZoU+Bf5OnupH3\n/xIbZar2eXH5EUfEaK4CH+PysQFnWZutRb1BMwCegLHD8CKDcxyeQWj8d35/\ncXmREF7KtK4=\n",
     "thumbnail_url": "https://images.code.org/cfd38e34a6bdb0dfee2857fb276817da-alarm.png"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:32.212+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level5a_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level5a_2025-launch\"},{\"changed_at\":\"2025-04-15 02:51:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:16:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:17:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:17:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:37:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:32.212+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level5a_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level5a_2025-launch\"},{\"changed_at\":\"2025-04-15 02:51:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:16:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:17:16 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:17:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:37:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:43:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:43:39 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:46:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:46:46 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

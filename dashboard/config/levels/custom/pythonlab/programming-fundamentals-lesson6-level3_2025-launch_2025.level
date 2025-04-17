@@ -21,7 +21,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "def clap():\n    print(\"👏\")\n\n# TODO - Call the clap() function three times to give a round of applause!\n\n\n",
+          "contents": "def clap():\n  # Print a hand-clapping emoji\n  print(\"👏\")\n\n# TODO - Call the clap() function three times to give a round of applause!\n\n\n",
           "folderId": "0",
           "active": true,
           "open": true
@@ -30,9 +30,9 @@
       "folders": {
       }
     },
-    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzi7LppzFCcUndaLi7g0iTwVjRDcsGdjy\nEWprR4ssVerkYbzfsRQt37X2KUe3LLVjjruJnhO7+Dns1w4YOBr5fsGtkSNa\nRaydr9Kd45+kckns9HE9RjdsJMcI5zjoz2p4bgGI6UhEgh2lAZx2rAB+1Nhi\nvkybpD9aFr/0FQKwRO1GgB1WXw2VDXOMyM/Sa1Tp6ikrChiyEQ162o6XnrP4\nxAJlatGq3/0xcdBe5Cx4IfU5pxxlg2KkmRw2AGY9gqybxiu0O7YIJhjdm80q\nUYckq9s=\n"
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzgEAdg6DuuVPhq1mYhWjFFhOB94A42tP\nf1NRvpXeTeIZpvNA6yQ+pns/ulJlrAMo2Xwi6n3Vu1hKLWH2NCKCPKRaLw1V\nFw8VpdQW4a0ppalrG+aTmtC6sLXoLGXraR1howxH6eMKmYTqKOzye0xoxGc3\nzIXkOdl5VOo/S38WkoQPDEOvq7yPepETuRVyPdQznM2Yo9XI5/1+aADM8CAe\nuvCWokFKM1mzmU9ISSzZ4C+J7KwLlzHfy7qzDGjqLrRckOXmF6GHnRoIC2g+\nz/VvDrCfjvjIyeWSRVJRX6/qpJfp3WQH8qVgUpMFv2F4RGxk9w==\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:31.503+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level3_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level3_2025-launch\"},{\"changed_at\":\"2025-04-15 02:51:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:49 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:08:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:31.503+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level3_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level3_2025-launch\"},{\"changed_at\":\"2025-04-15 02:51:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:49 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:08:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:42:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:42:18 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>
