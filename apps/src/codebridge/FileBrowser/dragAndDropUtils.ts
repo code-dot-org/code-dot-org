@@ -1,9 +1,15 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {KeyboardCode, KeyboardCoordinateGetter} from '@dnd-kit/core';
+import {
+  KeyboardCode,
+  KeyboardCoordinateGetter,
+  CollisionDetection,
+  rectIntersection,
+} from '@dnd-kit/core';
+import {RectMap} from '@dnd-kit/core/dist/store';
 
 const FOLDER_DROP_OFFSET = 8;
 
-const FileBrowserKeyboardCoordinateGetter: KeyboardCoordinateGetter = (
+export const fileBrowserKeyboardCoordinateGetter: KeyboardCoordinateGetter = (
   event,
   args
 ) => {
@@ -15,8 +21,6 @@ const FileBrowserKeyboardCoordinateGetter: KeyboardCoordinateGetter = (
   event.preventDefault();
   const orderedRects = Array.from(droppableRects.keys());
   orderedRects.sort((a, b) => {
-    // DEFAULT_FOLDER_ID should always be last in the list, because it is the root folder
-    // and contains all other folders.
     if (a === DEFAULT_FOLDER_ID) {
       return 1;
     } else if (b === DEFAULT_FOLDER_ID) {
@@ -60,4 +64,25 @@ const FileBrowserKeyboardCoordinateGetter: KeyboardCoordinateGetter = (
   }
 };
 
-export default FileBrowserKeyboardCoordinateGetter;
+export const fileBrowserCollisionDetector: CollisionDetection = args => {
+  const rectangleCollisions = rectIntersection(args);
+  console.log({rectangleCollisions});
+  if (rectangleCollisions.length <= 1) {
+    return rectangleCollisions;
+  }
+  return rectangleCollisions;
+  // const {droppableRects} = args;
+  // // If the item is over multiple files/folders, we should pick the one
+  // // that is closest to the top of the screen.
+  // rectangleCollisions.sort((a, b) => {
+  //   // DEFAULT_FOLDER_ID should always be last in the list, because it is the root folder
+  //   // and contains all other folders.
+  //   if (a.id === DEFAULT_FOLDER_ID) {
+  //     return 1;
+  //   } else if (b.id === DEFAULT_FOLDER_ID) {
+  //     return -1;
+  //   }
+  // });
+
+  // return [rectangleCollisions[0]];
+};

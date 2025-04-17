@@ -23,9 +23,12 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DndDataContextProvider} from './DnDDataContextProvider';
+import {
+  fileBrowserCollisionDetector,
+  fileBrowserKeyboardCoordinateGetter,
+} from './dragAndDropUtils';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
-import FileBrowserKeyboardCoordinateGetter from './FileBrowserKeyboardCoordinateGetter';
 import {useHandleDragEnd} from './hooks';
 import InnerFileBrowser from './InnerFileBrowser';
 import {DragDataType, DropDataType} from './types';
@@ -63,7 +66,7 @@ export const FileBrowser = React.memo(() => {
       },
     }),
     useSensor(KeyboardSensor, {
-      coordinateGetter: FileBrowserKeyboardCoordinateGetter,
+      coordinateGetter: fileBrowserKeyboardCoordinateGetter,
     })
   );
 
@@ -83,6 +86,7 @@ export const FileBrowser = React.memo(() => {
             restrictToVerticalAxis,
             restrictToFirstScrollableAncestor,
           ]}
+          collisionDetection={fileBrowserCollisionDetector}
         >
           <DndDataContextProvider
             value={{dragData, dropData}}
