@@ -3,6 +3,10 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {
+  FeedbackData,
+  logUserFeedbackOnStudentEvaluation,
+} from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
 
 import {FEEDBACK_TYPE} from './AiFeedbackType';
 import FeedbackToggle from './FeedbackToggle';
@@ -10,7 +14,7 @@ import FeedbackToggle from './FeedbackToggle';
 import styles from './summary.module.scss';
 
 type FreeResponseStudentResponseRowProps = {
-  studentWorkEvaluation: StudentWorkEvaluation | null;
+  studentWorkEvaluation: StudentWorkEvaluation;
 };
 
 const FreeResponseStudentResponseRow: React.FC<
@@ -96,6 +100,18 @@ const FreeResponseStudentResponseRow: React.FC<
     }
   };
 
+  const handleFeedbackClick = async (thumbsUp: boolean) => {
+    const feedbackData: FeedbackData = {
+      aiInteractionType: 'UserLevelEvaluation',
+      aiInteractionId: studentWorkEvaluation.id,
+      thumbsUp,
+      levelId: studentWorkEvaluation.levelId,
+      scriptId: studentWorkEvaluation.unitId,
+    };
+
+    logUserFeedbackOnStudentEvaluation(feedbackData);
+  };
+
   return (
     <div className={styles.rowContainer}>
       <BodyThreeText className={styles.aiAnalysisNameColumn}>
@@ -110,12 +126,8 @@ const FreeResponseStudentResponseRow: React.FC<
       >{`${studentWorkEvaluation?.aiEvaluation}. ${studentWorkEvaluation?.aiReasoning}`}</BodyThreeText>
       <div>
         <FeedbackToggle
-          onThumbsUpClick={() => {
-            console.log('thumbsUp');
-          }}
-          onThumbsDownClick={() => {
-            console.log('thumbsDown');
-          }}
+          onThumbsUpClick={() => handleFeedbackClick(true)}
+          onThumbsDownClick={() => handleFeedbackClick(false)}
           size="xs"
           color="gray"
         />
