@@ -1664,15 +1664,19 @@ class Unit < ApplicationRecord
     summary
   end
 
-  def summarize_for_rollup(user = nil)
+  def summarize_for_rollup(user = nil, unit_group_unit: nil)
+    link_path = script_path(self)
+    if Policies::Courses.modularity_enabled? && unit_group_unit
+      link_path = course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
+    end
     summary = {
       title: title_for_display,
       name: name,
-      link: script_path(self)
+      link: link_path
     }
     # Only get lessons with lesson plans
     filtered_lessons = lessons.select(&:has_lesson_plan)
-    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user)}
+    summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize_for_rollup(user, unit_group_unit: unit_group_unit)}
 
     summary
   end
