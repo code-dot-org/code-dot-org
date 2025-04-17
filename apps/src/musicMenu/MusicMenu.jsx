@@ -264,11 +264,25 @@ const optionsList = [
       {
         value: 'false',
         description:
-          'Exemplar player appears at bottom of main instructions text. (default).',
+          'Exemplar player appears at bottom of main instructions text (default).',
       },
       {
         value: 'true',
         description: 'Exemplar player appears at bottom of instructions panel.',
+      },
+    ],
+  },
+  {
+    name: 'log-validator-condition-changes',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'Do not log validator condition changes (default).',
+      },
+      {
+        value: 'true',
+        description: 'Log validator condition changes.',
       },
     ],
   },

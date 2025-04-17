@@ -128,7 +128,7 @@ FactoryBot.define do
   factory :studio_person do
   end
 
-  factory :user do
+  factory :user, class: Student do
     birthday {Time.zone.today - 21.years}
     email {"#{user_type}_#{SecureRandom.uuid}@code.org"}
     password {"00secret"}
@@ -144,7 +144,7 @@ FactoryBot.define do
       after(:create, &:demigrate_from_multi_auth)
     end
 
-    factory :teacher do
+    factory :teacher, class: Teacher do
       user_type {User::TYPE_TEACHER}
       birthday {Date.new(1980, 3, 14)}
       factory :admin do
@@ -318,7 +318,7 @@ FactoryBot.define do
       end
     end
 
-    factory :student do
+    factory :student, class: Student do
       user_type {User::TYPE_STUDENT}
       birthday {Time.zone.today - 17.years}
 
