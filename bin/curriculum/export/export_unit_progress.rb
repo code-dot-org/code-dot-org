@@ -50,6 +50,11 @@ def unload_progress(query_params:)
   unload_from_redshift(query_filename: query_filename, query_params: query_params)
 end
 
+def unload_evidence_levels(query_params:)
+  query_filename = 'export_evidence_levels.sql.erb'
+  unload_from_redshift(query_filename: query_filename, query_params: query_params)
+end
+
 def unload_ai_evals(query_params:)
   query_filename = 'export_ai_evals.sql.erb'
   unload_from_redshift(query_filename: query_filename, query_params: query_params)
@@ -92,6 +97,8 @@ def main
     level_id: level_id,
     output_dir: output_dir
   }
+
+  unload_evidence_levels(query_params: query_params)
 
   unload_ai_evals(query_params: query_params)
 
