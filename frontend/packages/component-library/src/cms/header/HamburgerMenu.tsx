@@ -90,7 +90,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({
             />
           </div>
           <ul className={moduleStyles.menu}>
-            {hamburgerLinks.map(
+            {hamburgerLinks?.map(
               ({key, href, hasDisplayLogic, label, ...link}) => (
                 <li
                   key={key}
