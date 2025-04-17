@@ -1,5 +1,5 @@
 @use 'colors.scss';
-@import 'font.scss';
+@use 'font.scss' as font;
 
 // Please note (!): Mixins and variables form this file are listed in README.MD. Please keep it up to date. (any update)
 // to this files should be reflected in README.MD file.
@@ -86,53 +86,53 @@ html {
 
 @mixin heading-xxl {
   @include heading-common;
-  font-family: $barlowSemiCondensed-semibold;
-  font-weight: $semi-bold-font-weight;
+  font-family: font.$barlowSemiCondensed-semibold;
+  font-weight: font.$semi-bold-font-weight;
   font-size: 3rem;
   line-height: 1.16;
 }
 
 @mixin heading-xl {
   @include heading-common;
-  font-family: $barlowSemiCondensed-semibold;
-  font-weight: $semi-bold-font-weight;
+  font-family: font.$barlowSemiCondensed-semibold;
+  font-weight: font.$semi-bold-font-weight;
   font-size: 2.125rem;
   line-height: 1.24;
 }
 
 @mixin heading-lg {
   @include heading-common;
-  font-family: $barlowSemiCondensed-semibold;
-  font-weight: $semi-bold-font-weight;
+  font-family: font.$barlowSemiCondensed-semibold;
+  font-weight: font.$semi-bold-font-weight;
   font-size: 1.75rem;
   line-height: 1.28;
 }
 
 @mixin heading-md {
   @include heading-common;
-  font-family: $barlowSemiCondensed-semibold;
-  font-weight: $semi-bold-font-weight;
+  font-family: font.$barlowSemiCondensed-semibold;
+  font-weight: font.$semi-bold-font-weight;
   font-size: 1.5rem;
   line-height: 1.32;
 }
 
 @mixin heading-sm {
   @include heading-common;
-  @include main-font-semi-bold;
+  @include font.main-font-semi-bold;
   font-size: 1.25rem;
   line-height: 1.4;
 }
 
 @mixin heading-xs {
   @include heading-common;
-  @include main-font-semi-bold;
+  @include font.main-font-semi-bold;
   font-size: 1rem;
   line-height: 1.48;
 }
 
 // Paragraph styles
 @mixin paragraph-common {
-  @include main-font-regular;
+  @include font.main-font-regular;
   color: var(--text-neutral-primary);
   margin-bottom: 1em;
 }
@@ -164,7 +164,7 @@ html {
 // Overline styles
 @mixin overline-common {
   @include paragraph-common;
-  @include main-font-semi-bold;
+  @include font.main-font-semi-bold;
   text-transform: uppercase;
   letter-spacing: 0.04rem;
 }
@@ -189,11 +189,11 @@ html {
 
 // Strong and Em styles
 @mixin strong {
-  font-weight: $semi-bold-font-weight;
+  font-weight: font.$semi-bold-font-weight;
 }
 
 @mixin extra-strong {
-  font-weight: $bold-font-weight;
+  font-weight: font.$bold-font-weight;
 }
 
 @mixin em {
@@ -202,7 +202,7 @@ html {
 
 // Caption styles
 @mixin figcaption {
-  @include main-font-semi-bold;
+  @include font.main-font-semi-bold;
   color: var(--text-neutral-primary);
   font-size: 0.875rem;
   line-height: 1.54;

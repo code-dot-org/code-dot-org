@@ -1,13 +1,12 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-04-14T23:13:33.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "are are given two small functions that are already defined and must write a new function that calls both in order\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAnything inside the quotation marks is called a **string** -- it's a type of data Python uses for text.",
+    "long_instructions": "## Do This:\r\n\r\nYou're helping program an emergency response robot for your school. The robot already has functions to sound an alarm and lock the doors, but now it needs an upgrade. You'll create a full emergency protocol that calls multiple safety steps in the right order, including a new function to secure the server room.\r\n\r\n1. Three safety functions are already defined for you:\r\n\r\n   * `sound_alarm()`\r\n   \r\n   * `lock_doors()`\r\n   \r\n   * `secure_server_room()`\r\n\r\n2. Write a new function called `emergency_protocol()` that:\r\n\r\n   * Calls `sound_alarm()` **twice** at the start (to make sure everyone hears it)\r\n   \r\n   * Then calls `lock_doors()`\r\n   \r\n   * Then calls `secure_server_room()`\r\n\r\n3. After defining `emergency_protocol()`, call it to run the full safety sequence.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nFunctions can call other functions—just make sure the ones you're calling are defined first!",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -15,8 +14,28 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "display_name": "Emergency Protocol",
+    "bubble_choice_description": "You're helping program an emergency response robot for your school. The robot already has functions to sound an alarm and lock the doors, but now it needs an upgrade. You'll create a full emergency protocol that calls multiple safety steps in the right order, including a new function to secure the server room.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def sound_alarm():\n  # Prints a message to notify that the alarm is sounding\n  print(\"🔊 Alarm sounding! Please evacuate.\")\n\ndef lock_doors():\n  # Prints a message to notify that the doors are locked\n  print(\"🔒 All doors are now locked.\")\n\ndef secure_server_room():\n  # Prints a message to notify that the server room is secured\n  print(\"🖥️ Server room secured.\")\n\n# TODO - Write the emergency_protocol() function\n\n\n\n# TODO - Call the emergency_protocol() function\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzorHuI95fPGnkJcqkqctUsCfgLgkYLZn\ne7Wsm8p/yhTysqLG3A+0odXN15e5nOmzXG0AplSNOfYzz2J/LOboQAoXyq7I\n1N+UzetbwLAPkdUbhLFfZ27eCNkyUucaE90UhitbruMKKEpAiWbfLSeYcmKC\nNAYkV/eR3/E2MCUw0W6iGDJlj+adMBRJ9v1QWmXO1vhjGbF9y8UctdLy/ou9\nrlJksj/twXlMqruerTF1XBfhwHg69m9YXCTiIHsmCO9bSbBmy1dehvmrvOt4\nVFZNUX+LCx4N+Te8LaOdSB0g/+n4nnTRAaZ97g7ADbwHrnomzsR5NiUFevR4\nGOERmUsK2gCI7zKw7aNkfXMhA1v2BZNQCWyg+Znr8A1vs7+8GL7FL3QA9aWf\n4EkMuFbez9/35CHEJEB74qbhi/PSMH2TQYUorkUuWptCEHu03x2QzJPSCFo2\nobV28KaNcZoQJOBaLk+6aEwZ6MFLZVq4GFx1bLqkYoxl+FHrY4pmhVSP9Mps\nQeVoFhc8liOgfDngY99zPR679VvkpRhKBDlVuk7KG8qgWvLdVz10jsdXM0cH\nLwOd3wYwlKmRxQyr/vvLroAmFSeBe4k9P41LVH6ek2h/MfSCt4isaWFbjoWJ\nL+5+Ez2y+Aok+9/h6YRaRpVy/2+Orn9mKXefVDI9RQJgpmBj6FOHfujSDHJa\nBVbiDvkyipLVe9jD0tytOtaGelROGTFh+ZMhE/6Ws0z+ark4gynG3miZUkh8\n6jdooWWJb8F6+BzIoC/fCxFOdUSckr/T4hFe4pcNao/Z2EpnFhyZOHddaZ5o\no8jsXzxBa/cpOfEzVYQAdPU9mmjjY5jeIjP9qA5i5F3sxwyELJboObJFEXQc\nel89jZ3Qd8ZIf5rKqKizxxURpA==\n",
+    "thumbnail_url": "https://images.code.org/dee90c65b26f99d73e55059c4ec926e5-emergency.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:33.803+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level6c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level6c_2025-launch\"},{\"changed_at\":\"2025-04-15 02:52:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:33.803+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level6c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level6c_2025-launch\"},{\"changed_at\":\"2025-04-15 02:52:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:25:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:26:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:27:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:36:18 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:52:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:52:43 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

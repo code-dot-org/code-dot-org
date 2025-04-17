@@ -6,7 +6,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "instructions",
+    "long_instructions": "## Do This:\r\n\r\nYou're setting up your morning playlist with two songs: one to get you pumped up and one to help you relax while getting ready. Two functions have already been written for the songs, but something isn't working. When you run your playlist, nothing happens . . . or there's an error!\r\n\r\nFix the code so that both songs play when you call `morning_playlist()`.",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -14,9 +14,25 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "def play_hype_song():\n  # Plays a high-energy song to get you pumped up\n  print(\"Playing hype song: 'Let's Go!'\")\n\ndef play_chill_song():\n  # Plays a calm song to help you relax while getting ready\n  print(\"Playing chill song: 'Easy Morning'\")\n\ndef morning_playlist():\n  play_hype_song\n  play_chill_sng()\n\nmorning_playlist()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzugAWo6sQZUOGvgj3AUYcP1ePevZlkFn\nGengRpyjz8YwbEBwGXxTAOg9o1jlqimp/eRuUfYzwG08Wn9rKxQtej/2a6iY\nvmz4KbebiXv2e05WClOsh1gtW7ss2PXdiKpsXNiSRIIEPC80FA5Edmy4EwH6\n0HTQnmVhafHsx5Lfwl41LwgjHeCgsFrKHp+8o3Yy12W2xGyIhdjcV4D7OTyi\nlNIaOP+tuC+WTlKwjBmlIGXFbuZy/OiQn4XNDOMI4P5EmvHVwtbTcFE2p0Wh\n0Efe8NYLRb+PUrpeeq3dzj0AiDPjOhG8vP/eSGAHYexZb3T3TRJmAjB2d0Os\nilOVCZ0q48Z36WC5nZobsu+DajoSozVkd25W8SsdVoxYN50ZC5T6a7zas/Wx\n/7z0vLDZorOP4cTwEy2go4RGEATI6gtBb7VY6r7gLjoL7RQIq6Ln6yJOnDnv\n8RaBOw74M5Am7A6NEus1JVE5gpI6oryonBCccdFViu16aGk26YyEP/0cRUjM\nSkZk6PGiBJo6B/iss6LQjtJ6+ZLck2Z4KuGj6NycE9RE\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:37.374+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level10_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level10_2025-launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:37.374+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level10_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level10_2025-launch\"},{\"changed_at\":\"2025-04-15 13:58:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:00:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:00:47 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

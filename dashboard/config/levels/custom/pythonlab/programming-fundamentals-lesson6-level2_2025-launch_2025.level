@@ -21,7 +21,7 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "def celebrate():\n    print(\"Homework is done! 🎉\")\n\ncelebrate\n",
+          "contents": "def celebrate():\n  # Print a celebration message\n  print(\"Homework is done! 🎉\")\n\ncelebrate\n",
           "folderId": "0",
           "active": true,
           "open": true
@@ -30,9 +30,9 @@
       "folders": {
       }
     },
-    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzsJX39R+sQGxBC9suBAeQzW2Lm/Se29k\noMn6VyQaVcA1WHzmZX1rVXqQz2r8I11WTvQeyFoTFjmPmJlfXXO5eYs4qxcg\n5yUS1yp/UfK1B/kInN1T9xEwnRYopt8UXX65M1GYR26FjXKe6v8tqXRHn6ki\nWWguTKqDLXZbLOQTmrBLxmAOH5IOALw7x1zpcgdCVg==\n"
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzrFZfUWuWLfuB9Jdx9bmSlLVVgbBjqSX\nrKxIhITEeUa/BwvIiuhu0R8h3WTK1nSI8xgxYyevN/Pqt6ZMB55+a5jdY1SA\nfPXHCPV4X2sW4e4B7qSvs5+otcvB5O1FXDAd7G9+jJbjlF1N/1wawP8Xmnyp\n3jw8zPpFwdWPxkhksBRffPDs1K7nvW1RwqP3uj5SZg1aUQFMnUTZwedfkrKU\nlWf1TgtRdPMRgmHxD1WTNLMk\n"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:31.290+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level2_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level2_2025-launch\"},{\"changed_at\":\"2025-04-15 02:50:56 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:02:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:03:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:04:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:04:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:31.290+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level2_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level2_2025-launch\"},{\"changed_at\":\"2025-04-15 02:50:56 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:02:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:03:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:04:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:04:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:41:33 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:41:40 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:41:46 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

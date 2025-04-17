@@ -18,12 +18,14 @@ interface ExemplarPlayerViewProps {
   playbackEvents: PlaybackEvent[];
   title: string;
   player: MusicPlayer;
+  insideInstructions: boolean;
 }
 
 const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   playbackEvents,
   title,
   player,
+  insideInstructions,
 }) => {
   const dispatch = useAppDispatch();
   const isPlaying = useAppSelector(state => state.music.isPlaying);
@@ -77,7 +79,12 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
   const packImage = MusicLibrary.getInstance()?.getPackImageUrl(DEFAULT_PACK);
 
   return (
-    <div className={moduleStyles.exemplarPlayer}>
+    <div
+      className={classNames(
+        moduleStyles.exemplarPlayer,
+        insideInstructions && moduleStyles.exemplarPlayerInsideInstructions
+      )}
+    >
       <div
         className={moduleStyles.entry}
         key={'exemplar-player'}

@@ -25,9 +25,7 @@ Scenario: Solve without recommended blocks
   When I press "again-button"
   And I wait to see "#resetButton"
   And I press "resetButton"
-  And I drag block "repeat" to block "whenRun"
-  And I connect block "startBlock" inside block "repeat"
-  And I delete block "extraBlock"
+  And I've initialized the workspace with recommended bee blocks
   And I press "runButton"
   And I wait to see ".congrats"
 

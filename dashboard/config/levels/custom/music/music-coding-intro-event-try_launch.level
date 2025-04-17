@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:57:05.000Z",
   "level_num": "custom",
@@ -12,7 +13,7 @@
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "false",
     "level_data": {
-      "library": "curriculum2024",
+      "library": "launch2024",
       "toolbox": {
         "type": "category",
         "blocks": {
@@ -33,6 +34,9 @@
                 "block": {
                   "type": "repeat_simple2",
                   "id": "repeat_simple2",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
                   "fields": {
                     "times": 10
                   },
@@ -49,11 +53,17 @@
                           "block": {
                             "type": "play_sounds_together",
                             "id": "play_sounds_together",
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
                             "inputs": {
                               "code": {
                                 "block": {
                                   "type": "play_sound_at_current_location_simple2",
                                   "id": "play_sound_at_current_location_simple2",
+                                  "extraState": {
+                                    "disableNextConnection": false
+                                  },
                                   "fields": {
                                     "sound": "curriculum/drum_long_1"
                                   },
@@ -61,6 +71,9 @@
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "],}V720pg|A*e|tHH4;=",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
                                       "fields": {
                                         "sound": "curriculum/bass_short_1"
                                       },
@@ -68,6 +81,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": "(:.Y-]e7[Oj{j,jIsj_:",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
                                           "fields": {
                                             "sound": "curriculum/lead_long_2"
                                           }
@@ -82,11 +98,17 @@
                               "block": {
                                 "type": "play_sounds_together",
                                 "id": "^U4KB}Jd-`G-]$Rs3~`;",
+                                "extraState": {
+                                  "disableNextConnection": false
+                                },
                                 "inputs": {
                                   "code": {
                                     "block": {
                                       "type": "play_sound_at_current_location_simple2",
                                       "id": "I^HU*UA_.mZ}x;{8c:o#",
+                                      "extraState": {
+                                        "disableNextConnection": false
+                                      },
                                       "fields": {
                                         "sound": "curriculum/drum_short_1"
                                       },
@@ -94,6 +116,9 @@
                                         "block": {
                                           "type": "play_sound_at_current_location_simple2",
                                           "id": "T#z_`p)G4{FL[wwi+AXx",
+                                          "extraState": {
+                                            "disableNextConnection": false
+                                          },
                                           "fields": {
                                             "sound": "curriculum/bass_short_1"
                                           },
@@ -101,6 +126,9 @@
                                             "block": {
                                               "type": "play_sound_at_current_location_simple2",
                                               "id": "svtnV$Y5Xp[b6eK)V|Xo",
+                                              "extraState": {
+                                                "disableNextConnection": false
+                                              },
                                               "fields": {
                                                 "sound": "curriculum/lead_short_3"
                                               }
@@ -123,7 +151,7 @@
             },
             {
               "type": "triggered_at_simple2",
-              "id": "4^{E3l-~rNh$K:70#B4)",
+              "id": "triggerone",
               "x": 310,
               "y": 30,
               "fields": {
@@ -134,6 +162,9 @@
                 "block": {
                   "type": "play_sound_at_current_location_simple2",
                   "id": "c3AAL,0@oITcyL,bX%4p",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
                   "fields": {
                     "sound": "curriculum/fx_short_1"
                   }
@@ -153,6 +184,9 @@
                 "block": {
                   "type": "play_sound_at_current_location_simple2",
                   "id": "|/r-URS/NTDASKm=vdus",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
                   "fields": {
                     "sound": "curriculum/fx_short_2"
                   }
@@ -172,6 +206,9 @@
                 "block": {
                   "type": "play_sound_at_current_location_simple2",
                   "id": "mGvj;IUn5GQ$C4VWt=CW",
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
                   "fields": {
                     "sound": "curriculum/fx_short_3"
                   }
@@ -181,9 +218,47 @@
           ]
         }
       },
-      "packId": "default"
+      "sounds": {
+        "acoustic_arcade": [
+          "drum_beat_cabana",
+          "drum_beat_conga",
+          "drum_beat_hands",
+          "drum_beat_sweep",
+          "drum_beat_trees",
+          "drum_beat_wobble",
+          "bass_elevator",
+          "bass_float",
+          "bass_giant",
+          "bass_seesaw",
+          "bass_bounce",
+          "bass_stamp",
+          "synth_castle",
+          "synth_cloud",
+          "synth_cosmic",
+          "synth_round",
+          "synth_rubber",
+          "synth_tines",
+          "ukulele_knot",
+          "ukulele_shine",
+          "ukulele_slide",
+          "ukulele_knock",
+          "guitar_handle",
+          "guitar_path",
+          "guitar_window",
+          "guitar_flower",
+          "lead_zaps",
+          "lead_swoop",
+          "lead_violins",
+          "waterfall",
+          "bongo_roll",
+          "chimes",
+          "vibra_verb",
+          "sleigh_bells",
+          "wheel_spoke"
+        ]
+      }
     },
-    "long_instructions": "###<i class=\"fa-solid fa-play\"></i> Try it out!\r\n\r\n1. Press [Run](#clickable=run-button) to start the background music. \r\n2. Press the triggers [1](#clickable=trigger-button-1), 2, or 3.\r\n3. What do you notice? ",
+    "long_instructions": "###<i class=\"fa-solid fa-play\"></i> Try it out! \r\n\r\nLook closely at the code to answer the question below. Then press Run and try the triggers. \r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id-left:triggerone)\r\n  \r\n--- \r\n \r\n**What will happen when the <code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">&nbsp;1&nbsp;</code> button is pressed?** \r\n\r\n",
     "validations": [
       {
         "key": "music-coding-intro-event-try_4819c55f-caa5-40b0-b2bc-0b2ee4635777",
@@ -230,10 +305,26 @@
       }
     ],
     "name_suffix": "_launch",
+    "predict_settings": {
+      "isPredictLevel": true,
+      "solution": "that1",
+      "questionType": "multipleChoice",
+      "allowMultipleAttempts": false,
+      "multipleChoiceOptions": [
+        "this",
+        "that1",
+        "that2",
+        "that3"
+      ],
+      "codeEditableAfterSubmit": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:05.948+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-try\\\"\"],\"cloned_from\":\"music-coding-intro-event-try\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:05.948+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-try\\\"\"],\"cloned_from\":\"music-coding-intro-event-try\"},{\"changed_at\":\"2025-04-16 17:39:06 +0000\",\"changed\":[],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 17:50:37 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 17:59:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:00:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:01:12 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:11:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:13:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:15:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:16:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:31:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 19:49:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 19:51:42 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 19:53:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 19:56:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 19:56:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 19:58:35 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:06:09 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:06:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:07:08 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:07:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:08:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:25:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:26:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:27:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:31:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:31:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:35:20 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:35:48 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:36:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:38:02 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 21:04:48 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

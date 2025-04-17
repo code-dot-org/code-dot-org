@@ -2336,22 +2336,6 @@ ActiveRecord::Schema.define(version: 2025_04_17_151841) do
     t.index ["user_id"], name: "index_user_geos_on_user_id"
   end
 
-  create_table "user_level_evaluations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "level_id", null: false
-    t.integer "script_id", null: false
-    t.string "school_year", null: false
-    t.text "evaluation_criteria"
-    t.text "ai_evaluation"
-    t.text "ai_reasoning"
-    t.string "ai_model_version"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "code_version"
-    t.index ["level_id"], name: "index_user_level_evaluations_on_level_id"
-    t.index ["user_id"], name: "index_user_level_evaluations_on_user_id"
-  end
-
   create_table "user_level_interactions", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
