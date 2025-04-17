@@ -32,7 +32,12 @@ class UnitGroup < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {order(:position)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  # Modular curriculum allows units to appear in multiple unit groups. However, each unit will still be owned by just one unit group.
+  # Default units are units that are currently in this unit group
   has_many :default_units, through: :default_unit_group_units, source: :script
+  # Original units are those which are owned by this unit group
+  # A unit cannot be removed from its original unit group. All original units will be in a unit group's default units, but not all default units are original units.
+  # For more information, see the 'Modular Curriculum design doc' at https://docs.google.com/document/d/1e8Xs_azDTJRyJoGLSk7G2v23rpyA-ZQzgSVnle6exvg/edit?usp=sharing.
   has_many :original_units, class_name: 'Unit', foreign_key: 'original_unit_group_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
@@ -247,7 +252,6 @@ class UnitGroup < ApplicationRecord
         participant_audience: participant_audience,
         instructor_audience: instructor_audience
       )
-      unit.update!(original_unit_group_id: nil) if unit.original_unit_group == self
 
       UnitGroupUnit.where(unit_group: self, script: unit).destroy_all
     end
