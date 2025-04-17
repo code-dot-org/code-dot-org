@@ -157,6 +157,14 @@
       "import": "./dist/esm/cms/snapshot/index.mjs",
       "require": "./dist/cjs/cms/snapshot/index.js"
     },
+    "./cms/spacer": {
+      "types": {
+        "import": "./dist/esm/cms/spacer/index.d.ts",
+        "require": "./dist/cjs/cms/spacer/index.d.ts"
+      },
+      "import": "./dist/esm/cms/spacer/index.mjs",
+      "require": "./dist/cjs/cms/spacer/index.js"
+    },
     "./cms/tabGroup": {
       "types": {
         "import": "./dist/esm/cms/tabGroup/index.d.ts",
