@@ -35,7 +35,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
 
   const consoleManagerRef = useRef<ConsoleManager | null>(null);
   const [isClearButtonDisabled, setIsClearButtonDisabled] = useState(true);
-  const [terminalLines, setTerminalLines] = useState<string[]>([]);
+  const [hasConsoleOutput, setHasConsoleOutput] = useState(false);
 
   useEffect(() => {
     consoleManagerRef.current = consoleManager;
@@ -44,13 +44,12 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   useEffect(() => {
     if (!consoleManager) return;
 
-    setTerminalLines(consoleManager.getTerminalLines() || []);
+    setHasConsoleOutput(consoleManager.getTerminalLines().length > 0);
 
     const handleUpdate = () => {
-      console.log('handleUpdate called');
-      setTerminalLines([
-        ...(consoleManagerRef.current?.getTerminalLines() || []),
-      ]);
+      const consoleManager = consoleManagerRef.current;
+      const lines = consoleManager?.getTerminalLines();
+      setHasConsoleOutput(!!lines && lines.length > 0);
     };
 
     consoleManager.addListener(handleUpdate);
@@ -61,8 +60,8 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   }, [consoleManager]);
 
   useEffect(() => {
-    setIsClearButtonDisabled(terminalLines.length === 0);
-  }, [terminalLines]);
+    setIsClearButtonDisabled(!hasConsoleOutput);
+  }, [hasConsoleOutput]);
 
   return (
     <>
