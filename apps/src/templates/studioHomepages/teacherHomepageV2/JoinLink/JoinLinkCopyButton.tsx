@@ -88,7 +88,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     hidden ? (
       <OverlineOneText>
         <span>{i18n.sectionCodeWithColon()}</span>{' '}
-        <span className={styles.sectionCodeText}>{sectionCode}</span>
+        <span className={styles.sectionCodeTextHidden}>{sectionCode}</span>
       </OverlineOneText>
     ) : (
       <div className={styles.sectionCodeBox} data-for="section-code" data-tip>
