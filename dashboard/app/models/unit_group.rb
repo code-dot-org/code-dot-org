@@ -231,6 +231,9 @@ class UnitGroup < ApplicationRecord
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
+    unremovable_unit_names = units_to_remove.select {|unit| unit.original_unit_group == self}.map(&:name)
+    raise "Cannot remove units from their original course: #{unremovable_unit_names}" if unremovable_unit_names.any?
+
     unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
       unaddable_unit_names = new_units_objects.select do |s|
         s.unit_group != self && s.prevent_course_version_change?
