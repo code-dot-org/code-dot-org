@@ -85,6 +85,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
                 sectionCode={section.code}
                 sectionId={section.id}
                 studioUrlPrefix={studioUrlPrefix}
+                hidden={section.hidden}
               />
             )}
           </div>

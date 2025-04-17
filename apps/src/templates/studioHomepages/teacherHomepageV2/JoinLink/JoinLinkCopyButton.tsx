@@ -24,6 +24,7 @@ interface JoinLinkCopyButtonProps {
   sectionId: number;
   studioUrlPrefix: string;
   sourceName?: string;
+  hidden?: boolean;
 }
 
 const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
@@ -32,6 +33,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   sectionId,
   studioUrlPrefix,
   sourceName = 'teacherHomepage',
+  hidden = false,
 }) => {
   const [shouldShowDialog, setShouldShowDialog] = React.useState(false);
   const [showCopiedMsg, setShowCopiedMsg] = React.useState(false);
