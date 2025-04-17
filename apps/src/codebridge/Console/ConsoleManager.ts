@@ -9,6 +9,7 @@ export default class ConsoleManager {
   private inputBuffer: string;
   // If the last line in terminalLines is a partial line or not (i.e. if it was terminated with a newline).
   private lastLineIsPartial: boolean;
+  private listeners: (() => void)[] = [];
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
     this.terminal = terminal;
@@ -38,6 +39,7 @@ export default class ConsoleManager {
     this.terminalLines = [];
     this.terminal.clear();
     this.lastLineIsPartial = false;
+    this.notifyListeners();
   }
 
   public getTerminalLines() {
@@ -47,6 +49,7 @@ export default class ConsoleManager {
   public writeConsoleMessage(message: string) {
     const lines = message.split('\n');
     lines.forEach(l => this.appendTerminalLine(l));
+    this.notifyListeners();
   }
 
   public writePartialLine(message: string) {
@@ -55,6 +58,7 @@ export default class ConsoleManager {
     this.terminal.write(message);
     this.terminal.scrollToBottom();
     this.terminal.focus();
+    this.notifyListeners();
   }
 
   public appendToInputBuffer(data: string) {
@@ -76,6 +80,20 @@ export default class ConsoleManager {
     this.updateTerminalLines(this.inputBuffer);
     this.lastLineIsPartial = false;
     this.inputBuffer = '';
+    this.notifyListeners();
+  }
+
+  public addListener(listener: () => void) {
+    console.log('addlistner', listener);
+    this.listeners.push(listener);
+  }
+
+  public removeListener(listener: () => void) {
+    this.listeners = this.listeners.filter(l => l !== listener);
+  }
+
+  private notifyListeners() {
+    this.listeners.forEach(listener => listener());
   }
 
   private appendTerminalLine(line: string) {

@@ -4,16 +4,19 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import SwapLayoutDropdown from '@codebridge/components/SwapLayoutDropdown';
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import ConsoleManager from './ConsoleManager';
 
 import moduleStyles from './right-buttons.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface RightButtonsProps {
   clearOutput: () => void;
+  consoleManager: ConsoleManager | null;
 }
 
 const tooltipProps: TooltipProps = {
@@ -26,8 +29,40 @@ const tooltipProps: TooltipProps = {
 
 const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   clearOutput,
+  consoleManager,
 }) => {
   const isShareView = useAppSelector(state => state.lab.isShareView);
+
+  const consoleManagerRef = useRef<ConsoleManager | null>(null);
+  const [isClearButtonDisabled, setIsClearButtonDisabled] = useState(true);
+  const [terminalLines, setTerminalLines] = useState<string[]>([]);
+
+  useEffect(() => {
+    consoleManagerRef.current = consoleManager;
+  }, [consoleManager]);
+
+  useEffect(() => {
+    if (!consoleManager) return;
+
+    setTerminalLines(consoleManager.getTerminalLines() || []);
+
+    const handleUpdate = () => {
+      console.log('handleUpdate called');
+      setTerminalLines([
+        ...(consoleManagerRef.current?.getTerminalLines() || []),
+      ]);
+    };
+
+    consoleManager.addListener(handleUpdate);
+
+    return () => {
+      consoleManager.removeListener(handleUpdate);
+    };
+  }, [consoleManager]);
+
+  useEffect(() => {
+    setIsClearButtonDisabled(terminalLines.length === 0);
+  }, [terminalLines]);
 
   return (
     <>
@@ -41,6 +76,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
             size={'xs'}
             type={'tertiary'}
             className={darkModeStyles.tertiaryButton}
+            disabled={isClearButtonDisabled}
           />
         </WithTooltip>
         {!isShareView && <SwapLayoutDropdown />}
