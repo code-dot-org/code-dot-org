@@ -10,7 +10,7 @@ import {
   DropdownFormFieldRelatedProps,
 } from '@/common/types';
 
-import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+import CustomDropdown, {_CustomDropdownOption} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 

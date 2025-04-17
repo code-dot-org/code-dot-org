@@ -76,9 +76,17 @@ export interface CustomDropdownProps extends AriaAttributes {
 }
 
 /**
- * Design System: _CustomDropdown Component.
- * This is a PRIVATE component that is used to create different custom dropdowns.
- * Only used inside of Design System components. DO NOT IMPORT OR USE DIRECTLY.
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see ./__tests__/CustomDropdown.test.tsx)
+ * * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: CustomDropdown Component.
+ * Renders CustomDropdown with content passed through props.
  */
 const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   name,

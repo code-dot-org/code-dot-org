@@ -13,7 +13,7 @@ import {
 } from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
-import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+import CustomDropdown, {_CustomDropdownOption} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
