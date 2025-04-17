@@ -36,6 +36,10 @@ markdown <<MARKDOWN
     <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">Sequencing, Loops, Functions</td>
   </tr>
   <tr>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Devices</strong></td>
+    <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">Desktops, laptops, and tablets</td>
+  </tr>
+  <tr>
     <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;"><strong>Student & Teacher Prerequisites</strong></td>
     <td style="padding: 8px; font-size: 14pt; border: 1px solid #ccc;">None!</td>
   </tr>

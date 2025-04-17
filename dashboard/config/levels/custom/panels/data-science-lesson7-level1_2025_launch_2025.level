@@ -43,10 +43,25 @@
         "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
         "layout": "text-bottom-right",
         "fadeInOverPrevious": true
+      },
+      {
+        "text": "### Choose a Font\n- Switch to the **Customize** tab\n- Click **Chart style** and select a **Font**",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
+        "key": "data-science-lesson7-level1_2025_launch_2025-86c87f15-c469-42b5-9711-28db92f2e5c9"
+      },
+      {
+        "text": "### Adding Data Labels\n- Open the **Series** toggle\n- Select **Data labels**",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
+        "key": "data-science-lesson7-level1_2025_launch_2025-57f3c518-65d5-47d5-875c-bf0ecba64f32"
+      },
+      {
+        "text": "### Adding Bar Color\n- **Double click a bar** to change its color\n- Select a **Fill color** ",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
+        "key": "data-science-lesson7-level1_2025_launch_2025-153cad2a-72f2-4a65-98a4-ff8c5f09bbd0"
       }
     ],
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:31.508+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-level1_2025_launch\\\"\"],\"cloned_from\":\"data-science-lesson7-level1_2025_launch\"},{\"changed_at\":\"2025-04-15 19:13:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-15 19:14:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-15 19:19:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:31.508+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-level1_2025_launch\\\"\"],\"cloned_from\":\"data-science-lesson7-level1_2025_launch\"},{\"changed_at\":\"2025-04-15 19:13:23 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-15 19:14:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-15 19:19:25 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 15:43:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:16:21 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Panels>

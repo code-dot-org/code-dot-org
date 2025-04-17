@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2025-03-21T21:34:43.000Z",
   "level_num": "custom",
@@ -7,8 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Skill Building",
-    "long_instructions": "##Histogram\r\n###Sometimes, if we put our data into bins, we can get some clearer insights.\r\n\r\n###[CODAP Link](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FkM84z9r7ZG2rJxKkc3Im%2Ffile.json)\r\n\r\n###**Do This**\r\n####1. Add the “Age Group” attribute to the Y-Axis.\r\n####2. Add the “Type” attribute to the center of the graph in order to create a legend.\r\n####3. Click on the “Configuration” tab on the graph toolbar \r\n####4. Select “Group into Bins”\r\n####5. Do new coasters have higher top speeds than older coasters? How can you tell?\r\n####6. What are new coasters more likely to be made of? What makes you think this?\r\n####7. If a roller coaster was to be built today that went over 100 mph, what do you predict it would be made out of? What makes you believe this?\r\n",
-    "teacher_markdown": "\r\n![](https://images.code.org/d137d6070dcdfc53831ffbfd13a88345-image-1721835324670.png)\r\n\r\nExample student responses:\r\n\r\nDo new coasters have higher top speeds than older coasters? How can you tell?\r\n- New coasters seem to have higher top speeds than older coasters. I can tell because in the graph, the dots representing newer coasters (in the 'newest' age group) are more frequently found in higher top speed intervals (80-100 mph, 100-120 mph) compared to older coasters, which are mostly in the lower speed ranges (20-40 mph, 40-60 mph).\r\n\r\nWhat are new coasters more likely to be made of? What makes you think this?\r\n- New coasters are more likely to be made of steel. This is evident because in the 'newest' age group section of the graph, there are more steel coasters (represented by pink dots) than wooden coasters (represented by green dots), especially at higher speed ranges.\r\n\r\nIf a roller coaster was to be built today that went over 100 mph, what do you predict it would be made out of? What makes you believe this?\r\n- I predict that a roller coaster built today that goes over 100 mph would be made out of steel. This is because, in the graph, almost all the coasters that have top speeds over 100 mph are represented by pink dots, which indicate they are made of steel. This suggests steel is preferred for higher-speed coasters.\r\n",
+    "long_instructions": "##Histograms\r\n\r\nSometimes, if we put our data into buckets, we can get some clearer insights.\r\n\r\nNeed a new copy of the dataset? [Google Sheets Link](https://docs.google.com/spreadsheets/d/1lg67vrIpnXaCe7P-XjqLmf6x91UcEvB-Ikw_rpqJDG8/edit?usp=sharing)\r\n\r\n###**Do This**\r\n1. Sort the data by \"Type\"\r\n2. Make two histograms based on the \"Top_Speed\" column: one for wooden and one for steel.\r\n3. Do wooden coasters have higher top speeds than steel coasters? How can you tell?\r\n\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -16,10 +16,11 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "sgXjN/J9d98Aa/YhTJWOvgjxhyUgAXhbMNxwCivSxa7rzjSNpu1eyPbjGPdD\new6TAw7Pcs3wVRoBp1eu5FlbBeY0dlyk/gLhZAiAvG5XWtvNBVrao+CI0PvZ\nhznw5kXmFUU01yu2hGs0mqN63UvW1oq07CXFAEoaLg0ansRSsD7LVD/NNs7X\njZWTHK0URtKg+KdRsh8bMa+9wjjNsULru+YGbESuNahDeIx1FC1FAGOLC4X4\nAY0gkhpNT5xqCgJ1DweqgBI6fYVulyWVBS3gSq/lVke7QtYVNdGerZoeVhOd\nizpV6V0n1Gm3i7dEgx9bbb5mDX63bUslxRoLzzJKrbO+2yPC3Hv0HLPSZZEN\n6sFmDm2AHcJkrJoqBAH5cJLPxZD9XCDUAPRLgRREB3rZTJUxsTHlBUcrKskk\nHK99T8nIdJIG/YfPO3R54K2PQD9WDSdFn9y0zOGjLNMPQCRvkAbGaoQDJ4uZ\n4pk91pVFjEetYTVAN1diTAhD1IqFfKn3YCjeV1SPYx0zjQCx6zNuWz/uh0IA\noT41qtlSmA644ErabKENOEJD/6NydXGebdjqVgSqKfk63pzB28gTT/+9DZCO\nWdBka/oX1Dg6OYb672p2v2hkfA8cYXyvM8ixVQa+JpwstDutO1z3O5R2Nmrr\nzXirf8LW0H4wtoBrryKINolzhBHZDUEm2wDFHnwliCoVfJkq6FOqyBn4NPwS\nqWHEzsFghMSZDNj6ZS/seLr5fuvbc6W6l0l2Bi5ddM+Ask7LFwMsHyPQT/Sx\nn7QPkX1U91gnsToegK7o8oU4JcKGEAcDJaMkeEE0rgFgbPRkhSvMpJHE2+Cu\nItRFymIK8pwlwl93mLAz+cDh+MrtRBfKbb2qiCIinSpTVoYErz/xl9YbzL0h\nzU6Q1+DFuohPxSSYfuc0/QprXl2nae0INEKAPKsoyZpXBUj0gnwfy/T3fgTr\nMzkb9CvTgex8QeqBHe2y2i5mQiHzbIskvA5L7fLTh7ImTJpIHv6GAjfuMZcq\n5P7RUTcgMCaFE3q2JpRM9NIv4viSfX1Bf4Xv18BV8nacHYmw1Yo6wsPMGnBz\nlmcnm3x7TCh9MexcYXaPWpIgSObOvfAkoHl4MvSrT2kMBM4PD3TJsLQa9bcE\njksw6UOGw9sy\n"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:43.168+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level6\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level6\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:43.168+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level6\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level6\"},{\"changed_at\":\"2025-04-16 16:29:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 16:31:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 17:27:31 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-16 17:28:30 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-16 17:30:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-16 18:08:24 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-16 21:03:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-16 21:06:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

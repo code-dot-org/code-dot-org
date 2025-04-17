@@ -1,0 +1,64 @@
+name 'self-paced-CSDMusicLab-L1-CT-CFU-Explanation'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Computational Thinking Check for Understanding
+
+## ✅ Correct Answers & Explanations
+
+<!-- Question 1 - Decomposition -->
+<div style="display: flex; align-items: flex-start; gap: 10px;">
+  <img src="https://images.code.org/199f369578811ff11f8dc88b6d40f3f5-image-1736535589828.png" alt="A flowchart showing a central item being broken down into three." style="width: 70px; height: 70px; margin-top: 20px; margin-right: 20px;">
+  <div>
+
+#### **Question 1**: Jordan is working on a coding challenge and says, "This whole thing feels overwhelming. I'm going to focus just on the drum track first, then I'll figure out the melody, and then the timing."  
+#### **Correct Answer:** Decomposition  
+#### **Explanation:** Jordan is breaking the problem into smaller, manageable parts: tackling the drum track first, then melody, then timing. This is exactly what decomposition is all about: handling complexity by splitting it into simpler steps.
+    
+  </div>
+</div>
+
+---
+
+<!-- Question 2 - Pattern Recognition -->
+<div style="display: flex; align-items: flex-start; gap: 10px;">
+  <img src="https://images.code.org/bcb4304d866a4ec46e036423fc0d79b0-image-1736535593030.png" alt="A magnifying glass showing three repeating items." style="width: 70px; height: 70px; margin-top: 20px; margin-right: 20px;">
+  <div>
+
+#### **Question 2**: Samira has noticed that several parts of her song follow the same structure: a bass note, a snare, and a rest. She decides to reuse this structure instead of rewriting it each time.  
+#### **Correct Answer:** Pattern Recognition  
+#### **Explanation:** Samira notices that parts of her song repeat the same structure and decides to reuse that pattern. Recognizing repeated sequences and using them to guide coding decisions is a key aspect of pattern recognition.
+
+  </div>
+</div>
+
+---
+
+<!-- Question 3 - Abstraction -->
+<div style="display: flex; align-items: flex-start; gap: 10px;">
+  <img src="https://images.code.org/53e922f8a75ee840f0e7989d9cfdfd35-image-1736535595178.png" alt="A highlighter marking up a piece of paper" style="width: 70px; height: 70px; margin-top: 20px; margin-right: 20px;">
+  <div>
+
+#### **Question 3**: Luis is reviewing a long piece of code and says, "I'm going to ignore the comments and beat tracks for now and just focus on what the vocals are doing."  
+#### **Correct Answer:** Abstraction  
+#### **Explanation:** Luis chooses to ignore less relevant details (comments and beat tracks) so he can focus on the meaningful parts of the code. This is abstraction: filtering out what doesn’t matter so you can concentrate on what does.
+
+  </div>
+</div>
+
+---
+
+<!-- Question 4 - Algorithmic Thinking -->
+<div style="display: flex; align-items: flex-start; gap: 10px;">
+  <img src="https://images.code.org/c41c2a800a5ad39838d6d7d37325f288-image-1736535608844.png" alt="A flowchart showing multiple steps" style="width: 70px; height: 70px; margin-top: 20px; margin-right: 20px;">
+  <div>
+
+#### **Question 4**: Taylor is trying to help a friend debug a level. She says, "Let's write out the steps the program should follow to build the song correctly, kind of like a recipe we can follow."  
+#### **Correct Answer:** Algorithmic Thinking  
+#### **Explanation:** Taylor builds a step-by-step plan to solve the problem, just like a recipe. Designing a clear sequence of actions or rules to follow is the heart of algorithmic thinking.
+
+  </div>
+</div>
+
+MARKDOWN

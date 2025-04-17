@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-15 19:57:57 UTC",
+    "serialized_at": "2025-04-17 03:50:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -219,6 +219,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "**How can adding a parameter to a function make your code more powerful and reusable?**\n\nIn this lesson, students learn how parameters make functions more powerful and reusable by writing, modifying, and debugging functions that take arguments. Through a mix of unplugged discussions, coding challenges, and structured practice in Python Lab, students explore the difference between parameters and arguments, practice writing custom helper functions in a separate file (`custom.py`), and call them from their main program using `from custom import`. Students also begin using the Backpack to save and reuse code, and apply the UMPIRE strategy to structure their thinking when writing functions.",
+        "student_overview": "**How can adding a parameter to a function make your code more powerful and reusable?**\n\nIn this lesson, you explore how to make your functions more flexible using parameters. You use arguments to customize what your code does, write and organize helper functions in `custom.py`, and solve creative challenges in the Neighborhood. You practice using the UMPIRE strategy to plan your functions, and learn how to save your work to the Backpack so you can reuse it later."
       },
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
@@ -3097,6 +3099,7 @@
       "key": "dcf6378f-cad1-4f80-ad64-d1f8170f3ab1",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about these functions? Do we really need a separate function for each name?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that the structure of each function is the same and only the name being greeted is changing. They may suggest that this is repetitive and could be simplified, setting up the need for parameters to make code more flexible and reusable.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How is using `say_hi(\"name\")` better than creating a different function for every person?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that using a single function with a parameter is better than creating many separate functions because it reduces repetition in the code. They should also recognize that this approach makes the code shorter, easier to update, and more flexible. Ultimately, they should begin to see how parameters allow a single function to handle different inputs, which makes the function more reusable across different situations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "dcf6378f-cad1-4f80-ad64-d1f8170f3ab1",
@@ -3107,6 +3110,15 @@
       "key": "1d2c7df5-86c3-4842-a196-668191750c39",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *parameter*.",
+        "duration": "15",
+        "name": "Parameters and Arguments",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reinforce that a parameter only exists *inside* the function definition."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1d2c7df5-86c3-4842-a196-668191750c39",
@@ -3114,9 +3126,43 @@
       }
     },
     {
-      "key": "96465bde-56ce-42ca-a186-4fee239d4c99",
+      "key": "b611734d-4052-47de-8831-0e070cfc167a",
       "position": 2,
       "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b611734d-4052-47de-8831-0e070cfc167a",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "fcb00a0c-6bc1-4fe1-8ff4-2662b06c7ae6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What would be the parameter in this example?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that the parameter is**name**– the placeholder inside the parentheses when the function is defined on line 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *argument*."
+      },
+      "seeding_key": {
+        "activity_section.key": "fcb00a0c-6bc1-4fe1-8ff4-2662b06c7ae6",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "ea5b02f2-21a5-4449-b2e1-573481e32693",
+      "position": 4,
+      "properties": {
+        "description": "Think of the function like a fill-in-the-blank sentence. The parameter is the blank space, and the argument is the word you choose to put in.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ea5b02f2-21a5-4449-b2e1-573481e32693",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "96465bde-56ce-42ca-a186-4fee239d4c99",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What about the argument?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that `\"Taylor\"` is the argument — the actual value being passed into the function. They should understand that the argument replaces the parameter name when the function runs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the `takePaint()` method.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the `paint()` method. Be sure to point out the `color` parameter that lets the user choose what color the `Painter` uses.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students how to specify a color for the `Painter` to use. Emphasize that the color is written in quotes and passed as an argument to the `paint()` method.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 through 6.\n- **Level #1:** In Python Lab, students complete a choice level where they add a parameter to a function.\n- **Level #2:** Students debug the missing argument.\n- **Level #3:** Students debug wrong parameter name and parameter trying to be used outside of function.\n- **Level #4:** Students complete a choice level where they explore using `take_paint()` and `paint()`.\n- **Level #5:** Students complete a choice level where they add a `Painter` parameter.\n- **Level #6:** Students complete a Check Your Understanding.",
         "progression_name": "Parameters and Arguments"
       },
       "seeding_key": {
@@ -3126,7 +3172,7 @@
     },
     {
       "key": "b77f273f-84bc-4b1c-92c4-72d0e81dfe43",
-      "position": 3,
+      "position": 6,
       "properties": {
         "progression_name": "Check Your Understanding"
       },
@@ -3136,9 +3182,128 @@
       }
     },
     {
-      "key": "0f1461bb-0676-4e9f-b0a1-37a4596abbfb",
-      "position": 4,
+      "key": "416591e5-0b6a-4642-bd16-37fbcb6e36e1",
+      "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, circulate around the room to check for understanding. Listen for students using the terms parameter and argument correctly, and ask them to explain the difference in their own words if needed. Watch for common debugging issues, such as missing quotation marks around strings or calling functions with the wrong number of arguments. This is also a great opportunity to highlight when students successfully use a parameter to make their function more flexible or reusable – point it out and encourage them to share their thinking with a partner.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Levels 1, 4, and 5 are choice levels. Encourage students to try at least one and challenge themselves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "416591e5-0b6a-4642-bd16-37fbcb6e36e1",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "8d095d7c-c375-41ba-ae87-f278a88d7cbf",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8d095d7c-c375-41ba-ae87-f278a88d7cbf",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "e25d2160-44db-42a0-be00-adadc4b2fb16",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain why parameters are useful for functions.",
+        "duration": "20",
+        "name": "Painter Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "e25d2160-44db-42a0-be00-adadc4b2fb16",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "3bf0c6dd-2aab-480d-874c-fcb2c7c7a614",
+      "position": 10,
+      "properties": {
+        "description": "A module is just a regular Python file. By storing your functions in a module like custom.py, you can keep your code organized and avoid repeating yourself. Then, when you want to use those functions in your main program, you just import them.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3bf0c6dd-2aab-480d-874c-fcb2c7c7a614",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "b235ec0b-7257-415c-8d2a-2c4b7a2c443a",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *module*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the code examples on both sides of the screen. Start with the file labeled `custom.py`, and explain that this file is used to define your functions — in this case, a simple `greet()` function that prints `\"Hello, World!\"` Then move to the file labeled `main.py`. Explain that this is the file where you actually use or call the function.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that one file defines the function, and the other file uses it. If students understand this relationship now, they'll be more successful when managing larger projects later on."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b235ec0b-7257-415c-8d2a-2c4b7a2c443a",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "8242a49d-b0ef-421a-8735-ac06f4e324ca",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8242a49d-b0ef-421a-8735-ac06f4e324ca",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "0189781b-2b83-4f0c-85d9-1b93a18ef58e",
+      "position": 13,
+      "properties": {
+        "description": "The Backpack is a tool that lets you save your Python files, like**custom.py**, so you can use them again in a different program. This is super helpful when you've written a great helper function and want to keep it for future projects. Think of it as a personal storage space for your best code.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0189781b-2b83-4f0c-85d9-1b93a18ef58e",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "1278d379-3fd9-4a34-9868-6eb6894bab74",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the Backpack is a way to save work they want to reuse later, especially custom helper functions they've written.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reinforce UMPIRE as a step-by-step strategy that students can use whenever they are writing a function.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "UMPIRE is especially helpful for students who feel stuck getting started or overwhelmed by function structure. Refer back to this strategy during coding time to support students in working independently."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1278d379-3fd9-4a34-9868-6eb6894bab74",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "9d90f151-618d-446d-b614-45828920456b",
+      "position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9d90f151-618d-446d-b614-45828920456b",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
+      "key": "0f1461bb-0676-4e9f-b0a1-37a4596abbfb",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 9 to complete Levels 9 through 11.\n- **Level #7:** Students complete a choice level where they write and use a `turn_right()` function.\n- **Level #8:** Students debug broken `custom.py` and `main.py` files.\n- **Level #9:** Students complete a choice level where they write and use a new function.\n- **Level #10:** Students complete a vocabulary Check Your Understanding.\n- **Level #11:** Students complete a Check Your Understanding.",
         "progression_name": "Painter Functions"
       },
       "seeding_key": {
@@ -3147,9 +3312,28 @@
       }
     },
     {
+      "key": "46e82856-c6c1-4536-a586-fb4f7b6cbd06",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, support them by asking clarifying questions about their function structure. Prompt them to check file names, imports, and syntax when debugging. Celebrate when students reuse functions or take a creative approach to painting designs.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Levels 10 and 11 are choice levels. Encourage students to try at least one and challenge themselves.\n\nEncourage students to use a debugging checklist as they work:\n- Is the function name the same in both files?\n- Did you call the function with parentheses?\n- Did you import it correctly?"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "46e82856-c6c1-4536-a586-fb4f7b6cbd06",
+        "lesson_activity.key": "451627c0-3379-4bcc-b51e-5ea6326e4982"
+      }
+    },
+    {
       "key": "6bca21c8-4915-48ae-802d-61b3dd36be0b",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their unit guides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.",
+        "name": "Question of the Day Reflection"
       },
       "seeding_key": {
         "activity_section.key": "6bca21c8-4915-48ae-802d-61b3dd36be0b",
@@ -5095,6 +5279,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-vocab_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5117,6 +5304,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-level10_2025-launch_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5590,31 +5780,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "programming-fundamentals-lesson7-level9_2025-launch_2025"
-        ],
-        "progression": "Painter Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson7-level9_2025-launch_2025"
-        ],
-        "lesson.key": "Functions with Parameters",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "0f1461bb-0676-4e9f-b0a1-37a4596abbfb"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson7-level9_2025-launch_2025"
-      ]
-    },
-    {
-      "chapter": 56,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "programming-fundamentals-lesson7-level10_2025-launch_2025"
         ],
         "progression": "Painter Functions"
@@ -5631,6 +5796,31 @@
       },
       "level_keys": [
         "programming-fundamentals-lesson7-level10_2025-launch_2025"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level9_2025-launch_2025"
+        ],
+        "progression": "Painter Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-level9_2025-launch_2025"
+        ],
+        "lesson.key": "Functions with Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif2-2025",
+        "activity_section.key": "0f1461bb-0676-4e9f-b0a1-37a4596abbfb"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson7-level9_2025-launch_2025"
       ]
     },
     {
@@ -5689,6 +5879,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-vocab_2025"
+        ],
         "progression": "Painter Functions"
       },
       "bonus": false,
@@ -5837,31 +6030,6 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "programming-fundamentals-lesson8-vocab_2025"
-        ],
-        "progression": "Check Your Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson8-vocab_2025"
-        ],
-        "lesson.key": "Introduction to Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "0f7a7ed3-fb87-4d49-903a-cf4518d5200c"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson8-vocab_2025"
-      ]
-    },
-    {
-      "chapter": 66,
-      "position": 7,
-      "activity_section_position": 2,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
           "programming-fundamentals-lesson8-level6_2025-launch_2025"
         ],
         "progression": "Check Your Understanding"
@@ -5881,8 +6049,8 @@
       ]
     },
     {
-      "chapter": 67,
-      "position": 8,
+      "chapter": 66,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5906,8 +6074,8 @@
       ]
     },
     {
-      "chapter": 68,
-      "position": 9,
+      "chapter": 67,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5931,8 +6099,8 @@
       ]
     },
     {
-      "chapter": 69,
-      "position": 10,
+      "chapter": 68,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -5956,9 +6124,31 @@
       ]
     },
     {
+      "chapter": 69,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Loops with the Painter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-vocab_2025"
+        ],
+        "lesson.key": "Introduction to Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif2-2025",
+        "activity_section.key": "21afbf6a-7141-4d87-84a9-fecb21f0c96c"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson8-vocab_2025"
+      ]
+    },
+    {
       "chapter": 70,
       "position": 11,
-      "activity_section_position": 4,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -8432,9 +8622,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson7-level9_2025-launch_2025",
+        "level.key": "programming-fundamentals-lesson7-level10_2025-launch_2025",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson7-level9_2025-launch_2025"
+          "programming-fundamentals-lesson7-level10_2025-launch_2025"
         ],
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
@@ -8444,9 +8634,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson7-level10_2025-launch_2025",
+        "level.key": "programming-fundamentals-lesson7-level9_2025-launch_2025",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson7-level10_2025-launch_2025"
+          "programming-fundamentals-lesson7-level9_2025-launch_2025"
         ],
         "lesson.key": "Functions with Parameters",
         "lesson_group.key": "lessonGroup-3",
@@ -8552,18 +8742,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson8-vocab_2025",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson8-vocab_2025"
-        ],
-        "lesson.key": "Introduction to Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "0f7a7ed3-fb87-4d49-903a-cf4518d5200c"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "programming-fundamentals-lesson8-level6_2025-launch_2025",
         "script_level.level_keys": [
           "programming-fundamentals-lesson8-level6_2025-launch_2025"
@@ -8603,6 +8781,18 @@
         "level.key": "programming-fundamentals-lesson8-level9_2025-launch_2025",
         "script_level.level_keys": [
           "programming-fundamentals-lesson8-level9_2025-launch_2025"
+        ],
+        "lesson.key": "Introduction to Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif2-2025",
+        "activity_section.key": "21afbf6a-7141-4d87-84a9-fecb21f0c96c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson8-vocab_2025",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-vocab_2025"
         ],
         "lesson.key": "Introduction to Loops",
         "lesson_group.key": "lessonGroup-3",
@@ -10028,6 +10218,16 @@
       }
     },
     {
+      "key": "argument",
+      "word": "argument",
+      "definition": "the actual value you pass into a function when you call it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "argument"
+      }
+    },
+    {
       "key": "bias",
       "word": "bias",
       "definition": "when our data or the way we analyze it favors certain outcomes over others",
@@ -10078,16 +10278,6 @@
       }
     },
     {
-      "key": "debugging",
-      "word": "debugging",
-      "definition": "the process of finding and fixing errors, or bugs, in logic and code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
       "key": "decomposition",
       "word": "decomposition",
       "definition": "breaking a larger problem into smaller, more manageable parts",
@@ -10128,16 +10318,6 @@
       }
     },
     {
-      "key": "logic_error",
-      "word": "logic error",
-      "definition": "when your code runs, but it doesn't do what you expected",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "logic_error"
-      }
-    },
-    {
       "key": "loop",
       "word": "loop",
       "definition": "code that continues to repeat while a condition is true",
@@ -10158,6 +10338,16 @@
       }
     },
     {
+      "key": "module",
+      "word": "module",
+      "definition": "a .py file that contains Python code",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "module"
+      }
+    },
+    {
       "key": "object",
       "word": "object",
       "definition": "something that has attributes (what it knows) and methods (what it can do)",
@@ -10165,6 +10355,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "object"
+      }
+    },
+    {
+      "key": "parameter",
+      "word": "parameter",
+      "definition": "a placeholder in your function",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameter"
       }
     },
     {
@@ -10185,16 +10385,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "snake_case"
-      }
-    },
-    {
-      "key": "syntax_error",
-      "word": "syntax error",
-      "definition": "when your code breaks the rules of the programming language, like forgetting a colon or misspelling a command",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "syntax_error"
       }
     },
     {
@@ -10270,19 +10460,19 @@
     {
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
-        "vocabulary.key": "debugging"
+        "vocabulary.key": "argument"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
-        "vocabulary.key": "logic_error"
+        "vocabulary.key": "module"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
-        "vocabulary.key": "syntax_error"
+        "vocabulary.key": "parameter"
       }
     },
     {
@@ -10481,6 +10671,16 @@
       }
     },
     {
+      "key": "714dd803-6137-42ad-97ff-6b09f16627e9",
+      "properties": {
+        "description": "Explain how parameters allow for more flexible code."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "objective.key": "714dd803-6137-42ad-97ff-6b09f16627e9"
+      }
+    },
+    {
       "key": "72dba5b6-8604-4399-85ea-fc7038efcfc6",
       "properties": {
         "description": "Identify the essential details of a problem by applying abstraction techniques"
@@ -10528,6 +10728,16 @@
       "seeding_key": {
         "lesson.key": "Functions",
         "objective.key": "aca6d88c-f0ec-4593-9f86-23e4a477e3c6"
+      }
+    },
+    {
+      "key": "adff6d11-ce11-4a61-b9a0-1201cd41fd96",
+      "properties": {
+        "description": "Debug common errors related to parameters."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "objective.key": "adff6d11-ce11-4a61-b9a0-1201cd41fd96"
       }
     },
     {
@@ -10591,6 +10801,16 @@
       }
     },
     {
+      "key": "e75aa9ee-2cf7-4aad-a90c-169c81358592",
+      "properties": {
+        "description": "Call a function and pass an appropriate argument."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "objective.key": "e75aa9ee-2cf7-4aad-a90c-169c81358592"
+      }
+    },
+    {
       "key": "eb6050df-e8a7-4f3c-93de-fd7091d3c84c",
       "properties": {
         "description": "Apply the UMPIRE strategy to plan, program, and debug a sequence of instructions."
@@ -10598,6 +10818,16 @@
       "seeding_key": {
         "lesson.key": "Working with Objects",
         "objective.key": "eb6050df-e8a7-4f3c-93de-fd7091d3c84c"
+      }
+    },
+    {
+      "key": "f6424eab-71c9-4cfa-a85f-7b428c44bb09",
+      "properties": {
+        "description": "Define functions that accept parameters."
+      },
+      "seeding_key": {
+        "lesson.key": "Functions with Parameters",
+        "objective.key": "f6424eab-71c9-4cfa-a85f-7b428c44bb09"
       }
     },
     {

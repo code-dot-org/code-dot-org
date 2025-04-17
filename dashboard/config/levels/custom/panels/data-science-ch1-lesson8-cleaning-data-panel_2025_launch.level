@@ -1,0 +1,37 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-04-16T18:10:46.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/a725584a2c7bff7f38734cd9631535f5-Panel Levels Slide Deck (3).png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Examine the Row\n- Decide if anything needs to be changed.\n- If not, copy over the original data as it is.\n",
+        "imageUrl": "https://images.code.org/6b5e33ef7143bee9a7fe822a29da243c-Screenshot 2025-04-16 at 12.51.42 PM.png",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Clean the Data\n- If the data needs to be cleaned, decide if you will:\n    - Change it\n    - Delete it",
+        "imageUrl": "https://images.code.org/c2c4beb4b9e10375aa468e90320c3824-Screenshot 2025-04-16 at 12.53.19 PM.png",
+        "key": "data-science-ch1-lesson8-cleaning-data-panel_2025_launch-63dc953b-1d36-47b0-aad4-ceade3d5d1a9"
+      }
+    ],
+    "name_suffix": "_2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-16T18:10:46.498+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-histogram-panel_2025_launch\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-histogram-panel_2025_launch\"},{\"changed_at\":\"2025-04-16 18:12:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:55:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

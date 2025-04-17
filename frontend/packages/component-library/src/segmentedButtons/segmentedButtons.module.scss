@@ -1,5 +1,5 @@
-@import '@code-dot-org/component-library-styles/mixins.scss';
-@import '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
 .segmentedButtons {
   display: flex;
@@ -159,7 +159,7 @@
 
   .segmentedButton {
     span {
-      @include button-one-text;
+      @include mixins.button-one-text;
       margin-bottom: 0;
       // Margin-top for correct vertical alignment of the metropolis font
       margin-top: 1px;
@@ -190,7 +190,7 @@
 
   .segmentedButton {
     span {
-      @include button-two-text;
+      @include mixins.button-two-text;
       margin-bottom: 0;
       // Margin-top for correct vertical alignment of the metropolis font
       margin-top: 1px;
@@ -221,7 +221,7 @@
 
   .segmentedButton {
     span {
-      @include button-three-text;
+      @include mixins.button-three-text;
       margin-bottom: 0;
       // Margin-top for correct vertical alignment of the metropolis font
       margin-top: 1px;
@@ -252,7 +252,7 @@
 
   .segmentedButton {
     span {
-      @include button-four-text;
+      @include mixins.button-four-text;
       margin-bottom: 0;
 
       // Margin-top for correct vertical alignment of the metropolis font

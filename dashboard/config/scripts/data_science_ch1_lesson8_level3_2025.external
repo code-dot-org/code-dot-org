@@ -5,15 +5,20 @@ title 'Check for Understanding'
 markdown <<MARKDOWN
 #Check for Understanding
 
-###At the following link:
+Open the following dataset and make a copy:
 
-###[Google Sheets - Pizza Choice](https://docs.google.com/spreadsheets/d/1MMsZwVwDaGNSol6RMsQk9NklsYBtgQyiEIxuSwmykIA/edit?usp=drive_link)
+[Google Sheets - Pizza Choice](https://docs.google.com/spreadsheets/d/1MMsZwVwDaGNSol6RMsQk9NklsYBtgQyiEIxuSwmykIA/edit?usp=drive_link)
 
-####For each response, decide if you want to:
-- ####Keep it the same
-- ####Delete it
-- ####Change it
-####Put your cleaned data in the second column--and graph it!
+1. For each response (one per row), decide if you want to:
+    - Keep it the same
+    - Delete it
+    - Change it
 
-![Data set showing pizza topping preferences](https://images.code.org/cb75c03c37adc495d1449c90558e41db-image-1744317884747.40.15 PM.png)
+2. Put your cleaned data response in the second column.
+
+3. After cleaning a few entries, use AI Chat on the next level to check your work.
+
+4. When you finish cleaning your dataset, graph it!
+
+![Data set showing pizza topping preferences](https://images.code.org/65b4896361351607f1789eb12ffc6e34-image-1744834320019.11.30 PM.png)
 MARKDOWN
