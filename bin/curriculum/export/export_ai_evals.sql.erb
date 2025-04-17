@@ -29,10 +29,10 @@ UNLOAD ($$
       FROM dashboard_production.rubrics r
         JOIN dashboard_production.rubric_ai_evaluations rae ON r.id = rae.rubric_id
         JOIN dashboard_production.learning_goals lg ON r.id = lg.rubric_id
-        JOIN dashboard_production.learning_goal_ai_evaluations lgae
+        JOIN dashboard_production_pii.learning_goal_ai_evaluations lgae
           -- must join against both lg and rae to avoid a huge number of duplicate rows
           ON lg.id = lgae.learning_goal_id AND rae.id = lgae.rubric_ai_evaluation_id
-        LEFT JOIN dashboard_production.learning_goal_ai_evaluation_feedbacks lgaef ON lgae.id = lgaef.learning_goal_ai_evaluation_id
+        LEFT JOIN dashboard_production_pii.learning_goal_ai_evaluation_feedbacks lgaef ON lgae.id = lgaef.learning_goal_ai_evaluation_id
       WHERE
         rae.status = 2 -- SUCCESS
     )
