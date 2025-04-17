@@ -9,7 +9,7 @@ export default class ConsoleManager {
   private inputBuffer: string;
   // If the last line in terminalLines is a partial line or not (i.e. if it was terminated with a newline).
   private lastLineIsPartial: boolean;
-  private listeners: (() => void)[] = [];
+  private terminalLinesListeners: (() => void)[] = [];
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
     this.terminal = terminal;
@@ -39,7 +39,7 @@ export default class ConsoleManager {
     this.terminalLines = [];
     this.terminal.clear();
     this.lastLineIsPartial = false;
-    this.notifyListeners();
+    this.executeTerminalLinesListeners();
   }
 
   public getTerminalLines() {
@@ -49,7 +49,7 @@ export default class ConsoleManager {
   public writeConsoleMessage(message: string) {
     const lines = message.split('\n');
     lines.forEach(l => this.appendTerminalLine(l));
-    this.notifyListeners();
+    this.executeTerminalLinesListeners();
   }
 
   public writePartialLine(message: string) {
@@ -58,7 +58,7 @@ export default class ConsoleManager {
     this.terminal.write(message);
     this.terminal.scrollToBottom();
     this.terminal.focus();
-    this.notifyListeners();
+    this.executeTerminalLinesListeners();
   }
 
   public appendToInputBuffer(data: string) {
@@ -80,20 +80,21 @@ export default class ConsoleManager {
     this.updateTerminalLines(this.inputBuffer);
     this.lastLineIsPartial = false;
     this.inputBuffer = '';
-    this.notifyListeners();
+    this.executeTerminalLinesListeners();
   }
 
-  public addListener(listener: () => void) {
-    console.log('addlistner', listener);
-    this.listeners.push(listener);
+  public addTerminalLinesListener(listener: () => void) {
+    this.terminalLinesListeners.push(listener);
   }
 
-  public removeListener(listener: () => void) {
-    this.listeners = this.listeners.filter(l => l !== listener);
+  public removeTerminalLinesListener(listener: () => void) {
+    this.terminalLinesListeners = this.terminalLinesListeners.filter(
+      l => l !== listener
+    );
   }
 
-  private notifyListeners() {
-    this.listeners.forEach(listener => listener());
+  private executeTerminalLinesListeners() {
+    this.terminalLinesListeners.forEach(listener => listener());
   }
 
   private appendTerminalLine(line: string) {
