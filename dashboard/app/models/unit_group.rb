@@ -206,15 +206,15 @@ class UnitGroup < ApplicationRecord
     original_scripts  = original_scripts.reject(&:empty?)
     original_units_objects = original_scripts.map {|s| Unit.find_by_name!(s)}
 
+    # Treat the seed as the source of truth
+    # If a unit is removed from this list, remove it
     units_to_remove = original_units - original_units_objects
-    unremovable_unit_names = units_to_remove.map(&:name)
-    raise "Cannot remove units from their original unit group: #{unremovable_unit_names}" if unremovable_unit_names.any?
+    units_to_remove.each do |unit|
+      unit.update!(original_unit_group_id: nil, skip_name_format_validation: true)
+      unit.reload
+    end
 
-    unaddable_unit_names = original_units_objects.select do |unit|
-      !unit.original_unit_group.nil? && unit.original_unit_group != self
-    end.map(&:name)
-    raise "Cannot add original units if they already have an original unit group: #{unaddable_unit_names}" if unaddable_unit_names.any?
-
+    # If a unit already has an original_unit_group, replace it with this one instead
     original_units_objects.each do |unit|
       unit.update!(original_unit_group_id: id, skip_name_format_validation: true)
       unit.reload
