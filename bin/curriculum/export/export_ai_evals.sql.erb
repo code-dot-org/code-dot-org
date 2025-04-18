@@ -9,12 +9,13 @@ UNLOAD ($$
         , rae.user_id
         , r.lesson_id
         , r.level_id
+        , r.id rubric_id
+        , lg.id learning_goal_id
         , lg.position learning_goal_position
         , lg.learning_goal learning_goal_text
         , lg.tips learning_goal_tips
         , rae.project_id
         , rae.project_version
-        , lgae.learning_goal_id
         , lgae.created_at
         , lgae.understanding ai_understanding
         , lgae.ai_confidence ai_confidence_pass_fail
