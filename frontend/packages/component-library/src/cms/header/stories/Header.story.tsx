@@ -256,6 +256,9 @@ export const DefaultLoggedOut: Story = {
       viewports: MINIMAL_VIEWPORTS,
       defaultViewport: 'desktop',
     },
+    eyes: {
+      viewportSize: {width: 1268, height: 720},
+    },
     docs: {
       description: {
         story:
@@ -326,6 +329,9 @@ export const LoggedIn: Story = {
       viewports: MINIMAL_VIEWPORTS,
       defaultViewport: 'desktop',
     },
+    eyes: {
+      viewportSize: {width: 1268, height: 720},
+    },
     docs: {
       description: {
         story:
@@ -363,6 +369,9 @@ export const NewProjectMenu: Story = {
     viewport: {
       viewports: MINIMAL_VIEWPORTS,
       defaultViewport: 'desktop',
+    },
+    eyes: {
+      viewportSize: {width: 1268, height: 720},
     },
     docs: {
       description: {
@@ -407,6 +416,9 @@ export const HelpMenu: Story = {
     viewport: {
       viewports: MINIMAL_VIEWPORTS,
       defaultViewport: 'desktop',
+    },
+    eyes: {
+      viewportSize: {width: 1268, height: 720},
     },
     docs: {
       description: {
