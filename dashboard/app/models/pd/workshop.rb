@@ -40,6 +40,7 @@ class Pd::Workshop < ApplicationRecord
   include Pd::WorkshopConstants
   include SerializedProperties
   include Pd::WorkshopSurveyConstants
+  include Pd::UrlValidator
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -162,7 +163,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def valid_registration_link_format
-    unless valid_url?(registration_link)
+    unless self.class.valid_url?(registration_link, true)
       errors.add(:registration_link, "is not a valid URL")
     end
   end
@@ -178,12 +179,6 @@ class Pd::Workshop < ApplicationRecord
     else
       Pd::SharedWorkshopConstants::WORKSHOP_FORMATS[:in_person]
     end
-  end
-
-  def valid_url?(url)
-    URI.parse(url)
-  rescue URI::InvalidURIError
-    false
   end
 
   def sanitize_time_zone

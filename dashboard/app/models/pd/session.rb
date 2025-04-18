@@ -25,6 +25,8 @@
 require 'cdo/code_generation'
 
 class Pd::Session < ApplicationRecord
+  include Pd::UrlValidator
+
   # creates a hash like {in_person: 0, virtual: 1}
   enum session_format: Pd::SharedWorkshopConstants::PD_SESSION_FORMATS.to_h {|f| [f[:value], f[:enum_value]]}
 
@@ -53,7 +55,7 @@ class Pd::Session < ApplicationRecord
   end
 
   def valid_meeting_link_format
-    unless workshop.valid_url?(meeting_link)
+    unless self.class.valid_url?(meeting_link, true)
       errors.add(:meeting_link, "is not a valid URL")
     end
   end
