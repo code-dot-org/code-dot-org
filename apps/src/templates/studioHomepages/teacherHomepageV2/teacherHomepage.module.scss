@@ -34,6 +34,14 @@
   margin-bottom: 20px;
 }
 
+.sectionCardDragButton {
+  cursor: grab;
+}
+
+.sectionCardDragButton:active {
+  cursor: grabbing;
+}
+
 .headerButtonRowRight {
   display: flex;
   gap: 6px;
