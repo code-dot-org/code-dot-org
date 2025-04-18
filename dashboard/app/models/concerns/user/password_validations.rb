@@ -1,3 +1,7 @@
+# This concern adds password validation logic to the User model.
+# It includes default validations for presence, length, and confirmation,
+# and applies stricter password rules for certain countries based on feature flags.
+
 module User::PasswordValidations
   extend ActiveSupport::Concern
 
