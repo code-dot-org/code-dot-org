@@ -27,6 +27,9 @@ import moduleStyles from './console.module.scss';
 const Console: React.FunctionComponent = () => {
   const terminalRef = useRef<HTMLDivElement>(null);
   const [didInit, setDidInit] = useState(false);
+  const [consoleManager, setConsoleManager] = useState<ConsoleManager | null>(
+    null
+  );
   const {labConfig, sendConsoleInput, levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
   const hasMiniApp = !!labConfig?.miniApp?.name;
@@ -125,8 +128,9 @@ const Console: React.FunctionComponent = () => {
     terminal.loadAddon(fitAddon);
     const imageAddon = new ImageAddon();
     terminal.loadAddon(imageAddon);
-    const consoleManager = new ConsoleManager(terminal, fitAddon);
-    CodebridgeRegistry.getInstance().setConsoleManager(consoleManager);
+    const newConsoleManager = new ConsoleManager(terminal, fitAddon);
+    CodebridgeRegistry.getInstance().setConsoleManager(newConsoleManager);
+    setConsoleManager(newConsoleManager);
     terminal.open(terminalRef.current);
     terminal.onData(onData);
     fitAddon.fit();
@@ -142,7 +146,7 @@ const Console: React.FunctionComponent = () => {
     // and move it to the new container.
     if (existingTerminalLines.length > 0) {
       const lines = existingTerminalLines.join('\n');
-      consoleManager.writeConsoleMessage(lines);
+      newConsoleManager.writeConsoleMessage(lines);
     }
 
     // Prevent keyboard trap.
@@ -177,7 +181,10 @@ const Console: React.FunctionComponent = () => {
       className={moduleStyles.consoleContainer}
       headerContent={codebridgeI18n.consoleHeader()}
       rightHeaderContent={
-        <RightButtons clearOutput={() => clearOutput(true)} />
+        <RightButtons
+          clearOutput={() => clearOutput(true)}
+          consoleManager={consoleManager}
+        />
       }
       leftHeaderContent={!hasMiniApp && <ControlButtons />}
       headerClassName={moduleStyles.consoleHeader}

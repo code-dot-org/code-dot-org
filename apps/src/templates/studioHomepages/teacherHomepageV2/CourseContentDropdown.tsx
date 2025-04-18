@@ -42,17 +42,7 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
       HttpClient.fetchJson<UnitLessonOptions[]>(
         `/sections/${section.id}/retrieve_lessons_for_dropdown`
       )
-        .then(response => {
-          const lessons: UnitLessonOptions[] = response.value.map(lesson => {
-            if (lesson.text.includes('Unit')) {
-              lesson.text = lesson.text.replace(' - ', ': ');
-            } else if (!lesson.text.includes('Lesson')) {
-              lesson.text = `${i18n.lesson()} ${lesson.text}`;
-            }
-            return lesson;
-          });
-          setLessonList(lessons);
-        })
+        .then(response => setLessonList(response.value))
         .catch(error => console.error(error));
     }
   }, [section.id, section.unitId]);
