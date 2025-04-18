@@ -49,14 +49,13 @@ const InnerFileBrowser = React.memo(
 
     return (
       <>
-        {isParentBeingDroppedOver && <div className={moduleStyles.row} />}
         {Object.values(folders)
           .filter(f => f.parentId === parentId)
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => {
             const MaybeDraggable = isReadOnly ? NotDraggable : Draggable;
             const isBeingDroppedOver = f.id === dropData?.id;
-            const isOpen = f.open || isBeingDroppedOver;
+            const isOpen = f.open;
             return (
               <Droppable
                 data={{id: f.id}}

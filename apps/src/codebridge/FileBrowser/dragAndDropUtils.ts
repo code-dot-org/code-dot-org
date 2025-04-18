@@ -13,7 +13,8 @@ export const fileBrowserKeyboardCoordinateGetter: KeyboardCoordinateGetter = (
   args
 ) => {
   const {context} = args;
-  const {droppableRects, over} = context;
+  const {droppableRects, droppableContainers, over} = context;
+  console.log({droppableRects, droppableContainers});
   if (event.code !== KeyboardCode.Up && event.code !== KeyboardCode.Down) {
     return;
   }
@@ -65,11 +66,10 @@ export const fileBrowserKeyboardCoordinateGetter: KeyboardCoordinateGetter = (
 
 export const fileBrowserCollisionDetector: CollisionDetection = args => {
   const rectangleCollisions = rectIntersection(args);
-  console.log({rectangleCollisions});
   if (rectangleCollisions.length <= 1) {
     return rectangleCollisions;
   }
-  const {droppableRects, active} = args;
+  const {droppableRects, collisionRect} = args;
   rectangleCollisions.sort((a, b) => {
     // DEFAULT_FOLDER_ID should always be last in the list, because it is the root folder
     // and contains all other folders.
@@ -78,23 +78,21 @@ export const fileBrowserCollisionDetector: CollisionDetection = args => {
     } else if (b.id === DEFAULT_FOLDER_ID) {
       return -1;
     }
-    const activeRect = droppableRects.get(active.id);
+    const activeRect = collisionRect;
     const aRect = droppableRects.get(a.id);
     const bRect = droppableRects.get(b.id);
+    console.log(`comparing a: ${a.id} b: ${b.id}`);
     // idk why this would happen
     if (!activeRect || !aRect || !bRect) {
       return 0;
     }
-    // If active is below the top of both rects, pick the one that is lower
-    if (aRect.top >= activeRect.bottom && bRect.top >= activeRect.bottom) {
+    // If active is below  rects, pick the one that is lower
+    if (aRect.top <= activeRect.top && bRect.top <= activeRect.top) {
       return bRect.top - aRect.top;
-    } else if (
-      aRect.top >= activeRect.bottom &&
-      bRect.top < activeRect.bottom
-    ) {
+    } else if (aRect.top <= activeRect.top && bRect.top > activeRect.top) {
       // If active is only below the top of aRect, bRect is higher priority
       return -1;
-    } else if (bRect.top >= activeRect.bottom) {
+    } else if (bRect.top <= activeRect.top) {
       // If only bRect is above active, bRect is higher priority
       return 1;
     } else {
