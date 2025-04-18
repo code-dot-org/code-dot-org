@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-04-07T23:38:24.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "####What would make this lesson better? ",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19619,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-04-07T23:38:24.527+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_ai_03_11\\\"\"],\"cloned_from\":\"csaif_pl_ai_03_11\"},{\"changed_at\":\"2025-04-07 23:42:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

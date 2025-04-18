@@ -242,6 +242,50 @@ const optionsList = [
       {value: 'true', description: 'JavaScript text editor.'},
     ],
   },
+  {
+    name: 'blockly-glow-highlight',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Show a yellow outline around highlighted blocks (default).',
+      },
+      {
+        value: 'true',
+        description: 'Add a light filter over highlighted blocks',
+      },
+    ],
+  },
+  {
+    name: 'exemplar-player-bottom',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description:
+          'Exemplar player appears at bottom of main instructions text (default).',
+      },
+      {
+        value: 'true',
+        description: 'Exemplar player appears at bottom of instructions panel.',
+      },
+    ],
+  },
+  {
+    name: 'log-validator-condition-changes',
+    type: 'radio',
+    values: [
+      {
+        value: 'false',
+        description: 'Do not log validator condition changes (default).',
+      },
+      {
+        value: 'true',
+        description: 'Log validator condition changes.',
+      },
+    ],
+  },
 ];
 
 export default class MusicMenu extends React.Component {

@@ -241,6 +241,7 @@ class Level < ApplicationRecord
         hash['notes'] = Encryption.decrypt_object(encrypted_notes)
       end
     rescue Encryption::KeyMissingError
+      raise if rack_env?(:production)
       puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
     end
     hash

@@ -217,6 +217,7 @@ const SummaryResponses = ({
           <FreeResponseAIEvaluation
             responses={responsesForAi}
             levelData={levelData}
+            totalNumberOfStudents={students.length}
           />
         )}
 

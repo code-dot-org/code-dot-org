@@ -40,14 +40,14 @@ describe('LessonOverview', () => {
                 {
                   key: 'lesson-1',
                   position: 1,
-                  displayName: 'Lesson 1',
+                  displayName: 'Lesson One',
                   link: '/lessons/1',
                   lockable: false,
                 },
                 {
                   key: 'lesson-2',
                   position: 2,
-                  displayName: 'Lesson 2',
+                  displayName: 'Lesson Two',
                   link: '/lessons/2',
                   lockable: false,
                 },
@@ -60,7 +60,8 @@ describe('LessonOverview', () => {
         duration: 45,
         position: 1,
         lockable: false,
-        displayName: 'Lesson 1',
+        displayName: 'Lesson One',
+        title: 'Lesson One Title',
         overview: 'Lesson Overview',
         purpose: 'The purpose of the lesson is for people to learn',
         preparation: '- One',
@@ -124,7 +125,7 @@ describe('LessonOverview', () => {
 
     expect(wrapper.find('LessonNavigationDropdown').length).to.equal(1);
 
-    expect(wrapper.contains('Lesson 1: Lesson 1'), 'Lesson Name').to.be.true;
+    expect(wrapper.contains('Lesson One Title'), 'Lesson Title').to.be.true;
     expect(wrapper.contains('45 minutes'), 'Lesson Duration').to.be.true;
 
     const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');

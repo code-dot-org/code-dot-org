@@ -37,7 +37,7 @@ const DESCRIPTION_LONG =
 const defaultArgs: ActionBlockProps = {
   title: 'Action block title',
   description: DESCRIPTION,
-  image: image1,
+  image: {src: image1},
   overline: 'Overline Text',
   background: 'primary',
   primaryButton: {
@@ -69,7 +69,7 @@ export const DefaultActionBlocks: Story = {
         }}
       >
         <ActionBlock {...args} />
-        <ActionBlock {...args} image={image2} />
+        <ActionBlock {...args} image={{src: image2}} />
       </div>
     );
   },
@@ -148,7 +148,7 @@ export const WithDetail: Story = {
         />
         <ActionBlock
           {...args}
-          image={image2}
+          image={{src: image2}}
           details={{label: 'Duration', description: '2 weeks'}}
         />
       </div>
@@ -186,7 +186,7 @@ export const WithoutSecondaryButton: Story = {
         }}
       >
         <ActionBlock {...args} />
-        <ActionBlock {...args} image={image2} />
+        <ActionBlock {...args} image={{src: image2}} />
       </div>
     );
   },
@@ -279,8 +279,16 @@ export const ThreeAcross: Story = {
         }}
       >
         <ActionBlock {...args} />
-        <ActionBlock {...args} image={image2} description={DESCRIPTION_LONG} />
-        <ActionBlock {...args} image={image3} description={DESCRIPTION_MED} />
+        <ActionBlock
+          {...args}
+          image={{src: image2}}
+          description={DESCRIPTION_LONG}
+        />
+        <ActionBlock
+          {...args}
+          image={{src: image3}}
+          description={DESCRIPTION_MED}
+        />
       </div>
     );
   },

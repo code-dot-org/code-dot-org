@@ -12,8 +12,20 @@ import {ActionBlockProps} from '../types';
 
 import moduleStyles from '../actionBlock.module.scss';
 
-// This component is used to render a full-width action block that's designed to be
-// used in a layout where the action block takes up the full width of its container.
+/**
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see ./__tests__/FullWidthActionBlock.test.tsx)
+ * * (✔) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Full Width Action Block Component.
+ * This component is used to render a full-width action block that's designed to be
+ * used in a layout where the action block takes up the full width of its container.
+ */
 export const FullWidthActionBlock: React.FC<ActionBlockProps> = ({
   title,
   description,

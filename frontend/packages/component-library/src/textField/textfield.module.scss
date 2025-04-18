@@ -1,7 +1,8 @@
-@import '@code-dot-org/component-library-styles/mixins.scss';
-@import '@code-dot-org/component-library-styles/colors.scss';
-@import '@code-dot-org/component-library-styles/primitiveColors.scss';
-@import '@code-dot-org/component-library-styles/typography.module.scss';
+@use '@code-dot-org/component-library-styles/primitiveColors.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 
 // TextField common styles
 .textField {
@@ -20,7 +21,7 @@
     }
 
     &:focus-visible {
-      @include focus-styles;
+      @include mixins.focus-styles;
     }
   }
 }
@@ -106,7 +107,7 @@
 .textField-size {
   &-l {
     input {
-      @include body-one;
+      @include typography.body-one;
       padding: 0.625rem 0.875rem;
       margin-bottom: 0;
     }
@@ -114,7 +115,7 @@
 
   &-m {
     input {
-      @include body-two;
+      @include typography.body-two;
       padding: 0.5rem 0.75rem;
       margin-bottom: 0;
 
@@ -126,7 +127,7 @@
 
   &-s {
     input {
-      @include body-three;
+      @include typography.body-three;
       padding: 0.3125rem 0.625rem;
       margin-bottom: 0;
 

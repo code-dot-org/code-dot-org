@@ -14,9 +14,6 @@ import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 /*
   This component will look to the `showFileBrowser` boolean in the config and flip it back and forth.
   If we're showing it, the icon is solid, and if not, the icon is regular.
-
-  If no `showFileBrowser` boolean is provided in the config, then this button will not render.
-
 */
 
 const ToggleFileBrowserButton: React.FunctionComponent = () => {
@@ -48,7 +45,6 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
             iconName: 'folder',
           }}
           isIconOnly
-          color={'white'}
           onClick={onClick}
           ariaLabel={codebridgeI18n.toggleFileBrowser()}
           size={'xs'}

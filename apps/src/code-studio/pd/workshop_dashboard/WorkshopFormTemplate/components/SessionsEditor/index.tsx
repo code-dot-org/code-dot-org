@@ -3,7 +3,12 @@ import moment from 'moment-timezone';
 import React, {Dispatch, FC, memo, useCallback} from 'react';
 
 import {DATE_FORMAT, TIME_FORMAT} from '../../../workshopConstants';
-import {SessionAction, SessionFormState} from '../../types';
+import {
+  SessionAction,
+  SessionErrors,
+  SessionFields,
+  SessionFormState,
+} from '../../types';
 
 import SessionPart from './components/SessionPart';
 
@@ -34,8 +39,10 @@ export const generateNewSession = (
 
 export const SessionsEditor: FC<{
   sessions: SessionFormState[];
+  fields: SessionFields;
   dispatchSessions: Dispatch<SessionAction>;
-}> = ({sessions, dispatchSessions}) => {
+  errors: SessionErrors;
+}> = ({sessions, fields, dispatchSessions, errors}) => {
   const addSession = useCallback(() => {
     dispatchSessions({type: 'ADD_SESSION'});
   }, [dispatchSessions]);
@@ -47,6 +54,8 @@ export const SessionsEditor: FC<{
           key={session.id}
           showSameAsPrevious={i > 0}
           dispatchSessions={dispatchSessions}
+          fields={fields}
+          errors={errors[session.id]}
           {...session}
         />
       ))}

@@ -1,0 +1,9 @@
+name 'PL Summer CSD U3 - Interactive Card - ExampleChoice_25'
+display_name 'Your Interactive Card'
+description 'In the next few levels, you\'ll be completing your own interactive card. Here are some examples to give you some ideas.'
+
+sublevels
+level 'CSD U3 - Interactive Card - Example1_25'
+level 'CSD U3 - Interactive Card - Example2_25'
+level 'CSD U3 - Interactive Card - Example3_25'
+level 'CSD U3 - Interactive Card - Example4_25'

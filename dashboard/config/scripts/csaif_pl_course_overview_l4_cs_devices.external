@@ -29,10 +29,13 @@ markdown <<MARKDOWN
   </div>
 </div>
 
-
-#### <b> Explore the Unit <a href = "LINKLINKLINKLINK" target = "blank" rel = "noopener noreferrer"> here </a></b>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Explore the entire unit <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>here</a>.
+</p>
 
 <div style="clear:both;"></div>
+
+---
 
 ## Unit Calendar 
 
@@ -40,13 +43,13 @@ markdown <<MARKDOWN
 
 #### This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
 
-#### Check out the <a href="https://levelbuilder-studio.code.org/s/pf-aitutor-pilot-content-2024" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+#### Check out the <a href="https://studio.code.org/s/pf-aitutor-pilot-content-2024" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
 
-*** needs the correct calendar
 
 <p align="center">
 
-<img src="https://images.code.org/075430f6f244afc930aa6f0398f07659-image-1741375452584.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
+<img src="https://images.code.org/68b300d6a88b72730716f37687b206d0-image-1743692031024.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
 </p>
+
 
 MARKDOWN

@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from 'react';
 
 import {
-  AIResponse,
   StudentAnswer,
   StudentWorkEvaluation,
   evaluateStudentWork,
-  summarizeEvaluations,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
-import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
+import FreeResponseAiStudentResponseHeader from './FreeResponseAiStudentResponseHeader';
 import FreeResponseAiSummaryBox from './FreeResponseAiSummaryBox';
 import FreeResponseStudentResponseRow from './FreeResponseStudentResponseRow';
+
+import styles from './summary.module.scss';
 
 interface LevelData {
   levelId: number;
@@ -20,15 +20,17 @@ interface LevelData {
 interface FreeResponseAIEvaluationProps {
   responses: StudentAnswer[];
   levelData: LevelData;
+  totalNumberOfStudents: number;
 }
 
 const FreeResponseAIEvaluation: React.FunctionComponent<
   FreeResponseAIEvaluationProps
-> = ({responses, levelData}) => {
+> = ({responses, levelData, totalNumberOfStudents}) => {
   const [evaluationsPending, setEvaluationsPending] = useState<boolean>(false);
   const [evaluations, setEvaluations] = useState<StudentWorkEvaluation[]>([]);
   const [evaluationCount, setEvaluationCount] = useState<number>(0);
-  const [aiSummary, setAiSummary] = useState<AIResponse>();
+  const [showDetailedAnalysis, setShowDetailedAnalysis] =
+    useState<boolean>(false);
   const evaluationComplete =
     evaluationCount > 0 && responses.length === evaluationCount;
 
@@ -38,9 +40,7 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       return evaluateStudentResponse(studentResponse);
     });
 
-    await Promise.allSettled(responsePromises).then(() =>
-      summarizeStudentEvaluations(evaluations)
-    );
+    await Promise.allSettled(responsePromises);
   };
 
   const evaluateStudentResponse = async (studentAnswer: StudentAnswer) => {
@@ -54,29 +54,12 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
       aiEvaluation: aiResponse.aiEvaluation,
       aiReasoning: aiResponse.aiReasoning,
       evaluationCriteria: aiResponse.evaluationCriteria,
+      levelId: levelData.levelId,
+      unitId: levelData.unitId,
+      id: aiResponse.id,
     };
     setEvaluations(prevEvaluations => [...prevEvaluations, evaluation]);
     setEvaluationCount(prevCount => prevCount + 1);
-  };
-
-  const summarizeStudentEvaluations = async (
-    evaluations: StudentWorkEvaluation[]
-  ) => {
-    const aiSummary = await summarizeEvaluations(
-      evaluations,
-      levelData.levelId,
-      levelData.unitId
-    );
-    const summary = aiSummary;
-    if (summary) {
-      setAiSummary(summary);
-    } else {
-      setAiSummary({
-        aiEvaluation: 'Uh oh!',
-        aiReasoning: 'Something went wrong',
-        evaluationCriteria: 'unknown',
-      });
-    }
   };
 
   useEffect(() => {
@@ -93,24 +76,20 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
         isPending={evaluationsPending}
         studentWorkEvaluations={evaluations}
         evaluationComplete={evaluationComplete}
+        totalNumberOfStudents={totalNumberOfStudents}
+        openDetailedAnalysis={() => setShowDetailedAnalysis(true)}
       />
-      {evaluationComplete && aiSummary && (
-        <div>
-          <CollapsibleSection
-            headerContent={
-              <h3>AI Evaluations of Individual Student Responses</h3>
-            }
-          >
-            <div>
-              {evaluations.map(evaluation => (
-                <FreeResponseStudentResponseRow
-                  key={evaluation.studentId}
-                  studentResponse={evaluation}
-                  studentWorkEvaluation={evaluation}
-                />
-              ))}
-            </div>
-          </CollapsibleSection>
+      {evaluationComplete && showDetailedAnalysis && (
+        <div className={styles.detailedAnalysisContainer}>
+          <FreeResponseAiStudentResponseHeader
+            closeStudentResponses={() => setShowDetailedAnalysis(false)}
+          />
+          {evaluations.map(evaluation => (
+            <FreeResponseStudentResponseRow
+              key={evaluation.studentId}
+              studentWorkEvaluation={evaluation}
+            />
+          ))}
         </div>
       )}
     </div>

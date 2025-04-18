@@ -29,7 +29,7 @@ markdown <<MARKDOWN
 <div style="margin: 20px auto; width: 90%; max-width: 900px; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
     <h2 style="margin-top: 0;">In this module, you will:</h2>
     <ul style="list-style-type: disc; padding-left: 20px; font-size: 14pt">
-        <li>Understand the key components of computer systems—hardware, software, and operating systems—and their interaction through the Input-Output-Storage-Processing (IOSP) model.
+        <li>Understand the key components of computer systems—hardware, software, and operating systems—and their interaction through the Input-Processing-Storage-Output(IPSO) model.
 </li><br>
         <li>Explore simulations that help students connect hardware, software, data processing, and system optimization.
 
@@ -46,13 +46,13 @@ markdown <<MARKDOWN
 
 ---
 
-<h2 style="text-align: center">Take the Pre-Survey</h2>
+<h2 style="text-align: left">Take the Pre-Survey</h2>
 
-<p style="text-align: center; font-size: 14pt">
+<p style="text-align: left; font-size: 14pt">
 Code.org values and is responsive to feedback. Please fill out the pre-survey to  tell us about who you are and how we can best support you.
 </p>
 
-<p style="text-align: center;">
+<p style="text-align:left;">
 <a class="btn btn-large btn-primary" href="https://studio.code.org/form/exploring_generative_ai_selfpaced_pl_pre_survey" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
 </p>
 

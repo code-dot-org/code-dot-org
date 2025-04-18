@@ -13,8 +13,8 @@ markdown <<MARKDOWN
 <div style="clear:both;"></div>
 
 <div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 600px; margin: 10px auto; text-align: left;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">Key Takeaways:</p>
-    <ul style="font-size: 14px;line-height: 1.2; margin-top: 10px;">
+    <p style="font-size: 16pt; font-weight: bold; margin: 0;">Key Takeaways:</p>
+    <ul style="font-size: 16px;line-height: 1.2; margin-top: 10px;">
     <li><b>A Great Tool for Problem-Solving</b> – AI can provide helpful suggestions, generate ideas, and offer alternative solutions that you may not have considered.</li>
     <li><b>Not Always Perfect</b> – AI responses are based on patterns and data, but they aren’t always accurate or the best fit for a situation. It’s important to <b>evaluate responses critically</b> and use your own judgment.</li>
     <li><b>Works Best with Clear Prompts</b> – The way you ask questions affects the quality of the response. Being specific and refining your prompts can lead to better, more relevant answers.</li>

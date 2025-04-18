@@ -26,6 +26,8 @@ import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/use
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 
+import {getSystemMessage} from './MessageHelpers';
+
 import moduleStyles from './console.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
@@ -89,7 +91,9 @@ const ControlButtons: React.FunctionComponent = () => {
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeSystemMessage("We don't know how to run your code.", appName);
+        ?.writeConsoleMessage(
+          getSystemMessage("We don't know how to run your code.", appName)
+        );
     }
   };
 
@@ -100,7 +104,9 @@ const ControlButtons: React.FunctionComponent = () => {
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeSystemMessage("We don't know how to stop your code.", appName);
+        ?.writeConsoleMessage(
+          getSystemMessage("We don't know how to stop your code.", appName)
+        );
       dispatch(setIsRunning(false));
     }
   };
@@ -158,7 +164,7 @@ const ControlButtons: React.FunctionComponent = () => {
             disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
             size={'xs'}
-            color={'white'}
+            type={'primary'}
             className={classNames(
               moduleStyles.controlButton,
               darkModeStyles.primaryButton

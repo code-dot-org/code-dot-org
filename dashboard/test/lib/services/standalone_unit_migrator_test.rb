@@ -5,12 +5,12 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
   let(:described_instance) {described_class.new(@unit, verbose: true, log_file: @temp_log_file.path, file_system_changes: false)}
 
   let(:family_name) {Faker::Lorem.unique.word}
+  skip_tests = true
 
   describe '#call' do
     subject(:migrate_unit) {described_instance.call}
 
     before do
-      skip "Can't run tests without environment variable"
       ENV['MIGRATE_STANDALONE_UNITS'] = 'true'
       @course_offering = create :course_offering, key: family_name, display_name: family_name
       @unit = create :standalone_unit, name: "#{family_name}-2025", family_name: family_name, version_year: "2025", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
@@ -26,6 +26,7 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
     end
 
     it 'successfully migrates a standalone unit to a UnitGroup' do
+      skip "Environment variable is not set during automated testing" if skip_tests
       assert migrate_unit
       @course_version.reload
       @unit.reload
@@ -52,6 +53,7 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
     end
 
     it 'fails when course_version is nil' do
+      skip "Environment variable is not set during automated testing" if skip_tests
       @unit.update!(course_version: nil)
       refute migrate_unit
 
@@ -60,6 +62,7 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
     end
 
     it 'fails when unit already has a UnitGroup' do
+      skip "Environment variable is not set during automated testing" if skip_tests
       @unit_group = create :single_unit_course, unit: @unit
       @unit.reload
 
@@ -69,6 +72,7 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
     end
 
     it 'succeeds when unit has an invalid name' do
+      skip "Environment variable is not set during automated testing" if skip_tests
       invalid_name = "INVALID NAME"
       @unit.update_column(:name, invalid_name)
       assert migrate_unit
@@ -79,6 +83,7 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
     end
 
     it 'rolls back migration when checks fail' do
+      skip "Environment variable is not set during automated testing" if skip_tests
       described_instance.expects(:run_checks).returns(false)
       refute migrate_unit
 
@@ -88,7 +93,6 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
   end
   describe '#rollback' do
     before do
-      skip "Can't run tests without environment variable"
       ENV['MIGRATE_STANDALONE_UNITS'] = 'true'
       @course_offering = create :course_offering, key: family_name, display_name: family_name
       @unit = create :unit, name: "#{family_name}-2025", published_state: "stable"
@@ -106,6 +110,7 @@ class Services::StandaloneUnitMigratorTest < ActiveSupport::TestCase
     end
 
     it 'successfully rolls back a migrated standalone unit' do
+      skip "Environment variable is not set during automated testing" if skip_tests
       described_instance.rollback
       @course_version.reload
       @unit.reload

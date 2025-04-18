@@ -1,7 +1,7 @@
-@import '@code-dot-org/component-library-styles/primitiveColors.scss';
-@import '@code-dot-org/component-library-styles/font.scss';
-@import '@code-dot-org/component-library-styles/mixins.scss';
-@import '@code-dot-org/component-library-styles/typography.module.scss';
+@use '@code-dot-org/component-library-styles/primitiveColors.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 
 // Chips common styles
 .chips {
@@ -126,72 +126,72 @@
 // Chips sizes
 .chips-l {
   .groupLabel {
-    @include label-one;
+    @include mixins.label-one;
   }
 
   .chip {
     padding: calc(0.62rem + 2px) 1.25rem 0.62rem;
 
     &.chip-thick {
-      @include button-one-text;
+      @include mixins.button-one-text;
     }
 
     &.chip-thin {
-      @include body-one;
+      @include typography.body-one;
     }
   }
 }
 
 .chips-m {
   .groupLabel {
-    @include label-two;
+    @include mixins.label-two;
   }
 
   .chip {
     padding: calc(0.5rem + 2px) 1rem 0.5rem;
 
     &.chip-thick {
-      @include button-two-text;
+      @include mixins.button-two-text;
     }
 
     &.chip-thin {
-      @include body-two;
+      @include typography.body-two;
     }
   }
 }
 
 .chips-s {
   .groupLabel {
-    @include label-three;
+    @include mixins.label-three;
   }
 
   .chip {
     padding: calc(0.31rem + 1px) 0.75rem 0.31rem;
 
     &.chip-thick {
-      @include button-three-text;
+      @include mixins.button-three-text;
     }
 
     &.chip-thin {
-      @include body-three;
+      @include typography.body-three;
     }
   }
 }
 
 .chips-xs {
   .groupLabel {
-    @include label-four;
+    @include mixins.label-four;
   }
 
   .chip {
     padding: calc(0.12rem + 1px) 0.5rem 0.12rem;
 
     &.chip-thick {
-      @include button-four-text;
+      @include mixins.button-four-text;
     }
 
     &.chip-thin {
-      @include body-four;
+      @include typography.body-four;
     }
   }
 }

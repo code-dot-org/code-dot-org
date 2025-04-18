@@ -1,0 +1,70 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-04-14T18:22:59.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "# This is Music Lab!\nIn Music Lab, students can drag and drop blocks to connect them to make music. Let's take a look at Music Lab's various components.",
+        "imageUrl": "https://images.code.org/9d94fb9cb45812c350dbcd69ad69c03c-Screenshot 2025-04-14 at 11.51.03 AM.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Instructions Panel\nOn the left, students will see an instructions panel that will direct them in completing the level.",
+        "imageUrl": "https://images.code.org/86c308f8dbd53d343c5fbe938861cf2d-Screenshot 2025-04-14 at 11.31.26 AM.png",
+        "key": "gen-ai-customizing-retrieval-practice-L5-007134e2-0169-4294-b8d0-b6de250851c6",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "# Code Blocks\nIn the middle, you'll see a bank of code blocks that are available to students on a given level.",
+        "imageUrl": "https://images.code.org/bb8e40f365504efa7c83112771af7881-Screenshot 2025-04-14 at 11.34.03 AM.png",
+        "key": "gen-ai-customizing-retrieval-practice-L5-e1d170f7-39bc-48d3-9e7e-5168b460494e"
+      },
+      {
+        "text": "# Customize Blocks\nBlocks can be customized with different sounds and beats by clicking on the rectangle within the block. Students can choose any of the sounds available to them.",
+        "imageUrl": "https://images.code.org/b4bfb1657745a468e0ec255dd490803b-Screenshot 2025-04-14 at 11.34.08 AM.png",
+        "key": "gen-ai-customizing-retrieval-practice-L5-35adae9d-8147-4ee2-befe-6ff93f337466",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Workspace\nTo the right is the workspace. Blocks that are dragged out and connected to the \"When Run\" block will play when a student clicks the \"Run\" button.",
+        "imageUrl": "https://images.code.org/1b7ed379b39984a20dfac5fb19e20b6e-Screenshot 2025-04-14 at 11.39.12 AM.png",
+        "key": "self-paced-CSDMusicLab-L1-aboutmusiclab-f570541a-0bc1-406d-a043-0a87974f0d3e",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Controls\nUnderneath the Instructions Panel are the Controls. This is where students will press run to play their code.",
+        "imageUrl": "https://images.code.org/a37f83e285864de1fbf45fabc238eca6-Screenshot 2025-04-14 at 11.40.49 AM.png",
+        "key": "self-paced-CSDMusicLab-L1-aboutmusiclab-5bdd5a69-5429-4f5c-b8d6-84fe40963dd6",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Timeline\nCode that gets added to a \"When Run\" block in the workspace will show up in the Timeline at the bottom. The length of the rectangle corresponds with how long the block will play for. \n\nIn this example, the block will play for two measures. A measure is typically four beats in Music Lab, so this block will play for eight beats total.",
+        "imageUrl": "https://images.code.org/c6f6239c6e08440f86397bad31437db0-Screenshot 2025-04-14 at 11.42.32 AM.png",
+        "key": "self-paced-CSDMusicLab-L1-aboutmusiclab-a5344c41-1e74-49c3-ad5d-b14088b69247",
+        "layout": "text-bottom-center"
+      },
+      {
+        "text": "# Matching Blocks in the Timeline\nThe color of a block in the Timeline corresponds with the sound in the Workspace. Notice how the drum next to \"Drum Beat Cowbell\" is the same color as the rectangle in the Timeline. This will be important when we add multiple blocks at a time.",
+        "imageUrl": "https://images.code.org/95216c17166aabe693d0ebd96cd7e469-Screenshot 2025-04-14 at 11.44.46 AM.png",
+        "key": "self-paced-CSDMusicLab-L1-aboutmusiclab-1d1323b1-1b77-4dd4-b7b8-1cbcc68ae928",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "# Putting it Together\nIn the next level, you'll get the chance to explore Music Lab!",
+        "imageUrl": "https://images.code.org/621b5d532d886b9fab2a0f4e4908bbff-Screenshot 2025-04-14 at 11.54.05 AM.png",
+        "key": "self-paced-CSDMusicLab-L1-aboutmusiclab-eb1dc447-a518-4d8c-9c3e-c94b99de4648",
+        "layout": "text-top-right"
+      }
+    ],
+    "name_suffix": "_2024",
+    "offer_browser_tts": "true"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-14T18:22:59.112+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L5_2024\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L5_2024\"},{\"changed_at\":\"2025-04-14 18:49:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-14 18:55:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-14 18:56:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+}]]></config>
+</Panels>

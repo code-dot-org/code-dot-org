@@ -1,7 +1,6 @@
 name 'data-science-ch1-lesson9-level2-choice_2025'
-display_name 'CODAP Level'
-description '###Create data visualizations based on Micahs room
-![](https://images.code.org/e503d0c8fd92c01092fde14e26a20538-image-1721755864008.png)'
+display_name 'Data Visualizations'
+description 'Create data visualizations based on Micah\'s room. Choose a dataset below:'
 
 sublevels
 level 'data-science-ch1-lesson9-level2a_2025'

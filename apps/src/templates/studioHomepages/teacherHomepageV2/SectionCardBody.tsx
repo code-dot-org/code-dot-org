@@ -17,7 +17,7 @@ interface SectionCardBodyProps {
   section: Section;
 }
 
-export const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
+const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
   return (
     <div className={styles.sectionCardBody}>
       <div className={styles.sectionCardBodyLeft}>
@@ -28,7 +28,7 @@ export const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             buttonText={i18n.assignACourseButton()}
             icon={'book-open-cover'}
             sectionId={section.id}
-            path={TEACHER_NAVIGATION_PATHS.settings}
+            path={'/catalog'}
           />
         )}
       </div>
@@ -73,3 +73,5 @@ export const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
     </div>
   );
 };
+
+export default SectionCardBody;

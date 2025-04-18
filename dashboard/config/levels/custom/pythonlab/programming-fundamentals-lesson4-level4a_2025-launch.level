@@ -1,21 +1,39 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2025-04-02T01:16:58.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "instructions",
+    "long_instructions": "You're creating a lifestyle app that asks users to choose their favorite snack. Later, they decide to change their answer -- maybe they're in the mood for something new!\r\n\r\n## Do This:\r\n\r\n1. Look at the original value stored in `favorite_snack`\r\n\r\n2. Change the value to a **different** snack.\r\n\r\n3. Run the program to see the **before** and **after**.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery time you assign a new value to a variable, the old one is replaced -- it's like swapping out what's in a labeled box.",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",
     "predict_settings": {
       "isPredictLevel": false
-    }
+    },
+    "display_name": "Favorite Snack",
+    "bubble_choice_description": "You're creating a lifestyle app that asks users to choose their favorite snack. Later, they decide to change their answer -- maybe they're in the mood for something new!",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program updates a favorite snack\n\nfavorite_snack = \"pretzels\"\nprint(\"Original favorite snack:\", favorite_snack)\n\n# Update the snack below\n\n\nprint(\"Favorite snack updated to:\", favorite_snack)\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/36670926f59f7d6a183a4a81a15e6332-snack.png"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-02 01:20:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-02 01:20:01 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:58:39 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 01:59:28 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-06 02:10:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

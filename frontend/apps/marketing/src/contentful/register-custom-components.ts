@@ -18,6 +18,9 @@ import ActionBlockCarousel, {
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
+import HeroBanner, {
+  HeroBannerContentfulComponentDefinition,
+} from '@/components/contentful/heroBanner';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
@@ -39,6 +42,9 @@ import Overline, {
 import Paragraph, {
   ParagraphContentfulComponentDefinition,
 } from '@/components/paragraph';
+import RichText, {
+  RichTextContentfulComponentDefinition,
+} from '@/components/richText';
 import Section, {
   SectionContentfulComponentDefinition,
 } from '@/components/section';
@@ -48,6 +54,10 @@ import SimpleList, {
 import CurriculumSnapshot, {
   CurriculumSnapshotContentfulComponentDefinition,
 } from '@/components/snapshots/curriculumSnapshot';
+import LabSnapshot, {
+  LabSnapshotContentfulComponentDefinition,
+} from '@/components/snapshots/labSnapshot';
+import Spacer, {SpacerContentfulComponentDefinition} from '@/components/spacer';
 import TabGroup, {
   TabGroupContentfulComponentDefinition,
 } from '@/components/tabGroup';
@@ -94,6 +104,13 @@ defineComponents(
       definition: HeadingContentfulComponentDefinition,
     },
     {
+      component: HeroBanner,
+      definition: HeroBannerContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
+    {
       component: IconHighlight,
       definition: IconHighlightContentfulComponentDefinition,
     },
@@ -109,6 +126,10 @@ defineComponents(
       definition: ImageContentfulComponentDefinition,
     },
     {
+      component: LabSnapshot,
+      definition: LabSnapshotContentfulComponentDefinition,
+    },
+    {
       component: Link,
       definition: LinkContentfulComponentDefinition,
     },
@@ -116,6 +137,10 @@ defineComponents(
     {
       component: Paragraph,
       definition: ParagraphContentfulComponentDefinition,
+    },
+    {
+      component: RichText,
+      definition: RichTextContentfulComponentDefinition,
     },
     {
       component: Section,
@@ -127,6 +152,10 @@ defineComponents(
     {
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
+    },
+    {
+      component: Spacer,
+      definition: SpacerContentfulComponentDefinition,
     },
     {
       component: CurriculumSnapshot,

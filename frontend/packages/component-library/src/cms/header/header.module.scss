@@ -1,0 +1,323 @@
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
+
+$desktop-breakpoint: 1268px;
+$tablet-breakpoint: 1023px;
+$mobile-breakpoint: 425px;
+$box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
+
+// Header common styles
+.headerNavigation {
+  background-color: var(--background-brand-teal-primary);
+  padding: 0.375rem 0.875rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+// Main links styles
+.mainLinksWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  .homeLink {
+    color: transparent;
+    text-decoration: none;
+
+    @include mixins.transition-all;
+
+    &:hover {
+      opacity: 90%;
+    }
+
+    &:focus-visible {
+      @include mixins.focus-styles;
+      outline-color: var(--neutral-white-alpha-70);
+      border-radius: 1px;
+    }
+
+    & > figure {
+      height: 2.375rem;
+      width: 2.375rem;
+      border-radius: unset;
+    }
+  }
+
+  .mainLinks {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    li {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      @include typography.body-three;
+      color: var(--text-neutral-white-fixed);
+      text-decoration: none;
+      padding: 1rem;
+      border-inline: 2px solid transparent;
+
+      @include mixins.transition-all;
+
+      &:hover,
+      &:active {
+        background-color: var(--background-brand-teal-strong);
+      }
+
+      &:focus-visible {
+        border-inline: 2px solid var(--neutral-white-alpha-70);
+        outline: none;
+      }
+    }
+  }
+}
+
+// Button links styles
+.buttonLinks {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  .signIn.mainMenu,
+  .newProject {
+    background: transparent;
+
+    &:hover {
+      background: var(--background-brand-teal-strong);
+    }
+  }
+
+  .createAccount.mainMenu,
+  .goToDashboard.mainMenu {
+    color: var(--text-brand-teal-primary-fixed);
+
+    &:hover {
+      background: var(--neutral-white-alpha-90);
+    }
+  }
+
+  button,
+  a {
+    &:focus-visible {
+      outline-color: var(--neutral-white-alpha-70);
+    }
+
+    span {
+      font-weight: 500;
+    }
+  }
+}
+
+// Icon button styles
+.buttonLinks .iconButton {
+  padding: 0;
+  background: transparent;
+  min-width: unset;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 100%;
+
+  & > i {
+    font-size: 1.375rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--neutral-white-alpha-90);
+    background: transparent;
+  }
+
+  &.helpButton {
+    margin-inline: 0.25rem -0.5rem;
+
+    [dir='rtl'] & {
+      transform: scaleX(-1);
+    }
+  }
+
+  &.hamburgerButton {
+    margin-inline-start: -0.25rem;
+  }
+}
+
+// Menu styles
+.menu {
+  @include mixins.border-styles;
+  list-style: none;
+  position: absolute;
+  top: 3rem;
+  padding: 0.375rem;
+  margin: 0;
+  min-width: 228px;
+  max-width: 300px;
+  background: var(--background-neutral-primary);
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: column;
+  text-align: initial;
+
+  a {
+    @include typography.body-three;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+
+    @include mixins.transition-all;
+
+    &:hover {
+      border-radius: variables.$regular-border-radius;
+      background: var(--background-neutral-tertiary);
+    }
+
+    &:focus-visible {
+      @include mixins.focus-styles;
+      outline-offset: 0;
+      border-radius: variables.$regular-border-radius;
+    }
+  }
+}
+
+// New Project menu styles
+.newProjectMenu {
+  a {
+    margin: 0;
+    padding-inline: 0.375rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 0.625rem;
+
+    figure {
+      width: 2.5rem;
+    }
+
+    & > div {
+      flex: 2;
+
+      .description {
+        font-size: 0.75rem;
+        margin: 0;
+        color: var(--text-neutral-tertiary);
+      }
+    }
+  }
+
+  li:last-child > a {
+    align-items: center;
+  }
+}
+
+// Account links styles
+.accountLinks {
+  display: flex;
+  gap: 0.5rem;
+
+  [dir='rtl'] & .goToDashboard i {
+    transform: scaleX(-1);
+  }
+}
+
+// Help menu styles
+.helpMenu {
+  inset-inline-end: 0;
+  min-width: 208px;
+}
+
+// Hamburger styles
+.hamburgerMenu {
+  position: absolute;
+  top: 0;
+  inset-inline-end: 0;
+  min-width: 248px;
+
+  .hamburgerButtonWrapper {
+    display: none;
+  }
+}
+
+// Breakpoint styles
+// Large desktop
+@media (max-width: ($desktop-breakpoint - 1px)) {
+  // Show Help menu
+  .helpButton {
+    display: none;
+  }
+}
+
+// Small desktop
+@media (min-width: $desktop-breakpoint) {
+  // Show Hamburger menu
+  .hamburgerButton {
+    display: none;
+  }
+}
+
+// Between 1268px and 1024px
+@media (max-width: ($desktop-breakpoint - 1px)) and (min-width: ($tablet-breakpoint + 1px)) {
+  .hasDisplayLogic {
+    display: none;
+  }
+}
+
+// Tablet
+@media (max-width: $tablet-breakpoint) {
+  // Hide Main links and New Project menu
+  .mainLinksWrapper .mainLinks,
+  .newProject {
+    display: none;
+  }
+
+  .hasDisplayLogic {
+    display: block;
+  }
+}
+
+// Mobile
+@media (max-width: $mobile-breakpoint) {
+  // Hide Account links
+  .accountLinks {
+    display: none;
+  }
+
+  // Mobile Hamburger menu styles
+  .hamburgerMenu {
+    top: 3rem;
+    box-shadow: $box-shadow;
+
+    .hamburgerButtonWrapper {
+      @include mixins.border-styles;
+      display: block;
+      padding: 0.375rem;
+      background: var(--background-neutral-secondary);
+      border-radius: 0.25rem 0.25rem 0 0;
+      border-bottom: 0;
+    }
+
+    .accountLinks {
+      display: flex;
+      flex-direction: column;
+
+      & > a:focus-visible {
+        @include mixins.focus-styles;
+      }
+    }
+
+    ul {
+      position: relative;
+      top: unset;
+      margin: 0;
+      border-radius: 0 0 0.25rem 0.25rem;
+      box-shadow: none;
+    }
+  }
+}

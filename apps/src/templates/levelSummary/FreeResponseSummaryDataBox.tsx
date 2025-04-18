@@ -28,7 +28,9 @@ const FreeResponseSummaryDataBox: React.FC<FreeResponseSummaryDataBoxProps> = ({
     icon: string,
     classname: string
   ): JSX.Element => {
-    const percent: number = (studentCount / totalStudentCount) * 100;
+    const percent: number = Math.round(
+      (studentCount / totalStudentCount) * 100
+    );
     return (
       <div className={styles.group}>
         <FontAwesomeV6Icon
@@ -60,16 +62,16 @@ const FreeResponseSummaryDataBox: React.FC<FreeResponseSummaryDataBoxProps> = ({
         styles.needsReviewIcon
       )}
       {generateData(
-        flaggedStudentCount,
-        FEEDBACK_TYPE.FLAGGED.label,
-        FEEDBACK_TYPE.FLAGGED.icon,
-        styles.flaggedIcon
-      )}
-      {generateData(
         noResponseStudentCount,
         FEEDBACK_TYPE.NO_ATTEMPT.label,
         FEEDBACK_TYPE.NO_ATTEMPT.icon,
         styles.noAttemptIcon
+      )}
+      {generateData(
+        flaggedStudentCount,
+        FEEDBACK_TYPE.FLAGGED.label,
+        FEEDBACK_TYPE.FLAGGED.icon,
+        styles.flaggedIcon
       )}
     </div>
   );

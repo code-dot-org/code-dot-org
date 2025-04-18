@@ -96,6 +96,7 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
         value={condition.name}
         onChange={e => {
           condition.name = e.target.value;
+          condition.value = undefined;
           if (!hasValueType) {
             condition.value = undefined;
           }
@@ -120,11 +121,10 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
 
               const isNumber = type === 'number';
               const isString = type === 'string';
-
               if (isNumber || (isString && !useDropdown)) {
                 return (
                   <input
-                    key={i}
+                    key={`${condition.name}-${i}`}
                     type={isNumber ? 'number' : 'text'}
                     className={
                       isNumber

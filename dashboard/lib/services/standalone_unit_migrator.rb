@@ -44,6 +44,12 @@ module Services
       @unit.reload
       @unit_group.reload
 
+      if @unit_group.course_version.nil?
+        log "New UnitGroup's course version not found: #{@unit_group.name}", type: "error"
+        @unit_group.destroy!
+        return false
+      end
+
       # Clear "course" settings from the unit
       @unit.update!(is_course: false, version_year: nil, family_name: nil, published_state: nil, instruction_type: nil, instructor_audience: nil, participant_audience: nil, skip_name_format_validation: true)
 

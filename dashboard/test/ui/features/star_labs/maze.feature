@@ -27,13 +27,7 @@ Scenario: Submit an invalid solution
 Scenario: Submit a valid solution
   When I wait for the lab page to fully load
   Then element "#resetButton" is hidden
-  Then I drag block "repeatForever" to block "topBlock"
-  And I drag block "moveForward" into first position in repeat block "repeatForever"
-  Then block "moveForward" is child of block "repeatForever"
-  Then I drag block "ifPathRight" to block "moveForward"
-  And block "ifPathRight" is child of block "moveForward"
-  Then I drag block "turnRight" to block "ifPathRight" plus offset 35, 30
-  And block "turnRight" is child of block "ifPathRight"
+  Then I've initialized the workspace with valid maze blocks
   Then I press "runButton"
   Then I wait until element ".congrats" is visible
   And element ".congrats" has text "Congratulations! You completed Puzzle 15."

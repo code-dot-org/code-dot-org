@@ -1,0 +1,21 @@
+{
+  "name": "faciliators-ea-pl-python-2025",
+  "script_names": [
+    "facilitator-prog-fund-pl-early-access"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "faciliators-ea-pl-python",
+    "has_numbered_units": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_03_150349) do
+ActiveRecord::Schema.define(version: 2025_04_16_140513) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2025_04_03_150349) do
     t.index ["lesson_activity_id"], name: "index_activity_sections_on_lesson_activity_id"
   end
 
-  create_table "ai_interaction_feedbacks", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "ai_interaction_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id"
     t.integer "script_id"
@@ -1953,6 +1953,7 @@ ActiveRecord::Schema.define(version: 2025_04_03_150349) do
     t.string "community_type", limit: 16, comment: "Urban-centric community type"
     t.integer "student_female"
     t.integer "student_male"
+    t.string "status"
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id"
   end
 
@@ -2108,6 +2109,8 @@ ActiveRecord::Schema.define(version: 2025_04_03_150349) do
     t.string "participant_type", default: "student", null: false
     t.bigint "lti_integration_id"
     t.boolean "ai_tutor_enabled", default: false
+    t.integer "avatar_color"
+    t.integer "avatar_emoji"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"
@@ -2195,7 +2198,7 @@ ActiveRecord::Schema.define(version: 2025_04_03_150349) do
     t.index ["framework_id", "shortcode"], name: "index_standards_on_framework_id_and_shortcode"
   end
 
-  create_table "student_work_evaluation_summaries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "student_work_evaluation_summaries", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "student_work_evaluation_id", null: false
     t.bigint "student_work_evaluation_summary_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -2204,7 +2207,7 @@ ActiveRecord::Schema.define(version: 2025_04_03_150349) do
     t.index ["student_work_evaluation_summary_id"], name: "fk_rails_d50fa61780"
   end
 
-  create_table "student_work_evaluations", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "student_work_evaluations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "type", null: false
     t.integer "student_id"
     t.integer "requester_id"
@@ -2331,22 +2334,6 @@ ActiveRecord::Schema.define(version: 2025_04_03_150349) do
     t.index ["user_id"], name: "index_user_geos_on_user_id"
   end
 
-  create_table "user_level_evaluations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "level_id", null: false
-    t.integer "script_id", null: false
-    t.string "school_year", null: false
-    t.text "evaluation_criteria"
-    t.text "ai_evaluation"
-    t.text "ai_reasoning"
-    t.string "ai_model_version"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "code_version"
-    t.index ["level_id"], name: "index_user_level_evaluations_on_level_id"
-    t.index ["user_id"], name: "index_user_level_evaluations_on_user_id"
-  end
-
   create_table "user_level_interactions", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
@@ -2414,6 +2401,8 @@ ActiveRecord::Schema.define(version: 2025_04_03_150349) do
     t.json "section_order"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.json "editor_font_size"
+    t.json "console_font_size"
     t.index ["user_id"], name: "index_user_preferences_on_user_id"
   end
 

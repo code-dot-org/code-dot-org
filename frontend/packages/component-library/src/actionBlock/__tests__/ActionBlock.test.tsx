@@ -35,7 +35,9 @@ describe('ActionBlock', () => {
   });
 
   it('renders an image', () => {
-    render(<ActionBlock {...defaultProps} image="image.png" />);
+    render(
+      <ActionBlock {...defaultProps} image={{src: 'image.png', alt: ''}} />,
+    );
 
     expect(screen.getByAltText('')).toHaveAttribute('src', 'image.png');
   });

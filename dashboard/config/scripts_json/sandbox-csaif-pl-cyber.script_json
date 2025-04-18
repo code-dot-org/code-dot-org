@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-31 19:21:49 UTC",
+    "serialized_at": "2025-04-11 16:47:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -149,7 +149,7 @@
       "key": "6b154d47-7c75-46bd-891d-f44d9a4d4747",
       "position": 4,
       "properties": {
-        "progression_name": "Wrap-Up"
+        "progression_name": "Final Project and Wrap-Up"
       },
       "seeding_key": {
         "activity_section.key": "6b154d47-7c75-46bd-891d-f44d9a4d4747",
@@ -539,6 +539,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_2_privacy_b"
+        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -739,7 +742,7 @@
         "level_keys": [
           "csaif_pl_2_project_1"
         ],
-        "progression": "Wrap-Up"
+        "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -764,7 +767,7 @@
         "level_keys": [
           "csaif_pl_2_project_02"
         ],
-        "progression": "Wrap-Up"
+        "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -786,7 +789,10 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Wrap-Up"
+        "level_keys": [
+          "csaif_pl_wrap-up"
+        ],
+        "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -808,7 +814,10 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Wrap-Up"
+        "level_keys": [
+          "csaif_pl_wrap-up_answer"
+        ],
+        "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -833,7 +842,7 @@
         "level_keys": [
           "csaif-pl-nextsteps-cyber"
         ],
-        "progression": "Wrap-Up"
+        "progression": "Final Project and Wrap-Up"
       },
       "bonus": false,
       "seeding_key": {

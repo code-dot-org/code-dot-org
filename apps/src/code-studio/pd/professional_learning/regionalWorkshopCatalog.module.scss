@@ -75,6 +75,11 @@
           .rpName {
             font-weight: 600;
           }
+
+          .rpNameMissing {
+            font-weight: 600;
+            color: var(--neutral-gray-40);
+          }
   
           .rpInfoButtons {
             display: flex;

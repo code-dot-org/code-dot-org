@@ -6,5 +6,7 @@ sublevels
 #level 'test-music-lab-sequences-synthesize-recap-choice-panels-a'
 #level 'test-music-lab-sequences-synthesize-recap-choice-panels-b'
 #level 'test-music-lab-sequences-synthesize-recap-choice-panels-c'
-level 'test-music-lab-sequences-synthesize-recap-choice-panels-d'
+level 'music-lab-functions-practice-abstract-panel'
+level 'music-lab-functions-practice-reuse-panel'
+level 'music-lab-functions-practice-compose-panel'
 

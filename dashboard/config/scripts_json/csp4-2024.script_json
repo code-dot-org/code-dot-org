@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-22 19:00:02 UTC",
+    "serialized_at": "2025-04-04 15:03:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9822,12 +9822,261 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "U4 L14 Practice PT 2_2024",
+      "seeding_key": {
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "368017c2-4802-4ca4-b132-73b6b74c8267",
+      "position": 1,
+      "learning_goal": "Variables",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "368017c2-4802-4ca4-b132-73b6b74c8267",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "key": "6165d66c-8de1-4bf9-922b-c3f0ab8d204f",
+      "position": 3,
+      "learning_goal": "Functions",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "6165d66c-8de1-4bf9-922b-c3f0ab8d204f",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "key": "c8b4467e-0abb-4189-8fd0-b71afe7583f4",
+      "position": 4,
+      "learning_goal": "Project Reflection",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "c8b4467e-0abb-4189-8fd0-b71afe7583f4",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "key": "e067ee7b-d6c0-47d6-a296-f11c140bc700",
+      "position": 2,
+      "learning_goal": "Conditionals",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "e067ee7b-d6c0-47d6-a296-f11c140bc700",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "Recognizes and attempts to use variables, but may struggle with proper implementation or usage.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "368017c2-4802-4ca4-b132-73b6b74c8267",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Uses variables correctly to store and manipulate data in a simple program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "368017c2-4802-4ca4-b132-73b6b74c8267",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Uses multiple variables efficiently in a program to solve a problem.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "368017c2-4802-4ca4-b132-73b6b74c8267",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Uses multiple variables effectively to store and update different types of information in the program. Demonstrates a clear understanding of how to change and use variables to control the flow of the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "368017c2-4802-4ca4-b132-73b6b74c8267",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Recognizes functions but may not use them effectively, or only calls them once.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "6165d66c-8de1-4bf9-922b-c3f0ab8d204f",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Creates and uses basic functions in a program, including calling them appropriately.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "6165d66c-8de1-4bf9-922b-c3f0ab8d204f",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Develops multiple functions that work together to solve a problem.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "6165d66c-8de1-4bf9-922b-c3f0ab8d204f",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Creates multiple functions that work together to organize the program into smaller, manageable parts. Shows a clear understanding of how to use functions to make the program easier to read and debug.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "6165d66c-8de1-4bf9-922b-c3f0ab8d204f",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Shares a basic observation about what was done in the project, with some recognition of what worked or didn’t work.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "c8b4467e-0abb-4189-8fd0-b71afe7583f4",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Reflects on the project by identifying some improvements made during the process and describing how debugging and user interface changes helped the program develop further.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "c8b4467e-0abb-4189-8fd0-b71afe7583f4",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Clearly explains the iterative development process, discussing how multiple rounds of debugging, interface design, and feedback led to improved program outputs.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "c8b4467e-0abb-4189-8fd0-b71afe7583f4",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Provides a thorough reflection on the iterative process, detailing multiple cycles of debugging, user interface updates, and feedback that resulted in polished, accurate program outputs. Identifies areas for continuous improvement and innovation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "c8b4467e-0abb-4189-8fd0-b71afe7583f4",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Recognizes conditionals but struggles to use them effectively in decision-making processes.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e067ee7b-d6c0-47d6-a296-f11c140bc700",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Uses conditionals correctly in a basic decision-making process within the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e067ee7b-d6c0-47d6-a296-f11c140bc700",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Integrates conditionals to manage multiple outcomes based on varied inputs.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e067ee7b-d6c0-47d6-a296-f11c140bc700",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Uses complex or nested conditionals to handle multiple decision branches in an efficient manner.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e067ee7b-d6c0-47d6-a296-f11c140bc700",
+        "lesson.key": "Project - Decision Maker App",
+        "lesson_group.key": "csp_project",
+        "script.name": "csp4-2024"
+      }
+    }
   ]
 }

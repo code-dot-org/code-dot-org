@@ -96,6 +96,24 @@ class User < ApplicationRecord
   include PartialRegistration
   include Rails.application.routes.url_helpers
 
+  self.inheritance_column = :user_type
+
+  # :user_type is locked. Use the :permissions property for more granular user permissions.
+  USER_TYPE_OPTIONS = [
+    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
+    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
+  ].freeze
+
+  TYPE_TO_STI_CLASS_MAP = {
+    TYPE_TEACHER => ::Teacher,
+    TYPE_STUDENT => ::Student,
+    'staff' => ::Teacher # Powerschool sends through 'staff' instead of 'teacher'
+  }.freeze
+
+  def self.find_sti_class(type_name)
+    TYPE_TO_STI_CLASS_MAP[type_name]
+  end
+
   # Notes:
   #   data_transfer_agreement_source: Indicates the source of the data transfer
   #     agreement.
@@ -133,6 +151,13 @@ class User < ApplicationRecord
   MAX_SECRET_RESET_ATTEMPTS = 5
   RESET_SECRETS = 'reset_secrets'.freeze
 
+  # Password Constants
+  PASSWORD_MAX_LENGTH = 128
+  PASSWORD_MIN_LENGTH = 6
+  PASSWORD_STRICT_MIN_LENGTH = 14
+  # Countries that require a 14 character password minimum
+  PASSWORD_STRICT_COUNTRIES = %w[AU NZ].freeze
+
   # Provider variables
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
@@ -144,12 +169,6 @@ class User < ApplicationRecord
   # using the next increasing natural number.
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
-  ].freeze
-
-  # :user_type is locked. Use the :permissions property for more granular user permissions.
-  USER_TYPE_OPTIONS = [
-    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
-    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
   ].freeze
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
@@ -385,7 +404,7 @@ class User < ApplicationRecord
 
   validates_presence_of     :password, if: :password_required?
   validates_confirmation_of :password, if: :password_required?
-  validates_length_of       :password, within: 6..128, allow_blank: true
+  validates_length_of       :password, minimum: :password_min_length, maximum: :password_max_length, allow_blank: true
 
   validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
   validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
@@ -481,6 +500,14 @@ class User < ApplicationRecord
   include Devise::Models::ManualSessionExpiration
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
+
+  def password_min_length
+    self.class.password_min_length(user_type, country_code)
+  end
+
+  def password_max_length
+    PASSWORD_MAX_LENGTH
+  end
 
   def save_email_preference
     if teacher?
@@ -1288,6 +1315,14 @@ class User < ApplicationRecord
 
   def levelbuilder?
     permission?(UserPermission::LEVELBUILDER)
+  end
+
+  # Students can always access their own work, and teachers can access the work of
+  # students in their sections. This is specifically for the student work sample API
+  # which allows pulling student work samples to make datasets to gauge accuracy of
+  # our AI evaluation tools internally.
+  def can_access_student_work?
+    permission?(UserPermission::STUDENT_WORK_ACCESS)
   end
 
   # A user is a verified instructor if you are a universal_instructor, plc_reviewer,
@@ -2380,14 +2415,14 @@ class User < ApplicationRecord
     user = User.find_by_email_or_hashed_email(params[:email])
 
     if user
-      user.update!(params.merge(user_type: TYPE_TEACHER))
+      user = user.becomes!(Teacher) unless user.instance_of?(Teacher)
+      user.update!(params)
     else
       # initialize new users with name and school
       if params[:ops_first_name] || params[:ops_last_name]
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
       params[:school] ||= params[:ops_school]
-      params[:user_type] = TYPE_TEACHER
       params[:age] ||= 21
 
       # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
@@ -2395,7 +2430,7 @@ class User < ApplicationRecord
       ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
         raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
       end
-      user = User.invite!(attributes: params)
+      user = Teacher.invite!(attributes: params)
       user.update!(invited_by: invited_by_user)
     end
 
@@ -2424,6 +2459,10 @@ class User < ApplicationRecord
     unless omniauth_user
       omniauth_user = create
       initialize_new_oauth_user(omniauth_user, auth, params)
+
+      sti_class = find_sti_class(omniauth_user.user_type)
+      omniauth_user = omniauth_user.becomes!(sti_class) if sti_class
+
       omniauth_user.save
     end
 
@@ -2495,8 +2534,22 @@ class User < ApplicationRecord
 
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
-    new_from_partial_registration session do |user|
-      Services::User.assign_form_params(user, params)
+
+    user = new_from_partial_registration(session)
+
+    sti_class = find_sti_class(params[:user_type] || params['user_type'])
+    user = user.becomes!(sti_class) if sti_class && !user.instance_of?(sti_class)
+
+    Services::User.assign_form_params(user, params)
+
+    user
+  end
+
+  def self.password_min_length(user_type, country_code)
+    if user_type == TYPE_TEACHER && PASSWORD_STRICT_COUNTRIES.include?(country_code) && DCDO.get('strict-password-country', false)
+      PASSWORD_STRICT_MIN_LENGTH
+    else
+      PASSWORD_MIN_LENGTH
     end
   end
 
