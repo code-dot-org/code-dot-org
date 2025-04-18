@@ -239,7 +239,10 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     workshopFormState,
   ]);
 
-  const cancel = useCallback(() => navigate(-1), [navigate]);
+  const cancel = useCallback(
+    () => (window.history.length > 1 ? navigate(-1) : navigate('/workshops')),
+    [navigate]
+  );
 
   const heading = workshopLabel(
     `${workshop ? 'Edit' : 'New'} ${workshopConfig?.label}`

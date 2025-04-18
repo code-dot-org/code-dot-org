@@ -134,7 +134,7 @@ export class WorkshopIndex extends React.Component {
                   {WorkshopCourseConfigs.map(({label, slug, icon}) => (
                     <MenuItem
                       key={slug}
-                      href={`pd/workshop_dashboard/workshops/${slug}/new`}
+                      href={`/pd/workshop_dashboard/workshops/new/${slug}`}
                       onClick={e => this.handleNewWorkshopClick(e, slug)}
                     >
                       <FontAwesomeV6Icon iconName={icon} /> {label}

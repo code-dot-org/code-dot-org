@@ -19,6 +19,7 @@ export const PublishCancelButtons: FC<PublishCancelButtonsProps> = ({
         text="Cancel and exit"
         type="secondary"
         color="destructive"
+        aria-label="Go back to the previous page or the workshop dashboard"
       />
     </div>
   );
