@@ -40,21 +40,21 @@ export default function SingleSectionSetUp({
           />
         </label>
       </div>
-      {experiments.isEnabled('teacher-homepage-v2') ||
-        (DCDO.get('teacher-homepage-v2', false) &&
-          !isNewSection &&
-          section.avatar_color && (
-            <div className={moduleStyles.avatarContainer}>
-              <label className={moduleStyles.typographyLabelTwo}>
-                {i18n.sectionAvatar()}
-                <SectionAvatar
-                  color={section.avatar_color}
-                  emoji={section.avatar_emoji}
-                />
-              </label>
-              {i18n.sectionAvatarNotice()}
-            </div>
-          ))}
+      {(experiments.isEnabled('teacher-homepage-v2') ||
+        DCDO.get('teacher-homepage-v2', false)) &&
+        !isNewSection &&
+        section.avatar_color && (
+          <div className={moduleStyles.avatarContainer}>
+            <label className={moduleStyles.typographyLabelTwo}>
+              {i18n.sectionAvatar()}
+              <SectionAvatar
+                color={section.avatar_color}
+                emoji={section.avatar_emoji}
+              />
+            </label>
+            {i18n.sectionAvatarNotice()}
+          </div>
+        )}
       {participantType === ParticipantAudience.student && (
         <div className={moduleStyles.containerWithMarginTop}>
           <Chips
