@@ -93,6 +93,7 @@ class User < ApplicationRecord
   include LocaleHelper
   include UserMultiAuthHelper
   include UserPermissionGrantee
+  include PasswordValidations
   include PartialRegistration
   include Rails.application.routes.url_helpers
 
@@ -132,13 +133,6 @@ class User < ApplicationRecord
   # constants for resetting user secret words/picture
   MAX_SECRET_RESET_ATTEMPTS = 5
   RESET_SECRETS = 'reset_secrets'.freeze
-
-  # Password Constants
-  PASSWORD_MAX_LENGTH = 128
-  PASSWORD_MIN_LENGTH = 6
-  PASSWORD_STRICT_MIN_LENGTH = 14
-  # Countries that require a 14 character password minimum
-  PASSWORD_STRICT_COUNTRIES = %w[AU NZ].freeze
 
   # Provider variables
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
@@ -390,10 +384,6 @@ class User < ApplicationRecord
 
   validates_inclusion_of :educator_role, in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?
 
-  validates_presence_of     :password, if: :password_required?
-  validates_confirmation_of :password, if: :password_required?
-  validates_length_of       :password, minimum: :password_min_length, maximum: :password_max_length, allow_blank: true
-
   validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
   validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
   validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
@@ -488,14 +478,6 @@ class User < ApplicationRecord
   include Devise::Models::ManualSessionExpiration
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
-
-  def password_min_length
-    self.class.password_min_length(user_type, country_code)
-  end
-
-  def password_max_length
-    PASSWORD_MAX_LENGTH
-  end
 
   def save_email_preference
     if teacher?
@@ -828,21 +810,6 @@ class User < ApplicationRecord
     else
       false
     end
-  end
-
-  def password_required?
-    # If the user is changing their password, then we should run all the password
-    # field verifications.
-    is_changing_password = password.present? || password_confirmation.present?
-    return true if is_changing_password
-
-    # Password is not required if the user is not managing their own account
-    # (i.e., someone is creating their account for them or the user is using OAuth).
-    return false unless managing_own_credentials?
-
-    # Password is required for:
-    # New users with no encrypted_password set
-    !persisted? && encrypted_password.blank?
   end
 
   # Determines if email is a required field for a teacher.
@@ -2520,14 +2487,6 @@ class User < ApplicationRecord
     return super unless PartialRegistration.in_progress? session
     new_from_partial_registration session do |user|
       Services::User.assign_form_params(user, params)
-    end
-  end
-
-  def self.password_min_length(user_type, country_code)
-    if user_type == TYPE_TEACHER && PASSWORD_STRICT_COUNTRIES.include?(country_code) && DCDO.get('strict-password-country', false)
-      PASSWORD_STRICT_MIN_LENGTH
-    else
-      PASSWORD_MIN_LENGTH
     end
   end
 
