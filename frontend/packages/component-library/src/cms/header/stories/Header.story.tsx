@@ -372,6 +372,7 @@ export const NewProjectMenu: Story = {
     },
     eyes: {
       browser: {width: 1268, height: 720, name: 'chrome'},
+      waitBeforeCapture: 'ul[aria-label="Projects menu"]',
     },
     docs: {
       description: {
@@ -419,6 +420,7 @@ export const HelpMenu: Story = {
     },
     eyes: {
       browser: {width: 1268, height: 720, name: 'chrome'},
+      waitBeforeCapture: 'ul[aria-label="Help menu"]',
     },
     docs: {
       description: {
