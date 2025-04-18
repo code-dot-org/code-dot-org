@@ -91,7 +91,10 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
           }}
           onClose={() => {}}
         />
-        <div className={styles.teacherHomepageContent}>
+        <div
+          id={'ui-test-teacher-homepage'}
+          className={styles.teacherHomepageContent}
+        >
           <div className={styles.teacherHomepageLeftContent}>
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
