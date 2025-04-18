@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:09 UTC",
+    "serialized_at": "2025-04-04 19:51:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -152,9 +152,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-24-mod1-Overview-Welcome_physical-computing_25_2-25_6a-25"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -177,9 +174,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-24-mod1-Certificate_25_2-25_6a-25"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -202,9 +196,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod1-welcome-vid_25_2-25_6a-25"
-        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -227,9 +218,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod1-CSisFoundational_physical-computing_25_2-25_6a-25"
-        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -252,9 +240,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod1-Advice-TipVid_25_2-25_6a-25"
-        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -277,9 +262,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-24-AboutCSD1_25_2-25_6a-25"
-        ],
         "progression": "Welcome to CS Discoveries"
       },
       "bonus": false,
@@ -302,9 +284,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-24-AboutCSD2_25_2-25_6a-25"
-        ],
         "progression": "Welcome to CS Discoveries"
       },
       "bonus": false,
@@ -327,9 +306,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod1-ModuleOverview_25_2-25_6a-25"
-        ],
         "progression": "Engaging in this course"
       },
       "bonus": false,
@@ -352,9 +328,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod1-ActivityOverview_25_2-25_6a-25"
-        ],
         "progression": "Engaging in this course"
       },
       "bonus": false,
@@ -377,9 +350,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-CSD-21-Navigation_25_2-25_6a-25"
-        ],
         "progression": "Engaging in this course"
       },
       "bonus": false,

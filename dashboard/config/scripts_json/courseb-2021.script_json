@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -14,6 +15,7 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "ca-ES",
@@ -47,11 +49,12 @@
         "zh-CN",
         "zh-TW"
       ],
-      "tts": true
+      "tts": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 02:57:36 UTC",
+    "serialized_at": "2025-04-03 01:05:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

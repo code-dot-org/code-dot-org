@@ -4,6 +4,8 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_6_8",
+      "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -13,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 02:56:53 UTC",
+    "serialized_at": "2025-03-28 09:28:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

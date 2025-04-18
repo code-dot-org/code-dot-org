@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:02 UTC",
+    "serialized_at": "2025-04-01 12:21:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -410,9 +410,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_lesson_resources_L6-cs-devices"
-        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -435,9 +432,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_AI_chatbot_overview_L8-cs-devicesn"
-        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -460,9 +454,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_career_overview_L7-cs-devices"
-        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -485,9 +476,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_teacher_Lesson1_L9-cs-devices"
-        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -585,9 +573,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-hardware-panels-L4-1-CSandDev"
-        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -610,9 +595,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-procssing-L4-2-CSandDev"
-        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -635,9 +617,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl-SNOT-overview-L5-CSandDev"
-        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -660,9 +639,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-hardware-troubleshoot-panels-L6-CSandDev"
-        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -685,9 +661,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-troubleshoot-AIbot-L7-CSandDev"
-        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -710,9 +683,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl-hardwarelesson-debrief-L8-CSandDev"
-        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -735,9 +705,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-hardware-assess-L8-CSandDev"
-        ],
         "progression": "Hardware"
       },
       "bonus": false,
@@ -760,9 +727,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_software-L11-CSandDev"
-        ],
         "progression": "Software and Operating Systems"
       },
       "bonus": false,
@@ -785,9 +749,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-matchingsoftware-L12-CSandDev"
-        ],
         "progression": "Software and Operating Systems"
       },
       "bonus": false,
@@ -810,9 +771,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl-reflectsoftware-L13-CSandDev"
-        ],
         "progression": "Software and Operating Systems"
       },
       "bonus": false,
@@ -835,9 +793,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_troubleshoot-about-L14-CSandDev"
-        ],
         "progression": "Troubleshooting Software"
       },
       "bonus": false,
@@ -860,9 +815,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-software-troubleshooting-L15-CSandDev"
-        ],
         "progression": "Troubleshooting Software"
       },
       "bonus": false,
@@ -885,9 +837,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea_fac_csaif-pl-troubleshooting-synthesis-L16-CSandDev"
-        ],
         "progression": "Troubleshooting Software"
       },
       "bonus": false,
@@ -910,9 +859,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-student-response-L17-CSandDev"
-        ],
         "progression": "Troubleshooting Software"
       },
       "bonus": false,
@@ -935,9 +881,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_optimizing-lesson-L18-CSandDev"
-        ],
         "progression": "Optimizing Software"
       },
       "bonus": false,
@@ -960,9 +903,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-optimize-bot-L19-CSandDev"
-        ],
         "progression": "Optimizing Software"
       },
       "bonus": false,
@@ -985,9 +925,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-optimization-reflect-L20-CSandDev"
-        ],
         "progression": "Optimizing Software"
       },
       "bonus": false,
@@ -1010,9 +947,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-_hardware-software_forum_L21_CSandDev"
-        ],
         "progression": "Optimizing Software"
       },
       "bonus": false,
@@ -1210,9 +1144,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-aiethics-video-L11-CSandDev"
-        ],
         "progression": "Ethics and Data"
       },
       "bonus": false,
@@ -1235,9 +1166,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_ethic-teaching-tips-L10-CSandDev"
-        ],
         "progression": "Ethics and Data"
       },
       "bonus": false,
@@ -1260,9 +1188,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-_data_forum_L10_CSandDev"
-        ],
         "progression": "Ethics and Data"
       },
       "bonus": false,
@@ -1385,9 +1310,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-nextsteps-L6-csandDev"
-        ],
         "progression": "Next Steps"
       },
       "bonus": false,

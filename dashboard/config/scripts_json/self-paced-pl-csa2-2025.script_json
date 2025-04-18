@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:08 UTC",
+    "serialized_at": "2025-04-06 19:11:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -258,9 +258,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-22-mod2-Overview-WebsiteNavigation-CSA_2025"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -283,9 +280,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-22-mod2-tour-vid-CSA_2025"
-        ],
         "progression": "Tour the Code.org learning platform"
       },
       "bonus": false,
@@ -308,9 +302,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-ClassSection-vid-CSA_2025"
-        ],
         "progression": "Set up a class section"
       },
       "bonus": false,
@@ -333,9 +324,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-Task-ClassSection-CSA_2025"
-        ],
         "progression": "Set up a class section"
       },
       "bonus": false,
@@ -358,9 +346,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-StudentExperience-vid-CSA_2025"
-        ],
         "progression": "Explore the student view"
       },
       "bonus": false,
@@ -383,9 +368,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-Task-StudentView-CSA_2025"
-        ],
         "progression": "Explore the student view"
       },
       "bonus": false,
@@ -408,9 +390,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-ProgessAndFeedback-vid-CSA_2025"
-        ],
         "progression": "Track student progress and provide feedback"
       },
       "bonus": false,
@@ -433,9 +412,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-progress-c4u-csp_2025"
-        ],
         "progression": "Track student progress and provide feedback"
       },
       "bonus": false,
@@ -458,9 +434,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-feedback-c4u-CSA_2025"
-        ],
         "progression": "Track student progress and provide feedback"
       },
       "bonus": false,
@@ -483,9 +456,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-22-mod2-TeachersInClassrooms-CSA_2025"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -508,9 +478,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-22-mod2-NavigatingLessonPlans-CSA_2025"
-        ],
         "progression": "Explore course lesson plans"
       },
       "bonus": false,
@@ -533,9 +500,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-22-mod2-ExploreLessonPlan-CSA_2025"
-        ],
         "progression": "Explore course lesson plans"
       },
       "bonus": false,
@@ -558,9 +522,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-22-mod2-Lesson-slides-levels-CSA_2025"
-        ],
         "progression": "Explore course lesson plans"
       },
       "bonus": false,
@@ -583,9 +544,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL_22-mod2-MakeAPlan-LessonPlanning-CSA_2025"
-        ],
         "progression": "Explore course lesson plans"
       },
       "bonus": false,
@@ -608,9 +566,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-22-mod2-NavigatingTeacherResources-CSA_2025"
-        ],
         "progression": "Explore additional teacher resources"
       },
       "bonus": false,
@@ -633,9 +588,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-22-mod2-UnitCalendar-CSA_2025"
-        ],
         "progression": "Explore additional teacher resources"
       },
       "bonus": false,
@@ -658,9 +610,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-TaskResources-CSA_2025"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -683,9 +632,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-navigating support-CSA_2025"
-        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -708,9 +654,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-ReadSupportArticles_2025"
-        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -733,9 +676,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-ReportAProblem_2025"
-        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -758,9 +698,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod2-Support-c4u-CSA_2025"
-        ],
         "progression": "Additional support for teachers"
       },
       "bonus": false,
@@ -783,9 +720,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-CSA-22-Navigation-Mod2_2025"
-        ],
         "progression": "Wrap up"
       },
       "bonus": false,

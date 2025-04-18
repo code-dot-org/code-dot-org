@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "is_migrated": true,
       "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 02:57:13 UTC",
+    "serialized_at": "2025-03-28 09:29:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

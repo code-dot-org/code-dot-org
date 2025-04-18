@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:10 UTC",
+    "serialized_at": "2025-04-01 17:13:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1072,9 +1072,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3L3 rect_2025"
-        ],
         "progression": "Predict - Introduction to Game Lab"
       },
       "bonus": false,
@@ -1097,9 +1094,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 rect_2025"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1122,9 +1116,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Drawing Squares to Corners_2025"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1147,9 +1138,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 fill_2025"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1172,9 +1160,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 sequence_2025"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1197,9 +1182,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 ellipse_2025"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1222,9 +1204,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 drawing practice choice_csd-vpl-23_2025"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1247,9 +1226,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSD U3 debug_2025"
-        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1272,9 +1248,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 drawing challenges_csd-vpl-23_2025"
-        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1297,9 +1270,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Variables Predict Where X_2025"
-        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1322,9 +1292,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Variables Predict Where XY_2025"
-        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1347,9 +1314,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3L5 - SB1_2025"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1372,9 +1336,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Variables naming rules v2_2025"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1397,9 +1358,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Variables Draw Poppy_2025"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1422,9 +1380,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD Games variables practice_csd-vpl-23_2025"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1447,9 +1402,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSD U3 Variables assessment_2025"
-        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1472,9 +1424,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD Games variables challenge_csd-vpl-23_2025"
-        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1497,9 +1446,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async1_2025"
-        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1522,9 +1468,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async1.5_2025"
-        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1547,9 +1490,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async2_2025"
-        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1572,9 +1512,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async3_2025"
-        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1597,9 +1534,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async4_2025"
-        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1622,9 +1556,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async5_2025"
-        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -1647,9 +1578,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-async6_2025"
-        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1672,9 +1600,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources1_2025"
-        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -1697,9 +1622,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources2_2025"
-        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -1722,9 +1644,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources3_2025"
-        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -1747,9 +1666,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment1_2025"
-        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1772,9 +1688,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment3_2025"
-        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1797,9 +1710,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment2_2025"
-        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1822,9 +1732,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-Assessment4_2025"
-        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1847,9 +1754,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day2-Levels_2025"
-        ],
         "progression": "Completing Model Lesson Levels"
       },
       "bonus": false,
@@ -2254,22 +2158,260 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "CSD Virtual Summer Workshop Day 2 Agenda",
+      "url": "https://docs.google.com/document/d/1MYUNRCphP03kX0kZTtV3dhnteu9nH246kMzgxGd_ZiY/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_2_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_2_agenda"
+      }
+    },
+    {
+      "name": "CSD Virtual Summer Workshop Day 2 Slides",
+      "url": "https://docs.google.com/presentation/d/1m8ugew7U2ojJdcWjztTc8uuWS0-OiuEXr5pJDXqHZCQ/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_2_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_2_slides"
+      }
+    },
+    {
+      "name": "Drawing in Game Lab",
+      "url": "https://docs.google.com/presentation/d/1kVwsZPhVrafAXXkK5qhWdfZeYKSEjK-eD6txmmWmPSA/template/preview",
+      "key": "drawing_in_game_lab",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_in_game_lab"
+      }
+    },
+    {
+      "name": "Drawing in Game Lab - Part 1",
+      "url": "https://youtu.be/PXn9gKiKKFo",
+      "key": "drawing_in_game_lab_-_part_1",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_introtodrawing-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_in_game_lab_-_part_1"
+      }
+    },
+    {
+      "name": "Drawing in Game Lab - Part 2",
+      "url": "https://youtu.be/QLabeWhw_O0",
+      "key": "drawing_in_game_lab_-_part_2",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_addingcolors-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_in_game_lab_-_part_2"
+      }
+    },
+    {
+      "name": "Drawing Shapes",
+      "url": "https://drive.google.com/file/d/1zlXf6POVzO078N25Xos87oTrMaJ_p3Iq/view?usp=sharing",
+      "key": "drawing_shapes",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "drawing_shapes"
+      }
+    },
+    {
+      "name": "Introduction to Variables",
+      "url": "https://youtu.be/UG7Q1Sr0_F0",
+      "key": "introduction_to_variables",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/applab/variables_1.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_variables"
+      }
+    },
+    {
+      "name": "Naming Variables",
+      "url": "https://drive.google.com/file/d/1GGtHE-IK3S9rN6KoaE9jhdzTK8emO_Kw/view",
+      "key": "naming_variables",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "naming_variables"
+      }
+    },
+    {
+      "name": "Variables",
+      "url": "https://drive.google.com/file/d/1sZpmFctaVP3RCT1Ojx0wcZ2CUyQhKzKv/view?usp=sharing",
+      "key": "variables",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "variables"
+      }
+    },
+    {
+      "name": "Variables",
+      "url": "https://youtu.be/WsXNpY3SXe8",
+      "key": "variables_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "variables_1"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3: U3L3 Drawing in Game Lab",
+        "resource.key": "drawing_in_game_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3: U3L3 Drawing in Game Lab",
+        "resource.key": "drawing_in_game_lab_-_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3: U3L3 Drawing in Game Lab",
+        "resource.key": "drawing_in_game_lab_-_part_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3: U3L3 Drawing in Game Lab",
+        "resource.key": "drawing_shapes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4: U3L5 Variables",
+        "resource.key": "introduction_to_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4: U3L5 Variables",
+        "resource.key": "naming_variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4: U3L5 Variables",
+        "resource.key": "variables"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4: U3L5 Variables",
+        "resource.key": "variables_1"
+      }
+    }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_2_agenda",
+        "script.name": "virtual-pl-csd-summer-2025-day2"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_2_slides",
+        "script.name": "virtual-pl-csd-summer-2025-day2"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "bug",
+      "word": "Bug",
+      "definition": "Part of a program that does not work correctly.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "key": "debugging",
+      "word": "Debugging",
+      "definition": "Finding and fixing problems in an algorithm or program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3: U3L3 Drawing in Game Lab",
+        "vocabulary.key": "bug"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3: U3L3 Drawing in Game Lab",
+        "vocabulary.key": "debugging"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 3: U3L3 Drawing in Game Lab",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson 4: U3L5 Variables",
+        "vocabulary.key": "variable"
+      }
+    }
   ],
   "lessons_programming_expressions": [
     {

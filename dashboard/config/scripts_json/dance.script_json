@@ -4,8 +4,10 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_migrated": true,
+      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "cs-CZ",
@@ -35,11 +37,12 @@
         "zh-CN",
         "zh-TW"
       ],
-      "tts": true
+      "tts": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 02:57:52 UTC",
+    "serialized_at": "2025-04-03 01:05:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -99,23 +102,11 @@
       }
     },
     {
-      "key": "0f404bbf-d9f1-45c9-a496-271179254aed",
+      "key": "14d674a9-18e0-43f3-ae74-d593dfc0fbda",
       "position": 2,
       "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0f404bbf-d9f1-45c9-a496-271179254aed",
-        "lesson.key": "Dance Party",
-        "lesson_group.key": "",
-        "script.name": "dance"
-      }
-    },
-    {
-      "key": "14d674a9-18e0-43f3-ae74-d593dfc0fbda",
-      "position": 3,
-      "properties": {
-        "name": "Activity (30-45 minutes)"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "14d674a9-18e0-43f3-ae74-d593dfc0fbda",
@@ -126,7 +117,7 @@
     },
     {
       "key": "4d9f4220-ead7-435d-adeb-bd7968b543aa",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -140,9 +131,10 @@
     },
     {
       "key": "2d33d18f-944d-4408-992a-31d1311733fc",
-      "position": 5,
+      "position": 4,
       "properties": {
-        "name": "Assessment (2 minutes)"
+        "duration": 2,
+        "name": "Assessment"
       },
       "seeding_key": {
         "lesson_activity.key": "2d33d18f-944d-4408-992a-31d1311733fc",
@@ -153,7 +145,7 @@
     },
     {
       "key": "74e90ab8-051a-45fd-bfd7-ec1e72686dc4",
-      "position": 6,
+      "position": 5,
       "properties": {
         "name": "Go Viral"
       },

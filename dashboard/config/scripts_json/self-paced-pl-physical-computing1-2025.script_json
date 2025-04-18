@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:09 UTC",
+    "serialized_at": "2025-04-04 19:48:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -389,9 +389,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computing_25"
-        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -414,9 +411,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-24-mod1-Certificate_25"
-        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -439,9 +433,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_25"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -464,9 +455,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-computing_25"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -489,9 +477,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-LessonTypes_25"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -514,9 +499,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-Devices-22-pre-survey_25"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -539,9 +521,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_25"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -564,9 +543,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-PSP-vid_25"
-        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -589,9 +565,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_25"
-        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -614,9 +587,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-computing_25"
-        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -639,9 +609,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_25"
-        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -664,9 +631,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_25"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -689,9 +653,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI6-CSD circuit video_25"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -714,9 +675,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_physical-comp_25"
-        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -739,9 +697,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_25"
-        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -764,9 +719,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-PILOT-CSD U6 - Board Inputs - SB1_25"
-        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -789,9 +741,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_25"
-        ],
         "progression": "Add Complexity to Your App"
       },
       "bonus": false,
@@ -814,9 +763,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_25"
-        ],
         "progression": "Add Complexity to Your App"
       },
       "bonus": false,
@@ -839,9 +785,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_25"
-        ],
         "progression": "Add Complexity to Your App"
       },
       "bonus": false,
@@ -864,9 +807,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_25"
-        ],
         "progression": "Explore Additional Board Events"
       },
       "bonus": false,
@@ -889,9 +829,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_25"
-        ],
         "progression": "Explore Additional Board Events"
       },
       "bonus": false,
@@ -914,9 +851,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_25"
-        ],
         "progression": "Explore Additional Board Events"
       },
       "bonus": false,
@@ -939,9 +873,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_physical-comp_25"
-        ],
         "progression": "Preview the End-of-Chapter Project"
       },
       "bonus": false,
@@ -964,9 +895,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Overview-U6L4_physical-computing_25"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -989,9 +917,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Sensors - A_25"
-        ],
         "progression": "Use Sensors "
       },
       "bonus": false,
@@ -1014,9 +939,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Accelerometer - P_25"
-        ],
         "progression": "Use Sensors "
       },
       "bonus": false,
@@ -1039,9 +961,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Music - Piano_25"
-        ],
         "progression": "Interact with Apps and Prototypes "
       },
       "bonus": false,
@@ -1064,9 +983,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Functions - SB5_25"
-        ],
         "progression": "Interact with Apps and Prototypes "
       },
       "bonus": false,
@@ -1089,9 +1005,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-CSD U6 - Interactive Art - Rev_25"
-        ],
         "progression": "Interact with Apps and Prototypes "
       },
       "bonus": false,
@@ -1114,9 +1027,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-22-CI-mod6-Sensor Overview_physical-computing_25"
-        ],
         "progression": "Interact with Apps and Prototypes "
       },
       "bonus": false,
@@ -1139,9 +1049,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_physical-comp_25"
-        ],
         "progression": "Preview the End-of-Chapter Project"
       },
       "bonus": false,
@@ -1164,9 +1071,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-physical-computing-22-Overview-TeachingLearning_25"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1189,9 +1093,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-LeadLearner_25"
-        ],
         "progression": "The Role of the Teacher"
       },
       "bonus": false,
@@ -1214,9 +1115,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-LeadLearner-vid_25"
-        ],
         "progression": "The Role of the Teacher"
       },
       "bonus": false,
@@ -1239,9 +1137,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-ClassroomCulture_25"
-        ],
         "progression": "The Role of the Teacher"
       },
       "bonus": false,
@@ -1264,9 +1159,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-PairProgramming_25"
-        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1289,9 +1181,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-PairProgramming-TipVid_25"
-        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1314,9 +1203,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-Resources_25"
-        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1339,9 +1225,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-Debugging_25"
-        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1364,9 +1247,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-Debugging-TipVid_25"
-        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1389,9 +1269,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-CP-22-teamworkOverview_25"
-        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1414,9 +1291,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-Strategies-StudentVideos_25"
-        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1439,9 +1313,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-CP-22-ProgrammingLevelsOverview_25"
-        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1464,9 +1335,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-CP-22-Inclusion_25"
-        ],
         "progression": "Meeting Student Needs"
       },
       "bonus": false,
@@ -1489,9 +1357,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-Differentiation_25"
-        ],
         "progression": "Meeting Student Needs"
       },
       "bonus": false,
@@ -1514,9 +1379,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-DifferentiationContinued_25"
-        ],
         "progression": "Meeting Student Needs"
       },
       "bonus": false,
@@ -1539,9 +1401,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-Assessment_25"
-        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1564,9 +1423,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-AssessmentPlan_25"
-        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1589,9 +1445,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VPL-Devices-22-post-survey_25"
-        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -1614,9 +1467,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-PC-22-mod2-WrapUp_25"
-        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

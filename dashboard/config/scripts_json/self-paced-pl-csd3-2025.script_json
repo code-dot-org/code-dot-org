@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:08 UTC",
+    "serialized_at": "2025-04-04 03:13:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -237,9 +237,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-Overview-CourseOverview_25"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -262,9 +259,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-CV-Equity_25"
-        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -287,9 +281,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-CSD-vid_25"
-        ],
         "progression": "Course Overview"
       },
       "bonus": false,
@@ -312,9 +303,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-CSD-mod3-Units_25"
-        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -337,9 +325,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-CSD-mod3-Chapters_25"
-        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -362,9 +347,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-CSD-TeacherVoices-CSDOverview_25"
-        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -387,9 +369,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-LessonTypes_25"
-        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -412,9 +391,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-Task-LessonTypes_25"
-        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -437,9 +413,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-LevelTypes_25"
-        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -462,9 +435,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-CSD-mod3-LevelType-practice-lc_25"
-        ],
         "progression": "Course Design"
       },
       "bonus": false,
@@ -487,9 +457,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-PSP_25"
-        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -512,9 +479,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-PSP-vid_25"
-        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -537,9 +501,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-PSP-cont_25"
-        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -562,9 +523,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-Overview-Tools_25"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -587,9 +545,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-LearningTools_25"
-        ],
         "progression": "Tools "
       },
       "bonus": false,
@@ -612,9 +567,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-GameLab-practice-lc_25"
-        ],
         "progression": "Tools "
       },
       "bonus": false,
@@ -637,9 +589,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-MakerApp_25"
-        ],
         "progression": "Tools "
       },
       "bonus": false,
@@ -662,9 +611,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-AILab_25"
-        ],
         "progression": "Tools "
       },
       "bonus": false,
@@ -687,9 +633,6 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-Tools-c4u_25"
-        ],
         "progression": "Tools "
       },
       "bonus": false,
@@ -712,9 +655,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-Overview-Implementation_25"
-        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -737,9 +677,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-TechAndMaterials_25"
-        ],
         "progression": "Make an Implementation Plan"
       },
       "bonus": false,
@@ -762,9 +699,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-21-mod3-ImplementationOptions_25"
-        ],
         "progression": "Make an Implementation Plan"
       },
       "bonus": false,
@@ -787,9 +721,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL_21-mod3-MakeAPlan-ImplementationPlan_25"
-        ],
         "progression": "Make an Implementation Plan"
       },
       "bonus": false,
@@ -812,9 +743,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-VPL-CSD-21-Navigation-Mod3_25"
-        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

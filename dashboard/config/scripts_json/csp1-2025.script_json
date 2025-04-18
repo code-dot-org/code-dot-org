@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:08:57 UTC",
+    "serialized_at": "2025-03-11 18:19:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3953,9 +3953,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp-pre-survey-levelgroup_21_222022_2025"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3977,9 +3974,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp_socialBelonging_control_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4002,9 +3996,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L3 CFU Sending Complex Messages_2025"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4027,9 +4018,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP U1L4 CYU3_2025"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4052,9 +4040,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Binary 4bit to 8bit CFU 2023_2025"
-        ],
         "progression": "Check for Understanding - Flippy Do"
       },
       "bonus": false,
@@ -4077,9 +4062,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L5 CFU adding bits_2025"
-        ],
         "progression": "Check for Understanding - Flippy Do"
       },
       "bonus": false,
@@ -4102,9 +4084,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L5 CFU how many bits_2025"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4127,9 +4106,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L5 CFU bin dec similarities_2025"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4152,9 +4128,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Widget: Binary Odometer_2025"
-        ],
         "progression": "Widget: Binary Odometer"
       },
       "bonus": false,
@@ -4177,9 +4150,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L6 CFU beyond odometer_2025"
-        ],
         "progression": "Check For Understanding - Overflow"
       },
       "bonus": false,
@@ -4202,9 +4172,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L6 CFU representing fractions_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4227,9 +4194,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L8 Reflection Multiple Representations CSP_2025"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4252,9 +4216,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation - Make the Letter A_2025"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4277,9 +4238,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget Fix bit offset_2025"
-        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4302,9 +4260,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge a_2025"
-        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -4327,9 +4282,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge B_2025"
-        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -4352,9 +4304,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L9 Multiple Choice Digital Analog2022_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4377,9 +4326,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L9 Pixelation Widget challenge C_2025"
-        ],
         "progression": "Sampling an Analog Image: Challenge C"
       },
       "bonus": false,
@@ -4402,9 +4348,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L9 CFU pixel data2022_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4427,9 +4370,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L9 CFU Sampling_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4452,9 +4392,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 RGB2022_2025"
-        ],
         "progression": "RGB Color"
       },
       "bonus": false,
@@ -4477,9 +4414,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 Color Pixelation Widget 1_2025"
-        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4502,9 +4436,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 More Shades of Color2022_2025"
-        ],
         "progression": "More Shades of Color"
       },
       "bonus": false,
@@ -4527,9 +4458,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 Color Pixelation Widget 2_2025"
-        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4552,9 +4480,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 Color Pixelation Widget 3_2025"
-        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4577,9 +4502,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1 Sampling Widget_2025"
-        ],
         "progression": "Color Sampling Widget"
       },
       "bonus": false,
@@ -4602,9 +4524,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U1L10 Color Pixelation Widget 4_2025"
-        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4627,9 +4546,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L10 Multiple Choice analog vs digital2022_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4652,9 +4568,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L10 CFU Sampling_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4677,9 +4590,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L11 Widget: Text Compression_2025"
-        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -4702,9 +4612,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L11 Multiple Choice lossless compression2022_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4727,9 +4634,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L11 CFU Compression for Email_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4752,9 +4656,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1 Lossy Compression Widget v1_2025"
-        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4777,9 +4678,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1 Lossy Compression Widget v2_2025"
-        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4802,9 +4700,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L11 CPS CFU Cell Phone_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4827,9 +4722,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L11 Multiple Choice Creative Commons2022_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4852,9 +4744,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L12 CFU Copyright_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4877,9 +4766,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L13 CFU Digital Representation_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4902,9 +4788,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L14 CSP CFU digital information_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4927,9 +4810,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csp1_2025"
-        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -4952,9 +4832,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 1 AP-Style Assessment 2022_2025"
-        ],
         "progression": "Unit 1 Exam"
       },
       "bonus": false,
@@ -5467,22 +5344,1274 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Activity Guide - Black and White Images",
+      "url": "https://docs.google.com/document/d/1-W0LMRihs84dIlC6VwKowq3FcTE3hCZGes8Duda1TqM/edit?usp=sharing",
+      "key": "activity_guide_-_black_and_white_images",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide_-_black_and_white_images"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csp1-2023/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp1-2023/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "Article - Fortnite Stealing Dance Moves",
+      "url": "https://drive.google.com/file/d/1RshIPOF9Sm9AYPLehNouZus4rkRDWX-7/view?usp=sharing",
+      "key": "article_-_fortnite_stealing_dance_moves",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "article_-_fortnite_stealing_dance_moves"
+      }
+    },
+    {
+      "name": "ASCII Reference Sheet",
+      "url": "https://docs.google.com/document/d/15pgXcGUX7XbAAGBkHfXMMLFwDP5cTKKZ-zFIfFKu9FQ/edit",
+      "key": "ascii_reference_sheet",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "ascii_reference_sheet"
+      }
+    },
+    {
+      "name": "Assessment Day - Digital Information",
+      "url": "https://docs.google.com/presentation/d/17fBn1PdOCkM21JPh1tTz5TFj_NNSfc4rd3Vo717EKHM/template/preview",
+      "key": "assessment_day_-_digital_information",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "assessment_day_-_digital_information"
+      }
+    },
+    {
+      "name": "B&W Pixelation Tutorial",
+      "url": "https://youtu.be/rJOa5Q5a1WM",
+      "key": "b_w_pixelation_tutorial",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/pixelation_bw.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "b_w_pixelation_tutorial"
+      }
+    },
+    {
+      "name": "Binary Numbers",
+      "url": "https://docs.google.com/presentation/d/1arPHNzsGlceddWZJa2U6DJsnvICJl_RvYscV332piwI/template/preview",
+      "key": "binary_numbers",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "binary_numbers"
+      }
+    },
+    {
+      "name": "Black and White Images",
+      "url": "https://docs.google.com/presentation/d/1JbbkxtdygdoyaEPRiaxXbvv9tN-LCSfyd6r4kGbiVLw/template/preview",
+      "key": "black_and_white_images",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "black_and_white_images"
+      }
+    },
+    {
+      "name": "Circle Square Patterns",
+      "url": "https://docs.google.com/document/d/17GrZRYeVRMKwo9vbW-xVT1-Ccu0U2n88Thr-kMqu4s4/edit",
+      "key": "circle_square_patterns",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "circle_square_patterns"
+      }
+    },
+    {
+      "name": "Circle Square Patterns",
+      "url": "https://docs.google.com/presentation/d/18d8nkIg9HvhD0pLiSzmhR9b-pEzab_gxXf-paGy5NS8/template/preview",
+      "key": "circle_square_patterns_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "circle_square_patterns_1"
+      }
+    },
+    {
+      "name": "Color Images",
+      "url": "https://docs.google.com/presentation/d/1h4Ml6ie_PufcGkCGlfRnK96WN6iObq_OEAJOjq9v038/template/preview",
+      "key": "color_images",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "color_images"
+      }
+    },
+    {
+      "name": "Computer Science is Changing Everything",
+      "url": "https://youtu.be/QvyTEx1wyOY",
+      "key": "computer_science_is_changing_everything",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/cs_is_changing_everything.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "computer_science_is_changing_everything"
+      }
+    },
+    {
+      "name": "Copyright in Practice",
+      "url": "https://youtu.be/ITASCSxnBqw",
+      "key": "copyright_in_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "copyright_in_practice"
+      }
+    },
+    {
+      "name": "Copyright Overview",
+      "url": "https://youtu.be/GPNWvU_IphU",
+      "key": "copyright_overview",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "copyright_overview"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
+      "key": "course_vocabulary",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "Creative Commons Copyright",
+      "url": "https://youtu.be/wC-m23T7cPM",
+      "key": "creative_commons_copyright",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "creative_commons_copyright"
+      }
+    },
+    {
+      "name": "CSP Bingo Cards - Unit One",
+      "url": "https://drive.google.com/file/d/1SkzhU8UB8gzKzCLe8nBXT9ysQV8zs-EP/view?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_one",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1SkzhU8UB8gzKzCLe8nBXT9ysQV8zs-EP",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_one"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "name": "CSP Unit 1 Project Rubric",
+      "url": "https://docs.google.com/document/d/14rAnNQCTjhGgWCqnVo4XczoNEDFM-oYLNqhJvLW-88Q/edit?usp=sharing",
+      "key": "csp_unit_1_project_rubric",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1_project_rubric"
+      }
+    },
+    {
+      "name": "CSP Unit 1 Slides",
+      "url": "https://docs.google.com/presentation/d/1ccxlBnconEF4KdNTkB-RhzJje5xMviicrhHqTp_QSio/template/preview",
+      "key": "csp_unit_1_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_1_slides"
+      }
+    },
+    {
+      "name": "Digital Dilemmas",
+      "url": "https://docs.google.com/presentation/d/1dBHtsZ-A4Fk1UnvaDZxwh7kPPW7jrESkFzRMIrIs9PA/template/preview",
+      "key": "digital_dilemmas",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "digital_dilemmas"
+      }
+    },
+    {
+      "name": "DNA Testing Kits & The Security Risks in Digitized DNA",
+      "url": "https://www.bleepingcomputer.com/news/security/dna-testing-kits-and-the-security-risks-in-digitized-dna/",
+      "key": "dna_testing_kits_the_security_risks_in_digitized_dna",
+      "properties": {
+        "audience": "Student",
+        "type": "Article"
+      },
+      "seeding_key": {
+        "resource.key": "dna_testing_kits_the_security_risks_in_digitized_dna"
+      }
+    },
+    {
+      "name": "Flippy Do",
+      "url": "https://drive.google.com/a/code.org/file/d/1ZrO6gBcLYrj2_scYsbxA78ZuQyGdHOjC/view?usp=sharing",
+      "key": "flippy_do",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "flippy_do"
+      }
+    },
+    {
+      "name": "Guide to Assessment",
+      "url": "https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit?usp=sharing",
+      "key": "guide_to_assessment",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_assessment"
+      }
+    },
+    {
+      "name": "Guide to Classroom Discussions",
+      "url": "https://docs.google.com/document/d/1Y3HdoKknnw5tdH_I5XtcONQrDxueMi0Xdgp3Nyr-Atk/edit?usp=sharing",
+      "key": "guide_to_classroom_discussions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions"
+      }
+    },
+    {
+      "name": "How Computers Work - Data and Binary",
+      "url": "https://www.youtube.com/watch?v=USCBCmwMCDA",
+      "key": "how_computers_work_-_data_and_binary",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/cs-discoveries/concept/03_BinaryData_sm.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_computers_work_-_data_and_binary"
+      }
+    },
+    {
+      "name": "How to Administer a Locked Assessment",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "how_to_administer_a_locked_assessment",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_administer_a_locked_assessment"
+      }
+    },
+    {
+      "name": "How to videos",
+      "url": "https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-",
+      "key": "how_to_videos",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_videos"
+      }
+    },
+    {
+      "name": "Intellectual Property",
+      "url": "https://docs.google.com/presentation/d/16pHsBIjXC_9T5nDtOlp8s46eN-Rto7NLWIfaYqLlWC4/template/preview",
+      "key": "intellectual_property",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intellectual_property"
+      }
+    },
+    {
+      "name": "Judge Rules in Favor of 'NBA 2K' Creators in Case Brought by Tattoo Artists",
+      "url": "https://www.si.com/nba/2020/04/06/nba-2k-ruling-tattoo-artists",
+      "key": "judge_rules_in_favor_of_nba_2k_creators_in_case_brought_by_tattoo_artists",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "judge_rules_in_favor_of_nba_2k_creators_in_case_brought_by_tattoo_artists"
+      }
+    },
+    {
+      "name": "KEY Black & White Images Activity Guide",
+      "url": "https://docs.google.com/document/d/1b02zxA27_uBJHDHkyBSyw56KiEPcgQRdwGekJmNs5Fk/edit?usp=sharing",
+      "key": "key_black_white_images_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "key_black_white_images_activity_guide"
+      }
+    },
+    {
+      "name": "KEY U1L4 Flippy Do Pt 1 Activity Guide",
+      "url": "https://docs.google.com/document/d/1ZFg2LvFTLOJ5VFL0IxIEydKaLLz59g7gwhNLiFPz2gE/edit?usp=sharing",
+      "key": "key_u1l4_flippy_do_pt_1_activity_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "key_u1l4_flippy_do_pt_1_activity_guide"
+      }
+    },
+    {
+      "name": "Lossless Compression",
+      "url": "https://docs.google.com/presentation/d/1z5xccPSBAVtfbaKfX38mspqEZhp3Z186MEXmV3NYJ_Y/template/preview",
+      "key": "lossless_compression",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lossless_compression"
+      }
+    },
+    {
+      "name": "Lossy Compression",
+      "url": "https://docs.google.com/presentation/d/1tvCrPosZDPQn19juJ2U6NrV8OnTkxB0Q7fcZls88A3Y/template/preview",
+      "key": "lossy_compression",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lossy_compression"
+      }
+    },
+    {
+      "name": "Overflow and Rounding",
+      "url": "https://docs.google.com/presentation/d/1V8UFeuSHwsmWT5EQAtPp7tJtsF5fr8U3mQZftKFXcC4/template/preview",
+      "key": "overflow_and_rounding",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "overflow_and_rounding"
+      }
+    },
+    {
+      "name": "Personal Innovations",
+      "url": "https://docs.google.com/document/d/1rUAaOVwSMBDYLoXKGhL5lxZix-Hgw51mzDvcgiF8RuE/view",
+      "key": "personal_innovations",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "personal_innovations"
+      }
+    },
+    {
+      "name": "Personal Innovations",
+      "url": "https://docs.google.com/document/d/1v3BHA47QuQu9USBcrQvALigzlNNtQzaojlDQuZ57LZA/view",
+      "key": "personal_innovations_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "personal_innovations_1"
+      }
+    },
+    {
+      "name": "Representing Information",
+      "url": "https://docs.google.com/presentation/d/1UPg9yeHqB2cHl7JrDN_z_Vvu3aCCEcbVLa_Wn9kSajE/template/preview",
+      "key": "representing_information",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "representing_information"
+      }
+    },
+    {
+      "name": "Representing Text",
+      "url": "https://docs.google.com/presentation/d/1-Y1NxI3MQYHUaBLUTSpA-eeqiSpkKxGVY6PSvdtGheo/template/preview",
+      "key": "representing_text",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "representing_text"
+      }
+    },
+    {
+      "name": "Shape Cutouts",
+      "url": "https://docs.google.com/document/d/1l19mBWEkYLt-cIZbahv8JrrbRQFnwQQajmeq-r5InsU/edit",
+      "key": "shape_cutouts",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "shape_cutouts"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "Text Compression widget (tutorial)",
+      "url": "http://youtu.be/LCGkcn1f-ms",
+      "key": "text_compression_widget_tutorial_",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/2015/csp/textcompression_blacc.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "text_compression_widget_tutorial_"
+      }
+    },
+    {
+      "name": "The Ethics of Computer-Generated Actors",
+      "url": "https://mediaengagement.org/research/the-ethics-of-computer-generated-actors/",
+      "key": "the_ethics_of_computer-generated_actors",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "the_ethics_of_computer-generated_actors"
+      }
+    },
+    {
+      "name": "U1 High Score Sample Article Markup",
+      "url": "https://docs.google.com/document/d/1wm-dWM_MyuWv_ANcY7wOwB30DfePpJUGVS_Iju73F40/edit?usp=sharing",
+      "key": "u1_high_score_sample_article_markup",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "u1_high_score_sample_article_markup"
+      }
+    },
+    {
+      "name": "U1 High Score Sample Poster ",
+      "url": "https://docs.google.com/presentation/d/1Z7w4PeNIK5MhhoBYZ6nf_I005BwGx0GjENTIGIi-WfA/edit?usp=sharing",
+      "key": "u1_high_score_sample_poster",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "u1_high_score_sample_poster"
+      }
+    },
+    {
+      "name": "U1 High Score Sample Rubric",
+      "url": "https://docs.google.com/document/d/19D-A1wmOP-RjrqiMrbJ4sZFN5SnsfQVRdyB4CePnqJw/edit?usp=sharing",
+      "key": "u1_high_score_sample_rubric",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "u1_high_score_sample_rubric"
+      }
+    },
+    {
+      "name": "U1 L4 Flippy Do Pt 1 - Activity Guide",
+      "url": "https://docs.google.com/document/d/1DmzViCZqIJTEPZQ2-aVa4Z-8_3PmzgRIS_XzzPbxXsU/edit?usp=sharing",
+      "key": "u1_l4_flippy_do_pt_1_-_activity_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "u1_l4_flippy_do_pt_1_-_activity_guide"
+      }
+    },
+    {
+      "name": "U1 L4 How to Make a FlippyDo",
+      "url": "https://docs.google.com/document/d/1ecO5-Vg8eQVVvpjIUX8P0dAVX2Mi1-QW7zfIMFWeqgY/edit?usp=sharing",
+      "key": "u1_l4_how_to_make_a_flippydo",
+      "properties": {
+        "audience": "Teacher",
+        "include_in_pdf": true,
+        "type": "Teacher Guide"
+      },
+      "seeding_key": {
+        "resource.key": "u1_l4_how_to_make_a_flippydo"
+      }
+    },
+    {
+      "name": "U1 Mid Score Sample Article Markup",
+      "url": "https://docs.google.com/document/d/1JR2p0KS4HeBiwy5j5nAGMsIv6lRYwp8w6j6-he1JqQ0/edit?usp=sharing",
+      "key": "u1_mid_score_sample_article_markup",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "u1_mid_score_sample_article_markup"
+      }
+    },
+    {
+      "name": "U1 Mid Score Sample Poster",
+      "url": "https://docs.google.com/presentation/d/1nWytpB3lOHq8U1ptGQ0r3IWg1jfH2fDxK88vNhq8d_E/edit?usp=sharing",
+      "key": "u1_mid_score_sample_poster",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "u1_mid_score_sample_poster"
+      }
+    },
+    {
+      "name": "U1 Mid Score Sample Rubric",
+      "url": "https://docs.google.com/document/d/1jXio0Ws5iXv_pcZXqIJ13hrYrYxJN0PtIDUynEX9DZ0/edit?usp=sharing",
+      "key": "u1_mid_score_sample_rubric",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "u1_mid_score_sample_rubric"
+      }
+    },
+    {
+      "name": "Unit 1 Journal - Example",
+      "url": "https://docs.google.com/presentation/d/17jJG9aGnvUsS_HClqDoAW7LkPS51PIsv2Q1npTlsbwM/edit?usp=sharing",
+      "key": "unit_1_journal_-_example",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_journal_-_example"
+      }
+    },
+    {
+      "name": "Unit 1 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/1nCwU7a83mgtEIKId1Fw-JzsZkHicWN12WeCTDMJkw68/edit?usp=share_link",
+      "key": "unit_1_journal_digital_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_journal_digital_"
+      }
+    },
+    {
+      "name": "Unit 1 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1hydmwrk4buHxg1gW-4TvVKMkIDvru8FTRuk53N8T8es/edit?usp=drive_link",
+      "key": "unit_1_journal_interactive_notebook_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_journal_interactive_notebook_"
+      }
+    },
+    {
+      "name": "Welcome to CSP",
+      "url": "https://docs.google.com/presentation/d/1kfteXZUhdSY0KdUrln3ccCvh8c3XLNTaH1lTJcZXy3k/template/preview",
+      "key": "welcome_to_csp",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "welcome_to_csp"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Assessment Day",
+        "resource.key": "assessment_day_-_digital_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "resource.key": "binary_numbers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "resource.key": "flippy_do"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "resource.key": "key_u1l4_flippy_do_pt_1_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "resource.key": "u1_l4_flippy_do_pt_1_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "resource.key": "u1_l4_how_to_make_a_flippydo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "resource.key": "activity_guide_-_black_and_white_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "resource.key": "b_w_pixelation_tutorial"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "resource.key": "black_and_white_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "resource.key": "key_black_white_images_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "resource.key": "circle_square_patterns"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "resource.key": "circle_square_patterns_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Circle Square Patterns",
+        "resource.key": "shape_cutouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color Images",
+        "resource.key": "color_images"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Color Images",
+        "resource.key": "how_computers_work_-_data_and_binary"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "article_-_fortnite_stealing_dance_moves"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "copyright_in_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "copyright_overview"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "creative_commons_copyright"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "resource.key": "intellectual_property"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "resource.key": "lossless_compression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "resource.key": "text_compression_widget_tutorial_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "resource.key": "lossy_compression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "resource.key": "overflow_and_rounding"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "csp_bingo_cards_-_unit_one"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "csp_unit_1_project_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "digital_dilemmas"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "dna_testing_kits_the_security_risks_in_digitized_dna"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "judge_rules_in_favor_of_nba_2k_creators_in_case_brought_by_tattoo_artists"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "the_ethics_of_computer-generated_actors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "u1_high_score_sample_article_markup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "u1_high_score_sample_poster"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "u1_high_score_sample_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "u1_mid_score_sample_article_markup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "u1_mid_score_sample_poster"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project Digital Information Dilemmas",
+        "resource.key": "u1_mid_score_sample_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "resource.key": "representing_information"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "resource.key": "unit_1_journal_-_example"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "resource.key": "unit_1_journal_digital_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Information",
+        "resource.key": "unit_1_journal_interactive_notebook_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "resource.key": "ascii_reference_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Representing Text",
+        "resource.key": "representing_text"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "computer_science_is_changing_everything"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "csp_unit_1_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "how_to_administer_a_locked_assessment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "how_to_videos"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "personal_innovations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "personal_innovations_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Welcome to CSP",
+        "resource.key": "welcome_to_csp"
+      }
+    }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_1_slides",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_assessment",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_journal_digital_",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_1_journal_interactive_notebook_",
+        "script.name": "csp1-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "analog_data",
+      "word": "Analog Data",
+      "definition": "Data with values that change continuously, or smoothly, over time. Some examples of analog data include music, colors of a painting, or position of a sprinter during a race.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "analog_data"
+      }
+    },
+    {
+      "key": "binary",
+      "word": "Binary",
+      "definition": "A way of representing information using only two options",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "binary"
+      }
+    },
+    {
+      "key": "bit",
+      "word": "Bit",
+      "definition": "A contraction of \"Binary Digit\";  the single unit of information in a computer, typically represented as a 0 or 1",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bit"
+      }
+    },
+    {
+      "key": "byte",
+      "word": "Byte",
+      "definition": "8 bits",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "byte"
+      }
+    },
+    {
+      "key": "creative_commons",
+      "word": "Creative Commons",
+      "definition": "A collection of public copyright licenses that enable the free distribution of an otherwise copyrighted work, used when an author wants to give people the right to share, use, and build upon a work that they have created",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "creative_commons"
+      }
+    },
+    {
+      "key": "decimal",
+      "word": "Decimal",
+      "definition": "A way of representing information using ten options",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decimal"
+      }
+    },
+    {
+      "key": "digital_data",
+      "word": "Digital Data",
+      "definition": "Data that changes discretely through a finite set of possible values",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "digital_data"
+      }
+    },
+    {
+      "key": "intellectual_property",
+      "word": "Intellectual Property",
+      "definition": "A work or invention that is the result of creativity, such as a piece of writing or a design, to which one has rights and for which one may apply for a patent, copyright, trademark, etc.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "intellectual_property"
+      }
+    },
+    {
+      "key": "lossless_compression",
+      "word": "Lossless Compression",
+      "definition": "A process for reducing the number of bits needed to represent something without losing any information. This process is reversible.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "lossless_compression"
+      }
+    },
+    {
+      "key": "lossy_compression",
+      "word": "Lossy Compression",
+      "definition": "A process for reducing the number of bits needed to represent something in which some information is lost or thrown away. This process is not reversible.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "lossy_compression"
+      }
+    },
+    {
+      "key": "overflow_error",
+      "word": "Overflow Error",
+      "definition": "Error from attempting to represent a number that is too large",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
+      "key": "round_off_error",
+      "word": "Round-off Error",
+      "definition": "Error from attempting to represent a number that is too precise. The value is rounded.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "round_off_error"
+      }
+    },
+    {
+      "key": "sampling",
+      "word": "Sampling",
+      "definition": "A process for creating a digital representation of analog data by measuring the analog data at regular intervals called samples.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sampling"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "vocabulary.key": "binary"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "vocabulary.key": "bit"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "vocabulary.key": "byte"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Binary Numbers",
+        "vocabulary.key": "decimal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "vocabulary.key": "analog_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "vocabulary.key": "digital_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Black and White Images",
+        "vocabulary.key": "sampling"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "vocabulary.key": "creative_commons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intellectual Property",
+        "vocabulary.key": "intellectual_property"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossless Compression",
+        "vocabulary.key": "lossless_compression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lossy Compression",
+        "vocabulary.key": "lossy_compression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "vocabulary.key": "overflow_error"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overflow and Rounding",
+        "vocabulary.key": "round_off_error"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

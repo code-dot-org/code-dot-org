@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:08:43 UTC",
+    "serialized_at": "2025-04-07 16:49:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6892,9 +6892,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-level-group-bubble"
-        ],
         "progression": "Unused Loops 2"
       },
       "bonus": false,
@@ -9491,10 +9488,296 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "[answer key] Client Stories",
+      "url": "https://docs.google.com/document/d/1ROBaDdO6Hlndp1jKpEcBL9bdFTNhrBLgmIqfxrYlZVM/edit?usp=sharing",
+      "key": "_answer_key_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_answer_key_"
+      }
+    },
+    {
+      "name": "Client Stories",
+      "url": "https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/copy",
+      "key": "_student_copy_music_for_different_needs",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_student_copy_music_for_different_needs"
+      }
+    },
+    {
+      "name": "Functions - Explore",
+      "url": "https://docs.google.com/presentation/d/1niuLGiC8RNMM9GO1XlTxg3vZoLC2TZ5CPXs2OLAM5rw/copy",
+      "key": "functions_-_explore",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_-_explore"
+      }
+    },
+    {
+      "name": "Functions - Practice",
+      "url": "https://docs.google.com/presentation/d/1M5Dkkj6zLFROOD3QG9j2p3AbVLkvx0VBzD0ECysvn8Q/copy",
+      "key": "functions_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_-_practice"
+      }
+    },
+    {
+      "name": "Functions - Synthesis",
+      "url": "https://docs.google.com/presentation/d/1j97kHjLKvm-yQbgT4bRSqKRdZin33ER2bobOJDAJ_OQ/copy",
+      "key": "functions_-_synthesis",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_-_synthesis"
+      }
+    },
+    {
+      "name": "Introduction to Music Lab",
+      "url": "https://docs.google.com/presentation/d/14X814gR4KUxcZKEkbqhOSR03pg-8XKWZZMhIn7AJo4w/copy",
+      "key": "introduction_to_music_lab",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_music_lab"
+      }
+    },
+    {
+      "name": "Loops - Explore",
+      "url": "https://docs.google.com/presentation/d/1n01W_XFQbH-gwSCfhJdvJRggagbapxXSx23tys4refA/copy",
+      "key": "loops_-_explore",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops_-_explore"
+      }
+    },
+    {
+      "name": "Loops - Practice",
+      "url": "https://docs.google.com/presentation/d/1zj_nA_H4-fa-vKZWKNX6JylIdMj6rFQuu_UPN9NG_7o/copy",
+      "key": "loops_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops_-_practice"
+      }
+    },
+    {
+      "name": "Loops - Synthesis",
+      "url": "https://docs.google.com/presentation/d/1s02366Iz1uO2K-ytHOjL1fQtamjKq8mcF3AUVDk8Ab8/copy",
+      "key": "loops_-_synthesis",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops_-_synthesis"
+      }
+    },
+    {
+      "name": "Mini Project - Cat GIF Loops",
+      "url": "https://docs.google.com/presentation/d/1j5lpbvr9BM4UfC6z7Mju9mZSlKJpLz7dEVaGBbw1hbo/copy",
+      "key": "mini_project_-_cat_gif_loops",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini_project_-_cat_gif_loops"
+      }
+    },
+    {
+      "name": "Mini Project - Walk Up Songs",
+      "url": "https://docs.google.com/presentation/d/1nQQ_vqwmOqhENzt-qAQYEjQ07R_xO8xTfteYVWnl3MY/copy",
+      "key": "mini_project_-_walk_up_songs",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini_project_-_walk_up_songs"
+      }
+    },
+    {
+      "name": "Music Word Search",
+      "url": "https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/copy",
+      "key": "music_word_search",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "music_word_search"
+      }
+    },
+    {
+      "name": "Project - Genre Mash Up",
+      "url": "https://docs.google.com/presentation/d/13sI-kHNF7fvgy0ThzjmhtIQhE5d0Otg4yx_kEoHDFT8/copy",
+      "key": "project_-_genre_mash_up",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_genre_mash_up"
+      }
+    },
+    {
+      "name": "Sequencing - Explore",
+      "url": "https://docs.google.com/presentation/d/1wvDRrS2P_cY9n-pR_pZd7yi5Ew8MjmJeUSkIFz2hpOo/copy",
+      "key": "sequencing_-_explore",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_-_explore"
+      }
+    },
+    {
+      "name": "Sequencing - Practice",
+      "url": "https://docs.google.com/presentation/d/1ObRxUvZcal2jUOnuIaMSs6o_CIC9QnOnHzwAZGv_Nes/copy",
+      "key": "sequencing_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_-_practice"
+      }
+    },
+    {
+      "name": "Sequencing - Synthesis",
+      "url": "https://docs.google.com/presentation/d/1w_ZKy07bfN4k32dW4q_u0YpWRekM5Q3yk7DBEnqcHIQ/copy",
+      "key": "sequencing_-_synthesis",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_-_synthesis"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "functions_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "functions_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "mini_project_-_walk_up_songs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "mini_project_-_cat_gif_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_answer_key_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_student_copy_music_for_different_needs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "introduction_to_music_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "music_word_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "project_-_genre_mash_up"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "sequencing_-_explore"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "sequencing_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "sequencing_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "loops_-_explore"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "loops_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "loops_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "functions_-_explore"
+      }
+    }
   ],
   "scripts_resources": [
 

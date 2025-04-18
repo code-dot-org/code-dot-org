@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:02 UTC",
+    "serialized_at": "2025-04-01 11:45:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -323,9 +323,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-faccsaif_pl_cyber_overview"
-        ],
         "progression": "Cybersecurity Overview"
       },
       "bonus": false,
@@ -348,9 +345,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_cyber_impact"
-        ],
         "progression": "Cybersecurity Overview"
       },
       "bonus": false,
@@ -373,9 +367,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_check_for_understanding"
-        ],
         "progression": "Cybersecurity Overview"
       },
       "bonus": false,
@@ -398,9 +389,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_check_answer"
-        ],
         "progression": "Cybersecurity Overview"
       },
       "bonus": false,
@@ -423,9 +411,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_navigating_module-cyber"
-        ],
         "progression": "Cybersecurity Overview"
       },
       "bonus": false,
@@ -498,9 +483,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea_fac_csaif_pl_2_data_02_2_3"
-        ],
         "progression": "Data and Privacy"
       },
       "bonus": false,
@@ -573,9 +555,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_security"
-        ],
         "progression": "Security Risks"
       },
       "bonus": false,
@@ -598,9 +577,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_2_encryption_03"
-        ],
         "progression": "Protecting Data"
       },
       "bonus": false,
@@ -623,9 +599,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_2_encryption"
-        ],
         "progression": "Protecting Data"
       },
       "bonus": false,
@@ -648,9 +621,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_2_encryption_04"
-        ],
         "progression": "Protecting Data"
       },
       "bonus": false,
@@ -673,9 +643,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_2_encryption_02"
-        ],
         "progression": "Protecting Data"
       },
       "bonus": false,
@@ -698,9 +665,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_2_encrypt-11"
-        ],
         "progression": "Protecting Data"
       },
       "bonus": false,
@@ -723,9 +687,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_2_project_1"
-        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -748,9 +709,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif_pl_2_project_02"
-        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -773,9 +731,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea_fac_csaif_pl_wrap-up"
-        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -798,9 +753,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac_csaif_pl_wrap-up_answer"
-        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,
@@ -823,9 +775,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ea-fac-csaif-pl-nextsteps-cyber"
-        ],
         "progression": "Wrap-Up"
       },
       "bonus": false,

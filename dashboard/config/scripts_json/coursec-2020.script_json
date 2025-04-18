@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-20/coursec/{LESSON}",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
@@ -19,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 02:57:39 UTC",
+    "serialized_at": "2025-04-03 01:05:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

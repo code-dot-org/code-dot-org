@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
       "hideable_lessons": true,
       "is_migrated": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 02:57:24 UTC",
+    "serialized_at": "2025-03-28 09:30:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

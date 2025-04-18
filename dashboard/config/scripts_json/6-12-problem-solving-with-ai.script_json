@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:08:43 UTC",
+    "serialized_at": "2025-03-27 21:10:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2160,9 +2160,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-problem-solving-with-ai-lesson12-level1-bubblechoice"
-        ],
         "progression": "AI in the Community"
       },
       "bonus": false,
@@ -2210,9 +2207,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-problem-solving-with-ai-lesson12-level4"
-        ],
         "progression": "Write a Video Script"
       },
       "bonus": false,

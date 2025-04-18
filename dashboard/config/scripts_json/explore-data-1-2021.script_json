@@ -4,13 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_6_8",
+      "curriculum_umbrella": "CSC 6-8",
       "is_migrated": true,
-      "tts": true
+      "show_calendar": true,
+      "tts": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 02:57:22 UTC",
+    "serialized_at": "2025-03-28 09:29:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

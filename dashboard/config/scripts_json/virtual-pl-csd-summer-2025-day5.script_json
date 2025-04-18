@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:11 UTC",
+    "serialized_at": "2025-04-01 17:09:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -498,9 +498,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day5-AsyncIntro_2025"
-        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -523,9 +520,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day5-Community1_2025"
-        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -548,9 +542,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day5-Community2_2025"
-        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -573,9 +564,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day5-Community3_2025"
-        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -598,9 +586,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day5-Community4_2025"
-        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -623,9 +608,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day5-Community5_2025"
-        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -648,9 +630,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day5-Community6_2025"
-        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -673,9 +652,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day5-Community7_2025"
-        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -698,9 +674,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day5-Community8_2025"
-        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -723,9 +696,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virtual-pl-csd-summer-day5-WrapUp_2025"
-        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -866,13 +836,43 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "CSD Virtual Summer Workshop Day 5 Agenda",
+      "url": "https://docs.google.com/document/d/1u5e6n5N9zH_r4Z2AwQAGJ7VXOgzbLdgHgvLQ6AjaOqw/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_5_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_5_agenda"
+      }
+    },
+    {
+      "name": "CSD Virtual Summer Workshop Day 5 Slides",
+      "url": "https://docs.google.com/presentation/d/18vlA7PnVReW41SgCjTqaXShB1ywlpAHMcsLoQZXZsnc/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_5_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_5_slides"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_5_agenda",
+        "script.name": "virtual-pl-csd-summer-2025-day5"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_5_slides",
+        "script.name": "virtual-pl-csd-summer-2025-day5"
+      }
+    }
   ],
   "scripts_student_resources": [
 

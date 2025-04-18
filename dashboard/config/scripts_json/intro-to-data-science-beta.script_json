@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:00 UTC",
+    "serialized_at": "2025-01-24 21:48:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3324,9 +3324,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Data Sci U1 Pre-Test_2024-pilot_beta"
-        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -3349,9 +3346,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson1-level1_beta"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3374,9 +3368,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson1-level2_beta"
-        ],
         "progression": "Data Scientists"
       },
       "bonus": false,
@@ -3399,9 +3390,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson1-level3_beta"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3424,9 +3412,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson2-level1_beta"
-        ],
         "progression": "Read 1: Context"
       },
       "bonus": false,
@@ -3449,9 +3434,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson2-level2_beta"
-        ],
         "progression": "Read 2: Quantities"
       },
       "bonus": false,
@@ -3474,9 +3456,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson2-level3_beta"
-        ],
         "progression": "Read 3: Questions"
       },
       "bonus": false,
@@ -3499,9 +3478,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson2-level4_beta"
-        ],
         "progression": "Pizza Slice Data Set"
       },
       "bonus": false,
@@ -3524,9 +3500,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson3-level1_beta"
-        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -3549,9 +3522,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson3-level2_beta"
-        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -3574,9 +3544,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson3-level3_beta"
-        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -3599,9 +3566,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson3-level4_beta"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3624,9 +3588,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson4-level1-choice_beta"
-        ],
         "progression": "Choose a Persona"
       },
       "bonus": false,
@@ -3649,9 +3610,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson5-level1-v2_beta"
-        ],
         "progression": "Read 1: Context"
       },
       "bonus": false,
@@ -3674,9 +3632,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson5-level2-v2_beta"
-        ],
         "progression": "Read 2: Quantities"
       },
       "bonus": false,
@@ -3699,9 +3654,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson5-level3-v2_beta"
-        ],
         "progression": "Read 3: Questions"
       },
       "bonus": false,
@@ -3724,9 +3676,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Data Sci - Ch1L5 match criteria_beta"
-        ],
         "progression": "Lacking Criteria"
       },
       "bonus": false,
@@ -3749,9 +3698,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson6-level1_beta"
-        ],
         "progression": "Expository Data Story"
       },
       "bonus": false,
@@ -3774,9 +3720,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson6-level2_beta"
-        ],
         "progression": "Persuasive Data Story"
       },
       "bonus": false,
@@ -3799,9 +3742,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson6-level3_beta"
-        ],
         "progression": "Party Planning Datasets"
       },
       "bonus": false,
@@ -3824,9 +3764,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson7-level1_beta"
-        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -3849,9 +3786,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson7-level2_beta"
-        ],
         "progression": "Shape of Distribution"
       },
       "bonus": false,
@@ -3874,9 +3808,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson7-level3_beta"
-        ],
         "progression": "CODAP Graphs"
       },
       "bonus": false,
@@ -3899,9 +3830,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson7-level4_beta"
-        ],
         "progression": "CODAP Graphs"
       },
       "bonus": false,
@@ -3924,9 +3852,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson7-level5_beta"
-        ],
         "progression": "CODAP Graphs"
       },
       "bonus": false,
@@ -3949,9 +3874,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson7-level6_beta"
-        ],
         "progression": "Applying Filters"
       },
       "bonus": false,
@@ -3974,9 +3896,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson8-level1_beta"
-        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -3999,9 +3918,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson8-level3_beta"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4024,9 +3940,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson9-level1_beta"
-        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -4049,9 +3962,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson9-level2-choice_beta"
-        ],
         "progression": "CODAP Level"
       },
       "bonus": false,
@@ -4074,9 +3984,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson9-level3_beta"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4099,9 +4006,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson9-level4_beta"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4124,9 +4028,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson9-level5_beta"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4149,9 +4050,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level1-v2_beta"
-        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4174,9 +4072,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level2_beta"
-        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4199,9 +4094,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level3_beta"
-        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4224,9 +4116,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level4_beta"
-        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4249,9 +4138,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level5-v2_beta"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4274,9 +4160,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level6_beta"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4299,9 +4182,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level7_beta"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4324,9 +4204,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level8_beta"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4349,9 +4226,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level9_beta"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4374,9 +4248,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson10-level10_beta"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4399,9 +4270,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "datasci-U1L12-projectL1_pilot2024_beta"
-        ],
         "progression": "Data Set Choices"
       },
       "bonus": false,
@@ -4424,9 +4292,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-u1-lesson12-level2_beta"
-        ],
         "progression": "Data Decisions and Visualizations"
       },
       "bonus": false,
@@ -4449,9 +4314,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-u1-lesson12-level3_beta"
-        ],
         "progression": "Your Data Story"
       },
       "bonus": false,
@@ -4474,9 +4336,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-u1-lesson12-level4fr_beta"
-        ],
         "progression": "The Data Cycle"
       },
       "bonus": false,
@@ -4499,9 +4358,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Data Sci U1 Post-Test_2024-pilot_beta"
-        ],
         "progression": "Unit 1 Assessment"
       },
       "bonus": false,
@@ -5098,22 +4954,1283 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "[EXEMPLAR] Jigsaw Graphs",
+      "url": "https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FLZicfZ8p84qBSfEs0LRw%2Ffile.json",
+      "key": "_exemplar_jigsaw_graphs",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_jigsaw_graphs"
+      }
+    },
+    {
+      "name": "[KEY] Data Scientist Bingo",
+      "url": "https://docs.google.com/document/d/1arZXqs-PZbSe53kvNvl4wNgMmWDDit131wiblo5ImF0/view",
+      "key": "_key_data_scientist_bingo",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_data_scientist_bingo"
+      }
+    },
+    {
+      "name": "[KEY] Data Scientist Tents",
+      "url": "https://docs.google.com/document/d/1waRCDPwr37Q7NkcjK4OmtWNsgnFw4qCMRe-YL7a_Dos/view",
+      "key": "_key_data_scientist_tents",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_data_scientist_tents"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/intro-to-data-science-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/intro-to-data-science-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/intro-to-data-science-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
+      "name": "Anchor Charts in Data Science",
+      "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/template/preview",
+      "key": "anchor_charts_in_data_science",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "anchor_charts_in_data_science"
+      }
+    },
+    {
+      "name": "Answering a Data Question",
+      "url": "https://docs.google.com/document/d/1b8acFM8GLCR1U4LZays88VE6cJNKTVe78xUxIRo_EfM/view",
+      "key": "answering_a_data_question",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "answering_a_data_question"
+      }
+    },
+    {
+      "name": "Cleaning Data",
+      "url": "https://docs.google.com/presentation/d/1Y_azIGJYuBFerX5UjFjDrjFwsPV7SuAU5-sd5n5TWSM/template/preview",
+      "key": "cleaning_data",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "cleaning_data"
+      }
+    },
+    {
+      "name": "Crafting Stories with Data Project",
+      "url": "https://docs.google.com/presentation/d/1k58rMvqRdWNCBLv8YWgtVn8_68ckfGWxRKmLo3XL8iM/template/preview",
+      "key": "crafting_stories_with_data_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "crafting_stories_with_data_project"
+      }
+    },
+    {
+      "name": "Crafting Stories with Data Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1wIqaBJxxyYquYiuWS2-CYN2zpSWA6mqI2j3S4cKHbvE/edit#heading=h.3gr1mqiax0ng",
+      "key": "crafting_stories_with_data_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "crafting_stories_with_data_project_planning_guide"
+      }
+    },
+    {
+      "name": "Data Collection Methods",
+      "url": "https://docs.google.com/document/d/1i7H5FuiJ9wKRgHJVX94b7p0YqJwx5_YPQVJJD_HC75o/view",
+      "key": "data_collection_methods",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "data_collection_methods"
+      }
+    },
+    {
+      "name": "Data Interpretation",
+      "url": "https://docs.google.com/presentation/d/1miYE3vdccvAFzf_OsVBFkFCsNcFMVLYQ-pJ-r6ugTCY/template/preview",
+      "key": "data_interpretation",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #1",
+      "url": "https://docs.google.com/document/d/1baUZ-M7KUmz0slX8iULIVUJKpnqg-Q6wZFCuHlNaAr8/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_1"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #2",
+      "url": "https://docs.google.com/document/d/1dk7aMg3kt__oRVdkNGBlwMRJ7M64PJ5JpCpqK3qHnRQ/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_2",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_2"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #3",
+      "url": "https://docs.google.com/document/d/1istc2atn3m4WFlk-xKtp5GI579ALAuP-Py4w3ohpaJc/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_3",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_3"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #4",
+      "url": "https://docs.google.com/document/d/1eGXSm1jBl_RRU4NZqXwiHSi-lzl-RNWIrrzlrM4xgg0/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_4",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_4"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #5",
+      "url": "https://docs.google.com/document/d/101BWNLoTdZ9_nnvV9CMqesNXjZLgqCJViLwBBAej0JM/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_5",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_5"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #6",
+      "url": "https://docs.google.com/document/d/1z5PuP-GOnk55S-mYI2QSWxc_vnRGBlihwtwDJa5UXz8/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_6",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_6"
+      }
+    },
+    {
+      "name": "Data Question Peer Review",
+      "url": "https://docs.google.com/document/d/1A6tPg-WhJPmjYJMqKjUh3toQexGdsS0wjbQ52Otj430/edit?usp=sharing",
+      "key": "data_question_peer_review",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_question_peer_review"
+      }
+    },
+    {
+      "name": "Data Rights",
+      "url": "https://docs.google.com/presentation/d/1sTd2QmpRPOZOCrz13wiRG7gMKgq5jLwfxZgIML7MqOY/template/preview",
+      "key": "data_rights",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "data_rights"
+      }
+    },
+    {
+      "name": "Data Rights Roleplay",
+      "url": "https://docs.google.com/document/d/1NB6nZdNyCksoK2DBQK42nTcHakn04TW9cQu9BMDYabg/view",
+      "key": "data_rights_roleplay",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_rights_roleplay"
+      }
+    },
+    {
+      "name": "Data Science - CODAP Teacher Tutorial",
+      "url": "https://docs.google.com/document/d/1rvW9lgAsALg8zJHHqaYf0lx60RCAbEb1h_5ldLWNQeo/edit?usp=sharing",
+      "key": "data_science_-_codap_teacher_tutorial",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "data_science_-_codap_teacher_tutorial"
+      }
+    },
+    {
+      "name": "Data Science Charts in CODAP",
+      "url": "https://docs.google.com/document/d/1C_EwhsozPJFZ8LNP0yhLOb17nlc1RJpb6SUJA_MDsiM/edit?usp=sharing",
+      "key": "data_science_charts_in_codap",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_charts_in_codap"
+      }
+    },
+    {
+      "name": "Data Science Unit 1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=drive_link",
+      "key": "data_science_unit_1_guided_notes",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_guided_notes"
+      }
+    },
+    {
+      "name": "Data Science Unit 1 Overview",
+      "url": "https://docs.google.com/document/d/14V8-mxHA1cz--owWOLPbwN8iqXXlDbr_KFOrbG0iA18/view",
+      "key": "data_science_unit_1_overview",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_overview"
+      }
+    },
+    {
+      "name": "Data Science Unit 1 Study Guide",
+      "url": "https://docs.google.com/document/d/1bW29rP0OZBZL_FuXsMrnwq5pWiqB7oA1qegVL7ZeQwc/edit?usp=drive_link",
+      "key": "data_science_unit_1_study_guide",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_study_guide"
+      }
+    },
+    {
+      "name": "Data Scientist Bingo",
+      "url": "https://docs.google.com/document/d/1AneTWDfmrXLWXQ_LSagemgSD_a8BRjFl5_FC-gx5ovU/view",
+      "key": "data_scientist_bingo",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_scientist_bingo"
+      }
+    },
+    {
+      "name": "Data Scientist Tents",
+      "url": "https://docs.google.com/document/d/14JzmWcfkAawz8KwRMuvRyDHmsNMQYF75n6kync1pTTA/view",
+      "key": "data_scientist_tents",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "data_scientist_tents"
+      }
+    },
+    {
+      "name": "Data Storytelling",
+      "url": "https://docs.google.com/presentation/d/1jSESaQ601E2A_aSetNhw8OemoY_tfkB26sZdZTzCCd4/template/preview",
+      "key": "data_storytelling",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "data_storytelling"
+      }
+    },
+    {
+      "name": "Data Storytelling",
+      "url": "https://docs.google.com/document/d/1g_HJAmgWJQsveP7fTI37PYebmE4bJl6j3VIZqkMm_cI/view",
+      "key": "data_storytelling_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_storytelling_1"
+      }
+    },
+    {
+      "name": "Effective Data Questions",
+      "url": "https://docs.google.com/presentation/d/1-5wOHz__mvmw2qo3XjTZVkSsIGVUcqLkCWvz8c29jps/template/preview",
+      "key": "effective_data_questions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "effective_data_questions"
+      }
+    },
+    {
+      "name": "Ethical Data Collection",
+      "url": "https://docs.google.com/presentation/d/1FYs-gzPghKZ_tGGNbcMd0PAjIkwmcUB_yboJthp3tnw/template/preview",
+      "key": "ethical_data_collection",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ethical_data_collection"
+      }
+    },
+    {
+      "name": "Guide to Anchor Charts & Word Walls",
+      "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/view",
+      "key": "guide_to_anchor_charts_word_walls",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_anchor_charts_word_walls"
+      }
+    },
+    {
+      "name": "Guide to Language Routines",
+      "url": "https://docs.google.com/document/d/1B93Lzlo63VrBNjlc3puiujew8gtMFanxSdXx3lqzIrs/view",
+      "key": "guide_to_language_routines",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_language_routines"
+      }
+    },
+    {
+      "name": "Guided Notes - Criteria for Creating Effective Questions",
+      "url": "https://docs.google.com/document/d/1ZA5qPypet0ErejfyIZVBD3F84dDYb-0P1fi74RbsdfY/view",
+      "key": "guided_notes_-_criteria_for_creating_effective_questions",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "guided_notes_-_criteria_for_creating_effective_questions"
+      }
+    },
+    {
+      "name": "Introduction to Data Science",
+      "url": "https://docs.google.com/presentation/d/1acl9tQ-KbC6hcWE8F-SJjuFbHt1TXasy9vJiqlVCj2o/template/preview",
+      "key": "introduction_to_data_science",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_data_science"
+      }
+    },
+    {
+      "name": "Introduction to Data Visualization",
+      "url": "https://docs.google.com/presentation/d/10zr_gSpPmJlC9NLiPCX-UIekd1Jro8F6rQz2rzOveZk/template/preview",
+      "key": "introduction_to_data_visualization",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_data_visualization"
+      }
+    },
+    {
+      "name": "Making Sense of Data",
+      "url": "https://docs.google.com/presentation/d/10zJojXHnkliOvtqmA_4NhcehIphxBL2ztO-hRcMOxfs/template/preview",
+      "key": "making_sense_of_data",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "making_sense_of_data"
+      }
+    },
+    {
+      "name": "More Visualization Techniques",
+      "url": "https://docs.google.com/presentation/d/1r06gRF-64qnEtmfF781Lns3ny9ODkW4jDyp3oUTlPyY/template/preview",
+      "key": "more_visualization_techniques",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "more_visualization_techniques"
+      }
+    },
+    {
+      "name": "Possible Questions",
+      "url": "https://docs.google.com/document/d/1IW9npsTXMycjHznEfWqY_J16z8ULBru-oyKU7Bd_ftI/view",
+      "key": "possible_questions",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "possible_questions"
+      }
+    },
+    {
+      "name": "Privacy Policy Statements",
+      "url": "https://docs.google.com/document/d/19LFF3McBNQqDq0u4BNrC9FOwpAdW32zqBivJ3kOTMxI/view",
+      "key": "privacy_policy_statements",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "privacy_policy_statements"
+      }
+    },
+    {
+      "name": "Unit 1 Guided Notes",
+      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit#heading=h.gqwpeghz4npc",
+      "key": "unit_1_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_guided_notes"
+      }
+    },
+    {
+      "name": "Visualization Techniques",
+      "url": "https://docs.google.com/document/d/1dQM0oBAF7E69ji75o0GOncvCe-hPk_fXAqGo0HKOa8Y/edit?usp=sharing",
+      "key": "visualization_techniques",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "visualization_techniques"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "crafting_stories_with_data_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "crafting_stories_with_data_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "data_question_peer_review"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "resource.key": "anchor_charts_in_data_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "resource.key": "cleaning_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "_exemplar_jigsaw_graphs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "data_interpretation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "data_interpretation_-_dataset_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "data_interpretation_-_dataset_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "data_interpretation_-_dataset_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "data_interpretation_-_dataset_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "data_interpretation_-_dataset_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "data_interpretation_-_dataset_6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Rights",
+        "resource.key": "data_rights"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Rights",
+        "resource.key": "data_rights_roleplay"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Rights",
+        "resource.key": "privacy_policy_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Storytelling",
+        "resource.key": "data_storytelling"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Storytelling",
+        "resource.key": "data_storytelling_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Effective Data Questions",
+        "resource.key": "effective_data_questions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Effective Data Questions",
+        "resource.key": "guided_notes_-_criteria_for_creating_effective_questions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Effective Data Questions",
+        "resource.key": "possible_questions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ethical Data Collection",
+        "resource.key": "data_collection_methods"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ethical Data Collection",
+        "resource.key": "ethical_data_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Science",
+        "resource.key": "_key_data_scientist_bingo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Science",
+        "resource.key": "_key_data_scientist_tents"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Science",
+        "resource.key": "data_scientist_bingo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Science",
+        "resource.key": "data_scientist_tents"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Science",
+        "resource.key": "introduction_to_data_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Science",
+        "resource.key": "unit_1_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
+        "resource.key": "introduction_to_data_visualization"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sense of Data",
+        "resource.key": "anchor_charts_in_data_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sense of Data",
+        "resource.key": "answering_a_data_question"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sense of Data",
+        "resource.key": "making_sense_of_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
+        "resource.key": "more_visualization_techniques"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
+        "resource.key": "visualization_techniques"
+      }
+    }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "intro-to-data-science-beta"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "intro-to-data-science-beta"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "intro-to-data-science-beta"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_-_codap_teacher_tutorial",
+        "script.name": "intro-to-data-science-beta"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_charts_in_codap",
+        "script.name": "intro-to-data-science-beta"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_guided_notes",
+        "script.name": "intro-to-data-science-beta"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_overview",
+        "script.name": "intro-to-data-science-beta"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "data_science_unit_1_study_guide",
+        "script.name": "intro-to-data-science-beta"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_anchor_charts_word_walls",
+        "script.name": "intro-to-data-science-beta"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "guide_to_language_routines",
+        "script.name": "intro-to-data-science-beta"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "attribute",
+      "word": "attribute",
+      "definition": "a column in a spreadsheet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "key": "bar_chart",
+      "word": "bar chart",
+      "definition": "a graph that uses rectangular bars to represent frequency or count",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bar_chart"
+      }
+    },
+    {
+      "key": "bell_curve",
+      "word": "bell curve",
+      "definition": "a symmetric, bell-shaped curve with most data points clustered around the center",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bell_curve"
+      }
+    },
+    {
+      "key": "bias",
+      "word": "bias",
+      "definition": "when our data or the way we analyze it favors certain outcomes over others",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "key": "bimodal_curve",
+      "word": "bimodal curve",
+      "definition": "shows a distribution with two distinct peaks",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bimodal_curve"
+      }
+    },
+    {
+      "key": "case",
+      "word": "case",
+      "definition": "a row of data in a spreadsheet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "case"
+      }
+    },
+    {
+      "key": "cells",
+      "word": "cells",
+      "definition": "data in a spreadsheet is organized in boxes",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "cells"
+      }
+    },
+    {
+      "key": "data",
+      "word": "data",
+      "definition": "any form of organized information, such as words, numbers, pictures, etc.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "key": "data_cleaning",
+      "word": "data cleaning",
+      "definition": "the process of making data useful by deleting doubles or blanks, creating categories, and editing spelling errors",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_cleaning"
+      }
+    },
+    {
+      "key": "data_collection",
+      "word": "data collection",
+      "definition": "the process of gathering and recording information from different sources",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_collection"
+      }
+    },
+    {
+      "key": "data_ethics",
+      "word": "data ethics",
+      "definition": "the set of guidelines that ensure the responsible use, collection, and sharing of data while respecting privacy, consent, and fairness",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_ethics"
+      }
+    },
+    {
+      "key": "data_question",
+      "word": "data question",
+      "definition": "a question that can be answered by the data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_question"
+      }
+    },
+    {
+      "key": "data_rights",
+      "word": "data rights",
+      "definition": "rules that make sure a person's information is used safely and fairly",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_rights"
+      }
+    },
+    {
+      "key": "data_science",
+      "word": "data science",
+      "definition": "making meaning from data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_science"
+      }
+    },
+    {
+      "key": "data_storytelling",
+      "word": "data storytelling",
+      "definition": "presenting visualizations and narratives to a specific audience for an expository or persuasive purpose",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_storytelling"
+      }
+    },
+    {
+      "key": "data_visualization",
+      "word": "data visualization",
+      "definition": "a graphical representation of information and data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "data_visualization"
+      }
+    },
+    {
+      "key": "dot_plot",
+      "word": "dot plot",
+      "definition": "a graph where each data point is represented by a dot along an axis",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "dot_plot"
+      }
+    },
+    {
+      "key": "expository_data_story",
+      "word": "expository data story",
+      "definition": "tells a story about a person, place, thing, or event using data",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "expository_data_story"
+      }
+    },
+    {
+      "key": "filter",
+      "word": "filter",
+      "definition": "a tool or process used to select specific data points from a larger set based on certain criteria or conditions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "filter"
+      }
+    },
+    {
+      "key": "measures_of_center",
+      "word": "measures of center",
+      "definition": "represent the central point or typical value of a data set",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "measures_of_center"
+      }
+    },
+    {
+      "key": "outlier",
+      "word": "outlier",
+      "definition": "a data point that significantly differs from other data points",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "outlier"
+      }
+    },
+    {
+      "key": "pattern",
+      "word": "pattern",
+      "definition": "a consistent or recurring sequence that can be observed and predicted",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pattern"
+      }
+    },
+    {
+      "key": "persuasive_data_story",
+      "word": "persuasive data story",
+      "definition": "attempts to convince the audience of a stance based on evidence from data and visualizations",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "persuasive_data_story"
+      }
+    },
+    {
+      "key": "sample_size",
+      "word": "sample size",
+      "definition": "the total number of cases",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sample_size"
+      }
+    },
+    {
+      "key": "scatter_plot",
+      "word": "scatter plot",
+      "definition": "a graph that uses dots to represent the values of two different variables",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "scatter_plot"
+      }
+    },
+    {
+      "key": "shape_of_distribution",
+      "word": "shape of distribution",
+      "definition": "how data values are spread out and how they form a pattern when visualized on a graph",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "shape_of_distribution"
+      }
+    },
+    {
+      "key": "skewed_distribution",
+      "word": "skewed distribution",
+      "definition": "occurs when the data stretches out more on one side than the other",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "skewed_distribution"
+      }
+    },
+    {
+      "key": "spreadsheet",
+      "word": "spreadsheet",
+      "definition": "a large data table on a computer",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "spreadsheet"
+      }
+    },
+    {
+      "key": "trend",
+      "word": "trend",
+      "definition": "the general direction in which data points are heading over a period of time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "trend"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "vocabulary.key": "bell_curve"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "vocabulary.key": "bimodal_curve"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "vocabulary.key": "data_cleaning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "vocabulary.key": "measures_of_center"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "vocabulary.key": "shape_of_distribution"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "vocabulary.key": "skewed_distribution"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "vocabulary.key": "outlier"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "vocabulary.key": "pattern"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "vocabulary.key": "trend"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Rights",
+        "vocabulary.key": "data_rights"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Storytelling",
+        "vocabulary.key": "data_storytelling"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Storytelling",
+        "vocabulary.key": "expository_data_story"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Storytelling",
+        "vocabulary.key": "persuasive_data_story"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ethical Data Collection",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ethical Data Collection",
+        "vocabulary.key": "data_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ethical Data Collection",
+        "vocabulary.key": "data_ethics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Science",
+        "vocabulary.key": "data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Science",
+        "vocabulary.key": "data_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
+        "vocabulary.key": "bar_chart"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
+        "vocabulary.key": "data_visualization"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
+        "vocabulary.key": "dot_plot"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
+        "vocabulary.key": "filter"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
+        "vocabulary.key": "scatter_plot"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sense of Data",
+        "vocabulary.key": "attribute"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sense of Data",
+        "vocabulary.key": "case"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sense of Data",
+        "vocabulary.key": "cells"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sense of Data",
+        "vocabulary.key": "data_question"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sense of Data",
+        "vocabulary.key": "sample_size"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Making Sense of Data",
+        "vocabulary.key": "spreadsheet"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

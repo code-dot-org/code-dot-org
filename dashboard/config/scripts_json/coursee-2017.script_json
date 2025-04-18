@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "curriculum_k_5",
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursee/{LESSON}",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
@@ -48,7 +49,7 @@
     },
     "new_name": "coursee-2017",
     "family_name": null,
-    "serialized_at": "2025-04-18 02:57:44 UTC",
+    "serialized_at": "2025-04-03 01:05:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6911,7 +6912,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_farmer_ramp12a",
+        "level.key": "courseD_video_repeatUntil",
         "script_level.level_keys": [
           "courseD_video_repeatUntil",
           "courseE_farmer_ramp12a"
@@ -6924,7 +6925,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_video_repeatUntil",
+        "level.key": "courseE_farmer_ramp12a",
         "script_level.level_keys": [
           "courseD_video_repeatUntil",
           "courseE_farmer_ramp12a"

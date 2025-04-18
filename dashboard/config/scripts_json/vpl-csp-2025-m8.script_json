@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:12 UTC",
+    "serialized_at": "2025-03-31 23:25:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -128,9 +128,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL Module 8 - Workshop Overview_2023.1_2025"
-        ],
         "progression": "Module 8 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -153,9 +150,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M8 - Unit 10 Exploration_2025"
-        ],
         "progression": "Unit 10 Exploration (~30 minutes)"
       },
       "bonus": false,
@@ -178,9 +172,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M8 - Reflection_2025"
-        ],
         "progression": "Reflection (~15 minutes)"
       },
       "bonus": false,
@@ -203,9 +194,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M8 - Community 1_2025"
-        ],
         "progression": "Connecting to the CS Community (~15 minutes)"
       },
       "bonus": false,
@@ -228,9 +216,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP-PL M8 - Community 2_2025"
-        ],
         "progression": "Connecting to the CS Community (~15 minutes)"
       },
       "bonus": false,
@@ -253,9 +238,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP - Module 8 Wrap Up_2023.1_2025"
-        ],
         "progression": "Module 8 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,

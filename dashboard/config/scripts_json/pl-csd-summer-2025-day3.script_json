@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:05 UTC",
+    "serialized_at": "2025-04-04 16:49:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1247,9 +1247,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3L6 - Predict_CSD-PL-24_25"
-        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1272,9 +1269,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Random random ellipse_CSD-PL-24_25"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1297,9 +1291,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Random random ellipse2_CSD-PL-24_25"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1322,9 +1313,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Variables random with assignment_CSD-PL-24_25"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1347,9 +1335,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Variables random reassign_CSD-PL-24_25"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1372,9 +1357,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD games random practice_CSD-PL-24_25"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1397,9 +1379,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSD U3 Random rainbow snake_CSD-PL-24_25"
-        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1422,9 +1401,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD games random challenge_CSD-PL-24_25"
-        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1447,9 +1423,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3L7 - Predict_CSD-PL-24_1-25"
-        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1472,9 +1445,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites intro sprites_CSD-PL-24_1-25"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1497,9 +1467,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites intro debug_CSD-PL-24_1-25"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1522,9 +1489,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites Exploration_CSD-PL-24_1-25"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1547,9 +1511,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites test intro sprites CSD-PL-24_1-25"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1572,9 +1533,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites anitab 1_CSD-PL-24_1-25"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1597,9 +1555,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites sequencing_CSD-PL-24_1-25"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1622,9 +1577,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 drawSprites placement match_CSD-PL-24_1-25"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1647,9 +1599,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD Games Sprites practice_CSD-PL-24_1-25"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1672,9 +1621,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites assessment_CSD-PL-24_1-25"
-        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1697,9 +1643,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD Games Sprites Challenges_CSD-PL-24_1-25"
-        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1722,9 +1665,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL-summer- CSD U3 L7 mini project_25"
-        ],
         "progression": "Lesson 7: Mini-Project - Robot Faces"
       },
       "bonus": false,
@@ -1747,9 +1687,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL summer - CSD U3 Scene Example_25"
-        ],
         "progression": "Lesson 11: Mini-Project - Captioned Scenes"
       },
       "bonus": false,
@@ -1772,9 +1709,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL Summer - CSD web project animated example_25"
-        ],
         "progression": "Lesson 14: Mini-Project - Animation"
       },
       "bonus": false,
@@ -1797,9 +1731,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL Summer CSD U3 - Interactive Card - ExampleChoice_25"
-        ],
         "progression": "Lesson 18: Project - Interactive Card"
       },
       "bonus": false,
@@ -2096,22 +2027,285 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Animation Tab",
+      "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
+      "key": "animation_tab",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "animation_tab"
+      }
+    },
+    {
+      "name": "CSD In-Person Summer Workshop Day 3 Agenda",
+      "url": "https://docs.google.com/document/d/1u0fq0msjhfNs528pbILMonq9epbB4eeqNwXqm-Sl6p0/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_3_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_in-person_summer_workshop_day_3_agenda"
+      }
+    },
+    {
+      "name": "CSD In-Person Summer Workshop Day 3 Slides",
+      "url": "https://docs.google.com/presentation/d/1RaloaP4JBmxR1tGLQxT3IgFi97gNBUE1ff0K0BxGb54/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_3_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_in-person_summer_workshop_day_3_slides"
+      }
+    },
+    {
+      "name": "Introduction to Sprites",
+      "url": "https://www.youtube.com/watch?v=96iGNtAp9J4",
+      "key": "introduction_to_sprites",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/introduction-to-sprites-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_sprites"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://drive.google.com/file/d/1Ix9XXFWgnPi7xoGUZ9ljdD8gZPrhFLUn/view?usp=sharing",
+      "key": "random_numbers",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "name": "Random Numbers",
+      "url": "https://docs.google.com/presentation/d/1wGEmc5Le7yplEoDzGSvWeaNxSxXCLUgu3f9DPZIwzF0/template/preview",
+      "key": "random_numbers_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "name": "Resource Packet",
+      "url": "https://docs.google.com/document/d/15ho43-c0njEcIEIr-RmHcUjZfIJPFdVZvQdpH6GC4B4/edit?usp=sharing",
+      "key": "resource_packet",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "resource_packet"
+      }
+    },
+    {
+      "name": "Sprites",
+      "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
+      "key": "sprites",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "sprites"
+      }
+    },
+    {
+      "name": "Sprites",
+      "url": "https://docs.google.com/presentation/d/1ONvRNfx1y9rfvRV7Y68nb9oo3v7tvsHt4OwJ4cUK9HE/template/preview",
+      "key": "sprites_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sprites_1"
+      }
+    },
+    {
+      "name": "The Animation Tab",
+      "url": "https://youtu.be/BrkREtPb0J4",
+      "key": "the_animation_tab",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/sprite-animations-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_animation_tab"
+      }
+    },
+    {
+      "name": "The Design Thinking Process",
+      "url": "https://www.youtube.com/watch?v=_r0VX-aU_T8",
+      "key": "the_design_thinking_process",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_design_thinking_process"
+      }
+    },
+    {
+      "name": "User Centered Design - Define and Prepare",
+      "url": "https://docs.google.com/presentation/d/1uuFzndkmhpgptbh6WMcZMhHjBcOFaonwJPzwa89Zkco/template/preview",
+      "key": "user_centered_design_-_define_and_prepare",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "user_centered_design_-_define_and_prepare"
+      }
+    },
+    {
+      "name": "User Centered Design (Define & Prepare)",
+      "url": "https://docs.google.com/document/d/1_SDc4Rqsmyi9gfU2cfjxb2cMd3-e7S-E8JpfYHGIgFA/edit",
+      "key": "user_centered_design_define_prepare_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "user_centered_design_define_prepare_"
+      }
+    },
+    {
+      "name": "User Centered Design (Define & Prepare) 2021",
+      "url": "https://docs.google.com/document/d/1XkDwOnyf6zxvBOb6MVYk00X9YuMnQdd-0xT11-idHRg/view",
+      "key": "user_centered_design_define_prepare_2021",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "user_centered_design_define_prepare_2021"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "resource.key": "random_numbers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 1 - U3L6 Random Numbers",
+        "resource.key": "random_numbers_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "resource.key": "animation_tab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "resource.key": "introduction_to_sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "resource.key": "sprites"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "resource.key": "sprites_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "resource.key": "the_animation_tab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "resource.key": "the_design_thinking_process"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "resource.key": "user_centered_design_-_define_and_prepare"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "resource.key": "user_centered_design_define_prepare_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
+        "resource.key": "user_centered_design_define_prepare_2021"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unit 3 Connections",
+        "resource.key": "resource_packet"
+      }
+    }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_in-person_summer_workshop_day_3_agenda",
+        "script.name": "pl-csd-summer-2025-day3"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_in-person_summer_workshop_day_3_slides",
+        "script.name": "pl-csd-summer-2025-day3"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "A character on the screen with properties that describe its location, movement, and look.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "TLO 2 - U3L8 Sprites",
+        "vocabulary.key": "sprite"
+      }
+    }
   ],
   "lessons_programming_expressions": [
     {

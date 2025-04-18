@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_migrated": true,
       "supported_locales": [
@@ -54,7 +55,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 02:57:56 UTC",
+    "serialized_at": "2025-04-03 01:05:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

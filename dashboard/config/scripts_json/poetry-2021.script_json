@@ -4,14 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSC",
+      "content_area": "curriculum_k_5",
+      "curriculum_umbrella": "CSC K-5",
       "is_migrated": true,
+      "show_calendar": true,
       "student_detail_progress_view": true,
-      "tts": true
+      "tts": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 02:57:19 UTC",
+    "serialized_at": "2025-03-28 09:29:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:08:59 UTC",
+    "serialized_at": "2025-03-11 18:26:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1853,9 +1853,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP Pre-Unit Pulse - Algorithms Q1_2025"
-        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -1878,9 +1875,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP Pre-Unit Pulse - Algorithms Q2_2025"
-        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -1903,9 +1897,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U6 L01 Algorithms vs Problems_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1928,9 +1919,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U6L2 Ticket Generator_2025"
-        ],
         "progression": "Widget: Ticket Generator"
       },
       "bonus": false,
@@ -1953,9 +1941,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U6L2 CFU Binary Search Steps2022_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1978,9 +1963,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U6L2 CFU Efficiency and Algorithms2022_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2003,9 +1985,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U6L3 BigO Widget_2025"
-        ],
         "progression": "Widget: Reasonable or Unreasonable?"
       },
       "bonus": false,
@@ -2028,9 +2007,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U6L3 CFU Reasonable vs Unreasonable2022_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2053,9 +2029,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U6 L03 Evaluate Reasonable or Not_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2078,9 +2051,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U6L4 Traveling Salesman_2025"
-        ],
         "progression": "Widget: Traveling Salesperson "
       },
       "bonus": false,
@@ -2103,9 +2073,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U6L4 Random Traveling Salesman_2025"
-        ],
         "progression": "Widget: Traveling Salesperson - Random Nodes"
       },
       "bonus": false,
@@ -2128,9 +2095,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U6L4 CFU Reason for Heuristics2022_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2153,9 +2117,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U6 L04 Unreasonable vs Undecidable_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2178,9 +2139,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U6L5 CFU Calculate Speedup2022_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2203,9 +2161,6 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U6 L05 Speedup Forever_2025"
-        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2228,9 +2183,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csp6_2025"
-        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -2253,9 +2205,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 6 AP-Style Assessment 2022_2025"
-        ],
         "progression": "Unit Exam - Algorithms"
       },
       "bonus": false,
@@ -2278,9 +2227,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp10_2025"
-        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -2517,22 +2463,707 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Algorithmic Efficiency",
+      "url": "https://docs.google.com/presentation/d/1dkeXRI7h444exZ-NxeM0wxcs26jMTYeh8bfCiQEQeuk/template/preview",
+      "key": "algorithmic_efficiency",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "algorithmic_efficiency"
+      }
+    },
+    {
+      "name": "Algorithms Solve Problems",
+      "url": "https://docs.google.com/presentation/d/1Q7XAfpV8TyupvayMkhCz9V1-NOthun-I63FpoP17Y60/template/preview",
+      "key": "algorithms_solve_problems",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "algorithms_solve_problems"
+      }
+    },
+    {
+      "name": "Algorithms (Unit Slides)",
+      "url": "https://docs.google.com/presentation/d/1R9n57GGvVd8HAbHqU77N86FDGBUaMjkmYyY11vPL6tg/template/preview",
+      "key": "algorithms_unit_slides_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "algorithms_unit_slides_"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csp10-2023/resources",
+      "key": "all_resources_9",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_9"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csp10-2023/standards",
+      "key": "all_standards_9",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_9"
+      }
+    },
+    {
+      "name": "Assessment Day",
+      "url": "https://docs.google.com/presentation/d/1j_uVygDdLBf9JRCxspJf8m-gyBmshhVsYA7DARwHE5w/template/preview",
+      "key": "assessment_day_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "assessment_day_1"
+      }
+    },
+    {
+      "name": "Code.org CSP Topic Coverage",
+      "url": "https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing",
+      "key": "code_org_csp_topic_coverage",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "code_org_csp_topic_coverage"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
+      "key": "course_vocabulary",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary"
+      }
+    },
+    {
+      "name": "CSP Bingo Cards - Unit Ten",
+      "url": "https://drive.google.com/file/d/1-gQuYsp5KtSC-DDI9yvJO9AO2-8lELbg/view?usp=drive_link",
+      "key": "csp_bingo_cards_-_unit_ten",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://drive.google.com/uc?export=download&id=1-gQuYsp5KtSC-DDI9yvJO9AO2-8lELbg",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_cards_-_unit_ten"
+      }
+    },
+    {
+      "name": "CSP Bingo Generator",
+      "url": "https://studio.code.org/s/csp-bingo-2023",
+      "key": "csp_bingo_generator",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Slides",
+      "url": "https://docs.google.com/presentation/d/1R9n57GGvVd8HAbHqU77N86FDGBUaMjkmYyY11vPL6tg/template/preview",
+      "key": "csp_unit_10_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_slides"
+      }
+    },
+    {
+      "name": "Distributed Algorithms",
+      "url": "https://docs.google.com/presentation/d/16APZqf7GCRmOeoDvp3x9Y_mgArzomlxECbPUZocgcr8/template/preview",
+      "key": "distributed_algorithms",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "distributed_algorithms"
+      }
+    },
+    {
+      "name": "Folding@home Supercomputing Project",
+      "url": "https://youtu.be/RGGzMQ2oFrA",
+      "key": "folding_home_supercomputing_project",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "folding_home_supercomputing_project"
+      }
+    },
+    {
+      "name": "KEY - Unreasonable Time",
+      "url": "https://docs.google.com/document/d/1wn2Z0k76KdotURzPG69GeYFzWvpMq1qiWUSlKfeDOfQ/edit?usp=sharing",
+      "key": "key_-_unreasonable_time",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "key_-_unreasonable_time"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
+      "key": "syllabus",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "syllabus"
+      }
+    },
+    {
+      "name": "Teacher Forum",
+      "url": "https://forum.code.org/c/csp/curriculum/392",
+      "key": "teacher_forum",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_forum"
+      }
+    },
+    {
+      "name": "The Halting Problem: The Unsolvable Problem",
+      "url": "https://youtu.be/VyHbd6sx5Po",
+      "key": "the_halting_problem_the_unsolvable_problem",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_halting_problem_the_unsolvable_problem"
+      }
+    },
+    {
+      "name": "The Limits of Algorithms",
+      "url": "https://docs.google.com/presentation/d/1KrS64CEchE0WBOGo3sp-cvs3yDDxjRylky7H0mIxxV4/template/preview",
+      "key": "the_limits_of_algorithms",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_limits_of_algorithms"
+      }
+    },
+    {
+      "name": "Unit 10 Journal (Digital)",
+      "url": "https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit?usp=drive_link",
+      "key": "unit_10_journal_digital_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_10_journal_digital_"
+      }
+    },
+    {
+      "name": "Unit 10 Journal (Interactive Notebook)",
+      "url": "https://docs.google.com/presentation/d/1NNgv5tK3Dgs6H5jA5hf9F0W3vuybvI6B7qXTxiv6Y5I/edit?usp=drive_link",
+      "key": "unit_10_journal_interactive_notebook_",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unit_10_journal_interactive_notebook_"
+      }
+    },
+    {
+      "name": "Unreasonable Time",
+      "url": "https://docs.google.com/document/d/1JSO1e1jrlPbq7ZnI63aSkaO1Gyq_78LVJuvO6JAFlhM/edit?usp=sharing",
+      "key": "unreasonable_time",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "unreasonable_time"
+      }
+    },
+    {
+      "name": "Unreasonable Time",
+      "url": "https://docs.google.com/presentation/d/1lsU9GaOZBxtt8LueQnhJUcI5Rq8RtoNWcy7pkDGmy58/template/preview",
+      "key": "unreasonable_time_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unreasonable_time_1"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "resource.key": "algorithmic_efficiency"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "algorithms_solve_problems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "algorithms_unit_slides_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "unit_10_journal_digital_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "resource.key": "unit_10_journal_interactive_notebook_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Assessment Day",
+        "resource.key": "assessment_day_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "csp_bingo_cards_-_unit_ten"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "csp_bingo_generator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "distributed_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "resource.key": "folding_home_supercomputing_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "resource.key": "the_halting_problem_the_unsolvable_problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "resource.key": "the_limits_of_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "resource.key": "key_-_unreasonable_time"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "resource.key": "unreasonable_time"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "resource.key": "unreasonable_time_1"
+      }
+    }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_9",
+        "script.name": "csp10-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_9",
+        "script.name": "csp10-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "code_org_csp_topic_coverage",
+        "script.name": "csp10-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "course_vocabulary",
+        "script.name": "csp10-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_slides",
+        "script.name": "csp10-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "syllabus",
+        "script.name": "csp10-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "teacher_forum",
+        "script.name": "csp10-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_10_journal_digital_",
+        "script.name": "csp10-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unit_10_journal_interactive_notebook_",
+        "script.name": "csp10-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "a finite set of instructions that accomplish a task",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "binary_search",
+      "word": "Binary Search",
+      "definition": "a search algorithm that starts at the middle of a sorted set of numbers and removes half of the data; this process repeats until the desired value is found or all elements have been eliminated",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "binary_search"
+      }
+    },
+    {
+      "key": "decision_problem",
+      "word": "Decision Problem",
+      "definition": "a problem with a yes/no answer  (e.g., is there a path from A to B?)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "decision_problem"
+      }
+    },
+    {
+      "key": "distributed_computing",
+      "word": "Distributed Computing",
+      "definition": "a model in which programs are run by multiple devices",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "distributed_computing"
+      }
+    },
+    {
+      "key": "efficiency",
+      "word": "Efficiency",
+      "definition": "a measure of how many steps are needed to complete an algorithm",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "key": "heuristic",
+      "word": "Heuristic",
+      "definition": "provides a \"good enough\" solution to a problem when an actual solution is impractical or impossible",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "heuristic"
+      }
+    },
+    {
+      "key": "iteration",
+      "word": "Iteration",
+      "definition": "a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "key": "linear_search",
+      "word": "Linear Search",
+      "definition": "a search algorithm which checks each element of a list, in order, until the desired value is found or all elements in the list have been checked",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "linear_search"
+      }
+    },
+    {
+      "key": "optimization_problem",
+      "word": "Optimization Problem",
+      "definition": "a problem with the goal of finding the \"best\" solution among many (e.g., what is the shortest path from A to B?)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "optimization_problem"
+      }
+    },
+    {
+      "key": "parallel_computing",
+      "word": "Parallel Computing",
+      "definition": "a model in which programs are broken into small pieces, some of which are run simultaneously",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parallel_computing"
+      }
+    },
+    {
+      "key": "problem",
+      "word": "Problem",
+      "definition": "a general description of a task that can (or cannot) be solved with an algorithm",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "problem"
+      }
+    },
+    {
+      "key": "reasonable_time",
+      "word": "Reasonable Time",
+      "definition": "Algorithms with a polynomial efficiency or lower (constant, linear, square, cube, etc.) are said to run in a reasonable amount of time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "reasonable_time"
+      }
+    },
+    {
+      "key": "selection",
+      "word": "Selection",
+      "definition": "deciding which steps to do next",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "selection"
+      }
+    },
+    {
+      "key": "sequencing",
+      "word": "Sequencing",
+      "definition": "putting steps in an order",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "key": "sequential_computing",
+      "word": "Sequential Computing",
+      "definition": "a model in which programs run in order, one command at a time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sequential_computing"
+      }
+    },
+    {
+      "key": "speedup",
+      "word": "Speedup",
+      "definition": "the time used to complete a task sequentially divided by the time to complete a task in parallel",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "speedup"
+      }
+    },
+    {
+      "key": "undecidable_problem",
+      "word": "Undecidable Problem",
+      "definition": "a problem for which no algorithm can be constructed that is always capable of providing a correct yes-or-no answer",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "undecidable_problem"
+      }
+    },
+    {
+      "key": "unreasonable_time",
+      "word": "Unreasonable Time",
+      "definition": "Algorithms with exponential or factorial efficiencies are examples of algorithms that run in an unreasonable amount of time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "unreasonable_time"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "vocabulary.key": "binary_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "vocabulary.key": "efficiency"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithm Efficiency",
+        "vocabulary.key": "linear_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "iteration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "selection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Algorithms Solve Problems",
+        "vocabulary.key": "sequencing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "vocabulary.key": "distributed_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "vocabulary.key": "parallel_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "vocabulary.key": "sequential_computing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
+        "vocabulary.key": "speedup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "vocabulary.key": "decision_problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "vocabulary.key": "heuristic"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "vocabulary.key": "optimization_problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Limits of Algorithms",
+        "vocabulary.key": "undecidable_problem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "vocabulary.key": "reasonable_time"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Unreasonable Time",
+        "vocabulary.key": "unreasonable_time"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
