@@ -1,4 +1,4 @@
-import {MINIMAL_VIEWPORTS} from '@storybook/addon-viewport';
+import {INITIAL_VIEWPORTS} from '@storybook/addon-viewport';
 import type {TestRunnerConfig} from '@storybook/test-runner';
 import {getStoryContext} from '@storybook/test-runner';
 import {injectAxe, checkA11y} from 'axe-playwright';
@@ -15,7 +15,7 @@ const config: TestRunnerConfig = {
 
     const context = await getStoryContext(page, story);
     const viewportName = context.parameters?.viewport?.defaultViewport;
-    const viewportParameter = MINIMAL_VIEWPORTS[viewportName];
+    const viewportParameter = INITIAL_VIEWPORTS[viewportName];
 
     if (viewportParameter) {
       const viewportSize = Object.entries(
