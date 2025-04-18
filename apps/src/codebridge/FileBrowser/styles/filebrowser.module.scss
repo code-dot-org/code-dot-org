@@ -1,15 +1,6 @@
 @import 'color.scss';
 @import '@code-dot-org/component-library-styles/colors.scss';
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .file-browser {
   height: 100%;
   background-color: $light_gray_950;
@@ -25,10 +16,6 @@
 .fileBrowserContents {
   overflow-y: auto;
   scrollbar-color: $light_gray_500 $light_gray_950;
-}
-
-.folder {
-  animation: fade-in 0.5s;
 }
 
 .file-browser div.folder {
