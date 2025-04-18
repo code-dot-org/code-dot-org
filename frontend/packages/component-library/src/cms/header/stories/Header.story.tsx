@@ -7,6 +7,7 @@ import gameLabImage from '@public/images/header-game-lab-icon.png';
 import musicLabImage from '@public/images/header-music-lab-icon.png';
 import pythonLabImage from '@public/images/header-python-lab-icon.png';
 import spriteLabImage from '@public/images/header-sprite-lab-icon.png';
+import {INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS} from '@storybook/addon-viewport';
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect, userEvent} from '@storybook/test';
 
@@ -252,10 +253,8 @@ export const DefaultLoggedOut: Story = {
   parameters: {
     layout: 'fullscreen',
     viewport: {
-      defaultViewport: 'largeDesktop',
-    },
-    eyes: {
-      viewportSize: {width: 1268, height: 720},
+      viewports: MINIMAL_VIEWPORTS,
+      defaultViewport: 'desktop',
     },
     docs: {
       description: {
@@ -324,10 +323,8 @@ export const LoggedIn: Story = {
   parameters: {
     layout: 'fullscreen',
     viewport: {
-      defaultViewport: 'largeDesktop',
-    },
-    eyes: {
-      viewportSize: {width: 1268, height: 720},
+      viewports: MINIMAL_VIEWPORTS,
+      defaultViewport: 'desktop',
     },
     docs: {
       description: {
@@ -364,10 +361,8 @@ export const NewProjectMenu: Story = {
   parameters: {
     layout: 'fullscreen',
     viewport: {
-      defaultViewport: 'largeDesktop',
-    },
-    eyes: {
-      viewportSize: {width: 1268, height: 720},
+      viewports: MINIMAL_VIEWPORTS,
+      defaultViewport: 'desktop',
     },
     docs: {
       description: {
@@ -410,10 +405,8 @@ export const HelpMenu: Story = {
   parameters: {
     layout: 'fullscreen',
     viewport: {
-      defaultViewport: 'largeDesktop',
-    },
-    eyes: {
-      viewportSize: {width: 1268, height: 720},
+      viewports: MINIMAL_VIEWPORTS,
+      defaultViewport: 'desktop',
     },
     docs: {
       description: {
@@ -456,10 +449,11 @@ export const SmallDesktop: Story = {
   parameters: {
     layout: 'fullscreen',
     viewport: {
-      defaultViewport: 'smallDesktop',
+      viewports: INITIAL_VIEWPORTS,
+      defaultViewport: 'ipad12p',
     },
     eyes: {
-      viewportSize: {width: 1024, height: 720},
+      viewportSize: {width: 1024, height: 1366},
     },
     docs: {
       description: {
@@ -537,6 +531,7 @@ export const Tablet: Story = {
   parameters: {
     layout: 'fullscreen',
     viewport: {
+      viewports: MINIMAL_VIEWPORTS,
       defaultViewport: 'tablet',
     },
     eyes: {
@@ -599,6 +594,7 @@ export const Mobile: Story = {
   parameters: {
     layout: 'fullscreen',
     viewport: {
+      viewports: MINIMAL_VIEWPORTS,
       defaultViewport: 'mobile2',
     },
     eyes: {

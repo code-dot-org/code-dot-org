@@ -1,4 +1,3 @@
-import {MINIMAL_VIEWPORTS} from '@storybook/addon-viewport';
 import {default as RtlPreview} from 'storybook-addon-rtl/preview';
 
 import {loadFonts} from '@code-dot-org/fonts';
@@ -15,23 +14,6 @@ const fontLoader = async () => {
   };
 };
 
-const customViewports = {
-  largeDesktop: {
-    name: 'Large desktop',
-    styles: {
-      width: '1268px',
-      height: '720px',
-    },
-  },
-  smallDesktop: {
-    name: 'Small desktop',
-    styles: {
-      width: '1024px',
-      height: '720px',
-    },
-  },
-};
-
 /** @type { import('@storybook/react').Preview } */
 const preview = {
   parameters: {
@@ -39,12 +21,6 @@ const preview = {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
-      },
-    },
-    viewport: {
-      viewports: {
-        ...MINIMAL_VIEWPORTS,
-        ...customViewports,
       },
     },
   },
