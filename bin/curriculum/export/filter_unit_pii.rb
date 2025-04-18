@@ -35,5 +35,5 @@ puts "#{File.basename(__FILE__)} found #{input_filenames.size} input files in #{
 
 input_filenames.each do |input_filename|
   puts "Processing #{input_filename}"
-  system("SKIP_SCRIPT_PRELOAD=1 bundle exec ruby #{File.join(__dir__, 'filter_pii_helper.rb')} -i #{$options[:input_dir]} -f #{File.basename(input_filename)}")
+  system("SKIP_SCRIPT_PRELOAD=1 bundle exec ruby #{File.join(__dir__, 'filter_pii_helper.rb')} -i #{$options[:input_dir]}  -o #{$options[:output_dir]} -f #{File.basename(input_filename)}")
 end

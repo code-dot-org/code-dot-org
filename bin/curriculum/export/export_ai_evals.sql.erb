@@ -51,7 +51,7 @@ UNLOAD ($$
     <%= "cs.script_name = '#{unit_name}'" %>
     <%= level_id && "and cs.level_id = #{level_id}" %>
 $$)
-TO 's3://cdo-data-sharing-internal/unloaded-ai-evals/<%=output_dir%>/<%=unit_name%>_ai_evals_'
+TO 's3://cdo-data-sharing-internal/unloaded-unit-progress/<%=output_dir%>/evals/<%=unit_name%>_ai_evals_'
 FORMAT JSON
 EXTENSION 'jsonl'
 IAM_ROLE 'arn:aws:iam::475661607190:role/redshift-s3'

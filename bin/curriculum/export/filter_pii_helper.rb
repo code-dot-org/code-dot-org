@@ -35,7 +35,7 @@ raise "must specify a filename, or use filter_unit_pii.rb to process an entire d
 
 $options[:output_dir] ||= $options[:input_dir]
 $output_dir = File.join(home, 'filtered', $options[:output_dir])
-FileUtils.mkdir_p($output_dir)
+FileUtils.mkdir_p("#{$output_dir}/progress")
 
 require_relative '../../../deployment'
 
@@ -61,18 +61,18 @@ end
 
 def get_input_filenames
   if $options[:filename]
-    input_filename = File.join($input_dir, $options[:filename])
+    input_filename = File.join($input_dir, 'progress', $options[:filename])
     raise "Input file must exist: #{input_filename}" unless File.exist?(input_filename)
     puts "#{File.basename(__FILE__)} found input file: #{input_filename}"
     return [input_filename]
   end
-  input_filenames = Dir.glob(File.join($input_dir, '*.jsonl'))
-  puts "Found #{input_filenames.size} input files in #{$input_dir}"
+  input_filenames = Dir.glob(File.join($input_dir, 'progress', '*.jsonl'))
+  puts "Found #{input_filenames.size} input files in #{$input_dir}/progress"
   input_filenames
 end
 
 def process_file(input_filename)
-  output_filename = File.join($output_dir, File.basename(input_filename))
+  output_filename = File.join($output_dir, 'progress', File.basename(input_filename))
   if File.exist?(output_filename)
     puts "Skipping #{input_filename} because output file already exists: #{output_filename}"
     return

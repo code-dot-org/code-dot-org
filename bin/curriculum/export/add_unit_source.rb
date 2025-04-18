@@ -33,7 +33,7 @@ raise 'Input directory is required' unless $options[:input_dir] && !$options[:in
 $options[:output_dir] ||= $options[:input_dir]
 
 $output_dir = File.join('/mnt/tmp-curriculum-export', 'sourced', $options[:output_dir])
-FileUtils.mkdir_p($output_dir)
+FileUtils.mkdir_p("#{$output_dir}/progress")
 
 require_relative '../../../deployment'
 
@@ -57,7 +57,7 @@ end
 $max_processes = 25
 
 def process_s3_file(bucket, key)
-  output_filename = File.join($output_dir, File.basename(key))
+  output_filename = File.join($output_dir, 'progress', File.basename(key))
 
   if File.exist?(output_filename)
     puts "Skipping #{File.basename(key)} because output file already exists: #{output_filename}"
@@ -106,8 +106,8 @@ end
 
 def main
   start_time = Time.now
-  keys = list_s3_files('cdo-data-sharing-internal', "unloaded-unit-progress/#{$options[:input_dir]}/")
-  puts "Found #{keys.size} files in s3://cdo-data-sharing-internal/unloaded-unit-progress/#{$options[:input_dir]}/"
+  keys = list_s3_files('cdo-data-sharing-internal', "unloaded-unit-progress/#{$options[:input_dir]}/progress/")
+  puts "Found #{keys.size} files in s3://cdo-data-sharing-internal/unloaded-unit-progress/#{$options[:input_dir]}/progress/"
 
   keys.each do |key|
     process_s3_file('cdo-data-sharing-internal', key)

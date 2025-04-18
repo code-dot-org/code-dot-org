@@ -35,7 +35,7 @@ UNLOAD ($$
     <%= level_id && "and cs.level_id = #{level_id}" %>
   ORDER BY script_name, lesson_position, level_number, learning_goal_position, understanding
 $$)
-TO 's3://cdo-data-sharing-internal/unloaded-evidence-levels/<%=output_dir%>/<%=unit_name%>_evidence_levels_'
+TO 's3://cdo-data-sharing-internal/unloaded-unit-progress/<%=output_dir%>/evals/<%=unit_name%>_evidence_levels_'
 FORMAT JSON
 EXTENSION 'jsonl'
 IAM_ROLE 'arn:aws:iam::475661607190:role/redshift-s3'

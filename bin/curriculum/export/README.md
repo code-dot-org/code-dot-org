@@ -36,63 +36,69 @@ To export progress for a given unit:
 1. check the [unit progress shares](https://docs.google.com/spreadsheets/d/1BiK3a3rlEEto1x9_ITjX7l0CsbhO0WZQrdYNdISWKQA/edit)
    gsheet to confirm that the data you need is not already available.
 
-2. connect to production-daemon
+2. choose a descriptive name for your new dataset indicating the unit name and date range:
+  - `<unit-name>-ending-YYYY-MM-DD` (e.g. `csd3-2024-ending-2025-04-01` for units less than 1 year old)
+  - `<unit-name>-school-year-2023` (prefer capturing one entire school year at a time for units > 1 year old)
+  -  see [unit progress shares](https://docs.google.com/spreadsheets/d/1BiK3a3rlEEto1x9_ITjX7l0CsbhO0WZQrdYNdISWKQA/edit)
+     gsheet for more details and examples.
+
+3. connect to production-daemon
 ```bash
 ssh -t gateway ssh production-daemon
 cd production
 ```
 
-3. export unit progress from redshift
+4. export unit progress from redshift
 ```bash
-SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/export_unit_progress.rb -u unit_name
+SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/export_unit_progress.rb -u unit-name -o unit-name-date-range
 ```
 the above command runs a redshift query whose results are written to s3://cdo-data-sharing-internal via the `UNLOAD` command.
 
-4. add student source code from S3
+5. add student source code from S3
 ```bash
-SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/add_unit_source.rb -i unit_name
+SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/add_unit_source.rb -i unit-name-date-range
 ```
 
-5. inspect the output for validity before performing the expensive PII filtering step
+6. inspect the output for validity before performing the expensive PII filtering step
 ```bash
-ls -l /mnt/tmp-curriculum-export/sourced/<unit-name>
-less /mnt/tmp-curriculum-export/sourced/<unit-name>/<filename>
+ls -l /mnt/tmp-curriculum-export/sourced/<unit-name-date-range>/progress
+less /mnt/tmp-curriculum-export/sourced/<unit-name-date-range>/progress/<filename>
 ```
 
-6. filter the output to exclude PII
+7. filter the output to exclude PII
 ```bash
-bin/curriculum/export/filter_unit_pii.rb -i unit_name
+bin/curriculum/export/filter_unit_pii.rb -i unit-name-date-range
 ```
 
-7. inspect the output for validity before uploading to S3
+8. inspect the output for validity before uploading to S3
 ```bash
-ls -l /mnt/tmp-curriculum-export/filtered/<unit-name>
-less /mnt/tmp-curriculum-export/filtered/<unit-name>/<filename>
+ls -l /mnt/tmp-curriculum-export/filtered/<unit-name-date-range>/progress
+less /mnt/tmp-curriculum-export/filtered/<unit-name-date-range>/progress/<filename>
 ```
 
-8. upload the filtered output to S3
+9. upload the filtered output to S3
 ```bash
 # s3 dir should be empty to start
-aws s3 ls s3://cdo-data-sharing/filtered-unit-progress/<unit-name>/
+aws s3 ls s3://cdo-data-sharing/filtered-unit-progress/<unit-name-date-range>/
 # if the dir is empty, go ahead and upload 
-aws s3 cp --recursive /mnt/tmp-curriculum-export/filtered/<unit-name> s3://cdo-data-sharing/filtered-unit-progress/<unit-name>
+aws s3 cp --recursive /mnt/tmp-curriculum-export/filtered/<unit-name-date-range> s3://cdo-data-sharing/filtered-unit-progress/<unit-name-date-range>
 ```
 
-9. add a row to the 
+10. add a row to the 
    [unit progress shares](https://docs.google.com/spreadsheets/d/1BiK3a3rlEEto1x9_ITjX7l0CsbhO0WZQrdYNdISWKQA/edit)
-   gsheet describing your data so that it can be used again by others.
+   gsheet describing your data so that it can be used again by others. be sure to include exact date range.
 
-10. share the data with the requester
+11. share the data with the requester
 
     - login to AWS console in your web browser
     - navigate to https://us-east-1.console.aws.amazon.com/s3/buckets/cdo-data-sharing?region=us-east-1&bucketType=general&prefix=unit-export/&showversions=false 
 
-11. clean up
+12. clean up
 
 Once you are happy with the data you've uploaded to S3, you should clean up the temporary files on production-daemon:
 ```bash
-rm -rf /mnt/tmp-curriculum-export/sourced/<unit-name>
-rm -rf /mnt/tmp-curriculum-export/filtered/<unit-name>
+rm -rf /mnt/tmp-curriculum-export/sourced/<unit-name-date-range>
+rm -rf /mnt/tmp-curriculum-export/filtered/<unit-name-date-range>
 ```
 ## Troubleshooting
 
@@ -109,9 +115,9 @@ ways you can accomplish this include:
 * pass `-l <level_id>` to `export_unit_progress.rb` 
 * truncate the files output by `export_unit_progress.rb`, for example:
 ```bash
-aws s3 cp s3://cdo-data-sharing-internal/unloaded-unit-progress/csd3-2023/csd3-2023_0000_part_00.jsonl <local-file-1>
+aws s3 cp s3://cdo-data-sharing-internal/unloaded-unit-progress/csd3-2023/progress/csd3-2023_0000_part_00.jsonl <local-file-1>
 head -n 1000 <local-file-1> > <local-file-2> 
-aws s3 cp <local-file-2> s3://cdo-data-sharing-internal/unloaded-unit-progress/csd3-2023-1K/csd3-2023_0000_part_00.jsonl    
+aws s3 cp <local-file-2> s3://cdo-data-sharing-internal/unloaded-unit-progress/csd3-2023-1K/progress/csd3-2023_0000_part_00.jsonl    
 ```
 then use `csd3-2023-1K` as the unit name for subsequent steps. 
-* To use a dataset that's already been truncated, look at `s3://cdo-data-sharing-internal/unloaded-unit-progress/csd3-2023-30K/`. this directory should contain 3 files with 10K lines each.
+* To use a dataset that's already been truncated, look at `s3://cdo-data-sharing-internal/unloaded-unit-progress/csd3-2023-30K/progress/`. this directory should contain 3 files with 10K lines each.
