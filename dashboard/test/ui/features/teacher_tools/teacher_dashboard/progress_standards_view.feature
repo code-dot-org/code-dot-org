@@ -2,6 +2,7 @@
 
 Feature: Viewing and Printing Standards Progress
 
+  @properties_encryption_key
   Scenario: Viewing standards progress in Progress Tab of Teacher Dashboard
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "coursea-2019"

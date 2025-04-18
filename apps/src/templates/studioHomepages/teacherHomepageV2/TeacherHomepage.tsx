@@ -22,7 +22,13 @@ import styles from './teacherHomepage.module.scss';
 
 export type ArchivedToggleOption = 'teaching' | 'archived';
 
-export const TeacherHomepage: React.FC = () => {
+interface TeacherHomepageProps {
+  studioUrlPrefix: string;
+}
+
+export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
+  studioUrlPrefix,
+}) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
 
   const dispatch = useAppDispatch();
@@ -68,7 +74,11 @@ export const TeacherHomepage: React.FC = () => {
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
-        <Heading2>{i18n.welcome({teacherName: teacherName})}</Heading2>
+        <Heading2>
+          {teacherName
+            ? i18n.welcome({teacherName: teacherName})
+            : i18n.welcomeWithoutName()}
+        </Heading2>
         <Alert
           className={styles.feedbackAlert}
           size={'s'}
@@ -97,6 +107,7 @@ export const TeacherHomepage: React.FC = () => {
             ) : (
               <SectionList
                 showHiddenOnly={selectedArchiveToggle === 'archived'}
+                studioUrlPrefix={studioUrlPrefix}
               />
             )}
           </div>

@@ -1,0 +1,77 @@
+name 'aif_pl_AI_chatbot_overview_L8-2-data-science'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Chat Lab Overview
+
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="code.org AI robot character" style="border-radius:10px; float: right; ; height: 200px; margin: 20px 20px 0px 10px; ">
+
+## Working with AI
+
+#### Throughout the <a href="studio.code.org/courses/artificial-intelligence-foundations-2025" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a>, students will have the opportunity to interact with an AI Chatbot.
+
+#### Code.org has created a an **AI Chat Lab** that is safe for student use and embedded into the curriculum seamlessly so students can engage with generative AI in an authentic and secure way without leaving the platform.
+
+## Why use Generative AI?
+
+#### By working with AI in a structured and responsible setting, students will learn how to engage ethically with these technologies, use AI as a tool for problem-solving, and develop essential skills for the future of work. 
+
+#### Understanding how to interact with AI effectively will prepare them to navigate an increasingly AI-driven world with confidence and critical thinking.
+<br>
+
+---
+#### To ensure safety and appropriate use, a pop-up message displays before each use of the Chat Lab. 
+
+<div style="background-color: #FFFFFF; color: #000000; padding: 15px; border-radius: 5px; width: 90%; margin: 20px auto; border: 4px solid #000000; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); position: relative;">
+    
+    <!-- Close Button -->
+    <span style="position: absolute; top: 10px; right: 10px; font-size: 20pt; font-weight: bold; border: 2px solid black; border-radius: 2px; padding: 0 10px; cursor: pointer; line-height: 1;">X</span>
+    
+<h2>Remember to chat responsibly!</h2>
+    <hr>
+
+<div style="font-size: 14pt; line-height: 1.5; margin-top: 10px; padding-left: 10px;">
+        <p style="font-size: 14pt;"><b>All messages you send will be visible to your teacher, including blocked messages.</b></p>
+        <p style="font-size: 14pt;">Inappropriate messages will be flagged by our content moderation policy.</p>
+        <p style="font-size: 14pt;">All unsaved changes will be lost.</p>
+        <p style="font-size: 14pt;">In order to protect your privacy, anything considered personal information (name, phone number, address, etc.) should not be submitted.</p>
+    </div>
+
+<hr>
+
+<!-- Start Chatting Button -->
+<div align="right">
+  <a href="#start" style="background-color: #8c52ba; color: #ffffff; text-decoration: none; padding: 10px 20px; font-size: 14pt; border-radius: 8px; display: inline-block;">
+    Start Chatting
+  </a>
+</div>
+
+</div>
+
+
+
+## Exploring AI in Action
+
+#### This brief example highlights **Lesson 2**, where students use Use AI Chat to analyze the pizza dataset they work with in that lesson. The bot will help summarize key details, identify trends, and make suggestions.
+
+
+
+#### Lessons incorporating the Chat Lab are intentionally designed to provide structured guidance, ensuring students engage with AI purposefully. These interactions foster authentic learning experiences, helping students see how AI can be a valuable tool for exploration and problem-solving.
+
+<div style="text-align: center;">
+    <img src="https://images.code.org/3e443cee8d3e5936a333e760d50806f4-image-1744815662701.png" 
+         alt="A sample of a chat conversation with an AI bot from Lesson 2 about analyzing pizza data." 
+         width="650px" 
+         style="border-radius: 5px; border: 4px solid #ccc; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+</div>
+
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 2. You can find more details in the full <a href='https://studio.code.org/s/aif6-2025/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+
+MARKDOWN

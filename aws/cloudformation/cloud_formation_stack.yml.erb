@@ -413,7 +413,7 @@ Resources:
       FunctionName: !Sub "${AWS::StackName}-marketing-router"
       # The JS file for this function depends on the Sub function to inject the value of MarketingDomainName
       Code: 
-        ZipFile: !Sub <%=inline_js 'lambdas/marketing-router/index.js'%>
+        ZipFile: !Sub <%=inline_js('lambdas/marketing-router/index.js', uglify: false) %>
       Handler: index.handler
       Runtime: nodejs22.x
       Role: !GetAtt MarketingRouterLambdaRole.Arn

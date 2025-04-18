@@ -4,7 +4,8 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {ProjectFile} from '@codebridge/types';
 import {getFileIconNameAndStyle} from '@codebridge/utils';
 import classNames from 'classnames';
-import React from 'react';
+import {throttle} from 'lodash';
+import React, {useEffect, useMemo, useRef} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
@@ -24,12 +25,33 @@ const FileTab = ({file}: FileTabProps) => {
   const className = classNames(moduleStyles.fileTab, {
     [moduleStyles.active]: isActive,
   });
+  const tabRef = useRef<HTMLDivElement>(null);
+
+  const scrollTabIntoView = () =>
+    tabRef.current?.scrollIntoView({block: 'end', inline: 'start'});
+
+  const throttledScrollTabIntoView = useMemo(
+    () => throttle(scrollTabIntoView, 30),
+    []
+  );
+
+  useEffect(() => {
+    if (isActive) {
+      scrollTabIntoView();
+      window.addEventListener('resize', throttledScrollTabIntoView);
+    } else {
+      window.removeEventListener('resize', throttledScrollTabIntoView);
+    }
+    return () =>
+      window.removeEventListener('resize', throttledScrollTabIntoView);
+  }, [isActive, throttledScrollTabIntoView]);
 
   return (
     <div className={className} key={file.id}>
       <div
         className={moduleStyles.label}
         onClick={() => setActiveFile(file.id)}
+        ref={tabRef}
       >
         <FontAwesomeV6Icon
           iconName={iconName}

@@ -856,7 +856,6 @@ Dashboard::Application.routes.draw do
     get '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning#workshops_as_facilitator_for_pl_page'
     get '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
     get '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
-    get 'regional_workshop_data/:zip_code', to: 'pd/professional_learning#regional_workshop_data'
     post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
     post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
@@ -870,6 +869,7 @@ Dashboard::Application.routes.draw do
     get 'professional-learning/facilitator/computer-science-principles', to: 'pd/professional_learning#csp'
     get 'professional-learning/facilitator/computer-science-ai-fundamentals', to: 'pd/professional_learning#csaif'
     get 'professional-learning/regional-partner/playbook', to: 'pd/professional_learning#rp_playbook'
+    get 'professional-learning/regional_workshop_data/:zip_code', to: 'pd/professional_learning#regional_workshop_data'
 
     namespace :pd do
       # React-router will handle sub-routes on the client.
@@ -1277,6 +1277,8 @@ Dashboard::Application.routes.draw do
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
     end
+
+    resources :ai_interaction_feedback, only: [:create]
 
     # Policy Compliance
     namespace :policy_compliance do

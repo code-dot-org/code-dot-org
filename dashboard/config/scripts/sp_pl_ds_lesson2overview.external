@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<h1>Lesson: Introduction to Data Science</h1>
+<h1>Introduction to Data Science</h1>
 
 #### Now that you have learned about what Data Science is, let’s dive into the content of the unit and see how these concepts come together for your students.
 

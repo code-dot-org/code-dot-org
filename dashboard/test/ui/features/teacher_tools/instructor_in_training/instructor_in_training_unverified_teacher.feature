@@ -48,6 +48,7 @@ Feature: Self Paced PL Instructor in Training - Unverified Instructor
     And element "#instructor_in_training_tag" contains text "Viewing As Instructor"
 
   @no_mobile
+  @properties_encryption_key
   Scenario: View Instructor In Training LevelGroup Level as Unverified Teacher
     Given I create a teacher named "Ms_Frizzle"
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/2/levels/1"

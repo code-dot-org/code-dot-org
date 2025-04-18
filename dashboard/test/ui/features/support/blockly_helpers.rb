@@ -126,4 +126,9 @@ def move_block_to_jigsaw_ghost(id)
   "blockToMove.moveTo(appOptions.level.ghost);"
 end
 
+def load_json_blocks(blocks_json)
+  script = "Blockly.serialization.workspaces.load(#{blocks_json}, Blockly.getMainWorkspace());"
+  @browser.execute_script(script)
+end
+
 World(BlocklyHelpers)

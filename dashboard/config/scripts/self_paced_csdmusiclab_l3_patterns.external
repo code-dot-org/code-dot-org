@@ -1,0 +1,24 @@
+name 'self-paced-CSDMusicLab-L3-patterns'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Patterns
+
+<img src="https://images.code.org/bcb4304d866a4ec46e036423fc0d79b0-image-1736535593030.png" alt="A magnifying glass showing three repeating items." style="float: right; width: 15%; margin-left: 15px;">
+
+
+#### As you can no doubt tell by now, loops are a great way to highlight pattern recognition in computer science. 
+
+#### Pattern recognition is one of the key practices in computational thinking. In Music Lab, patterns can show up in track order, rhythm, and how certain song sections are structured. Helping students *notice and name* these patterns gives them powerful tools for coding and creativity.
+
+## 🧠 Prompts to Build Pattern Recognition
+
+#### Use questions like these to encourage students to think like pattern-spotters:
+
+* #### What parts of this song repeat? Can you show it in the code?
+* #### Where do you see the same blocks used more than once?
+* #### If you were to add a new track, could you reuse something you’ve already written?
+* #### Do any instruments or beats create a repeating structure in this track?
+* #### Could you describe this pattern using words, like ABAB or AABB?
+MARKDOWN

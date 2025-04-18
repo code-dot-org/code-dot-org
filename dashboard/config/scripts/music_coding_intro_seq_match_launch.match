@@ -1,6 +1,6 @@
 name 'music-coding-intro-seq-match_launch'
 title '<i class="fa-solid fa-magnifying-glass"></i><i class="fa-sharp fa-solid fa-eyes"></i> Show What You Know!'
-description 'Move the description to the code that matches.'
+description 'Move the timeline output to the code that matches.'
 
 height '210'
 width '200'

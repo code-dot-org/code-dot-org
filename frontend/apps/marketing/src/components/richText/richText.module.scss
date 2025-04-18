@@ -1,0 +1,89 @@
+@use '@code-dot-org/component-library-styles/font.scss' as font;
+
+.richText {
+  & > * {
+    margin: 0 0 1rem;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  a {
+    font-weight: font.$regular-font-weight;
+  }
+
+  b {
+    font-weight: font.$semi-bold-font-weight;
+  }
+
+  p {
+    white-space: pre-wrap;
+  }
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0 0 0 1.25rem;
+
+    li {
+      @include font.main-font-regular;
+      padding-left: 0.25rem;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    border-radius: 0.25rem;
+    box-shadow: var(--borders-neutral-primary) 0 0 0 1px;
+    overflow: hidden;
+    table-layout: fixed;
+    width: 100%;
+
+    tbody {
+      tr {
+        &:nth-child(odd) {
+          background: var(--background-neutral-secondary);
+        }
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--borders-neutral-primary);
+        }
+
+        th,
+        td {
+          border-collapse: collapse;
+          padding: 0.75rem 1rem;
+          text-align: center;
+        }
+
+        th {
+          background: var(--background-brand-teal-primary);
+          border-bottom: 1px solid var(--borders-brand-teal-strong);
+
+          &:not(:last-child) {
+            border-right: 1px solid var(--borders-brand-teal-strong);
+          }
+
+          p {
+            color: var(--text-neutral-white-fixed);
+            text-transform: uppercase;
+            font-weight: font.$semi-bold-font-weight;
+          }
+        }
+
+        td {
+          &:not(:last-child) {
+            border-right: 1px solid var(--borders-neutral-primary);
+          }
+        }
+      }
+    }
+  }
+}

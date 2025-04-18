@@ -1,0 +1,21 @@
+name 'self-paced-CSDMusicLab-L2-algorithms'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Algorithmic Thinking
+
+#### In the previous level, you may have noticed that you used **algorithmic thinking** to solve the coding challenge. Each section of the song - four measures each, for a total of eight measures - contained a vocals, leads, bass, and drums track.
+
+<div style="text-align: center; margin: 20px auto;">
+    <img src="https://images.code.org/32fea12cc5d0acfe6d9beea00eec9625-image-1743110887914.png" alt="Two sets of tracks with vocals, leads, bass, and drums." style="width: 75%; border-radius: 10px;">
+</div>
+
+#### The tracks in the coding workspace reflect this pattern.
+
+<div style="text-align: center; margin: 20px auto;">
+    <img src="https://images.code.org/1885135fcb146d603afa9937db010e1f-image-1744845728159.22.04 PM.png" alt="Two sets of tracks with vocals, leads, bass, and drums." style="width: 40%; border-radius: 10px;">
+</div>
+
+#### Following this set of steps is a way to exercise **algorithmic thinking**! Not every song needs all four tracks, but this is a good "recipe" for making a song that sounds fleshed-out.
+MARKDOWN

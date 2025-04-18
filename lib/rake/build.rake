@@ -37,14 +37,6 @@ namespace :build do
     end
   end
 
-  desc 'Builds broken link checker.'
-  timed_task_with_logging :tools do
-    Dir.chdir(File.join(tools_dir, "scripts", "brokenLinkChecker")) do
-      ChatClient.log 'Installing <b>broken link checker</b> dependencies...'
-      RakeUtils.yarn_install
-    end
-  end
-
   desc 'Builds dashboard (install gems, migrate/seed db, compile assets).'
   timed_task_with_logging dashboard: :package do
     Dir.chdir(dashboard_dir) do
@@ -195,7 +187,6 @@ namespace :build do
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
-  tasks << :tools if rack_env?(:staging)
   tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end
