@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_16_140513) do
+ActiveRecord::Schema.define(version: 2025_04_18_071352) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2122,6 +2122,15 @@ ActiveRecord::Schema.define(version: 2025_04_16_140513) do
     t.string "table", null: false
     t.datetime "mtime"
     t.index ["table"], name: "index_seed_info_on_table"
+  end
+
+  create_table "seeded_commits", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "commit_hash", null: false
+    t.integer "status", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["commit_hash"], name: "index_seeded_commits_on_commit_hash", unique: true
+    t.index ["updated_at"], name: "index_seeded_commits_on_updated_at"
   end
 
   create_table "seeded_s3_objects", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

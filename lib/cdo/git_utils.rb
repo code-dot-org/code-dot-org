@@ -46,6 +46,10 @@ module GitUtils
     staged_changes.concat(unstaged_changes).uniq
   end
 
+  def self.files_changed_between(sha1, sha2)
+    `git diff --name-only #{sha1} #{sha2}`.split("\n")
+  end
+
   def self.current_branch
     `git rev-parse --abbrev-ref HEAD`.strip
   end
@@ -72,7 +76,7 @@ module GitUtils
   end
 
   def self.git_revision
-    `git rev-parse HEAD`.strip
+    git_revision_branch('HEAD')
   end
 
   def self.git_revision_short(project_directory = Dir.pwd)
