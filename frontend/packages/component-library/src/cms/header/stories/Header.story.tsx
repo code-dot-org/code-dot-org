@@ -452,6 +452,9 @@ export const SmallDesktop: Story = {
       viewports: INITIAL_VIEWPORTS,
       defaultViewport: 'ipad12p',
     },
+    eyes: {
+      viewportSize: {width: 1024, height: 1366},
+    },
     docs: {
       description: {
         story:
@@ -531,6 +534,9 @@ export const Tablet: Story = {
       viewports: MINIMAL_VIEWPORTS,
       defaultViewport: 'tablet',
     },
+    eyes: {
+      viewportSize: {width: 834, height: 1112},
+    },
     docs: {
       description: {
         story:
@@ -589,7 +595,10 @@ export const Mobile: Story = {
     layout: 'fullscreen',
     viewport: {
       viewports: MINIMAL_VIEWPORTS,
-      defaultViewport: 'mobile1',
+      defaultViewport: 'mobile2',
+    },
+    eyes: {
+      viewportSize: {width: 414, height: 896},
     },
     docs: {
       description: {
