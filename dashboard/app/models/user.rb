@@ -96,24 +96,6 @@ class User < ApplicationRecord
   include PartialRegistration
   include Rails.application.routes.url_helpers
 
-  self.inheritance_column = :user_type
-
-  # :user_type is locked. Use the :permissions property for more granular user permissions.
-  USER_TYPE_OPTIONS = [
-    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
-    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
-  ].freeze
-
-  TYPE_TO_STI_CLASS_MAP = {
-    TYPE_TEACHER => ::Teacher,
-    TYPE_STUDENT => ::Student,
-    'staff' => ::Teacher # Powerschool sends through 'staff' instead of 'teacher'
-  }.freeze
-
-  def self.find_sti_class(type_name)
-    TYPE_TO_STI_CLASS_MAP[type_name]
-  end
-
   # Notes:
   #   data_transfer_agreement_source: Indicates the source of the data transfer
   #     agreement.
@@ -169,6 +151,12 @@ class User < ApplicationRecord
   # using the next increasing natural number.
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
+  ].freeze
+
+  # :user_type is locked. Use the :permissions property for more granular user permissions.
+  USER_TYPE_OPTIONS = [
+    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
+    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
   ].freeze
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
@@ -2415,14 +2403,14 @@ class User < ApplicationRecord
     user = User.find_by_email_or_hashed_email(params[:email])
 
     if user
-      user = user.becomes!(Teacher) unless user.instance_of?(Teacher)
-      user.update!(params)
+      user.update!(params.merge(user_type: TYPE_TEACHER))
     else
       # initialize new users with name and school
       if params[:ops_first_name] || params[:ops_last_name]
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
       params[:school] ||= params[:ops_school]
+      params[:user_type] = TYPE_TEACHER
       params[:age] ||= 21
 
       # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
@@ -2430,7 +2418,7 @@ class User < ApplicationRecord
       ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
         raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
       end
-      user = Teacher.invite!(attributes: params)
+      user = User.invite!(attributes: params)
       user.update!(invited_by: invited_by_user)
     end
 
@@ -2459,10 +2447,6 @@ class User < ApplicationRecord
     unless omniauth_user
       omniauth_user = create
       initialize_new_oauth_user(omniauth_user, auth, params)
-
-      sti_class = find_sti_class(omniauth_user.user_type)
-      omniauth_user = omniauth_user.becomes!(sti_class) if sti_class
-
       omniauth_user.save
     end
 
@@ -2534,15 +2518,9 @@ class User < ApplicationRecord
 
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
-
-    user = new_from_partial_registration(session)
-
-    sti_class = find_sti_class(params[:user_type] || params['user_type'])
-    user = user.becomes!(sti_class) if sti_class && !user.instance_of?(sti_class)
-
-    Services::User.assign_form_params(user, params)
-
-    user
+    new_from_partial_registration session do |user|
+      Services::User.assign_form_params(user, params)
+    end
   end
 
   def self.password_min_length(user_type, country_code)

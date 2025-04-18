@@ -4,16 +4,19 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import SwapLayoutDropdown from '@codebridge/components/SwapLayoutDropdown';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import ConsoleManager from './ConsoleManager';
 
 import moduleStyles from './right-buttons.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface RightButtonsProps {
   clearOutput: () => void;
+  consoleManager: ConsoleManager | null;
 }
 
 const tooltipProps: TooltipProps = {
@@ -26,26 +29,47 @@ const tooltipProps: TooltipProps = {
 
 const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   clearOutput,
+  consoleManager,
 }) => {
   const isShareView = useAppSelector(state => state.lab.isShareView);
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+  const [hasConsoleOutput, setHasConsoleOutput] = useState(false);
+  const isClearButtonDisabled = isRunning || !hasConsoleOutput;
+
+  useEffect(() => {
+    if (!consoleManager) {
+      return;
+    }
+
+    setHasConsoleOutput(consoleManager.getTerminalLines().length > 0);
+
+    const handleUpdate = (terminalLines: string[]) => {
+      setHasConsoleOutput(terminalLines.length > 0);
+    };
+
+    consoleManager.addTerminalLinesListener(handleUpdate);
+
+    return () => {
+      consoleManager.removeTerminalLinesListener(handleUpdate);
+    };
+  }, [consoleManager]);
 
   return (
-    <>
-      <div className={moduleStyles.buttonContainer}>
-        <WithTooltip tooltipProps={tooltipProps}>
-          <Button
-            isIconOnly
-            icon={{iconStyle: 'solid', iconName: 'eraser'}}
-            ariaLabel={codebridgeI18n.clearConsole()}
-            onClick={clearOutput}
-            size={'xs'}
-            type={'tertiary'}
-            className={darkModeStyles.tertiaryButton}
-          />
-        </WithTooltip>
-        {!isShareView && <SwapLayoutDropdown />}
-      </div>
-    </>
+    <div className={moduleStyles.buttonContainer}>
+      <WithTooltip tooltipProps={tooltipProps}>
+        <Button
+          isIconOnly
+          icon={{iconStyle: 'solid', iconName: 'eraser'}}
+          ariaLabel={codebridgeI18n.clearConsole()}
+          onClick={clearOutput}
+          size={'xs'}
+          type={'tertiary'}
+          className={darkModeStyles.tertiaryButton}
+          disabled={isClearButtonDisabled}
+        />
+      </WithTooltip>
+      {!isShareView && <SwapLayoutDropdown />}
+    </div>
   );
 };
 

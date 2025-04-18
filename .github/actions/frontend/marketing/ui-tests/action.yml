@@ -5,7 +5,7 @@ inputs:
   CONTENTFUL_SPACE_ID:
     description: "Contentful Space ID"
     required: true
-  CONTENTFUL_TOKEN:
+  CONTENTFUL_DELIVERY_TOKEN:
     description: "Contentful API Key"
     required: true
   APPLITOOLS_API_KEY:

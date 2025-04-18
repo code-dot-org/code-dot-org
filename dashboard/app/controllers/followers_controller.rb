@@ -26,9 +26,8 @@ class FollowersController < ApplicationController
       @user = current_user
     elsif params[:user]
       user_type = params[:user][:user_type] == User::TYPE_TEACHER ? User::TYPE_TEACHER : User::TYPE_STUDENT
-      @user = User.new(user_type: user_type).tap do |user|
-        user.assign_attributes followers_params(user_type)
-      end
+      @user = User.new(followers_params(user_type))
+      @user.user_type = user_type
     else
       @section_code = params[:section_code]
       render 'join_logged_out', formats: [:html]

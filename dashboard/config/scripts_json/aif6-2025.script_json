@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-16 21:22:51 UTC",
+    "serialized_at": "2025-04-18 00:06:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -213,7 +213,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**How do we create data visualizations that help us better understand the data?**\n\nIn this lesson, students create charts in a spreadsheet editor to practice building basic data visualizations – bar charts and pie charts. As they practice building each sort of data visualization, they also discuss when and where each type of visualization might be useful. Finally, they will learn how to sort and filter their data in a spreadsheet.",
+        "overview": "**How do we create data visualizations that help us better understand the data?**\n\nIn this lesson, students create charts in a spreadsheet editor to practice building basic data visualizations – bar charts and pie charts. As they practice building each sort of data visualization, they also discuss when and where each type of visualization might be useful. Finally, they will learn how to filter their data in a spreadsheet.",
         "student_overview": "**How do we create data visualizations that help us better understand the data?**\n\nIn this lesson, you'll get to dive into the world of data visualizations, making several of your own in a spreadsheet editor."
       },
       "seeding_key": {
@@ -248,7 +248,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**How do the visualizations data scientists choose impact our interpretation of data?**\n\nThis lesson delves into how various data visualizations can shape our understanding of the same topic, emphasizing identifying trends, patterns, and outliers. Students will analyze individual datasets and create visualizations before participating in a jigsaw activity to merge and discuss insights from different perspectives. This collaborative approach enhances their ability to critically assess data and understand the ethical considerations involved in its presentation.",
+        "overview": "**How do the visualizations data scientists choose impact our interpretation of data?**\n\nThis lesson delves into how various data visualizations can shape our understanding of the same topic, emphasizing identifying trends, patterns, and outliers. Students will analyze individual datasets and discuss insights from different perspectives. ",
         "preparation": "* Print out copies of the activity guide for each dataset",
         "student_overview": "**How do the visualizations data scientists choose impact our interpretation of data?**\n\nIn this lesson, you'll explore how different visualizations influence our understanding of the same data. Through individual analysis and group collaboration, you'll learn to identify trends, patterns, outliers, and the impact of how data is presented."
       },
@@ -2197,36 +2197,8 @@
       }
     },
     {
-      "key": "8ce03ab8-b0ed-4de1-a4df-360f2f800b01",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"*How to Sort in Google Sheets*\"\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to review how to sort their dataset and creating visualizations."
-      },
-      "seeding_key": {
-        "activity_section.key": "8ce03ab8-b0ed-4de1-a4df-360f2f800b01",
-        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
-      }
-    },
-    {
-      "key": "69063bf2-c69a-44b7-b0af-990555140ef0",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to create two visualizations using the same column — one sorted, one unsorted — and reflect on which one is easier to understand.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": " If students are stuck, suggest they sort by \"Estimated Cups of Soda\" or \"Energy Level at Parties\" and look for outliers or trends."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "69063bf2-c69a-44b7-b0af-990555140ef0",
-        "lesson_activity.key": "0c982686-ca18-4e83-95a7-d5cf6e6747b8"
-      }
-    },
-    {
       "key": "f259f20a-1db4-4527-9174-2f3932c9f2ca",
-      "position": 11,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"*How to Use Filters in Google Sheets*\""
       },
@@ -2237,7 +2209,7 @@
     },
     {
       "key": "6b265407-468a-4d40-a9e1-0f1fc4cb87b7",
-      "position": 12,
+      "position": 10,
       "properties": {
         "description": "Sometimes we want to focus on certain aspects of our dataset instead of visualizing everything. We can do this using a filter.",
         "remarks": true
@@ -2249,7 +2221,7 @@
     },
     {
       "key": "1c9dc65a-b470-436e-b5b4-3b677519839e",
-      "position": 13,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce filter as a tool to focus on just part of the dataset — like seeing what only 7th graders think or what songs a certain group prefers.\n",
         "tips": [
@@ -2266,7 +2238,7 @@
     },
     {
       "key": "34e7e320-87f4-4f16-89d0-26e78f6f6a03",
-      "position": 14,
+      "position": 12,
       "properties": {
         "description": "Imagine you're planning a pizza party. How might filtering the data by grade or party personality change your decisions about music, food, or activities?",
         "remarks": true
@@ -2278,7 +2250,7 @@
     },
     {
       "key": "d295aa55-3e6f-426f-8f8d-69bd2639f683",
-      "position": 15,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How might filtering the data by grade level or personality type change your party planning choices?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify how different groups might prefer different songs, pizza types, or party durations. Example: “7th graders might want quieter music” or “Social Butterflies invite more friends.”"
       },
@@ -2289,9 +2261,9 @@
     },
     {
       "key": "2f9d2aa7-0270-4bdb-a938-1e504d3c8b7f",
-      "position": 16,
+      "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 6 - 7.\n* **Level 6:** Students review the basics of applying filters. \n* **Level 7:** Students use Google Sheets to apply filters and to make visualizations using the school pizza party dataset.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 5 - 6.\n* **Level 5:** Students review the basics of applying filters. \n* **Level 6:** Students use Google Sheets to apply filters and to make visualizations using the school pizza party dataset.\n",
         "progression_name": "Applying Filters"
       },
       "seeding_key": {
@@ -2301,7 +2273,7 @@
     },
     {
       "key": "28cae1b1-7213-4be1-80ef-6e7588ab70e8",
-      "position": 17,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students what group they filtered by and what changed in the chart compared to the unfiltered version. Encourage students to try multiple filters and compare — what changes when you filter for Performers vs. Relaxers?   \n"
       },
@@ -2312,9 +2284,9 @@
     },
     {
       "key": "9a0c40b4-48b2-4c88-af30-106c0004db6b",
-      "position": 18,
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to screenshot one of their charts in order to upload it to the AI Assistant for feedback.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 8 in order to get AI-assisted feedback on one of their visualizations. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students with snipping, screenshotting, or saving an image of one of the charts that they have created. They might also need assistance with uploading this image into the AI Chat.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to screenshot one of their charts in order to upload it to the AI Assistant for feedback.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 7 in order to get AI-assisted feedback on one of their visualizations. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students with snipping, screenshotting, or saving an image of one of the charts that they have created. They might also need assistance with uploading this image into the AI Chat.\n",
         "progression_name": "AI Chat: Data Visualizations"
       },
       "seeding_key": {
@@ -2324,7 +2296,7 @@
     },
     {
       "key": "b3d84ace-187c-4fd3-9321-a100682b7ec5",
-      "position": 19,
+      "position": 17,
       "properties": {
         "tips": [
           {
@@ -2340,9 +2312,9 @@
     },
     {
       "key": "89eff5c8-66fb-4624-a04f-ca97902a35db",
-      "position": 20,
+      "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students revise their original chart using the feedback they received.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 9 to upload a revised visualization and complete a reflection.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for charts with clear improvements — updated titles, better axis labels, changed chart types — and ask students to explain what they changed and why.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students revise their original chart using the feedback they received.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 8 to upload a revised visualization and complete a reflection.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for charts with clear improvements — updated titles, better axis labels, changed chart types — and ask students to explain what they changed and why.\n",
         "progression_name": "AI Reflection"
       },
       "seeding_key": {
@@ -2352,7 +2324,7 @@
     },
     {
       "key": "a61af6a2-6e08-4e1e-92b7-b3b9d20b0134",
-      "position": 21,
+      "position": 19,
       "properties": {
         "tips": [
           {
@@ -2689,13 +2661,7 @@
       "key": "b8106c5c-342a-454e-872d-a306ff6d463e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Open Level 1 and show the student responses to the class.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Let's take a look at what you noticed and wondered. What common themes do we see in our responses?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** As students share what they notice and what they wonder about the Dessert dataset, highlight any responses that refer to outliers, patterns, or trends, even if they don’t use those terms explicitly. Steer the discussion and student wonderings to focus on the following:\n\n* Outliers:\n   * **Pumpkin Pie in November:** The sharp increase in pumpkin pie consumption in November is an outlier. This suggests that pumpkin pie is highly favored during Thanksgiving and should be a priority dessert for November school events.\n   * **Low Dessert Consumption in January:** There is a noticeable drop in all dessert types in January, likely due to a post-holiday decrease in interest or health-driven New Year resolutions. This could imply that January school parties might focus less on desserts or offer healthier dessert options.\n\n* Patterns:\n   * **Summer Preference for Ice Cream:** Ice cream shows increased consumption during the summer months (June, July, August). This indicates a preference for cooler, refreshing desserts during warmer weather, making it an ideal choice for end-of-year or summer-related school celebrations.\n   * **General Popularity of Cookies and Cupcakes:** Cookies and cupcakes maintain a relatively consistent popularity through most of the year, suggesting they are reliably favored choices that could regularly feature in school parties.\n\n* Trends:\n   * **Rising Cookie Consumption in Spring and Summer:** There is an upward trend in cookie consumption from March to July, peaking in July. This could indicate a growing preference for cookies during this period, possibly due to their convenience at events or their appeal to a broad range of students.\n\n* Insights:\n   * **Seasonal Preferences:** Different desserts are favored at different times of the year. Tailoring dessert offerings to seasonal preferences could enhance student enjoyment and participation in school parties.\n   * **Event-driven Choices:** Certain desserts like pumpkin pie are extremely popular during specific months, likely due to cultural events such as Thanksgiving. Aligning dessert offerings with cultural or seasonal events can make school events feel more festive and relevant.\n\nStudents might also notice or wonder about the Shape of Distribution or Measures of Center. While these concepts are not the focus of today’s lesson, it is important to recognize and highlight any references to these concepts, even if not explicitly names, linking them back to the previous lesson. If you have time, it might be helpful to specifically ask students about the Shape of Distribution and Measures of Center in order to reinforce what they learned the previous lesson.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "After students have had a chance to record their responses in the level and share with their partner, the teacher asks several students to share things they noticed and things they wondered. Student responses can also be displayed for the class to help drive the conversation. \n\nUsually, the teacher steers the conversation to wondering about something that the class is about to focus on, which in this case is outliers, patterns and trends. In a Data Talk the teacher does not have to be an expert in the topic of data visualization - if a student asks a question, you can say that you do not know the answer, but would love to find out together! This is a nice opportunity to model not knowing, and embracing uncertainty. \n\nThe purpose of a Data Talk  is to make an opening task accessible to all students with these two approachable questions. By thinking about them and responding, students gain entry into the context and might get their curiosity piqued."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Open Level 1 and show the student responses to the class.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Let's take a look at what you noticed and wondered. What common themes do we see in our responses?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** As students share what they notice and what they wonder about the Dessert dataset, highlight any responses that refer to outliers, patterns, or trends, even if they don’t use those terms explicitly. Steer the discussion and student wonderings to focus on the following:\n\n* Outliers:\n   * **Pumpkin Pie in November:** The sharp increase in pumpkin pie consumption in November is an outlier. This suggests that pumpkin pie is highly favored during Thanksgiving and should be a priority dessert for November school events.\n   * **Low Dessert Consumption in January:** There is a noticeable drop in all dessert types in January, likely due to a post-holiday decrease in interest or health-driven New Year resolutions. This could imply that January school parties might focus less on desserts or offer healthier dessert options.\n\n* Patterns:\n   * **Summer Preference for Ice Cream:** Ice cream shows increased consumption during the summer months (June, July, August). This indicates a preference for cooler, refreshing desserts during warmer weather, making it an ideal choice for end-of-year or summer-related school celebrations.\n\n* Trends:\n   * **Rising Cookie Consumption in Spring and Summer:** There is an upward trend in cookie consumption from March to July, peaking in July. This could indicate a growing preference for cookies during this period, possibly due to their convenience at events or their appeal to a broad range of students.\n\n* Insights:\n   * **Seasonal Preferences:** Different desserts are favored at different times of the year. Tailoring dessert offerings to seasonal preferences could enhance student enjoyment and participation in school parties."
       },
       "seeding_key": {
         "activity_section.key": "b8106c5c-342a-454e-872d-a306ff6d463e",
@@ -2716,17 +2682,7 @@
       "key": "ea95e62f-532c-4b04-b41a-e21a64120220",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student to add the terms outlier, pattern, and trend to the Word Wall.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take a moment and decide on one of the answer options for this quick self-check of what trends in data do for us",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "You might choose to have students do one of the following:\n* Jot down their answer in a journal\n* Take a silent moment to decide on an answer and then chat with a partner about their choice\n* Ask students to raise their hands for each choice to indicate their selection and help you gauge where the class is at\n\nThe purpose of the Self Check is to be a quick formative assessment to help you determine understanding before moving into the main activities. If needed, you can provide your students the additional information below about trends in data science: \n* Trends provide insights into the overall direction and momentum, helping in strategic planning and long-term predictions.\n* Trends are typically observed as a consistent upward or downward slope in line graphs or moving averages that smooth out fluctuations to highlight the general direction of the data."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Self Checks can be used as a quick formative assessment of whether students understand the terms they will be using. "
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student to add the terms outlier, pattern, and trend to the Word Wall.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take a moment and decide on one of the answer options for this quick self-check of what trends in data do for us\n* Trends provide insights into the overall direction and momentum, helping in strategic planning and long-term predictions.\n* Trends are typically observed as a consistent upward or downward slope in line graphs or moving averages that smooth out fluctuations to highlight the general direction of the data."
       },
       "seeding_key": {
         "activity_section.key": "ea95e62f-532c-4b04-b41a-e21a64120220",
@@ -2747,7 +2703,7 @@
       "key": "112c201b-918b-41d3-8734-bd85ab2ebc3e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take a moment and decide on one of the answer options for this quick self-check of what outliers in data do for us.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take a moment and decide on one of the answer options for this quick self-check of what patterns in data do for us\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take a moment and decide on one of the answer options for this quick self-check of what outliers in data do for us.\n* Outliers can sometimes distort the understanding of trends and patterns if not appropriately handled. * They might indicate either errors to be corrected or special cases that need separate investigation.\n* Outliers might appear as points that break away from the cluster or main grouping of data in scatter plots, bar charts, or line graphs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to take a moment and decide on one of the answer options for this quick self-check of what patterns in data do for us\n* Patterns help in understanding the regular behavior or characteristics within data, which is useful for tasks like anomaly detection, where deviations from these patterns become evident.\n* Patterns are often visible through repeated shapes or configurations in the data, such as recurring cycles in a line graph or consistent groupings in scatter plots.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "112c201b-918b-41d3-8734-bd85ab2ebc3e",
@@ -2758,13 +2714,7 @@
       "key": "4e1b6878-36c3-43af-b81b-7571b1aff9fe",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs and assign each pair one of the six datasets. If possible, try to have equal amounts of pairs working on each dataset for the jigsaw activity.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the accompanying Data Interpretations activity guide for their assigned dataset. ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The jigsaw activity consists of two parts. In Part 1 students will work with a partner to create a visualization of their assigned dataset and discuss and answer questions about their chart or graph. Although they are working with a partner, each student will need to record their responses to Part 1 individually since partners will part ways during Part 2. For Part 2, students will form groups of 6, ensuring that each member of the group has worked with a different dataset from Part 1. Check that all datasets from 1 to 6 are represented within each group."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs in order to work through the interpretation of the four datasets present on Level 2.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the accompanying Data Interpretations activity guide for their assigned dataset. "
       },
       "seeding_key": {
         "activity_section.key": "4e1b6878-36c3-43af-b81b-7571b1aff9fe",
@@ -2791,8 +2741,8 @@
       "key": "65019e4b-6482-4bb6-80ea-2ee093ab9045",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2, and have them select the dataset that corresponds to the one under \"Part 1\" of the activity guide. Students should work with their partner, following the instructions to create the desired bar chart or line graph. Once the visualization is created, students should take a moment and explore the dataset and visualization, then discuss and answer the questions with their partner.",
-        "progression_name": "CODAP Level"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2. Students should work with their partner, following the instructions to explore each dataset and visualization. Then discuss and answer the questions with their partner.",
+        "progression_name": "Data Interpretation"
       },
       "seeding_key": {
         "activity_section.key": "65019e4b-6482-4bb6-80ea-2ee093ab9045",
@@ -2813,11 +2763,11 @@
       "key": "814d15c9-1ffb-49d0-9dea-84bdbf912dde",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, ensure that students are creating the desired visualizations (see the Exemplar Jigsaw Graphs). Prompt students to go beyond simple observations by asking probing questions that encourage them to think about the \"why\" and \"how\" behind the data patterns they observe. Ensure that both students in each pair are engaged and contributing to the discussions.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, ensure that students are reviewing the visualizations. Prompt students to go beyond simple observations by asking probing questions that encourage them to think about the \"why\" and \"how\" behind the data outliers, patterns, and trends they observe. Ensure that both students in each pair are engaged and contributing to the discussions.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students should spend no more than ten minutes on Part 1. It might be helpful to display a timer or to announce to students where they should be in the process of completing Part 1. For example, after about four minutes let students know that they should be answering the questions."
+            "markdown": "Students should spend no more than twenty minutes on Part 1, roughly five minutes per level. It might be helpful to display a timer or to announce to students where they should be in the process of completing Part 1. For example, after about two minutes of reviewing the data and visualization let students know that they should be answering the questions. "
           }
         ]
       },
@@ -2827,25 +2777,12 @@
       }
     },
     {
-      "key": "788d1a7a-1981-461e-aa52-34ca59d06eb7",
+      "key": "8783d942-3169-4095-a73c-3106cdcec33c",
       "position": 6,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "788d1a7a-1981-461e-aa52-34ca59d06eb7",
-        "lesson_activity.key": "598b98b4-2486-4dbc-9b42-c3ef03008767"
-      }
-    },
-    {
-      "key": "8783d942-3169-4095-a73c-3106cdcec33c",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to separate from their partner and form a new group of 6, making sure each member of the group has worked with a different dataset from Part 1. Check that all datasets from 1 to 6 are represented within each group. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to use Part 2 of their activity guide to help them share, discuss and explore the connections, common themes, and conflicting data points among their datasets and implications of each visualization. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share and discuss in their groups, circulate to ensure they are engaging in meaningful discussions and staying on task. Prompt students to delve deeper during both analysis and group discussions, ensuring they explore beyond surface level observations. For those groups who might need the additional assistance, guide them to consider the implications of their findings not just on Micah’s habits but as a reflection of broader data analysis challenges.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to think about everything they have seen and learned about Micah and their cleaning habits. Based on the group’s combined insights, direct students to work together to create a comprehensive Expository Data Story that explains Micah’s cleaning habits over time. Let students know that they only have five minutes to create this story, so they should keep it short and to the point, ensuring that their decisions are based on their datasets. Students should use their activity guide to jot down their story ideas but do not need to write full sentences or paragraphs yet - they just need to make sure they know what their narrative is as they will be recording it on Level 3 during the Wrap Up.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, ensure students effectively integrate data insights from various datasets to form a coherent story. Encourage them to delve beyond surface-level descriptions by asking probing questions that stimulate exploration of underlying causes and broader implications. Monitor for accuracy and consistency in students' narratives, ensuring claims are supported by data. Additionally, guide students who need additional support on structuring their narratives clearly, perhaps using simple narrative frameworks like chronological order or cause and effect, can help maintain logical flow and clarity.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a group, have students discuss their data interpretations and observations from the activity.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share and discuss in their groups, circulate to ensure they are engaging in meaningful discussions and staying on task. Prompt students to delve deeper during both analysis and group discussions, ensuring they explore beyond surface level observations. For those groups who might need the additional assistance, guide them to consider the implications of their findings not just on Micah’s habits but as a reflection of broader data analysis challenges\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 3.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students to work together to create an Expository Data Story that explains Micah’s cleaning habits over time. Students should keep it short and to the point, ensuring that their decisions are based on their datasets. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, ensure students integrate their insights from all four datasets to form a coherent story. Encourage them to go beyond surface-level descriptions by having them consider underlying causes and broader implications. .",
+        "progression_name": "Expository Data Story",
         "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, you may choose to have students find a partner that was not in their group of 6 and instruct them to share and compare their narratives with one another."
-          },
           {
             "type": "assessmentOpportunity",
             "markdown": "The Data Interpretation activity guide can be collected and used as a formative assessment of student learning."
@@ -2859,23 +2796,25 @@
     },
     {
       "key": "a01bd90a-3d1a-46db-bdf0-28985b833c5c",
-      "position": 8,
+      "position": 7,
       "properties": {
-        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 3-5.\n* **Level 3:** Students record their expository data story.\n* **Level 4:** Students answer reflection questions.\n* **Level 5:** Students practice identifying trends, patterns, and outliers in a data visualization.",
-        "progression_name": "Check for Understanding",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, you might decide to ask students to share and have a class discussion about the reflection question in Level 4 and data visualization on Level 5."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Each of the Wrap Up levels can be used as a formative assessment of the lesson objectives."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have one person from each group share a highlight from their group’s data story with the class.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What commonalities and differences do we see in the different expository data stories? What are the ethical implications of presenting the same data in different ways?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to identify common themes and patterns across data stories. They should also be able to identify differences in how they presented the data. Have students consider the different conclusions one could draw from presenting the data in different ways.\n",
+        "progression_name": "Expository Data Story"
       },
       "seeding_key": {
         "activity_section.key": "a01bd90a-3d1a-46db-bdf0-28985b833c5c",
+        "lesson_activity.key": "598b98b4-2486-4dbc-9b42-c3ef03008767"
+      }
+    },
+    {
+      "key": "6994a727-3930-42c1-83a2-68744cf19302",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 4\n* Students practice identifying trends, patterns, and outliers in a data visualization.\n",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "6994a727-3930-42c1-83a2-68744cf19302",
         "lesson_activity.key": "598b98b4-2486-4dbc-9b42-c3ef03008767"
       }
     },
@@ -4407,6 +4346,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level3_2025"
+        ],
         "progression": "Creating Bar Charts"
       },
       "bonus": false,
@@ -4429,6 +4371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-panel3_2025_launch_2025"
+        ],
         "progression": "Creating Pie Charts"
       },
       "bonus": false,
@@ -4451,6 +4396,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level4"
+        ],
         "progression": "Creating Pie Charts"
       },
       "bonus": false,
@@ -4473,27 +4421,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-lesson7-panel5-2025-launch_2025"
+        "level_keys": [
+          "data-science-lesson7-panel6-2025-launch_2025"
         ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "8ce03ab8-b0ed-4de1-a4df-360f2f800b01"
-      },
-      "level_keys": [
-        "data-science-lesson7-panel5-2025-launch_2025"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Applying Filters"
       },
       "bonus": false,
@@ -4511,11 +4441,14 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 7,
+      "chapter": 30,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level6_2025"
+        ],
         "progression": "Applying Filters"
       },
       "bonus": false,
@@ -4533,8 +4466,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 8,
+      "chapter": 31,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4558,11 +4491,14 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 9,
+      "chapter": 32,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-Free_Response-2025-launch"
+        ],
         "progression": "AI Reflection"
       },
       "bonus": false,
@@ -4580,7 +4516,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4605,11 +4541,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson8-cleaning-data-panel_2025_launch"
+        ],
         "progression": "Cleaning Data Panel"
       },
       "bonus": false,
@@ -4627,7 +4566,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4652,7 +4591,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4677,7 +4616,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4702,7 +4641,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4710,7 +4649,7 @@
         "level_keys": [
           "data-science-ch1-lesson9-level2-choice_2025"
         ],
-        "progression": "CODAP Level"
+        "progression": "Data Interpretation"
       },
       "bonus": false,
       "seeding_key": {
@@ -4727,15 +4666,12 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson9-level3_2025"
-        ],
-        "progression": "Check for Understanding"
+        "progression": "Expository Data Story"
       },
       "bonus": false,
       "seeding_key": {
@@ -4745,46 +4681,18 @@
         "lesson.key": "Data Interpretation",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "a01bd90a-3d1a-46db-bdf0-28985b833c5c"
+        "activity_section.key": "8783d942-3169-4095-a73c-3106cdcec33c"
       },
       "level_keys": [
         "data-science-ch1-lesson9-level3_2025"
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson9-level4_2025"
-        ],
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-science-ch1-lesson9-level4_2025"
-        ],
-        "lesson.key": "Data Interpretation",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "a01bd90a-3d1a-46db-bdf0-28985b833c5c"
-      },
-      "level_keys": [
-        "data-science-ch1-lesson9-level4_2025"
-      ]
-    },
-    {
-      "chapter": 42,
-      "position": 5,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "data-science-ch1-lesson9-level5_2025"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4795,14 +4703,14 @@
         "lesson.key": "Data Interpretation",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "a01bd90a-3d1a-46db-bdf0-28985b833c5c"
+        "activity_section.key": "6994a727-3930-42c1-83a2-68744cf19302"
       },
       "level_keys": [
         "data-science-ch1-lesson9-level5_2025"
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4827,7 +4735,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4852,7 +4760,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4877,7 +4785,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4902,7 +4810,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4927,11 +4835,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level6_2025"
+        ],
         "progression": "Creating Histograms"
       },
       "bonus": false,
@@ -4949,7 +4860,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4974,11 +4885,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level7_2025"
+        ],
         "progression": "Creating Scatterplots"
       },
       "bonus": false,
@@ -4996,7 +4910,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 49,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5021,11 +4935,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 50,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-formulas-free-response_2025"
+        ],
         "progression": "Using Formulas with Datasets"
       },
       "bonus": false,
@@ -5043,7 +4960,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 51,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5068,7 +4985,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5093,7 +5010,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5118,7 +5035,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5143,7 +5060,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5168,7 +5085,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5193,7 +5110,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5557,18 +5474,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "data-science-lesson7-panel5-2025-launch_2025",
-        "script_level.level_keys": [
-          "data-science-lesson7-panel5-2025-launch_2025"
-        ],
-        "lesson.key": "Introduction to Data Visualization",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "8ce03ab8-b0ed-4de1-a4df-360f2f800b01"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "data-science-lesson7-panel6-2025-launch_2025",
         "script_level.level_keys": [
           "data-science-lesson7-panel6-2025-launch_2025"
@@ -5696,19 +5601,7 @@
         "lesson.key": "Data Interpretation",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "a01bd90a-3d1a-46db-bdf0-28985b833c5c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "data-science-ch1-lesson9-level4_2025",
-        "script_level.level_keys": [
-          "data-science-ch1-lesson9-level4_2025"
-        ],
-        "lesson.key": "Data Interpretation",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif6-2025",
-        "activity_section.key": "a01bd90a-3d1a-46db-bdf0-28985b833c5c"
+        "activity_section.key": "8783d942-3169-4095-a73c-3106cdcec33c"
       }
     },
     {
@@ -5720,7 +5613,7 @@
         "lesson.key": "Data Interpretation",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif6-2025",
-        "activity_section.key": "a01bd90a-3d1a-46db-bdf0-28985b833c5c"
+        "activity_section.key": "6994a727-3930-42c1-83a2-68744cf19302"
       }
     },
     {
@@ -5930,15 +5823,15 @@
   ],
   "resources": [
     {
-      "name": "[EXEMPLAR] Jigsaw Graphs",
-      "url": "https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FLZicfZ8p84qBSfEs0LRw%2Ffile.json",
-      "key": "_exemplar_jigsaw_graphs",
+      "name": "[KEY] Activity Guide - Data Interpretation",
+      "url": "https://docs.google.com/document/d/1xF87sS2PXuUoACQS13EXSe6x_ZDiNePrAa7huHNr788/",
+      "key": "_key_activity_guide_-_data_interpretation",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
+        "audience": "Teacher",
+        "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "_exemplar_jigsaw_graphs"
+        "resource.key": "_key_activity_guide_-_data_interpretation"
       }
     },
     {
@@ -5963,6 +5856,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_data_scientist_tents"
+      }
+    },
+    {
+      "name": "Activity Guide - Data Interpretation",
+      "url": "https://docs.google.com/document/d/16QeUhLDpKVBrIb4Uo61Ba3yAvKK-6Dn0OXmns2M1-N0/",
+      "key": "activity_guide_-_data_interpretation",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "activity_guide_-_data_interpretation"
       }
     },
     {
@@ -6083,84 +5988,6 @@
       },
       "seeding_key": {
         "resource.key": "data_interpretation"
-      }
-    },
-    {
-      "name": "Data Interpretation - Dataset #1",
-      "url": "https://docs.google.com/document/d/1baUZ-M7KUmz0slX8iULIVUJKpnqg-Q6wZFCuHlNaAr8/edit?usp=drive_link",
-      "key": "data_interpretation_-_dataset_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "data_interpretation_-_dataset_1"
-      }
-    },
-    {
-      "name": "Data Interpretation - Dataset #2",
-      "url": "https://docs.google.com/document/d/1dk7aMg3kt__oRVdkNGBlwMRJ7M64PJ5JpCpqK3qHnRQ/edit?usp=drive_link",
-      "key": "data_interpretation_-_dataset_2",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "data_interpretation_-_dataset_2"
-      }
-    },
-    {
-      "name": "Data Interpretation - Dataset #3",
-      "url": "https://docs.google.com/document/d/1istc2atn3m4WFlk-xKtp5GI579ALAuP-Py4w3ohpaJc/edit?usp=drive_link",
-      "key": "data_interpretation_-_dataset_3",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "data_interpretation_-_dataset_3"
-      }
-    },
-    {
-      "name": "Data Interpretation - Dataset #4",
-      "url": "https://docs.google.com/document/d/1eGXSm1jBl_RRU4NZqXwiHSi-lzl-RNWIrrzlrM4xgg0/edit?usp=drive_link",
-      "key": "data_interpretation_-_dataset_4",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "data_interpretation_-_dataset_4"
-      }
-    },
-    {
-      "name": "Data Interpretation - Dataset #5",
-      "url": "https://docs.google.com/document/d/101BWNLoTdZ9_nnvV9CMqesNXjZLgqCJViLwBBAej0JM/edit?usp=drive_link",
-      "key": "data_interpretation_-_dataset_5",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "data_interpretation_-_dataset_5"
-      }
-    },
-    {
-      "name": "Data Interpretation - Dataset #6",
-      "url": "https://docs.google.com/document/d/1z5PuP-GOnk55S-mYI2QSWxc_vnRGBlihwtwDJa5UXz8/edit?usp=drive_link",
-      "key": "data_interpretation_-_dataset_6",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "data_interpretation_-_dataset_6"
       }
     },
     {
@@ -6357,6 +6184,18 @@
       }
     },
     {
+      "name": "Pizza Party Survey Dataset",
+      "url": "https://docs.google.com/spreadsheets/d/1AlVNpxzypX82fNlPDxDEa5ww72J_G2kyfZ2sFJedBJA/view",
+      "key": "pizza_party_survey_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "pizza_party_survey_dataset"
+      }
+    },
+    {
       "name": "Possible Questions",
       "url": "https://docs.google.com/document/d/1IW9npsTXMycjHznEfWqY_J16z8ULBru-oyKU7Bd_ftI/view",
       "key": "possible_questions",
@@ -6393,15 +6232,14 @@
       }
     },
     {
-      "name": "Unit 1 Guided Notes",
-      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit#heading=h.gqwpeghz4npc",
-      "key": "unit_1_guided_notes",
+      "name": "Introduction to Data Science Unit Guide",
+      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=sharing",
+      "key": "unit_guide",
       "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
+        "audience": "Student"
       },
       "seeding_key": {
-        "resource.key": "unit_1_guided_notes"
+        "resource.key": "unit_guide"
       }
     },
     {
@@ -6470,8 +6308,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "resource.key": "unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Data Interpretation",
-        "resource.key": "_exemplar_jigsaw_graphs"
+        "resource.key": "_key_activity_guide_-_data_interpretation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "activity_guide_-_data_interpretation"
       }
     },
     {
@@ -6483,37 +6333,7 @@
     {
       "seeding_key": {
         "lesson.key": "Data Interpretation",
-        "resource.key": "data_interpretation_-_dataset_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Interpretation",
-        "resource.key": "data_interpretation_-_dataset_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Interpretation",
-        "resource.key": "data_interpretation_-_dataset_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Interpretation",
-        "resource.key": "data_interpretation_-_dataset_4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Interpretation",
-        "resource.key": "data_interpretation_-_dataset_5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Interpretation",
-        "resource.key": "data_interpretation_-_dataset_6"
+        "resource.key": "unit_guide"
       }
     },
     {
@@ -6536,6 +6356,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Data Rights",
+        "resource.key": "unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Data Storytelling",
         "resource.key": "data_storytelling"
       }
@@ -6548,6 +6374,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Data Storytelling",
+        "resource.key": "unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Effective Data Questions",
         "resource.key": "effective_data_questions"
       }
@@ -6556,6 +6388,12 @@
       "seeding_key": {
         "lesson.key": "Effective Data Questions",
         "resource.key": "possible_questions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Effective Data Questions",
+        "resource.key": "unit_guide"
       }
     },
     {
@@ -6574,6 +6412,12 @@
       "seeding_key": {
         "lesson.key": "Ethical Data Collection",
         "resource.key": "ethical_data_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ethical Data Collection",
+        "resource.key": "unit_guide"
       }
     },
     {
@@ -6609,13 +6453,25 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Data Science",
-        "resource.key": "unit_1_guided_notes"
+        "resource.key": "unit_guide"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Introduction to Data Visualization",
         "resource.key": "introduction_to_data_visualization"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
+        "resource.key": "pizza_party_survey_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Data Visualization",
+        "resource.key": "unit_guide"
       }
     },
     {
@@ -6644,8 +6500,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Making Sense of Data",
+        "resource.key": "unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "More Visualization Techniques",
         "resource.key": "more_visualization_techniques"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
+        "resource.key": "unit_guide"
       }
     }
   ],
@@ -7293,7 +7161,7 @@
     {
       "key": "4f67bbc4-fd23-49b4-ab35-7cd73c18467b",
       "properties": {
-        "description": "Filter and sort data to gain new insights from visualizations"
+        "description": "Filter data to gain new insights from visualizations"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Data Visualization",

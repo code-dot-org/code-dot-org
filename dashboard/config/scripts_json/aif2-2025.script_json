@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-17 03:50:48 UTC",
+    "serialized_at": "2025-04-18 02:13:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -236,6 +236,8 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "overview": "**How can we use loops to make our code repeat instructions and solve problems more efficiently?**\n\nIn this lesson, students are introduced to `while` loops as a way to repeat instructions in Python while a condition remains true. The lesson begins with an unplugged activity to help students intuitively understand repetition and stopping conditions, then transitions into guided practice with loop syntax and structure. Through scaffolded levels, students modify, debug, and write `while` loops using conditions like `can_move()` and `has_paint()`, with increasing independence and creativity.",
+        "student_overview": "**How can we use loops to make our code repeat instructions and solve problems more efficiently?**\n\nIn this lesson, you get to explore how to make your code repeat steps without copying the same line over and over. You'll try out `while` loops in Python and see how they can help the `Painter` keep moving, paint a path, or stop when something changes. Along the way, you fix loops that don't work, write your own functions, and use conditions like `can_move()` and `has_paint()` to decide when a loop should stop."
       },
       "seeding_key": {
         "lesson.key": "Introduction to Loops",
@@ -3014,7 +3016,7 @@
       "key": "d7fa26c3-7251-422a-b269-266431da99a2",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the difference between function and method.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why is it helpful to include a comment in a function?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that comments explain what a function is supposed to do without needing to read every line of code. They should also see comments as a way to communicate intent, especially when the function name alone doesn't tell the full story."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why is it helpful to include a comment in a function?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that comments explain what a function is supposed to do without needing to read every line of code. They should also see comments as a way to communicate intent, especially when the function name alone doesn't tell the full story."
       },
       "seeding_key": {
         "activity_section.key": "d7fa26c3-7251-422a-b269-266431da99a2",
@@ -3212,7 +3214,7 @@
       "key": "e25d2160-44db-42a0-be00-adadc4b2fb16",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain why parameters are useful for functions.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Do This: Click through the animated slide to explain the difference between function and method.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain why parameters are useful for functions.",
         "duration": "20",
         "name": "Painter Functions"
       },
@@ -3344,6 +3346,8 @@
       "key": "43ccf1c0-83b3-4b4f-9764-03a2214b7093",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Before students arrive, scatter small items (e.g., markers, paper clips, sticky notes) around the room and designate a cardboard box or plastic bin as the place for the items to end up. Tell students to read the prompt on the screen and follow the directions.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What was the condition for repeating the task?*\n- *What made the task stop?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that the condition was “items on the floor”. While this was still true, students needed to continue picking up the items and placing them in the bin. They stopped the task when all of the items had been collected.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the definition and components of an algorithm.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "name": "Repeating Tasks"
       },
       "seeding_key": {
         "activity_section.key": "43ccf1c0-83b3-4b4f-9764-03a2214b7093",
@@ -3354,6 +3358,15 @@
       "key": "276c83f9-0a2c-4967-9b08-4ecc18c8e983",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Suppose we wanted to move our `Painter` from (0,0) to the edge of The Neighborhood. Why might we want to reduce repetition?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that typing the same line of code over and over is repetitive, inefficient, and easy to mess up. They might say things like, \"This takes a lot of space,\" or \"If I wanted to change something, I'd have to change it in every line,\" or \"It’s boring to write.\" This sets up the motivation for using a loop – to make code shorter, cleaner, and easier to manage.",
+        "duration": "15",
+        "name": "Introduction to while Loops",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Jot down some of the student responses on the board. Highlight any comments about efficiency, readability, or avoiding mistakes – those will be key ideas to return to when you introduce the loop syntax next."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "276c83f9-0a2c-4967-9b08-4ecc18c8e983",
@@ -3361,9 +3374,151 @@
       }
     },
     {
-      "key": "d1111c87-cd59-47a0-999a-b2f8be02e5f1",
+      "key": "48aaa5d7-0fa7-471d-8570-d461ad70987c",
       "position": 2,
       "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "48aaa5d7-0fa7-471d-8570-d461ad70987c",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "be641172-1614-46c9-9fb2-139f517fc1c5",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to the code snippet on the slide. Highlight that this code does the exact same thing as the repeated `talia.move()` lines from the previous slide – but it's shorter, cleaner, and easier to understand. Explain the structure of the `while` loop: the keyword `while`, the condition `talia.canMove()`, the colon `:`, and the indented action `talia.move()`.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is a good moment to explicitly connect students' earlier observations to this code. Ask them if this matches what they saw the robot doing in the unplugged activity – repeating an action until a stop condition was met."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be641172-1614-46c9-9fb2-139f517fc1c5",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "bf602b4a-cce0-45c3-8bc8-f32dba72fe0d",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bf602b4a-cce0-45c3-8bc8-f32dba72fe0d",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "196e748a-995c-463f-860c-78472fa468fd",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This: ** Define*loop*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that `while` is a keyword in Python that signals the start of a loop. This tells the computer to repeat something while a condition is true.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Let students know that keywords like while are special — they're built into the language and always need to be spelled exactly right. If a keyword is misspelled, the program won't run."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "196e748a-995c-463f-860c-78472fa468fd",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "74d7fd9c-8129-40ff-a8f7-a137da007ab0",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "74d7fd9c-8129-40ff-a8f7-a137da007ab0",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "b0eeeef5-d4fc-40a4-924d-89d40fd8378f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that `talia.can_move()` is what the computer checks before running the loop. If it's true, the loop runs. If it's false, the loop ends.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Help students understand that what is checked must always give a Boolean value (`True` or `False`). You might ask the class: \"What else might we check in a loop?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b0eeeef5-d4fc-40a4-924d-89d40fd8378f",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "15ceb439-02e4-4b7a-bc94-aa54bd8c7105",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "15ceb439-02e4-4b7a-bc94-aa54bd8c7105",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "103739cb-48ff-4a6e-9cfd-4dfa25205b55",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the colon is required syntax and tells Python that the next indented lines belong to the loop.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that this block is the part of the code that runs again and again while the condition is true.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use this slide to reinforce the visual structure of the loop. Ask students what they notice about the spacing in front of the two lines that run inside the loop.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that indentation matters in Python. Without it, the computer won't know what code is part of the loop. If a line is not indented, it won't repeat!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "103739cb-48ff-4a6e-9cfd-4dfa25205b55",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "ca0d189a-ee59-4937-a7e6-f03c1f70cda8",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ca0d189a-ee59-4937-a7e6-f03c1f70cda8",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "58cc06e7-d446-4252-88ea-d7585006ef56",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how a `while` loop works. Walk students through the flowchart:\n- The program checks the condition (`talia.canMove()`).\n- If it's `True`, the action (`talia.move()`) happens.\n- Then it checks the condition again.\n- If it's still `True`, it repeats. If it's `False`, the loop ends.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *condition*."
+      },
+      "seeding_key": {
+        "activity_section.key": "58cc06e7-d446-4252-88ea-d7585006ef56",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "bf0348e9-f089-445a-af7c-82dc66a62e6a",
+      "position": 12,
+      "properties": {
+        "description": "Today, we will work with three new methods that give our `Painter` information in the form of either true or false, also called a Boolean value.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bf0348e9-f089-445a-af7c-82dc66a62e6a",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "d1111c87-cd59-47a0-999a-b2f8be02e5f1",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 1 to complete Levels 1 through 6.\n- **Level #1:** In Python Lab, students modify code using `can_move()` in a `while` loop.\n- **Level #2:** Students modify code using `has_paint()` in a `while` loop.\n- **Level #3:** Students modify code using `is_on_bucket()` in a `while` loop.\n- **Level #4:** Students debug a `while` loop that has an indentation error.\n- **Level #5:** Students are given a loop like `while painter.has_paint():` but the `Painter` starts without paint. They observe that the loop doesn't run and must fix the condition.\n- **Level #6:** Students complete a Check Your Understanding.",
         "progression_name": "Exploring while Loops"
       },
       "seeding_key": {
@@ -3373,7 +3528,7 @@
     },
     {
       "key": "0f7a7ed3-fb87-4d49-903a-cf4518d5200c",
-      "position": 3,
+      "position": 14,
       "properties": {
         "progression_name": "Check Your Understanding"
       },
@@ -3383,9 +3538,39 @@
       }
     },
     {
-      "key": "21afbf6a-7141-4d87-84a9-fecb21f0c96c",
-      "position": 4,
+      "key": "1797a7d6-fb76-4eef-a8de-e9f662b4a117",
+      "position": 15,
       "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for:\n- Whether they understand the loop structure (condition, colon, indented block)\n- Misconceptions about when the loop should stop",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to say what their loop is doing in plain language before writing it in code. This helps them think through the logic before jumping into syntax."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1797a7d6-fb76-4eef-a8de-e9f662b4a117",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "66ffe2b4-dece-4f7f-8a25-fea749ac1b80",
+      "position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "66ffe2b4-dece-4f7f-8a25-fea749ac1b80",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
+      "key": "21afbf6a-7141-4d87-84a9-fecb21f0c96c",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you learn about `while` loops?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share what they noticed about `while` loops, such as the syntax or how they are used to repeat actions.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have about `while` loops?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share any questions they have about `while` loops.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are the benefits of using `while` loops in our code?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that `while` loops are useful because they reduce repetition in code and make programs shorter and easier to read. They should understand that `while` loops allow the computer to repeat an action over and over until a condition becomes false. This is especially helpful when we don't know in advance how many times an action needs to happen. Some students may also point out that loops make it easier to debug or update code, since you don't have to change the same instruction in multiple places – those are excellent insights to highlight and build on.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 7 to complete Levels 7 through 10.\n- **Level #7:** Students complete a choice level where they write a function that uses `can_move()`.\n- **Level #8:** Students write a function that uses `is_on_bucket()`.\n- **Level #9:** Students complete a choice level where they write a function that uses `has_paint()`.\n- **Level #10:** Students complete a vocabulary Check Your Understanding.\n- **Level #11:** Students complete a Check Your Understanding.",
+        "duration": "15",
+        "name": "Loops with the Painter",
         "progression_name": "Loops with the Painter"
       },
       "seeding_key": {
@@ -3394,9 +3579,28 @@
       }
     },
     {
+      "key": "4d651f42-313b-41d8-b9f9-b79d677de91d",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, watch for whether they're correctly using indentation and syntax and if they're thinking through when the loop should stop. Ask students to explain their loop in plain language if they're stuck — that often helps them catch logic errors or infinite loop mistakes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Levels 7 and 9 are choice levels. Encourage students to try at least one and challenge themselves.\n\nEncourage students to use the UMPIRE strategy as they work through each level: plan what the loop should do, identify the stopping condition, write the code, test it, revise it, and explain how it works."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d651f42-313b-41d8-b9f9-b79d677de91d",
+        "lesson_activity.key": "b3b84662-5ead-4fdc-b5f0-41dc794fd539"
+      }
+    },
+    {
       "key": "a57f25d8-4c1a-4df6-b394-4cfb08ed206f",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their unit guides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.",
+        "name": "Question of the Day Reflection"
       },
       "seeding_key": {
         "activity_section.key": "a57f25d8-4c1a-4df6-b394-4cfb08ed206f",
@@ -6079,15 +6283,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson8-level8_2025-launch_2025"
-        ],
         "progression": "Loops with the Painter"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson8-level8_2025-launch_2025"
+          "programming-fundamentals-lesson8-level8a_2025-launch_2025"
         ],
         "lesson.key": "Introduction to Loops",
         "lesson_group.key": "lessonGroup-3",
@@ -6095,7 +6296,7 @@
         "activity_section.key": "21afbf6a-7141-4d87-84a9-fecb21f0c96c"
       },
       "level_keys": [
-        "programming-fundamentals-lesson8-level8_2025-launch_2025"
+        "programming-fundamentals-lesson8-level8a_2025-launch_2025"
       ]
     },
     {
@@ -6129,6 +6330,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-vocab_2025"
+        ],
         "progression": "Loops with the Painter"
       },
       "bonus": false,
@@ -6201,15 +6405,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson9-level2_2025-launch_2025"
-        ],
         "progression": "Exploring Conditionals"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson9-level2_2025-launch_2025"
+          "programming-fundamentals-lesson9-level2a_2025-launch_2025"
         ],
         "lesson.key": "Conditional Statements",
         "lesson_group.key": "lessonGroup-3",
@@ -6217,7 +6418,7 @@
         "activity_section.key": "ca7c07ae-f729-45c2-8722-89d2a1edcd25"
       },
       "level_keys": [
-        "programming-fundamentals-lesson9-level2_2025-launch_2025"
+        "programming-fundamentals-lesson9-level2a_2025-launch_2025"
       ]
     },
     {
@@ -6252,56 +6453,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "programming-fundamentals-lesson9-level4_2025-launch_2025"
-        ],
-        "progression": "Exploring Conditionals"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson9-level4_2025-launch_2025"
-        ],
-        "lesson.key": "Conditional Statements",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "ca7c07ae-f729-45c2-8722-89d2a1edcd25"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson9-level4_2025-launch_2025"
-      ]
-    },
-    {
-      "chapter": 75,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson9-level5_2025-launch_2025"
-        ],
-        "progression": "Exploring Conditionals"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson9-level5_2025-launch_2025"
-        ],
-        "lesson.key": "Conditional Statements",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "ca7c07ae-f729-45c2-8722-89d2a1edcd25"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson9-level5_2025-launch_2025"
-      ]
-    },
-    {
-      "chapter": 76,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "programming-fundamentals-lesson9-level6_2025-launch_2025"
         ],
         "progression": "Exploring Conditionals"
@@ -6321,34 +6472,9 @@
       ]
     },
     {
-      "chapter": 77,
-      "position": 7,
+      "chapter": 75,
+      "position": 5,
       "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson9-vocab_2025"
-        ],
-        "progression": "Check Your Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson9-vocab_2025"
-        ],
-        "lesson.key": "Conditional Statements",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "c0542057-c942-4b5a-b91e-198cee0abbae"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson9-vocab_2025"
-      ]
-    },
-    {
-      "chapter": 78,
-      "position": 8,
-      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -6371,8 +6497,8 @@
       ]
     },
     {
-      "chapter": 79,
-      "position": 9,
+      "chapter": 76,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -6396,8 +6522,8 @@
       ]
     },
     {
-      "chapter": 80,
-      "position": 10,
+      "chapter": 77,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6421,9 +6547,31 @@
       ]
     },
     {
-      "chapter": 81,
-      "position": 11,
+      "chapter": 78,
+      "position": 8,
       "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Decisions with the Painter"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-vocab_2025"
+        ],
+        "lesson.key": "Conditional Statements",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif2-2025",
+        "activity_section.key": "ef6fcb18-665d-41d3-b426-66757294ed6e"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson9-vocab_2025"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 9,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -6446,7 +6594,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6471,7 +6619,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6496,7 +6644,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6521,7 +6669,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 83,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6546,7 +6694,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 84,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6571,7 +6719,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 85,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6596,7 +6744,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 86,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6621,7 +6769,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 87,
       "position": 7,
       "activity_section_position": 2,
       "assessment": true,
@@ -6646,7 +6794,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 88,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6671,7 +6819,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 89,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -6696,7 +6844,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 90,
       "position": 10,
       "activity_section_position": 3,
       "assessment": true,
@@ -6721,7 +6869,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 91,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6746,7 +6894,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 92,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6771,7 +6919,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6796,7 +6944,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6821,7 +6969,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 95,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6846,7 +6994,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 96,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6871,7 +7019,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6896,7 +7044,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6921,7 +7069,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6946,7 +7094,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6971,7 +7119,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -6996,7 +7144,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7021,7 +7169,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7046,7 +7194,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7071,7 +7219,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 105,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7096,7 +7244,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 106,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -7121,7 +7269,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7146,7 +7294,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 108,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7171,7 +7319,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 109,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7196,7 +7344,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 110,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7221,7 +7369,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 111,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7246,7 +7394,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 112,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7271,7 +7419,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 113,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7296,7 +7444,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 114,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7321,7 +7469,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 115,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7346,7 +7494,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 116,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7371,7 +7519,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 117,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7396,7 +7544,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 118,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7421,7 +7569,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 119,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7446,7 +7594,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 120,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7471,7 +7619,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 121,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7496,7 +7644,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 122,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -7521,7 +7669,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 123,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7546,7 +7694,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 124,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -7571,7 +7719,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 125,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7596,7 +7744,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 126,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7621,7 +7769,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 127,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7646,7 +7794,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 128,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7671,7 +7819,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 129,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7696,7 +7844,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 130,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7721,7 +7869,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 131,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7746,7 +7894,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 132,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -7771,7 +7919,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7796,7 +7944,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 134,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7821,7 +7969,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 135,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7846,7 +7994,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 136,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7871,7 +8019,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 137,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7896,7 +8044,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 138,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7921,7 +8069,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 139,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7946,7 +8094,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 140,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -8766,9 +8914,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson8-level8_2025-launch_2025",
+        "level.key": "programming-fundamentals-lesson8-level8a_2025-launch_2025",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson8-level8_2025-launch_2025"
+          "programming-fundamentals-lesson8-level8a_2025-launch_2025"
         ],
         "lesson.key": "Introduction to Loops",
         "lesson_group.key": "lessonGroup-3",
@@ -8826,9 +8974,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson9-level2_2025-launch_2025",
+        "level.key": "programming-fundamentals-lesson9-level2a_2025-launch_2025",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson9-level2_2025-launch_2025"
+          "programming-fundamentals-lesson9-level2a_2025-launch_2025"
         ],
         "lesson.key": "Conditional Statements",
         "lesson_group.key": "lessonGroup-3",
@@ -8850,30 +8998,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson9-level4_2025-launch_2025",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson9-level4_2025-launch_2025"
-        ],
-        "lesson.key": "Conditional Statements",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "ca7c07ae-f729-45c2-8722-89d2a1edcd25"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "programming-fundamentals-lesson9-level5_2025-launch_2025",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson9-level5_2025-launch_2025"
-        ],
-        "lesson.key": "Conditional Statements",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "ca7c07ae-f729-45c2-8722-89d2a1edcd25"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "programming-fundamentals-lesson9-level6_2025-launch_2025",
         "script_level.level_keys": [
           "programming-fundamentals-lesson9-level6_2025-launch_2025"
@@ -8882,18 +9006,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif2-2025",
         "activity_section.key": "ca7c07ae-f729-45c2-8722-89d2a1edcd25"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "programming-fundamentals-lesson9-vocab_2025",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson9-vocab_2025"
-        ],
-        "lesson.key": "Conditional Statements",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "c0542057-c942-4b5a-b91e-198cee0abbae"
       }
     },
     {
@@ -8925,6 +9037,18 @@
         "level.key": "programming-fundamentals-lesson9-level9_2025-launch_2025",
         "script_level.level_keys": [
           "programming-fundamentals-lesson9-level9_2025-launch_2025"
+        ],
+        "lesson.key": "Conditional Statements",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif2-2025",
+        "activity_section.key": "ef6fcb18-665d-41d3-b426-66757294ed6e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson9-vocab_2025",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-vocab_2025"
         ],
         "lesson.key": "Conditional Statements",
         "lesson_group.key": "lessonGroup-3",
@@ -10258,6 +10382,16 @@
       }
     },
     {
+      "key": "condition",
+      "word": "condition",
+      "definition": "a rule that the computer checks to decide if it should keep going",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "condition"
+      }
+    },
+    {
       "key": "conditional_statement",
       "word": "conditional statement",
       "definition": "a command that runs only if a certain condition is True, allowing a program to make decisions",
@@ -10275,6 +10409,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "key": "debug",
+      "word": "debug",
+      "definition": "to find out why your code isn't working and fix the problem so your program runs the way you expect",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "debug"
       }
     },
     {
@@ -10320,7 +10464,7 @@
     {
       "key": "loop",
       "word": "loop",
-      "definition": "code that continues to repeat while a condition is true",
+      "definition": "a way to tell a computer to repeat a set of instructions",
       "properties": {
       },
       "seeding_key": {
@@ -10484,6 +10628,12 @@
     {
       "seeding_key": {
         "lesson.key": "Introduction to Loops",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Loops",
         "vocabulary.key": "loop"
       }
     },
@@ -10497,6 +10647,12 @@
       "seeding_key": {
         "lesson.key": "Variables and Data Flow",
         "vocabulary.key": "data_type"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables and Data Flow",
+        "vocabulary.key": "debug"
       }
     },
     {
@@ -10651,6 +10807,16 @@
       }
     },
     {
+      "key": "60e4e0a7-7045-435e-ba55-32ee4743f1af",
+      "properties": {
+        "description": "Write a while loop in Python that repeats actions based on a Boolean condition."
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Loops",
+        "objective.key": "60e4e0a7-7045-435e-ba55-32ee4743f1af"
+      }
+    },
+    {
       "key": "62446c4a-b5f1-432e-a43e-7977261e776b",
       "properties": {
         "description": "Explain how emerging technologies are applied in real-world careers"
@@ -10688,6 +10854,16 @@
       "seeding_key": {
         "lesson.key": "Computational Thinking",
         "objective.key": "72dba5b6-8604-4399-85ea-fc7038efcfc6"
+      }
+    },
+    {
+      "key": "7675c5c0-f57f-4b6a-adbb-912592e71b36",
+      "properties": {
+        "description": "Describe the purpose of a loop in programming and how it helps reduce repetition."
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Loops",
+        "objective.key": "7675c5c0-f57f-4b6a-adbb-912592e71b36"
       }
     },
     {

@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 2: Teaching Lessons 1 - 5: Sequencing
+# Teaching Lessons 10 - 13: Functions
 
 <div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
     <div style="width: 70%;">
@@ -17,12 +17,12 @@ markdown <<MARKDOWN
         </ul>
         <p style="font-size: 16px; color: black;">
         <br>
-        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>25</mark> minutes
+        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>XX</mark> minutes
         </p>
     </div>
     
     <!-- Image on the right -->
-    <img src="https://images.code.org/2b751f030a999afa638fe44eb9c27b0d-image-1744665236038.13.52 PM.png" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 30%; height: auto; border-radius: 5px;">
+    <img src="https://images.code.org/876b4b33c5b5460b466056acf081e3c9-image-1744904824433.47.02 AM.png" alt="" style="width: 30%; height: auto; border-radius: 5px;">
 </div>
 <br>
 MARKDOWN

@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-16 18:52:09 UTC",
+    "serialized_at": "2025-04-17 15:58:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -51,7 +51,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "Introduction to Data Science [Unit 1]",
+      "name": "Introduction to Data Science ",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -65,12 +65,27 @@
       }
     },
     {
-      "key": "lesson-3",
-      "name": "Introduction Data Science and Python [Unit 2: Part 1]",
+      "key": "lesson-6",
+      "name": "Data Visualizations",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Introduction Data Science and Python [Unit 2: Part 1]",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -82,10 +97,10 @@
     {
       "key": "lesson-5",
       "name": "Advanced Data Science and Python [Unit 2: Part 2]",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -118,6 +133,18 @@
       "seeding_key": {
         "lesson_activity.key": "d95067e8-9fc1-400b-b21d-223494fbe23e",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science"
+      }
+    },
+    {
+      "key": "c20a020b-2588-4ed9-ba6b-18256417c7ed",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c20a020b-2588-4ed9-ba6b-18256417c7ed",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science"
       }
@@ -247,6 +274,50 @@
       "seeding_key": {
         "activity_section.key": "d58b1bde-98df-4361-a2e1-7492a4056e3f",
         "lesson_activity.key": "d95067e8-9fc1-400b-b21d-223494fbe23e"
+      }
+    },
+    {
+      "key": "cc70bf01-1960-4119-9f0f-d7da88808108",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Data Visualizations"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108",
+        "lesson_activity.key": "c20a020b-2588-4ed9-ba6b-18256417c7ed"
+      }
+    },
+    {
+      "key": "e28f2888-e81b-4080-89e2-278b01afed2c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Cleaning and Interpreting Data "
+      },
+      "seeding_key": {
+        "activity_section.key": "e28f2888-e81b-4080-89e2-278b01afed2c",
+        "lesson_activity.key": "c20a020b-2588-4ed9-ba6b-18256417c7ed"
+      }
+    },
+    {
+      "key": "6829e5ac-40dd-4d85-a6bf-17776ac8d624",
+      "position": 3,
+      "properties": {
+        "progression_name": "More Data Visuals"
+      },
+      "seeding_key": {
+        "activity_section.key": "6829e5ac-40dd-4d85-a6bf-17776ac8d624",
+        "lesson_activity.key": "c20a020b-2588-4ed9-ba6b-18256417c7ed"
+      }
+    },
+    {
+      "key": "7ad04490-971d-4e94-b3dc-84c933bf7a63",
+      "position": 4,
+      "properties": {
+        "progression_name": "Wrapping Up Unit 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ad04490-971d-4e94-b3dc-84c933bf7a63",
+        "lesson_activity.key": "c20a020b-2588-4ed9-ba6b-18256417c7ed"
       }
     },
     {
@@ -539,6 +610,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif_pl_AI_chatbot_overview_L8-2-data-science"
+        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -1011,6 +1085,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-PL-data_science_lesson2_ai_chat_2025"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -1033,6 +1110,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif_pl_AI_chatbot_debrief_L12-2-data-science"
+        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -1301,372 +1381,424 @@
     },
     {
       "chapter": 38,
-      "position": 26,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-DS_L7"
+        "progression": "Introduction to Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-sp-pl-DS-lesson3Overview-DataVis"
         ],
-        "progression": "Data Visualization "
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
+      },
+      "level_keys": [
+        "aif-sp-pl-DS-lesson3Overview-DataVis"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sp-pl-DS_L7"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "a4667924-9a4d-4671-b8a4-7446f7e4cf0b"
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
       },
       "level_keys": [
         "sp-pl-DS_L7"
       ]
     },
     {
-      "chapter": 39,
-      "position": 27,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "sp-pl-DS-codap-tutorial"
-        ],
-        "progression": "Data Visualization "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "sp-pl-DS-codap-tutorial"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "a4667924-9a4d-4671-b8a4-7446f7e4cf0b"
-      },
-      "level_keys": [
-        "sp-pl-DS-codap-tutorial"
-      ]
-    },
-    {
       "chapter": 40,
-      "position": 28,
+      "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-DS-DotPlots"
+        "progression": "Introduction to Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS-codap-tutorial"
         ],
-        "progression": "Data Visualization "
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
+      },
+      "level_keys": [
+        "ea-fac-sp-pl-DS-codap-tutorial"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sp-pl-DS-DotPlots"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "a4667924-9a4d-4671-b8a4-7446f7e4cf0b"
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
       },
       "level_keys": [
         "sp-pl-DS-DotPlots"
       ]
     },
     {
-      "chapter": 41,
-      "position": 29,
-      "activity_section_position": 4,
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-DS-teacher-Codap"
-        ],
-        "progression": "Data Visualization "
+        "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sp-pl-DS-teacher-Codap"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "a4667924-9a4d-4671-b8a4-7446f7e4cf0b"
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
       },
       "level_keys": [
         "sp-pl-DS-teacher-Codap"
       ]
     },
     {
-      "chapter": 42,
-      "position": 30,
+      "chapter": 43,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-PL-sortData-panel-L30-DS"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
+      },
+      "level_keys": [
+        "aif-PL-sortData-panel-L30-DS"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-PL-filtering-data-L31-DS"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
+      },
+      "level_keys": [
+        "aif-PL-filtering-data-L31-DS"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Data Visualizations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-PL-applyingFilters-L32-DS"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
+      },
+      "level_keys": [
+        "aif-PL-applyingFilters-L32-DS"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-DS_L8andL9"
-        ],
-        "progression": "Cleaning and Interpreting Data"
+        "progression": "Cleaning and Interpreting Data "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sp-pl-DS_L8andL9"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "5e796184-2e8c-4a23-98ab-19c8ae1106ed"
+        "activity_section.key": "e28f2888-e81b-4080-89e2-278b01afed2c"
       },
       "level_keys": [
         "sp-pl-DS_L8andL9"
       ]
     },
     {
-      "chapter": 43,
-      "position": 31,
+      "chapter": 47,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-DS-cleaningData"
-        ],
-        "progression": "Cleaning and Interpreting Data"
+        "progression": "Cleaning and Interpreting Data "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sp-pl-DS-cleaningData"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "5e796184-2e8c-4a23-98ab-19c8ae1106ed"
+        "activity_section.key": "e28f2888-e81b-4080-89e2-278b01afed2c"
       },
       "level_keys": [
         "sp-pl-DS-cleaningData"
       ]
     },
     {
-      "chapter": 44,
-      "position": 32,
+      "chapter": 48,
+      "position": 11,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-DS-PizzaChoice"
-        ],
-        "progression": "Cleaning and Interpreting Data"
+        "progression": "Cleaning and Interpreting Data "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sp-pl-DS-PizzaChoice"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "5e796184-2e8c-4a23-98ab-19c8ae1106ed"
+        "activity_section.key": "e28f2888-e81b-4080-89e2-278b01afed2c"
       },
       "level_keys": [
         "sp-pl-DS-PizzaChoice"
       ]
     },
     {
-      "chapter": 45,
-      "position": 33,
+      "chapter": 49,
+      "position": 12,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-DS-teacher-discuss-ethcialFramework"
-        ],
-        "progression": "Cleaning and Interpreting Data"
+        "progression": "Cleaning and Interpreting Data "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sp-pl-DS-teacher-discuss-ethcialFramework"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "5e796184-2e8c-4a23-98ab-19c8ae1106ed"
+        "activity_section.key": "e28f2888-e81b-4080-89e2-278b01afed2c"
       },
       "level_keys": [
         "sp-pl-DS-teacher-discuss-ethcialFramework"
       ]
     },
     {
-      "chapter": 46,
-      "position": 34,
+      "chapter": 50,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SP-PL-DS-Choice-DataVisuals"
-        ],
-        "progression": "More Data Visualizations"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-PL-DS-Choice-DataVisuals"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "e5dcd0ea-4b07-45a8-8c99-4ff33661c597"
-      },
-      "level_keys": [
-        "SP-PL-DS-Choice-DataVisuals"
-      ]
-    },
-    {
-      "chapter": 47,
-      "position": 35,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "sp-pl-DS-chkCodap"
-        ],
-        "progression": "More Data Visualizations"
+        "progression": "More Data Visuals"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sp-pl-DS-chkCodap"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "e5dcd0ea-4b07-45a8-8c99-4ff33661c597"
+        "activity_section.key": "6829e5ac-40dd-4d85-a6bf-17776ac8d624"
       },
       "level_keys": [
         "sp-pl-DS-chkCodap"
       ]
     },
     {
-      "chapter": 48,
-      "position": 36,
+      "chapter": 51,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "More Data Visuals"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-PL-DS-Choice-DataVisuals"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "6829e5ac-40dd-4d85-a6bf-17776ac8d624"
+      },
+      "level_keys": [
+        "SP-PL-DS-Choice-DataVisuals"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 15,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-DS_L11"
-        ],
-        "progression": "Wrapping Up Chapter 1"
+        "progression": "Wrapping Up Unit 1"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sp-pl-DS_L11"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "d58b1bde-98df-4361-a2e1-7492a4056e3f"
+        "activity_section.key": "7ad04490-971d-4e94-b3dc-84c933bf7a63"
       },
       "level_keys": [
         "sp-pl-DS_L11"
       ]
     },
     {
-      "chapter": 49,
-      "position": 37,
+      "chapter": 53,
+      "position": 16,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Wrapping Up Chapter 1"
+        "progression": "Wrapping Up Unit 1"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "aif-pl_DS_teaching_bias"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "d58b1bde-98df-4361-a2e1-7492a4056e3f"
+        "activity_section.key": "7ad04490-971d-4e94-b3dc-84c933bf7a63"
       },
       "level_keys": [
         "aif-pl_DS_teaching_bias"
       ]
     },
     {
-      "chapter": 50,
-      "position": 38,
+      "chapter": 54,
+      "position": 17,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Wrapping Up Chapter 1"
+        "progression": "Wrapping Up Unit 1"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "aif-pl-DS-teachingstrategies"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "d58b1bde-98df-4361-a2e1-7492a4056e3f"
+        "activity_section.key": "7ad04490-971d-4e94-b3dc-84c933bf7a63"
       },
       "level_keys": [
         "aif-pl-DS-teachingstrategies"
       ]
     },
     {
-      "chapter": 51,
-      "position": 39,
+      "chapter": 55,
+      "position": 18,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sp-pl-DS-teacherEnd"
-        ],
-        "progression": "Wrapping Up Chapter 1"
+        "progression": "Wrapping Up Unit 1"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "sp-pl-DS-teacherEnd"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "d58b1bde-98df-4361-a2e1-7492a4056e3f"
+        "activity_section.key": "7ad04490-971d-4e94-b3dc-84c933bf7a63"
       },
       "level_keys": [
         "sp-pl-DS-teacherEnd"
       ]
     },
     {
-      "chapter": 52,
-      "position": 40,
+      "chapter": 56,
+      "position": 19,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Wrapping Up Chapter 1"
+        "progression": "Wrapping Up Unit 1"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "aif-pl-DS-nextsteps"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "d58b1bde-98df-4361-a2e1-7492a4056e3f"
+        "activity_section.key": "7ad04490-971d-4e94-b3dc-84c933bf7a63"
       },
       "level_keys": [
         "aif-pl-DS-nextsteps"
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1691,7 +1823,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1716,7 +1848,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1741,7 +1873,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1766,7 +1898,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1791,7 +1923,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 62,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -1816,7 +1948,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 63,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1841,7 +1973,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 64,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -1866,7 +1998,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 65,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -1891,7 +2023,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 66,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -1916,7 +2048,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 67,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -1941,7 +2073,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 68,
       "position": 12,
       "activity_section_position": 6,
       "assessment": false,
@@ -1966,7 +2098,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 69,
       "position": 13,
       "activity_section_position": 7,
       "assessment": false,
@@ -1991,7 +2123,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 70,
       "position": 14,
       "activity_section_position": 8,
       "assessment": false,
@@ -2016,7 +2148,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 71,
       "position": 15,
       "activity_section_position": 9,
       "assessment": false,
@@ -2041,7 +2173,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 72,
       "position": 16,
       "activity_section_position": 10,
       "assessment": false,
@@ -2066,7 +2198,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 73,
       "position": 17,
       "activity_section_position": 11,
       "assessment": false,
@@ -2091,7 +2223,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 74,
       "position": 18,
       "activity_section_position": 12,
       "assessment": false,
@@ -2116,7 +2248,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 75,
       "position": 19,
       "activity_section_position": 13,
       "assessment": false,
@@ -2141,7 +2273,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 76,
       "position": 20,
       "activity_section_position": 14,
       "assessment": false,
@@ -2166,7 +2298,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 77,
       "position": 21,
       "activity_section_position": 15,
       "assessment": false,
@@ -2191,7 +2323,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 78,
       "position": 22,
       "activity_section_position": 16,
       "assessment": false,
@@ -2216,7 +2348,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 79,
       "position": 23,
       "activity_section_position": 17,
       "assessment": false,
@@ -2241,7 +2373,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 80,
       "position": 24,
       "activity_section_position": 1,
       "assessment": false,
@@ -2266,7 +2398,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 81,
       "position": 25,
       "activity_section_position": 2,
       "assessment": false,
@@ -2291,7 +2423,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 82,
       "position": 26,
       "activity_section_position": 3,
       "assessment": false,
@@ -2316,7 +2448,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 83,
       "position": 27,
       "activity_section_position": 4,
       "assessment": false,
@@ -2341,7 +2473,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 84,
       "position": 28,
       "activity_section_position": 5,
       "assessment": false,
@@ -2366,7 +2498,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 85,
       "position": 29,
       "activity_section_position": 6,
       "assessment": false,
@@ -2391,7 +2523,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 86,
       "position": 30,
       "activity_section_position": 7,
       "assessment": false,
@@ -2416,7 +2548,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 87,
       "position": 31,
       "activity_section_position": 8,
       "assessment": false,
@@ -2441,7 +2573,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 88,
       "position": 32,
       "activity_section_position": 9,
       "assessment": false,
@@ -2466,7 +2598,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 89,
       "position": 33,
       "activity_section_position": 1,
       "assessment": false,
@@ -2491,7 +2623,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 90,
       "position": 34,
       "activity_section_position": 2,
       "assessment": false,
@@ -2516,7 +2648,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 91,
       "position": 35,
       "activity_section_position": 3,
       "assessment": false,
@@ -2541,7 +2673,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 92,
       "position": 36,
       "activity_section_position": 4,
       "assessment": false,
@@ -2566,7 +2698,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 93,
       "position": 37,
       "activity_section_position": 5,
       "assessment": false,
@@ -2591,7 +2723,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 94,
       "position": 38,
       "activity_section_position": 6,
       "assessment": false,
@@ -2616,7 +2748,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 95,
       "position": 39,
       "activity_section_position": 7,
       "assessment": false,
@@ -2641,7 +2773,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2666,7 +2798,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2691,7 +2823,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2716,7 +2848,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2741,7 +2873,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2766,7 +2898,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2791,7 +2923,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 102,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -2816,7 +2948,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 103,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -2841,7 +2973,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 104,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -2866,7 +2998,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 105,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -2891,7 +3023,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 106,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -2916,7 +3048,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 107,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -2941,7 +3073,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 108,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -2966,7 +3098,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 109,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -2991,7 +3123,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 110,
       "position": 15,
       "activity_section_position": 5,
       "assessment": false,
@@ -3016,7 +3148,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 111,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -3041,7 +3173,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 112,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -3066,7 +3198,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 113,
       "position": 18,
       "activity_section_position": 3,
       "assessment": false,
@@ -3091,7 +3223,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 114,
       "position": 19,
       "activity_section_position": 4,
       "assessment": false,
@@ -3116,7 +3248,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 115,
       "position": 20,
       "activity_section_position": 5,
       "assessment": false,
@@ -3141,7 +3273,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 116,
       "position": 21,
       "activity_section_position": 1,
       "assessment": false,
@@ -3166,7 +3298,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 117,
       "position": 22,
       "activity_section_position": 2,
       "assessment": false,
@@ -3191,7 +3323,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 118,
       "position": 23,
       "activity_section_position": 3,
       "assessment": false,
@@ -3216,7 +3348,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 119,
       "position": 24,
       "activity_section_position": 4,
       "assessment": false,
@@ -3241,7 +3373,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 120,
       "position": 25,
       "activity_section_position": 5,
       "assessment": false,
@@ -3266,7 +3398,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 121,
       "position": 26,
       "activity_section_position": 1,
       "assessment": false,
@@ -3291,7 +3423,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 122,
       "position": 27,
       "activity_section_position": 2,
       "assessment": false,
@@ -3316,7 +3448,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 123,
       "position": 28,
       "activity_section_position": 3,
       "assessment": false,
@@ -3341,7 +3473,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 124,
       "position": 29,
       "activity_section_position": 4,
       "assessment": false,
@@ -3366,7 +3498,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 125,
       "position": 30,
       "activity_section_position": 1,
       "assessment": false,
@@ -3391,7 +3523,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 126,
       "position": 31,
       "activity_section_position": 2,
       "assessment": false,
@@ -3416,7 +3548,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 127,
       "position": 32,
       "activity_section_position": 1,
       "assessment": false,
@@ -3441,7 +3573,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 128,
       "position": 33,
       "activity_section_position": 2,
       "assessment": false,
@@ -3466,7 +3598,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 129,
       "position": 34,
       "activity_section_position": 3,
       "assessment": false,
@@ -3938,26 +4070,38 @@
     },
     {
       "seeding_key": {
-        "level.key": "sp-pl-DS_L7",
+        "level.key": "aif-sp-pl-DS-lesson3Overview-DataVis",
         "script_level.level_keys": [
-          "sp-pl-DS_L7"
+          "aif-sp-pl-DS-lesson3Overview-DataVis"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "a4667924-9a4d-4671-b8a4-7446f7e4cf0b"
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
       }
     },
     {
       "seeding_key": {
-        "level.key": "sp-pl-DS-codap-tutorial",
+        "level.key": "sp-pl-DS_L7",
         "script_level.level_keys": [
-          "sp-pl-DS-codap-tutorial"
+          "sp-pl-DS_L7"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "a4667924-9a4d-4671-b8a4-7446f7e4cf0b"
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ea-fac-sp-pl-DS-codap-tutorial",
+        "script_level.level_keys": [
+          "ea-fac-sp-pl-DS-codap-tutorial"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
       }
     },
     {
@@ -3966,10 +4110,10 @@
         "script_level.level_keys": [
           "sp-pl-DS-DotPlots"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "a4667924-9a4d-4671-b8a4-7446f7e4cf0b"
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
       }
     },
     {
@@ -3978,10 +4122,46 @@
         "script_level.level_keys": [
           "sp-pl-DS-teacher-Codap"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "a4667924-9a4d-4671-b8a4-7446f7e4cf0b"
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-PL-sortData-panel-L30-DS",
+        "script_level.level_keys": [
+          "aif-PL-sortData-panel-L30-DS"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-PL-filtering-data-L31-DS",
+        "script_level.level_keys": [
+          "aif-PL-filtering-data-L31-DS"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-PL-applyingFilters-L32-DS",
+        "script_level.level_keys": [
+          "aif-PL-applyingFilters-L32-DS"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "cc70bf01-1960-4119-9f0f-d7da88808108"
       }
     },
     {
@@ -3990,10 +4170,10 @@
         "script_level.level_keys": [
           "sp-pl-DS_L8andL9"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "5e796184-2e8c-4a23-98ab-19c8ae1106ed"
+        "activity_section.key": "e28f2888-e81b-4080-89e2-278b01afed2c"
       }
     },
     {
@@ -4002,10 +4182,10 @@
         "script_level.level_keys": [
           "sp-pl-DS-cleaningData"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "5e796184-2e8c-4a23-98ab-19c8ae1106ed"
+        "activity_section.key": "e28f2888-e81b-4080-89e2-278b01afed2c"
       }
     },
     {
@@ -4014,10 +4194,10 @@
         "script_level.level_keys": [
           "sp-pl-DS-PizzaChoice"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "5e796184-2e8c-4a23-98ab-19c8ae1106ed"
+        "activity_section.key": "e28f2888-e81b-4080-89e2-278b01afed2c"
       }
     },
     {
@@ -4026,22 +4206,10 @@
         "script_level.level_keys": [
           "sp-pl-DS-teacher-discuss-ethcialFramework"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "5e796184-2e8c-4a23-98ab-19c8ae1106ed"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "SP-PL-DS-Choice-DataVisuals",
-        "script_level.level_keys": [
-          "SP-PL-DS-Choice-DataVisuals"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "",
-        "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "e5dcd0ea-4b07-45a8-8c99-4ff33661c597"
+        "activity_section.key": "e28f2888-e81b-4080-89e2-278b01afed2c"
       }
     },
     {
@@ -4050,10 +4218,22 @@
         "script_level.level_keys": [
           "sp-pl-DS-chkCodap"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "e5dcd0ea-4b07-45a8-8c99-4ff33661c597"
+        "activity_section.key": "6829e5ac-40dd-4d85-a6bf-17776ac8d624"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-PL-DS-Choice-DataVisuals",
+        "script_level.level_keys": [
+          "SP-PL-DS-Choice-DataVisuals"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "6829e5ac-40dd-4d85-a6bf-17776ac8d624"
       }
     },
     {
@@ -4062,10 +4242,10 @@
         "script_level.level_keys": [
           "sp-pl-DS_L11"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "d58b1bde-98df-4361-a2e1-7492a4056e3f"
+        "activity_section.key": "7ad04490-971d-4e94-b3dc-84c933bf7a63"
       }
     },
     {
@@ -4074,10 +4254,10 @@
         "script_level.level_keys": [
           "aif-pl_DS_teaching_bias"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "d58b1bde-98df-4361-a2e1-7492a4056e3f"
+        "activity_section.key": "7ad04490-971d-4e94-b3dc-84c933bf7a63"
       }
     },
     {
@@ -4086,10 +4266,10 @@
         "script_level.level_keys": [
           "aif-pl-DS-teachingstrategies"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "d58b1bde-98df-4361-a2e1-7492a4056e3f"
+        "activity_section.key": "7ad04490-971d-4e94-b3dc-84c933bf7a63"
       }
     },
     {
@@ -4098,10 +4278,10 @@
         "script_level.level_keys": [
           "sp-pl-DS-teacherEnd"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "d58b1bde-98df-4361-a2e1-7492a4056e3f"
+        "activity_section.key": "7ad04490-971d-4e94-b3dc-84c933bf7a63"
       }
     },
     {
@@ -4110,10 +4290,10 @@
         "script_level.level_keys": [
           "aif-pl-DS-nextsteps"
         ],
-        "lesson.key": "lesson-2",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "sandbox-teaching-data-science",
-        "activity_section.key": "d58b1bde-98df-4361-a2e1-7492a4056e3f"
+        "activity_section.key": "7ad04490-971d-4e94-b3dc-84c933bf7a63"
       }
     },
     {

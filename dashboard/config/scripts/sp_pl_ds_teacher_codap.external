@@ -44,9 +44,15 @@ markdown <<MARKDOWN
   </tr>
 </table>
 
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 7. You can find more details in the full <a href='https://studio.code.org/s/aif6-2025/lessons/7' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
 ##
 
 <hr style="clear:both">
+
 
 <img src="https://images.code.org/984c5b8d41d2e371f98ff81b9af4c7a5-image-1724350333310.png" style="float: left; height: 205px; clear: both; margin: 0 30px 20px 0;">
 

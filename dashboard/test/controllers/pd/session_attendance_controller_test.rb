@@ -193,8 +193,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
     sign_in student
 
     post :confirm_upgrade_account, params: {session_code: @session.code, email: email}
-    student = User.find(student.id)
-    assert student.teacher?
+    assert student.reload.teacher?
     assert_redirected_to action: :attend
   end
 
