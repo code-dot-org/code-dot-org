@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:08:44 UTC",
+    "serialized_at": "2025-04-16 18:52:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -539,9 +539,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "aif_pl_AI_chatbot_overview_L8-2-data-science"
-        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -1014,9 +1011,6 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "aif-PL-data_science_lesson2_ai_chat_2025"
-        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -1039,9 +1033,6 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "aif_pl_AI_chatbot_debrief_L12-2-data-science"
-        ],
         "progression": "Introduction to Data Science"
       },
       "bonus": false,
@@ -1589,9 +1580,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "aif-pl_DS_teaching_bias"
-        ],
         "progression": "Wrapping Up Chapter 1"
       },
       "bonus": false,
@@ -1614,9 +1602,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "aif-pl-DS-teachingstrategies"
-        ],
         "progression": "Wrapping Up Chapter 1"
       },
       "bonus": false,
@@ -1664,9 +1649,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "aif-pl-DS-nextsteps"
-        ],
         "progression": "Wrapping Up Chapter 1"
       },
       "bonus": false,

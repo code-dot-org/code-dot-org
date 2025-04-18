@@ -282,39 +282,6 @@ trigger:
     - pull_request
 
 ---
-# When our UI and Unit tests complete, we trigger a GitHub Actions workflow
-# to do followup work.
-kind: pipeline
-type: docker
-name: on-droneci-complete
-depends_on:
-  - unit
-  - ui
-clone:
-  disable: true
-steps:
-  - name: trigger-github-actions
-    image: plugins/webhook
-    settings:
-      urls:
-        - https://api.github.com/repos/code-dot-org/code-dot-org/actions/workflows/on-droneci-complete.yml/dispatches
-      username: deploy-code-org
-      password:
-        from_secret: on-droneci-complete-github-token
-      template: |
-        {
-          "ref": "${DRONE_SOURCE_BRANCH}",
-          "inputs": {
-            "github_sha": "{{ build.commit }}",
-            "drone_build_status": "{{ build.status }}"
-          }
-        }
-
-trigger:
-  event:
-    - pull_request
-
----
 # On push, cache a clone of staging to drone's S3 bucket.
 # The staging cache reduces git bandwidth in PR pipelines.
 kind: pipeline
@@ -348,9 +315,8 @@ trigger:
     - "staging-next"
   event:
     - push
-
 ---
 kind: signature
-hmac: 7edd55636718e9d1d2896ba5a6851292de962ecbc6d8555b1265aa04a4bb3a66
+hmac: c32532882fe8b8b8c24853dece9734ee85fc53fbb7fa866056d4eb2a055c9d87
 
 ...

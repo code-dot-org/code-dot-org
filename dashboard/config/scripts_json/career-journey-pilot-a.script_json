@@ -5,11 +5,12 @@
     "login_required": false,
     "properties": {
       "is_migrated": true,
+      "pilot_experiment": "career-journeys-elem-a",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:08:45 UTC",
+    "serialized_at": "2025-04-11 22:38:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -328,9 +329,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-elem-career-journeys-video-journey"
-        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -670,10 +668,46 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "Helpful Hints in Sprite Lab",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/edit#slide=id.g1b38224bb2a_0_20",
+      "key": "helpful_hints_in_sprite_lab",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_in_sprite_lab"
+      }
+    },
+    {
+      "name": "Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1jBLRpypbE5Wd3YMivAiV-ZTO9--JkrVdvI94prEF5dY/edit#slide=id.g2694c47731d_3_317",
+      "key": "lesson_slides",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/presentation/d/1jBLRpypbE5Wd3YMivAiV-ZTO9--JkrVdvI94prEF5dY/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_slides"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys A",
+        "resource.key": "helpful_hints_in_sprite_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys A",
+        "resource.key": "lesson_slides"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -682,10 +716,72 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "career",
+      "word": "Career",
+      "definition": "A job you work toward by building skills and learning new things.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "career"
+      }
+    },
+    {
+      "key": "computer_science",
+      "word": "Computer Science",
+      "definition": "Using computers to solve problems and create things.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer_science"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action, like a key press, that causes something in your program to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "sprite",
+      "word": "Sprite",
+      "definition": "An object on the screen with a location, size, and appearance.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sprite"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys A",
+        "vocabulary.key": "career"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys A",
+        "vocabulary.key": "computer_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys A",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Career Journeys A",
+        "vocabulary.key": "sprite"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:08:46 UTC",
+    "serialized_at": "2025-04-16 06:34:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4479,10 +4479,812 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "[KEY] AI Networks Chat",
+      "url": "https://docs.google.com/document/d/17m_80EDQvotN8ywKsOwArdgbBh_Df1z55c6yK0wp3Qw/edit?usp=sharing",
+      "key": "_key_ai_networks_chat",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_networks_chat"
+      }
+    },
+    {
+      "name": "[KEY] IP Addressing and Visualizing",
+      "url": "https://docs.google.com/document/d/19oWyQXsqUiftKDOd5DQLlcouJkzbmb3j8xtnHDoTed8/edit?usp=sharing",
+      "key": "_key_ip_addressing_and_visualizing",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ip_addressing_and_visualizing"
+      }
+    },
+    {
+      "name": "[KEY] Network Diagram Analysis",
+      "url": "https://docs.google.com/document/d/15Nsh7tO7d7RVvheQSpd-5nBYLwXCfNtlVaUSG2zC8es/edit?usp=sharing",
+      "key": "_key_network_diagram_analysis",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_network_diagram_analysis"
+      }
+    },
+    {
+      "name": "[KEY] Packets and Protocols",
+      "url": "https://docs.google.com/document/d/1HkXJBHGsC5mKmd18poO5cWdeKR0mHRmWl0z0YsXQK6k/edit?usp=sharing",
+      "key": "_key_packets_and_protocols",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_key_packets_and_protocols"
+      }
+    },
+    {
+      "name": "AI-Based Real-Time Threat Detection",
+      "url": "https://www.youtube.com/watch?v=UDChsxHx1wc",
+      "key": "ai-based_real-time_threat_detection",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "ai-based_real-time_threat_detection"
+      }
+    },
+    {
+      "name": "AI Chat Lab FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_lab_faq",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
+      "name": "AI Networks Chat",
+      "url": "https://docs.google.com/document/d/1EIf-YBvg0X8jMjJnj812sRHTjPnVkbWArbUqfo_ffms/edit?usp=sharing",
+      "key": "ai_networks_chat",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_networks_chat"
+      }
+    },
+    {
+      "name": "Challenge 1 Binary Cards",
+      "url": "https://docs.google.com/document/d/12tegCZRYEi9D3sE-JYBvy3T0Kaa_DLS4KZ1wivFVPlc/edit?tab=t.0",
+      "key": "challenge_1_binary_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "challenge_1_binary_cards"
+      }
+    },
+    {
+      "name": "Challenge 2 Binary Cards",
+      "url": "https://docs.google.com/document/d/1wPqqwDgwfTRlAdtP2o2jQ46UdxPWWksbwzom3TtMKfc/edit?tab=t.0",
+      "key": "challenge_2_binary_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "challenge_2_binary_cards"
+      }
+    },
+    {
+      "name": "DNS Hierarchy",
+      "url": "https://docs.google.com/document/d/1LST7DpPTAQ--Z6L6k82INXOdoCzP55HfPrUIooayzgI/edit?tab=t.0",
+      "key": "dns_hierarchy",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "dns_hierarchy"
+      }
+    },
+    {
+      "name": "Emerging Technologies",
+      "url": "https://docs.google.com/presentation/d/1HwhwDDb-ZPDK2lUmy27fHEgONwuOuBX_LSvLAEhbKeA/edit?usp=sharing",
+      "key": "emerging_technologies",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "emerging_technologies"
+      }
+    },
+    {
+      "name": "Gallery Walk Info Tracker",
+      "url": "https://docs.google.com/document/d/1xBwQ_66xC9fRXJrFs9dOKP7l9G8VNOfatcbeZQqeATw/edit?usp=sharing",
+      "key": "gallery_walk_info_tracker",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "gallery_walk_info_tracker"
+      }
+    },
+    {
+      "name": "How Cyber Attacks Happen in Real Life",
+      "url": "https://www.youtube.com/watch?v=Q3DsntHY0Ns",
+      "key": "how_cyber_attacks_happen_in_real_life",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_cyber_attacks_happen_in_real_life"
+      }
+    },
+    {
+      "name": "HTTP and DNS",
+      "url": "https://docs.google.com/presentation/d/1ainHdptvrQYfCXXkOUcw0hAay3-YlcTTf7hHBmsCERA/edit?usp=sharing",
+      "key": "http_and_dns",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "http_and_dns"
+      }
+    },
+    {
+      "name": "HTTP Observations",
+      "url": "https://docs.google.com/document/d/1HZ3Yp1Kh0fUh94gaQq460MQPS9BpeBQO7Hh4aIqYzIw/edit?usp=sharing",
+      "key": "http_observations",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "http_observations"
+      }
+    },
+    {
+      "name": "Internet Access Advocacy Campaign Project",
+      "url": "https://docs.google.com/presentation/d/1sFJilkpDqhGOswoce844_s--kcr4DsaK-FN8zornsfg/edit?usp=sharing",
+      "key": "internet_access_advocacy_campaign_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "internet_access_advocacy_campaign_project"
+      }
+    },
+    {
+      "name": "Internet Access Advocacy Campaign Project Planning Guide",
+      "url": "https://docs.google.com/document/d/10LJg4_NeHINJ1QKh6n2lGkOfTjwEJwdlns86B-alUJ4/edit?usp=sharing",
+      "key": "internet_access_advocacy_campaign_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "internet_access_advocacy_campaign_project_planning_guide"
+      }
+    },
+    {
+      "name": "Internet Access IRL",
+      "url": "https://docs.google.com/document/d/1CI1AWCzg52fqn8JHihj8_ml6sn1L8t1m8MjJ07WOMzc/edit?usp=sharing",
+      "key": "internet_access_irl",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "internet_access_irl"
+      }
+    },
+    {
+      "name": "Introduction to the Internet",
+      "url": "https://docs.google.com/presentation/d/1y4HXx4STFnWr7kmzoccIlEc6xT85c4mkxvwGcU4n5v8/edit?usp=sharing",
+      "key": "introduction_to_the_internet",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_the_internet"
+      }
+    },
+    {
+      "name": "IP Address Collection",
+      "url": "https://docs.google.com/document/d/1z8PiOj38Ks-WkWO11KtcCOA8_pnAJYNDfne-ZLewGsE/edit?tab=t.0#heading=h.99p5pkxp2sz8",
+      "key": "ip_address_collection",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ip_address_collection"
+      }
+    },
+    {
+      "name": "IP Addresses",
+      "url": "https://docs.google.com/presentation/d/1EPFMI_UeE4f6FomxqWhoQcSxYgi4M34i5RdehBHmoLE/edit?usp=sharing",
+      "key": "ip_addresses",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ip_addresses"
+      }
+    },
+    {
+      "name": "IP Addresses",
+      "url": "https://docs.google.com/document/d/1cFj-QFCZJUx2iel3HpDqOE6bo-mZ3-B3AEBdB9XE6tw/edit?usp=sharing",
+      "key": "ip_addresses_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "ip_addresses_1"
+      }
+    },
+    {
+      "name": "IP Addressing and Visualizing",
+      "url": "https://docs.google.com/document/d/1GbNHGZK8vISlbu3q0o5efwDRPu4SYUT2lDYlaa6-qjs/edit?usp=drive_link",
+      "key": "ip_addressing_and_visualizing",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ip_addressing_and_visualizing"
+      }
+    },
+    {
+      "name": "Network Diagram Analysis",
+      "url": "https://docs.google.com/document/d/1at4atqY76knT627ag5-o_YZkouYdWotn2Q43rjl6fQA/edit?usp=sharing",
+      "key": "network_diagram_analysis",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "network_diagram_analysis"
+      }
+    },
+    {
+      "name": "Network Security",
+      "url": "https://docs.google.com/presentation/d/1xsiVpdyk9D9w5lHjLuuvP7V4YsLvQClENkp-lKwmN6c/edit?usp=sharing",
+      "key": "network_security",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "network_security"
+      }
+    },
+    {
+      "name": "Network Security Risk Assessment Project",
+      "url": "https://docs.google.com/presentation/d/1puVxPTQEPoUTPQkdS7XDSLn-HoM53Of85G9siddUVc8/edit?usp=sharing",
+      "key": "network_security_risk_assessment_project",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "network_security_risk_assessment_project"
+      }
+    },
+    {
+      "name": "Network Security Risk Assessment Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1IO-DrZ7fRuMFXCzr7Xaq7aULq38qHmu4qOmpfAFyEm4/edit?usp=sharing",
+      "key": "network_security_risk_assessment_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "network_security_risk_assessment_project_planning_guide"
+      }
+    },
+    {
+      "name": "Networks and the Internet Unit Guide",
+      "url": "https://docs.google.com/document/d/14YiuNXo8xwD2aQcmt2sBY0Oway5hI4RBHUez_CcWI4w/edit?usp=sharing",
+      "key": "networks_and_the_internet_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "networks_and_the_internet_unit_guide"
+      }
+    },
+    {
+      "name": "Packets",
+      "url": "https://docs.google.com/presentation/d/1-jVNvpCrxU_p33rrnbLe7XvVIQwsTicio9r-dm38t3w/edit?usp=sharing",
+      "key": "packets",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "packets"
+      }
+    },
+    {
+      "name": "Packets and Protocols",
+      "url": "https://docs.google.com/document/d/12XtxAe5Dm03Ei6ICdALTDYFinY0GA9ma0rE6p1lphOE/edit?usp=sharing",
+      "key": "packets_and_protocols",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "packets_and_protocols"
+      }
+    },
+    {
+      "name": "Peer Feedback Cards",
+      "url": "https://docs.google.com/document/d/10gHuaMFve5x1WkZY1H0P08hPAVXO54z2T2JeLQlkRP4/edit?usp=sharing",
+      "key": "peer_feedback_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "peer_feedback_cards"
+      }
+    },
+    {
+      "name": "Persona Fact Sheet",
+      "url": "https://docs.google.com/document/d/1iFRJ0FFfPQM7t8AFOqBJ_czuksxKspBjFxPst-_jCrY/edit?usp=sharing",
+      "key": "persona_fact_sheet",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "persona_fact_sheet"
+      }
+    },
+    {
+      "name": "Role Cards for Challenge 1 and 2",
+      "url": "https://docs.google.com/document/d/1ntvGt1aXcCQIlhDMPO3zxYJBFQbVANp5dzRDC092DJs/edit?usp=sharing",
+      "key": "role_cards_for_challenge_1_and_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "role_cards_for_challenge_1_and_2"
+      }
+    },
+    {
+      "name": "Routers and Redundancy",
+      "url": "https://docs.google.com/presentation/d/1GQuN1mbYNeRTsPtELYx6hqDuvp93QmSquUrQmvgw6qk/edit?usp=sharing",
+      "key": "routers_and_redundancy",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "routers_and_redundancy"
+      }
+    },
+    {
+      "name": "Sending Bits",
+      "url": "https://docs.google.com/presentation/d/1tcj5mMbuhGW7x6rGHDhwqmyjIK8hsG-y6Y_fR8jogvA/edit?usp=sharing",
+      "key": "sending_bits",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sending_bits"
+      }
+    },
+    {
+      "name": "Teacher Guide: Packets Unplugged",
+      "url": "https://docs.google.com/document/d/1zg2NuvjecV5-ayCORwy6_Cf1UZ0CJ1rKyMWPbPzDVhE/edit?usp=sharing",
+      "key": "teacher_guide_packets_unplugged",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teacher_guide_packets_unplugged"
+      }
+    },
+    {
+      "name": "Teaching Guide: Human Network Bit Transmission Challenge",
+      "url": "https://docs.google.com/document/d/1u-E0Suv0CV69qy70-6NudPs7uPGR1NeiOqgoAiTQm-k/edit?usp=drive_link",
+      "key": "teaching_guide_human_network_bit_transmission_challenge",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teaching_guide_human_network_bit_transmission_challenge"
+      }
+    },
+    {
+      "name": "The Internet: IP Addresses and DNS",
+      "url": "https://www.youtube.com/watch?v=5o8CwafCxnU",
+      "key": "the_internet_ip_addresses_and_dns",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_internet_ip_addresses_and_dns"
+      }
+    },
+    {
+      "name": "The Internet: Packets, Routing, and Reliability",
+      "url": "https://youtu.be/AYdF7b3nMto",
+      "key": "the_internet_packets_routing_and_reliability",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_internet_packets_routing_and_reliability"
+      }
+    },
+    {
+      "name": "The Internet's Hidden Barriers",
+      "url": "https://docs.google.com/presentation/d/1qG0k-bOzjQKAhB6ReuypH9y5p1dFqXjJYSOYnRwc5YY/edit?usp=sharing",
+      "key": "the_internet_s_hidden_barriers",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_internet_s_hidden_barriers"
+      }
+    },
+    {
+      "name": "The Internet: Wires, Cables, and WiFi",
+      "url": "https://www.youtube.com/watch?v=ZhEf7e4kopM&themeRefresh=1",
+      "key": "the_internet_wires_cables_and_wifi",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "the_internet_wires_cables_and_wifi"
+      }
+    },
+    {
+      "name": "Threat Detected! Cards",
+      "url": "https://docs.google.com/document/d/1xkXDiVCEattulslAG9ZI4TV3ejU09VNH1J1Xq7oKWSw/edit?usp=sharing",
+      "key": "threat_detected_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "threat_detected_cards"
+      }
+    },
+    {
+      "name": "Threat Detection Guided Notes",
+      "url": "https://docs.google.com/document/d/1k846UL_chsUrkPwDgxHZcprycp-YpSoAEr6F1F-7b9A/edit?usp=sharing",
+      "key": "threat_detection_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "threat_detection_guided_notes"
+      }
+    },
+    {
+      "name": "Viewing Student AI Chat History as a Teacher",
+      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Emerging Technologies",
+        "resource.key": "ai-based_real-time_threat_detection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emerging Technologies",
+        "resource.key": "emerging_technologies"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emerging Technologies",
+        "resource.key": "threat_detected_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emerging Technologies",
+        "resource.key": "threat_detection_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "resource.key": "dns_hierarchy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "resource.key": "http_and_dns"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "resource.key": "http_observations"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "resource.key": "ip_address_collection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "resource.key": "ip_addresses_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "IP Addresses",
+        "resource.key": "_key_ip_addressing_and_visualizing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "IP Addresses",
+        "resource.key": "ip_addresses"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "IP Addresses",
+        "resource.key": "ip_addressing_and_visualizing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "IP Addresses",
+        "resource.key": "the_internet_ip_addresses_and_dns"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "gallery_walk_info_tracker"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "internet_access_advocacy_campaign_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "internet_access_advocacy_campaign_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "peer_feedback_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "persona_fact_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to the Internet",
+        "resource.key": "_key_ai_networks_chat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to the Internet",
+        "resource.key": "ai_chat_lab_faq"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to the Internet",
+        "resource.key": "ai_networks_chat"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to the Internet",
+        "resource.key": "introduction_to_the_internet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to the Internet",
+        "resource.key": "networks_and_the_internet_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to the Internet",
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Network Security Risk Assessment Project",
+        "resource.key": "network_security_risk_assessment_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Network Security Risk Assessment Project",
+        "resource.key": "network_security_risk_assessment_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Network Security",
+        "resource.key": "how_cyber_attacks_happen_in_real_life"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Network Security",
+        "resource.key": "network_security"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "resource.key": "_key_packets_and_protocols"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "resource.key": "packets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "resource.key": "packets_and_protocols"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "resource.key": "teacher_guide_packets_unplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "resource.key": "the_internet_packets_routing_and_reliability"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "resource.key": "_key_network_diagram_analysis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "resource.key": "network_diagram_analysis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "resource.key": "routers_and_redundancy"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sending Bits",
+        "resource.key": "challenge_1_binary_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sending Bits",
+        "resource.key": "challenge_2_binary_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sending Bits",
+        "resource.key": "role_cards_for_challenge_1_and_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sending Bits",
+        "resource.key": "sending_bits"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sending Bits",
+        "resource.key": "teaching_guide_human_network_bit_transmission_challenge"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sending Bits",
+        "resource.key": "the_internet_wires_cables_and_wifi"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Internet's Hidden Barriers",
+        "resource.key": "internet_access_irl"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Internet's Hidden Barriers",
+        "resource.key": "the_internet_s_hidden_barriers"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -4491,10 +5293,184 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "digital_divide",
+      "word": "digital divide",
+      "definition": "the gap between people who have easy access to the Internet and technology and those who do not, often due to differences in income, location, or resources",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "digital_divide"
+      }
+    },
+    {
+      "key": "domain_name_system_dns_",
+      "word": "Domain Name System (DNS)",
+      "definition": "a system that translates human-friendly website names (like www.example.com) into numerical IP addresses that computers use to find and communicate with each other on the Internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "domain_name_system_dns_"
+      }
+    },
+    {
+      "key": "hypertext_transfer_protocol_http_",
+      "word": "HyperText Transfer Protocol (HTTP)",
+      "definition": "a protocol that allows computers to request and share web content, like webpages, images, and videos",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "hypertext_transfer_protocol_http_"
+      }
+    },
+    {
+      "key": "internet_tower",
+      "word": "Internet tower",
+      "definition": "a piece of infrastructure that sends and receives wireless signals",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "internet_tower"
+      }
+    },
+    {
+      "key": "ip_address",
+      "word": "IP address",
+      "definition": "a unique number assigned to each device on a network",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ip_address"
+      }
+    },
+    {
+      "key": "net_neutrality",
+      "word": "Net Neutrality",
+      "definition": "the idea that all websites and online services should be treated equally by Internet providers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "net_neutrality"
+      }
+    },
+    {
+      "key": "router",
+      "word": "router",
+      "definition": "a type of computer that forwards data across a network",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "router"
+      }
+    },
+    {
+      "key": "server",
+      "word": "server",
+      "definition": "a powerful computer that stores and delivers websites, files, and messages when requested by a user",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "server"
+      }
+    },
+    {
+      "key": "switch",
+      "word": "switch",
+      "definition": "a component that helps send data to the right place inside a local network",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "switch"
+      }
+    },
+    {
+      "key": "transmission_control_protocol_tcp_",
+      "word": "Transmission Control Protocol (TCP)",
+      "definition": "a protocol that ensures that all parts of a message are received and ordered correctly",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "transmission_control_protocol_tcp_"
+      }
+    },
+    {
+      "key": "user_datagram_protocol_udp_",
+      "word": "User Datagram Protocol (UDP)",
+      "definition": "a protocol that focuses on speed and does not guarantee all packets arrive",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user_datagram_protocol_udp_"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "vocabulary.key": "domain_name_system_dns_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "vocabulary.key": "hypertext_transfer_protocol_http_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "IP Addresses",
+        "vocabulary.key": "ip_address"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to the Internet",
+        "vocabulary.key": "internet_tower"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to the Internet",
+        "vocabulary.key": "router"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to the Internet",
+        "vocabulary.key": "server"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to the Internet",
+        "vocabulary.key": "switch"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Packets",
+        "vocabulary.key": "user_datagram_protocol_udp_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sending Bits",
+        "vocabulary.key": "transmission_control_protocol_tcp_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Internet's Hidden Barriers",
+        "vocabulary.key": "digital_divide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Internet's Hidden Barriers",
+        "vocabulary.key": "net_neutrality"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 

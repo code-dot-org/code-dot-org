@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:08:56 UTC",
+    "serialized_at": "2025-04-17 03:13:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4351,9 +4351,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-lab-triggers-panel"
-        ],
         "progression": "Walk-Up Songs"
       },
       "bonus": false,
@@ -4751,9 +4748,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-lab-loops-practice-practice-4"
-        ],
         "progression": "Loops with Lyrics"
       },
       "bonus": false,
@@ -8023,10 +8017,537 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "[answer key] Client Stories",
+      "url": "https://docs.google.com/document/d/1ROBaDdO6Hlndp1jKpEcBL9bdFTNhrBLgmIqfxrYlZVM/edit?usp=sharing",
+      "key": "_answer_key_client_stories",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_answer_key_client_stories"
+      }
+    },
+    {
+      "name": "Cat GIF Loops",
+      "url": "https://docs.google.com/document/d/1JQWXQ39-DKoE2gbwLi7v-BdV0Dcn3Z9IMY0515-pKVI/edit",
+      "key": "cat_gif_loops",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "cat_gif_loops"
+      }
+    },
+    {
+      "name": "Cat GIF Loops Rubric",
+      "url": "https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0",
+      "key": "cat_gif_loops_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "cat_gif_loops_rubric"
+      }
+    },
+    {
+      "name": "Client Stories",
+      "url": "https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/view",
+      "key": "client_stories",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "client_stories"
+      }
+    },
+    {
+      "name": "Functions - Explore",
+      "url": "https://docs.google.com/presentation/d/1niuLGiC8RNMM9GO1XlTxg3vZoLC2TZ5CPXs2OLAM5rw/template/preview",
+      "key": "functions_-_explore",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_-_explore"
+      }
+    },
+    {
+      "name": "Functions - Practice",
+      "url": "https://docs.google.com/presentation/d/1M5Dkkj6zLFROOD3QG9j2p3AbVLkvx0VBzD0ECysvn8Q/template/preview",
+      "key": "functions_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_-_practice"
+      }
+    },
+    {
+      "name": "Functions - Synthesis",
+      "url": "https://docs.google.com/presentation/d/1j97kHjLKvm-yQbgT4bRSqKRdZin33ER2bobOJDAJ_OQ/template/preview",
+      "key": "functions_-_synthesis",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "functions_-_synthesis"
+      }
+    },
+    {
+      "name": "Genre Mashup",
+      "url": "https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit",
+      "key": "genre_mashup",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "genre_mashup"
+      }
+    },
+    {
+      "name": "Genre Mashup Rubric",
+      "url": "https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0",
+      "key": "genre_mashup_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "genre_mashup_rubric"
+      }
+    },
+    {
+      "name": "Introduction to Music Lab",
+      "url": "https://docs.google.com/presentation/d/14X814gR4KUxcZKEkbqhOSR03pg-8XKWZZMhIn7AJo4w/template/preview",
+      "key": "introduction_to_music_lab",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_music_lab"
+      }
+    },
+    {
+      "name": "Loops - Explore",
+      "url": "https://docs.google.com/presentation/d/1n01W_XFQbH-gwSCfhJdvJRggagbapxXSx23tys4refA/template/preview",
+      "key": "loops_-_explore",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops_-_explore"
+      }
+    },
+    {
+      "name": "Loops - Practice",
+      "url": "https://docs.google.com/presentation/d/1zj_nA_H4-fa-vKZWKNX6JylIdMj6rFQuu_UPN9NG_7o/template/preview",
+      "key": "loops_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops_-_practice"
+      }
+    },
+    {
+      "name": "Loops - Synthesis",
+      "url": "https://docs.google.com/presentation/d/1s02366Iz1uO2K-ytHOjL1fQtamjKq8mcF3AUVDk8Ab8/template/preview",
+      "key": "loops_-_synthesis",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "loops_-_synthesis"
+      }
+    },
+    {
+      "name": "Make Music, Learn Code",
+      "url": "https://www.youtube.com/watch?v=GqlP5s7KTl4",
+      "key": "make_music_learn_code",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://videos.code.org/levelbuilder/music-lab-_-make-music-learn-code-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "make_music_learn_code"
+      }
+    },
+    {
+      "name": "Mini Project - Cat GIF Loops",
+      "url": "https://docs.google.com/presentation/d/1j5lpbvr9BM4UfC6z7Mju9mZSlKJpLz7dEVaGBbw1hbo/template/preview",
+      "key": "mini_project_-_cat_gif_loops",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini_project_-_cat_gif_loops"
+      }
+    },
+    {
+      "name": "Mini Project - Walk Up Songs",
+      "url": "https://docs.google.com/presentation/d/1nQQ_vqwmOqhENzt-qAQYEjQ07R_xO8xTfteYVWnl3MY/template/preview",
+      "key": "mini_project_-_walk_up_songs",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mini_project_-_walk_up_songs"
+      }
+    },
+    {
+      "name": "Music Word Search",
+      "url": "https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/view",
+      "key": "music_word_search",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "music_word_search"
+      }
+    },
+    {
+      "name": "Overview of Live Coding Levels",
+      "url": "https://www.loom.com/share/0cefdcdd98244527a3d0a3a77d4078eb",
+      "key": "overview_of_live_coding_levels",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "overview_of_live_coding_levels"
+      }
+    },
+    {
+      "name": "Overview of Shadow Blocks",
+      "url": "https://www.loom.com/share/577e64f8ec2742788b0c4963de47a07c",
+      "key": "overview_of_shadow_blocks",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "overview_of_shadow_blocks"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://www.youtube.com/watch?v=q7d_JtyCq1A",
+      "key": "pair_programming",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "name": "Problem Solving and Computational Thinking",
+      "url": "https://docs.google.com/document/d/1b670YBrm2H0PwBKAVoef7lfdsI3ci5SYJz9zWnWTiRI/view",
+      "key": "problem_solving_and_computational_thinking",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_and_computational_thinking"
+      }
+    },
+    {
+      "name": "Project - Genre Mash Up",
+      "url": "https://docs.google.com/presentation/d/13sI-kHNF7fvgy0ThzjmhtIQhE5d0Otg4yx_kEoHDFT8/template/preview",
+      "key": "project_-_genre_mash_up",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_genre_mash_up"
+      }
+    },
+    {
+      "name": "Sequencing - Explore",
+      "url": "https://docs.google.com/presentation/d/1wvDRrS2P_cY9n-pR_pZd7yi5Ew8MjmJeUSkIFz2hpOo/template/preview",
+      "key": "sequencing_-_explore",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_-_explore"
+      }
+    },
+    {
+      "name": "Sequencing - Practice",
+      "url": "https://docs.google.com/presentation/d/1ObRxUvZcal2jUOnuIaMSs6o_CIC9QnOnHzwAZGv_Nes/template/preview",
+      "key": "sequencing_-_practice",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_-_practice"
+      }
+    },
+    {
+      "name": "Sequencing - Synthesis",
+      "url": "https://docs.google.com/presentation/d/1w_ZKy07bfN4k32dW4q_u0YpWRekM5Q3yk7DBEnqcHIQ/template/preview",
+      "key": "sequencing_-_synthesis",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sequencing_-_synthesis"
+      }
+    },
+    {
+      "name": "Spotlight: Henny Tha Bizness, Record Producer",
+      "url": "https://www.youtube.com/watch?v=OrrZPzgWPII",
+      "key": "spotlight_henny_tha_bizness_record_producer",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/music_lab_henny_career_spotlight-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "spotlight_henny_tha_bizness_record_producer"
+      }
+    },
+    {
+      "name": "Spotlight: Roxanne Harris, Creative Coder",
+      "url": "https://www.youtube.com/watch?v=MDtQjObQ8yY",
+      "key": "spotlight_roxanne_harris_creative_coder",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/music_lab_roxanne_interview-6-12-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "spotlight_roxanne_harris_creative_coder"
+      }
+    },
+    {
+      "name": "Walk Up Songs",
+      "url": "https://docs.google.com/document/d/1-NOQXuyOA4TXy2X4oACt97K0f64h2TlkP2tc3-YQKRI/edit",
+      "key": "walk_up_songs",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "walk_up_songs"
+      }
+    },
+    {
+      "name": "Walk Up Songs Rubric",
+      "url": "https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0",
+      "key": "walk_up_songs_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "walk_up_songs_rubric"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Functions - Explore",
+        "resource.key": "functions_-_explore"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions - Practice",
+        "resource.key": "functions_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions - Synthesis",
+        "resource.key": "functions_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Music Lab",
+        "resource.key": "_answer_key_client_stories"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Music Lab",
+        "resource.key": "client_stories"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Music Lab",
+        "resource.key": "introduction_to_music_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Music Lab",
+        "resource.key": "music_word_search"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops - Explore",
+        "resource.key": "loops_-_explore"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops - Explore",
+        "resource.key": "overview_of_shadow_blocks"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops - Practice",
+        "resource.key": "loops_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops - Synthesize",
+        "resource.key": "loops_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops - Synthesize",
+        "resource.key": "overview_of_live_coding_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops - Synthesize",
+        "resource.key": "spotlight_roxanne_harris_creative_coder"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "resource.key": "cat_gif_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "resource.key": "cat_gif_loops_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "resource.key": "mini_project_-_cat_gif_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "resource.key": "mini_project_-_walk_up_songs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "resource.key": "walk_up_songs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "resource.key": "walk_up_songs_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "genre_mashup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "genre_mashup_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "project_-_genre_mash_up"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "resource.key": "make_music_learn_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "resource.key": "problem_solving_and_computational_thinking"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Explore",
+        "resource.key": "sequencing_-_explore"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Practice",
+        "resource.key": "sequencing_-_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Synthesize",
+        "resource.key": "sequencing_-_synthesis"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing - Synthesize",
+        "resource.key": "spotlight_henny_tha_bizness_record_producer"
+      }
+    }
   ],
   "scripts_resources": [
 

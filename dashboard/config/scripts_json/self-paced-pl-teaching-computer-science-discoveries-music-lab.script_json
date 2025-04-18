@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 03:09:09 UTC",
+    "serialized_at": "2025-04-17 01:37:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -631,9 +631,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-CSDMusicLab-L1-CT-CFU"
-        ],
         "progression": "Curriculum Pedagogy"
       },
       "bonus": false,
@@ -656,9 +653,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-CSDMusicLab-L1-CT-CFU-Explanation"
-        ],
         "progression": "Curriculum Pedagogy"
       },
       "bonus": false,
@@ -956,9 +950,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-CSDMusicLab-L2-algorithms"
-        ],
         "progression": "Sequencing & Play Together"
       },
       "bonus": false,
@@ -1431,9 +1422,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "self-paced-CSDMusicLab-L3-patterns"
-        ],
         "progression": "Loops"
       },
       "bonus": false,
