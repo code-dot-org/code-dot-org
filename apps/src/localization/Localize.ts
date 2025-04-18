@@ -167,6 +167,11 @@ export type LocalizeOptions = {
   vueSafe?: boolean;
 };
 
+export type LocalizeLanguageInfo = {
+  code: string;
+  name: string;
+};
+
 /**
  * The argument given to the callback for the 'setLanguage' event callback.
  */
@@ -231,7 +236,10 @@ interface Localize {
    * Returns all available languages for the project.
    */
   getAvailableLanguages: (
-    callback: (err: string | undefined, languages: string[]) => void
+    callback: (
+      err: string | undefined,
+      languages: LocalizeLanguageInfo[]
+    ) => void
   ) => void;
   /**
    * Calling this function will hide the default Localize language-switching

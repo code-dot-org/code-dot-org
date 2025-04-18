@@ -10,12 +10,24 @@ export type TranslationCallback = (code: string) => void;
 
 import {get} from 'js-cookie';
 
-import Localize, {
-  LocalizeOptions,
-  LocalizeSetLanguageData,
-} from '@cdo/apps/localization/Localize';
+import Localize, {LocalizeOptions} from '@cdo/apps/localization/Localize';
 import experiments from '@cdo/apps/util/experiments';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
+
+/**
+ * Describes an available language.
+ */
+export type LanguageInfo = {
+  /**
+   * The localized name of the language. "English" or "Español", for example.
+   */
+  text: string;
+  /**
+   * The language code. "en" or "hi-IN", for example.
+   */
+  value: string;
+};
 
 /**
  * This class handles our dynamic localization engine.
@@ -30,6 +42,8 @@ export class Localization {
   private callbacks: {[key: string]: TranslationCallback[]} = {};
   /* Keep track of the options we gave to LocalizeJS */
   private options: LocalizeOptions | undefined;
+
+  private localeList: LanguageInfo[] = [];
 
   /**
    * Instantiates our localization code and binds events to the LocalizeJS
@@ -47,10 +61,16 @@ export class Localization {
       this.options = options as LocalizeOptions;
     });
 
-    Localize?.on('setLanguage', data => {
+    Localize?.on('setLanguage', _ => {
       // Call our own 'change' event
-      const language = (data as LocalizeSetLanguageData).to;
-      this.trigger('change', language || 'en');
+      this.trigger('change', this.locale);
+    });
+
+    Localize?.getAvailableLanguages((_, data) => {
+      this.localeList = data.map(({name, code}) => ({
+        text: name,
+        value: code,
+      }));
     });
   }
 
@@ -65,11 +85,44 @@ export class Localization {
    * Gets the current locale as a region code.
    */
   get locale(): string {
-    if (!Localize) {
-      // If not using LocalizeJS, then pull from the language cookie
-      return get('language_') || DefaultLocale;
+    // If not using LocalizeJS, then pull from the language cookie
+    // And always fall back to the DefaultLocale
+    const language =
+      Localize?.getLanguage() || get('language_') || DefaultLocale;
+
+    return (
+      this.localeList.find(info => info.value === language)?.value ||
+      this.localeList.find(info => info.value.startsWith(language))?.value ||
+      language
+    );
+  }
+
+  get locales(): LanguageInfo[] {
+    // These workarounds will go away when the localization is done completely
+    // on the frontend.
+    if (this.localeList.length === 0) {
+      // Localize has not given us any languages... build from the existing
+      // localization dropdown.
+      this.localeList =
+        (
+          getScriptData('smallfooter') as
+            | {localeOptions: LanguageInfo[]}
+            | undefined
+        )?.localeOptions || [];
     }
-    return Localize?.getLanguage() || DefaultLocale;
+
+    if (this.localeList.length === 0) {
+      // There's no small footer either (or no smallfooter data)
+      // Query the locale dropdown on the page and read from the <option> listings
+      this.localeList = Array.from(
+        document.querySelectorAll('select#locale option')
+      ).map(option => ({
+        text: option.textContent as string,
+        value: (option as HTMLInputElement).value,
+      }));
+    }
+
+    return this.localeList;
   }
 
   /**
@@ -86,9 +139,7 @@ export class Localization {
     if (event === 'change') {
       // If we aren't in the source language, let's trigger the change event
       // right away.
-      if (Localize && (Localize.getLanguage() || 'en') !== 'en') {
-        this.trigger('change', Localize.getLanguage() || 'en');
-      }
+      this.trigger('change', this.locale);
     }
   }
 

@@ -30,36 +30,19 @@
       Localize.realSetLanguage = Localize.setLanguage;
       Localize.cdoCallbacks = [];
       Localize.cdoSetLanguage = (language) => {
-        const lang = language.split("-")[0];
-
-        // Our internal language codes do not always match LocalizeJS
-        const mapping = {
-          "fa-IR": "fa",
-          "en-US": "en",
-          "es-MX": "es",
-          "es-ES": "es",
-          "hi-IN": "hi",
-        };
-
         // Call LocalizeJS's setLanguage function (which we have renamed to override it)
-        Localize.realSetLanguage(mapping[language] || language);
+        Localize.realSetLanguage(language);
 
         // Set the <html> direction to update it dynamically
+        const lang = language.split("-")[0];
         document.querySelector("html").setAttribute("dir", ["fa"].includes(lang) ? "rtl" : "ltr");
 
-        // Craft the inverse map so we can get our internal language code from LocalizeJS's code
-        const inverseMapping = {};
-        for (const key in mapping) {
-          if (Object.hasOwnProperty.call(mapping, key)) {
-            inverseMapping[mapping[key]] = key;
-          }
-        }
-        const cdoLanguage = language === "source" ? "en-US" : inverseMapping[language] || language;
+        const cdoLanguage = language === "source" ? "en" : language;
 
         const ensureSelector = (cdoLanguage) => {
           const localeSelect = document.querySelector("#locale") || document.querySelector("select[name='locale']");
           if (localeSelect) {
-            localeSelect.selectedIndex = localeSelect.querySelector("option[value='" + cdoLanguage + "']").index;
+            localeSelect.selectedIndex = localeSelect.querySelector("option[value='" + cdoLanguage + "']")?.index || 0;
           }
         };
 
@@ -79,10 +62,12 @@
             // Remove all options and replace them with the LocalizeJS options we have
             Localize.getAvailableLanguages((err, data) => {
               const codes = data.map((entry) => entry.code);
-              localeSelect.querySelectorAll("option").forEach((option) => {
-                if (!codes.some((code) => option.value.startsWith(code) && mapping[option.value])) {
-                  option.remove();
-                }
+              localeSelect.innerHTML = "";
+              data.forEach((info) => {
+                const option = document.createElement("option");
+                option.value = info.code;
+                option.textContent = info.name;
+                localeSelect.append(option);
               });
             });
             localeSelect.removeAttribute('onchange');
