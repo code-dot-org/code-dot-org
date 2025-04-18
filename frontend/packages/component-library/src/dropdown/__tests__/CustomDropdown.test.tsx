@@ -8,19 +8,19 @@ describe('Design System - Custom Dropdown Component', () => {
   it('renders with correct text and children', () => {
     render(
       <CustomDropdown name="test-dropdown" labelText="Dropdown label" size="m">
-        <div data-testid="dropdown-content">Dropdown content</div>
+        <div>Dropdown content</div>
       </CustomDropdown>,
     );
 
     expect(screen.getByText('Dropdown label')).toBeInTheDocument();
-    expect(screen.getByTestId('dropdown-content')).toBeInTheDocument();
+    expect(screen.getByText('Dropdown content')).toBeInTheDocument();
   });
 
   it('opens and closes when clicked', async () => {
     const user = userEvent.setup();
     render(
       <CustomDropdown name="test-dropdown" labelText="Dropdown label" size="m">
-        <div data-testid="dropdown-content">Dropdown content</div>
+        <div>Dropdown content</div>
       </CustomDropdown>,
     );
 
@@ -30,7 +30,7 @@ describe('Design System - Custom Dropdown Component', () => {
 
     // Initially dropdown content should not be visible
     const dropdownContainer =
-      screen.getByTestId('dropdown-content').parentElement;
+      screen.getByText('Dropdown content').parentElement;
     expect(dropdownContainer).not.toHaveClass('open');
 
     // Click to open dropdown
@@ -55,7 +55,7 @@ describe('Design System - Custom Dropdown Component', () => {
         disabled
         size="m"
       >
-        <div data-testid="dropdown-content">Dropdown content</div>
+        <div>Dropdown content</div>
       </CustomDropdown>,
     );
 
@@ -78,7 +78,7 @@ describe('Design System - Custom Dropdown Component', () => {
         size="m"
         icon={{iconName: 'filter', iconStyle: 'solid', title: 'Filter Icon'}}
       >
-        <div data-testid="dropdown-content">Dropdown content</div>
+        <div>Dropdown content</div>
       </CustomDropdown>,
     );
 
@@ -99,7 +99,7 @@ describe('Design System - Custom Dropdown Component', () => {
           type: 'primary',
         }}
       >
-        <div data-testid="dropdown-content">Dropdown content</div>
+        <div>Dropdown content</div>
       </CustomDropdown>,
     );
 
@@ -120,7 +120,7 @@ describe('Design System - Custom Dropdown Component', () => {
         helperMessage="This is a helper message"
         helperIcon={{iconName: 'info-circle', iconStyle: 'solid'}}
       >
-        <div data-testid="dropdown-content">Dropdown content</div>
+        <div>Dropdown content</div>
       </CustomDropdown>,
     );
 
@@ -137,7 +137,7 @@ describe('Design System - Custom Dropdown Component', () => {
         size="m"
         errorMessage="This is an error message"
       >
-        <div data-testid="dropdown-content">Dropdown content</div>
+        <div>Dropdown content</div>
       </CustomDropdown>,
     );
 
@@ -156,7 +156,7 @@ describe('Design System - Custom Dropdown Component', () => {
         styleAsFormField={true}
         selectedValueText="Selected Option"
       >
-        <div data-testid="dropdown-content">Dropdown content</div>
+        <div>Dropdown content</div>
       </CustomDropdown>,
     );
 
