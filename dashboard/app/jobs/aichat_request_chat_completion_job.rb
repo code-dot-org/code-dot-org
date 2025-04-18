@@ -50,6 +50,14 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
+  private def multimodal?(request)
+    messages = [*request.stored_messages, request.new_message]
+    messages_with_assets_count = messages.count do |message|
+      message['assets']&.any?
+    end
+    return messages_with_assets_count>0
+  end
+
   private def get_execution_status_and_response(request, locale)
     # Moderate user input for toxicity.
     user_toxicity = AichatSafetyHelper.find_toxicity('user', request.new_message['chatMessageText'], locale, request.level_id)
@@ -57,19 +65,6 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
     user_pii = find_pii(request.new_message['chatMessageText'], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
-
-    messages = request.stored_messages + [request.new_message]
-    messages_with_assets_count = messages.count do |message|
-      message[:content].any? {|c| c[:type] != 'text'}
-    end
-    @pdfs_count = messages.sum do |message|
-      message[:content].count {|c| c[:type] == 'file'}
-    end
-    @images_count = messages.sum do |message|
-      message[:content].count {|c| c[:type] == 'image_url'}
-    end
-
-    @is_multimodal = messages_with_assets_count > 0
 
     # Make the request.
     begin
@@ -128,6 +123,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
             {name: 'ModelId', value: get_model_id(request)},
+            {name: 'Multimodal', value: multimodal?(request).to_s},
           ],
         }
       ]
@@ -136,9 +132,6 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   private def report_job_finish(request)
     execution_time = Time.now - @start_time
-    is_multimodal = @is_multimodal || false
-    pdfs_count = @pdfs_count || 0
-    images_count = @images_count || 0
     status_name = SharedConstants::AI_REQUEST_EXECUTION_STATUS.key(request.execution_status).to_s
     Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE,
       [
@@ -151,9 +144,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
             {name: 'Environment', value: CDO.rack_env},
             {name: 'ModelId', value: get_model_id(request)},
             {name: 'ExecutionStatus', value: status_name},
-            {name: 'Multimodal', value: @is_multimodal.to_s},
-            {name: 'pdfs', value: @pdfs_count.to_s},
-            {name: 'images', value: @images_count.to_s},
+            {name: 'Multimodal', value: multimodal?(request).to_s},
           ],
         },
         {
@@ -164,9 +155,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
             {name: 'ModelId', value: get_model_id(request)},
-            {name: 'Multimodal', value: is_multimodal.to_s},
-            {name: 'pdfs', value: pdfs_count.to_s},
-            {name: 'images', value: images_count.to_s},
+            {name: 'Multimodal', value: multimodal?(request).to_s},
           ],
         }
       ]
