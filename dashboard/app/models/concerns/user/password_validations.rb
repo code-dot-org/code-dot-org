@@ -50,13 +50,11 @@ module User::PasswordValidations
     new_user_without_password?
   end
 
-  private
-
-  def changing_password?
+  private def changing_password?
     password.present? || password_confirmation.present?
   end
 
-  def new_user_without_password?
+  private def new_user_without_password?
     !persisted? && encrypted_password.blank?
   end
 end
