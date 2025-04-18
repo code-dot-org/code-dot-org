@@ -1,7 +1,6 @@
 import {GoogleAnalytics} from '@next/third-parties/google';
-import {headers} from 'next/headers';
 
-import {getBrandFromHostname} from '@/config/brand';
+import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
 import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
 import {getStage} from '@/config/stage';
@@ -17,11 +16,14 @@ import StatsigProvider from '@/providers/statsig/StatsigProvider';
  */
 export default async function Layout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{brand: Brand}>;
 }>) {
-  const hostname = (await headers()).get('Host');
-  const brand = getBrandFromHostname(hostname);
+  const syncParams = await params;
+  const {brand} = syncParams;
+
   const googleAnalyticsMeasurementId = getGoogleAnalyticsMeasurementId(brand);
   const statsigBootstrapValues = await generateBootstrapValues();
   const statsigClientKey = process.env.STATSIG_CLIENT_KEY;

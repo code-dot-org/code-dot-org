@@ -83,7 +83,7 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
         end
 
         it 'returns new user instance without reset password tokens' do
-          _reset_password.must_be_instance_of Teacher
+          _reset_password.must_be_instance_of User
           _(reset_password.reset_password_token).must_be_nil
           _(reset_password.reset_password_sent_at).must_be_nil
           _(reset_password.raw_token).must_be_nil
@@ -145,7 +145,7 @@ class Services::User::PasswordResetterByEmailTest < ActiveSupport::TestCase
         end
 
         it 'returns new user instance without reset password tokens' do
-          _reset_password.must_be_instance_of Teacher
+          _reset_password.must_be_instance_of User
           _(reset_password.reset_password_token).must_be_nil
           _(reset_password.reset_password_sent_at).must_be_nil
           _(reset_password.raw_token).must_be_nil

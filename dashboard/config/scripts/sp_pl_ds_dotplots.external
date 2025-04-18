@@ -10,12 +10,15 @@ Replacing level with panels for google sheets
 ## Data Link
 
 #### Use this link to access the school party survey data from previous lessons.
-//update link
-<p style = "font-size: 16pt"> <a href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FbmRtgGWIm4yEfQjEOp9c%2Ffile.json" target="blank" rel="noopener noreferrer">School Party Survey Data - CODAP</a></p>
 
+<p style = "font-size: 16pt"> <a href="https://docs.google.com/spreadsheets/d/1AlVNpxzypX82fNlPDxDEa5ww72J_G2kyfZ2sFJedBJA/edit?usp=sharing" target="blank" rel="noopener noreferrer">School Party Survey Data - Google Sheets</a></p>
+
+#### **Tips:**
+#### Create a Copy of the dataset before creating a data visualization.
+#### Duplicate the data into a new tab for each bar chart you create.
 ---
 
-<img src="https://images.code.org/0c3faaf47fecefab31d4eb9ea5011a61-image-1731425456148.png" alt="bar chart created in CODAP" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/fc0d828145861e665d2b0f0eabfc1dc1-image-1744901010152.png" alt="bar chart created in Google Sheets" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 ## Bar Chart
 #### Using the pizza party data, create a bar chart by:
@@ -30,7 +33,7 @@ Replacing level with panels for google sheets
 
 ---
 
-<img src="https://images.code.org/b5dd1ce9a5e6b3d8122a87a21efc7ab0-image-1731425622735.png" alt="bar chart created in CODAP" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/1614544f27bed480f32d75c583ac4b19-image-1744901246487.png" alt="pie chart created in Google Sheets" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
 ## Pie Chart
 

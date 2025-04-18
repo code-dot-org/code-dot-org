@@ -3,7 +3,10 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-import {TEACHER_NAVIGATION_SECTIONS_URL} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import {
+  TEACHER_NAVIGATION_SECTIONS_URL,
+  TEACHER_NAVIGATION_PATHS,
+} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 
 import styles from './teacherHomepage.module.scss';
 
@@ -28,7 +31,10 @@ export const EmptyStateButton: React.FC<EmptyStateButtonProps> = ({
   sectionId,
   path,
 }) => {
-  return (
+  const inDashboard: boolean = Object.values(TEACHER_NAVIGATION_PATHS).includes(
+    path
+  );
+  return inDashboard ? (
     <NavLink
       className={styles.emptyStateButton}
       to={`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`}
@@ -47,5 +53,21 @@ export const EmptyStateButton: React.FC<EmptyStateButtonProps> = ({
         iconStyle={'solid'}
       />
     </NavLink>
+  ) : (
+    <a className={styles.emptyStateButton} href={path}>
+      <div className={styles.taskButtonLeft}>
+        <FontAwesomeV6Icon
+          className={styles.emptyStateButtonIcon}
+          iconName={icon}
+          iconStyle={'solid'}
+        />
+        <BodyThreeText>{buttonText}</BodyThreeText>
+      </div>
+      <FontAwesomeV6Icon
+        className={styles.emptyStateButtonIcon}
+        iconName={'plus'}
+        iconStyle={'solid'}
+      />
+    </a>
   );
 };

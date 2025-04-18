@@ -3,6 +3,7 @@ import '@/contentful/register-custom-components';
 
 import {detachExperienceStyles} from '@contentful/experiences-sdk-react';
 import {Metadata} from 'next';
+import {draftMode} from 'next/headers';
 
 import FontLoader from '@code-dot-org/fonts/FontLoader';
 
@@ -11,6 +12,9 @@ import {getExperience} from '@/contentful/get-experience';
 import {getSeoMetadata} from '@/metadata/seo';
 import {getPageHeading} from '@/selectors/contentful/getExperienceEntryFields';
 
+export const dynamic = 'force-static'; // Ensure ISR is enabled
+export const revalidate = 600; // Cache for five minutes until on-demand revalidation works
+
 type ExperiencePageProps = {
   params: Promise<{locale?: string; slug?: string; preview?: string}>;
   searchParams: Promise<{[key: string]: string | string[] | undefined}>;
@@ -18,11 +22,16 @@ type ExperiencePageProps = {
 
 async function getPageProps({params, searchParams}: ExperiencePageProps) {
   const {locale = 'en-US', slug = 'home-page'} = (await params) || {};
-  const {expEditorMode} = await searchParams;
-  const editorMode = expEditorMode === 'true';
+  const isDraftModeEnabled = (await draftMode()).isEnabled;
 
   return {
-    experienceResult: await getExperience(slug, locale, editorMode),
+    experienceResult: await getExperience(
+      slug,
+      locale,
+      isDraftModeEnabled
+        ? (await searchParams).expEditorMode === 'true'
+        : false,
+    ),
     locale,
     slug,
   };

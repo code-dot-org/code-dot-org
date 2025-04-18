@@ -43,6 +43,8 @@ export async function logStudentWorkEvaluations(
       })
     );
   }
+
+  return ule.id;
 }
 
 type StudentWorkEvaluation = UserLevelEvaluation | UserLevelSkillEvaluation;

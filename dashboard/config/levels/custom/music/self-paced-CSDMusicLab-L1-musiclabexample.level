@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-04-10T21:52:45.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "#### Welcome to Music Lab!\r\n\r\nThis is a lab that lets you combine **coding** and **music**! This level is all about exploration! Try clicking things! Try dragging things! Explore this space! \r\n\r\nSee how many of these you can do:\r\n\r\n- Drag out a block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_sound_at_current_location_simple2)\r\n- Connect two blocks [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:when-run-block)\r\n- Play a track [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=run-button)\r\n- Change the track\r\n- Duplicate a block (hint: right-click on a block!)\r\n- Play 3 tracks in a row: <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5;\"></i> &nbsp; Beat </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9;\"></i> &nbsp; Bass </span>, then <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px;  white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A;\"></i> &nbsp; Lead </span>\r\n- Change the order of your tracks\r\n- Change where the song starts playing in the timeline\r\n- Delete a block\r\n- Clear the workspace and start over [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n- Play 3 tracks simultaneously \r\n\r\n",
+    "long_instructions": "#### Welcome to Music Lab!\r\n\r\nThis is a lab that lets you combine **coding** and **music**! This level is all about exploration! Try clicking things! Try dragging things! Explore this space! \r\n\r\nSee how many of these you can do:\r\n\r\n- Drag out a block [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_sound_at_current_location_simple2)\r\n- Connect two blocks [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=id:when-run-block)\r\n- Play a track [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=run-button)\r\n- Change the track\r\n- Duplicate a block (hint: right-click on a block!)\r\n- Play 3 tracks in a row: <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5;\"></i> &nbsp; Beat </span>, <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9;\"></i> &nbsp; Bass </span>, then <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px;  white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-guitars\" style=\"color: #64D25A;\"></i> &nbsp; Lead </span>\r\n- Change the order of your tracks\r\n- Change where the song starts playing in the timeline\r\n- Delete a block\r\n- Clear the workspace and start over [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n> If you're stuck, try clicking the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints!\r\n",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -81,7 +82,7 @@
       },
       {
         "key": "test-music-lab-sequences-explore-investigate_b40600c0-2378-4876-b62c-b4929dc5601a",
-        "message": "You played a sound! Try to play 3 in total!",
+        "message": "You played a sound! Try to play 3 in total!  [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_sound_at_current_location_simple2---id:when-run-block)",
         "next": false,
         "conditions": [
           {
@@ -93,7 +94,7 @@
       },
       {
         "key": "test-music-lab-sequences-explore-investigate_5b77ac2f-f924-47b1-a8e2-b96c505d8008",
-        "message": "Nothing is playing yet! Try connecting a block!",
+        "message": "Nothing is playing yet! Try connecting a block! [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=flyout-id:play_sound_at_current_location_simple2---id:when-run-block)",
         "next": false,
         "conditions": [
 
@@ -103,8 +104,7 @@
     ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-10T21:52:45.066+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-investigate\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-investigate\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-10T21:52:45.066+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-explore-investigate\\\"\"],\"cloned_from\":\"test-music-lab-sequences-explore-investigate\"},{\"changed_at\":\"2025-04-17 21:05:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
