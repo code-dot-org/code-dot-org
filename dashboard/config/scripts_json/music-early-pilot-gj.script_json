@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-23 23:12:25 UTC",
+    "serialized_at": "2025-04-18 03:09:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -442,6 +442,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-career1-panel_january"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -464,6 +467,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-sound_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -486,6 +492,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-play-two_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -508,6 +517,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-panel_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -530,6 +542,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-together1_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -552,6 +567,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-ingro-loop1_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -574,6 +592,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-5sounds_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -596,6 +617,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-seq-panel-rests_january"
+        ],
         "progression": "Music Integration Video"
       },
       "bonus": false,
@@ -618,6 +642,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-loop-beat_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -640,6 +667,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-layer_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -662,6 +692,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-drop-panel_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -684,6 +717,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-drop2_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -706,6 +742,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-drop3_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -728,6 +767,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-make_january"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -750,6 +792,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold_january"
+        ],
         "progression": "Video Intro"
       },
       "bonus": false,
@@ -772,6 +817,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-need_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -794,6 +842,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-panel_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -816,6 +867,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-call_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -838,6 +892,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-define_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -860,6 +917,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-use_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -882,6 +942,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-chorus_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -904,6 +967,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-chorus2_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -926,6 +992,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-panel2_january"
+        ],
         "progression": "Remix & Freeplay"
       },
       "bonus": false,
@@ -948,6 +1017,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-beat_january"
+        ],
         "progression": "Remix & Freeplay"
       },
       "bonus": false,
@@ -970,6 +1042,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-layer_january"
+        ],
         "progression": "Remix & Freeplay"
       },
       "bonus": false,
@@ -992,6 +1067,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold3_january"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -1014,6 +1092,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-try_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1036,6 +1117,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-scenes-panel_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1058,6 +1142,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-sound_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1080,6 +1167,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-function_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1102,6 +1192,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-functions_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1124,6 +1217,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-effects-panel_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1146,6 +1242,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-effects_january"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1168,6 +1267,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-review-panel_january"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -1190,6 +1292,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-make_january"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -1630,57 +1735,10 @@
     }
   ],
   "resources": [
-    {
-      "name": "Lesson Slides",
-      "url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/template",
-      "key": "lesson_slides",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/download",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "lesson_slides"
-      }
-    },
-    {
-      "name": "Music Lab Inspiration",
-      "url": "https://www.youtube.com/watch?v=GqlP5s7KTl4",
-      "key": "music_lab_inspiration",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "music_lab_inspiration"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Producer Power",
-        "resource.key": "lesson_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Songwriter's Toolbox",
-        "resource.key": "lesson_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Songwriter's Toolbox",
-        "resource.key": "music_lab_inspiration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sound Designer's Studio",
-        "resource.key": "lesson_slides"
-      }
-    }
+
   ],
   "scripts_resources": [
 
@@ -1689,104 +1747,10 @@
 
   ],
   "vocabularies": [
-    {
-      "key": "efficient",
-      "word": "Efficient",
-      "definition": "Doing something in the easiest and quickest way. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "efficient"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A piece of code that you can call over and over again",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "A way to tell the computer to do the same thing over and over.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "A set of instructions that tells a computer what to do.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "sequence",
-      "word": "Sequence",
-      "definition": "The order of steps in a program or task.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sequence"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Producer Power",
-        "vocabulary.key": "efficient"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Producer Power",
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Songwriter's Toolbox",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Songwriter's Toolbox",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Songwriter's Toolbox",
-        "vocabulary.key": "sequence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sound Designer's Studio",
-        "vocabulary.key": "event"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

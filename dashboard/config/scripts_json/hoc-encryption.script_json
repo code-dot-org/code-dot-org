@@ -4,19 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_migrated": true,
-      "show_calendar": true,
       "supported_locales": [
         "es-MX",
         "es-ES"
-      ],
-      "weekly_instructional_minutes": 225
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:30:07 UTC",
+    "serialized_at": "2025-04-18 02:57:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-06 01:05:26 UTC",
+    "serialized_at": "2025-04-18 03:08:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2036,24 +2036,24 @@
       }
     },
     {
-      "key": "03ef816d-3618-49c9-8fa6-e44dd3da6dfd",
+      "key": "4ef56261-f037-4615-a0ca-32f70641f29b",
       "position": 3,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ef56261-f037-4615-a0ca-32f70641f29b",
+        "lesson_activity.key": "8a4a79ac-ca8f-479a-857c-5bd885783dcf"
+      }
+    },
+    {
+      "key": "03ef816d-3618-49c9-8fa6-e44dd3da6dfd",
+      "position": 4,
       "properties": {
         "progression_name": "Moving and Painting"
       },
       "seeding_key": {
         "activity_section.key": "03ef816d-3618-49c9-8fa6-e44dd3da6dfd",
-        "lesson_activity.key": "8a4a79ac-ca8f-479a-857c-5bd885783dcf"
-      }
-    },
-    {
-      "key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706",
-      "position": 4,
-      "properties": {
-        "progression_name": "Painter Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706",
         "lesson_activity.key": "8a4a79ac-ca8f-479a-857c-5bd885783dcf"
       }
     },
@@ -2099,8 +2099,19 @@
       }
     },
     {
-      "key": "d79b0346-a22c-4104-8cd5-36421b4fee20",
+      "key": "99281af4-66ad-4b8c-a8a1-b4ffd5b76af9",
       "position": 3,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "99281af4-66ad-4b8c-a8a1-b4ffd5b76af9",
+        "lesson_activity.key": "45835d8c-9298-4fb7-9b3c-9bb021aaa49a"
+      }
+    },
+    {
+      "key": "d79b0346-a22c-4104-8cd5-36421b4fee20",
+      "position": 4,
       "properties": {
         "progression_name": "Problem-Solving with Functions"
       },
@@ -2151,8 +2162,19 @@
       }
     },
     {
-      "key": "9c3277e2-de4e-40e0-909f-771e1e2d5af2",
+      "key": "27e46863-dc28-49ac-b5c1-c2fadcd515de",
       "position": 3,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "27e46863-dc28-49ac-b5c1-c2fadcd515de",
+        "lesson_activity.key": "c11a91c3-e91d-4788-b285-5390eb09abf0"
+      }
+    },
+    {
+      "key": "9c3277e2-de4e-40e0-909f-771e1e2d5af2",
+      "position": 4,
       "properties": {
         "progression_name": "Painter Functions"
       },
@@ -2203,8 +2225,19 @@
       }
     },
     {
-      "key": "fa808186-b40a-4c68-ba49-fcfa6cfc8456",
+      "key": "8b920ff2-d1ed-4e9c-bd5f-dad95c592ef8",
       "position": 3,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b920ff2-d1ed-4e9c-bd5f-dad95c592ef8",
+        "lesson_activity.key": "5fa9b71b-b737-497f-9ce9-0ceda2ac109c"
+      }
+    },
+    {
+      "key": "fa808186-b40a-4c68-ba49-fcfa6cfc8456",
+      "position": 4,
       "properties": {
         "progression_name": "Loops with the Painter"
       },
@@ -2255,8 +2288,19 @@
       }
     },
     {
-      "key": "e2f9a922-d1a6-40d4-84d6-c9a8e50f2f8e",
+      "key": "140430e3-52c2-4ef9-944f-e6e5bc496e18",
       "position": 3,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "140430e3-52c2-4ef9-944f-e6e5bc496e18",
+        "lesson_activity.key": "0f6f3350-e364-4b7a-a93f-f1abe0713467"
+      }
+    },
+    {
+      "key": "e2f9a922-d1a6-40d4-84d6-c9a8e50f2f8e",
+      "position": 4,
       "properties": {
         "progression_name": "Decisions with the Painter"
       },
@@ -2631,8 +2675,19 @@
       }
     },
     {
-      "key": "3ee75dbc-7c86-4758-b002-dbfadec21e54",
+      "key": "e4126e1e-d022-4a79-abd2-285bf10883ed",
       "position": 3,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4126e1e-d022-4a79-abd2-285bf10883ed",
+        "lesson_activity.key": "29951745-12ac-40b2-99f2-1c7dee989d2c"
+      }
+    },
+    {
+      "key": "3ee75dbc-7c86-4758-b002-dbfadec21e54",
+      "position": 4,
       "properties": {
         "progression_name": "Solving Problems in The Neighborhood"
       },
@@ -3778,6 +3833,31 @@
       "assessment": true,
       "properties": {
         "level_keys": [
+          "programming-fundamentals-lesson4-vocab_2025"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-vocab_2025"
+        ],
+        "lesson.key": "Variables and Data Flow",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "c594905e-07ee-4b79-b103-b213df8dc626"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson4-vocab_2025"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
           "programming-fundamentals-lesson4-level8_2025-launch"
         ],
         "progression": "Check Your Understanding"
@@ -3797,8 +3877,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 9,
+      "chapter": 25,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3822,7 +3902,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3847,7 +3927,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -3872,7 +3952,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -3897,7 +3977,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -3922,7 +4002,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -3947,15 +4027,15 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
           "programming-fundamentals-lesson5-level6_2025-launch"
         ],
-        "progression": "Meet the Painter"
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -3965,14 +4045,14 @@
         "lesson.key": "Working with Objects",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "932592a4-ec86-4827-83a0-9610fdb6b514"
+        "activity_section.key": "4ef56261-f037-4615-a0ca-32f70641f29b"
       },
       "level_keys": [
         "programming-fundamentals-lesson5-level6_2025-launch"
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3997,7 +4077,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -4022,7 +4102,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -4047,9 +4127,34 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 10,
       "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-vocab_2025"
+        ],
+        "progression": "Moving and Painting"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson5-vocab_2025"
+        ],
+        "lesson.key": "Working with Objects",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "03ef816d-3618-49c9-8fa6-e44dd3da6dfd"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson5-vocab_2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 11,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -4069,56 +4174,6 @@
       },
       "level_keys": [
         "programming-fundamentals-lesson5-level10_2025-launch"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson5-level11_2025-launch"
-        ],
-        "progression": "Painter Challenges"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson5-level11_2025-launch"
-        ],
-        "lesson.key": "Working with Objects",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif2-2025",
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson5-level11_2025-launch"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 12,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson5-level12_2025-launch"
-        ],
-        "progression": "Painter Challenges"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson5-level12_2025-launch"
-        ],
-        "lesson.key": "Working with Objects",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif2-2025",
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson5-level12_2025-launch"
       ]
     },
     {
@@ -4274,13 +4329,38 @@
     {
       "chapter": 43,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson6-vocab_2025"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-vocab_2025"
+        ],
+        "lesson.key": "Functions and Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "99281af4-66ad-4b8c-a8a1-b4ffd5b76af9"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson6-vocab_2025"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 8,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "programming-fundamentals-lesson6-level7_2025-launch"
         ],
-        "progression": "Exploring Functions"
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -4290,15 +4370,15 @@
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
+        "activity_section.key": "99281af4-66ad-4b8c-a8a1-b4ffd5b76af9"
       },
       "level_keys": [
         "programming-fundamentals-lesson6-level7_2025-launch"
       ]
     },
     {
-      "chapter": 44,
-      "position": 8,
+      "chapter": 45,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4322,8 +4402,8 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 9,
+      "chapter": 46,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4347,8 +4427,8 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 10,
+      "chapter": 47,
+      "position": 11,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -4372,8 +4452,8 @@
       ]
     },
     {
-      "chapter": 47,
-      "position": 11,
+      "chapter": 48,
+      "position": 12,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
@@ -4397,11 +4477,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level1_2025-launch"
+        ],
         "progression": "Parameters and Arguments"
       },
       "bonus": false,
@@ -4419,11 +4502,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level2_2025-launch"
+        ],
         "progression": "Parameters and Arguments"
       },
       "bonus": false,
@@ -4441,11 +4527,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level3_2025-launch"
+        ],
         "progression": "Parameters and Arguments"
       },
       "bonus": false,
@@ -4463,11 +4552,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level4_2025-launch"
+        ],
         "progression": "Parameters and Arguments"
       },
       "bonus": false,
@@ -4485,11 +4577,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level5_2025-launch"
+        ],
         "progression": "Parameters and Arguments"
       },
       "bonus": false,
@@ -4507,11 +4602,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level6_2025-launch"
+        ],
         "progression": "Parameters and Arguments"
       },
       "bonus": false,
@@ -4529,11 +4627,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level7_2025-launch"
+        ],
         "progression": "Parameters and Arguments"
       },
       "bonus": false,
@@ -4551,12 +4652,40 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-vocab_2025"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-vocab_2025"
+        ],
+        "lesson.key": "Debugging Strategies",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "27e46863-dc28-49ac-b5c1-c2fadcd515de"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson7-vocab_2025"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 9,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Parameters and Arguments"
+        "level_keys": [
+          "programming-fundamentals-lesson7-level8_2025-launch"
+        ],
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -4566,18 +4695,21 @@
         "lesson.key": "Debugging Strategies",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "8f76a8e6-58a7-44c5-91d0-333898e9e860"
+        "activity_section.key": "27e46863-dc28-49ac-b5c1-c2fadcd515de"
       },
       "level_keys": [
         "programming-fundamentals-lesson7-level8_2025-launch"
       ]
     },
     {
-      "chapter": 56,
-      "position": 9,
+      "chapter": 58,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level9_2025-launch"
+        ],
         "progression": "Painter Functions"
       },
       "bonus": false,
@@ -4595,11 +4727,14 @@
       ]
     },
     {
-      "chapter": 57,
-      "position": 10,
+      "chapter": 59,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level10_2025-launch"
+        ],
         "progression": "Painter Functions"
       },
       "bonus": false,
@@ -4617,11 +4752,14 @@
       ]
     },
     {
-      "chapter": 58,
-      "position": 11,
+      "chapter": 60,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level11_2025-launch"
+        ],
         "progression": "Painter Functions"
       },
       "bonus": false,
@@ -4639,11 +4777,14 @@
       ]
     },
     {
-      "chapter": 59,
-      "position": 12,
+      "chapter": 61,
+      "position": 13,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson7-level12_2025-launch"
+        ],
         "progression": "Painter Functions"
       },
       "bonus": false,
@@ -4661,11 +4802,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level1_2025-launch"
+        ],
         "progression": "Exploring while Loops"
       },
       "bonus": false,
@@ -4683,11 +4827,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level2_2025-launch"
+        ],
         "progression": "Exploring while Loops"
       },
       "bonus": false,
@@ -4705,11 +4852,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level3_2025-launch"
+        ],
         "progression": "Exploring while Loops"
       },
       "bonus": false,
@@ -4727,11 +4877,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level4_2025-launch"
+        ],
         "progression": "Exploring while Loops"
       },
       "bonus": false,
@@ -4749,11 +4902,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level5_2025-launch"
+        ],
         "progression": "Exploring while Loops"
       },
       "bonus": false,
@@ -4771,12 +4927,40 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Exploring while Loops"
+        "level_keys": [
+          "programming-fundamentals-lesson8-vocab_2025"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-vocab_2025"
+        ],
+        "lesson.key": "Introduction to Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "8b920ff2-d1ed-4e9c-bd5f-dad95c592ef8"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson8-vocab_2025"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level6_2025-launch"
+        ],
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -4786,18 +4970,21 @@
         "lesson.key": "Introduction to Loops",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "ccaf38f1-30aa-45ab-bedb-f8749267e209"
+        "activity_section.key": "8b920ff2-d1ed-4e9c-bd5f-dad95c592ef8"
       },
       "level_keys": [
         "programming-fundamentals-lesson8-level6_2025-launch"
       ]
     },
     {
-      "chapter": 66,
-      "position": 7,
+      "chapter": 69,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level7_2025-launch"
+        ],
         "progression": "Loops with the Painter"
       },
       "bonus": false,
@@ -4815,11 +5002,14 @@
       ]
     },
     {
-      "chapter": 67,
-      "position": 8,
+      "chapter": 70,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level8_2025-launch"
+        ],
         "progression": "Loops with the Painter"
       },
       "bonus": false,
@@ -4837,11 +5027,14 @@
       ]
     },
     {
-      "chapter": 68,
-      "position": 9,
+      "chapter": 71,
+      "position": 10,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level9_2025-launch"
+        ],
         "progression": "Loops with the Painter"
       },
       "bonus": false,
@@ -4859,11 +5052,14 @@
       ]
     },
     {
-      "chapter": 69,
-      "position": 10,
+      "chapter": 72,
+      "position": 11,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level10_2025-launch"
+        ],
         "progression": "Loops with the Painter"
       },
       "bonus": false,
@@ -4881,11 +5077,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level1_2025-launch"
+        ],
         "progression": "Exploring Conditionals"
       },
       "bonus": false,
@@ -4903,11 +5102,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level2_2025-launch"
+        ],
         "progression": "Exploring Conditionals"
       },
       "bonus": false,
@@ -4925,11 +5127,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level3_2025-launch"
+        ],
         "progression": "Exploring Conditionals"
       },
       "bonus": false,
@@ -4947,11 +5152,14 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 76,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level4_2025-launch"
+        ],
         "progression": "Exploring Conditionals"
       },
       "bonus": false,
@@ -4969,11 +5177,14 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 77,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level5_2025-launch"
+        ],
         "progression": "Exploring Conditionals"
       },
       "bonus": false,
@@ -4991,11 +5202,14 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 78,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level6_2025-launch"
+        ],
         "progression": "Exploring Conditionals"
       },
       "bonus": false,
@@ -5013,12 +5227,40 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 79,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Exploring Conditionals"
+        "level_keys": [
+          "programming-fundamentals-lesson9-vocab_2025"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-vocab_2025"
+        ],
+        "lesson.key": "Conditional Statements",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "140430e3-52c2-4ef9-944f-e6e5bc496e18"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson9-vocab_2025"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level7_2025-launch"
+        ],
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -5028,18 +5270,21 @@
         "lesson.key": "Conditional Statements",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "c87ea95f-715f-4ead-b2fa-bed2a3ec7850"
+        "activity_section.key": "140430e3-52c2-4ef9-944f-e6e5bc496e18"
       },
       "level_keys": [
         "programming-fundamentals-lesson9-level7_2025-launch"
       ]
     },
     {
-      "chapter": 77,
-      "position": 8,
+      "chapter": 81,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level8_2025-launch"
+        ],
         "progression": "Decisions with the Painter"
       },
       "bonus": false,
@@ -5057,11 +5302,14 @@
       ]
     },
     {
-      "chapter": 78,
-      "position": 9,
+      "chapter": 82,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level9_2025-launch"
+        ],
         "progression": "Decisions with the Painter"
       },
       "bonus": false,
@@ -5079,11 +5327,14 @@
       ]
     },
     {
-      "chapter": 79,
-      "position": 10,
+      "chapter": 83,
+      "position": 11,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level10_2025-launch"
+        ],
         "progression": "Decisions with the Painter"
       },
       "bonus": false,
@@ -5101,7 +5352,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5126,11 +5377,14 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level1_2025-launch"
+        ],
         "progression": "if/else Statements"
       },
       "bonus": false,
@@ -5148,11 +5402,14 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level2_2025-launch"
+        ],
         "progression": "if/else Statements"
       },
       "bonus": false,
@@ -5170,11 +5427,14 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 87,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level3_2025-launch"
+        ],
         "progression": "if/else Statements"
       },
       "bonus": false,
@@ -5192,11 +5452,14 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 88,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level4_2025-launch"
+        ],
         "progression": "if/else Statements"
       },
       "bonus": false,
@@ -5214,11 +5477,14 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 89,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level5_2025-launch"
+        ],
         "progression": "if/else Statements"
       },
       "bonus": false,
@@ -5236,12 +5502,40 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 90,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "if/else Statements"
+        "level_keys": [
+          "programming-fundamentals-lesson12-vocab_2025"
+        ],
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-vocab_2025"
+        ],
+        "lesson.key": "Two-Way and Nested Selection",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "e4126e1e-d022-4a79-abd2-285bf10883ed"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson12-vocab_2025"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level6_2025-launch"
+        ],
+        "progression": "Check Your Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -5251,18 +5545,21 @@
         "lesson.key": "Two-Way and Nested Selection",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "81fdb381-ae32-41a2-8747-d5c569c358cb"
+        "activity_section.key": "e4126e1e-d022-4a79-abd2-285bf10883ed"
       },
       "level_keys": [
         "programming-fundamentals-lesson12-level6_2025-launch"
       ]
     },
     {
-      "chapter": 87,
-      "position": 7,
+      "chapter": 92,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level7_2025-launch"
+        ],
         "progression": "Solving Problems in The Neighborhood"
       },
       "bonus": false,
@@ -5280,11 +5577,14 @@
       ]
     },
     {
-      "chapter": 88,
-      "position": 8,
+      "chapter": 93,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level8_2025-launch"
+        ],
         "progression": "Solving Problems in The Neighborhood"
       },
       "bonus": false,
@@ -5302,11 +5602,14 @@
       ]
     },
     {
-      "chapter": 89,
-      "position": 9,
+      "chapter": 94,
+      "position": 10,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level9_2025-launch"
+        ],
         "progression": "Solving Problems in The Neighborhood"
       },
       "bonus": false,
@@ -5324,7 +5627,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5349,7 +5652,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 96,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5374,7 +5677,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5399,7 +5702,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5424,7 +5727,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 99,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5449,7 +5752,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 100,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5474,7 +5777,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 101,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5499,7 +5802,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 102,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5524,7 +5827,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 103,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5549,7 +5852,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 104,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5574,7 +5877,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 105,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5599,7 +5902,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 106,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5624,7 +5927,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 107,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5649,7 +5952,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 108,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -5674,7 +5977,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 109,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5699,7 +6002,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 110,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -5724,7 +6027,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 111,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5749,7 +6052,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 112,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5774,7 +6077,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 113,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5799,7 +6102,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 114,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5824,7 +6127,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 115,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5849,7 +6152,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 116,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5874,7 +6177,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 117,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5899,7 +6202,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 118,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -5924,7 +6227,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 119,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5949,7 +6252,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 120,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5974,7 +6277,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 121,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5999,7 +6302,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 122,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6024,7 +6327,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 123,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6049,7 +6352,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 124,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6074,7 +6377,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 125,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6099,7 +6402,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 126,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -6124,7 +6427,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 127,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6149,7 +6452,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 128,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -6174,7 +6477,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 129,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6199,7 +6502,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 130,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6224,7 +6527,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 131,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6249,7 +6552,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 132,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6274,7 +6577,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 133,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6299,7 +6602,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 134,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6324,7 +6627,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 135,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6349,7 +6652,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 136,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -6374,7 +6677,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 137,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6399,7 +6702,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 138,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6424,7 +6727,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 139,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6449,7 +6752,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 140,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6474,7 +6777,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 141,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6499,7 +6802,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 142,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6524,7 +6827,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 143,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6549,7 +6852,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 144,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6841,6 +7144,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "programming-fundamentals-lesson4-vocab_2025",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson4-vocab_2025"
+        ],
+        "lesson.key": "Variables and Data Flow",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "c594905e-07ee-4b79-b103-b213df8dc626"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "programming-fundamentals-lesson4-level8_2025-launch",
         "script_level.level_keys": [
           "programming-fundamentals-lesson4-level8_2025-launch"
@@ -6932,7 +7247,7 @@
         "lesson.key": "Working with Objects",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "932592a4-ec86-4827-83a0-9610fdb6b514"
+        "activity_section.key": "4ef56261-f037-4615-a0ca-32f70641f29b"
       }
     },
     {
@@ -6973,9 +7288,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson5-level10_2025-launch",
+        "level.key": "programming-fundamentals-lesson5-vocab_2025",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson5-level10_2025-launch"
+          "programming-fundamentals-lesson5-vocab_2025"
         ],
         "lesson.key": "Working with Objects",
         "lesson_group.key": "lessonGroup-3",
@@ -6985,26 +7300,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson5-level11_2025-launch",
+        "level.key": "programming-fundamentals-lesson5-level10_2025-launch",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson5-level11_2025-launch"
+          "programming-fundamentals-lesson5-level10_2025-launch"
         ],
         "lesson.key": "Working with Objects",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "programming-fundamentals-lesson5-level12_2025-launch",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson5-level12_2025-launch"
-        ],
-        "lesson.key": "Working with Objects",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csaif2-2025",
-        "activity_section.key": "9f7dee9c-66ad-4f5e-822b-3ffb3caa6706"
+        "activity_section.key": "03ef816d-3618-49c9-8fa6-e44dd3da6dfd"
       }
     },
     {
@@ -7081,6 +7384,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "programming-fundamentals-lesson6-vocab_2025",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson6-vocab_2025"
+        ],
+        "lesson.key": "Functions and Parameters",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "99281af4-66ad-4b8c-a8a1-b4ffd5b76af9"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "programming-fundamentals-lesson6-level7_2025-launch",
         "script_level.level_keys": [
           "programming-fundamentals-lesson6-level7_2025-launch"
@@ -7088,7 +7403,7 @@
         "lesson.key": "Functions and Parameters",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "1af67eec-d03e-4521-b3e6-40c5c7e87ce9"
+        "activity_section.key": "99281af4-66ad-4b8c-a8a1-b4ffd5b76af9"
       }
     },
     {
@@ -7225,6 +7540,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "programming-fundamentals-lesson7-vocab_2025",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson7-vocab_2025"
+        ],
+        "lesson.key": "Debugging Strategies",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "27e46863-dc28-49ac-b5c1-c2fadcd515de"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "programming-fundamentals-lesson7-level8_2025-launch",
         "script_level.level_keys": [
           "programming-fundamentals-lesson7-level8_2025-launch"
@@ -7232,7 +7559,7 @@
         "lesson.key": "Debugging Strategies",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "8f76a8e6-58a7-44c5-91d0-333898e9e860"
+        "activity_section.key": "27e46863-dc28-49ac-b5c1-c2fadcd515de"
       }
     },
     {
@@ -7345,6 +7672,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "programming-fundamentals-lesson8-vocab_2025",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson8-vocab_2025"
+        ],
+        "lesson.key": "Introduction to Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "8b920ff2-d1ed-4e9c-bd5f-dad95c592ef8"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "programming-fundamentals-lesson8-level6_2025-launch",
         "script_level.level_keys": [
           "programming-fundamentals-lesson8-level6_2025-launch"
@@ -7352,7 +7691,7 @@
         "lesson.key": "Introduction to Loops",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "ccaf38f1-30aa-45ab-bedb-f8749267e209"
+        "activity_section.key": "8b920ff2-d1ed-4e9c-bd5f-dad95c592ef8"
       }
     },
     {
@@ -7477,6 +7816,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "programming-fundamentals-lesson9-vocab_2025",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson9-vocab_2025"
+        ],
+        "lesson.key": "Conditional Statements",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "140430e3-52c2-4ef9-944f-e6e5bc496e18"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "programming-fundamentals-lesson9-level7_2025-launch",
         "script_level.level_keys": [
           "programming-fundamentals-lesson9-level7_2025-launch"
@@ -7484,7 +7835,7 @@
         "lesson.key": "Conditional Statements",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "c87ea95f-715f-4ead-b2fa-bed2a3ec7850"
+        "activity_section.key": "140430e3-52c2-4ef9-944f-e6e5bc496e18"
       }
     },
     {
@@ -7597,6 +7948,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "programming-fundamentals-lesson12-vocab_2025",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-vocab_2025"
+        ],
+        "lesson.key": "Two-Way and Nested Selection",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csaif2-2025",
+        "activity_section.key": "e4126e1e-d022-4a79-abd2-285bf10883ed"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "programming-fundamentals-lesson12-level6_2025-launch",
         "script_level.level_keys": [
           "programming-fundamentals-lesson12-level6_2025-launch"
@@ -7604,7 +7967,7 @@
         "lesson.key": "Two-Way and Nested Selection",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csaif2-2025",
-        "activity_section.key": "81fdb381-ae32-41a2-8747-d5c569c358cb"
+        "activity_section.key": "e4126e1e-d022-4a79-abd2-285bf10883ed"
       }
     },
     {
@@ -8245,630 +8608,10 @@
     }
   ],
   "resources": [
-    {
-      "name": "[KEY] Algorithm Decision-Making",
-      "url": "https://docs.google.com/document/d/1z-x3W3b9zAvsILXE_YaEufF6_sjG14NKHFPVOz3ZI5Y/edit?tab=t.0",
-      "key": "_key_algorithm_decision-making",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_algorithm_decision-making"
-      }
-    },
-    {
-      "name": "[KEY] Decomposing a Pixel Image",
-      "url": "https://docs.google.com/document/d/17m8szFTsM7DneesI50et0mqnmQhyTv0g-dqNRSGgYU0",
-      "key": "_key_decomposing_a_pixel_image",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_decomposing_a_pixel_image"
-      }
-    },
-    {
-      "name": "[KEY] My Variables",
-      "url": "https://docs.google.com/document/d/1rd3xXYuySMY0IqcQ1GPlHBQgrQoyidyNPTB8OHFuFU0/edit?usp=sharing",
-      "key": "_key_my_variables",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "_key_my_variables"
-      }
-    },
-    {
-      "name": "[KEY] Planning a School Event",
-      "url": "https://docs.google.com/document/d/1AeaAiMSzRY60b4x-paMcAgFiAHB8FQsKt6WvjApOYoE/edit?usp=sharing",
-      "key": "_key_planning_a_school_event",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_planning_a_school_event"
-      }
-    },
-    {
-      "name": "AI Chat Lab FAQ",
-      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
-      "key": "ai_chat_lab_faq",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "ai_chat_lab_faq"
-      }
-    },
-    {
-      "name": "Algorithm Decision-Making",
-      "url": "https://docs.google.com/document/d/1zCe5nxpYzzU7C9rF-D9rqVfpgwgSzOcjShuh2UpeWuw/edit?usp=drive_link",
-      "key": "algorithm_decision-making",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "algorithm_decision-making"
-      }
-    },
-    {
-      "name": "Algorithms IRL",
-      "url": "https://docs.google.com/presentation/d/1TrMhPB-4coGmsYbedwyPJzdkSGzVlQ2dci64iYszsc4/view",
-      "key": "algorithms_irl",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "algorithms_irl"
-      }
-    },
-    {
-      "name": "Career Exploration",
-      "url": "https://docs.google.com/document/d/1U4hP8EoWpT9LciVkr6JpCZhdyTAGoXpq6mwrTUOoHLY/edit?tab=t.0",
-      "key": "career_exploration",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "career_exploration"
-      }
-    },
-    {
-      "name": "Computational Thinking",
-      "url": "https://docs.google.com/presentation/d/1CaywRbM7YHY6KccWXS_EM6xK8ULerskVbYpaMiOI09k/view",
-      "key": "computational_thinking",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "computational_thinking"
-      }
-    },
-    {
-      "name": "Computing Careers",
-      "url": "https://docs.google.com/presentation/d/11XfXkKvbVTNoHznxipHtkmt36NybViuHrwX7VePZsbk/view",
-      "key": "computing_careers",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "computing_careers"
-      }
-    },
-    {
-      "name": "Conditionals",
-      "url": "https://docs.google.com/presentation/d/15JfNDNk1crY2FGUqz5qvGnm7QuHIYN-_HoEhtVs7WfI/view",
-      "key": "conditionals",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "conditionals"
-      }
-    },
-    {
-      "name": "Data Cards",
-      "url": "https://docs.google.com/document/d/17vIBFs1NfvABnB4DyYpejYCE-lPN18XVOxaCh4l0Xs0/edit?usp=sharing",
-      "key": "data_cards",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "data_cards"
-      }
-    },
-    {
-      "name": "Debugging Strategies",
-      "url": "https://docs.google.com/document/d/18Okia2_j-C2QHUhV7_z_a3qgDQvuHdPZP2_hRuq3HUs/edit?tab=t.0",
-      "key": "debugging_strategies",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "debugging_strategies"
-      }
-    },
-    {
-      "name": "Debugging Strategies",
-      "url": "https://docs.google.com/presentation/d/1jae4CHdi-JLPV6-wNS5EQq6xKOU2NN97QJXSl0_tTu8/view",
-      "key": "debugging_strategies_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "debugging_strategies_1"
-      }
-    },
-    {
-      "name": "Decomposing a Pixel Image",
-      "url": "https://docs.google.com/document/d/1D2rxb4VwJ_0bOmViS2MzBlqTDQOSmg7FEFg8pDdPNkA",
-      "key": "decomposing_a_pixel_image",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "decomposing_a_pixel_image"
-      }
-    },
-    {
-      "name": "Decomposition",
-      "url": "https://docs.google.com/presentation/d/1yO47BnEJYxIIyht0pRzLkbvZwO9Kl2XGuv3WPD_VkIY/view",
-      "key": "decomposition",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "decomposition"
-      }
-    },
-    {
-      "name": "Designing Algorithms",
-      "url": "https://docs.google.com/presentation/d/14uQrrrUki-pFGH00pMV32DWJXl4-jB0rQT1hfQDzaSU/view",
-      "key": "designing_algorithms",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "designing_algorithms"
-      }
-    },
-    {
-      "name": "Functions and Parameters",
-      "url": "https://docs.google.com/presentation/d/1BfPxNA_iwAOVQjKtHD7x_M3qobfPiDO6qhq1GYHdGTo/view",
-      "key": "functions_and_parameters",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "functions_and_parameters"
-      }
-    },
-    {
-      "name": "Grid Navigation",
-      "url": "https://docs.google.com/document/d/1aG7Z72bio0SaF8oMDuq3x7Nu6dbfg1P-Y0P46rGQBwk/edit?tab=t.0",
-      "key": "grid_navigation",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "grid_navigation"
-      }
-    },
-    {
-      "name": "Introduction to Loops",
-      "url": "https://docs.google.com/presentation/d/1ZNza1O9r3yPS_9kTCAqXB-JnDNh_Pad5NL-pXkmhapQ/view",
-      "key": "introduction_to_loops",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_loops"
-      }
-    },
-    {
-      "name": "My Variables",
-      "url": "https://docs.google.com/document/d/1-GFrKomr4jq56xpzBnwakqzj5nX0pQuu96_4zPGg7go/edit?usp=sharing",
-      "key": "my_variables",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "my_variables"
-      }
-    },
-    {
-      "name": "Pixels of Me Project",
-      "url": "https://docs.google.com/presentation/d/1bmcqAD0vP7hSRydyJq8jzN8LtTMplHgMtASi9GjUJe4/view",
-      "key": "pixels_of_me_project",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "pixels_of_me_project"
-      }
-    },
-    {
-      "name": "Pixels of Me Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1CNal1TCRTr9jHg_aFT53MCiJEJNLBtzGeNYLrCRg8ng",
-      "key": "pixels_of_me_project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "pixels_of_me_project_planning_guide"
-      }
-    },
-    {
-      "name": "Planning a School Event",
-      "url": "https://docs.google.com/document/d/1yJYjJzxfi7C_599jdujULal5ssdp1H05_n9cmlkIcN0/edit?usp=sharing",
-      "key": "planning_a_school_event",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "planning_a_school_event"
-      }
-    },
-    {
-      "name": "Programming Fundamentals Unit Guide",
-      "url": "https://docs.google.com/document/d/1Nj6Ftrl10jVhwmxZxkBO49n8tKXhU791VkGwEWQV1W4/edit?tab=t.0#heading=h.al7bg56kcf1",
-      "key": "programming_fundamentals_unit_guide",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "programming_fundamentals_unit_guide"
-      }
-    },
-    {
-      "name": "Selection Flowchart",
-      "url": "https://docs.google.com/document/d/1QmlYZcPeQ_rLpKtW-yjyZrTJ9tN1_zxHn5kYvzZgji4/edit?usp=sharing",
-      "key": "selection_flowchart",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "selection_flowchart"
-      }
-    },
-    {
-      "name": "Two-Way and Nested Selection",
-      "url": "https://docs.google.com/presentation/d/11LKMHcQWT_r8FZ-jIkwrO6W01fakbdI2ZpARLUHfWJY/view",
-      "key": "two-way_and_nested_selection",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "two-way_and_nested_selection"
-      }
-    },
-    {
-      "name": "Variables and Data Flow",
-      "url": "https://docs.google.com/presentation/d/1VDuq6oRVHvaaJ1gtebligSwpadUokG8FlnXOSOEjP_s/view",
-      "key": "variables_and_data_flow",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "variables_and_data_flow"
-      }
-    },
-    {
-      "name": "Viewing Student AI Chat History as a Teacher",
-      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
-      "key": "viewing_student_ai_chat_history_as_a_teacher",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
-      }
-    },
-    {
-      "name": "Waymo Self-Driving Car",
-      "url": "https://drive.google.com/file/d/1yxxJ_YiA2CiEt1V82Nl3HfcK7IoK9xol/view?usp=sharing",
-      "key": "waymo_self-driving_car",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "waymo_self-driving_car"
-      }
-    },
-    {
-      "name": "Working with Objects",
-      "url": "https://docs.google.com/presentation/d/1NmivRIkjo3H7E9bBdUa53a3Kfkb2f69HggMPmVOFdgE/view",
-      "key": "working_with_objects",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "working_with_objects"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms IRL",
-        "resource.key": "_key_algorithm_decision-making"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms IRL",
-        "resource.key": "algorithm_decision-making"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms IRL",
-        "resource.key": "algorithms_irl"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms IRL",
-        "resource.key": "waymo_self-driving_car"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computational Thinking",
-        "resource.key": "_key_planning_a_school_event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computational Thinking",
-        "resource.key": "computational_thinking"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computational Thinking",
-        "resource.key": "planning_a_school_event"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computational Thinking",
-        "resource.key": "programming_fundamentals_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computing Careers",
-        "resource.key": "ai_chat_lab_faq"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computing Careers",
-        "resource.key": "career_exploration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computing Careers",
-        "resource.key": "computing_careers"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computing Careers",
-        "resource.key": "programming_fundamentals_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computing Careers",
-        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditional Statements",
-        "resource.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditional Statements",
-        "resource.key": "programming_fundamentals_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "resource.key": "debugging_strategies"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "resource.key": "debugging_strategies_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "resource.key": "programming_fundamentals_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition",
-        "resource.key": "_key_decomposing_a_pixel_image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition",
-        "resource.key": "decomposing_a_pixel_image"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition",
-        "resource.key": "decomposition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Decomposition",
-        "resource.key": "programming_fundamentals_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing Algorithms",
-        "resource.key": "designing_algorithms"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing Algorithms",
-        "resource.key": "programming_fundamentals_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions and Parameters",
-        "resource.key": "functions_and_parameters"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions and Parameters",
-        "resource.key": "programming_fundamentals_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Loops",
-        "resource.key": "introduction_to_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Loops",
-        "resource.key": "programming_fundamentals_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Pixels of Me Project",
-        "resource.key": "pixels_of_me_project"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Pixels of Me Project",
-        "resource.key": "pixels_of_me_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way and Nested Selection",
-        "resource.key": "programming_fundamentals_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way and Nested Selection",
-        "resource.key": "selection_flowchart"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way and Nested Selection",
-        "resource.key": "two-way_and_nested_selection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables and Data Flow",
-        "resource.key": "_key_my_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables and Data Flow",
-        "resource.key": "data_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables and Data Flow",
-        "resource.key": "my_variables"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables and Data Flow",
-        "resource.key": "programming_fundamentals_unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables and Data Flow",
-        "resource.key": "variables_and_data_flow"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Working with Objects",
-        "resource.key": "grid_navigation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Working with Objects",
-        "resource.key": "working_with_objects"
-      }
-    }
+
   ],
   "scripts_resources": [
 
@@ -8877,376 +8620,10 @@
 
   ],
   "vocabularies": [
-    {
-      "key": "abstraction",
-      "word": "abstraction",
-      "definition": "focusing on the important information and ignoring irrelevant details",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "key": "algorithm",
-      "word": "algorithm",
-      "definition": "a set of instructions to accomplish a task that usually involves sequence, selection, and iteration",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "key": "argument",
-      "word": "argument",
-      "definition": "the actual values passed into a function when you call it",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "argument"
-      }
-    },
-    {
-      "key": "attribute",
-      "word": "attribute",
-      "definition": "a column in a spreadsheet",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "attribute"
-      }
-    },
-    {
-      "key": "bias",
-      "word": "bias",
-      "definition": "when our data or the way we analyze it favors certain outcomes over others",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "bias"
-      }
-    },
-    {
-      "key": "class",
-      "word": "class",
-      "definition": "defines the structure and actions that objects will have",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "class"
-      }
-    },
-    {
-      "key": "computational_thinking",
-      "word": "computational thinking",
-      "definition": "a problem-solving approach that involves breaking problems down into smaller parts, recognizing patterns, focusing on important details, and creating step-by-step solutions that a computer or person can follow",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "computational_thinking"
-      }
-    },
-    {
-      "key": "conditional_statement",
-      "word": "conditional statement",
-      "definition": "a command that runs only if a certain condition is True, allowing a program to make decisions",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "conditional_statement"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "debugging",
-      "definition": "the process of finding and fixing errors, or bugs, in logic and code",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "decomposition",
-      "word": "decomposition",
-      "definition": "breaking a larger problem into smaller, more manageable parts",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "decomposition"
-      }
-    },
-    {
-      "key": "dot_notation",
-      "word": "dot notation",
-      "definition": "accessing an object's attributes or methods using a dot (.)",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "key": "emerging_technology",
-      "word": "emerging technology",
-      "definition": "new or evolving technologies that solve problems or create opportunities in various fields, such as AI, robotics, or augmented reality",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "emerging_technology"
-      }
-    },
-    {
-      "key": "ethics",
-      "word": "ethics",
-      "definition": "a guide for responsible choices about emerging technologies, ensuring privacy, consent, and safety for everyone",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "ethics"
-      }
-    },
-    {
-      "key": "function",
-      "word": "function",
-      "definition": "a set of instructions that defines a block of code that can be reused to perform a specific task",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "logic_error",
-      "word": "logic error",
-      "definition": "when your code runs, but it doesn't do what you expected",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "logic_error"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "loop",
-      "definition": "code that continues to repeat while a condition is true",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "method",
-      "word": "method",
-      "definition": "an action that an object can perform",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "method"
-      }
-    },
-    {
-      "key": "nested_conditional",
-      "word": "nested conditional",
-      "definition": "an if/else statement inside another if/else statement, creating multiple paths of decision-making in a program",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "nested_conditional"
-      }
-    },
-    {
-      "key": "object",
-      "word": "object",
-      "definition": "an instance of a class",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "object"
-      }
-    },
-    {
-      "key": "parameter",
-      "word": "parameter",
-      "definition": "a placeholder in the function definition that specifies what kind of input the function will take",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "key": "syntax_error",
-      "word": "syntax error",
-      "definition": "when your code breaks the rules of the programming language, like forgetting a colon or misspelling a command",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "syntax_error"
-      }
-    },
-    {
-      "key": "two_way_selection",
-      "word": "two-way selection",
-      "definition": "also known as an if/else statement, is where the program chooses one path or the other depending on the condition",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "two_way_selection"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "variable",
-      "definition": "a container for a piece of information that can change",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms IRL",
-        "vocabulary.key": "bias"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Algorithms IRL",
-        "vocabulary.key": "ethics"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computational Thinking",
-        "vocabulary.key": "abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computational Thinking",
-        "vocabulary.key": "computational_thinking"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computational Thinking",
-        "vocabulary.key": "decomposition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computing Careers",
-        "vocabulary.key": "emerging_technology"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditional Statements",
-        "vocabulary.key": "conditional_statement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "vocabulary.key": "logic_error"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging Strategies",
-        "vocabulary.key": "syntax_error"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Designing Algorithms",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions and Parameters",
-        "vocabulary.key": "argument"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions and Parameters",
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions and Parameters",
-        "vocabulary.key": "parameter"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Loops",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way and Nested Selection",
-        "vocabulary.key": "nested_conditional"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Two-Way and Nested Selection",
-        "vocabulary.key": "two_way_selection"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Variables and Data Flow",
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Working with Objects",
-        "vocabulary.key": "attribute"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Working with Objects",
-        "vocabulary.key": "class"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Working with Objects",
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Working with Objects",
-        "vocabulary.key": "method"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Working with Objects",
-        "vocabulary.key": "object"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

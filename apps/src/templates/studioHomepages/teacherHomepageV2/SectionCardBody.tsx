@@ -28,7 +28,7 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             buttonText={i18n.assignACourseButton()}
             icon={'book-open-cover'}
             sectionId={section.id}
-            path={TEACHER_NAVIGATION_PATHS.settings}
+            path={'/catalog'}
           />
         )}
       </div>

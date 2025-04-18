@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 17:17:27 UTC",
+    "serialized_at": "2025-04-18 03:09:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1848,57 +1848,10 @@
     }
   ],
   "resources": [
-    {
-      "name": "Lesson Slides",
-      "url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/template",
-      "key": "lesson_slides",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit?usp=sharing/download",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "lesson_slides"
-      }
-    },
-    {
-      "name": "Music Lab Inspiration",
-      "url": "https://www.youtube.com/watch?v=GqlP5s7KTl4",
-      "key": "music_lab_inspiration",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "music_lab_inspiration"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Producer Power",
-        "resource.key": "lesson_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Songwriter's Toolbox",
-        "resource.key": "lesson_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Songwriter's Toolbox",
-        "resource.key": "music_lab_inspiration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sound Designer's Studio",
-        "resource.key": "lesson_slides"
-      }
-    }
+
   ],
   "scripts_resources": [
 
@@ -1907,104 +1860,10 @@
 
   ],
   "vocabularies": [
-    {
-      "key": "efficient",
-      "word": "Efficient",
-      "definition": "Doing something in the easiest and quickest way. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "efficient"
-      }
-    },
-    {
-      "key": "event",
-      "word": "Event",
-      "definition": "An action that causes something to happen. ",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event"
-      }
-    },
-    {
-      "key": "function",
-      "word": "Function",
-      "definition": "A piece of code that you can call over and over again",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "key": "loop",
-      "word": "Loop",
-      "definition": "A way to tell the computer to do the same thing over and over.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "A set of instructions that tells a computer what to do.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "sequence",
-      "word": "Sequence",
-      "definition": "The order of steps in a program or task.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sequence"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Producer Power",
-        "vocabulary.key": "efficient"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Producer Power",
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Songwriter's Toolbox",
-        "vocabulary.key": "loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Songwriter's Toolbox",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Songwriter's Toolbox",
-        "vocabulary.key": "sequence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Sound Designer's Studio",
-        "vocabulary.key": "event"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

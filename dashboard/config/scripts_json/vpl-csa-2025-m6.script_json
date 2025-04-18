@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-01 03:45:13 UTC",
+    "serialized_at": "2025-04-18 03:09:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -108,6 +108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-overview_2025"
+        ],
         "progression": "Opening"
       },
       "bonus": false,
@@ -130,6 +133,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-ap-subset_2025"
+        ],
         "progression": "Opening"
       },
       "bonus": false,
@@ -152,6 +158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA vpl_m6_U6L9-L1_2025"
+        ],
         "progression": "NLP Content"
       },
       "bonus": false,
@@ -174,6 +183,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-M6-NLP1_2025"
+        ],
         "progression": "NLP Content"
       },
       "bonus": false,
@@ -196,6 +208,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA VPL_M6_U6L9-L2_2025"
+        ],
         "progression": "NLP Content"
       },
       "bonus": false,
@@ -218,6 +233,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA VPL_M6_U6L9-L3_2025"
+        ],
         "progression": "NLP Content"
       },
       "bonus": false,
@@ -240,6 +258,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA VPL_M6_U6L9-L4_2025"
+        ],
         "progression": "NLP Content"
       },
       "bonus": false,
@@ -262,6 +283,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-wrap-up_2025"
+        ],
         "progression": "Closing"
       },
       "bonus": false,

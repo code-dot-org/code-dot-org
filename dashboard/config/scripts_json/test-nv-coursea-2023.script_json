@@ -4,8 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "content_area": "other",
-      "curriculum_umbrella": "Other",
+      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_migrated": true,
       "lesson_extras_available": true,
@@ -16,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:29:19 UTC",
+    "serialized_at": "2025-04-18 02:57:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

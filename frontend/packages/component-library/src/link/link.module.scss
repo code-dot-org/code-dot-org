@@ -1,5 +1,5 @@
 @use '@code-dot-org/component-library-styles/colors';
-@import '@code-dot-org/component-library-styles/mixins.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
 // Link common styles
 .link {
@@ -55,17 +55,17 @@
 
 // Sizes
 .link-l {
-  @include link-body-one;
+  @include mixins.link-body-one;
 }
 
 .link-m {
-  @include link-body-two;
+  @include mixins.link-body-two;
 }
 
 .link-s {
-  @include link-body-three;
+  @include mixins.link-body-three;
 }
 
 .link-xs {
-  @include link-body-four;
+  @include mixins.link-body-four;
 }

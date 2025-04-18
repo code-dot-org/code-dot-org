@@ -4,10 +4,8 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_migrated": true,
-      "show_calendar": true,
       "supported_locales": [
         "es-ES",
         "es-MX",
@@ -34,12 +32,11 @@
         "zh-CN",
         "zh-TW"
       ],
-      "tts": true,
-      "weekly_instructional_minutes": 225
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:30:01 UTC",
+    "serialized_at": "2025-04-18 02:57:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -88,8 +85,7 @@
       "key": "a34f3d0c-c670-4774-a52e-bf7881f5a3cc",
       "position": 1,
       "properties": {
-        "duration": 5,
-        "name": "Getting Started"
+        "name": "Getting Started (5 minutes)"
       },
       "seeding_key": {
         "lesson_activity.key": "a34f3d0c-c670-4774-a52e-bf7881f5a3cc",
@@ -102,8 +98,7 @@
       "key": "b5a5dd70-3968-40ab-bcb5-5d0e7df30880",
       "position": 2,
       "properties": {
-        "duration": 35,
-        "name": "Activity"
+        "name": "Activity (30-45 minutes)"
       },
       "seeding_key": {
         "lesson_activity.key": "b5a5dd70-3968-40ab-bcb5-5d0e7df30880",

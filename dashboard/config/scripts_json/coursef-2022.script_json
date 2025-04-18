@@ -16,7 +16,6 @@
           "buttonText": "Learn more"
         }
       ],
-      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -27,7 +26,6 @@
         "artist"
       ],
       "project_widget_visible": true,
-      "show_calendar": true,
       "supported_locales": [
         "fa-AF",
         "fa-IR",
@@ -39,7 +37,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:05:33 UTC",
+    "serialized_at": "2025-04-18 02:57:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

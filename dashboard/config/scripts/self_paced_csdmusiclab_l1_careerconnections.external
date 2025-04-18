@@ -1,0 +1,46 @@
+name 'self-paced-CSDMusicLab-L1-careerconnections'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Career Spotlights
+
+## What are Career Spotlights?
+
+#### To help students see the real-world applications of computer science and music, we've included Career Spotlights in the curriculum.
+
+#### Each chunk of the curriculum (sequencing, loops, and functions), introduces a **real-world career** related to computer science and/or music to frame the synthesis lesson. Students then apply their new skills with **authentic problems** inspired by these careers.
+
+<div style="display: flex; justify-content: space-between; width: 100%; margin: 20pt auto; padding: 0 5px;">
+  <img src="https://images.code.org/794fce27e2665539fc2ee035962dd389-image-1744653846449.03.30 AM.png" style="border-radius: 5pt; width: 32%;" alt="Image of a woman singing with the text, A record producer is someone who brings the singers, the songwriters, the engineers, the musicians together">
+  <img src="https://images.code.org/34e053cb621b242bb88cccb1f7606df8-image-1744653848780.01.55 AM.png" style="border-radius: 5pt; width: 32%;" alt="A woman codes in front of a screen. The text says, Creative Coding - Roxanne performs music using code.">
+  <img src="https://images.code.org/fafa657031d5f3671fec4180da9f8a7a-image-1744653850201.01.41 AM.png" style="border-radius: 5pt; width: 32%;" alt="An image of a man with the text, Remix Artist - This is Altrice. He's an electronic and remix musical artist.">
+</div>
+
+## What do Career Spotlights look like?
+
+#### Take a look at the student challenges below. These both come from the <a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/4" target="blank" rel="noopener noreferrer">Sequencing Synthesize lesson</a>. While you read, consider how you might help students make connections to the real world.
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0; text-align: center;">Sequencing Synthesize - Real-World Problem Example</p>
+
+#### **Define**: You've been asked to design a new alarm clock ringtone that helps people wake up. The volume should slowly increase as different tracks play and end in some kind of big surprise.
+
+#### **Prepare**: Pick the tracks and effects you want to use and imagine what you want the timeline to look like. Consider using rests to surprise the listener!
+
+#### **Try**: Create your alarm clock ringtone!
+
+#### **Reflect**: In order to pass this level, make sure your code has:
+* #### At least 6 tracks
+* #### At least 3 effects
+* #### A "rising" volume and a surprise moment!
+</div>
+
+#### Lessons end with **reflection prompts** that ask students to consider their personal interest in the field and how they might apply them.
+
+<div style="background-color: #B7E0E5; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
+    <p style="font-size: 14pt; font-weight: bold; margin: 0; text-align: center;">Sequencing Synthesize - Reflection Prompt</p>
+
+#### A record producer brings people together to create music and uses technology to edit and finalize songs, using technology to bring people together. Are there aspects of this job you would like to see in your own future career? Why or why not?
+</div>
+MARKDOWN

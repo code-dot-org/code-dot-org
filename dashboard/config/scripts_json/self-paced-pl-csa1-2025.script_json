@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-06 19:07:59 UTC",
+    "serialized_at": "2025-04-18 03:09:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -184,6 +184,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-Overview-Welcome_2025"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -206,6 +209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2025"
+        ],
         "progression": "What is Code.org?"
       },
       "bonus": false,
@@ -228,6 +234,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2025"
+        ],
         "progression": "What is Code.org?"
       },
       "bonus": false,
@@ -250,6 +259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-what-is-CSA1_2025"
+        ],
         "progression": "What is AP CSA? "
       },
       "bonus": false,
@@ -272,6 +284,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-why-teach-with-Code_2025"
+        ],
         "progression": "What is AP CSA? "
       },
       "bonus": false,
@@ -294,6 +309,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-csa-framework_2025"
+        ],
         "progression": "The CSA Framework and Curriculum "
       },
       "bonus": false,
@@ -316,6 +334,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-approach-to-curriculum_2025"
+        ],
         "progression": "The CSA Framework and Curriculum "
       },
       "bonus": false,
@@ -338,6 +359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-mod1-college-board-resources_2025"
+        ],
         "progression": "College Board Resources "
       },
       "bonus": false,
@@ -360,6 +384,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSA-FAQ_2025"
+        ],
         "progression": "Frequently Asked Questions "
       },
       "bonus": false,
@@ -382,6 +409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSA-22-Navigation-Mod1_2025"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,

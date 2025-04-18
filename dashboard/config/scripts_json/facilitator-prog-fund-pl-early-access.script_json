@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-04 21:05:46 UTC",
+    "serialized_at": "2025-04-18 03:09:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -347,6 +347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_overview_objectives_python_ea-fac-25"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -369,6 +372,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_cert_python_ea-fac-25"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -391,6 +397,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_module_overview_python_ea-fac-25"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -413,6 +422,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_course_overview_python_ea-fac-25"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -435,6 +447,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_course_structure_python_ea-fac-25"
+        ],
         "progression": "Course Introduction"
       },
       "bonus": false,
@@ -457,6 +472,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_resources_python_ea-fac-25"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -479,6 +497,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_career_overview_python_ea-fac-25"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -501,6 +522,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_AI_chatbot_overview_python_ea-fac-25"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -523,6 +547,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_AI_tutor_overview_python_ea-fac-25"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -545,6 +572,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_teacher_Lesson1_python_ea-fac-25"
+        ],
         "progression": "Course Resources"
       },
       "bonus": false,
@@ -567,6 +597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_comp_think_L1_python_ea-fac-25"
+        ],
         "progression": "What is Computational Thinking?"
       },
       "bonus": false,
@@ -589,6 +622,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_comp_think_overview_L2_python_ea-fac-25"
+        ],
         "progression": "What is Computational Thinking?"
       },
       "bonus": false,
@@ -611,6 +647,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-DS-comp_think_panel_L3_Python_ea-fac-25"
+        ],
         "progression": "What is Computational Thinking?"
       },
       "bonus": false,
@@ -633,6 +672,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_module_comp_think_L4_python_ea-fac-25"
+        ],
         "progression": "What is Computational Thinking?"
       },
       "bonus": false,
@@ -655,6 +697,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_comp_think_L5_python_ea-fac-25"
+        ],
         "progression": "Exploring Computational Thinking"
       },
       "bonus": false,
@@ -677,6 +722,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_comp_think_L6_python_ea-fac-25"
+        ],
         "progression": "Exploring Computational Thinking"
       },
       "bonus": false,
@@ -699,6 +747,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_comp_think_L7_python_ea-fac-25"
+        ],
         "progression": "Exploring Computational Thinking"
       },
       "bonus": false,
@@ -721,6 +772,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-comp_thinking_L8_python_ea-fac-25"
+        ],
         "progression": "Exploring Computational Thinking"
       },
       "bonus": false,
@@ -743,6 +797,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_comp_think_forum_L8_python_ea-fac-25"
+        ],
         "progression": "Exploring Computational Thinking"
       },
       "bonus": false,
@@ -765,6 +822,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_code_basicsL1_python_ea-fac-25"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -786,6 +846,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-PL-pythonLab_tour-L1-5_python_ea-fac-25"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -807,6 +870,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl_Python-data-Variables-L4-Python_ea-fac-25"
+        ],
         "progression": "Variables and Print Statements "
       },
       "bonus": false,
@@ -829,6 +895,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl_Python-Variables-L3-Python_ea-fac-25"
+        ],
         "progression": "Variables and Print Statements "
       },
       "bonus": false,
@@ -851,6 +920,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-PL-variablecode-L5-python_ea-fac-25"
+        ],
         "progression": "Variables and Print Statements "
       },
       "bonus": false,
@@ -873,6 +945,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-PL-variable_print_L6_python_ea-fac-25"
+        ],
         "progression": "Variables and Print Statements "
       },
       "bonus": false,
@@ -895,6 +970,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_concat_L7_python_ea-fac-25"
+        ],
         "progression": "Variables and Print Statements "
       },
       "bonus": false,
@@ -917,6 +995,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-choice_L8_python_ea-fac-25"
+        ],
         "progression": "Variables and Print Statements "
       },
       "bonus": false,
@@ -939,6 +1020,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl_neighborhood_L9_Python_ea-fac-25"
+        ],
         "progression": "Objects and The Neighborhood"
       },
       "bonus": false,
@@ -961,6 +1045,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-PL-neighborhood-tour_L10_Python_ea-fac-25"
+        ],
         "progression": "Objects and The Neighborhood"
       },
       "bonus": false,
@@ -983,6 +1070,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_objects_L11_Python_ea-fac-25"
+        ],
         "progression": "Objects and The Neighborhood"
       },
       "bonus": false,
@@ -1005,6 +1095,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_the-painter_L12_Python_ea-fac-25"
+        ],
         "progression": "Objects and The Neighborhood"
       },
       "bonus": false,
@@ -1027,6 +1120,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-PL-objects-code_L13_Python_ea-fac-25"
+        ],
         "progression": "Objects and The Neighborhood"
       },
       "bonus": false,
@@ -1049,6 +1145,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl_object-code-L14_Python_ea-fac-25"
+        ],
         "progression": "Objects and The Neighborhood"
       },
       "bonus": false,
@@ -1071,6 +1170,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl_choice-objects-L15_Python_ea-fac-25"
+        ],
         "progression": "Objects and The Neighborhood"
       },
       "bonus": false,
@@ -1093,6 +1195,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-functions-L15-1-python_ea-fac-25"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1115,6 +1220,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-PL-functions-L16_Python_ea-fac-25"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1137,6 +1245,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-function-trn-rght-L17-Python_ea-fac-25"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1159,6 +1270,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_custompy-L17-2_Python_ea-fac-25"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1181,6 +1295,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_backpack-L18_Python_ea-fac-25"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1203,6 +1320,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-bkpk-function-L19-Python_ea-fac-25"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1225,6 +1345,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-functions-mult-choice-L21-Python_ea-fac-25"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1247,6 +1370,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_checkreview-functions-22-2_Python_ea-fac-25"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1269,6 +1395,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_debugging_L22_Python_ea-fac-25"
+        ],
         "progression": "Debugging "
       },
       "bonus": false,
@@ -1291,6 +1420,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-PL-debug-L23-Python_ea-fac-25"
+        ],
         "progression": "Debugging "
       },
       "bonus": false,
@@ -1313,6 +1445,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_python-basics-forem_L26_python_ea-fac-25"
+        ],
         "progression": "Debugging "
       },
       "bonus": false,
@@ -1335,6 +1470,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_advanced_alg_L1_python_ea-fac-25"
+        ],
         "progression": "While Loops"
       },
       "bonus": false,
@@ -1357,6 +1495,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl_loops_L2-Python_ea-fac-25"
+        ],
         "progression": "While Loops"
       },
       "bonus": false,
@@ -1379,6 +1520,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-loop-modify-code_L3-python_ea-fac-25"
+        ],
         "progression": "While Loops"
       },
       "bonus": false,
@@ -1401,6 +1545,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-loop-code-L4-python_ea-fac-25"
+        ],
         "progression": "While Loops"
       },
       "bonus": false,
@@ -1423,6 +1570,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-predict-conditional-L5-2-python_ea-fac-25"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1445,6 +1595,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_conditionals-L6_python_ea-fac-25"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1467,6 +1620,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl_methos-conditional-L7-Python_ea-fac-25"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1489,6 +1645,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_if-while-L9_python_ea-fac-25"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1511,6 +1670,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-conditional-practice-L10-python_ea-fac-25"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1533,6 +1695,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_algorithm_review-L11-Python_ea-fac-25"
+        ],
         "progression": "Two-way and Nested Selection"
       },
       "bonus": false,
@@ -1555,6 +1720,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_flowChart_L12_Python_ea-fac-25"
+        ],
         "progression": "Two-way and Nested Selection"
       },
       "bonus": false,
@@ -1577,6 +1745,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-PL-predict-nested-L13-python_ea-fac-25"
+        ],
         "progression": "Two-way and Nested Selection"
       },
       "bonus": false,
@@ -1599,6 +1770,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_else-compare-L14-python_ea-fac-25"
+        ],
         "progression": "Two-way and Nested Selection"
       },
       "bonus": false,
@@ -1621,6 +1795,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-nested-L15-python_ea-fac-25"
+        ],
         "progression": "Two-way and Nested Selection"
       },
       "bonus": false,
@@ -1643,6 +1820,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-assessment-L16-python_ea-fac-25"
+        ],
         "progression": "Two-way and Nested Selection"
       },
       "bonus": false,
@@ -1665,6 +1845,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_real-life-alg_forum_L17_python_ea-fac-25"
+        ],
         "progression": "Ethical Algorithmic Decision Making"
       },
       "bonus": false,
@@ -1687,6 +1870,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ethical-algorithmic-decision-L18-python_ea-fac-25"
+        ],
         "progression": "Ethical Algorithmic Decision Making"
       },
       "bonus": false,
@@ -1709,6 +1895,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ethic-teaching-tips-L19-python_ea-fac-25"
+        ],
         "progression": "Ethical Algorithmic Decision Making"
       },
       "bonus": false,
@@ -1731,6 +1920,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_teacher_Lesson4-L20_python_ea-fac-25"
+        ],
         "progression": "Ethical Algorithmic Decision Making"
       },
       "bonus": false,
@@ -1753,6 +1945,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_endofUnit_L1_python_ea-fac-25"
+        ],
         "progression": "End of Unit Project"
       },
       "bonus": false,
@@ -1775,6 +1970,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_project-description-L2-python_ea-fac-25"
+        ],
         "progression": "End of Unit Project"
       },
       "bonus": false,
@@ -1797,6 +1995,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_3-day-project-L3-Python_ea-fac-25"
+        ],
         "progression": "End of Unit Project"
       },
       "bonus": false,
@@ -1819,6 +2020,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_collaboration-L4_python_ea-fac-25"
+        ],
         "progression": "End of Unit Project"
       },
       "bonus": false,
@@ -1841,6 +2045,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_python_ea-fac-25"
+        ],
         "progression": "End of Unit Project"
       },
       "bonus": false,
@@ -1863,6 +2070,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-nextsteps-L6-python_ea-fac-25"
+        ],
         "progression": "End of Unit Project"
       },
       "bonus": false,

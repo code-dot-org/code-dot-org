@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2025-04-14T23:13:35.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're working on a digital assistant that reminds users to think critically when using AI tools. Every time the assistant starts up, it prints a two-line reminder message. Right now, the same block is repeated over and over. Your task is to clean up the code using a function.\r\n\r\n1. Read the block of repeated code.\r\n\r\n2. Create a function called `ai_reminder()` that prints both lines.\r\n\r\n3. Replace the repeated block by calling your new function three times.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYour function can include more than one line of code -- just make sure each line is indented the same amount under the `def` statement.\r\n\r\nUse the UMPIRE strategy:\r\n\r\n* **U**nderstand: What message are you repeating?\r\n\r\n* **M**ake a plan: What should your function do?\r\n\r\n* **P**roduce: Define the function and replace the repetition.\r\n\r\n* **I**nspect: Does it still print the message three times?\r\n\r\n* **E**xplain: Why is using a function better in this case?",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_2025",
+    "display_name": "AI Ethics Reminder",
+    "bubble_choice_description": "You're working on a digital assistant that reminds users to think critically when using AI tools. Every time the assistant starts up, it prints a two-line reminder message. Right now, the same block is repeated over and over. Your task is to clean up the code using a function.",
+    "thumbnail_url": "https://images.code.org/ef8fe37605ce379e4ae45e1425bf9e7c-ai_tools.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# TODO - Write the ai_reminder() function that prints both lines\n\n\n\n\n\n# TODO - Replace the repeated blocks by calling your new function\nprint(\"🤖 AI tools are helpful, but not always accurate.\")\nprint(\"🧠 Think critically and double-check information.\")\nprint(\"🤖 AI tools are helpful, but not always accurate.\")\nprint(\"🧠 Think critically and double-check information.\")\nprint(\"🤖 AI tools are helpful, but not always accurate.\")\nprint(\"🧠 Think critically and double-check information.\")\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzsS9mvnR7G8EEmyo1Fwct4GOwYZqjUBO\nKdGP6nN2deYulVgdF6FAqS1FXpMMCONKi2NlxeynALQznu1WHWnQPhZLdvVO\nZYWUhwrRtA5oOwokN+VSptAzyXFF9U1dsS3Gv0H9FmZT8PT9D8pG1MNqESgu\nZ2/xRor+6Nbdeit7snOdZxo/Xsm0fhE825ZayEf/KmXZgOljNkpQJ1i716Ip\n/Ple69WTo0meYJNfejury1qRVQYqiquiwVCV5slyt4WUCfDy2xODDZufw+IW\nS0JjbIrkraQMrY0Oip8wu53X6r63ggRiRmDpsLfVNqbexYfU31h9GSZI7dRV\nI8FEiaY9IEw6L9DMBkENE3VI/YGkIpWWeZLNhTGnF9JzsLtENmre8NffBfyL\nIE1Rf5OMKu2OOmZo9NRis3YMG/LnqmZkjjvSSJbKk5Tzr0jupc5LNiCbenVS\nXcW0YP4iy4VeJBx0uaqUIRix8cBN4607QwA/fBo3up6xfUVQsXWYT1kT6Zcs\najR6JDSXCsHkiSZYCOwVOfk=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:35.656+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level8c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level8c_2025-launch\"},{\"changed_at\":\"2025-04-15 14:39:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:42:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:43:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:46:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

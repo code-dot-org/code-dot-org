@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-11 18:24:25 UTC",
+    "serialized_at": "2025-04-18 03:08:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3603,6 +3603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Lists, Loops, Traversals Q1_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -3625,6 +3628,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Lists, Loops, Traversals Q2_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -3647,6 +3653,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Lists, Loops, Traversals Q3_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -3669,6 +3678,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-20-21-u5-assess-lists2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3691,6 +3703,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Investigate Outfitly Code_2025"
+        ],
         "progression": "Accessing Lists"
       },
       "bonus": false,
@@ -3713,6 +3728,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Investigate Bandly Code_2025"
+        ],
         "progression": "Accessing Lists"
       },
       "bonus": false,
@@ -3735,6 +3753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Investigate Partnersly Code_2025"
+        ],
         "progression": "Changing Lists"
       },
       "bonus": false,
@@ -3757,6 +3778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Data Tab Investigate_2025"
+        ],
         "progression": "Data Tab Investigation"
       },
       "bonus": false,
@@ -3779,6 +3803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Random List Access Pattern_2025"
+        ],
         "progression": "List Patterns"
       },
       "bonus": false,
@@ -3801,6 +3828,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "List Scrolling Pattern_2025"
+        ],
         "progression": "List Patterns"
       },
       "bonus": false,
@@ -3823,6 +3853,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Lists Predict_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3845,6 +3878,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 1_2025"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3867,6 +3903,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 2_2025"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3889,6 +3928,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 3_2025"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3911,6 +3953,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 4_2025"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3933,6 +3978,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 5_2025"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3955,6 +4003,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 6_2025"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3977,6 +4028,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 7_2025"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -3999,6 +4053,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 8_2025"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -4021,6 +4078,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 9_2025"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -4043,6 +4103,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6_L03_Lists Practice_Level 10_2025"
+        ],
         "progression": "App Development: Lists in Action!"
       },
       "bonus": false,
@@ -4065,6 +4128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Make Project Sample App 2020_2025"
+        ],
         "progression": "Try the Reminders App"
       },
       "bonus": false,
@@ -4087,6 +4153,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Lists Make Project 2020_2025"
+        ],
         "progression": "Make the Reminders App"
       },
       "bonus": false,
@@ -4109,6 +4178,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L5 CSP CFU Looping_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4131,6 +4203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Investigate Coin Flipper Predict_2025"
+        ],
         "progression": "Coin Flipper App"
       },
       "bonus": false,
@@ -4153,6 +4228,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Investigate Coin Flipper_2025"
+        ],
         "progression": "Coin Flipper App"
       },
       "bonus": false,
@@ -4175,6 +4253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Investigate Font Tester_2025"
+        ],
         "progression": "Font Tester App"
       },
       "bonus": false,
@@ -4197,6 +4278,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L6 CSP CFU Element Looping_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4219,6 +4303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 1_2025"
+        ],
         "progression": "While Loop Practice"
       },
       "bonus": false,
@@ -4241,6 +4328,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 2_2025"
+        ],
         "progression": "While Loop Practice"
       },
       "bonus": false,
@@ -4263,6 +4353,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 3_2025"
+        ],
         "progression": "While Loop Practice"
       },
       "bonus": false,
@@ -4285,6 +4378,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L7 While Loop Choice_2025"
+        ],
         "progression": "Putting It Together"
       },
       "bonus": false,
@@ -4307,6 +4403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 4_2025"
+        ],
         "progression": "For Loop Practice"
       },
       "bonus": false,
@@ -4329,6 +4428,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 5_2025"
+        ],
         "progression": "For Loop Practice"
       },
       "bonus": false,
@@ -4351,6 +4453,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 6_2025"
+        ],
         "progression": "For Loop Practice"
       },
       "bonus": false,
@@ -4373,6 +4478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Sentence Randomizer_2025"
+        ],
         "progression": "Loops and Screen Elements"
       },
       "bonus": false,
@@ -4395,6 +4503,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Dice Roller_2025"
+        ],
         "progression": "Loops and Screen Elements"
       },
       "bonus": false,
@@ -4417,6 +4528,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L7 CFU Loops Psuedocode2022_2025"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -4439,6 +4553,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L7 CFU Loops Psuedocode 22022_2025"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -4461,6 +4578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Make Wallpaper App Example 2020_2025"
+        ],
         "progression": "Try the Lock Screen Maker"
       },
       "bonus": false,
@@ -4483,6 +4603,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Loops Make Wallpaper App 2020_2025"
+        ],
         "progression": "Make the Lock Screen Maker"
       },
       "bonus": false,
@@ -4505,6 +4628,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 L09 Traversals Exit Ticket_2025"
+        ],
         "progression": "Assessment: Check For Understanding\r"
       },
       "bonus": false,
@@ -4527,6 +4653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Investigate Mile Tracker Modify_2025"
+        ],
         "progression": "Mile Tracker Investigation"
       },
       "bonus": false,
@@ -4549,6 +4678,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Investigate Dog Finder Modify_2025"
+        ],
         "progression": "Random Dog Picker Investigation"
       },
       "bonus": false,
@@ -4571,6 +4703,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "List Filter Pattern_2025"
+        ],
         "progression": "Traversal Patterns"
       },
       "bonus": false,
@@ -4593,6 +4728,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "List Reduce Pattern_2025"
+        ],
         "progression": "Traversal Patterns"
       },
       "bonus": false,
@@ -4615,6 +4753,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U5L10 CFU Traversals_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4637,6 +4778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 3_2025"
+        ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
@@ -4659,6 +4803,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 2_2025"
+        ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
@@ -4681,6 +4828,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 1_2025"
+        ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
@@ -4703,6 +4853,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 4_2025"
+        ],
         "progression": "Reduce and Filter Practice"
       },
       "bonus": false,
@@ -4725,6 +4878,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 5_2025"
+        ],
         "progression": "Reduce and Filter Practice"
       },
       "bonus": false,
@@ -4747,6 +4903,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 6_2025"
+        ],
         "progression": "Reduce and Filter Practice"
       },
       "bonus": false,
@@ -4769,6 +4928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L11 Traversals App Practice Choice_2025"
+        ],
         "progression": "Putting It Together"
       },
       "bonus": false,
@@ -4791,6 +4953,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L11 CFU For Each Psuedocode2022_2025"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -4813,6 +4978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Make Project Sample App 2020_2025"
+        ],
         "progression": "Try the Random Forecaster App"
       },
       "bonus": false,
@@ -4835,6 +5003,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Make Project 2020_2025"
+        ],
         "progression": "Make the Random Forecaster App"
       },
       "bonus": false,
@@ -4857,6 +5028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 2_2025"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -4879,6 +5053,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 5_2025"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -4901,6 +5078,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp5_2025"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -4923,6 +5103,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 5 AP-Style Assessment 2022_2025"
+        ],
         "progression": "Unit Exam - Lists, Loops, and Traversals"
       },
       "bonus": false,
@@ -4945,6 +5128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_csp6_2025"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -4967,6 +5153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 1_b_2025"
+        ],
         "progression": "Setting up Lists"
       },
       "bonus": false,
@@ -4989,6 +5178,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 2_b_2025"
+        ],
         "progression": "Setting up Lists"
       },
       "bonus": false,
@@ -5011,6 +5203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 3.75_b_2025"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -5033,6 +5228,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 3.5_b_2025"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -5055,6 +5253,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 10_b_2025"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -5077,6 +5278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice Strings 2_b_2025"
+        ],
         "progression": "Strings and Indexes"
       },
       "bonus": false,
@@ -5099,6 +5303,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice Strings 3_b_2025"
+        ],
         "progression": "Strings and Indexes"
       },
       "bonus": false,
@@ -5121,6 +5328,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 4_b_2025"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -5143,6 +5353,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 5_b_2025"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -5165,6 +5378,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 9_b_2025"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -5187,6 +5403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L3 Choice_b_2025"
+        ],
         "progression": "Putting It Together"
       },
       "bonus": false,
@@ -5209,6 +5428,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L3 CFU Lists Psuedocode2022_b_2025"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -5231,6 +5453,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L3 CFU Lists Psuedocode 22022_b_2025"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -6151,1204 +6376,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "[EXEMPLAR] CSP Lists Make - Reminder App",
-      "url": "https://docs.google.com/document/d/1D4ieaYNuRK1S-TCcDSdo9yY85zosx_8uv4_8tGycCgI/edit",
-      "key": "_exemplar_csp_lists_make_-_reminder_app",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_csp_lists_make_-_reminder_app"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] CSP Loops Make - Lock Screen Maker App - Activity Guide",
-      "url": "https://docs.google.com/document/d/16TNOS62OKg4tUoG-9n19_Q9D8D-uEvozVd0ILa1mPOs/edit",
-      "key": "_exemplar_csp_loops_make_-_lock_screen_maker_app_-_activity_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_csp_loops_make_-_lock_screen_maker_app_-_activity_guide"
-      }
-    },
-    {
-      "name": "[EXEMPLAR] CSP Traversals Make - Random Forecaster App - Activity Guide",
-      "url": "https://docs.google.com/document/d/1bZisMQUKVl3CYTCGyoupjb-MzgXvdQ15hEttDC6T6Kw/edit",
-      "key": "_exemplar_csp_traversals_make_-_random_forecaster_app_-_activity_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_exemplar_csp_traversals_make_-_random_forecaster_app_-_activity_guide"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/csp6-2023/resources",
-      "key": "all_resources_5",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_5"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csp6-2023/standards",
-      "key": "all_standards_5",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_5"
-      }
-    },
-    {
-      "name": "App Code Support - Loops Make",
-      "url": "https://docs.google.com/document/d/1UYfg5T360it74GfJFMnkx-hpUNriNXoDyJ73IEF-khE/edit?usp=sharing",
-      "key": "app_code_support_-_loops_make",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "app_code_support_-_loops_make"
-      }
-    },
-    {
-      "name": "App Code Support - Traversals Make",
-      "url": "https://docs.google.com/document/d/1bCKr9hZhpLZlmO4s5xVW8KkpzHBYq74VKFdxHx8urjk/edit?usp=sharing",
-      "key": "app_code_support_-_traversals_make",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "app_code_support_-_traversals_make"
-      }
-    },
-    {
-      "name": "App Code Support - Unit 6 Project - Hackathon",
-      "url": "https://docs.google.com/document/d/11h_ILIUvFvYR0og28hy4n-QgRZd8ufQ_FQ6MJmdQt7I/edit?usp=sharing",
-      "key": "app_code_support_-_unit_6_project_-_hackathon",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "app_code_support_-_unit_6_project_-_hackathon"
-      }
-    },
-    {
-      "name": "App Support - Lists Make",
-      "url": "https://docs.google.com/document/d/1fxuIM2dUclR-NdqKhGX8qlWAlMt8RCidEUeVmHXgUUY/edit#heading=h.yfilne4z9w4x",
-      "key": "app_support_-_lists_make",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "app_support_-_lists_make"
-      }
-    },
-    {
-      "name": "Assessment Day - Lists, Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/10kzv_0LmJN2P15HjAAkx55-40fJ1ms4_IfdLu2hJ_oE/template/preview",
-      "key": "assessment_day_-_lists_loops_and_traversals",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "assessment_day_-_lists_loops_and_traversals"
-      }
-    },
-    {
-      "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
-      "key": "course_vocabulary",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "course_vocabulary"
-      }
-    },
-    {
-      "name": "Create PT Practice Written Response - Unit 6 Assessment",
-      "url": "https://docs.google.com/presentation/d/1LSSxUPfpWVOt77WiTvMO6Q8_6UDwUPbUG3_qYyfo1iE",
-      "key": "create_pt_practice_written_response_-_unit_6_assessment",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "create_pt_practice_written_response_-_unit_6_assessment"
-      }
-    },
-    {
-      "name": "CSP Hackathon Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1YwiDuYM_Ln3GeVpgGofHAa-Z6AilQtSDwQdm20CE--U/edit?usp=share_link",
-      "key": "csp_hackathon_project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "csp_hackathon_project_planning_guide"
-      }
-    },
-    {
-      "name": "CSP Hackathon Project Written Response",
-      "url": "https://docs.google.com/document/d/1Ton-0LEejjGVg9bNC-8hPptpNPiyyrTu3C3aSmx4lZU/edit?usp=share_link",
-      "key": "csp_hackathon_project_written_response",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "csp_hackathon_project_written_response"
-      }
-    },
-    {
-      "name": "CSP Hackathon Submission on AP Classroom",
-      "url": "https://docs.google.com/document/d/1_wObV2_1G7RiHpzBrdl63QHJyZqNyzW7CVqlFEJi2LA/edit?usp=sharing",
-      "key": "csp_hackathon_submission_on_ap_classroom",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csp_hackathon_submission_on_ap_classroom"
-      }
-    },
-    {
-      "name": "CSP Lists Make - Reminder App",
-      "url": "https://docs.google.com/document/d/1ASZv664TobGiKJA-ygRh24WVMP9zFqN59jF2q3F5yvo/edit?usp=share_link",
-      "key": "csp_lists_make_-_reminder_app",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "csp_lists_make_-_reminder_app"
-      }
-    },
-    {
-      "name": "CSP Loops Make - Lock Screen Maker",
-      "url": "https://docs.google.com/document/d/1gA_lrTfWpvW_iXFDAI7a5GnnV0F3BYP2VGaaezPPEKQ/edit?usp=share_link",
-      "key": "csp_loops_make_-_lock_screen_maker",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "csp_loops_make_-_lock_screen_maker"
-      }
-    },
-    {
-      "name": "CSP Traversals Make - Random Forecaster App",
-      "url": "https://docs.google.com/document/d/1jfhyhfkhBr2iPQH19szkGxO9lrd1Yg2AXxd04c9QJuE/edit?usp=share_link",
-      "key": "csp_traversals_make_-_random_forecaster_app",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "csp_traversals_make_-_random_forecaster_app"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 10 - Traversals Investigate",
-      "url": "https://docs.google.com/presentation/d/1zS7j6oCW0rzownz-Fg12M-UheRiRs7W8ENm1cZJv4VQ/template/preview",
-      "key": "csp_unit_6_-_lesson_10_-_traversals_investigate",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_10_-_traversals_investigate"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 11 - Traversals Practice",
-      "url": "https://docs.google.com/presentation/d/1H5ZUrHHZqkSu_FrHtNbWQjzRvylU8woXv595hEZptZY/template/preview",
-      "key": "csp_unit_6_-_lesson_11_-_traversals_practice",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_11_-_traversals_practice"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 12 - Traversals Make",
-      "url": "https://docs.google.com/presentation/d/10eNxfCkDNLoMAPnfmFDQR0XwO_mMkmM6j3ewfh2y3kM/template/preview",
-      "key": "csp_unit_6_-_lesson_12_-_traversals_make",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_12_-_traversals_make"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 16 - Lists Practice (Alternative)",
-      "url": "https://docs.google.com/presentation/d/1Ct8EZ3dK11i-OwOBXvavdMwbpX9VtLsPFIV6QykI9lo/edit#slide=id.g270cade7398_0_134",
-      "key": "csp_unit_6_-_lesson_16_-_lists_practice_alternative_",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_16_-_lists_practice_alternative_"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 1 - Lists Explore",
-      "url": "https://docs.google.com/presentation/d/13G2goMIY0_1U-9t0Q7z9bwdTAwvCIdtJF8Yg7lM5KDU/template/preview",
-      "key": "csp_unit_6_-_lesson_1_-_lists_explore",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_1_-_lists_explore"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 2 - Lists Investigate",
-      "url": "https://docs.google.com/presentation/d/1CqWDMocYpGJ0C5KxulAJ9w5_hk_0xLP7YNgxG9yO80k/template/preview",
-      "key": "csp_unit_6_-_lesson_2_-_lists_investigate",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_2_-_lists_investigate"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 3 - Lists Practice",
-      "url": "https://docs.google.com/presentation/d/1JhQiugyeatUCmwtSH9zE7m80DvG7-vYGAHcy4nlPMrM/template/preview",
-      "key": "csp_unit_6_-_lesson_3_-_lists_practice",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_3_-_lists_practice"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 4 - Lists Make",
-      "url": "https://docs.google.com/presentation/d/1dXBuLRsRgm_Mnu9ZL1scq956g15TFYTmmb6qpaCpY4c/template/preview",
-      "key": "csp_unit_6_-_lesson_4_-_lists_make",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_4_-_lists_make"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 5 - Loops Explore",
-      "url": "https://docs.google.com/presentation/d/1t9iK3jci5azPJ36Jt-gszacowFJfFHjNcB5jISANH4A/template/preview",
-      "key": "csp_unit_6_-_lesson_5_-_loops_explore",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_5_-_loops_explore"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 6 - Loops Investigate",
-      "url": "https://docs.google.com/presentation/d/1254jbpQv91VDm55SU3RlzLeyvBU8j-r8NuEBDN8JAB4/template/preview",
-      "key": "csp_unit_6_-_lesson_6_-_loops_investigate",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_6_-_loops_investigate"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 7 - Loops Practice",
-      "url": "https://docs.google.com/presentation/d/1eLWZB21by7sS0couXtbYmwRm1uyVxAX_9j_4W2v61so/template/preview",
-      "key": "csp_unit_6_-_lesson_7_-_loops_practice",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_7_-_loops_practice"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 8 - Loops Make",
-      "url": "https://docs.google.com/presentation/d/1rm9otugkyZliSLbqX0bSgnIghaElguoIykh1JaJMUX0/template/preview",
-      "key": "csp_unit_6_-_lesson_8_-_loops_make",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_8_-_loops_make"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Lesson 9 - Traversals Explore",
-      "url": "https://docs.google.com/presentation/d/1Qi1HRGX43c_TVpb3hdJFX5wrN5zs_qKXpWaymUqDtYI/template/preview",
-      "key": "csp_unit_6_-_lesson_9_-_traversals_explore",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_lesson_9_-_traversals_explore"
-      }
-    },
-    {
-      "name": "CSP Unit 6 - Slides",
-      "url": "https://docs.google.com/presentation/d/1l_mpNKjAK73OlGNpll-0fWEPnsHaP3YeLffqHKN9oPE/template/preview",
-      "key": "csp_unit_6_-_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_slides"
-      }
-    },
-    {
-      "name": "Customize Make Lessons: How-To-Guide",
-      "url": "https://docs.google.com/document/d/1K33HqvpPwb8BYX7mvFD7m2d17RSGD7ASEG4UUA0ajOM/edit?usp=sharing",
-      "key": "customize_make_lessons_how-to-guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "customize_make_lessons_how-to-guide"
-      }
-    },
-    {
-      "name": "Data Tab in App Lab",
-      "url": "https://youtu.be/PNe3MSreQAA",
-      "key": "data_tab_in_app_lab",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/csp_datatabinapplab_sm-1-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "data_tab_in_app_lab"
-      }
-    },
-    {
-      "name": "FRQ  EXEMPLAR CSP Unit 6 Hackathon Project Written Response",
-      "url": "https://docs.google.com/document/d/1TjczEvy5Fb9HeRCvPfKB6kp4sFkea7PDyhSd-pjpL9g/edit?usp=sharing",
-      "key": "frq_exemplar_csp_unit_6_hackathon_project_written_response",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "frq_exemplar_csp_unit_6_hackathon_project_written_response"
-      }
-    },
-    {
-      "name": "Guide to EIPM Lessons",
-      "url": "https://www.youtube.com/playlist?list=PLzdnOPI1iJNeqEl6MN7c2KyM3gdBSo8t3",
-      "key": "guide_to_eipm_lessons",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_eipm_lessons"
-      }
-    },
-    {
-      "name": "Hackathon High Score Sample App",
-      "url": "https://studio.code.org/projects/applab/zmiLk9B9ZWKLeJtoXNEiuxn92IpZukOz8xZWBLzzz9M",
-      "key": "hackathon_high_score_sample_app",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "hackathon_high_score_sample_app"
-      }
-    },
-    {
-      "name": "Hackathon High Score Sample Planning Guide & Rubric",
-      "url": "https://docs.google.com/document/d/1oz5uUMSTi4VKGwBfT9cW3riBUFE5MEbg2baHPDg_U2k/edit?usp=sharing",
-      "key": "hackathon_high_score_sample_planning_guide_rubric",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "hackathon_high_score_sample_planning_guide_rubric"
-      }
-    },
-    {
-      "name": "Hackathon Mid Score Sample App",
-      "url": "https://studio.code.org/projects/applab/hGGs32BtXJMHnxpglngOa3XWPYHzy1obVNG9GYrgU5I",
-      "key": "hackathon_mid_score_sample_app",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "hackathon_mid_score_sample_app"
-      }
-    },
-    {
-      "name": "Hackathon Mid Score Sample Planning Guide & Rubric",
-      "url": "https://docs.google.com/document/d/1k4Gy9UlB7jNfDwq-zFxyODi5fgNTaom1uuTE7HgpFv8/edit?usp=sharing",
-      "key": "hackathon_mid_score_sample_planning_guide_rubric",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "hackathon_mid_score_sample_planning_guide_rubric"
-      }
-    },
-    {
-      "name": "Introduction to Lists - Assigning and Updating",
-      "url": "https://youtu.be/rWSsVSMGXXY",
-      "key": "introduction_to_lists_-_assigning_and_updating",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_3.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_lists_-_assigning_and_updating"
-      }
-    },
-    {
-      "name": "Introduction to Lists - Getting Length",
-      "url": "https://youtu.be/H__zi1BiXJM",
-      "key": "introduction_to_lists_-_getting_length",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_lists_-_getting_length"
-      }
-    },
-    {
-      "name": "Introduction to Lists - Part 1",
-      "url": "https://youtu.be/n1exiRH00x0",
-      "key": "introduction_to_lists_-_part_1",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_1.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_lists_-_part_1"
-      }
-    },
-    {
-      "name": "Introduction to Lists - Part 2",
-      "url": "https://youtu.be/TL0Y_GI4NZg",
-      "key": "introduction_to_lists_-_part_2",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/lists_intro_2.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_lists_-_part_2"
-      }
-    },
-    {
-      "name": "Introduction to Traversal",
-      "url": "https://youtu.be/RQ6GJt9f2vg",
-      "key": "introduction_to_traversal",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/processing_lists.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_traversal"
-      }
-    },
-    {
-      "name": "Lists, Loops, and Traversals",
-      "url": "https://docs.google.com/presentation/d/1l_mpNKjAK73OlGNpll-0fWEPnsHaP3YeLffqHKN9oPE/template/preview",
-      "key": "lists_loops_and_traversals",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "lists_loops_and_traversals"
-      }
-    },
-    {
-      "name": "Loops Game Board",
-      "url": "https://docs.google.com/document/d/1tvAqNjn1ktrzMROtHAxOZDfHHMOn367Fdpnp9sbWghM/view",
-      "key": "loops_game_board",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "loops_game_board"
-      }
-    },
-    {
-      "name": "Project - Hackathon",
-      "url": "https://docs.google.com/presentation/d/1pvRpMallMjVBPQNOusvULwZ_iIXPYw1NOmz4EZFrmXM/template/preview",
-      "key": "project_-_hackathon",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_hackathon"
-      }
-    },
-    {
-      "name": "Syllabus",
-      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
-      "key": "syllabus",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "syllabus"
-      }
-    },
-    {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csp/curriculum/392",
-      "key": "teacher_forum",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "teacher_forum"
-      }
-    },
-    {
-      "name": "Traversal Machine",
-      "url": "https://docs.google.com/document/d/155CFeFELE2dfoQCip9CwLb6KbJqDeUcvhumCRecCU-Y/view",
-      "key": "traversal_machine",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "traversal_machine"
-      }
-    },
-    {
-      "name": "Unit 6 Journal (Digital)",
-      "url": "https://docs.google.com/presentation/d/1J2hBz676YRP_Fbs7IwNYsX32XQmJ49x2RxptD-DwBIk/edit?usp=drive_link",
-      "key": "unit_6_journal_digital_",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_6_journal_digital_"
-      }
-    },
-    {
-      "name": "Unit 6 Journal (Interactive Notebook)",
-      "url": "https://docs.google.com/presentation/d/1tqcSleg0s5dO8VQw2mBq9HdWE5pbxFQ9EjG9T632oRY/edit?usp=drive_link",
-      "key": "unit_6_journal_interactive_notebook_",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_6_journal_interactive_notebook_"
-      }
-    },
-    {
-      "name": "Using Loops",
-      "url": "https://youtu.be/G8hfAk4PfOM",
-      "key": "using_loops",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/2015/csp/applab/loops.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "using_loops"
-      }
-    },
-    {
-      "name": "Writing Support - Lists Make",
-      "url": "https://docs.google.com/document/d/1yviJRLtpeJSywP3GYPGiSE2Zag4GrSCl6MEmD064TpY/edit",
-      "key": "writing_support_-_lists_make",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "writing_support_-_lists_make"
-      }
-    },
-    {
-      "name": "Writing Support - Loops Make",
-      "url": "https://docs.google.com/document/d/12e2cyLJFKMa3DSBqlaF2PAhBCznMD4rbY-bAnRk0qPY/edit?usp=sharing",
-      "key": "writing_support_-_loops_make",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "writing_support_-_loops_make"
-      }
-    },
-    {
-      "name": "Writing Support - Traversals Make",
-      "url": "https://docs.google.com/document/d/12vNNLoKCwvO3o0mwBjRDV1Pqrb-SjyJFV_9-xXZicMg/edit?usp=sharing",
-      "key": "writing_support_-_traversals_make",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "writing_support_-_traversals_make"
-      }
-    },
-    {
-      "name": "Writing Support - Unit 6 Project - Hackathon",
-      "url": "https://docs.google.com/document/d/1AH8ASUhjjgSgTjndQdg7Zp9l8d7nSVWWsYPQP8EdadE/edit?usp=sharing",
-      "key": "writing_support_-_unit_6_project_-_hackathon",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "writing_support_-_unit_6_project_-_hackathon"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Assessment Day",
-        "resource.key": "assessment_day_-_lists_loops_and_traversals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Assessment Day",
-        "resource.key": "create_pt_practice_written_response_-_unit_6_assessment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "resource.key": "csp_unit_6_-_lesson_1_-_lists_explore"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "resource.key": "introduction_to_lists_-_part_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "resource.key": "introduction_to_lists_-_part_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "resource.key": "lists_loops_and_traversals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "resource.key": "unit_6_journal_digital_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "resource.key": "unit_6_journal_interactive_notebook_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Investigate",
-        "resource.key": "csp_unit_6_-_lesson_2_-_lists_investigate"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Investigate",
-        "resource.key": "introduction_to_lists_-_assigning_and_updating"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Investigate",
-        "resource.key": "introduction_to_lists_-_getting_length"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Make",
-        "resource.key": "_exemplar_csp_lists_make_-_reminder_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Make",
-        "resource.key": "app_support_-_lists_make"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Make",
-        "resource.key": "csp_lists_make_-_reminder_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Make",
-        "resource.key": "csp_unit_6_-_lesson_4_-_lists_make"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Make",
-        "resource.key": "customize_make_lessons_how-to-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Make",
-        "resource.key": "writing_support_-_lists_make"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Practice (Alternative)",
-        "resource.key": "csp_unit_6_-_lesson_16_-_lists_practice_alternative_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Practice",
-        "resource.key": "csp_unit_6_-_lesson_3_-_lists_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Explore",
-        "resource.key": "csp_unit_6_-_lesson_5_-_loops_explore"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Explore",
-        "resource.key": "loops_game_board"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Explore",
-        "resource.key": "using_loops"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Investigate",
-        "resource.key": "csp_unit_6_-_lesson_6_-_loops_investigate"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Make",
-        "resource.key": "_exemplar_csp_loops_make_-_lock_screen_maker_app_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Make",
-        "resource.key": "app_code_support_-_loops_make"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Make",
-        "resource.key": "csp_loops_make_-_lock_screen_maker"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Make",
-        "resource.key": "csp_unit_6_-_lesson_8_-_loops_make"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Make",
-        "resource.key": "customize_make_lessons_how-to-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Make",
-        "resource.key": "writing_support_-_loops_make"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Practice",
-        "resource.key": "csp_unit_6_-_lesson_7_-_loops_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "app_code_support_-_unit_6_project_-_hackathon"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "csp_hackathon_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "csp_hackathon_project_written_response"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "csp_hackathon_submission_on_ap_classroom"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "frq_exemplar_csp_unit_6_hackathon_project_written_response"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "hackathon_high_score_sample_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "hackathon_high_score_sample_planning_guide_rubric"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "hackathon_mid_score_sample_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "hackathon_mid_score_sample_planning_guide_rubric"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "project_-_hackathon"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Hackathon",
-        "resource.key": "writing_support_-_unit_6_project_-_hackathon"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Explore",
-        "resource.key": "csp_unit_6_-_lesson_9_-_traversals_explore"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Explore",
-        "resource.key": "introduction_to_traversal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Explore",
-        "resource.key": "traversal_machine"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Investigate",
-        "resource.key": "csp_unit_6_-_lesson_10_-_traversals_investigate"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Investigate",
-        "resource.key": "data_tab_in_app_lab"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Make",
-        "resource.key": "_exemplar_csp_traversals_make_-_random_forecaster_app_-_activity_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Make",
-        "resource.key": "app_code_support_-_traversals_make"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Make",
-        "resource.key": "csp_traversals_make_-_random_forecaster_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Make",
-        "resource.key": "csp_unit_6_-_lesson_12_-_traversals_make"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Make",
-        "resource.key": "customize_make_lessons_how-to-guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Make",
-        "resource.key": "writing_support_-_traversals_make"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Practice",
-        "resource.key": "csp_unit_6_-_lesson_11_-_traversals_practice"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_5",
-        "script.name": "csp6-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_5",
-        "script.name": "csp6-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "course_vocabulary",
-        "script.name": "csp6-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_unit_6_-_slides",
-        "script.name": "csp6-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_eipm_lessons",
-        "script.name": "csp6-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "syllabus",
-        "script.name": "csp6-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csp6-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_6_journal_digital_",
-        "script.name": "csp6-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_6_journal_interactive_notebook_",
-        "script.name": "csp6-2025"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "data_abstraction",
-      "word": "Data Abstraction",
-      "definition": "manage complexity in programs by giving a collection of data a name without referencing the specific details of the representation",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "data_abstraction"
-      }
-    },
-    {
-      "key": "element",
-      "word": "Element",
-      "definition": "an individual value in a list that is assigned a unique index",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "element"
-      }
-    },
-    {
-      "key": "index",
-      "word": "Index",
-      "definition": " a common method for referencing the elements in a list or string using numbers",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "index"
-      }
-    },
-    {
-      "key": "infinite_loop",
-      "word": "Infinite Loop",
-      "definition": "occurs when the ending condition will never evaluate to true",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "infinite_loop"
-      }
-    },
-    {
-      "key": "iteration",
-      "word": "Iteration",
-      "definition": "a repetitive portion of an algorithm which repeats a specified number of times or until a given condition is met",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "iteration"
-      }
-    },
-    {
-      "key": "list",
-      "word": "List",
-      "definition": "an ordered collection of elements",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "list"
-      }
-    },
-    {
-      "key": "traversal",
-      "word": "Traversal",
-      "definition": "the process of accessing each item in a list one at a time",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "traversal"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "vocabulary.key": "data_abstraction"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "vocabulary.key": "element"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "vocabulary.key": "index"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lists Explore",
-        "vocabulary.key": "list"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Explore",
-        "vocabulary.key": "infinite_loop"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Loops Explore",
-        "vocabulary.key": "iteration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Traversals Explore",
-        "vocabulary.key": "traversal"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

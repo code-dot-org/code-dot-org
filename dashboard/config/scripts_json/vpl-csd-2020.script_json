@@ -4,7 +4,6 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "is_migrated": true,
@@ -12,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:28:45 UTC",
+    "serialized_at": "2025-04-18 02:56:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

@@ -16,6 +16,9 @@ import {getStore} from '@cdo/apps/redux';
 import {SectionCard} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCard';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+
+jest.mock('@cdo/apps/util/copyToClipboard');
 
 describe('SectionCard', () => {
   const section: Section = {
@@ -53,6 +56,8 @@ describe('SectionCard', () => {
     syncEnabled: false,
     ttsAutoplayEnabled: false,
     unitId: null,
+    avatar_color: 1,
+    avatar_emoji: 1,
   };
 
   const store: Store = getStore();
@@ -76,6 +81,7 @@ describe('SectionCard', () => {
                 path={TEACHER_NAVIGATION_PATHS.home}
                 element={
                   <SectionCard
+                    studioUrlPrefix="https://studio.code.org"
                     id={section.id}
                     section={section}
                     onDeleteClickCallback={() => {}}
@@ -97,13 +103,15 @@ describe('SectionCard', () => {
 
   it('renders section class code with login info link', () => {
     renderComponent();
-    const link = screen.getByRole('link', {name: 'ABCDEF'});
-    expect(link).toHaveAttribute('target', '_blank');
-    expect(link).toHaveAttribute('href', '/join/ABCDEF');
+    const link = screen.getByRole('button', {name: 'ABCDEF'});
     fireEvent.click(link);
+
+    expect(copyToClipboard).toHaveBeenCalledWith(
+      'https://studio.code.org/join/ABCDEF'
+    );
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
-      {},
+      {source: 'teacherHomepage'},
       PLATFORMS.BOTH
     );
   });
@@ -120,6 +128,6 @@ describe('SectionCard', () => {
 
   it('renders the SectionAvatar component', () => {
     renderComponent();
-    screen.getByText('☔');
+    screen.getByText('🐧');
   });
 });

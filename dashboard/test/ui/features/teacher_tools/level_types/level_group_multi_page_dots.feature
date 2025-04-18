@@ -7,6 +7,7 @@ Background:
   Then I wait to see ".nextPageButton"
   And element ".nextPageButton" is visible
 
+@properties_encryption_key
 Scenario: Submit three pages as... 1. all, 2. none, 3. some questions answered.
   When element ".level-group-content:eq(0) .multi-question" contains text "Which arrow gets"
 

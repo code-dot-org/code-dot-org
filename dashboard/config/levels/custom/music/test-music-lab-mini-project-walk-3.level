@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-19T18:00:28.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
@@ -117,18 +118,58 @@
           }
         ],
         "kind": "flyoutToolbox"
-      }
+      },
+      "showSoundFilters": true,
+      "validationTimeout": 1
     },
-    "long_instructions": "### Make your third character's \"Walk Up\" song\r\n\r\nAlmost done. Time to code your third character's song. You know the drill. \r\n\r\n**Do This:**\r\n- Choose your third character. \r\n- Code a sequence of sounds under `when run`. \r\n- Make sure the beginning (Measures 1-2) build up to the middle (Measures 4-6) and that leads to the ending (Measures 7-8). *Note: Your song can be longer, but do not exceed 12 measures*. \r\n- When you have a sequence you like, drag the `3 triggered immediately` block to your workspace and move all the code under `when run` to the trigger block. \r\n- Press \"Run\" and then practice pressing \"1\", \"2\", or \"3\" to trigger each walk up song. ",
+    "long_instructions": "### Make your third character's \"Walk Up\" song\r\n\r\nAlmost done. Time to code your third character's song. You know the drill. \r\n\r\n**Do This:**\r\n1) Choose your third character. \r\n2) Code a sequence of sounds under `when run`. \r\n  - Make sure the beginning (Measures 1-2) build up to the middle (Measures 4-6) and that leads to the ending (Measures 7-8). *Note: Your song can be longer, but do not exceed 12 measures*. \r\n3) When you have a sequence you like, drag the `3 triggered immediately` block to your workspace and move all the code under `when run` to the trigger block. \r\n\r\nPress \"Run\" and then practice pressing \"1\", \"2\", or \"3\" to trigger each walk up song. ",
     "exemplar_settings": {
       "playerEnabled": false,
       "validationEnabled": false
     },
     "project_template_level_name": "test-music-lab-mini-project-walk-template",
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-walk-3_be9f852c-497b-4bc2-9eb1-22f2d275b32a",
+        "message": "It looks like your code has all the blocks it needs! Make sure you meet the other requirements!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:3"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-walk-3_3d2fac9f-0852-4ae3-b308-5a7e0f2026ea",
+        "message": "Your code needs to have at least 3 triggers!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:9"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-walk-3_42d4a86f-54b4-4633-8f95-2a63049ec4d6",
+        "message": "Your code needs to have at least 9 tracks!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-19T18:00:28.320+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-2\"},{\"changed_at\":\"2025-03-19 18:01:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-05 23:36:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-19T18:00:28.320+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-2\"},{\"changed_at\":\"2025-03-19 18:01:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-05 23:36:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 17:16:58 +0000\",\"changed\":[\"offer_browser_tts\",\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

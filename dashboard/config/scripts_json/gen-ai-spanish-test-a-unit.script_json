@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-05 17:59:32 UTC",
+    "serialized_at": "2025-04-18 03:09:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -107,6 +107,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-4omini-spanish-temperature"
+        ],
         "progression": "Spanish Testing!"
       },
       "bonus": false,
@@ -129,6 +132,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-4omini-spanish-systemprompt"
+        ],
         "progression": "Spanish Testing!"
       },
       "bonus": false,
@@ -151,6 +157,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-4omini-spanish-retrieval"
+        ],
         "progression": "Spanish Testing!"
       },
       "bonus": false,

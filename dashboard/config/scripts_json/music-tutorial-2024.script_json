@@ -4,10 +4,8 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "is_migrated": true,
-      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "es-ES",
@@ -27,15 +25,11 @@
         "tr-TR",
         "vi-VN",
         "zh-TW"
-      ],
-      "topic_tags": [
-        "music_lab"
-      ],
-      "weekly_instructional_minutes": 225
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:05:55 UTC",
+    "serialized_at": "2025-04-18 02:57:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -66,7 +60,6 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "background": "dark",
         "overview": "In this interactive lesson, students will use Music Lab, a block-based IDE, to learn about events, functions, and loops while creating unique sounds, composing songs, and performing live music. They will utilize sound generation, loops, functions, and events to craft and share a unique composition, developing foundational coding skills and an appreciation for the connection between music and technology."
       },
       "seeding_key": {

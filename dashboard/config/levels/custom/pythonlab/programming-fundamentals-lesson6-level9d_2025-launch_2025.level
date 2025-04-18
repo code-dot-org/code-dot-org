@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-04-14T23:13:37.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're creating a countdown for a surprise party. Before the guest arrives, everyone has to stay quiet. You want your program to print the same \"Shhh...\" message a few times to build suspense before yelling \"Surprise!\"\r\n\r\n1. Define a function called `stay_quiet()` that prints\r\n\r\n   ```\r\n   🤫 Shhh... they're coming!\r\n   ```\r\n\r\n2. Call the function **three times** to build suspense.\r\n\r\n3. Then, add one more line of code outside the function to print\r\n\r\n   ```\r\n   🎉 SURPRISE!\r\n   ```\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nUse functions to control repetition, and use `print()` on its own when you only need to say something once.\r\n\r\nUse the **UMPIRE** strategy to understand what's happening, make a plan, test your output, and explain your thinking.",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_2025",
+    "display_name": "Surprise Party Countdown",
+    "bubble_choice_description": "You're creating a countdown for a surprise party. Before the guest arrives, everyone has to stay quiet. You want your program to print the same \"Shhh...\" message a few times to build suspense before yelling \"Surprise!\"",
+    "thumbnail_url": "https://images.code.org/6ca83b26fba9c633985b93924842281a-party-popper.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# TODO - Write the function stay_quiet()\n\n\n\n# TODO - Call the stay_quiet() function three times\n\n\n\n# TODO - Print \"🎉 SURPRISE!\" after the third call\n\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzhTmp7azeMcV6vTCgWQBDmvTOtko6SII\n7nMRbUAfn4UGckAesz+VbbZJd4Ku9zsol62b1KTEdzGlVn/LxKp+MdSAVpGo\nbX1ld7YolDaMuOL1/hUo+a4xLrOj6ZeH4gSStuqeLFhuImp8HHQjRARsO0bA\nW2o1g3oy5STM2wzbE+S3G6iZrSBr77ZlPWFLhqe4mSYBvGItZtsNZ8SzaJbi\nu0RaTk2ElVUUYeYbkK+Kl0ChQcl9enRQ3XRo/csY9oajWjhXPUr2Qe2y9nhM\n7s9CSHNTm4Tc1x2kgfzNzihGDaONLZDsKj8z3k1HoFV/9U1TbL2qjmKW0rkz\nZr9hAgexTliZcPZQ6Q+2mlGVJSHcfTqohSCQWcGQhIARR/jMeopSzmPSCc2m\nR3jHvm3QnH3nFsZpi3ssOUExaXljFjIrETH9PvgDcsj6w/q0FNOcM6tX2g7A\n08cPSMeuSYy+yQyeeRE=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:37.052+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9d_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9d_2025-launch\"},{\"changed_at\":\"2025-04-15 16:37:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 16:40:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 17:04:52 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -4,8 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "content_area": "other",
-      "curriculum_umbrella": "Other",
+      "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
@@ -16,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:30:03 UTC",
+    "serialized_at": "2025-04-18 02:57:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

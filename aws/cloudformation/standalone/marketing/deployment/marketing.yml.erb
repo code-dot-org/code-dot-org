@@ -6,6 +6,12 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: Marketing App AWS resources
 
 Parameters:
+  BaseDomainName:
+    Type: String
+    Description: Base domain name (e.g. 'code.org' in 'marketing.code.org').
+  SubdomainName:
+    Type: String
+    Description: Subdomain name for marketing (e.g. 'marketing' in 'marketing.code.org').
   Environment:
     Type: String
     Default: "test"
@@ -14,6 +20,8 @@ Parameters:
     Type: String
     Description: "The sha256sum of the marketing container image."
 
+Conditions:
+  IsDevCondition: !Equals [!Ref BaseDomainName, "dev-code.org"]
 Resources:
   # Route 53 root hosted zone for marketing.dev-code.org
   RootHostedZone:
@@ -557,6 +565,13 @@ Resources:
               - 'ecs:DescribeServices'
               - 'ecs:UpdateService'
             Resource: !Ref FargateService
+          - Effect: Allow
+            Action:
+              - "s3:PutObject"
+              - "s3:ListBucket"
+            Resource:
+              - !GetAtt MarketingStaticAssetsBucket.Arn
+              - !Sub "${MarketingStaticAssetsBucket.Arn}/*"
 
   MarketingGithubDeployerAccessKey:
     Type: AWS::IAM::AccessKey
@@ -579,6 +594,28 @@ Resources:
             - '"}'
     UpdateReplacePolicy: Delete
     DeletionPolicy: Delete
+
+  MarketingStaticAssetsBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !If [IsDevCondition, !Sub "cdo-dev-${SubdomainName}-static-assets", !Sub "cdo-${SubdomainName}-static-assets"]
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault:
+              SSEAlgorithm: "AES256"
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      VersioningConfiguration:
+        Status: Enabled
+      LifecycleConfiguration:
+        Rules:
+          - Id: ExpireOldVersions
+            Status: Enabled
+            NoncurrentVersionExpiration:
+              NoncurrentDays: 90
 
 Outputs:
   FargateServiceLoadBalancerDNS:

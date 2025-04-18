@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-02 19:03:00 UTC",
+    "serialized_at": "2025-04-18 03:09:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -381,6 +381,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 Overview_2025"
+        ],
         "progression": "Module 5 Overview"
       },
       "bonus": false,
@@ -403,6 +406,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M7 Theme Introduction_2025"
+        ],
         "progression": "Theme Introduction"
       },
       "bonus": false,
@@ -425,6 +431,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI-U6_2025"
+        ],
         "progression": "Curriculum Investigation Overview"
       },
       "bonus": false,
@@ -447,6 +456,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L1_2023_1_2025"
+        ],
         "progression": "Unit 6 Lesson 1 - Intro to App Lab"
       },
       "bonus": false,
@@ -469,6 +481,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L1_2025"
+        ],
         "progression": "Unit 6 Lesson 2 - Physical Designs"
       },
       "bonus": false,
@@ -491,6 +506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L3_2025"
+        ],
         "progression": "Unit 6 Lesson 3 - The Circuit Playground OR Introducing the micro:bit"
       },
       "bonus": false,
@@ -513,6 +531,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI_2025"
+        ],
         "progression": "Unit 6 Lesson 4 - Updating Screen Elements"
       },
       "bonus": false,
@@ -535,6 +556,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L2a_2025"
+        ],
         "progression": "Unit 6 Lesson 4 - Updating Screen Elements"
       },
       "bonus": false,
@@ -557,6 +581,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module  U6L2 Reflection_2025"
+        ],
         "progression": "Unit 6 Lesson 4 - Updating Screen Elements"
       },
       "bonus": false,
@@ -579,6 +606,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L4_2025"
+        ],
         "progression": "Unit 6 Lesson 5 - Board Events"
       },
       "bonus": false,
@@ -601,6 +631,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 U6L4 Level 2_2025"
+        ],
         "progression": "Unit 6 Lesson 5 - Board Events"
       },
       "bonus": false,
@@ -623,6 +656,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 - U6L4 Level 3_2025"
+        ],
         "progression": "Unit 6 Lesson 5 - Board Events"
       },
       "bonus": false,
@@ -645,6 +681,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8 U6L4 Reflection_2025"
+        ],
         "progression": "Unit 6 Lesson 5 - Board Events"
       },
       "bonus": false,
@@ -667,6 +706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 PSP Reflection_2025"
+        ],
         "progression": "Reflection: Problem Solving Process for Programming"
       },
       "bonus": false,
@@ -689,6 +731,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 Wrap Up_2025"
+        ],
         "progression": "Module 7 Asynchronous Wrap Up"
       },
       "bonus": false,
@@ -889,43 +934,13 @@
     }
   ],
   "resources": [
-    {
-      "name": "23-24 CS Discoveries Virtual M5 Agenda",
-      "url": "https://docs.google.com/document/d/1tO94dRFkU7_GjauhkMbzC_TcdqGcIZxAD5xzOmNNj_c/edit?usp=sharing",
-      "key": "23-24_cs_discoveries_virtual_m5_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m5_agenda"
-      }
-    },
-    {
-      "name": "23-24 CS Discoveries Virtual M5 Slides",
-      "url": "https://docs.google.com/presentation/d/1xVNUWIHUD2xkA58jBKso5gGtvtMjSbG2V_3ZJlApBuA/edit?usp=drive_link",
-      "key": "23-24_cs_discoveries_virtual_m5_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m5_slides"
-      }
-    }
+
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m5_agenda",
-        "script.name": "vpl-csd-2025-m5"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m5_slides",
-        "script.name": "vpl-csd-2025-m5"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 

@@ -4,24 +4,19 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "9-12 Special topics",
+      "curriculum_umbrella": "AI",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
-      "topic_tags": [
-        "ai"
-      ],
       "tts": true,
-      "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-02 16:32:56 UTC",
+    "serialized_at": "2025-04-18 02:57:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4134,28 +4129,6 @@
       }
     },
     {
-      "name": "All Resources",
-      "url": "/s/coding-with-ai/resources",
-      "key": "all_resources",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/coding-with-ai/standards",
-      "key": "all_standards",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards"
-      }
-    },
-    {
       "name": "Beyond the Finished Code",
       "url": "https://docs.google.com/presentation/d/1fq-1lXJK6bYgQ8bsNUUPgWfxn4svW1sCA5Z77mu8X04/template/preview",
       "key": "beyond_the_finished_code",
@@ -4714,18 +4687,6 @@
     {
       "seeding_key": {
         "resource.key": "ai_chatbot_prompting_guide",
-        "script.name": "coding-with-ai"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources",
-        "script.name": "coding-with-ai"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards",
         "script.name": "coding-with-ai"
       }
     },

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-02 18:54:19 UTC",
+    "serialized_at": "2025-04-18 03:09:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -632,6 +632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPL - CSD-PL AYWS1 Debugging Intro_2025"
+        ],
         "progression": "Module 1 Overview"
       },
       "bonus": false,
@@ -654,6 +657,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 Summer Review Overview_2025"
+        ],
         "progression": "Module 1 Overview"
       },
       "bonus": false,
@@ -676,6 +682,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Variables Overview_2025"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -698,6 +707,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module Variable Video with Reflection_2025"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -720,6 +732,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-HTMLReview_2025"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -742,6 +757,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-CSSVideo_2025"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -764,6 +782,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-CSSReview_2025"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -786,6 +807,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-variablesoverview1_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -808,6 +832,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-variables4_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -830,6 +857,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-randomnumbersoverview_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -852,6 +882,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD U3 Random random ellipse2_2018_21_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -874,6 +907,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-spritesoverview_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -896,6 +932,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-sprites1_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -918,6 +957,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-sprites3_2025"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -940,6 +982,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL- CSD - Module 1 Debugging OverviewOPD-K5 Pair_copy_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -962,6 +1007,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 1 Debugging Reflection 1_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -984,6 +1032,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD Games variables practice_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1006,6 +1057,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 1 Debugging Reflection 2_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1028,6 +1082,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 Wrap Up_2025"
+        ],
         "progression": "Module 1 Asynchronous Wrap Up"
       },
       "bonus": false,
@@ -1050,6 +1107,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 images explore_csd-vpl-m1_2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1072,6 +1132,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 1_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1094,6 +1157,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Credit_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1116,6 +1182,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag Debug_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1138,6 +1207,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image choose name_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1160,6 +1232,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 2_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1182,6 +1257,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image practice_pilot_csd-vpl-m1_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1204,6 +1282,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image assessment_csd-vpl-m1_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1226,6 +1307,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L Assess FR_csd-vpl-m1_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1248,6 +1332,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image challenge_pilot_csd-vpl-m1_2025"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1270,6 +1357,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties predict_csd-vpl-m1_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1292,6 +1382,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties xy_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1314,6 +1407,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties new_csd-vpl-m1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1336,6 +1432,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties practice_csd-vpl-m1_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1358,6 +1457,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Games properties assessment_csd-vpl-m1_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1380,6 +1482,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties challenge_csd-vpl-m1_2025"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1820,190 +1925,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "23-24 CS Discoveries Virtual M1 Agenda",
-      "url": "https://docs.google.com/document/d/1X_Xzrt_HkrYTHXiXcRVaLovJPGFPbccUNTZPvHiZ9EM/edit?usp=sharing",
-      "key": "23-24_cs_discoveries_virtual_m1_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m1_agenda"
-      }
-    },
-    {
-      "name": "23-24 CS Discoveries Virtual M1 Slides",
-      "url": "https://docs.google.com/presentation/d/1wzw7mOUry4kdyz4h1SRlQt2AB1k0HAKKpSgbi3QBME0/edit?usp=drive_link",
-      "key": "23-24_cs_discoveries_virtual_m1_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m1_slides"
-      }
-    },
-    {
-      "name": "Creative Commons Search",
-      "url": "https://drive.google.com/file/d/1W7c3XSlxyL-JuqHiwkn8kzlFZcwZ9xke/view",
-      "key": "creative_commons_search",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "creative_commons_search"
-      }
-    },
-    {
-      "name": "Images in HTML",
-      "url": "https://drive.google.com/file/d/1qd50f20T10vhLdc81x0CQlNu7EEX6_fo/view",
-      "key": "images_in_html",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "images_in_html"
-      }
-    },
-    {
-      "name": "Sprite Properties",
-      "url": "https://drive.google.com/file/d/1E4UZKHRQM0erDbb-rPTRbRVpj7IquA3p/view?usp=sharing",
-      "key": "sprite_properties",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_properties"
-      }
-    },
-    {
-      "name": "Sprite Properties",
-      "url": "https://www.youtube.com/watch?v=5Op72oHFUnc",
-      "key": "sprite_properties_1",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/sprite-properties-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_properties_1"
-      }
-    },
-    {
-      "name": "Sprite Properties",
-      "url": "https://docs.google.com/presentation/d/1lXQZubMuJ4727CqmBJwd3pOy55oFYbbo9960UxLTXCc/template/preview",
-      "key": "sprite_properties_2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_properties_2"
-      }
-    },
-    {
-      "name": "Using Images",
-      "url": "https://docs.google.com/presentation/d/1mAUT_XTWrs1Y-nnDBnvXNc13ireAWWPZ28IlIIDdxV4/template/preview",
-      "key": "using_images",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "using_images"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L8 - Using Images",
-        "resource.key": "creative_commons_search"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L8 - Using Images",
-        "resource.key": "images_in_html"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L8 - Using Images",
-        "resource.key": "using_images"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
-        "resource.key": "sprite_properties"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
-        "resource.key": "sprite_properties_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
-        "resource.key": "sprite_properties_2"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m1_agenda",
-        "script.name": "vpl-csd-2025-m1"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m1_slides",
-        "script.name": "vpl-csd-2025-m1"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "dot_notation",
-      "word": "Dot notation",
-      "definition": "the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "key": "property",
-      "word": "Property",
-      "definition": "A label for a characteristic of a sprite, such as its location and appearance",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "property"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
-        "vocabulary.key": "dot_notation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
-        "vocabulary.key": "property"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
     {

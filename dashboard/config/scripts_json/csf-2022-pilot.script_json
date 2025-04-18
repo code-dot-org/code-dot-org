@@ -14,14 +14,13 @@
           "key": "93414d4a-fd8a-4309-9945-5c88c86ee365"
         }
       ],
-      "content_area": "other",
-      "curriculum_umbrella": "Other",
+      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:28:59 UTC",
+    "serialized_at": "2025-04-18 02:56:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

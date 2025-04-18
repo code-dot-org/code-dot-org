@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-11 18:21:21 UTC",
+    "serialized_at": "2025-04-18 03:08:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2318,6 +2318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Pre-Unit Pulse Q1_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2340,6 +2343,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Pre-Unit Pulse Q2_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2362,6 +2368,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Pre-Unit Pulse Q3_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2384,6 +2393,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App_2025"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2406,6 +2418,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App_2025"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2428,6 +2443,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App_2025"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2450,6 +2468,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App_2025"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2472,6 +2493,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App_2025"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2494,6 +2518,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App Investigate_2025"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2516,6 +2543,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App Investigation_2025"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2538,6 +2568,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App Investigation_2025"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2560,6 +2593,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App Investigation_2025"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2582,6 +2618,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App Investigation_2025"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2604,6 +2643,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L1 Input Output Matching2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2626,6 +2668,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township Design Mode_2025"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2648,6 +2693,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Themes_2025"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2670,6 +2718,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Colors_2025"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2692,6 +2743,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Images_2025"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2714,6 +2768,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Icons_2025"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2736,6 +2793,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode ids_2025"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2758,6 +2818,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Copy an App_2025"
+        ],
         "progression": "Copy an App"
       },
       "bonus": false,
@@ -2780,6 +2843,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L2 CSP CFU ID names_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2802,6 +2868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz Storyboard_2025"
+        ],
         "progression": "Sample Prototype"
       },
       "bonus": false,
@@ -2824,6 +2893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Design Screens_2025"
+        ],
         "progression": "Build Your Screens"
       },
       "bonus": false,
@@ -2846,6 +2918,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L5 CSP CFU natural language_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2868,6 +2943,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 1_2025"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2890,6 +2968,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 2_2025"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2912,6 +2993,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 1_2025"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2934,6 +3018,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event vs Seq Predict_2025"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2956,6 +3043,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven setScreen_2025"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2978,6 +3068,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 2_2025"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3000,6 +3093,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 3_2025"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3022,6 +3118,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L6 CSP CFU Sequential vs Event Driven_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3044,6 +3143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 1_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3066,6 +3168,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 2_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3088,6 +3193,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 4_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3110,6 +3218,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 6_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3132,6 +3243,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3 Debugging Predict_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3154,6 +3268,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L7 Choice_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3176,6 +3293,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L7 CSP CFU What was confusing_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3198,6 +3318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Add Code_2025"
+        ],
         "progression": "Add Code"
       },
       "bonus": false,
@@ -3220,6 +3343,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L9 Add More Code_2025"
+        ],
         "progression": "Add More Code"
       },
       "bonus": false,
@@ -3242,6 +3368,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L10 Submit App_2025"
+        ],
         "progression": "Submit Your App"
       },
       "bonus": false,
@@ -3264,6 +3393,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp3_2025"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -3286,6 +3418,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 3 MC Assessment 2022_2025"
+        ],
         "progression": "Unit Assessment - Intro to App Design"
       },
       "bonus": false,
@@ -3846,721 +3981,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "All Resources",
-      "url": "/s/csp3-2023/resources",
-      "key": "all_resources_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_2"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/csp3-2023/standards",
-      "key": "all_standards_2",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_2"
-      }
-    },
-    {
-      "name": "App Code Support - Unit 3 Project - Designing an App",
-      "url": "https://docs.google.com/document/d/1t3ejgyokOIQ191rjF2UpXDu4j7-Lxkw1YXiOqjXZqUU/edit?usp=sharing",
-      "key": "app_code_support_-_unit_3_project_-_designing_an_app",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "app_code_support_-_unit_3_project_-_designing_an_app"
-      }
-    },
-    {
-      "name": "App Development Planning Guide",
-      "url": "https://docs.google.com/document/d/1JXIaQGRKzsw9UvZh58yLfkriV2QH7fTE51Omr8OJ1aM/edit?usp=sharing",
-      "key": "app_development_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "app_development_planning_guide"
-      }
-    },
-    {
-      "name": "Assessment Day - Intro to App Development",
-      "url": "https://docs.google.com/presentation/d/16pBOhj2W2JQ0O-_kkeNMesABf3fObLqmMsLEYDIOOro/edit?usp=drive_link",
-      "key": "assessment_day_-_intro_to_app_development",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "assessment_day_-_intro_to_app_development"
-      }
-    },
-    {
-      "name": "Class Chats: Olawale Oladehin",
-      "url": "https://drive.google.com/file/d/1Z9L6przjSwWZcP4lnF0w1jJBf-w-FdqB/view?usp=sharing",
-      "key": "class_chats_olawale_oladehin",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://drive.google.com/file/d/1Z9L6przjSwWZcP4lnF0w1jJBf-w-FdqB/view?usp=sharing",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "class_chats_olawale_oladehin"
-      }
-    },
-    {
-      "name": "Course Vocabulary",
-      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
-      "key": "course_vocabulary",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "course_vocabulary"
-      }
-    },
-    {
-      "name": "CSP Bingo Cards - Unit Three",
-      "url": "https://drive.google.com/file/d/16_HrE069VnL4vU7HzGFVs3-fCQwW4xSn/view?usp=sharing",
-      "key": "csp_bingo_cards_-_unit_three",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://drive.google.com/uc?export=download&id=16_HrE069VnL4vU7HzGFVs3-fCQwW4xSn",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "csp_bingo_cards_-_unit_three"
-      }
-    },
-    {
-      "name": "CSP Bingo Generator",
-      "url": "https://studio.code.org/s/csp-bingo-2023",
-      "key": "csp_bingo_generator",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csp_bingo_generator"
-      }
-    },
-    {
-      "name": "CSP Unit 3 Slides",
-      "url": "https://docs.google.com/presentation/d/1fhkhXMCx7LAwkjzq3r4oXLkCn2m6A9EA2e5NoNnndhg/edit?usp=drive_link",
-      "key": "csp_unit_3_slides",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "csp_unit_3_slides"
-      }
-    },
-    {
-      "name": "Debugging",
-      "url": "https://docs.google.com/document/d/17EvJ2lQBUwg_FkafIs143frPpk6nuXvhmJhxWA8qGP4/preview",
-      "key": "debugging",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "debugging"
-      }
-    },
-    {
-      "name": "Debugging",
-      "url": "https://docs.google.com/presentation/d/1C9bXPRlfG4u-o2ZNzhdQHxBiX20ItmQJCd1cPBAYCLc/edit?usp=drive_link",
-      "key": "debugging_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "debugging_1"
-      }
-    },
-    {
-      "name": "Designing an App - Days 1-2",
-      "url": "https://docs.google.com/presentation/d/1GkR1OzozJ5b4gWQ0-OWydxGY5n_Pe5duDS854HbqMlM/edit?usp=drive_link",
-      "key": "designing_an_app_-_days_1-2",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "designing_an_app_-_days_1-2"
-      }
-    },
-    {
-      "name": "Designing an App - Days 3-5",
-      "url": "https://docs.google.com/presentation/d/19C9oe3Uihh3N3BvCWt4HXIFModtZ96YLoSxlXcDc9So/edit?usp=drive_link",
-      "key": "designing_an_app_-_days_3-5",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "designing_an_app_-_days_3-5"
-      }
-    },
-    {
-      "name": "EXEMPLAR CSP Unit 3 App Development Planning Guide",
-      "url": "https://docs.google.com/document/d/1A4KP1ZX1cZDBQDHHxDRUH-oqrK84X2aPPk-CV_nK-b8/edit?usp=sharing",
-      "key": "exemplar_csp_unit_3_app_development_planning_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "exemplar_csp_unit_3_app_development_planning_guide"
-      }
-    },
-    {
-      "name": "How Computers Work - What Makes a Computer, a Computer",
-      "url": "https://www.youtube.com/watch?v=mCq8-xTH7jA&feature=youtu.be",
-      "key": "how_computers_work_-_what_makes_a_computer_a_computer",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/cs-discoveries/concept/02_WhatMakesAComputer_sm.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_computers_work_-_what_makes_a_computer_a_computer"
-      }
-    },
-    {
-      "name": "How To Debug",
-      "url": "https://youtu.be/auv10y-dN4s",
-      "key": "how_to_debug",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/debugging_sm-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "how_to_debug"
-      }
-    },
-    {
-      "name": "Intro to Programming",
-      "url": "https://docs.google.com/presentation/d/1mRpR7FKPCKrkMLB5uGr6P2O0aQj1J-MIk6VYsDiMK54/edit?usp=drive_link",
-      "key": "intro_to_programming",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "intro_to_programming"
-      }
-    },
-    {
-      "name": "Introduction to Apps",
-      "url": "https://docs.google.com/presentation/d/1g6LFNgWIB6RQtBwLVM6Oub8MwCb7esjlspivaMmr_GI/edit?usp=drive_link",
-      "key": "introduction_to_apps",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_apps"
-      }
-    },
-    {
-      "name": "Introduction to Design Mode",
-      "url": "https://docs.google.com/presentation/d/1t5uWQ3OqPWfuT7HXSU98zw7vAfkvTB0HJHQAUOSBKX8/edit?usp=drive_link",
-      "key": "introduction_to_design_mode",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_design_mode"
-      }
-    },
-    {
-      "name": "Pair Programming",
-      "url": "https://youtu.be/q7d_JtyCq1A",
-      "key": "pair_programming",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/pairprogramming-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "pair_programming"
-      }
-    },
-    {
-      "name": "Syllabus",
-      "url": "https://docs.google.com/document/d/1yg2L8OAKSqjtxzETYRw7G5XCinTR1wKNscyyBx3dJGk/edit?usp=sharing",
-      "key": "syllabus",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "syllabus"
-      }
-    },
-    {
-      "name": "Teacher Forum",
-      "url": "https://forum.code.org/c/csp/curriculum/392",
-      "key": "teacher_forum",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "teacher_forum"
-      }
-    },
-    {
-      "name": "The Need for Programming Languages",
-      "url": "https://docs.google.com/presentation/d/1oXCko_CKu9SnMCYy4Gw5BTAG3YVtg8okK9G1SGVdlUI/edit?usp=drive_link",
-      "key": "the_need_for_programming_languages",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "the_need_for_programming_languages"
-      }
-    },
-    {
-      "name": "Unit 3 Digital Journal",
-      "url": "https://docs.google.com/presentation/d/11bPD5axn1Xjql5050aLfUSYy-G2UJWhQ-nV6nskne_E/edit?usp=share_link",
-      "key": "unit_3_digital_journal",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_3_digital_journal"
-      }
-    },
-    {
-      "name": "Unit 3 Interactive Notebook Journal",
-      "url": "https://docs.google.com/presentation/d/1P8Iz5X_NiTUx8fBJGtKcQPQfGaR9O9ujIWBJp_H6WtQ/edit?usp=drive_link",
-      "key": "unit_3_interactive_notebook_journal",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_3_interactive_notebook_journal"
-      }
-    },
-    {
-      "name": "Writing Support - Unit 3 Project - Designing an App",
-      "url": "https://docs.google.com/document/d/1yJEM_LofpMtw23zCF4VMWUA6XyyJAaTFbor50S16D-A/edit?usp=sharing",
-      "key": "writing_support_-_unit_3_project_-_designing_an_app",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "writing_support_-_unit_3_project_-_designing_an_app"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Assessment Day",
-        "resource.key": "app_development_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Assessment Day",
-        "resource.key": "assessment_day_-_intro_to_app_development"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "resource.key": "class_chats_olawale_oladehin"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "resource.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "resource.key": "debugging_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "resource.key": "how_to_debug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "resource.key": "intro_to_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "resource.key": "csp_unit_3_slides"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "resource.key": "how_computers_work_-_what_makes_a_computer_a_computer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "resource.key": "introduction_to_apps"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "resource.key": "unit_3_digital_journal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "resource.key": "unit_3_interactive_notebook_journal"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Design Mode",
-        "resource.key": "introduction_to_design_mode"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
-        "resource.key": "app_development_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 1",
-        "resource.key": "designing_an_app_-_days_1-2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
-        "resource.key": "app_code_support_-_unit_3_project_-_designing_an_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
-        "resource.key": "app_development_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
-        "resource.key": "csp_bingo_cards_-_unit_three"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
-        "resource.key": "csp_bingo_generator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
-        "resource.key": "designing_an_app_-_days_3-5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
-        "resource.key": "exemplar_csp_unit_3_app_development_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
-        "resource.key": "pair_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
-        "resource.key": "writing_support_-_unit_3_project_-_designing_an_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Programming Languages",
-        "resource.key": "the_need_for_programming_languages"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_2",
-        "script.name": "csp3-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_2",
-        "script.name": "csp3-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "course_vocabulary",
-        "script.name": "csp3-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csp_unit_3_slides",
-        "script.name": "csp3-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "syllabus",
-        "script.name": "csp3-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "teacher_forum",
-        "script.name": "csp3-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "unit_3_digital_journal",
-        "script.name": "csp3-2025"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "comment",
-      "word": "Comment",
-      "definition": "form of program documentation written into the program to be read by people and which do not affect how a program runs",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "comment"
-      }
-    },
-    {
-      "key": "debugging",
-      "word": "Debugging",
-      "definition": "Finding and fixing problems in an algorithm or program",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "key": "development_process",
-      "word": "Development Process",
-      "definition": " the steps or phases used to create a piece of software. Typical phases include investigating, designing, prototyping, and testing.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "development_process"
-      }
-    },
-    {
-      "key": "documentation",
-      "word": "Documentation",
-      "definition": "a written description of how a command or piece of code works or was developed",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "documentation"
-      }
-    },
-    {
-      "key": "event_driven_programming",
-      "word": "Event Driven Programming",
-      "definition": "some program statements run when triggered by an event, like a mouse click or a key press",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "event_driven_programming"
-      }
-    },
-    {
-      "key": "input",
-      "word": "Input",
-      "definition": "data that are sent to a computer for processing by a program. Can come in a variety of forms, such as tactile interaction, audio, visuals, or text.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "input"
-      }
-    },
-    {
-      "key": "output",
-      "word": "Output",
-      "definition": "any data that are sent from a program to a device. Can come in a variety of forms, such as tactile interaction, audio, visuals, or text.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "output"
-      }
-    },
-    {
-      "key": "pair_programming",
-      "word": "Pair Programming",
-      "definition": "a collaborative programming style in which two programmers switch between the roles of writing code and tracking or planning high level progress",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "pair_programming"
-      }
-    },
-    {
-      "key": "program",
-      "word": "Program",
-      "definition": "a collection of program statements. Programs run (or “execute”) one command at a time.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "key": "program_statement",
-      "word": "Program Statement",
-      "definition": "a command or instruction. Sometimes also referred to as a code statement.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "program_statement"
-      }
-    },
-    {
-      "key": "sequential_programming",
-      "word": "Sequential Programming",
-      "definition": "program statements run in order, from top to bottom",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sequential_programming"
-      }
-    },
-    {
-      "key": "user_interface",
-      "word": "User Interface",
-      "definition": "the inputs and outputs that allow a user to interact with a piece of software. User interfaces can include a variety of forms such as buttons, menus, images, text, and graphics.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "user_interface"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "vocabulary.key": "comment"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Debugging",
-        "vocabulary.key": "documentation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "vocabulary.key": "event_driven_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "vocabulary.key": "program"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "vocabulary.key": "program_statement"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Programming",
-        "vocabulary.key": "sequential_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "vocabulary.key": "input"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "vocabulary.key": "output"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Apps",
-        "vocabulary.key": "user_interface"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
-        "vocabulary.key": "development_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Designing an App Part 2",
-        "vocabulary.key": "pair_programming"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

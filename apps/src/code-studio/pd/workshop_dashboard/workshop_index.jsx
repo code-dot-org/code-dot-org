@@ -51,6 +51,10 @@ export class WorkshopIndex extends React.Component {
 
   static contextType = RouterContext;
 
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   handleNewWorkshopClick = e => {
     e.preventDefault();
     this.context.router.push('/workshops/new');

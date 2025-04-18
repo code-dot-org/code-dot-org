@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-24 21:50:49 UTC",
+    "serialized_at": "2025-04-18 03:09:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2687,6 +2687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci U2 Pre-Test_2024-pilot_beta"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -2709,6 +2712,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L1_2024-pilot_beta"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -2731,6 +2737,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L2_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2753,6 +2762,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L4_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2775,6 +2787,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L5_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2797,6 +2812,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L7_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2819,6 +2837,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L8_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2841,6 +2862,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-CFU_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2863,6 +2887,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L8Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2885,6 +2912,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L2-L9Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2907,6 +2937,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L1_2024-pilot_beta"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -2929,6 +2962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L2_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2951,6 +2987,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L3_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2973,6 +3012,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L4_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -2995,6 +3037,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L6_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3017,6 +3062,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-CFU_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3039,6 +3087,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L7Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3061,6 +3112,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L8Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3083,6 +3137,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L3-L9Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3105,6 +3162,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L1_2024-pilot_beta"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3127,6 +3187,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L2_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3149,6 +3212,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L3_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3171,6 +3237,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L5_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3193,6 +3262,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-CFU_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3215,6 +3287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L6Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3237,6 +3312,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L7Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3259,6 +3337,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L8Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3281,6 +3362,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L4-L9Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3303,6 +3387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L1_2024-pilot_beta"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3325,6 +3412,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L2_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3347,6 +3437,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L3_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3369,6 +3462,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L4_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3391,6 +3487,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L6_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3413,6 +3512,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-CFU_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3435,6 +3537,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L7Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3457,6 +3562,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L5-L8Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3479,6 +3587,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L1_2024-pilot_beta"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3501,6 +3612,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L2_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3523,6 +3637,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L3_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3545,6 +3662,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L6_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3567,6 +3687,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L7_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3589,6 +3712,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L11_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3611,6 +3737,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-CFU_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3633,6 +3762,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L7Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3655,6 +3787,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L6-L8Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3677,6 +3812,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L1_2024-pilot_beta"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3699,6 +3837,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L2_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3721,6 +3862,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L5_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3743,6 +3887,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L7_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3765,6 +3912,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L10_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3787,6 +3937,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-CFU_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3809,6 +3962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L7Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3831,6 +3987,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L7-L8Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3853,6 +4012,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L1_2024-pilot_beta"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -3875,6 +4037,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L2_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3897,6 +4062,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L4_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3919,6 +4087,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L7_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3941,6 +4112,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L10_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3963,6 +4137,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L12_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -3985,6 +4162,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-CFU_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4007,6 +4187,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L8Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4029,6 +4212,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L9Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4051,6 +4237,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L8-L10Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4073,6 +4262,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L1_2024-pilot_beta"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -4095,6 +4287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L2_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4117,6 +4312,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L3_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4139,6 +4337,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L4_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4161,6 +4362,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-CFU_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4183,6 +4387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L6_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4205,6 +4412,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L7_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4227,6 +4437,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L9-L8Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4249,6 +4462,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L1_2024-pilot_beta"
+        ],
         "progression": "Predict and Run"
       },
       "bonus": false,
@@ -4271,6 +4487,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L2_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4293,6 +4512,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L3_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4315,6 +4537,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L4_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4337,6 +4562,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L5_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4359,6 +4587,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L6_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4381,6 +4612,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-CFU_2024-pilot_beta"
+        ],
         "progression": "Investigate and Modify"
       },
       "bonus": false,
@@ -4403,6 +4637,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L8Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4425,6 +4662,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L10-L9Prac_2024-pilot_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4447,6 +4687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datascience-U2L11-L1_2024-pilot_beta"
+        ],
         "progression": "Data Project"
       },
       "bonus": false,
@@ -4469,6 +4712,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci U2 Post-Test_2024-pilot_beta"
+        ],
         "progression": "Unit 2 Assessment"
       },
       "bonus": false,
@@ -5473,851 +5719,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "(Optional) Visualization Peer Review",
-      "url": "https://docs.google.com/document/d/1Eq_SfFWn7xSb-FdnTWWJFVN5kLSVz7P-ntePFbVq7Wg/edit",
-      "key": "_optional_visualization_peer_review",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "_optional_visualization_peer_review"
-      }
-    },
-    {
-      "name": "Accessing and Grouping Values",
-      "url": "https://docs.google.com/presentation/d/1I0BTjvAuzC0R2jT7X8fVHrOhDBWZHqufZ_HU4jmwbxU/template/preview",
-      "key": "accessing_and_grouping_values",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "accessing_and_grouping_values"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/data-science-with-python-2024/resources",
-      "key": "all_resources_1",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_1"
-      }
-    },
-    {
-      "name": "All Standards",
-      "url": "/s/data-science-with-python-2024/standards",
-      "key": "all_standards_1",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_standards_1"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/data-science-with-python-2024/vocab",
-      "key": "all_vocabulary_1",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_1"
-      }
-    },
-    {
-      "name": "Cleaning Data",
-      "url": "https://docs.google.com/presentation/d/1746UQoze6wGE4b9FGDt2sLHTIoQ2hixYs9nJL5ocFhE/template/preview",
-      "key": "cleaning_data_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "cleaning_data_1"
-      }
-    },
-    {
-      "name": "Data Science for Community Impact",
-      "url": "https://docs.google.com/presentation/d/14SYf2bg-fYq15eDRiZELausbVtoKTFhKiJmlxSB-GZc/template/preview",
-      "key": "data_science_for_community_impact",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "data_science_for_community_impact"
-      }
-    },
-    {
-      "name": "Data Science for Community Impact Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1Eg3BCWTRkfA-5jbtj-_phIItW93Bdb3nhG7tLjXFMBM/edit",
-      "key": "data_science_for_community_impact_project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "data_science_for_community_impact_project_planning_guide"
-      }
-    },
-    {
-      "name": "Data Science Unit 2 Guided Notes",
-      "url": "https://docs.google.com/document/d/175Tq55HFroHz8RIv6MyEvPGV2bNFRvxm3LizFAcvx20/edit?usp=drive_link",
-      "key": "data_science_unit_2_guided_notes",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "data_science_unit_2_guided_notes"
-      }
-    },
-    {
-      "name": "Data Science Unit 2 Overview",
-      "url": "https://docs.google.com/document/d/1S3LnMEV4V3A8eEA7bXAaYXtGXco2QbtiZSywaR5vIvw/view",
-      "key": "data_science_unit_2_overview",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "data_science_unit_2_overview"
-      }
-    },
-    {
-      "name": "Data Science Unit 2 Study Guide",
-      "url": "https://docs.google.com/document/d/1q-bcf53SVePWCeWuTmP0Lp3K2ju3ydH-dXFYHhXX3lk/edit?usp=drive_link",
-      "key": "data_science_unit_2_study_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "data_science_unit_2_study_guide"
-      }
-    },
-    {
-      "name": "Exploratory Data Analysis",
-      "url": "https://docs.google.com/presentation/d/1NnZk4lfwSDAgtI30pc32mmFLol1GyB3I2w9E8qEiWIk/template/preview",
-      "key": "exploratory_data_analysis",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "exploratory_data_analysis"
-      }
-    },
-    {
-      "name": "Gallery Walk Template",
-      "url": "https://docs.google.com/presentation/d/1sTZkmCS5bfx0e5sL_EeVKgdFKXfI5LtuytCL7w-O_60/view",
-      "key": "gallery_walk_template",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "gallery_walk_template"
-      }
-    },
-    {
-      "name": "Getting to Know Your Data",
-      "url": "https://docs.google.com/presentation/d/1uLyPczIZrZIe6LxkJzOCs8KGeFHZneuLw8aPLu6fZ9c/template/preview",
-      "key": "getting_to_know_your_data",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "getting_to_know_your_data"
-      }
-    },
-    {
-      "name": "Guide to Anchor Charts & Word Walls",
-      "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/view",
-      "key": "guide_to_anchor_charts_word_walls",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_anchor_charts_word_walls"
-      }
-    },
-    {
-      "name": "Guide to Language Routines",
-      "url": "https://docs.google.com/document/d/1B93Lzlo63VrBNjlc3puiujew8gtMFanxSdXx3lqzIrs/view",
-      "key": "guide_to_language_routines",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_language_routines"
-      }
-    },
-    {
-      "name": "Guide to Programming Levels",
-      "url": "https://docs.google.com/document/d/1OpnzuyuSCpkglUer9j4qFbjTI85RczLMy52AAIpxPQc/edit",
-      "key": "guide_to_programming_levels",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_programming_levels"
-      }
-    },
-    {
-      "name": "Introduction to Matplotlib",
-      "url": "https://docs.google.com/presentation/d/1pS679hCaFc49ZaooUzAAcy-RJW9q4JSKugrHSQeliig/template/preview",
-      "key": "introduction_to_matplotlib",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_matplotlib"
-      }
-    },
-    {
-      "name": "Introduction to Pandas",
-      "url": "https://docs.google.com/presentation/d/1goCA7-ASIzOZ1iHfAlhi-TWL9CAvMqR7Wqs9YwS8XGA/template/preview",
-      "key": "introduction_to_pandas",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_pandas"
-      }
-    },
-    {
-      "name": "Introduction to Python",
-      "url": "https://docs.google.com/presentation/d/17ni7Aw_3c_dAcjRpCWr5cCDMXoBaPzd_DnhTBr8h9fI/template/preview",
-      "key": "introduction_to_python",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_python"
-      }
-    },
-    {
-      "name": "More Visualization Types",
-      "url": "https://docs.google.com/presentation/d/1t3ZOqayQKgrb9rDUlFCPXNuaqakAU086_-rUzE_Vgk4/template/preview",
-      "key": "more_visualization_types",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "more_visualization_types"
-      }
-    },
-    {
-      "name": "Mythical Creatures Dataset",
-      "url": "https://docs.google.com/document/d/1qngMxgFJ2Z4WoCVITPeLKdjmAoi4nwaGYfERimEeR_E/edit",
-      "key": "mythical_creatures_dataset",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "mythical_creatures_dataset"
-      }
-    },
-    {
-      "name": "Occupations Dataset",
-      "url": "https://docs.google.com/document/d/1NwRaVYYXfcGPL69tUgkQTWv5IN3a9yaP05q4foNyyNg/edit",
-      "key": "occupations_dataset",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "occupations_dataset"
-      }
-    },
-    {
-      "name": "Project Kickoff",
-      "url": "https://docs.google.com/presentation/d/1jWmOV--NMaCK8YAWpiObk9y47U9NN2qtN1VleCT4A4E/template/preview",
-      "key": "project_kickoff",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_kickoff"
-      }
-    },
-    {
-      "name": "Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1zI55ag_XNooqQOHcaVQ5AxBF5IaDSn0uM2IyX7-GkUs/edit#heading=h.e3mtmasdigez",
-      "key": "project_planning_guide",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "project_planning_guide"
-      }
-    },
-    {
-      "name": "Python Anticipation Guide",
-      "url": "https://docs.google.com/document/d/13TFHek4g_6yoFLRlGsZphjEq_jL3utJYsDgzpwqwAgw/edit#heading=h.he8kcnk26cq4",
-      "key": "python_anticipation_guide",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "python_anticipation_guide"
-      }
-    },
-    {
-      "name": "Python Anticipation Guide",
-      "url": "https://docs.google.com/document/d/1vkcs31eiWp0AEVeCqwWL4BCvHAqcyXam7Ael8FGkJXs/edit#heading=h.he8kcnk26cq4'",
-      "key": "python_anticipation_guide_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "python_anticipation_guide_1"
-      }
-    },
-    {
-      "name": "Python / Pandas Documentation",
-      "url": "https://docs.google.com/document/d/12xlUG_K0F8mx-fqJ9OHhe1o49IGNO6RLPv8yO0jDJ9o/edit?usp=drive_link",
-      "key": "python_pandas_documentation",
-      "properties": {
-        "audience": "Student"
-      },
-      "seeding_key": {
-        "resource.key": "python_pandas_documentation"
-      }
-    },
-    {
-      "name": "Querying Your Data",
-      "url": "https://docs.google.com/presentation/d/1rp2mMNe7hXNPqX9bg0dp0Zv0pVTkkC8-MOlenkRYm_A/template/preview",
-      "key": "querying_your_data",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "querying_your_data"
-      }
-    },
-    {
-      "name": "Quiz, Quiz, Trade Cards",
-      "url": "https://docs.google.com/document/d/1kYKagn6Ea2GlGBiGDvjECg1xMCCtcg4qC9kNHwIiw08/edit",
-      "key": "quiz_quiz_trade_cards",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "quiz_quiz_trade_cards"
-      }
-    },
-    {
-      "name": "Sea Level Anomalies",
-      "url": "https://docs.google.com/document/d/1oJF_pwCcdGzFpcbLIJgfQIf2aZPAR0IG11fGfk_gBak/edit",
-      "key": "sea_level_anomalies",
-      "properties": {
-        "audience": "Student",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "sea_level_anomalies"
-      }
-    },
-    {
-      "name": "Stars Data Roundtable",
-      "url": "https://docs.google.com/document/d/1brLAvfHS12OXRcBqF9TF7E9xQNfboGfBoWcg56q8DzA/edit#heading=h.5isxwos4ollk",
-      "key": "stars_data_roundtable",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "stars_data_roundtable"
-      }
-    },
-    {
-      "name": "Unit 2 Guided Notes",
-      "url": "https://docs.google.com/document/d/175Tq55HFroHz8RIv6MyEvPGV2bNFRvxm3LizFAcvx20/edit#heading=h.gqwpeghz4npc",
-      "key": "unit_2_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "unit_2_guided_notes"
-      }
-    },
-    {
-      "name": "US Gas Prices Dataset",
-      "url": "https://docs.google.com/document/d/1t6PiigVhrmC98fV-5Py35br4AWV6lUPglPW2vmDHnoI/edit",
-      "key": "us_gas_prices_dataset",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "us_gas_prices_dataset"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Accessing and Grouping Values",
-        "resource.key": "accessing_and_grouping_values"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessing and Grouping Values",
-        "resource.key": "stars_data_roundtable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Cleaning Data",
-        "resource.key": "cleaning_data_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Cleaning Data",
-        "resource.key": "occupations_dataset"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Cleaning Data",
-        "resource.key": "quiz_quiz_trade_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Science for Community Impact Project",
-        "resource.key": "_optional_visualization_peer_review"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Science for Community Impact Project",
-        "resource.key": "data_science_for_community_impact"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Science for Community Impact Project",
-        "resource.key": "data_science_for_community_impact_project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Data Science for Community Impact Project",
-        "resource.key": "gallery_walk_template"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploratory Data Analysis",
-        "resource.key": "exploratory_data_analysis"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Exploratory Data Analysis",
-        "resource.key": "sea_level_anomalies"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Getting to Know Your Data",
-        "resource.key": "getting_to_know_your_data"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Matplotlib",
-        "resource.key": "introduction_to_matplotlib"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Pandas",
-        "resource.key": "introduction_to_pandas"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Pandas",
-        "resource.key": "us_gas_prices_dataset"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Python",
-        "resource.key": "introduction_to_python"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Python",
-        "resource.key": "python_anticipation_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Python",
-        "resource.key": "python_anticipation_guide_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Python",
-        "resource.key": "unit_2_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More Visualization Types",
-        "resource.key": "more_visualization_types"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "More Visualization Types",
-        "resource.key": "mythical_creatures_dataset"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Kickoff",
-        "resource.key": "project_kickoff"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project Kickoff",
-        "resource.key": "project_planning_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Querying Your Data",
-        "resource.key": "querying_your_data"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_1",
-        "script.name": "data-science-with-python-beta"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_standards_1",
-        "script.name": "data-science-with-python-beta"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_1",
-        "script.name": "data-science-with-python-beta"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "data_science_unit_2_guided_notes",
-        "script.name": "data-science-with-python-beta"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "data_science_unit_2_overview",
-        "script.name": "data-science-with-python-beta"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "data_science_unit_2_study_guide",
-        "script.name": "data-science-with-python-beta"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_anchor_charts_word_walls",
-        "script.name": "data-science-with-python-beta"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_language_routines",
-        "script.name": "data-science-with-python-beta"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_programming_levels",
-        "script.name": "data-science-with-python-beta"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "python_pandas_documentation",
-        "script.name": "data-science-with-python-beta"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "aggregation",
-      "word": "aggregation ",
-      "definition": "a summary of a larger set of data",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "aggregation"
-      }
-    },
-    {
-      "key": "csv_comma_separated_values_file",
-      "word": "CSV (comma-separated values) file",
-      "definition": "a type of text file that stores tabular data, where each row represents a record and columns are separated by commas",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "csv_comma_separated_values_file"
-      }
-    },
-    {
-      "key": "data_type",
-      "word": "Data type",
-      "definition": "the format of the data that can be stored in a variable",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "data_type"
-      }
-    },
-    {
-      "key": "dataframe",
-      "word": "DataFrame ",
-      "definition": "a table with rows and columns, like a spreadsheet, that allows easy data manipulation and analysis using the pandas library in Python",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "dataframe"
-      }
-    },
-    {
-      "key": "expression",
-      "word": "expression",
-      "definition": "a combination of data and operators that evaluates to a single value",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "expression"
-      }
-    },
-    {
-      "key": "index",
-      "word": "index",
-      "definition": "an integer value that indicates the position of a value inside of a list",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "index"
-      }
-    },
-    {
-      "key": "indexing_operator",
-      "word": "indexing operator",
-      "definition": "used to access a column in a DataFrame",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "indexing_operator"
-      }
-    },
-    {
-      "key": "library",
-      "word": "library",
-      "definition": "a collection of pre-written code that can be used to perform common tasks, saving time and effort in programming",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "library"
-      }
-    },
-    {
-      "key": "list",
-      "word": "list",
-      "definition": "a comma-separated list of values or objects inside square brackets [ ]",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "list"
-      }
-    },
-    {
-      "key": "logical_operator",
-      "word": "logical operator",
-      "definition": "an operator that returns a boolean value",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "logical_operator"
-      }
-    },
-    {
-      "key": "matplotlib",
-      "word": "Matplotlib ",
-      "definition": "a Python library that contains functions for creating and customizing data visualizations",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "matplotlib"
-      }
-    },
-    {
-      "key": "module",
-      "word": "module ",
-      "definition": "a file in a library that contains a thematic grouping of functions",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "module"
-      }
-    },
-    {
-      "key": "null",
-      "word": "null",
-      "definition": "a missing or undefined value in a dataset, often represented as NaN, indicating that the data point is empty or not available.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "null"
-      }
-    },
-    {
-      "key": "variable",
-      "word": "variable ",
-      "definition": "a container that stores a value in memory",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "variable"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Accessing and Grouping Values",
-        "vocabulary.key": "aggregation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessing and Grouping Values",
-        "vocabulary.key": "indexing_operator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Cleaning Data",
-        "vocabulary.key": "null"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Matplotlib",
-        "vocabulary.key": "matplotlib"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Matplotlib",
-        "vocabulary.key": "module"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Pandas",
-        "vocabulary.key": "csv_comma_separated_values_file"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Pandas",
-        "vocabulary.key": "dataframe"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Pandas",
-        "vocabulary.key": "library"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Python",
-        "vocabulary.key": "data_type"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Python",
-        "vocabulary.key": "expression"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Python",
-        "vocabulary.key": "index"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Python",
-        "vocabulary.key": "list"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Python",
-        "vocabulary.key": "variable"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Querying Your Data",
-        "vocabulary.key": "logical_operator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Querying Your Data",
-        "vocabulary.key": "null"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

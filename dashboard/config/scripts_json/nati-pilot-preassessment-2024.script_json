@@ -10,14 +10,13 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "pilot_experiment": "nati-2025-pilot",
       "student_detail_progress_view": true,
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-28 21:58:47 UTC",
+    "serialized_at": "2025-04-18 03:09:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -126,29 +125,13 @@
     }
   ],
   "resources": [
-    {
-      "name": "Support Article: How to Unlock Assessments",
-      "url": "https://support.code.org/hc/en-us/articles/115001331951-How-do-I-unlock-assessments-tests-and-surveys-for-my-students",
-      "key": "support_article_how_to_unlock_assessments",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "support_article_how_to_unlock_assessments"
-      }
-    }
+
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "support_article_how_to_unlock_assessments",
-        "script.name": "nati-pilot-preassessment-2024"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 

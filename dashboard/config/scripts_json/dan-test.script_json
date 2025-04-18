@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:29:31 UTC",
+    "serialized_at": "2025-04-18 03:09:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -923,26 +923,10 @@
     }
   ],
   "resources": [
-    {
-      "name": "Amazon Music: Careers Behind the Beats",
-      "url": "https://www.amazonfutureengineer.com/music",
-      "key": "amazon_music_careers_behind_the_beats",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "amazon_music_careers_behind_the_beats"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Music Lab: Jam Session",
-        "resource.key": "amazon_music_careers_behind_the_beats"
-      }
-    }
+
   ],
   "scripts_resources": [
 
@@ -951,120 +935,10 @@
 
   ],
   "vocabularies": [
-    {
-      "key": "artificial_intelligence_a_i_",
-      "word": "Artificial Intelligence (A.I.)",
-      "definition": "A computer program that takes in data, learns patterns from that data, and then makes decisions based on what it has learned.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "artificial_intelligence_a_i_"
-      }
-    },
-    {
-      "key": "functions",
-      "word": "Functions",
-      "definition": "A named section of a program that performs a specific task.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "functions"
-      }
-    },
-    {
-      "key": "music_producer",
-      "word": "Music Producer",
-      "definition": "Someone who helps create and mix songs by bringing together singers, musicians, and technology to make the track sound great.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "music_producer"
-      }
-    },
-    {
-      "key": "product_manager",
-      "word": "Product Manager",
-      "definition": "A person who helps create new products, like apps or games, by making sure they meet the needs of users.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "product_manager"
-      }
-    },
-    {
-      "key": "sequencing",
-      "word": "Sequencing",
-      "definition": "Putting commands in the correct order so computers can read the commands.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "sequencing"
-      }
-    },
-    {
-      "key": "software_engineer",
-      "word": "Software Engineer",
-      "definition": "Someone who writes the code that makes apps, games, and websites work. They are like the builders of the tech world.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "software_engineer"
-      }
-    },
-    {
-      "key": "ux_designer",
-      "word": "UX Designer",
-      "definition": "A person who designs how products look and work, making sure apps, websites, or games are easy and fun to use for all users. UX stands for User Experience: how a person feels and interacts with a product.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "ux_designer"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "Music Lab: Jam Session",
-        "vocabulary.key": "artificial_intelligence_a_i_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Music Lab: Jam Session",
-        "vocabulary.key": "functions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Music Lab: Jam Session",
-        "vocabulary.key": "music_producer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Music Lab: Jam Session",
-        "vocabulary.key": "product_manager"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Music Lab: Jam Session",
-        "vocabulary.key": "sequencing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Music Lab: Jam Session",
-        "vocabulary.key": "software_engineer"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Music Lab: Jam Session",
-        "vocabulary.key": "ux_designer"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

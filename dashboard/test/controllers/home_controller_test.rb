@@ -297,9 +297,9 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     assert_select '#student-information-modal'
-    assert_select '#user_age'
-    assert_select '#user_us_state', false
-    assert_select '#user_gender_student_input', false
+    assert_select '#student_age'
+    assert_select '#student_us_state', false
+    assert_select '#student_gender_student_input', false
   end
 
   test 'LTI student without us_state gets student information prompt' do
@@ -312,8 +312,8 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     assert_select '#student-information-modal'
-    assert_select '#user_us_state'
-    assert_select '#user_gender_student_input'
+    assert_select '#student_us_state'
+    assert_select '#student_gender_student_input'
   end
 
   test 'student with age does not get student information prompt' do
@@ -351,9 +351,9 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     assert_select '#student-information-modal', true
-    assert_select '#user_age', false
-    assert_select '#user_us_state', true
-    assert_select '#user_gender_student_input', false
+    assert_select '#student_age', false
+    assert_select '#student_us_state', true
+    assert_select '#student_gender_student_input', false
   end
 
   test 'student under 13 and in US with no provided us_state gets student information prompt' do
@@ -369,9 +369,9 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     assert_select '#student-information-modal', true
-    assert_select '#user_age', false
-    assert_select '#user_us_state', true
-    assert_select '#user_gender_student_input', false
+    assert_select '#student_age', false
+    assert_select '#student_us_state', true
+    assert_select '#student_gender_student_input', false
   end
 
   test 'CAP student missing us_state and created after CPA started does sees the student information prompt' do
@@ -385,9 +385,9 @@ class HomeControllerTest < ActionController::TestCase
     get :home
 
     assert_select '#student-information-modal', true
-    assert_select '#user_age', false
-    assert_select '#user_us_state', true
-    assert_select '#user_gender_student_input', false
+    assert_select '#student_age', false
+    assert_select '#student_us_state', true
+    assert_select '#student_gender_student_input', false
   end
 
   test 'student under 13 and in US with provided us_state does not get student information prompt' do

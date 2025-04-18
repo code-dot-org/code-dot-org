@@ -10,7 +10,7 @@
     "skip_sound": true,
     "encrypted": "false",
     "title": "Reflect",
-    "long_instructions": "What skills did you use today that could be useful in a future career, either in music or computer science?",
+    "long_instructions": "A record producer brings people together to create music and uses technology to edit and finalize songs, using technology to bring people together. Are there aspects of this job you would like to see in your own future career? Why or why not?",
     "stay_on_level_after_submit": "false",
     "height": "200",
     "allow_user_uploads": "false",
@@ -19,7 +19,7 @@
     "optional": "false",
     "allow_multiple_attempts": "true"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-01T19:48:23.136+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-synthesis-reflect1\\\"\"],\"cloned_from\":\"music-lab-loops-synthesis-reflect1\"},{\"changed_at\":\"2025-04-01 19:48:25 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-01T19:48:23.136+00:00\",\"changed\":[\"cloned from \\\"music-lab-loops-synthesis-reflect1\\\"\"],\"cloned_from\":\"music-lab-loops-synthesis-reflect1\"},{\"changed_at\":\"2025-04-01 19:48:25 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 04:35:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

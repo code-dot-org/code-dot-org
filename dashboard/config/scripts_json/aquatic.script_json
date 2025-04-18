@@ -16,10 +16,8 @@
           "buttonText": "Computer Science Basics for K-5 Teachers"
         }
       ],
-      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_migrated": true,
-      "show_calendar": true,
       "supported_locales": [
         "ar-SA",
         "bg-BG",
@@ -62,12 +60,11 @@
         "vi-VN",
         "zh-CN",
         "zh-TW"
-      ],
-      "weekly_instructional_minutes": 225
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:06:00 UTC",
+    "serialized_at": "2025-04-18 02:58:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -130,8 +127,7 @@
       "key": "9bd1489e-8bf5-45a9-828f-e8fab79d8331",
       "position": 2,
       "properties": {
-        "duration": 35,
-        "name": "Activity"
+        "name": "Activity (30-45 minutes)"
       },
       "seeding_key": {
         "lesson_activity.key": "9bd1489e-8bf5-45a9-828f-e8fab79d8331",
@@ -144,8 +140,7 @@
       "key": "09d516b6-38b7-42e0-900c-5d427b051b65",
       "position": 3,
       "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
+        "name": "Wrap Up (5 minutes)"
       },
       "seeding_key": {
         "lesson_activity.key": "09d516b6-38b7-42e0-900c-5d427b051b65",
@@ -158,8 +153,7 @@
       "key": "3b10ea82-0421-4583-a1cf-561c09edc727",
       "position": 4,
       "properties": {
-        "duration": 5,
-        "name": "Assessment"
+        "name": "Assessment (2 minutes)"
       },
       "seeding_key": {
         "lesson_activity.key": "3b10ea82-0421-4583-a1cf-561c09edc727",

@@ -24,6 +24,7 @@ class RegistrationsControllerTest < ActionController::TestCase
       age: '13',
       user_type: 'student'
     }
+    ActionController::TestRequest.any_instance.stubs(:country_code)
   end
 
   test "update: returns bad_request if user param is nil" do
@@ -336,7 +337,6 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create new teacher with MailJet enabled sends welcome email" do
     teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', email_preference_opt_in: true))
-    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     MailJet.stubs(:enabled?).returns(true)
     MailJet.expects(:create_contact_and_add_to_welcome_series).once
     assert_creates(User) do
@@ -348,7 +348,6 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create new teacher with opt-in option as yes writes email preference as yes" do
     teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', email_preference_opt_in: true))
-    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     assert_creates(User) do
       assert_creates(EmailPreference) do
         post :create, params: {user: teacher_params}
@@ -363,7 +362,6 @@ class RegistrationsControllerTest < ActionController::TestCase
 
   test "create new teacher with opt-in option as no writes email preference as no" do
     teacher_params = set_up_partial_registration(@default_params.update(user_type: 'teacher', email_preference_opt_in: false))
-    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     assert_creates(User) do
       assert_creates(EmailPreference) do
         post :create, params: {user: teacher_params}

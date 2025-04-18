@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-01 03:24:42 UTC",
+    "serialized_at": "2025-04-18 03:09:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -119,6 +119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-3-overview_2025"
+        ],
         "progression": "Module 3 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -141,6 +144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-3-multi-select_2025"
+        ],
         "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
       },
       "bonus": false,
@@ -163,6 +169,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-3-CSA U4L10-L1_2022-COPY_2025"
+        ],
         "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
       },
       "bonus": false,
@@ -185,6 +194,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-3-CSA U4L10-L3_2022-COPY_2025"
+        ],
         "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
       },
       "bonus": false,
@@ -207,6 +219,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-3-reflection_2025"
+        ],
         "progression": "Unit 4, Lesson 10 Exploration (~45 minutes)"
       },
       "bonus": false,
@@ -229,6 +244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-2022-module-3-reflection-project_2025"
+        ],
         "progression": "Reflection (~5 minutes)"
       },
       "bonus": false,
@@ -251,6 +269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-3-wrap-up_2025"
+        ],
         "progression": "Module 3 Wrap-up (~5 minutes)"
       },
       "bonus": false,

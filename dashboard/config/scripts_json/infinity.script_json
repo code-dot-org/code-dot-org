@@ -16,7 +16,6 @@
           "buttonText": "Computer Science Basics for K-5 Teachers "
         }
       ],
-      "content_area": "hoc",
       "curriculum_umbrella": "HOC",
       "is_migrated": true,
       "supported_locales": [
@@ -61,7 +60,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:05:37 UTC",
+    "serialized_at": "2025-04-18 02:57:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

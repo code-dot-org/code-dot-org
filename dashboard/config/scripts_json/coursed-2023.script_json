@@ -16,19 +16,16 @@
           "buttonText": "Get free resources"
         }
       ],
-      "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_migrated": true,
       "lesson_extras_available": true,
-      "show_calendar": true,
-      "tts": true,
-      "weekly_instructional_minutes": 225
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 01:05:18 UTC",
+    "serialized_at": "2025-04-18 02:57:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

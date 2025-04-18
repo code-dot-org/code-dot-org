@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-12 20:43:55 UTC",
+    "serialized_at": "2025-04-18 03:09:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3841,6 +3841,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-studentsurvey-premodule_2025"
+        ],
         "progression": "Student Pre-Survey"
       },
       "bonus": false,
@@ -3863,6 +3866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L1_2025"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -3885,6 +3891,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L2_2025"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -3907,6 +3916,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L3_2025"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3929,6 +3941,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L4_2025"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3951,6 +3966,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L5_2025"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3973,6 +3991,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L6_2025"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -3995,6 +4016,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L7_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4017,6 +4041,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8V2_2025"
+        ],
         "progression": "Investigating Hallucinations"
       },
       "bonus": false,
@@ -4039,6 +4066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4061,6 +4091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L1V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4083,6 +4116,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L2V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4105,6 +4141,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L3_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4127,6 +4166,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L4_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4149,6 +4191,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L5_2025"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -4171,6 +4216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L6_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4193,6 +4241,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L7_2025"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -4215,6 +4266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L1_2025"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -4237,6 +4291,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L2_2025"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -4259,6 +4316,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L3_2025"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -4281,6 +4341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L4_2025"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -4303,6 +4366,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L5_2025"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -4325,6 +4391,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L6_2025"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -4347,6 +4416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L7_2025"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -4369,6 +4441,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L8_2025"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -4391,6 +4466,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L9_2025"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -4413,6 +4491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L10_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4435,6 +4516,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L11_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4457,6 +4541,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L12_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4479,6 +4566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L13_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4501,6 +4591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L1_2025"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4523,6 +4616,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L2_2025"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4545,6 +4641,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L3_2025"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4567,6 +4666,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L4_2025"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -4589,6 +4691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L5_2025"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4611,6 +4716,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L6_2025"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4633,6 +4741,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L7_2025"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -4655,6 +4766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L9_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4677,6 +4791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L8_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4699,6 +4816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-10V2_2025"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -4721,6 +4841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L1_2025"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -4743,6 +4866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L2V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4765,6 +4891,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L3V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4787,6 +4916,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L4_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4809,6 +4941,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L5_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4831,6 +4966,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L6_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4853,6 +4991,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L7A_2025"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -4875,6 +5016,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L8_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4897,6 +5041,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L9_2025"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -4919,6 +5066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L1_2025"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -4941,6 +5091,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L2_2025"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -4963,6 +5116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L3_2025"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -4985,6 +5141,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L4_2025"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -5007,6 +5166,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L5_2025"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -5029,6 +5191,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L6_2025"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -5051,6 +5216,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L7_2025"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -5073,6 +5241,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L8_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5095,6 +5266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L9_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5117,6 +5291,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L10_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -5139,6 +5316,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L11_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -5161,6 +5341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1_2025"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -5183,6 +5366,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1.1_2025"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -5205,6 +5391,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L2_2025"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -5227,6 +5416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4_2025"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -5249,6 +5441,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4.1_2025"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -5271,6 +5466,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L5_2025"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -5293,6 +5491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L10_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5315,6 +5516,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L11_2025"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -5337,6 +5541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7_2025"
+        ],
         "progression": "(Optional) User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -5359,6 +5566,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7.1_2025"
+        ],
         "progression": "(Optional) User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -5381,6 +5591,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L8_2025"
+        ],
         "progression": "(Optional) User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -5403,6 +5616,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L1_2025"
+        ],
         "progression": "Initial Scenario"
       },
       "bonus": false,
@@ -5425,6 +5641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L2_2025"
+        ],
         "progression": "You Decide!"
       },
       "bonus": false,
@@ -5447,6 +5666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L0_2025"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -5469,6 +5691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L1_2025"
+        ],
         "progression": "Model, Temperature, and Prompt"
       },
       "bonus": false,
@@ -5491,6 +5716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L2_2025"
+        ],
         "progression": "Retrieval"
       },
       "bonus": false,
@@ -5513,6 +5741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L3_2025"
+        ],
         "progression": "Model Card"
       },
       "bonus": false,
@@ -5535,6 +5766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-L1_2025"
+        ],
         "progression": "User Testing"
       },
       "bonus": false,
@@ -5557,6 +5791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2_2025"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5579,6 +5816,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3_2025"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5601,6 +5841,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4_2025"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5623,6 +5866,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5_2025"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -5645,6 +5891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L1_2025"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -5667,6 +5916,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L2V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5689,6 +5941,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L3V2_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5711,6 +5966,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L4_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5733,6 +5991,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-panels-finetune-overview_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5755,6 +6016,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-choice_2025"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -5777,6 +6041,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L6_2025"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5799,6 +6066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5_2025"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -5821,6 +6091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L0_2025"
+        ],
         "progression": "Example Projects"
       },
       "bonus": false,
@@ -5843,6 +6116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L1_2025"
+        ],
         "progression": "Step 4: Create your Chatbot"
       },
       "bonus": false,
@@ -5865,6 +6141,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L2_2025"
+        ],
         "progression": "Step 5: Make a Model Card"
       },
       "bonus": false,
@@ -5887,6 +6166,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-studentsurvey-postmodule_2025"
+        ],
         "progression": "Student Post-Survey"
       },
       "bonus": false,
@@ -7035,1103 +7317,22 @@
     }
   ],
   "resources": [
-    {
-      "name": "5 Levels - Connectome",
-      "url": "https://www.youtube.com/watch?v=opqIa5Jiwuw",
-      "key": "5_levels_-_connectome",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "5_levels_-_connectome"
-      }
-    },
-    {
-      "name": "5 Why's",
-      "url": "https://docs.google.com/presentation/d/1OFMOFUWDp4ixlCNErGZ-8GEbaKzXxPTzkE5nixWEXkM/edit",
-      "key": "5_why_s",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "5_why_s"
-      }
-    },
-    {
-      "name": "[KEY] Level Guide: Retrieval - Exploration",
-      "url": "https://docs.google.com/document/d/1zwZySU9dN42z1HgG1vXxYd8tTKXvRBowfiSh66AqYkI/edit",
-      "key": "_key_level_guide_retrieval_-_exploration",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_key_level_guide_retrieval_-_exploration"
-      }
-    },
-    {
-      "name": "[KEY] Level Guide: Retrieval - Practice",
-      "url": "https://docs.google.com/document/d/1DadDunmeRJqK-ykPeo_5B0qw9h8wAb1qd19B-G1lKvw/edit",
-      "key": "_key_level_guide_retrieval_-_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_key_level_guide_retrieval_-_practice"
-      }
-    },
-    {
-      "name": "[KEY] Level Guide: System Prompting - Exploration",
-      "url": "https://docs.google.com/document/d/1kEfedl7ajGTXU5DMpwLu_U9Cym07PBDvt6vw4f_Qq9o/edit",
-      "key": "_key_level_guide_system_prompting_-_exploration",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_key_level_guide_system_prompting_-_exploration"
-      }
-    },
-    {
-      "name": "[KEY] Level Guide: System Prompting - Practice",
-      "url": "https://docs.google.com/document/d/1CfONIHQUGmgppxKbjcpqqe9ATNAdJ2_wjbPlVJvLm1M/edit",
-      "key": "_key_level_guide_system_prompting_-_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "_key_level_guide_system_prompting_-_practice"
-      }
-    },
-    {
-      "name": "[KEY] Level Guide: System Prompting - Synthesis",
-      "url": "https://docs.google.com/document/d/1-kRr7MLjo4XrJ4wehFq43b5bOSXjqlTabLktbc22LwY/edit",
-      "key": "_key_level_guide_system_prompting_-_synthesis",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "_key_level_guide_system_prompting_-_synthesis"
-      }
-    },
-    {
-      "name": "[Template] 5 Why's",
-      "url": "https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit",
-      "key": "_template_5_why_s",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "_template_5_why_s"
-      }
-    },
-    {
-      "name": "[Template] Chatbot Model Card",
-      "url": "https://docs.google.com/presentation/d/1KXIwPhbXIumnp4enyOcAvhGucqZmlm7_pDYkZPCQNeE/edit",
-      "key": "_template_chatbot_model_card",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "_template_chatbot_model_card"
-      }
-    },
-    {
-      "name": "Activity Instructions",
-      "url": "https://docs.google.com/document/d/1nMp7SJSf_xX2U8MK-mI60NjwKkcUgXI5C2x2x1BLInk/edit#heading=h.59k2gm16lgj2",
-      "key": "activity_instructions",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "activity_instructions"
-      }
-    },
-    {
-      "name": "AI4K12 and CSTA Standards Mapping",
-      "url": "https://docs.google.com/spreadsheets/d/1YuvIyOFDkF8DMgPzv16f7rclVkhQ7asCD3zDBPiOWKw/view",
-      "key": "ai4k12_and_csta_standards_mapping",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "ai4k12_and_csta_standards_mapping"
-      }
-    },
-    {
-      "name": "AI Scenario",
-      "url": "https://docs.google.com/document/d/1Z9P0FYWMBDQguWedAGi541P-HYbRS1gbcjFbFxdpRSk/edit",
-      "key": "ai_scenario",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "ai_scenario"
-      }
-    },
-    {
-      "name": "All Resources",
-      "url": "/s/exploring-gen-ai2-2024/resources",
-      "key": "all_resources_1",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_resources_1"
-      }
-    },
-    {
-      "name": "All Vocabulary",
-      "url": "/s/exploring-gen-ai2-2024/vocab",
-      "key": "all_vocabulary_1",
-      "properties": {
-        "is_rollup": true
-      },
-      "seeding_key": {
-        "resource.key": "all_vocabulary_1"
-      }
-    },
-    {
-      "name": "Character Cards",
-      "url": "https://docs.google.com/document/d/1e0C1Tp1JhpnJNFjzlxI-bJpisZmZZe6uyglW0JgNm7s/edit",
-      "key": "character_cards",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "character_cards"
-      }
-    },
-    {
-      "name": "Chatbot Brainstorm",
-      "url": "https://docs.google.com/document/d/11_hnorhUsT1qm-zzkAVXYOvT7g-gbXi5qZy489LAQpA/edit",
-      "key": "chatbot_brainstorm",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "chatbot_brainstorm"
-      }
-    },
-    {
-      "name": "Chatbot User Testing",
-      "url": "https://docs.google.com/document/d/1SqWCKewyia6WXiWacVnlD-TWj8AcEAP0apg9yE0X58c/edit",
-      "key": "chatbot_user_testing",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "chatbot_user_testing"
-      }
-    },
-    {
-      "name": "Chatbots in Society",
-      "url": "https://docs.google.com/presentation/d/1DewlLvcb9fzBC8_VamtfPq4JuOXSvK-a-fqollwA8YY/template/preview",
-      "key": "chatbots_in_society",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "chatbots_in_society"
-      }
-    },
-    {
-      "name": "Fine Tuning - Exploration",
-      "url": "https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/template/preview",
-      "key": "fine_tuning_-_exploration",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "fine_tuning_-_exploration"
-      }
-    },
-    {
-      "name": "Foresight in AI Chart",
-      "url": "https://docs.google.com/document/d/1TkceFBX_Tc-xNE4gBeTHtkUbloPkiargShh9yxOIo-s/edit",
-      "key": "foresight_in_ai_chart",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "foresight_in_ai_chart"
-      }
-    },
-    {
-      "name": "Guide to Ethics Opportunities in Exploring Generative AI",
-      "url": "https://docs.google.com/document/d/1ztq07VnPY-KfuA1dQEeHjCa5yd4Y-E6qc9RdUIl6vDI/edit",
-      "key": "guide_to_ethics_opportunities_in_exploring_generative_ai",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "guide_to_ethics_opportunities_in_exploring_generative_ai"
-      }
-    },
-    {
-      "name": "Interacting with Language Models",
-      "url": "https://docs.google.com/presentation/d/1oBkecogXS8uEUQCK19t28A9DOAHUoTyeC3q2LK4kAs4/template/preview",
-      "key": "interacting_with_language_models",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "interacting_with_language_models"
-      }
-    },
-    {
-      "name": "Introduction to Generative AI",
-      "url": "https://docs.google.com/presentation/d/1ZnXkSXy9SKvhX3tzlcPXvRnauXVD_YtyoYCeClQgsrw/template/preview",
-      "key": "introduction_to_generative_ai_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_generative_ai_1"
-      }
-    },
-    {
-      "name": "Introduction to Large Language Models",
-      "url": "https://www.youtube.com/watch?v=6NDEoJ4gWtM",
-      "key": "introduction_to_large_language_models_1",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/llms-intro-video-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "introduction_to_large_language_models_1"
-      }
-    },
-    {
-      "name": "Issue Statements",
-      "url": "https://docs.google.com/presentation/d/1eBMyo2cbMbaXH5Z1_Fno8FNHSHxu7Hw19XVNFjeRAh0/template/preview",
-      "key": "issue_statements",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "issue_statements"
-      }
-    },
-    {
-      "name": "LEADERS Framework",
-      "url": "https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit",
-      "key": "leaders_framework",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "leaders_framework"
-      }
-    },
-    {
-      "name": "Learning Framework",
-      "url": "https://docs.google.com/spreadsheets/d/18JCfzIn8XbAHgjcSqY_TkzUC0fNCmJoj-_ql8M8H1S4/edit",
-      "key": "learning_framework",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "learning_framework"
-      }
-    },
-    {
-      "name": "Model Card - Class Scenario",
-      "url": "https://docs.google.com/document/d/1-lIWtV556QCZ2hUlaHajtTugty9-TWy84YGk8UvXZH4/edit",
-      "key": "model_card_-_class_scenario",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "model_card_-_class_scenario"
-      }
-    },
-    {
-      "name": "Model Card - Scenario 1",
-      "url": "https://docs.google.com/document/d/1fmw324RzOuxAS1NhETm8AApDk56ZmtW-0JluAq-ZPF0/edit#heading=h.10sosi3gwomj",
-      "key": "model_card_-_scenario_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "model_card_-_scenario_1"
-      }
-    },
-    {
-      "name": "Model Card - Scenario 2",
-      "url": "https://docs.google.com/document/d/1K317h6vQpqi9AH2QeJzT2E-6K2aEXNA-8k4C3g6LhGM/edit",
-      "key": "model_card_-_scenario_2",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "model_card_-_scenario_2"
-      }
-    },
-    {
-      "name": "Model Card - Scenario 3",
-      "url": "https://docs.google.com/document/d/1VW3RoG-VWhDx7EhylYJmFj2ZY19QEYBOTOQ9RpB682w/edit",
-      "key": "model_card_-_scenario_3",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "model_card_-_scenario_3"
-      }
-    },
-    {
-      "name": "Model Cards",
-      "url": "https://docs.google.com/document/d/1o4Yv3chFH5WM8jeQTSfvFsJVA5YVjLM-hgEJsB2dSKQ/edit",
-      "key": "model_cards",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "model_cards"
-      }
-    },
-    {
-      "name": "Model Cards - Exploration",
-      "url": "https://docs.google.com/presentation/d/1gCTRY-dzl-26MEHCdiz3IMInZx3MxsdU2kT8qzXlNVA/template/preview",
-      "key": "model_cards_-_exploration",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "model_cards_-_exploration"
-      }
-    },
-    {
-      "name": "Model Cards - Practice",
-      "url": "https://docs.google.com/presentation/d/1SiSyjE8Smx58djB3qPLBr0sVSsPFxKMoLY1vZZR18DI/template/preview",
-      "key": "model_cards_-_practice",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "model_cards_-_practice"
-      }
-    },
-    {
-      "name": "News Articles",
-      "url": "https://docs.google.com/document/d/1rPltcrLUsIKSmmpS5tyFfUyab0JI4ye-8raei_O_7ys/edit",
-      "key": "news_articles",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "news_articles"
-      }
-    },
-    {
-      "name": "Project - Create a Personal Chatbot",
-      "url": "https://docs.google.com/document/d/1Nyz1VFJ4ApBGNc-G3AD_spUOIQb_NC41Zu_NOMcZMS0/edit",
-      "key": "project_-_create_a_personal_chatbot",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "project_-_create_a_personal_chatbot"
-      }
-    },
-    {
-      "name": "Project: Create a Personal Chatbot",
-      "url": "https://docs.google.com/presentation/d/1UULzAD3keKLVfambWx223hZBENVljEkTZ7pdiXyKN24/template/preview",
-      "key": "project_create_a_personal_chatbot",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_create_a_personal_chatbot"
-      }
-    },
-    {
-      "name": "Project: Solving Community Problems",
-      "url": "https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/template/preview",
-      "key": "project_solving_community_problems",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "project_solving_community_problems"
-      }
-    },
-    {
-      "name": "Recycling Chatbot User Testing",
-      "url": "https://docs.google.com/document/d/1n60D0JCk3KDSbJduD8AEXUPp2zhDJM9e6rHVj-Mc56Y/edit",
-      "key": "recycling_chatbot_user_testing",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "recycling_chatbot_user_testing"
-      }
-    },
-    {
-      "name": "Retrieval - Exploration",
-      "url": "https://docs.google.com/presentation/d/1Q64bzj24cx0l9ePYgymrhn7z0nMM2PDG9RgJxiuLJ_A/template/preview",
-      "key": "retrieval_-_exploration",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "retrieval_-_exploration"
-      }
-    },
-    {
-      "name": "Retrieval - Practice",
-      "url": "https://docs.google.com/presentation/d/1WepfsQ4BqHORfYbIGsIuX3cTog436Ae5-n5JvfXqrug/template/preview",
-      "key": "retrieval_-_practice",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "retrieval_-_practice"
-      }
-    },
-    {
-      "name": "Retrieval - Synthesis",
-      "url": "https://docs.google.com/presentation/d/1YEm0J3733QiyulpXOsTAcgO4QInTIIKtdGc9q7dCn04/template/preview",
-      "key": "retrieval_-_synthesis",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "retrieval_-_synthesis"
-      }
-    },
-    {
-      "name": "Rubric - Create a Personal Chatbot",
-      "url": "https://docs.google.com/document/d/1UlxG0Tc7WfNWy4XpS2jwnLpRScxAycI763TV7mtzwqg/edit",
-      "key": "rubric_-_create_a_personal_chatbot",
-      "properties": {
-        "audience": "Student",
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "rubric_-_create_a_personal_chatbot"
-      }
-    },
-    {
-      "name": "Rubric - Solving Community Problems",
-      "url": "https://docs.google.com/document/d/1JnCsw08k305rLPW0iw1H9UkzmDstlO1fd-zetK2W0Sw/edit?tab=t.0",
-      "key": "rubric_-_solving_community_problems",
-      "properties": {
-        "audience": "Student",
-        "type": "Rubric"
-      },
-      "seeding_key": {
-        "resource.key": "rubric_-_solving_community_problems"
-      }
-    },
-    {
-      "name": "Solving Community Problems",
-      "url": "https://docs.google.com/document/d/1dM1g3ZPt1Q43I8iq-7oxxmm0acqGAiOubaeBdFHRofU/edit",
-      "key": "solving_community_problems",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "solving_community_problems"
-      }
-    },
-    {
-      "name": "System Prompting - Exploration",
-      "url": "https://docs.google.com/presentation/d/1BpTaMUqNdcLTRqHfn9YyNqZstR0WIlZ8FkCQSlxTJqw/template/preview",
-      "key": "system_prompting_-_exploration",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "system_prompting_-_exploration"
-      }
-    },
-    {
-      "name": "System Prompting - Practice",
-      "url": "https://docs.google.com/presentation/d/1keAW0kOKmbkg9a9Q6LrXhjPAW40T_GZEMAj2BSYcEQM/template/preview",
-      "key": "system_prompting_-_practice",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "system_prompting_-_practice"
-      }
-    },
-    {
-      "name": "System Prompting - Synthesis",
-      "url": "https://docs.google.com/presentation/d/1EjKJttJMIkm5I-xhF8z7jmkDiFkjQT5hbQtt9y0S_ww/template/preview",
-      "key": "system_prompting_-_synthesis",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "system_prompting_-_synthesis"
-      }
-    },
-    {
-      "name": "Teaching Guide - Incorporating Student Responses in Lessons",
-      "url": "https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs/edit",
-      "key": "teaching_guide_-_incorporating_student_responses_in_lessons",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "teaching_guide_-_incorporating_student_responses_in_lessons"
-      }
-    },
-    {
-      "name": "Teaching Guide - Incorporating Student Responses via Student Summaries",
-      "url": "https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs/edit",
-      "key": "teaching_guide_-_incorporating_student_responses_via_student_summaries_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "teaching_guide_-_incorporating_student_responses_via_student_summaries_1"
-      }
-    },
-    {
-      "name": "User Testing",
-      "url": "https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/template/preview",
-      "key": "user_testing",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "user_testing"
-      }
-    },
-    {
-      "name": "What Is Machine Learning?",
-      "url": "https://www.youtube.com/watch?v=KHbwOetbmbs",
-      "key": "what_is_machine_learning_",
-      "properties": {
-        "audience": "Student",
-        "download_url": "https://videos.code.org/levelbuilder/01-ai-machinelearning-sm-mp4-mp4.mp4",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "what_is_machine_learning_"
-      }
-    },
-    {
-      "name": "What Makes a Computer a Computer?",
-      "url": "https://www.youtube.com/watch?v=sLIJNEIE0Rs",
-      "key": "what_makes_a_computer_a_computer_",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "what_makes_a_computer_a_computer_"
-      }
-    }
+
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Introduction to Generative AI",
-        "resource.key": "introduction_to_generative_ai_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Introduction to Generative AI",
-        "resource.key": "introduction_to_large_language_models_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Introduction to Generative AI",
-        "resource.key": "what_is_machine_learning_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Introduction to Generative AI",
-        "resource.key": "what_makes_a_computer_a_computer_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Chatbots in Society",
-        "resource.key": "activity_instructions"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Chatbots in Society",
-        "resource.key": "ai_scenario"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Chatbots in Society",
-        "resource.key": "character_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Chatbots in Society",
-        "resource.key": "chatbots_in_society"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Chatbots in Society",
-        "resource.key": "news_articles"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Fine Tuning - Exploration",
-        "resource.key": "5_levels_-_connectome"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Fine Tuning - Exploration",
-        "resource.key": "fine_tuning_-_exploration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Interacting with Language Models",
-        "resource.key": "interacting_with_language_models"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Interacting with Language Models",
-        "resource.key": "leaders_framework"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Interacting with Language Models",
-        "resource.key": "teaching_guide_-_incorporating_student_responses_in_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Issue Statements",
-        "resource.key": "5_why_s"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Issue Statements",
-        "resource.key": "chatbot_brainstorm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Issue Statements",
-        "resource.key": "issue_statements"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards - Exploration",
-        "resource.key": "foresight_in_ai_chart"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards - Exploration",
-        "resource.key": "leaders_framework"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards - Exploration",
-        "resource.key": "model_cards"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards - Exploration",
-        "resource.key": "model_cards_-_exploration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards - Practice",
-        "resource.key": "leaders_framework"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards - Practice",
-        "resource.key": "model_card_-_class_scenario"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards - Practice",
-        "resource.key": "model_card_-_scenario_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards - Practice",
-        "resource.key": "model_card_-_scenario_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards - Practice",
-        "resource.key": "model_card_-_scenario_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Model Cards - Practice",
-        "resource.key": "model_cards_-_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Create a Personal Chatbot",
-        "resource.key": "project_-_create_a_personal_chatbot"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Create a Personal Chatbot",
-        "resource.key": "project_create_a_personal_chatbot"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Create a Personal Chatbot",
-        "resource.key": "rubric_-_create_a_personal_chatbot"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Solving Community Problems with Chatbots",
-        "resource.key": "_template_5_why_s"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Solving Community Problems with Chatbots",
-        "resource.key": "_template_chatbot_model_card"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Solving Community Problems with Chatbots",
-        "resource.key": "chatbot_user_testing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Solving Community Problems with Chatbots",
-        "resource.key": "project_solving_community_problems"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Solving Community Problems with Chatbots",
-        "resource.key": "rubric_-_solving_community_problems"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project: Solving Community Problems with Chatbots",
-        "resource.key": "solving_community_problems"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Retrieval - Exploration",
-        "resource.key": "_key_level_guide_retrieval_-_exploration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Retrieval - Exploration",
-        "resource.key": "retrieval_-_exploration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Retrieval - Practice",
-        "resource.key": "_key_level_guide_retrieval_-_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Retrieval - Practice",
-        "resource.key": "retrieval_-_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Retrieval - Synthesis",
-        "resource.key": "retrieval_-_synthesis"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "System Prompting - Exploration",
-        "resource.key": "_key_level_guide_system_prompting_-_exploration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "System Prompting - Exploration",
-        "resource.key": "system_prompting_-_exploration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "System Prompting - Practice",
-        "resource.key": "_key_level_guide_system_prompting_-_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "System Prompting - Practice",
-        "resource.key": "system_prompting_-_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "System Prompting - Synthesis",
-        "resource.key": "_key_level_guide_system_prompting_-_synthesis"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "System Prompting - Synthesis",
-        "resource.key": "system_prompting_-_synthesis"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Feedback",
-        "resource.key": "leaders_framework"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Feedback",
-        "resource.key": "recycling_chatbot_user_testing"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "User Feedback",
-        "resource.key": "user_testing"
-      }
-    }
+
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "ai4k12_and_csta_standards_mapping",
-        "script.name": "exploring-gen-ai2-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_resources_1",
-        "script.name": "exploring-gen-ai2-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "all_vocabulary_1",
-        "script.name": "exploring-gen-ai2-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "guide_to_ethics_opportunities_in_exploring_generative_ai",
-        "script.name": "exploring-gen-ai2-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "leaders_framework",
-        "script.name": "exploring-gen-ai2-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "learning_framework",
-        "script.name": "exploring-gen-ai2-2025"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "teaching_guide_-_incorporating_student_responses_via_student_summaries_1",
-        "script.name": "exploring-gen-ai2-2025"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
-    {
-      "key": "artificial_intelligence",
-      "word": "Artificial Intelligence",
-      "definition": "A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "artificial_intelligence"
-      }
-    },
-    {
-      "key": "hallucination",
-      "word": "Hallucination",
-      "definition": "An inaccuracy in a chatbot response.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "hallucination"
-      }
-    },
-    {
-      "key": "large_language_model",
-      "word": "Large Language Model",
-      "definition": "A computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "large_language_model"
-      }
-    },
-    {
-      "key": "model",
-      "word": "Model",
-      "definition": "A computer program designed to make a decision",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "model"
-      }
-    },
-    {
-      "key": "system_prompt",
-      "word": "System Prompt",
-      "definition": "A set of instructions that changes the behavior of a language model. Effective system prompts adjust the role, tone, goal, and restrictions of a chatbot.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "system_prompt"
-      }
-    },
-    {
-      "key": "temperature",
-      "word": "Temperature",
-      "definition": "a setting that affects which words are chosen as a language model generates new words. When you set a higher temperature, the model has more options for its choices, making the responses seem more random and creative.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "temperature"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Introduction to Generative AI",
-        "vocabulary.key": "artificial_intelligence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Introduction to Generative AI",
-        "vocabulary.key": "large_language_model"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Introduction to Generative AI",
-        "vocabulary.key": "model"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Interacting with Language Models",
-        "vocabulary.key": "hallucination"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Interacting with Language Models",
-        "vocabulary.key": "temperature"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "System Prompting - Exploration",
-        "vocabulary.key": "system_prompt"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 

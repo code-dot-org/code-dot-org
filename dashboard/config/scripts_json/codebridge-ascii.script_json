@@ -4,13 +4,11 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "content_area": "other",
-      "curriculum_umbrella": "Other",
       "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:30:02 UTC",
+    "serialized_at": "2025-04-18 02:57:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -35,13 +33,12 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Lets make ACSII Art",
+      "name": "Make some Ascii Art",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "background": "dark"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -91,7 +88,6 @@
       "key": "9a2e723d-e907-407b-9a67-d3075e69bcf3",
       "position": 3,
       "properties": {
-        "progression_name": "ASCII Art"
       },
       "seeding_key": {
         "activity_section.key": "9a2e723d-e907-407b-9a67-d3075e69bcf3",
@@ -233,8 +229,7 @@
       "properties": {
         "level_keys": [
           "ascii-art-OL-incubator"
-        ],
-        "progression": "ASCII Art"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -258,8 +253,7 @@
       "properties": {
         "level_keys": [
           "ascii-art-LOL-incubator"
-        ],
-        "progression": "ASCII Art"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -283,8 +277,7 @@
       "properties": {
         "level_keys": [
           "ascii-art-LOLZ-incubator"
-        ],
-        "progression": "ASCII Art"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -308,8 +301,7 @@
       "properties": {
         "level_keys": [
           "ascii-art-makeyourown-incubator"
-        ],
-        "progression": "ASCII Art"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-04-14T23:13:35.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Do This:\r\n\r\nYou're designing a simple program to simulate a productive study session. The code includes repeated reminders to take breaks and check your to-do list, but it's messy and hard to maintain. Clean things up by writing two functions that organize these tasks.\r\n\r\n1. Look closely at the code. There are **two different blocks** of repeated code:\r\n\r\n   * One reminds you to take a break.\r\n   \r\n   * One tells you to check your to-do list.\r\n\r\n2. Define a function called `take_break()` for the break reminders.\r\n\r\n3. Define a second function called `check_todo()` for the to-do list reminders.\r\n\r\n4. Replace the repeated blocks by calling your new functions in the correct places.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEach function should include the lines that belong together. Pay close attention to indentation, and use the UMPIRE strategy:\r\n\r\n* **U**nderstand: What's repeated and why?\r\n\r\n* **M**ake a plan: Which messages go in which function?\r\n\r\n* **P**roduce: Write and call both functions.\r\n\r\n* **I**nspect: Does it run as expected?\r\n\r\n* **E**xplain: How did using functions improve the code?",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "name_suffix": "_2025",
+    "display_name": "Study Session Organizer",
+    "bubble_choice_description": "You're designing a simple program to simulate a productive study session. The code includes repeated reminders to take breaks and check your to-do list, but it's messy and hard to maintain. Clean things up by writing two functions that organize these tasks.",
+    "thumbnail_url": "https://images.code.org/6eba48f516b96c9a26bd57c649391701-study.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# TODO - Write the take_break() function for the break reminders\n\n\n\n# TODO - Write the check_todo() function for the to-do list reminders\n\n\n\n# TODO - Replace the repeated blocks by calling your new functions\nprint(\"🧠 Don't forget to take a short break.\")\nprint(\"⏱️ Stretch, get water, and rest your eyes.\")\n\nprint(\"📋 What's next on your to-do list?\")\nprint(\"✅ Pick one task and get started.\")\n\nprint(\"🧠 Don't forget to take a short break.\")\nprint(\"⏱️ Stretch, get water, and rest your eyes.\")\n\nprint(\"📋 What's next on your to-do list?\")\nprint(\"✅ Pick one task and get started.\")\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzv35LW6UFjnWrlvHIHxXi4NdpbduQbTs\nOv0YQkmauBHFjmY8qdUtO0ByLzwBAD34k2lH4lEY9IJE0UeuzP+Dq2+7GrBX\nKi6cLWHf87KB1L5+Vq5fyqltnt5I6Wz5PMnsDaPFX5jmNip8ze9CmpfI7BRC\nsCTMkndAeewHZcCKJejDTvPR69zpQJ6D8rABrTh/mnzJHvDNYL9rFavVPIl3\nqzA7GkeUE+4lcYhSjCA88PxhRNDluqXN1WwbSCa+K8lumAsK2S0+3HdfA2TJ\nsotCnHaNNus4cA1Q4OoQE4jn2DGI1BSMIQRSO9vVy6AX2oTw+3rGswWAH99u\n/daENm6cEHzZUpebaswGhOek9znHJHnVch2yXbho2rG+f9H+29ovMUtJlVkQ\n+AtmyI1y7IgQ67D0cOl84N7Q5X3XMQOBm4A+qaSyeLKiPZTifkRXRpRMOEJB\n2nfuD9L1zYba008dk3p7BoLTVRbH+b6lBBqAhx6oOuRIm0Bq1jLDfWy9wayA\n8ZJN0FUEU+EzICiUSsDhNSPYDeykCtPkQpRogP2TxGgiTgvXy7ZB48G7jBwI\nVZ7UpTiR4oBJ7DkLCcYHZd0S2yz4V+027Au60TTEd1L3F7lbJpNxrd+cSNbP\nZML2sLHbgrWVZUcYxRMWRMRHcL9lHw3JCgWoYfPcsTbxp9XzLgEX9Yzh9keH\nteSQW55hpnPZkxqGdL/uPQn27BT/w2PDccEKnaGDPBG36ryqrdGDlZvTC7WH\nU+pvjDRBvkYrW6rvaw==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:35.841+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level8d_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level8d_2025-launch\"},{\"changed_at\":\"2025-04-15 14:31:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:34:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:35:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>

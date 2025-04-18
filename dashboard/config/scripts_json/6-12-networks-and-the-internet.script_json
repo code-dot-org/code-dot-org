@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-24 21:50:24 UTC",
+    "serialized_at": "2025-04-18 03:08:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -813,6 +813,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-L3-L1"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -835,6 +838,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-lesson3-level2"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -857,6 +863,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-lesson3-level3"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -879,6 +888,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-L3-L4"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -1374,6 +1386,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-lesson11-choiceLevel"
+        ],
         "progression": "Company Case Study Choices"
       },
       "bonus": false,
@@ -1396,6 +1411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-internet-lesson11-AI-choiceLevel"
+        ],
         "progression": "AI-Driven Solution Chatbots"
       },
       "bonus": false,
@@ -1418,6 +1436,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-networks-and-internet-lesson11-project"
+        ],
         "progression": "Final Risk Assessment"
       },
       "bonus": false,

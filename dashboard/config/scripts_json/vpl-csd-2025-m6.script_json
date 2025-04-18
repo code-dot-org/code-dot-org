@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-02 19:04:51 UTC",
+    "serialized_at": "2025-04-18 03:09:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -326,6 +326,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8 Overview_2025"
+        ],
         "progression": "Module 6 Overview"
       },
       "bonus": false,
@@ -348,6 +351,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - CI_2025"
+        ],
         "progression": "Curriculum Investigation Overview"
       },
       "bonus": false,
@@ -370,6 +376,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6_2025"
+        ],
         "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
@@ -392,6 +401,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Lesson 2_2025"
+        ],
         "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
@@ -414,6 +426,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Level 3_2025"
+        ],
         "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
@@ -436,6 +451,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6 - Level 4_2025"
+        ],
         "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
@@ -458,6 +476,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8  U6L6 Reflection_2025"
+        ],
         "progression": "Unit 6: Lesson 8 -  Getting Screen Inputs (~20 - 25 mins)"
       },
       "bonus": false,
@@ -480,6 +501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - Conclusions and Connections2_2025"
+        ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
       "bonus": false,
@@ -502,6 +526,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U6 Chapter 1 Project_2025"
+        ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
       "bonus": false,
@@ -524,6 +551,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M8 Conclusions and Connections Reflection_2025"
+        ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
       "bonus": false,
@@ -546,6 +576,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 Wrap Up_2025"
+        ],
         "progression": "Wrap Up (~10 mins)"
       },
       "bonus": false,
@@ -698,43 +731,13 @@
     }
   ],
   "resources": [
-    {
-      "name": "23-24 CS Discoveries Virtual M6 Agenda",
-      "url": "https://docs.google.com/document/d/1JfWt09clE46GfQZdT8mFlydMLtO4v1BMYy46lDvqM4Y/edit?usp=drive_link",
-      "key": "23-24_cs_discoveries_virtual_m6_agenda_1",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m6_agenda_1"
-      }
-    },
-    {
-      "name": "23-24 CS Discoveries Virtual M6 Slides",
-      "url": "https://docs.google.com/document/d/1JfWt09clE46GfQZdT8mFlydMLtO4v1BMYy46lDvqM4Y/edit?usp=drive_link",
-      "key": "23-24_cs_discoveries_virtual_m6_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m6_slides"
-      }
-    }
+
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m6_agenda_1",
-        "script.name": "vpl-csd-2025-m6"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "23-24_cs_discoveries_virtual_m6_slides",
-        "script.name": "vpl-csd-2025-m6"
-      }
-    }
+
   ],
   "scripts_student_resources": [
 
