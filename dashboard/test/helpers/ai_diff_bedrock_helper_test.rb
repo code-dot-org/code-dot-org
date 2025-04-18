@@ -45,11 +45,12 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
 
   test 'Testing prompt formatting for lesson, not preset' do
     context = SharedConstants::AI_DIFF_CONTEXT[:LESSON]
-    course_name = "Computer Science Discoveries"
+    course_display_name = "Computer Science Discoveries"
     unit_name = "CSD Unit 3"
     lesson_name = "Test Lesson Name"
     is_preset = false
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset)
+    section_contexts = nil
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_display_name, unit_name, lesson_name, is_preset, section_contexts)
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the Computer Science Discoveries course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current lesson this teacher is working on is Computer Science Discoveries CSD Unit 3, Test Lesson Name.
 
@@ -62,11 +63,12 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
 
   test 'Testing prompt formatting for unit, not preset' do
     context = SharedConstants::AI_DIFF_CONTEXT[:UNIT]
-    course_name = "Computer Science Discoveries"
+    course_display_name = "Computer Science Discoveries"
     unit_name = "CSD Unit 3"
     lesson_name = "Test Lesson Name"
     is_preset = false
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset)
+    section_contexts = nil
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_display_name, unit_name, lesson_name, is_preset, section_contexts)
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your focus is on helping teachers with lesson plans in the Computer Science Discoveries course. The teacher will either ask you questions about the current unit's lesson plans and resources or ask you to make changes to or create new material for this unit. When creating new material for this unit, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current unit this teacher is working on is Computer Science Discoveries CSD Unit 3.
 
@@ -79,11 +81,12 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
 
   test 'Testing prompt formatting for course, not preset' do
     context = SharedConstants::AI_DIFF_CONTEXT[:COURSE]
-    course_name = "Computer Science Discoveries"
+    course_display_name = "Computer Science Discoveries"
     unit_name = "CSD Unit 3"
     lesson_name = "Test Lesson Name"
     is_preset = false
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset)
+    section_contexts = nil
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_display_name, unit_name, lesson_name, is_preset, section_contexts)
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your focus is on helping teachers with the Computer Science Discoveries course. The teacher will either ask you questions about the current course plan and resources or ask you to make changes to or create new material for this course. When creating new material for the course, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current course this teacher is working on is Computer Science Discoveries.
 
@@ -96,12 +99,44 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
 
   test 'Testing prompt formatting for general, not preset' do
     context = SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
-    course_name = nil
+    course_display_name = nil
     unit_name = nil
     lesson_name = nil
     is_preset = false
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset)
-    expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+    section_contexts = nil
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_display_name, unit_name, lesson_name, is_preset, section_contexts)
+    expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. You also provide support with using the code.org platform. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+
+      Here are the search results in numbered order:
+      $search_results$
+
+      $output_format_instructions$"
+    assert_equal prompt, expected_prompt
+  end
+
+  test 'Testing prompt formatting for general with sections, not preset' do
+    context = SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+    course_display_name = nil
+    unit_name = nil
+    lesson_name = nil
+    is_preset = false
+    section_contexts = [
+      {
+        context: SharedConstants::AI_DIFF_CONTEXT[:COURSE],
+        course_display_name: "Fake Course A",
+        course_names: ["fake_a"]
+      },
+      {
+        context: SharedConstants::AI_DIFF_CONTEXT[:COURSE],
+        course_display_name: "Phony Class B",
+        course_names: ["fake_b"]
+      }
+    ]
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_display_name, unit_name, lesson_name, is_preset, section_contexts)
+    expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. You also provide support with using the code.org platform. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+The courses that this teacher may ask you about are:
+ - Fake Course A
+ - Phony Class B
 
       Here are the search results in numbered order:
       $search_results$
@@ -112,11 +147,12 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
 
   test 'Testing prompt formatting for lesson, is preset' do
     context = SharedConstants::AI_DIFF_CONTEXT[:LESSON]
-    course_name = "Computer Science Discoveries"
+    course_display_name = "Computer Science Discoveries"
     unit_name = "CSD Unit 3"
     lesson_name = "Test Lesson Name"
     is_preset = true
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset)
+    section_contexts = nil
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_display_name, unit_name, lesson_name, is_preset, section_contexts)
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the Computer Science Discoveries course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current lesson this teacher is working on is Computer Science Discoveries CSD Unit 3, Test Lesson Name.
 
@@ -127,11 +163,12 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
 
   test 'Testing prompt formatting for unit, is preset' do
     context = SharedConstants::AI_DIFF_CONTEXT[:UNIT]
-    course_name = "Computer Science Discoveries"
+    course_display_name = "Computer Science Discoveries"
     unit_name = "CSD Unit 3"
     lesson_name = "Test Lesson Name"
     is_preset = true
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset)
+    section_contexts = nil
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_display_name, unit_name, lesson_name, is_preset, section_contexts)
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your focus is on helping teachers with lesson plans in the Computer Science Discoveries course. The teacher will either ask you questions about the current unit's lesson plans and resources or ask you to make changes to or create new material for this unit. When creating new material for this unit, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current unit this teacher is working on is Computer Science Discoveries CSD Unit 3.
 
@@ -142,11 +179,12 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
 
   test 'Testing prompt formatting for course, is preset' do
     context = SharedConstants::AI_DIFF_CONTEXT[:COURSE]
-    course_name = "Computer Science Discoveries"
+    course_display_name = "Computer Science Discoveries"
     unit_name = "CSD Unit 3"
     lesson_name = "Test Lesson Name"
     is_preset = true
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset)
+    section_contexts = nil
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_display_name, unit_name, lesson_name, is_preset, section_contexts)
     expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your focus is on helping teachers with the Computer Science Discoveries course. The teacher will either ask you questions about the current course plan and resources or ask you to make changes to or create new material for this course. When creating new material for the course, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
       The current course this teacher is working on is Computer Science Discoveries.
 
@@ -157,12 +195,42 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
 
   test 'Testing prompt formatting for general, is preset' do
     context = SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
-    course_name = nil
+    course_display_name = nil
     unit_name = nil
     lesson_name = nil
     is_preset = true
-    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset)
-    expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+    section_contexts = nil
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_display_name, unit_name, lesson_name, is_preset, section_contexts)
+    expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. You also provide support with using the code.org platform. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+
+      Here are the search results in numbered order:
+      $search_results$"
+    assert_equal prompt, expected_prompt
+  end
+
+  test 'Testing prompt formatting for general with sections, is preset' do
+    context = SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
+    course_display_name = nil
+    unit_name = nil
+    lesson_name = nil
+    is_preset = true
+    section_contexts = [
+      {
+        context: SharedConstants::AI_DIFF_CONTEXT[:COURSE],
+        course_display_name: "Fake Course A",
+        course_names: ["fake_a"]
+      },
+      {
+        context: SharedConstants::AI_DIFF_CONTEXT[:COURSE],
+        course_display_name: "Phony Class B",
+        course_names: ["fake_b"]
+      }
+    ]
+    prompt = AiDiffBedrockHelper.get_prompt_for_context(context, course_display_name, unit_name, lesson_name, is_preset, section_contexts)
+    expected_prompt = "You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. You also provide support with using the code.org platform. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+The courses that this teacher may ask you about are:
+ - Fake Course A
+ - Phony Class B
 
       Here are the search results in numbered order:
       $search_results$"
@@ -208,9 +276,10 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
   test 'Testing context filtering for lesson' do
     input = "Hello there!"
     prompt = "prompt text"
-    course_name = "test_course"
+    course_names = ["test_course"]
     unit_num = 2
     lesson_number = 3
+    section_contexts = nil
     formatted_input = AiDiffBedrockHelper.format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -244,7 +313,7 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
                     {equals: {key: "unit", value: "U02"}},
                     {equals: {key: "unit", value: "all"}}
                   ]},
-                  {equals: {key: "course", value: "test_course"}},
+                  {in: {key: "course", value: ["test_course"]}},
                 ]
               },
               number_of_results: 10,
@@ -253,16 +322,17 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
         }
       }
     }
-    filtered_input = AiDiffBedrockHelper.filter_for_context(formatted_input, lesson_number, unit_num, course_name)
+    filtered_input = AiDiffBedrockHelper.filter_for_context(formatted_input, lesson_number, unit_num, course_names, section_contexts)
     assert_equal filtered_input, expected_input
   end
 
   test 'Testing context filtering for unit' do
     input = "Hello there!"
     prompt = "prompt text"
-    course_name = "test_course"
+    course_names = ["test_course"]
     unit_num = 2
     lesson_number = nil
+    section_contexts = nil
     formatted_input = AiDiffBedrockHelper.format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -292,7 +362,7 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
                     {equals: {key: "unit", value: "U02"}},
                     {equals: {key: "unit", value: "all"}}
                   ]},
-                  {equals: {key: "course", value: "test_course"}},
+                  {in: {key: "course", value: ["test_course"]}},
                 ]
               },
               number_of_results: 10,
@@ -301,16 +371,17 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
         }
       }
     }
-    filtered_input = AiDiffBedrockHelper.filter_for_context(formatted_input, lesson_number, unit_num, course_name)
+    filtered_input = AiDiffBedrockHelper.filter_for_context(formatted_input, lesson_number, unit_num, course_names, section_contexts)
     assert_equal filtered_input, expected_input
   end
 
   test 'Testing context filtering for course' do
     input = "Hello there!"
     prompt = "prompt text"
-    course_name = "test_course"
+    course_names = ["test_course"]
     unit_num = nil
     lesson_number = nil
+    section_contexts = nil
     formatted_input = AiDiffBedrockHelper.format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -335,7 +406,7 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
           retrieval_configuration: {
             vector_search_configuration: {
               filter: {
-                equals: {key: "course", value: "test_course"}
+                in: {key: "course", value: ["test_course"]}
               },
               number_of_results: 10,
             }
@@ -343,16 +414,17 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
         }
       }
     }
-    filtered_input = AiDiffBedrockHelper.filter_for_context(formatted_input, lesson_number, unit_num, course_name)
+    filtered_input = AiDiffBedrockHelper.filter_for_context(formatted_input, lesson_number, unit_num, course_names, section_contexts)
     assert_equal filtered_input, expected_input
   end
 
   test 'Testing context filtering for general context' do
     input = "Hello there!"
     prompt = "prompt text"
-    course_name = nil
+    course_names = nil
     unit_num = nil
     lesson_number = nil
+    section_contexts = nil
     formatted_input = AiDiffBedrockHelper.format_inputs_for_bedrock_request(input, prompt)
     expected_input = {
       input: {
@@ -385,17 +457,74 @@ class AiDiffBedrockHelperTest < ActionView::TestCase
         }
       }
     }
-    filtered_input = AiDiffBedrockHelper.filter_for_context(formatted_input, lesson_number, unit_num, course_name)
+    filtered_input = AiDiffBedrockHelper.filter_for_context(formatted_input, lesson_number, unit_num, course_names, section_contexts)
+    assert_equal filtered_input, expected_input
+  end
+
+  test 'Testing context filtering for general context with sections' do
+    input = "Hello there!"
+    prompt = "prompt text"
+    course_names = nil
+    unit_num = nil
+    lesson_number = nil
+    section_contexts = [
+      {
+        context: SharedConstants::AI_DIFF_CONTEXT[:COURSE],
+        course_display_name: "Fake Course A",
+        course_names: ["fake_a"]
+      },
+      {
+        context: SharedConstants::AI_DIFF_CONTEXT[:COURSE],
+        course_display_name: "Phony Class B",
+        course_names: ["fake_b"]
+      }
+    ]
+    formatted_input = AiDiffBedrockHelper.format_inputs_for_bedrock_request(input, prompt)
+    expected_input = {
+      input: {
+        text: "Hello there!"
+      },
+      retrieve_and_generate_configuration: {
+        type: 'KNOWLEDGE_BASE',
+        knowledge_base_configuration: {
+          knowledge_base_id: AiDiffBedrockHelper::KB_ID,
+          model_arn: 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0',
+          generation_configuration: {
+            prompt_template: {
+              text_prompt_template: "prompt text"
+            },
+            inference_config: {
+              text_inference_config: {
+                max_tokens: 1500,
+                temperature: 0.5,
+              }
+            },
+          },
+          retrieval_configuration: {
+            vector_search_configuration: {
+              filter: {or_all: [
+                {equals: {key: "scope", value: "general"}},
+                {in: {key: "course", value: ["fake_a"]}},
+                {in: {key: "course", value: ["fake_b"]}}
+              ]},
+              number_of_results: 10,
+            }
+          }
+        }
+      }
+    }
+    filtered_input = AiDiffBedrockHelper.filter_for_context(formatted_input, lesson_number, unit_num, course_names, section_contexts)
     assert_equal filtered_input, expected_input
   end
 
   test 'Testing rag generation call with session' do
     input = "Hello there!"
     prompt = "a well crafted prompt"
-    course_name = "test_course"
+    course_names = "test_course"
     unit_num = 3
     lesson_number = 5
-    response = AiDiffBedrockHelper.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, @session_id)
+    section_contexts = nil
+    response = AiDiffBedrockHelper.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_names, @session_id, section_contexts)
     assert_equal response.output.text, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     assert_equal response.session_id, "1234"
     assert_equal response.citations[0].generated_response_part.text_response_part.text, "Lorem ipsum dolor sit amet, consectetur adipiscing elit"

@@ -27,11 +27,6 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for corporate web site ("Pegasus").
-  MarketingDomainName:
-    Type: String
-    # Todo: update to handle multiple envs once the app is in prod
-    Default: 'dev.marketing.dev-code.org'
-    Description: Subdomain name for marketing site.
   HourOfCodeBaseDomainName:
     Type: String
     Default: hourofcode.com
@@ -406,48 +401,6 @@ Resources:
 
 <%   if cdn_enabled && app == 'Pegasus' -%>
 <%=    component 'www_redirect', app: app -%>
-  MarketingRouterLambda:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: 'Lambda for dynamically routing marketing traffic to different origins based on the URL path'
-      FunctionName: !Sub "${AWS::StackName}-marketing-router"
-      # The JS file for this function depends on the Sub function to inject the value of MarketingDomainName
-      Code: 
-        ZipFile: !Sub <%=inline_js 'lambdas/marketing-router/index.js'%>
-      Handler: index.handler
-      Runtime: nodejs22.x
-      Role: !GetAtt MarketingRouterLambdaRole.Arn
-      LoggingConfig:
-        ApplicationLogLevel: "ERROR"
-        LogFormat: "JSON"
-  MarketingRouterVersion:
-    Type: AWS::Lambda::Version
-    Properties:
-      FunctionName: !Ref MarketingRouterLambda
-  MarketingRouterLambdaRole:
-    Type: AWS::IAM::Role
-    Properties:
-      <%=service_role ['lambda', 'edgelambda']%>
-      Path: /
-      Policies:
-        - PolicyName: Logging
-          PolicyDocument:
-            Version: "2012-10-17"
-            Statement:
-              - Effect: Allow
-                Action:
-                  - logs:CreateLogGroup
-                Resource: 
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${AWS::StackName}-marketing-router:*"
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${AWS::StackName}-marketing-router:*"
-              - Effect: Allow
-                Action:
-                  - logs:CreateLogStream
-                  - logs:PutLogEvents
-                Resource:
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/us-east-1.${AWS::StackName}-marketing-router:log-stream:*"
-                  - !Sub "arn:aws:logs:*:*:log-group:/aws/lambda/${AWS::StackName}-marketing-router:log-stream:*"
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
 <%  end -%>
 
 <% end -%>

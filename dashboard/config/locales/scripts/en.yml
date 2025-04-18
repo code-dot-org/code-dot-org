@@ -19679,6 +19679,8 @@ en:
               name: Teaching Resources for Data Science
             lesson-5:
               name: 'Advanced Data Science and Python [Unit 2: Part 2]'
+            lesson-6:
+              name: Data Visualizations
           lesson_groups: {}
           name: sandbox-teaching-data-science
           title: Teaching Data Science

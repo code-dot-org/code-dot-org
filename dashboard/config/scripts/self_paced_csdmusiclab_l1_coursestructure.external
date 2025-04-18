@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Curriculum Structure
 
-#### The Programming with Music Lab curriculum begins with an introductory lesson, <a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/1" target="blank" rel="noopener noreferrer">Introduction to Music Lab</a>, which introduces the Problem-Solving Process and primes them to create music.
+#### The Programming with Music Lab curriculum begins with an introductory lesson, <a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/1" target="blank" rel="noopener noreferrer">Introduction to Music Lab</a>, which introduces the Problem-Solving Process and primes students to create music.
 
 #### The rest of the curriculum is divided into three chunks, each covering one of the major computer science concepts: **sequencing**, **loops**, and **functions**.
 
@@ -66,7 +66,7 @@ markdown <<MARKDOWN
 <summary style="font-size: 18px; font-weight: bold;">🎼 Project</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
 
-#### The sequences and loops chunks end with a mini-project, while the functions chunk ends with an end-of-unit project.
+#### The sequencing and loops chunks end with a mini-project, while the functions chunk ends with an end-of-unit project.
 </div></details>
 
 ## Projects

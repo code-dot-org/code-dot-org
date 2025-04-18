@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-14 21:39:01 UTC",
+    "serialized_at": "2025-04-16 21:21:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -827,6 +827,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-need2_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -900,6 +903,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "music-coding-intro-functions-chorus_launch"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-chorus_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-chorus_launch"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "music-coding-intro-functions-call_launch"
         ],
         "progression": "Skill Building"
@@ -919,9 +947,9 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 21,
+      "position": 8,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -944,9 +972,9 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 8,
-      "activity_section_position": 7,
+      "chapter": 22,
+      "position": 9,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -966,31 +994,6 @@
       },
       "level_keys": [
         "music-coding-intro-functions-chorus2_launch"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 9,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-chorus_launch"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-coding-intro-functions-chorus_launch"
-        ],
-        "lesson.key": "Producer Power",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
-      },
-      "level_keys": [
-        "music-coding-intro-functions-chorus_launch"
       ]
     },
     {
@@ -1074,15 +1077,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-video-hold3_launch"
-        ],
         "progression": "Intro Video"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "music-coding-intro-functions-video-hold3_launch"
+          "music-coding-intro-events-video"
         ],
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",
@@ -1090,7 +1090,7 @@
         "activity_section.key": "25c7741d-9c12-447a-84f9-b8fb2ff3a8c9"
       },
       "level_keys": [
-        "music-coding-intro-functions-video-hold3_launch"
+        "music-coding-intro-events-video"
       ]
     },
     {
@@ -1125,31 +1125,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "music-coding-intro-scenes-panel_launch"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-coding-intro-scenes-panel_launch"
-        ],
-        "lesson.key": "Sound Designer's Studio",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
-      },
-      "level_keys": [
-        "music-coding-intro-scenes-panel_launch"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "music-coding-intro-event-sound_launch"
         ],
         "progression": "Skill Building"
@@ -1169,9 +1144,9 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 5,
-      "activity_section_position": 4,
+      "chapter": 29,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1194,9 +1169,9 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 6,
-      "activity_section_position": 5,
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1219,9 +1194,9 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1244,9 +1219,9 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 8,
-      "activity_section_position": 7,
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1269,9 +1244,9 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 9,
-      "activity_section_position": 8,
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1294,8 +1269,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 10,
+      "chapter": 34,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1319,8 +1294,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 11,
+      "chapter": 35,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1341,6 +1316,28 @@
       },
       "level_keys": [
         "music-coding-intro-freeplay3_launch"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Freeplay"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-functions-video-hold3_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "0353181f-6c32-40a0-95dc-930ee1578205"
+      },
+      "level_keys": [
+        "music-coding-intro-functions-video-hold3_launch"
       ]
     }
   ],
@@ -1563,6 +1560,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "music-coding-intro-functions-chorus_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-chorus_launch"
+        ],
+        "lesson.key": "Producer Power",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "music-coding-intro-functions-call_launch",
         "script_level.level_keys": [
           "music-coding-intro-functions-call_launch"
@@ -1590,18 +1599,6 @@
         "level.key": "music-coding-intro-functions-chorus2_launch",
         "script_level.level_keys": [
           "music-coding-intro-functions-chorus2_launch"
-        ],
-        "lesson.key": "Producer Power",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "music-coding-intro-functions-chorus_launch",
-        "script_level.level_keys": [
-          "music-coding-intro-functions-chorus_launch"
         ],
         "lesson.key": "Producer Power",
         "lesson_group.key": "",
@@ -1647,9 +1644,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-coding-intro-functions-video-hold3_launch",
+        "level.key": "music-coding-intro-events-video",
         "script_level.level_keys": [
-          "music-coding-intro-functions-video-hold3_launch"
+          "music-coding-intro-events-video"
         ],
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",
@@ -1662,18 +1659,6 @@
         "level.key": "music-coding-intro-event-try_launch",
         "script_level.level_keys": [
           "music-coding-intro-event-try_launch"
-        ],
-        "lesson.key": "Sound Designer's Studio",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "music-coding-intro-scenes-panel_launch",
-        "script_level.level_keys": [
-          "music-coding-intro-scenes-panel_launch"
         ],
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",
@@ -1770,6 +1755,18 @@
         "level.key": "music-coding-intro-freeplay3_launch",
         "script_level.level_keys": [
           "music-coding-intro-freeplay3_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "0353181f-6c32-40a0-95dc-930ee1578205"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-functions-video-hold3_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-functions-video-hold3_launch"
         ],
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",

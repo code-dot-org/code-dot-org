@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Making Sense of Data 
 
-<img src="https://images.code.org/80ecbee7c4dfb3f1c882ad81b5013b21-image-1744644828568.png" alt="Image CS Discoveries students" width="300px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/80ecbee7c4dfb3f1c882ad81b5013b21-image-1744644828568.png" alt="Image CS Discoveries students" width="275px" style="border-radius:10px; float:right; margin: 0 0 10px 40px;">
 
 #### After using the Three Reads strategy, students will analyze a larger dataset to answer the question: *How much pizza should we order for a school party?*
 
@@ -22,7 +22,7 @@ markdown <<MARKDOWN
 <div style="display: flex; gap: 40px; align-items: flex-start; font-size: 16pt;">
 
 <!-- Left Column: AI Tool Capabilities -->
-<div style="border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; box-shadow: 2px 2px 6px rgba(0,0,0,0.15); padding: 20px; background-color: #f9fafa; max-width: 250px;">
+<div style="border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; box-shadow: 2px 2px 6px rgba(0,0,0,0.15); padding: 20px; background-color: #f9fafa; max-width: 400px;">
     <strong>AI data analytics tools can:</strong>
     <ul style="padding-left: 20px; margin-top: 10px; font-size: 16pt;">
       <li>Analyze large datasets in seconds</li><br>

@@ -30,6 +30,10 @@ export interface HeroBannerProps extends HTMLAttributes<HTMLElement> {
   description?: string | ReactNode;
   /** HeroBanner image */
   imageProps?: ImageProps;
+  /** HeroBanner video component. We use this composition here to allow using HeroBanner component for ssr pages.
+   * More context can be found in this slack thread: https://codedotorg.slack.com/archives/C07UW4ED66Q/p1744640489709969
+   * */
+  VideoComponent: typeof Video;
   /** HeroBanner video */
   videoProps?: VideoProps;
   /** HeroBanner link */
@@ -74,9 +78,10 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
   subHeading,
   description,
   partner,
-  buttonProps,
   imageProps,
+  VideoComponent,
   videoProps,
+  buttonProps,
   announcementBannerProps,
   backgroundColor,
   backgroundImageUrl,
@@ -134,7 +139,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       {(imageProps || videoProps) && (
         <div className={moduleStyles.heroBannerMediaContainer}>
           {imageProps && !videoProps && <Image {...imageProps} />}
-          {videoProps && <Video {...videoProps} />}
+          {videoProps && <VideoComponent {...videoProps} />}
         </div>
       )}
     </div>

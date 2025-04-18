@@ -18,6 +18,9 @@ import ActionBlockCarousel, {
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
+import HeroBanner, {
+  HeroBannerContentfulComponentDefinition,
+} from '@/components/contentful/heroBanner';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
@@ -39,6 +42,9 @@ import Overline, {
 import Paragraph, {
   ParagraphContentfulComponentDefinition,
 } from '@/components/paragraph';
+import RichText, {
+  RichTextContentfulComponentDefinition,
+} from '@/components/richText';
 import Section, {
   SectionContentfulComponentDefinition,
 } from '@/components/section';
@@ -51,6 +57,7 @@ import CurriculumSnapshot, {
 import LabSnapshot, {
   LabSnapshotContentfulComponentDefinition,
 } from '@/components/snapshots/labSnapshot';
+import Spacer, {SpacerContentfulComponentDefinition} from '@/components/spacer';
 import TabGroup, {
   TabGroupContentfulComponentDefinition,
 } from '@/components/tabGroup';
@@ -97,6 +104,13 @@ defineComponents(
       definition: HeadingContentfulComponentDefinition,
     },
     {
+      component: HeroBanner,
+      definition: HeroBannerContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
+    {
       component: IconHighlight,
       definition: IconHighlightContentfulComponentDefinition,
     },
@@ -125,6 +139,10 @@ defineComponents(
       definition: ParagraphContentfulComponentDefinition,
     },
     {
+      component: RichText,
+      definition: RichTextContentfulComponentDefinition,
+    },
+    {
       component: Section,
       definition: SectionContentfulComponentDefinition,
       options: {
@@ -134,6 +152,10 @@ defineComponents(
     {
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
+    },
+    {
+      component: Spacer,
+      definition: SpacerContentfulComponentDefinition,
     },
     {
       component: CurriculumSnapshot,

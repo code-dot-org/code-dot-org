@@ -18,6 +18,12 @@ $mobileBreakpoint: 970px;
       flex: 1;
     }
   }
+
+  .heroBannerTextContainer {
+    a {
+      margin: 1.875rem 0 0;
+    }
+  }
 }
 
 div.heroBannerAnnouncementBanner {
@@ -72,10 +78,6 @@ div.heroBannerAnnouncementBanner {
   h1 {
     margin-bottom: 1.5rem;
   }
-
-  a {
-    margin: 1.875rem 0 0;
-  }
 }
 
 .heroBannerPartnerContainer {
@@ -114,12 +116,12 @@ div.heroBannerAnnouncementBanner {
   align-self: stretch;
 
   figure {
-    display: flex;
     max-height: 28.125rem;
-    justify-content: center;
-    align-items: center;
     flex: 1;
     border-radius: variables.$regular-border-radius;
-    background: var(--background-neutral-primary);
+
+    img {
+      background: var(--background-neutral-primary);
+    }
   }
 }
