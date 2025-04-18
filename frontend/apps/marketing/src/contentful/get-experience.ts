@@ -1,6 +1,7 @@
 import {fetchBySlug} from '@contentful/experiences-sdk-react';
+import {draftMode} from 'next/headers';
 
-import client from './client';
+import {getContentfulClient} from './client';
 
 /**
  * Calls Contentful to retrieve the experience content record
@@ -14,6 +15,9 @@ export const getExperience = async (
   localeCode: string,
   isEditorMode = false,
 ) => {
+  const {isEnabled} = await draftMode();
+  const client = getContentfulClient(isEnabled);
+
   if (!client) {
     // The client will not be available if the environment variables for secrets are not set.
     // Rather than crashing the app, we log a warning and return undefined to allow Next.js to static

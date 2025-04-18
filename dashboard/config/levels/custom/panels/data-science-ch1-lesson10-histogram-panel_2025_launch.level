@@ -19,7 +19,7 @@
       },
       {
         "text": "### Choose Your Data\nSelect the **numerical** data you want to turn into a histogram.\n",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
         "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
         "layout": "text-bottom-right",
         "fadeInOverPrevious": false
@@ -27,31 +27,36 @@
       {
         "text": "### Make a Chart\n- Highlight a column or data range\n- Click **Insert** -> **Chart** ",
         "imageUrl": "",
-        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-bacd1c1d-cd37-4d2c-b166-94d0c6070205"
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-bacd1c1d-cd37-4d2c-b166-94d0c6070205",
+        "fadeInOverPrevious": true
       },
       {
         "text": "### Create a Histogram\n- Click **Chart type**\n- Under **Other**, select **Histogram chart**",
         "imageUrl": "",
-        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-52a7128c-1a97-41fe-8640-3833bd1948c7"
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-52a7128c-1a97-41fe-8640-3833bd1948c7",
+        "fadeInOverPrevious": true
       },
       {
         "text": "### Add a Title\n\n- Click **Customize**\n- Open the toggle **Chart & axis titles**\n- Add your title in **Title text**",
         "imageUrl": "",
-        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-4150a755-c790-45ba-8b7f-33ceab36bbd3"
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-4150a755-c790-45ba-8b7f-33ceab36bbd3",
+        "fadeInOverPrevious": true
       },
       {
         "text": "### Visualize Individual Data Points\n\n- Click **Customize**\n- Open the toggle **Histogram**\n- Click **Show item dividers**",
         "imageUrl": "",
-        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-fa2e7a18-309e-43e6-8c32-9e5d06ff0e37"
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-fa2e7a18-309e-43e6-8c32-9e5d06ff0e37",
+        "fadeInOverPrevious": true
       },
       {
         "text": "### Change Bucket Size\n\n- Click **Customize**\n- Open the toggle **Histogram**\n- Play around with different sizes from the **Bucket size** dropdown until you find one that suits your dataset",
         "imageUrl": "",
-        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-6226dd2a-06d3-4d8a-8aad-60fc4f7ca9fc"
+        "key": "emma-histogram-panel-data-science-lesson7-_2025_launch-6226dd2a-06d3-4d8a-8aad-60fc4f7ca9fc",
+        "fadeInOverPrevious": true
       }
     ],
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-15T21:31:04.900+00:00\",\"changed\":[\"cloned from \\\"emma-histogram-panel-data-science-lesson7-_2025_launch\\\"\"],\"cloned_from\":\"emma-histogram-panel-data-science-lesson7-_2025_launch\"},{\"changed_at\":\"2025-04-15 21:31:18 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-15T21:31:04.900+00:00\",\"changed\":[\"cloned from \\\"emma-histogram-panel-data-science-lesson7-_2025_launch\\\"\"],\"cloned_from\":\"emma-histogram-panel-data-science-lesson7-_2025_launch\"},{\"changed_at\":\"2025-04-15 21:31:18 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:17:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-16 18:18:20 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Panels>

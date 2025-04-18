@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lesson 3: Ethical Data Collection 
 
-#### In this lesson, your students will analyze three different scenarios, each about a different concept and context: privacy regarding food allergies, misuse & consent regarding sponsorships, and accuracy and bias regarding entertainment. This professional learning module just covers one. 
+#### In this lesson, your students will analyze three different scenarios, each about a different concept and context: privacy regarding food allergies, misuse & consent regarding sponsorships, and accuracy and bias regarding entertainment. *This professional learning module just covers one.* 
 
 #### As your students work through the scenarios, they should pay attention to how data is collected, whether through surveys, automated methods, or measurements.
 
@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 <br>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/s/aif6-2025/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
 </p>
 
 

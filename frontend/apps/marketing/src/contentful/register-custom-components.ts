@@ -42,6 +42,9 @@ import Overline, {
 import Paragraph, {
   ParagraphContentfulComponentDefinition,
 } from '@/components/paragraph';
+import RichText, {
+  RichTextContentfulComponentDefinition,
+} from '@/components/richText';
 import Section, {
   SectionContentfulComponentDefinition,
 } from '@/components/section';
@@ -54,6 +57,7 @@ import CurriculumSnapshot, {
 import LabSnapshot, {
   LabSnapshotContentfulComponentDefinition,
 } from '@/components/snapshots/labSnapshot';
+import Spacer, {SpacerContentfulComponentDefinition} from '@/components/spacer';
 import TabGroup, {
   TabGroupContentfulComponentDefinition,
 } from '@/components/tabGroup';
@@ -135,6 +139,10 @@ defineComponents(
       definition: ParagraphContentfulComponentDefinition,
     },
     {
+      component: RichText,
+      definition: RichTextContentfulComponentDefinition,
+    },
+    {
       component: Section,
       definition: SectionContentfulComponentDefinition,
       options: {
@@ -144,6 +152,10 @@ defineComponents(
     {
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
+    },
+    {
+      component: Spacer,
+      definition: SpacerContentfulComponentDefinition,
     },
     {
       component: CurriculumSnapshot,

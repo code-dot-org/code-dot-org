@@ -1,4 +1,5 @@
 @use '@code-dot-org/component-library-styles/primitiveColors.scss';
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
 
 .customDialogOverlay {
   position: fixed;
@@ -8,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: variables.$zindex-modal-backdrop;
 
   width: 100%;
   height: 100%;

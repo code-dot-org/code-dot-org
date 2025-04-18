@@ -1289,6 +1289,8 @@ Dashboard::Application.routes.draw do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
     end
 
+    resources :ai_interaction_feedback, only: [:create]
+
     # Policy Compliance
     namespace :policy_compliance do
       get :pending_permission_request

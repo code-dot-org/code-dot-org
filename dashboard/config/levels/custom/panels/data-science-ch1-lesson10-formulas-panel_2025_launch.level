@@ -16,7 +16,7 @@
       },
       {
         "text": "### What Are Formulas?\nRather than do calculations by hand, Google Sheets has countless built-in formulas we can use to analyze the data.",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
         "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
         "layout": "text-bottom-right",
         "typing": false,
@@ -24,51 +24,51 @@
       },
       {
         "text": "### Sum\nWhen we want the **sum total** of elements in a given range we can use the `=SUM` function.\n",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
         "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
         "layout": "text-bottom-right",
         "fadeInOverPrevious": false
       },
       {
         "text": "### How to use the SUM function\nWe want to find the total number of inversions in Ohio:\n- Use `=SUM` to call the sum function\n- Specify the range by typing it in `=SUM(N92:N105)`\n- Press **Enter** to escape out of the cell and run your formula",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
         "key": "emma-panel-data-science-lesson7-level1_2025_launch-4342e1cd-90f7-4f8e-9415-72e83c812088"
       },
       {
         "text": "### Another Way to Calculate Sum\nWe can also highlight those cells and use the \"Sum\" feature at the bottom right",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
         "key": "emma-panel-data-science-lesson7-level1_2025_launch-80896949-e025-41a3-bff3-276a5979305d"
       },
       {
         "text": "### Count If\nWhen we want to **count** the number of elements that fit a specific criteria we can use the `=COUNTIF` function. This is how to set up the formula `=COUNTIF(range, criteria)`.\n\n",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
         "key": "hardware-components-ed2b07b1-278f-49d5-ba3b-02994f4bccd8",
         "layout": "text-bottom-right",
         "fadeInOverPrevious": false
       },
       {
         "text": "### How to use COUNTIF\nWe want to know how many roller coasters go faster than 60 mph:\n- Remember to use the formula `=COUNTIF(range, criteria)`\n- First, specify the range: `=COUNTIF(D2:D158, criteria)`\n- Then, specific the criteria of greater than 60 mph: `=COUNTIF(D2:D158, \">60\")`\n- Press **Enter** to escape out of the cell and run your formula",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
         "key": "emma-panel-data-science-lesson7-level1_2025_launch-23e257fa-ba98-4eaf-84d4-e58c1d4a9c79"
       },
       {
         "text": "### Average\nWhen we want the **average value** of elements in a given range we can use the `=AVG` function.\n",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
         "key": "data-science-lesson7-level1_2025_launch-6009960e-f3c5-438e-8af4-13d4801af88b"
       },
       {
         "text": "### How to use AVG\nWe want to find the average length of roller coasters\n- Use `=AVERAGE` to call the sum function\n- Specify the range by typing it in `=AVERAGE(G2:G158)`\n- Press **Enter** to escape out of the cell and run your formula\n",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
         "key": "emma-panel-data-science-lesson7-level1_2025_launch-8482159f-0e02-4de6-a6bb-209364d96693"
       },
       {
         "text": "### Another Way to Calculate Average\nWe can also highlight those cells and use the \"Average\" feature at the bottom right",
-        "imageUrl": "",
+        "imageUrl": "https://images.code.org/320d00cfdc333568de18ff4fd62707d5-work_in_progress.png",
         "key": "emma-panel-data-science-lesson7-level1_2025_launch-b6b58321-7c8c-41e9-b9ef-5f1df2c028f9"
       }
     ],
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-15T21:29:58.164+00:00\",\"changed\":[\"cloned from \\\"emma-panel-data-science-lesson7-level1_2025_launch\\\"\"],\"cloned_from\":\"emma-panel-data-science-lesson7-level1_2025_launch\"},{\"changed_at\":\"2025-04-15 21:30:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-15T21:29:58.164+00:00\",\"changed\":[\"cloned from \\\"emma-panel-data-science-lesson7-level1_2025_launch\\\"\"],\"cloned_from\":\"emma-panel-data-science-lesson7-level1_2025_launch\"},{\"changed_at\":\"2025-04-15 21:30:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:20:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </Panels>

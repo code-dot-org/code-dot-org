@@ -8,7 +8,6 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 
-import {REPLAY_BLOCK_CLASS} from '@cdo/apps/metrics/StatsigSessionReplay';
 import {
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
@@ -97,8 +96,7 @@ export default function SchoolDataInputs({
 
   const computedStyleClass = classNames(
     style.schoolAssociationWrapper,
-    containerClassName,
-    REPLAY_BLOCK_CLASS
+    containerClassName
   );
 
   return (

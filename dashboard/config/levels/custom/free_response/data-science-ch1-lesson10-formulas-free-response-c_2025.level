@@ -15,9 +15,10 @@
     "allow_multiple_attempts": "true",
     "skip_dialog": true,
     "skip_sound": true,
-    "stay_on_level_after_submit": "false"
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "Ivp+QKzU55shLb4cVEAM+Q==\n"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-15T21:07:44.525+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-formulas-free-response-b_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-formulas-free-response-b_2025\"},{\"changed_at\":\"2025-04-15 21:16:50 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-15 21:23:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-15T21:07:44.525+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-formulas-free-response-b_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-formulas-free-response-b_2025\"},{\"changed_at\":\"2025-04-15 21:16:50 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-15 21:23:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 17:53:00 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
