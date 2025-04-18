@@ -74,7 +74,11 @@ export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
-        <Heading2>{i18n.welcome({teacherName: teacherName})}</Heading2>
+        <Heading2>
+          {teacherName
+            ? i18n.welcome({teacherName: teacherName})
+            : i18n.welcomeWithoutName()}
+        </Heading2>
         <Alert
           className={styles.feedbackAlert}
           size={'s'}
