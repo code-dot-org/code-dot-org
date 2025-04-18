@@ -104,6 +104,16 @@ rescue NoMethodError => exception
   nil
 end
 
+def copy_eval_files
+  start_time = Time.now
+  # copy evals directory from input_dir in s3 to output_dir in local filesystem
+  keys = list_s3_files('cdo-data-sharing-internal', "unloaded-unit-progress/#{$options[:input_dir]}/evals/")
+  puts "Found #{keys.size} files in s3://cdo-data-sharing-internal/unloaded-unit-progress/#{$options[:input_dir]}/evals/"
+  system("aws s3 cp --recursive s3://cdo-data-sharing-internal/unloaded-unit-progress/#{$options[:input_dir]}/evals/ #{$output_dir}/evals/")
+  raise "Failed to copy evals files" unless $?.success?
+  puts "Copied evals files to #{$output_dir}/evals in #{(Time.now - start_time).round(2)} seconds."
+end
+
 def main
   start_time = Time.now
   keys = list_s3_files('cdo-data-sharing-internal', "unloaded-unit-progress/#{$options[:input_dir]}/progress/")
@@ -114,6 +124,8 @@ def main
   end
 
   puts "Processed source in #{(Time.now - start_time).round(2)} seconds."
+
+  copy_eval_files
 end
 
 main
