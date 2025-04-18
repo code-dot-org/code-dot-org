@@ -440,10 +440,6 @@ export const SmallDesktop: Story = {
       viewports: INITIAL_VIEWPORTS,
       defaultViewport: 'ipad12p',
     },
-    testViewport: {
-      width: 1267,
-      height: 768,
-    },
     docs: {
       description: {
         story:
@@ -522,10 +518,6 @@ export const Tablet: Story = {
     viewport: {
       defaultViewport: 'tablet',
     },
-    testViewport: {
-      width: 834,
-      height: 1112,
-    },
     docs: {
       description: {
         story:
@@ -584,10 +576,6 @@ export const Mobile: Story = {
     layout: 'fullscreen',
     viewport: {
       defaultViewport: 'mobile1',
-    },
-    testViewport: {
-      width: 414,
-      height: 896,
     },
     docs: {
       description: {
