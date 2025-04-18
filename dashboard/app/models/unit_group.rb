@@ -190,7 +190,7 @@ class UnitGroup < ApplicationRecord
   # @param units [Array<String>] - Updated list of names of units in this course
   # @param course_strings[Hash{String => String}]
   def persist_strings_and_units_changes(units, course_strings)
-    UnitGroup.update_strings(name, course_strings)
+    UnitGroup.update_strings(name, course_strings) if Rails.application.config.levelbuilder_mode
     update_scripts(units) if units
     save!
   end

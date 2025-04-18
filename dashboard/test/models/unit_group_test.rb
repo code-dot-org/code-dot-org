@@ -505,16 +505,11 @@ class UnitGroupTest < ActiveSupport::TestCase
       course_version = create :course_version
       unit_group = create :unit_group, course_version: course_version
 
-      unit1 = create :script, name: 'unit1'
-      create(:unit_group_unit, unit_group: unit_group, position: 0, script: unit1)
-      create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'unit2'))
+      create :script, name: 'unit1'
+      create :script, name: 'unit2'
+      unit_group.update_scripts(['unit1', 'unit2'])
 
-      lesson = create :lesson
-      resource = create :resource, course_version: course_version
-      lesson.resources = [resource]
-      lesson_group = create :lesson_group, lessons: [lesson]
-      unit1.lesson_groups = [lesson_group]
-
+      unit_group.reload
       error = assert_raises RuntimeError do
         unit_group.update_scripts(['unit2'])
       end
