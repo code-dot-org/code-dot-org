@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionAvatar';
 import experiments from '@cdo/apps/util/experiments';
@@ -39,7 +40,8 @@ export default function SingleSectionSetUp({
           />
         </label>
       </div>
-      {experiments.isEnabled('teacher-homepage-v2') &&
+      {(experiments.isEnabled('teacher-homepage-v2') ||
+        DCDO.get('teacher-homepage-v2', false)) &&
         !isNewSection &&
         section.avatar_color && (
           <div className={moduleStyles.avatarContainer}>
