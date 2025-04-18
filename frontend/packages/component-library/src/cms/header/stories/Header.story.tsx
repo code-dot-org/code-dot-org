@@ -257,7 +257,7 @@ export const DefaultLoggedOut: Story = {
       defaultViewport: 'desktop',
     },
     eyes: {
-      viewportSize: {width: 1268, height: 720},
+      browser: {width: 1268, height: 720, name: 'chrome'},
     },
     docs: {
       description: {
@@ -330,7 +330,7 @@ export const LoggedIn: Story = {
       defaultViewport: 'desktop',
     },
     eyes: {
-      viewportSize: {width: 1268, height: 720},
+      browser: {width: 1268, height: 720, name: 'chrome'},
     },
     docs: {
       description: {
@@ -371,7 +371,7 @@ export const NewProjectMenu: Story = {
       defaultViewport: 'desktop',
     },
     eyes: {
-      viewportSize: {width: 1268, height: 720},
+      browser: {width: 1268, height: 720, name: 'chrome'},
     },
     docs: {
       description: {
@@ -418,7 +418,7 @@ export const HelpMenu: Story = {
       defaultViewport: 'desktop',
     },
     eyes: {
-      viewportSize: {width: 1268, height: 720},
+      browser: {width: 1268, height: 720, name: 'chrome'},
     },
     docs: {
       description: {
@@ -465,7 +465,7 @@ export const SmallDesktop: Story = {
       defaultViewport: 'ipad12p',
     },
     eyes: {
-      viewportSize: {width: 1024, height: 1366},
+      browser: {width: 1024, height: 1366, name: 'chrome'},
     },
     docs: {
       description: {
@@ -547,7 +547,7 @@ export const Tablet: Story = {
       defaultViewport: 'tablet',
     },
     eyes: {
-      viewportSize: {width: 834, height: 1112},
+      browser: {width: 834, height: 1112, name: 'chrome'},
     },
     docs: {
       description: {
@@ -610,7 +610,7 @@ export const Mobile: Story = {
       defaultViewport: 'mobile2',
     },
     eyes: {
-      viewportSize: {width: 414, height: 896},
+      browser: {width: 414, height: 896, name: 'chrome'},
     },
     docs: {
       description: {
