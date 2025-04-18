@@ -6,7 +6,7 @@ import {
   rectIntersection,
 } from '@dnd-kit/core';
 
-const FOLDER_DROP_OFFSET = 12;
+const FOLDER_DROP_OFFSET = 16;
 
 export const fileBrowserKeyboardCoordinateGetter: KeyboardCoordinateGetter = (
   event,

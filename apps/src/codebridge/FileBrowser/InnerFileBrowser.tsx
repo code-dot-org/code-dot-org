@@ -23,7 +23,6 @@ type FilesComponentProps = {
   parentId?: FolderId;
   setFileType: setFileType;
   appName?: string;
-  isParentBeingDroppedOver?: boolean;
 };
 
 /**
@@ -31,14 +30,7 @@ type FilesComponentProps = {
  * (there is an implicit root folder with a default parentId).
  */
 const InnerFileBrowser = React.memo(
-  ({
-    parentId,
-    folders,
-    files,
-    setFileType,
-    appName,
-    isParentBeingDroppedOver,
-  }: FilesComponentProps) => {
+  ({parentId, folders, files, setFileType, appName}: FilesComponentProps) => {
     const {dragData, dropData} = useDndDataContext();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -54,15 +46,13 @@ const InnerFileBrowser = React.memo(
           .sort((a, b) => a.name.localeCompare(b.name))
           .map(f => {
             const MaybeDraggable = isReadOnly ? NotDraggable : Draggable;
-            const isBeingDroppedOver = f.id === dropData?.id;
-            const isOpen = f.open;
             return (
               <Droppable
                 data={{id: f.id}}
                 key={f.id + f.open}
                 Component="div"
                 className={classNames(moduleStyles.droppableArea, {
-                  [moduleStyles.acceptingDrop]: isBeingDroppedOver,
+                  [moduleStyles.acceptingDrop]: f.id === dropData?.id,
                 })}
               >
                 <MaybeDraggable
@@ -72,7 +62,7 @@ const InnerFileBrowser = React.memo(
                     item={f}
                     enableMenu={!isReadOnly && !dragData?.id}
                   />
-                  {isOpen && (
+                  {f.open && (
                     <div className={moduleStyles.folder}>
                       <InnerFileBrowser
                         folders={folders}
@@ -80,7 +70,6 @@ const InnerFileBrowser = React.memo(
                         files={files}
                         setFileType={setFileType}
                         appName={appName}
-                        isParentBeingDroppedOver={isBeingDroppedOver}
                       />
                     </div>
                   )}
