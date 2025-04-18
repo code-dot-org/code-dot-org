@@ -9,7 +9,7 @@ export default class ConsoleManager {
   private inputBuffer: string;
   // If the last line in terminalLines is a partial line or not (i.e. if it was terminated with a newline).
   private lastLineIsPartial: boolean;
-  private terminalLinesListeners: (() => void)[] = [];
+  private terminalLinesListeners: ((lines: string[]) => void)[] = [];
 
   constructor(terminal: Terminal, terminalFitAddon: FitAddon) {
     this.terminal = terminal;
@@ -80,18 +80,20 @@ export default class ConsoleManager {
     this.inputBuffer = '';
   }
 
-  public addTerminalLinesListener(listener: () => void) {
+  public addTerminalLinesListener(listener: (lines: string[]) => void) {
     this.terminalLinesListeners.push(listener);
   }
 
-  public removeTerminalLinesListener(listener: () => void) {
+  public removeTerminalLinesListener(listener: (lines: string[]) => void) {
     this.terminalLinesListeners = this.terminalLinesListeners.filter(
       l => l !== listener
     );
   }
 
   private executeTerminalLinesListeners() {
-    this.terminalLinesListeners.forEach(listener => listener());
+    this.terminalLinesListeners.forEach(listener =>
+      listener(this.terminalLines)
+    );
   }
 
   private appendTerminalLine(line: string) {

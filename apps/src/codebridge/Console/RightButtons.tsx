@@ -4,7 +4,7 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import SwapLayoutDropdown from '@codebridge/components/SwapLayoutDropdown';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -33,13 +33,8 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
 }) => {
   const isShareView = useAppSelector(state => state.lab.isShareView);
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
-  const consoleManagerRef = useRef<ConsoleManager | null>(null);
   const [hasConsoleOutput, setHasConsoleOutput] = useState(false);
   const isClearButtonDisabled = isRunning || !hasConsoleOutput;
-
-  useEffect(() => {
-    consoleManagerRef.current = consoleManager;
-  }, [consoleManager]);
 
   useEffect(() => {
     if (!consoleManager) {
@@ -48,10 +43,8 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
 
     setHasConsoleOutput(consoleManager.getTerminalLines().length > 0);
 
-    const handleUpdate = () => {
-      const manager = consoleManagerRef.current;
-      const lines = manager?.getTerminalLines();
-      setHasConsoleOutput(!!lines && lines.length > 0);
+    const handleUpdate = (terminalLines: string[]) => {
+      setHasConsoleOutput(terminalLines.length > 0);
     };
 
     consoleManager.addTerminalLinesListener(handleUpdate);
