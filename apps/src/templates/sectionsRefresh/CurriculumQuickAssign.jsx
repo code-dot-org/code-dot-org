@@ -59,7 +59,9 @@ export default function CurriculumQuickAssign({
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [filteredCourseOfferings, setFilteredCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
-  const [marketingAudience, setMarketingAudience] = useState('');
+  const [marketingAudience, setMarketingAudience] = useState(
+    MARKETING_AUDIENCE.ELEMENTARY
+  );
   const [selectedCourseOffering, setSelectedCourseOffering] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -289,7 +291,9 @@ export default function CurriculumQuickAssign({
       {isLoading && !isNewSection ? (
         <>
           <Heading3>{i18n.assignCurriculum()}</Heading3>
-          <Spinner />
+          <div className={moduleStyles.loadingSpinner}>
+            <Spinner />
+          </div>
         </>
       ) : (
         <>
