@@ -85,8 +85,11 @@
   }
 
   .required {
-    > span::after,
-    &[id='grades-dropdown'] > div:first-of-type > span::after {
+    > span::after {
+      content: '*';
+    }
+
+    &[id$='-dropdown'] > div:first-of-type > span::after {
       content: '*';
     }
   }
