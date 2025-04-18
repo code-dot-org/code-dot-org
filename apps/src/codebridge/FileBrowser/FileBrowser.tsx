@@ -42,6 +42,7 @@ export const FileBrowser = React.memo(() => {
 
   const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
   const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
+  const projectFolders = source.folders;
 
   const dndMonitor = useMemo(
     () => ({
@@ -66,7 +67,7 @@ export const FileBrowser = React.memo(() => {
       },
     }),
     useSensor(KeyboardSensor, {
-      coordinateGetter: fileBrowserKeyboardCoordinateGetter,
+      coordinateGetter: fileBrowserKeyboardCoordinateGetter(projectFolders),
     })
   );
 

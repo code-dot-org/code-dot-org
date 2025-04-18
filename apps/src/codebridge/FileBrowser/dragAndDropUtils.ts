@@ -6,23 +6,48 @@ import {
   rectIntersection,
 } from '@dnd-kit/core';
 
+import {ProjectFolder} from '@cdo/apps/lab2/types';
+
+import {getFolderChildren} from '../utils/getFolderChildren';
+
+import {DragType} from './types';
+
 const FOLDER_DROP_OFFSET = 16;
 
 // Custom keyboard coordinate getter for the file browser.
 // When we are moving an item via the keyboard, we move it to the next available folder
 // up/down in the browser, rather than just a flat number of pixels.
-export const fileBrowserKeyboardCoordinateGetter: KeyboardCoordinateGetter = (
-  event,
-  args
-) => {
+export const fileBrowserKeyboardCoordinateGetter: (
+  folders: Record<string, ProjectFolder>
+) => KeyboardCoordinateGetter = folders => (event, args) => {
   if (event.code !== KeyboardCode.Up && event.code !== KeyboardCode.Down) {
     return;
   }
   event.preventDefault();
 
   const {context} = args;
-  const {droppableRects, over} = context;
+  const {droppableRects, over, active} = context;
   const orderedRects = Array.from(droppableRects.keys());
+  const currentId = active?.data.current?.id;
+  const dragType = active?.data.current?.type;
+  // active.data.current: id, type, parentId
+  if (dragType === DragType.FOLDER) {
+    // We can't move a folder:
+    // into a folder that is a child of itself
+    // into itself?
+    // into its parent??
+    // this is still buggy
+    const parent = folders[currentId]?.parentId;
+    const allChildren = getFolderChildren(
+      currentId as string,
+      Object.values(folders)
+    );
+    console.log({folders, allChildren, parent, currentId});
+    orderedRects.filter(
+      id => id !== currentId && !allChildren.includes(id as string)
+    );
+  }
+
   // Sort the available droppable rectangles by their top coordinate, except
   // for the root folder (DEFAULT_FOLDER_ID), which should always be last, as it
   // is the folder that contains all the other folders.
@@ -86,7 +111,13 @@ export const fileBrowserCollisionDetector: CollisionDetection = args => {
     return rectangleCollisions;
   }
   // The collisionRect is the file/folder being dragged.
-  const {droppableRects, collisionRect} = args;
+  const {droppableRects, collisionRect, active} = args;
+
+  const dragType = active.data.current?.type;
+  if (dragType === DragType.FOLDER) {
+    rectangleCollisions.filter(collision => collision.id !== active.id);
+  }
+
   rectangleCollisions.sort((a, b) => {
     // DEFAULT_FOLDER_ID should always be last in the list, because it is the root folder
     // and contains all other folders.
