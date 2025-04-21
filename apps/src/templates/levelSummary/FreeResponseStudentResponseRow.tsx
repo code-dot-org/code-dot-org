@@ -22,6 +22,7 @@ const FreeResponseStudentResponseRow: React.FC<
   FreeResponseStudentResponseRowProps
 > = ({studentWorkEvaluation}) => {
   const [feedbackModalOpen, setFeedbackModalOpen] = useState<boolean>(false);
+  const [feedbackData, setFeedbackData] = useState<FeedbackData | null>(null);
 
   // used to create the tag for the response
   const analysisTag = () => {
@@ -104,17 +105,19 @@ const FreeResponseStudentResponseRow: React.FC<
   };
 
   const handleFeedbackClick = async (thumbsUp: boolean) => {
-    const feedbackData: FeedbackData = {
+    const feedbackDataGenerated = {
       aiInteractionType: 'UserLevelEvaluation',
       aiInteractionId: studentWorkEvaluation.id,
       thumbsUp,
       levelId: studentWorkEvaluation.levelId,
       scriptId: studentWorkEvaluation.unitId,
     };
+    setFeedbackData(feedbackDataGenerated);
 
-    logUserFeedbackOnStudentEvaluation(feedbackData);
     if (!thumbsUp) {
       setFeedbackModalOpen(true);
+    } else {
+      logUserFeedbackOnStudentEvaluation(feedbackDataGenerated);
     }
   };
 
@@ -138,8 +141,9 @@ const FreeResponseStudentResponseRow: React.FC<
           color="gray"
         />
       </div>
-      {feedbackModalOpen && (
+      {feedbackModalOpen && feedbackData && (
         <AiEvaluationFeedbackModal
+          feedbackData={feedbackData}
           forStudentAiInteractionFeedback={true}
           closeModalHandler={() => {
             setFeedbackModalOpen(false);

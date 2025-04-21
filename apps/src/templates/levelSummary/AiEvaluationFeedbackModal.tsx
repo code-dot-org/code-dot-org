@@ -1,19 +1,25 @@
 import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {Heading4, StrongText} from '@code-dot-org/component-library/typography';
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 
+import {
+  FeedbackData,
+  logUserFeedbackOnStudentEvaluation,
+} from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 
 import style from './summary.module.scss';
 
 interface AiEvaluationFeedbackModalProps {
+  feedbackData: FeedbackData;
   forStudentAiInteractionFeedback: boolean;
   closeModalHandler: () => void;
 }
 
 const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
+  feedbackData,
   forStudentAiInteractionFeedback,
   closeModalHandler,
 }) => {
@@ -24,24 +30,23 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
   const [aiFeedbackOther, setAiFeedbackOther] = useState(false);
   const [aiOtherContent, setAiOtherContent] = useState('');
 
-  const handleSendingFeedback = async () => {
-    const bodyData = {
+  const reasonGivenRef = useRef(false);
+
+  const sendFeedbackWithMetadata = async () => {
+    const metadata = {
       tooHigh: aiTooHigh,
       tooLow: aiTooLow,
       flaggedIncorrectly: aiFlagged,
-      // 'Vague' is capitalized to avoid a ForbiddenAttributes error
-      // error cause is unknown
       Vague: aiVague,
       feedbackOther: aiFeedbackOther,
       otherContent: aiOtherContent,
     };
 
-    // await updateAiFeedback(bodyData, aiFeedbackId);
-
-    // setAISubmitted(true);
-    // setAIFeedbackReceived(true);
-    console.log('Feedback prepped:', bodyData);
-    closeModalHandler();
+    const combinedFeedbackData = {
+      ...feedbackData,
+      metadata,
+    };
+    logUserFeedbackOnStudentEvaluation(combinedFeedbackData);
   };
 
   const renderOptionsForStudentAiInteractionFeedback = () => {
@@ -93,12 +98,10 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
           <div className={style.aiFeedbackOther}>
             <StrongText>{i18n.aiFeedbackOtherDetails()} </StrongText>
             <textarea
-              //   className={style.aiFeedbackTextbox}
               onChange={e => {
                 setAiOtherContent(e.target.value);
               }}
-              // eslint-disable-next-line react/forbid-dom-props
-              data-testid="ai-frq-feedback-textarea"
+              aria-label="AI feedback details"
             />
           </div>
         )}
@@ -106,13 +109,27 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
     );
   };
 
+  const handleSubmitButtonClick = () => {
+    reasonGivenRef.current = true;
+    sendFeedbackWithMetadata();
+    closeModalHandler();
+  };
+
+  const onCloseHandler = () => {
+    if (!reasonGivenRef.current) {
+      logUserFeedbackOnStudentEvaluation(feedbackData);
+      closeModalHandler();
+    }
+  };
+
   return (
-    <AccessibleDialog onClose={closeModalHandler} closeOnClickBackdrop={true}>
+    <AccessibleDialog onClose={onCloseHandler} closeOnClickBackdrop={true}>
       <div>
         <Heading4>
           Why is the AI analysis inaccurate? (Check all that apply)
         </Heading4>
         <hr />
+        {/* TODO: add options for section-level feedback - TEACH-1769 */}
         {forStudentAiInteractionFeedback &&
           renderOptionsForStudentAiInteractionFeedback()}
         <hr />
@@ -124,7 +141,7 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
             text={i18n.closeDialog()}
           />
           <Button
-            onClick={handleSendingFeedback}
+            onClick={handleSubmitButtonClick}
             type="primary"
             color="purple"
             text={i18n.aiFeedbackSubmit()}
