@@ -13,7 +13,6 @@ import {getFolderChildren} from '../utils/getFolderChildren';
 import {DragType} from './types';
 
 const FOLDER_DROP_OFFSET = 16;
-const DEFAULT_FOLDER_DROP_OFFSET = 8;
 
 // Custom keyboard coordinate getter for the file browser.
 // When we are moving an item via the keyboard, we move it to the next available folder
@@ -79,9 +78,10 @@ export const fileBrowserKeyboardCoordinateGetter: (
     // Normally, the y coordinate is the top of the droppable area, plus an offset.
     let y = newRect.top + FOLDER_DROP_OFFSET;
     // If we are dropping into the root folder, we want to drop at the bottom of the
-    // droppable area, because the root folder is the entire file browser.
+    // droppable area, because the root folder is the entire file browser. We subtract the
+    // offset to be a bit above the bottom of the droppable area.
     if (newRectId === DEFAULT_FOLDER_ID) {
-      y = newRect.bottom - DEFAULT_FOLDER_DROP_OFFSET;
+      y = newRect.bottom - FOLDER_DROP_OFFSET;
     }
     const newCoordinates = {
       x,

@@ -16,6 +16,7 @@
 .fileBrowserContents {
   overflow-y: auto;
   scrollbar-color: $light_gray_500 $light_gray_950;
+  height: 100%;
 }
 
 .file-browser div.folder {
