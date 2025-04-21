@@ -372,7 +372,7 @@ export const NewProjectMenu: Story = {
     },
     eyes: {
       browser: {width: 1268, height: 720, name: 'chrome'},
-      waitBeforeCapture: 3000,
+      waitBeforeCapture: 'ul[aria-label="Projects menu"]',
     },
     docs: {
       description: {
@@ -408,53 +408,53 @@ export const NewProjectMenu: Story = {
   },
 };
 
-// export const HelpMenu: Story = {
-//   args: {
-//     ...defaultArgs,
-//   },
-//   parameters: {
-//     layout: 'fullscreen',
-//     viewport: {
-//       viewports: MINIMAL_VIEWPORTS,
-//       defaultViewport: 'desktop',
-//     },
-//     eyes: {
-//       browser: {width: 1268, height: 720, name: 'chrome'},
-//       waitBeforeCapture: 3000,
-//     },
-//     docs: {
-//       description: {
-//         story:
-//           'Shows the Help menu on large desktop. The Help menu contains links to help and support resources.',
-//       },
-//     },
-//   },
-//   play: async ({canvasElement}) => {
-//     const canvas = within(canvasElement);
+export const HelpMenu: Story = {
+  args: {
+    ...defaultArgs,
+  },
+  parameters: {
+    layout: 'fullscreen',
+    viewport: {
+      viewports: MINIMAL_VIEWPORTS,
+      defaultViewport: 'desktop',
+    },
+    eyes: {
+      browser: {width: 1268, height: 720, name: 'chrome'},
+      waitBeforeCapture: 'ul[aria-label="Help menu"]',
+    },
+    docs: {
+      description: {
+        story:
+          'Shows the Help menu on large desktop. The Help menu contains links to help and support resources.',
+      },
+    },
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
 
-//     // check that Help button is visible
-//     const helpButton = await canvas.findByRole('button', {
-//       name: 'Open Help menu',
-//     });
-//     await expect(helpButton).toBeVisible();
+    // check that Help button is visible
+    const helpButton = await canvas.findByRole('button', {
+      name: 'Open Help menu',
+    });
+    await expect(helpButton).toBeVisible();
 
-//     // click the Help button to open the menu
-//     await userEvent.click(helpButton);
+    // click the Help button to open the menu
+    await userEvent.click(helpButton);
 
-//     // check that Help menu is visible
-//     const helpMenu = await canvas.findByRole('list', {
-//       name: 'Help menu',
-//     });
-//     const helpMenuLinks = await canvas.findAllByRole('link', {
-//       name: /help and support|report a problem/i,
-//     });
-//     await expect(helpMenu).toBeVisible();
-//     await expect(helpMenuLinks).toHaveLength(2);
-//     for (const link of helpMenuLinks) {
-//       await expect(link).toBeVisible();
-//     }
-//   },
-// };
+    // check that Help menu is visible
+    const helpMenu = await canvas.findByRole('list', {
+      name: 'Help menu',
+    });
+    const helpMenuLinks = await canvas.findAllByRole('link', {
+      name: /help and support|report a problem/i,
+    });
+    await expect(helpMenu).toBeVisible();
+    await expect(helpMenuLinks).toHaveLength(2);
+    for (const link of helpMenuLinks) {
+      await expect(link).toBeVisible();
+    }
+  },
+};
 
 export const SmallDesktop: Story = {
   args: {
@@ -468,7 +468,6 @@ export const SmallDesktop: Story = {
     },
     eyes: {
       browser: {width: 1024, height: 720, name: 'chrome'},
-      waitBeforeCapture: 3000,
     },
     docs: {
       description: {
