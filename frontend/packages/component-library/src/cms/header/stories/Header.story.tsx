@@ -419,9 +419,11 @@ export const HelpMenu: Story = {
       defaultViewport: 'desktop',
     },
     eyes: {
-      browser: {width: 1268, height: 720, name: 'chrome'},
-      waitBeforeCapture: 3000,
-      // waitBeforeCapture: 'ul[aria-label="Help menu"]',
+      // TODO: CMS-559 - Turning this off for now because Applitools
+      // does not currently support changing the viewportSize for a test,
+      // so this menu is not being captured correctly. It's still
+      // being tested in the play function.
+      include: false,
     },
     docs: {
       description: {
