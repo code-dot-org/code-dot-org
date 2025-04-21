@@ -55,12 +55,12 @@ describe('CurriculumQuickAssign', () => {
       />
     );
 
-    expect(wrapper.find('Button').at(0).props().icon).toBe('caret-right');
+    expect(wrapper.find('Button').at(0).props().icon).toBe('caret-down');
     wrapper
       .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('Button').at(0).props().icon).toBe('caret-down');
+    expect(wrapper.find('Button').at(0).props().icon).toBe('caret-right');
   });
 
   it('opens and closes version dropdowns with table open and collapse', () => {
@@ -72,17 +72,17 @@ describe('CurriculumQuickAssign', () => {
       />
     );
 
-    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(0);
-    wrapper
-      .find('Button')
-      .at(0)
-      .simulate('click', {preventDefault: () => {}});
     expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(1);
     wrapper
       .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
     expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(0);
+    wrapper
+      .find('Button')
+      .at(0)
+      .simulate('click', {preventDefault: () => {}});
+    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(1);
   });
 
   it('leaves dropdowns alone when decide later clicked', () => {
@@ -94,8 +94,14 @@ describe('CurriculumQuickAssign', () => {
       />
     );
 
-    // No dropdowns active at beginning
-    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(0);
+    // Dropdown starts open
+    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(1);
+
+    // Close dropdown first
+    wrapper
+      .find('Button')
+      .at(0)
+      .simulate('click', {preventDefault: () => {}});
 
     // Toggle decide later, verify its state changes.
     expect(wrapper.find('input').props().checked).toBe(false);
