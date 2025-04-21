@@ -16,7 +16,7 @@ export default {
       ? Object.values(args)
       : [args];
     return (
-      <div
+      <section
         style={{
           display: 'grid',
           gridTemplateColumns: `repeat(${components.length % 3 === 0 ? 3 : 2}, 1fr)`,
@@ -26,7 +26,7 @@ export default {
         {components.map((component, index) => (
           <EditorialCard key={index} {...defaultProps} {...component} />
         ))}
-      </div>
+      </section>
     );
   },
 } as Meta;
