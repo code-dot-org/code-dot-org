@@ -588,7 +588,7 @@ class Lesson < ApplicationRecord
 
   # Provides a JSON summary of a particular lesson, that is consumed by tools used to
   # build lesson plans (Curriculum Builder)
-  def summary_for_lesson_plans
+  def summary_for_lesson_plans(unit_group_unit: nil)
     {
       # TODO: should be renamed after we combine CurriculumBuilder into LevelBuilder, if we still need this.
       stageName: localized_name,
@@ -602,10 +602,10 @@ class Lesson < ApplicationRecord
           bonus_level: !!script_level.bonus,
           assessment: script_level.assessment,
           progression: script_level.progression,
-          path: script_level.path,
+          path: script_level.path(unit_group_unit: unit_group_unit),
         }
 
-        level_json.merge!(level.summary_for_lesson_plans)
+        level_json.merge!(level.summary_for_lesson_plans(unit_group_unit: unit_group_unit))
 
         level_json
       end

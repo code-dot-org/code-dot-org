@@ -988,7 +988,7 @@ class Unit < ApplicationRecord
     script_levels[chapter - 1] # order is by chapter
   end
 
-  def get_bonus_script_levels(current_lesson)
+  def get_bonus_script_levels(current_lesson, unit_group_unit: nil)
     unless @all_bonus_script_levels
       @all_bonus_script_levels = lessons.map do |lesson|
         {
@@ -1007,7 +1007,7 @@ class Unit < ApplicationRecord
     summarized_lesson_levels = lesson_levels.map do |lesson|
       {
         lessonNumber: lesson[:lessonNumber],
-        levels: lesson[:levels].map(&:summarize_as_bonus)
+        levels: lesson[:levels].map {|l| l.summarize_as_bonus(unit_group_unit: unit_group_unit)}
       }
     end
     summarized_lesson_levels
@@ -1721,7 +1721,7 @@ class Unit < ApplicationRecord
 
   # Similar to summarize, but returns an even more narrow set of fields, restricted
   # to those needed in header.html.haml
-  def summarize_header
+  def summarize_header(unit_group_unit: nil)
     {
       name: name,
       displayName: title_for_display,
@@ -1730,6 +1730,8 @@ class Unit < ApplicationRecord
       age_13_required: logged_out_age_13_required?,
       show_sign_in_callout: csf? || csc?,
       hasUnnumberedLessons: has_unnumbered_lessons?,
+      course_name: unit_group_unit&.unit_group&.name,
+      unit_position: unit_group_unit&.position,
     }
   end
 

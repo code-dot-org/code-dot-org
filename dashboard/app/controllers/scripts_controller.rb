@@ -8,7 +8,7 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :destroy]
+  before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show]
@@ -240,37 +240,52 @@ class ScriptsController < ApplicationController
   end
 
   def vocab
-    @unit_summary = @script.summarize_for_rollup(current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user, unit_group_unit: @unit_group_unit)
   end
 
   def resources
-    @unit_summary = @script.summarize_for_rollup(current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user, unit_group_unit: @unit_group_unit)
   end
 
   def code
-    @unit_summary = @script.summarize_for_rollup(current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user, unit_group_unit: @unit_group_unit)
   end
 
   def standards
-    @unit_summary = @script.summarize_for_rollup(current_user)
+    @unit_summary = @script.summarize_for_rollup(current_user, unit_group_unit: @unit_group_unit)
   end
 
   def get_rollup_resources
-    unit = Unit.get_from_cache(params[:id])
+    unit = @script
     course_version = unit.get_course_version
+    if @unit_group_unit
+      course_version = @unit_group_unit.unit_group.course_version
+    end
     return render status: :bad_request, json: {error: 'Unit does not have course version'} unless course_version
+    code_path = code_script_path(unit)
+    resources_path = resources_script_path(unit)
+    standards_path = standards_script_path(unit)
+    vocab_path = vocab_script_path(unit)
+    if Policies::Courses.modularity_enabled? && @unit_group_unit
+      course = @unit_group_unit.unit_group
+      unit_position = @unit_group_unit.position
+      code_path = code_course_unit_path(course, unit_position)
+      resources_path = resources_course_unit_path(course, unit_position)
+      standards_path = standards_course_unit_path(course, unit_position)
+      vocab_path = vocab_course_unit_path(course, unit_position)
+    end
     rollup_pages = []
     if unit.lessons.any? {|l| !l.programming_expressions.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_script_path(unit), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Code', url: code_path, course_version_id: course_version.id))
     end
     if unit.lessons.any? {|l| !l.resources.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_script_path(unit), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Resources', url: resources_path, course_version_id: course_version.id))
     end
     if unit.lessons.any? {|l| !l.standards.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_script_path(unit), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Standards', url: standards_path, course_version_id: course_version.id))
     end
     if unit.lessons.any? {|l| !l.vocabularies.empty?}
-      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_script_path(unit), course_version_id: course_version.id))
+      rollup_pages.append(Resource.find_or_create_by!(name: 'All Vocabulary', url: vocab_path, course_version_id: course_version.id))
     end
     rollup_pages.each do |r|
       r.is_rollup = true

@@ -50,8 +50,8 @@ class PeerReview < ApplicationRecord
   before_save :add_status_to_audit_trail, if: -> {reviewer_id? && (status_changed? || data_changed?)}
   before_save :add_assignment_to_audit_trail, if: :reviewer_id_changed?
 
-  after_save :send_review_completed_mail, if: -> {saved_change_to_status? && (accepted? || rejected?)}
   after_update :mark_user_level, if: -> {saved_change_to_status? || saved_change_to_data?}
+  after_save :send_review_completed_mail, if: -> {saved_change_to_status? && (accepted? || rejected?)}
 
   def add_assignment_to_audit_trail
     message = reviewer_id.present? ? "ASSIGNED to user id #{reviewer_id}" : 'UNASSIGNED'
@@ -105,9 +105,9 @@ class PeerReview < ApplicationRecord
     PeerReview.get_potential_reviews(script, user).where(
       status: nil,
       data: nil
-    ).where(
+    ).find_by(
       'reviewer_id is null or created_at < now() - interval 1 day'
-    ).take
+    )
   end
 
   def mark_user_level
@@ -283,6 +283,9 @@ class PeerReview < ApplicationRecord
   # Returns the route path for the submission's script_level (or level if there is no script_level)
   # @returns [String] path to the submission (script_level or level)
   def submission_path
+    # TODO - How do we get the UnitGroupUnit the user was in when they wrote
+    # the review? `build_script_level_path` needs to have unit_group_unit
+    # passed it it.
     script_level = level.script_levels.find_by(script: script)
     script_level ? build_script_level_path(script_level) : level_path(level)
   end

@@ -405,9 +405,23 @@ class ApiController < ApplicationController
   end
 
   def script_structure
-    script = Unit.get_from_cache(params[:script])
-    overview_path = CDO.studio_url(script_path(script))
-    summary = script.summarize(true, current_user, true)
+    context = nil
+    if params[:script]
+      context = Queries::Courses.get_course_context(params[:script])
+    else
+      course_name = params[:course_name]
+      unit_position = params[:unit_position]
+      context = Queries::Courses.get_unit_context(course_name, unit_position)
+    end
+    return render json: {error: 'Unit not found'}, status: :bad_request unless context
+    unit = context[:unit]
+    unit_group = context[:course]
+    ugu = context[:unit_group_unit]
+    overview_path = CDO.studio_url(script_path(unit))
+    if Policies::Courses.modularity_enabled? && ugu
+      overview_path = CDO.studio_url(course_unit_path(unit_group, ugu.position))
+    end
+    summary = unit.summarize(true, current_user, true, unit_group_unit: ugu)
     summary[:path] = overview_path
     render json: summary
   end
@@ -591,6 +605,7 @@ class ApiController < ApplicationController
     script_level = Unit.cache_find_script_level params[:script_level_id].to_i
     level = Unit.cache_find_level params[:level_id].to_i
     section_id = params[:section_id].present? ? params[:section_id].to_i : nil
+    # TODO - pass in `unit_group_unit`
     render json: script_level.get_example_solutions(level, current_user, section_id)
   end
 
