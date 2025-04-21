@@ -65,6 +65,13 @@ export const FileBrowser = React.memo(() => {
     }),
     useSensor(KeyboardSensor, {
       coordinateGetter: fileBrowserKeyboardCoordinateGetter(projectFolders),
+      keyboardCodes: {
+        // Start dragging on 'm', so 'enter' and 'space' can be used to open/close a folder.
+        // TODO: expose a menu to users of our keyboard options, until then this is a hidden feature.
+        start: ['KeyM'],
+        cancel: ['Escape'],
+        end: ['KeyM', 'Enter', 'Space'],
+      },
     })
   );
 
