@@ -13,6 +13,7 @@ import {getFolderChildren} from '../utils/getFolderChildren';
 import {DragType} from './types';
 
 const FOLDER_DROP_OFFSET = 16;
+const DEFAULT_FOLDER_DROP_OFFSET = 8;
 
 // Custom keyboard coordinate getter for the file browser.
 // When we are moving an item via the keyboard, we move it to the next available folder
@@ -27,24 +28,18 @@ export const fileBrowserKeyboardCoordinateGetter: (
 
   const {context} = args;
   const {droppableRects, over, active} = context;
-  const orderedRects = Array.from(droppableRects.keys());
+  let orderedRects = Array.from(droppableRects.keys());
   const currentId = active?.data.current?.id;
   const dragType = active?.data.current?.type;
   // active.data.current: id, type, parentId
   if (dragType === DragType.FOLDER) {
-    // We can't move a folder:
-    // into a folder that is a child of itself
-    // into itself?
-    // into its parent??
-    // this is still buggy
-    const parent = folders[currentId]?.parentId;
+    // We can't move a folder into a folder that is a child of itself
     const allChildren = getFolderChildren(
       currentId as string,
       Object.values(folders)
     );
-    console.log({folders, allChildren, parent, currentId});
-    orderedRects.filter(
-      id => id !== currentId && !allChildren.includes(id as string)
+    orderedRects = orderedRects.filter(
+      id => !allChildren.includes(id as string)
     );
   }
 
@@ -86,7 +81,7 @@ export const fileBrowserKeyboardCoordinateGetter: (
     // If we are dropping into the root folder, we want to drop at the bottom of the
     // droppable area, because the root folder is the entire file browser.
     if (newRectId === DEFAULT_FOLDER_ID) {
-      y = newRect.bottom;
+      y = newRect.bottom - DEFAULT_FOLDER_DROP_OFFSET;
     }
     const newCoordinates = {
       x,
@@ -107,6 +102,11 @@ export const fileBrowserKeyboardCoordinateGetter: (
 // Documentation: https://docs.dndkit.com/api-documentation/context-provider/collision-detection-algorithms
 export const fileBrowserCollisionDetector: CollisionDetection = args => {
   const rectangleCollisions = rectIntersection(args);
+  if (rectangleCollisions.length === 0) {
+    // If there are no collisions, drop into the default folder.
+    return [{id: DEFAULT_FOLDER_ID}];
+  }
+
   if (rectangleCollisions.length <= 1) {
     return rectangleCollisions;
   }
