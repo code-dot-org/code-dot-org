@@ -4,8 +4,8 @@ title 'Dot Plot'
 
 markdown <<MARKDOWN
 #Graphs in Google Sheets
-Replacing level with panels for google sheets
-> #### Practice building graphs in Google Sheets. Create at least one. If you have time and want to explore, try creating a dot plot, bar graph and scatter plot.
+
+> #### Practice building graphs in Google Sheets. Create at least one. If you have time and want to explore, try creating a bar chart and pie chart.
 
 ## Data Link
 
@@ -13,9 +13,11 @@ Replacing level with panels for google sheets
 
 <p style = "font-size: 16pt"> <a href="https://docs.google.com/spreadsheets/d/1AlVNpxzypX82fNlPDxDEa5ww72J_G2kyfZ2sFJedBJA/edit?usp=sharing" target="blank" rel="noopener noreferrer">School Party Survey Data - Google Sheets</a></p>
 
-#### **Tips:**
-#### Create a Copy of the dataset before creating a data visualization.
-#### Duplicate the data into a new tab for each bar chart you create.
+<img src="https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png" alt="A clipboard with the words TO DO on it. This icon is used to signal an action item for participants." width="50px" style="border-radius:10px; float:left; margin: 0px 10px 20px 0px;">
+
+#### 1. Create a Copy of the dataset before creating a data visualization.
+#### 2. Go to the "Bar Chart Workspace Tab"
+#### 3. Practice creating and customizing a bar chart.
 ---
 
 <img src="https://images.code.org/fc0d828145861e665d2b0f0eabfc1dc1-image-1744901010152.png" alt="bar chart created in Google Sheets" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
@@ -26,7 +28,7 @@ Replacing level with panels for google sheets
 #### 2. Select 'insert' graph from the drop down menu.
 #### 3. Select 'bar chart' from the side menu.
 
-<details><summary style="font-size: 18px;"><strong>🔎 Show Me How 🔎</strong></summary> <img src="https://images.code.org/a343e96165703b6c5f3819af77d15a47-image-1731532933733.gif">
+<details><summary style="font-size: 18px;"><strong>🔎 Show Me How 🔎</strong></summary> <img src="https://images.code.org/b6042703403f38487c31c55e8e9f238b-makechart.gif">
 </details>
 
 <div style="clear:both;"></div>
@@ -42,7 +44,7 @@ Replacing level with panels for google sheets
 #### 2. Select 'insert' graph from the drop down menu.
 #### 3. Select 'pie chart' from the side menu.
 
-<details><summary style="font-size: 18px;"><strong>🔎 Show Me How 🔎</strong></summary> <img src="https://images.code.org/dc6b5337afc103094149798c1a6634f1-image-1731533159844.gif">
+<details><summary style="font-size: 18px;"><strong>🔎 Show Me How 🔎</strong></summary> <img src="https://images.code.org/b6042703403f38487c31c55e8e9f238b-makechart.gif">
 </details>
 
 <div style="clear:both;"></div>

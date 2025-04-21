@@ -27,7 +27,9 @@ test.describe('Caching Tests', () => {
     test.skip(getStage() === 'development', 'Only runs in Docker mode');
 
     const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
-    const response = await allTheThingsPage.enableDraftMode();
+    const response = await allTheThingsPage.enableDraftMode(
+      process.env.DRAFT_MODE_TOKEN,
+    );
 
     const cacheControlHeader = response?.headers()['cache-control'];
     expect(cacheControlHeader).toEqual(

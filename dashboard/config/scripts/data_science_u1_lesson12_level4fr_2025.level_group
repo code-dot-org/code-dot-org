@@ -2,6 +2,7 @@ name 'data-science-u1-lesson12-level4fr_2025'
 title 'Data Cycle'
 submittable 'false'
 anonymous 'false'
+activity_guide_level 'true'
 
 page
 level 'data-science-u1-lesson12-level4a_2025'

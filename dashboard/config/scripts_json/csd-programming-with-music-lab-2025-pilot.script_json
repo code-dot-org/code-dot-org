@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-17 03:13:51 UTC",
+    "serialized_at": "2025-04-18 21:42:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4251,6 +4251,28 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Triggers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-triggers-panel"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "7ebb4d49-3ce2-4011-b4d3-4869b540cdcf"
+      },
+      "level_keys": [
+        "music-lab-triggers-panel"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "test-music-lab-mini-project-walk-triggers-2"
         ],
@@ -4271,9 +4293,9 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 40,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4296,8 +4318,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 4,
+      "chapter": 41,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4321,8 +4343,8 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 5,
+      "chapter": 42,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4346,31 +4368,9 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Walk-Up Songs"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-lab-triggers-panel"
-        ],
-        "lesson.key": "Mini Project: Walk-Up Songs",
-        "lesson_group.key": "",
-        "script.name": "csd-programming-with-music-lab-2025-pilot",
-        "activity_section.key": "113bb6b0-5147-4d87-8bcd-0fd4f4cb73d1"
-      },
-      "level_keys": [
-        "music-lab-triggers-panel"
-      ]
-    },
-    {
       "chapter": 43,
       "position": 7,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4395,7 +4395,7 @@
     {
       "chapter": 44,
       "position": 8,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4748,6 +4748,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-loops-practice-practice-4"
+        ],
         "progression": "Loops with Lyrics"
       },
       "bonus": false,
@@ -4795,9 +4798,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "test-music-lab-loops-practice-nested-loops-2"
-        ],
         "progression": "Nested Loops"
       },
       "bonus": false,
@@ -4845,9 +4845,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "test-music-lab-loops-practice-formative"
-        ],
         "progression": "Check-in"
       },
       "bonus": false,
@@ -6937,6 +6934,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "music-lab-triggers-panel",
+        "script_level.level_keys": [
+          "music-lab-triggers-panel"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "7ebb4d49-3ce2-4011-b4d3-4869b540cdcf"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "test-music-lab-mini-project-walk-triggers-2",
         "script_level.level_keys": [
           "test-music-lab-mini-project-walk-triggers-2"
@@ -6976,18 +6985,6 @@
         "level.key": "test-music-lab-mini-project-walk-1",
         "script_level.level_keys": [
           "test-music-lab-mini-project-walk-1"
-        ],
-        "lesson.key": "Mini Project: Walk-Up Songs",
-        "lesson_group.key": "",
-        "script.name": "csd-programming-with-music-lab-2025-pilot",
-        "activity_section.key": "113bb6b0-5147-4d87-8bcd-0fd4f4cb73d1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "music-lab-triggers-panel",
-        "script_level.level_keys": [
-          "music-lab-triggers-panel"
         ],
         "lesson.key": "Mini Project: Walk-Up Songs",
         "lesson_group.key": "",

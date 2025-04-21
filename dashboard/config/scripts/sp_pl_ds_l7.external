@@ -9,9 +9,9 @@ markdown <<MARKDOWN
 
 #### **Visualization** is the process of turning data into **graphs or charts** that help reveal patterns, relationships, or differences more clearly. A well-designed graph can make complex information easier to interpret at a glance.
 
-## Data Visualization
+<img src="https://images.code.org/c3323b50d1b27f06c72d626c1f28d368-image-1724349560850.png" alt="graph icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
 
-<img src="https://images.code.org/c3323b50d1b27f06c72d626c1f28d368-image-1724349560850.png" alt="graph icon" width="220px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+## Data Visualization
 
 #### Different types of charts are useful for different kinds of data.
 - #### A **bar chart** helps compare quantities across categories.
@@ -34,6 +34,8 @@ markdown <<MARKDOWN
 > - #### **bar chart:** a graph that uses rectangular bars to represent frequency or count
 > - #### A **pie chart** is great for showing parts of a whole.
 > - #### **filter:** a tool or process used to select specific data points from a larger set based on certain criteria or conditions
+
+<br>
 
 
 

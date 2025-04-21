@@ -1,12 +1,12 @@
 name 'test-music-lab-loops-practice-choice'
-display_name 'Practice Recreating these Timelines with Code'
+display_name 'Practice'
 description 'Choose an option below to try to recreate with code.'
 
 sublevels
 level 'test-music-lab-loops-practice-choice-a'
-level 'test-music-lab-loops-practice-choice-b'
 level 'music-lab-loops-practice-practice-3'
 level 'music-lab-loops-practice-practice-5'
+level 'music-lab-loops-synthesis-summative'
 
 
 
