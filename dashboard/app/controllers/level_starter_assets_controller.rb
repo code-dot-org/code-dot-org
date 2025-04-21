@@ -46,22 +46,26 @@ class LevelStarterAssetsController < ApplicationController
       return head :unprocessable_entity
     end
 
-    # handle if file is not too large
-    if upload.size > MAX_FILE_SIZE
-      resized_file = LevelStarterAssetsHelper.try_resize_file(upload.tempfile.read, file_ext)
+    # For AI Chat levels, we resize levelbuilder assets that are greater than 5 MB
+    # to improve performance when used as input to OpenAI.
+    # We also set a hard limit at 20 MB (somewhat arbitrarily) to avoid performance issues resizing extremely large files.
+    if @level.is_a?(Aichat)
+      if upload.size > 20_000_000
+        return head :payload_too_large
+      elsif upload.size > MAX_FILE_SIZE
+        resized_upload = LevelStarterAssetsHelper.try_resize_file(upload.tempfile, file_ext)
+      end
     end
 
     # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
     uuid_name = SecureRandom.uuid + file_ext
     file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
-    # success = file_obj&.upload_file(upload.tempfile.path)
-    # success = file_obj&.upload_file(resized_file)
-    success = file_obj&.put(body: resized_file)
+    success = file_obj&.upload_file((resized_upload || upload).tempfile.path)
 
     if success && @level.add_starter_asset!(friendly_name, uuid_name)
       render json: LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)
     else
-      return head :unprocessable_entity
+      return head :request_too_large
     end
   end
 
