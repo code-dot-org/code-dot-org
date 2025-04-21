@@ -5,6 +5,7 @@ class LevelStarterAssetsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:destroy]
 
   VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3 .wav .pdf)
+  MAX_FILE_SIZE = 5_000_000 # 5 MB
 
   # GET /level_starter_assets/:level_name
   def show
@@ -45,10 +46,17 @@ class LevelStarterAssetsController < ApplicationController
       return head :unprocessable_entity
     end
 
+    # handle if file is not too large
+    if upload.size > MAX_FILE_SIZE
+      resized_file = LevelStarterAssetsHelper.try_resize_file(upload.tempfile.read, file_ext)
+    end
+
     # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
     uuid_name = SecureRandom.uuid + file_ext
     file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
-    success = file_obj&.upload_file(upload.tempfile.path)
+    # success = file_obj&.upload_file(upload.tempfile.path)
+    # success = file_obj&.upload_file(resized_file)
+    success = file_obj&.put(body: resized_file)
 
     if success && @level.add_starter_asset!(friendly_name, uuid_name)
       render json: LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)
