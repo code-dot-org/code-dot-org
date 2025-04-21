@@ -114,24 +114,3 @@ export const VerticalWithIcon: Story = {
     },
   ],
 };
-
-export const HorizontalWithIcon: Story = {
-  args: [
-    {
-      ...withIconProps,
-      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
-    },
-    {
-      ...withIconProps,
-      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
-    },
-    {
-      ...withIconProps,
-      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
-    },
-    {
-      ...withIconProps,
-      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
-    },
-  ],
-};
