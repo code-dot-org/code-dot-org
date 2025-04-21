@@ -1,6 +1,5 @@
 Feature: BubbleChoice
   @no_safari
-  @no_mobile
   @properties_encryption_key
   Scenario: Viewing BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
