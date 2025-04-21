@@ -27,6 +27,7 @@
     > div > i {
       inset-inline-end: 0.5rem;
       inset-inline-start: unset;
+      pointer-events: none;
     }
 
     > div > select {
