@@ -422,6 +422,18 @@ svg text[fill] {
   color: var(--text-neutral-primary) !important;
 }
 
+.flaggedTag div {
+  background-color: var(--background-error-extra-light, #ffe1dd) !important;
+}
+
+.flaggedTag div i {
+  color: var(--text-error-primary) !important;
+}
+
+.flaggedTag div span {
+  color: var(--text-neutral-primary) !important;
+}
+
 .proficientIcon {
   color: var(--text-success-primary);
 }

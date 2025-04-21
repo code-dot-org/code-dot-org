@@ -32,7 +32,13 @@ class UnitGroup < ApplicationRecord
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
   has_many :default_unit_group_units, -> {order(:position)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  # Modular curriculum allows units to appear in multiple unit groups. However, each unit will still be owned by just one unit group.
+  # Default units are units that are currently in this unit group
   has_many :default_units, through: :default_unit_group_units, source: :script
+  # Original units are those which are owned by this unit group
+  # A unit cannot be removed from its original unit group. All original units will be in a unit group's default units, but not all default units are original units.
+  # For more information, see the 'Modular Curriculum design doc' at https://docs.google.com/document/d/1e8Xs_azDTJRyJoGLSk7G2v23rpyA-ZQzgSVnle6exvg/edit?usp=sharing.
+  has_many :original_units, class_name: 'Unit', foreign_key: 'original_unit_group_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
@@ -125,6 +131,7 @@ class UnitGroup < ApplicationRecord
 
   def self.seed_from_hash(hash)
     unit_group = UnitGroup.find_or_create_by!(name: hash['name'])
+    unit_group.update_original_scripts(hash['original_script_names'])
     unit_group.update_scripts(hash['script_names'])
     unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
@@ -166,6 +173,7 @@ class UnitGroup < ApplicationRecord
       {
         name: name,
         script_names: default_unit_group_units.map(&:script).map(&:name),
+        original_script_names: original_units.map(&:name),
         published_state: published_state,
         instruction_type: instruction_type,
         participant_audience: participant_audience,
@@ -193,6 +201,26 @@ class UnitGroup < ApplicationRecord
     File.write(UnitGroup.file_path(name), serialize)
   end
 
+  def update_original_scripts(original_scripts)
+    return if original_scripts.nil?
+    original_scripts  = original_scripts.reject(&:empty?)
+    original_units_objects = original_scripts.map {|s| Unit.find_by_name!(s)}
+
+    # Treat the seed as the source of truth
+    # If a unit is removed from this list, remove it
+    units_to_remove = original_units - original_units_objects
+    units_to_remove.each do |unit|
+      unit.update!(original_unit_group_id: nil, skip_name_format_validation: true)
+      unit.reload
+    end
+
+    # If a unit already has an original_unit_group, replace it with this one instead
+    original_units_objects.each do |unit|
+      unit.update!(original_unit_group_id: id, skip_name_format_validation: true)
+      unit.reload
+    end
+  end
+
   # @param new_units [Array<String>]
   def update_scripts(new_units)
     new_units = new_units.reject(&:empty?)
@@ -202,6 +230,9 @@ class UnitGroup < ApplicationRecord
 
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
+
+    unremovable_unit_names = units_to_remove.select {|unit| unit.original_unit_group == self}.map(&:name)
+    raise "Cannot remove units from their original course: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
     unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
       unaddable_unit_names = new_units_objects.select do |s|
@@ -214,6 +245,7 @@ class UnitGroup < ApplicationRecord
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
         unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil, skip_name_format_validation: true)
+        unit.update!(original_unit_group_id: id, skip_name_format_validation: true) if unit.original_unit_group.nil?
         unit.course_version&.destroy unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
 
         unit.reload

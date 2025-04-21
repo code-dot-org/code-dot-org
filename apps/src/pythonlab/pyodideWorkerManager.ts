@@ -1,4 +1,11 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import ConsoleManager from '@codebridge/Console/ConsoleManager';
+import {
+  getErrorMessage,
+  getImageMessage,
+  getSystemError,
+  getSystemMessage,
+} from '@codebridge/Console/MessageHelpers';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {setAndSaveSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -7,6 +14,8 @@ import {
   setLoadedCodeEnvironment,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {ConsoleSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
+import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
@@ -24,6 +33,45 @@ const appName = 'pythonlab';
 let inputServiceWorker: ServiceWorker | undefined;
 let lastInputId = '';
 let setupPromise: Promise<void> | undefined;
+let outputToNeighborhood = false;
+
+const getMessageHandlers = (
+  consoleManager: ConsoleManager | null,
+  neighborhood: Neighborhood | null,
+  outputToNeighborhood: boolean
+) => {
+  if (outputToNeighborhood && neighborhood) {
+    return {
+      writeConsoleMessage: (line: string) =>
+        neighborhood.handleSignal({
+          value: ConsoleSignalType.CONSOLE_LOG,
+          detail: line,
+        }),
+      writePartialLine: (partialLine: string) =>
+        neighborhood.handleSignal({
+          value: ConsoleSignalType.PARTIAL_LOG,
+          detail: partialLine,
+        }),
+    };
+  } else if (consoleManager) {
+    return {
+      writeConsoleMessage:
+        consoleManager.writeConsoleMessage.bind(consoleManager),
+      writePartialLine: consoleManager.writePartialLine.bind(consoleManager),
+    };
+  } else {
+    return {
+      writeConsoleMessage: () => {},
+      writePartialLine: () => {},
+    };
+  }
+};
+
+let {writeConsoleMessage, writePartialLine} = getMessageHandlers(
+  null,
+  null,
+  false
+);
 
 const setUpPyodideWorker = () => {
   // The web worker is versioned to ensure the correct version is loaded.
@@ -41,7 +89,9 @@ const setUpPyodideWorker = () => {
   worker.onmessage = event => {
     const {type, id, message} = event.data as PyodideMessage;
     const onSuccess = callbacks[id];
-    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+
+    const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+
     switch (type) {
       case 'sysout':
       case 'syserr':
@@ -50,12 +100,10 @@ const setUpPyodideWorker = () => {
         if (message.startsWith(MessageTag.MATPLOTLIB_IMG)) {
           // This is a matplotlib image, so we need to append it to the output
           const image = message.slice(MessageTag.MATPLOTLIB_IMG.length + 1);
-          consoleManager?.writeImage(image);
+          writeConsoleMessage(getImageMessage(image));
           break;
         }
         if (message.startsWith(MessageTag.NEIGHBORHOOD_SIGNAL)) {
-          const neighborhood =
-            CodebridgeRegistry.getInstance().getNeighborhood();
           if (neighborhood) {
             // Parse message string to NeighborhoodSignal.
             const data = parseMessageToNeighborhoodSignal(message);
@@ -65,33 +113,33 @@ const setUpPyodideWorker = () => {
         }
         if (message.includes(MessageTag.INPUT_PROMPT)) {
           const prompt = message.replace(MessageTag.INPUT_PROMPT, '');
-          consoleManager?.writePartialLine(prompt);
+          writePartialLine(prompt);
           break;
         }
-        consoleManager?.writeConsoleMessage(message);
+        writeConsoleMessage(message);
         break;
-      case 'run_complete':
-        consoleManager?.writeSystemMessage(
-          pythonlabI18n.programCompleted(),
-          appName
+      case 'run_complete': {
+        writeConsoleMessage(
+          getSystemMessage(pythonlabI18n.programCompleted(), appName)
         );
         delete callbacks[id];
         onSuccess(event.data);
         break;
+      }
       case 'updated_source':
         getStore().dispatch(setAndSaveSource(message));
         break;
       case 'error':
         getStore().dispatch(setHasError(true));
         if (message.includes(MessageTag.INPUT_FAILED)) {
-          consoleManager?.writeErrorMessage(pythonlabI18n.inputFailed());
+          writeConsoleMessage(getErrorMessage(pythonlabI18n.inputFailed()));
           break;
         }
-        consoleManager?.writeErrorMessage(parseErrorMessage(message));
+        writeConsoleMessage(getErrorMessage(parseErrorMessage(message)));
         break;
       case 'system_error':
         getStore().dispatch(setHasError(true));
-        consoleManager?.writeSystemError(message, appName);
+        writeConsoleMessage(getSystemError(message, appName));
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logError('Python Lab System Code Error', undefined, {message});
@@ -105,7 +153,7 @@ const setUpPyodideWorker = () => {
         Lab2Registry.getInstance()
           .getMetricsReporter()
           .logError('Failed to load packages', undefined, {message});
-        consoleManager?.writeErrorMessage(pythonlabI18n.loadFailed());
+        writeConsoleMessage(getErrorMessage(pythonlabI18n.loadFailed()));
         break;
       case 'loading_pyodide':
         getStore().dispatch(setLoadedCodeEnvironment(false));
@@ -203,7 +251,8 @@ const asyncRun = (() => {
   return async (
     script: string,
     source: MultiFileSource,
-    validationFile?: ProjectFile
+    validationFile?: ProjectFile,
+    shouldOutputToNeighborhood?: boolean
   ) => {
     id = createUuid();
 
@@ -211,6 +260,16 @@ const asyncRun = (() => {
     await initializeServiceWorker();
     // Reset error state
     getStore().dispatch(setHasError(false));
+    outputToNeighborhood = !!shouldOutputToNeighborhood;
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    const neighborhood = CodebridgeRegistry.getInstance().getNeighborhood();
+    const messageHandlers = getMessageHandlers(
+      consoleManager,
+      neighborhood,
+      outputToNeighborhood
+    );
+    writeConsoleMessage = messageHandlers.writeConsoleMessage;
+    writePartialLine = messageHandlers.writePartialLine;
 
     return new Promise<PyodideMessage>(onSuccess => {
       callbacks[id] = onSuccess;
@@ -231,8 +290,10 @@ const restartPyodideIfProgramIsRunning = () => {
   if (Object.keys(callbacks).length > 0) {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
-    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
-    consoleManager?.writeSystemMessage(pythonlabI18n.programStopped(), appName);
+
+    writeConsoleMessage(
+      getSystemMessage(pythonlabI18n.programStopped(), appName)
+    );
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('PythonLab.PyodideRestarted');

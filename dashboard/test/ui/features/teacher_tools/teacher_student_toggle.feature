@@ -1,6 +1,7 @@
 Feature: Teacher Student Toggle
 
 @eyes
+@properties_encryption_key
 Scenario: Toggle on Multi Level
   When I open my eyes to test "toggle on multi level"
   Given I create an authorized teacher-associated student named "Daenerys"
@@ -23,6 +24,7 @@ Scenario: Toggle on Multi Level
   And I close my eyes
 
 @eyes
+@properties_encryption_key
 Scenario: Toggle on Hidden Maze Level
   When I open my eyes to test "toggle on hidden maze level"
   Given I create an authorized teacher-associated student named "Arya"
@@ -41,6 +43,7 @@ Scenario: Toggle on Hidden Maze Level
   And I close my eyes
 
 @eyes
+@properties_encryption_key
 Scenario: Toggle on Lockable Level
   When I open my eyes to test "toggle on a lockable level"
   Given I create an authorized teacher-associated student named "Joffrey"

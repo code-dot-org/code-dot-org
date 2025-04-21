@@ -286,6 +286,20 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
 
   const renderInstructions = useCallback(
     (position: InstructionsPosition) => {
+      const exemplarPlayerInsideInstructions =
+        AppConfig.getValue('exemplar-player-bottom') !== 'true';
+
+      const exemplarPlayer = exemplarSettings?.playerEnabled &&
+        exemplarSources &&
+        !isEditingExemplar && (
+          <ExemplarPlayerView
+            playbackEvents={exemplarPlaybackEvents}
+            title={exemplarSettings.playerTitle!}
+            player={player}
+            insideInstructions={exemplarPlayerInsideInstructions}
+          />
+        );
+
       return (
         <div
           id="instructions-area"
@@ -308,16 +322,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   : 'horizontal'
               }
               handleInstructionsTextClick={onInstructionsTextClick}
+              bottomComponent={
+                exemplarPlayerInsideInstructions && exemplarPlayer
+              }
             />
-            {exemplarSettings?.playerEnabled &&
-              exemplarSources &&
-              !isEditingExemplar && (
-                <ExemplarPlayerView
-                  playbackEvents={exemplarPlaybackEvents}
-                  title={exemplarSettings.playerTitle!}
-                  player={player}
-                />
-              )}
+            {!exemplarPlayerInsideInstructions && exemplarPlayer}
           </PanelContainer>
         </div>
       );

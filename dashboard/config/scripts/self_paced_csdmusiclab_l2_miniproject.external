@@ -1,0 +1,43 @@
+name 'self-paced-CSDMusicLab-L2-miniproject'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# 🎧 Lesson 5: Mini Project – Walk-Up Songs
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%">
+<a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/5" target="blank" rel="noopener noreferrer">Access Lesson 5: Mini Project - Walk-Up Songs Lesson Plan</a></p>
+
+#### In this culminating project for the sequencing chunk, students create personalized "walk-up" songs for characters using everything they've learned so far. This lesson emphasizes creativity, musical structure, and the introduction of a new Music Lab feature: **triggers**.
+
+## Preparing to Teach
+
+### 🧾 **What to Prepare**
+
+* #### Print copies of the <a href="https://docs.google.com/document/d/1-NOQXuyOA4TXy2X4oACt97K0f64h2TlkP2tc3-YQKRI/edit" target="blank" rel="noopener noreferrer">Walk-Up Songs Activity Guide</a> for each student  
+* #### Print the <a href="https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0" target="blank" rel="noopener noreferrer">Walk-Up Songs Rubric</a> to help guide peer feedback
+* #### Make a copy of the <a href="https://docs.google.com/presentation/d/1nQQ_vqwmOqhENzt-qAQYEjQ07R_xO8xTfteYVWnl3MY/template/preview" target="blank" rel="noopener noreferrer">lesson plan slides</a> and adjust for your teaching context as necessary. 
+* #### Preview the **Trigger** levels (1 - 3) and song design levels (5 - 8) in Code Studio
+
+### 🧠 **Lesson Summary**
+
+* #### **Warm-Up:** Students explore iconic music moments and reflect on how music connects to character and identity.
+* ####  **Activity:** Students complete Trigger levels, then design and code a walk-up song for a fictional character.
+* #### **Wrap-Up:** Students share their work and give/receive structured feedback from peers.
+
+#### The goal is to blend **creative decision-making** with **sequencing logic** and **trigger use**, while reinforcing the Problem Solving Process.
+
+### 🧰 **Tips for Teaching**
+
+* ####  **Let students explore!** This is their first time using triggers, so give them space to play and hear how timing changes the feel of their songs.
+* ####  **Focus on alignment with user needs.** Ask students how their musical choices reflect the personality of their chosen character. This is a great opportunity to connect back to the song-matching activity from Lesson 1.
+* ####  **Manage time flexibly.** If students don't finish their final song in one session, they can revisit it later. This project works well as a checkpoint or launchpad for future work.
+
+### 🔄 **Assessment Opportunity**
+
+#### Use the **rubric** to support self- and peer-assessment. Look for evidence of:
+
+* ####  Clear alignment between character and musical choices
+* ####  Use of sequencing and triggers
+* ####  Willingness to iterate and reflect
+MARKDOWN

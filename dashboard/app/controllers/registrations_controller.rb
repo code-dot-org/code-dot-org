@@ -8,6 +8,7 @@ require 'queries/lti'
 
 class RegistrationsController < Devise::RegistrationsController
   before_action :require_no_authentication, only: [:account_type, :login_type, :finish_student_account, :finish_teacher_account, :new, :create, :cancel]
+  before_action :assign_country_code, only: [:begin_sign_up, :login_type, :finish_student_account, :finish_teacher_account, :edit]
 
   respond_to :json
   prepend_before_action :authenticate_scope!, only: [
@@ -35,6 +36,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def begin_sign_up
     @user = User.new(begin_sign_up_params)
+    @user.country_code = @country_code
     @user.validate_for_finish_sign_up
 
     if @user.errors.blank?
@@ -59,6 +61,7 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def login_type
     @is_signed_out = current_user.nil?
+    @user_type = params[:user_type]
     view_options(full_width: true, responsive_content: true)
     render 'login_type'
   end
@@ -77,8 +80,6 @@ class RegistrationsController < Devise::RegistrationsController
     @age_options = [{value: '', text: ''}] + User::AGE_DROPDOWN_OPTIONS.map do |age|
       {value: age.to_s, text: age.to_s}
     end
-    location = Geocoder.search(request.ip).try(:first)
-    @country_code = location&.country_code.to_s.upcase
     @us_ip = ['US', 'RD'].include?(@country_code)
     @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
       {value: code, text: name}
@@ -91,8 +92,6 @@ class RegistrationsController < Devise::RegistrationsController
   # Get /users/sign_up/finish_teacher_account
   #
   def finish_teacher_account
-    location = Geocoder.search(request.ip).try(:first)
-    @country_code = location&.country_code.to_s.upcase
     @us_ip = ['US', 'RD'].include?(@country_code)
 
     render 'finish_teacher_account'
@@ -284,7 +283,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   def begin_sign_up_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:email, :password, :password_confirmation, :user_type)
   end
 
   # Set age, us_state and gender for the current user if empty - skips CSRF verification because this can be called
@@ -432,8 +431,6 @@ class RegistrationsController < Devise::RegistrationsController
     @permission_status = current_user.cap_status
 
     # Get the request location
-    location = Geocoder.search(request.ip).try(:first)
-    @country_code = location&.country_code.to_s.upcase
     @is_usa = Policies::User.in_usa?(@country_code)
 
     # A student is underage if they reside in a state with a CAP policy and are in the affected age range.
@@ -656,8 +653,10 @@ class RegistrationsController < Devise::RegistrationsController
 
   private def us_ip?
     # Get the request location
-    location = Geocoder.search(request.ip).try(:first)
-    country_code = location&.country_code.to_s.upcase
-    ['US', 'RD'].include?(country_code)
+    ['US', 'RD'].include?(request.country_code)
+  end
+
+  private def assign_country_code
+    @country_code = request.country_code
   end
 end

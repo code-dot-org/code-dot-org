@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2025-03-18T19:56:55.000Z",
   "level_num": "custom",
@@ -9,10 +10,11 @@
     "offer_browser_tts": "true",
     "panels": [
       {
-        "text": "You just practiced using functions. Now you’re ready to make your own!",
+        "text": "Nice! Now that you've had practice naming, defining and calling functions, you are ready to make your own!",
         "imageUrl": "https://images.code.org/f2f927bbadf095ec28e7f1d6643632a2-Lesson 3 Level 9.png",
         "key": "music-coding-intro-functions-panel-dd6ade9d-4ac1-4787-89e4-4fa347cf3c12",
-        "layout": "text-top-center"
+        "layout": "text-top-center",
+        "typing": true
       },
       {
         "text": "First, drag `my function` into your workspace.",
@@ -21,15 +23,15 @@
         "layout": "text-top-center"
       },
       {
-        "text": "Next, add sounds into the function.",
-        "imageUrl": "https://images.code.org/925505c7351e5904d7ffc07e5d390886-Lesson 2 Level 8b.png",
-        "key": "music-coding-intro-functions-panel-b11022f2-164f-4e79-b32c-96ed53cf9381",
+        "text": "Give your function a descriptive name.",
+        "imageUrl": "https://images.code.org/6c9d50a6001a43b3ba1dacc312f55ae7-Lesson 2 Level 8c.png",
+        "key": "music-coding-intro-functions-panel-13c54ec6-1d0b-4bdf-89aa-880a117202f8",
         "layout": "text-top-center"
       },
       {
-        "text": "Give your function a name that describes the sounds.",
-        "imageUrl": "https://images.code.org/6c9d50a6001a43b3ba1dacc312f55ae7-Lesson 2 Level 8c.png",
-        "key": "music-coding-intro-functions-panel-13c54ec6-1d0b-4bdf-89aa-880a117202f8",
+        "text": "Next, define the function by adding sounds into it.",
+        "imageUrl": "https://images.code.org/925505c7351e5904d7ffc07e5d390886-Lesson 2 Level 8b.png",
+        "key": "music-coding-intro-functions-panel-b11022f2-164f-4e79-b32c-96ed53cf9381",
         "layout": "text-top-center"
       },
       {
@@ -41,7 +43,6 @@
     ],
     "name_suffix": "_launch"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:55.745+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel2\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel2\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:55.745+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-panel2\\\"\"],\"cloned_from\":\"music-coding-intro-functions-panel2\"},{\"changed_at\":\"2025-04-16 22:01:56 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

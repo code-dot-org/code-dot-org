@@ -1,5 +1,6 @@
 Feature: Markdown rendering across the website
 
+  @properties_encryption_key
   Scenario: Visiting an external markdown level with details tag
     Given I am on "http://studio.code.org/s/allthethings/lessons/21/levels/1?noautoplay=true"
     And I wait to see "#extra-details-tag"

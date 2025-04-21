@@ -1,11 +1,8 @@
 import classNames from 'classnames';
-import {useCallback, memo, AriaAttributes} from 'react';
+import {useCallback, AriaAttributes} from 'react';
 
 import {dropdownColors} from '@/common/constants';
-import {
-  DropdownProviderWrapper,
-  useDropdownContext,
-} from '@/common/contexts/DropdownContext';
+import {useDropdownContext} from '@/common/contexts/DropdownContext';
 import {
   ComponentSizeXSToL,
   DropdownColor,
@@ -13,11 +10,11 @@ import {
 } from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
-import CustomDropdown, {_CustomDropdownOption} from './../_CustomDropdown';
+import CustomDropdown, {CustomDropdownOption} from '../CustomDropdown';
 
 import moduleStyles from './../customDropdown.module.scss';
 
-export interface IconDropdownOption extends _CustomDropdownOption {
+export interface IconDropdownOption extends CustomDropdownOption {
   icon: FontAwesomeV6IconProps;
 }
 
@@ -50,6 +47,19 @@ export interface IconDropdownProps
   onChange: (option: IconDropdownOption) => void;
 }
 
+/**
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see ./__tests__/IconDropdown.test.tsx)
+ * * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: Icon Dropdown Component.
+ * Used to render dropdowns with a list of options with icons.
+ */
 const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   name,
   className,
@@ -141,23 +151,4 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   );
 };
 
-/**
- * ### Production-ready Checklist:
- * * (✔) implementation of component approved by design team;
- * * (✔) has storybook, covered with stories and documentation;
- * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see ./__tests__/IconDropdown.test.tsx)
- * * (?) passes accessibility checks;
- *
- * ###  Status: ```Ready for dev```
- *
- * Design System: Icon Dropdown Component.
- * Used to render dropdowns with a list of options with icons.
- */
-const WrappedIconDropdown = (props: IconDropdownProps) => (
-  <DropdownProviderWrapper>
-    <IconDropdown {...props} />
-  </DropdownProviderWrapper>
-);
-
-export default memo(WrappedIconDropdown);
+export default IconDropdown;

@@ -7,7 +7,7 @@ import {dropdownColors} from './../../index';
 
 export default {
   title: 'DesignSystem/Dropdown/Checkbox Dropdown',
-  component: CheckboxDropdown.type,
+  component: CheckboxDropdown,
 } as Meta;
 
 //

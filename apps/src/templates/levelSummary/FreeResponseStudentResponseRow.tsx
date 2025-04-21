@@ -3,6 +3,10 @@ import {BodyThreeText} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {
+  FeedbackData,
+  logUserFeedbackOnStudentEvaluation,
+} from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
 
 import {FEEDBACK_TYPE} from './AiFeedbackType';
 import FeedbackToggle from './FeedbackToggle';
@@ -10,7 +14,7 @@ import FeedbackToggle from './FeedbackToggle';
 import styles from './summary.module.scss';
 
 type FreeResponseStudentResponseRowProps = {
-  studentWorkEvaluation: StudentWorkEvaluation | null;
+  studentWorkEvaluation: StudentWorkEvaluation;
 };
 
 const FreeResponseStudentResponseRow: React.FC<
@@ -48,7 +52,7 @@ const FreeResponseStudentResponseRow: React.FC<
               icon: {
                 iconName: FEEDBACK_TYPE.NEEDS_REVIEW.icon,
                 iconStyle: 'solid',
-                title: 'check',
+                title: 'exclamation point',
                 placement: 'left',
               },
             },
@@ -66,7 +70,7 @@ const FreeResponseStudentResponseRow: React.FC<
               icon: {
                 iconName: FEEDBACK_TYPE.NO_ATTEMPT.icon,
                 iconStyle: 'solid',
-                title: 'check',
+                title: 'dash',
                 placement: 'left',
               },
             },
@@ -75,7 +79,37 @@ const FreeResponseStudentResponseRow: React.FC<
           className={styles.noAttemptTag}
         />
       );
+    } else if (studentWorkEvaluation?.aiEvaluation === 'Profanity detected') {
+      return (
+        <Tags
+          tagsList={[
+            {
+              label: FEEDBACK_TYPE.FLAGGED.label,
+              icon: {
+                iconName: FEEDBACK_TYPE.FLAGGED.icon,
+                iconStyle: 'solid',
+                title: 'flag',
+                placement: 'left',
+              },
+            },
+          ]}
+          size="m"
+          className={styles.flaggedTag}
+        />
+      );
     }
+  };
+
+  const handleFeedbackClick = async (thumbsUp: boolean) => {
+    const feedbackData: FeedbackData = {
+      aiInteractionType: 'UserLevelEvaluation',
+      aiInteractionId: studentWorkEvaluation.id,
+      thumbsUp,
+      levelId: studentWorkEvaluation.levelId,
+      scriptId: studentWorkEvaluation.unitId,
+    };
+
+    logUserFeedbackOnStudentEvaluation(feedbackData);
   };
 
   return (
@@ -92,12 +126,8 @@ const FreeResponseStudentResponseRow: React.FC<
       >{`${studentWorkEvaluation?.aiEvaluation}. ${studentWorkEvaluation?.aiReasoning}`}</BodyThreeText>
       <div>
         <FeedbackToggle
-          onThumbsUpClick={() => {
-            console.log('thumbsUp');
-          }}
-          onThumbsDownClick={() => {
-            console.log('thumbsDown');
-          }}
+          onThumbsUpClick={() => handleFeedbackClick(true)}
+          onThumbsDownClick={() => handleFeedbackClick(false)}
           size="xs"
           color="gray"
         />

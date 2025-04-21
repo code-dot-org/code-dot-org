@@ -1,0 +1,45 @@
+name 'self-paced-CSDMusicLab-L3-miniproject'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# 🐱 Lesson 9: Mini Project - Cat GIF Loops
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%">
+<a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/9" target="blank" rel="noopener noreferrer">Access Lesson 9: Mini Project - Cat GIF Loops Lesson Plan</a></p>
+
+#### In this playful project, students choose a looping cat GIF and design a musical loop that matches its mood. They’ll combine visual and auditory patterns while exploring random blocks. This project reinforces looping structures while giving students space to experiment and have fun.
+
+## Preparing to Teach
+
+### 🧾 **What to Prepare**
+
+* #### Print copies of the <a href="https://docs.google.com/document/d/1JQWXQ39-DKoE2gbwLi7v-BdV0Dcn3Z9IMY0515-pKVI/edit" target="blank" rel="noopener noreferrer">Cat GIF Loops Activity Guide</a> for each student  
+* #### Print the <a href="https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0" target="blank" rel="noopener noreferrer">Cat GIF Loops Rubric</a> to support peer feedback
+* #### Make a copy of the <a href="https://docs.google.com/presentation/d/1j5lpbvr9BM4UfC6z7Mju9mZSlKJpLz7dEVaGBbw1hbo/template/preview" target="blank" rel="noopener noreferrer">lesson plan slides</a> and adjust as needed
+* #### Preview the **Play Random** levels (1 - 3) and **Musical Cat GIFS** levels (5 - 7) in Code Studio
+
+### 🧠 **Lesson Summary**
+
+* #### **Warm-Up:** Students reflect on looped visuals (like GIFs) and how they communicate tone or emotion.
+* #### **Activity:** Students experiment with **Play Random** blocks, then design a looped backing track that matches their chosen cat GIF.
+* #### **Wrap-Up:** Students share their projects and give feedback using structured prompts.
+
+#### This project challenges students to think about how **looping** and **randomness** work together to shape both musical and emotional impact.
+
+### 🧰 **Tips for Teaching**
+
+* #### **Embrace creativity.** Let students lean into the humor, energy, or weirdness of their GIF - musical choices should reflect the mood!
+* #### **Prompt purposeful randomness.** Ask students: *How does the element of surprise change the feel of your track?*
+* #### **Support variety in pacing.** Students may move through exploration at different speeds. It’s okay if some take extra time to refine their track - this project works great as an ongoing creative checkpoint.
+
+### 🔄 **Assessment Opportunity**
+
+#### Use the **rubric** to guide self- and peer-assessment. Look for:
+
+* #### Musical choices that reflect the mood of the chosen GIF
+* #### Use of both repeat and random blocks
+* #### Willingness to experiment and iterate based on feedback
+
+
+MARKDOWN

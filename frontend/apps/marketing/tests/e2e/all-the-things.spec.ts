@@ -45,10 +45,10 @@ test.describe('All the things UI e2e test', () => {
       'OpenGraph Description',
     );
     expect(await allTheThingsPage.getOpenGraph('image')).toBe(
-      'https://images.ctfassets.net/90t6bu6vlf76/4mNRGSevP1JdG2th62NXfs/9ac89df80ecfc67309b06003f74864ba/ai-and-oceans-cover.png',
+      'https://images.ctfassets.net/90t6bu6vlf76/4hXiOPiRlCXpmtypRNOZqc/9ebe430094c1ae1faf742e1de3f8aa8b/engineering-only-opengraph-default.png',
     );
-    expect(await allTheThingsPage.getOpenGraph('image:width')).toBe('1600');
-    expect(await allTheThingsPage.getOpenGraph('image:height')).toBe('900');
+    expect(await allTheThingsPage.getOpenGraph('image:width')).toBe('1200');
+    expect(await allTheThingsPage.getOpenGraph('image:height')).toBe('630');
     expect(await allTheThingsPage.getOpenGraph('type')).toBe('website');
   });
 
@@ -89,6 +89,76 @@ test.describe('All the things UI e2e test', () => {
     test.beforeEach(async ({page}) => {
       allTheThingsPage = new AllTheThingsPage(page, 'en-US');
       await allTheThingsPage.goto();
+    });
+
+    test.describe('action block', () => {
+      let component: Locator;
+
+      test.beforeEach(() => {
+        component = allTheThingsPage.getSectionLocator('Action Block');
+      });
+
+      test('renders action block', async () => {
+        const overline = component.getByText('K-12 Teachers');
+        const title = component.getByText('TEST - Self-Paced PL');
+        const description = component.getByText(
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.',
+        );
+        const image = component.locator('img[alt=""]');
+        const primaryButton = component.getByText('Primary button test');
+        const secondaryButton = component.getByText('Secondary button test');
+        const externalLinkButton = component.getByText(
+          'External link button test',
+        );
+
+        expect(await overline.count()).toBeGreaterThan(0);
+        expect(await title.count()).toBeGreaterThan(0);
+        expect(await description.count()).toBeGreaterThan(0);
+        expect(await image.count()).toBeGreaterThan(0);
+        expect(await primaryButton.count()).toBeGreaterThan(0);
+        expect(await secondaryButton.count()).toBeGreaterThan(0);
+        expect(await externalLinkButton.count()).toBeGreaterThan(0);
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('full width action block', () => {
+      let component: Locator;
+
+      test.beforeEach(() => {
+        component = allTheThingsPage.getSectionLocator(
+          'Full Width Action Block',
+        );
+      });
+
+      test('renders full width action block', async () => {
+        const overline = component.getByText('K-12 Teachers');
+        const title = component.getByText('TEST - Self-Paced PL');
+        const description = component.getByText(
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam.',
+        );
+        const image = component.locator('img[alt=""]');
+        const primaryButton = component.getByText('Primary button test');
+        const secondaryButton = component.getByText('Secondary button test');
+        const externalLinkButton = component.getByText(
+          'External link button test',
+        );
+
+        expect(await overline.count()).toBeGreaterThan(0);
+        expect(await title.count()).toBeGreaterThan(0);
+        expect(await description.count()).toBeGreaterThan(0);
+        expect(await image.count()).toBeGreaterThan(0);
+        expect(await primaryButton.count()).toBeGreaterThan(0);
+        expect(await secondaryButton.count()).toBeGreaterThan(0);
+        expect(await externalLinkButton.count()).toBeGreaterThan(0);
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
     });
 
     test.describe('button', () => {
@@ -178,6 +248,32 @@ test.describe('All the things UI e2e test', () => {
 
         for (const header of headerLocators) {
           await expect(header).toBeVisible();
+        }
+      });
+
+      test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+        await eyes.check(testInfo.title, {region: component});
+      });
+    });
+
+    test.describe('image', () => {
+      let component: Locator;
+
+      test.beforeEach(() => {
+        component = allTheThingsPage.getSectionLocator('Image');
+      });
+
+      test('renders all images with correct alt text', async () => {
+        const altText = ['', 'Image with border', 'Image with shadow'];
+
+        for (const alt of altText) {
+          const image =
+            alt === ''
+              ? component.locator('img[alt=""]')
+              : component.getByRole('img', {name: alt});
+
+          await image.scrollIntoViewIfNeeded();
+          await expect(image).toBeVisible();
         }
       });
 

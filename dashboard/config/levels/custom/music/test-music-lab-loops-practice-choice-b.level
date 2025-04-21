@@ -9,7 +9,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
     "level_data": {
@@ -39,7 +39,44 @@
               "x": 30,
               "y": 30,
               "deletable": false,
-              "movable": false
+              "movable": false,
+              "editable": false
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "{c.g/Qf}]A|}XTbG.kaA",
+              "x": 210,
+              "y": 90,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "groove/groovy_alternate_beat"
+              }
+            },
+            {
+              "type": "play_sound_at_current_location_simple2",
+              "id": "}-fRr8/7qkxKM1=52Kx*",
+              "x": 210,
+              "y": 170,
+              "disabledReasons": [
+                "MANUALLY_DISABLED"
+              ],
+              "deletable": false,
+              "movable": false,
+              "editable": false,
+              "extraState": {
+                "disableNextConnection": false
+              },
+              "fields": {
+                "sound": "groove/reggaeton_beat"
+              }
             }
           ]
         }
@@ -50,17 +87,31 @@
           {
             "kind": "block",
             "type": "play_sound_at_current_location_simple2",
+            "id": "{c.g/Qf}]A|}XTbG.kaA",
             "extraState": {
               "disableNextConnection": false
             },
             "fields": {
-              "sound": "electro/drum_beat_cowbell"
+              "sound": "groove/groovy_alternate_beat"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_rest_at_current_location_simple2",
+            "id": "(3}6z^-oSJg-Kr:#/In9",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "rest_duration": "<field name=\"rest_duration\">1</field>"
             },
             "enabled": true
           },
           {
             "kind": "block",
             "type": "play_sounds_together",
+            "id": "O.L#?$AvJzoI)B1ZiiQf",
             "extraState": {
               "disableNextConnection": false
             },
@@ -69,6 +120,7 @@
           {
             "kind": "block",
             "type": "play_sounds_sequential",
+            "id": ",fL9|{ySopuld4n6#8aL",
             "extraState": {
               "disableNextConnection": false
             },
@@ -77,28 +129,12 @@
           {
             "kind": "block",
             "type": "repeat_simple2",
+            "id": "DjPK(PHczTo=@k`*DcOY",
             "extraState": {
               "disableNextConnection": false
             },
             "fields": {
               "times": 1
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "set_effect_at_current_location_simple2",
-            "fields": {
-              "effects_name": "<field name=\"effects_name\">volume</field>",
-              "effects_value": "<field name=\"effects_value\">normal</field>"
-            },
-            "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "play_rest_at_current_location_simple2",
-            "fields": {
-              "rest_duration": "<field name=\"rest_duration\">1</field>"
             },
             "enabled": true
           }
@@ -144,7 +180,7 @@
       },
       "packId": "default"
     },
-    "long_instructions": "### Ramona's Song\r\nRamona is in a groove and really wants to use the Reggaeton Beat and the Groovy Beat 2 throughout his song. \r\n\r\nShe wants you to add bass, leads, and effects to make her song come to life. \r\n\r\nHer only requirements are: \r\n- The \"Reggaeton Beat\" and the \"Groovy Beat 2\" play together\r\n- The beats last for 20 measures. \r\n\r\nThe rest of the song is up to you. ",
+    "long_instructions": "### Ramona's Song\r\nRamona is in a groove and really wants to use the Reggaeton Beat and the Groovy Beat 2 throughout his song. She wants you to add bass, leads, and effects to make her song come to life. \r\n\r\nWhen you're finished, your song should sound like: \r\n- The \"Reggaeton Beat\" and the \"Groovy Beat 2\" play together for at least 20 measures.\r\n- Your song has beats, bass, leads, and effects\r\n  - Think about how you can use rests for some of these sounds!\r\n\r\nBe creative! What can you come up with?",
     "exemplar_settings": {
       "playerEnabled": true,
       "validationEnabled": false,
@@ -152,7 +188,7 @@
       "playerTitle": "Ramona's Drums "
     },
     "display_name": "Ramona's Song",
-    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHorpGDOr2pRvuThrKHiF83RB9K57+7l4eyEWHmFiRIIW9Jj\nk3IqEBsgJiAJkZJ4S+pnq3zj60x+bCM/beMYW98QNvZV9wQR5DNyQgdpkUq/\n8HaSJlwOgoHZsDefhK++qJ0kwFq1VdVdQQ8Cnuy4tm+Jyzl6mDbe85W7tzV/\n4BMy9/u3R3R6raTswj6eVx/8e+7W0dNxl18DgN09dvjhXg/URywHI0LCCJsq\ntA6HNudhGhoNZzqdipMrL7EDjZ7EDH60f+uq3drCnwxYZSrky3gVuS8LfNgb\nkPhhcHzIex90MeMNODc5M0O2QkGu9zZ25c2DLBihfcx/PVq/nnrGovp9hmNk\n52IlKiQhuUkv9d1gXZjuxNH6Qtkfqsd8X8V/nRzW4b6UfOGKIMG1qGJOGPG9\nYWLLLJ3MFWh99gvJ7UHcXCioErsl/StS0ouwIXzoR5/LC2dyRKpkAPQX+S5y\nwxV8m9AHjKw/Btn7EMI1lVd4aXXeUDAh3C3w08MBen/XiGMBTjvVUALe3Ovv\nXSvyo5LTf4yJvNtRcyG/xYyWmghXXAQPuqcHzLY07gferzIxTVENq78IAmco\nZtAvmmyS3C30+d1PxiuGw/Yz5MJY20rM92AEHUTZuZq1U3XWdk8+9dmYDADn\n85YXpxrvFGHF0eEUz7Z2m3/3aoJtNGAMuzwu7rQ=\n",
+    "encrypted_exemplar_sources": "UGYNk6iye9eaFwUY05FzzO/7y8j7ObxryFbKvBPuF528qP4MtsSFqDeG//aJ\nl0T6UI7wWB0H/J+Euq0wtMrnfZIv4KqNWq5gtmuW8ushzt6HJzSVh89nAJ/g\nqoY+ihv6+zHmlLE8msmvDlVnBRmpwSSug3q+SpkXFur9+w3vOPL1o8LhfdJB\n0ep9sKAPNFreeEGpfNaTHyeEek22ZDpwo5g1/91laRFZXLJ3ObFQkI2Mi/SF\neThQ1zPNuOEggHor/cwejr3U15rWOIkH8dDTLeaAYtCh7rvJ4qD5+CIxST9G\nggfxD7BQ98gFrJXBA67SOwtQWwRoiVLCqpE6+1x5F3wpCoip+cWdxu1G2lAQ\nOtF22TkJkr3CgCQgBPLYV0Lo8Q3ZBhb9mdXIUIsg5ELjxyfBz85JNpKXhXJT\n3jP+JFAm18KANqGzU/GQwtRUQvgcbi36oDpnLcKrQ4pmw9jhbelKCHvvfoqE\nnsH8tFg0rYax3xyHOXUbn5U5T4iSWBAcE/ru0XhIiuRWHr8S9ThIGpI/sqdc\nfrNRi4fxNljgWGWBOCfKYfdFiDsN12Yu6OypDWsNNcdqbfUq4AC6HGt0BnxQ\nCkkgdFl1c/yCs+XSs4jgn7fSDibBmZ6wCxlWGfoFKedAJLN6EM3R+C7EoE7m\n1mEXu4qgMEFEw5gJgdnXMt1HmH6j8C5F4/Nzes/MN6wIzIcpu6p+UiD9zMw0\nIvByUTrzvDPN+whAYsXPxpWzHcCfLreSsueZqAiB07I7Dyw/P8n5yXkKFqeQ\nmJNvG0xYx2lnjBuG7eEjn5SmLvRNL/79H7ipfe7RyrnbHVSQFH6Maf8r7g45\nj9lppxcNffm/99wqjVHO14iJ6IlPs6YP2j+2e+Z0UzXhvlXHXBjExfaarp/D\nkdDWwHEE5iEfEiY1//0l4egahPHd+yDoaK9PkVuf2ujE8NRAYyU4qEUGEoOA\nTW5NJXO8q7uivOP+cULy06VhPbPxNcJZ0coWHoE0LKgPTz/PbTll+h50U2bE\nXcOztyHKAeGvTEwElsnYLulXsgHSk/5gXWwzUDCWW2aBdhsMrXQou2P59wqE\noSzee8JD5et5rHMEHDUH+hFuSrPGDCaoOnupehY3PpyzDWmJorWdjy8zo54j\ngFna/wGJSe2kj2fPpFQMqB2w4kvrbQzGb2hbatOIdPngLm+7UB1YRGGz54DA\ncUSm0VVy93hVqVvqQKqCKHh1NdkUaofs0tL3Z5Om5+vl8JAZV2hYgjb1Czlc\njyaGLPTdZZzWBgTAyReMVmfnl+UYcpTXCocSFfclbKkDLHt/jOd149WVEW+n\njwCqzvCkIQwUYIu0odlM8bNPtTW4FErIYZ1u5uwjB+zoX5ATyWTLQ+M9iVvT\nyNsRb82pl9T3psZKz/s7un7CFjsedxWuqojboXkKVhVb+nTiwVWqdXo7JBxq\nemhxddoyqLJDxUK7/JSxuQzmCXpcSrhniRqvOlrEWMT6br3338vnJvrpdITx\n5CvJPuL0FUQmNtJAzwxsd8klkzV+eoGQD9QTkehjNfUh1tyap1OAjOa5q+nY\nvKi7o5KCX0jxBSsQ9ZQHtJq2oqTyUgnpudC+aTvfhVU/e4aZ+aUzSnrxMrmT\nDP99B9N00Yfqk6aWNMrTasSw62ZRqAcen8uGEKfN/N/E/93FFY1G8B3vRlRu\n4PLaBGCENnA8zm7NGBY5hZySUXp74dXPFEdDgiwT+lcTUr7rMyveCBrH/Mjt\neh7+ZYo0SRllTq2nFasbgH09YLEoiumRbjsqyp35HjlduFCFcGiEJyv+eyHO\nji/5w5diWqtBCQ/rwB9SD6w3s5c+kf5vEWdwPPyltXGoymsYGR6uAUqc8GKe\nWni1tB+hS3o8tBdw8JRCVeat8REOXbYcVxydXeEVBhkOBDJ5wkUr+Vt24cbR\nlyKO/7IhSZVY9UQZU8PzG6Nz+xPZLaPajZ89rEqbBNmf7VIHWN88xtCTTTc0\nglvjLObH/OQokTw94jo4sdsOc/SyjbL3i7busOAdONwz6NrCWBggT7OvUZ5H\niQRH45oe7bh+0iOH5Pzrn3oinchuypTbTBCVkvc8Z1oV4kJoHAx59TY7Zpku\nDlZHK7q8fagHMYzRF7PV35n3jrB1vs7V+qHgxURhCTh7xKTTS11HiBchumqh\nBMA3iv+J6rL8pNQeUi1ko3x5fev02Bqqbhfa3IroFeOaNM80zJC0qBOwosN4\n2ky27oF47EI9/VrSaVgGB75VPWLy9YYbpEEHBKiooRx8Pwaw3T8PO3N9RmIZ\nhoDL91xe14LOKYwpPArP7V1FTnvy+dsDQWV1tVcc8BLcPDaz7r9Bcdgwsknb\nRbL4fT08j2LJPEUyH3qsNFWp6Bmc28aYxQLpOms/lYo4WFFLakKm8LFmM2SO\n8g14mP7Gqd0=\n",
     "predict_settings": {
       "isPredictLevel": false
     },
@@ -219,9 +255,10 @@
         ]
       }
     ],
+    "bubble_choice_description": "Ramona is in a groove with two beat tracks. She wants you to add bass, leads, and effects to make her song come to life.\r\n",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-14T22:58:29.181+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-03-14 23:02:08 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:02:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-03 20:27:57 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-07 03:37:49 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-07 03:40:24 +0000\",\"changed\":[\"long_instructions\",\"exemplar_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-07 03:40:46 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-08 14:26:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-04-08 14:27:54 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-04-08 14:30:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"validations\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-04-08 14:37:45 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-14T22:58:29.181+00:00\",\"changed\":[\"cloned from \\\"music-lab-simple-template\\\"\"],\"cloned_from\":\"music-lab-simple-template\"},{\"changed_at\":\"2025-03-14 23:02:08 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 23:02:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-03 20:27:57 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-07 03:37:49 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-07 03:40:24 +0000\",\"changed\":[\"long_instructions\",\"exemplar_settings\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-07 03:40:46 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-08 14:26:39 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-04-08 14:27:54 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-04-08 14:30:53 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"validations\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2025-04-08 14:37:45 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-18 23:12:24 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-18 23:14:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-18 23:18:29 +0000\",\"changed\":[\"offer_browser_tts\",\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-18 23:23:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-18 23:23:42 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
