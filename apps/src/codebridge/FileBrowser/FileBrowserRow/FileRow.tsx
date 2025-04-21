@@ -7,7 +7,7 @@ import {FileRowName} from './FileRowName';
 import {useFileRowOptions} from './hooks';
 import {ItemRow} from './ItemRow';
 
-import moduleStyles from '../styles/filebrowser.module.scss';
+import moduleStyles from '@codebridge/FileBrowser/styles/filebrowser.module.scss';
 
 export type FileRowProps = {
   item: ProjectFile;

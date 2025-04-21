@@ -1,17 +1,19 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import {DragType} from '@codebridge/FileBrowser/types';
+import {ProjectFolder} from '@codebridge/types';
 import {
   validateFileName as globalValidateFileName,
   validateFolderName,
 } from '@codebridge/utils';
+import {getFolderChildren} from '@codebridge/utils/getFolderChildren';
 import {DragOverEvent} from '@dnd-kit/core';
 import {useMemo} from 'react';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
-
-import {DragType} from '../types';
 
 /**
  * Handles the drag end event for the file browser, performing file/folder movement and validation.
@@ -40,11 +42,13 @@ export const useHandleDragEnd = () => {
           return;
         }
         if (e.active.data.current?.type === DragType.FOLDER) {
-          const validationError = validateFolderName({
-            folderName: source.folders[e.active.data.current.id].name,
-            parentId: e.over.id as string,
-            projectFolders: source.folders,
-          });
+          const folderId = e.active.data.current.id as string;
+          const validationError = validateFolderMove(
+            source.folders[folderId].name,
+            e.over.id as string,
+            source.folders,
+            folderId
+          );
           if (validationError) {
             dialogControl?.showDialog({
               type: DialogType.GenericAlert,
@@ -78,4 +82,27 @@ export const useHandleDragEnd = () => {
       validateFileName,
     ]
   );
+};
+
+const validateFolderMove = (
+  folderName: string,
+  parentId: string,
+  projectFolders: Record<string, ProjectFolder>,
+  folderId: string
+) => {
+  let validationError = validateFolderName({
+    folderName,
+    parentId,
+    projectFolders,
+  });
+  if (!validationError) {
+    const childFolders = getFolderChildren(
+      folderId,
+      Object.values(projectFolders)
+    );
+    if (childFolders.includes(parentId)) {
+      validationError = codebridgeI18n.moveFolderErrorChild();
+    }
+  }
+  return validationError;
 };

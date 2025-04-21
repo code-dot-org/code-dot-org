@@ -12,10 +12,13 @@ import {FolderRowName} from './FolderRowName';
 import {useFolderRowOptions} from './hooks';
 import {ItemRow} from './ItemRow';
 
+import moduleStyles from '@codebridge/FileBrowser/styles/filebrowser.module.scss';
+
 export type FolderRowProps = {
   item: ProjectFolder;
   // If the pop-up menu is enabled, we will show the 3-dot menu button on hover.
   enableMenu: boolean;
+  isDragging?: boolean;
 };
 
 /**
@@ -27,6 +30,7 @@ export type FolderRowProps = {
 export const FolderRow: React.FunctionComponent<FolderRowProps> = ({
   item,
   enableMenu,
+  isDragging,
 }) => {
   const {
     source: {files},
@@ -56,6 +60,7 @@ export const FolderRow: React.FunctionComponent<FolderRowProps> = ({
         IconComponent={FolderRowIcon}
         NameComponent={FolderRowName}
         openFunction={toggleOpenFolder}
+        className={isDragging ? moduleStyles.dragging : undefined}
       />
     </>
   );
