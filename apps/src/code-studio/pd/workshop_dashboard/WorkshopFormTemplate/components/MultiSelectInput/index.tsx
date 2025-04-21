@@ -208,6 +208,7 @@ export const MultiSelectInput: React.FC<{
     id: OptionId
   ) => {
     if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
       handleToggleOption(id);
     }
   };

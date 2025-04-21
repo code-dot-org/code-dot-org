@@ -346,6 +346,8 @@ class UnconnectedMusicView extends React.Component {
       !!levelData?.text || !!this.props.longInstructions
     );
 
+    const startSources = this.getStartSources();
+
     // Check if the user has already made changes to the code on the project level.
     let codeChangedOnProjectLevel = false;
     if (isToolboxMode) {
@@ -359,11 +361,19 @@ class UnconnectedMusicView extends React.Component {
         levelToolboxDefinition
       );
     } else if (isEditingExemplar || isViewingExemplar) {
-      this.loadCode(this.getExemplarSources() || this.getStartSources());
-    } else if (this.getStartSources() || initialSources) {
-      const startSources = this.getStartSources();
+      this.loadCode(this.getExemplarSources() || startSources);
+    } else if (startSources || initialSources) {
+      const predictSettings = this.props.levelProperties?.predictSettings;
+      const isPredictLevel = !!predictSettings?.isPredictLevel;
+      const codeEditableAfterSubmit = predictSettings?.codeEditableAfterSubmit;
+      const isEditablePredictLevel = isPredictLevel && codeEditableAfterSubmit;
       let codeToLoad = startSources;
-      if (initialSources?.source) {
+      if (
+        initialSources?.source &&
+        // Predict levels only use sources loaded from the server if the code is editable
+        // after submit, otherwise use the start sources.
+        (!isPredictLevel || isEditablePredictLevel)
+      ) {
         codeToLoad = JSON.parse(initialSources.source);
         codeChangedOnProjectLevel =
           this.props.isProjectLevel &&

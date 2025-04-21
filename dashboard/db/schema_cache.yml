@@ -6307,6 +6307,14 @@ columns:
     default_function: 
     collation: utf8mb3_unicode_ci
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: original_unit_group_id
+    sql_type_metadata: *2
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   scripts_resources:
   - *17
   - &129 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -13063,6 +13071,19 @@ indexes:
     type: 
     using: :btree
     comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: scripts
+    name: index_scripts_on_original_unit_group_id
+    unique: false
+    columns:
+    - original_unit_group_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   scripts_resources:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: scripts_resources
@@ -14319,7 +14340,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250416140513
+version: 20250417151841
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
