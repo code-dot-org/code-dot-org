@@ -104,14 +104,21 @@ export const fileBrowserCollisionDetector: (
   folders: Record<string, ProjectFolder>
 ) => CollisionDetection = folders => args => {
   let rectangleCollisions = rectIntersection(args);
-  // Filter out any attempts to move into a folder that is a child of this folder.
-  const allChildren = getFolderChildren(
-    args.active.id as string,
-    Object.values(folders)
-  );
-  rectangleCollisions = rectangleCollisions.filter(
-    collision => !allChildren.includes(collision.id as string)
-  );
+  // The collisionRect is the file/folder being dragged.
+  const {droppableRects, collisionRect, active} = args;
+
+  const dragType = active.data.current?.type;
+  const activeId = active.data.current?.id;
+  if (dragType === DragType.FOLDER) {
+    // Filter out any attempts to move into a folder that is a child of this folder.
+    const allChildren = getFolderChildren(
+      activeId as string,
+      Object.values(folders)
+    );
+    rectangleCollisions = rectangleCollisions.filter(
+      collision => !allChildren.includes(collision.id as string)
+    );
+  }
 
   if (rectangleCollisions.length === 0) {
     // If there are no collisions, drop into the default folder.
@@ -120,13 +127,6 @@ export const fileBrowserCollisionDetector: (
 
   if (rectangleCollisions.length <= 1) {
     return rectangleCollisions;
-  }
-  // The collisionRect is the file/folder being dragged.
-  const {droppableRects, collisionRect, active} = args;
-
-  const dragType = active.data.current?.type;
-  if (dragType === DragType.FOLDER) {
-    rectangleCollisions.filter(collision => collision.id !== active.id);
   }
 
   rectangleCollisions.sort((a, b) => {
