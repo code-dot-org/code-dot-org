@@ -4,7 +4,11 @@ import {
   KeyboardCoordinateGetter,
   CollisionDetection,
   rectIntersection,
+  Collision,
+  Active,
+  ClientRect,
 } from '@dnd-kit/core';
+import {RectMap} from '@dnd-kit/core/dist/store';
 
 import {ProjectFolder} from '@cdo/apps/lab2/types';
 
@@ -99,14 +103,31 @@ export const fileBrowserKeyboardCoordinateGetter: (
 // The default rectangleCollision algorithm picks the intersection between rectangles,
 // and we can overlap with multiple folders due to nesting. We take the initial list of collisions,
 // sort it accordingly, and return the highest priority folder.
+// If we are dropping a folder, we also filter out any folders that are children of the current folder.
 // Documentation: https://docs.dndkit.com/api-documentation/context-provider/collision-detection-algorithms
 export const fileBrowserCollisionDetector: (
   folders: Record<string, ProjectFolder>
 ) => CollisionDetection = folders => args => {
-  let rectangleCollisions = rectIntersection(args);
-  // The collisionRect is the file/folder being dragged.
-  const {droppableRects, collisionRect, active} = args;
+  const rectangleCollisions = rectIntersection(args);
 
+  const {droppableRects, collisionRect, active} = args;
+  return getHighestPriorityCollision(
+    folders,
+    rectangleCollisions,
+    active,
+    droppableRects,
+    collisionRect
+  );
+};
+
+// Exported for testing
+export const getHighestPriorityCollision = (
+  folders: Record<string, ProjectFolder>,
+  rectangleCollisions: Collision[],
+  active: Active,
+  droppableRects: RectMap,
+  collisionRect: ClientRect
+) => {
   const dragType = active.data.current?.type;
   const activeId = active.data.current?.id;
   if (dragType === DragType.FOLDER) {

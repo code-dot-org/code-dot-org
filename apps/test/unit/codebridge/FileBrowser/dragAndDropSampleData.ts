@@ -1,4 +1,9 @@
-import {KeyboardCode, SensorContext, UniqueIdentifier} from '@dnd-kit/core';
+import {
+  Active,
+  KeyboardCode,
+  SensorContext,
+  UniqueIdentifier,
+} from '@dnd-kit/core';
 import {Coordinates} from '@dnd-kit/utilities';
 
 import {DragType} from '@cdo/apps/codebridge/FileBrowser/types';
@@ -67,6 +72,18 @@ export const sampleDroppableRects = new Map([
   ],
 ]);
 
+export const folderActive: Active = {
+  id: '1-1',
+  data: {current: {id: '1', type: DragType.FOLDER, parentId: '0'}},
+  rect: {current: {initial: null, translated: null}},
+};
+
+export const fileActive: Active = {
+  id: '2-2',
+  data: {current: {id: '2', type: DragType.FILE, parentId: '1'}},
+  rect: {current: {initial: null, translated: null}},
+};
+
 export const folderKeyboardArgs: {
   active: UniqueIdentifier;
   currentCoordinates: Coordinates;
@@ -79,11 +96,7 @@ export const folderKeyboardArgs: {
   },
   context: {
     activatorEvent: null,
-    active: {
-      id: '1-1',
-      data: {current: {id: '1', type: DragType.FOLDER, parentId: '0'}},
-      rect: {current: {initial: null, translated: null}},
-    },
+    active: folderActive,
     activeNode: null,
     collisionRect: null,
     collisions: null,
@@ -120,11 +133,7 @@ export const fileKeyboardArgs: {
   },
   context: {
     ...folderKeyboardArgs['context'],
-    active: {
-      id: '2-2',
-      data: {current: {id: '2', type: DragType.FILE, parentId: '1'}},
-      rect: {current: {initial: null, translated: null}},
-    },
+    active: fileActive,
     over: {
       id: '2',
       rect: {
