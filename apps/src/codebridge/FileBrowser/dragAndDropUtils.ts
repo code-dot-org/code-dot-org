@@ -12,7 +12,7 @@ import {getFolderChildren} from '../utils/getFolderChildren';
 
 import {DragType} from './types';
 
-const FOLDER_DROP_OFFSET = 16;
+export const FOLDER_DROP_OFFSET = 16;
 
 // Custom keyboard coordinate getter for the file browser.
 // When we are moving an item via the keyboard, we move it to the next available folder
