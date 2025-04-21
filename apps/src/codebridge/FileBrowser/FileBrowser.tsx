@@ -68,6 +68,11 @@ export const FileBrowser = React.memo(() => {
     })
   );
 
+  const collisionDectector = useMemo(
+    () => fileBrowserCollisionDetector(projectFolders),
+    [projectFolders]
+  );
+
   return (
     <PanelContainer
       id="file-browser"
@@ -81,7 +86,7 @@ export const FileBrowser = React.memo(() => {
           onDragEnd={handleDragEnd}
           sensors={sensors}
           modifiers={[restrictToVerticalAxis]}
-          collisionDetection={fileBrowserCollisionDetector}
+          collisionDetection={collisionDectector}
         >
           <DndDataContextProvider
             value={{dragData, dropData}}

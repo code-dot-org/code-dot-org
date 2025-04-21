@@ -100,8 +100,19 @@ export const fileBrowserKeyboardCoordinateGetter: (
 // and we can overlap with multiple folders due to nesting. We take the initial list of collisions,
 // sort it accordingly, and return the highest priority folder.
 // Documentation: https://docs.dndkit.com/api-documentation/context-provider/collision-detection-algorithms
-export const fileBrowserCollisionDetector: CollisionDetection = args => {
-  const rectangleCollisions = rectIntersection(args);
+export const fileBrowserCollisionDetector: (
+  folders: Record<string, ProjectFolder>
+) => CollisionDetection = folders => args => {
+  let rectangleCollisions = rectIntersection(args);
+  // Filter out any attempts to move into a folder that is a child of this folder.
+  const allChildren = getFolderChildren(
+    args.active.id as string,
+    Object.values(folders)
+  );
+  rectangleCollisions = rectangleCollisions.filter(
+    collision => !allChildren.includes(collision.id as string)
+  );
+
   if (rectangleCollisions.length === 0) {
     // If there are no collisions, drop into the default folder.
     return [{id: DEFAULT_FOLDER_ID}];
