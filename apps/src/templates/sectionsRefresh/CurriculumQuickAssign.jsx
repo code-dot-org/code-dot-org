@@ -59,9 +59,7 @@ export default function CurriculumQuickAssign({
   const [courseOfferings, setCourseOfferings] = useState(null);
   const [filteredCourseOfferings, setFilteredCourseOfferings] = useState(null);
   const [decideLater, setDecideLater] = useState(false);
-  const [marketingAudience, setMarketingAudience] = useState(
-    MARKETING_AUDIENCE.ELEMENTARY
-  );
+  const [marketingAudience, setMarketingAudience] = useState('');
   const [selectedCourseOffering, setSelectedCourseOffering] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
