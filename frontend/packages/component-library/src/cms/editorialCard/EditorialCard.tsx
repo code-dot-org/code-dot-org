@@ -23,10 +23,10 @@ export interface EditorialCardProps extends HTMLAttributes<HTMLElement> {
   text: string | ReactNode;
   /** EditorialCard link */
   link?: LinkProps;
-  /** EditorialCard class */
-  className?: string;
   /** EditorialCard layout */
   layout?: EDITORIAL_CARD_LAYOUTS;
+  /** EditorialCard class */
+  className?: string;
 }
 
 /**
@@ -34,13 +34,13 @@ export interface EditorialCardProps extends HTMLAttributes<HTMLElement> {
  *  * (✔) implementation of component approved by design team;
  *  * (✔) has storybook, covered with stories and documentation;
  *  * (✔) has tests: test every prop, every state and every interaction that's js related;
- *  * (see ./__tests__/Spacer.test.tsx)
+ *  * (see ./__tests__/EditorialCard.test.tsx)
  *  * (✔) passes accessibility checks;
  *
  * ### Status: ```Ready for dev```
  *
  * Design System: EditorialCard Component.
- * Acts as an editorial card.
+ * Acts as an editorial card that displays an image or icon over related text.
  */
 const EditorialCard: React.FC<EditorialCardProps> = ({
   media,

@@ -16,24 +16,24 @@ export default {
       ? Object.values(args)
       : [args];
     return (
-      <>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: `repeat(${components.length % 3 === 0 ? 3 : 2}, 1fr)`,
+          gap: '4rem',
+        }}
+      >
         {components.map((component, index) => (
-          <section key={index} style={{width: '27rem', marginBottom: '2rem'}}>
-            <EditorialCard {...defaultProps} {...component} />
-          </section>
+          <EditorialCard key={index} {...defaultProps} {...component} />
         ))}
-      </>
+      </div>
     );
   },
 } as Meta;
 
 const defaultProps: EditorialCardProps = {
   heading: 'EditorialCard Heading',
-  text:
-    'Students can explore their imagination as ' +
-    'they design unique, interactive experiences,\n' +
-    'making game design a powerful tool for ' +
-    'artistic expression.',
+  text: 'Students can explore their imagination as they design unique, interactive experiences, making game design a powerful tool for artistic expression.',
   media: {
     src: imageFile,
   },
@@ -53,17 +53,40 @@ export const Playground: Story = {
   },
 };
 
-export const Layouts: Story = {
+export const VerticalLayout: Story = {
   args: [
     {
       ...defaultProps,
-      heading: 'Horizontal EditorialCard',
+      layout: EDITORIAL_CARD_LAYOUTS.VERTICAL,
+    },
+    {
+      ...defaultProps,
+      layout: EDITORIAL_CARD_LAYOUTS.VERTICAL,
+    },
+    {
+      ...defaultProps,
+      layout: EDITORIAL_CARD_LAYOUTS.VERTICAL,
+    },
+  ],
+};
+
+export const HorizontalLayout: Story = {
+  args: [
+    {
+      ...defaultProps,
       layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
     },
     {
       ...defaultProps,
-      heading: 'Vertical EditorialCard',
-      layout: EDITORIAL_CARD_LAYOUTS.VERTICAL,
+      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
+    },
+    {
+      ...defaultProps,
+      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
+    },
+    {
+      ...defaultProps,
+      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
     },
   ],
 };
