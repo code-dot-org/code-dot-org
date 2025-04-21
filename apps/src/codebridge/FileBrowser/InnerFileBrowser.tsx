@@ -57,14 +57,15 @@ const InnerFileBrowser = React.memo(
               >
                 <MaybeDraggable
                   data={{id: f.id, type: DragType.FOLDER, parentId: f.parentId}}
+                  className={
+                    f.id === dragData?.id && dragData?.type === DragType.FOLDER
+                      ? moduleStyles.dragging
+                      : undefined
+                  }
                 >
                   <FolderRow
                     item={f}
                     enableMenu={!isReadOnly && !dragData?.id}
-                    isDragging={
-                      dragData?.id === f.id &&
-                      dragData?.type === DragType.FOLDER
-                    }
                   />
                   {f.open && (
                     <div className={moduleStyles.folder}>
