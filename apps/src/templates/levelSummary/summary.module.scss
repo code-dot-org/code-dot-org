@@ -492,3 +492,16 @@ svg text[fill] {
   align-items: flex-start;
   align-self: stretch;
 }
+
+.aiFeedbackOther {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.aiFeedbackOtherTextArea {
+  width: 100%;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}

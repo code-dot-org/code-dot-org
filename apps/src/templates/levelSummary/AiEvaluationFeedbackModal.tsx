@@ -101,6 +101,7 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
               onChange={e => {
                 setAiOtherContent(e.target.value);
               }}
+              className={style.aiFeedbackOtherTextArea}
               aria-label="AI feedback details"
             />
           </div>
