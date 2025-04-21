@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-28 09:29:22 UTC",
+    "serialized_at": "2025-04-18 19:29:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -80,7 +80,7 @@
     },
     {
       "key": "lesson-4",
-      "name": "Level Library",
+      "name": "Additional Pages",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -380,9 +380,32 @@
       "key": "7145d6b8-b8cb-4787-91fd-d9fba5d1995c",
       "position": 1,
       "properties": {
+        "progression_name": "Assessment Levels"
       },
       "seeding_key": {
         "activity_section.key": "7145d6b8-b8cb-4787-91fd-d9fba5d1995c",
+        "lesson_activity.key": "1a21b280-518f-4601-8d8d-c645c2d9ad61"
+      }
+    },
+    {
+      "key": "636701b5-8142-4e25-9add-bd4a10a962da",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video Guidelines"
+      },
+      "seeding_key": {
+        "activity_section.key": "636701b5-8142-4e25-9add-bd4a10a962da",
+        "lesson_activity.key": "1a21b280-518f-4601-8d8d-c645c2d9ad61"
+      }
+    },
+    {
+      "key": "3da3c34f-8118-4a28-b9e1-5720bc013fc3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Melissa's Section"
+      },
+      "seeding_key": {
+        "activity_section.key": "3da3c34f-8118-4a28-b9e1-5720bc013fc3",
         "lesson_activity.key": "1a21b280-518f-4601-8d8d-c645c2d9ad61"
       }
     }
@@ -1221,7 +1244,8 @@
       "properties": {
         "level_keys": [
           "Assessment Levels"
-        ]
+        ],
+        "progression": "Assessment Levels"
       },
       "bonus": false,
       "seeding_key": {
@@ -1240,12 +1264,10 @@
     {
       "chapter": 35,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Design Guide Video"
-        ]
+        "progression": "Video Guidelines"
       },
       "bonus": false,
       "seeding_key": {
@@ -1255,10 +1277,32 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide",
-        "activity_section.key": "7145d6b8-b8cb-4787-91fd-d9fba5d1995c"
+        "activity_section.key": "636701b5-8142-4e25-9add-bd4a10a962da"
       },
       "level_keys": [
         "Design Guide Video"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Melissa's Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PL_styleguide_L4_melissapage"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "3da3c34f-8118-4a28-b9e1-5720bc013fc3"
+      },
+      "level_keys": [
+        "PL_styleguide_L4_melissapage"
       ]
     }
   ],
@@ -1680,7 +1724,19 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "pl-team-design-guide",
-        "activity_section.key": "7145d6b8-b8cb-4787-91fd-d9fba5d1995c"
+        "activity_section.key": "636701b5-8142-4e25-9add-bd4a10a962da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PL_styleguide_L4_melissapage",
+        "script_level.level_keys": [
+          "PL_styleguide_L4_melissapage"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-team-design-guide",
+        "activity_section.key": "3da3c34f-8118-4a28-b9e1-5720bc013fc3"
       }
     }
   ],

@@ -9,16 +9,15 @@ markdown <<MARKDOWN
 
 #### **Visualization** is the process of turning data into **graphs or charts** that help reveal patterns, relationships, or differences more clearly. A well-designed graph can make complex information easier to interpret at a glance.
 
+<img src="https://images.code.org/c3323b50d1b27f06c72d626c1f28d368-image-1724349560850.png" alt="graph icon" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
 ## Data Visualization
 
-<img src="https://images.code.org/c3323b50d1b27f06c72d626c1f28d368-image-1724349560850.png" alt="graph icon" width="220px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
-
 #### Different types of charts are useful for different kinds of data.
-- #### A **dot plot** is great for showing individual values and how often they occur. 
 - #### A **bar chart** helps compare quantities across categories.
-- #### A **scatter plot** is used to show how two variables might be related—for example, how study time and test scores might be connected.
+- #### A **pie chart** is great for showing parts of a whole.
 
-#### Another important tool is the **filter**, which lets you focus on a specific portion of your data. Instead of scrolling through everything, you can quickly narrow it down to just what you need—like all students who scored above 80%, or only responses from a certain grade level.
+#### Another important tool is the **filter**, which lets you focus on a specific portion of your data. Instead of scrolling through everything, you can quickly narrow it down to just what you need.
 
 <div style="clear:both;"></div>
 
@@ -32,10 +31,11 @@ markdown <<MARKDOWN
 
 > #### **Key Concepts:**
 > - #### **data visualization:** a graphical representation of information and data
-> - #### **dot plot:** a graph where each data point is represented by a dot along an axis
 > - #### **bar chart:** a graph that uses rectangular bars to represent frequency or count
-> - #### **scatter plot:** a graph that uses dots to represent the values of two different variables
+> - #### A **pie chart** is great for showing parts of a whole.
 > - #### **filter:** a tool or process used to select specific data points from a larger set based on certain criteria or conditions
+
+<br>
 
 
 

@@ -28,10 +28,26 @@
         "text": "### Clean the Data\n- If the data needs to be cleaned, decide if you will:\n    - Change it\n    - Delete it",
         "imageUrl": "https://images.code.org/c2c4beb4b9e10375aa468e90320c3824-Screenshot 2025-04-16 at 12.53.19 PM.png",
         "key": "data-science-ch1-lesson8-cleaning-data-panel_2025_launch-63dc953b-1d36-47b0-aad4-ceade3d5d1a9"
+      },
+      {
+        "text": "###Sort the Data\n- Click the drop-down to sort the column either A -> Z or Z -> A\n- Sorting groups similar responses together.\n   - Makes it easier to spot misspellings, off-topic answers, etc.\n   - Can help you clean your data more efficiently",
+        "imageUrl": "https://images.code.org/9edee676683f7dc902bf2d9ef3c14afd-sorting1.gif",
+        "key": "data-science-ch1-lesson8-cleaning-data-panel_2025_launch-b29bb984-152f-4abc-9c4c-678b7cdc939c",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "###Use Copy and Paste\n- Use Ctrl + C to copy a clean value you've already typed.\n- Use Ctrl + V to paste it into other matching cells.\n- Why it helps:\n   - Saves time when cleaning lots of similar answers.\n   - Prevents typos or inconsistent spelling (like “BBQ Chicken” vs. “Bbq chicken”).",
+        "imageUrl": "https://images.code.org/6ca8c08f6dbb3580c682e5480fb2d4b6-copy and paste.gif",
+        "key": "data-science-ch1-lesson8-cleaning-data-panel_2025_launch-6685d17c-4e27-4c1b-a20f-4d859b9029a4"
+      },
+      {
+        "text": "###Drag to Duplicate\n- Hover over the bottom right corner of a cell until you see a small blue square.\n- Click and drag down to fill the same cleaned value into multiple cells.\n- Why it helps:\n   - Speeds up cleaning when the same correction applies to several rows in a row.\n   - Works best when your data is sorted so similar values are grouped together.",
+        "imageUrl": "https://images.code.org/597de639595196b3588325b154437f77-duplicating.gif",
+        "key": "data-science-ch1-lesson8-cleaning-data-panel_2025_launch-024425c6-e53f-436f-be9f-c00e644d0985"
       }
     ],
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-16T18:10:46.498+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-histogram-panel_2025_launch\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-histogram-panel_2025_launch\"},{\"changed_at\":\"2025-04-16 18:12:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:55:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-16T18:10:46.498+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-histogram-panel_2025_launch\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-histogram-panel_2025_launch\"},{\"changed_at\":\"2025-04-16 18:12:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:55:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-18 00:28:38 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>
