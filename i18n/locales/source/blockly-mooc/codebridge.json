@@ -81,6 +81,7 @@
   "renameFolder": "Rename",
   "replace": "Replace",
   "replaceFile": "Replace existing file",
+  "resetPreview": "Reset preview",
   "restoredOldVersion": "Version successfully restored",
   "result": "Result",
   "rootFolder": "project root",
