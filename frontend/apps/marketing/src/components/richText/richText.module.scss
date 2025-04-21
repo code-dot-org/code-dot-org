@@ -34,6 +34,7 @@
 
     li {
       @include font.main-font-regular;
+      color: var(--text-neutral-primary);
       padding-left: 0.25rem;
     }
   }
@@ -48,6 +49,8 @@
 
     tbody {
       tr {
+        background: var(--background-neutral-primary);
+
         &:nth-child(odd) {
           background: var(--background-neutral-secondary);
         }
