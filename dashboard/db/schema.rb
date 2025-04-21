@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_16_140513) do
+ActiveRecord::Schema.define(version: 2025_04_17_151841) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2017,11 +2017,13 @@ ActiveRecord::Schema.define(version: 2025_04_16_140513) do
     t.string "instruction_type"
     t.string "instructor_audience"
     t.string "participant_audience"
+    t.integer "original_unit_group_id"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
     t.index ["instructor_audience"], name: "index_scripts_on_instructor_audience"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
+    t.index ["original_unit_group_id"], name: "index_scripts_on_original_unit_group_id"
     t.index ["participant_audience"], name: "index_scripts_on_participant_audience"
     t.index ["published_state"], name: "index_scripts_on_published_state"
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
@@ -2634,6 +2636,7 @@ ActiveRecord::Schema.define(version: 2025_04_16_140513) do
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
+  add_foreign_key "scripts", "unit_groups", column: "original_unit_group_id"
   add_foreign_key "section_instructors", "users", column: "instructor_id"
   add_foreign_key "section_instructors", "users", column: "invited_by_id"
   add_foreign_key "sections", "lti_integrations"

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 00:06:54 UTC",
+    "serialized_at": "2025-04-18 20:05:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3631,7 +3631,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students might need to go back to Level 4 to download images of the visualizations they will upload to support their answer to their data question, if they didn’t complete this during the previous lesson. Support students as needed by providing instructions on where in the “local file” to save their images."
+            "markdown": "Students might need to go back to Level 2 to download images of the visualizations they will upload to support their answer to their data question, if they didn’t complete this during the previous lesson. Support students as needed by providing instructions on where in the “local file” to save their images."
           },
           {
             "type": "assessmentOpportunity",
@@ -4671,6 +4671,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level3_2025"
+        ],
         "progression": "Expository Data Story"
       },
       "bonus": false,
@@ -4693,6 +4696,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level5_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,

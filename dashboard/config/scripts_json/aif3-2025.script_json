@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-17 19:38:59 UTC",
+    "serialized_at": "2025-04-18 16:09:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -300,7 +300,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "**What are the decisions made for us without us?**\n\nIn this activity, students will engage with several different scenarios in which different ethical approaches to AI and computing systems might exist. Students will roleplay the scenario from the perspective different stakeholders, ultimately using this experience in empathy to craft ethical guidelines for AI and emerging technologies.",
+        "overview": "**What are the decisions made for us without us?**\n\nIn this activity, students will engage with several different scenarios in which different ethical approaches to AI and computing systems might exist. Students will examine these scenarios from the perspective different stakeholders, ultimately using this experience in empathy to craft ethical guidelines for AI and emerging technologies.",
         "preparation": "- Prepare several half-sheets of paper\n- Make an editable class copy of the [AI and Emerging Technology Slide template](https://docs.google.com/presentation/d/1Akl28SCAO4jirah8PNAh_CpiHVemESY5UBbhFLN_KLc/edit?usp=sharing)",
         "student_overview": "**What are the decisions made for us without us?**\n\nYou will take be asked to role play several different personas throughout today’s activity, trying to create a set of ethical guidelines for AI and emerging technologies. By examining how these technologies manifest in real-world scenarios, you will be asked to construct your own personal guidelines and expectations."
       },

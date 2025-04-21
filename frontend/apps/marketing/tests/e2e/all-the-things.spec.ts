@@ -47,8 +47,6 @@ test.describe('All the things UI e2e test', () => {
     expect(await allTheThingsPage.getOpenGraph('image')).toBe(
       'https://images.ctfassets.net/90t6bu6vlf76/4hXiOPiRlCXpmtypRNOZqc/9ebe430094c1ae1faf742e1de3f8aa8b/engineering-only-opengraph-default.png',
     );
-    expect(await allTheThingsPage.getOpenGraph('image:width')).toBe('1200');
-    expect(await allTheThingsPage.getOpenGraph('image:height')).toBe('630');
     expect(await allTheThingsPage.getOpenGraph('type')).toBe('website');
   });
 

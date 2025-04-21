@@ -286,4 +286,12 @@ class SectionsControllerTest < ActionController::TestCase
       assert_equal true, section.hidden
     end
   end
+
+  test 'retrieve_lessons_for_dropdown returns lessons links for a unit' do
+    sign_in @teacher
+    get :retrieve_lessons_for_dropdown, params: {id: @flappy_section.id}
+    assert_response :success
+    response_json = JSON.parse(@response.body)
+    assert_equal response_json, [{"text"=>"Flappy Code", "value"=>"/s/flappy"}, {"text"=>"Lesson 1: Flappy Code", "value"=>"/s/flappy/lessons/1/levels/1"}]
+  end
 end
