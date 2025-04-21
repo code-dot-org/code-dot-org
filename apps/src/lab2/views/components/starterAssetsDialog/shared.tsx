@@ -2,12 +2,18 @@ import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
+import {isNetworkError} from '@cdo/apps/util/HttpClient';
+
 import styles from './starter-assets-dialog.module.scss';
 
-const ErrorAlert: React.FC = () => (
+const ErrorAlert: React.FC<{currentError?: Error}> = ({currentError}) => (
   <div className={styles.alertContainer}>
     <Alert
-      text="Something went wrong. Please try again!"
+      text={
+        isNetworkError(currentError) && currentError.getDetails().status === 413
+          ? 'too large'
+          : 'Something went wrong. Please try again!'
+      }
       type="danger"
       size="xs"
       className={styles.alert}

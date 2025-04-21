@@ -24,6 +24,7 @@ const ACCEPTED_FILE_TYPES = [
 
 export interface UploadProps extends CommonProps {
   mode: 'upload';
+  currentError?: Error;
 }
 
 const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
@@ -35,6 +36,7 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
   levelName,
   showError,
   setError,
+  currentError,
 }) => {
   const [requestInProgress, setRequestInProgress] = useState<
     'upload' | 'delete'
@@ -114,7 +116,9 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
       }}
       secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
       customContent={loading ? <Loading /> : <ModalBody />}
-      customBottomContent={showError && <ErrorAlert />}
+      customBottomContent={
+        showError && <ErrorAlert currentError={currentError} />
+      }
     />
   );
 };

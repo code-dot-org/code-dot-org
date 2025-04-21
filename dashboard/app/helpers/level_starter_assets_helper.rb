@@ -11,7 +11,6 @@ module LevelStarterAssetsHelper
       image.resize '2048x2048>'
       return image
     end
-
     file
   end
 

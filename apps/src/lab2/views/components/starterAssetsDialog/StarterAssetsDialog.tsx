@@ -14,6 +14,9 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
   const [assets, setAssets] = useState<AssetData[]>([]);
   const [loading, setLoading] = useState(false);
   const [showError, setShowError] = useState(false);
+  const [currentError, setCurrentError] = useState<Error | undefined>(
+    undefined
+  );
 
   const abortControllerRef = useRef(new AbortController());
 
@@ -68,6 +71,8 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
     (error: Error) => {
       onError?.(error);
       setShowError(true);
+      setCurrentError(error);
+      console.log(error);
     },
     [onError]
   );
@@ -80,6 +85,7 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
     addAsset,
     removeAsset,
     setError,
+    currentError,
   };
 
   if (mode === 'select') {
