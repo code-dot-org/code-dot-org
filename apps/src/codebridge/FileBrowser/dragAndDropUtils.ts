@@ -21,6 +21,7 @@ export const FOLDER_DROP_OFFSET = 16;
 // Custom keyboard coordinate getter for the file browser.
 // When we are moving an item via the keyboard, we move it to the next available folder
 // up/down in the browser, rather than just a flat number of pixels.
+// If we are moving a folder, we skip any folders that are children of the current folder.
 export const fileBrowserKeyboardCoordinateGetter: (
   folders: Record<string, ProjectFolder>
 ) => KeyboardCoordinateGetter = folders => (event, args) => {
@@ -34,7 +35,7 @@ export const fileBrowserKeyboardCoordinateGetter: (
   let orderedRects = Array.from(droppableRects.keys());
   const currentId = active?.data.current?.id;
   const dragType = active?.data.current?.type;
-  // active.data.current: id, type, parentId
+
   if (dragType === DragType.FOLDER) {
     // We can't move a folder into a folder that is a child of itself
     const allChildren = getFolderChildren(
