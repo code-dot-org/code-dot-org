@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import {omit} from 'lodash';
 import {HTMLAttributes, ReactNode} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -60,7 +59,7 @@ const EditorialCard: React.FC<EditorialCardProps> = ({
     )}
   >
     <div className={moduleStyles.editorialCardMedia} aria-hidden="true">
-      {(media as ImageProps)?.src && (
+      {'src' in media && (
         <Image
           {...(media as ImageProps)}
           className={classNames(
@@ -70,7 +69,7 @@ const EditorialCard: React.FC<EditorialCardProps> = ({
         />
       )}
 
-      {(media as FontAwesomeV6IconProps)?.iconName && (
+      {'iconName' in media && (
         <FontAwesomeV6Icon
           {...(media as FontAwesomeV6IconProps)}
           className={classNames(
@@ -95,7 +94,10 @@ const EditorialCard: React.FC<EditorialCardProps> = ({
 
       {link && (
         <Link
-          {...omit(link, ['text'])}
+          {
+            // Omits text from link props
+            ...(({text, ...rest}) => rest || text)(link)
+          }
           className={classNames(moduleStyles.editorialCardLink, link.className)}
           size="s"
         >
