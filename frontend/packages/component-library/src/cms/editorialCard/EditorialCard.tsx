@@ -96,7 +96,7 @@ const EditorialCard: React.FC<EditorialCardProps> = ({
         <Link
           {
             // Omits text from link props
-            ...(({text, ...rest}) => rest || text)(link)
+            ...(({text, ...rest}) => rest || {text})(link)
           }
           className={classNames(moduleStyles.editorialCardLink, link.className)}
           size="s"
