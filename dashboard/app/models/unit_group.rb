@@ -210,8 +210,11 @@ class UnitGroup < ApplicationRecord
     # If a unit is removed from this list, remove it
     units_to_remove = original_units - original_units_objects
     units_to_remove.each do |unit|
-      unit.update!(original_unit_group_id: nil, skip_name_format_validation: true)
-      unit.reload
+      # Don't remove the original_unit_group_id if its already been updated to another unit group
+      if unit.original_unit_group_id == id
+        unit.update!(original_unit_group_id: nil, skip_name_format_validation: true)
+        unit.reload
+      end
     end
 
     # If a unit already has an original_unit_group, replace it with this one instead

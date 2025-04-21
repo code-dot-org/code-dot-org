@@ -1903,7 +1903,7 @@ class Unit < ApplicationRecord
     # rubocop:disable Style/ZeroLengthPredicate
     return nil if unit_group_units.length < 1
     # rubocop:enable Style/ZeroLengthPredicate
-    UnitGroup.get_from_cache(unit_group_units[0].course_id)
+    UnitGroup.get_from_cache(original_unit_group_id)
   end
 
   # If this unit is a standalone unit, returns its CourseVersion. Otherwise,
