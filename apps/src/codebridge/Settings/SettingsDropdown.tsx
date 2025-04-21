@@ -203,12 +203,14 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             size="s"
             onClick={closeDropdown}
             color="black"
+            className={moduleStyles.footerButton}
           />
           <Button
             text={commonI18n.save()}
             type="primary"
             size="s"
             onClick={onSave}
+            className={moduleStyles.footerButton}
           />
         </div>
       </div>
