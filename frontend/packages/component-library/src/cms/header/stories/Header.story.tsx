@@ -420,7 +420,8 @@ export const HelpMenu: Story = {
     },
     eyes: {
       browser: {width: 1268, height: 720, name: 'chrome'},
-      waitBeforeCapture: 'ul[aria-label="Help menu"]',
+      waitBeforeCapture: 3000,
+      // waitBeforeCapture: 'ul[aria-label="Help menu"]',
     },
     docs: {
       description: {
