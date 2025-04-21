@@ -136,7 +136,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert_equal "#{AichatRequestChatCompletionJob.name}.Start", job_start_metric[:metric_name]
     assert_equal 1, job_start_metric[:value]
     assert_equal 'Count', job_start_metric[:unit]
-    assert_equal 2, job_start_metric[:dimensions].length
+    assert_equal 3, job_start_metric[:dimensions].length
 
     # Verify job finish metrics
     job_finish_metrics = reported_metrics[1]
@@ -147,7 +147,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert_equal "#{AichatRequestChatCompletionJob.name}.Finish", finish_metric[:metric_name]
     assert_equal 1, finish_metric[:value]
     assert_equal 'Count', finish_metric[:unit]
-    assert_equal 3, finish_metric[:dimensions].length
+    assert_equal 4, finish_metric[:dimensions].length
     assert_equal 'SUCCESS', finish_metric[:dimensions][2][:value]
 
     execution_time_metric = job_finish_metrics[1]
@@ -188,7 +188,7 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert_equal "#{AichatRequestChatCompletionJob.name}.Finish", finish_metric[:metric_name]
     assert_equal 1, finish_metric[:value]
     assert_equal 'Count', finish_metric[:unit]
-    assert_equal 3, finish_metric[:dimensions].length
+    assert_equal 4, finish_metric[:dimensions].length
     assert_equal 'FAILURE', finish_metric[:dimensions][2][:value]
   end
 

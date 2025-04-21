@@ -49,6 +49,14 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request.update!(response: response, execution_status: status)
   end
 
+  private def multimodal?(request)
+    messages = [*request.stored_messages, request.new_message]
+    messages_with_assets_count = messages.count do |message|
+      message['assets']&.any?
+    end
+    return messages_with_assets_count>0
+  end
+
   private def get_execution_status_and_response(request, locale)
     # Moderate user input for toxicity.
     user_toxicity = AichatSafetyHelper.find_toxicity('user', request.new_message['chatMessageText'], locale, request.level_id)
@@ -114,6 +122,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
             {name: 'ModelId', value: get_model_id(request)},
+            {name: 'Multimodal', value: multimodal?(request).to_s},
           ],
         }
       ]
@@ -134,6 +143,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
             {name: 'Environment', value: CDO.rack_env},
             {name: 'ModelId', value: get_model_id(request)},
             {name: 'ExecutionStatus', value: status_name},
+            {name: 'Multimodal', value: multimodal?(request).to_s},
           ],
         },
         {
@@ -144,6 +154,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
             {name: 'ModelId', value: get_model_id(request)},
+            {name: 'Multimodal', value: multimodal?(request).to_s},
           ],
         }
       ]
