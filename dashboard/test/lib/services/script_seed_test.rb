@@ -139,6 +139,7 @@ module Services
       assert_equal counts_before, get_counts
       script_after_seed = Unit.with_seed_models.find_by!(name: script.name)
       assert_script_trees_equal(script, script_after_seed)
+      assert_equal script_after_seed.original_unit_group, script.original_unit_group
     end
 
     # This tests the scenario where a script is in a unit group, but we don't
@@ -1458,6 +1459,7 @@ module Services
         unit_group = create :unit_group, family_name: family_name, version_year: version_year
         create :unit_group_unit, unit_group: unit_group, script: script, position: 1
         CourseOffering.add_course_offering(unit_group)
+        script.update!(original_unit_group_id: unit_group.id)
       else
         script.update!(
           is_course: true,
