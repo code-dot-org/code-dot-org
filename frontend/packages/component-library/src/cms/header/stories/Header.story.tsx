@@ -372,7 +372,7 @@ export const NewProjectMenu: Story = {
     },
     eyes: {
       browser: {width: 1268, height: 720, name: 'chrome'},
-      waitBeforeCapture: 'ul[aria-label="Projects menu"]',
+      waitBeforeCapture: 3000,
     },
     docs: {
       description: {
@@ -420,7 +420,7 @@ export const HelpMenu: Story = {
     },
     eyes: {
       browser: {width: 1268, height: 720, name: 'chrome'},
-      waitBeforeCapture: 'ul[aria-label="Help menu"]',
+      waitBeforeCapture: 3000,
     },
     docs: {
       description: {
@@ -468,6 +468,7 @@ export const SmallDesktop: Story = {
     },
     eyes: {
       browser: {width: 1024, height: 720, name: 'chrome'},
+      waitBeforeCapture: 3000,
     },
     docs: {
       description: {
