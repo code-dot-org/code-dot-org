@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-16 07:09:54 UTC",
+    "serialized_at": "2025-04-19 06:20:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2331,10 +2331,16 @@
       "key": "e199d7e1-18a6-4c5b-9c7d-88fedeeb749b",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.",
         "duration": "10",
         "name": "HTTP Preview and Inspect Tool Exploration",
-        "progression_name": "HTTP Requests Exploration"
+        "progression_name": "HTTP Requests Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students have access to real Developer Tools, encourage them to complete the scavenger hunt using their own browser, and the files that load on an actual webpage. This gives them hands-on experience with live HTTP traffic and helps reinforce the connection between what they see in the simulator and how browsers work in the real world."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e199d7e1-18a6-4c5b-9c7d-88fedeeb749b",
@@ -2342,18 +2348,35 @@
       }
     },
     {
-      "key": "9887a596-58cc-4888-bfcb-8faf7b16cc15",
+      "key": "77506d8b-c4db-483e-8772-c3d3e54467c2",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to user their Unit Guide to record observations about types of files that are being loaded and why it might be important for the browser to request only the files it needs.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to help students open the Inspect Tool, navigate to the Network tab, and identify different file types and status codes.",
+      },
+      "seeding_key": {
+        "activity_section.key": "77506d8b-c4db-483e-8772-c3d3e54467c2",
+        "lesson_activity.key": "21f4e8d6-4666-4b5d-8896-d6033f430e45"
+      }
+    },
+    {
+      "key": "41c71743-6740-41d0-bb91-f125f09f6b70",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the HTTP Scavenger Hunt. They should use either the HTTP Explorer simulator or their own browser to complete each task and fill in the Method, Status Code, File Type, and Load Time fields in their activity guide.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "41c71743-6740-41d0-bb91-f125f09f6b70",
+        "lesson_activity.key": "21f4e8d6-4666-4b5d-8896-d6033f430e45"
+      }
+    },
+    {
+      "key": "9887a596-58cc-4888-bfcb-8faf7b16cc15",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 4 to answer the questions.",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "If time permits, ask students to share their observations with the class, including the types of files that were being loaded and why it is important for the browser to request only the files it needs. Draw out key takeaways such as DNS resolves the domain name into an IP address so HTTP knows where to send requests and how HTTP retrieves content in smaller pieces, ensuring efficiency and scalability."
-          },
-          {
             "type": "assessmentOpportunity",
-            "markdown": "Levels 4 and 5 can be used to formatively assess the learning objectives. "
+            "markdown": "The responses on Levels 4 and 5 can be used to formatively assess the lesson objectives:\n- Describe the function of HTTP in requesting web pages and resources\n"
           }
         ]
       },
@@ -2364,7 +2387,7 @@
     },
     {
       "key": "8334a118-fb80-4d20-a45a-59e8044400c6",
-      "position": 13,
+      "position": 15,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -3600,6 +3623,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level3.5_2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -4802,7 +4828,7 @@
     },
     {
       "name": "HTTP and DNS",
-      "url": "https://docs.google.com/presentation/d/1ainHdptvrQYfCXXkOUcw0hAay3-YlcTTf7hHBmsCERA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/18FAONwLy7N1q60lT0ObmMhhPckB889X-ACp3BGFAnag/edit?usp=sharing",
       "key": "http_and_dns",
       "properties": {
         "audience": "Verified Teacher",
@@ -4813,15 +4839,15 @@
       }
     },
     {
-      "name": "HTTP Observations",
-      "url": "https://docs.google.com/document/d/1HZ3Yp1Kh0fUh94gaQq460MQPS9BpeBQO7Hh4aIqYzIw/edit?usp=sharing",
-      "key": "http_observations",
+      "name": " HTTP Request Simulator",
+      "url": "https://docs.google.com/presentation/d/167Rqj73r2Pu9-ovxYj2UZxy4PJNxxzCR8RszaBI25xM/edit?usp=sharing",
+      "key": "http_request_simulator",
       "properties": {
         "audience": "Student",
-        "type": "Activity Guide"
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "http_observations"
+        "resource.key": "http_request_simulator"
       }
     },
     {
@@ -5061,6 +5087,18 @@
       }
     },
     {
+      "name": "Scavenger Hunt Activity",
+      "url": "https://docs.google.com/presentation/d/17-D9uP8eVYI6uFX4VtQyAo5j4qzv7uuKghpmwX_D33M/edit?usp=sharing",
+      "key": "scavenger_hunt_activity",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "scavenger_hunt_activity"
+      }
+    },
+    {
       "name": "Sending Bits",
       "url": "https://docs.google.com/presentation/d/1tcj5mMbuhGW7x6rGHDhwqmyjIK8hsG-y6Y_fR8jogvA/edit?usp=sharing",
       "key": "sending_bits",
@@ -5222,7 +5260,7 @@
     {
       "seeding_key": {
         "lesson.key": "HTTP and DNS",
-        "resource.key": "http_observations"
+        "resource.key": "http_request_simulator"
       }
     },
     {
@@ -5235,6 +5273,12 @@
       "seeding_key": {
         "lesson.key": "HTTP and DNS",
         "resource.key": "ip_addresses_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "resource.key": "scavenger_hunt_activity"
       }
     },
     {

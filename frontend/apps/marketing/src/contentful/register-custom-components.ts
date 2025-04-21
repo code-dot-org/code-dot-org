@@ -57,6 +57,7 @@ import CurriculumSnapshot, {
 import LabSnapshot, {
   LabSnapshotContentfulComponentDefinition,
 } from '@/components/snapshots/labSnapshot';
+import Spacer, {SpacerContentfulComponentDefinition} from '@/components/spacer';
 import TabGroup, {
   TabGroupContentfulComponentDefinition,
 } from '@/components/tabGroup';
@@ -151,6 +152,10 @@ defineComponents(
     {
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
+    },
+    {
+      component: Spacer,
+      definition: SpacerContentfulComponentDefinition,
     },
     {
       component: CurriculumSnapshot,

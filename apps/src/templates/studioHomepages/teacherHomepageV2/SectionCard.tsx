@@ -40,7 +40,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
     <li
       className={styles.sectionCardWrapper}
       ref={setNodeRef}
-      style={style}
+      style={{cursor: isDragging ? 'grabbing' : 'inherit', ...style}}
       aria-labelledby={`section-card-title-${section.id}`}
     >
       <div className={styles.sectionCardHeader}>
@@ -56,9 +56,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               size="s"
               aria-label={i18n.dragSection()}
               type="tertiary"
-              style={{
-                cursor: isDragging ? 'grabbing' : 'grab',
-              }}
+              className={styles.sectionCardDragButton}
             />
           )}
           {section.avatar_color && (
@@ -76,6 +74,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               sectionCode={section.code}
               sectionId={section.id}
               studioUrlPrefix={studioUrlPrefix}
+              hidden={section.hidden}
             />
           </div>
         </div>

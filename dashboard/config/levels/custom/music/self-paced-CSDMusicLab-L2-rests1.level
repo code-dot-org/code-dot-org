@@ -157,7 +157,7 @@
       "questionType": "freeResponse",
       "allowMultipleAttempts": false,
       "placeholderText": "Answer Here!",
-      "freeResponseHeight": 150,
+      "freeResponseHeight": 50,
       "codeEditableAfterSubmit": false
     },
     "validations": [
@@ -183,7 +183,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-14T21:45:53.086+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-predict\"},{\"changed_at\":\"2025-04-16 21:38:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T21:45:53.086+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-predict\"},{\"changed_at\":\"2025-04-16 21:38:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 21:24:14 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

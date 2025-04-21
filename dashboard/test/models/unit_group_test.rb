@@ -299,7 +299,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal unit_group, unit2.original_unit_group
     end
 
-    test "cannot remove original scripts" do
+    test "remove original scripts" do
       unit_group = create :unit_group
 
       create(:script, name: 'unit1')
@@ -311,28 +311,28 @@ class UnitGroupTest < ActiveSupport::TestCase
 
       assert_equal 2, unit_group.original_units.length
 
-      error = assert_raises RuntimeError do
-        unit_group.update_original_scripts(['unit1'])
-      end
-      assert_includes error.message, 'Cannot remove units from their original unit group'
+      unit_group.update_original_scripts(['unit1'])
+      unit_group.reload
+      assert_equal 1, unit_group.original_units.length
     end
 
-    test "cannot add original scripts that already have an original unit group" do
+    test "change original unit group if a unit already has a unit group" do
       unit_group1 = create :unit_group
 
-      create(:script, name: 'unit1')
+      unit1 = create(:script, name: 'unit1')
       create(:script, name: 'unit2')
 
       unit_group1.update_original_scripts(['unit1', 'unit2'])
       unit_group1.reload
+      unit1.reload
       assert_equal 2, unit_group1.original_units.length
 
       unit_group2 = create :unit_group
-
-      error = assert_raises RuntimeError do
-        unit_group2.update_original_scripts(['unit1'])
-      end
-      assert_includes error.message, 'Cannot add original units if they already have an original unit group'
+      unit_group2.update_original_scripts(['unit1'])
+      unit_group2.reload
+      unit1.reload
+      assert_equal 1, unit_group2.original_units.length
+      assert_equal unit_group2, unit1.original_unit_group
     end
   end
 

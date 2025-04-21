@@ -11,6 +11,12 @@ export class MarketingPage {
     this.locale = locale;
   }
 
+  async enableDraftMode(token: string, slug: string) {
+    return await this.page.goto(
+      `${this.getBaseUrl()}/api/draft?token=${token}&slug=${slug}&locale=${this.locale}`,
+    );
+  }
+
   getBaseUrl() {
     const stage = process.env.STAGE;
 
@@ -41,9 +47,11 @@ export class MarketingPage {
   }
 
   async goto(subPath: string) {
-    await this.page.goto(`${this.getBasePath()}${subPath}`);
+    const response = await this.page.goto(`${this.getBasePath()}${subPath}`);
 
     await this.loadFonts();
+
+    return response;
   }
 
   async loadFonts() {
