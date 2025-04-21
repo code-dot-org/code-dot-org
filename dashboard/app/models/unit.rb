@@ -2,31 +2,33 @@
 #
 # Table name: scripts
 #
-#  id                   :integer          not null, primary key
-#  name                 :string(255)      not null
-#  created_at           :datetime
-#  updated_at           :datetime
-#  wrapup_video_id      :integer
-#  user_id              :integer
-#  login_required       :boolean          default(FALSE), not null
-#  properties           :text(65535)
-#  new_name             :string(255)
-#  family_name          :string(255)
-#  published_state      :string(255)      default("in_development")
-#  instruction_type     :string(255)
-#  instructor_audience  :string(255)
-#  participant_audience :string(255)
+#  id                     :integer          not null, primary key
+#  name                   :string(255)      not null
+#  created_at             :datetime
+#  updated_at             :datetime
+#  wrapup_video_id        :integer
+#  user_id                :integer
+#  login_required         :boolean          default(FALSE), not null
+#  properties             :text(65535)
+#  new_name               :string(255)
+#  family_name            :string(255)
+#  published_state        :string(255)      default("in_development")
+#  instruction_type       :string(255)
+#  instructor_audience    :string(255)
+#  participant_audience   :string(255)
+#  original_unit_group_id :integer
 #
 # Indexes
 #
-#  index_scripts_on_family_name           (family_name)
-#  index_scripts_on_instruction_type      (instruction_type)
-#  index_scripts_on_instructor_audience   (instructor_audience)
-#  index_scripts_on_name                  (name) UNIQUE
-#  index_scripts_on_new_name              (new_name) UNIQUE
-#  index_scripts_on_participant_audience  (participant_audience)
-#  index_scripts_on_published_state       (published_state)
-#  index_scripts_on_wrapup_video_id       (wrapup_video_id)
+#  index_scripts_on_family_name             (family_name)
+#  index_scripts_on_instruction_type        (instruction_type)
+#  index_scripts_on_instructor_audience     (instructor_audience)
+#  index_scripts_on_name                    (name) UNIQUE
+#  index_scripts_on_new_name                (new_name) UNIQUE
+#  index_scripts_on_original_unit_group_id  (original_unit_group_id)
+#  index_scripts_on_participant_audience    (participant_audience)
+#  index_scripts_on_published_state         (published_state)
+#  index_scripts_on_wrapup_video_id         (wrapup_video_id)
 #
 
 require 'cdo/shared_constants'
@@ -65,6 +67,7 @@ class Unit < ApplicationRecord
   belongs_to :user, optional: true
   has_many :unit_group_units, foreign_key: 'script_id', dependent: :destroy
   has_many :unit_groups, through: :unit_group_units
+  belongs_to :original_unit_group, class_name: 'UnitGroup', optional: true
   has_one :course_version, as: :content_root, dependent: :destroy
 
   scope(

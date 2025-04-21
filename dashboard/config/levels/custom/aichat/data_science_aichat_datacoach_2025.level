@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-04-14T23:15:39.000Z",
   "level_num": "custom",
   "user_id": 22366,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## AI Data Coach\r\n\r\nUse AI Chat to get feedback at any point in your project.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. Ask AI Chat to help with one of these:\r\n   - Refine your data question\r\n   - Interpret your graph\r\n   - Turn bullet points into a paragraph \r\n   - Clean a messy data entry\r\n2. Review its suggestion.  \r\n3. Decide how you’ll use the feedback in your project.  \r\n",
+    "long_instructions": "## AI Data Coach\r\n\r\nUse AI Chat to get feedback at any point in your project.\r\n\r\n---\r\n\r\n**Do This:**\r\n\r\n1. Ask AI Chat to help with one of these:\r\n   - Refine your data question\r\n   - Interpret your graph\r\n   - Turn bullet points into a paragraph \r\n   - Clean a messy data entry\r\n2. Review its suggestion.  \r\n3. Decide how you’ll use the feedback in your project.  \r\n\r\n::: details [**Here's how to download your dataset as a PDF**]\r\n![](https://images.code.org/4997fb44a36f4e902f3ce8fe5808605f-image-1744828202871.29.44 PM.png)\r\n:::\r\n\r\n",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -46,7 +47,6 @@
     },
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:39.063+00:00\",\"changed\":[\"cloned from \\\"data_science_aichat_datacoach\\\"\"],\"cloned_from\":\"data_science_aichat_datacoach\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:39.063+00:00\",\"changed\":[\"cloned from \\\"data_science_aichat_datacoach\\\"\"],\"cloned_from\":\"data_science_aichat_datacoach\"},{\"changed_at\":\"2025-04-18 18:46:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
