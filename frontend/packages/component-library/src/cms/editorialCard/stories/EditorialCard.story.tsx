@@ -44,6 +44,13 @@ const defaultProps: EditorialCardProps = {
   },
 };
 
+const withIconProps: EditorialCardProps = {
+  ...defaultProps,
+  media: {
+    iconName: 'smile',
+  },
+};
+
 //
 // STORIES
 //
@@ -53,7 +60,7 @@ export const Playground: Story = {
   },
 };
 
-export const VerticalLayout: Story = {
+export const VerticalWithImage: Story = {
   args: [
     {
       ...defaultProps,
@@ -70,7 +77,7 @@ export const VerticalLayout: Story = {
   ],
 };
 
-export const HorizontalLayout: Story = {
+export const HorizontalWithImage: Story = {
   args: [
     {
       ...defaultProps,
@@ -91,23 +98,40 @@ export const HorizontalLayout: Story = {
   ],
 };
 
-export const WithIcon: Story = {
+export const VerticalWithIcon: Story = {
   args: [
     {
-      ...defaultProps,
-      heading: 'Horizontal EditorialCard',
-      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
-      media: {
-        iconName: 'smile',
-      },
+      ...withIconProps,
+      layout: EDITORIAL_CARD_LAYOUTS.VERTICAL,
     },
     {
-      ...defaultProps,
-      heading: 'Vertical EditorialCard',
+      ...withIconProps,
       layout: EDITORIAL_CARD_LAYOUTS.VERTICAL,
-      media: {
-        iconName: 'smile',
-      },
+    },
+    {
+      ...withIconProps,
+      layout: EDITORIAL_CARD_LAYOUTS.VERTICAL,
+    },
+  ],
+};
+
+export const HorizontalWithIcon: Story = {
+  args: [
+    {
+      ...withIconProps,
+      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
+    },
+    {
+      ...withIconProps,
+      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
+    },
+    {
+      ...withIconProps,
+      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
+    },
+    {
+      ...withIconProps,
+      layout: EDITORIAL_CARD_LAYOUTS.HORIZONTAL,
     },
   ],
 };
