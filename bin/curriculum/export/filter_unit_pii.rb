@@ -46,8 +46,6 @@ end
 
 def filter_evals_pii
   evals_filenames = Dir.glob(File.join($input_dir, 'evals', '*.jsonl'))
-  puts "#{File.basename(__FILE__)} found #{evals_filenames.size} eval files in #{$input_dir}/evals"
-  puts "debug eval filenames: \n#{evals_filenames.join("\n")}"
 
   ai_evals_filename = File.basename(evals_filenames.find {|filename| filename.include?('_ai_evals_')})
   raise "No AI evals found in #{$input_dir}/evals" unless ai_evals_filename
