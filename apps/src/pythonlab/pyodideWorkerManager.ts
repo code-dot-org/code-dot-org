@@ -119,8 +119,11 @@ const setUpPyodideWorker = () => {
         writeConsoleMessage(message);
         break;
       case 'run_complete': {
-        // Write a blank line to the console.
-        writeConsoleMessage('');
+        // Write a blank line to the console if we are not on a neighborhood level (which handles
+        // this for us).
+        if (!outputToNeighborhood) {
+          writeConsoleMessage('');
+        }
         delete callbacks[id];
         onSuccess(event.data);
         break;

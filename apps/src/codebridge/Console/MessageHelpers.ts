@@ -39,5 +39,5 @@ export function getTimestampMessage(runType: RunType) {
   } else if (runType === RunType.VALIDATION) {
     runString = codebridgeI18n.validateAt({time: formattedTime});
   }
-  return `--------${runString}--------`;
+  return `\x1b[38;5;249m--------${runString}--------\x1b[0m`;
 }
