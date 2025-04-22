@@ -296,7 +296,8 @@ class UnitGroup < ApplicationRecord
       link: link,
       version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
       units: units_for_user(user).map do |unit|
-        unit.summarize_for_rollup(user)
+        ugu = unit.unit_group_units.find_by(unit_group: self)
+        unit.summarize_for_rollup(user, unit_group_unit: ugu)
       end,
       has_numbered_units: has_numbered_units?
     }
