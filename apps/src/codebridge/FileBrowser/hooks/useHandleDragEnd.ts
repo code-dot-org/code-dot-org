@@ -1,15 +1,12 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {DragType} from '@codebridge/FileBrowser/types';
-import {ProjectFolder} from '@codebridge/types';
 import {
   validateFileName as globalValidateFileName,
-  validateFolderName,
+  validateFolderMove,
 } from '@codebridge/utils';
-import {getFolderChildren} from '@codebridge/utils/getFolderChildren';
 import {DragOverEvent} from '@dnd-kit/core';
 import {useMemo} from 'react';
 
-import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {usePartialApply, PAFunctionArgs} from '@cdo/apps/lab2/hooks';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -82,27 +79,4 @@ export const useHandleDragEnd = () => {
       validateFileName,
     ]
   );
-};
-
-const validateFolderMove = (
-  folderName: string,
-  parentId: string,
-  projectFolders: Record<string, ProjectFolder>,
-  folderId: string
-) => {
-  let validationError = validateFolderName({
-    folderName,
-    parentId,
-    projectFolders,
-  });
-  if (!validationError) {
-    const childFolders = getFolderChildren(
-      folderId,
-      Object.values(projectFolders)
-    );
-    if (childFolders.includes(parentId)) {
-      validationError = codebridgeI18n.moveFolderErrorChild();
-    }
-  }
-  return validationError;
 };
