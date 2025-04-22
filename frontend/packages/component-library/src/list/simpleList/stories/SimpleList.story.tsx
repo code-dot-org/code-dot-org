@@ -374,7 +374,7 @@ export const WithMultilineItem: Story = {
         label:
           'Extremely, exceptionally, extraordinarily, immensely prolonged Item B',
       },
-      {key: 'item-c', label: 'Item c'},
+      {key: 'item-c', label: 'Item C'},
     ],
   },
   play: ({canvasElement}: {canvasElement: HTMLElement}) => {
