@@ -83,7 +83,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 }
 
 // Button links styles
-body .buttonLinks {
+header .buttonLinks {
   position: relative;
   display: flex;
   align-items: center;
@@ -120,7 +120,7 @@ body .buttonLinks {
 }
 
 // Icon button styles
-body .buttonLinks .iconButton {
+header .buttonLinks .iconButton {
   padding: 0;
   background: transparent;
   min-width: unset;
@@ -152,7 +152,7 @@ body .buttonLinks .iconButton {
 }
 
 // Menu styles
-body .menu {
+header .menu {
   @include mixins.border-styles;
   list-style: none;
   position: absolute;
@@ -191,7 +191,7 @@ body .menu {
 }
 
 // New Project menu styles
-body .newProjectMenu {
+header .newProjectMenu {
   a {
     margin: 0;
     padding: 0.375rem;
@@ -252,7 +252,7 @@ body .newProjectMenu {
 // Large desktop
 @media (max-width: ($desktop-breakpoint - 1px)) {
   // Show Help menu
-  body .helpButton {
+  header .helpButton {
     display: none;
   }
 }
@@ -260,7 +260,7 @@ body .newProjectMenu {
 // Small desktop
 @media (min-width: $desktop-breakpoint) {
   // Show Hamburger menu
-  body .hamburgerButton {
+  header .hamburgerButton {
     display: none;
   }
 }
@@ -275,8 +275,8 @@ body .newProjectMenu {
 // Tablet
 @media (max-width: $tablet-breakpoint) {
   // Hide Main links and New Project menu
-  body .mainLinksWrapper .mainLinks,
-  body .newProject {
+  header .mainLinksWrapper .mainLinks,
+  header .newProject {
     display: none;
   }
 
@@ -288,7 +288,7 @@ body .newProjectMenu {
 // Mobile
 @media (max-width: $mobile-breakpoint) {
   // Hide Account links
-  body .accountLinks {
+  header .accountLinks {
     display: none;
   }
 
