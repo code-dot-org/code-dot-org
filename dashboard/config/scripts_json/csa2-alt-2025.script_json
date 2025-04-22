@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-26 03:19:38 UTC",
+    "serialized_at": "2025-04-21 09:57:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5498,15 +5498,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L5-L2-4_alt-2025"
-        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L2-4_alt-2025"
+          "CSA U1L5-L2-4_revised2025"
         ],
         "lesson.key": "Loops",
         "lesson_group.key": "lessonGroup-3",
@@ -5514,7 +5511,7 @@
         "activity_section.key": "4a603e15-f550-4103-85c8-8e8cab9cc16a"
       },
       "level_keys": [
-        "CSA U1L5-L2-4_alt-2025"
+        "CSA U1L5-L2-4_revised2025"
       ]
     },
     {
@@ -7367,9 +7364,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L2-4_alt-2025",
+        "level.key": "CSA U1L5-L2-4_revised2025",
         "script_level.level_keys": [
-          "CSA U1L5-L2-4_alt-2025"
+          "CSA U1L5-L2-4_revised2025"
         ],
         "lesson.key": "Loops",
         "lesson_group.key": "lessonGroup-3",

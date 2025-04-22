@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-07 23:48:28 UTC",
+    "serialized_at": "2025-04-21 15:32:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4261,6 +4261,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-elem-career-journeys-video-choice4"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -4433,6 +4436,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Version A Survey"
+        ],
         "progression": "Project"
       },
       "bonus": false,
@@ -4705,6 +4711,9 @@
       "activity_section_position": 7,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Version B Survey"
+        ],
         "progression": "Build Your Project"
       },
       "bonus": false,

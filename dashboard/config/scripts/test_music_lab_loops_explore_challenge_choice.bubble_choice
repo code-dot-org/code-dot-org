@@ -3,10 +3,12 @@ display_name 'Challenge'
 description 'Choose additional challenges to try!'
 
 sublevels
+level 'music-lab-loops-explore-practice-a'
 level 'test-music-lab-loops-explore-practice-choice-a'
 level 'test-music-lab-loops-explore-challenge-choice-a'
-level 'test-music-lab-loops-explore-challenge-choice-b'
+# level 'test-music-lab-loops-explore-challenge-choice-b'
 level 'music-lab-loops-explore-practice-e'
+level 'music-lab-loops-explore-challenge-freeplay'
 
 
 

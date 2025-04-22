@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-20 17:31:18 UTC",
+    "serialized_at": "2025-04-21 17:11:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -388,6 +388,21 @@
       },
       "seeding_key": {
         "lesson.key": "Sandbox: The Theater",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa8-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa8-2025"
       }
@@ -995,6 +1010,18 @@
       "seeding_key": {
         "lesson_activity.key": "88fc75da-87ef-40df-bb8d-65e64c355c46",
         "lesson.key": "Sandbox: The Theater",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa8-2025"
+      }
+    },
+    {
+      "key": "bf23b419-3cb5-403b-8fbf-3cd978c33401",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bf23b419-3cb5-403b-8fbf-3cd978c33401",
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa8-2025"
       }
@@ -3890,6 +3917,17 @@
         "activity_section.key": "66676462-6478-4fc7-a747-ed270223eb3e",
         "lesson_activity.key": "88fc75da-87ef-40df-bb8d-65e64c355c46"
       }
+    },
+    {
+      "key": "b73c46a1-2c1e-4ee9-bcfc-ee0643d66889",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b73c46a1-2c1e-4ee9-bcfc-ee0643d66889",
+        "lesson_activity.key": "bf23b419-3cb5-403b-8fbf-3cd978c33401"
+      }
     }
   ],
   "script_levels": [
@@ -4775,128 +4813,6 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "csp-post-survey-levelgroup_csa_2025"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp-post-survey-levelgroup_csa_2025"
-        ],
-        "lesson.key": "CSA Post-Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa8-2025",
-        "activity_section.key": "716f5e3c-be1d-4fa9-8ee8-77920149bfe7"
-      },
-      "level_keys": [
-        "csp-post-survey-levelgroup_csa_2025"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA 2023 Console Sandbox_2025"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA 2023 Console Sandbox_2025"
-        ],
-        "lesson.key": "Sandbox: Console",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa8-2025",
-        "activity_section.key": "12243018-f4b4-4c7e-b8ab-45f63ebbbd62"
-      },
-      "level_keys": [
-        "CSA 2023 Console Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA 2023 Neighborhood Sandbox_2025"
-        ],
-        "progression": "With Paint Bucket"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA 2023 Neighborhood Sandbox_2025"
-        ],
-        "lesson.key": "Sandbox: The Neighborhood",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa8-2025",
-        "activity_section.key": "bb5ca4ba-96d5-4db3-a191-b3e761112b3b"
-      },
-      "level_keys": [
-        "CSA 2023 Neighborhood Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 39,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
-        ],
-        "progression": "No Paint Bucket"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
-        ],
-        "lesson.key": "Sandbox: The Neighborhood",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa8-2025",
-        "activity_section.key": "324ff927-6ac1-459e-86f5-d602f5639c1b"
-      },
-      "level_keys": [
-        "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 40,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA 2023 Theater Sandbox_2025"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA 2023 Theater Sandbox_2025"
-        ],
-        "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa8-2025",
-        "activity_section.key": "66676462-6478-4fc7-a747-ed270223eb3e"
-      },
-      "level_keys": [
-        "CSA 2023 Theater Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 41,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
           "CSA U8 Creative Coding with the Console Project_pilot_oo2025"
         ],
         "progression": "Creative Coding with the Console Project"
@@ -4916,7 +4832,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4941,7 +4857,31 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup_csa_2025"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csp-post-survey-levelgroup_csa_2025"
+        ],
+        "lesson.key": "CSA Post-Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa8-2025",
+        "activity_section.key": "716f5e3c-be1d-4fa9-8ee8-77920149bfe7"
+      },
+      "level_keys": [
+        "csp-post-survey-levelgroup_csa_2025"
+      ]
+    },
+    {
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4963,6 +4903,126 @@
       },
       "level_keys": [
         "CSA U8 Creative Coding with the Console Project 1-Day_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2025"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Console Sandbox_2025"
+        ],
+        "lesson.key": "Sandbox: Console",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa8-2025",
+        "activity_section.key": "12243018-f4b4-4c7e-b8ab-45f63ebbbd62"
+      },
+      "level_keys": [
+        "CSA 2023 Console Sandbox_2025"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2025"
+        ],
+        "progression": "With Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2025"
+        ],
+        "lesson.key": "Sandbox: The Neighborhood",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa8-2025",
+        "activity_section.key": "bb5ca4ba-96d5-4db3-a191-b3e761112b3b"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood Sandbox_2025"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
+        ],
+        "progression": "No Paint Bucket"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
+        ],
+        "lesson.key": "Sandbox: The Neighborhood",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa8-2025",
+        "activity_section.key": "324ff927-6ac1-459e-86f5-d602f5639c1b"
+      },
+      "level_keys": [
+        "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2025"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA 2023 Theater Sandbox_2025"
+        ],
+        "lesson.key": "Sandbox: The Theater",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa8-2025",
+        "activity_section.key": "66676462-6478-4fc7-a747-ed270223eb3e"
+      },
+      "level_keys": [
+        "CSA 2023 Theater Sandbox_2025"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa8-2025",
+        "activity_section.key": "b73c46a1-2c1e-4ee9-bcfc-ee0643d66889"
+      },
+      "level_keys": [
+        "student-eou-survey_-csa_2025"
       ]
     }
   ],
@@ -5389,6 +5449,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U8 Creative Coding with the Console Project_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U8 Creative Coding with the Console Project_pilot_oo2025"
+        ],
+        "lesson.key": "Creative Coding with the Console Project",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa8-2025",
+        "activity_section.key": "686690b1-29be-4f97-9e54-68603b554e63"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 8 Assessment_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA Unit 8 Assessment_pilot_oo2025"
+        ],
+        "lesson.key": "Unit 8 Assessment",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa8-2025",
+        "activity_section.key": "79eed1ad-4c2c-479b-a220-cf6dbc646635"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csp-post-survey-levelgroup_csa_2025",
         "script_level.level_keys": [
           "csp-post-survey-levelgroup_csa_2025"
@@ -5397,6 +5481,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa8-2025",
         "activity_section.key": "716f5e3c-be1d-4fa9-8ee8-77920149bfe7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U8 Creative Coding with the Console Project 1-Day_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U8 Creative Coding with the Console Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa8-2025",
+        "activity_section.key": "1f86d477-0835-4964-882b-174916fdab1e"
       }
     },
     {
@@ -5449,38 +5545,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U8 Creative Coding with the Console Project_pilot_oo2025",
+        "level.key": "student-eou-survey_-csa_2025",
         "script_level.level_keys": [
-          "CSA U8 Creative Coding with the Console Project_pilot_oo2025"
+          "student-eou-survey_-csa_2025"
         ],
-        "lesson.key": "Creative Coding with the Console Project",
-        "lesson_group.key": "lessonGroup-8",
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa8-2025",
-        "activity_section.key": "686690b1-29be-4f97-9e54-68603b554e63"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA Unit 8 Assessment_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA Unit 8 Assessment_pilot_oo2025"
-        ],
-        "lesson.key": "Unit 8 Assessment",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "csa8-2025",
-        "activity_section.key": "79eed1ad-4c2c-479b-a220-cf6dbc646635"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U8 Creative Coding with the Console Project 1-Day_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U8 Creative Coding with the Console Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa8-2025",
-        "activity_section.key": "1f86d477-0835-4964-882b-174916fdab1e"
+        "activity_section.key": "b73c46a1-2c1e-4ee9-bcfc-ee0643d66889"
       }
     }
   ],

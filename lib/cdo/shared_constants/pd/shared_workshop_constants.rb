@@ -423,55 +423,62 @@ module Pd
       time_zone: {
         required: false,
         stateKey: 'timeZone',
-        label: 'Workshop time(s) will be set to your timezone:'
+        label: 'Workshop time(s) will be set to timezone:'
       },
     }
 
     WORKSHOP_COURSE_CONFIGS = [
       {
+        slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
+        label: COURSE_BUILD_YOUR_OWN,
+        icon: 'plus-square',
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(
+          course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
+          participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
+        )
+      },
+      {
         slug: COURSE_CSF.parameterize(separator: "_"),
         label: COURSE_CSF,
+        icon: 'book',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSF].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSP.parameterize(separator: "_"),
         label: COURSE_CSP,
+        icon: 'book',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSP].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSD.parameterize(separator: "_"),
         label: COURSE_CSD,
+        icon: 'book',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSD].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSA.parameterize(separator: "_"),
         label: COURSE_CSA,
+        icon: 'book',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_ADMIN_COUNSELOR.parameterize(separator: "_"),
         label: COURSE_ADMIN_COUNSELOR,
+        icon: 'users',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_ADMIN_COUNSELOR].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_FACILITATOR.parameterize(separator: "_"),
         label: COURSE_FACILITATOR,
+        icon: 'users',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS
-      },
-      {
-        slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
-        label: COURSE_BUILD_YOUR_OWN,
-        session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(
-          course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
-          participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
-        )
       }
     ].freeze
   end

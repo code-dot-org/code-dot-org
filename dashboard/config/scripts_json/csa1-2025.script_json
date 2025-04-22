@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 07:01:18 UTC",
+    "serialized_at": "2025-04-22 06:58:35 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -461,6 +461,21 @@
       },
       "seeding_key": {
         "lesson.key": "Sandbox: The Neighborhood",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 22,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2025"
       }
@@ -1296,6 +1311,18 @@
       "seeding_key": {
         "lesson_activity.key": "8da246ec-fa5b-4329-af9c-ef9daa8d8509",
         "lesson.key": "Sandbox: The Neighborhood",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "acfbe2d5-0e1e-4207-9915-f32a845ca58b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "acfbe2d5-0e1e-4207-9915-f32a845ca58b",
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2025"
       }
@@ -3978,7 +4005,7 @@
       "key": "b374b88e-45ec-4003-903b-c0823b347123",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***void***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that a subclass can access methods in the superclass, but a superclass cannot access methods in the subclass."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***void***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that a subclass can access methods in the superclass, but a superclass cannot access methods in the subclass."
       },
       "seeding_key": {
         "activity_section.key": "b374b88e-45ec-4003-903b-c0823b347123",
@@ -6494,6 +6521,17 @@
         "activity_section.key": "82b12e33-6eea-4f1a-a197-e8180b2ef351",
         "lesson_activity.key": "8da246ec-fa5b-4329-af9c-ef9daa8d8509"
       }
+    },
+    {
+      "key": "38f41b23-6697-4edd-9bd0-3d5b3232bbba",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "38f41b23-6697-4edd-9bd0-3d5b3232bbba",
+        "lesson_activity.key": "acfbe2d5-0e1e-4207-9915-f32a845ca58b"
+      }
     }
   ],
   "script_levels": [
@@ -6903,14 +6941,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U1L4-L2-2_pilot_oo2025"
+          "CSA U1L4-L2-2_revised2025"
         ],
         "progression": "Investigate and Modify: Painter Class Methods"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L4-L2-2_pilot_oo2025"
+          "CSA U1L4-L2-2_revised2025"
         ],
         "lesson.key": "Methods",
         "lesson_group.key": "lessonGroup-8",
@@ -6918,7 +6956,7 @@
         "activity_section.key": "61f5b832-9097-487c-9aef-3305829b84f5"
       },
       "level_keys": [
-        "CSA U1L4-L2-2_pilot_oo2025"
+        "CSA U1L4-L2-2_revised2025"
       ]
     },
     {
@@ -7277,15 +7315,12 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U1L5-L2-4_pilot_oo2025"
-        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L5-L2-4_pilot_oo2025"
+          "CSA U1L5-L2-4_revised2025"
         ],
         "lesson.key": "Loops",
         "lesson_group.key": "lessonGroup-8",
@@ -7293,7 +7328,7 @@
         "activity_section.key": "006169fb-83d0-4455-a641-33f1c9185b67"
       },
       "level_keys": [
-        "CSA U1L5-L2-4_pilot_oo2025"
+        "CSA U1L5-L2-4_revised2025"
       ]
     },
     {
@@ -8595,6 +8630,28 @@
       "level_keys": [
         "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
       ]
+    },
+    {
+      "chapter": 85,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2025",
+        "activity_section.key": "38f41b23-6697-4edd-9bd0-3d5b3232bbba"
+      },
+      "level_keys": [
+        "student-eou-survey_-csa_2025"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -8792,9 +8849,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L4-L2-2_pilot_oo2025",
+        "level.key": "CSA U1L4-L2-2_revised2025",
         "script_level.level_keys": [
-          "CSA U1L4-L2-2_pilot_oo2025"
+          "CSA U1L4-L2-2_revised2025"
         ],
         "lesson.key": "Methods",
         "lesson_group.key": "lessonGroup-8",
@@ -8972,9 +9029,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L5-L2-4_pilot_oo2025",
+        "level.key": "CSA U1L5-L2-4_revised2025",
         "script_level.level_keys": [
-          "CSA U1L5-L2-4_pilot_oo2025"
+          "CSA U1L5-L2-4_revised2025"
         ],
         "lesson.key": "Loops",
         "lesson_group.key": "lessonGroup-8",
@@ -9605,6 +9662,18 @@
         "script.name": "csa1-2025",
         "activity_section.key": "82b12e33-6eea-4f1a-a197-e8180b2ef351"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-csa_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa1-2025",
+        "activity_section.key": "38f41b23-6697-4edd-9bd0-3d5b3232bbba"
+      }
     }
   ],
   "resources": [
@@ -9682,7 +9751,7 @@
     },
     {
       "name": "[EXEMPLAR] Instantiating Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/177wrjjLdfuEx1dliDJLrrVCDzn0Gk3moImBxaZqB_JY/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1963L2lEt66c67LjbJ4p8uSkq-jmIhqNqn2EqcDQG_VE/edit?usp=sharing",
       "key": "_exemplar_instantiating_objects_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -10198,7 +10267,7 @@
     },
     {
       "name": "Classes and Objects",
-      "url": "https://docs.google.com/presentation/d/1bjb_fMB9M1hkBFl_oYTJ9-ZP4yn4SREkP1fhNkMZPKg/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1sMR2QXHNBTaW9SKgI7jA93aZesAUbogoTQqduyrHDUQ/edit?usp=sharing",
       "key": "classes_and_objects_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -10297,11 +10366,9 @@
     },
     {
       "name": "CSA Unit 1 Slides",
-      "url": "https://docs.google.com/presentation/d/1bFZJ2H9aGgtfdGgymlQJU1-04SAswwc7IbCBYVJFz34/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/19Y5dlA2dVGuG5wPW53oz39-b7gahSlES6EYBBg5gwsQ/edit?usp=sharing",
       "key": "csa_unit_1_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_1_slides"
@@ -10309,11 +10376,9 @@
     },
     {
       "name": "CSA Unit 1 Word Wall Cards",
-      "url": "https://docs.google.com/document/d/1HzzZWTryqreYF9IuC4BQUS0hiXJAd7J5Jy4NRJZVjrA/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1BQf9QlaRAnkqKk8GXYZH6P9WusADQta4b8jT4dqPHNo/edit?usp=sharing",
       "key": "csa_unit_1_word_wall_cards",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "csa_unit_1_word_wall_cards"
@@ -10321,7 +10386,7 @@
     },
     {
       "name": "Debugging Strategies",
-      "url": "https://docs.google.com/presentation/d/1rIh6HfWEOINeyq7MEztTPYw-LWit9h2IuXO83kQUmfo/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1SepTz1kRkqWkFUNgkiIHFMcXNhgnpZFchw7w0HyevM4/edit?usp=sharing",
       "key": "debugging_strategies_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -10521,7 +10586,7 @@
     },
     {
       "name": "Instantiating Objects",
-      "url": "https://docs.google.com/presentation/d/1yGZbEJtx4Lq5CKXXB824rhxiz4J0sJb3KUA4YPDtHO0/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1SI_HkFxX4qwHE1lGE1Z6Nvi4-DTKFw1DCWY82ziAIqg/edit?usp=sharing",
       "key": "instantiating_objects_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -10546,7 +10611,7 @@
     },
     {
       "name": "Instantiating Objects Guided Notes",
-      "url": "https://docs.google.com/document/d/1bf6wdryCKsqj632zGBvcU8isI3ij4GLxo4tYiL0i1SE/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1gdXJDXjNoVh6GUJ-pYmD1tB7MMI-IpVYBjov0D1yfGw/edit?usp=sharing",
       "key": "instantiating_objects_guided_notes",
       "properties": {
         "audience": "Student",
@@ -11197,7 +11262,7 @@
     },
     {
       "name": "Writing Methods",
-      "url": "https://docs.google.com/presentation/d/1-ZSKkoIstCdjKQtVjwARr6O8neqzXWih9hW581WLD3w/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1bv8urSa5e4QOM6LEuT0gDDp3kywJ4zqsj8eYSlgcc3M/edit?usp=sharing",
       "key": "writing_methods_1",
       "properties": {
         "audience": "Verified Teacher",

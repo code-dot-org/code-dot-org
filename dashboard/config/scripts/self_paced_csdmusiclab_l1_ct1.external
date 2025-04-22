@@ -1,0 +1,42 @@
+name 'self-paced-CSDMusicLab-L1-CT1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Computational Thinking in the Curriculum
+
+#### The Programming with Music Lab curriculum prompts students to utilize the above practices while they code. While you teach the curriculum, it will be valuable to recognize them and model them in your thinking. This will help engender independence and a problem-solving mindset in students.
+
+#### Here's what this might sound like during your instruction:
+
+<!-- Quote 1 (image left, bubble right) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+  <img src="https://images.code.org/4086844cf82c87eb1c9faf23d2d5f227-image-1744318038281.png" alt="Teacher avatar" style="width: 70px; height: 70px; border-radius: 50%;">
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 20px 0;">
+  Hm, this coding level seems pretty complex. I'm going to <b>decompose it</b>, or break it down, into a couple of simple steps that I can check off one-by-one to make it easier.
+  </div>
+</div>
+
+<!-- Quote 2 (image right, bubble left) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px; flex-direction: row-reverse;">
+  <img src="https://images.code.org/aceef16fd20a958bf4ea438db569fad1-image-1744318027547.png" alt="Teacher avatar" style="width: 70px; height: 70px; border-radius: 50%;">
+  <div style="background-color: #DECEEA; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 0 20px;">
+    I've seen this kind of bug before. Let me look for a <b>pattern</b> so I can reuse a solution that worked last time.
+  </div>
+</div>
+
+<!-- Quote 3 (image left, bubble right) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+  <img src="https://images.code.org/2cd1158362bb55adf308b2a5c8c352a5-image-1744318029997.png" alt="Teacher avatar" style="width: 70px; height: 70px; border-radius: 50%;">
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 20px 0;">
+    There’s a lot happening in this code. I'm going to use <b>abstraction</b> by focusing only on what the blocks do together, not every single detail.
+  </div>
+</div>
+<!-- Quote 4: Algorithms (image right, bubble left) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px; flex-direction: row-reverse;">
+  <img src="https://images.code.org/65067c2c052f9307003507603b1d0d1f-image-1744318025103.png" alt="Teacher avatar" style="width: 70px; height: 70px; border-radius: 50%;">
+  <div style="background-color: #DECEEA; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 0 20px;">
+  To solve this, I’m going to come up with a list of steps the computer can follow — almost like a recipe. That’s called building an <b>algorithm</b>.
+  </div>
+</div>
+MARKDOWN

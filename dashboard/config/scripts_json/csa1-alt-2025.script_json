@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 07:01:35 UTC",
+    "serialized_at": "2025-04-22 06:01:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4259,7 +4259,7 @@
       "key": "ea00adb8-ded5-4591-a39a-06d3f7240f6f",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***void***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that a subclass can access methods in the superclass, but a superclass cannot access methods in the subclass."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***void***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that a subclass can access methods in the superclass, but a superclass cannot access methods in the subclass."
       },
       "seeding_key": {
         "activity_section.key": "ea00adb8-ded5-4591-a39a-06d3f7240f6f",
@@ -7374,7 +7374,7 @@
       "key": "b894a494-1641-4e0a-ae78-afb86c6a7256",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to recall how subclasses inherit the attributes and methods of the superclass and explain that constructors are not inherited.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think we could assign values to the instance variables declared in the superclass from a subclass constructor?*\n\n**Discussion Goal:** Students suggest ways to assign the values to the instance variables declared in the superclass and may wonder if there is a keyword similar to the `this` keyword that they can use to achieve this.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to recall how subclasses inherit the attributes and methods of the superclass and explain that constructors are not inherited.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If a subclass inherits instance variables from the superclass but not its constructor, what problems might happen when we try to create a subclass object?*\n\n**Discussion Goal:** Students recognize that constructors are used to initialize instance variables. Without inheriting constructors, they may reason that subclass objects could be created without necessary values, leading to incorrect or incomplete objects. Some students might suggest that the subclass would need its own way to pass values to the superclass.",
         "name": "Revisiting Inheritance",
         "tips": [
           {
@@ -7543,7 +7543,7 @@
       "key": "5a2e72b0-e965-42ff-878e-f4b2998d6f12",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Designate four corners or areas in the classroom for each constructor signature. Have students go to the corner they think is the correct constructor for the constructor call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the correct constructor signature. Have students work with the students at their corner to develop an explanation for why their corner is correct or incorrect. Ask students to share their explanations with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Designate four corners or areas in the classroom for each possible explanation of why we use `super()` in a subclass constructor. Have students go to the corner they believe is correct.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Once in their corners, have students work together to justify their choice. Encourage them to prepare a short explanation of why their answer is correct — or why other options are incorrect — and share out with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Constructor Corners",
         "tips": [
           {
@@ -9210,14 +9210,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U1L4-L2-2_alt-2025"
+          "CSA U1L4-L2-2_revised2025"
         ],
         "progression": "Investigate and Modify: Painter Class Methods"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L4-L2-2_alt-2025"
+          "CSA U1L4-L2-2_revised2025"
         ],
         "lesson.key": "Methods",
         "lesson_group.key": "lessonGroup-18",
@@ -9225,7 +9225,7 @@
         "activity_section.key": "efed4d69-39bb-4ce2-b1ae-cf6b6808d826"
       },
       "level_keys": [
-        "CSA U1L4-L2-2_alt-2025"
+        "CSA U1L4-L2-2_revised2025"
       ]
     },
     {
@@ -10509,15 +10509,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA-UserInput-L5_pilot_alt-2025"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA-UserInput-L5_pilot_alt-2025"
+          "CSA-UserInput-L5_revised-2025"
         ],
         "lesson.key": "User Input",
         "lesson_group.key": "lessonGroup-18",
@@ -10525,7 +10522,7 @@
         "activity_section.key": "1c3450ba-a02d-48c5-a72c-0912c418850e"
       },
       "level_keys": [
-        "CSA-UserInput-L5_pilot_alt-2025"
+        "CSA-UserInput-L5_revised-2025"
       ]
     },
     {
@@ -12410,9 +12407,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L4-L2-2_alt-2025",
+        "level.key": "CSA U1L4-L2-2_revised2025",
         "script_level.level_keys": [
-          "CSA U1L4-L2-2_alt-2025"
+          "CSA U1L4-L2-2_revised2025"
         ],
         "lesson.key": "Methods",
         "lesson_group.key": "lessonGroup-18",
@@ -13034,9 +13031,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA-UserInput-L5_pilot_alt-2025",
+        "level.key": "CSA-UserInput-L5_revised-2025",
         "script_level.level_keys": [
-          "CSA-UserInput-L5_pilot_alt-2025"
+          "CSA-UserInput-L5_revised-2025"
         ],
         "lesson.key": "User Input",
         "lesson_group.key": "lessonGroup-18",
@@ -14597,7 +14594,7 @@
     },
     {
       "name": "Classes and Objects",
-      "url": "https://docs.google.com/presentation/d/1zShEU4odisNrMf1__90VklwFDu16Rjysvh-IzF1nRtY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1sMR2QXHNBTaW9SKgI7jA93aZesAUbogoTQqduyrHDUQ/edit?usp=sharing",
       "key": "classes_and_objects",
       "properties": {
         "audience": "Verified Teacher",

@@ -5,19 +5,16 @@ description 'description here'
 markdown <<MARKDOWN
 # Routers and Redundancy
 
-## 📝 To Do
-
-#### 1. Look at the network diagram below. Notice any instances where messages took different routes to reach the same destination.
+#### Take a look at the network diagram below, and imagine you were trying to send a message from the device with the IP address 1.1 to the device with the IP address 2.12. *What different routes could the message take?*
 
 <p align="center">
-<img src="https://images.code.org/50fcb7171f111b9233c60a1901145065-Screenshot 2025-04-15 at 2.07.15 PM.png" alt="lesson plan diagram" width="50%" style="border-radius:10px; border: 5px solid black;">
+<img src="https://images.code.org/0d372d6308a4f4ebccb0e1b65ed7c1fa-Screenshot 2025-04-21 at 10.52.56 AM.png" alt="lesson plan diagram" width="50%" style="border-radius:10px; border: 5px solid black;">
 </p>
 
-#### 2. Imagine one router fails. Imagine an alternate route that your message might take to reach the same destination.
+#### For example, the message could travel from **1.1 ➡️ Router 1 ➡️ Router 8 ➡️ Router 2 ➡️ 2.12**
 
-#### 3. Reflect on how redundant paths prevents a complete network failure.
+#### The message could also take a different path from **1.1 ➡️ Router 8 ➡️ Router 6 ➡️ Router 2 ➡️ 2.12**
 
-<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
-</p>
+#### Imagine one router fails. Because of the **redundancy** in the system, the message can take an alternative route to it's final destination. *Trace out a few alternative paths and reflect on how redundant paths prevents a complete network failure.*
+
 MARKDOWN

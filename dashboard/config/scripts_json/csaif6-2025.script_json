@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "Other",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-10 21:07:43 UTC",
+    "serialized_at": "2025-04-21 21:33:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4352,6 +4352,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-panel5-2025-launch"
+        ],
         "progression": "Panel Levels"
       },
       "bonus": false,
@@ -4374,6 +4377,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-lesson7-panel6-2025-launch"
+        ],
         "progression": "Panel Levels"
       },
       "bonus": false,
