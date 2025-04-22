@@ -3,9 +3,12 @@ import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
 import React from 'react';
 
+import AITutorFooter from '@cdo/apps/aiTutor/views//AITutorFooter';
+import AITutorChatWorkspace from '@cdo/apps/aiTutor/views/AITutorChatWorkspace';
 import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
@@ -22,6 +25,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
 }) => {
   const {
     leftPanelWidth,
+    rightestPanelWidth,
     rightPanelWidth,
     rightTopPanelHeight,
     rightBottomPanelHeight,
@@ -87,6 +91,18 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             width={rightPanelWidth}
             setOutputHeight={setRightBottomPanelSize}
           />
+        </div>
+        <div style={{width: rightestPanelWidth}}>
+          <PanelContainer
+            id="aitutor"
+            headerContent="AI Tutor"
+            className={moduleStyles.rightestColumn}
+          >
+            <div className={moduleStyles.inside}>
+              <AITutorChatWorkspace />
+              <AITutorFooter renderAITutor={true} />
+            </div>
+          </PanelContainer>
         </div>
       </div>
       {isProjectLevel && <div className={moduleStyles.footerArea} />}

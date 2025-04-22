@@ -94,27 +94,22 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
       >
         {storedMessages.map((message, index) => {
           const isLastAssistantMessage = index === lastAssistantMessageIndex;
-          return (
-            <div
-              key={message.id ?? `message-${index}`}
-              ref={isLastAssistantMessage ? lastAssistantMessageRef : null}
-            >
-              <ChatMessage
-                text={message.chatMessageText}
-                role={message.role}
-                customStyles={style}
-                footer={
-                  message.role === Role.ASSISTANT &&
-                  message.chatMessageText !== initialAssistantGreeting ? (
-                    <AssistantMessageFeedback
-                      messageId={message.id}
-                      onDetailsOpenChange={setFeedbackDetailsOpen}
-                    />
-                  ) : null
-                }
-              />
-            </div>
-          );
+          if (message.role !== 'user') {
+            return (
+              <div
+                key={message.id ?? `message-${index}`}
+                ref={isLastAssistantMessage ? lastAssistantMessageRef : null}
+                style={{opacity: index === storedMessages.length - 1 ? 1 : 0.7}}
+              >
+                <ChatMessage
+                  text={message.chatMessageText}
+                  role={message.role}
+                  customStyles={style}
+                  footer={null}
+                />
+              </div>
+            );
+          }
         })}
         <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
         <AITutorSuggestedPrompts innerRef={handleSuggestedPromptsRef} />
@@ -127,6 +122,8 @@ const AITutorChatWorkspace: React.FunctionComponent = () => {
 const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
   shouldDisplay,
 }) => {
+  return null;
+
   if (shouldDisplay) {
     return (
       <div className={style.waitingAnimationWrapper}>

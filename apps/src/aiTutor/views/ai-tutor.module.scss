@@ -177,11 +177,13 @@ button.buttonStyle {
 .conversationContainer {
   display: flex;
   flex-direction: column;
-  gap: $default-spacing;
+  //gap: $default-spacing;
   height: 100%;
   width: 100%;
   overflow-y: auto;
   box-sizing: border-box;
-  padding: $default-spacing;
+  padding: 0 0 24px 0;
+  //padding: $default-spacing;
+  gap: 6px;
 }
 

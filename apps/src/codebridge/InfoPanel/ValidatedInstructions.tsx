@@ -9,6 +9,7 @@ import React, {useContext, useEffect, useMemo, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import AITutorChatWorkspace from '@cdo/apps/aiTutor/views/AITutorChatWorkspace';
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
 import {
@@ -243,7 +244,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     const showFinishButton = showButton && !hasNextLevel;
 
     // We show the continue variant if there is a next level.
-    const showContinueButton = showButton && hasNextLevel;
+    const showContinueButton = false; // showButton && hasNextLevel;
 
     const showNavigation =
       showContinueButton || showFinishButton || showSubmitButton || false;
@@ -390,6 +391,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             </InstructorsOnly>
           )}
         </div>
+        <AITutorChatWorkspace />
         {showNavigation && (
           <div
             id="instructions-navigation"

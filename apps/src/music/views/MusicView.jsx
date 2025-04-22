@@ -396,7 +396,7 @@ class UnconnectedMusicView extends React.Component {
       this.props.setPackId(DEFAULT_PACK);
       Lab2Registry.getInstance()
         .getMetricsReporter()
-        .logInfo('Setting existing project to default pack');
+        .logInfo('Setting existing project tso default pack');
     }
 
     // Go ahead and compile and execute the initial song, and report initial block stats once code is loaded.

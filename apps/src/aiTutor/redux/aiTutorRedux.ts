@@ -25,13 +25,7 @@ export interface AITutorState {
   showSuggestedPrompts: boolean;
 }
 
-const initialChatMessages: ChatCompletionMessage[] = [
-  {
-    role: Role.ASSISTANT,
-    chatMessageText: initialAssistantGreeting,
-    status: Status.OK,
-  },
-];
+const initialChatMessages: ChatCompletionMessage[] = [];
 
 const initialState: AITutorState = {
   level: undefined,
@@ -77,15 +71,16 @@ export const askAITutor = createAsyncThunk(
       scriptId: aiTutorState.aiTutor.scriptId,
     };
 
+    const formattedQuestion = formatQuestionForAITutor(chatContext);
+
     const storedMessages = aiTutorState.aiTutor.chatMessages;
     const newMessage: ChatCompletionMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: chatContext.studentInput,
+      chatMessageText: formattedQuestion, // chatContext.studentInput,
     };
     thunkAPI.dispatch(addChatMessage(newMessage));
 
-    const formattedQuestion = formatQuestionForAITutor(chatContext);
     // We currently use the default system prompt stored on the server,
     // so don't pass in an override here.
     const systemPrompt = !!chatContext.systemPrompt

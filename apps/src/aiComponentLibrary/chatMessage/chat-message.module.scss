@@ -3,8 +3,8 @@
 @import '@code-dot-org/component-library-styles/typography.module';
 
 $message-border-radius: 8px;
-$user-color: $light_gray_100;
-$assistant-color: $brand_primary_light;
+$user-color: $light_gray_950;
+$assistant-color: $light_gray_950;
 $bot-container-size: 32px;
 $icon-message-gap: 8px;
 $icon-overlay-padding-right: 8px;
@@ -133,8 +133,8 @@ $icon-overlay-padding-right: 8px;
 }
 
 .botIcon {
-  width: 24px;
-  height: 24px;
+  //width: 48px;
+  //height: 48px;
   flex-shrink: 0;
 }
 

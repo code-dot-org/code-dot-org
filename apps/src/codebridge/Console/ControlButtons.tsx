@@ -7,11 +7,14 @@ import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterH
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
-import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {askAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getActiveFileForSource,
+  getAppOptionsEditBlocks,
+} from '@cdo/apps/lab2/projects/utils';
 import {
   setHasRun,
   setIsRunning,
@@ -59,6 +62,10 @@ const ControlButtons: React.FunctionComponent = () => {
 
   const miniApp = labConfig?.miniApp?.name;
 
+  const pythonlabSource = useAppSelector(
+    state => state.lab2Project?.projectSources?.source
+  );
+
   const resetStatus = useCallback(() => {
     dispatch(setHasRun(false));
     dispatch(setIsRunning(false));
@@ -87,7 +94,18 @@ const ControlButtons: React.FunctionComponent = () => {
         }
       });
       dispatch(setHasRun(true));
-      dispatch(setShowSuggestedPrompts(true));
+      //dispatch(setShowSuggestedPrompts(true));
+      const studentCode =
+        typeof pythonlabSource !== 'string' && pythonlabSource
+          ? getActiveFileForSource(pythonlabSource)?.contents || ''
+          : '';
+      dispatch(
+        askAITutor({
+          studentInput: "Why doesn't my code work?",
+          studentCode,
+          actionType: 'generic_help',
+        })
+      );
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()

@@ -46,6 +46,7 @@ export const useHorizontalLayout = ({
   const [leftPanelWidth, setLeftPanelWidth] = useState<number | undefined>(
     leftPanel.initialWidth
   );
+  const rightestPanelWidth = 250;
   const [rightBottomPanelHeight, setrightBottomPanelHeight] = useState<
     number | undefined
   >(rightBottomPanel.initialHeight);
@@ -84,7 +85,10 @@ export const useHorizontalLayout = ({
 
   const adjustRightPanelWidth = useCallback(() => {
     const newRightPanelWidth = Math.max(
-      window.innerWidth - rawLeftPanelWidth - RESIZE_BAR_SIZE_PX,
+      window.innerWidth -
+        rawLeftPanelWidth -
+        RESIZE_BAR_SIZE_PX -
+        rightestPanelWidth,
       minRightPanelWidth
     );
     setRightPanelWidth(newRightPanelWidth);
@@ -164,6 +168,7 @@ export const useHorizontalLayout = ({
 
   return {
     leftPanelWidth,
+    rightestPanelWidth,
     rightPanelWidth,
     rightTopPanelHeight,
     rightBottomPanelHeight,

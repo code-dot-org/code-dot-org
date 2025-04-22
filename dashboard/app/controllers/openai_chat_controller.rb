@@ -26,6 +26,8 @@ class OpenaiChatController < ApplicationController
 
     messages = prepend_system_prompt(system_prompt, params[:messages])
 
+    pp messages
+
     response = client.request_chat_completion(messages)
     response_body = JSON.parse(response.body)
     response_body = response_body['choices'][0]['message'] if response.code == 200
