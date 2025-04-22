@@ -3,6 +3,9 @@ require 'parallel'
 require 'json'
 require 'fileutils'
 
+# This script operates on the output from add_unit_source.rb. It filters PII from
+# student source code within a single input file.
+
 $options = {}
 OptionParser.new do |opts|
   opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
@@ -30,7 +33,7 @@ raise "Input directory must exist: #{$input_dir}" unless Dir.exist?($input_dir)
 raise "Input directory must not be empty: #{$input_dir}" if Dir.empty?($input_dir)
 
 # work around a bug where the second call to Parallel.map fails with Parallel::DeadWorker
-# by temporarily requiring this script to be called on a single input file.
+# by requiring this script to be called on a single input file.
 raise "must specify a filename, or use filter_unit_pii.rb to process an entire directory." unless $options[:filename]
 
 $options[:output_dir] ||= $options[:input_dir]
