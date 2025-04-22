@@ -277,7 +277,9 @@ module Services
       script_to_import.is_migrated = true
       # Needed because we already have some Scripts with invalid names
       script_to_import.skip_name_format_validation = true
-      Unit.import! [script_to_import], on_duplicate_key_update: get_columns(Unit)
+      # We want to persist original_unit_group_id since it does not get set until the course is seeded
+      columns_to_update = get_columns(Unit) - [:original_unit_group_id]
+      Unit.import! [script_to_import], on_duplicate_key_update: columns_to_update
 
       # activerecord-import doesn't trigger callbacks for imported models, and
       # Scripts rely on the after_save hook to invoke `generate_plc_objects`,
