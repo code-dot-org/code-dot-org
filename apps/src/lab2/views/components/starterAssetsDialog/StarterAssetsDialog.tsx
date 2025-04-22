@@ -67,24 +67,24 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
   );
 
   const handleError = useCallback(
-    (error?: Error) => {
-      if (error) {
-        onError?.(error);
-      }
-
+    (error: Error) => {
+      onError?.(error);
       setCurrentError(error);
     },
     [onError]
   );
 
+  const clearError = () => setCurrentError(undefined);
+
   const dialogProps = {
     assets,
     loading,
+    currentError,
     // Used by UploadAssetDialog
     addAsset,
     removeAsset,
     handleError,
-    currentError,
+    clearError,
   };
 
   if (mode === 'select') {

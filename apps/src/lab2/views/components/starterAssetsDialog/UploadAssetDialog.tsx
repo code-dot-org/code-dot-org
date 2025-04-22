@@ -24,7 +24,7 @@ const ACCEPTED_FILE_TYPES = [
 
 export interface UploadProps extends CommonProps {
   mode: 'upload';
-  currentError?: Error;
+  clearError?: () => void;
 }
 
 const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
@@ -36,6 +36,7 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
   levelName,
   handleError,
   currentError,
+  clearError,
 }) => {
   const [requestInProgress, setRequestInProgress] = useState<
     'upload' | 'delete'
@@ -64,7 +65,7 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
   );
 
   const onDelete = async (filename: string) => {
-    handleError(undefined);
+    clearError?.();
     setRequestInProgress('delete');
     try {
       await deleteFile(filename, levelName);
@@ -108,7 +109,7 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
       primaryButtonProps={{
         text: buttonText,
         onClick: () => {
-          handleError(undefined);
+          clearError?.();
           openFileInput();
         },
         iconLeft: {

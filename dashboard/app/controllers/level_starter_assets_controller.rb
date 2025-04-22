@@ -65,7 +65,7 @@ class LevelStarterAssetsController < ApplicationController
     if success && @level.add_starter_asset!(friendly_name, uuid_name)
       render json: LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)
     else
-      return head :request_too_large
+      return head :unprocessable_entity
     end
   end
 
