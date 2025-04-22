@@ -9,8 +9,11 @@ import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 
-import {getValidationFromSource} from '../codebridge';
-import {getSystemMessage} from '../codebridge/Console/MessageHelpers';
+import {getValidationFromSource, RunType} from '../codebridge';
+import {
+  getSystemMessage,
+  getTimestampMessage,
+} from '../codebridge/Console/MessageHelpers';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {
@@ -49,9 +52,7 @@ export async function handleRunClick(
       );
       return;
     }
-    consoleManager?.writeConsoleMessage(
-      getSystemMessage(pythonlabI18n.runningProgram(), appName)
-    );
+    consoleManager?.writeConsoleMessage(getTimestampMessage(RunType.RUN));
     await runPythonCode(code, source);
     if (isNeighborhoodLevel()) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
@@ -107,7 +108,7 @@ export async function runAllTests(
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
   if (validationToRun) {
     consoleManager?.writeConsoleMessage(
-      getSystemMessage(pythonlabI18n.runningLevelTests(), appName)
+      getTimestampMessage(RunType.VALIDATION)
     );
     progressManager?.resetValidation();
     // We only send the separate validation file, because otherwise the
@@ -131,7 +132,7 @@ export async function runAllTests(
     }
   } else {
     consoleManager?.writeConsoleMessage(
-      getSystemMessage(pythonlabI18n.runningProjectTests(), appName)
+      getSystemMessage(getTimestampMessage(RunType.TEST))
     );
     // Otherwise, we look for files that follow the regex 'test*.py' and run those.
     await runPythonCode(runStudentTests(), source);

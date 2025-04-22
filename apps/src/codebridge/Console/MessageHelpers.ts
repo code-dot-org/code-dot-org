@@ -1,3 +1,7 @@
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
+
+import {RunType} from '../types';
+
 const IMAGE_WIDTH = 600;
 const IMAGE_HEIGHT = 600;
 
@@ -21,4 +25,19 @@ export function getErrorMessage(message: string) {
 
 export function getSystemError(message: string, appName?: string) {
   return getErrorMessage(getSystemMessage(message, appName));
+}
+
+export function getTimestampMessage(runType: RunType) {
+  const currentDate = new Date();
+  const formattedTime = currentDate.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+  let runString = codebridgeI18n.runAt({time: formattedTime});
+  if (runType === RunType.TEST) {
+    runString = codebridgeI18n.testAt({time: formattedTime});
+  } else if (runType === RunType.VALIDATION) {
+    runString = codebridgeI18n.validateAt({time: formattedTime});
+  }
+  return `--------${runString}--------`;
 }

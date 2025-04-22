@@ -119,9 +119,8 @@ const setUpPyodideWorker = () => {
         writeConsoleMessage(message);
         break;
       case 'run_complete': {
-        writeConsoleMessage(
-          getSystemMessage(pythonlabI18n.programCompleted(), appName)
-        );
+        // Write a blank line to the console.
+        writeConsoleMessage('');
         delete callbacks[id];
         onSuccess(event.data);
         break;
@@ -291,6 +290,7 @@ const restartPyodideIfProgramIsRunning = () => {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
 
+    // TODO: decide if we want to keep this or not
     writeConsoleMessage(
       getSystemMessage(pythonlabI18n.programStopped(), appName)
     );
