@@ -244,7 +244,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     const showFinishButton = showButton && !hasNextLevel;
 
     // We show the continue variant if there is a next level.
-    const showContinueButton = showButton && hasNextLevel;
+    const showContinueButton = false; // showButton && hasNextLevel;
 
     const showNavigation =
       showContinueButton || showFinishButton || showSubmitButton || false;
