@@ -99,7 +99,7 @@ export const fileBrowserKeyboardCoordinateGetter: (
 
 // Custom collision detection algorithm for the file browser.
 // We want to drop into the folder that the file is below the top of, but if
-// we are below multiple folders, we will pick the lower of the two (which is the one
+// we are below multiple folders, we will pick the lowest one (which is the one
 // the item being dropped is closest to).
 // The default rectangleCollision algorithm picks the intersection between rectangles,
 // and we can overlap with multiple folders due to nesting. We take the initial list of collisions,
