@@ -474,7 +474,7 @@ class Lesson < ApplicationRecord
       announcements: announcements,
       purpose: render_property(:purpose),
       preparation: render_property(:preparation),
-      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user)},
+      activities: lesson_activities.map {|la| la.summarize_for_lesson_show(can_view_teacher_markdown, user, unit_group_unit: unit_group_unit)},
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),
