@@ -364,3 +364,20 @@ export const Weight: Story = {
     });
   },
 };
+
+export const WithMultilineItem: Story = {
+  args: {
+    items: [
+      {key: 'item-a', label: 'Item A'},
+      {
+        key: 'item-b',
+        label:
+          'Extremely, exceptionally, extraordinarily, immensely prolonged Item B',
+      },
+      {key: 'item-c', label: 'Item c'},
+    ],
+  },
+  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
+    canvasElement.style.width = '20rem';
+  },
+};
