@@ -6,7 +6,7 @@ require 'fileutils'
 # This script operates on the output from add_unit_source.rb. It filters PII from
 # student source code within a single input file.
 
-INPUT_TYPES = %w[progress evals]
+INPUT_TYPES = %w[progress ai_evals teacher_evals]
 
 $options = {
   input_type: 'progress'
@@ -95,9 +95,7 @@ def process_file(input_filename)
 
   rows = Parallel.map(rows, in_processes: $max_processes) do |row|
     data = JSON.parse(row, symbolize_names: true)
-    if $options[:input_type] == 'progress'
-      process_row_source_pii(data)
-    end
+    process_row_pii(data)
     data.to_json
   rescue JSON::ParserError => exception
     puts "Error parsing JSON: #{exception.message}. row:\n#{row}"
@@ -111,32 +109,57 @@ def process_file(input_filename)
   puts "Processed #{rows.size} rows in #{(Time.now - start_time).round(2)} seconds."
 end
 
-def process_row_source_pii(data)
-  if data[:source].present?
-    pii_score, pii_entities = check_text_pii(data[:source], type: 'source')
-    data[:source_pii_score] = pii_score
-    data[:source_pii_entities] = pii_entities
-    if pii_score > $pii_threshold
-      data[:source] = nil
-      data[:link_to_project] = nil
-      data[:channel_id] = nil
-    end
-  end
-
-  if data[:student_answer].present?
-    pii_score, pii_entities = check_text_pii(data[:student_answer], type: 'source')
-    data[:student_answer_pii_score] = pii_score
-    data[:student_answer_pii_entities] = pii_entities
-    if pii_score > $pii_threshold
-      data[:student_answer] = nil
-    end
+def process_row_pii(data)
+  # process the row based on the input type, so that we don't (a) waste time
+  # scanning for irrelevant fields or (b) accidentally do PII filtering on the
+  # wrong field if there is overlap in field names between input types.
+  case $options[:input_type]
+  when 'progress'
+    process_source_pii(data)
+  when 'ai_evals'
+    process_ai_eval_pii(data)
+  when 'teacher_evals'
+    process_teacher_eval_pii(data)
+  else
+    raise "Unsupported input type: #{$options[:input_type]}"
   end
 
   data[:hashed_user_id] = hashed_user_id(data[:user_id])
   data.delete(:user_id)
 end
 
-def check_text_pii(text, type:)
+def process_source_pii(data)
+  process_field_pii(data, field: :source, related_fields: [:link_to_project, :channel_id])
+  process_field_pii(data, field: :student_answer)
+end
+
+def process_ai_eval_pii(data)
+  process_field_pii(data, field: :ai_evidence)
+  process_field_pii(data, field: :ai_observations)
+  process_field_pii(data, field: :ai_feedback_other_content)
+end
+
+def process_teacher_eval_pii(data)
+  process_field_pii(data,  field: :teacher_feedback)
+end
+
+# if the field contains a pii score over the threshold, nil out that field and
+# any related fields.
+def process_field_pii(data, field:, related_fields: [])
+  return unless data[field].present?
+
+  pii_score, pii_entities = check_text_pii(data[field])
+  data[:"#{field}_pii_score"] = pii_score
+  data[:"#{field}_pii_entities"] = pii_entities
+  if pii_score > $pii_threshold
+    data[field] = nil
+    related_fields.each do |related_field|
+      data[related_field] = nil
+    end
+  end
+end
+
+def check_text_pii(text)
   return [0, []] unless text.present?
 
   params = {
@@ -162,7 +185,7 @@ def check_text_pii(text, type:)
 
   [max_score, response.entities]
 rescue => exception
-  puts "Error checking #{type} for PII: #{exception.message}"
+  puts "Error checking text for PII: #{exception.message}"
   [1, []]
 end
 

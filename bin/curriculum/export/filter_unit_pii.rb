@@ -44,8 +44,31 @@ def filter_progress_pii
   end
 end
 
+def filter_evals_pii
+  evals_filenames = Dir.glob(File.join($input_dir, 'evals', '*.jsonl'))
+  puts "#{File.basename(__FILE__)} found #{evals_filenames.size} eval files in #{$input_dir}/evals"
+  puts "debug eval filenames: \n#{evals_filenames.join("\n")}"
+
+  ai_evals_filename = File.basename(evals_filenames.find {|filename| filename.include?('_ai_evals_')})
+  raise "No AI evals found in #{$input_dir}/evals" unless ai_evals_filename.present?
+
+  teacher_evals_filename = File.basename(evals_filenames.find {|filename| filename.include?('_teacher_evals_')})
+  raise "No teacher evals found in #{$input_dir}/evals" unless teacher_evals_filename.present?
+
+  command = "SKIP_SCRIPT_PRELOAD=1 bundle exec ruby #{File.join(__dir__, 'filter_file_pii.rb')} " \
+    "-i #{$options[:input_dir]} -o #{$options[:output_dir]} -f #{ai_evals_filename} -t ai_evals"
+  puts "command: #{command}"
+  system(command)
+
+  command = "SKIP_SCRIPT_PRELOAD=1 bundle exec ruby #{File.join(__dir__, 'filter_file_pii.rb')} " \
+    "-i #{$options[:input_dir]} -o #{$options[:output_dir]} -f #{teacher_evals_filename} -t teacher_evals"
+  puts "command: #{command}"
+  system(command)
+end
+
 def main
   filter_progress_pii
+  filter_evals_pii
 end
 
 main
