@@ -55,6 +55,9 @@ def filter_evals_pii
   teacher_evals_filename = File.basename(evals_filenames.find {|filename| filename.include?('_teacher_evals_')})
   raise "No teacher evals found in #{$input_dir}/evals" unless teacher_evals_filename
 
+  evidence_levels_filename = File.basename(evals_filenames.find {|filename| filename.include?('_evidence_levels_')})
+  raise "No evidence levels found in #{$input_dir}/evals" unless evidence_levels_filename
+
   command = "SKIP_SCRIPT_PRELOAD=1 bundle exec ruby #{File.join(__dir__, 'filter_file_pii.rb')} " \
     "-i #{$options[:input_dir]} -o #{$options[:output_dir]} -f #{ai_evals_filename} -t ai_evals"
   puts "command: #{command}"
@@ -62,6 +65,10 @@ def filter_evals_pii
 
   command = "SKIP_SCRIPT_PRELOAD=1 bundle exec ruby #{File.join(__dir__, 'filter_file_pii.rb')} " \
     "-i #{$options[:input_dir]} -o #{$options[:output_dir]} -f #{teacher_evals_filename} -t teacher_evals"
+  puts "command: #{command}"
+  system(command)
+
+  command = "cp #{$input_dir}/evals/#{evidence_levels_filename} #{$options[:output_dir]}/evals/"
   puts "command: #{command}"
   system(command)
 end
