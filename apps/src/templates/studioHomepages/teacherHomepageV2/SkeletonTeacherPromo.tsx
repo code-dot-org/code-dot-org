@@ -13,7 +13,10 @@ import styles from './teacherHomepage.module.scss';
 
 export const SkeletonTeacherPromo: React.FC = () => {
   return (
-    <div className={styles.promotion} aria-label={i18n.loading()}>
+    <div
+      className={classNames(styles.promotion, styles['promotion-skeleton'])}
+      aria-label={i18n.loading()}
+    >
       <OverlineTwoText className={styles.promotionType}>
         <Skeleton />
       </OverlineTwoText>

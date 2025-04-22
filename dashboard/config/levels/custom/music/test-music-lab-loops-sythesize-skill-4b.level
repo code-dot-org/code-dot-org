@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-19T15:53:01.000Z",
   "level_num": "custom",
@@ -237,6 +238,17 @@
         "message": "auto-pass for exemplar validation",
         "next": true,
         "conditions": [
+          {
+            "name": "played_sound_type_multiple_times",
+            "value": "vocal:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-loops-sythesize-skill-4b_e49fd2a1-1712-46c9-9fad-238468f2a7cc",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening for **two different vocal tracks to play**...",
+        "next": false,
+        "conditions": [
 
         ]
       }
@@ -246,8 +258,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-19T15:53:01.066+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-4a\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-4a\"},{\"changed_at\":\"2025-03-19 15:53:56 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:54:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:55:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:55:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:56:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:57:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:59:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-07 14:14:25 +0000\",\"changed\":[\"offer_browser_tts\",\"exemplar_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-19T15:53:01.066+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-4a\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-4a\"},{\"changed_at\":\"2025-03-19 15:53:56 +0000\",\"changed\":[\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:54:54 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:55:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:55:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:56:36 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:57:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-19 15:59:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-07 14:14:25 +0000\",\"changed\":[\"offer_browser_tts\",\"exemplar_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-18 23:52:58 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

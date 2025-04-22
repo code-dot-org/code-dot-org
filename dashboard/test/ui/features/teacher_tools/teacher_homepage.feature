@@ -33,6 +33,7 @@ Feature: Using the teacher homepage sections feature
     When I create a new student section and go home
     Then the student section table should have 2 rows
 
+  @properties_encryption_key
   Scenario: Navigate to course and unit pages
     # No sections, ensure that levels load correctly after navigating from MiniView
     Given I am on "http://studio.code.org/s/csp2-2017/lessons/1/levels/1"
@@ -108,6 +109,7 @@ Feature: Using the teacher homepage sections feature
     And I wait until element "#script-title" is visible
     And element ".uitest-sectionselect" has value ""
 
+  @properties_encryption_key
   Scenario: Assign hidden unit to section
     Given I am on "http://studio.code.org/home"
     And I create a new "High School" student section with course "Computer Science Principles", version "'17-'18" and unit "CSP Unit 1 - The Internet ('17-'18)"

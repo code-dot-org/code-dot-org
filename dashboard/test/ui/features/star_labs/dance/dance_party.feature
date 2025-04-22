@@ -1,6 +1,7 @@
 Feature: Dance Party
   # This test relies on CloudFront signed cookies to access /restricted/ on the
   # test machine, but uses SoundLibraryApi for access in CI.
+  @cloudfront_key
   Scenario: Restricted audio content is protected
     When I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does not contain "placeholder for testing"

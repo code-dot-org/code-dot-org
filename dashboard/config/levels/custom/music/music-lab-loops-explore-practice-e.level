@@ -499,7 +499,7 @@
       },
       {
         "key": "music-lab-loops-explore-practice-e_f8001f85-b5b3-4b9b-acbe-71ff0dc6c28e",
-        "message": "You've played at least 8 different tracks so far - make sure to play at least 10!",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot has heard at least 8 different tracks so far - make sure to play at least 10!",
         "next": false,
         "conditions": [
           {
@@ -510,13 +510,21 @@
       },
       {
         "key": "test-music-lab-loops-explore-practice-choice-b_bb94584f-ed8d-4b7a-aeab-9df0cdadea5f",
-        "message": "You've played at least 5 different tracks so far - make sure to play at least 10!",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot has heard at least 5 different tracks so far - make sure to play at least 10!",
         "next": false,
         "conditions": [
           {
             "name": "played_different_sounds",
             "value": 5
           }
+        ]
+      },
+      {
+        "key": "music-lab-loops-explore-practice-e_fc36406a-2cf1-4583-ae97-d2352fe439e3",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is listening to your song and waiting to hear **10 unique tracks**",
+        "next": false,
+        "conditions": [
+
         ]
       }
     ],
@@ -525,7 +533,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-28T18:28:43.607+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-b\"},{\"changed_at\":\"2025-03-28 18:35:16 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"display_name\",\"bubble_choice_description\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:45:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:49:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:56:07 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"display_name\",\"exemplar_settings\",\"bubble_choice_description\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-28T18:28:43.607+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-explore-practice-choice-b\\\"\"],\"cloned_from\":\"test-music-lab-loops-explore-practice-choice-b\"},{\"changed_at\":\"2025-03-28 18:35:16 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"display_name\",\"bubble_choice_description\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:45:46 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:49:35 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:56:07 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"display_name\",\"exemplar_settings\",\"bubble_choice_description\",\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-15 00:07:13 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

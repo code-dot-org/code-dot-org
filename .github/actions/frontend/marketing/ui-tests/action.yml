@@ -5,8 +5,11 @@ inputs:
   CONTENTFUL_SPACE_ID:
     description: "Contentful Space ID"
     required: true
-  CONTENTFUL_TOKEN:
+  CONTENTFUL_DELIVERY_TOKEN:
     description: "Contentful API Key"
+    required: true
+  DRAFT_MODE_TOKEN:
+    description: "Marketing App Draft Mode Token"
     required: true
   APPLITOOLS_API_KEY:
     description: "Applitools API Key"
@@ -30,7 +33,8 @@ runs:
       shell: bash
       working-directory: ./frontend/apps/marketing
       run: |
-        echo "APPLITOOLS_API_KEY=${{ inputs.APPLITOOLS_API_KEY }}" >> .env
+        echo "APPLITOOLS_API_KEY=${{ inputs.APPLITOOLS_API_KEY }}
+        DRAFT_MODE_TOKEN=${{ inputs.DRAFT_MODE_TOKEN }}" >> .env
 
     - name: UI Tests
       shell: bash

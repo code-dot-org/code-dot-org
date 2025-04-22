@@ -1,3 +1,4 @@
+import Alert from '@code-dot-org/component-library/alert';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import React from 'react';
 
@@ -21,7 +22,13 @@ import styles from './teacherHomepage.module.scss';
 
 export type ArchivedToggleOption = 'teaching' | 'archived';
 
-export const TeacherHomepage: React.FC = () => {
+interface TeacherHomepageProps {
+  studioUrlPrefix: string;
+}
+
+export const TeacherHomepage: React.FC<TeacherHomepageProps> = ({
+  studioUrlPrefix,
+}) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
 
   const dispatch = useAppDispatch();
@@ -67,8 +74,27 @@ export const TeacherHomepage: React.FC = () => {
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
-        <Heading2>{i18n.welcome({teacherName: teacherName})}</Heading2>
-
+        <Heading2>
+          {teacherName
+            ? i18n.welcome({teacherName: teacherName})
+            : i18n.welcomeWithoutName()}
+        </Heading2>
+        <Alert
+          className={styles.feedbackAlert}
+          size={'s'}
+          text={i18n.teacherHomePageFeedback()}
+          type="primary"
+          showIcon={true}
+          icon={{iconName: 'hand-wave'}}
+          isImmediateImportance={false}
+          link={{
+            text: i18n.feedbackHeader(),
+            href: 'https://usabi.li/do/a9ksz7qfbspy/iwhhup',
+            openInNewTab: true,
+            external: true,
+          }}
+          onClose={() => {}}
+        />
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
             <Header
@@ -81,6 +107,7 @@ export const TeacherHomepage: React.FC = () => {
             ) : (
               <SectionList
                 showHiddenOnly={selectedArchiveToggle === 'archived'}
+                studioUrlPrefix={studioUrlPrefix}
               />
             )}
           </div>

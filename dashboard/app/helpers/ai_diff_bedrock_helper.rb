@@ -50,7 +50,16 @@ module AiDiffBedrockHelper
     end
   end
 
-  def self.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset)
+  def self.get_prompt_supplement(section_contexts)
+    return "" unless section_contexts
+    prompt = "\nThe courses that this teacher may ask you about are:"
+    section_contexts.each do |context|
+      prompt = format("%{prompt}\n - %{course_name}", prompt: prompt, course_name: context[:course_display_name])
+    end
+    prompt
+  end
+
+  def self.get_prompt_for_context(context, course_name, unit_name, lesson_name, is_preset, section_contexts)
     case context
     when SharedConstants::AI_DIFF_CONTEXT[:LESSON]
       prompt = format("You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant lesson planning tasks. Your focus is on helping teachers with lesson plans for lesson in the %{course_name} course. The teacher will either ask you questions about the current lesson plan and resources or ask you to make changes to or create new material for the lesson. When creating new material for the lesson, you must provide all the information a teacher needs. For example, if asked to create a quiz you should also provide the answer key. Your job is to use the information from the search results to help the teacher to the best of your ability, asking clarifying questions if needed. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
@@ -74,10 +83,10 @@ module AiDiffBedrockHelper
       $search_results$", course_name: course_name, unit_name: unit_name, lesson_name: lesson_name
       )
     when SharedConstants::AI_DIFF_CONTEXT[:GENERAL]
-      prompt = format("You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.
+      prompt = format("You are a teaching assistant named Aida. It's your job to help K-12 computer science teachers using the code.org platform plan their lessons and adjust lesson plans to fit class time requirements, help students that are ahead or behind, provide alternate explanations of the material, and other relevant teaching tasks. You also provide support with using the code.org platform. Your responses should be warm and helpful because you're the best lesson planner there could be, and you know all about computer science education.%{section_contexts}
 
       Here are the search results in numbered order:
-      $search_results$", course_name: course_name, unit_name: unit_name, lesson_name: lesson_name
+      $search_results$", course_name: course_name, unit_name: unit_name, lesson_name: lesson_name, section_contexts: get_prompt_supplement(section_contexts)
       )
     end
     unless is_preset
@@ -122,10 +131,11 @@ module AiDiffBedrockHelper
     }
   end
 
-  def self.filter_for_context(config, lesson_number, unit_num, course_name)
-    temp_filters = []
+  def self.filter_for_context(config, lesson_number, unit_num, course_names, section_contexts)
+    and_all_filters = []
+    or_all_filters = []
     unless lesson_number.nil?
-      temp_filters.push(
+      and_all_filters.push(
         or_all: [
           {equals: {key: "lesson", value: format("L%02d", lesson_number)}},
           {equals: {key: "lesson", value: "all"}}
@@ -133,34 +143,47 @@ module AiDiffBedrockHelper
       )
     end
     unless unit_num.nil?
-      temp_filters.push(
+      and_all_filters.push(
         or_all: [
           {equals: {key: "unit", value: format("U%02d", unit_num)}},
           {equals: {key: "unit", value: "all"}}
         ]
       )
     end
-    temp_filters.push({equals: {key: "course", value: course_name}}) unless course_name.nil?
+    and_all_filters.push({in: {key: "course", value: course_names}}) unless course_names.nil?
 
-    if lesson_number.nil? && unit_num.nil? && course_name.nil?
-      temp_filters.push({equals: {key: "scope", value: "general"}})
+    if lesson_number.nil? && unit_num.nil? && course_names.nil?
+      or_all_filters.push({equals: {key: "scope", value: "general"}})
+      section_contexts&.each do |section_context|
+        or_all_filters.push({in: {key: "course", value: section_context[:course_names]}})
+      end
     end
 
     #can't use "and_all" if there is only 1 expression to filter on, only 2+
-    if temp_filters.length > 1
+    curriculum_filter = if and_all_filters.length > 1
+                          {and_all: and_all_filters}
+                        elsif and_all_filters.length == 1
+                          and_all_filters[0]
+                        else
+                          nil
+                        end
+    or_all_filters.push(curriculum_filter) unless curriculum_filter.nil?
+
+    #can't use "or_all" if there is only 1 expression to filter on, only 2+
+    if or_all_filters.length > 1
       config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = {
-        and_all: temp_filters
+        or_all: or_all_filters
       }
-    elsif temp_filters.length == 1
-      config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = temp_filters[0]
+    elsif or_all_filters.length == 1
+      config[:retrieve_and_generate_configuration][:knowledge_base_configuration][:retrieval_configuration][:vector_search_configuration][:filter] = or_all_filters[0]
     end
     config
   end
 
-  def self.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, session_id)
+  def self.request_bedrock_rag_chat(input, prompt, lesson_number, unit_num, course_name, session_id, section_contexts)
     config = format_inputs_for_bedrock_request(input, prompt)
     config[:session_id] = session_id unless session_id.nil?
-    config = filter_for_context(config, lesson_number, unit_num, course_name)
+    config = filter_for_context(config, lesson_number, unit_num, course_name, section_contexts)
 
     response = create_bedrock_client.retrieve_and_generate(
       config

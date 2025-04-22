@@ -34,48 +34,57 @@ export const workshopDataToState = (data: Workshop): WorkshopFormState => ({
   suppressEmail: data.suppress_email ?? false,
   courseOfferings: data.course_offerings?.map(n => n.toString()) ?? [],
   participantGroupType: data.participant_group_type ?? '',
-  timeZone: data.time_zone ?? Intl.DateTimeFormat().resolvedOptions().timeZone,
+  timeZone: data.time_zone ?? '',
 });
 
 export const sessionDataToState = (
   data: Session[],
-  timeZone: string
+  timeZone: Workshop['time_zone']
 ): SessionFormState[] =>
   data.map(session => ({
     id: session.id.toString(),
-    date: moment(session.start).tz(timeZone).format(DATE_FORMAT),
-    start: moment(session.start).tz(timeZone).format(TIME_FORMAT),
-    end: moment(session.end).tz(timeZone).format(TIME_FORMAT),
+    date: moment
+      .utc(session.start)
+      .tz(timeZone || 'UTC')
+      .format(DATE_FORMAT),
+    start: moment
+      .utc(session.start)
+      .tz(timeZone || 'UTC')
+      .format(TIME_FORMAT),
+    end: moment
+      .utc(session.end)
+      .tz(timeZone || 'UTC')
+      .format(TIME_FORMAT),
     locationAddress: session.location_address ?? '',
     locationName: session.location_name ?? '',
     meetingLink: session.meeting_link ?? '',
     format: session.session_format ?? 'in_person',
-    sameAsPrevious: false,
   }));
 
 export const workshopStateToApi = (
   workshop: WorkshopFormState
 ): Omit<WorkshopRequest, 'sessions'> => ({
-  course: workshop.course || undefined,
+  course: workshop.course || null,
   capacity:
     workshop.capacity && !isNaN(Number(workshop.capacity))
       ? Number(workshop.capacity)
-      : undefined,
-  description: workshop.description || undefined,
+      : null,
+  description: workshop.description || null,
   facilitators: workshop.facilitators,
-  fee: workshop.fee || undefined,
+  fee: workshop.fee || null,
   grades: workshop.grades,
   hidden: workshop.hidden,
-  name: workshop.name || undefined,
-  notes: workshop.notes || undefined,
-  prereq: workshop.hasPrereq ? workshop.prereq : undefined,
-  regional_partner_id: workshop.regionalPartnerId ?? undefined,
-  registration_link: workshop.registrationLink || undefined,
-  subject: workshop.subject || undefined,
+  name: workshop.name || null,
+  notes: workshop.notes || null,
+  prereq: workshop.hasPrereq ? workshop.prereq : null,
+  regional_partner_id: workshop.regionalPartnerId ?? null,
+  registration_link: workshop.registrationLink || null,
+  subject: workshop.subject || null,
   suppress_email: workshop.suppressEmail,
   course_offerings: workshop.courseOfferings.map(offering => Number(offering)),
-  participant_group_type: workshop.participantGroupType,
-  time_zone: workshop.timeZone,
+  participant_group_type: workshop.participantGroupType || null,
+  time_zone: workshop.timeZone || null,
+  legacy: null,
 });
 
 export const sessionStateToApi = (
@@ -101,25 +110,27 @@ export const sessionStateToApi = (
       id: session.id.startsWith('new') ? undefined : Number(session.id),
       session_format: session.format,
       start: moment
-        .tz(`${session.date} ${session.start}`, DATETIME_FORMAT, timeZone)
+        .tz(
+          `${session.date} ${session.start}`,
+          DATETIME_FORMAT,
+          timeZone || 'UTC'
+        )
         .utc()
         .toISOString(),
       end: moment
-        .tz(`${session.date} ${session.end}`, DATETIME_FORMAT, timeZone)
+        .tz(
+          `${session.date} ${session.end}`,
+          DATETIME_FORMAT,
+          timeZone || 'UTC'
+        )
         .utc()
         .toISOString(),
       location_address:
-        session.format === 'in_person'
-          ? session.locationAddress || undefined
-          : undefined,
+        session.format === 'in_person' ? session.locationAddress || null : null,
       location_name:
-        session.format === 'in_person'
-          ? session.locationName || undefined
-          : undefined,
+        session.format === 'in_person' ? session.locationName || null : null,
       meeting_link:
-        session.format === 'virtual'
-          ? session.meetingLink || undefined
-          : undefined,
+        session.format === 'virtual' ? session.meetingLink || null : null,
     });
   });
 

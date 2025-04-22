@@ -173,9 +173,6 @@ const TeacherNavigationBar: React.FC<{
             unitName: sections[sectionId]?.unitName,
           })
         );
-        if (currentPathObject.url === TEACHER_NAVIGATION_PATHS.settings) {
-          window.location.reload();
-        }
       }
 
       analyticsReporter.sendEvent(EVENTS.NAVIGATE_TO_SECTION, {

@@ -29,7 +29,6 @@ import manageStudents, {
   TransferStatus,
   TransferType,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
-import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import ManageStudentsTable, {
   UnconnectedManageStudentsTable,
   sortRows,
@@ -358,7 +357,7 @@ describe('ManageStudentsTable', () => {
       expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
         SectionLoginType.picture
       );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
+      expect(wrapper.containsMatchingElement('#uitest-no-section-code')).to.be
         .false;
     });
 
@@ -387,7 +386,7 @@ describe('ManageStudentsTable', () => {
       expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
         SectionLoginType.word
       );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
+      expect(wrapper.containsMatchingElement('#uitest-no-section-code')).to.be
         .false;
     });
 
@@ -414,7 +413,7 @@ describe('ManageStudentsTable', () => {
       expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
         SectionLoginType.email
       );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
+      expect(wrapper.containsMatchingElement('#uitest-no-section-code')).to.be
         .false;
     });
 
@@ -484,52 +483,6 @@ describe('ManageStudentsTable', () => {
       expect(loginInfo.find('SignInInstructions').props().loginType).to.equal(
         SectionLoginType.google_classroom
       );
-    });
-
-    it('opens dialog correctly for Google Classroom sections', () => {
-      const googleSection = {
-        ...fakeSection,
-        loginType: SectionLoginType.google_classroom,
-      };
-      getStore().dispatch(setLoginType(SectionLoginType.google_classroom));
-      getStore().dispatch(setSections([googleSection]));
-      const wrapper = mount(
-        <Provider store={getStore()}>
-          <ManageStudentsTable section={googleSection} />
-        </Provider>
-      );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
-        .true;
-      expect(
-        wrapper.find('NoSectionCodeDialog').props().typeClassroom
-      ).to.equal(SectionLoginType.google_classroom);
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.false;
-
-      wrapper.find('#uitest-why-link').simulate('click');
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.true;
-    });
-
-    it('opens dialog correctly for Clever sections', () => {
-      const cleverSection = {
-        ...fakeSection,
-        loginType: SectionLoginType.clever,
-      };
-      getStore().dispatch(setLoginType(SectionLoginType.clever));
-      getStore().dispatch(setSections([cleverSection]));
-      const wrapper = mount(
-        <Provider store={getStore()}>
-          <ManageStudentsTable section={cleverSection} />
-        </Provider>
-      );
-      expect(wrapper.containsMatchingElement(<NoSectionCodeDialog />)).to.be
-        .true;
-      expect(
-        wrapper.find('NoSectionCodeDialog').props().typeClassroom
-      ).to.equal(SectionLoginType.clever);
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.be.false;
-
-      wrapper.find('#uitest-why-link').simulate('click');
-      expect(wrapper.find('NoSectionCodeDialog').props().isOpen).to.equal(true);
     });
 
     describe('The full section notification', () => {

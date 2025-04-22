@@ -1,9 +1,16 @@
+import {Dialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  TooltipOverlay,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
+import {OverlineOneText} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
 import React from 'react';
-// @ts-expect-error (lfm) because old react-tooltip version is untyped. Will update soon.
-import ReactTooltip from 'react-tooltip';
 
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/metrics/firehose';
-import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import {LOGIN_TYPES_WITH_PASSWORD_COLUMN} from '@cdo/apps/templates/teacherDashboard/LoginTypeConstants';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
@@ -12,17 +19,21 @@ import i18n from '@cdo/locale';
 import styles from './joinLinkCopyButton.module.scss';
 
 interface JoinLinkCopyButtonProps {
-  loginType: keyof typeof SectionLoginType;
+  loginType?: keyof typeof SectionLoginType;
   sectionCode: string;
   sectionId: number;
   studioUrlPrefix: string;
+  sourceName?: string;
+  hidden?: boolean;
 }
 
-export const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
+const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
   loginType,
   sectionCode,
   sectionId,
   studioUrlPrefix,
+  sourceName = 'teacherHomepage',
+  hidden = false,
 }) => {
   const [shouldShowDialog, setShouldShowDialog] = React.useState(false);
   const [showCopiedMsg, setShowCopiedMsg] = React.useState(false);
@@ -42,11 +53,12 @@ export const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
     setShouldShowDialog(true);
   };
 
-  const close = () => {
-    setShouldShowDialog(false);
-  };
+  const classroomType =
+    loginType === SectionLoginType.google_classroom
+      ? i18n.loginTypeGoogleClassroom()
+      : i18n.loginTypeClever();
 
-  const copySectionCode = () => {
+  const handleCopySectionCode = () => {
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
     copyToClipboard(joinLink);
     firehoseClient.putRecord(
@@ -60,46 +72,90 @@ export const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
       },
       {includeUserId: true}
     );
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
+      {source: sourceName},
+      PLATFORMS.BOTH
+    );
     setShowCopiedMsg(true);
     setTimeout(() => {
       setShowCopiedMsg(false);
     }, 5000);
   };
 
-  return (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (
-    <div
-      className={styles.sectionCodeBox}
-      data-for="section-code"
-      data-tip
-      onClick={copySectionCode}
-    >
-      {!showCopiedMsg && (
-        <span>
-          <span>{i18n.sectionCodeWithColon()}</span>
-          <span className={styles.sectionCode}>{sectionCode}</span>
-          <ReactTooltip id="section-code" role="tooltip" effect="solid">
-            <div>{i18n.copySectionCodeTooltip()}</div>
-          </ReactTooltip>
-        </span>
-      )}
-      {showCopiedMsg && <span>{i18n.copySectionCodeSuccess()}</span>}
-    </div>
+  return loginType &&
+    (LOGIN_TYPES_WITH_PASSWORD_COLUMN as string[]).includes(loginType) ? (
+    hidden ? (
+      <OverlineOneText>
+        <span>{i18n.sectionCodeWithColon()}</span>{' '}
+        <span className={styles.sectionCodeTextHidden}>{sectionCode}</span>
+      </OverlineOneText>
+    ) : (
+      <div className={styles.sectionCodeBox} data-for="section-code" data-tip>
+        {!showCopiedMsg && (
+          <TooltipOverlay>
+            <span className={styles.sectionCodeText}>
+              <OverlineOneText>
+                <span>{i18n.sectionCodeWithColon()}</span>
+              </OverlineOneText>
+              <WithTooltip
+                tooltipProps={{
+                  tooltipId: 'section-code',
+                  role: 'tooltip',
+                  text: i18n.copySectionCodeTooltip(),
+                  direction: 'onLeft',
+                  size: 's',
+                  iconLeft: {iconName: 'copy'},
+                }}
+              >
+                <OverlineOneText>
+                  <button
+                    className={styles.sectionCode}
+                    onClick={handleCopySectionCode}
+                    type="button"
+                  >
+                    {sectionCode}
+                  </button>
+                </OverlineOneText>
+              </WithTooltip>
+            </span>
+          </TooltipOverlay>
+        )}
+        {showCopiedMsg && <span>{i18n.copySectionCodeSuccess()}</span>}
+      </div>
+    )
   ) : (
-    <div className={styles.sectionCodeBox}>
-      {i18n.sectionCodeWithColon()}
-      <span
-        className={styles.sectionCodeNotApplicable}
-      >{` ${i18n.notApplicable()}. `}</span>
-      <span className={styles.noSectionCode}>
-        <a onClick={() => showSectionCodeDialog()} id="uitest-why-link">
-          {i18n.whyWithQuestionMark()}
-        </a>
-      </span>
-      <NoSectionCodeDialog
-        typeClassroom={loginType}
-        handleClose={close}
-        isOpen={shouldShowDialog}
-      />
-    </div>
+    <>
+      <div
+        className={classNames(styles.sectionCodeBox, styles.sectionCodeText)}
+        id="uitest-no-section-code"
+      >
+        <OverlineOneText>
+          {`${i18n.sectionCodeWithColon()} ${i18n.notApplicable()}`}
+          <button
+            onClick={() => showSectionCodeDialog()}
+            id="uitest-why-link"
+            className={styles.noSectionCode}
+            aria-label={i18n.whyWithQuestionMark()}
+            type="button"
+          >
+            <FontAwesomeV6Icon iconName="question-circle" iconStyle="regular" />
+          </button>
+        </OverlineOneText>
+      </div>
+      {shouldShowDialog && (
+        <Dialog
+          title={i18n.noSectionDialogHeader({classroom: classroomType})}
+          description={i18n.noSectionDialogBody({classroom: classroomType})}
+          primaryButtonProps={{
+            onClick: () => setShouldShowDialog(false),
+            text: i18n.ok(),
+          }}
+          onClose={() => setShouldShowDialog(false)}
+        />
+      )}
+    </>
   );
 };
+
+export default JoinLinkCopyButton;

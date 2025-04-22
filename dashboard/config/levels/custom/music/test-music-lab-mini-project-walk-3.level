@@ -122,7 +122,7 @@
       "showSoundFilters": true,
       "validationTimeout": 1
     },
-    "long_instructions": "### Make your third character's \"Walk Up\" song\r\n\r\nAlmost done. Time to code your third character's song. You know the drill. \r\n\r\n**Do This:**\r\n1) Choose your third character. \r\n2) Code a sequence of sounds under `when run`. \r\n  - Make sure the beginning (Measures 1-2) build up to the middle (Measures 4-6) and that leads to the ending (Measures 7-8). *Note: Your song can be longer, but do not exceed 12 measures*. \r\n3) When you have a sequence you like, drag the `3 triggered immediately` block to your workspace and move all the code under `when run` to the trigger block. \r\n\r\nPress \"Run\" and then practice pressing \"1\", \"2\", or \"3\" to trigger each walk up song. ",
+    "long_instructions": "### Walk-Up Songs\r\n\r\n**Do This:**\r\n1) Let's make your third walk-up song. Refer to your Activity Guide to determine the mood and personality of this character. \r\n2) Add your tracks under `when run`. \r\n  - Your song should be at least 8 measures.\r\n3) When you have a sequence you like, drag the `3 triggered immediately` block to your workspace and move all the code under `when run` to the trigger block.\r\n\r\nPress \"Run\" and then practice pressing \"1\", \"2\", or \"3\" to trigger each walk up song. ",
     "exemplar_settings": {
       "playerEnabled": false,
       "validationEnabled": false
@@ -132,7 +132,7 @@
       {
         "key": "test-music-lab-mini-project-walk-3_be9f852c-497b-4bc2-9eb1-22f2d275b32a",
         "message": "It looks like your code has all the blocks it needs! Make sure you meet the other requirements!",
-        "next": false,
+        "next": true,
         "conditions": [
           {
             "name": "block_count_by_type",
@@ -169,7 +169,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-19T18:00:28.320+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-2\"},{\"changed_at\":\"2025-03-19 18:01:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-05 23:36:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 17:16:58 +0000\",\"changed\":[\"offer_browser_tts\",\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-19T18:00:28.320+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-walk-2\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-walk-2\"},{\"changed_at\":\"2025-03-19 18:01:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-05 23:36:55 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 17:16:58 +0000\",\"changed\":[\"offer_browser_tts\",\"level_data\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-18 19:00:30 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-18 19:09:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2025-03-21T21:34:56.000Z",
   "level_num": "custom",
@@ -8,20 +9,20 @@
     "encrypted": "false",
     "title": "Four Elephant Seals",
     "display_name": "Four Elephant Seals Data",
-    "long_instructions": "## Data Decisions and Visualizations\r\nTracking data from elephant seals 546, 541, 536, and 528 are displayed in the table. Start exploring how these seals are behaving in different parts of the ocean.\r\n\r\n####[CODAP Link](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FADKLsr14bCQTYmXrbJBy%2Ffile.json)\r\n\r\n## Do This\r\n\r\n### Day 2:\r\n1. Make decisions about your data. \r\n   - For example, do you need to clean it? Do you need to summarize your data with a new attribute and the count() function? \r\n2. Create visualizations that help answer your data question(s).\r\n\r\n### Day 3:\r\n1. Continue making visualizations that will help you answer your data question. \r\n2. Use your visualizations to start figuring out your answer to your data question. \r\n   - What does each visualization tell you about your data and your data question?\r\n   - What insights does each provide?\r\n3. Ensure you have created all the visualizations you need to help support the answer to your data question. \r\n4. Download an image of each visualization you will use to support your answer to your data question.\r\n   - Click on the camera icon in the toolbar on the right side of the visualization. \r\n   - Select “Export PNG Image”\r\n   - Click “Local File” and Rename your image\r\n   - Click “Download” and select a location on your device to save the image to.\r\n\r\n",
+    "long_instructions": "## Data Decisions and Visualizations\r\nTracking data from elephant seals 546, 541, 536, and 528 are displayed in the table. Start exploring how these seals are behaving in different parts of the ocean.\r\n\r\n####[Google Sheets Link](https://docs.google.com/spreadsheets/d/12k4NhORPptNdieJahOTr3EYzR-ZZ2FVcEWWyZiTKhVw/edit?usp=drive_link)\r\n\r\n## Do This\r\n\r\n### Day 2:\r\n1. Make decisions about your data. \r\n   - For example, do you need to clean it? Do you need to sort or filter your data? Do you need to use the COUNTIF(), SUM(), and AVG() formulas?\r\n2. Create visualizations that help answer your data question(s).\r\n\r\n### Day 3:\r\n1. Continue making visualizations that will help you answer your data question. \r\n2. Use your visualizations to start figuring out your answer to your data question. \r\n   - What does each visualization tell you about your data and your data question?\r\n   - What insights does each provide?\r\n3. Ensure you have created all the visualizations you need to help support the answer to your data question. \r\n4. Download an image of each visualization you will use to support your answer to your data question.\r\n   - Click on the three vertical dots in the upper-right corner of your visualization.\r\n   - Select \"Download chart\" and \"PNG image (.png)\"\r\n   - Your visualization image will into appear in your Downloads folder\r\n   - Click the \"Add/Remove Attachments\" on this level and attach your visualization.\r\n\r\n",
     "bubble_choice_description": "Explore the dataset, make decisions with your data and create visualizations.",
     "thumbnail_url": "https://images.code.org/e9b2c3f3291f76fd09d1d1d06349037d-seal.png",
-    "allow_user_uploads": "false",
+    "allow_user_uploads": "true",
     "submittable": "false",
     "peer_reviewable": "false",
     "optional": "false",
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:56.494+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level2f\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level2f\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:56.494+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level2f\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level2f\"},{\"changed_at\":\"2025-04-18 17:57:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-18 19:01:39 +0000\",\"changed\":[\"long_instructions\",\"allow_user_uploads\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

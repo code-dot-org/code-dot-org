@@ -373,14 +373,14 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     get :csp
     assert_redirected_to '/users/sign_in'
 
-    get :csaif
+    get :aif
     assert_redirected_to '/users/sign_in'
   end
 
   test 'csa facilitator landing page only loads for users with one of the necessary permissions' do
     setup_facilitator_landing_users
     can_view = [@program_manager, @workshop_organizer, @workshop_admin, @csa_facilitator]
-    cannot_view = [@teacher, @csd_facilitator, @csf_facilitator, @csp_facilitator, @csaif_facilitator]
+    cannot_view = [@teacher, @csd_facilitator, @csf_facilitator, @csp_facilitator, @aif_facilitator]
 
     can_view.each do |can_view_user|
       sign_in can_view_user
@@ -400,7 +400,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
   test 'csd facilitator landing page only loads for users with one of the necessary permissions' do
     setup_facilitator_landing_users
     can_view = [@program_manager, @workshop_organizer, @workshop_admin, @csd_facilitator]
-    cannot_view = [@teacher, @csa_facilitator, @csf_facilitator, @csp_facilitator, @csaif_facilitator]
+    cannot_view = [@teacher, @csa_facilitator, @csf_facilitator, @csp_facilitator, @aif_facilitator]
 
     can_view.each do |can_view_user|
       sign_in can_view_user
@@ -420,7 +420,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
   test 'csf facilitator landing page only loads for users with one of the necessary permissions' do
     setup_facilitator_landing_users
     can_view = [@program_manager, @workshop_organizer, @workshop_admin, @csf_facilitator]
-    cannot_view = [@teacher, @csa_facilitator, @csd_facilitator, @csp_facilitator, @csaif_facilitator]
+    cannot_view = [@teacher, @csa_facilitator, @csd_facilitator, @csp_facilitator, @aif_facilitator]
 
     can_view.each do |can_view_user|
       sign_in can_view_user
@@ -440,7 +440,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
   test 'csp facilitator landing page only loads for users with one of the necessary permissions' do
     setup_facilitator_landing_users
     can_view = [@program_manager, @workshop_organizer, @workshop_admin, @csp_facilitator]
-    cannot_view = [@teacher, @csa_facilitator, @csd_facilitator, @csf_facilitator, @csaif_facilitator]
+    cannot_view = [@teacher, @csa_facilitator, @csd_facilitator, @csf_facilitator, @aif_facilitator]
 
     can_view.each do |can_view_user|
       sign_in can_view_user
@@ -457,21 +457,21 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     end
   end
 
-  test 'csaif facilitator landing page only loads for users with one of the necessary permissions' do
+  test 'aif facilitator landing page only loads for users with one of the necessary permissions' do
     setup_facilitator_landing_users
-    can_view = [@program_manager, @workshop_organizer, @workshop_admin, @csaif_facilitator]
+    can_view = [@program_manager, @workshop_organizer, @workshop_admin, @aif_facilitator]
     cannot_view = [@teacher, @csa_facilitator, @csd_facilitator, @csf_facilitator, @csp_facilitator]
 
     can_view.each do |can_view_user|
       sign_in can_view_user
-      get :csaif
-      assert_template 'pd/professional_learning/facilitator/csaif'
+      get :aif
+      assert_template 'pd/professional_learning/facilitator/aif'
       sign_out can_view_user
     end
 
     cannot_view.each do |cannot_view_user|
       sign_in cannot_view_user
-      get :csaif
+      get :aif
       assert_template 'pd/professional_learning/facilitator/not_permitted_to_view'
       sign_out cannot_view_user
     end
@@ -670,7 +670,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     @csf_facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSF
     @csp_facilitator = create :facilitator
     @csp_facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSP
-    @csaif_facilitator = create :facilitator
-    @csaif_facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSAIF
+    @aif_facilitator = create :facilitator
+    @aif_facilitator.course_as_facilitator = Pd::Workshop::COURSE_AIF
   end
 end

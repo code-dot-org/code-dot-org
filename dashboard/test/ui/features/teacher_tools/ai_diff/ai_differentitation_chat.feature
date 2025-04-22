@@ -67,6 +67,7 @@ Feature: Send and receive messages in the AI differentiation chat
     Then I close my eyes
 
   @chrome
+  @properties_encryption_key
   Scenario: Teacher can type messages and leave feedback in AI Differentiation chat
     Given I create a teacher named "Stilgar"
     And I add the current user to the "ai-differentiation" single user experiment

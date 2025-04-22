@@ -108,6 +108,14 @@
       "import": "./dist/esm/closeButton/index.mjs",
       "require": "./dist/cjs/closeButton/index.js"
     },
+    "./cms/editorialCard": {
+      "types": {
+        "import": "./dist/esm/cms/editorialCard/index.d.ts",
+        "require": "./dist/cjs/cms/editorialCard/index.d.ts"
+      },
+      "import": "./dist/esm/cms/editorialCard/index.mjs",
+      "require": "./dist/cjs/cms/editorialCard/index.js"
+    },
     "./cms/footer": {
       "types": {
         "import": "./dist/esm/cms/footer/index.d.ts",
@@ -115,6 +123,14 @@
       },
       "import": "./dist/esm/cms/footer/index.mjs",
       "require": "./dist/cjs/cms/footer/index.js"
+    },
+    "./cms/heroBanner": {
+      "types": {
+        "import": "./dist/esm/cms/heroBanner/index.d.ts",
+        "require": "./dist/cjs/cms/heroBanner/index.d.ts"
+      },
+      "import": "./dist/esm/cms/heroBanner/index.mjs",
+      "require": "./dist/cjs/cms/heroBanner/index.js"
     },
     "./cms/iconHighlight": {
       "types": {
@@ -148,6 +164,14 @@
       },
       "import": "./dist/esm/cms/snapshot/index.mjs",
       "require": "./dist/cjs/cms/snapshot/index.js"
+    },
+    "./cms/spacer": {
+      "types": {
+        "import": "./dist/esm/cms/spacer/index.d.ts",
+        "require": "./dist/cjs/cms/spacer/index.d.ts"
+      },
+      "import": "./dist/esm/cms/spacer/index.mjs",
+      "require": "./dist/cjs/cms/spacer/index.js"
     },
     "./cms/tabGroup": {
       "types": {
@@ -428,7 +452,6 @@
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
   },
   "dependencies": {
-    "dompurify": "^3.2.4",
     "lodash": "^4.17.21",
     "react-player": "^3.0.0-canary.4",
     "react-schemaorg": "^2.0.0"
@@ -479,7 +502,6 @@
   },
   "peerDependencies": {
     "classnames": "^2.5.1",
-    "dompurify": "^3.2.4",
     "react": ">=16",
     "react-dom": ">=16",
     "swiper": "^11.0.5"

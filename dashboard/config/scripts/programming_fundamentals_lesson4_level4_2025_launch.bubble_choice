@@ -1,6 +1,6 @@
 name 'programming-fundamentals-lesson4-level4_2025-launch'
 display_name 'Time for a Change - Update a Variable'
-description 'Choose one of the four scenarios where something in the program needs to change — like a snack, a mood, or a class period. You\'ll update the value stored in a variable and print both the original and updated versions to see how variables can change over time.'
+description 'Choose **ONE** of the four scenarios where something in the program needs to change — like a snack, a mood, or a class period. Update the value stored in a variable and print both the original and updated versions to see how variables can change over time.'
 
 sublevels
 level 'programming-fundamentals-lesson4-level4a_2025-launch'

@@ -72,8 +72,8 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
       <BodyTwoText>
         <strong>{`${i18n.reasoning()}:`}</strong>
         {proficiencyCount > proficienceyThreshold
-          ? 'This is proficient because more than 80% of the students demonstrated proficiency in their responses. '
-          : 'This is needs review less than 80% of students demonstrated proficiency in their responses. '}
+          ? 'More than 80% of the students demonstrated proficiency in their responses. '
+          : 'Less than 80% of the students demonstrated proficiency in their responses. '}
         <Link
           type="primary"
           size="m"
@@ -103,9 +103,8 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     ? countEvaluationsByType(studentWorkEvaluations, ['needs revision'])
     : 0;
 
-  // TO DO: Update this with perhaps different logic for "flagged students"
   const flaggedStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['Cant Evaluate'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['Profanity detected'])
     : 0;
 
   // A student can have "no response" if they have not started the level yet OR
