@@ -25,7 +25,12 @@ export const FOLDER_DROP_OFFSET = 16;
 export const fileBrowserKeyboardCoordinateGetter: (
   folders: Record<string, ProjectFolder>
 ) => KeyboardCoordinateGetter = folders => (event, args) => {
-  if (event.code !== KeyboardCode.Up && event.code !== KeyboardCode.Down) {
+  const moveCodes: string[] = [
+    KeyboardCode.Up,
+    KeyboardCode.Down,
+    KeyboardCode.Tab,
+  ];
+  if (!moveCodes.includes(event.code)) {
     return;
   }
   event.preventDefault();
@@ -64,11 +69,12 @@ export const fileBrowserKeyboardCoordinateGetter: (
   });
   const currentIndex = orderedRects.indexOf(over?.id as string);
   let nextIndex = currentIndex;
-  // Find the next index based on the key pressed.
-  if (event.code === KeyboardCode.Down) {
-    nextIndex = Math.min(currentIndex + 1, orderedRects.length - 1);
+  // Find the next index based on the key pressed. We cycle around if they reach
+  // the beginning or end of the list.
+  if (event.code === KeyboardCode.Down || event.code === KeyboardCode.Tab) {
+    nextIndex = (currentIndex + 1) % orderedRects.length;
   } else if (event.code === KeyboardCode.Up) {
-    nextIndex = Math.max(currentIndex - 1, 0);
+    nextIndex = (currentIndex - 1) % orderedRects.length;
   }
 
   if (nextIndex === currentIndex) {
