@@ -27,7 +27,7 @@ class AssetBucket < BucketHelper
     # in our web apps.
     if ([".jpg", ".jpeg", ".png"].include? extension.downcase) && (body.length < max_resize_size)
       image = MiniMagick::Image.read(body, extension)
-      image.resize (image.width / 4).floor.to_s + "x" + (image.height / 4).floor.to_s
+      image.resize('25%')
       return image.to_blob
     end
 
