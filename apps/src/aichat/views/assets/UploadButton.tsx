@@ -1,7 +1,6 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import classNames from 'classnames';
 import React, {ChangeEvent, useState} from 'react';
-import {createPortal} from 'react-dom';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import StarterAssetsDialog from '@cdo/apps/lab2/views/components/starterAssetsDialog';
@@ -154,19 +153,15 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
 
   return (
     <>
-      {levelName &&
-        showAssetManager &&
-        // Use createPortal to make sure the dialog overlay covers all elements on the page
-        createPortal(
-          <StarterAssetsDialog
-            levelName={levelName}
-            onClose={() => setShowAssetManager(false)}
-            mode="select"
-            onSelect={onSelectStarterAssets}
-            limit={numAllowedFiles}
-          />,
-          document.body
-        )}
+      {levelName && showAssetManager && (
+        <StarterAssetsDialog
+          levelName={levelName}
+          onClose={() => setShowAssetManager(false)}
+          mode="select"
+          onSelect={onSelectStarterAssets}
+          limit={numAllowedFiles}
+        />
+      )}
       <FileInput />
       <ActionDropdown
         name="uploadDropdown"
