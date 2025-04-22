@@ -3,11 +3,11 @@ import {useMemo} from 'react';
 
 import EditorialCard, {
   EDITORIAL_CARD_LAYOUTS,
+  EditorialCardProps,
 } from '@code-dot-org/component-library/cms/editorialCard';
 
 import {fontAwesomeV6BrandIconsMap} from '@/components/common/constants';
 import {LinkEntry} from '@/types/contentful/entries/Link';
-import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 export enum EDITORIAL_CARD_CONTENTFUL_LAYOUTS {
   HORIZONTAL_WITH_IMAGE = 'horizontal_with_image',
@@ -20,7 +20,7 @@ export interface EditorialCardContentfulProps {
   heading: EntryFields.Text;
   text: EntryFields.Text;
   iconName?: EntryFields.Text;
-  image?: ExperienceAsset | string;
+  image?: EntryFields.Text;
   linkEntry?: LinkEntry;
 }
 
@@ -32,7 +32,7 @@ const EditorialCardContentful: React.FC<EditorialCardContentfulProps> = ({
   iconName,
   linkEntry,
 }) => {
-  const layout = useMemo(() => {
+  const layout: EditorialCardProps['layout'] = useMemo(() => {
     switch (layoutOpt) {
       case EDITORIAL_CARD_CONTENTFUL_LAYOUTS.HORIZONTAL_WITH_IMAGE:
         return EDITORIAL_CARD_LAYOUTS.HORIZONTAL;
@@ -42,25 +42,25 @@ const EditorialCardContentful: React.FC<EditorialCardContentfulProps> = ({
     }
   }, [layoutOpt]);
 
-  const media = useMemo(() => {
+  const media: EditorialCardProps['media'] | undefined = useMemo(() => {
     switch (layoutOpt) {
       case EDITORIAL_CARD_CONTENTFUL_LAYOUTS.HORIZONTAL_WITH_IMAGE:
       case EDITORIAL_CARD_CONTENTFUL_LAYOUTS.VERTICAL_WITH_IMAGE:
-        return image && {src: image as string};
+        return image ? {src: image} : undefined;
       case EDITORIAL_CARD_CONTENTFUL_LAYOUTS.VERTICAL_WITH_ICON:
-        return (
-          iconName && {
-            iconName,
-            iconStyle: 'solid' as const,
-            iconFamily: fontAwesomeV6BrandIconsMap.has(iconName)
-              ? ('brands' as const)
-              : undefined,
-          }
-        );
+        return iconName
+          ? {
+              iconName,
+              iconStyle: 'solid',
+              iconFamily: fontAwesomeV6BrandIconsMap.has(iconName)
+                ? 'brands'
+                : undefined,
+            }
+          : undefined;
     }
   }, [layoutOpt, iconName, image]);
 
-  const link = useMemo(
+  const link: EditorialCardProps['link'] = useMemo(
     () =>
       linkEntry && {
         text: linkEntry.fields.label,
