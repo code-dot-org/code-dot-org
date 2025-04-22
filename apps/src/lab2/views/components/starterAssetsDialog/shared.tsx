@@ -11,7 +11,7 @@ const ErrorAlert: React.FC<{currentError?: Error}> = ({currentError}) => (
     <Alert
       text={
         isNetworkError(currentError) && currentError.getDetails().status === 413
-          ? 'too large'
+          ? 'Uploaded images must be less than 20MB. Please try a smaller image.'
           : 'Something went wrong. Please try again!'
       }
       type="danger"

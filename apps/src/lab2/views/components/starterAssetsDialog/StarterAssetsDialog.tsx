@@ -13,7 +13,6 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
   const {levelName, mode, onError} = props;
   const [assets, setAssets] = useState<AssetData[]>([]);
   const [loading, setLoading] = useState(false);
-  const [showError, setShowError] = useState(false);
   const [currentError, setCurrentError] = useState<Error | undefined>(
     undefined
   );
@@ -29,7 +28,7 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
       setAssets(assets);
     } catch (error) {
       onError?.(error as Error);
-      setShowError(true);
+      setCurrentError(error as Error);
     }
     setLoading(false);
   }, [levelName, onError]);
@@ -67,12 +66,13 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
     [assets]
   );
 
-  const setError = useCallback(
-    (error: Error) => {
-      onError?.(error);
-      setShowError(true);
+  const handleError = useCallback(
+    (error?: Error) => {
+      if (error) {
+        onError?.(error);
+      }
+
       setCurrentError(error);
-      console.log(error);
     },
     [onError]
   );
@@ -80,11 +80,10 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
   const dialogProps = {
     assets,
     loading,
-    showError,
     // Used by UploadAssetDialog
     addAsset,
     removeAsset,
-    setError,
+    handleError,
     currentError,
   };
 

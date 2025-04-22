@@ -34,8 +34,7 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
   removeAsset,
   loading,
   levelName,
-  showError,
-  setError,
+  handleError,
   currentError,
 }) => {
   const [requestInProgress, setRequestInProgress] = useState<
@@ -54,7 +53,7 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
       const asset = await uploadFile(files[0], levelName);
       addAsset(asset);
     } catch (error) {
-      setError(error as Error);
+      handleError(error as Error);
     }
     setRequestInProgress(undefined);
   };
@@ -65,12 +64,13 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
   );
 
   const onDelete = async (filename: string) => {
+    handleError(undefined);
     setRequestInProgress('delete');
     try {
       await deleteFile(filename, levelName);
       removeAsset(filename);
     } catch (error) {
-      setError(error as Error);
+      handleError(error as Error);
     }
     setRequestInProgress(undefined);
   };
@@ -107,7 +107,10 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
       title={'Manage Starter Assets'}
       primaryButtonProps={{
         text: buttonText,
-        onClick: openFileInput,
+        onClick: () => {
+          handleError(undefined);
+          openFileInput();
+        },
         iconLeft: {
           iconName: requestInProgress ? 'spinner' : 'upload',
           animationType: requestInProgress ? 'spin' : undefined,
@@ -117,7 +120,7 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
       secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
       customContent={loading ? <Loading /> : <ModalBody />}
       customBottomContent={
-        showError && <ErrorAlert currentError={currentError} />
+        currentError && <ErrorAlert currentError={currentError} />
       }
     />
   );
