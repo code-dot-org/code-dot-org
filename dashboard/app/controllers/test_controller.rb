@@ -253,7 +253,7 @@ class TestController < ApplicationController
 
   def destroy_course
     course = UnitGroup.find_by!(name: params[:course_name])
-    course.destroy
+    course.destroy!
     head :ok
   end
 
