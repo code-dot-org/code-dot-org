@@ -46,7 +46,7 @@ raise "must specify a filename, or use filter_unit_pii.rb to process an entire d
 
 $options[:output_dir] ||= $options[:input_dir]
 $output_dir = File.join(home, 'filtered', $options[:output_dir])
-FileUtils.mkdir_p("#{$output_dir}/progress")
+FileUtils.mkdir_p("#{$output_dir}/#{$options[:input_type]}")
 
 require_relative '../../../deployment'
 
@@ -72,18 +72,18 @@ end
 
 def get_input_filenames
   if $options[:filename]
-    input_filename = File.join($input_dir, 'progress', $options[:filename])
+    input_filename = File.join($input_dir, $options[:input_type], $options[:filename])
     raise "Input file must exist: #{input_filename}" unless File.exist?(input_filename)
     puts "#{File.basename(__FILE__)} found input file: #{input_filename}"
     return [input_filename]
   end
-  input_filenames = Dir.glob(File.join($input_dir, 'progress', '*.jsonl'))
-  puts "Found #{input_filenames.size} input files in #{$input_dir}/progress"
+  input_filenames = Dir.glob(File.join($input_dir, $options[:input_type], '*.jsonl'))
+  puts "Found #{input_filenames.size} input files in #{$input_dir}/#{$options[:input_type]}"
   input_filenames
 end
 
 def process_file(input_filename)
-  output_filename = File.join($output_dir, 'progress', File.basename(input_filename))
+  output_filename = File.join($output_dir, $options[:input_type], File.basename(input_filename))
   if File.exist?(output_filename)
     puts "Skipping #{input_filename} because output file already exists: #{output_filename}"
     return
@@ -95,7 +95,9 @@ def process_file(input_filename)
 
   rows = Parallel.map(rows, in_processes: $max_processes) do |row|
     data = JSON.parse(row, symbolize_names: true)
-    process_row_pii(data)
+    if $options[:input_type] == 'progress'
+      process_row_source_pii(data)
+    end
     data.to_json
   rescue JSON::ParserError => exception
     puts "Error parsing JSON: #{exception.message}. row:\n#{row}"
@@ -109,7 +111,7 @@ def process_file(input_filename)
   puts "Processed #{rows.size} rows in #{(Time.now - start_time).round(2)} seconds."
 end
 
-def process_row_pii(data)
+def process_row_source_pii(data)
   if data[:source].present?
     pii_score, pii_entities = check_text_pii(data[:source], type: 'source')
     data[:source_pii_score] = pii_score
