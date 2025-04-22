@@ -446,7 +446,7 @@ class ScriptLevel < ApplicationRecord
     summary[:id] = id.to_s
     summary[:scriptId] = script_id
     summary[:exampleSolutions] = get_example_solutions(oldest_active_level, current_user, unit_group_unit: unit_group_unit)
-    summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown, unit_group_unit: unit_group_unit)}
+    summary[:levels] = levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)}
     summary
   end
 
