@@ -277,7 +277,8 @@ module Services
       script_to_import.is_migrated = true
       # Needed because we already have some Scripts with invalid names
       script_to_import.skip_name_format_validation = true
-      # We want to persist original_unit_group_id since it does not get set until the course is seeded
+      # We don't want to overwrite original_unit_group_id to nil if the unit exists and has an original_unit_group_id.
+      # The original_unit_group_id is set when courses are seeded.
       columns_to_update = get_columns(Unit) - [:original_unit_group_id]
       Unit.import! [script_to_import], on_duplicate_key_update: columns_to_update
 
