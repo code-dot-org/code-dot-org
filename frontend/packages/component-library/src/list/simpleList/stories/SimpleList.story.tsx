@@ -367,6 +367,7 @@ export const Weight: Story = {
 
 export const WithMultilineItem: Story = {
   args: {
+    style: {maxWidth: '20em'},
     items: [
       {key: 'item-a', label: 'Item A'},
       {
@@ -376,8 +377,5 @@ export const WithMultilineItem: Story = {
       },
       {key: 'item-c', label: 'Item C'},
     ],
-  },
-  play: ({canvasElement}: {canvasElement: HTMLElement}) => {
-    canvasElement.style.width = '20rem';
   },
 };
