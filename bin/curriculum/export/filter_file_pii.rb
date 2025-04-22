@@ -6,7 +6,11 @@ require 'fileutils'
 # This script operates on the output from add_unit_source.rb. It filters PII from
 # student source code within a single input file.
 
-$options = {}
+INPUT_TYPES = %w[progress evals]
+
+$options = {
+  input_type: 'progress'
+}
 OptionParser.new do |opts|
   opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
   opts.on("-i", "--s3-input-dir DIR", "Name of input directory under /mnt/tmp-curriculum-export/sourced/ .") do |input_dir|
@@ -17,6 +21,10 @@ OptionParser.new do |opts|
   end
   opts.on("-f", "--filename FILENAME", "Name of input file within input directory.") do |filename|
     $options[:filename] = filename
+  end
+  opts.on("-t", "--input_type TYPE", "Type of input file. One of: #{INPUT_TYPES} default: progress") do |type|
+    raise "Unsupported input file type: #{type}" unless INPUT_TYPES.include?(type)
+    $options[:input_type] = type
   end
 
   opts.on("-h", "--help", "Prints this help") do
@@ -103,7 +111,7 @@ end
 
 def process_row_pii(data)
   if data[:source].present?
-    pii_score, pii_entities = check_source_pii(data[:source])
+    pii_score, pii_entities = check_text_pii(data[:source], type: 'source')
     data[:source_pii_score] = pii_score
     data[:source_pii_entities] = pii_entities
     if pii_score > $pii_threshold
@@ -114,7 +122,7 @@ def process_row_pii(data)
   end
 
   if data[:student_answer].present?
-    pii_score, pii_entities = check_source_pii(data[:student_answer])
+    pii_score, pii_entities = check_text_pii(data[:student_answer], type: 'source')
     data[:student_answer_pii_score] = pii_score
     data[:student_answer_pii_entities] = pii_entities
     if pii_score > $pii_threshold
@@ -126,22 +134,22 @@ def process_row_pii(data)
   data.delete(:user_id)
 end
 
-def check_source_pii(source)
-  return [0, []] unless source.present?
+def check_text_pii(text, type:)
+  return [0, []] unless text.present?
 
   params = {
     language_code: "en",
-    text: source
+    text: text
   }
   response = $comprehend.detect_pii_entities(params)
 
   # a string without pii concerns will contain no entities. example responses:
   # {
-  #   "source": "the quick brown fox jumped over the lazy dog",
+  #   "text": "the quick brown fox jumped over the lazy dog",
   #   "response": []
   # }
   # {
-  #   "source": "the quick brown fox (206) 555-1212 jumped over the lazy dog at 55 main st",
+  #   "text": "the quick brown fox (206) 555-1212 jumped over the lazy dog at 55 main st",
   #   "response": [
   #     "{:score=>0.9999105930328369, :type=>\"PHONE\", :begin_offset=>20, :end_offset=>34}",
   #     "{:score=>0.9999832510948181, :type=>\"ADDRESS\", :begin_offset=>63, :end_offset=>73}"
@@ -152,7 +160,7 @@ def check_source_pii(source)
 
   [max_score, response.entities]
 rescue => exception
-  puts "Error checking source for PII: #{exception.message}"
+  puts "Error checking #{type} for PII: #{exception.message}"
   [1, []]
 end
 
