@@ -38,7 +38,7 @@ def filter_progress_pii
 
   input_filenames.each do |input_filename|
     puts "Processing #{input_filename}"
-    command = "SKIP_SCRIPT_PRELOAD=1 bundle exec ruby #{File.join(__dir__, 'filter_progress_file_pii.rb')} -i #{$options[:input_dir]}  -o #{$options[:output_dir]} -f #{File.basename(input_filename)}"
+    command = "SKIP_SCRIPT_PRELOAD=1 bundle exec ruby #{File.join(__dir__, 'filter_file_pii.rb')} -i #{$options[:input_dir]}  -o #{$options[:output_dir]} -f #{File.basename(input_filename)}"
     puts "command: #{command}"
     system(command)
   end
