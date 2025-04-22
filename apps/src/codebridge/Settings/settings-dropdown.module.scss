@@ -1,5 +1,10 @@
 @import 'color.scss';
 
+$space-xs: 2px;
+$space-s: 4px;
+$space-m: 6px;
+$space-l: 8px;
+
 .settingsDropdown {
   position: absolute;
   cursor: pointer;
@@ -12,37 +17,37 @@
   vertical-align: top;
   z-index: 1000;
   right: 0;
-  padding: 8px;
+  padding: $space-l;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 8px;
+  padding: $space-l;
 }
 
 .dropdownRow {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 6px;
-}
+  padding: $space-m;
+  align-items: center;
 
-.dropdownLabel {
-  min-width: 150px;
-  font-size: 14px;
-  font-weight: 500;
-  margin: 2px;
+  .dropdownLabel {
+    min-width: 150px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: $space-xs;
+  }
 }
 
 .footer {
   display: flex;
   justify-content: flex-end;
-  gap: 4px;
-  margin-top: 6px;
-  padding: 6px;
+  padding: $space-m;
+  gap: $space-s;
+  margin-top: $space-m;
 
   .footerButton {
-    margin: 2px;
+    margin: $space-xs;
   }
 }
