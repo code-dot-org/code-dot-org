@@ -63,23 +63,13 @@ $max_processes = 25
 def main
   puts "Filtering PII..."
   start_time = Time.now
-  input_filenames = get_input_filenames
-  input_filenames.each do |input_filename|
-    process_file(input_filename)
-  end
-  puts "Filtered PII in #{(Time.now - start_time).to_i} seconds."
-end
 
-def get_input_filenames
-  if $options[:filename]
-    input_filename = File.join($input_dir, $options[:input_type], $options[:filename])
-    raise "Input file must exist: #{input_filename}" unless File.exist?(input_filename)
-    puts "#{File.basename(__FILE__)} found input file: #{input_filename}"
-    return [input_filename]
-  end
-  input_filenames = Dir.glob(File.join($input_dir, $options[:input_type], '*.jsonl'))
-  puts "Found #{input_filenames.size} input files in #{$input_dir}/#{$options[:input_type]}"
-  input_filenames
+  input_filename = File.join($input_dir, $options[:input_type], $options[:filename])
+  raise "Input file must exist: #{input_filename}" unless File.exist?(input_filename)
+  puts "#{File.basename(__FILE__)} found input file: #{input_filename}"
+
+  process_file(input_filename)
+  puts "Filtered PII in #{(Time.now - start_time).to_i} seconds."
 end
 
 def process_file(input_filename)
