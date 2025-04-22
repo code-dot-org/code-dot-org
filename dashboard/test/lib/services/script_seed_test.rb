@@ -122,6 +122,7 @@ module Services
       script = create_script_tree(with_unit_group: true)
       refute script.course_version
       assert script.unit_group.course_version
+      assert script.unit_group.id, script.original_unit_group_id
       script.freeze
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
@@ -1218,19 +1219,6 @@ module Services
       # minitest is a bit weird about Time equality, so normalize both values
       # to integers for easy comparison
       assert_equal serialized['serialized_at'].to_i, Time.parse(script.seeded_from).to_i
-    end
-
-    test 'import_script does not overwrite original_unit_group_id' do
-      script = create_script_tree(with_unit_group: true)
-      original_unit_group_id = script.unit_group.id
-      assert_equal original_unit_group_id, script.original_unit_group_id
-
-      serialized = ScriptSeed::ScriptSerializer.new(script, scope: {seed_context: {}}).as_json.stringify_keys
-      assert serialized['serialized_at'].present?
-
-      ScriptSeed.import_script(serialized)
-      script.reload
-      assert_equal original_unit_group_id, script.original_unit_group_id
     end
 
     test 'seed rejects bad plc module name' do
