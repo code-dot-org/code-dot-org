@@ -25,7 +25,7 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
 }) => {
   const [aiTooHigh, setAiTooHigh] = useState(false);
   const [aiTooLow, setAiTooLow] = useState(false);
-  const [aiFlagged, setAiFlagged] = useState(false);
+  const [aiProfanityFalsePositive, setAiFalsePositiveFlag] = useState(false);
   const [aiVague, setAiVague] = useState(false);
   const [aiFeedbackOther, setAiFeedbackOther] = useState(false);
   const [aiOtherContent, setAiOtherContent] = useState('');
@@ -36,7 +36,7 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
     const metadata = {
       tooHigh: aiTooHigh,
       tooLow: aiTooLow,
-      flaggedIncorrectly: aiFlagged,
+      profanityFalsePositive: aiProfanityFalsePositive,
       Vague: aiVague,
       feedbackOther: aiFeedbackOther,
       otherContent: aiOtherContent,
@@ -70,9 +70,9 @@ const AiEvaluationFeedbackModal: React.FC<AiEvaluationFeedbackModalProps> = ({
           label={'Response was evaluated too high'}
         />
         <Checkbox
-          checked={aiFlagged}
+          checked={aiProfanityFalsePositive}
           onChange={() => {
-            setAiFlagged(!aiFlagged);
+            setAiFalsePositiveFlag(!aiProfanityFalsePositive);
           }}
           name={'flagged'}
           label={'Response was incorrectly flagged'}
