@@ -133,6 +133,7 @@
   text-decoration: none;
   text-indent: 0;
   box-shadow: none;
+  flex-grow: 1;
 
   display: flex;
   align-items: center;
@@ -141,6 +142,10 @@
 
   padding: 0.5rem 1rem 0.5rem 0.75rem;
   gap: 0.75rem;
+
+  &:active {
+    border: 0 !important;
+  }
 
   &:hover {
     color: var(--neutral-base-black);

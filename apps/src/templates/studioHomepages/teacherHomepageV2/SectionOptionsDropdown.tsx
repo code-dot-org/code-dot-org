@@ -7,15 +7,15 @@ import {Link} from 'react-router-dom';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-// import {toggleSectionHidden} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {toggleSectionHidden} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Section} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import {
   TEACHER_NAVIGATION_SECTIONS_URL,
   TEACHER_NAVIGATION_PATHS,
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
-// import {Student} from '@cdo/apps/types/redux';
-// import HttpClient from '@cdo/apps/util/HttpClient';
-// import {useAppDispatch, AppDispatch} from '@cdo/apps/util/reduxHooks';
+import {Student} from '@cdo/apps/types/redux';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {useAppDispatch, AppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import styles from './teacherHomepage.module.scss';
@@ -27,69 +27,41 @@ export interface SectionOptionsDropdownProps {
 
 const CERTIFICATE_URL = '/certificates/batch';
 
-// const onSectionSettingsClick = (
-//   navigate: NavigateFunction,
-//   sectionId: number
-// ) => {
-//   analyticsReporter.sendEvent(
-//     EVENTS.SECTION_CARD_SETTINGS_CLICKED,
-//     {},
-//     PLATFORMS.BOTH
-//   );
-//   navigate(
-//     `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.settings}`
-//   );
-// };
+const onArchiveClick = (dispatch: AppDispatch, section: Section) => {
+  const hideShowEvent = section.hidden
+    ? EVENTS.SECTION_CARD_RESTORE_CLICKED
+    : EVENTS.SECTION_CARD_ARCHIVE_CLICKED;
+  analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.BOTH);
+  dispatch(toggleSectionHidden(section.id));
+};
 
-// const onRosterClick = (navigate: NavigateFunction, sectionId: number) => {
-//   analyticsReporter.sendEvent(
-//     EVENTS.SECTION_CARD_ROSTER_CLICKED,
-//     {},
-//     PLATFORMS.BOTH
-//   );
-//   navigate(
-//     `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.roster}`
-//   );
-// };
-
-// const onLoginCardsClick = (navigate: NavigateFunction, sectionId: number) => {
-//   analyticsReporter.sendEvent(
-//     EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED,
-//     {},
-//     PLATFORMS.BOTH
-//   );
-//   navigate(
-//     `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
-//   );
-// };
-
-// const onArchiveClick = (dispatch: AppDispatch, section: Section) => {
-//   const hideShowEvent = section.hidden
-//     ? EVENTS.SECTION_CARD_RESTORE_CLICKED
-//     : EVENTS.SECTION_CARD_ARCHIVE_CLICKED;
-//   analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.BOTH);
-//   dispatch(toggleSectionHidden(section.id));
-// };
-
-// const onDeleteClick = (
-//   onDeleteClickCallback: (sectionId: number) => void,
-//   sectionId: number
-// ) => {
-//   analyticsReporter.sendEvent(
-//     EVENTS.SECTION_CARD_DELETE_CLICKED,
-//     {},
-//     PLATFORMS.BOTH
-//   );
-//   onDeleteClickCallback(sectionId);
-// };
-
-const getLinkElement = (
-  value: string,
-  label: string,
-  iconName: string,
-  url: string,
-  eventName?: string
+const onDeleteClick = (
+  onDeleteClickCallback: (sectionId: number) => void,
+  sectionId: number
 ) => {
+  analyticsReporter.sendEvent(
+    EVENTS.SECTION_CARD_DELETE_CLICKED,
+    {},
+    PLATFORMS.BOTH
+  );
+  onDeleteClickCallback(sectionId);
+};
+
+interface LinkElementProps {
+  value: string;
+  label: string;
+  iconName: string;
+  url: string;
+  eventName?: string;
+}
+
+const LinkOption: React.FC<LinkElementProps> = ({
+  value,
+  label,
+  iconName,
+  url,
+  eventName,
+}) => {
   return (
     <li key={value}>
       <Link
@@ -100,11 +72,7 @@ const getLinkElement = (
             analyticsReporter.sendEvent(eventName, {}, PLATFORMS.BOTH);
         }}
       >
-        <FontAwesomeV6Icon
-          iconName={iconName}
-          iconStyle="solid"
-          className={styles.linkIcon}
-        />
+        <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
         <span>{label}</span>
       </Link>
     </li>
@@ -115,87 +83,98 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   section,
   onDeleteClickCallback,
 }) => {
-  // const navigate = useNavigate();
-  // const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
 
   const certFormRef = React.useRef<HTMLFormElement>(null);
 
-  const [studentNames] = React.useState<string[]>([]);
+  const [studentNames, setStudentNames] = React.useState<string[]>([]);
 
-  // const onClickPrintCerts = React.useCallback(() => {
-  //   analyticsReporter.sendEvent(
-  //     EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
-  //     {},
-  //     PLATFORMS.BOTH
-  //   );
-  //   HttpClient.fetchJson<Student[]>(
-  //     `/dashboardapi/sections/${section.id}/students`
-  //   )
-  //     .then(result => result.value)
-  //     .then(value => {
-  //       const names = value.map((student: {name: string}) => student.name);
-  //       setStudentNames(names);
-  //       certFormRef.current?.submit();
-  //     })
-  //     .catch(error =>
-  //       console.error('Error retrieving student names for certificates', error)
-  //     );
-  // }, [section.id]);
+  const onClickPrintCerts = React.useCallback(() => {
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
+    HttpClient.fetchJson<Student[]>(
+      `/dashboardapi/sections/${section.id}/students`
+    )
+      .then(result => result.value)
+      .then(value => {
+        const names = value.map((student: {name: string}) => student.name);
+        setStudentNames(names);
+        certFormRef.current?.submit();
+      })
+      .catch(error =>
+        console.error('Error retrieving student names for certificates', error)
+      );
+  }, [section.id]);
 
   const dropdownOptions = useMemo(() => {
-    //value: string,
-    // label: string,
-    // iconName: string,
-    // url: string,
-    // eventName?: string
     const options = [
-      getLinkElement(
-        'sectionSettings',
-        i18n.sectionSettings(),
-        'gear',
-        `../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}`,
-        EVENTS.SECTION_CARD_SETTINGS_CLICKED
-      ),
-      // {
-      //   value: 'roster',
-      //   label: i18n.roster(),
-      //   icon: {iconName: 'user', iconStyle: 'solid'},
-
-      //   onClick: () => onRosterClick(navigate, section.id),
-      // },
-      // {
-      //   value: 'loginCards',
-      //   label: i18n.loginCards(),
-      //   icon: {iconName: 'id-card', iconStyle: 'solid'},
-      //   onClick: () => onLoginCardsClick(navigate, section.id),
-      // },
-      // {
-      //   value: 'certificates',
-      //   label: i18n.certificates(),
-      //   icon: {iconName: 'file-certificate', iconStyle: 'solid'},
-      //   onClick: () => onClickPrintCerts(),
-      // },
-      // {
-      //   value: section.hidden ? 'restore' : 'archive',
-      //   label: section.hidden ? i18n.restoreClassSection() : i18n.archive(),
-      //   icon: {
-      //     iconName: section.hidden ? 'window-restore' : 'box-archive',
-      //     iconStyle: 'solid',
-      //   },
-      //   onClick: () => onArchiveClick(dispatch, section),
-      // },
+      <LinkOption
+        value="sectionSettings"
+        label={i18n.sectionSettings()}
+        iconName="gear"
+        url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}`}
+        eventName={EVENTS.SECTION_CARD_SETTINGS_CLICKED}
+      />,
+      <LinkOption
+        value="roster"
+        label={i18n.roster()}
+        iconName="user"
+        url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.roster}`}
+        eventName={EVENTS.SECTION_CARD_ROSTER_CLICKED}
+      />,
+      <LinkOption
+        value="loginCards"
+        label={i18n.loginCards()}
+        iconName="id-card"
+        url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.loginInfo}`}
+        eventName={EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED}
+      />,
+      <li key={'certificates'}>
+        <button
+          type="button"
+          className={styles.dropdownMenuItem}
+          onClick={onClickPrintCerts}
+        >
+          <FontAwesomeV6Icon iconName="file-certificate" iconStyle="solid" />
+          <span>{i18n.certificates()}</span>
+        </button>
+      </li>,
+      <li key={'archive'}>
+        <button
+          type="button"
+          className={styles.dropdownMenuItem}
+          onClick={() => onArchiveClick(dispatch, section)}
+        >
+          <FontAwesomeV6Icon
+            iconName={section.hidden ? 'window-restore' : 'box-archive'}
+            iconStyle="solid"
+          />
+          <span>
+            {section.hidden ? i18n.restoreClassSection() : i18n.archive()}
+          </span>
+        </button>
+      </li>,
     ];
 
-    // if (section.studentCount === 0) {
-    //   options.push({
-    //     value: 'delete',
-    //     label: i18n.delete(),
-    //     icon: {iconName: 'trash', iconStyle: 'solid'},
-    //     onClick: () => onDeleteClick(onDeleteClickCallback, section.id),
-    //   });
-    // }
+    if (section.studentCount === 0) {
+      options.push(
+        <li key={'delete'}>
+          <button
+            type="button"
+            className={styles.dropdownMenuItem}
+            onClick={() => onDeleteClick(onDeleteClickCallback, section.id)}
+          >
+            <FontAwesomeV6Icon iconName="trash" iconStyle="solid" />
+            <span>{i18n.delete()}</span>
+          </button>
+        </li>
+      );
+    }
     return options;
-  }, [section]);
+  }, [section, dispatch, onDeleteClickCallback, onClickPrintCerts]);
 
   return (
     <form ref={certFormRef} action={CERTIFICATE_URL} method="POST">
