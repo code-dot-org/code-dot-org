@@ -30,7 +30,8 @@ class AssetBucket < BucketHelper
       image.resize (image.width / 4).floor.to_s + "x" + (image.height / 4).floor.to_s
       return image.to_blob
     end
-    return body
+
+    body
   end
 
   def cache_duration_seconds
