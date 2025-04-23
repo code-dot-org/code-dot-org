@@ -38,7 +38,7 @@ def filter_progress_pii
   puts "#{File.basename(__FILE__)} found #{input_filenames.size} input files in #{$input_dir}/progress"
 
   input_filenames.each do |input_filename|
-    filter_file_pii(input_filename, 'progress')
+    filter_file_pii(File.basename(input_filename), 'progress')
   end
 end
 
