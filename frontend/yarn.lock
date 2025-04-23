@@ -1086,6 +1086,7 @@ __metadata:
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@contentful/experiences-sdk-react": "npm:^1.37.1"
+    "@contentful/rich-text-html-renderer": "npm:^17.0.0"
     "@next/eslint-plugin-next": "npm:^15.0.3"
     "@next/third-parties": "npm:^15.2.1"
     "@playwright/test": "npm:~1.49.1"
@@ -1099,6 +1100,7 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    "@types/turndown": "npm:^5.0.5"
     contentful: "npm:^11.2.5"
     cookies-next: "npm:^5.1.0"
     dotenv: "npm:^16.4.7"
@@ -1115,6 +1117,7 @@ __metadata:
     schema-dts: "npm:^1.1.5"
     stylelint: "npm:^16.14.1"
     ts-node: "npm:^10.9.2"
+    turndown: "npm:^7.2.0"
     typescript: "npm:^5"
     uuid: "npm:^11.1.0"
   languageName: unknown
@@ -1209,6 +1212,16 @@ __metadata:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
   checksum: 10c0/d3942e08cfd06efae01463a835a168103b2a01afc85f45c6253ef48cd4331bfeb94b8f6a1e876aee8e87c688f19d06514da17b35a1ab6e90875829c98d8f8ab8
+  languageName: node
+  linkType: hard
+
+"@contentful/rich-text-html-renderer@npm:^17.0.0":
+  version: 17.0.0
+  resolution: "@contentful/rich-text-html-renderer@npm:17.0.0"
+  dependencies:
+    "@contentful/rich-text-types": "npm:^17.0.0"
+    escape-html: "npm:^1.0.3"
+  checksum: 10c0/cbc48d53c52753e61158c099b936924cdea957323d41188320629da9396dc82ad01b40bf583d3faba9c8ce03a25e8ac699d66af6429036511d82eaf235de86d7
   languageName: node
   linkType: hard
 
@@ -3198,6 +3211,13 @@ __metadata:
     "@types/react": ">=16"
     react: ">=16"
   checksum: 10c0/381ed1211ba2b8491bf0ad9ef0d8d1badcdd114e1931d55d44019d4b827cc2752586708f9c7d2f9c3244150ed81f1f671a6ca95fae0edd5797fb47a22e06ceca
+  languageName: node
+  linkType: hard
+
+"@mixmark-io/domino@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@mixmark-io/domino@npm:2.2.0"
+  checksum: 10c0/aa468a15f9217d425220fe6a4b3f9416cbe8e566ee14efc191c6d5cc04fe39338b16a90bbac190f28d44e69465db5f2cf95f479c621ce38060ca6b2a3d346e9d
   languageName: node
   linkType: hard
 
@@ -5575,6 +5595,13 @@ __metadata:
   version: 4.0.5
   resolution: "@types/tough-cookie@npm:4.0.5"
   checksum: 10c0/68c6921721a3dcb40451543db2174a145ef915bc8bcbe7ad4e59194a0238e776e782b896c7a59f4b93ac6acefca9161fccb31d1ce3b3445cb6faa467297fb473
+  languageName: node
+  linkType: hard
+
+"@types/turndown@npm:^5.0.5":
+  version: 5.0.5
+  resolution: "@types/turndown@npm:5.0.5"
+  checksum: 10c0/d6b4f8451caf72399f36f810461baf5f3b5e958ff216388bb3324a9949079daad31d970a28a140b3571db8793908396e757329334f5dc8bcff414698b8c31113
   languageName: node
   linkType: hard
 
@@ -9509,6 +9536,13 @@ __metadata:
   version: 4.0.0
   resolution: "escape-goat@npm:4.0.0"
   checksum: 10c0/9d2a8314e2370f2dd9436d177f6b3b1773525df8f895c8f3e1acb716f5fd6b10b336cb1cd9862d4709b36eb207dbe33664838deca9c6d55b8371be4eebb972f6
+  languageName: node
+  linkType: hard
+
+"escape-html@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "escape-html@npm:1.0.3"
+  checksum: 10c0/524c739d776b36c3d29fa08a22e03e8824e3b2fd57500e5e44ecf3cc4707c34c60f9ca0781c0e33d191f2991161504c295e98f68c78fe7baa6e57081ec6ac0a3
   languageName: node
   linkType: hard
 
@@ -18275,6 +18309,15 @@ __metadata:
   bin:
     turbo: bin/turbo
   checksum: 10c0/cad6a7b16d2cdaa15fe75efe1938d335cb026c073dfe639aaf2dce4c4d10ecc6a63216689682c1d1f7238ceed56f6e4ba736aa1b738aec70afb66f770e7c3817
+  languageName: node
+  linkType: hard
+
+"turndown@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "turndown@npm:7.2.0"
+  dependencies:
+    "@mixmark-io/domino": "npm:^2.2.0"
+  checksum: 10c0/6abcdcdf9d35cd79d7a8100a7de1d2226b921d5bd99e73ac14a7ead39c059978f519378913375efb04c68bcfc40f7ffe2dee0ce9ae4d54dc1235b12856a78d4e
   languageName: node
   linkType: hard
 

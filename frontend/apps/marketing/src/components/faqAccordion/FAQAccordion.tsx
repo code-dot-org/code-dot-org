@@ -1,11 +1,17 @@
+import {documentToHtmlString} from '@contentful/rich-text-html-renderer';
 import {EntryFields, BaseEntry} from 'contentful';
 import {useMemo} from 'react';
+import TurndownService from 'turndown';
 
 import FAQAccordion, {
   FAQAccordionItem,
 } from '@code-dot-org/component-library/accordrion/faqAccordion';
 
-type FAQAccordionContentfulProps = {
+import RichText from '@/components/richText';
+
+import moduleStyles from './faqAccordion.module.scss';
+
+export type FAQAccordionContentfulProps = {
   faqs?: (BaseEntry & {
     fields: {
       question: EntryFields.Text | EntryFields.RichText;
@@ -26,33 +32,50 @@ const checkIfEntryFieldIsRichText = (
 const FAQAccordionContentful: React.FunctionComponent<
   FAQAccordionContentfulProps
 > = ({faqs}) => {
+  const htmlToMarkdownConverter = new TurndownService();
+
+  // Converts decorated inline elements to plain text for JSON-LD
+  htmlToMarkdownConverter.addRule('plainText', {
+    filter: ['p', 'b', 'strong', 'i', 'em'],
+    replacement: (content, node) =>
+      node.parentNode && ['P', 'LI'].includes(node.parentNode.nodeName)
+        ? content
+        : content + '\n\n',
+  });
+
   const faqItems = useMemo(
     () =>
       faqs?.filter(Boolean).map(faq => {
-        let id, question, questionString, answer, answerString;
+        let question, questionString, answer, answerString;
 
         if (checkIfEntryFieldIsRichText(faq, 'question')) {
-          question =
-            'Rich Text is not supported yet. Please use Text type instead';
-          questionString = question;
-          id = 'rich-text-not-supported-yet';
+          const richTextQuestion = faq.fields.question as EntryFields.RichText;
+          question = <RichText content={richTextQuestion} />;
+          questionString = htmlToMarkdownConverter.turndown(
+            documentToHtmlString(richTextQuestion),
+          );
         } else {
           question = faq.fields.question as string;
           questionString = question;
-          id = question.replace(' ', '-').toLowerCase();
         }
 
         if (checkIfEntryFieldIsRichText(faq, 'answer')) {
-          answer =
-            'Rich Text is not supported yet. Please use Text type instead';
-          answerString = answer;
+          const richTextAnswer = faq.fields.answer as EntryFields.RichText;
+          answer = (
+            <div className={moduleStyles.faqAccordionAnswer}>
+              <RichText content={richTextAnswer} />
+            </div>
+          );
+          answerString = htmlToMarkdownConverter.turndown(
+            documentToHtmlString(richTextAnswer),
+          );
         } else {
           answer = faq.fields.answer as string;
           answerString = answer;
         }
 
         return {
-          id,
+          id: questionString,
           label: question,
           questionString,
           content: answer,
@@ -75,7 +98,9 @@ const FAQAccordionContentful: React.FunctionComponent<
     );
   }
 
-  return <FAQAccordion items={faqItems} />;
+  return (
+    <FAQAccordion className={moduleStyles.faqAccordion} items={faqItems} />
+  );
 };
 
 export default FAQAccordionContentful;
