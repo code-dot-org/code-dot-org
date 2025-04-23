@@ -70,6 +70,7 @@
     "@types/js-cookie": "^3.0.6",
     "@types/mocha": "^10.0.1",
     "@types/react-bootstrap": "^0.32.36",
+    "@types/react-csv": "^1.1.10",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-select": "^1.2.1",
     "@types/reactabular-table": "^8.14.6",
