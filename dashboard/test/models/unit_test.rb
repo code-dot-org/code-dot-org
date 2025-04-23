@@ -2628,6 +2628,7 @@ class UnitTest < ActiveSupport::TestCase
     unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
     course_unit_group = create(:unit_group)
     unit_gp_unit = create :unit_group_unit, unit_group: course_unit_group, script: unit_in_course, position: 1
+    unit_in_course.update!(original_unit_group: nil)
     CourseOffering.add_course_offering(course_unit_group)
 
     UnitGroup.any_instance.expects(:write_serialization).never

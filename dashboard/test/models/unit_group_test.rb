@@ -115,6 +115,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
 
     serialization = unit_group.serialize
+    unit_group.original_units.each {|u| u.update!(original_unit_group: nil)}
     unit_group.destroy
 
     seeded_unit_group = UnitGroup.seed_from_hash(JSON.parse(serialization))
