@@ -39,6 +39,7 @@ export function getTimestampMessage(runType: RunType) {
   } else if (runType === RunType.VALIDATION) {
     runString = codebridgeI18n.validateAt({time: formattedTime});
   }
+  // The full message should be 32 characters long, padded with '-' on both sides
   const stringLength = runString.length;
   const paddingLeftCount = Math.max(Math.floor((32 - stringLength) / 2), 0);
   const paddingRightCount = Math.max(32 - stringLength - paddingLeftCount, 0);

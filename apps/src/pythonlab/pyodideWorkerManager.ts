@@ -293,10 +293,10 @@ const restartPyodideIfProgramIsRunning = () => {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
 
-    // TODO: decide if we want to keep this or not
     writeConsoleMessage(
       getSystemMessage(pythonlabI18n.programStopped(), appName)
     );
+    writeConsoleMessage('');
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('PythonLab.PyodideRestarted');
