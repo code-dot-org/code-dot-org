@@ -3,9 +3,6 @@ require 'cdo/geocoder'
 require 'cdo/profanity_filter'
 require 'dynamic_config/gatekeeper'
 
-USER_ENTERED_TEXT_INDICATORS = ['TITLE', 'TEXT', 'title name\=\"VAL\"'].freeze
-PLAYLAB_APP_INDICATOR = 'studio_'.freeze
-
 # This is raised if there is any violation and you query with exceptions
 # enabled.
 class ShareFilterException < StandardError
