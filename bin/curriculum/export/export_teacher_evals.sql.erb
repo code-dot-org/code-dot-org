@@ -35,7 +35,8 @@ UNLOAD ($$
     JOIN analysis.course_structure cs ON cs.level_id = teacher_evals.level_id AND cs.stage_id = teacher_evals.lesson_id
     JOIN dashboard_production.user_levels ul ON teacher_evals.user_id = ul.user_id AND cs.level_id = ul.level_id AND cs.script_id = ul.script_id
   WHERE
-    cs.script_name = '<%=unit_name%>'
+    (understanding IS NOT NULL OR teacher_feedback IS NOT NULL)
+    AND cs.script_name = '<%=unit_name%>'
     <%= level_id && "and cs.level_id = #{level_id}" %>
 $$)
 TO 's3://cdo-data-sharing-internal/unloaded-unit-progress/<%=output_dir%>/evals/<%=unit_name%>_teacher_evals_'
