@@ -289,14 +289,15 @@ const asyncRun = (() => {
 const restartPyodideIfProgramIsRunning = () => {
   // Only restart if there are pending callbacks, as that means the worker is currently
   // running a program.
+
+  const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+  consoleManager?.writeConsoleMessage(
+    getSystemMessage(pythonlabI18n.programStopped(), appName)
+  );
+  consoleManager?.writeConsoleMessage('');
   if (Object.keys(callbacks).length > 0) {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
-
-    writeConsoleMessage(
-      getSystemMessage(pythonlabI18n.programStopped(), appName)
-    );
-    writeConsoleMessage('');
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('PythonLab.PyodideRestarted');
