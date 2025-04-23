@@ -12,6 +12,7 @@ import {Grid, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restri
 import {connect} from 'react-redux';
 
 import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
+import experiments from '@cdo/apps/util/experiments';
 
 import Spinner from '../../../sharedComponents/Spinner';
 
@@ -22,6 +23,10 @@ import EnrollmentsPanel from './EnrollmentsPanel';
 import IntroPanel from './IntroPanel';
 import {PermissionPropType, WorkshopAdmin} from './permission';
 import SignUpPanel from './SignUpPanel';
+
+const newWorkshopFormEnabled = experiments.isEnabled(
+  experiments.NEW_WORKSHOP_FORM
+);
 
 export class Workshop extends React.Component {
   static contextType = RouterContext;
@@ -78,39 +83,7 @@ export class Workshop extends React.Component {
       .done(data => {
         this.setState({
           loadingWorkshop: false,
-          workshop: _.pick(data, [
-            'id',
-            'name',
-            'organizer',
-            'facilitators',
-            'location_name',
-            'location_address',
-            'capacity',
-            'enrolled_teacher_count',
-            'on_map',
-            'funded',
-            'funding_type',
-            'course',
-            'subject',
-            'fee',
-            'notes',
-            'sessions',
-            'state',
-            'account_required_for_attendance?',
-            'ready_to_close?',
-            'regional_partner_name',
-            'regional_partner_id',
-            'scholarship_workshop?',
-            'potential_organizers',
-            'created_at',
-            'virtual',
-            'suppress_email',
-            'third_party_provider',
-            'course_offerings',
-            'module',
-            'participant_group_type',
-            'time_zone',
-          ]),
+          workshop: data,
         });
       })
       .fail(data => {
@@ -169,16 +142,25 @@ export class Workshop extends React.Component {
     const {workshopId} = params;
     const isWorkshopAdmin = permission.has(WorkshopAdmin);
     const {workshop, enrollments, loadingEnrollments} = this.state;
-    const {created_at, sessions, state: workshopState} = workshop;
+    const {created_at, sessions, state: workshopState, time_zone} = workshop;
 
     return (
       <Grid>
+        {newWorkshopFormEnabled && (
+          <DetailsPanel
+            workshopId={workshopId}
+            workshop={workshop}
+            workshopState={workshopState}
+            isWorkshopAdmin={isWorkshopAdmin}
+          />
+        )}
         {workshopState === 'Not Started' && (
           <SignUpPanel workshopId={workshopId} />
         )}
         <IntroPanel
           workshopId={workshopId}
           workshopState={workshopState}
+          workshopTimezone={time_zone}
           sessions={sessions}
           isAccountRequiredForAttendance={
             workshop['account_required_for_attendance?']
@@ -204,14 +186,17 @@ export class Workshop extends React.Component {
           isWorkshopAdmin={isWorkshopAdmin}
           loadEnrollments={this.loadEnrollments}
         />
-        <DetailsPanel
-          view={view}
-          workshopId={workshopId}
-          workshop={workshop}
-          workshopState={workshopState}
-          isWorkshopAdmin={isWorkshopAdmin}
-          onWorkshopSaved={this.handleWorkshopSaved}
-        />
+        {!newWorkshopFormEnabled && (
+          <DetailsPanel
+            view={view}
+            workshopId={workshopId}
+            workshop={workshop}
+            workshopState={workshopState}
+            isWorkshopAdmin={isWorkshopAdmin}
+            onWorkshopSaved={this.handleWorkshopSaved}
+          />
+        )}
+
         <MetadataFooter createdAt={created_at} />
       </Grid>
     );

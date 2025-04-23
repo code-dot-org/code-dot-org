@@ -103,16 +103,20 @@ const TeacherPromotions: React.FC = () => {
   );
 
   return (
-    <div className={styles.promotions}>
+    <ul className={styles.promotions}>
       {isLoading ? (
         <SkeletonTeacherPromo />
       ) : (
-        promotions.map((promotion, ind) => (
-          <TeacherPromo {...promotion} onClose={closePromotionCallback} />
+        promotions.map(promotion => (
+          <TeacherPromo
+            {...promotion}
+            onClose={closePromotionCallback}
+            key={promotion.id}
+          />
         ))
       )}
       <PermanentPromotions />
-    </div>
+    </ul>
   );
 };
 

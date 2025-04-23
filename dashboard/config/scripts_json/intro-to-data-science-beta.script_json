@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -16,11 +16,12 @@
       "topic_tags": [
         "data_science"
       ],
+      "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-01-24 21:48:54 UTC",
+    "serialized_at": "2025-04-21 21:27:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3324,6 +3325,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci U1 Pre-Test_2024-pilot_beta"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -3346,6 +3350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level1_beta"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3368,6 +3375,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level2_beta"
+        ],
         "progression": "Data Scientists"
       },
       "bonus": false,
@@ -3390,6 +3400,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level3_beta"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3412,6 +3425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level1_beta"
+        ],
         "progression": "Read 1: Context"
       },
       "bonus": false,
@@ -3434,6 +3450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level2_beta"
+        ],
         "progression": "Read 2: Quantities"
       },
       "bonus": false,
@@ -3456,6 +3475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level3_beta"
+        ],
         "progression": "Read 3: Questions"
       },
       "bonus": false,
@@ -3478,6 +3500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level4_beta"
+        ],
         "progression": "Pizza Slice Data Set"
       },
       "bonus": false,
@@ -3500,6 +3525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level1_beta"
+        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -3522,6 +3550,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level2_beta"
+        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -3544,6 +3575,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level3_beta"
+        ],
         "progression": "Party Planning"
       },
       "bonus": false,
@@ -3566,6 +3600,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level4_beta"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3588,6 +3625,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson4-level1-choice_beta"
+        ],
         "progression": "Choose a Persona"
       },
       "bonus": false,
@@ -3610,6 +3650,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level1-v2_beta"
+        ],
         "progression": "Read 1: Context"
       },
       "bonus": false,
@@ -3632,6 +3675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level2-v2_beta"
+        ],
         "progression": "Read 2: Quantities"
       },
       "bonus": false,
@@ -3654,6 +3700,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level3-v2_beta"
+        ],
         "progression": "Read 3: Questions"
       },
       "bonus": false,
@@ -3676,6 +3725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci - Ch1L5 match criteria_beta"
+        ],
         "progression": "Lacking Criteria"
       },
       "bonus": false,
@@ -3698,6 +3750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level1_beta"
+        ],
         "progression": "Expository Data Story"
       },
       "bonus": false,
@@ -3720,6 +3775,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level2_beta"
+        ],
         "progression": "Persuasive Data Story"
       },
       "bonus": false,
@@ -3742,6 +3800,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level3_beta"
+        ],
         "progression": "Party Planning Datasets"
       },
       "bonus": false,
@@ -3764,6 +3825,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level1_beta"
+        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -3786,6 +3850,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level2_beta"
+        ],
         "progression": "Shape of Distribution"
       },
       "bonus": false,
@@ -3808,6 +3875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level3_beta"
+        ],
         "progression": "CODAP Graphs"
       },
       "bonus": false,
@@ -3830,6 +3900,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level4_beta"
+        ],
         "progression": "CODAP Graphs"
       },
       "bonus": false,
@@ -3852,6 +3925,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level5_beta"
+        ],
         "progression": "CODAP Graphs"
       },
       "bonus": false,
@@ -3874,6 +3950,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level6_beta"
+        ],
         "progression": "Applying Filters"
       },
       "bonus": false,
@@ -3896,6 +3975,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson8-level1_beta"
+        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -3918,6 +4000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson8-level3_beta"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3940,6 +4025,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level1_beta"
+        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -3962,6 +4050,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level2-choice_beta"
+        ],
         "progression": "CODAP Level"
       },
       "bonus": false,
@@ -3984,6 +4075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level3_beta"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4006,6 +4100,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level4_beta"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4028,6 +4125,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level5_beta"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4050,6 +4150,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level1-v2_beta"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4072,6 +4175,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level2_beta"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4094,6 +4200,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level3_beta"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4116,6 +4225,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level4_beta"
+        ],
         "progression": "Roller Coasters"
       },
       "bonus": false,
@@ -4138,6 +4250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level5-v2_beta"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4160,6 +4275,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level6_beta"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4182,6 +4300,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level7_beta"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4204,6 +4325,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level8_beta"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4226,6 +4350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level9_beta"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4248,6 +4375,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level10_beta"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4270,6 +4400,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "datasci-U1L12-projectL1_pilot2024_beta"
+        ],
         "progression": "Data Set Choices"
       },
       "bonus": false,
@@ -4292,6 +4425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-u1-lesson12-level2_beta"
+        ],
         "progression": "Data Decisions and Visualizations"
       },
       "bonus": false,
@@ -4314,6 +4450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-u1-lesson12-level3_beta"
+        ],
         "progression": "Your Data Story"
       },
       "bonus": false,
@@ -4336,6 +4475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data-science-u1-lesson12-level4fr_beta"
+        ],
         "progression": "The Data Cycle"
       },
       "bonus": false,
@@ -4358,6 +4500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Sci U1 Post-Test_2024-pilot_beta"
+        ],
         "progression": "Unit 1 Assessment"
       },
       "bonus": false,

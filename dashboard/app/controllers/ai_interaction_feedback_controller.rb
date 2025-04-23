@@ -22,7 +22,7 @@ class AiInteractionFeedbackController < ApplicationController
       :scriptId,
       :thumbsUp,
       :schoolYear,
-      :metadata
+      metadata: {}
     ).transform_keys {|key| key.to_s.underscore.to_sym}
   end
 end

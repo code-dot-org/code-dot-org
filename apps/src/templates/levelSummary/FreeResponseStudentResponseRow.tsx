@@ -1,6 +1,6 @@
 import Tags from '@code-dot-org/component-library/tags';
 import {BodyThreeText} from '@code-dot-org/component-library/typography';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {
@@ -8,6 +8,7 @@ import {
   logUserFeedbackOnStudentEvaluation,
 } from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
 
+import AiEvaluationFeedbackModal from './AiEvaluationFeedbackModal';
 import {FEEDBACK_TYPE} from './AiFeedbackType';
 import FeedbackToggle from './FeedbackToggle';
 
@@ -20,6 +21,9 @@ type FreeResponseStudentResponseRowProps = {
 const FreeResponseStudentResponseRow: React.FC<
   FreeResponseStudentResponseRowProps
 > = ({studentWorkEvaluation}) => {
+  const [feedbackModalOpen, setFeedbackModalOpen] = useState<boolean>(false);
+  const [feedbackData, setFeedbackData] = useState<FeedbackData | null>(null);
+
   // used to create the tag for the response
   const analysisTag = () => {
     if (
@@ -101,15 +105,20 @@ const FreeResponseStudentResponseRow: React.FC<
   };
 
   const handleFeedbackClick = async (thumbsUp: boolean) => {
-    const feedbackData: FeedbackData = {
+    const feedbackDataGenerated = {
       aiInteractionType: 'UserLevelEvaluation',
       aiInteractionId: studentWorkEvaluation.id,
       thumbsUp,
       levelId: studentWorkEvaluation.levelId,
       scriptId: studentWorkEvaluation.unitId,
     };
+    setFeedbackData(feedbackDataGenerated);
 
-    logUserFeedbackOnStudentEvaluation(feedbackData);
+    if (!thumbsUp) {
+      setFeedbackModalOpen(true);
+    } else {
+      logUserFeedbackOnStudentEvaluation(feedbackDataGenerated);
+    }
   };
 
   return (
@@ -132,6 +141,15 @@ const FreeResponseStudentResponseRow: React.FC<
           color="gray"
         />
       </div>
+      {feedbackModalOpen && feedbackData && (
+        <AiEvaluationFeedbackModal
+          feedbackData={feedbackData}
+          forStudentAiInteractionFeedback={true}
+          closeModalHandler={() => {
+            setFeedbackModalOpen(false);
+          }}
+        />
+      )}
     </div>
   );
 };

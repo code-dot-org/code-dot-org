@@ -3,6 +3,9 @@
   "script_names": [
     "hoc-dp-oct-beta-b"
   ],
+  "original_script_names": [
+    "hoc-dp-oct-beta-b"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

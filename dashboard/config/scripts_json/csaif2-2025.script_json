@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "Other",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-14 15:37:03 UTC",
+    "serialized_at": "2025-04-21 21:30:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4132,6 +4132,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson5-vocab_2025"
+        ],
         "progression": "Moving and Painting"
       },
       "bonus": false,

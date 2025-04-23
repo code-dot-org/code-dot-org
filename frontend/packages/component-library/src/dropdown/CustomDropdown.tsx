@@ -6,11 +6,15 @@ import {
   useEffect,
   AriaAttributes,
   KeyboardEvent,
+  memo,
 } from 'react';
 
 import {Button, ButtonProps} from '@/button';
 import {dropdownColors} from '@/common/constants';
-import {useDropdownContext} from '@/common/contexts/DropdownContext';
+import {
+  DropdownProviderWrapper,
+  useDropdownContext,
+} from '@/common/contexts/DropdownContext';
 import {getAriaPropsFromProps} from '@/common/helpers';
 import {ComponentSizeXSToL, DropdownColor} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -26,7 +30,7 @@ export interface TriggerComponentProps extends AriaAttributes {
   'data-toggle': string;
 }
 
-export interface _CustomDropdownOption {
+export interface CustomDropdownOption {
   value: string;
   label: string;
   isOptionDisabled?: boolean;
@@ -76,9 +80,17 @@ export interface CustomDropdownProps extends AriaAttributes {
 }
 
 /**
- * Design System: _CustomDropdown Component.
- * This is a PRIVATE component that is used to create different custom dropdowns.
- * Only used inside of Design System components. DO NOT IMPORT OR USE DIRECTLY.
+ * ### Production-ready Checklist:
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see ./__tests__/CustomDropdown.test.tsx)
+ * * (?) passes accessibility checks;
+ *
+ * ###  Status: ```Ready for dev```
+ *
+ * Design System: CustomDropdown Component.
+ * Renders CustomDropdown with content passed through props.
  */
 const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   name,
@@ -239,8 +251,10 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
           <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-down" />
         </button>
       )}
-      {/** Dropdown menu content is rendered here as children props*/}
-      {children}
+      <div className={moduleStyles.dropdownMenuContainer}>
+        {/** Dropdown menu content is rendered here as children props*/}
+        {children}
+      </div>
 
       {!errorMessage && (helperMessage || helperIcon) && (
         <div className={moduleStyles.helperSection}>
@@ -263,4 +277,10 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   );
 };
 
-export default CustomDropdown;
+const WrappedCustomDropdown = (props: CustomDropdownProps) => (
+  <DropdownProviderWrapper>
+    <CustomDropdown {...props} />
+  </DropdownProviderWrapper>
+);
+
+export default memo(WrappedCustomDropdown);

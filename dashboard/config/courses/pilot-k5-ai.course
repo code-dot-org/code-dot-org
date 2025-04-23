@@ -3,6 +3,9 @@
   "script_names": [
     "pilot-k5-ai"
   ],
+  "original_script_names": [
+    "pilot-k5-ai"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

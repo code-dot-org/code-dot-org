@@ -3,6 +3,9 @@
   "script_names": [
     "csd3-virtual"
   ],
+  "original_script_names": [
+    "csd3-virtual"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

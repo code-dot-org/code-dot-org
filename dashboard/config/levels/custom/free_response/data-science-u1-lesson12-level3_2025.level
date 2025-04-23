@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2025-03-21T21:34:57.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Writing Your Data Story",
-    "long_instructions": "## Do This:\r\n1. Record your final response below.\r\n   - Make sure you describe your data using the sentence starters from Day 4 of your project guide.\r\n   - Make sure you answer your data question and add evidence.\r\n2. Upload images of your visualizations that support your answer to your data question. \r\n   - Note: You may have to go back to level 4 to download images if you have not already done so.",
+    "long_instructions": "## Do This:\r\n1. Record your final response below.\r\n   - Make sure you describe your data using the sentence starters from Day 4 of your project guide.\r\n   - Make sure you answer your data question and add evidence.\r\n2. Upload images of your visualizations that support your answer to your data question. \r\n   - Note: You may have to go back to level 2 to download images if you have not already done so.",
     "allow_user_uploads": "true",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -15,10 +16,10 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:57.029+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level3\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level3\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:57.029+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level3\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level3\"},{\"changed_at\":\"2025-04-18 20:03:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

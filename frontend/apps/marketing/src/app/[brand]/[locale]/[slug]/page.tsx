@@ -7,6 +7,7 @@ import {draftMode} from 'next/headers';
 
 import FontLoader from '@code-dot-org/fonts/FontLoader';
 
+import {Brand} from '@/config/brand';
 import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 import {getExperience} from '@/contentful/get-experience';
 import {getSeoMetadata} from '@/metadata/seo';
@@ -16,7 +17,7 @@ export const dynamic = 'force-static'; // Ensure ISR is enabled
 export const revalidate = 600; // Cache for five minutes until on-demand revalidation works
 
 type ExperiencePageProps = {
-  params: Promise<{locale?: string; slug?: string; preview?: string}>;
+  params: Promise<{locale?: string; slug?: string; brand?: Brand}>;
   searchParams: Promise<{[key: string]: string | string[] | undefined}>;
 };
 
@@ -41,6 +42,7 @@ export async function generateMetadata({
   params,
   searchParams,
 }: ExperiencePageProps): Promise<Metadata> {
+  const {brand} = (await params) || {};
   const pageProps = await getPageProps({
     params,
     searchParams,
@@ -50,7 +52,7 @@ export async function generateMetadata({
 
   return {
     title: getPageHeading(experience),
-    ...getSeoMetadata(experience, pageProps.locale),
+    ...getSeoMetadata(experience, brand, pageProps.locale),
   };
 }
 export default async function ExperiencePage({

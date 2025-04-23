@@ -1,5 +1,6 @@
 import Chips from '@code-dot-org/component-library/chips';
 import {Heading2} from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -12,17 +13,21 @@ import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './sections-refresh.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 export default function SingleSectionSetUp({
   sectionNum,
   section,
   updateSection,
   isNewSection,
+  isLoading = false,
 }) {
   const gradeOptions = StudentGradeLevels.map(g => ({label: g, value: g}));
   const participantType = isNewSection
     ? queryParams('participantType')
     : section.participantType;
+
+  console.log('lfm', {section});
 
   return (
     <div>
@@ -30,14 +35,25 @@ export default function SingleSectionSetUp({
         <Heading2>{i18n.classSection()}</Heading2>
         <label className={moduleStyles.typographyLabelTwo}>
           {i18n.className()}
-          <input
-            required
-            type="text"
-            id="uitest-section-name-setup"
-            className={moduleStyles.classNameTextField}
-            value={section.name}
-            onChange={e => updateSection('name', e.target.value)}
-          />
+
+          {isLoading ? (
+            <div
+              className={classNames(
+                moduleStyles.skeletonTextField,
+                skeletonizeContent.skeletonizeContent
+              )}
+            />
+          ) : (
+            <input
+              required
+              type="text"
+              id="uitest-section-name-setup"
+              className={moduleStyles.classNameTextField}
+              value={section.name}
+              onChange={e => updateSection('name', e.target.value)}
+              disabled={isLoading}
+            />
+          )}
         </label>
       </div>
       {(experiments.isEnabled('teacher-homepage-v2') ||
@@ -65,6 +81,7 @@ export default function SingleSectionSetUp({
             options={gradeOptions}
             values={section.grades || []}
             setValues={g => updateSection('grades', g)}
+            disabled={isLoading}
           />
         </div>
       )}
@@ -77,4 +94,5 @@ SingleSectionSetUp.propTypes = {
   section: PropTypes.object.isRequired,
   updateSection: PropTypes.func.isRequired,
   isNewSection: PropTypes.bool.isRequired,
+  isLoading: PropTypes.bool,
 };

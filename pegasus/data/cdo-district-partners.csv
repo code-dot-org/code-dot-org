@@ -2,6 +2,7 @@ district_s,state_s
 Birmingham City Schools,Alabama
 Dale County Schools,Alabama
 Elmore County Public Schools,Alabama
+Montgomery Public School,Alabama
 Montgomery Public Schools,Alabama
 Bering Strait School District,Alaska
 Galena City School District,Alaska
@@ -198,12 +199,14 @@ Ipswich Public Schools,Massachusetts
 Maynard Public Schools,Massachusetts
 Melrose Public Schools,Massachusetts
 Natick Public Schools,Massachusetts
+Needham Public Schools,Massachusetts
 Phoenix Charter Academy,Massachusetts
 Plymouth Public Schools,Massachusetts
 Somerville Public Schools,Massachusetts
 Southeastern Massachusetts Educational Collaborative,Massachusetts
 Springfield International Charter School,Massachusetts
 Sudbury Public Schools,Massachusetts
+Advanced Technology Academy,Michigan
 Bedford Public Schools,Michigan
 Bessemer Area Schools,Michigan
 Chippewa Valley Schools,Michigan
@@ -309,6 +312,7 @@ Benjamin Banneker Preparatory Charter School,New Jersey
 Bloomfield Public Schools,New Jersey
 Brick Education Network,New Jersey
 Cape May County Vocational School District,New Jersey
+Cherry Hill Public Schools,New Jersey
 Clinton Township School District,New Jersey
 Dunellen Public Schools,New Jersey
 East Hanover Township School District,New Jersey
@@ -549,6 +553,7 @@ Lubbock-Cooper ISD,Texas
 McGregor Independent School District,Texas
 Mineola Independent School District,Texas
 Prairie Valley Independent School District,Texas
+Rockwall ISD,Texas
 Santa Rosa ISD,Texas
 Southside Independent School District,Texas
 Springtown Independent School District,Texas
@@ -597,4 +602,3 @@ Venture Academy,Wisconsin
 Converse County School District #2,Wyoming
 Sheridan County School District #2,Wyoming
 Sweetwater County School District #1,Wyoming
-Cherry Hill Public Schools,NJ

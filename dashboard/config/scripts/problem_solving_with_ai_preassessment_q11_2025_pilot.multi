@@ -7,7 +7,7 @@ wrong 'AI can only generate one version of any idea.'
 wrong 'AI content is always incorrect.'
 wrong 'Revisions are not important if the first result looks fine.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 9: AI as a Co-Creator

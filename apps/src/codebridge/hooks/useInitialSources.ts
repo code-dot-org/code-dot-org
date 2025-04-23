@@ -120,8 +120,12 @@ export const useInitialSources = (
     if (isStartMode) {
       return startSources;
     }
-    if (predictSettings?.isPredictLevel) {
-      // Predict levels never use sources loaded from the server, only the start sources.
+    if (
+      predictSettings?.isPredictLevel &&
+      !predictSettings?.codeEditableAfterSubmit
+    ) {
+      // Predict levels only use sources loaded from the server if the code is
+      // editable after submit, otherwise use the start sources.
       return templateSources || startSources;
     }
     if (isEditingExemplar || isViewingExemplar) {
@@ -168,6 +172,7 @@ export const useInitialSources = (
     templateStartSources,
     isStartMode,
     predictSettings?.isPredictLevel,
+    predictSettings?.codeEditableAfterSubmit,
     isEditingExemplar,
     isViewingExemplar,
     initialServerSource,

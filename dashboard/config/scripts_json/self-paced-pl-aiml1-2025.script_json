@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "self_paced_pl_6_8",
-      "curriculum_umbrella": "PD Workshop Activity CSD",
+      "curriculum_umbrella": "Self-paced PL - CSD",
       "has_verified_resources": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-04 20:07:27 UTC",
+    "serialized_at": "2025-04-23 03:25:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -441,6 +441,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23_25"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -463,6 +466,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-24-mod1-Certificate_25"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -485,6 +491,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23_25"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -507,6 +516,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ML-vid_25"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -529,6 +541,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Intro-Quotes_-22_23_25"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -551,6 +566,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-lesson1-Overview-AIML_-22_23_25"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -573,6 +591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-U7L1L1_25"
+        ],
         "progression": "Practice Training A.I. Bot "
       },
       "bonus": false,
@@ -595,6 +616,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-MLintro-c4u_-22_23_25"
+        ],
         "progression": "Practice Training A.I. Bot "
       },
       "bonus": false,
@@ -617,6 +641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_23_25"
+        ],
         "progression": "Explore the First Week of Curriculum"
       },
       "bonus": false,
@@ -639,6 +666,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L5overview-AIML_-22_23_25"
+        ],
         "progression": "Explore the First Week of Curriculum"
       },
       "bonus": false,
@@ -661,6 +691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod5-PL-lesson2-overview_-22_23_25"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -683,6 +716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILab-vid_25"
+        ],
         "progression": "Introduction to AI Lab"
       },
       "bonus": false,
@@ -705,6 +741,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overview-AIML_-22_23_25"
+        ],
         "progression": "Introduction to AI Lab"
       },
       "bonus": false,
@@ -727,6 +766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1_25"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -749,6 +791,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabVocab-c4u_-22_23_25"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -771,6 +816,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabPart2-vid_25"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -793,6 +841,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overviewCont-AIML_-22_23_25"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -815,6 +866,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro categorical-pizza_25"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -837,6 +891,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-DataVisualizations-c4u_-22_23_25"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -859,6 +916,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod5-PL-lesson3-overview_-22_23_25"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -881,6 +941,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0_25"
+        ],
         "progression": "Explore Machine Learning Apps"
       },
       "bonus": false,
@@ -903,6 +966,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo_25"
+        ],
         "progression": "Explore Machine Learning Apps"
       },
       "bonus": false,
@@ -925,6 +991,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-use model card-example3A_25"
+        ],
         "progression": "Explore Machine Learning Apps"
       },
       "bonus": false,
@@ -947,6 +1016,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod5-PL-lesson4-overview_-22_23_25"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -969,6 +1041,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-BiasOverview-AIML_-22_23_25"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -991,6 +1066,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-TrainingDataBias-vid_25"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -1013,6 +1091,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_25"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -1035,6 +1116,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical-3_-22_23_25"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -1057,6 +1141,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ModelCards-c4u_-22_23_25"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -1079,6 +1166,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid_25"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -1101,6 +1191,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L14examples-AIML_-22_23_25"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -1123,6 +1216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod5-PL-lesson5-overview_-22_23_25"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1145,6 +1241,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectOverview-AIML_-22_23_25"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -1167,6 +1266,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ChapterProjectOverview-AIML_-22_23_25"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -1189,6 +1291,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectExamples-AIML_-22_23_25"
+        ],
         "progression": "Unit Projects"
       },
       "bonus": false,
@@ -1211,6 +1316,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-MakeAPlan-AIML_-22_23_25"
+        ],
         "progression": "Make a Plan"
       },
       "bonus": false,
@@ -1233,6 +1341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning_CSD-PL-24_25"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1255,6 +1366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-LeadLearner_CSD-PL-24_25"
+        ],
         "progression": "The Role of the Teacher"
       },
       "bonus": false,
@@ -1277,6 +1391,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-LeadLearner-vid_CSD-PL-24_25"
+        ],
         "progression": "The Role of the Teacher"
       },
       "bonus": false,
@@ -1299,6 +1416,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-ClassroomCulture_CSD-PL-24_25"
+        ],
         "progression": "The Role of the Teacher"
       },
       "bonus": false,
@@ -1321,6 +1441,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PairProgramming_CSD-PL-24_25"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1343,6 +1466,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PairProgramming-TipVid_CSD-PL-24_25"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1365,6 +1491,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Resources_CSD-PL-24_25"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1387,6 +1516,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Debugging_CSD-PL-24_25"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1409,6 +1541,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Debugging-TipVid_CSD-PL-24_25"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1431,6 +1566,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-teamworkOverview_CSD-PL-24_25"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1453,6 +1591,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Strategies-StudentVideos_CSD-PL-24_25"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1475,6 +1616,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-ProgrammingLevelsOverview_CSD-PL-24_25"
+        ],
         "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
@@ -1497,6 +1641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CP-22-Inclusion_CSD-PL-24_25"
+        ],
         "progression": "Meeting Student Needs"
       },
       "bonus": false,
@@ -1519,6 +1666,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Differentiation_CSD-PL-24_25"
+        ],
         "progression": "Meeting Student Needs"
       },
       "bonus": false,
@@ -1541,6 +1691,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-DifferentiationContinued_CSD-PL-24_25"
+        ],
         "progression": "Meeting Student Needs"
       },
       "bonus": false,
@@ -1563,6 +1716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-Assessment_CSD-PL-24_25"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1585,6 +1741,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-AssessmentPlan_CSD-PL-24_25"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1607,6 +1766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-mod2-WrapUp_CSD-PL-24_25"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

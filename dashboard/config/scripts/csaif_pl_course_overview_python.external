@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Programming Fundamentals Curriculum Overview
+# Foundations of AI Programming Curriculum Overview
  
-#### The **Programming Fundamentals** curriculum unit introduces students to programming, algorithms, and ethical computing.
+#### The **Foundations of AI Programming** curriculum unit introduces students to programming, algorithms, and ethical computing.
 
 #### They learn how algorithms solve problems, how to design and debug Python programs with AI tools, and will consider the societal impact of computing. 
 
@@ -39,7 +39,7 @@ markdown <<MARKDOWN
 
 #### This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
 
-#### Check out the <a href="https://studio.code.org/s/pf-aitutor-pilot-content-2024" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+#### Check out the <a href="https://studio.code.org/s/aif2-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
 
 <p align="center">
 
@@ -47,6 +47,6 @@ markdown <<MARKDOWN
 </p>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ Explore the full unit curriculum  <a href='https://studio.code.org/courses/programming-fundamentals-aitutor-2024' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>here</a>.
+    ➡️ Explore the full unit curriculum  <a href='https://studio.code.org/s/aif2-2025' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>here</a>.
 </p>
 MARKDOWN

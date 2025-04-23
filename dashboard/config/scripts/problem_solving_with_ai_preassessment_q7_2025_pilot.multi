@@ -7,7 +7,7 @@ wrong 'Context guarantees that the AI only references its most recently updated 
 right 'Context gives the AI more relevant details, helping it generate answers tailored to the user\'s specific needs.'
 wrong 'Context transforms the AI into an expert system, granting it human-like reasoning capabilities.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 5: Uncovering Contradictions

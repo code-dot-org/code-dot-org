@@ -9,9 +9,33 @@ markdown <<MARKDOWN
 
 <div style="clear:both"/>
 
+<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+  <tr>
+    <td style="width: 25%; background-color: #B7E0E5; color: #000000; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+      ⭐️<br>
+      Introduction to Programming with Music Lab
+    </td>
+    <td style="width: 25%; background-color: #B7E0E5; color: #000000; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold;">
+      🔢<br>
+      Teaching Lessons 1 – 5: Sequencing
+    </td>
+    <td style="width: 25%; background-color: #B7E0E5; color: #000000; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold;">
+      🔁<br>
+      Teaching Lessons 6 – 9: Loops
+    </td>
+    <td style="width: 25%; background-color: #026C7A; color: #ffffff; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+      🎶<br>
+      Teaching Lessons 10 – 13: Functions
+    </td>
+  </tr>
+</table>
+
+
 ## Help Us Make This Module Better!
 
 #### Code.org values and is responsive to feedback. Please fill out this <a href="" target="blank" rel="noopener noreferrer" >short survey</a> to provide your feedback on this module.
+
+#### <mark>**Note for pilot teachers**: Please complete your post-survey in Great Question!</mark>
 
 ## Next Steps
 
