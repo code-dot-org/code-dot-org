@@ -78,6 +78,7 @@ def process_s3_file(bucket, key)
     channel_id = data['channel_id']
     source = get_project_source(channel_id)
     data['source'] = source
+    data['past_version_ids'] = get_past_version_ids(channel_id)
     data.to_json
   rescue JSON::ParserError => exception
     puts "Error parsing JSON: #{exception}"
@@ -102,6 +103,27 @@ def get_project_source(channel_id)
 rescue NoMethodError => exception
   puts "Error getting source for channel id: #{channel_id}: #{exception}"
   nil
+end
+
+def get_past_version_ids(channel_id)
+  return [] unless channel_id
+
+  # sample response from SourceBucket.new.list_versions:
+  # [
+  #   {
+  #     :versionId=>"EL24MWXWEIZOQS4OC3PAzL0hlrq.GMcA",
+  #     :lastModified=>2024-09-04 05:08:09 UTC,
+  #     :isLatest=>true
+  #   },
+  #   {
+  #     :versionId=>"6SZKYyT9GZw1nmq29g9u0L3UNQmOkTsh",
+  #     :lastModified=>2024-09-04 05:06:35 UTC,
+  #     :isLatest=>false
+  #   }
+  # ]
+  versions = SourceBucket.new.list_versions(channel_id, "main.json")
+  past_versions = versions.reject {|version| version[:isLatest]}
+  past_versions.map {|version| version[:versionId]}
 end
 
 def copy_eval_files
