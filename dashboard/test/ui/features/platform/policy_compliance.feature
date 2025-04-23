@@ -33,6 +33,7 @@ Feature: Policy Compliance and Parental Permission
     Then I am on "http://studio.code.org/home?forceStudentInterstitial=true"
 
     Then I wait to see "#student-information-modal"
+    And I wait until element "#user_us_state" is visible
     And I select the "Colorado" option in dropdown "user_us_state"
 
     Then I press "#submit-btn" using jQuery
