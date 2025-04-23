@@ -105,7 +105,7 @@
       = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
       = t('user.create_personal_login_link_account') if current_user.migrated?
   .div{style: 'position: relative'}
-    = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account', style: (!@personal_account_linking_enabled ? 'opacity: 0.25;' : '')}, namespace: 'create_personal') do |form|
+    = form_for(current_user, as: :user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account', style: (!@personal_account_linking_enabled ? 'opacity: 0.25;' : '')}, namespace: 'create_personal') do |form|
       = form.hidden_field :hashed_email
       %h3= t('user.enter_new_login_info')
       - if no_email
