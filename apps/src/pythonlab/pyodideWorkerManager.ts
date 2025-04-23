@@ -287,14 +287,19 @@ const asyncRun = (() => {
 })();
 
 const restartPyodideIfProgramIsRunning = () => {
-  // Only restart if there are pending callbacks, as that means the worker is currently
-  // running a program.
-
+  // Always send a stop message, as some programs will still
+  // look like they are "running" to the user even if they aren't truly running
+  // (for example, the neighborhood). We send via the console manager rather than
+  // the message handler because the neighborhood stops processing messages on stop,
+  // and we want to always show this to the user.
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
   consoleManager?.writeConsoleMessage(
     getSystemMessage(pythonlabI18n.programStopped(), appName)
   );
   consoleManager?.writeConsoleMessage('');
+
+  // Only restart if there are pending callbacks, as that means the worker is currently
+  // running a program.
   if (Object.keys(callbacks).length > 0) {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
