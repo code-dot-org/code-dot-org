@@ -3,6 +3,9 @@
   "script_names": [
     "cspassessment"
   ],
+  "original_script_names": [
+    "cspassessment"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

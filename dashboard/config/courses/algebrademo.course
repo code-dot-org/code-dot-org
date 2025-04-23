@@ -3,6 +3,9 @@
   "script_names": [
     "algebrademo"
   ],
+  "original_script_names": [
+    "algebrademo"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

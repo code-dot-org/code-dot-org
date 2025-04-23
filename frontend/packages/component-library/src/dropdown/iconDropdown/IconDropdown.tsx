@@ -107,46 +107,44 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       selectedValueText={selectedOption?.label}
       {...rest}
     >
-      <div className={moduleStyles.dropdownMenuContainer}>
-        <ul>
-          {options.map(option => {
-            const {
-              value,
-              label,
-              isOptionDisabled,
-              icon: {
-                iconName,
-                iconStyle,
-                title: iconTitle,
-                className: iconClassName,
-              },
-            } = option;
-            return (
-              <li key={value}>
-                <button
-                  className={classNames(
-                    moduleStyles.dropdownMenuItem,
-                    isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
-                    selectedOption.value === value &&
-                      moduleStyles.selectedDropdownMenuItem,
-                  )}
-                  disabled={isOptionDisabled || disabled}
-                  type="button"
-                  onClick={() => onOptionClick(option)}
-                >
-                  <FontAwesomeV6Icon
-                    iconName={iconName}
-                    iconStyle={iconStyle}
-                    title={iconTitle}
-                    className={iconClassName}
-                  />
-                  <span>{label}</span>
-                </button>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
+      <ul>
+        {options.map(option => {
+          const {
+            value,
+            label,
+            isOptionDisabled,
+            icon: {
+              iconName,
+              iconStyle,
+              title: iconTitle,
+              className: iconClassName,
+            },
+          } = option;
+          return (
+            <li key={value}>
+              <button
+                className={classNames(
+                  moduleStyles.dropdownMenuItem,
+                  isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
+                  selectedOption.value === value &&
+                    moduleStyles.selectedDropdownMenuItem,
+                )}
+                disabled={isOptionDisabled || disabled}
+                type="button"
+                onClick={() => onOptionClick(option)}
+              >
+                <FontAwesomeV6Icon
+                  iconName={iconName}
+                  iconStyle={iconStyle}
+                  title={iconTitle}
+                  className={iconClassName}
+                />
+                <span>{label}</span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
     </CustomDropdown>
   );
 };

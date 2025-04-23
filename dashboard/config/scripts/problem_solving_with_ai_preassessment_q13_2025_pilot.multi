@@ -7,4 +7,4 @@ right 'AI systems often generate content without revealing or crediting their so
 wrong 'AI models are unable to access any human-created content during training.'
 wrong 'AI-generated content is always publicly available and free to use.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true

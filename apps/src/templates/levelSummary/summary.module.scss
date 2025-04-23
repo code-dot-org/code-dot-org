@@ -77,7 +77,28 @@ label.sectionSelector {
 
 .toggleGroup {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
+}
+
+.aiToggleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+
+  .headerTag {
+    margin-left: 4px;
+
+    div {
+      background-color: var(--background-neutral-tertiary);
+
+      span {
+        color: var(--text-neutral-primary);
+      }
+    }
+  }
 }
 
 [dir='rtl'] .toggleContainer {

@@ -120,41 +120,39 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
         .join(', ')}
       {...rest}
     >
-      <div className={moduleStyles.dropdownMenuContainer}>
-        <ul>
-          {allOptions.map(({value, label, isOptionDisabled}) => (
-            <li key={value}>
-              <Checkbox
-                checked={checkedOptions.includes(value)}
-                disabled={disabled || isOptionDisabled}
-                onChange={onChange}
-                size={size}
-                name={value}
-                value={value}
-                label={label}
-              />
-            </li>
-          ))}
-        </ul>
-        {!rest.hideControls && (
-          <div className={moduleStyles.bottomButtonsContainer}>
-            <Button
-              type="tertiary"
-              color={buttonColors.purple}
-              text={rest.selectAllText}
-              onClick={rest.onSelectAll}
+      <ul>
+        {allOptions.map(({value, label, isOptionDisabled}) => (
+          <li key={value}>
+            <Checkbox
+              checked={checkedOptions.includes(value)}
+              disabled={disabled || isOptionDisabled}
+              onChange={onChange}
               size={size}
+              name={value}
+              value={value}
+              label={label}
             />
-            <Button
-              type="tertiary"
-              color={buttonColors.purple}
-              text={rest.clearAllText}
-              onClick={rest.onClearAll}
-              size={size}
-            />
-          </div>
-        )}
-      </div>
+          </li>
+        ))}
+      </ul>
+      {!rest.hideControls && (
+        <div className={moduleStyles.bottomButtonsContainer}>
+          <Button
+            type="tertiary"
+            color={buttonColors.purple}
+            text={rest.selectAllText}
+            onClick={rest.onSelectAll}
+            size={size}
+          />
+          <Button
+            type="tertiary"
+            color={buttonColors.purple}
+            text={rest.clearAllText}
+            onClick={rest.onClearAll}
+            size={size}
+          />
+        </div>
+      )}
     </CustomDropdown>
   );
 };

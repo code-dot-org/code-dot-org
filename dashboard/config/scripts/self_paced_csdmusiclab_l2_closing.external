@@ -7,16 +7,16 @@ markdown <<MARKDOWN
 
 #### So far, you can:
 
-* #### Describe the structure and flow of the Music Lab unit
-* #### Identify key pedagogical features that support student learning
-* #### Navigate the Music Lab coding environment and recognize how students will interact with it
+* #### Identify how sequencing is introduced and developed in Music Lab
+* #### Identify how students apply sequencing in creative coding tasks
+* #### Support students in recognizing how the order of code affects musical output
 
 ## Up Next
 
 #### In the next section of this professional learning module, you will:
-* #### Learn how sequencing is introduced and developed in Music Lab
-* #### Identify how students apply sequencing in creative coding tasks
-* #### Learn how to support students in recognizing how the order of code affects musical output
+* #### Describe how loops reduce repetition and create musical structure
+* #### Learn how to guide students in identifying and applying patterns using repeat blocks
+* #### Learn how to support student reasoning about loop timing and layering
 
 ___
 
@@ -40,5 +40,5 @@ ___
     </td>
   </tr>
 </table>
-
+<br>
 MARKDOWN

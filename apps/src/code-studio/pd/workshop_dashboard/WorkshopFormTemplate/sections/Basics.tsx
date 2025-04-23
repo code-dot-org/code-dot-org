@@ -234,7 +234,6 @@ export const Basics: FC<BasicsProps> = ({
                 [commonStyles.required]: fields.capacity.required,
               })}
               errorMessage={errors.capacity}
-              // @ts-expect-error TextField props are not typed correctly
               min={1}
             />
           )}

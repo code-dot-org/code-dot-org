@@ -3,6 +3,9 @@
   "script_names": [
     "frequency_analysis"
   ],
+  "original_script_names": [
+    "frequency_analysis"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

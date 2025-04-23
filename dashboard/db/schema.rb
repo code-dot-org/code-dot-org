@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_17_151841) do
+ActiveRecord::Schema.define(version: 2025_04_21_191829) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2151,6 +2151,14 @@ ActiveRecord::Schema.define(version: 2025_04_17_151841) do
     t.integer "sign_in_count", null: false
     t.index ["sign_in_at"], name: "index_sign_ins_on_sign_in_at"
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
+  end
+
+  create_table "skills", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.string "description", null: false
+    t.text "evaluation_criteria"
+    t.string "concept"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "stages", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|

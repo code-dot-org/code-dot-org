@@ -1,3 +1,4 @@
+import Tags from '@code-dot-org/component-library/tags';
 import Toggle from '@code-dot-org/component-library/toggle';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useMemo} from 'react';
@@ -199,14 +200,21 @@ const SummaryResponses = ({
                 name={'showStudentNames'}
               />
               {aiAnalysisAvailable && (
-                <Toggle
-                  onChange={toggleAIAnalysis}
-                  checked={showAIAnalysis}
-                  label={i18n.showAiInsights()}
-                  position={'right'}
-                  size={'s'}
-                  name={'showAIAnalysis'}
-                />
+                <div className={styles.aiToggleContainer}>
+                  <Toggle
+                    onChange={toggleAIAnalysis}
+                    checked={showAIAnalysis}
+                    label={i18n.showAiInsights()}
+                    position={'right'}
+                    size={'s'}
+                    name={'showAIAnalysis'}
+                  />
+                  <Tags
+                    className={styles.headerTag}
+                    tagsList={[{label: i18n.experiment()}]}
+                    size="s"
+                  />
+                </div>
               )}
             </div>
           )}

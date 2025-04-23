@@ -21090,7 +21090,7 @@ en:
               name: Preparing for the Final Project
           lesson_groups: {}
           name: sandbox-csaif-pl-python
-          title: Programming Fundamentals
+          title: Foundations of AI Programming
           description_audience: ''
           description_short: ''
           description: ''
@@ -23429,7 +23429,7 @@ en:
               display_name: End of Unit Project
             lessonGroup-5:
               display_name: End of Unit Assessment and Survey
-          title: Computer Systems and Devices
+          title: AI and the Systems That Power It
           description: |-
             This unit explores how AI and computing systems process information, interact with hardware and software, and integrate emerging technologies like IoT and robotics. Through hands-on activities, you design and troubleshoot systems, analyze AI’s societal and ethical impacts, and apply human-centered design to solve real-world problems. AI Chat supports your learning by unpacking system layers, optimizing software, and evaluating AI-generated content for accuracy and fairness. Discussions on bias and debates on AI’s role in society encourage creativity, critical thinking, and collaboration. Grounded in ethics, inclusivity, and computational thinking, this unit helps you develop a deeper understanding of AI and its potential for equitable solutions.
 
@@ -23486,7 +23486,7 @@ en:
               display_name: End of Unit Project
             lessonGroup-7:
               display_name: End of Unit Assessment and Survey
-          title: Networks and the Internet
+          title: The Fabric of the Internet and AI
           description: |-
             This unit explores how the Internet and networks function, their societal and ethical impacts, and their real-world applications. You examine data transmission, IP addressing, DNS resolution, network security, and AI’s role in cybersecurity. Through hands-on simulations and discussions, you analyze how data moves through networks, how protocols ensure secure communication, and how issues like the digital divide affect global connectivity. Ethical problem-solving and collaboration help you propose solutions to improve Internet access and security. Grounded in computational thinking and real-world relevance, this unit fosters curiosity, critical thinking, and innovation, preparing you to engage with networking technologies and their societal implications.
 
@@ -23546,7 +23546,7 @@ en:
               display_name: End Project
             lessonGroup-5:
               display_name: End of Unit Assessment and Survey
-          title: Introduction to Data Science
+          title: Insights from Data and AI
           description: "In this unit, students explore the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis. Through hands-on activities, they use spreadsheets for basic data analysis, explore ethical data practices, and learn how to communicate their findings using various visualization techniques. The unit begins with an introduction to data science concepts and progresses through lessons on data cleaning, visualization, and interpretation, concluding with a project that encourages students to tell a compelling data story using their newly acquired skills.\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, students will be able to . . .**]\n- Understand the foundations of data science and its interdisciplinary nature. \n- Create and refine data questions to guide investigations. \n- Analyze datasets and apply various analysis techniques. \n- Develop visualizations to help answer data questions. \n- Use analysis results to tell a compelling data story. \n- Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n:::\n\n&nbsp;"
           student_description: "This unit introduces you to the foundational concepts of data science, including developing effective data questions, collecting data, and using spreadsheets to analyze and visualize data. You will work on creating various visualizations such as bar charts, scatter plots, and dot plots to communicate data insights. Additionally, you will explore the ethical implications of data collection and analysis. The unit culminates in a project where you will tell a compelling data story, using data visualizations to present your findings to your peers.\n\n::: details [<i class=\"fa-solid fa-badge-check\"></i> **By the end of this unit, you will be able to . . .**]\n- Understand the foundations of data science and its interdisciplinary nature. \n- Create and refine data questions to guide investigations. \n- Analyze data using CODAP and apply various analysis techniques. \n- Develop visualizations to help answer data questions. \n- Use analysis results to tell a compelling data story. \n- Consider ethical concerns when creating data questions, analyzing data, and telling a data story. \n:::\n\n&nbsp;"
           description_short: Students are introduced to foundational data science concepts, data collection strategies, and effective ways to communicate insights through data stories.
@@ -23564,3 +23564,60 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        self-paced-pl-aif1-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-aif1-2025
+          title: Teaching Problem Solving with AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-aif2-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-aif2-2025
+          title: Teaching Programming Fundamentals
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-aif3-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-aif3-2025
+          title: Teaching Computer Systems and Devices
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-aif4-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-aif4-2025
+          title: Teaching Networks and the Internet
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-aif5-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-aif5-2025
+          title: Teaching Cybersecurity and Global Impacts
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-aif6-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-aif6-2025
+          title: Teaaching Introduction to Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-k5-music-lab-2025:
+          lessons: {}
+          lesson_groups: {}

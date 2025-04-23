@@ -871,7 +871,7 @@ Dashboard::Application.routes.draw do
     get 'professional-learning/facilitator/computer-science-discoveries', to: 'pd/professional_learning#csd'
     get 'professional-learning/facilitator/computer-science-fundamentals', to: 'pd/professional_learning#csf'
     get 'professional-learning/facilitator/computer-science-principles', to: 'pd/professional_learning#csp'
-    get 'professional-learning/facilitator/computer-science-ai-fundamentals', to: 'pd/professional_learning#csaif'
+    get 'professional-learning/facilitator/ai-fundamentals', to: 'pd/professional_learning#aif'
     get 'professional-learning/regional-partner/playbook', to: 'pd/professional_learning#rp_playbook'
     get 'professional-learning/regional_workshop_data/:zip_code', to: 'pd/professional_learning#regional_workshop_data'
 

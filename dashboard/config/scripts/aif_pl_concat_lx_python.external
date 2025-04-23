@@ -1,0 +1,37 @@
+name 'aif_pl_concat_LX_python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Using Commas in Print 
+
+
+#### In the previous levels, you worked with **print statements** and strings.
+
+
+<img src="https://images.code.org/3253ee1e2dd9ddd8b176930b996dd13f-image-1745270250476.png" alt="design process graph of the cycle" width="250px" style="display: block; margin-left: auto; margin-right: auto;">
+
+<img src="https://images.code.org/8ff1c75cd4d69d6594b506802c161250-image-1745270284549.png" alt="design process graph of the cycle" width="250px" style="display: block; margin-left: auto; margin-right: auto;">
+
+<br>
+
+## Using a comma ',' in print()
+
+#### When you use commas inside a `print()` statement, Python treats each item as a separate argument. 
+
+#### Here's what that means in simple terms:
+
+- #### Python will automatically convert each item into a string, if it's not already.
+- #### Python will also add a space between each item when it prints them.
+
+
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This concept is covered in Lesson 4. You can find more details in the full <a href='https://studio.code.org/s/aif2-2025/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+## Let's practice with a choice level!
+
+
+MARKDOWN

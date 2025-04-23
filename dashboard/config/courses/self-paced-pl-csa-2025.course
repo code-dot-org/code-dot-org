@@ -6,8 +6,14 @@
     "self-paced-pl-csa3-2025",
     "self-paced-pl-csa4-2025"
   ],
-  "published_state": "in_development",
-  "instruction_type": "teacher_led",
+  "original_script_names": [
+    "self-paced-pl-csa1-2025",
+    "self-paced-pl-csa2-2025",
+    "self-paced-pl-csa4-2025",
+    "self-paced-pl-csa3-2025"
+  ],
+  "published_state": "beta",
+  "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
   "properties": {
