@@ -71,10 +71,16 @@ export const fileBrowserKeyboardCoordinateGetter: (
   let nextIndex = currentIndex;
   // Find the next index based on the key pressed. We cycle around if they reach
   // the beginning or end of the list.
-  if (event.code === KeyboardCode.Down || event.code === KeyboardCode.Tab) {
+  if (
+    event.code === KeyboardCode.Down ||
+    (event.code === KeyboardCode.Tab && !event.shiftKey)
+  ) {
     nextIndex = (currentIndex + 1) % orderedRects.length;
-  } else if (event.code === KeyboardCode.Up) {
-    nextIndex = (currentIndex - 1) % orderedRects.length;
+  } else if (
+    event.code === KeyboardCode.Up ||
+    (event.code === KeyboardCode.Tab && event.shiftKey)
+  ) {
+    nextIndex = (currentIndex - 1 + orderedRects.length) % orderedRects.length;
   }
 
   if (nextIndex === currentIndex) {
