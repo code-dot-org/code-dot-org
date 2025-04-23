@@ -16,18 +16,6 @@ end
 # Check whether it is defined—helpers can be double-included during test running.
 BLOCKLY_SOURCE_FILENAME = 'main.json'.freeze unless defined? BLOCKLY_SOURCE_FILENAME
 
-def profanity_privacy_violation?(filename, body)
-  return false unless filename == BLOCKLY_SOURCE_FILENAME
-  share_failure = share_failure_from_body body, request.locale
-  !!share_failure
-end
-
-def channel_policy_violation?(channel_id)
-  body = channel_main_json_body channel_id
-  return false unless body
-  profanity_privacy_violation?(BLOCKLY_SOURCE_FILENAME, body)
-end
-
 def title_profanity_privacy_violation(name, locale)
   share_failure = begin
     ShareFiltering.find_name_failure(name, locale)

@@ -265,19 +265,6 @@ class ChannelsApi < Sinatra::Base
   end
 
   #
-  # GET /v3/channels/<channel-id>/privacy-profanity
-  #
-  # Get an indication of privacy/profanity violation.
-  #
-  get %r{/v3/channels/([^/]+)/privacy-profanity} do |id|
-    dont_cache
-    content_type :json
-
-    value = channel_policy_violation?(id)
-    {has_violation: value}.to_json
-  end
-
-  #
   # GET /v3/channels/<channel-id>/share-failure
   #
   # Get an indication of why a project can't be shared.
