@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_21_191829) do
+ActiveRecord::Schema.define(version: 2025_04_23_171750) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -951,6 +951,13 @@ ActiveRecord::Schema.define(version: 2025_04_21_191829) do
     t.index ["level_id"], name: "index_levels_script_levels_on_level_id"
     t.index ["script_level_id", "level_id"], name: "index_levels_script_levels_on_script_level_id_and_level_id", unique: true
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id"
+  end
+
+  create_table "levels_skills", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "level_id", null: false
+    t.bigint "skill_id", null: false
+    t.index ["level_id", "skill_id"], name: "index_levels_skills_on_level_id_and_skill_id"
+    t.index ["skill_id", "level_id"], name: "index_levels_skills_on_skill_id_and_level_id"
   end
 
   create_table "libraries", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
