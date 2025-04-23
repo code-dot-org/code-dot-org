@@ -79,6 +79,7 @@ def process_s3_file(bucket, key)
     source = get_project_source(channel_id)
     data['source'] = source
     data['past_version_ids'] = get_past_version_ids(channel_id)
+    data['past_versions_map'] = get_past_versions_map(channel_id)
     data.to_json
   rescue JSON::ParserError => exception
     puts "Error parsing JSON: #{exception}"
@@ -92,10 +93,10 @@ def process_s3_file(bucket, key)
   puts "Processed #{rows.size} rows in #{(Time.now - start_time).round(2)} seconds."
 end
 
-def get_project_source(channel_id)
+def get_project_source(channel_id, version_id: nil)
   return nil unless channel_id
 
-  source_data = SourceBucket.new.get(channel_id, "main.json")
+  source_data = SourceBucket.new.get(channel_id, "main.json", version: version_id)
   return nil unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
 
   main_json = source_data[:body].string
@@ -103,6 +104,15 @@ def get_project_source(channel_id)
 rescue NoMethodError => exception
   puts "Error getting source for channel id: #{channel_id}: #{exception}"
   nil
+end
+
+# returns a map from each past version id to the corresponding source code
+def get_past_versions_map(channel_id)
+  past_version_ids = get_past_version_ids(channel_id)
+  past_version_ids.map do |version_id|
+    source = get_project_source(channel_id, version_id: version_id)
+    [version_id, source]
+  end.to_h
 end
 
 def get_past_version_ids(channel_id)
