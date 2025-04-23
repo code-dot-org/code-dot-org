@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 20:05:30 UTC",
+    "serialized_at": "2025-04-21 17:50:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -72,7 +72,7 @@
       "user_facing": true,
       "position": 4,
       "properties": {
-        "display_name": "End of Unit Assessment"
+        "display_name": "End of Unit Assessment and Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
@@ -89,7 +89,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "assessment": true
+        "assessment": true,
+        "preparation": "- Unlock the assessment questions as indicated on the Unlocking Assessments resource"
       },
       "seeding_key": {
         "lesson.key": "Pre-Assessment",
@@ -305,6 +306,21 @@
       },
       "seeding_key": {
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif6-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif6-2025"
       }
@@ -819,6 +835,18 @@
       "seeding_key": {
         "lesson_activity.key": "d635eb2d-92e0-45fd-bb68-d70650982240",
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif6-2025"
+      }
+    },
+    {
+      "key": "1efb6553-7b4f-489c-b668-9531bd926a9a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1efb6553-7b4f-489c-b668-9531bd926a9a",
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif6-2025"
       }
@@ -3712,6 +3740,17 @@
         "activity_section.key": "77078631-3dc1-43fa-be52-56f4715eeee8",
         "lesson_activity.key": "d635eb2d-92e0-45fd-bb68-d70650982240"
       }
+    },
+    {
+      "key": "729d0116-b27f-4341-835c-c4711bff0e14",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "729d0116-b27f-4341-835c-c4711bff0e14",
+        "lesson_activity.key": "1efb6553-7b4f-489c-b668-9531bd926a9a"
+      }
     }
   ],
   "script_levels": [
@@ -5139,6 +5178,28 @@
       "level_keys": [
         "data-science-ch1-postassessment_2025"
       ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_2025-launch"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif6-2025",
+        "activity_section.key": "729d0116-b27f-4341-835c-c4711bff0e14"
+      },
+      "level_keys": [
+        "student-eou-survey_2025-launch"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5825,6 +5886,18 @@
         "script.name": "aif6-2025",
         "activity_section.key": "77078631-3dc1-43fa-be52-56f4715eeee8"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_2025-launch",
+        "script_level.level_keys": [
+          "student-eou-survey_2025-launch"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif6-2025",
+        "activity_section.key": "729d0116-b27f-4341-835c-c4711bff0e14"
+      }
     }
   ],
   "resources": [
@@ -5936,7 +6009,7 @@
     },
     {
       "name": "Cleaning Data",
-      "url": "https://docs.google.com/presentation/d/1Y_azIGJYuBFerX5UjFjDrjFwsPV7SuAU5-sd5n5TWSM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Y_azIGJYuBFerX5UjFjDrjFwsPV7SuAU5-sd5n5TWSM/view",
       "key": "cleaning_data",
       "properties": {
         "audience": "Teacher",
@@ -5948,7 +6021,7 @@
     },
     {
       "name": "Crafting Stories with Data Project",
-      "url": "https://docs.google.com/presentation/d/1k58rMvqRdWNCBLv8YWgtVn8_68ckfGWxRKmLo3XL8iM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1k58rMvqRdWNCBLv8YWgtVn8_68ckfGWxRKmLo3XL8iM/view",
       "key": "crafting_stories_with_data_project",
       "properties": {
         "audience": "Teacher",
@@ -5986,7 +6059,7 @@
     },
     {
       "name": "Data Interpretation",
-      "url": "https://docs.google.com/presentation/d/1miYE3vdccvAFzf_OsVBFkFCsNcFMVLYQ-pJ-r6ugTCY/",
+      "url": "https://docs.google.com/presentation/d/1miYE3vdccvAFzf_OsVBFkFCsNcFMVLYQ-pJ-r6ugTCY/view",
       "key": "data_interpretation",
       "properties": {
         "audience": "Teacher",
@@ -5998,7 +6071,7 @@
     },
     {
       "name": "Data Question Peer Review",
-      "url": "https://docs.google.com/document/d/1A6tPg-WhJPmjYJMqKjUh3toQexGdsS0wjbQ52Otj430/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1A6tPg-WhJPmjYJMqKjUh3toQexGdsS0wjbQ52Otj430/view",
       "key": "data_question_peer_review",
       "properties": {
         "audience": "Student",
@@ -6011,7 +6084,7 @@
     },
     {
       "name": "Data Rights",
-      "url": "https://docs.google.com/presentation/d/1sTd2QmpRPOZOCrz13wiRG7gMKgq5jLwfxZgIML7MqOY/",
+      "url": "https://docs.google.com/presentation/d/1sTd2QmpRPOZOCrz13wiRG7gMKgq5jLwfxZgIML7MqOY/view",
       "key": "data_rights",
       "properties": {
         "audience": "Teacher",
@@ -6062,7 +6135,7 @@
     },
     {
       "name": "Data Storytelling",
-      "url": "https://docs.google.com/presentation/d/1jSESaQ601E2A_aSetNhw8OemoY_tfkB26sZdZTzCCd4/",
+      "url": "https://docs.google.com/presentation/d/1jSESaQ601E2A_aSetNhw8OemoY_tfkB26sZdZTzCCd4/view",
       "key": "data_storytelling",
       "properties": {
         "audience": "Teacher",
@@ -6087,7 +6160,7 @@
     },
     {
       "name": "Effective Data Questions",
-      "url": "https://docs.google.com/presentation/d/1-5wOHz__mvmw2qo3XjTZVkSsIGVUcqLkCWvz8c29jps/",
+      "url": "https://docs.google.com/presentation/d/1-5wOHz__mvmw2qo3XjTZVkSsIGVUcqLkCWvz8c29jps/view",
       "key": "effective_data_questions",
       "properties": {
         "audience": "Teacher",
@@ -6099,7 +6172,7 @@
     },
     {
       "name": "Ethical Data Collection",
-      "url": "https://docs.google.com/presentation/d/1FYs-gzPghKZ_tGGNbcMd0PAjIkwmcUB_yboJthp3tnw/",
+      "url": "https://docs.google.com/presentation/d/1FYs-gzPghKZ_tGGNbcMd0PAjIkwmcUB_yboJthp3tnw/view",
       "key": "ethical_data_collection",
       "properties": {
         "audience": "Teacher",
@@ -6131,7 +6204,7 @@
     },
     {
       "name": "Introduction to Data Science",
-      "url": "https://docs.google.com/presentation/d/1acl9tQ-KbC6hcWE8F-SJjuFbHt1TXasy9vJiqlVCj2o/",
+      "url": "https://docs.google.com/presentation/d/1acl9tQ-KbC6hcWE8F-SJjuFbHt1TXasy9vJiqlVCj2o/view",
       "key": "introduction_to_data_science",
       "properties": {
         "audience": "Teacher",
@@ -6143,7 +6216,7 @@
     },
     {
       "name": "Introduction to Data Visualization",
-      "url": "https://docs.google.com/presentation/d/10zr_gSpPmJlC9NLiPCX-UIekd1Jro8F6rQz2rzOveZk/",
+      "url": "https://docs.google.com/presentation/d/10zr_gSpPmJlC9NLiPCX-UIekd1Jro8F6rQz2rzOveZk/view",
       "key": "introduction_to_data_visualization",
       "properties": {
         "audience": "Teacher",
@@ -6155,7 +6228,7 @@
     },
     {
       "name": "Making Sense of Data",
-      "url": "https://docs.google.com/presentation/d/10zJojXHnkliOvtqmA_4NhcehIphxBL2ztO-hRcMOxfs/",
+      "url": "https://docs.google.com/presentation/d/10zJojXHnkliOvtqmA_4NhcehIphxBL2ztO-hRcMOxfs/view",
       "key": "making_sense_of_data",
       "properties": {
         "audience": "Teacher",
@@ -6179,7 +6252,7 @@
     },
     {
       "name": "More Visualization Techniques",
-      "url": "https://docs.google.com/presentation/d/1r06gRF-64qnEtmfF781Lns3ny9ODkW4jDyp3oUTlPyY/",
+      "url": "https://docs.google.com/presentation/d/1r06gRF-64qnEtmfF781Lns3ny9ODkW4jDyp3oUTlPyY/view",
       "key": "more_visualization_techniques",
       "properties": {
         "audience": "Teacher",
@@ -6278,6 +6351,18 @@
       },
       "seeding_key": {
         "resource.key": "unit_overview"
+      }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
       }
     }
   ],
@@ -6521,6 +6606,12 @@
         "lesson.key": "More Visualization Techniques",
         "resource.key": "unit_guide"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Pre-Assessment",
+        "resource.key": "unlocking_assessments"
+      }
     }
   ],
   "scripts_resources": [
@@ -6569,6 +6660,12 @@
     {
       "seeding_key": {
         "resource.key": "unit_overview",
+        "script.name": "aif6-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unlocking_assessments",
         "script.name": "aif6-2025"
       }
     }

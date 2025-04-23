@@ -34,6 +34,7 @@
 
     li {
       @include font.main-font-regular;
+      color: var(--text-neutral-primary);
       padding-left: 0.25rem;
     }
   }
@@ -48,6 +49,8 @@
 
     tbody {
       tr {
+        background: var(--background-neutral-primary);
+
         &:nth-child(odd) {
           background: var(--background-neutral-secondary);
         }
@@ -60,7 +63,7 @@
         td {
           border-collapse: collapse;
           padding: 0.75rem 1rem;
-          text-align: center;
+          text-align: start;
         }
 
         th {
@@ -75,6 +78,9 @@
             color: var(--text-neutral-white-fixed);
             text-transform: uppercase;
             font-weight: font.$semi-bold-font-weight;
+            font-size: var(--font-size-body-xs);
+            line-height: 1.23rem;
+            letter-spacing: 0.03rem;
           }
         }
 

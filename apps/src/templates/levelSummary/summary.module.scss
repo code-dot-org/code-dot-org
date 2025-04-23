@@ -484,3 +484,24 @@ svg text[fill] {
   color: var(--text-neutral-quaternary, #727a83) !important;
   margin-bottom: 0 !important;
 }
+
+.feedbackPortalButtonContainer {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.aiFeedbackOther {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.aiFeedbackOtherTextArea {
+  width: 100%;
+  padding: 8px 12px;
+  box-sizing: border-box;
+}

@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 19:32:14 UTC",
+    "serialized_at": "2025-04-21 17:50:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -29,13 +29,26 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Content"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "aif5-2025"
       }
     }
@@ -57,7 +70,7 @@
       },
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -76,7 +89,7 @@
       },
       "seeding_key": {
         "lesson.key": "Data Policies and Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -95,7 +108,7 @@
       },
       "seeding_key": {
         "lesson.key": "The Value of Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -115,7 +128,7 @@
       },
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -134,7 +147,7 @@
       },
       "seeding_key": {
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -153,7 +166,7 @@
       },
       "seeding_key": {
         "lesson.key": "Security Risks Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -173,7 +186,7 @@
       },
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -192,7 +205,7 @@
       },
       "seeding_key": {
         "lesson.key": "Protecting Data Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -211,7 +224,7 @@
       },
       "seeding_key": {
         "lesson.key": "Protecting Data Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -231,7 +244,22 @@
       },
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "aif5-2025"
       }
     }
@@ -247,7 +275,7 @@
       "seeding_key": {
         "lesson_activity.key": "2f772780-8ece-4858-af0a-49dfb56da5d2",
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -261,7 +289,7 @@
       "seeding_key": {
         "lesson_activity.key": "431cc643-725b-47c5-b0a7-2f5d1e4d4234",
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -275,7 +303,7 @@
       "seeding_key": {
         "lesson_activity.key": "b665ed24-9784-42f9-baaf-4946b325e312",
         "lesson.key": "Data Policies and Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -289,7 +317,7 @@
       "seeding_key": {
         "lesson_activity.key": "4f8c1ade-432d-4f02-80b7-6a60c9933e4e",
         "lesson.key": "Data Policies and Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -303,7 +331,7 @@
       "seeding_key": {
         "lesson_activity.key": "8cac9be4-f2de-4c4a-acb4-c3de02e5967a",
         "lesson.key": "Data Policies and Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -315,7 +343,7 @@
       "seeding_key": {
         "lesson_activity.key": "0d70f00d-f7a2-4ec6-826a-ee3e79a8b1d3",
         "lesson.key": "Data Policies and Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -329,7 +357,7 @@
       "seeding_key": {
         "lesson_activity.key": "92886069-cd8a-4355-bb5e-9a5ff21d9c78",
         "lesson.key": "The Value of Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -343,7 +371,7 @@
       "seeding_key": {
         "lesson_activity.key": "8d2d7a73-e975-4c9e-aa8b-c6c15a7f3d7e",
         "lesson.key": "The Value of Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -357,7 +385,7 @@
       "seeding_key": {
         "lesson_activity.key": "48aa6aab-6087-49c1-9b43-f1467054f7ff",
         "lesson.key": "The Value of Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -371,7 +399,7 @@
       "seeding_key": {
         "lesson_activity.key": "83f0e801-95b2-4ae3-8157-68e19b042ea6",
         "lesson.key": "Project - Innovation Simulation Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -385,7 +413,7 @@
       "seeding_key": {
         "lesson_activity.key": "619b425c-6b72-480f-a06d-a91699e69447",
         "lesson.key": "Project - Innovation Simulation Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -398,7 +426,7 @@
       "seeding_key": {
         "lesson_activity.key": "a72fca34-7d95-445e-a3e0-c0c663314242",
         "lesson.key": "Project - Innovation Simulation Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -412,7 +440,7 @@
       "seeding_key": {
         "lesson_activity.key": "de30e850-f20d-471a-98e8-33ebeaca535e",
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -426,7 +454,7 @@
       "seeding_key": {
         "lesson_activity.key": "f1b4bad5-3148-4709-b0bd-4b5030d794e2",
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -440,7 +468,7 @@
       "seeding_key": {
         "lesson_activity.key": "9f561892-dd6b-43a4-a611-24e627740fea",
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -452,7 +480,7 @@
       "seeding_key": {
         "lesson_activity.key": "c8b87060-31d6-4d39-a4a6-d3514a7bf385",
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -466,7 +494,7 @@
       "seeding_key": {
         "lesson_activity.key": "de3919b5-5bef-4ecb-bba3-cf3e5b197e5b",
         "lesson.key": "Security Risks Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -480,7 +508,7 @@
       "seeding_key": {
         "lesson_activity.key": "c17801a8-4151-4a66-9570-739940bad236",
         "lesson.key": "Security Risks Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -494,7 +522,7 @@
       "seeding_key": {
         "lesson_activity.key": "0ce0e36a-9703-48be-a398-9480cb797eeb",
         "lesson.key": "Security Risks Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -508,7 +536,7 @@
       "seeding_key": {
         "lesson_activity.key": "d9166eb3-eed7-493a-a54e-67d6a1155654",
         "lesson.key": "Project - Innovation Simulation Part 3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -522,7 +550,7 @@
       "seeding_key": {
         "lesson_activity.key": "efda25a5-5f7a-4dba-8283-8c474e6d2043",
         "lesson.key": "Project - Innovation Simulation Part 3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -536,7 +564,7 @@
       "seeding_key": {
         "lesson_activity.key": "6c14c717-6fc7-4642-95cc-5c2a55d551f3",
         "lesson.key": "Project - Innovation Simulation Part 3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -550,7 +578,7 @@
       "seeding_key": {
         "lesson_activity.key": "bc4f3463-cdae-444f-8ac9-55aa8f0fe42d",
         "lesson.key": "Protecting Data Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -564,7 +592,7 @@
       "seeding_key": {
         "lesson_activity.key": "088b18b9-98dd-46a9-9dfb-3d7f001299aa",
         "lesson.key": "Protecting Data Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -578,7 +606,7 @@
       "seeding_key": {
         "lesson_activity.key": "e0d88701-7ea2-4ea2-b94a-5da053d98f4c",
         "lesson.key": "Protecting Data Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -590,7 +618,7 @@
       "seeding_key": {
         "lesson_activity.key": "09ffb71b-f197-416e-84d5-ed45c1b8e883",
         "lesson.key": "Protecting Data Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -604,7 +632,7 @@
       "seeding_key": {
         "lesson_activity.key": "53a96612-23b6-4101-886a-1f5d52fd91a6",
         "lesson.key": "Protecting Data Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -618,7 +646,7 @@
       "seeding_key": {
         "lesson_activity.key": "769a3980-60f4-41f9-87af-85b165cdc086",
         "lesson.key": "Protecting Data Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -632,7 +660,7 @@
       "seeding_key": {
         "lesson_activity.key": "6a334b03-9789-474c-83d7-2c1fed568c01",
         "lesson.key": "Protecting Data Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -644,7 +672,7 @@
       "seeding_key": {
         "lesson_activity.key": "4aa4e186-97a3-42dd-92f8-b05a4b6bde54",
         "lesson.key": "Protecting Data Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -658,7 +686,7 @@
       "seeding_key": {
         "lesson_activity.key": "51631a75-402f-45f3-a7ec-f2496ee22688",
         "lesson.key": "Project - Innovation Simulation Part 4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -672,7 +700,7 @@
       "seeding_key": {
         "lesson_activity.key": "85812b3b-2a77-4f68-bb73-965309c5dcf8",
         "lesson.key": "Project - Innovation Simulation Part 4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
       }
     },
@@ -686,7 +714,19 @@
       "seeding_key": {
         "lesson_activity.key": "619286e2-1f45-4ef3-8e26-6287a5e896f6",
         "lesson.key": "Project - Innovation Simulation Part 4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-2025"
+      }
+    },
+    {
+      "key": "33f40d4f-b17b-41ef-a6cc-c8211cd6905d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "33f40d4f-b17b-41ef-a6cc-c8211cd6905d",
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "aif5-2025"
       }
     }
@@ -2310,6 +2350,17 @@
         "activity_section.key": "cacfffb0-3a3e-49b5-ba1e-fe57b023b0b6",
         "lesson_activity.key": "619286e2-1f45-4ef3-8e26-6287a5e896f6"
       }
+    },
+    {
+      "key": "19f33688-8b0c-42da-8aa3-8cab1869970a",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "19f33688-8b0c-42da-8aa3-8cab1869970a",
+        "lesson_activity.key": "33f40d4f-b17b-41ef-a6cc-c8211cd6905d"
+      }
     }
   ],
   "script_levels": [
@@ -2330,7 +2381,7 @@
           "U10 L01 CFU innovations_2025"
         ],
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "16bc8fe0-d896-4732-a335-50814272d0b0"
       },
@@ -2355,7 +2406,7 @@
           "U10 L02 CFU innovations part 2_2025"
         ],
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "ca901535-4242-4afe-8b33-033ca979521e"
       },
@@ -2380,7 +2431,7 @@
           "U10L3 CFU Why Collect PII2022_2025"
         ],
         "lesson.key": "Data Policies and Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "457415bc-c342-4c23-825f-14df730a846a"
       },
@@ -2394,6 +2445,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cybersecurity-global-impacts-lesson3-level1"
+        ],
         "progression": "Privacy Tradeoffs"
       },
       "bonus": false,
@@ -2402,7 +2456,7 @@
           "cybersecurity-global-impacts-lesson3-level1"
         ],
         "lesson.key": "The Value of Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "903bb7be-c1a5-4957-9b66-c16a329f1831"
       },
@@ -2416,6 +2470,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cybersecurity-global-impacts-lesson4-level1"
+        ],
         "progression": "Innovation Simulation - Part 2"
       },
       "bonus": false,
@@ -2424,7 +2481,7 @@
           "cybersecurity-global-impacts-lesson4-level1"
         ],
         "lesson.key": "Project - Innovation Simulation Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "09697234-f276-4fdd-8a61-99c0077ac46b"
       },
@@ -2449,7 +2506,7 @@
           "CSP 20-21 Keylogging2022_2025"
         ],
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "b7048358-300a-40e2-86e2-e7de7e1c7ee6"
       },
@@ -2474,7 +2531,7 @@
           "CSP 20-21 Phishing2022_2025"
         ],
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "ad6fbb8c-a3af-4f40-93c6-9ed35bc62c9b"
       },
@@ -2499,7 +2556,7 @@
           "CSP 20-21 Rogue Access Points2022_2025"
         ],
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "12e9d6e2-d1f6-40ca-96b6-2567ae8b41f6"
       },
@@ -2524,7 +2581,7 @@
           "U10 L07 CFU security risks_2025"
         ],
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "0864553a-d77f-495a-a2b2-c0b0bcdd7899"
       },
@@ -2549,7 +2606,7 @@
           "U10 L08 CFU security risks_2025"
         ],
         "lesson.key": "Security Risks Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "87166f8d-e71a-4a93-bed0-343752c187ff"
       },
@@ -2563,6 +2620,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cybersecurity-global-impacts-lesson7-level1"
+        ],
         "progression": "Innovation Simulation - Part 3"
       },
       "bonus": false,
@@ -2571,7 +2631,7 @@
           "cybersecurity-global-impacts-lesson7-level1"
         ],
         "lesson.key": "Project - Innovation Simulation Part 3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "2cc81a34-9325-45a3-a995-8c1436017f38"
       },
@@ -2596,7 +2656,7 @@
           "Crack a Caesar Cipher_2025"
         ],
         "lesson.key": "Protecting Data Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "5a1be1a4-7811-4c74-aeef-9cdf3ab3a4de"
       },
@@ -2621,7 +2681,7 @@
           "Crack Random Substitution_2025"
         ],
         "lesson.key": "Protecting Data Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "5a1be1a4-7811-4c74-aeef-9cdf3ab3a4de"
       },
@@ -2646,7 +2706,7 @@
           "U10L9 CFU public key_2025"
         ],
         "lesson.key": "Protecting Data Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "6bc0c56d-add2-4367-94e2-eb41b4239371"
       },
@@ -2671,7 +2731,7 @@
           "U10L10 CFU MFA_2025"
         ],
         "lesson.key": "Protecting Data Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "0fe168a5-5892-435b-abc6-2eefd8ffeeac"
       },
@@ -2685,6 +2745,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "cybersecurity-global-impacts-lesson10-level1"
+        ],
         "progression": "Innovation Simulation - Part 4"
       },
       "bonus": false,
@@ -2693,12 +2756,34 @@
           "cybersecurity-global-impacts-lesson10-level1"
         ],
         "lesson.key": "Project - Innovation Simulation Part 4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "a1c95af8-ac13-4087-8ff6-cc7aa5586c3c"
       },
       "level_keys": [
         "cybersecurity-global-impacts-lesson10-level1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-cyber_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-2025",
+        "activity_section.key": "19f33688-8b0c-42da-8aa3-8cab1869970a"
+      },
+      "level_keys": [
+        "student-eou-survey_-cyber_2025"
       ]
     }
   ],
@@ -2710,7 +2795,7 @@
           "U10 L01 CFU innovations_2025"
         ],
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "16bc8fe0-d896-4732-a335-50814272d0b0"
       }
@@ -2722,7 +2807,7 @@
           "U10 L02 CFU innovations part 2_2025"
         ],
         "lesson.key": "Project - Innovation Simulation Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "ca901535-4242-4afe-8b33-033ca979521e"
       }
@@ -2734,7 +2819,7 @@
           "U10L3 CFU Why Collect PII2022_2025"
         ],
         "lesson.key": "Data Policies and Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "457415bc-c342-4c23-825f-14df730a846a"
       }
@@ -2746,7 +2831,7 @@
           "cybersecurity-global-impacts-lesson3-level1"
         ],
         "lesson.key": "The Value of Privacy",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "903bb7be-c1a5-4957-9b66-c16a329f1831"
       }
@@ -2758,7 +2843,7 @@
           "cybersecurity-global-impacts-lesson4-level1"
         ],
         "lesson.key": "Project - Innovation Simulation Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "09697234-f276-4fdd-8a61-99c0077ac46b"
       }
@@ -2770,7 +2855,7 @@
           "CSP 20-21 Keylogging2022_2025"
         ],
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "b7048358-300a-40e2-86e2-e7de7e1c7ee6"
       }
@@ -2782,7 +2867,7 @@
           "CSP 20-21 Phishing2022_2025"
         ],
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "ad6fbb8c-a3af-4f40-93c6-9ed35bc62c9b"
       }
@@ -2794,7 +2879,7 @@
           "CSP 20-21 Rogue Access Points2022_2025"
         ],
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "12e9d6e2-d1f6-40ca-96b6-2567ae8b41f6"
       }
@@ -2806,7 +2891,7 @@
           "U10 L07 CFU security risks_2025"
         ],
         "lesson.key": "Security Risks Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "0864553a-d77f-495a-a2b2-c0b0bcdd7899"
       }
@@ -2818,7 +2903,7 @@
           "U10 L08 CFU security risks_2025"
         ],
         "lesson.key": "Security Risks Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "87166f8d-e71a-4a93-bed0-343752c187ff"
       }
@@ -2830,7 +2915,7 @@
           "cybersecurity-global-impacts-lesson7-level1"
         ],
         "lesson.key": "Project - Innovation Simulation Part 3",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "2cc81a34-9325-45a3-a995-8c1436017f38"
       }
@@ -2842,7 +2927,7 @@
           "Crack a Caesar Cipher_2025"
         ],
         "lesson.key": "Protecting Data Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "5a1be1a4-7811-4c74-aeef-9cdf3ab3a4de"
       }
@@ -2854,7 +2939,7 @@
           "Crack Random Substitution_2025"
         ],
         "lesson.key": "Protecting Data Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "5a1be1a4-7811-4c74-aeef-9cdf3ab3a4de"
       }
@@ -2866,7 +2951,7 @@
           "U10L9 CFU public key_2025"
         ],
         "lesson.key": "Protecting Data Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "6bc0c56d-add2-4367-94e2-eb41b4239371"
       }
@@ -2878,7 +2963,7 @@
           "U10L10 CFU MFA_2025"
         ],
         "lesson.key": "Protecting Data Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "0fe168a5-5892-435b-abc6-2eefd8ffeeac"
       }
@@ -2890,9 +2975,21 @@
           "cybersecurity-global-impacts-lesson10-level1"
         ],
         "lesson.key": "Project - Innovation Simulation Part 4",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "a1c95af8-ac13-4087-8ff6-cc7aa5586c3c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-cyber_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-cyber_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif5-2025",
+        "activity_section.key": "19f33688-8b0c-42da-8aa3-8cab1869970a"
       }
     }
   ],

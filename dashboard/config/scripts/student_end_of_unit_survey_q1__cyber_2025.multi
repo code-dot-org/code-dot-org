@@ -1,0 +1,13 @@
+name 'student-end-of-unit-survey-q1_-cyber_2025'
+
+question 'I feel confident that if I had exam to test what I have learned in this unit, I would do well.'
+
+right 'Strongly agree'
+right 'Agree'
+right 'Slightly agree'
+right 'Neither'
+right 'Slightly disagree'
+right 'Disagree'
+right 'Strongly disagree'
+
+allow_multiple_attempts true

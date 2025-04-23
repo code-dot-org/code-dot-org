@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # String Concatenation   
 
-
+// update to comma 
 #### In the previous levels, you worked with **print statements** and **string concatenation**.
 
 
@@ -42,4 +42,8 @@ markdown <<MARKDOWN
 </p>
 
 ## Let's practice with a choice level!
+
+![](https://images.code.org/3253ee1e2dd9ddd8b176930b996dd13f-image-1745270250476.png)
+
+![](https://images.code.org/8ff1c75cd4d69d6594b506802c161250-image-1745270284549.png)
 MARKDOWN

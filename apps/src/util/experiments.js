@@ -61,6 +61,10 @@ experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
 // Use glow effect for Blockly block highlighting
 experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
 
+// TODO: ACQ-3081 remove experiment
+// Use new workshop form
+experiments.NEW_WORKSHOP_FORM = 'new-workshop-form';
+
 /**
  * This was a gamified version of the finish dialog, built in 2018,
  * but never fully shipped.

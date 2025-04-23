@@ -1,0 +1,14 @@
+name 'student-end-of-unit-survey-q29_-programming_2025'
+
+question 'I collaborated often with peers in activities.'
+
+right 'Most of the activities'
+right 'Most of the projects or larger activities'
+right 'Occasionally'
+right 'Never'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

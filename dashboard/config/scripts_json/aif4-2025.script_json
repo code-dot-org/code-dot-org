@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-19 06:20:01 UTC",
+    "serialized_at": "2025-04-21 17:49:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -93,7 +93,7 @@
       "user_facing": true,
       "position": 6,
       "properties": {
-        "display_name": "End of Unit Assessment"
+        "display_name": "End of Unit Assessment and Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-7",
@@ -330,6 +330,21 @@
       },
       "seeding_key": {
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
         "script.name": "aif4-2025"
       }
@@ -818,6 +833,18 @@
       "seeding_key": {
         "lesson_activity.key": "964d503e-2a91-4284-a748-ced09b44b9bb",
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "key": "8806d0ed-4ce3-485f-959b-ecc771e270a4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8806d0ed-4ce3-485f-959b-ecc771e270a4",
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
         "script.name": "aif4-2025"
       }
@@ -3439,6 +3466,17 @@
         "activity_section.key": "bf9d8dd4-bf50-44f3-9b7f-457bb189c1f8",
         "lesson_activity.key": "964d503e-2a91-4284-a748-ced09b44b9bb"
       }
+    },
+    {
+      "key": "90678282-a92e-4991-b369-e8e9988069f5",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "90678282-a92e-4991-b369-e8e9988069f5",
+        "lesson_activity.key": "8806d0ed-4ce3-485f-959b-ecc771e270a4"
+      }
     }
   ],
   "script_levels": [
@@ -4266,6 +4304,28 @@
       "level_keys": [
         "networks-postassessment_2025"
       ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-networks_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "aif4-2025",
+        "activity_section.key": "90678282-a92e-4991-b369-e8e9988069f5"
+      },
+      "level_keys": [
+        "student-eou-survey_-networks_2025"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4663,6 +4723,18 @@
         "lesson_group.key": "lessonGroup-7",
         "script.name": "aif4-2025",
         "activity_section.key": "bf9d8dd4-bf50-44f3-9b7f-457bb189c1f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-networks_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-networks_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "aif4-2025",
+        "activity_section.key": "90678282-a92e-4991-b369-e8e9988069f5"
       }
     }
   ],

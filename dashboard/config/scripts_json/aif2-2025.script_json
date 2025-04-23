@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 01:17:59 UTC",
+    "serialized_at": "2025-04-21 17:45:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -69,7 +69,7 @@
       "user_facing": true,
       "position": 4,
       "properties": {
-        "display_name": "End of Unit Assessment"
+        "display_name": "End of Unit Assessment and Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
@@ -350,12 +350,27 @@
       }
     },
     {
-      "key": "Working with Objects (Lesson 5)",
-      "name": "Working with Objects (Lesson 5)",
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "key": "Working with Objects (Lesson 5)",
+      "name": "Working with Objects (Lesson 5)",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -367,10 +382,10 @@
     {
       "key": "Functions and Parameters (Lesson 6)",
       "name": "Functions and Parameters (Lesson 6)",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -382,10 +397,10 @@
     {
       "key": "Debugging Strategies (Lesson 7)",
       "name": "Debugging Strategies (Lesson 7)",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -397,10 +412,10 @@
     {
       "key": "Introduction to Loops (Lesson 8)",
       "name": "Introduction to Loops (Lesson 8)",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -412,10 +427,10 @@
     {
       "key": "Conditional Statements (Lesson 9)",
       "name": "Conditional Statements (Lesson 9)",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -427,10 +442,10 @@
     {
       "key": "Decomposition (Lesson 11)",
       "name": "Decomposition (Lesson 11)",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -442,10 +457,10 @@
     {
       "key": "Two-Way and Nested Selection (Lesson 12)",
       "name": "Two-Way and Nested Selection (Lesson 12)",
-      "absolute_position": 22,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -1022,6 +1037,18 @@
       "seeding_key": {
         "lesson_activity.key": "6a4750b3-948d-4d9a-be5c-83aad7bc40cb",
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "key": "eaf7552f-0f99-4f83-8055-45cf51493653",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eaf7552f-0f99-4f83-8055-45cf51493653",
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif2-2025"
       }
@@ -4764,6 +4791,17 @@
       }
     },
     {
+      "key": "15a1a055-8b1d-4b29-a11f-7961131c3b46",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "15a1a055-8b1d-4b29-a11f-7961131c3b46",
+        "lesson_activity.key": "eaf7552f-0f99-4f83-8055-45cf51493653"
+      }
+    },
+    {
       "key": "0fab5e90-7fc1-4b0c-8681-6b9419370225",
       "position": 1,
       "properties": {
@@ -7101,6 +7139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-level5_2025-launch_2025"
+        ],
         "progression": "Solving Problems in The Neighborhood"
       },
       "bonus": false,
@@ -7148,6 +7189,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-vocab_2025"
+        ],
         "progression": "Solving Problems in The Neighborhood"
       },
       "bonus": false,
@@ -8437,6 +8481,28 @@
       },
       "level_keys": [
         "programming-fundamentals-lesson20-level7_2025"
+      ]
+    },
+    {
+      "chapter": 139,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif2-2025",
+        "activity_section.key": "15a1a055-8b1d-4b29-a11f-7961131c3b46"
+      },
+      "level_keys": [
+        "student-eou-survey_-programming_2025"
       ]
     }
   ],
@@ -10095,6 +10161,18 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "aif2-2025",
         "activity_section.key": "6043282c-1422-4473-be8d-6615f72f2ff4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-programming_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif2-2025",
+        "activity_section.key": "15a1a055-8b1d-4b29-a11f-7961131c3b46"
       }
     }
   ],

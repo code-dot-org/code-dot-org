@@ -1,0 +1,48 @@
+name 'self-paced-CSDMusicLab-L1-careerspotlights2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Career Spotlights
+
+## What do Career Spotlights look like in the curriculum?
+
+#### There are three components in Synthesize lessons that connect to Career Spotlights: a **video** for you and your students to watch as a class, a **panel level** that connects the video to students' coding challenges, and a **relevant coding challenge** for students to engage with.
+
+## Videos
+
+#### There are three videos in the curriculum that show how computer science and music connect in the real world:
+
+<div style="display: flex; justify-content: space-between; gap: 15px; margin-top: 20px;">
+
+  <!-- Video 1: Sequencing -->
+  <div style="text-align: center; width: 32%;">
+    <a href="https://www.youtube.com/watch?v=OrrZPzgWPII" target="_blank">
+      <img src="https://images.code.org/e237ecc91f265333140e5db625446295-image-1745279755766.51.59 PM.png" alt="Henny Tha Bizness video thumbnail" style="width: 100%; border-radius: 8px;">
+    </a>
+    <p style="font-size: 14pt; margin-top: 10px;">Sequencing Spotlight: Henny Tha Bizness</p>
+  </div>
+
+  <!-- Video 2: Loops -->
+  <div style="text-align: center; width: 33%;">
+    <a href="https://www.youtube.com/watch?v=MDtQjObQ8yY" target="_blank">
+      <img src="https://images.code.org/f130f21e59936b796dd29ebf0a65e91b-image-1745279755764.53.31 PM.png" alt="Roxanne Harris video thumbnail" style="width: 100%; border-radius: 8px;">
+    </a>
+    <p style="font-size: 14pt; margin-top: 10px;">Loops Spotlight: Roxanne Harris, Creative Coder</p>
+  </div>
+
+  <!-- Video 3: Placeholder -->
+  <div style="text-align: center; width: 32%;">
+    <a href="https://www.youtube.com/placeholder-link" target="_blank">
+      <img src="https://via.placeholder.com/400x225?text=Coming+Soon" alt="Placeholder image" style="width: 100%; border-radius: 8px;">
+    </a>
+    <p style="font-size: 14pt; margin-top: 10px;">[Functions Spotlight Title]</p>
+  </div>
+
+</div>
+
+
+## Panel Levels
+
+## Coding Challenges
+MARKDOWN

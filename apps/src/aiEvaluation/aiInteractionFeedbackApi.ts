@@ -6,6 +6,7 @@ export interface FeedbackData {
   thumbsUp?: boolean;
   levelId?: number;
   scriptId?: number;
+  metadata?: Record<string, string | boolean>;
 }
 
 export async function logUserFeedbackOnStudentEvaluation(
@@ -24,6 +25,7 @@ export async function logUserFeedbackOnStudentEvaluation(
         thumbsUp: feedbackData.thumbsUp,
         levelId: feedbackData.levelId,
         scriptId: feedbackData.scriptId,
+        metadata: feedbackData.metadata,
       }),
     });
 

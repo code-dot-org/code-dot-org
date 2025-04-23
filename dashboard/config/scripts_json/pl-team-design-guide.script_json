@@ -6,11 +6,13 @@
     "properties": {
       "content_area": "other",
       "curriculum_umbrella": "Other",
-      "is_migrated": true
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 19:29:48 UTC",
+    "serialized_at": "2025-04-21 20:06:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1267,6 +1269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design Guide Video"
+        ],
         "progression": "Video Guidelines"
       },
       "bonus": false,
@@ -1289,6 +1294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL_styleguide_L4_melissapage"
+        ],
         "progression": "Melissa's Section"
       },
       "bonus": false,

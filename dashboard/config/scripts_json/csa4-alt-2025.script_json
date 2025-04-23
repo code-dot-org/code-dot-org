@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-26 20:44:13 UTC",
+    "serialized_at": "2025-04-21 23:56:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3349,7 +3349,7 @@
       "key": "85d4d227-647f-4570-b7f5-b3117b7e0f12",
       "position": 9,
       "properties": {
-        "description": "Many of the apps and programs we use every day use large amounts of data to help us find information we are looking for, perform calculations, or recommend similar videos or products. 1D arrays give software engineers a way to store and analyze large amounts of data.",
+        "description": "When arrays are created, each element is automatically given a default value. Understanding these values—and how to find the length of an array—helps programmers write code that works reliably with any array.",
         "duration": "10",
         "name": "Default Values and Length",
         "remarks": true

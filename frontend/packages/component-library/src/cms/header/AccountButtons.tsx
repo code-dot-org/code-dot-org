@@ -94,7 +94,7 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
 
     return (
       <>
-        {orderedButtons.map(({key, props}) => (
+        {orderedButtons?.map(({key, props}) => (
           <LinkButton key={key} size="s" {...(props as LinkButtonProps)} />
         ))}
       </>
