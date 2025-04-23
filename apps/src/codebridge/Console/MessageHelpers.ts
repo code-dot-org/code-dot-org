@@ -39,5 +39,10 @@ export function getTimestampMessage(runType: RunType) {
   } else if (runType === RunType.VALIDATION) {
     runString = codebridgeI18n.validateAt({time: formattedTime});
   }
-  return `\x1b[38;5;249m--------${runString}--------\x1b[0m`;
+  const stringLength = runString.length;
+  const paddingLeftCount = Math.max(Math.floor((32 - stringLength) / 2), 0);
+  const paddingRightCount = Math.max(32 - stringLength - paddingLeftCount, 0);
+  const fullMessage =
+    '-'.repeat(paddingLeftCount) + runString + '-'.repeat(paddingRightCount);
+  return `\x1b[38;5;249m${fullMessage}\x1b[0m`;
 }
