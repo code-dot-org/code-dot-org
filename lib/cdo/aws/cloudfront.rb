@@ -200,6 +200,20 @@ module AWS
               ]
             }
           end,
+          ({
+            Id: 'marketing',
+            CustomOriginConfig: {
+              OriginProtocolPolicy: 'match-viewer',
+              OriginSSLProtocols: %w(TLSv1.2),
+              OriginReadTimeout: 30
+            },
+            DomainName: "marketingsites.#{CDO.rack_env == 'production' ? 'code.org' : 'dev-code.org'}",
+            OriginPath: '',
+            OriginShield: {
+              Enabled: true,
+              OriginShieldRegion: {Ref: 'AWS::Region'}
+            },
+          } if app == :pegasus),
           {
             Id: 'cdo-assets',
             DomainName: "#{CDO.assets_bucket}.s3.amazonaws.com",
@@ -216,7 +230,7 @@ module AWS
               OriginAccessIdentity: 'origin-access-identity/cloudfront/E17G1PR1YAN7F4'
             },
           },
-        ],
+        ].compact,
         PriceClass: 'PriceClass_All',
         Restrictions: {
           GeoRestriction: {
@@ -262,11 +276,6 @@ module AWS
           Forward: behavior_config[:cookies]
         }
 
-      accept_language_fn =
-        {
-          EventType: 'viewer-request',
-          FunctionARN: {'Fn::Sub': 'arn:aws:cloudfront::${AWS::AccountId}:function/AcceptLanguage'}
-        }
       normalize_accept_language = headers.include?('Accept-Language')
       # Behaviors including session cookies aren't cacheable anyway, so don't bother
       # running the extra header-normalization function for these.
@@ -284,7 +293,7 @@ module AWS
           Headers: headers,
           QueryString: behavior_config[:query] != false
         },
-        FunctionAssociations: normalize_accept_language ? [accept_language_fn] : [],
+        FunctionAssociations: function_associations(normalize_accept_language, behavior_config[:include_marketing_router_lambda]),
         MaxTTL: 31_536_000, # =1 year,
         MinTTL: 0,
         SmoothStreaming: false,
@@ -295,6 +304,26 @@ module AWS
         behavior[:PathPattern] = path if path
         behavior[:RealtimeLogConfigArn] = {'Fn::ImportValue': 'AccessLogs-Config'}
       end
+    end
+
+    def self.function_associations(normalize_accept_language, include_marketing_router_lambda)
+      function_associations = []
+
+      if normalize_accept_language
+        function_associations << {
+          EventType: 'viewer-request',
+          FunctionARN: {'Fn::Sub': 'arn:aws:cloudfront::${AWS::AccountId}:function/AcceptLanguage'}
+        }
+      end
+
+      if include_marketing_router_lambda
+        function_associations << {
+          EventType: 'origin-request',
+          LambdaFunctionARN: {Ref: 'MarketingRouterVersion'}
+        }
+      end
+
+      function_associations
     end
 
     # Generate cookies granting access to the resource until the expiration_date.
