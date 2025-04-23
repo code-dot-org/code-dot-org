@@ -221,6 +221,6 @@ export const defaultProps: HeaderProps = {
   ],
 };
 
-const Header: React.FC<HeaderProps> = () => <DSCOHeader {...defaultProps} />;
+const Header: React.FC = () => <DSCOHeader {...defaultProps} />;
 
 export default Header;

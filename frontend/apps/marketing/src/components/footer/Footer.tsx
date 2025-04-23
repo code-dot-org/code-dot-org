@@ -93,6 +93,6 @@ export const defaultProps: FooterProps = {
   ],
 };
 
-const Footer: React.FC<FooterProps> = () => <DSCOFooter {...defaultProps} />;
+const Footer: React.FC = () => <DSCOFooter {...defaultProps} />;
 
 export default Footer;
