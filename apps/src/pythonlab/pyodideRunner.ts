@@ -1,4 +1,9 @@
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import ConsoleManager from '@codebridge/Console/ConsoleManager';
+import {
+  getSystemMessage,
+  getTimestampMessage,
+} from '@codebridge/Console/MessageHelpers';
 import {MiniApps} from '@codebridge/constants';
 import {AnyAction, Dispatch} from 'redux';
 
@@ -10,10 +15,6 @@ import pythonlabI18n from '@cdo/apps/pythonlab/locale';
 import {getStore} from '@cdo/apps/redux';
 
 import {getValidationFromSource, RunType} from '../codebridge';
-import {
-  getSystemMessage,
-  getTimestampMessage,
-} from '../codebridge/Console/MessageHelpers';
 
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import {
@@ -33,26 +34,31 @@ export async function handleRunClick(
 ) {
   const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
   if (!source) {
-    consoleManager?.writeConsoleMessage(
-      getSystemMessage(pythonlabI18n.noCode(), appName)
-    );
+    const runType = runTests
+      ? validationFile
+        ? RunType.VALIDATION
+        : RunType.TEST
+      : RunType.RUN;
+
+    consoleManager?.writeConsoleMessage(getTimestampMessage(runType));
+    handleRunEndedUnexpectedly(consoleManager, pythonlabI18n.noCode());
     return;
   }
   if (runTests) {
     await runAllTests(source, dispatch, progressManager, validationFile);
   } else {
     // Run main.py
+    consoleManager?.writeConsoleMessage(getTimestampMessage(RunType.RUN));
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
-    if (!code) {
-      consoleManager?.writeConsoleMessage(
-        getSystemMessage(
-          pythonlabI18n.noFileToRun({fileName: MAIN_PYTHON_FILE}),
-          appName
-        )
+    if (code === undefined) {
+      handleRunEndedUnexpectedly(
+        consoleManager,
+        pythonlabI18n.noFileToRun({
+          fileName: MAIN_PYTHON_FILE,
+        })
       );
       return;
     }
-    consoleManager?.writeConsoleMessage(getTimestampMessage(RunType.RUN));
     await runPythonCode(code, source);
     if (isNeighborhoodLevel()) {
       CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
@@ -144,4 +150,18 @@ function isNeighborhoodLevel() {
     getStore().getState().lab2Project.projectSources?.labConfig?.miniApp
       ?.name === MiniApps.Neighborhood
   );
+}
+
+function handleRunEndedUnexpectedly(
+  consoleManager: ConsoleManager | null,
+  message: string
+) {
+  consoleManager?.writeConsoleMessage(getSystemMessage(message, appName));
+  if (isNeighborhoodLevel()) {
+    CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
+    CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();
+  } else {
+    consoleManager?.writeConsoleMessage('');
+  }
 }
