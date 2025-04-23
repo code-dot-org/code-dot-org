@@ -238,10 +238,6 @@ class Game < ApplicationRecord
     ].include? app
   end
 
-  def sharing_filtered?
-    app == STUDIO
-  end
-
   def flappy?
     app == FLAPPY
   end

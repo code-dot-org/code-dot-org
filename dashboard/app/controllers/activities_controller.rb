@@ -52,41 +52,13 @@ class ActivitiesController < ApplicationController
     end
 
     sharing_allowed = Gatekeeper.allows('shareEnabled', where: {script_name: script_name}, default: true)
-    if params[:program] && sharing_allowed
-      share_failure = nil
-      if @level.game.sharing_filtered?
-        begin
-          share_failure = ShareFiltering.find_share_failure(params[:program], locale)
-        rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable => exception
-          # If WebPurify or Geocoder fail, the program will be allowed, and we
-          # retain the share_filtering_error to log it alongside the level_source
-          # ID below.
-          share_filtering_error = exception
-        end
-      end
-
-      unless share_failure || ActivityConstants.skipped?(params[:new_result].to_i)
-        # Explicitly use the writer connection to make this write call
-        ActiveRecord::Base.connected_to(role: :writing) do
-          @level_source = LevelSource.find_identical_or_create(
-            @level,
-            params[:program].strip_utf8mb4
-          )
-        end
-        if share_filtering_error
-          FirehoseClient.instance.put_record(
-            :analysis,
-            {
-              study: 'share_filtering',
-              study_group: 'v0',
-              event: 'share_filtering_error',
-              data_string: "#{share_filtering_error.class.name}: #{share_filtering_error}",
-              data_json: {
-                level_source_id: @level_source.id
-              }.to_json
-            }
-          )
-        end
+    if params[:program] && sharing_allowed && !ActivityConstants.skipped?(params[:new_result].to_i)
+      # Explicitly use the writer connection to make this write call
+      ActiveRecord::Base.connected_to(role: :writing) do
+        @level_source = LevelSource.find_identical_or_create(
+          @level,
+          params[:program].strip_utf8mb4
+        )
       end
     end
 
