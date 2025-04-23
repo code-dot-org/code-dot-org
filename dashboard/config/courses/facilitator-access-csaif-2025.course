@@ -5,6 +5,11 @@
     "facilitator-cyber-csaif-early-access",
     "facilitator-datasci-pl-early-access"
   ],
+  "original_script_names": [
+    "facilitator-compsys-pl-early-access",
+    "facilitator-cyber-csaif-early-access",
+    "facilitator-datasci-pl-early-access"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",

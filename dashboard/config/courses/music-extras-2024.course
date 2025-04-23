@@ -3,6 +3,9 @@
   "script_names": [
     "music-extras-2024"
   ],
+  "original_script_names": [
+    "music-extras-2024"
+  ],
   "published_state": "in_development",
   "instruction_type": "self_paced",
   "participant_audience": "student",

@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 21:32:26 UTC",
+    "serialized_at": "2025-04-22 13:01:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -939,7 +939,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "For example:\n- **Opening Statement:** \"A mysterious talking cat started showing up to math class.\"\n- **Student 1:** \"Yes, and he said his name is Whiskers.\"\n- **Student 2:** \"Yes, and he happens to be very good at multiplication.\"\n- **Student 1:** \"Yes, and he has a sister who started showing up to English class.\"\n- **Student 2:** \"Yes, and he has a sister who started showing up to English class.\"\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that prom will be held on a spaceship this year.\"\n- \"Every locker in the main hallway suddenly started playing music.\"\n"
+            "markdown": "For example:\n- **Opening Statement:** \"A mysterious talking cat started showing up to math class.\"\n- **Student 1:** \"Yes, and he said his name is Whiskers.\"\n- **Student 2:** \"Yes, and he happens to be very good at multiplication.\"\n- **Student 1:** \"Yes, and he has a sister who started showing up to English class.\"\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that prom will be held on a spaceship this year.\"\n- \"Every locker in the main hallway suddenly started playing music.\"\n"
           }
         ]
       },

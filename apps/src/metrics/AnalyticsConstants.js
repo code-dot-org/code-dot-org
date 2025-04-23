@@ -479,6 +479,10 @@ const EVENTS = {
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
 
+  // Measures of learning
+  AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
+    'Teacher gave feedback on AIs summary of student work',
+
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',
   CODEBRIDGE_DELETE_FOLDER: 'Delete folder on codebridge',

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-16 21:21:04 UTC",
+    "serialized_at": "2025-04-22 22:19:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1077,6 +1077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-events-video"
+        ],
         "progression": "Intro Video"
       },
       "bonus": false,
@@ -1149,6 +1152,28 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-coding-intro-2events-sound_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      },
+      "level_keys": [
+        "music-coding-intro-2events-sound_launch"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "music-coding-intro-event-function_launch"
         ],
@@ -1169,9 +1194,9 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 5,
-      "activity_section_position": 4,
+      "chapter": 31,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1194,9 +1219,9 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 6,
-      "activity_section_position": 5,
+      "chapter": 32,
+      "position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1219,9 +1244,9 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1244,9 +1269,9 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 8,
-      "activity_section_position": 7,
+      "chapter": 34,
+      "position": 9,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1269,8 +1294,8 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 9,
+      "chapter": 35,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1294,8 +1319,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 10,
+      "chapter": 36,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1319,11 +1344,14 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 11,
+      "chapter": 37,
+      "position": 12,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold3_launch"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -1671,6 +1699,18 @@
         "level.key": "music-coding-intro-event-sound_launch",
         "script_level.level_keys": [
           "music-coding-intro-event-sound_launch"
+        ],
+        "lesson.key": "Sound Designer's Studio",
+        "lesson_group.key": "",
+        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-coding-intro-2events-sound_launch",
+        "script_level.level_keys": [
+          "music-coding-intro-2events-sound_launch"
         ],
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",

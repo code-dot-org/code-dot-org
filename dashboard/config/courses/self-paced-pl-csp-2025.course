@@ -6,7 +6,13 @@
     "self-paced-pl-csp3-2025",
     "self-paced-pl-csp4-2025"
   ],
-  "published_state": "in_development",
+  "original_script_names": [
+    "self-paced-pl-csp1-2025",
+    "self-paced-pl-csp2-2025",
+    "self-paced-pl-csp3-2025",
+    "self-paced-pl-csp4-2025"
+  ],
+  "published_state": "beta",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

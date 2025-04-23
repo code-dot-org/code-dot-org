@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 17:45:25 UTC",
+    "serialized_at": "2025-04-23 01:21:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -114,9 +114,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do your skills and preferences align with computing careers and emerging technologies?**\n\nIn this lesson, students explore how their skills and interests align with computing careers and emerging technologies. Through collaborative activities, they analyze career personas, connect traits to career categories, and identify technologies that enhance career opportunities. At the end of the lesson, students reflect on their own traits and how they align with potential computing careers.",
-        "preparation": "- Print copies of the Career Exploration activity guide (one for each pair of students)\n- Ensure students have access to their Unit Guides (print copies or provide digital copies)",
-        "student_overview": "**How do your skills and preferences align with computing careers and emerging technologies?**\n\nExplore how your skills and interests connect to exciting computing careers and technologies. Discover how emerging technologies solve real-world problems and reflect on the skills you have that align with your future goals."
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do your skills and interests align with computing careers and emerging technologies?**\n\nIn this lesson, students explore how their skills and interests align with computing careers and emerging technologies. Through collaborative activities, they analyze career personas, connect traits to career categories, and identify technologies that enhance career opportunities. At the end of the lesson, students reflect on their own traits and how they align with potential computing careers.",
+        "preparation": "- Provide copies of the Vision Board template (one for each pair of students)\n- Ensure students have access to their Unit Guides (print copies or provide digital copies)",
+        "student_overview": "**How do your skills and interests align with computing careers and emerging technologies?**\n\nExplore how your skills and interests connect to exciting computing careers and technologies. Discover how emerging technologies solve real-world problems and reflect on the skills you have that align with your future goals."
       },
       "seeding_key": {
         "lesson.key": "Computing Careers",
@@ -1246,10 +1246,10 @@
       "key": "31cb443d-0869-41be-b2d7-2832f85fc5bd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Career Exploration activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Before students start working, explain that careers can often be grouped based on the kind of work involved: working with People, working with Ideas, or working with Things. Explain to students that they'll use these categories throughout the activity to explore different computing careers and make connections to necessary skills and technologies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the activity. Explain that students analyze a fictional persona’s social media to determine their interests and skills in order to match them to computing careers that might align with that persona’s skills and interests. For example, a persona might enjoy doing escape rooms which could mean they enjoy working with others or that they enjoy problem solving. Students then get help from a chatbot to brainstorm ways that emerging technologies could be used with that career.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students into groups of two.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. \n- **Level 1:** Students choose one of the four personas and analyze the traits and match them to careers in Part 1 of their activity guide. \n- **Level 2:** Students use the information on the level to match their persona from Level 1 to a category, potential careers, and emerging technologies. \n- **Level 3:** Students use an AI Chatbot to explore more emerging technologies for their persona’s matched career. \n- **Level 4:** Students complete a Check for Understanding.",
-        "duration": "25",
-        "name": "Career Persona Exploration",
-        "progression_name": "Career Persona Exploration"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Foundations of AI Programming Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the My Interests and Skills section of their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \nBefore students start working, explain that careers can often be grouped based on the kind of work involved: working with People, working with Ideas, or working with Things. Explain to students that they'll work with AI Chat to make connections between their skills and different computing careers.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. Have students copy and paste (or type out) their responses to the My Interests and Skills section of their unit guide into AI Chat. Have students go back and forth with AI Chat several times to give it key background information. \n",
+        "duration": "10",
+        "name": "My Skills and Interests",
+        "progression_name": "My Skills and Interests"
       },
       "seeding_key": {
         "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd",
@@ -1260,15 +1260,11 @@
       "key": "6fced135-358d-4aa5-9e84-24be43206f2a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students struggling to make connections between skills/interests and potential careers. Ask students probing questions such as, \"What traits or skills stand out about this persona?\" or \"What careers involve working with people (ideas … things)?\" As you walk around the room, ensure students are using the activity guide to document the traits they notice about their persona and writing a justification for their skill/interest and career matches. Reassure students that there is no one “right” answer! For example, \"Maya might enjoy being an AI Engineer or a Game Developer because she’s creative, loves puzzles, and enjoys solving big challenges, and both AI Engineers and Game Developers use creativity and logic to build systems that solve complex problems.\"",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students struggling to provide sufficient information about their skills and interests. Ask students probing questions such as, \"What activities do you do after school?\" or \"What are your favorite subjects in school?\" As you walk around the room, ensure students are giving AI Chat enough context for it to choose a career category.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "- Part 1: If students struggle to match personas to careers, encourage them to focus on the skills and interests first. Ask questions like: \"What interests or skills does this persona have?\" Then, reference the Computing Careers Handout to find careers that align with those traits.\n- Part 2: If students are unsure how to connect emerging technologies to careers, provide examples. For instance: \"How might AI make a Data Scientist's job easier?\" or \"How could robotics help a Systems Architect design better solutions?\""
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Career Exploration Activity Guide can be collected and used to formatively assess the lesson objectives.\n\nThe Check for Understanding on Level 4 can be used to formatively assess and provide feedback on students’ understanding of the lesson objectives."
+            "markdown": "Remind students that they should not give AI Chat any personally identifying information. For example, they can share that they are in the high school chorus, but should not share the name of their school.\n"
           }
         ]
       },
@@ -1278,9 +1274,46 @@
       }
     },
     {
-      "key": "072230f9-385e-456c-b83a-2c3efae2f398",
+      "key": "7fe05c39-b4d9-432c-853d-2ce680a1a591",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a quick assessment, ask students to raise their hands based on what category AI Chat suggested. “For example, raise your hand if AI Chat suggested you focus on people-oriented careers.” Explain to students that they'll use these categories throughout the next activity to explore different computing careers and make connections to necessary skills and technologies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each student make a copy of the Vision Board template. Explain that students will complete the first column, My Interests and Skills. As they look through Level 2, students should start thinking about careers they can add to the middle column.",
+        "duration": "5",
+        "name": "Career Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students will be adding to their vision boards throughout the lesson. The template is formatted as a table for students to add in bullet points, however depending on time you might encourage students to add images, videos, or links.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7fe05c39-b4d9-432c-853d-2ce680a1a591",
+        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
+      }
+    },
+    {
+      "key": "de33a9df-3f9b-4a23-a6d0-a14aa7d423da",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to choose the suggested career category suggested in the previous level. Students will look at the different careers and add one or two that interests them to the Future Careers column of their vision board.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may have gotten more than one career category suggestion from AI Chat. Encourage students to look over the different levels but focus on two careers for their vision board."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "de33a9df-3f9b-4a23-a6d0-a14aa7d423da",
+        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
+      }
+    },
+    {
+      "key": "072230f9-385e-456c-b83a-2c3efae2f398",
+      "position": 5,
+      "properties": {
+        "progression_name": "Career Exploration"
       },
       "seeding_key": {
         "activity_section.key": "072230f9-385e-456c-b83a-2c3efae2f398",
@@ -1288,16 +1321,67 @@
       }
     },
     {
-      "key": "6e7b7d67-ecb6-41e6-8650-34562471bb0c",
-      "position": 4,
+      "key": "b7ca5133-3284-4c5e-8ebf-3054157977fc",
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Programming Fundamentals Unit Guide.",
-        "duration": "5",
-        "name": "Career Persona Self-Reflection",
+        "description": "Now that you’ve explored a few careers that align with your skills and interests, it’s time to start building your vision board. This will help you organize your thinking and connect what you're good at with careers you might want to explore further.\n\n",
+        "name": "Designing My Vision Board",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b7ca5133-3284-4c5e-8ebf-3054157977fc",
+        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
+      }
+    },
+    {
+      "key": "70a273fd-5138-4de0-a402-ac050c8e296f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to begin creating their vision board by completing the first two columns. In Column 1, they should reflect on their interests and strengths, using examples from earlier discussions or their Unit Guide. In Column 2, they’ll add 1–2 careers they found intriguing in Level 2, making sure to include key details or visuals that explain why those careers stood out. Remind students that they’re building something they’ll use in the next step, so they should put effort into making it informative and personal before downloading it as an image.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are including personal touches in Column 1 (e.g., hobbies, school subjects, strengths). For Column 2, encourage students to add not just job titles, but what caught their attention about the careers — such as salary ranges, tools used, or tasks performed.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students will be using this every lesson throughout the unit. Determine if distributing physical copies of the Unit Guide or having students make their own digital copies will work best for you and your students."
+            "markdown": "If students finish early, encourage them to add icons, logos, or visuals from their research to make their vision board more engaging and unique to them.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "70a273fd-5138-4de0-a402-ac050c8e296f",
+        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
+      }
+    },
+    {
+      "key": "475adf23-042e-4c50-8b2b-433aa4695929",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 3 to collaborate with AI to get suggestions about emerging technology that align with students’ interests, skills, and career choices. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for how students are prompting AI. If responses feel generic, ask: “Can you be more specific about what you’re interested in?” or “What would you like to know about how this tech is used?”",
+        "name": "Emerging Technologies",
+        "progression_name": "Envisioning My Future",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reinforce digital safety—students should not include their real names or personal information when sharing their vision board image. Before students upload, remind them to double-check their file and chat messages to make sure no personal details are included.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "475adf23-042e-4c50-8b2b-433aa4695929",
+        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
+      }
+    },
+    {
+      "key": "6e7b7d67-ecb6-41e6-8650-34562471bb0c",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the AI suggestions as a springboard to explore technologies they might want to learn more about. Instruct them to complete the final column of their vision board with any emerging technologies they found exciting, relevant, or surprising. They can include descriptions, visuals, or links to support their choices. If time allows, invite students to share their vision boards with a partner or small group.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are thoughtfully connecting the AI suggestions to their existing interests or skills. Ask questions like: “Which tech seems like a good fit for your strengths or passions?” or \t“Can you see yourself using or building this tech in the future?” Support students who are unsure by helping them revisit earlier parts of their board or offering a few AI suggestions for inspiration. Encourage them to explain their choices — not just list a technology — and to make their boards visually engaging and personally meaningful.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, consider organizing a gallery walk or peer share so students can showcase their completed vision boards. This builds community and helps students see the variety of tech-career connections.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students’ completed vision boards can be used to assess their understanding of how personal interests connect to computing careers and emerging technologies. Look for evidence that students have made thoughtful connections between their skills and the AI-recommended tech, and that they can explain why those connections matter.\n"
           }
         ]
       },
@@ -1308,7 +1392,7 @@
     },
     {
       "key": "214841b5-2893-4086-a1a7-70c2bb26a5d4",
-      "position": 5,
+      "position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -1317,55 +1401,44 @@
       }
     },
     {
-      "key": "aaa5832e-9ced-46ab-a247-2fc1af897558",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Self-Reflection Activity and explain that students will now reflect on their own skills and interests. Direct students to complete the Career Self-Reflection section on page one of their Unit Guide so that they can refer back to this self-reflection throughout the unit. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are highlighting or circling their top 3 self-identified skills or interests from the list. There is a spot for them to write in additional skills or interests that are not listed. If students do not identify with any of the listed skills or interests, encourage them to add ones that they do identify with. Encourage students to prompt the chatbot on Level 3 more than once to see if they get different suggestions and to only record those that they are most interested in. ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "- If students are struggling to identify their interests or skills, encourage them to think about hobbies, school projects, or favorite subjects. For example: \"If you enjoy drawing or designing, creativity might be one of your strengths.\"\n- If time permits, students could also ask the AI Career Chat Buddy what emerging tech might be used with the career(s) that interests them. Students can also flip the question around and ask the Chat Buddy what careers use the type of emerging tech that interests them the most."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Career Self-Reflection section in the Unit Guide can be used to assess the lesson objectives."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "aaa5832e-9ced-46ab-a247-2fc1af897558",
-        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
-      }
-    },
-    {
-      "key": "a1d516fd-8fa9-4af7-94fd-ad670df5538a",
-      "position": 7,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "a1d516fd-8fa9-4af7-94fd-ad670df5538a",
-        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
-      }
-    },
-    {
       "key": "b176f1d9-720a-43f8-8914-9001c5ee6140",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day aloud for students. Give students a moment to think about and record their answer individually in their Unit Guide before they share with a partner. If time allows, have students share with a second person not seated near them.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance: *\"Think about a skill or interest you rated yourself highly on earlier. How did it connect to one of the careers we explored?\"*",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the question aloud and let students know this is their chance to reflect on the connections they've made throughout the lesson. Then show the next slide for extra guidance.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Rephrase the question using the breakdown on the slide and in their Unit Guide to help students think more specifically. Direct them to write their answer in the Question of the Day section of Lesson 1 in their Unit Guide. If students are stuck, prompt them to refer to their vision board for inspiration.\n\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance: \"Think about a skill or interest you rated yourself highly on earlier. How did it connect to one of the careers we explored?\"",
         "tips": [
           {
-            "type": "assessmentOpportunity",
-            "markdown": "The question of the day in the Unit Guide can be used to assess the lesson objectives."
+            "type": "teachingTip",
+            "markdown": "If time allows, end the wrap-up with a whole-class share-out: Ask students if anyone would like to share a connection they made between their skills, a computing career, and an emerging technology? This can help reinforce key takeaways and provide inspiration for students who may have struggled.\n"
           },
           {
-            "type": "teachingTip",
-            "markdown": "If time allows, end the wrap-up with a whole-class share-out: Ask students if anyone would like to share a connection they made between their skills, a computing career, and an emerging technology? This can help reinforce key takeaways and provide inspiration for students who may have struggled."
+            "type": "assessmentOpportunity",
+            "markdown": "The question of the day in the Unit Guide can be used to assess the lesson objectives.\n"
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "b176f1d9-720a-43f8-8914-9001c5ee6140",
+        "lesson_activity.key": "f066a060-a428-405d-a6a3-fd9a52b4f9b6"
+      }
+    },
+    {
+      "key": "6841dd72-3c07-4971-bbd9-d8b7494590ac",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6841dd72-3c07-4971-bbd9-d8b7494590ac",
+        "lesson_activity.key": "f066a060-a428-405d-a6a3-fd9a52b4f9b6"
+      }
+    },
+    {
+      "key": "11519843-c123-4665-96e8-8ebccff5c41c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "11519843-c123-4665-96e8-8ebccff5c41c",
         "lesson_activity.key": "f066a060-a428-405d-a6a3-fd9a52b4f9b6"
       }
     },
@@ -1825,7 +1898,7 @@
       "key": "7807355e-ab77-41ea-9e5a-b8de91e739ee",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that their task is to design an algorithm using the algorithm design steps. Let students know that they will use sticky notes for their steps and decisions points - one color for the steps or processes and one color for decision points.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Levels 2 through 6 to pick one of the scenarios to work with and design an algorithm for. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that their task is to design an algorithm using the algorithm design steps. Let students know that they will use sticky notes for their steps and decisions points - one color for the steps or processes and one color for decision points.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Levels 2 through 6 have questions specific to the different scenarios. Have students pick **one** scenario. Then direct students to the level that matches their scenario and have them answer the questions on that level. Once they submit their answers, have them skip over the other levels and jump straight to the Check for Understanding on Level 7.\n",
         "progression_name": "Scenario Choices"
       },
       "seeding_key": {
@@ -1837,7 +1910,7 @@
       "key": "b7f96039-4268-492f-987c-7deb5b7a3f80",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are clearly identifying steps and decision points in their algorithms. Ask questions like: \"What is the goal of your algorithm?\" or \"Does your flowchart account for all possible outcomes?\"",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure that students are only answering questions for one scenario. Check that students are clearly identifying steps and decision points in their algorithms. Ask questions like: \"What is the goal of your algorithm?\" or \"Does your flowchart account for all possible outcomes?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -3832,12 +3905,30 @@
       }
     },
     {
-      "key": "3fd3a870-dac1-4554-818c-b41a32469854",
+      "key": "154b669b-7c96-4524-816d-1da7e25a292a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students the Algorithm Decision-Making activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 1 of their activity guide where they analyze a flawed music selection algorithm using a flowchart, identify what the algorithm currently does, its limitations, and possible improvements. Guide them to focus on how the algorithm makes recommendations and whether it considers diverse user preferences. Clarify that this is an analysis activity, not about finding a single correct answer.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s behavior, such as only recommending songs from the first selected genre. Look for students recognizing limitations like lack of diversity or bias toward initial choices. Encourage creative improvement ideas, such as incorporating recent searches or expanding recommendations over time. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students the Algorithm Decision-Making activity guide. Or direct them to Level 1 to complete the Activity Guide on their device.\n\n",
         "duration": "15",
         "name": "Debugging a Music Selection Algorithm",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Decide in advance if you want to print out the Activity Guide for students or have them complete it digitally."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "154b669b-7c96-4524-816d-1da7e25a292a",
+        "lesson_activity.key": "402be37a-a02b-4e89-91db-4fa2b0fd766b"
+      }
+    },
+    {
+      "key": "3fd3a870-dac1-4554-818c-b41a32469854",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 1 of their activity guide where they analyze a flawed music selection algorithm using a flowchart, identify what the algorithm currently does, its limitations, and possible improvements. Guide them to focus on how the algorithm makes recommendations and whether it considers diverse user preferences. Clarify that this is an analysis activity, not about finding a single correct answer.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s behavior, such as only recommending songs from the first selected genre. Look for students recognizing limitations like lack of diversity or bias toward initial choices. Encourage creative improvement ideas, such as incorporating recent searches or expanding recommendations over time. ",
+        "progression_name": "Algorithms IRL",
         "tips": [
           {
             "type": "teachingTip",
@@ -3852,7 +3943,7 @@
     },
     {
       "key": "dacd6642-fb6f-4897-a200-8cb80664ecf7",
-      "position": 2,
+      "position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -3862,7 +3953,7 @@
     },
     {
       "key": "68767580-36a0-41e5-b399-b2374f09acdd",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One to share their ideas for proposed solutions.",
         "tips": [
@@ -3879,7 +3970,7 @@
     },
     {
       "key": "38405927-030d-4242-9cf3-c2a3c51c4faf",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -3889,7 +3980,7 @@
     },
     {
       "key": "fa5aaeb2-cf8e-4c97-8f62-58846c6032d9",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What similarities do you see across these suggestions?*\n- *What challenges might arise when implementing these improvements?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize common themes in their proposed improvements, such as increasing variety in recommendations or considering user feedback. They should also discuss challenges like balancing personalization with diversity or ensuring the algorithm adapts over time. "
       },
@@ -3900,7 +3991,7 @@
     },
     {
       "key": "4a284003-bb8b-4512-b4a8-29bb75994f3b",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *bias*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *ethics*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 2 of their activity guide where they analyze the self-driving car decision-making algorithm by identifying what it does, the factors it considers, the trade-offs involved, and who benefits or is harmed. Encourage them to think critically about the algorithm’s priorities and limitations. Remind them that real-world algorithms must balance multiple factors, often leading to ethical dilemmas.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s steps, such as detecting obstacles, assessing risks, and making a decision. Look for students recognizing the factors considered, like pedestrian safety, passenger safety, and legal concerns. Encourage analysis of trade-offs, such as whether avoiding one accident increases the risk of another. Pay attention to conversations about ethical implications, including who benefits, who is at risk, and what makes a decision \"fair.\" ",
         "duration": "20",
@@ -3919,7 +4010,7 @@
     },
     {
       "key": "d270cde4-71b9-4ac4-bae2-d656773df516",
-      "position": 7,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -3929,7 +4020,7 @@
     },
     {
       "key": "5da7bd5c-6cb8-4d17-8078-4ac3d4c124e0",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What challenges arise when designing algorithms that make critical decisions affecting people’s lives?*\n- *How does public trust in autonomous systems depend on ethical decision-making?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the challenges of designing decision-making algorithms that balance fairness, ethics, and functionality, and how these challenges impact public trust in autonomous systems. Listen for students identifying trade-offs in algorithmic decisions, such as prioritizing safety vs. efficiency, and discussing how bias, transparency, or accountability affect trust in AI systems.",
         "tips": [
@@ -3950,7 +4041,7 @@
     },
     {
       "key": "229d7187-ce33-4bd9-99e6-98d0fe4a44dd",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -5064,15 +5155,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson1-level1_2025"
-        ],
-        "progression": "Career Persona Exploration"
+        "progression": "My Skills and Interests"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level1_2025"
+          "programming-fundamentals-lesson1-level1-launch_2025"
         ],
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
@@ -5080,44 +5168,38 @@
         "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
       },
       "level_keys": [
-        "programming-fundamentals-lesson1-level1_2025"
+        "programming-fundamentals-lesson1-level1-launch_2025"
       ]
     },
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson1-level2_2025"
-        ],
-        "progression": "Career Persona Exploration"
+        "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level2_2025"
+          "programming-fundamentals-lesson1-level2-choice_2025"
         ],
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
+        "activity_section.key": "072230f9-385e-456c-b83a-2c3efae2f398"
       },
       "level_keys": [
-        "programming-fundamentals-lesson1-level2_2025"
+        "programming-fundamentals-lesson1-level2-choice_2025"
       ]
     },
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson1-level3_2025"
-        ],
-        "progression": "Career Persona Exploration"
+        "progression": "Envisioning My Future"
       },
       "bonus": false,
       "seeding_key": {
@@ -5127,7 +5209,7 @@
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
+        "activity_section.key": "475adf23-042e-4c50-8b2b-433aa4695929"
       },
       "level_keys": [
         "programming-fundamentals-lesson1-level3_2025"
@@ -5135,31 +5217,6 @@
     },
     {
       "chapter": 5,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson1-level4_2025"
-        ],
-        "progression": "Career Persona Exploration"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level4_2025"
-        ],
-        "lesson.key": "Computing Careers",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson1-level4_2025"
-      ]
-    },
-    {
-      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5184,7 +5241,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5209,7 +5266,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -5234,7 +5291,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5259,7 +5316,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5284,7 +5341,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5309,7 +5366,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5334,7 +5391,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5359,7 +5416,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -5384,7 +5441,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5409,7 +5466,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5434,7 +5491,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5459,7 +5516,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5484,7 +5541,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5509,7 +5566,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5534,7 +5591,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -5559,7 +5616,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -5584,7 +5641,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5609,7 +5666,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 9,
       "activity_section_position": 2,
       "assessment": true,
@@ -5634,7 +5691,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5659,7 +5716,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5684,7 +5741,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5709,7 +5766,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5734,7 +5791,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5759,7 +5816,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5784,7 +5841,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5809,7 +5866,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5834,7 +5891,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -5859,7 +5916,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -5884,7 +5941,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -5909,7 +5966,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 11,
       "activity_section_position": 2,
       "assessment": true,
@@ -5934,7 +5991,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5959,7 +6016,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5984,7 +6041,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6009,7 +6066,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6034,7 +6091,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6059,7 +6116,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -6084,7 +6141,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -6109,7 +6166,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
@@ -6134,7 +6191,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6159,7 +6216,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -6184,7 +6241,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -6209,7 +6266,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 12,
       "activity_section_position": 4,
       "assessment": true,
@@ -6234,7 +6291,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6259,7 +6316,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6284,7 +6341,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6309,7 +6366,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6334,7 +6391,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6359,7 +6416,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6384,7 +6441,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6409,7 +6466,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -6434,7 +6491,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -6459,7 +6516,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 10,
       "activity_section_position": 4,
       "assessment": true,
@@ -6484,7 +6541,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 11,
       "activity_section_position": 5,
       "assessment": true,
@@ -6509,7 +6566,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6534,7 +6591,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6559,7 +6616,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6584,7 +6641,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6609,7 +6666,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6634,7 +6691,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6659,7 +6716,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6684,7 +6741,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -6709,7 +6766,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -6734,7 +6791,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 10,
       "activity_section_position": 4,
       "assessment": true,
@@ -6759,7 +6816,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 11,
       "activity_section_position": 5,
       "assessment": true,
@@ -6784,7 +6841,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6809,7 +6866,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6834,7 +6891,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6859,7 +6916,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6884,7 +6941,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6909,7 +6966,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6934,7 +6991,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 76,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -6959,7 +7016,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 77,
       "position": 8,
       "activity_section_position": 3,
       "assessment": true,
@@ -6984,7 +7041,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 78,
       "position": 9,
       "activity_section_position": 4,
       "assessment": true,
@@ -7006,6 +7063,28 @@
       },
       "level_keys": [
         "programming-fundamentals-lesson9-level10_2025-launch_2025"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Algorithms IRL"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson10-level1_2025"
+        ],
+        "lesson.key": "Algorithms IRL",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif2-2025",
+        "activity_section.key": "3fd3a870-dac1-4554-818c-b41a32469854"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson10-level1_2025"
       ]
     },
     {
@@ -7312,6 +7391,31 @@
       "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_-programming_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif2-2025",
+        "activity_section.key": "15a1a055-8b1d-4b29-a11f-7961131c3b46"
+      },
+      "level_keys": [
+        "student-eou-survey_-programming_2025"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -7334,7 +7438,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7359,7 +7463,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7384,7 +7488,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7409,7 +7513,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7434,7 +7538,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7459,7 +7563,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7484,7 +7588,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7509,7 +7613,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7534,7 +7638,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7559,7 +7663,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7584,7 +7688,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7609,7 +7713,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -7634,7 +7738,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7659,7 +7763,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7684,7 +7788,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7709,7 +7813,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7734,7 +7838,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7759,7 +7863,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7784,7 +7888,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7809,7 +7913,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7834,7 +7938,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7859,7 +7963,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7884,7 +7988,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7909,7 +8013,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7934,7 +8038,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7959,7 +8063,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7984,7 +8088,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -8009,7 +8113,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -8034,7 +8138,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8059,7 +8163,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -8084,7 +8188,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8109,7 +8213,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8134,7 +8238,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8159,7 +8263,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8184,7 +8288,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -8209,7 +8313,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -8234,7 +8338,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8259,7 +8363,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -8284,7 +8388,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8309,7 +8413,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8334,7 +8438,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8359,7 +8463,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8384,7 +8488,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8409,7 +8513,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8434,7 +8538,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 138,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -8459,7 +8563,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 139,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -8482,28 +8586,6 @@
       "level_keys": [
         "programming-fundamentals-lesson20-level7_2025"
       ]
-    },
-    {
-      "chapter": 139,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_-programming_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "aif2-2025",
-        "activity_section.key": "15a1a055-8b1d-4b29-a11f-7961131c3b46"
-      },
-      "level_keys": [
-        "student-eou-survey_-programming_2025"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -8521,9 +8603,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson1-level1_2025",
+        "level.key": "programming-fundamentals-lesson1-level1-launch_2025",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level1_2025"
+          "programming-fundamentals-lesson1-level1-launch_2025"
         ],
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
@@ -8533,14 +8615,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson1-level2_2025",
+        "level.key": "programming-fundamentals-lesson1-level2-choice_2025",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level2_2025"
+          "programming-fundamentals-lesson1-level2-choice_2025"
         ],
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
+        "activity_section.key": "072230f9-385e-456c-b83a-2c3efae2f398"
       }
     },
     {
@@ -8552,19 +8634,7 @@
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "programming-fundamentals-lesson1-level4_2025",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level4_2025"
-        ],
-        "lesson.key": "Computing Careers",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
+        "activity_section.key": "475adf23-042e-4c50-8b2b-433aa4695929"
       }
     },
     {
@@ -9457,6 +9527,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "programming-fundamentals-lesson10-level1_2025",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson10-level1_2025"
+        ],
+        "lesson.key": "Algorithms IRL",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif2-2025",
+        "activity_section.key": "3fd3a870-dac1-4554-818c-b41a32469854"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "programming-fundamentals-lesson11-level1_2025",
         "script_level.level_keys": [
           "programming-fundamentals-lesson11-level1_2025"
@@ -9597,6 +9679,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif2-2025",
         "activity_section.key": "b9ec9221-603b-4b08-91fe-8c9a71605f58"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-programming_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif2-2025",
+        "activity_section.key": "15a1a055-8b1d-4b29-a11f-7961131c3b46"
       }
     },
     {
@@ -10162,18 +10256,6 @@
         "script.name": "aif2-2025",
         "activity_section.key": "6043282c-1422-4473-be8d-6615f72f2ff4"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_-programming_2025",
-        "script_level.level_keys": [
-          "student-eou-survey_-programming_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "aif2-2025",
-        "activity_section.key": "15a1a055-8b1d-4b29-a11f-7961131c3b46"
-      }
     }
   ],
   "resources": [
@@ -10240,7 +10322,7 @@
     },
     {
       "name": "Algorithms IRL",
-      "url": "https://docs.google.com/presentation/d/1TrMhPB-4coGmsYbedwyPJzdkSGzVlQ2dci64iYszsc4/view",
+      "url": "https://docs.google.com/presentation/d/1sKtkFPS_SVPTZ6M85YngP4-JMRwFnM3TrMM4zCVgnhc/edit?usp=drive_link",
       "key": "algorithms_irl",
       "properties": {
         "audience": "Verified Teacher",
@@ -10251,21 +10333,8 @@
       }
     },
     {
-      "name": "Career Exploration",
-      "url": "https://docs.google.com/document/d/1U4hP8EoWpT9LciVkr6JpCZhdyTAGoXpq6mwrTUOoHLY/edit?tab=t.0",
-      "key": "career_exploration",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "career_exploration"
-      }
-    },
-    {
       "name": "Computational Thinking",
-      "url": "https://docs.google.com/presentation/d/1CaywRbM7YHY6KccWXS_EM6xK8ULerskVbYpaMiOI09k/view",
+      "url": "https://docs.google.com/presentation/d/1qJjvG2fmfioHeduwsVIuW53l_bSU_cIzkjoLqyO3bFY/edit?usp=drive_link",
       "key": "computational_thinking",
       "properties": {
         "audience": "Verified Teacher",
@@ -10277,7 +10346,7 @@
     },
     {
       "name": "Computing Careers",
-      "url": "https://docs.google.com/presentation/d/11XfXkKvbVTNoHznxipHtkmt36NybViuHrwX7VePZsbk/view",
+      "url": "https://docs.google.com/presentation/d/1B37Ij94cu2d2kIFKTvC0g7FTegqKtsDWIvNUVWGrS-s/edit?usp=sharing",
       "key": "computing_careers",
       "properties": {
         "audience": "Verified Teacher",
@@ -10314,7 +10383,7 @@
     },
     {
       "name": "Decomposition",
-      "url": "https://docs.google.com/presentation/d/1yO47BnEJYxIIyht0pRzLkbvZwO9Kl2XGuv3WPD_VkIY/view",
+      "url": "https://docs.google.com/presentation/d/1VHClwbKc66EJXAwzOO5E-7-ZS8tz8_lWKsD2Kt1VNbA/edit?usp=drive_link",
       "key": "decomposition",
       "properties": {
         "audience": "Verified Teacher",
@@ -10326,7 +10395,7 @@
     },
     {
       "name": "Designing Algorithms",
-      "url": "https://docs.google.com/presentation/d/14uQrrrUki-pFGH00pMV32DWJXl4-jB0rQT1hfQDzaSU/view",
+      "url": "https://docs.google.com/presentation/d/194J-dUdxm-w7l4y-nbpCkWmV-QuO3lRrabi2f9QUdHw/edit?usp=drive_link",
       "key": "designing_algorithms",
       "properties": {
         "audience": "Verified Teacher",
@@ -10374,7 +10443,7 @@
     },
     {
       "name": "Pixels of Me Project",
-      "url": "https://docs.google.com/presentation/d/1bmcqAD0vP7hSRydyJq8jzN8LtTMplHgMtASi9GjUJe4/view",
+      "url": "https://docs.google.com/presentation/d/1Fx4_y67UTkJbdKuQgy9VS9-qyvip4TLjQetE0Gxv_Q4/edit?usp=drive_link",
       "key": "pixels_of_me_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -10423,6 +10492,16 @@
       }
     },
     {
+      "name": "Python Lab Documentation",
+      "url": "https://studio.code.org/docs/ide/pythonlab",
+      "key": "python_lab_documentation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "python_lab_documentation"
+      }
+    },
+    {
       "name": "Two-Way Selection",
       "url": "https://docs.google.com/presentation/d/1sQYoSuyu2WXOmOqaPMSrcYueigYXxgTaTgEMgy4NCBs/edit?usp=sharing",
       "key": "two-way_selection",
@@ -10456,6 +10535,18 @@
       },
       "seeding_key": {
         "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
+      "name": "Vision Board",
+      "url": "https://docs.google.com/presentation/d/1VWtxphobT9lGbWUxWA2w1j_wvPJemCMuiJjJEhsj-Mw/view",
+      "key": "vision_board",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "vision_board"
       }
     },
     {
@@ -10541,12 +10632,6 @@
     {
       "seeding_key": {
         "lesson.key": "Computing Careers",
-        "resource.key": "career_exploration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computing Careers",
         "resource.key": "computing_careers"
       }
     },
@@ -10560,6 +10645,12 @@
       "seeding_key": {
         "lesson.key": "Computing Careers",
         "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computing Careers",
+        "resource.key": "vision_board"
       }
     },
     {
@@ -10690,7 +10781,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "programming_fundamentals_unit_guide",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "python_lab_documentation",
+        "script.name": "aif2-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 

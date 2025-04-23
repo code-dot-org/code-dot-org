@@ -146,7 +146,7 @@
       "allowChangeStartingPlayheadPosition": true,
       "validationTimeout": 1
     },
-    "long_instructions": "##### **Teacher Note**: Students also learn about the `rest` block in Lesson 3. They'll start this section by predicting what they think it does. This is Lesson 3, Level 6 from the curriculum.\r\n\r\n___\r\n\r\n### Make a Prediction \r\nNotice there is a <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">rest</code> block in this code. When do you think the vocal track will play when you press \"Run\"?",
+    "long_instructions": "##### **Teacher Note**: Students also learn about the <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">rest</code> block in Lesson 3. They'll start this section by predicting what they think it does. This is Lesson 3, Level 6 from the curriculum.\r\n\r\n___\r\n\r\n### Make a Prediction \r\nNotice there is a <code style=\"background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">rest</code> block in this code. When do you think the vocal track will play when you press \"Run\"?",
     "exemplar_settings": {
       "playerEnabled": false,
       "validationEnabled": false
@@ -183,7 +183,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-14T21:45:53.086+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-predict\"},{\"changed_at\":\"2025-04-16 21:38:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 21:24:14 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T21:45:53.086+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-practice-rest-predict\\\"\"],\"cloned_from\":\"test-music-lab-sequences-practice-rest-predict\"},{\"changed_at\":\"2025-04-16 21:38:25 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2025-04-17 21:24:14 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-22 20:33:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
