@@ -611,7 +611,6 @@ Resources:
       ResourceSignal:
         Timeout: PT4H
     Properties:
-      # Temporarily hardcode the Ubuntu 20 image just for production-daemon, so we can gradually roll out the update.
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
       IamInstanceProfile: !Ref DaemonInstanceProfile
