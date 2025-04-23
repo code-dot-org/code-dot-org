@@ -46,8 +46,8 @@ raise "must specify a filename, or use filter_unit_pii.rb to process an entire d
 
 $options[:output_dir] ||= $options[:input_dir]
 $output_dir = File.join(home, 'filtered', $options[:output_dir])
-FileUtils.mkdir_p("#{$output_dir}/#{$options[:input_type]}")
-
+$subdir = $options[:input_type] == 'progress' ? 'progress' : 'evals'
+FileUtils.mkdir_p("#{$output_dir}/#{$subdir}")
 require_relative '../../../deployment'
 
 start_time = Time.now
@@ -64,7 +64,7 @@ def main
   puts "Filtering PII..."
   start_time = Time.now
 
-  input_filename = File.join($input_dir, $options[:input_type], $options[:filename])
+  input_filename = File.join($input_dir, $subdir, $options[:filename])
   raise "Input file must exist: #{input_filename}" unless File.exist?(input_filename)
   puts "#{File.basename(__FILE__)} found input file: #{input_filename}"
 
@@ -73,7 +73,7 @@ def main
 end
 
 def process_file(input_filename)
-  output_filename = File.join($output_dir, $options[:input_type], File.basename(input_filename))
+  output_filename = File.join($output_dir, $subdir, File.basename(input_filename))
   if File.exist?(output_filename)
     puts "Skipping #{input_filename} because output file already exists: #{output_filename}"
     return
