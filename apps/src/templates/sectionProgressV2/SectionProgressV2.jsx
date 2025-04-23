@@ -17,6 +17,7 @@ import {
 import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 import UnitSelectorV2 from '../UnitSelectorV2';
 
+import DownloadProgressCsv from './DownloadProgressCsv';
 import IconKey from './IconKey';
 import MoreOptionsDropdown from './MoreOptionsDropdown';
 import ProgressTableV2 from './ProgressTableV2';
@@ -130,6 +131,7 @@ function SectionProgressV2({
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
           <MoreOptionsDropdown />
+          <DownloadProgressCsv />
         </Heading6>
       </div>
       <ProgressTableV2 isSkeleton={isLoading} />
