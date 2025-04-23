@@ -229,8 +229,12 @@ class Lesson < ApplicationRecord
     get_localized_property(:name) || ''
   end
 
-  def localized_lesson_plan
-    return script_lesson_path(script, self) if script.is_migrated? && !script.use_legacy_lesson_plans?
+  def localized_lesson_plan(unit_group_unit: nil)
+    path = script_lesson_path(script, self)
+    if Policies::Courses.modularity_enabled? && unit_group_unit
+      path = course_unit_lesson_path(unit_group_unit.unit_group, unit_group_unit.position, self)
+    end
+    return path if script.is_migrated? && !script.use_legacy_lesson_plans?
 
     if script.curriculum_path?
       path = script.curriculum_path.gsub('{LESSON}', relative_position.to_s)
@@ -243,8 +247,8 @@ class Lesson < ApplicationRecord
     end
   end
 
-  def lesson_plan_html_url
-    localized_lesson_plan || "#{lesson_plan_base_url}/Teacher"
+  def lesson_plan_html_url(unit_group_unit: nil)
+    localized_lesson_plan(unit_group_unit: unit_group_unit) || "#{lesson_plan_base_url}/Teacher"
   end
 
   def lesson_feedback_url
@@ -331,7 +335,7 @@ class Lesson < ApplicationRecord
       if has_lesson_plan
         # only collect lesson feedback on the most recent stable english version of the course
         lesson_data[:lesson_feedback_url] = lesson_feedback_url if script.get_course_version&.recommended?
-        lesson_data[:lesson_plan_html_url] = lesson_plan_html_url
+        lesson_data[:lesson_plan_html_url] = lesson_plan_html_url(unit_group_unit: unit_group_unit)
         lesson_data[:lesson_plan_pdf_url] = lesson_plan_pdf_url
         if script.include_student_lesson_plans && script.is_migrated
           student_lesson_plan_path = script_lesson_student_path(script, self)
@@ -529,7 +533,7 @@ class Lesson < ApplicationRecord
       name: localized_name,
       resources: resources_for_lesson_plan(user&.verified_instructor?),
       lessonPlanPdfUrl: lesson_plan_pdf_url,
-      lessonPlanHtmlUrl: lesson_plan_html_url,
+      lessonPlanHtmlUrl: lesson_plan_html_url(unit_group_unit: unit_group_unit),
       scriptResourcesPdfUrl: script.get_unit_resources_pdf_url,
       standardsUrl: standards_url,
       vocabularyUrl: vocabulary_url,

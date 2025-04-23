@@ -112,7 +112,7 @@ class BubbleChoice < DSLDefined
         name: name,
         type: type,
         teacher_markdown: teacher_markdown,
-        sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize)
+        sublevels: summarize_sublevels(script_level: script_level, user_id: user_id, should_localize: should_localize, unit_group_unit: unit_group_unit),
       }
 
       if script_level
@@ -121,7 +121,7 @@ class BubbleChoice < DSLDefined
 
         unit_url = script_url(script_level.script)
         if Policies::Courses.modularity_enabled? && unit_group_unit
-          unit_url = course_name_url(unit_group_unit.unit_group, unit_group_unit.position)
+          unit_url = course_unit_url(unit_group_unit.unit_group, unit_group_unit.position)
         end
         summary.merge!(
           {
