@@ -1,3 +1,5 @@
+import axios from 'axios';
+import {buildMemoryStorage, setupCache} from 'axios-cache-interceptor';
 import {createClient, CreateClientParams} from 'contentful';
 
 type ClientProps = {
@@ -13,6 +15,25 @@ type ClientType = 'preview' | 'delivery';
 const clientProps: ClientProps = {
   space: process.env.CONTENTFUL_SPACE_ID!,
   environment: process.env.CONTENTFUL_ENV_ID,
+};
+
+/**
+ * Updates the Contentful Axios instance with axios caching
+ */
+const OLD_CACHE_ENTRIES_CLEAN_INTERVAL_MILLISECONDS = 1000 * 60 * 60 * 24; // 1 day
+const CACHE_ENTRY_TTL = 1000 * 60 * 1; // 15 minutes
+const uncachedAxiosCreate = axios.create;
+
+axios.create = function (...args) {
+  const instance = uncachedAxiosCreate.apply(this, args);
+
+  return setupCache(instance, {
+    storage: buildMemoryStorage(
+      true,
+      OLD_CACHE_ENTRIES_CLEAN_INTERVAL_MILLISECONDS,
+    ),
+    ttl: CACHE_ENTRY_TTL,
+  });
 };
 
 function getContentfulClientProps(clientType: ClientType): CreateClientParams {
@@ -48,5 +69,7 @@ export function createContentfulClient(clientType: ClientType) {
     return undefined;
   }
 
-  return createClient(contentfulClientProps);
+  const client = createClient(contentfulClientProps);
+
+  return client;
 }

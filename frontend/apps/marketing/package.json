@@ -42,6 +42,7 @@
     "@statsig/react-bindings": "^3.14.1",
     "@statsig/statsig-node-core": "^0.0.8",
     "@statsig/web-analytics": "^3.14.1",
+    "axios-cache-interceptor": "^1.7.0",
     "contentful": "^11.2.5",
     "cookies-next": "^5.1.0",
     "next": "^15.2.4",
