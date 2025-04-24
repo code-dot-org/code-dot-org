@@ -130,20 +130,20 @@ end
 #     :versionId=>"EL24MWXWEIZOQS4OC3PAzL0hlrq.GMcA",
 #     :lastModified=>2024-09-04 05:08:09 UTC,
 #     :isLatest=>true,
-#     :source=>"...",
-#     :source_pii_score=>0.9999105930328369,
-#     :source_pii_entities=>[...]
+#     :version_source=>"...",
+#     :version_source_pii_score=>0.9999105930328369,
+#     :version_source_pii_entities=>[...]
 #   },
 #   ...
 # ]
 def process_source_versions_pii(data)
   data[:source_versions].each do |version|
     if version[:isLatest]
-      version[:source] = data[:source]
-      version[:source_pii_score] = data[:source_pii_score]
-      version[:source_pii_entities] = data[:source_pii_entities]
+      version[:version_source] = data[:source]
+      version[:version_source_pii_score] = data[:source_pii_score]
+      version[:version_source_pii_entities] = data[:source_pii_entities]
     else
-      process_field_pii(version, field: :source)
+      process_field_pii(version, field: :version_source)
     end
   end
 end

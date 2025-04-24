@@ -111,7 +111,7 @@ end
 #     :versionId=>"EL24MWXWEIZOQS4OC3PAzL0hlrq.GMcA",
 #     :lastModified=>2024-09-04 05:08:09 UTC,
 #     :isLatest=>true,
-#     :source=>"...",
+#     :version_source=>"...",
 #   },
 #   ...
 # ]
@@ -120,7 +120,7 @@ def get_source_versions(channel_id, latest_source:)
 
   versions = SourceBucket.new.list_versions(channel_id, "main.json")
   versions.each do |version|
-    version[:source] = version[:isLatest] ? latest_source : get_project_source(channel_id, version_id: version[:versionId])
+    version[:version_source] = version[:isLatest] ? latest_source : get_project_source(channel_id, version_id: version[:versionId])
   end
   versions
 end
