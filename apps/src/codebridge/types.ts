@@ -91,6 +91,6 @@ export interface ProjectPickerSettings {
 
 export enum RunType {
   RUN,
-  TEST,
-  VALIDATION,
+  TEST, // User-written tests
+  VALIDATION, // Levelbuilder-written tests
 }

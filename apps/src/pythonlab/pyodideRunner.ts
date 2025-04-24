@@ -158,6 +158,9 @@ function handleRunEndedUnexpectedly(
 ) {
   consoleManager?.writeConsoleMessage(getSystemMessage(message, appName));
   if (isNeighborhoodLevel()) {
+    // We reset, run, and close the neighborhood to ensure that the neighborhood
+    // properly resets the run button back to run (from stop), and to reset the
+    // neighborhood to its original state.
     CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
     CodebridgeRegistry.getInstance().getNeighborhood()?.onRun();
     CodebridgeRegistry.getInstance().getNeighborhood()?.onClose();

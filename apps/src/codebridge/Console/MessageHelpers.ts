@@ -19,8 +19,7 @@ export function getImageMessage(base64Image: string) {
 
 export function getErrorMessage(message: string) {
   // This colors the message red in the terminal
-  // Reference for color codes: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
-  return `\x1b[38;5;203m${message}\x1b[0m`;
+  return getMessageWithColor(message, 203);
 }
 
 export function getSystemError(message: string, appName?: string) {
@@ -45,5 +44,13 @@ export function getTimestampMessage(runType: RunType) {
   const paddingRightCount = Math.max(32 - stringLength - paddingLeftCount, 0);
   const fullMessage =
     '-'.repeat(paddingLeftCount) + runString + '-'.repeat(paddingRightCount);
-  return `\x1b[38;5;249m${fullMessage}\x1b[0m`;
+  // Light gray color
+  return getMessageWithColor(fullMessage, 249);
+}
+
+// Return the message colored with the given ANSI color code.
+// The message will reset the color at the end so the next message will be the default color.
+// Reference for color codes: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
+function getMessageWithColor(message: string, ansiColor: number) {
+  return `\x1b[38;5;${ansiColor}m${message}\x1b[0m`;
 }
