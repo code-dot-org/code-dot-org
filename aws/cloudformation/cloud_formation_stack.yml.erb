@@ -29,9 +29,8 @@ Parameters:
     Description: Subdomain name for corporate web site ("Pegasus").
   MarketingDomainName:
     Type: String
-    # Todo: update to handle multiple envs once the app is in prod
-    Default: 'dev.marketing.dev-code.org'
-    Description: Subdomain name for marketing site.
+    Default: <%="code.marketing-sites.#{CDO.rack_env == 'production' ? 'code.org' : 'dev-code.org'}"%>
+    Description: Domain name for marketing site.
   HourOfCodeBaseDomainName:
     Type: String
     Default: hourofcode.com
