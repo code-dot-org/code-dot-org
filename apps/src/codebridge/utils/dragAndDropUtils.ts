@@ -1,4 +1,6 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {DragType} from '@codebridge/FileBrowser/types';
+import {getFolderChildren} from '@codebridge/utils';
 import {
   KeyboardCode,
   KeyboardCoordinateGetter,
@@ -11,10 +13,6 @@ import {
 import {RectMap} from '@dnd-kit/core/dist/store';
 
 import {ProjectFolder} from '@cdo/apps/lab2/types';
-
-import {getFolderChildren} from '../utils/getFolderChildren';
-
-import {DragType} from './types';
 
 export const FOLDER_DROP_OFFSET = 16;
 
@@ -197,4 +195,12 @@ export const getHighestPriorityCollision = (
   });
 
   return [rectangleCollisions[0]];
+};
+
+export const dragAndDropKeyboardCodes = {
+  // Start dragging on 'm', so 'enter' and 'space' can be used to open/close a file/folder.
+  // TODO: expose a menu to users of our keyboard options, until then this is a hidden feature.
+  start: ['KeyM'],
+  cancel: ['Escape'],
+  end: ['KeyM'],
 };
