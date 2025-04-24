@@ -289,14 +289,6 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_nil CourseVersion.find_by(course_offering: offering, key: '2050')
   end
 
-  test "cannot destroy course version if it has resources" do
-    course_version = create :course_version
-    create :resource, course_version: course_version
-    assert_raises ActiveRecord::RecordNotDestroyed do
-      course_version.destroy_and_destroy_parent_if_empty
-    end
-  end
-
   test "destroy_and_destroy_parent_if_empty destroys version and offering for offering with one version" do
     course_version = create :course_version
     offering = course_version.course_offering

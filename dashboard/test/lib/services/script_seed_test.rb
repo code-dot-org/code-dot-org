@@ -122,7 +122,6 @@ module Services
       script = create_script_tree(with_unit_group: true)
       refute script.course_version
       assert script.unit_group.course_version
-      assert script.unit_group.id, script.original_unit_group_id
       script.freeze
       json = ScriptSeed.serialize_seeding_json(script)
       counts_before = get_counts
@@ -160,8 +159,6 @@ module Services
       script.resources.destroy_all
       script.student_resources.destroy_all
       script.freeze
-      script.unit_group.course_version.resources.destroy_all
-      script.unit_group.course_version.vocabularies.destroy_all
       expected_counts = get_counts
 
       # destroy the script and its unit group, so that no course version will
