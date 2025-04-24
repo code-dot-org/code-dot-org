@@ -4,4 +4,6 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Level Types
+
+#### Note for pilot teachers: This level is under construction for now.
 MARKDOWN

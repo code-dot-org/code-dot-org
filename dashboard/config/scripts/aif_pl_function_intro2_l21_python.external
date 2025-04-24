@@ -1,0 +1,48 @@
+name 'aif_pl_function-intro2-L21_Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Creating and Using Functions in Python
+
+#### Now that we know why functions are useful, let’s look at how to make one in Python.
+
+#### There are a few key steps:
+
+### 🧩 **1. Give your function a name**
+#### A function needs a name so you can refer to it later. Pick something that describes what the function does, like `greet_user` or `calculate_total`.
+#### *Remember to use snake_case!*
+
+---
+
+
+
+### 🔧 **2. Use the def keyword to define the function**
+#### In Python, every function starts with the word **def** (short for define), followed by the function’s name and parentheses `()` and a colon `:`.
+
+<img src="https://images.code.org/d1d4d3a51160578261fa58167815c8c4-image-1745423539641.png" alt="Image CS Discoveries students" width="350px" style="border-radius:10px; float:left; margin: 0 0 40px 10px;">
+
+<div style="clear:both;"></div>
+
+---
+
+### 🧱 **3. Write the code you want to run (inside the function)**
+#### The code inside the function is indented—usually 4 spaces or a tab. This tells Python what belongs to the function.
+
+<img src="https://images.code.org/f79184f8c12b563c740ec65b67acd854-image-1745423616328.png" alt="Image CS Discoveries students" width="350px" style="border-radius:10px; float:left; margin: 0 0 40px 10px;">
+
+<div style="clear:both;"></div>
+
+#### ➡️ *Indentation matters in Python! If the lines aren't indented, Python won’t know they’re part of the function.*
+
+---
+
+### ▶️ **4. Call the function to make it run**
+#### Just defining a function doesn’t run it. You have to call it by typing its name with parentheses:
+
+<img src="https://images.code.org/17f108b4e01f652c36a3c379d85c948f-image-1745424413545.png" alt="Image CS Discoveries students" width="350px" style="border-radius:10px; float:left; margin: 0 0 40px 10px;">
+
+<div style="clear:both;"></div>
+
+## Let's practice!
+MARKDOWN

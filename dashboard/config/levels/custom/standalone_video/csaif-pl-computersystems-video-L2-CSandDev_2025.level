@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2025-04-23T16:31:16.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csd_concept_computer",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_2025",
+    "encrypted": "false",
+    "long_instructions": "#### A computer system is a set of parts that work together to process information and complete tasks. Simply put, it includes:\r\n\r\n>- #### **Hardware** - the physical parts\r\n>- #### **Software** - the programs that run on it\r\n>- #### **Operating System** - manages the hardware and software\r\n\r\n#### This video gives a brief overview of computer systems. While you watch this video, consider how the different parts of a computer system — **hardware, software, and the operating system** — work together."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-04-23T16:31:16.903+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-computersystems-video-L2-CSandDev\\\"\"],\"cloned_from\":\"csaif-pl-computersystems-video-L2-CSandDev\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

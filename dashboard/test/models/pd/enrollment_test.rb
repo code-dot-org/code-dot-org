@@ -139,9 +139,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     local_summer_workshop = create :csp_summer_workshop, :ended
     local_summer_enrollment = create :pd_enrollment, workshop: local_summer_workshop
 
-    csp_wfrt = create :csp_wfrt, :ended
-    csp_wfrt_enrollment = create :pd_enrollment, workshop: csp_wfrt
-
     byo_workshop = create :pd_workshop,
       :ended,
       funded: false,
@@ -155,7 +152,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_district_enrollment.code}"], csf_district_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_survey/post/#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/post/#{byo_enrollment.code}"], byo_enrollment.exit_survey_url
   end
 
@@ -165,7 +161,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     assert normal_enrollment.should_send_exit_survey?
 
-    fit_workshop = create :fit_workshop, :ended
+    fit_workshop = build :fit_workshop, :ended
+    # workshop subject is deprecated so validation must be skipped
+    fit_workshop.save(validate: false)
     fit_enrollment = create :pd_enrollment, user: create(:teacher), workshop: fit_workshop
 
     refute fit_enrollment.should_send_exit_survey?
@@ -179,7 +177,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   end
 
   test 'send_exit_survey does not send mail for FIT Weekend workshops' do
-    workshop = create :fit_workshop, :ended
+    workshop = build :fit_workshop, :ended
+    # workshop subject is deprecated so validation must be skipped
+    workshop.save(validate: false)
     enrollment = create :pd_enrollment, user: create(:teacher), workshop: workshop
     Pd::WorkshopMailer.expects(:exit_survey).never
 
@@ -465,7 +465,9 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
     # Ended FiT workshop, with attendance
     # (Checks a special case: FiT workshops don't have exit surveys)
-    fit_workshop = create :fit_workshop, :ended
+    fit_workshop = build :fit_workshop, :ended
+    # workshop subject is deprecated so validation must be skipped
+    fit_workshop.save(validate: false)
     fit_enrollment = create :pd_enrollment, workshop: fit_workshop
     create :pd_attendance, session: fit_workshop.sessions.first, enrollment: fit_enrollment
 

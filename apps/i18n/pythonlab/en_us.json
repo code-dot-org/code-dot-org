@@ -1,6 +1,7 @@
 {
   "changeConsoleVisibility": "Change Console Visibility",
-  "codeEditor": "Code Editor",
+  "codeEditorEditing": "Code Editor: editing",
+  "codeEditorDescription": "Code Editor: Press Enter to edit, Escape to exit.",
   "console": "Console",
   "consoleOnly": "Console only",
   "consoleOnlyDescription": "A project that outputs to the console.",

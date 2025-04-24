@@ -6,7 +6,6 @@ import ReactTooltip from 'react-tooltip';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -47,7 +46,7 @@ import SharingControlActionsHeaderCell from '@cdo/apps/templates/manageStudents/
 import ShowSecret from '@cdo/apps/templates/manageStudents/ShowSecret';
 import UsStateColumn from '@cdo/apps/templates/manageStudents/Table/UsStateColumn';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {JoinLinkCopyButton} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/JoinLink/JoinLinkCopyButton';
+import JoinLinkCopyButton from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/JoinLink/JoinLinkCopyButton';
 import {
   tableLayoutStyles,
   sortableOptions,
@@ -878,6 +877,7 @@ class ManageStudentsTable extends Component {
             sectionCode={sectionCode}
             loginType={loginType}
             studioUrlPrefix={this.props.studioUrlPrefix}
+            sourceName="ManageStudentsTable"
           />
         </div>
         <div style={tableStyle}>
@@ -929,9 +929,6 @@ const styles = {
   verticalAlign: {
     display: 'flex',
     alignItems: 'center',
-  },
-  sectionCodeNotApplicable: {
-    ...fontConstants['main-font-bold'],
   },
   v2TableWidth: {
     width: '100%',

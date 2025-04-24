@@ -1,3 +1,4 @@
+import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -61,11 +62,13 @@ describe('ValidatedInstructions', () => {
   function renderDefault(levelProperties: CodebridgeLevelProperties) {
     render(
       <Provider store={store}>
-        <CodebridgeContextProvider
-          value={{...getDefaultCodebridgeContext(), levelProperties}}
-        >
-          <ValidatedInstructions />
-        </CodebridgeContextProvider>
+        <ThemeProvider>
+          <CodebridgeContextProvider
+            value={{...getDefaultCodebridgeContext(), levelProperties}}
+          >
+            <ValidatedInstructions />
+          </CodebridgeContextProvider>
+        </ThemeProvider>
       </Provider>
     );
   }

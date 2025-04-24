@@ -1,17 +1,17 @@
 import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {
   BodyTwoText,
   Heading3,
 } from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
-import React, {useMemo, useContext} from 'react';
+import React, {useMemo} from 'react';
 
 import {
   useEnterKeyboardTrap,
   useEscapeKeyboardTrap,
 } from '@cdo/apps/lab2/hooks';
-import {Theme, ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import commonI18n from '@cdo/locale';
 
 import {useDialogControl} from './DialogControlContext';
@@ -111,7 +111,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
 }) => {
   const dialogControl = useDialogControl();
 
-  const {theme} = useContext(ThemeContext);
+  const {theme} = useTheme();
 
   const cancelCallback = useButtonCallback({
     closeDialog: dialogControl.closeDialog,
@@ -156,12 +156,12 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
               <Button
                 onClick={cancelCallback}
                 className={classNames(moduleStyles.cancel, {
-                  [darkModeStyles.secondaryButton]: theme === Theme.DARK,
+                  [darkModeStyles.secondaryButton]: theme === 'Dark',
                 })}
                 type="secondary"
                 disabled={buttons.cancel.disabled}
                 color={
-                  theme === Theme.DARK ? buttonColors.white : buttonColors.gray
+                  theme === 'Dark' ? buttonColors.white : buttonColors.gray
                 }
                 text={buttons.cancel.text || commonI18n.cancel()}
               />
@@ -181,15 +181,13 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
               <Button
                 onClick={confirmCallback}
                 className={classNames({
-                  [darkModeStyles.primaryButton]: theme === Theme.DARK,
+                  [darkModeStyles.primaryButton]: theme === 'Dark',
                 })}
                 disabled={buttons?.confirm?.disabled}
                 type="primary"
                 color={
                   buttons?.confirm?.destructive
                     ? buttonColors.destructive
-                    : theme === Theme.DARK
-                    ? buttonColors.white
                     : buttonColors.purple
                 }
                 text={buttons?.confirm?.text || commonI18n.dialogOK()}

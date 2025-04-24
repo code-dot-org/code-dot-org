@@ -90,9 +90,9 @@ class SectionsController < ApplicationController
     lessons = []
     if section.script_id
       unit = Unit.find(section.script_id)
-      lessons << {text: unit.title_for_display, value: unit.link}
+      lessons << {text: unit.title_for_display.sub(" - ", ": "), value: unit.link}
       unit.lesson_groups.each do |lesson_group|
-        lessons.concat(lesson_group.lessons.select(&:has_lesson_plan).map {|lesson| {text: lesson.relative_position.to_s + ': ' + lesson.localized_name, value: script_lesson_path(unit, lesson) << '/levels/1'}})
+        lessons.concat(lesson_group.lessons.select(&:has_lesson_plan).map {|lesson| {text: 'Lesson ' + lesson.relative_position.to_s + ': ' + lesson.localized_name, value: script_lesson_path(unit, lesson) << '/levels/1'}})
       end
     end
     render json: lessons

@@ -7,7 +7,7 @@ wrong 'Keep the prompt as short as possible to avoid confusion'
 wrong 'Change the AI settings to \"high accuracy mode\"'
 right 'Provide a more detailed and specific prompt'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 1: Talking to Machines

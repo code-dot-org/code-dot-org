@@ -52,12 +52,16 @@ const InnerFileBrowser = React.memo(
                 key={f.id + f.open}
                 Component="div"
                 className={classNames(moduleStyles.droppableArea, {
-                  [moduleStyles.acceptingDrop]:
-                    f.id === dropData?.id && dragData?.parentId !== f.id,
+                  [moduleStyles.acceptingDrop]: f.id === dropData?.id,
                 })}
               >
                 <MaybeDraggable
                   data={{id: f.id, type: DragType.FOLDER, parentId: f.parentId}}
+                  className={
+                    f.id === dragData?.id && dragData?.type === DragType.FOLDER
+                      ? moduleStyles.dragging
+                      : undefined
+                  }
                 >
                   <FolderRow
                     item={f}
@@ -89,6 +93,8 @@ const InnerFileBrowser = React.memo(
               item: f,
               hasValidationFile,
               enableMenu: !isReadOnly && (!dragData?.id || isDraggingLocked),
+              isDragging:
+                dragData?.id === f.id && dragData?.type === DragType.FILE,
             };
             const MaybeDraggable = isDraggingLocked ? NotDraggable : Draggable;
             return (

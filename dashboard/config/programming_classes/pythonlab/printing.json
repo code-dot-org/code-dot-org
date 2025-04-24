@@ -1,0 +1,14 @@
+{
+  "category_key": "python_basics",
+  "content": "Printing is one of the first (and most useful!) things you'll do in Python. It's how your code can \"talk\" to you — by showing messages, results, or values in the output.\n\n## What Does \"Print\" Mean?\n\nIn Python, `print()` is a built-in function that shows text or data on the screen.\n\nFor example:\n\n```\nprint(\"Hello, world!\")\n```\n\nOutput:\n\n```\nHello, world!\n```\n\nThe message inside the quotes is what gets printed.\n\n## Printing Text\n\nText in Python is called a **string**, and it always goes inside quotation marks:\n\n```\nprint(\"Coding is fun!\")\nprint(\"Python Lab makes it easy.\")\n```\n\nYou can use single quotes `'like this'` or double quotes `\"like this\"` — just be consistent!\n\n## Printing Numbers\n\nYou can also print numbers directly, without quotation marks:\n\n```\nprint(42)\nprint(3.14)\n```\n\nOutput:\n\n```\n42\n3.14\n```\n\n## Combining Text and Variables\n\nYou can print variables too! Here's an example:\n\n```\nname = \"Jordan\"\nprint(\"Hi, \" + name + \"!\")\n```\n\nOutput:\n\n```\nHi, Jordan!\n```\n\nYou can also combine strings and numbers using commas:\n\n```\nage = 16\nprint(\"I am\", age, \"years old.\")\n```\n\nOutput:\n\n```\nI am 16 years old.\n```\n\nUsing commas is an easy way to mix different types of data.\n\n## Printing the Results of Expressions\n\nPython can do math — and you can print the answers:\n\n```\nprint(7 + 3)\nprint(5 * 2)\n```\n\nOutput:\n\n```\n10\n10\n```\n\nYou can even store the result in a variable:\n\n```\ntotal = 8 + 2\nprint(total)\n```",
+  "examples": "[]",
+  "external_documentation": "",
+  "fields": "[]",
+  "key": "printing",
+  "name": "Printing",
+  "syntax": "",
+  "tips": "",
+  "methods": [
+
+  ]
+}

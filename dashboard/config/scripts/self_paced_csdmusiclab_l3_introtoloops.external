@@ -3,26 +3,79 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 2: Teaching Lessons 1 - 5: Sequencing
+# Lessons 6 - 9: Loops
 
-<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
-    <div style="width: 70%;">
-        <p style="line-height: 1.5; font-size: 18px;">
-            In this lesson, you will:
-        </p>
-        <ul style="margin-left: 20px; line-height: 1.6;">
-            <li style="line-height: 1.5;font-size: 18px;">
-                <mark>UPDATE</mark>
-            </li>
-        </ul>
-        <p style="font-size: 16px; color: black;">
-        <br>
-        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>25</mark> minutes
-        </p>
-    </div>
-    
-    <!-- Image on the right -->
-    <img src="https://images.code.org/2b751f030a999afa638fe44eb9c27b0d-image-1744665236038.13.52 PM.png" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 30%; height: auto; border-radius: 5px;">
+#### This second chunk of lessons introduces students to loops in Music Lab. Across the Explore-Practice-Synthesize-Project arc, students learn how to reduce repetition in their code, layer patterns with musical structure, and use looping to power creative projects.
+
+#### This level is designed to give you a *brief* overview of the lessons before we dive into coding practice.
+
+<div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
+    <p style="font-size: 16pt; font-weight: bold; margin: 0; text-align: center;">What are Loops?</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">A loop is a programming structure that tells the computer to repeat a set of instructions. Instead of writing the same code over and over, you can use a loop to repeat it automatically.</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">In Music Lab, loops are used to repeat musical patterns - like a drum beat or bass line - to create rhythm and structure in a song. Loops help keep code organized and make it easier to build complex music with fewer blocks.</p>
 </div>
-<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🔍 Explore Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 6: Loops - Explore lesson plan</a>. How are students introduced to loops in a way that emphasizes both structure and creativity?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+Students are introduced to loops through real-world performances using loop pedals. They make predictions about how a repeat block will behave and explore how looping can simplify and strengthen musical structure. Shadow blocks are introduced to help students visually identify patterns in their code.
+</p>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🛠️ Practice Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/7' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 7: Loops - Practice lesson plan</a>. How do students build fluency with repeat blocks and nested loops?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+Students deepen their understanding of loops by working with more complex structures, including nested loops and loops with rests. Pair programming supports peer collaboration, and check-in levels allow teachers to adapt pacing based on student progress.
+</p>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🧠 Synthesize Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/8' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 8: Loops - Synthesize lesson plan</a>. How does the lesson invite students to blend creative coding with live performance techniques?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+Students explore the idea of live coding through the lens of creative performer Roxanne Harris. They review loops and build confidence using them in performance-like settings. This lesson gives students space to blend musical structure with real-time experimentation.
+</p>
+</div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+<summary style="font-size: 18px; font-weight: bold;">🎼 Project Lesson</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; line-height: 150%;">
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2;">
+Briefly scan over the <a href='https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/lessons/9' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 9: Mini Project: Cat GIF Loops lesson plan</a>. How does this project allow students to connect musical mood and meaning?
+</p>
+
+<p style="font-size: 18px;"><strong>Lesson Overview</strong><br>
+Students choose a looping cat GIF and design a musical loop that matches its mood. They explore the use of <strong>random blocks</strong> to introduce variety and surprise in their code. This project is a playful way to demonstrate mastery of loops while reinforcing creative expression.
+</p>
+</div>
+</details>
+
+## Up Next
+
+#### Ready? Let's dive in to loops. You'll learn the following:
+
+* #### **From Lesson 6:** How to use the <code style="background-color: rgb(242, 24, 162); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">repeat</code> block to loop music
+* #### **From Lesson 7:** How to loop music with lyrics and how to use nested loops
+* #### **From Lesson 8:** How to replicate live coding projects with Music Lab
 MARKDOWN

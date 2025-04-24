@@ -5,11 +5,12 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "csaif-problem-solving-with-ai-2025-pilot",
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 15:03:59 UTC",
+    "serialized_at": "2025-04-23 18:16:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -938,7 +939,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "For example:\n- **Opening Statement:** \"A mysterious talking cat started showing up to math class.\"\n- **Student 1:** \"Yes, and he said his name is Whiskers.\"\n- **Student 2:** \"Yes, and he happens to be very good at multiplication.\"\n- **Student 1:** \"Yes, and he has a sister who started showing up to English class.\"\n- **Student 2:** \"Yes, and he has a sister who started showing up to English class.\"\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that prom will be held on a spaceship this year.\"\n- \"Every locker in the main hallway suddenly started playing music.\"\n"
+            "markdown": "For example:\n- **Opening Statement:** \"A mysterious talking cat started showing up to math class.\"\n- **Student 1:** \"Yes, and he said his name is Whiskers.\"\n- **Student 2:** \"Yes, and he happens to be very good at multiplication.\"\n- **Student 1:** \"Yes, and he has a sister who started showing up to English class.\"\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that prom will be held on a spaceship this year.\"\n- \"Every locker in the main hallway suddenly started playing music.\"\n"
           }
         ]
       },
@@ -3733,7 +3734,8 @@
       "key": "f238865a-4984-4316-aad7-0dc718e6974d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 6 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 6 to complete the End of Lesson Survey.\n",
+        "progression_name": "Student Survey"
       },
       "seeding_key": {
         "activity_section.key": "f238865a-4984-4316-aad7-0dc718e6974d",
@@ -5016,6 +5018,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level4_2024-pilot"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -5138,6 +5143,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level4_2024-pilot"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -5385,6 +5393,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level8_2024-pilot"
+        ],
         "progression": "Try Your Own"
       },
       "bonus": false,
@@ -5457,6 +5468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level10_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5579,6 +5593,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level5_2024-pilot"
+        ],
         "progression": "AI Audit Challenge"
       },
       "bonus": false,
@@ -5601,6 +5618,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level5_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5823,6 +5843,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level6_2024-pilot"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5920,6 +5943,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level9_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5967,6 +5993,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level2_2024-pilot"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -6014,6 +6043,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level3_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6111,6 +6143,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level4_2024-pilot"
+        ],
         "progression": "AI as the Creator"
       },
       "bonus": false,
@@ -6158,6 +6193,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level5_2024"
+        ],
+        "progression": "Student Survey"
       },
       "bonus": false,
       "seeding_key": {

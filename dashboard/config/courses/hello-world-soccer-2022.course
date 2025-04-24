@@ -3,6 +3,9 @@
   "script_names": [
     "hello-world-soccer-2022"
   ],
+  "original_script_names": [
+    "hello-world-soccer-2022"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

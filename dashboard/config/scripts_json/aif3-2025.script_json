@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -13,12 +13,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-14 23:15:02 UTC",
+    "serialized_at": "2025-04-23 18:09:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -69,7 +72,7 @@
       "user_facing": true,
       "position": 4,
       "properties": {
-        "display_name": "End of Unit Assessment"
+        "display_name": "End of Unit Assessment and Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
@@ -300,7 +303,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
-        "overview": "**What are the decisions made for us without us?**\n\nIn this activity, students will engage with several different scenarios in which different ethical approaches to AI and computing systems might exist. Students will roleplay the scenario from the perspective different stakeholders, ultimately using this experience in empathy to craft ethical guidelines for AI and emerging technologies.",
+        "overview": "**What are the decisions made for us without us?**\n\nIn this activity, students will engage with several different scenarios in which different ethical approaches to AI and computing systems might exist. Students will examine these scenarios from the perspective different stakeholders, ultimately using this experience in empathy to craft ethical guidelines for AI and emerging technologies.",
         "preparation": "- Prepare several half-sheets of paper\n- Make an editable class copy of the [AI and Emerging Technology Slide template](https://docs.google.com/presentation/d/1Akl28SCAO4jirah8PNAh_CpiHVemESY5UBbhFLN_KLc/edit?usp=sharing)",
         "student_overview": "**What are the decisions made for us without us?**\n\nYou will take be asked to role play several different personas throughout today’s activity, trying to create a set of ethical guidelines for AI and emerging technologies. By examining how these technologies manifest in real-world scenarios, you will be asked to construct your own personal guidelines and expectations."
       },
@@ -341,6 +344,21 @@
       },
       "seeding_key": {
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif3-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif3-2025"
       }
@@ -913,6 +931,18 @@
       "seeding_key": {
         "lesson_activity.key": "c586a02f-33e7-4edf-a697-1ec7f98c5e45",
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif3-2025"
+      }
+    },
+    {
+      "key": "8f76abbd-faea-4458-9b1f-346310e8f509",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8f76abbd-faea-4458-9b1f-346310e8f509",
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif3-2025"
       }
@@ -3058,7 +3088,7 @@
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group several blank half-sheets of paper and access to the shared slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Student should access a class-editable version of the Slide template. Each member of the group should pick a distinct stakeholder– there are four stakeholder per scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the slide that corresponds to the scenario and stakeholder that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
         "duration": "20",
-        "name": "Role Playing",
+        "name": "Exploration",
         "tips": [
           {
             "type": "teachingTip",
@@ -3442,8 +3472,20 @@
       }
     },
     {
-      "key": "a893abef-705a-482f-94e1-10abe78718e9",
+      "key": "097a2f2e-7708-4d35-98f7-0a3a54611827",
       "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 5. Students will upload their computer system diagram into the AI Chat in order to receive feedback on how to improve it. ",
+        "progression_name": "Computer System Diagram Feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "097a2f2e-7708-4d35-98f7-0a3a54611827",
+        "lesson_activity.key": "c1eb699e-98ee-4003-bc5c-4eb4e8d3621e"
+      }
+    },
+    {
+      "key": "a893abef-705a-482f-94e1-10abe78718e9",
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the remaining time in class to complete the reflection section of their diagram and to make any improvements or revisions to their project they think will help them align better with the criteria on the rubric."
       },
@@ -3454,7 +3496,7 @@
     },
     {
       "key": "34effca7-c27e-4e5b-a1ba-1cb8a9bb8b22",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students submit their projects before the end of class.",
         "duration": "5",
@@ -3481,6 +3523,17 @@
         "activity_section.key": "cff2fb96-e5d5-4765-94c5-a1a106a740d7",
         "lesson_activity.key": "c586a02f-33e7-4edf-a697-1ec7f98c5e45"
       }
+    },
+    {
+      "key": "9b21ee02-c7eb-49b2-953c-834557a7cc9c",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b21ee02-c7eb-49b2-953c-834557a7cc9c",
+        "lesson_activity.key": "8f76abbd-faea-4458-9b1f-346310e8f509"
+      }
     }
   ],
   "script_levels": [
@@ -3490,6 +3543,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-preassessment_2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -3512,6 +3568,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level1_2025"
+        ],
         "progression": "Pick an Innovation"
       },
       "bonus": false,
@@ -3534,6 +3593,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level2_2025"
+        ],
         "progression": "Industry Interviews"
       },
       "bonus": false,
@@ -3556,6 +3618,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level3_2025"
+        ],
         "progression": "Industry Interviews"
       },
       "bonus": false,
@@ -3578,6 +3643,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level4_2025"
+        ],
         "progression": "Industry Interviews"
       },
       "bonus": false,
@@ -3600,6 +3668,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level5_2025"
+        ],
         "progression": "Industry Interviews"
       },
       "bonus": false,
@@ -3622,6 +3693,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level6_2025"
+        ],
         "progression": "Industry Interviews"
       },
       "bonus": false,
@@ -3644,6 +3718,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level7_2025"
+        ],
         "progression": "Industry Interviews"
       },
       "bonus": false,
@@ -3666,6 +3743,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level8_2025"
+        ],
         "progression": "Industry Interviews"
       },
       "bonus": false,
@@ -3688,6 +3768,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level9_2025"
+        ],
         "progression": "Industry Interviews"
       },
       "bonus": false,
@@ -3710,6 +3793,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level10_2025"
+        ],
         "progression": "Exploring Technical Roles"
       },
       "bonus": false,
@@ -3732,6 +3818,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level11_2025"
+        ],
         "progression": "Your Role in Innovation"
       },
       "bonus": false,
@@ -3754,6 +3843,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level12_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3776,6 +3868,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson1-level13_2025-launch_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3798,6 +3893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level1_2025"
+        ],
         "progression": "Storage and Memory Components"
       },
       "bonus": false,
@@ -3820,6 +3918,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level2_2025"
+        ],
         "progression": "Processing Components"
       },
       "bonus": false,
@@ -3842,6 +3943,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level3_2025"
+        ],
         "progression": "Connecting Components"
       },
       "bonus": false,
@@ -3864,6 +3968,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level4_2025"
+        ],
         "progression": "Career Hardware Needs"
       },
       "bonus": false,
@@ -3886,6 +3993,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level5_2025"
+        ],
         "progression": "Career Hardware Needs"
       },
       "bonus": false,
@@ -3908,6 +4018,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson2-level6_2025-launch_2025"
+        ],
         "progression": "Career Hardware Needs"
       },
       "bonus": false,
@@ -3930,6 +4043,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level1_2025"
+        ],
         "progression": "Wearable Troubleshooting Scenario"
       },
       "bonus": false,
@@ -3952,6 +4068,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level2_2025"
+        ],
         "progression": "Troubleshooting Maya's Wearable"
       },
       "bonus": false,
@@ -3974,6 +4093,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level3_2025"
+        ],
         "progression": "Hardware Troubleshooting Scenarios"
       },
       "bonus": false,
@@ -3996,6 +4118,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level4_2025"
+        ],
         "progression": "Tech Support Chatbot"
       },
       "bonus": false,
@@ -4018,6 +4143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level5_2025"
+        ],
         "progression": "Hardware Careers: Components and Troubleshooting"
       },
       "bonus": false,
@@ -4040,6 +4168,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level6_2025"
+        ],
         "progression": "Hardware Careers: Components and Troubleshooting"
       },
       "bonus": false,
@@ -4062,6 +4193,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson3-level7_2025-launch_2025"
+        ],
         "progression": "Hardware Careers: Components and Troubleshooting"
       },
       "bonus": false,
@@ -4084,6 +4218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson4-level1_2025"
+        ],
         "progression": "Software Scavenger Hunt Debrief"
       },
       "bonus": false,
@@ -4106,6 +4243,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson4-level2_2025-launch_2025"
+        ],
         "progression": "Software Scavenger Hunt Debrief"
       },
       "bonus": false,
@@ -4128,6 +4268,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson5-level1_2025"
+        ],
         "progression": "Troubleshooting"
       },
       "bonus": false,
@@ -4150,6 +4293,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson5-level2_2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4172,6 +4318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson5-level3_2025"
+        ],
         "progression": "Optimization"
       },
       "bonus": false,
@@ -4194,6 +4343,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson6-level2_2025"
+        ],
         "progression": "Computer Build User Profiles"
       },
       "bonus": false,
@@ -4216,6 +4368,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson6-level1_2025"
+        ],
         "progression": "PCPartPicker"
       },
       "bonus": false,
@@ -4238,6 +4393,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson6-level3_2025"
+        ],
         "progression": "Computer Build Assistant"
       },
       "bonus": false,
@@ -4260,6 +4418,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson6-level4_2025-launch_2025"
+        ],
         "progression": "Computer Build Assistant"
       },
       "bonus": false,
@@ -4282,6 +4443,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson7-level1_2025"
+        ],
         "progression": "Sensors and AI Chatbot"
       },
       "bonus": false,
@@ -4304,6 +4468,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson7-level2_2025-launch_2025"
+        ],
         "progression": "Sensors and AI Chatbot"
       },
       "bonus": false,
@@ -4326,6 +4493,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level1_2025"
+        ],
         "progression": "Processing Library Data"
       },
       "bonus": false,
@@ -4348,6 +4518,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level2_2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4370,6 +4543,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level3_2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4392,6 +4568,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level4_2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4414,6 +4593,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson9-level2_2025"
+        ],
         "progression": "Processing Unit Battle"
       },
       "bonus": false,
@@ -4436,6 +4618,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson9-level1_2025"
+        ],
         "progression": "Explore an AI Model"
       },
       "bonus": false,
@@ -4458,6 +4643,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson9-level3_2025"
+        ],
         "progression": "Determine AI Hardware"
       },
       "bonus": false,
@@ -4480,6 +4668,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson10-level1_2025"
+        ],
         "progression": "Security, Privacy, and Data Ownership"
       },
       "bonus": false,
@@ -4502,6 +4693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level1_2025"
+        ],
         "progression": "User Testing Results"
       },
       "bonus": false,
@@ -4524,6 +4718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level2_2025"
+        ],
         "progression": "Using AI to Analyze Data"
       },
       "bonus": false,
@@ -4546,6 +4743,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level3_2025"
+        ],
         "progression": "Alice's Scenario"
       },
       "bonus": false,
@@ -4568,6 +4768,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level4_2025"
+        ],
         "progression": "Josh's Scenario"
       },
       "bonus": false,
@@ -4590,6 +4793,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level5_2025"
+        ],
         "progression": "Lydia's Scenario"
       },
       "bonus": false,
@@ -4612,6 +4818,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson11-level6_2025-launch_2025"
+        ],
         "progression": "Lydia's Scenario"
       },
       "bonus": false,
@@ -4634,6 +4843,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson12-level2_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4656,6 +4868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson13-level1_2025"
+        ],
         "progression": "Explore Sustainable Development Goal Targets"
       },
       "bonus": false,
@@ -4678,6 +4893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson13-level2_2025"
+        ],
         "progression": "Brainstorm Your Project"
       },
       "bonus": false,
@@ -4700,6 +4918,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson13-level3_2025"
+        ],
         "progression": "Understanding Your Users"
       },
       "bonus": false,
@@ -4722,6 +4943,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computer-systems-lesson13-level4_2025"
+        ],
         "progression": "Ethics and Impact"
       },
       "bonus": false,
@@ -4740,10 +4964,38 @@
     },
     {
       "chapter": 58,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson13-level5_2025-launch"
+        ],
+        "progression": "Computer System Diagram Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level5_2025-launch"
+        ],
+        "lesson.key": "Sustainable Systems Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif3-2025",
+        "activity_section.key": "097a2f2e-7708-4d35-98f7-0a3a54611827"
+      },
+      "level_keys": [
+        "computer-systems-lesson13-level5_2025-launch"
+      ]
+    },
+    {
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "computer-systems-postassessment_2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -4758,6 +5010,31 @@
       },
       "level_keys": [
         "computer-systems-postassessment_2025"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_-compsys_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-compsys_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif3-2025",
+        "activity_section.key": "9b21ee02-c7eb-49b2-953c-834557a7cc9c"
+      },
+      "level_keys": [
+        "student-eou-survey_-compsys_2025"
       ]
     }
   ],
@@ -5448,6 +5725,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "computer-systems-lesson13-level5_2025-launch",
+        "script_level.level_keys": [
+          "computer-systems-lesson13-level5_2025-launch"
+        ],
+        "lesson.key": "Sustainable Systems Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif3-2025",
+        "activity_section.key": "097a2f2e-7708-4d35-98f7-0a3a54611827"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computer-systems-postassessment_2025",
         "script_level.level_keys": [
           "computer-systems-postassessment_2025"
@@ -5456,6 +5745,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif3-2025",
         "activity_section.key": "cff2fb96-e5d5-4765-94c5-a1a106a740d7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-compsys_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-compsys_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif3-2025",
+        "activity_section.key": "9b21ee02-c7eb-49b2-953c-834557a7cc9c"
       }
     }
   ],
@@ -5578,6 +5879,26 @@
       },
       "seeding_key": {
         "resource.key": "ai_and_emerging_technology_slide_template"
+      }
+    },
+    {
+      "name": "AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1xgkyggbdaHpxDhD_Cvx1RptJUrzf8sUcGHKfDLs5-CU/edit?usp=sharing",
+      "key": "ai_and_the_systems_that_power_it_unit_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
+      }
+    },
+    {
+      "name": "AI Chat FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_faq",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_faq"
       }
     },
     {
@@ -6070,13 +6391,15 @@
       }
     },
     {
-      "name": "Unit Guide",
-      "url": "https://docs.google.com/document/d/1xgkyggbdaHpxDhD_Cvx1RptJUrzf8sUcGHKfDLs5-CU/view",
-      "key": "unit_guide",
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
       "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "unit_guide"
+        "resource.key": "unlocking_assessments"
       }
     },
     {
@@ -6524,6 +6847,18 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide",
+        "script.name": "aif3-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ai_chat_faq",
+        "script.name": "aif3-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "all_resources",
         "script.name": "aif3-2025"
       }
@@ -6542,7 +6877,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "unit_guide",
+        "resource.key": "unlocking_assessments",
+        "script.name": "aif3-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
         "script.name": "aif3-2025"
       }
     }

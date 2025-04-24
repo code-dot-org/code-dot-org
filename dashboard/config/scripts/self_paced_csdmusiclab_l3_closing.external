@@ -1,0 +1,44 @@
+name 'self-paced-CSDMusicLab-L3-closing'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Great Job! 🎉
+
+#### So far, you can:
+
+* #### Describe how loops reduce repetition and create musical structure
+* #### Guide students in identifying and applying patterns using repeat blocks
+* #### Support student reasoning about loop timing and layering
+
+## Up Next
+
+#### In the next section of this professional learning module, you will:
+* #### Explain how functions help students organize and reuse code
+* #### Learn how to support abstraction by helping students define named sections of music
+* #### Learn how to guide students through remixing and composing with structured functions
+
+___
+
+<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+  <tr>
+    <td style="width: 25%; background-color: #B7E0E5; color: #000000; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+      ⭐️<br>
+      Introduction to Programming with Music Lab
+    </td>
+    <td style="width: 25%; background-color: #B7E0E5; color: #000000; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold;">
+      🔢<br>
+      Teaching Lessons 1 – 5: Sequencing
+    </td>
+    <td style="width: 25%; background-color: #026C7A; color: #ffffff; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold;">
+      🔁<br>
+      Teaching Lessons 6 – 9: Loops
+    </td>
+    <td style="width: 25%; background-color: #F7F8FA; color: #000000; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+      🎶<br>
+      Teaching Lessons 10 – 13: Functions
+    </td>
+  </tr>
+</table>
+<br>
+MARKDOWN

@@ -3,6 +3,9 @@
   "script_names": [
     "csp3-staging"
   ],
+  "original_script_names": [
+    "csp3-staging"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

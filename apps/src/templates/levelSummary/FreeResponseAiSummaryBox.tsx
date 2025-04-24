@@ -8,6 +8,9 @@ import {
 import React from 'react';
 
 import {StudentWorkEvaluation} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import aiBot from './AI-Bot-default.png';
@@ -36,6 +39,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   totalNumberOfStudents,
   openDetailedAnalysis,
 }) => {
+  const currentUserId = useAppSelector(state => state.currentUser.userId);
   const proficienceyThreshold = totalNumberOfStudents * 0.8;
   const aiSummaryTag = (proficiencyCount: number) => {
     return (
@@ -70,10 +74,10 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   const aiSummaryMessage = (proficiencyCount: number) => (
     <>
       <BodyTwoText>
-        <strong>{`${i18n.reasoning()}:`}</strong>
+        <strong>{`${i18n.reasoning()}: `}</strong>
         {proficiencyCount > proficienceyThreshold
-          ? 'This is proficient because more than 80% of the students demonstrated proficiency in their responses. '
-          : 'This is needs review less than 80% of students demonstrated proficiency in their responses. '}
+          ? 'More than 80% of the students demonstrated proficiency in their responses. '
+          : 'Less than 80% of the students demonstrated proficiency in their responses. '}
         <Link
           type="primary"
           size="m"
@@ -96,11 +100,11 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   };
 
   const proficientStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['great', 'ok'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['Great', 'Ok'])
     : 0;
 
   const needsRevisionStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['needs revision'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['Needs revision'])
     : 0;
 
   const flaggedStudentCount = studentWorkEvaluations
@@ -114,6 +118,19 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
       (totalNumberOfStudents - studentWorkEvaluations.length)
     : 0;
 
+  const handleIconClick = (thumbsUp: boolean) => {
+    if (!studentWorkEvaluations) {
+      return;
+    }
+    analyticsReporter.sendEvent(EVENTS.AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK, {
+      userId: currentUserId,
+      levelId: studentWorkEvaluations[0].levelId,
+      scriptId: studentWorkEvaluations[0].unitId,
+      aiInteractionType: 'ai_summary',
+      thumbsUp: thumbsUp,
+    });
+  };
+
   const showEvaluationSummary = studentWorkEvaluations && evaluationComplete;
 
   const aiSummaryContent = () => {
@@ -126,8 +143,12 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
               {i18n.aiFeedbackQuestion()}
             </BodyThreeText>
             <FeedbackToggle
-              onThumbsUpClick={() => {}}
-              onThumbsDownClick={() => {}}
+              onThumbsUpClick={() => {
+                handleIconClick(true);
+              }}
+              onThumbsDownClick={() => {
+                handleIconClick(false);
+              }}
               size="xs"
               color="gray"
             />

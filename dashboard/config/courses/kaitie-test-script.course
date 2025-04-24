@@ -3,6 +3,9 @@
   "script_names": [
     "kaitie-test-script"
   ],
+  "original_script_names": [
+    "kaitie-test-script"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

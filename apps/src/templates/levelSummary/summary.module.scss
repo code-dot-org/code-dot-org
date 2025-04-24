@@ -77,7 +77,28 @@ label.sectionSelector {
 
 .toggleGroup {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
+}
+
+.aiToggleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+
+  .headerTag {
+    margin-left: 4px;
+
+    div {
+      background-color: var(--background-neutral-tertiary);
+
+      span {
+        color: var(--text-neutral-primary);
+      }
+    }
+  }
 }
 
 [dir='rtl'] .toggleContainer {
@@ -308,7 +329,7 @@ svg text[fill] {
   padding: 16px;
   background-color: var(--background-neutral-secondary);
   border: 1px solid var(--borders-neutral-primary);
-  gap: 40px;
+  gap: 28px;
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 20px;
@@ -341,7 +362,7 @@ svg text[fill] {
 
 .aiDataContainer {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   background-color: var(--background-neutral-primary);
   border-radius: 4px;
   border: 1px solid var(--borders-neutral-primary);
@@ -351,7 +372,7 @@ svg text[fill] {
   .group {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 4px;
 
     .labelText {
       margin-bottom: 0 !important;
@@ -483,4 +504,25 @@ svg text[fill] {
 .feedbackText {
   color: var(--text-neutral-quaternary, #727a83) !important;
   margin-bottom: 0 !important;
+}
+
+.feedbackPortalButtonContainer {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.aiFeedbackOther {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.aiFeedbackOtherTextArea {
+  width: 100%;
+  padding: 8px 12px;
+  box-sizing: border-box;
 }

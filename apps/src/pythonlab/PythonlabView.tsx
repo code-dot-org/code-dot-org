@@ -196,7 +196,7 @@ const PythonlabView: React.FunctionComponent<
   };
 
   return (
-    <div data-theme="Dark" className={moduleStyles.pythonlab}>
+    <div className={moduleStyles.pythonlab}>
       {source && (
         <Codebridge
           source={source}

@@ -4,6 +4,10 @@
     "self-paced-pl-equitymodule-unit1",
     "self-paced-pl-equitymodule-unit2"
   ],
+  "original_script_names": [
+    "self-paced-pl-equitymodule-unit1",
+    "self-paced-pl-equitymodule-unit2"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

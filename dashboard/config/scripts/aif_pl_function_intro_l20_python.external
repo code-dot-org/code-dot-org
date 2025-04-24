@@ -1,0 +1,50 @@
+name 'aif_pl_function-intro-L20_Python'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Introducing Functions 
+
+#### If you've ever written the same line of code more than once—or copied and pasted a block of code to use it again—you’ve already run into a common coding problem: **repetition.**
+
+## Stop Repeating Yourself! 
+
+#### When you're just starting out with coding, it's easy to write the same lines of code over and over. For example, imagine you’re making a birthday program that prints a greeting for three friends:
+
+<img src="https://images.code.org/509ee403d4b4a39439a3248a068054bc-image-1745420914259.png" alt="design process graph of the cycle" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+
+
+#### That’s a lot of repeating! It works, but what if you wanted to change the message? You’d have to update every section by hand.
+
+#### This is where **functions** help.
+
+
+
+> #### A **function** is like a mini-program inside your program. It lets you group a set of instructions under a name, so you can run those instructions whenever you need them—without rewriting the code each time. You **define** a function once, and then you can **call** it as many times as you like.
+
+#### Here's how that birthday example looks using a function: 
+
+<img src="https://images.code.org/4bcfc9203dd932bd5393016a5e8a27fb-image-1745421696182.png" alt="design process graph of the cycle" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+
+#### Much cleaner, right?
+
+#### Functions make your code **easier to read, easier to reuse, and easier to fix if something changes**. And once you get the hang of them, they make your programs more powerful too!
+
+
+
+
+
+## Let's look at how to create functions!
+
+
+
+
+---
+
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This concept is covered in Lesson 6. You can find more details in the full <a href='https://studio.code.org/s/aif2-2025/lessons/6' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>lesson plan</a>.
+</p>
+
+
+MARKDOWN

@@ -5,6 +5,11 @@
     "pf-aitutor-pilot-content-2024",
     "pf-aitutor-pilot-postassessment-2024"
   ],
+  "original_script_names": [
+    "pf-aitutor-pilot-preassessment-2024",
+    "pf-aitutor-pilot-content-2024",
+    "pf-aitutor-pilot-postassessment-2024"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

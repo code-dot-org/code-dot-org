@@ -328,7 +328,7 @@ describe('useInitialSources', () => {
     expect(initialSources).toEqual(expectedInitialSources);
   });
 
-  it('predict levels always use start code', () => {
+  it('predict levels use start code if code is not editable after submit', () => {
     const {initialSources} = renderDefault(
       predictLevelProperties,
       sampleInitialSources
@@ -338,5 +338,23 @@ describe('useInitialSources', () => {
       labConfig: undefined,
     };
     expect(initialSources).toEqual(expectedInitialSources);
+  });
+
+  it('predict levels use initialSources if code is editable after submit', () => {
+    const editablePredictLevelProperties = {
+      ...predictLevelProperties,
+      predictSettings: {
+        ...predictLevelProperties.predictSettings,
+        isPredictLevel: true,
+        codeEditableAfterSubmit: true,
+      },
+    };
+
+    const {initialSources} = renderDefault(
+      editablePredictLevelProperties,
+      sampleInitialSources
+    );
+
+    expect(initialSources).toEqual(sampleInitialSources);
   });
 });

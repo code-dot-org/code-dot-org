@@ -3,26 +3,35 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 2: Teaching Lessons 1 - 5: Sequencing
+# Lessons 2 - 5: Sequencing
 
-<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
-    <div style="width: 70%;">
-        <p style="line-height: 1.5; font-size: 18px;">
-            In this lesson, you will:
-        </p>
-        <ul style="margin-left: 20px; line-height: 1.6;">
-            <li style="line-height: 1.5;font-size: 18px;">
-                <mark>UPDATE</mark>
-            </li>
-        </ul>
-        <p style="font-size: 16px; color: black;">
-        <br>
-        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>25</mark> minutes
-        </p>
-    </div>
-    
-    <!-- Image on the right -->
-    <img src="https://images.code.org/2b751f030a999afa638fe44eb9c27b0d-image-1744665236038.13.52 PM.png" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 30%; height: auto; border-radius: 5px;">
+## Sequencing in Music Lab
+
+#### The next section of the professional learning module will give you hands-on practice with sequencing in Music Lab. We'll introduce each computer science concept (sequencing, loops, and functions), and walk you through a selection of student coding challenges.
+
+<div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
+    <p style="font-size: 16pt; font-weight: bold; margin: 0; text-align: center;">What is Sequencing?</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">Sequencing is the process of putting code blocks in a specific order so that actions happen one after another, in the order you choose.</p>
+    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">In Music Lab, sequencing means arranging musical tracks or sounds to play in a certain order, just like writing the steps in a recipe or the notes in a song. The order matters: changing the sequence changes the way the music sounds!</p>
 </div>
-<br>
+
+## **Does this mean I don't need to prep the lesson plans?**
+
+<img src="https://images.code.org/9c09f72265dedb02c7f2fe39ab0da859-image-1744838232658.17.10 PM.png" 
+     alt="" 
+     style="width: 25%; border-radius: 5px; margin: 0px 0px 20px 20px; float: right;">
+
+#### While we'll help you learn the coding concepts, **you'll still need to read the lesson plans and walk through all of the coding challenges before teaching**. We've included somewhere between 2 to 6 coding challenges from each lesson (Explore-Practice-Synthesize), but not all of them! However, we think this is a great primer.
+
+#### We've covered the sequencing chunk of lesson plans in a <a href="https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/1/levels/8" target="blank" rel="noopener noreferrer">previous level of this module</a>. We will also review the mini-project at the end of this section.
+
+## Up Next
+
+#### Ready? Let's dive in to sequencing. You'll learn the following:
+
+* #### **From Lesson 2:** How to use the <code style="background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">play together</code> block to play music at the same time
+* #### **From Lesson 3:** How to use the <code style="background-color: rgb(0, 148, 202); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">play sequential</code> block to play music sequentially and how to use the <code style="background-color: rgb(116, 53, 178); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">rest</code> block to offset tracks
+* #### **From Lesson 4:** How to use effects to change up the sound of your music
+
+### The next level you'll see will be in Music Lab. Make sure you read all the text in the instructions panel!
 MARKDOWN

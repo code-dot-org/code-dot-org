@@ -7,7 +7,7 @@ right 'It involves refining or adjusting instructions until the output behaves a
 wrong 'It means checking for syntax errors in the AI\'s internal programming language.'
 wrong 'It ensures the AI\'s response is always 100% free of factual mistakes.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 8: Debugging and Refining Outputs

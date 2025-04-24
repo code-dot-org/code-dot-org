@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -13,12 +13,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-16 07:09:54 UTC",
+    "serialized_at": "2025-04-23 18:09:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -93,7 +96,7 @@
       "user_facing": true,
       "position": 6,
       "properties": {
-        "display_name": "End of Unit Assessment"
+        "display_name": "End of Unit Assessment and Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-7",
@@ -330,6 +333,21 @@
       },
       "seeding_key": {
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
         "script.name": "aif4-2025"
       }
@@ -818,6 +836,18 @@
       "seeding_key": {
         "lesson_activity.key": "964d503e-2a91-4284-a748-ced09b44b9bb",
         "lesson.key": "End of Unit Assessment",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "key": "8806d0ed-4ce3-485f-959b-ecc771e270a4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8806d0ed-4ce3-485f-959b-ecc771e270a4",
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
         "script.name": "aif4-2025"
       }
@@ -2331,10 +2361,16 @@
       "key": "e199d7e1-18a6-4c5b-9c7d-88fedeeb749b",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.",
         "duration": "10",
         "name": "HTTP Preview and Inspect Tool Exploration",
-        "progression_name": "HTTP Requests Exploration"
+        "progression_name": "HTTP Requests Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students have access to real Developer Tools, encourage them to complete the scavenger hunt using their own browser, and the files that load on an actual webpage. This gives them hands-on experience with live HTTP traffic and helps reinforce the connection between what they see in the simulator and how browsers work in the real world."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e199d7e1-18a6-4c5b-9c7d-88fedeeb749b",
@@ -2342,18 +2378,35 @@
       }
     },
     {
-      "key": "9887a596-58cc-4888-bfcb-8faf7b16cc15",
+      "key": "77506d8b-c4db-483e-8772-c3d3e54467c2",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to user their Unit Guide to record observations about types of files that are being loaded and why it might be important for the browser to request only the files it needs.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to help students open the Inspect Tool, navigate to the Network tab, and identify different file types and status codes.",
+      },
+      "seeding_key": {
+        "activity_section.key": "77506d8b-c4db-483e-8772-c3d3e54467c2",
+        "lesson_activity.key": "21f4e8d6-4666-4b5d-8896-d6033f430e45"
+      }
+    },
+    {
+      "key": "41c71743-6740-41d0-bb91-f125f09f6b70",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the HTTP Scavenger Hunt. They should use either the HTTP Explorer simulator or their own browser to complete each task and fill in the Method, Status Code, File Type, and Load Time fields in their activity guide.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "41c71743-6740-41d0-bb91-f125f09f6b70",
+        "lesson_activity.key": "21f4e8d6-4666-4b5d-8896-d6033f430e45"
+      }
+    },
+    {
+      "key": "9887a596-58cc-4888-bfcb-8faf7b16cc15",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 4 to answer the questions.",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "If time permits, ask students to share their observations with the class, including the types of files that were being loaded and why it is important for the browser to request only the files it needs. Draw out key takeaways such as DNS resolves the domain name into an IP address so HTTP knows where to send requests and how HTTP retrieves content in smaller pieces, ensuring efficiency and scalability."
-          },
-          {
             "type": "assessmentOpportunity",
-            "markdown": "Levels 4 and 5 can be used to formatively assess the learning objectives. "
+            "markdown": "The responses on Levels 4 and 5 can be used to formatively assess the lesson objectives:\n- Describe the function of HTTP in requesting web pages and resources\n"
           }
         ]
       },
@@ -2364,7 +2417,7 @@
     },
     {
       "key": "8334a118-fb80-4d20-a45a-59e8044400c6",
-      "position": 13,
+      "position": 15,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -3416,6 +3469,17 @@
         "activity_section.key": "bf9d8dd4-bf50-44f3-9b7f-457bb189c1f8",
         "lesson_activity.key": "964d503e-2a91-4284-a748-ced09b44b9bb"
       }
+    },
+    {
+      "key": "90678282-a92e-4991-b369-e8e9988069f5",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "90678282-a92e-4991-b369-e8e9988069f5",
+        "lesson_activity.key": "8806d0ed-4ce3-485f-959b-ecc771e270a4"
+      }
     }
   ],
   "script_levels": [
@@ -3600,6 +3664,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "networks-internet-lesson3-level3.5_2025"
+        ],
         "progression": "IP Addressing and Visualizing"
       },
       "bonus": false,
@@ -4240,6 +4307,31 @@
       "level_keys": [
         "networks-postassessment_2025"
       ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_-networks_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-networks_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "aif4-2025",
+        "activity_section.key": "90678282-a92e-4991-b369-e8e9988069f5"
+      },
+      "level_keys": [
+        "student-eou-survey_-networks_2025"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -4638,6 +4730,18 @@
         "script.name": "aif4-2025",
         "activity_section.key": "bf9d8dd4-bf50-44f3-9b7f-457bb189c1f8"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-networks_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-networks_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "aif4-2025",
+        "activity_section.key": "90678282-a92e-4991-b369-e8e9988069f5"
+      }
     }
   ],
   "resources": [
@@ -4702,6 +4806,16 @@
       }
     },
     {
+      "name": "AI Chat FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_faq",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_faq"
+      }
+    },
+    {
       "name": "AI Chat Lab FAQ",
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_lab_faq",
@@ -4724,6 +4838,39 @@
       },
       "seeding_key": {
         "resource.key": "ai_networks_chat"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/aif4-2025/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/aif4-2025/standards",
+      "key": "all_standards_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_3"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/aif4-2025/vocab",
+      "key": "all_vocabulary_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3"
       }
     },
     {
@@ -4802,7 +4949,7 @@
     },
     {
       "name": "HTTP and DNS",
-      "url": "https://docs.google.com/presentation/d/1ainHdptvrQYfCXXkOUcw0hAay3-YlcTTf7hHBmsCERA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/18FAONwLy7N1q60lT0ObmMhhPckB889X-ACp3BGFAnag/edit?usp=sharing",
       "key": "http_and_dns",
       "properties": {
         "audience": "Verified Teacher",
@@ -4813,15 +4960,15 @@
       }
     },
     {
-      "name": "HTTP Observations",
-      "url": "https://docs.google.com/document/d/1HZ3Yp1Kh0fUh94gaQq460MQPS9BpeBQO7Hh4aIqYzIw/edit?usp=sharing",
-      "key": "http_observations",
+      "name": " HTTP Request Simulator",
+      "url": "https://docs.google.com/presentation/d/167Rqj73r2Pu9-ovxYj2UZxy4PJNxxzCR8RszaBI25xM/edit?usp=sharing",
+      "key": "http_request_simulator",
       "properties": {
         "audience": "Student",
-        "type": "Activity Guide"
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "http_observations"
+        "resource.key": "http_request_simulator"
       }
     },
     {
@@ -4974,7 +5121,7 @@
       }
     },
     {
-      "name": "Networks and the Internet Unit Guide",
+      "name": "The Fabric of the Internet and AI Unit Guide",
       "url": "https://docs.google.com/document/d/14YiuNXo8xwD2aQcmt2sBY0Oway5hI4RBHUez_CcWI4w/edit?usp=sharing",
       "key": "networks_and_the_internet_unit_guide",
       "properties": {
@@ -5058,6 +5205,18 @@
       },
       "seeding_key": {
         "resource.key": "routers_and_redundancy"
+      }
+    },
+    {
+      "name": "Scavenger Hunt Activity",
+      "url": "https://docs.google.com/presentation/d/17-D9uP8eVYI6uFX4VtQyAo5j4qzv7uuKghpmwX_D33M/edit?usp=sharing",
+      "key": "scavenger_hunt_activity",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "scavenger_hunt_activity"
       }
     },
     {
@@ -5170,6 +5329,18 @@
       }
     },
     {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
+      }
+    },
+    {
       "name": "Viewing Student AI Chat History as a Teacher",
       "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
       "key": "viewing_student_ai_chat_history_as_a_teacher",
@@ -5222,7 +5393,7 @@
     {
       "seeding_key": {
         "lesson.key": "HTTP and DNS",
-        "resource.key": "http_observations"
+        "resource.key": "http_request_simulator"
       }
     },
     {
@@ -5235,6 +5406,12 @@
       "seeding_key": {
         "lesson.key": "HTTP and DNS",
         "resource.key": "ip_addresses_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "HTTP and DNS",
+        "resource.key": "scavenger_hunt_activity"
       }
     },
     {
@@ -5449,7 +5626,48 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai_chat_faq",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_3",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_3",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "networks_and_the_internet_unit_guide",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unlocking_assessments",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
+        "script.name": "aif4-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 

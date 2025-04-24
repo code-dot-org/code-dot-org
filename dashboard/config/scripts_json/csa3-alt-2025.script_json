@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-26 20:56:52 UTC",
+    "serialized_at": "2025-04-23 05:07:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1341,7 +1341,7 @@
       "key": "8bec1300-2487-4eab-85dc-0802a144a61a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a text-description of the Pet-Dog-Cat relationship would look like."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a text-based description of the `Pet`, `Dog`, `Cat`, and `PetOwner` classes might look like, including how they relate to one another."
       },
       "seeding_key": {
         "activity_section.key": "8bec1300-2487-4eab-85dc-0802a144a61a",
@@ -6886,15 +6886,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L9-L3_alt-2025"
-        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2L9-L3_alt-2025"
+          "CSA U2L9-L3_alt-revised-2025"
         ],
         "lesson.key": "Mutator Methods",
         "lesson_group.key": "lessonGroup-3",
@@ -6902,7 +6899,7 @@
         "activity_section.key": "561b017d-9efa-4cce-bfc3-dd86553941f1"
       },
       "level_keys": [
-        "CSA U2L9-L3_alt-2025"
+        "CSA U2L9-L3_alt-revised-2025"
       ]
     },
     {
@@ -8396,9 +8393,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2L9-L3_alt-2025",
+        "level.key": "CSA U2L9-L3_alt-revised-2025",
         "script_level.level_keys": [
-          "CSA U2L9-L3_alt-2025"
+          "CSA U2L9-L3_alt-revised-2025"
         ],
         "lesson.key": "Mutator Methods",
         "lesson_group.key": "lessonGroup-3",
@@ -9809,7 +9806,7 @@
     },
     {
       "name": "Program Design",
-      "url": "https://docs.google.com/presentation/d/1s0MaMaaeI2u-9ZuglcSpXLbGQQDPCBA3-25ksu1JRDY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1mO548rvy6hxIJ0U_1TBqMu4P45Iu42w-2QI98AVUMMM/edit?usp=sharing",
       "key": "program_design",
       "properties": {
         "audience": "Verified Teacher",

@@ -40,6 +40,7 @@ class Pd::Workshop < ApplicationRecord
   include Pd::WorkshopConstants
   include SerializedProperties
   include Pd::WorkshopSurveyConstants
+  include Pd::UrlValidator
 
   acts_as_paranoid # Use deleted_at column instead of deleting rows.
 
@@ -73,7 +74,11 @@ class Pd::Workshop < ApplicationRecord
     # If true, our system will not send enrollees reminders related to this workshop.
     # If the subject is not in the MUST_SUPPRESS_EMAIL_SUBJECTS constant, this attribute
     # can be set to be true or false from the UI
-    'suppress_email'
+    'suppress_email',
+    # TODO: ACQ-3081
+    # temporary flag that skips some of the config based workshop validation if the
+    # flag indicating workshop is created or updated via the legacy form
+    'legacyForm2025'
   ]
 
   before_validation :sanitize_time_zone
@@ -84,11 +89,14 @@ class Pd::Workshop < ApplicationRecord
   validates_length_of :location_name, :location_address, maximum: 255
   validate :sessions_must_start_on_separate_days
   validate :subject_must_be_valid_for_course
-  validates_inclusion_of :on_map, in: [true, false]
-  validates_inclusion_of :funded, in: [true, false]
+  # TODO: ACQ-3081 remove on_map & funded validation when we are ready to remove the legacy form
+  validates_inclusion_of :on_map, in: [true, false], if: :legacyForm2025?
+  validates_inclusion_of :funded, in: [true, false], if: :legacyForm2025?
   validates_inclusion_of :third_party_provider, in: %w(friday_institute), allow_nil: true
-  validate :virtual_only_subjects_must_be_virtual
   validate :not_funded_subjects_must_not_be_funded
+  validate :valid_registration_link_format, if: :registration_link
+
+  validate :config_validation, unless: :legacyForm2025?
 
   validates :funding_type,
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
@@ -103,30 +111,60 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def sessions_must_start_on_separate_days
-    if sessions.all(&:valid?)
-      unless sessions.map {|session| session.start_time.to_date}.uniq.length == sessions.length
-        errors.add(:sessions, 'must start on separate days.')
-      end
-    else
-      errors.add(:sessions, "must each have a valid start and end.")
+    new_sessions = sessions.reject(&:marked_for_destruction?)
+    unless new_sessions.map {|session| session.start_time.to_date}.uniq.length == new_sessions.length
+      errors.add(:sessions, 'must start on separate days')
     end
   end
 
   def subject_must_be_valid_for_course
     unless SUBJECTS[course]&.include?(subject) || (!SUBJECTS[course] && !subject)
-      errors.add(:subject, 'must be a valid option for the course.')
+      errors.add(:subject, 'must be a valid option for the course')
     end
   end
 
   def not_funded_subjects_must_not_be_funded
     if NOT_FUNDED_SUBJECTS.include?(subject) && funded?
-      errors.add :properties, 'Admin/Counselor - Welcome workshop must not be funded.'
+      errors.add :properties, 'Admin/Counselor - Welcome workshop must not be funded'
     end
   end
 
-  def virtual_only_subjects_must_be_virtual
-    if VIRTUAL_ONLY_SUBJECTS.include?(subject) && !virtual?
-      errors.add :properties, "Workshops with the subject #{subject} must be virtual"
+  def config_validation
+    config = Pd::SharedWorkshopConstants::WORKSHOP_COURSE_CONFIGS.find do |c|
+      c[:label] == course
+    end
+
+    unless config
+      errors.add(:course, "#{course} is not a valid workshop course")
+      return
+    end
+
+    required_validation(config)
+  end
+
+  def required_validation(config)
+    config[:fields].each do |field_name, field_options|
+      next unless field_options[:required]
+      value = public_send(field_name)
+      is_invalid = value.nil? || (value.is_a?(String) && value.strip.empty?) || (value.is_a?(Array) && value.empty?)
+      if is_invalid
+        case field_name
+        when :course_offerings
+          errors.add(:base, "Please select at least one workshop topic")
+        when :grades
+          errors.add(:base, "Please select at least one grade level")
+        when :participant_group_type
+          errors.add(:base, "Cohort type is required")
+        else
+          errors.add(field_name, "is required")
+        end
+      end
+    end
+  end
+
+  def valid_registration_link_format
+    unless self.class.valid_url?(registration_link, true)
+      errors.add(:registration_link, "is not a valid URL")
     end
   end
 
@@ -409,18 +447,19 @@ class Pd::Workshop < ApplicationRecord
     raise 'Workshop must have at least one session to start.' if sessions.empty?
 
     sessions.each(&:assign_code)
-    update!(started_at: Time.zone.now)
+    # using update_attribute to skip validation
+    update_attribute(:started_at, Time.zone.now)
 
     # return nil in case any callers are still expecting a section
     nil
   end
 
   # Ends the workshop, or no-op if it's already ended.
-  # The return value is undefined.
+  # The return value is nil.
   def end!
     return unless ended_at.nil?
-    self.ended_at = Time.zone.now
-    save!
+    # using update_attribute to skip validation
+    update_attribute(:ended_at, Time.zone.now)
 
     # We want to send exit surveys now, but that needs to be done on the
     # production-daemon machine, so we'll let the process_pd_workshop_emails
@@ -441,7 +480,8 @@ class Pd::Workshop < ApplicationRecord
       next unless !workshop.processed_at || workshop.processed_at < workshop.ended_at
       workshop.send_exit_surveys
       workshop.send_facilitator_post_surveys
-      workshop.update!(processed_at: Time.zone.now)
+      # using update_attribute to skip validation
+      workshop.update_attribute(:processed_at, Time.zone.now)
     end
   end
 

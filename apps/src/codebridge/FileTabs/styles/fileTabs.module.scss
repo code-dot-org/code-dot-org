@@ -5,11 +5,11 @@
   justify-content: flex-start;
   gap: 6px;
   align-items: flex-end;
-  overflow-x: scroll;
+  overflow-x: auto;
   max-width: 100%;
   background-color: $light_gray_900;
-  scrollbar-width: none;
-  min-height: 32px;
+  scrollbar-width: thin;
+  box-sizing: border-box;
   font-size: 14px;
   font-weight: 600;
   color: $light_gray_100;
