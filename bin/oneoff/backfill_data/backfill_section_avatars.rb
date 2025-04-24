@@ -2,8 +2,7 @@
 
 require_relative '../../../dashboard/config/environment'
 
-# This script backfills the section_instructors table to ensure that older
-# sections have their owner represented in this table.
+# This script backfills the section table to add section avatars to existing sections.
 
 CDO.log = Logger.new($stdout)
 ActiveRecord::Base.record_timestamps = false
@@ -31,7 +30,7 @@ sections_processed = 0
 sections_not_processed = 0
 
 Section.find_each(batch_size: BATCH_SIZE, start: options[:start_with]) do |section|
-  # Be kind to the database by limiting to 100 sections processed per second
+  # Be kind to the database by limiting to 1000 sections processed per second
   sleep 0.001
 
   ActiveRecord::Base.transaction do
