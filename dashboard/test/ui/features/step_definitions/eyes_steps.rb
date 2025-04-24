@@ -55,6 +55,7 @@ And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |
   # alternative fonts for symbols and localized glyphs.
   wait_until do
     fonts_loaded?
+    font_awesome_loaded?
   end
 
   if stitch_mode == "none"
@@ -104,6 +105,12 @@ def ensure_eyes_available
   @eyes = Applitools::Selenium::Eyes.new
   @eyes.api_key = CDO.applitools_eyes_api_key
   @eyes.log_handler = Logger.new('../../log/eyes.log')
+end
+
+# There are several fonts we sometimes load associated with Font Awesome, but Font Awesome 6 at the "solid" weight (900) is our default,
+# so we wait for that one to load at least.
+def font_awesome_loaded?
+  @browser.execute_script('return [...document.fonts].find(font => font.family === "Font Awesome 6" && font.weight === 900).status === "loaded"') == true
 end
 
 def fonts_loaded?
