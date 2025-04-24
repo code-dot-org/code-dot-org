@@ -283,10 +283,8 @@ class PeerReview < ApplicationRecord
   # Returns the route path for the submission's script_level (or level if there is no script_level)
   # @returns [String] path to the submission (script_level or level)
   def submission_path
-    # TODO - How do we get the UnitGroupUnit the user was in when they wrote
-    # the review? `build_script_level_path` needs to have unit_group_unit
-    # passed it it.
     script_level = level.script_levels.find_by(script: script)
+    # TODO: TEACH-1863 Pass the course to build_script_level_path
     script_level ? build_script_level_path(script_level) : level_path(level)
   end
 
