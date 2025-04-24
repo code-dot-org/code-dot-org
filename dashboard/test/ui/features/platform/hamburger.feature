@@ -173,7 +173,7 @@ Feature: Hamburger dropdown
       | Learn                  | http://code.org/students                     |
       | Districts              | http://code.org/administrators               |
       | Stats                  | http://code.org/promote                      |
-      | Donate                 | http://code.org/donate                       |
+      | Help Us                | http://code.org/help                         |
 
     # The Teach submenu
     Then I can navigate the following hamburger menu items within the educate_entries submenu:
@@ -232,7 +232,7 @@ Feature: Hamburger dropdown
       | Learn                  | http://code.org/students                     |
       | Districts              | http://code.org/administrators               |
       | Stats                  | http://code.org/promote                      |
-      | Donate                 | http://code.org/donate                       |
+      | Help Us                | http://code.org/help                         |
 
     # The Teach submenu
     Then I can navigate the following hamburger menu items within the educate_entries submenu:

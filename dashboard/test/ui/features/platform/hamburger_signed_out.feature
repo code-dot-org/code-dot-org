@@ -103,7 +103,7 @@ Feature: Hamburger dropdown - Signed out
       | Learn                  | http://code.org/students                     |
       | Districts              | http://code.org/administrators               |
       | Stats                  | http://code.org/promote                      |
-      | Donate                 | http://code.org/donate                       |
+      | Help Us                | http://code.org/help                         |
       | Incubator              | http://studio.code.org/incubator             |
 
     # The Teach submenu
