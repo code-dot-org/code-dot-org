@@ -65,14 +65,6 @@ export abstract class Section extends ComponentTree {
     };
   }
 
-  createContainer({children}: {children: any}) {
-    return {
-      definitionId: 'contentful-container',
-      patternProperties: {},
-      children,
-    };
-  }
-
   createSingleColumn({
     cfVerticalAlignment,
     cfHorizontalAlignment,

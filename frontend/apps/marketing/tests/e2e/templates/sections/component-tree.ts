@@ -12,9 +12,11 @@ export class ComponentTree {
   createHeading({
     heading,
     visualAppearance,
+    cfTextAlign,
   }: {
     heading: string;
     visualAppearance?: string;
+    cfTextAlign?: string;
   }) {
     const headingChild = this.createUnboundValue(heading);
 
@@ -27,6 +29,12 @@ export class ComponentTree {
           type: 'DesignValue',
           valuesByBreakpoint: {
             desktop: visualAppearance ?? 'heading-xxl',
+          },
+        },
+        cfTextAlign: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: cfTextAlign ?? 'left',
           },
         },
         children: headingChild,
@@ -97,6 +105,29 @@ export class ComponentTree {
     });
   }
 
+  createDivider({color, margin}: {color: string; margin: string}) {
+    this.children.push({
+      displayName: 'Divider',
+      definitionId: 'divider',
+      patternProperties: {},
+      variables: {
+        color: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: color,
+          },
+        },
+        margin: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: margin,
+          },
+        },
+      },
+      children: [],
+    });
+  }
+
   createColumnContainer({
     cfWrapColumnsCount,
     cfColumns,
@@ -141,7 +172,73 @@ export class ComponentTree {
     });
   }
 
-  createParagraph({paragraph}: {paragraph: string}) {
+  createContainer({
+    cfBorder,
+    cfHorizontalAlignment,
+    cfVerticalAlignement,
+    cfFlexDirection,
+    cfWidth,
+    children,
+  }: {
+    cfBorder?: string;
+    cfFlexDirection?: string;
+    cfWidth?: string;
+    cfHorizontalAlignment?: string;
+    cfVerticalAlignement?: string;
+    children: any;
+  }) {
+    this.children.push({
+      definitionId: 'contentful-container',
+      patternProperties: {},
+      variables: {
+        ...(cfBorder && {
+          cfBorder: {
+            type: 'DesignValue',
+            valuesByBreakpoint: {
+              desktop: cfBorder,
+            },
+          },
+        }),
+        ...(cfFlexDirection && {
+          cfFlexDirection: {
+            type: 'DesignValue',
+            valuesByBreakpoint: {
+              desktop: cfFlexDirection,
+            },
+          },
+        }),
+        ...(cfWidth && {
+          cfWidth: {
+            type: 'DesignValue',
+            valuesByBreakpoint: {
+              desktop: cfWidth,
+            },
+          },
+        }),
+        cfHorizontalAlignment: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: cfHorizontalAlignment ?? 'start',
+          },
+        },
+        cfVerticalAlignement: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: cfVerticalAlignement ?? 'start',
+          },
+        },
+      },
+      children,
+    });
+  }
+
+  createParagraph({
+    paragraph,
+    cfTextAlign,
+  }: {
+    paragraph: string;
+    cfTextAlign?: string;
+  }) {
     const paragraphChild = this.createUnboundValue(paragraph);
 
     this.children.push({
@@ -153,6 +250,12 @@ export class ComponentTree {
           type: 'DesignValue',
           valuesByBreakpoint: {
             desktop: 'body-one',
+          },
+        },
+        cfTextAlign: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: cfTextAlign ?? 'left',
           },
         },
         children: paragraphChild,
