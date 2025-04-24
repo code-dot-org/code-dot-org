@@ -50,7 +50,7 @@ def list_s3_files(bucket, prefix)
   s3 = Aws::S3::Client.new
   response = s3.list_objects_v2(bucket: bucket, prefix: prefix)
   keys = response.contents.map(&:key)
-  raise "No files found in s3://#{bucket}/#{prefix}/" if keys.empty?
+  raise "No files found in s3://#{bucket}/#{prefix}" if keys.empty?
   keys
 end
 
@@ -78,8 +78,7 @@ def process_s3_file(bucket, key)
     channel_id = data['channel_id']
     source = get_project_source(channel_id)
     data['source'] = source
-    data['past_version_ids'] = get_past_version_ids(channel_id)
-    data['past_versions_map'] = get_past_versions_map(channel_id)
+    data['source_versions'] = get_source_versions(channel_id, latest_source: source)
     data.to_json
   rescue JSON::ParserError => exception
     puts "Error parsing JSON: #{exception}"
@@ -96,7 +95,7 @@ end
 def get_project_source(channel_id, version_id: nil)
   return nil unless channel_id
 
-  source_data = SourceBucket.new.get(channel_id, "main.json", version: version_id)
+  source_data = SourceBucket.new.get(channel_id, "main.json", nil, version_id)
   return nil unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
 
   main_json = source_data[:body].string
@@ -106,34 +105,24 @@ rescue NoMethodError => exception
   nil
 end
 
-# returns a map from each past version id to the corresponding source code
-def get_past_versions_map(channel_id)
-  past_version_ids = get_past_version_ids(channel_id)
-  past_version_ids.map do |version_id|
-    source = get_project_source(channel_id, version_id: version_id)
-    [version_id, source]
-  end.to_h
-end
-
-def get_past_version_ids(channel_id)
+# returns a list of source versions in the following format:
+# [
+#   {
+#     :versionId=>"EL24MWXWEIZOQS4OC3PAzL0hlrq.GMcA",
+#     :lastModified=>2024-09-04 05:08:09 UTC,
+#     :isLatest=>true,
+#     :source=>"...",
+#   },
+#   ...
+# ]
+def get_source_versions(channel_id, latest_source:)
   return [] unless channel_id
 
-  # sample response from SourceBucket.new.list_versions:
-  # [
-  #   {
-  #     :versionId=>"EL24MWXWEIZOQS4OC3PAzL0hlrq.GMcA",
-  #     :lastModified=>2024-09-04 05:08:09 UTC,
-  #     :isLatest=>true
-  #   },
-  #   {
-  #     :versionId=>"6SZKYyT9GZw1nmq29g9u0L3UNQmOkTsh",
-  #     :lastModified=>2024-09-04 05:06:35 UTC,
-  #     :isLatest=>false
-  #   }
-  # ]
   versions = SourceBucket.new.list_versions(channel_id, "main.json")
-  past_versions = versions.reject {|version| version[:isLatest]}
-  past_versions.map {|version| version[:versionId]}
+  versions.each do |version|
+    version[:source] = version[:isLatest] ? latest_source : get_project_source(channel_id, version_id: version[:versionId])
+  end
+  versions
 end
 
 def copy_eval_files
