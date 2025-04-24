@@ -52,9 +52,7 @@ puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 def list_s3_files(bucket, prefix)
   s3 = Aws::S3::Client.new
   response = s3.list_objects_v2(bucket: bucket, prefix: prefix)
-  keys = response.contents.map(&:key)
-  raise "No files found in s3://#{bucket}/#{prefix}" if keys.empty?
-  keys
+  response.contents.map(&:key)
 end
 
 $max_processes = 25
