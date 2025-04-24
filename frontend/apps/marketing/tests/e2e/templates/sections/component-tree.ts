@@ -9,6 +9,54 @@ export class ComponentTree {
     this.children = [];
   }
 
+  createOverline({
+    color,
+    size,
+    removeMarginBottom,
+    text,
+    cfTextAlign,
+  }: {
+    color: string;
+    size: string;
+    removeMarginBottom: boolean;
+    text: string;
+    cfTextAlign?: string;
+  }) {
+    this.children.push({
+      displayName: 'Overline',
+      definitionId: 'overline',
+      patternProperties: {},
+      variables: {
+        color: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: color,
+          },
+        },
+        size: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: size,
+          },
+        },
+        removeMarginBottom: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: removeMarginBottom ?? false,
+          },
+        },
+        children: this.createUnboundValue(text),
+        cfTextAlign: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: cfTextAlign ?? 'left',
+          },
+        },
+      },
+      children: [],
+    });
+  }
+
   createHeading({
     heading,
     visualAppearance,
@@ -232,10 +280,70 @@ export class ComponentTree {
     });
   }
 
-  createParagraph({
-    paragraph,
+  createTextLink({
+    size,
+    text,
+    href,
+    isLinkExternal,
+    removeMarginBottom,
     cfTextAlign,
   }: {
+    size: string;
+    text: string;
+    href: string;
+    isLinkExternal: boolean;
+    removeMarginBottom?: boolean;
+    arialabel?: string;
+    cfTextAlign?: string;
+  }) {
+    this.children.push({
+      displayName: 'Text Link',
+      definitionId: 'link',
+      patternProperties: {},
+      variables: {
+        size: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: size,
+          },
+        },
+        children: this.createUnboundValue(text),
+        href: this.createUnboundValue(href),
+        isLinkExternal: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: isLinkExternal ?? false,
+          },
+        },
+        removeMarginBottom: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: removeMarginBottom ?? false,
+          },
+        },
+        cfTextAlign: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: cfTextAlign ?? 'left',
+          },
+        },
+      },
+      children: [],
+    });
+  }
+
+  createParagraph({
+    paragraph,
+    visualAppearance,
+    color,
+    removeMarginBottom,
+    isStrong,
+    cfTextAlign,
+  }: {
+    visualAppearance?: string;
+    color?: string;
+    removeMarginBottom?: boolean;
+    isStrong?: boolean;
     paragraph: string;
     cfTextAlign?: string;
   }) {
@@ -249,13 +357,31 @@ export class ComponentTree {
         visualAppearance: {
           type: 'DesignValue',
           valuesByBreakpoint: {
-            desktop: 'body-one',
+            desktop: visualAppearance ?? 'body-one',
           },
         },
         cfTextAlign: {
           type: 'DesignValue',
           valuesByBreakpoint: {
             desktop: cfTextAlign ?? 'left',
+          },
+        },
+        color: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: color ?? 'primary',
+          },
+        },
+        removeMarginBottom: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: removeMarginBottom ?? false,
+          },
+        },
+        isStrong: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: isStrong ?? false,
           },
         },
         children: paragraphChild,

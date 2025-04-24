@@ -11,6 +11,9 @@ import ColumnSection from './sections/column';
 import ContainerSection from './sections/container';
 import DividerSection from './sections/divider';
 import HeadingSection from './sections/heading';
+import OverlineSection from './sections/overline';
+import ParagraphSection from './sections/paragraph';
+import TextLinkSection from './sections/text-link';
 
 export async function createAllTheThingsExperienceEntry() {
   const managementClient = createClient({
@@ -31,6 +34,9 @@ export async function createAllTheThingsExperienceEntry() {
   const containerSection = new ContainerSection();
   const dividerSection = new DividerSection();
   const headingSection = new HeadingSection();
+  const overlineSection = new OverlineSection();
+  const paragraphSection = new ParagraphSection();
+  const textLinkSection = new TextLinkSection();
 
   const sections = [
     introductionSection,
@@ -40,6 +46,9 @@ export async function createAllTheThingsExperienceEntry() {
     containerSection,
     dividerSection,
     headingSection,
+    overlineSection,
+    paragraphSection,
+    textLinkSection,
   ];
 
   const unboundValues = sections.reduce((acc, section) => {
@@ -3207,417 +3216,8 @@ export async function createAllTheThingsExperienceEntry() {
                 },
               ],
             }),
-            createContentfulSectionWrapper({
-              name: 'Overline',
-
-              children: [
-                {
-                  id: 'b2f0KDFZ',
-                  displayName: 'Heading',
-                  definitionId: 'heading',
-                  patternProperties: {},
-                  variables: {
-                    visualAppearance: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'heading-xxl',
-                      },
-                    },
-                    removeMarginBottom: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    children: {
-                      key: '-KqdBQBCJexO6AUlN6Hdk',
-                      type: 'UnboundValue',
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                    cfTextAlign: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'left',
-                      },
-                    },
-                  },
-                  children: [],
-                },
-                {
-                  id: 'L9QvdEUS',
-                  displayName: 'Overline',
-                  definitionId: 'overline',
-                  patternProperties: {},
-                  variables: {
-                    color: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'primary',
-                      },
-                    },
-                    size: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'm',
-                      },
-                    },
-                    removeMarginBottom: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    children: {
-                      key: '1eCExq2WLGpJwNbRFYPCg',
-                      type: 'UnboundValue',
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                    cfTextAlign: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'left',
-                      },
-                    },
-                  },
-                  children: [],
-                },
-                {
-                  id: 'H2y2eW6g',
-                  displayName: 'Overline 1',
-                  definitionId: 'overline',
-                  patternProperties: {},
-                  variables: {
-                    color: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'secondary',
-                      },
-                    },
-                    size: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 's',
-                      },
-                    },
-                    removeMarginBottom: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    children: {
-                      key: 'Lu9xfUr8',
-                      type: 'UnboundValue',
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                    cfTextAlign: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'center',
-                      },
-                    },
-                  },
-                  children: [],
-                },
-                {
-                  id: 'K6qaxqTv',
-                  displayName: 'Overline 2',
-                  definitionId: 'overline',
-                  patternProperties: {},
-                  variables: {
-                    color: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'primary',
-                      },
-                    },
-                    size: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'l',
-                      },
-                    },
-                    removeMarginBottom: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    children: {
-                      key: 'tgfqSQxT',
-                      type: 'UnboundValue',
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                    cfTextAlign: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'right',
-                      },
-                    },
-                  },
-                  children: [],
-                },
-              ],
-            }),
-            createContentfulSectionWrapper({
-              name: 'Paragraph',
-
-              children: [
-                {
-                  id: 'KesTZnYJ',
-                  displayName: 'Heading',
-                  definitionId: 'heading',
-                  patternProperties: {},
-                  variables: {
-                    visualAppearance: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'heading-xxl',
-                      },
-                    },
-                    removeMarginBottom: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    children: {
-                      key: '4fZ-pGgFlP7R6tach397W',
-                      type: 'UnboundValue',
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                    cfTextAlign: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'left',
-                      },
-                    },
-                  },
-                  children: [],
-                },
-                {
-                  id: 'AMYwkYNk',
-                  displayName: 'Paragraph',
-                  definitionId: 'paragraph',
-                  patternProperties: {},
-                  variables: {
-                    visualAppearance: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'body-four',
-                      },
-                    },
-                    color: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'primary',
-                      },
-                    },
-                    removeMarginBottom: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    children: {
-                      key: 'joR8i87odA3R7JLfvzfCw',
-                      type: 'UnboundValue',
-                    },
-                    isStrong: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                    cfTextAlign: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'left',
-                      },
-                    },
-                  },
-                  children: [],
-                },
-                {
-                  id: 'zJvuD0HD',
-                  displayName: 'Paragraph 1',
-                  definitionId: 'paragraph',
-                  patternProperties: {},
-                  variables: {
-                    visualAppearance: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'body-two',
-                      },
-                    },
-                    color: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'secondary',
-                      },
-                    },
-                    removeMarginBottom: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    children: {
-                      key: 'TSFzv7B9',
-                      type: 'UnboundValue',
-                    },
-                    isStrong: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                    cfTextAlign: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'center',
-                      },
-                    },
-                  },
-                  children: [],
-                },
-                {
-                  id: 'SJd9fYto',
-                  displayName: 'Paragraph 2',
-                  definitionId: 'paragraph',
-                  patternProperties: {},
-                  variables: {
-                    visualAppearance: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'body-two',
-                      },
-                    },
-                    color: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'secondary',
-                      },
-                    },
-                    removeMarginBottom: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    children: {
-                      key: 'avmUJimV',
-                      type: 'UnboundValue',
-                    },
-                    isStrong: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                    cfTextAlign: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'right',
-                      },
-                    },
-                  },
-                  children: [],
-                },
-                {
-                  id: 'pl5CZVbe',
-                  displayName: 'Paragraph',
-                  definitionId: 'paragraph',
-                  patternProperties: {},
-                  variables: {
-                    visualAppearance: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'body-one',
-                      },
-                    },
-                    color: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'primary',
-                      },
-                    },
-                    removeMarginBottom: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    children: {
-                      key: 'hRhxjrt3N9VU1NMl2QRh3',
-                      type: 'UnboundValue',
-                    },
-                    isStrong: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: false,
-                      },
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                    cfTextAlign: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'left',
-                      },
-                    },
-                  },
-                  children: [],
-                },
-              ],
-            }),
+            overlineSection.getComponentTree(),
+            paragraphSection.getComponentTree(),
             createContentfulSectionWrapper({
               name: 'Section',
 
@@ -3728,6 +3328,7 @@ export async function createAllTheThingsExperienceEntry() {
                 },
               ],
             }),
+            textLinkSection.getComponentTree(),
             createContentfulSectionWrapper({
               name: 'Text Link',
 
