@@ -1,0 +1,17 @@
+name 'student-end-of-unit-survey-q27_-compsys_2025'
+
+question 'This unit  has helped me learn or confirm that failure is a natural and expected part of the problem solving process.'
+
+right 'Strongly agree'
+right 'Agree'
+right 'Slightly agree'
+right 'Neither'
+right 'Slightly disagree'
+right 'Disagree'
+right 'Strongly disagree'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

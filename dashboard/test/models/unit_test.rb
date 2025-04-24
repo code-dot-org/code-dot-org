@@ -1638,14 +1638,15 @@ class UnitTest < ActiveSupport::TestCase
     assert_nil unit.course_link
   end
 
-  test "course_link returns nil if unit is in two courses" do
+  test "course_link returns first unit_group course link if unit is in two courses" do
     unit = create :script
     unit_group = create :unit_group, name: 'csp'
     other_unit_group = create :unit_group, name: 'othercsp'
     create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
     create :unit_group_unit, position: 1, unit_group: other_unit_group, script: unit
 
-    assert_nil unit.course_link
+    unit.reload
+    assert_equal '/courses/csp', unit.course_link
   end
 
   test "course_link returns course_path if unit is in one course" do
@@ -2627,6 +2628,7 @@ class UnitTest < ActiveSupport::TestCase
     unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
     course_unit_group = create(:unit_group)
     unit_gp_unit = create :unit_group_unit, unit_group: course_unit_group, script: unit_in_course, position: 1
+    unit_in_course.update!(original_unit_group: nil)
     CourseOffering.add_course_offering(course_unit_group)
 
     UnitGroup.any_instance.expects(:write_serialization).never

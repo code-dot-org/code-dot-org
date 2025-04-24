@@ -8,11 +8,9 @@ import {
   PointerSensor,
   useSensor,
   useSensors,
+  KeyboardSensor,
 } from '@dnd-kit/core';
-import {
-  restrictToFirstScrollableAncestor,
-  restrictToVerticalAxis,
-} from '@dnd-kit/modifiers';
+import {restrictToVerticalAxis} from '@dnd-kit/modifiers';
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
@@ -22,6 +20,10 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DndDataContextProvider} from './DnDDataContextProvider';
+import {
+  fileBrowserCollisionDetector,
+  fileBrowserKeyboardCoordinateGetter,
+} from './dragAndDropUtils';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {useHandleDragEnd} from './hooks';
@@ -37,6 +39,7 @@ export const FileBrowser = React.memo(() => {
 
   const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
   const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
+  const projectFolders = source.folders;
 
   const dndMonitor = useMemo(
     () => ({
@@ -59,7 +62,22 @@ export const FileBrowser = React.memo(() => {
       activationConstraint: {
         distance: 2,
       },
+    }),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: fileBrowserKeyboardCoordinateGetter(projectFolders),
+      keyboardCodes: {
+        // Start dragging on 'm', so 'enter' and 'space' can be used to open/close a folder.
+        // TODO: expose a menu to users of our keyboard options, until then this is a hidden feature.
+        start: ['KeyM'],
+        cancel: ['Escape'],
+        end: ['KeyM', 'Enter', 'Space'],
+      },
     })
+  );
+
+  const collisionDetector = useMemo(
+    () => fileBrowserCollisionDetector(projectFolders),
+    [projectFolders]
   );
 
   return (
@@ -74,10 +92,8 @@ export const FileBrowser = React.memo(() => {
         <DndContext
           onDragEnd={handleDragEnd}
           sensors={sensors}
-          modifiers={[
-            restrictToVerticalAxis,
-            restrictToFirstScrollableAncestor,
-          ]}
+          modifiers={[restrictToVerticalAxis]}
+          collisionDetection={collisionDetector}
         >
           <DndDataContextProvider
             value={{dragData, dropData}}

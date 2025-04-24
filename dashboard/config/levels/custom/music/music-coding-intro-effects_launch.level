@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:57:07.000Z",
   "level_num": "custom",
@@ -46,7 +47,7 @@
               "next": {
                 "block": {
                   "type": "play_chord_at_current_location_simple2",
-                  "id": "play_chord_at_current_location_simple2",
+                  "id": "notes",
                   "extraState": {
                     "disableNextConnection": false
                   },
@@ -75,7 +76,7 @@
               "next": {
                 "block": {
                   "type": "play_pattern_at_current_location_simple2",
-                  "id": "play_pattern_at_current_location_simple2",
+                  "id": "drums",
                   "extraState": {
                     "disableNextConnection": false
                   },
@@ -99,7 +100,7 @@
     "validations": [
       {
         "key": "music-coding-intro-effects_70c7b024-3441-4cb3-a904-33635808b53c",
-        "message": "Nice! You triggered both events. ",
+        "message": "**Nice!** You customized the sounds and triggered both events. ",
         "next": true,
         "conditions": [
           {
@@ -114,7 +115,7 @@
       },
       {
         "key": "music-coding-intro-effects_30c23d9c-144e-4028-8ee5-5d0c9fe605e4",
-        "message": "You triggered the notes. Now use the numbers 1 and 2 to trigger both sounds. ",
+        "message": "You triggered the notes. Now use both numbers 1 and 2 to trigger both sounds. ",
         "next": false,
         "conditions": [
           {
@@ -125,7 +126,7 @@
       },
       {
         "key": "music-coding-intro-effects_ca810c65-90d6-4113-b7cc-5b831a9d897b",
-        "message": "You triggered the drums. Now use the numbers 1 and 2 to trigger both sounds. ",
+        "message": "You triggered the drums. Now use the both numbers 1 and 2 to trigger both sounds. ",
         "next": false,
         "conditions": [
           {
@@ -160,7 +161,7 @@
       },
       {
         "key": "music-coding-intro-effects_35b45d42-21a3-48b6-8f6c-e7f23a7a028e",
-        "message": "Nothing has played yet. Press Stop, read the instructions and try again. ",
+        "message": "Nothing has played yet. First, define the notes & drum patterns. Then, trigger the sounds. ",
         "next": false,
         "conditions": [
 
@@ -168,12 +169,18 @@
         "callout": "run-button"
       }
     ],
-    "long_instructions": "####<i class=\"fa-solid fa-music\"></i> Make your own melody\r\n\r\n1. Click on the [play notes](#clickable=play-notes-block) block to create your own unique melody.\r\n2. Then, click on the [play drums](#clickable=play-drums-block) block to make your own beat.\r\n3. Press [Run](#clickable=run-button) then trigger your new sound!",
+    "long_instructions": "####<i class=\"fa-solid fa-music\"></i> Make your own melody!\r\nThe blocks are already in place but you need to define the notes & drums.\r\n1. Click on the `play notes` block to create a unique melody. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id:notes)\r\n2. Then, click on the `play drums` block to make your own beat. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id:drums)\r\n3. Press [Run](#clickable=run-button) then trigger your new sounds!",
     "name_suffix": "_launch",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:07.187+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects\\\"\"],\"cloned_from\":\"music-coding-intro-effects\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:07.187+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects\\\"\"],\"cloned_from\":\"music-coding-intro-effects\"},{\"changed_at\":\"2025-04-23 22:17:52 +0000\",\"changed\":[\"validations\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:24:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:25:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:27:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:35:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

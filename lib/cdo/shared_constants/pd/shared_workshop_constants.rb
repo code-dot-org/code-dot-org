@@ -8,7 +8,7 @@ module Pd
       COURSE_FACILITATOR = 'Facilitator'.freeze,
       COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
       COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop'.freeze,
-      COURSE_CSAIF = 'CS and AI Fundamentals'.freeze,
+      COURSE_AIF = 'AI Fundamentals'.freeze,
     ].freeze
 
     ARCHIVED_COURSES = [
@@ -80,46 +80,35 @@ module Pd
       ],
       COURSE_CSP => [
         SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
-        SUBJECT_CSP_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
         SUBJECT_CSP_WORKSHOP_1 = SUBJECT_WORKSHOP_1,
         SUBJECT_CSP_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
         SUBJECT_CSP_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
         SUBJECT_CSP_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
         SUBJECT_CSP_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
         SUBJECT_CSP_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
-        SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
-        SUBJECT_CSP_FIT = SUBJECT_FIT,
-        SUBJECT_CSP_FOR_RETURNING_TEACHERS,
       ],
       COURSE_CSA => [
         SUBJECT_CSA_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
-        SUBJECT_CSA_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
         SUBJECT_CSA_WORKSHOP_1 = SUBJECT_WORKSHOP_1,
         SUBJECT_CSA_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
         SUBJECT_CSA_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
         SUBJECT_CSA_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
         SUBJECT_CSA_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
         SUBJECT_CSA_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
-        SUBJECT_CSA_FIT = SUBJECT_FIT,
-        SUBJECT_CSA_CAPSTONE = 'Capstone'.freeze
       ],
       COURSE_CSD => [
         SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
-        SUBJECT_CSD_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
         SUBJECT_CSD_WORKSHOP_1 = SUBJECT_WORKSHOP_1,
         SUBJECT_CSD_WORKSHOP_2 = SUBJECT_WORKSHOP_2,
         SUBJECT_CSD_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
         SUBJECT_CSD_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
         SUBJECT_CSD_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
         SUBJECT_CSD_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
-        SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
-        SUBJECT_CSD_FIT = SUBJECT_FIT
       ],
       COURSE_CSF => [
         SUBJECT_CSF_101,
         SUBJECT_CSF_201,
-        SUBJECT_CSF_DISTRICT,
-        SUBJECT_CSF_FIT = SUBJECT_FIT
+        SUBJECT_CSF_DISTRICT
       ],
       COURSE_ADMIN_COUNSELOR => [
         SUBJECT_ADMIN_COUNSELOR_WELCOME,
@@ -130,10 +119,6 @@ module Pd
         SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
       ]
     }.freeze
-
-    VIRTUAL_ONLY_SUBJECTS = [
-      SUBJECT_VIRTUAL_KICKOFF
-    ].freeze
 
     CSD_CUSTOM_WORKSHOP_MODULES = [
       CS_BASICS_FOR_K5_TEACHERS = 'Computer Science Basics for K-5 Teachers'.freeze,
@@ -180,21 +165,6 @@ module Pd
       SUBJECT_WORKSHOP_3_4
     ].freeze
 
-    # Used to suppress post-workshop emails and in create/edit workshop UI
-    MUST_SUPPRESS_EMAIL_SUBJECTS = [
-      SUBJECT_CSP_TEACHER_CON,
-      SUBJECT_CSP_FIT,
-      SUBJECT_CSD_TEACHER_CON,
-      SUBJECT_CSD_FIT,
-      SUBJECT_CSF_FIT,
-      SUBJECT_ADMIN_COUNSELOR_WELCOME,
-      SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
-    ].freeze
-
     LEGACY_SUBJECTS = {
       COURSE_CSP => [
         LEGACY_SUBJECT_CSP_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
@@ -218,7 +188,12 @@ module Pd
         LEGACY_SUBJECT_CSP_VIRTUAL_5 = 'Virtual Workshop 5'.freeze,
         LEGACY_SUBJECT_CSP_VIRTUAL_6 = 'Virtual Workshop 6'.freeze,
         LEGACY_SUBJECT_CSP_VIRTUAL_7 = 'Virtual Workshop 7'.freeze,
-        LEGACY_SUBJECT_CSP_VIRTUAL_8 = 'Virtual Workshop 8'.freeze
+        LEGACY_SUBJECT_CSP_VIRTUAL_8 = 'Virtual Workshop 8'.freeze,
+
+        SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
+        SUBJECT_CSP_FIT = SUBJECT_FIT,
+        SUBJECT_CSP_FOR_RETURNING_TEACHERS,
+        SUBJECT_CSP_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF
       ],
       COURSE_CSD => [
         LEGACY_SUBJECT_CSD_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
@@ -243,9 +218,40 @@ module Pd
         LEGACY_SUBJECT_CSD_VIRTUAL_6 = 'Virtual Workshop 6'.freeze,
         LEGACY_SUBJECT_CSD_VIRTUAL_7 = 'Virtual Workshop 7'.freeze,
         LEGACY_SUBJECT_CSD_VIRTUAL_8 = 'Virtual Workshop 8'.freeze,
-        SUBJECT_CSD_CUSTOM_WORKSHOP = SUBJECT_CUSTOM_WORKSHOP
+
+        SUBJECT_CSD_CUSTOM_WORKSHOP = SUBJECT_CUSTOM_WORKSHOP,
+        SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
+        SUBJECT_CSD_FIT = SUBJECT_FIT,
+        SUBJECT_CSD_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF
+      ],
+      COURSE_CSF => [
+        SUBJECT_CSF_FIT = SUBJECT_FIT
+      ],
+      COURSE_CSA => [
+        SUBJECT_CSA_FIT = SUBJECT_FIT,
+        SUBJECT_CSA_CAPSTONE = 'Capstone'.freeze,
+        SUBJECT_CSA_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF
       ]
     }.freeze
+
+    # Used to suppress post-workshop emails and in create/edit workshop UI
+    MUST_SUPPRESS_EMAIL_SUBJECTS = [
+      SUBJECT_VIRTUAL_KICKOFF,
+      SUBJECT_CSP_TEACHER_CON,
+      SUBJECT_CSP_FIT,
+      SUBJECT_CSP_FOR_RETURNING_TEACHERS,
+      SUBJECT_CSD_TEACHER_CON,
+      SUBJECT_CSD_FIT,
+      SUBJECT_CSF_FIT,
+      SUBJECT_CSA_FIT,
+      SUBJECT_CSA_CAPSTONE,
+      SUBJECT_ADMIN_COUNSELOR_WELCOME,
+      SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL2,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL3,
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4
+    ].freeze
 
     WORKSHOP_APPLICATION_STATES = {
       now_closed: "now_closed",
@@ -423,55 +429,62 @@ module Pd
       time_zone: {
         required: false,
         stateKey: 'timeZone',
-        label: 'Workshop time(s) will be set to your timezone:'
+        label: 'Workshop time(s) will be set to timezone:'
       },
     }
 
     WORKSHOP_COURSE_CONFIGS = [
       {
+        slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
+        label: COURSE_BUILD_YOUR_OWN,
+        icon: 'plus-square',
+        session_fields: SESSION_FIELDS,
+        fields: COMMON_COURSE_FIELDS.merge(
+          course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
+          participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
+        )
+      },
+      {
         slug: COURSE_CSF.parameterize(separator: "_"),
         label: COURSE_CSF,
+        icon: 'book',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSF].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSP.parameterize(separator: "_"),
         label: COURSE_CSP,
+        icon: 'book',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSP].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSD.parameterize(separator: "_"),
         label: COURSE_CSD,
+        icon: 'book',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSD].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_CSA.parameterize(separator: "_"),
         label: COURSE_CSA,
+        icon: 'book',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_CSA].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_ADMIN_COUNSELOR.parameterize(separator: "_"),
         label: COURSE_ADMIN_COUNSELOR,
+        icon: 'users',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS.merge(subject: {required: true, stateKey: 'subject', label: 'Subject', options: SUBJECTS[COURSE_ADMIN_COUNSELOR].map {|s| {value: s, label: s}}})
       },
       {
         slug: COURSE_FACILITATOR.parameterize(separator: "_"),
         label: COURSE_FACILITATOR,
+        icon: 'users',
         session_fields: SESSION_FIELDS,
         fields: COMMON_COURSE_FIELDS
-      },
-      {
-        slug: COURSE_BUILD_YOUR_OWN.parameterize(separator: "_"),
-        label: COURSE_BUILD_YOUR_OWN,
-        session_fields: SESSION_FIELDS,
-        fields: COMMON_COURSE_FIELDS.merge(
-          course_offerings: {required: true, stateKey: 'courseOfferings', label: 'Select workshop topic(s)'},
-          participant_group_type: {required: true, stateKey: 'participantGroupType', label: 'Cohort type', options: PARTICIPANT_GROUP_TYPES.map {|s| {value: s, label: s}}}
-        )
       }
     ].freeze
   end

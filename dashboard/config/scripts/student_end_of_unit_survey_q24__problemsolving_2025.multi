@@ -1,0 +1,17 @@
+name 'student-end-of-unit-survey-q24_-problemsolving_2025'
+
+question 'I expect that the work and projects I did in this class will be relevant to the work I might do in the future.'
+
+right 'Strongly agree'
+right 'Agree'
+right 'Slightly agree'
+right 'Neither'
+right 'Slightly disagree'
+right 'Disagree'
+right 'Strongly disagree'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

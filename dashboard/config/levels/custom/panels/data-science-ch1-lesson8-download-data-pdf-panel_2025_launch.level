@@ -1,0 +1,32 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-04-16T18:13:06.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/cc0bd1b72a05c383d665533c30294327-Panel Levels Slide Deck (4).png",
+        "key": "hardware-components-e56bb056-0af5-475f-b8e1-7b49f9c79f82",
+        "layout": "text-bottom-right",
+        "typing": false,
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Choose Your Data\nSelect the **numerical** data you want to turn into a histogram.\n",
+        "imageUrl": "",
+        "key": "hardware-components-60bbd87e-b298-4721-8344-14ba7f84abc6",
+        "layout": "text-bottom-right",
+        "fadeInOverPrevious": false
+      }
+    ],
+    "name_suffix": "_2025"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-16T18:13:06.889+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson8-cleaning-data-panel_2025_launch\\\"\"],\"cloned_from\":\"data-science-ch1-lesson8-cleaning-data-panel_2025_launch\"},{\"changed_at\":\"2025-04-16 18:14:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

@@ -320,8 +320,14 @@ Resources:
               ContainerPath: /app/apps/marketing/.next/server/app/code.org
               ReadOnly: false
           Secrets:
-            - Name: CONTENTFUL_TOKEN
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_TOKEN::'
+            - Name: CONTENTFUL_DELIVERY_TOKEN
+              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_DELIVERY_TOKEN::'
+            - Name: CONTENTFUL_PREVIEW_TOKEN
+              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_PREVIEW_TOKEN::'
+            - Name: CONTENTFUL_REVALIDATE_TOKEN
+              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_REVALIDATE_TOKEN::'
+            - Name: DRAFT_MODE_TOKEN
+              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:DRAFT_MODE_TOKEN::'
             - Name: STATSIG_CLIENT_KEY
               ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:STATSIG_CLIENT_KEY::'
             - Name: STATSIG_SERVER_KEY

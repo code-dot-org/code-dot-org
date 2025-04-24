@@ -1,6 +1,3 @@
-import moment from 'moment-timezone';
-
-import {DATETIME_FORMAT} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
 import {
   Facilitator,
   Organizer,
@@ -17,12 +14,12 @@ import {
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/utils';
 
 describe('sessionDataToState', () => {
-  it('should convert session data to state', () => {
+  it('should convert session data to state with timezone', () => {
     const sessionData: Session[] = [
       {
         id: 1,
-        start: '2024-01-01T16:00:00Z',
-        end: '2024-01-02T00:00:00Z',
+        start: '2024-01-01T16:00:00.000Z',
+        end: '2024-01-02T00:00:00.000Z',
         location_address: '123 Main St',
         location_name: 'Test Location',
         session_format: 'in_person',
@@ -40,7 +37,35 @@ describe('sessionDataToState', () => {
         locationName: 'Test Location',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
+      },
+    ];
+    const state = sessionDataToState(sessionData, timeZone);
+    expect(state).toEqual(expectedState);
+  });
+
+  it('should convert session data to state without timezone', () => {
+    const sessionData: Session[] = [
+      {
+        id: 1,
+        start: '2024-01-01T09:00:00.000Z',
+        end: '2024-01-01T17:00:00.000Z',
+        location_address: '123 Main St',
+        location_name: 'Test Location',
+        session_format: 'in_person',
+        code: 'abc',
+      },
+    ];
+    const timeZone = null;
+    const expectedState = [
+      {
+        id: '1',
+        date: '2024-01-01',
+        start: '9:00am',
+        end: '5:00pm',
+        locationAddress: '123 Main St',
+        locationName: 'Test Location',
+        meetingLink: '',
+        format: 'in_person',
       },
     ];
     const state = sessionDataToState(sessionData, timeZone);
@@ -111,7 +136,6 @@ describe('sessionStateToApi', () => {
         locationName: 'Test Location',
         meetingLink: 'https://test.meeting',
         format: 'virtual',
-        sameAsPrevious: false,
       },
       {
         id: 'new-2',
@@ -122,7 +146,6 @@ describe('sessionStateToApi', () => {
         locationName: 'New Location',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
       },
     ];
 
@@ -130,27 +153,18 @@ describe('sessionStateToApi', () => {
       {
         id: 1,
         session_format: 'virtual',
-        start: moment
-          .tz('2024-03-15 9:00am', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        end: moment
-          .tz('2024-03-15 12:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
+        start: '2024-03-15T15:00:00.000Z',
+        end: '2024-03-15T18:00:00.000Z',
         meeting_link: 'https://test.meeting',
+        location_address: null,
+        location_name: null,
       },
       {
         id: undefined,
         session_format: 'in_person',
-        start: moment
-          .tz('2024-03-16 1:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        end: moment
-          .tz('2024-03-16 4:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
+        start: '2024-03-16T19:00:00.000Z',
+        end: '2024-03-16T22:00:00.000Z',
+        meeting_link: null,
         location_address: '456 New St',
         location_name: 'New Location',
       },
@@ -172,7 +186,6 @@ describe('sessionStateToApi', () => {
         locationName: '',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
       },
     ];
 
@@ -180,17 +193,42 @@ describe('sessionStateToApi', () => {
       {
         id: 1,
         session_format: 'in_person',
-        start: moment
-          .tz('2024-03-15 9:00am', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        end: moment
-          .tz('2024-03-15 12:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        location_address: undefined,
-        location_name: undefined,
-        meeting_link: undefined,
+        start: '2024-03-15T15:00:00.000Z',
+        end: '2024-03-15T18:00:00.000Z',
+        location_address: null,
+        location_name: null,
+        meeting_link: null,
+      },
+    ];
+
+    const apiFormat = sessionStateToApi(sessionState, timeZone);
+    expect(apiFormat).toEqual(expectedApiFormat);
+  });
+
+  it('should handle empty time zone correctly', () => {
+    const timeZone = '';
+    const sessionState: SessionFormState[] = [
+      {
+        id: '1',
+        date: '2024-03-15',
+        start: '9:00am',
+        end: '12:00pm',
+        locationAddress: '',
+        locationName: '',
+        meetingLink: '',
+        format: 'in_person',
+      },
+    ];
+
+    const expectedApiFormat = [
+      {
+        id: 1,
+        session_format: 'in_person',
+        start: '2024-03-15T09:00:00.000Z',
+        end: '2024-03-15T12:00:00.000Z',
+        location_address: null,
+        location_name: null,
+        meeting_link: null,
       },
     ];
 
@@ -210,7 +248,6 @@ describe('sessionStateToApi', () => {
         locationName: 'Test Location',
         meetingLink: 'https://test.meeting',
         format: 'virtual',
-        sameAsPrevious: false,
       },
       {
         id: 'new-3',
@@ -221,7 +258,6 @@ describe('sessionStateToApi', () => {
         locationName: 'New Location',
         meetingLink: '',
         format: 'in_person',
-        sameAsPrevious: false,
       },
     ];
 
@@ -229,16 +265,16 @@ describe('sessionStateToApi', () => {
       {
         id: 1,
         session_format: 'virtual',
-        start: '2024-03-15T16:00:00Z',
-        end: '2024-03-15T19:00:00Z',
+        start: '2024-03-15T16:00:00.000Z',
+        end: '2024-03-15T19:00:00.000Z',
         meeting_link: 'https://test.meeting',
         code: 'abc',
       },
       {
         id: 2,
         session_format: 'in_person',
-        start: '2024-03-16T17:00:00Z',
-        end: '2024-03-16T20:00:00Z',
+        start: '2024-03-16T17:00:00.000Z',
+        end: '2024-03-16T20:00:00.000Z',
         location_address: '456 Old St',
         location_name: 'Old Location',
         code: 'abc',
@@ -249,27 +285,18 @@ describe('sessionStateToApi', () => {
       {
         id: 1,
         session_format: 'virtual',
-        start: moment
-          .tz('2024-03-15 9:00am', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        end: moment
-          .tz('2024-03-15 12:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
+        start: '2024-03-15T15:00:00.000Z',
+        end: '2024-03-15T18:00:00.000Z',
         meeting_link: 'https://test.meeting',
+        location_address: null,
+        location_name: null,
       },
       {
         id: undefined,
         session_format: 'in_person',
-        start: moment
-          .tz('2024-03-17 1:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
-        end: moment
-          .tz('2024-03-17 4:00pm', DATETIME_FORMAT, timeZone)
-          .utc()
-          .toISOString(),
+        start: '2024-03-17T19:00:00.000Z',
+        end: '2024-03-17T22:00:00.000Z',
+        meeting_link: null,
         location_address: '789 New St',
         location_name: 'New Location',
       },
@@ -330,6 +357,7 @@ describe('workshopStateToApi', () => {
       course_offerings: [1, 2, 3],
       participant_group_type: 'Test Group',
       time_zone: 'America/Denver',
+      legacyForm2025: null,
     };
 
     const apiFormat = workshopStateToApi(workshopState);
@@ -360,23 +388,24 @@ describe('workshopStateToApi', () => {
     };
 
     const expectedApiFormat = {
-      course: undefined,
-      capacity: undefined,
-      description: undefined,
+      course: null,
+      capacity: null,
+      description: null,
       facilitators: [],
-      fee: undefined,
+      fee: null,
       grades: [],
       hidden: false,
-      name: undefined,
-      notes: undefined,
-      prereq: undefined,
-      regional_partner_id: undefined,
-      registration_link: undefined,
-      subject: undefined,
+      name: null,
+      notes: null,
+      prereq: null,
+      regional_partner_id: null,
+      registration_link: null,
+      subject: null,
       suppress_email: false,
       course_offerings: [],
-      participant_group_type: '',
+      participant_group_type: null,
       time_zone: 'America/Denver',
+      legacyForm2025: null,
     };
 
     const apiFormat = workshopStateToApi(workshopState);
@@ -407,23 +436,24 @@ describe('workshopStateToApi', () => {
     };
 
     const expectedApiFormat = {
-      course: undefined,
-      capacity: undefined,
-      description: undefined,
+      course: null,
+      capacity: null,
+      description: null,
       facilitators: [],
-      fee: undefined,
+      fee: null,
       grades: [],
       hidden: false,
-      name: undefined,
-      notes: undefined,
-      prereq: undefined,
-      regional_partner_id: undefined,
-      registration_link: undefined,
-      subject: undefined,
+      name: null,
+      notes: null,
+      prereq: null,
+      regional_partner_id: null,
+      registration_link: null,
+      subject: null,
       suppress_email: false,
       course_offerings: [],
-      participant_group_type: '',
+      participant_group_type: null,
       time_zone: 'America/Denver',
+      legacyForm2025: null,
     };
 
     const apiFormat = workshopStateToApi(workshopState);

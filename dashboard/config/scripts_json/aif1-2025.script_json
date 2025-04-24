@@ -4,12 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "AIF",
+      "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-14 23:12:52 UTC",
-    "published_state": null,
+    "serialized_at": "2025-04-23 19:03:15 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -31,19 +37,89 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "",
+        "script.name": "aif1-2025"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "64a411fd-1501-457c-bcd6-f0abfdf16f38",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "64a411fd-1501-457c-bcd6-f0abfdf16f38",
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "",
+        "script.name": "aif1-2025"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "edd80d04-9a62-4084-ac80-bbc0051a65f8",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "edd80d04-9a62-4084-ac80-bbc0051a65f8",
+        "lesson_activity.key": "64a411fd-1501-457c-bcd6-f0abfdf16f38"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_-problemsolving_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-problemsolving_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "",
+        "script.name": "aif1-2025",
+        "activity_section.key": "edd80d04-9a62-4084-ac80-bbc0051a65f8"
+      },
+      "level_keys": [
+        "student-eou-survey_-problemsolving_2025"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-problemsolving_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-problemsolving_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "",
+        "script.name": "aif1-2025",
+        "activity_section.key": "edd80d04-9a62-4084-ac80-bbc0051a65f8"
+      }
+    }
   ],
   "resources": [
 

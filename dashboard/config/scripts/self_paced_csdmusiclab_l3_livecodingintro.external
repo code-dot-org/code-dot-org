@@ -3,26 +3,30 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 2: Teaching Lessons 1 - 5: Sequencing
+# Lesson 8: Loops Synthesize
 
-<div style="display: flex; align-items: flex-start; gap: 20px; margin-top: 20px;">
-    <div style="width: 70%;">
-        <p style="line-height: 1.5; font-size: 18px;">
-            In this lesson, you will:
-        </p>
-        <ul style="margin-left: 20px; line-height: 1.6;">
-            <li style="line-height: 1.5;font-size: 18px;">
-                <mark>UPDATE</mark>
-            </li>
-        </ul>
-        <p style="font-size: 16px; color: black;">
-        <br>
-        <p style="line-height: 1.5; font-size: 18px;"><strong>Suggested time for this lesson:</strong> <mark>25</mark> minutes
-        </p>
-    </div>
-    
-    <!-- Image on the right -->
-    <img src="https://images.code.org/2b751f030a999afa638fe44eb9c27b0d-image-1744665236038.13.52 PM.png" alt="A teacher and a student look on to a laptop computer together, smiling." style="width: 30%; height: auto; border-radius: 5px;">
+## Live Coding
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%; margin: 10px 0px">
+📽️ Check out the lesson's Career Spotlights video: <a href="https://www.youtube.com/watch?v=MDtQjObQ8yY" target="_blank" rel="noopener noreferrer" style="text-decoration: none; font-weight: bold;">Roxanne Harris, Creative Coder and Live Performer</a>
+</p>
+
+#### In Lesson 8 of Programming with Music Lab, students will learn about how creative coder, Roxanne Harris, uses live coding to make music.
+
+#### The coding levels within Lesson 8 help students emulate Roxanne's live coding. We've created a video overview to help you get the hang of it. Click the image below to launch the video in a new tab!
+
+<div style="text-align: center; margin: 20px 0;">
+  <a href="https://www.loom.com/share/0cefdcdd98244527a3d0a3a77d4078eb" target="_blank">
+    <img style="max-width: 90%;" src="https://cdn.loom.com/sessions/thumbnails/0cefdcdd98244527a3d0a3a77d4078eb-d2fc98bbf7fa58dd-full-play.gif" alt="Live coding overview video thumbnail">
+  </a>
+  <p style="font-size: 18px; margin-top: 15px;">
+    <a href="https://www.loom.com/share/0cefdcdd98244527a3d0a3a77d4078eb" target="_blank" style="text-decoration: none; font-weight: bold;">
+      🎥 Overview of Live Coding – Watch Video
+    </a>
+  </p>
 </div>
-<br>
+
+## Up Next
+
+#### In the next few levels, you'll get the chance to practice some live coding yourself!
 MARKDOWN

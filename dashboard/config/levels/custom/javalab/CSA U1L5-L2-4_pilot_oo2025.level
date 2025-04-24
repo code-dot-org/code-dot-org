@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-03-12T23:24:18.000Z",
   "level_num": "custom",
@@ -757,15 +758,17 @@
       ]
     ],
     "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Change the condition for the last <code style=\"background-color: #ececec; color: black; font-weight: bold;\">while</code> loop on **Line 34** to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">jesse.hasPaint()</code> then run the program to observe the results. What happens when you run the program? Why do you think this happened?",
-    "project_template_level_name": "CSA U1L5-Loops PBT_pilot_oo2025",
+    "project_template_level_name": "CSA U1L5-Loops PBT_pilot-2025",
     "reference_links": [
       "/courses/csa-2023/guides/while-loops"
     ],
     "teacher_markdown": "When changing the condition on **Line 34** from `jesse.canMove()` to `jesse.hasPaint()`, the `Painter` object no longer moves across the second row. This is because the `Painter` object runs out of paint in the first row, so the condition for this `while` loop is never `true` when this code segment is reached.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-12T23:24:18.090+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L2-4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L5-L2-4_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T23:24:18.090+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L2-4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L5-L2-4_pilot-2025\"},{\"changed_at\":\"2025-04-21 09:50:23 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"project_template_level_name\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-04-21 09:52:07 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>

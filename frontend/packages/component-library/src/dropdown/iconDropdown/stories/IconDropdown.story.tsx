@@ -7,7 +7,7 @@ import {dropdownColors} from './../../index';
 
 export default {
   title: 'DesignSystem/Dropdown/Icon Dropdown',
-  component: IconDropdown.type,
+  component: IconDropdown,
 } as Meta;
 
 //

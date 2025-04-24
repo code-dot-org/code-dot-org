@@ -7,7 +7,7 @@
   flex-direction: column;
 }
 
-.genericDialog-dark {
+.genericDialog-Dark {
   @extend %generic-dialog;
   background-color: $light_gray_950;
 
@@ -25,7 +25,7 @@
   }
 }
 
-.genericDialog-light {
+.genericDialog-Light {
   @extend %generic-dialog;
 }
 

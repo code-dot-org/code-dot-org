@@ -129,7 +129,7 @@ jobs:
     - name: Synthesize Cloudformation Template
       working-directory: ./aws/cloudformation/standalone/marketing/deployment
       run: |
-        ruby ./deploy.rb
+        ruby ./deploy.rb marketing
 
     - name: "Download Built Docker Image"
       run: |
@@ -189,6 +189,7 @@ jobs:
         with:
           STAGE: test
           CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
-          CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN}}
+          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN}}
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
           MARKETING_BASE_URL: ${{ vars.MARKETING_BASE_URL }}
+          DRAFT_MODE_TOKEN: ${{ secrets.DRAFT_MODE_TOKEN }}
