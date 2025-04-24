@@ -48,7 +48,8 @@ def filter_evals_pii
   teacher_evals_filename = get_evals_filename('_teacher_evals_')
   evidence_levels_filename = get_evals_filename('_evidence_levels_')
 
-  filter_file_pii(ai_evals_filename, 'ai_evals')
+  # allow ai evals to be missing, because some units don't have them
+  filter_file_pii(ai_evals_filename, 'ai_evals') if ai_evals_filename
   filter_file_pii(teacher_evals_filename, 'teacher_evals')
 
   command = "cp #{$input_dir}/evals/#{evidence_levels_filename} #{$output_dir}/evals/"
@@ -58,9 +59,10 @@ end
 
 def get_evals_filename(pattern)
   filenames = Dir.glob(File.join($input_dir, 'evals', '*.jsonl'))
-  filename = File.basename(filenames.find {|name| name.include?(pattern)})
-  raise "No #{pattern} found in #{$input_dir}/evals" unless filename
-  filename
+  filename = filenames.find {|name| name.include?(pattern)}
+  return File.basename(filename) if filename
+  puts "No #{pattern} found in #{$input_dir}/evals"
+  nil
 end
 
 def filter_file_pii(filename, type)
