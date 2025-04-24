@@ -4,8 +4,13 @@ import {expect, Locator} from '@playwright/test';
 import {EXPECTED_LOCALIZATION_STRINGS} from './config/i18n';
 import {test} from './fixtures/base';
 import {AllTheThingsPage} from './pom/all-the-things';
+import {createAllTheThingsExperienceEntry} from './templates/all-the-things';
 
 test.describe('All the things UI e2e test', () => {
+  test('programmatic', async ({page}) => {
+    await createAllTheThingsExperienceEntry();
+  });
+
   test.describe('a11y', () => {
     test('should have no accessibility violations', async ({page}) => {
       const allTheThingsPage = new AllTheThingsPage(page, 'en-US');

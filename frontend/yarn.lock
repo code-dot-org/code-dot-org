@@ -1100,6 +1100,7 @@ __metadata:
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
     contentful: "npm:^11.2.5"
+    contentful-management: "npm:^11.52.1"
     cookies-next: "npm:^5.1.0"
     dotenv: "npm:^16.4.7"
     eslint: "npm:^9.16.0"
@@ -6778,7 +6779,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^1.6.1, axios@npm:^1.7.4, axios@npm:^1.7.7":
+"axios@npm:^1.6.1, axios@npm:^1.7.4, axios@npm:^1.7.7, axios@npm:^1.8.4":
   version: 1.8.4
   resolution: "axios@npm:1.8.4"
   dependencies:
@@ -7877,6 +7878,19 @@ __metadata:
   version: 1.0.0
   resolution: "constants-browserify@npm:1.0.0"
   checksum: 10c0/ab49b1d59a433ed77c964d90d19e08b2f77213fb823da4729c0baead55e3c597f8f97ebccfdfc47bd896d43854a117d114c849a6f659d9986420e97da0f83ac5
+  languageName: node
+  linkType: hard
+
+"contentful-management@npm:^11.52.1":
+  version: 11.52.1
+  resolution: "contentful-management@npm:11.52.1"
+  dependencies:
+    "@contentful/rich-text-types": "npm:^16.6.1"
+    axios: "npm:^1.8.4"
+    contentful-sdk-core: "npm:^9.0.1"
+    fast-copy: "npm:^3.0.0"
+    globals: "npm:^15.15.0"
+  checksum: 10c0/7828897e30abe2605635a78a0c904d2c9161973f3541a761ea843b031e58455ab700027b5a4164c832d8428b70dd8b4645e610e7cdddfbf24df6911583ee0b3a
   languageName: node
   linkType: hard
 
@@ -10078,7 +10092,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-copy@npm:^3.0.2":
+"fast-copy@npm:^3.0.0, fast-copy@npm:^3.0.2":
   version: 3.0.2
   resolution: "fast-copy@npm:3.0.2"
   checksum: 10c0/02e8b9fd03c8c024d2987760ce126456a0e17470850b51e11a1c3254eed6832e4733ded2d93316c82bc0b36aeb991ad1ff48d1ba95effe7add7c3ab8d8eb554a
@@ -11021,6 +11035,13 @@ __metadata:
   version: 15.13.0
   resolution: "globals@npm:15.13.0"
   checksum: 10c0/640365115ca5f81d91e6a7667f4935021705e61a1a5a76a6ec5c3a5cdf6e53f165af7f9db59b7deb65cf2e1f83d03ac8d6660d0b14c569c831a9b6483eeef585
+  languageName: node
+  linkType: hard
+
+"globals@npm:^15.15.0":
+  version: 15.15.0
+  resolution: "globals@npm:15.15.0"
+  checksum: 10c0/f9ae80996392ca71316495a39bec88ac43ae3525a438b5626cd9d5ce9d5500d0a98a266409605f8cd7241c7acf57c354a48111ea02a767ba4f374b806d6861fe
   languageName: node
   linkType: hard
 
