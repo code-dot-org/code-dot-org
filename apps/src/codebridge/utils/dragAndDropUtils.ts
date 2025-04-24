@@ -11,6 +11,7 @@ import {
   ClientRect,
 } from '@dnd-kit/core';
 import {RectMap} from '@dnd-kit/core/dist/store';
+import {sortableKeyboardCoordinates} from '@dnd-kit/sortable';
 
 import {ProjectFolder} from '@cdo/apps/lab2/types';
 
@@ -195,6 +196,22 @@ export const getHighestPriorityCollision = (
   });
 
   return [rectangleCollisions[0]];
+};
+
+// Extend sortableKeyboardCoordinates to support tab and shift+tab to move items.
+export const sortableKeyboardCoordinatesWithTab: KeyboardCoordinateGetter = (
+  event,
+  args
+) => {
+  if (event.code === KeyboardCode.Tab && event.shiftKey) {
+    // Shift tab is equivalent to left arrow
+    sortableKeyboardCoordinates({...event, code: KeyboardCode.Left}, args);
+  } else if (event.code === KeyboardCode.Tab) {
+    // Tab is equivalent to right arrow
+    sortableKeyboardCoordinates({...event, code: KeyboardCode.Right}, args);
+  }
+  // Otherwise, call the original function
+  return sortableKeyboardCoordinates(event, args);
 };
 
 export const dragAndDropKeyboardCodes = {
