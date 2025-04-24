@@ -125,7 +125,8 @@ export const getLevelPropertiesPath = state => {
       sublevelPosition = currentLevel.levelNumber;
     }
 
-    // TODO - use /courses/:course_name/units/:unit_position/...
+    // TODO: TEACH-1864
+    // use /courses/:course_name/units/:unit_position/... instead of /s/
     return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelPosition}/${
       sublevelPosition === undefined ? '' : `sublevel/${sublevelPosition}/`
     }level_properties`;
