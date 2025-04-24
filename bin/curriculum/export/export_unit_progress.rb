@@ -21,6 +21,9 @@ OptionParser.new do |opts|
   opts.on("-o", "--output-dir OUTPUT_DIR", "Output directory name in S3") do |output_dir|
     $options[:output_dir] = output_dir
   end
+  opts.on("-r", "--rubric-evals", "Include rubric evaluations") do
+    $options[:rubric_evals] = true
+  end
 
   opts.on("-h", "--help", "Prints this help") do
     puts opts
@@ -98,11 +101,11 @@ def main
     output_dir: output_dir
   }
 
-  unload_evidence_levels(query_params: query_params)
-
-  unload_ai_evals(query_params: query_params)
-
-  unload_teacher_evals(query_params: query_params)
+  if $options[:rubric_evals]
+    unload_evidence_levels(query_params: query_params)
+    unload_ai_evals(query_params: query_params)
+    unload_teacher_evals(query_params: query_params)
+  end
 
   unload_progress(query_params: query_params)
 end

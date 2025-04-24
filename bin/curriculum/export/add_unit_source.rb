@@ -108,6 +108,7 @@ def copy_eval_files
   start_time = Time.now
   # copy evals directory from input_dir in s3 to output_dir in local filesystem
   keys = list_s3_files('cdo-data-sharing-internal', "unloaded-unit-progress/#{$options[:input_dir]}/evals/")
+  return if keys.empty?
   puts "Found #{keys.size} files in s3://cdo-data-sharing-internal/unloaded-unit-progress/#{$options[:input_dir]}/evals/"
   system("aws s3 cp --recursive s3://cdo-data-sharing-internal/unloaded-unit-progress/#{$options[:input_dir]}/evals/ #{$output_dir}/evals/")
   raise "Failed to copy evals files" unless $?.success?

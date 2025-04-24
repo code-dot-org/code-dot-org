@@ -43,6 +43,7 @@ def filter_progress_pii
 end
 
 def filter_evals_pii
+  return unless Dir.exist?(File.join($input_dir, 'evals'))
   ai_evals_filename = get_evals_filename('_ai_evals_')
   teacher_evals_filename = get_evals_filename('_teacher_evals_')
   evidence_levels_filename = get_evals_filename('_evidence_levels_')
