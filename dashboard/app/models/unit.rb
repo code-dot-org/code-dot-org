@@ -1977,25 +1977,26 @@ class Unit < ApplicationRecord
     unit_ids.include? id
   end
 
-  def summarize_for_unit_selector
+  def summarize_for_unit_selector(unit_group_unit: nil)
+    unit_group_unit ||= unit_group_units&.first
     {
       id: id,
       key: name,
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
-      position: unit_group_units&.first&.position,
+      position: unit_group_unit&.position,
       description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil,
       is_feedback_enabled: teacher_feedback_enabled?
     }
   end
 
-  def summarize_for_assignment_dropdown
+  def summarize_for_assignment_dropdown(unit_group_unit: nil)
     [
       id,
       {
         id: id,
         name: launched? ? localized_title : localized_title + " *",
-        path: link,
+        path: link(unit_group_unit: unit_group_unit),
         lesson_extras_available: lesson_extras_available?,
         text_to_speech_enabled: text_to_speech_enabled?,
         position: unit_group_units&.first&.position,
