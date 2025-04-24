@@ -62,7 +62,7 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
   onClose,
 }) => {
   return (
-    <div
+    <li
       className={classNames(
         styles.promotion,
         styles[`promotion-${_.lowerCase(backgroundColor)}`]
@@ -104,7 +104,7 @@ const TeacherPromo: React.FC<TeacherPromoProps> = ({
         size="s"
         className={styles.promotionButton}
       />
-    </div>
+    </li>
   );
 };
 

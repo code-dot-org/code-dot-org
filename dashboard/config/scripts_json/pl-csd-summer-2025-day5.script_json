@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-04 17:02:58 UTC",
+    "serialized_at": "2025-04-23 15:30:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -364,7 +364,7 @@
   "resources": [
     {
       "name": "CSD In-Person Summer Workshop Day 5 Agenda",
-      "url": "https://docs.google.com/document/d/1wqmQfryf27dhl0nApe5JqcsXmDJ7Ys6vT0VTUf_XhPg/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1YVh1mOY7i7f7k0i8u_TXX2UEghMUwXzI0jvlqAJpVPs/edit?usp=drive_link",
       "key": "csd_in-person_summer_workshop_day_5_agenda",
       "properties": {
       },
@@ -374,7 +374,7 @@
     },
     {
       "name": "CSD In-Person Summer Workshop day 5 Slides",
-      "url": "https://docs.google.com/presentation/d/1_IGDyXtadz25a3Ad9K5-4IO0A96ZZhNQF4nBUWulk8w/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1mknnqTY9Lq5r1a7KuN-sBHw1KdyO1XkiPGUeVpnlLPs/edit?usp=drive_link",
       "key": "csd_in-person_summer_workshop_day_5_slides",
       "properties": {
       },

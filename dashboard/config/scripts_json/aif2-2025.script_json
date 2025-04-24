@@ -13,12 +13,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 01:21:24 UTC",
+    "serialized_at": "2025-04-23 21:05:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -133,7 +136,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can computational thinking help us simplify and solve complex problems?**\n\nIn this lesson, students activate prior knowledge about breaking tasks into smaller steps and practice computational thinking as a structured problem solving approach. They work in pairs to plan a school event (e.g., fundraiser, dance, talent show), applying computational thinking pillars (decomposition and abstraction) to solve the challenge. Students have an opportunity to use an AI Chatbot to help them complete the activity guide. During the wrap up, students reflect on the activity they completed and discuss the computational skills they practiced.",
-        "preparation": "- Print copies of the Planning a School Event activity guide (one for each pair of students)\n- (Optional) Gather several sticky notes for each student",
+        "preparation": "- Print copies and cut up sets of Baking a Cake cards (one for each pair of students)\n- Print copies of the Planning a School Event activity guide (one for each pair of students)\n- (Optional) Gather several sticky notes for each student",
         "student_overview": "**How can computational thinking help us simplify and solve complex problems?**\n\nApply computational thinking principles —decomposition and abstraction — to plan a school event, and use an AI Chatbot for support."
       },
       "seeding_key": {
@@ -529,7 +532,7 @@
       "key": "9ccfa017-dd35-4bd3-b1a5-b029d6c4b4d6",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -557,7 +560,7 @@
       "key": "49c0d1e7-1633-49fc-9243-5171480f9c74",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1443,26 +1446,39 @@
       }
     },
     {
-      "key": "c8007228-6ec1-44a1-9c76-1ca6571abba8",
+      "key": "ad98f01c-e591-483b-a1ce-708ddd8f0cea",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What process do you take to clean up your room? How do you go about this task?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight the varied approaches that students suggest for accomplishing this common task. Point out any of the following if mentioned by students: the importance of breaking tasks into smaller steps (decomposition), the benefit of recognizing repeated steps (pattern recognition), the need to focus only on key information (abstraction).",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a set of the Baking a Cake cards.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The discussion protocol Think-Pair-Share allows students time to independently reflect on a discussion question and get peer feedback before a class-wide discussion. Allow 1-2 minutes for students to write down bullet points or steps in their process. Then have students share what they wrote down with a partner (or in a group of three). As students are sharing out with a partner, circulate the classroom to find one or two students whose responses you want to highlight. Bring the class back together, and have these one or two students share their responses with the class."
+            "markdown": "You also have the option to have students do this matching activity digitally with the Digital Option Baking Cake Cards"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "c8007228-6ec1-44a1-9c76-1ca6571abba8",
+        "activity_section.key": "ad98f01c-e591-483b-a1ce-708ddd8f0cea",
+        "lesson_activity.key": "9ccfa017-dd35-4bd3-b1a5-b029d6c4b4d6"
+      }
+    },
+    {
+      "key": "7b72f8cc-8a05-42bd-b7aa-9e3d993c1292",
+      "position": 2,
+      "properties": {
+        "description": " Don’t worry about getting this “right” — just focus on what makes sense to you. In a few minutes, we’ll give you the official names for these groups, but first we want to see how you think about organizing these ideas.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7b72f8cc-8a05-42bd-b7aa-9e3d993c1292",
         "lesson_activity.key": "9ccfa017-dd35-4bd3-b1a5-b029d6c4b4d6"
       }
     },
     {
       "key": "3b6e0c69-eb76-43e0-92fb-8ea88e65c02e",
-      "position": 2,
+      "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students group the cards by the kind of task they represent — even if they don’t know the formal terms yet. They should focus on what the card is doing: Is it describing a step? Repeating something? Leaving out extra details?\n\n"
       },
       "seeding_key": {
         "activity_section.key": "3b6e0c69-eb76-43e0-92fb-8ea88e65c02e",
@@ -1470,8 +1486,37 @@
       }
     },
     {
+      "key": "53df3809-bd35-409a-9c00-05619fe7b2dd",
+      "position": 4,
+      "properties": {
+        "description": "Great work! You just used four powerful ways of thinking to organize a real-world task — even if you didn’t know it yet. These are the building blocks of something called computational thinking, and today we’re going to dive into two of them: decomposition and abstraction.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "53df3809-bd35-409a-9c00-05619fe7b2dd",
+        "lesson_activity.key": "9ccfa017-dd35-4bd3-b1a5-b029d6c4b4d6"
+      }
+    },
+    {
+      "key": "5829464a-b671-42f9-bb67-d61bb90963c4",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *computational thinking*. Explain that computational thinking is like cooking a recipe:\n- You break down the recipe into steps – prepping ingredients, cooking, plating.\n- You notice similarities with other recipes you've made – chopping vegetables, boiling water.\n- You focus on essential steps and ignore unnecessary details – you don't need to know how the oven works, just how to set the temperature.\n- You follow or create a step-by-step process to cook the dish.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that computational thinking consists of four pillars: decomposition, pattern recognition, abstraction, and algorithm design. Emphasize that computational thinking isn't just for coding – these pillars are useful for solving all kinds of real-world problems.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson will focus on decomposition and abstraction only, and pattern recognition and algorithm design will be discussed in greater depth in upcoming lessons, so don't spend too much time explaining all four of these pillars now."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5829464a-b671-42f9-bb67-d61bb90963c4",
+        "lesson_activity.key": "9ccfa017-dd35-4bd3-b1a5-b029d6c4b4d6"
+      }
+    },
+    {
       "key": "de9e4af1-e992-4574-9742-b23078cd7ea7",
-      "position": 3,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -1481,38 +1526,11 @@
       }
     },
     {
-      "key": "9eeddeb8-5b6f-4890-95cf-df568d0aae74",
+      "key": "2592c796-cceb-4fb6-b00e-c385e430a96b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *computational thinking*. Explain that computational thinking is like cooking a recipe:\n- You break down the recipe into steps – prepping ingredients, cooking, plating.\n- You notice similarities with other recipes you've made – chopping vegetables, boiling water.\n- You focus on essential steps and ignore unnecessary details – you don't need to know how the oven works, just how to set the temperature.\n- You follow or create a step-by-step process to cook the dish.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that computational thinking consists of four pillars: decomposition, pattern recognition, abstraction, and algorithm design. Emphasize that computational thinking isn't just for coding – these pillars are useful for solving all kinds of real-world problems.",
-        "name": "School Event Planning Challenge",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This lesson will focus on decomposition and abstraction only, and pattern recognition and algorithm design will be discussed in greater depth in upcoming lessons, so don't spend too much time explaining all four of these pillars now."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "9eeddeb8-5b6f-4890-95cf-df568d0aae74",
-        "lesson_activity.key": "c32b75a0-affb-4678-a22e-3b53a7c1985a"
-      }
-    },
-    {
-      "key": "74e233f2-226c-4597-b7d7-1d67d9a312f7",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "74e233f2-226c-4597-b7d7-1d67d9a312f7",
-        "lesson_activity.key": "c32b75a0-affb-4678-a22e-3b53a7c1985a"
-      }
-    },
-    {
-      "key": "2592c796-cceb-4fb6-b00e-c385e430a96b",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *decomposition*."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *decomposition*.",
+        "name": "School Event Planning Challenge"
       },
       "seeding_key": {
         "activity_section.key": "2592c796-cceb-4fb6-b00e-c385e430a96b",
@@ -1521,7 +1539,7 @@
     },
     {
       "key": "c75e44e4-3ee0-4847-883f-d4f42c7a2aff",
-      "position": 4,
+      "position": 2,
       "properties": {
         "description": "When you start a jigsaw puzzle, you don't try to put everything together at once. Instead, you break it down into smaller steps – first sorting edge pieces, then grouping by colors or patterns, and finally assembling sections before putting everything together.",
         "remarks": true
@@ -1533,7 +1551,7 @@
     },
     {
       "key": "3a766650-15d4-4770-b17c-67fc399c8716",
-      "position": 5,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *abstraction*."
       },
@@ -1544,7 +1562,7 @@
     },
     {
       "key": "c7f93660-0f74-4c63-8fd2-2809d01170fd",
-      "position": 6,
+      "position": 4,
       "properties": {
         "description": "When you look at a map, you don't see every tree, building, or streetlight – only the important features like roads, landmarks, and distances. The map removes unnecessary details while keeping the essential information needed to navigate.",
         "remarks": true
@@ -1556,7 +1574,7 @@
     },
     {
       "key": "3d5ce63f-9fb8-4e18-a6f4-36e646089bc7",
-      "position": 7,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Planning a School Event activity guide.",
         "tips": [
@@ -1573,7 +1591,7 @@
     },
     {
       "key": "add1e159-a85e-412e-a612-0e78b40d263e",
-      "position": 8,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -1583,7 +1601,7 @@
     },
     {
       "key": "cae3332b-8709-40c7-8436-e0f69d4dcdce",
-      "position": 9,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will work with their partner to plan a school event (e.g., fundraiser, dance, talent show). Allow students to either select from a provided list or come up with their own school or community-related event.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2 Level 1. Students will use the AI chatbot to assist with completing the Decomposition section of the Planning a School Event activity guide.",
         "progression_name": "Decomposition"
@@ -1595,7 +1613,7 @@
     },
     {
       "key": "5002d390-eaf8-4fd5-8704-0026f3c63602",
-      "position": 10,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around and observe students as they work on their activity guide. Ask guiding questions like, \"What’s something you would need to buy for this type of event?\" and \"What types of tasks are similar to each other?\"",
         "tips": [
@@ -1612,7 +1630,7 @@
     },
     {
       "key": "abc992a3-e15c-4b3b-ab4f-5c01bb3696f3",
-      "position": 11,
+      "position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -1622,7 +1640,7 @@
     },
     {
       "key": "4db3e6e6-5dc5-4fb4-a474-676c47f19e59",
-      "position": 12,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once students have finished brainstorming their task list, have students pair up with another pair who chose the same (or a similar) event. Direct each pair to read through the other pair’s tasks before providing feedback.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around and observe students as they give each other feedback. Ask guiding questions like, \"What tasks might you want to add to your own list\" and \"What tasks should be broken up into separate tasks?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did breaking the event into smaller tasks make it easier to plan?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate that planning the event became easier because they were able to see all of the tasks that they would need to accomplish.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 and Level 3. \n- **Level 2**: Students will use the AI chatbot to assist with completing the Abstraction section of the Planning a School Event activity guide.\n- **Level 3:** Check for Understanding",
         "progression_name": "Abstraction",
@@ -1640,7 +1658,7 @@
     },
     {
       "key": "8de1bc9f-09d0-4c24-8214-6d18cbed1451",
-      "position": 13,
+      "position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -1650,7 +1668,7 @@
     },
     {
       "key": "f571dfe9-6bd5-4a2b-a790-d87360479f41",
-      "position": 14,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did abstraction help simplify your plan?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate that abstraction helped them eliminate unnecessary details and see the big picture of what tasks they would need to complete.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How can you use the skills of decomposition and abstraction in the real world?*\n- Use the Raise a Righteous Hand protocol to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students make connections to ways they might already be using decomposition and abstraction in the real world. Figuring out which classes have assigned homework due the next day is an example of decomposition. Using the internet is an example of abstraction, since you don’t need to know exactly how it works in order to use it. See if students can make connections to ways engineers might use decomposition and abstraction in their jobs."
       },
@@ -1661,7 +1679,7 @@
     },
     {
       "key": "325cf278-8c27-4792-b2ca-56372a3514de",
-      "position": 15,
+      "position": 13,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -1674,7 +1692,7 @@
       "key": "57151b32-b07e-462b-884a-d1d07c55f63c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day aloud for students. Give students a moment to think about and record their answer individually in their unit guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance. Have them think back to the Warm Up question “*What process do you take to clean up your room? How do you go about this task?*” Have students consider how decomposition and abstraction help solve this task. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day aloud for students. Give students a moment to think about and record their answer individually in their unit guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance. Have them think back to the Warm Up activity and consider how decomposition and abstraction help solve a task like baking something. ",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1751,11 +1769,11 @@
       "key": "263e8dcf-1907-47d2-9e15-56bb781d4277",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you notice?*\n- *What do you wonder?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share what they notice and wonder about the responses. Look for student responses that break down the problem into steps and responses that identify decisions points to help drive the discussion towards the idea of an algorithm.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display students’ anonymous responses for the class answering the question, “What steps would you take to create a playlist?”\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What patterns do you notice in the responses?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students students practice the computational thinking skill of pattern recognition to identify similarities in their responses.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Highlight any student responses that involve doing things in a certain order, any steps that happened more than once, or decisions they would need to make, such as sorting songs into groups based on their energy or mood. Point out any of those concepts in their steps and connect them to the idea of an algorithm - a step-by-step process that often involves steps in certain order (sequencing), decision-making (selection), and repetition (iteration)."
+            "markdown": "If you feel comfortable, this is a great opportunity to model walking through the steps of students’ algorithms. Open up Spotify or another music player and have students start to give you the order of steps you need to take. Note how many steps need to be taken before you can start adding songs (login to an account, create a new playlist, create a playlist title, etc). Tell students that they will work together as a class to create a flowchart for this process."
           }
         ]
       },
@@ -1816,12 +1834,12 @@
       "key": "07dcf5f3-3fed-4f9a-afdb-a2f70121ccb6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the steps for designing an algorithm. Explain that we follow these steps to make the process structured and logical. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce this flowchart example to students. Point out that different shapes represent either taking an action or making a decision. Have students read over the chart and be prepared to share what they notice and wonder.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* What did you notice?\n* What do you wonder?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share what they notice and wonder about the flowchart. Encourage students to reference specific steps or decision points in their responses. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the steps (or algorithm) for designing a flowchart. Explain that we follow these steps to make the process structured and logical. \n\n\n",
         "name": "Designing an Algorithm",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time permits, you can engage students with a quick recall discussion and ask the following questions:\n- Why is it important to decompose a complex problem or break it into smaller steps?\n- How does decomposition help with creating an algorithm?\n- Reinforce that following these steps ensures clarity and helps avoid mistakes in problem-solving."
+            "markdown": "If time permits, you can engage students with a quick recall discussion and ask the following questions:\n- Why is it important to decompose a complex problem or break it into smaller steps?\n- How does decomposition help with creating an algorithm?\n\nReinforce that following these steps ensures clarity and helps avoid mistakes in problem-solving."
           }
         ]
       },
@@ -1861,6 +1879,13 @@
       "key": "fa891288-7e6d-4b28-aef7-8d813c8698e2",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the information on the slide to explain to students the \"Shout Out, Share Out\" protocol. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts. Have selected students who shouted out an answer record their response on a sticky note. Then use the sticky notes to build a class flowchart.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Rather than writing student responses on the board, consider having students write their response on a sticky note. Have one color represent steps (e.g. log in to my account) and another color represent decision points (e.g. decide on playlist name). This way you can build out a flowchart by rearranging decision points and steps as students provide their responses.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fa891288-7e6d-4b28-aef7-8d813c8698e2",
@@ -1868,14 +1893,31 @@
       }
     },
     {
-      "key": "8f538bf4-4ab2-4592-8f79-e9ecedd47c24",
+      "key": "339cfe78-4407-4163-8bd4-85304ce8cf27",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the information on the slide to explain to students the \"Shout Out, Share Out\" protocol. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts. Record students' responses on the board, and note any common answers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a moment and look at what was shared together. Point out any similarities from each step. Highlight the different decisions students mentioned and connect them to how we approach problem-solving. Click through the animated slide to explain that everyday decisions, like deciding what to wear, can be broken into simple steps. Algorithms help us solve more complex problems by organizing tasks and guiding decision-making efficiently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Go over the final step of designing an algorithm: organizing steps and decisions into a logical sequence using a flowchart. Point out how the flowchart visually connects actions and decisions to guide the process.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a handful of two different color sticky notes. Students will also need some space near their computers to arrange their sticky notes into a flowchart.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Go over the final step of designing an algorithm: organizing steps and decisions into a logical sequence using a flowchart. Rearrange sticky notes as needed and point out how the flowchart visually connects actions and decisions to guide the process. Explain that everyday problems, like playing music or deciding what to wear, can be broken into simple steps. Algorithms help us solve more complex problems by organizing tasks and guiding decision-making efficiently.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If your classroom setup doesn’t allow for students to easily work on the computer while using sticky notes to create flowcharts at their desk, consider using the optional activity guide instead and distributing copies to students when you distribute sticky notes. The optional activity guide has all of the same options for students to choose from as the options in Level 2. "
+            "markdown": "Highlight any sticky notes that involve doing things in a certain order (e.g. logging in to your account), decisions that need to be made (e.g. sorting songs into groups based on their energy or mood), and any steps that happened more than once (e.g. adding a song to the playlist). Connect these steps to the idea of an algorithm - a step-by-step process that often involves steps in certain order (sequencing), decision-making (selection), and repetition (iteration).\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "339cfe78-4407-4163-8bd4-85304ce8cf27",
+        "lesson_activity.key": "f3f34ac0-1f2d-4368-85fc-b62354f44b02"
+      }
+    },
+    {
+      "key": "8f538bf4-4ab2-4592-8f79-e9ecedd47c24",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* When you hear the word ‘algorithm,’ what comes to mind?\n* How do you think Spotify chooses what to play next?\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students reflect on any biases they hold or previous experiences they have had with the word “algorithm”. Then have students think about how an AI recommendation algorithm, such as Spotify, might work. Review the flowchart you built as a class and note where the Spotify algorithm might take a different approach.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students aren’t familiar with Spotify, use a different media site such as TikTok, Netflix, or YouTube to highlight the concept of an AI-powered recommendation algorithm.\n"
           }
         ]
       },
@@ -1886,8 +1928,15 @@
     },
     {
       "key": "dffa2adf-0eae-47bb-8d29-72e1238cc2f7",
-      "position": 6,
+      "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a handful of two different color sticky notes. Students will also need some space near their computers to arrange their sticky notes into a flowchart.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If your classroom setup doesn’t allow for students to easily work on the computer while using sticky notes to create flowcharts at their desk, consider having students use a digital whiteboard or Google Slides to create their flowchart."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "dffa2adf-0eae-47bb-8d29-72e1238cc2f7",
@@ -1896,7 +1945,7 @@
     },
     {
       "key": "7807355e-ab77-41ea-9e5a-b8de91e739ee",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that their task is to design an algorithm using the algorithm design steps. Let students know that they will use sticky notes for their steps and decisions points - one color for the steps or processes and one color for decision points.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Levels 2 through 6 have questions specific to the different scenarios. Have students pick **one** scenario. Then direct students to the level that matches their scenario and have them answer the questions on that level. Once they submit their answers, have them skip over the other levels and jump straight to the Check for Understanding on Level 7.\n",
         "progression_name": "Scenario Choices"
@@ -1908,7 +1957,7 @@
     },
     {
       "key": "b7f96039-4268-492f-987c-7deb5b7a3f80",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure that students are only answering questions for one scenario. Check that students are clearly identifying steps and decision points in their algorithms. Ask questions like: \"What is the goal of your algorithm?\" or \"Does your flowchart account for all possible outcomes?\"",
         "tips": [
@@ -1929,7 +1978,7 @@
     },
     {
       "key": "1ed541af-36d6-4f5a-811e-e0f2279fee02",
-      "position": 9,
+      "position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -1939,7 +1988,7 @@
     },
     {
       "key": "a3d9ecde-432d-4c0a-a30b-bc703d966980",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to pair up with another group to share their flowcharts, use the questions on the slide to provide constructive feedback, and then revise their flowcharts based on that feedback. Emphasize that the goal is to make their algorithms clearer and more complete.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are giving meaningful feedback and incorporating it into their revisions. Ask questions like: *\"What feedback are you using to improve your flowchart?\"* or *\"How does your revision address missing steps or outcomes?\"",
         "tips": [
@@ -1956,7 +2005,7 @@
     },
     {
       "key": "5e791e23-a427-42e7-a572-00f996a64471",
-      "position": 11,
+      "position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -1966,13 +2015,13 @@
     },
     {
       "key": "08cd6fbf-d36a-4c8e-af6d-61c1c4765144",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 7 on Code Studio to answer the Check for Understanding questions.",
         "progression_name": "Check for Understanding",
         "tips": [
           {
-            "type": "teachingTip",
+            "type": "assessmentOpportunity",
             "markdown": "The responses in Level 7 can be used to formatively assess the lesson objectives. "
           }
         ]
@@ -1984,7 +2033,7 @@
     },
     {
       "key": "29d7c2cb-49ce-4d97-8fc0-90499f87a9b0",
-      "position": 13,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -1994,7 +2043,7 @@
     },
     {
       "key": "20e47a8d-2178-4394-9fbb-7dd8185425b3",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What challenges did you face when deciding what to keep, delete, or highlight?*\n- *How might AI handle similar challenges?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students reflect on the challenges they faced when designing their algorithms, such as balancing fairness or handling multiple outcomes. Encourage them to connect these challenges to how AI might tackle similar problems, highlighting both its strengths (e.g., efficiency) and limitations (e.g., bias or lack of context). The goal is for students to recognize the importance of thoughtful algorithm design in addressing complex, real-world issues.",
         "tips": [
@@ -2011,7 +2060,7 @@
     },
     {
       "key": "5805f6e9-f412-4a5b-afbd-7c8595e1482b",
-      "position": 15,
+      "position": 16,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -2034,6 +2083,17 @@
       },
       "seeding_key": {
         "activity_section.key": "c6960a8f-1133-48d9-8276-0f4a7850375a",
+        "lesson_activity.key": "dc416934-a45b-4896-83b2-2da6999a9734"
+      }
+    },
+    {
+      "key": "6fa481a2-cfdd-44ad-929d-b9c2f946876d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "6fa481a2-cfdd-44ad-929d-b9c2f946876d",
         "lesson_activity.key": "dc416934-a45b-4896-83b2-2da6999a9734"
       }
     },
@@ -3052,7 +3112,7 @@
       "key": "a22c2487-d84b-4cc7-86e4-b03e033375d1",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we define a function with the word**def**, which tells Python we're *defining* a function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we then give the function a name. This should describe what the function does.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that after the name, we add parentheses and a colon.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the steps that the function performs go *underneath*, and they must be indented. Python uses indentation to know what's inside the function. Tell students to use the Tab key to indent their code.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that once you've defined the function, you can call it by using its name with parentheses.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to complete Levels 1 through 8.\n- **Level #1:** In Python Lab, students complete a function that prints something and then call it.\n- **Level #2:** Students are given a defined function but the call is missing parentheses.\n- **Level #3:** Students are given a working function and must add code to call it three times in a row.\n- **Level #4:** Students debug a broken function definition with missing or incorrect syntax.\n- **Level #5:** Students complete a choice level where they are given a function and add a line of code to it.\n- **Level #6:** Students complete a choice level where they are given two small functions that are already defined and must write a new function that calls both in order.\n- **Level #7:** Students complete a vocabulary Check Your Understanding.\n- **Level #8:** Students complete a Check Your Understanding.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we define a function with the word **def**, which tells Python we're *defining* a function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we then give the function a name. This should describe what the function does.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that after the name, we add parentheses and a colon.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the steps that the function performs go *underneath*, and they must be indented. Python uses indentation to know what's inside the function. Tell students to use the Tab key to indent their code.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that once you've defined the function, you can call it by using its name with parentheses.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to complete Levels 1 through 8.\n- **Level #1:** In Python Lab, students complete a function that prints something and then call it.\n- **Level #2:** Students are given a defined function but the call is missing parentheses.\n- **Level #3:** Students are given a working function and must add code to call it three times in a row.\n- **Level #4:** Students debug a broken function definition with missing or incorrect syntax.\n- **Level #5:** Students complete a choice level where they are given a function and add a line of code to it.\n- **Level #6:** Students complete a choice level where they are given two small functions that are already defined and must write a new function that calls both in order.\n- **Level #7:** Students complete a vocabulary Check Your Understanding.\n- **Level #8:** Students complete a Check Your Understanding.",
         "duration": "10",
         "name": "Exploring Functions",
         "progression_name": "Exploring Functions"
@@ -4079,11 +4139,75 @@
       }
     },
     {
-      "key": "3fbd6065-7feb-48a0-b134-3bc605358668",
+      "key": "6233eb7b-dedb-4ae0-a90c-c1429956de61",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two. \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Decomposing a Pixel Image activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through the tasks in their activity guide. Explain that they will first choose a pixel image to recreate, then identify patterns and define functions to break the image into smaller, manageable pieces. Next, they will write pseudocode to describe how they will code the image before sharing their plan with another group for T.A.G. feedback (Tell, Ask, Give). Encourage students to focus on decomposition and efficiency as they plan. Leave this slide up while students work so they can refer back to the steps.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss with a partner: What patterns do you see in the image? Encourage them to look for repeated shapes, colors, or layout elements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After pairs have discussed, ask for a few volunteers to share out. Then click through the slide to reveal the example patterns: Purple Lines, Black Squares, Blue Squares.",
+        "name": "Decomposing an Image Example",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students are unsure where to start, prompt them to describe one row or one column and look for what repeats. Suggest tracing or counting colors to spot repetition more easily."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6233eb7b-dedb-4ae0-a90c-c1429956de61",
+        "lesson_activity.key": "b5c817be-275f-4e82-9148-4e3fbab7008e"
+      }
+    },
+    {
+      "key": "52d6a686-51cc-4e46-b610-1509ddb9f01a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to discuss with a partner: If we wanted to code this image, what functions could we create based on the patterns we just noticed?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After discussion, call on a few students to share their ideas. Then click to reveal the sample function names: `purple_line()`, `black_square()`, `blue_square()`.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to use function names that describe the outcome of the pattern. If students suggest vague names like do_it(), push them to explain what the function actually does."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "52d6a686-51cc-4e46-b610-1509ddb9f01a",
+        "lesson_activity.key": "b5c817be-275f-4e82-9148-4e3fbab7008e"
+      }
+    },
+    {
+      "key": "0abe1eb7-3e7f-4288-9d0c-8ebc0f028f87",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with a partner about what pseudocode might look like for the `purple_line()` function. Encourage them to think through the steps the computer needs to follow.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask for a few students to share an idea of their pseudocode. Then click to reveal the two example versions — one using repeated steps, one using a loop.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this opportunity to reinforce why loops are helpful. Ask students which version is easier to read or change later — and which one they’d prefer to debug.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0abe1eb7-3e7f-4288-9d0c-8ebc0f028f87",
+        "lesson_activity.key": "b5c817be-275f-4e82-9148-4e3fbab7008e"
+      }
+    },
+    {
+      "key": "c0a763f9-1234-4e2c-9ca9-874740f29251",
+      "position": 4,
+      "properties": {
+        "description": "Now it’s your turn to decompose an image. You and your partner will choose one of the pixel images and break it down into patterns and functions — just like we practiced and then go code the image using your planned pseudocode.",
         "name": "Decomposing a Pixel Image",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c0a763f9-1234-4e2c-9ca9-874740f29251",
+        "lesson_activity.key": "b5c817be-275f-4e82-9148-4e3fbab7008e"
+      }
+    },
+    {
+      "key": "3fbd6065-7feb-48a0-b134-3bc605358668",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two. \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Decomposing a Pixel Image activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through the tasks in their activity guide. Explain that they will first choose a pixel image to recreate, then identify patterns and define functions to break the image into smaller, manageable pieces. Next, they will write pseudocode to describe how they will code the image before sharing their plan with another group for T.A.G. feedback (Tell, Ask, Give). Encourage students to focus on decomposition and efficiency as they plan. Leave this slide up while students work so they can refer back to the steps.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4098,7 +4222,7 @@
     },
     {
       "key": "efd87425-4817-423c-a85c-f260118604a6",
-      "position": 2,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -4108,7 +4232,7 @@
     },
     {
       "key": "9ee0c3f1-be06-4944-adbf-d488e5427dae",
-      "position": 3,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the visual for the TAG feedback protocol. Remind them that their job is to Tell the group something they like about their code, Ask a question about the code, and Give a suggestion for improvement. Encourage them to focus on clarity, efficiency, and organization in the pseudocode.",
         "tips": [
@@ -4125,7 +4249,7 @@
     },
     {
       "key": "f257ade1-ced8-4bc8-a802-50d5ef356857",
-      "position": 4,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -4135,7 +4259,7 @@
     },
     {
       "key": "50d8a59b-c688-4f26-9311-2fe8a724896e",
-      "position": 5,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this activity, the focus is on designing algorithms to recreate a pixel image, rather than collecting paint. Since the exact amount of paint needed is unknown, there are no paint buckets in this level. Instead, students will use `painter.set_paint(amount)` to set the amount of paint directly in their programs, ensuring they have enough to complete their image efficiently.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 1 to convert their pseudocode into Python and create their pixel image.",
         "progression_name": "My Pixel Image"
@@ -4147,7 +4271,7 @@
     },
     {
       "key": "0f3e3960-2ff4-4c75-bbcc-29b851f3774a",
-      "position": 6,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they are defining and calling functions correctly and using consistent function names. Listen for debugging discussions and prompt students to compare their code to their pseudocode when they get stuck. Encourage them to test in small steps instead of writing everything at once.",
         "tips": [
@@ -4168,7 +4292,7 @@
     },
     {
       "key": "1235771e-693f-418b-a91c-61640d4d1efb",
-      "position": 7,
+      "position": 11,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -5155,6 +5279,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level1-launch_2025"
+        ],
         "progression": "My Skills and Interests"
       },
       "bonus": false,
@@ -5177,6 +5304,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level2-choice_2025"
+        ],
         "progression": "Career Exploration"
       },
       "bonus": false,
@@ -5199,6 +5329,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson1-level3_2025"
+        ],
         "progression": "Envisioning My Future"
       },
       "bonus": false,
@@ -7071,6 +7204,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson10-level1_2025"
+        ],
         "progression": "Algorithms IRL"
       },
       "bonus": false,
@@ -10272,6 +10408,18 @@
       }
     },
     {
+      "name": "[KEY] Baking a Cake",
+      "url": "https://drive.google.com/file/d/1J72Glvy5GQRmK_wXVNLDr_uW0kOKuzUX/view?usp=drive_link",
+      "key": "_key_baking_a_cake",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_baking_a_cake"
+      }
+    },
+    {
       "name": "[KEY] Decomposing a Pixel Image",
       "url": "https://docs.google.com/document/d/17m8szFTsM7DneesI50et0mqnmQhyTv0g-dqNRSGgYU0",
       "key": "_key_decomposing_a_pixel_image",
@@ -10293,6 +10441,16 @@
       },
       "seeding_key": {
         "resource.key": "_key_planning_a_school_event"
+      }
+    },
+    {
+      "name": "AI Chat FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_faq",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_faq"
       }
     },
     {
@@ -10330,6 +10488,63 @@
       },
       "seeding_key": {
         "resource.key": "algorithms_irl"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/aif2-2025/resources",
+      "key": "all_resources_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/aif2-2025/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/aif2-2025/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
+      }
+    },
+    {
+      "name": "Baking a Cake",
+      "url": "https://drive.google.com/file/d/1Hz3Jpw65nSHfHpGV4iIw3yYXbC9mIb16/view?usp=drive_link",
+      "key": "baking_a_cake",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "baking_a_cake"
+      }
+    },
+    {
+      "name": "Baking a Cake (Digital Option)",
+      "url": "https://docs.google.com/presentation/d/1S4Pq1TTn6KrvauIsb0ShVvpBfbxlrzB4aS_2_uAQLUE/edit?usp=drive_link",
+      "key": "baking_a_cake_digital_option_",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "baking_a_cake_digital_option_"
       }
     },
     {
@@ -10514,6 +10729,18 @@
       }
     },
     {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
+      }
+    },
+    {
       "name": "Variables and Data Flow",
       "url": "https://docs.google.com/presentation/d/16I1iVy8X_Qe_z_AI7O1oYHoedst-4TRAfsP-t_vzywk/edit?usp=sharing",
       "key": "variables_and_data_flow",
@@ -10602,7 +10829,25 @@
     {
       "seeding_key": {
         "lesson.key": "Computational Thinking",
+        "resource.key": "_key_baking_a_cake"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computational Thinking",
         "resource.key": "_key_planning_a_school_event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computational Thinking",
+        "resource.key": "baking_a_cake"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computational Thinking",
+        "resource.key": "baking_a_cake_digital_option_"
       }
     },
     {
@@ -10783,6 +11028,30 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "ai_chat_faq",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "programming_fundamentals_unit_guide",
         "script.name": "aif2-2025"
       }
@@ -10790,6 +11059,18 @@
     {
       "seeding_key": {
         "resource.key": "python_lab_documentation",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unlocking_assessments",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
         "script.name": "aif2-2025"
       }
     }

@@ -14,14 +14,15 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "topic_tags": [
-        "data_science"
+        "data_science",
+        "ai"
       ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-22 18:05:46 UTC",
+    "serialized_at": "2025-04-23 18:09:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5953,6 +5954,16 @@
       }
     },
     {
+      "name": "AI Chat FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_faq",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_faq"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csaif6-2025/resources",
       "key": "all_resources_1",
@@ -6304,16 +6315,6 @@
       }
     },
     {
-      "name": "Study Guide",
-      "url": "https://docs.google.com/document/d/1bW29rP0OZBZL_FuXsMrnwq5pWiqB7oA1qegVL7ZeQwc/edit?usp=drive_link",
-      "key": "study_guide",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "study_guide"
-      }
-    },
-    {
       "name": "Introduction to Data Science Unit Guide",
       "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=sharing",
       "key": "unit_guide",
@@ -6337,23 +6338,13 @@
       }
     },
     {
-      "name": "Unit Guide",
+      "name": "Insights from Data and AI Unit Guide",
       "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=drive_link",
       "key": "unit_guide_1",
       "properties": {
       },
       "seeding_key": {
         "resource.key": "unit_guide_1"
-      }
-    },
-    {
-      "name": "Unit Overview",
-      "url": "https://docs.google.com/document/d/14V8-mxHA1cz--owWOLPbwN8iqXXlDbr_KFOrbG0iA18/view",
-      "key": "unit_overview",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "unit_overview"
       }
     },
     {
@@ -6366,6 +6357,18 @@
       },
       "seeding_key": {
         "resource.key": "unlocking_assessments"
+      }
+    },
+    {
+      "name": "Viewing Student AI Chat History as a Teacher",
+      "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
+      "key": "viewing_student_ai_chat_history_as_a_teacher",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
       }
     }
   ],
@@ -6620,6 +6623,12 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "ai_chat_faq",
+        "script.name": "aif6-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "all_resources_1",
         "script.name": "aif6-2025"
       }
@@ -6650,25 +6659,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "study_guide",
-        "script.name": "aif6-2025"
-      }
-    },
-    {
-      "seeding_key": {
         "resource.key": "unit_guide_1",
         "script.name": "aif6-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "unit_overview",
+        "resource.key": "unlocking_assessments",
         "script.name": "aif6-2025"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "unlocking_assessments",
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
         "script.name": "aif6-2025"
       }
     }

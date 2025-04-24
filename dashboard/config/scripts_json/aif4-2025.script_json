@@ -13,12 +13,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-22 20:18:26 UTC",
+    "serialized_at": "2025-04-23 18:09:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4803,6 +4806,16 @@
       }
     },
     {
+      "name": "AI Chat FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_faq",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_faq"
+      }
+    },
+    {
       "name": "AI Chat Lab FAQ",
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_lab_faq",
@@ -4825,6 +4838,39 @@
       },
       "seeding_key": {
         "resource.key": "ai_networks_chat"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/aif4-2025/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/aif4-2025/standards",
+      "key": "all_standards_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_3"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/aif4-2025/vocab",
+      "key": "all_vocabulary_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3"
       }
     },
     {
@@ -5075,7 +5121,7 @@
       }
     },
     {
-      "name": "Networks and the Internet Unit Guide",
+      "name": "The Fabric of the Internet and AI Unit Guide",
       "url": "https://docs.google.com/document/d/14YiuNXo8xwD2aQcmt2sBY0Oway5hI4RBHUez_CcWI4w/edit?usp=sharing",
       "key": "networks_and_the_internet_unit_guide",
       "properties": {
@@ -5280,6 +5326,18 @@
       },
       "seeding_key": {
         "resource.key": "threat_detection_guided_notes"
+      }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
       }
     },
     {
@@ -5568,7 +5626,48 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai_chat_faq",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_3",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_3",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "networks_and_the_internet_unit_guide",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unlocking_assessments",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
+        "script.name": "aif4-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 01:20:41 UTC",
+    "serialized_at": "2025-04-23 19:56:41 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1407,6 +1407,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-mini-project-walk-1-pl"
+        ],
         "progression": "Mini-Project: Walk-Up Songs"
       },
       "bonus": false,
@@ -1854,6 +1857,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L3-livecoding3"
+        ],
         "progression": "Live Coding with Loops"
       },
       "bonus": false,
@@ -1901,6 +1907,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-mini-project-gif-1-pl"
+        ],
         "progression": "Mini Project: Cat GIF Loops"
       },
       "bonus": false,
@@ -2373,6 +2382,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-genre-project-pl"
+        ],
         "progression": "Project: Genre Mash-Up"
       },
       "bonus": false,

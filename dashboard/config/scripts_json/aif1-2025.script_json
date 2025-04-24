@@ -4,12 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "AIF",
+      "is_migrated": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 17:08:45 UTC",
-    "published_state": null,
+    "serialized_at": "2025-04-23 19:03:15 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -81,6 +87,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-problemsolving_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,

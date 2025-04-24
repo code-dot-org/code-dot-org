@@ -13,12 +13,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-22 18:04:38 UTC",
+    "serialized_at": "2025-04-23 18:09:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5879,6 +5882,26 @@
       }
     },
     {
+      "name": "AI and the Systems That Power It Unit Guide",
+      "url": "https://docs.google.com/document/d/1xgkyggbdaHpxDhD_Cvx1RptJUrzf8sUcGHKfDLs5-CU/edit?usp=sharing",
+      "key": "ai_and_the_systems_that_power_it_unit_guide",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide"
+      }
+    },
+    {
+      "name": "AI Chat FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_faq",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_faq"
+      }
+    },
+    {
       "name": "AI Chat Lab FAQ",
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_lab_faq",
@@ -6368,14 +6391,15 @@
       }
     },
     {
-      "name": "Introduction to Data Science Unit Guide",
-      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=sharing",
-      "key": "unit_guide",
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
       "properties": {
-        "audience": "Student"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "unit_guide"
+        "resource.key": "unlocking_assessments"
       }
     },
     {
@@ -6823,6 +6847,18 @@
   "scripts_resources": [
     {
       "seeding_key": {
+        "resource.key": "ai_and_the_systems_that_power_it_unit_guide",
+        "script.name": "aif3-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "ai_chat_faq",
+        "script.name": "aif3-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "all_resources",
         "script.name": "aif3-2025"
       }
@@ -6841,7 +6877,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "unit_guide",
+        "resource.key": "unlocking_assessments",
+        "script.name": "aif3-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
         "script.name": "aif3-2025"
       }
     }

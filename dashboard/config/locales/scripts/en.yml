@@ -21165,8 +21165,8 @@ en:
           title: Teaching Programming with Music Lab
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: "## Welcome\n##### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching Programming with Music Lab with your students.\n\n##### Find the learning that works for you:\n\n* ##### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* ##### **Pick your content:** The content is organized in the suggested progression for teachers new to Progarmming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
+          student_description: "## Welcome\n#### Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, you'll be ready to get started teaching Programming with Music Lab with your students.\n\n#### Find the learning that works for you:\n\n* #### **Go at your own pace**: This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.\n\n* #### **Pick your content:** The content is organized in the suggested progression for teachers new to Progarmming with Music Lab. However, you can engage with the content in the order that best meets your needs. "
         csp1-2025:
           lesson_groups:
             cspSurvey:
@@ -21976,7 +21976,16 @@ en:
           title: "[PILOT] CSD Programming with Music Lab"
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |
+            ### Self-Paced Professional Development Now Available!
+
+            We are also piloting our self-paced professional learning for this unit - [Click here to access our professional learning!](https://levelbuilder-studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab)
+
+            You can also approach the professional learning in pieces as you get to new parts of the curriculum. Here are direct links to each section:
+            - [Overview of the Curriculum](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/1/levels/5)
+            - [Lessons 1-5: Sequencing](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/1)
+            - [Lessons 6-9: Loops](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/1)
+            - [Lessons 10-13: Functions](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/1)
           student_description: ''
         self-paced-pl-getting-started-2024:
           lessons:
@@ -23366,6 +23375,9 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: aif1-2025
         aif2-2025:
           lesson_groups:
             lessonGroup-2:
@@ -23586,7 +23598,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-aif3-2025
-          title: Teaching Computer Systems and Devices
+          title: AI and the Systems that Power It
           description_audience: ''
           description_short: ''
           description: ''
@@ -23613,11 +23625,29 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-aif6-2025
-          title: Teaaching Introduction to Data Science
+          title: Insights from Data and AI
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit.
+
+            #### The Insights from Data and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Insights from Data and AI unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit.
+
+            #### The Insights from Data and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Insights from Data and AI unit. However, you can engage with the content in the order that best meets your needs.
         self-paced-pl-teaching-k5-music-lab-2025:
           lessons: {}
           lesson_groups: {}

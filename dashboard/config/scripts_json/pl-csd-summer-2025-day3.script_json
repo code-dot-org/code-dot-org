@@ -4,7 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "content_area": "self_paced_pl_6_8",
+      "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-04 16:49:35 UTC",
+    "serialized_at": "2025-04-23 15:26:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1247,6 +1247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L6 - Predict_CSD-PL-24_25"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1269,6 +1272,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1291,6 +1297,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1313,6 +1322,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1335,6 +1347,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random reassign_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1357,6 +1372,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random practice_CSD-PL-24_25"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1379,6 +1397,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake_CSD-PL-24_25"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1401,6 +1422,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random challenge_CSD-PL-24_25"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1423,6 +1447,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L7 - Predict_CSD-PL-24_1-25"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1445,6 +1472,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_CSD-PL-24_1-25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1467,6 +1497,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_CSD-PL-24_1-25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1489,6 +1522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_CSD-PL-24_1-25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1511,6 +1547,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites test intro sprites CSD-PL-24_1-25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1533,6 +1572,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_CSD-PL-24_1-25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1555,6 +1597,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_CSD-PL-24_1-25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1577,6 +1622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_CSD-PL-24_1-25"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1599,6 +1647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_CSD-PL-24_1-25"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1621,6 +1672,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_CSD-PL-24_1-25"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1643,6 +1697,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_CSD-PL-24_1-25"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1665,6 +1722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL-summer- CSD U3 L7 mini project_25"
+        ],
         "progression": "Lesson 7: Mini-Project - Robot Faces"
       },
       "bonus": false,
@@ -1687,6 +1747,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL summer - CSD U3 Scene Example_25"
+        ],
         "progression": "Lesson 11: Mini-Project - Captioned Scenes"
       },
       "bonus": false,
@@ -1709,6 +1772,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL Summer - CSD web project animated example_25"
+        ],
         "progression": "Lesson 14: Mini-Project - Animation"
       },
       "bonus": false,
@@ -1731,6 +1797,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL Summer CSD U3 - Interactive Card - ExampleChoice_25"
+        ],
         "progression": "Lesson 18: Project - Interactive Card"
       },
       "bonus": false,
@@ -2041,7 +2110,7 @@
     },
     {
       "name": "CSD In-Person Summer Workshop Day 3 Agenda",
-      "url": "https://docs.google.com/document/d/1u0fq0msjhfNs528pbILMonq9epbB4eeqNwXqm-Sl6p0/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1bjnhvtovC7GI6ddfAA3k9B12u8WoUHXy8LvUIWuFBkw/edit?usp=drive_link",
       "key": "csd_in-person_summer_workshop_day_3_agenda",
       "properties": {
       },
@@ -2051,7 +2120,7 @@
     },
     {
       "name": "CSD In-Person Summer Workshop Day 3 Slides",
-      "url": "https://docs.google.com/presentation/d/1RaloaP4JBmxR1tGLQxT3IgFi97gNBUE1ff0K0BxGb54/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1JDqtiofPKd7ZbNMLN4VNt7823KZ6l8qDOpL0eZyBsTQ/edit?usp=drive_link",
       "key": "csd_in-person_summer_workshop_day_3_slides",
       "properties": {
       },

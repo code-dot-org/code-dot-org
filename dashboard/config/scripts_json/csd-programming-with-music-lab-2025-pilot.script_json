@@ -10,6 +10,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "csd-programming-with-music-lab-2025-pilot",
       "show_calendar": true,
       "topic_tags": [
         "music_lab"
@@ -19,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-22 20:36:02 UTC",
+    "serialized_at": "2025-04-23 19:44:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -50,6 +51,18 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "announcements": [
+          {
+            "key": "05827675-5685-4018-9b5e-5dc0e7267f56",
+            "notice": "NEW! Self-Paced Professional Learning is here!",
+            "details": "Get started with our new Self-Paced Professional Learning to explore the curriculum and Music Lab! Feel confident and prepared as you start teaching the unit!",
+            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/1/levels/1",
+            "type": "information",
+            "visibility": "Teacher-only",
+            "dismissible": true,
+            "buttonText": "Start Learning!"
+          }
+        ],
         "overview": "To kick off a unit focused on creative coding and designing interactive music experiences, students will take on the role of music experience designers. Their challenge: help clients bring their ideas for unique songs to life using Music Lab.\n\nStudents begin by reviewing a variety of early song prototypes in Code Studio, each showcasing different interactive features. Then, they read through short client stories—each with a specific goal or mood in mind—and match each client with the prototype that best fits their vision.\n\nTo wrap up, students reflect on how understanding a user’s goals can shape creative decisions and consider how they might adapt or remix prototypes in Music Lab to better serve different needs.",
         "preparation": "* Print a copy of the activity guide for each student\n- Preview the prototype examples in Code Studio to get familiar with the student experience",
         "student_overview": "Today, you’ll be a music experience designer! Your job is to help different “clients” bring their song ideas to life. First, you’ll check out some song prototypes in Music Lab. Then, you’ll read each client’s story and decide which prototype fits their idea best.\n\nYou’ll explain your choice and think about how to make the music even better for them."
@@ -68,7 +81,19 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
+        "announcements": [
+          {
+            "key": "2f635d5a-70b6-4f4f-808e-8c42df337e21",
+            "notice": "Just-In-Time Professional Learning",
+            "details": "About to start these lessons on Sequencing? Feel prepared by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes!",
+            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/1",
+            "type": "information",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Start Now!"
+          }
+        ],
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be). "
       },
       "seeding_key": {
         "lesson.key": "Sequencing - Explore",
@@ -132,6 +157,18 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "announcements": [
+          {
+            "key": "5347d987-f350-4175-bdd8-5c8a09f09804",
+            "notice": "Just-In-Time Professional Learning",
+            "details": "About to start these lessons on Loops? Feel prepared by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes!",
+            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/1",
+            "type": "information",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Start Now!"
+          }
+        ],
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -196,6 +233,18 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "announcements": [
+          {
+            "key": "926e7a4b-21eb-4116-b6e3-5850cb0c2d77",
+            "notice": "Just-In-Time Professional Learning",
+            "details": "About to start these lessons on Functions? Feel prepared by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes!",
+            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/1",
+            "type": "information",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Start Now!"
+          }
+        ],
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -317,6 +366,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "c9cd0acf-2725-4f6d-970b-c9c61216e759",
+        "lesson.key": "Introduction to Music Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    },
+    {
+      "key": "9de60e29-602a-40f1-9e14-9f2b777a3724",
+      "position": 6,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9de60e29-602a-40f1-9e14-9f2b777a3724",
         "lesson.key": "Introduction to Music Lab",
         "lesson_group.key": "",
         "script.name": "csd-programming-with-music-lab-2025-pilot"
@@ -556,6 +618,19 @@
       }
     },
     {
+      "key": "47fa9dd0-0263-4ffb-bc0c-314ea9b90e9a",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47fa9dd0-0263-4ffb-bc0c-314ea9b90e9a",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    },
+    {
       "key": "f2113134-847a-48b3-8055-2c4cf8372b57",
       "position": 1,
       "properties": {
@@ -783,6 +858,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "cb7f4200-865f-4ea3-b387-2c5dcc82d731",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    },
+    {
+      "key": "cd2f7dbf-f004-4a4a-8e09-6ba037698181",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd2f7dbf-f004-4a4a-8e09-6ba037698181",
         "lesson.key": "Mini Project: Cat GIF Loops",
         "lesson_group.key": "",
         "script.name": "csd-programming-with-music-lab-2025-pilot"
@@ -1027,10 +1115,23 @@
       "key": "944b875d-9674-441c-815f-8ed23f92b3e9",
       "position": 1,
       "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
+        "name": "Pilot Information"
       },
       "seeding_key": {
         "activity_section.key": "944b875d-9674-441c-815f-8ed23f92b3e9",
+        "lesson_activity.key": "f2abce3f-f9ef-4fc9-941a-f7b2b06b5b2b"
+      }
+    },
+    {
+      "key": "3aab8e3e-14f5-4c29-86ab-68b63baaeaca",
+      "position": 2,
+      "properties": {
+        "description": "Get started with our new Self-Paced Professional Learning to explore the curriculum and Music Lab! Feel confident and prepared as you start teaching the unit! [**Click here to start learning!**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/1/levels/1)",
+        "name": "Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "3aab8e3e-14f5-4c29-86ab-68b63baaeaca",
         "lesson_activity.key": "f2abce3f-f9ef-4fc9-941a-f7b2b06b5b2b"
       }
     },
@@ -1399,6 +1500,18 @@
       "seeding_key": {
         "activity_section.key": "18c98b22-3882-4ca9-bc84-f2d4595c72c7",
         "lesson_activity.key": "c9cd0acf-2725-4f6d-970b-c9c61216e759"
+      }
+    },
+    {
+      "key": "5ae8c28d-45ae-40f7-891e-e1d9fe3b5c6e",
+      "position": 1,
+      "properties": {
+        "description": "The next set of lessons introduces **Sequencing** with brand new blocks and programming strategies. Feel prepared to teach these lessons by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes! [**Click here to start now!**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/1)",
+        "name": "Just-In-Time Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ae8c28d-45ae-40f7-891e-e1d9fe3b5c6e",
+        "lesson_activity.key": "9de60e29-602a-40f1-9e14-9f2b777a3724"
       }
     },
     {
@@ -1988,10 +2101,23 @@
       "key": "8f71d476-8f59-4a2b-9bed-0987484bef5b",
       "position": 1,
       "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
+        "name": "Pilot Information"
       },
       "seeding_key": {
         "activity_section.key": "8f71d476-8f59-4a2b-9bed-0987484bef5b",
+        "lesson_activity.key": "976d781f-a07d-4321-b589-e7389e242a99"
+      }
+    },
+    {
+      "key": "724a0a77-c5a0-41a5-a35f-603158f63031",
+      "position": 2,
+      "properties": {
+        "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/20)",
+        "name": "Project Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "724a0a77-c5a0-41a5-a35f-603158f63031",
         "lesson_activity.key": "976d781f-a07d-4321-b589-e7389e242a99"
       }
     },
@@ -2095,6 +2221,18 @@
       "seeding_key": {
         "activity_section.key": "f3bdb519-d21e-4d10-bcfa-f5f5e40cb211",
         "lesson_activity.key": "9222d79e-4b7e-438a-967a-5cecb7fdc9cc"
+      }
+    },
+    {
+      "key": "26557c7a-b5b2-4188-9503-dd1cb92f51a2",
+      "position": 1,
+      "properties": {
+        "description": "The next set of lessons introduces **Loops** with brand new blocks and programming strategies. Feel prepared to teach these lessons by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes! [**Click here to start now!**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/1)",
+        "name": "Just-In-Time Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "26557c7a-b5b2-4188-9503-dd1cb92f51a2",
+        "lesson_activity.key": "47fa9dd0-0263-4ffb-bc0c-314ea9b90e9a"
       }
     },
     {
@@ -2634,10 +2772,23 @@
       "key": "c39cf9ab-38b0-4f22-8d67-712abb02e005",
       "position": 1,
       "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
+        "name": "Pilot Information"
       },
       "seeding_key": {
         "activity_section.key": "c39cf9ab-38b0-4f22-8d67-712abb02e005",
+        "lesson_activity.key": "d04fb5be-ab67-4ab9-930f-d9e9e701f2d0"
+      }
+    },
+    {
+      "key": "53e5182b-ad4d-4c53-99dc-af7747e0659e",
+      "position": 2,
+      "properties": {
+        "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/19)",
+        "name": "Project Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "53e5182b-ad4d-4c53-99dc-af7747e0659e",
         "lesson_activity.key": "d04fb5be-ab67-4ab9-930f-d9e9e701f2d0"
       }
     },
@@ -2708,6 +2859,18 @@
       "seeding_key": {
         "activity_section.key": "43cb3bf3-4ce3-4bf3-a0f7-493b93c31700",
         "lesson_activity.key": "cb7f4200-865f-4ea3-b387-2c5dcc82d731"
+      }
+    },
+    {
+      "key": "c1e90d94-1bfd-40a0-800c-777a7f22261f",
+      "position": 1,
+      "properties": {
+        "description": "The next set of lessons introduces **Functions** with brand new blocks and programming strategies. Feel prepared to teach these lessons by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes! [**Click here to start now!**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/1)",
+        "name": "Just-In-Time Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1e90d94-1bfd-40a0-800c-777a7f22261f",
+        "lesson_activity.key": "cd2f7dbf-f004-4a4a-8e09-6ba037698181"
       }
     },
     {
@@ -3236,10 +3399,23 @@
       "key": "fe564595-6878-4b7f-8d9d-a1b7bb50570a",
       "position": 1,
       "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
+        "name": "Pilot Information"
       },
       "seeding_key": {
         "activity_section.key": "fe564595-6878-4b7f-8d9d-a1b7bb50570a",
+        "lesson_activity.key": "a630facc-8d39-48ae-baa8-972a0cbc9039"
+      }
+    },
+    {
+      "key": "ff66f412-efb9-4e80-a420-f31a7d3a48c2",
+      "position": 2,
+      "properties": {
+        "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/18)",
+        "name": "Project Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff66f412-efb9-4e80-a420-f31a7d3a48c2",
         "lesson_activity.key": "a630facc-8d39-48ae-baa8-972a0cbc9039"
       }
     },
@@ -5451,6 +5627,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-random-4"
+        ],
         "progression": "Play Random"
       },
       "bonus": false,
