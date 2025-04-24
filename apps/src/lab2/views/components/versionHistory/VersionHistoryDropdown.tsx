@@ -408,6 +408,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
                 disabled={versionLoading}
                 className={moduleStyles.footerButton}
                 type={'secondary'}
+                color="black"
               />
             </div>
           </div>

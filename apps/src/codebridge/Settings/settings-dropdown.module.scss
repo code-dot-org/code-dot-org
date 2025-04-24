@@ -52,7 +52,7 @@ $space-l: 8px;
 .footer {
   display: flex;
   justify-content: flex-end;
-  padding: $space-m;
+  padding: $space-m $space-m $space-s;
   gap: $space-s;
   margin-top: $space-m;
 

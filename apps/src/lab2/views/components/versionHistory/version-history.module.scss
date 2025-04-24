@@ -21,10 +21,7 @@ $space-xl: 10px;
 }
 
 .header {
-  padding-top: $space-m;
-  padding-left: $space-l;
-  padding-right: $space-l;
-  padding-bottom: $space-m;
+  padding: $space-m $space-l;
   border-bottom: 1px solid #54595E;
   display: flex;
   justify-content: space-between;
@@ -62,8 +59,8 @@ $space-xl: 10px;
 .footer {
   display: flex;
   justify-content: flex-end;
-  padding: $space-m;
   gap: $space-s;
+  padding: $space-m;
   margin-bottom: $space-m;
   margin-right: $space-xl;
 
