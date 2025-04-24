@@ -30,8 +30,8 @@ const FilePreview: React.FC<{
     };
 
     const handleError = () => {
-      onLoadError?.();
       setImageLoaded(true);
+      onLoadError?.();
     };
 
     if (imageElement.complete) {
