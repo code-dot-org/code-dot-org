@@ -5,8 +5,9 @@ class LevelStarterAssetsController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:destroy]
 
   VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3 .wav .pdf)
-  MAX_RESIZABLE_FILE_SIZE = 5_000_000 # 5 MB
-  MAX_FILE_SIZE = 20_000_000 # 20 MB
+
+  MAX_FILE_SIZE_AI_CHAT = 5_000_000 # 5 MB
+  MAX_DIMENSION_PIXELS_AI_CHAT = 2048
 
   # GET /level_starter_assets/:level_name
   def show
@@ -40,6 +41,7 @@ class LevelStarterAssetsController < ApplicationController
     end
 
     upload = params[:files]&.first
+    upload_tempfile = upload.tempfile
     friendly_name = upload.original_filename
     file_ext = File.extname(friendly_name)
 
@@ -47,22 +49,20 @@ class LevelStarterAssetsController < ApplicationController
       return head :unprocessable_entity
     end
 
-    # For AI Chat levels, we resize levelbuilder assets that are greater than 5 MB
+    # For AI Chat levels, we attempt to resize assets that are greater than 5 MB
     # to improve performance when used as input to OpenAI.
-    # We also set a hard limit at 20 MB (somewhat arbitrarily) to avoid performance issues resizing extremely large files.
     if @level.is_a?(Aichat)
-      if upload.size > MAX_FILE_SIZE
-        return head :payload_too_large
-      elsif upload.size > MAX_RESIZABLE_FILE_SIZE
-        resized_upload_tempfile = LevelStarterAssetsHelper.try_resize_file(upload.tempfile, file_ext)
+      if upload_tempfile.size > MAX_FILE_SIZE_AI_CHAT
+        upload_tempfile = LevelStarterAssetsHelper.try_resize_file(upload.tempfile, file_ext, MAX_DIMENSION_PIXELS_AI_CHAT)
       end
+
+      return head :payload_too_large if upload_tempfile.size > MAX_FILE_SIZE_AI_CHAT
     end
 
     # Replace the friendly file name with a UUID for storage in S3 to avoid naming conflicts.
     uuid_name = SecureRandom.uuid + file_ext
     file_obj = LevelStarterAssetsHelper.get_object(uuid_name)
-    path_to_upload = resized_upload_tempfile&.path || upload.tempfile.path
-    success = file_obj&.upload_file(path_to_upload)
+    success = file_obj&.upload_file(upload_tempfile.path)
 
     if success && @level.add_starter_asset!(friendly_name, uuid_name)
       render json: LevelStarterAssetsHelper.summarize(file_obj, friendly_name, uuid_name)

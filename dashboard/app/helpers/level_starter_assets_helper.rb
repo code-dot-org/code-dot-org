@@ -2,17 +2,17 @@ module LevelStarterAssetsHelper
   S3_BUCKET = 'cdo-v3-assets'.freeze
   S3_PREFIX = 'starter_assets/'.freeze
   MAX_RESIZE_SIZE = 20_000_000 # 20 MB
-  MAX_DIMENSION_PIXELS = 2048
 
-  def self.try_resize_file(file, extension)
+  def self.try_resize_file(file, extension, max_dimension_px)
     # Resizing takes a lot of compute power.
-    # If we're given an image higher than 20MB, don't attempt to resize.
+    # If we're given an image higher than 20MB (), don't attempt to resize.
+    # Since this is intended to be a levelbuilder-specific helper (ie, low volume/levelbuilder machine), it may be safe to increase this limit.
     if ([".jpg", ".jpeg", ".png"].include? extension.downcase) && (file.length < MAX_RESIZE_SIZE)
       image = MiniMagick::Image.read(file, extension)
 
       # The '>' suffix means that the image will be resized to fit within the given dimensions,
       # but smaller images will not be enlarged.
-      image.resize MAX_DIMENSION_PIXELS.to_s + 'x' + MAX_DIMENSION_PIXELS.to_s + '>'
+      image.resize max_dimension_px.to_s + 'x' + max_dimension_px.to_s + '>'
       return image.tempfile
     end
 
