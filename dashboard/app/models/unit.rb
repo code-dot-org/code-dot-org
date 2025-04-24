@@ -1244,6 +1244,7 @@ class Unit < ApplicationRecord
         elsif destination_unit_group
           raise 'Destination unit group must be in a course version. please try saving the course edit page again.' if destination_unit_group.course_version.nil?
           UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
+          copied_unit.update!(original_unit_group: destination_unit_group)
           copied_unit.reload
         else
           raise "Must supply version year if new unit will be a standalone unit" unless version_year
@@ -1897,11 +1898,14 @@ class Unit < ApplicationRecord
     result
   end
 
-  # A unit is considered to have a matching course if there is exactly one
+  # A unit is considered to have a matching course if there is at least one
   # unit_group for this unit
   def unit_group
-    return nil if unit_group_units.length != 1
-    UnitGroup.get_from_cache(unit_group_units[0].course_id)
+    # rubocop:disable Style/ZeroLengthPredicate
+    return nil if unit_group_units.length < 1
+    # rubocop:enable Style/ZeroLengthPredicate
+    #
+    UnitGroup.get_from_cache(original_unit_group_id)
   end
 
   # If this unit is a standalone unit, returns its CourseVersion. Otherwise,

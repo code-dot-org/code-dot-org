@@ -74,7 +74,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   const aiSummaryMessage = (proficiencyCount: number) => (
     <>
       <BodyTwoText>
-        <strong>{`${i18n.reasoning()}:`}</strong>
+        <strong>{`${i18n.reasoning()}: `}</strong>
         {proficiencyCount > proficienceyThreshold
           ? 'More than 80% of the students demonstrated proficiency in their responses. '
           : 'Less than 80% of the students demonstrated proficiency in their responses. '}
@@ -100,11 +100,11 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   };
 
   const proficientStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['great', 'ok'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['Great', 'Ok'])
     : 0;
 
   const needsRevisionStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['needs revision'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['Needs revision'])
     : 0;
 
   const flaggedStudentCount = studentWorkEvaluations
