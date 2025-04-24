@@ -1,7 +1,7 @@
 'use client';
 
 import DSCOHeader, {
-  getDefaultProps,
+  getDefaultHeaderProps,
 } from '@code-dot-org/component-library/cms/header';
 
 import {getStudioUrl} from '@/config/studio';
@@ -15,7 +15,7 @@ import musicLabImage from '@public/images/header-music-lab-icon.png';
 import pythonLabImage from '@public/images/header-python-lab-icon.png';
 import spriteLabImage from '@public/images/header-sprite-lab-icon.png';
 
-const defaultProps = getDefaultProps({
+const defaultProps = getDefaultHeaderProps({
   logoImage: logoImage.src,
   spriteLabImage: spriteLabImage.src,
   artistImage: artistImage.src,

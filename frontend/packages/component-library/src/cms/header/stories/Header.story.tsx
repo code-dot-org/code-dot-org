@@ -11,7 +11,7 @@ import {INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS} from '@storybook/addon-viewport';
 import type {Meta, StoryObj} from '@storybook/react';
 import {within, expect, userEvent} from '@storybook/test';
 
-import {getDefaultProps} from '../config';
+import {getDefaultHeaderProps} from '../config';
 import Header, {HeaderProps} from '../Header';
 
 type Story = StoryObj<typeof Header>;
@@ -37,7 +37,7 @@ export default {
   render: args => <Header {...args} />,
 } as Meta<HeaderProps>;
 
-const defaultArgs = getDefaultProps({
+const defaultArgs = getDefaultHeaderProps({
   logoImage,
   spriteLabImage,
   artistImage,

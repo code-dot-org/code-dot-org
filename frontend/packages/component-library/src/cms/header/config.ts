@@ -13,7 +13,7 @@ interface DefaultProps {
   studioUrl: string;
 }
 
-export function getDefaultProps({
+export function getDefaultHeaderProps({
   logoImage,
   spriteLabImage,
   artistImage,
