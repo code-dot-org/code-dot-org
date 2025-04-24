@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import Alert from '@code-dot-org/component-library/alert';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
@@ -162,6 +163,24 @@ export const UnconnectedTeacherHomepage = ({
 
   return (
     <div>
+      <Alert
+        size={'s'}
+        text={i18n.teacherHomePageFeedback()}
+        type="primary"
+        showIcon={true}
+        icon={{iconName: 'party-horn'}}
+        isImmediateImportance={false}
+        link={{
+          text: i18n.feedbackHeader(),
+          href: 'https://usabi.li/do/a9ksz7qfbspy/iwhhup',
+          openInNewTab: true,
+          external: true,
+        }}
+        onClose={() => {
+          setIsFeedbackAlertClosed(true);
+          trySetLocalStorage(LOCAL_STORAGE_KEY, 'true');
+        }}
+      />
       <HeaderBanner
         headingText={i18n.homepageHeading()}
         backgroundUrl={backgroundUrl}
