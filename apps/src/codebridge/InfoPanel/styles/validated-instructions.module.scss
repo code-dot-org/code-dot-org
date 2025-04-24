@@ -152,6 +152,13 @@ button.validationButton {
       }
     }
   }
+
+  code {
+    // Allow code to wrap.
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
 }
 
 .validationIcon {
