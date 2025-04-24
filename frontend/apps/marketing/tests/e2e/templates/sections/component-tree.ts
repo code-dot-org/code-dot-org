@@ -280,6 +280,42 @@ export class ComponentTree {
     });
   }
 
+  createVideo({
+    videoTitle,
+    videoDesc,
+    uploadDate,
+    youTubeId,
+    videoFallback,
+    showCaption,
+  }: {
+    videoTitle: string;
+    videoDesc: string;
+    uploadDate: string;
+    youTubeId: string;
+    videoFallback?: string;
+    showCaption?: boolean;
+  }) {
+    this.children.push({
+      displayName: 'Video',
+      definitionId: 'video',
+      patternProperties: {},
+      variables: {
+        videoTitle: this.createUnboundValue(videoTitle),
+        videoDesc: this.createUnboundValue(videoDesc),
+        uploadDate: this.createUnboundValue(uploadDate),
+        youTubeId: this.createUnboundValue(youTubeId),
+        videoFallback: this.createUnboundValue(videoFallback),
+        showCaption: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: showCaption ?? false,
+          },
+        },
+      },
+      children: [],
+    });
+  }
+
   createTextLink({
     size,
     text,
