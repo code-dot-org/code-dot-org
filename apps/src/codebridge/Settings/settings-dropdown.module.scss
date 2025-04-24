@@ -23,7 +23,16 @@ $space-l: 8px;
 .header {
   display: flex;
   justify-content: space-between;
-  padding: $space-l;
+  align-items: center;
+  padding-left: $space-m;
+  padding-right: $space-m;
+  padding-bottom: $space-l;
+
+  .heading {
+    margin: $space-s;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .dropdownRow {

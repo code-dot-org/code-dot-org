@@ -151,7 +151,9 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         data-theme="Dark"
       >
         <div className={moduleStyles.header}>
-          <Heading6>{commonI18n.settings()}</Heading6>
+          <Heading6 className={moduleStyles.heading}>
+            {commonI18n.settings()}
+          </Heading6>
           <CloseButton
             onClick={closeDropdown}
             aria-label={codebridgeI18n.closeSettings()}
