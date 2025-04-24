@@ -17,7 +17,7 @@ module Services
     # Storing this data together in a "data object" makes it easier to pass around.
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
-      :script_levels, :levels_script_levels, :levels,
+      :script_levels, :levels_script_levels, :levels, :skills,
       :resources, :lessons_resources, :scripts_resources, :scripts_student_resources,
       :vocabularies, :lessons_vocabularies, :programming_environments,
       :programming_expressions, :lessons_programming_expressions, :objectives, :frameworks,
@@ -49,6 +49,7 @@ module Services
       vocabularies = script.lessons.map(&:vocabularies).flatten.sort_by(&:key).uniq
       programming_environments = ProgrammingEnvironment.all
       programming_expressions = ProgrammingExpression.all
+      skills = Skill.all
 
       # Use existing seeding_key code to efficiently sort join model objects
       # in a manner that will be stable across environments.
@@ -62,6 +63,7 @@ module Services
         vocabularies: vocabularies,
         programming_environments: programming_environments,
         programming_expressions: programming_expressions,
+        skills: skills,
       )
       lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(sort_context).to_json}
       scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sort_context).to_json}
@@ -101,7 +103,8 @@ module Services
         lessons_standards: lessons_standards,
         lessons_opportunity_standards: lessons_opportunity_standards,
         rubrics: rubrics,
-        learning_goals: learning_goals
+        learning_goals: learning_goals,
+        skills: skills,
       )
       scope = {seed_context: seed_context}
 
@@ -126,6 +129,7 @@ module Services
         rubrics: rubrics.map {|r| ScriptSeed::RubricSerializer.new(r, scope: scope).as_json},
         learning_goals: learning_goals.map {|lg| ScriptSeed::LearningGoalSerializer.new(lg, scope: scope).as_json},
         learning_goal_evidence_levels: learning_goal_evidence_levels.map {|lgel| ScriptSeed::LearningGoalEvidenceLevelSerializer.new(lgel, scope: scope).as_json},
+        skills: skills.map {|s| ScriptSeed::SkillSerializer.new(s, scope: scope).as_json},
       }
       JSON.pretty_generate(data) + "\n"
     end
@@ -210,6 +214,7 @@ module Services
       rubrics_data = data['rubrics'] || []
       learning_goals_data = data['learning_goals'] || []
       learning_goals_evidence_levels_data = data['learning_goal_evidence_levels'] || []
+      skills_data = data['skills'] || []
       seed_context = SeedContext.new
 
       Unit.transaction do
@@ -261,6 +266,9 @@ module Services
         seed_context.rubrics = import_rubrics(rubrics_data, seed_context)
         seed_context.learning_goals = import_learning_goals(learning_goals_data, seed_context)
         seed_context.learning_goal_evidence_levels = import_learning_goals_evidence_levels(learning_goals_evidence_levels_data, seed_context)
+
+        seed_context.skills = import_skills(skills_data, seed_context)
+        seed_context.levels_skills = import_levels_skills(levels_skills_data, seed_context)
 
         # generate_plc_objects must be run after lessons are added.
         seed_context.script.generate_plc_objects
@@ -749,6 +757,30 @@ module Services
       should_keep[true]
     end
 
+    def import_skills(skills_data, seed_context)
+      skills_to_import = skills_data.map do |skill_data|
+        skill_attrs = skill_data.except('seeding_key')
+        Skill.new(skill_attrs)
+      end
+      Skill.import! skills_to_import, on_duplicate_key_update: get_columns(Skill)
+      skill_keys = skills_to_import.map(&:key)
+      Skill.where(key: skill_keys)
+    end
+
+    def self.import_levels_skills(levels_skills_data, seed_context)
+      level_skills_data.map do |levels_skill_data|
+        level = seed_context.levels.find {|l| l.key == levels_skill_data['seeding_key']['level.key']}
+        raise 'No level found' if level.nil?
+        skill = seed_context.skills.find {|s| s.key == levels_skill_data['seeding_key']['skill.key']}
+        raise 'No skill found' if skill.nil?
+
+        LevelsSkill.new(
+          level_id: level.id,
+          skill_id: skill.id
+        )
+      end
+    end
+
     def self.get_columns(model_class)
       model_class.columns.map(&:name).map(&:to_sym) - %i(id)
     end
@@ -1009,6 +1041,22 @@ module Services
 
     class LearningGoalEvidenceLevelSerializer < ActiveModel::Serializer
       attributes :understanding, :teacher_description, :ai_prompt, :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class SkillSerializer < ActiveModel::Serializer
+      attributes :description, :evaluation_criteria, :concept, :seeding_key
+
+      def seeding_key
+        object.seeding_key(@scope[:seed_context])
+      end
+    end
+
+    class LevelsSkillSerializer < ActiveModel::Serializer
+      attributes :seeding_key
 
       def seeding_key
         object.seeding_key(@scope[:seed_context])
