@@ -51,7 +51,7 @@ const FAQAccordionContentful: React.FunctionComponent<
             documentToHtmlString(faq.fields.question),
           );
         } else {
-          question = faq.fields.question as string;
+          question = faq.fields.question;
           questionString = question;
         }
 
@@ -65,7 +65,7 @@ const FAQAccordionContentful: React.FunctionComponent<
             documentToHtmlString(faq.fields.answer),
           );
         } else {
-          answer = faq.fields.answer as string;
+          answer = faq.fields.answer;
           answerString = answer;
         }
 
