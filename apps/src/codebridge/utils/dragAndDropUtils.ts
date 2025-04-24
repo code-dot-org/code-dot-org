@@ -204,14 +204,23 @@ export const sortableKeyboardCoordinatesWithTab: KeyboardCoordinateGetter = (
   args
 ) => {
   if (event.code === KeyboardCode.Tab && event.shiftKey) {
+    event.preventDefault();
+    const newEvent = new KeyboardEvent('keydown', {
+      code: KeyboardCode.Left,
+    });
     // Shift tab is equivalent to left arrow
-    sortableKeyboardCoordinates({...event, code: KeyboardCode.Left}, args);
+    return sortableKeyboardCoordinates(newEvent, args);
   } else if (event.code === KeyboardCode.Tab) {
     // Tab is equivalent to right arrow
-    sortableKeyboardCoordinates({...event, code: KeyboardCode.Right}, args);
+    event.preventDefault();
+    const newEvent = new KeyboardEvent('keydown', {
+      code: KeyboardCode.Right,
+    });
+    return sortableKeyboardCoordinates(newEvent, args);
+  } else {
+    // Otherwise, call the original function
+    return sortableKeyboardCoordinates(event, args);
   }
-  // Otherwise, call the original function
-  return sortableKeyboardCoordinates(event, args);
 };
 
 export const dragAndDropKeyboardCodes = {
