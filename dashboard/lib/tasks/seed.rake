@@ -149,6 +149,7 @@ namespace :seed do
     step
     oceans
     sports
+    jigsaw
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
@@ -351,6 +352,7 @@ namespace :seed do
        starwarsblocks
        step
        oceans
+       jigsaw
        sports).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
