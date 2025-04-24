@@ -50,6 +50,41 @@ export async function createAllTheThingsExperienceEntry() {
       definitionId: 'contentful-section',
       patternProperties: {},
       variables: {},
+      children: [createDscoSectionWrapper({name, children})],
+    };
+  }
+
+  function createDscoSectionWrapper({
+    name,
+    children,
+  }: {
+    name: string;
+    children: any;
+  }) {
+    return {
+      displayName: name,
+      definitionId: 'section',
+      patternProperties: {},
+      variables: {
+        background: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: 'primary',
+          },
+        },
+        padding: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: 'l',
+          },
+        },
+        cfVisibility: {
+          type: 'DesignValue',
+          valuesByBreakpoint: {
+            desktop: true,
+          },
+        },
+      },
       children,
     };
   }
@@ -78,25 +113,25 @@ export async function createAllTheThingsExperienceEntry() {
               name: 'Introduction',
               children: [
                 {
-                  id: '0fJNzzC8',
-                  displayName: 'Introduction',
-                  definitionId: 'section',
+                  id: 'uUa7o1jl',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    visualAppearance: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'primary',
+                        desktop: 'heading-xxl',
                       },
                     },
-                    padding: {
+                    removeMarginBottom: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: false,
                       },
                     },
-                    id: {
-                      key: 'lgGRRfq5zcVueL3yrxoh9',
+                    children: {
+                      key: 'R0C45WqvjfIgrCLvhJPSB',
                       type: 'UnboundValue',
                     },
                     cfVisibility: {
@@ -105,144 +140,112 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
                   },
-                  children: [
-                    {
-                      id: 'uUa7o1jl',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'R0C45WqvjfIgrCLvhJPSB',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                  children: [],
+                },
+                {
+                  id: 'UUn7E5n5',
+                  displayName: 'Paragraph',
+                  definitionId: 'paragraph',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'body-one',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'UUn7E5n5',
-                      displayName: 'Paragraph',
-                      definitionId: 'paragraph',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'body-one',
-                          },
-                        },
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: '204Ys74QveR6n_DzcowIB',
-                          type: 'UnboundValue',
-                        },
-                        isStrong: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'AXIFq1qJ',
-                      displayName: 'Paragraph',
-                      definitionId: 'paragraph',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'body-one',
-                          },
-                        },
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'i-CBt91tEkCmZHGzb85xW',
-                          type: 'UnboundValue',
-                        },
-                        isStrong: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
                       },
-                      children: [],
                     },
-                  ],
+                    children: {
+                      key: '204Ys74QveR6n_DzcowIB',
+                      type: 'UnboundValue',
+                    },
+                    isStrong: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'AXIFq1qJ',
+                  displayName: 'Paragraph',
+                  definitionId: 'paragraph',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'body-one',
+                      },
+                    },
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'i-CBt91tEkCmZHGzb85xW',
+                      type: 'UnboundValue',
+                    },
+                    isStrong: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
                 },
               ],
             }),
@@ -250,25 +253,25 @@ export async function createAllTheThingsExperienceEntry() {
               name: 'Localization',
               children: [
                 {
-                  id: 'YVm0InSQ',
-                  displayName: 'Section',
-                  definitionId: 'section',
+                  id: 'BkKYMhQm',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    visualAppearance: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'primary',
+                        desktop: 'heading-xxl',
                       },
                     },
-                    padding: {
+                    removeMarginBottom: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: false,
                       },
                     },
-                    id: {
-                      key: 'sQZaBqbWsJUIR6cGO4R7w',
+                    children: {
+                      key: 'd5NKAnwp',
                       type: 'UnboundValue',
                     },
                     cfVisibility: {
@@ -277,330 +280,299 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
                   },
-                  children: [
-                    {
-                      id: 'BkKYMhQm',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'd5NKAnwp',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                  children: [],
+                },
+                {
+                  id: 'dxKxFE8C',
+                  displayName: 'Heading 1',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xl',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'dxKxFE8C',
-                      displayName: 'Heading 1',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'uML982xB',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'b55f9mox',
-                      displayName: 'Paragraph',
-                      definitionId: 'paragraph',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'body-one',
-                          },
-                        },
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          path: '/TDy6kSns/fields/quoteName/~locale',
-                          type: 'BoundValue',
-                        },
-                        isStrong: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    children: {
+                      key: 'uML982xB',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'VzJgPw9B',
-                      displayName: 'Heading 2',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'qQFZT2Ct',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'QKZo3i6u',
-                      displayName: 'Paragraph 1',
-                      definitionId: 'paragraph',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'body-one',
-                          },
-                        },
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          path: '/OBu7LBgD/fields/longQuote/~locale',
-                          type: 'BoundValue',
-                        },
-                        isStrong: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'b55f9mox',
+                  displayName: 'Paragraph',
+                  definitionId: 'paragraph',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'body-one',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'jltL4xD9',
-                      displayName: 'Heading 3',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'bvkdCWAp',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'RydO4DZ5',
-                      displayName: 'Paragraph 1',
-                      definitionId: 'paragraph',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'body-one',
-                          },
-                        },
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'M6UV6klE',
-                          type: 'UnboundValue',
-                        },
-                        isStrong: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
                       },
-                      children: [],
                     },
-                  ],
+                    children: {
+                      path: '/TDy6kSns/fields/quoteName/~locale',
+                      type: 'BoundValue',
+                    },
+                    isStrong: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'VzJgPw9B',
+                  displayName: 'Heading 2',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'qQFZT2Ct',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'QKZo3i6u',
+                  displayName: 'Paragraph 1',
+                  definitionId: 'paragraph',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'body-one',
+                      },
+                    },
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      path: '/OBu7LBgD/fields/longQuote/~locale',
+                      type: 'BoundValue',
+                    },
+                    isStrong: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'jltL4xD9',
+                  displayName: 'Heading 3',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'bvkdCWAp',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'RydO4DZ5',
+                  displayName: 'Paragraph 1',
+                  definitionId: 'paragraph',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'body-one',
+                      },
+                    },
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'M6UV6klE',
+                      type: 'UnboundValue',
+                    },
+                    isStrong: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
                 },
               ],
             }),
             createContentfulSectionWrapper({
               name: 'Action Block',
+
               children: [
                 {
-                  id: 'fCFouSL6',
-                  displayName: 'Section',
-                  definitionId: 'section',
+                  id: 'lBfKWG1Q',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    visualAppearance: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'primary',
+                        desktop: 'heading-xxl',
                       },
                     },
-                    padding: {
+                    removeMarginBottom: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: false,
                       },
                     },
-                    id: {
-                      key: 'OmmiviO_PnQgExsnIQWG2',
+                    children: {
+                      key: 'zB9624m9',
                       type: 'UnboundValue',
                     },
                     cfVisibility: {
@@ -609,1756 +581,34 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
                   },
-                  children: [
-                    {
-                      id: 'lBfKWG1Q',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'zB9624m9',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'NcFGUcus',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'IRGGNCsc',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: '4Z9z51w4',
-                      definitionId: 'contentful-container',
-                      patternProperties: {},
-                      variables: {
-                        cfVerticalAlignment: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
-                        cfHorizontalAlignment: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfMargin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0 0 0 0',
-                          },
-                        },
-                        cfPadding: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0 0 0 0',
-                          },
-                        },
-                        cfBackgroundColor: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'rgba(0, 0, 0, 0)',
-                          },
-                        },
-                        cfWidth: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '100%',
-                          },
-                        },
-                        cfHeight: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'fit-content',
-                          },
-                        },
-                        cfMaxWidth: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '1192px',
-                          },
-                        },
-                        cfFlexDirection: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'row',
-                            mobile: 'column',
-                          },
-                        },
-                        cfFlexReverse: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        cfFlexWrap: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'nowrap',
-                          },
-                        },
-                        cfBorder: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0px solid rgba(0, 0, 0, 0)',
-                          },
-                        },
-                        cfGap: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0px 24px',
-                            mobile: '24px 24px',
-                          },
-                        },
-                        cfHyperlink: {
-                          type: 'UnboundValue',
-                          key: '36YfTgYM',
-                        },
-                        cfOpenInNewTab: {
-                          type: 'UnboundValue',
-                          key: '1g7RleiK',
-                        },
-                        cfBorderRadius: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0px',
-                          },
-                        },
-                        cfBackgroundImageUrl: {
-                          type: 'UnboundValue',
-                          key: 'dJNC5rnb',
-                        },
-                        cfBackgroundImageOptions: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: {
-                              scaling: 'fill',
-                              alignment: 'left top',
-                              targetSize: '2000px',
-                            },
-                          },
-                        },
-                      },
-                      children: [
-                        {
-                          id: 'KXc3wv4t',
-                          definitionId: 'contentful-container',
-                          patternProperties: {},
-                          variables: {
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfMargin: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '100%',
-                              },
-                            },
-                            cfHeight: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'fit-content',
-                              },
-                            },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexReverse: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px solid rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
-                              type: 'UnboundValue',
-                              key: 'Ov2KaMlI',
-                            },
-                            cfOpenInNewTab: {
-                              type: 'UnboundValue',
-                              key: 'z9iS8tow',
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              type: 'UnboundValue',
-                              key: 'SGrm6TeM',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: 'cqVonltI',
-                              definitionId: 'verticalActionBlock',
-                              patternProperties: {},
-                              variables: {
-                                overline: {
-                                  path: '/Ura63qS4/fields/actionBlockOverline/~locale',
-                                  type: 'BoundValue',
-                                },
-                                title: {
-                                  path: '/sOCuihY3/fields/title/~locale',
-                                  type: 'BoundValue',
-                                },
-                                description: {
-                                  path: '/P3w0MI3x/fields/shortDescription/~locale',
-                                  type: 'BoundValue',
-                                },
-                                image: {
-                                  path: '/D06vmzVo/fields/image/~locale/fields/file/~locale',
-                                  type: 'BoundValue',
-                                },
-                                primaryButton: {
-                                  path: '/0Uc1jnt8/fields/primaryLinkRef/~locale',
-                                  type: 'BoundValue',
-                                },
-                                secondaryButton: {
-                                  path: '/5gQSSrFE/fields/secondaryLinkRef/~locale',
-                                  type: 'BoundValue',
-                                },
-                                background: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'primary',
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                        {
-                          id: 'GIbKtM99',
-                          definitionId: 'contentful-container',
-                          patternProperties: {},
-                          variables: {
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfMargin: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '100%',
-                              },
-                            },
-                            cfHeight: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'fit-content',
-                              },
-                            },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexReverse: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px solid rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
-                              type: 'UnboundValue',
-                              key: 'eMXbhJJO',
-                            },
-                            cfOpenInNewTab: {
-                              type: 'UnboundValue',
-                              key: 'hAGyY1mh',
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              type: 'UnboundValue',
-                              key: 'Aw5CTnlT',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: 'cNcSAcmb',
-                              definitionId: 'verticalActionBlock',
-                              patternProperties: {},
-                              variables: {
-                                overline: {
-                                  path: '/btGygYlg/fields/actionBlockOverline/~locale',
-                                  type: 'BoundValue',
-                                },
-                                title: {
-                                  path: '/qj8MdFqk/fields/title/~locale',
-                                  type: 'BoundValue',
-                                },
-                                description: {
-                                  path: '/OkAdGTNN/fields/shortDescription/~locale',
-                                  type: 'BoundValue',
-                                },
-                                image: {
-                                  path: '/4rTEErM8/fields/image/~locale/fields/file/~locale',
-                                  type: 'BoundValue',
-                                },
-                                primaryButton: {
-                                  path: '/wf6Nfy0h/fields/marketingLink/~locale',
-                                  type: 'BoundValue',
-                                },
-                                secondaryButton: {
-                                  path: '/L4ppraxB/fields/marketingLink/~locale',
-                                  type: 'BoundValue',
-                                },
-                                background: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'primary',
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    {
-                      id: 'XkRIiyuw',
-                      definitionId: 'divider',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        margin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 's',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'WF9VdUgg',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'rXgI4Mvr',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'Jx09S5tI',
-                      definitionId: 'contentful-container',
-                      patternProperties: {},
-                      variables: {
-                        cfVerticalAlignment: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
-                        cfHorizontalAlignment: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfMargin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0 0 0 0',
-                          },
-                        },
-                        cfPadding: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '24px 24px 24px 24px',
-                          },
-                        },
-                        cfBackgroundColor: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'rgba(247, 248, 250, 1)',
-                          },
-                        },
-                        cfWidth: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '100%',
-                          },
-                        },
-                        cfHeight: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'fit-content',
-                          },
-                        },
-                        cfMaxWidth: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '1192px',
-                          },
-                        },
-                        cfFlexDirection: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'row',
-                            mobile: 'column',
-                          },
-                        },
-                        cfFlexReverse: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        cfFlexWrap: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'nowrap',
-                          },
-                        },
-                        cfBorder: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0px solid rgba(0, 0, 0, 0)',
-                          },
-                        },
-                        cfGap: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0px 24px',
-                            mobile: '24px 24px',
-                          },
-                        },
-                        cfHyperlink: {
-                          type: 'UnboundValue',
-                          key: 'xaSe4Rjf',
-                        },
-                        cfOpenInNewTab: {
-                          type: 'UnboundValue',
-                          key: 'TnZjwBke',
-                        },
-                        cfBorderRadius: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0px',
-                          },
-                        },
-                        cfBackgroundImageUrl: {
-                          type: 'UnboundValue',
-                          key: 'gwYa67z7',
-                        },
-                        cfBackgroundImageOptions: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: {
-                              scaling: 'fill',
-                              alignment: 'left top',
-                              targetSize: '2000px',
-                            },
-                          },
-                        },
-                      },
-                      children: [
-                        {
-                          id: 'pSAn3QNf',
-                          definitionId: 'contentful-container',
-                          patternProperties: {},
-                          variables: {
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfMargin: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '100%',
-                              },
-                            },
-                            cfHeight: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'fit-content',
-                              },
-                            },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexReverse: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px solid rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
-                              type: 'UnboundValue',
-                              key: 'rqSvSSLH',
-                            },
-                            cfOpenInNewTab: {
-                              type: 'UnboundValue',
-                              key: 'ZdTFBVAL',
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              type: 'UnboundValue',
-                              key: 'dWrBnOHy',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: 'HA6kV8lH',
-                              definitionId: 'verticalActionBlock',
-                              patternProperties: {},
-                              variables: {
-                                overline: {
-                                  path: '/eV4HBBLe/fields/actionBlockOverline/~locale',
-                                  type: 'BoundValue',
-                                },
-                                title: {
-                                  path: '/eeVAmXO7/fields/title/~locale',
-                                  type: 'BoundValue',
-                                },
-                                description: {
-                                  path: '/1V2S6k5O/fields/shortDescription/~locale',
-                                  type: 'BoundValue',
-                                },
-                                image: {
-                                  path: '/3xRBhtEN/fields/image/~locale/fields/file/~locale',
-                                  type: 'BoundValue',
-                                },
-                                primaryButton: {
-                                  path: '/iKuwF5UL/fields/primaryLinkRef/~locale',
-                                  type: 'BoundValue',
-                                },
-                                secondaryButton: {
-                                  path: '/XC0Orztn/fields/secondaryLinkRef/~locale',
-                                  type: 'BoundValue',
-                                },
-                                background: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'secondary',
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                        {
-                          id: 'hAm0hXK7',
-                          definitionId: 'contentful-container',
-                          patternProperties: {},
-                          variables: {
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfMargin: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '100%',
-                              },
-                            },
-                            cfHeight: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'fit-content',
-                              },
-                            },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexReverse: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px solid rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
-                              type: 'UnboundValue',
-                              key: 'GGSUj7T7',
-                            },
-                            cfOpenInNewTab: {
-                              type: 'UnboundValue',
-                              key: '6dweZgN5',
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              type: 'UnboundValue',
-                              key: 'TC9267aF',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: 'NRvZhJuI',
-                              definitionId: 'verticalActionBlock',
-                              patternProperties: {},
-                              variables: {
-                                overline: {
-                                  path: '/pnEVNJEY/fields/actionBlockOverline/~locale',
-                                  type: 'BoundValue',
-                                },
-                                title: {
-                                  path: '/289w042P/fields/title/~locale',
-                                  type: 'BoundValue',
-                                },
-                                description: {
-                                  path: '/8W24TK7L/fields/shortDescription/~locale',
-                                  type: 'BoundValue',
-                                },
-                                image: {
-                                  path: '/Gac8HyiL/fields/image/~locale/fields/file/~locale',
-                                  type: 'BoundValue',
-                                },
-                                primaryButton: {
-                                  path: '/L1oQ0Cfn/fields/marketingLink/~locale',
-                                  type: 'BoundValue',
-                                },
-                                secondaryButton: {
-                                  path: '/jgZPQ2f4/fields/marketingLink/~locale',
-                                  type: 'BoundValue',
-                                },
-                                background: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'secondary',
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                    {
-                      id: 'HT5aw3I7',
-                      definitionId: 'divider',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        margin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 's',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'aAeOh6L6',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'Tgg1s2D2',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'kAFZ2mur',
-                      definitionId: 'contentful-container',
-                      patternProperties: {},
-                      variables: {
-                        cfVerticalAlignment: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
-                        cfHorizontalAlignment: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfMargin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0 0 0 0',
-                          },
-                        },
-                        cfPadding: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0 0 0 0',
-                          },
-                        },
-                        cfBackgroundColor: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'rgba(0, 0, 0, 0)',
-                          },
-                        },
-                        cfWidth: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '100%',
-                          },
-                        },
-                        cfHeight: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'fit-content',
-                          },
-                        },
-                        cfMaxWidth: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '1192px',
-                          },
-                        },
-                        cfFlexDirection: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'row',
-                            mobile: 'column',
-                          },
-                        },
-                        cfFlexReverse: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        cfFlexWrap: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'nowrap',
-                          },
-                        },
-                        cfBorder: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0px solid rgba(0, 0, 0, 0)',
-                          },
-                        },
-                        cfGap: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0px 24px',
-                            mobile: '24px 24px',
-                          },
-                        },
-                        cfHyperlink: {
-                          type: 'UnboundValue',
-                          key: '5rKwB2lO',
-                        },
-                        cfOpenInNewTab: {
-                          type: 'UnboundValue',
-                          key: 'hEDkMrEi',
-                        },
-                        cfBorderRadius: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0px',
-                          },
-                        },
-                        cfBackgroundImageUrl: {
-                          type: 'UnboundValue',
-                          key: 'mp03r8eT',
-                        },
-                        cfBackgroundImageOptions: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: {
-                              scaling: 'fill',
-                              alignment: 'left top',
-                              targetSize: '2000px',
-                            },
-                          },
-                        },
-                      },
-                      children: [
-                        {
-                          id: 'CC1rbHZN',
-                          definitionId: 'contentful-container',
-                          patternProperties: {},
-                          variables: {
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfMargin: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '100%',
-                              },
-                            },
-                            cfHeight: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'fit-content',
-                              },
-                            },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexReverse: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px solid rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
-                              type: 'UnboundValue',
-                              key: 'LY3fwrGF',
-                            },
-                            cfOpenInNewTab: {
-                              type: 'UnboundValue',
-                              key: 'vl7mGMNk',
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              type: 'UnboundValue',
-                              key: 'Mo4S1GHf',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: 'vKRDeLjD',
-                              definitionId: 'verticalActionBlock',
-                              patternProperties: {},
-                              variables: {
-                                overline: {
-                                  path: '/S9wdCChd/fields/actionBlockOverline/~locale',
-                                  type: 'BoundValue',
-                                },
-                                title: {
-                                  path: '/sCyp4umt/fields/title/~locale',
-                                  type: 'BoundValue',
-                                },
-                                description: {
-                                  path: '/VHT0F26i/fields/shortDescription/~locale',
-                                  type: 'BoundValue',
-                                },
-                                image: {
-                                  path: '/hbWAEPUa/fields/image/~locale/fields/file/~locale',
-                                  type: 'BoundValue',
-                                },
-                                primaryButton: {
-                                  path: '/NQABxHSW/fields/primaryLinkRef/~locale',
-                                  type: 'BoundValue',
-                                },
-                                secondaryButton: {
-                                  path: '/0HkUraow/fields/secondaryLinkRef/~locale',
-                                  type: 'BoundValue',
-                                },
-                                background: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'primary',
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                        {
-                          id: 'MFJ3yTqG',
-                          definitionId: 'contentful-container',
-                          patternProperties: {},
-                          variables: {
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfMargin: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '100%',
-                              },
-                            },
-                            cfHeight: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'fit-content',
-                              },
-                            },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexReverse: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px solid rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
-                              type: 'UnboundValue',
-                              key: 'JjsxkEPq',
-                            },
-                            cfOpenInNewTab: {
-                              type: 'UnboundValue',
-                              key: 'mI3808f6',
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              type: 'UnboundValue',
-                              key: 'AKTPfVrs',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: '1yfSgGaI',
-                              definitionId: 'verticalActionBlock',
-                              patternProperties: {},
-                              variables: {
-                                overline: {
-                                  path: '/qUW7SuUq/fields/actionBlockOverline/~locale',
-                                  type: 'BoundValue',
-                                },
-                                title: {
-                                  path: '/7Gxx550Y/fields/title/~locale',
-                                  type: 'BoundValue',
-                                },
-                                description: {
-                                  path: '/PkMzRu3l/fields/shortDescription/~locale',
-                                  type: 'BoundValue',
-                                },
-                                image: {
-                                  path: '/q64yPb2d/fields/image/~locale/fields/file/~locale',
-                                  type: 'BoundValue',
-                                },
-                                primaryButton: {
-                                  path: '/9VSvsbCf/fields/primaryLinkRef/~locale',
-                                  type: 'BoundValue',
-                                },
-                                secondaryButton: {
-                                  path: '/o8e0EuB2/fields/secondaryLinkRef/~locale',
-                                  type: 'BoundValue',
-                                },
-                                background: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'primary',
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                        {
-                          id: 'w6KnOUij',
-                          definitionId: 'contentful-container',
-                          patternProperties: {},
-                          variables: {
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfMargin: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '100%',
-                              },
-                            },
-                            cfHeight: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'fit-content',
-                              },
-                            },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexReverse: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px solid rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
-                              type: 'UnboundValue',
-                              key: 'lTlx2Ck5',
-                            },
-                            cfOpenInNewTab: {
-                              type: 'UnboundValue',
-                              key: 'byHQXRz8',
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              type: 'UnboundValue',
-                              key: 'IuXKDn7Q',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: 'KtyKVhex',
-                              definitionId: 'verticalActionBlock',
-                              patternProperties: {},
-                              variables: {
-                                overline: {
-                                  path: '/MKnXMzs0/fields/actionBlockOverline/~locale',
-                                  type: 'BoundValue',
-                                },
-                                title: {
-                                  path: '/tgGNSw4W/fields/title/~locale',
-                                  type: 'BoundValue',
-                                },
-                                description: {
-                                  path: '/o5ZyffFl/fields/shortDescription/~locale',
-                                  type: 'BoundValue',
-                                },
-                                image: {
-                                  path: '/EGqljg4x/fields/image/~locale/fields/file/~locale',
-                                  type: 'BoundValue',
-                                },
-                                primaryButton: {
-                                  path: '/TBoKgmUE/fields/primaryLinkRef/~locale',
-                                  type: 'BoundValue',
-                                },
-                                secondaryButton: {
-                                  path: '/tqX7SCKc/fields/secondaryLinkRef/~locale',
-                                  type: 'BoundValue',
-                                },
-                                background: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'primary',
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                      ],
-                    },
-                  ],
+                  children: [],
                 },
-              ],
-            }),
-            createContentfulSectionWrapper({
-              name: 'Full Width Action Block',
-              children: [
                 {
-                  id: 'e3oqSxBp',
-                  displayName: 'Section',
-                  definitionId: 'section',
+                  id: 'NcFGUcus',
+                  definitionId: 'heading',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    visualAppearance: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'primary',
+                        desktop: 'heading-xl',
                       },
                     },
-                    padding: {
+                    removeMarginBottom: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: false,
                       },
                     },
-                    id: {
-                      key: 'ZpinQk1s',
+                    children: {
+                      key: 'IRGGNCsc',
                       type: 'UnboundValue',
                     },
                     cfVisibility: {
@@ -2367,295 +617,138 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: '4Z9z51w4',
+                  definitionId: 'contentful-container',
+                  patternProperties: {},
+                  variables: {
+                    cfVerticalAlignment: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                    cfHorizontalAlignment: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfMargin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0 0 0 0',
+                      },
+                    },
+                    cfPadding: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0 0 0 0',
+                      },
+                    },
+                    cfBackgroundColor: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'rgba(0, 0, 0, 0)',
+                      },
+                    },
+                    cfWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '100%',
+                      },
+                    },
+                    cfHeight: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'fit-content',
+                      },
+                    },
+                    cfMaxWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '1192px',
+                      },
+                    },
+                    cfFlexDirection: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'row',
+                        mobile: 'column',
+                      },
+                    },
+                    cfFlexReverse: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfFlexWrap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'nowrap',
+                      },
+                    },
+                    cfBorder: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px solid rgba(0, 0, 0, 0)',
+                      },
+                    },
+                    cfGap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px 24px',
+                        mobile: '24px 24px',
+                      },
+                    },
+                    cfHyperlink: {
+                      type: 'UnboundValue',
+                      key: '36YfTgYM',
+                    },
+                    cfOpenInNewTab: {
+                      type: 'UnboundValue',
+                      key: '1g7RleiK',
+                    },
+                    cfBorderRadius: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px',
+                      },
+                    },
+                    cfBackgroundImageUrl: {
+                      type: 'UnboundValue',
+                      key: 'dJNC5rnb',
+                    },
+                    cfBackgroundImageOptions: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: {
+                          scaling: 'fill',
+                          alignment: 'left top',
+                          targetSize: '2000px',
+                        },
+                      },
+                    },
                   },
                   children: [
                     {
-                      id: 'mKmQjjB5',
-                      displayName: 'Heading 1',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: '0BYMXHkY',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'XQ7TfDn9',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'IAwsxK7N',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'pU9KFVeN',
-                      definitionId: 'fullWidthActionBlock',
-                      patternProperties: {},
-                      variables: {
-                        image: {
-                          path: '/FbSNI62I/fields/image/~locale/fields/file/~locale',
-                          type: 'BoundValue',
-                        },
-                        overline: {
-                          path: '/zibXm2hu/fields/actionBlockOverline/~locale',
-                          type: 'BoundValue',
-                        },
-                        title: {
-                          path: '/k5eX10Tv/fields/title/~locale',
-                          type: 'BoundValue',
-                        },
-                        description: {
-                          path: '/d2JuVKZQ/fields/shortDescription/~locale',
-                          type: 'BoundValue',
-                        },
-                        primaryButton: {
-                          path: '/NqrmKrUA/fields/primaryLinkRef/~locale',
-                          type: 'BoundValue',
-                        },
-                        secondaryButton: {
-                          path: '/f5guroL4/fields/secondaryLinkRef/~locale',
-                          type: 'BoundValue',
-                        },
-                        background: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'X3HvQXNU',
-                      definitionId: 'divider',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        margin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 's',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'qPYEMk2o',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'Xsx7dtxc',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'dtvNdOmk',
-                      definitionId: 'fullWidthActionBlock',
-                      patternProperties: {},
-                      variables: {
-                        image: {
-                          path: '/DXDrLIKT/fields/image/~locale/fields/file/~locale',
-                          type: 'BoundValue',
-                        },
-                        overline: {
-                          path: '/XvAA9yze/fields/actionBlockOverline/~locale',
-                          type: 'BoundValue',
-                        },
-                        title: {
-                          path: '/lnB5pwJz/fields/title/~locale',
-                          type: 'BoundValue',
-                        },
-                        description: {
-                          path: '/MdJaRWGZ/fields/shortDescription/~locale',
-                          type: 'BoundValue',
-                        },
-                        primaryButton: {
-                          path: '/0TXnLT0j/fields/marketingLink/~locale',
-                          type: 'BoundValue',
-                        },
-                        secondaryButton: {
-                          path: '/uyYAAfql/fields/marketingLink/~locale',
-                          type: 'BoundValue',
-                        },
-                        background: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'RdLeOx6U',
-                      definitionId: 'divider',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        margin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 's',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'fwnmq3Qj',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'v6A0d7WI',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'SYclWTwE',
+                      id: 'KXc3wv4t',
                       definitionId: 'contentful-container',
                       patternProperties: {},
                       variables: {
@@ -2686,13 +779,13 @@ export async function createAllTheThingsExperienceEntry() {
                         cfPadding: {
                           type: 'DesignValue',
                           valuesByBreakpoint: {
-                            desktop: '24px 24px 24px 24px',
+                            desktop: '0 0 0 0',
                           },
                         },
                         cfBackgroundColor: {
                           type: 'DesignValue',
                           valuesByBreakpoint: {
-                            desktop: 'rgba(247, 248, 250, 1)',
+                            desktop: 'rgba(0, 0, 0, 0)',
                           },
                         },
                         cfWidth: {
@@ -2745,11 +838,11 @@ export async function createAllTheThingsExperienceEntry() {
                         },
                         cfHyperlink: {
                           type: 'UnboundValue',
-                          key: 'ICrX3vs',
+                          key: 'Ov2KaMlI',
                         },
                         cfOpenInNewTab: {
                           type: 'UnboundValue',
-                          key: 'bAIeQt5',
+                          key: 'z9iS8tow',
                         },
                         cfBorderRadius: {
                           type: 'DesignValue',
@@ -2759,7 +852,7 @@ export async function createAllTheThingsExperienceEntry() {
                         },
                         cfBackgroundImageUrl: {
                           type: 'UnboundValue',
-                          key: 'fupk4k7',
+                          key: 'SGrm6TeM',
                         },
                         cfBackgroundImageOptions: {
                           type: 'DesignValue',
@@ -2774,38 +867,38 @@ export async function createAllTheThingsExperienceEntry() {
                       },
                       children: [
                         {
-                          id: 'jPGXtwTT',
-                          definitionId: 'fullWidthActionBlock',
+                          id: 'cqVonltI',
+                          definitionId: 'verticalActionBlock',
                           patternProperties: {},
                           variables: {
-                            image: {
-                              path: '/w3A8mGao/fields/image/~locale/fields/file/~locale',
-                              type: 'BoundValue',
-                            },
                             overline: {
-                              path: '/XXpWcD4q/fields/actionBlockOverline/~locale',
+                              path: '/Ura63qS4/fields/actionBlockOverline/~locale',
                               type: 'BoundValue',
                             },
                             title: {
-                              path: '/x7pyjFFj/fields/title/~locale',
+                              path: '/sOCuihY3/fields/title/~locale',
                               type: 'BoundValue',
                             },
                             description: {
-                              path: '/WIYCSsvX/fields/shortDescription/~locale',
+                              path: '/P3w0MI3x/fields/shortDescription/~locale',
+                              type: 'BoundValue',
+                            },
+                            image: {
+                              path: '/D06vmzVo/fields/image/~locale/fields/file/~locale',
                               type: 'BoundValue',
                             },
                             primaryButton: {
-                              path: '/xSo60zbz/fields/primaryLinkRef/~locale',
+                              path: '/0Uc1jnt8/fields/primaryLinkRef/~locale',
                               type: 'BoundValue',
                             },
                             secondaryButton: {
-                              path: '/baGfsFOR/fields/secondaryLinkRef/~locale',
+                              path: '/5gQSSrFE/fields/secondaryLinkRef/~locale',
                               type: 'BoundValue',
                             },
                             background: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: 'secondary',
+                                desktop: 'primary',
                               },
                             },
                             cfVisibility: {
@@ -2819,1212 +912,8 @@ export async function createAllTheThingsExperienceEntry() {
                         },
                       ],
                     },
-                  ],
-                },
-              ],
-            }),
-            createContentfulSectionWrapper({
-              name: 'Button',
-              children: [
-                {
-                  id: 'HjMZCQC6',
-                  displayName: 'Section',
-                  definitionId: 'section',
-                  patternProperties: {},
-                  variables: {
-                    background: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'primary',
-                      },
-                    },
-                    padding: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'l',
-                      },
-                    },
-                    id: {
-                      key: 'vy3Z4qCBqa2yM79waYyZx',
-                      type: 'UnboundValue',
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                  },
-                  children: [
                     {
-                      id: 'sqnBKCvr',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'lzUBFGk045vgYma7aXjur',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'ZA7w0xDd',
-                      displayName: 'Button',
-                      definitionId: 'button',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'purple',
-                          },
-                        },
-                        type: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        text: {
-                          key: 'hXGMAy_S9tLUATPGf5Zry',
-                          type: 'UnboundValue',
-                        },
-                        href: {
-                          key: 'm5B_-isX7sffstDtAWTWi',
-                          type: 'UnboundValue',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: 'Jr3_e_AP72m0PxsOOIzg6',
-                          type: 'UnboundValue',
-                        },
-                        iconLeftName: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'sMndlIZK',
-                      displayName: 'Button 1',
-                      definitionId: 'button',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'black',
-                          },
-                        },
-                        type: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'secondary',
-                          },
-                        },
-                        text: {
-                          key: 'C2eh9B38',
-                          type: 'UnboundValue',
-                        },
-                        href: {
-                          key: 'JwQMnloG',
-                          type: 'UnboundValue',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: 'Xyg0Z-kNXwLoS7tUWKWe4',
-                          type: 'UnboundValue',
-                        },
-                        iconLeftName: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'home',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'i9TQ90r1',
-                      displayName: 'Button 2',
-                      definitionId: 'button',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'white',
-                          },
-                        },
-                        type: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'secondary',
-                          },
-                        },
-                        text: {
-                          key: '7PWBeER6',
-                          type: 'UnboundValue',
-                        },
-                        href: {
-                          key: '6ktx3JHv',
-                          type: 'UnboundValue',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        ariaLabel: {
-                          key: 'BHheSJr0-DKiQ2KV6nT9b',
-                          type: 'UnboundValue',
-                        },
-                        iconLeftName: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'smile',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'LLoJaXAe',
-                      definitionId: 'divider',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        margin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'xs',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'fdLp3ahg',
-                      displayName: 'Left Aligned Button',
-                      definitionId: 'button',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'purple',
-                          },
-                        },
-                        type: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        text: {
-                          key: 'C820WrIq2MCzdJJuM4oiI',
-                          type: 'UnboundValue',
-                        },
-                        href: {
-                          type: 'UnboundValue',
-                          key: 'uMhUcdTnHh9zPBFXifvKq',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: 'Q8S_CqSaOYMVwDMKlR3jr',
-                          type: 'UnboundValue',
-                        },
-                        iconLeftName: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'n4kkpjAV',
-                      displayName: 'Centered Button',
-                      definitionId: 'button',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'purple',
-                          },
-                        },
-                        type: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        text: {
-                          key: 'WasTGlxj',
-                          type: 'UnboundValue',
-                        },
-                        href: {
-                          type: 'UnboundValue',
-                          key: 'NhzwQJMw',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: 'jjrfcFBAJ5AspsCCOO2xO',
-                          type: 'UnboundValue',
-                        },
-                        iconLeftName: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'UkQimeF2',
-                      displayName: 'Right Aligned Button',
-                      definitionId: 'button',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'purple',
-                          },
-                        },
-                        type: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        text: {
-                          key: 'B1N7IJY8',
-                          type: 'UnboundValue',
-                        },
-                        href: {
-                          type: 'UnboundValue',
-                          key: 'dczpwBQS',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: 'SHqULneHIzJfEOPmKB4fN',
-                          type: 'UnboundValue',
-                        },
-                        iconLeftName: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'right',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                  ],
-                },
-              ],
-            }),
-            createContentfulSectionWrapper({
-              name: 'Column',
-              children: [
-                {
-                  id: 'g3bDeJ5Q',
-                  definitionId: 'section',
-                  patternProperties: {},
-                  variables: {
-                    background: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'primary',
-                      },
-                    },
-                    padding: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'l',
-                      },
-                    },
-                    id: {
-                      key: 'LC3Zogrcyn7ko8fQM4Nqs',
-                      type: 'UnboundValue',
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                  },
-                  children: [
-                    {
-                      id: 'kSaqrZkL',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: '7tPoQs29dgRnwZubnGEms',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: '1xhHBB2q',
-                      definitionId: 'contentful-columns',
-                      patternProperties: {},
-                      variables: {
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfBorderRadius: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0px',
-                          },
-                        },
-                        cfBackgroundColor: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'rgba(0, 0, 0, 0)',
-                          },
-                        },
-                        cfBackgroundImageUrl: {
-                          key: 'PWEyhxSkmxTGO951MgkM_',
-                          type: 'UnboundValue',
-                        },
-                        cfBackgroundImageOptions: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: {
-                              scaling: 'fill',
-                              alignment: 'left top',
-                              targetSize: '2000px',
-                            },
-                          },
-                        },
-                        cfMargin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '0 0 0 0',
-                          },
-                        },
-                        cfWidth: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '100%',
-                          },
-                        },
-                        cfMaxWidth: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '1192px',
-                          },
-                        },
-                        cfPadding: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '10px 10px 10px 10px',
-                          },
-                        },
-                        cfBorder: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '1px solid rgba(0, 0, 0, 1)',
-                          },
-                        },
-                        cfGap: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '10px 10px',
-                          },
-                        },
-                        cfColumns: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '[3,3,3,3]',
-                          },
-                        },
-                        cfWrapColumns: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfWrapColumnsCount: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: '2',
-                          },
-                        },
-                      },
-                      children: [
-                        {
-                          id: '4aK86X01',
-                          definitionId: 'contentful-single-column',
-                          patternProperties: {},
-                          variables: {
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              key: '-hiP47xkS8H9dfmgslbdh',
-                              type: 'UnboundValue',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'start',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1px solid rgba(0, 0, 0, 1)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfColumnSpan: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '6',
-                              },
-                            },
-                            cfColumnSpanLock: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: 'zAfKojaP',
-                              definitionId: 'paragraph',
-                              patternProperties: {},
-                              variables: {
-                                visualAppearance: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'body-one',
-                                  },
-                                },
-                                color: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'primary',
-                                  },
-                                },
-                                removeMarginBottom: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                children: {
-                                  key: 'uyEiVj6ofeCIPPsOLAAcg',
-                                  type: 'UnboundValue',
-                                },
-                                isStrong: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfTextAlign: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'left',
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                        {
-                          id: 'ivBBNdu3',
-                          definitionId: 'contentful-single-column',
-                          patternProperties: {},
-                          variables: {
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              key: 'h1C3gxnYgR9u4L8CDjo3D',
-                              type: 'UnboundValue',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1px solid rgba(0, 0, 0, 1)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfColumnSpan: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '6',
-                              },
-                            },
-                            cfColumnSpanLock: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: 'gbRF7ltC',
-                              definitionId: 'paragraph',
-                              patternProperties: {},
-                              variables: {
-                                visualAppearance: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'body-one',
-                                  },
-                                },
-                                color: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'primary',
-                                  },
-                                },
-                                removeMarginBottom: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                children: {
-                                  key: 'fLRxfb9Ecsh1B9F3VCTCi',
-                                  type: 'UnboundValue',
-                                },
-                                isStrong: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfTextAlign: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'center',
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                        {
-                          id: '2fCB1Xtu',
-                          definitionId: 'contentful-single-column',
-                          patternProperties: {},
-                          variables: {
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              key: 'jUIXS8jmgg7N0QAzowItS',
-                              type: 'UnboundValue',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'end',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1px solid rgba(0, 0, 0, 1)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfColumnSpan: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '6',
-                              },
-                            },
-                            cfColumnSpanLock: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: 'L9hvodcz',
-                              definitionId: 'paragraph',
-                              patternProperties: {},
-                              variables: {
-                                visualAppearance: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'body-one',
-                                  },
-                                },
-                                color: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'primary',
-                                  },
-                                },
-                                removeMarginBottom: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                children: {
-                                  key: '3BFpKy2b749t3Z0j19D9a',
-                                  type: 'UnboundValue',
-                                },
-                                isStrong: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfTextAlign: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'right',
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                        {
-                          id: 'lv1SSmyU',
-                          definitionId: 'contentful-single-column',
-                          patternProperties: {},
-                          variables: {
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              key: 'fP6j0_ZupHdFnUUB_Ia5H',
-                              type: 'UnboundValue',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px solid rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfColumnSpan: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '6',
-                              },
-                            },
-                            cfColumnSpanLock: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                          },
-                          children: [],
-                        },
-                      ],
-                    },
-                  ],
-                },
-              ],
-            }),
-            createContentfulSectionWrapper({
-              name: 'Container',
-              children: [
-                {
-                  id: 'uHUM5mzD',
-                  definitionId: 'section',
-                  patternProperties: {},
-                  variables: {
-                    background: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'primary',
-                      },
-                    },
-                    padding: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: 'l',
-                      },
-                    },
-                    id: {
-                      key: '_byo2Rxu56P0ZbFndME7R',
-                      type: 'UnboundValue',
-                    },
-                    cfVisibility: {
-                      type: 'DesignValue',
-                      valuesByBreakpoint: {
-                        desktop: true,
-                      },
-                    },
-                  },
-                  children: [
-                    {
-                      id: 'eDgH4prd',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'V8YHlFRp',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'uCuOdCYT',
+                      id: 'GIbKtM99',
                       definitionId: 'contentful-container',
                       patternProperties: {},
                       variables: {
@@ -4085,7 +974,7 @@ export async function createAllTheThingsExperienceEntry() {
                         cfFlexDirection: {
                           type: 'DesignValue',
                           valuesByBreakpoint: {
-                            desktop: 'row',
+                            desktop: 'column',
                           },
                         },
                         cfFlexReverse: {
@@ -4113,12 +1002,12 @@ export async function createAllTheThingsExperienceEntry() {
                           },
                         },
                         cfHyperlink: {
-                          key: 'IsyZ4DkUsAKB5tReDxD1q',
                           type: 'UnboundValue',
+                          key: 'eMXbhJJO',
                         },
                         cfOpenInNewTab: {
-                          key: 'rpWptElOUBNuPNQXKsjMo',
                           type: 'UnboundValue',
+                          key: 'hAGyY1mh',
                         },
                         cfBorderRadius: {
                           type: 'DesignValue',
@@ -4127,8 +1016,8 @@ export async function createAllTheThingsExperienceEntry() {
                           },
                         },
                         cfBackgroundImageUrl: {
-                          key: 'mFzwT6KHtA9j1FYYT0dvh',
                           type: 'UnboundValue',
+                          key: 'Aw5CTnlT',
                         },
                         cfBackgroundImageOptions: {
                           type: 'DesignValue',
@@ -4143,20 +1032,38 @@ export async function createAllTheThingsExperienceEntry() {
                       },
                       children: [
                         {
-                          id: 'a9I1ElrU',
-                          definitionId: 'contentful-container',
+                          id: 'cNcSAcmb',
+                          definitionId: 'verticalActionBlock',
                           patternProperties: {},
                           variables: {
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'start',
-                              },
+                            overline: {
+                              path: '/btGygYlg/fields/actionBlockOverline/~locale',
+                              type: 'BoundValue',
                             },
-                            cfHorizontalAlignment: {
+                            title: {
+                              path: '/qj8MdFqk/fields/title/~locale',
+                              type: 'BoundValue',
+                            },
+                            description: {
+                              path: '/OkAdGTNN/fields/shortDescription/~locale',
+                              type: 'BoundValue',
+                            },
+                            image: {
+                              path: '/4rTEErM8/fields/image/~locale/fields/file/~locale',
+                              type: 'BoundValue',
+                            },
+                            primaryButton: {
+                              path: '/wf6Nfy0h/fields/marketingLink/~locale',
+                              type: 'BoundValue',
+                            },
+                            secondaryButton: {
+                              path: '/L4ppraxB/fields/marketingLink/~locale',
+                              type: 'BoundValue',
+                            },
+                            background: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: 'center',
+                                desktop: 'primary',
                               },
                             },
                             cfVisibility: {
@@ -4165,628 +1072,29 @@ export async function createAllTheThingsExperienceEntry() {
                                 desktop: true,
                               },
                             },
-                            cfMargin: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '25%',
-                              },
-                            },
-                            cfHeight: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'fit-content',
-                              },
-                            },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexReverse: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1px solid rgba(0, 0, 0, 1)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
-                              key: 'XeBIpyktpVkLEy45skA7l',
-                              type: 'UnboundValue',
-                            },
-                            cfOpenInNewTab: {
-                              key: '2T84aGT0sd1wyPrlXpm_v',
-                              type: 'UnboundValue',
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              key: 'cKcaNJOJ3vHPn3yBMhHgh',
-                              type: 'UnboundValue',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
                           },
-                          children: [
-                            {
-                              id: 'FNbhC3Xu',
-                              definitionId: 'heading',
-                              patternProperties: {},
-                              variables: {
-                                visualAppearance: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'heading-xxl',
-                                  },
-                                },
-                                removeMarginBottom: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                children: {
-                                  key: 'op-Qp-gdr8uf9I9-WXcdr',
-                                  type: 'UnboundValue',
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfTextAlign: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'left',
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                            {
-                              id: 'UDIwg6gf',
-                              definitionId: 'paragraph',
-                              patternProperties: {},
-                              variables: {
-                                visualAppearance: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'body-one',
-                                  },
-                                },
-                                color: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'primary',
-                                  },
-                                },
-                                removeMarginBottom: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                children: {
-                                  key: 'QcBjAcsD-IhgBz5nwADMs',
-                                  type: 'UnboundValue',
-                                },
-                                isStrong: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfTextAlign: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'left',
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                        {
-                          id: 'E07pN8W4',
-                          definitionId: 'contentful-container',
-                          patternProperties: {},
-                          variables: {
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfMargin: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '25%',
-                              },
-                            },
-                            cfHeight: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'fit-content',
-                              },
-                            },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexReverse: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1px solid rgba(0, 0, 0, 1)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
-                              key: 'Vbrs8KDX',
-                              type: 'UnboundValue',
-                            },
-                            cfOpenInNewTab: {
-                              key: '6lSOjmKa',
-                              type: 'UnboundValue',
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              key: 'zkx5V9ed',
-                              type: 'UnboundValue',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: 'o6xpiMNG',
-                              definitionId: 'heading',
-                              patternProperties: {},
-                              variables: {
-                                visualAppearance: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'heading-xxl',
-                                  },
-                                },
-                                removeMarginBottom: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                children: {
-                                  key: 'M8tEEkEnbhdKkkzZSTBRd',
-                                  type: 'UnboundValue',
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfTextAlign: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'left',
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                            {
-                              id: 'NcKsyTr5',
-                              definitionId: 'paragraph',
-                              patternProperties: {},
-                              variables: {
-                                visualAppearance: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'body-one',
-                                  },
-                                },
-                                color: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'primary',
-                                  },
-                                },
-                                removeMarginBottom: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                children: {
-                                  key: 'l2UKloU9',
-                                  type: 'UnboundValue',
-                                },
-                                isStrong: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfTextAlign: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'center',
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
-                        },
-                        {
-                          id: '1vmrSFao',
-                          definitionId: 'contentful-container',
-                          patternProperties: {},
-                          variables: {
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'end',
-                              },
-                            },
-                            cfHorizontalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
-                            },
-                            cfVisibility: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: true,
-                              },
-                            },
-                            cfMargin: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfPadding: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
-                              },
-                            },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '25%',
-                              },
-                            },
-                            cfHeight: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'fit-content',
-                              },
-                            },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexReverse: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1px solid rgba(0, 0, 0, 1)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
-                              key: 'yzVjh0Ni',
-                              type: 'UnboundValue',
-                            },
-                            cfOpenInNewTab: {
-                              key: '18Loxedj',
-                              type: 'UnboundValue',
-                            },
-                            cfBorderRadius: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfBackgroundImageUrl: {
-                              key: '5OJDXQCx',
-                              type: 'UnboundValue',
-                            },
-                            cfBackgroundImageOptions: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
-                              },
-                            },
-                          },
-                          children: [
-                            {
-                              id: '48VmFOtI',
-                              definitionId: 'heading',
-                              patternProperties: {},
-                              variables: {
-                                visualAppearance: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'heading-xxl',
-                                  },
-                                },
-                                removeMarginBottom: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                children: {
-                                  key: 'sfjHI0Y3PWcC6rm8lYfap',
-                                  type: 'UnboundValue',
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfTextAlign: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'right',
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                            {
-                              id: 'VkXRXr2S',
-                              definitionId: 'paragraph',
-                              patternProperties: {},
-                              variables: {
-                                visualAppearance: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'body-one',
-                                  },
-                                },
-                                color: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'primary',
-                                  },
-                                },
-                                removeMarginBottom: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                children: {
-                                  key: '7Cj0SIqV',
-                                  type: 'UnboundValue',
-                                },
-                                isStrong: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: false,
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfTextAlign: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'right',
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
+                          children: [],
                         },
                       ],
                     },
                   ],
                 },
-              ],
-            }),
-            createContentfulSectionWrapper({
-              name: 'Divider',
-              children: [
                 {
-                  id: 'BRrxH9Ul',
-                  displayName: 'Section',
-                  definitionId: 'section',
+                  id: 'XkRIiyuw',
+                  definitionId: 'divider',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    color: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
                         desktop: 'primary',
                       },
                     },
-                    padding: {
+                    margin: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: 's',
                       },
-                    },
-                    id: {
-                      key: 'koY0ISJaPzBIDXqlznL0H',
-                      type: 'UnboundValue',
                     },
                     cfVisibility: {
                       type: 'DesignValue',
@@ -4795,125 +1103,27 @@ export async function createAllTheThingsExperienceEntry() {
                       },
                     },
                   },
-                  children: [
-                    {
-                      id: 's5HoxC42',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'fvbdsWsT',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'pHAqHABK',
-                      displayName: 'Divider',
-                      definitionId: 'divider',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        margin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'none',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'WydkYUZS',
-                      displayName: 'Divider 1',
-                      definitionId: 'divider',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'strong',
-                          },
-                        },
-                        margin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'l',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                  ],
+                  children: [],
                 },
-              ],
-            }),
-            createContentfulSectionWrapper({
-              name: 'Heading',
-              children: [
                 {
-                  id: 'DiK9VHcn',
-                  displayName: 'Section',
-                  definitionId: 'section',
+                  id: 'WF9VdUgg',
+                  definitionId: 'heading',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    visualAppearance: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'primary',
+                        desktop: 'heading-xl',
                       },
                     },
-                    padding: {
+                    removeMarginBottom: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: false,
                       },
                     },
-                    id: {
-                      key: 'aTtjH3mTVn7fMVJ-xb2nG',
+                    children: {
+                      key: 'rXgI4Mvr',
                       type: 'UnboundValue',
                     },
                     cfVisibility: {
@@ -4922,258 +1132,31 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
                   },
-                  children: [
-                    {
-                      id: 'QeFTqe9z',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: '1O9vd7afmvcqJPb-Hst2m',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 's9BWm87K',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'ppcJTpQrNNmiFzRpoKuk7',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'g7eJTxtZ',
-                      displayName: 'Heading 1',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-lg',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'k7cc4DWU',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'Og5azalB',
-                      displayName: 'Heading 1',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-md',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'J8z7Qo1L',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'aqtlS0Go',
-                      displayName: 'Heading 1',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-sm',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'mCXPy8Sk',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'B3ylIbTZ',
-                      displayName: 'Heading 1',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xs',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'rMO0UpAm',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'right',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                  ],
+                  children: [],
                 },
-              ],
-            }),
-            createContentfulSectionWrapper({
-              name: 'Image',
-              children: [
                 {
-                  id: 'OX0joJve',
-                  displayName: 'Section',
-                  definitionId: 'section',
+                  id: 'Jx09S5tI',
+                  definitionId: 'contentful-container',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    cfVerticalAlignment: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'primary',
+                        desktop: 'center',
                       },
                     },
-                    padding: {
+                    cfHorizontalAlignment: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: 'center',
                       },
-                    },
-                    id: {
-                      key: 'mJJmzfsA',
-                      type: 'UnboundValue',
                     },
                     cfVisibility: {
                       type: 'DesignValue',
@@ -5181,47 +1164,106 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
+                    cfMargin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0 0 0 0',
+                      },
+                    },
+                    cfPadding: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '24px 24px 24px 24px',
+                      },
+                    },
+                    cfBackgroundColor: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'rgba(247, 248, 250, 1)',
+                      },
+                    },
+                    cfWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '100%',
+                      },
+                    },
+                    cfHeight: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'fit-content',
+                      },
+                    },
+                    cfMaxWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '1192px',
+                      },
+                    },
+                    cfFlexDirection: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'row',
+                        mobile: 'column',
+                      },
+                    },
+                    cfFlexReverse: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfFlexWrap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'nowrap',
+                      },
+                    },
+                    cfBorder: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px solid rgba(0, 0, 0, 0)',
+                      },
+                    },
+                    cfGap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px 24px',
+                        mobile: '24px 24px',
+                      },
+                    },
+                    cfHyperlink: {
+                      type: 'UnboundValue',
+                      key: 'xaSe4Rjf',
+                    },
+                    cfOpenInNewTab: {
+                      type: 'UnboundValue',
+                      key: 'TnZjwBke',
+                    },
+                    cfBorderRadius: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px',
+                      },
+                    },
+                    cfBackgroundImageUrl: {
+                      type: 'UnboundValue',
+                      key: 'gwYa67z7',
+                    },
+                    cfBackgroundImageOptions: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: {
+                          scaling: 'fill',
+                          alignment: 'left top',
+                          targetSize: '2000px',
+                        },
+                      },
+                    },
                   },
                   children: [
                     {
-                      id: 'AI1IIxgR',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'ZJnqNzR6',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
-                    },
-                    {
-                      id: 'pW9sYR0b',
+                      id: 'pSAn3QNf',
                       definitionId: 'contentful-container',
                       patternProperties: {},
                       variables: {
@@ -5270,7 +1312,7 @@ export async function createAllTheThingsExperienceEntry() {
                         cfHeight: {
                           type: 'DesignValue',
                           valuesByBreakpoint: {
-                            desktop: '178px',
+                            desktop: 'fit-content',
                           },
                         },
                         cfMaxWidth: {
@@ -5282,8 +1324,7 @@ export async function createAllTheThingsExperienceEntry() {
                         cfFlexDirection: {
                           type: 'DesignValue',
                           valuesByBreakpoint: {
-                            desktop: 'row',
-                            mobile: 'column',
+                            desktop: 'column',
                           },
                         },
                         cfFlexReverse: {
@@ -5307,17 +1348,16 @@ export async function createAllTheThingsExperienceEntry() {
                         cfGap: {
                           type: 'DesignValue',
                           valuesByBreakpoint: {
-                            desktop: '0px 24px',
-                            mobile: '24px 24px',
+                            desktop: '0px',
                           },
                         },
                         cfHyperlink: {
                           type: 'UnboundValue',
-                          key: 'Fe4Bfar',
+                          key: 'rqSvSSLH',
                         },
                         cfOpenInNewTab: {
                           type: 'UnboundValue',
-                          key: 'baOMaPo',
+                          key: 'ZdTFBVAL',
                         },
                         cfBorderRadius: {
                           type: 'DesignValue',
@@ -5327,7 +1367,7 @@ export async function createAllTheThingsExperienceEntry() {
                         },
                         cfBackgroundImageUrl: {
                           type: 'UnboundValue',
-                          key: 'KBQ3_Cb',
+                          key: 'dWrBnOHy',
                         },
                         cfBackgroundImageOptions: {
                           type: 'DesignValue',
@@ -5342,20 +1382,38 @@ export async function createAllTheThingsExperienceEntry() {
                       },
                       children: [
                         {
-                          id: 'Jk6x2y8G',
-                          definitionId: 'contentful-container',
+                          id: 'HA6kV8lH',
+                          definitionId: 'verticalActionBlock',
                           patternProperties: {},
                           variables: {
-                            cfVerticalAlignment: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'center',
-                              },
+                            overline: {
+                              path: '/eV4HBBLe/fields/actionBlockOverline/~locale',
+                              type: 'BoundValue',
                             },
-                            cfHorizontalAlignment: {
+                            title: {
+                              path: '/eeVAmXO7/fields/title/~locale',
+                              type: 'BoundValue',
+                            },
+                            description: {
+                              path: '/1V2S6k5O/fields/shortDescription/~locale',
+                              type: 'BoundValue',
+                            },
+                            image: {
+                              path: '/3xRBhtEN/fields/image/~locale/fields/file/~locale',
+                              type: 'BoundValue',
+                            },
+                            primaryButton: {
+                              path: '/iKuwF5UL/fields/primaryLinkRef/~locale',
+                              type: 'BoundValue',
+                            },
+                            secondaryButton: {
+                              path: '/XC0Orztn/fields/secondaryLinkRef/~locale',
+                              type: 'BoundValue',
+                            },
+                            background: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: 'center',
+                                desktop: 'secondary',
                               },
                             },
                             cfVisibility: {
@@ -5364,159 +1422,2732 @@ export async function createAllTheThingsExperienceEntry() {
                                 desktop: true,
                               },
                             },
-                            cfMargin: {
+                          },
+                          children: [],
+                        },
+                      ],
+                    },
+                    {
+                      id: 'hAm0hXK7',
+                      definitionId: 'contentful-container',
+                      patternProperties: {},
+                      variables: {
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfMargin: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '100%',
+                          },
+                        },
+                        cfHeight: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'fit-content',
+                          },
+                        },
+                        cfMaxWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1192px',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexReverse: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px solid rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfHyperlink: {
+                          type: 'UnboundValue',
+                          key: 'GGSUj7T7',
+                        },
+                        cfOpenInNewTab: {
+                          type: 'UnboundValue',
+                          key: '6dweZgN5',
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          type: 'UnboundValue',
+                          key: 'TC9267aF',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
+                            },
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: 'NRvZhJuI',
+                          definitionId: 'verticalActionBlock',
+                          patternProperties: {},
+                          variables: {
+                            overline: {
+                              path: '/pnEVNJEY/fields/actionBlockOverline/~locale',
+                              type: 'BoundValue',
+                            },
+                            title: {
+                              path: '/289w042P/fields/title/~locale',
+                              type: 'BoundValue',
+                            },
+                            description: {
+                              path: '/8W24TK7L/fields/shortDescription/~locale',
+                              type: 'BoundValue',
+                            },
+                            image: {
+                              path: '/Gac8HyiL/fields/image/~locale/fields/file/~locale',
+                              type: 'BoundValue',
+                            },
+                            primaryButton: {
+                              path: '/L1oQ0Cfn/fields/marketingLink/~locale',
+                              type: 'BoundValue',
+                            },
+                            secondaryButton: {
+                              path: '/jgZPQ2f4/fields/marketingLink/~locale',
+                              type: 'BoundValue',
+                            },
+                            background: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
+                                desktop: 'secondary',
                               },
                             },
-                            cfPadding: {
+                            cfVisibility: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
+                                desktop: true,
                               },
                             },
-                            cfBackgroundColor: {
+                          },
+                          children: [],
+                        },
+                      ],
+                    },
+                  ],
+                },
+                {
+                  id: 'HT5aw3I7',
+                  definitionId: 'divider',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    margin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 's',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'aAeOh6L6',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'Tgg1s2D2',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'kAFZ2mur',
+                  definitionId: 'contentful-container',
+                  patternProperties: {},
+                  variables: {
+                    cfVerticalAlignment: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                    cfHorizontalAlignment: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfMargin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0 0 0 0',
+                      },
+                    },
+                    cfPadding: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0 0 0 0',
+                      },
+                    },
+                    cfBackgroundColor: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'rgba(0, 0, 0, 0)',
+                      },
+                    },
+                    cfWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '100%',
+                      },
+                    },
+                    cfHeight: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'fit-content',
+                      },
+                    },
+                    cfMaxWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '1192px',
+                      },
+                    },
+                    cfFlexDirection: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'row',
+                        mobile: 'column',
+                      },
+                    },
+                    cfFlexReverse: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfFlexWrap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'nowrap',
+                      },
+                    },
+                    cfBorder: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px solid rgba(0, 0, 0, 0)',
+                      },
+                    },
+                    cfGap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px 24px',
+                        mobile: '24px 24px',
+                      },
+                    },
+                    cfHyperlink: {
+                      type: 'UnboundValue',
+                      key: '5rKwB2lO',
+                    },
+                    cfOpenInNewTab: {
+                      type: 'UnboundValue',
+                      key: 'hEDkMrEi',
+                    },
+                    cfBorderRadius: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px',
+                      },
+                    },
+                    cfBackgroundImageUrl: {
+                      type: 'UnboundValue',
+                      key: 'mp03r8eT',
+                    },
+                    cfBackgroundImageOptions: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: {
+                          scaling: 'fill',
+                          alignment: 'left top',
+                          targetSize: '2000px',
+                        },
+                      },
+                    },
+                  },
+                  children: [
+                    {
+                      id: 'CC1rbHZN',
+                      definitionId: 'contentful-container',
+                      patternProperties: {},
+                      variables: {
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfMargin: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '100%',
+                          },
+                        },
+                        cfHeight: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'fit-content',
+                          },
+                        },
+                        cfMaxWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1192px',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexReverse: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px solid rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfHyperlink: {
+                          type: 'UnboundValue',
+                          key: 'LY3fwrGF',
+                        },
+                        cfOpenInNewTab: {
+                          type: 'UnboundValue',
+                          key: 'vl7mGMNk',
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          type: 'UnboundValue',
+                          key: 'Mo4S1GHf',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
+                            },
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: 'vKRDeLjD',
+                          definitionId: 'verticalActionBlock',
+                          patternProperties: {},
+                          variables: {
+                            overline: {
+                              path: '/S9wdCChd/fields/actionBlockOverline/~locale',
+                              type: 'BoundValue',
+                            },
+                            title: {
+                              path: '/sCyp4umt/fields/title/~locale',
+                              type: 'BoundValue',
+                            },
+                            description: {
+                              path: '/VHT0F26i/fields/shortDescription/~locale',
+                              type: 'BoundValue',
+                            },
+                            image: {
+                              path: '/hbWAEPUa/fields/image/~locale/fields/file/~locale',
+                              type: 'BoundValue',
+                            },
+                            primaryButton: {
+                              path: '/NQABxHSW/fields/primaryLinkRef/~locale',
+                              type: 'BoundValue',
+                            },
+                            secondaryButton: {
+                              path: '/0HkUraow/fields/secondaryLinkRef/~locale',
+                              type: 'BoundValue',
+                            },
+                            background: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
+                                desktop: 'primary',
                               },
                             },
-                            cfWidth: {
+                            cfVisibility: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: '100%',
+                                desktop: true,
                               },
                             },
-                            cfHeight: {
+                          },
+                          children: [],
+                        },
+                      ],
+                    },
+                    {
+                      id: 'MFJ3yTqG',
+                      definitionId: 'contentful-container',
+                      patternProperties: {},
+                      variables: {
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfMargin: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '100%',
+                          },
+                        },
+                        cfHeight: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'fit-content',
+                          },
+                        },
+                        cfMaxWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1192px',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexReverse: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px solid rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfHyperlink: {
+                          type: 'UnboundValue',
+                          key: 'JjsxkEPq',
+                        },
+                        cfOpenInNewTab: {
+                          type: 'UnboundValue',
+                          key: 'mI3808f6',
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          type: 'UnboundValue',
+                          key: 'AKTPfVrs',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
+                            },
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: '1yfSgGaI',
+                          definitionId: 'verticalActionBlock',
+                          patternProperties: {},
+                          variables: {
+                            overline: {
+                              path: '/qUW7SuUq/fields/actionBlockOverline/~locale',
+                              type: 'BoundValue',
+                            },
+                            title: {
+                              path: '/7Gxx550Y/fields/title/~locale',
+                              type: 'BoundValue',
+                            },
+                            description: {
+                              path: '/PkMzRu3l/fields/shortDescription/~locale',
+                              type: 'BoundValue',
+                            },
+                            image: {
+                              path: '/q64yPb2d/fields/image/~locale/fields/file/~locale',
+                              type: 'BoundValue',
+                            },
+                            primaryButton: {
+                              path: '/9VSvsbCf/fields/primaryLinkRef/~locale',
+                              type: 'BoundValue',
+                            },
+                            secondaryButton: {
+                              path: '/o8e0EuB2/fields/secondaryLinkRef/~locale',
+                              type: 'BoundValue',
+                            },
+                            background: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: 'fit-content',
+                                desktop: 'primary',
                               },
                             },
-                            cfMaxWidth: {
+                            cfVisibility: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: '1192px',
+                                desktop: true,
                               },
                             },
-                            cfFlexDirection: {
+                          },
+                          children: [],
+                        },
+                      ],
+                    },
+                    {
+                      id: 'w6KnOUij',
+                      definitionId: 'contentful-container',
+                      patternProperties: {},
+                      variables: {
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfMargin: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '100%',
+                          },
+                        },
+                        cfHeight: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'fit-content',
+                          },
+                        },
+                        cfMaxWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1192px',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexReverse: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px solid rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfHyperlink: {
+                          type: 'UnboundValue',
+                          key: 'lTlx2Ck5',
+                        },
+                        cfOpenInNewTab: {
+                          type: 'UnboundValue',
+                          key: 'byHQXRz8',
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          type: 'UnboundValue',
+                          key: 'IuXKDn7Q',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
+                            },
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: 'KtyKVhex',
+                          definitionId: 'verticalActionBlock',
+                          patternProperties: {},
+                          variables: {
+                            overline: {
+                              path: '/MKnXMzs0/fields/actionBlockOverline/~locale',
+                              type: 'BoundValue',
+                            },
+                            title: {
+                              path: '/tgGNSw4W/fields/title/~locale',
+                              type: 'BoundValue',
+                            },
+                            description: {
+                              path: '/o5ZyffFl/fields/shortDescription/~locale',
+                              type: 'BoundValue',
+                            },
+                            image: {
+                              path: '/EGqljg4x/fields/image/~locale/fields/file/~locale',
+                              type: 'BoundValue',
+                            },
+                            primaryButton: {
+                              path: '/TBoKgmUE/fields/primaryLinkRef/~locale',
+                              type: 'BoundValue',
+                            },
+                            secondaryButton: {
+                              path: '/tqX7SCKc/fields/secondaryLinkRef/~locale',
+                              type: 'BoundValue',
+                            },
+                            background: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: 'column',
+                                desktop: 'primary',
                               },
                             },
-                            cfFlexReverse: {
+                            cfVisibility: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: true,
+                              },
+                            },
+                          },
+                          children: [],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            }),
+            createContentfulSectionWrapper({
+              name: 'Full Width Action Block',
+
+              children: [
+                {
+                  id: 'mKmQjjB5',
+                  displayName: 'Heading 1',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xxl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: '0BYMXHkY',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'XQ7TfDn9',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'IAwsxK7N',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'pU9KFVeN',
+                  definitionId: 'fullWidthActionBlock',
+                  patternProperties: {},
+                  variables: {
+                    image: {
+                      path: '/FbSNI62I/fields/image/~locale/fields/file/~locale',
+                      type: 'BoundValue',
+                    },
+                    overline: {
+                      path: '/zibXm2hu/fields/actionBlockOverline/~locale',
+                      type: 'BoundValue',
+                    },
+                    title: {
+                      path: '/k5eX10Tv/fields/title/~locale',
+                      type: 'BoundValue',
+                    },
+                    description: {
+                      path: '/d2JuVKZQ/fields/shortDescription/~locale',
+                      type: 'BoundValue',
+                    },
+                    primaryButton: {
+                      path: '/NqrmKrUA/fields/primaryLinkRef/~locale',
+                      type: 'BoundValue',
+                    },
+                    secondaryButton: {
+                      path: '/f5guroL4/fields/secondaryLinkRef/~locale',
+                      type: 'BoundValue',
+                    },
+                    background: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'X3HvQXNU',
+                  definitionId: 'divider',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    margin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 's',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'qPYEMk2o',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'Xsx7dtxc',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'dtvNdOmk',
+                  definitionId: 'fullWidthActionBlock',
+                  patternProperties: {},
+                  variables: {
+                    image: {
+                      path: '/DXDrLIKT/fields/image/~locale/fields/file/~locale',
+                      type: 'BoundValue',
+                    },
+                    overline: {
+                      path: '/XvAA9yze/fields/actionBlockOverline/~locale',
+                      type: 'BoundValue',
+                    },
+                    title: {
+                      path: '/lnB5pwJz/fields/title/~locale',
+                      type: 'BoundValue',
+                    },
+                    description: {
+                      path: '/MdJaRWGZ/fields/shortDescription/~locale',
+                      type: 'BoundValue',
+                    },
+                    primaryButton: {
+                      path: '/0TXnLT0j/fields/marketingLink/~locale',
+                      type: 'BoundValue',
+                    },
+                    secondaryButton: {
+                      path: '/uyYAAfql/fields/marketingLink/~locale',
+                      type: 'BoundValue',
+                    },
+                    background: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'RdLeOx6U',
+                  definitionId: 'divider',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    margin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 's',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'fwnmq3Qj',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'v6A0d7WI',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'SYclWTwE',
+                  definitionId: 'contentful-container',
+                  patternProperties: {},
+                  variables: {
+                    cfVerticalAlignment: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                    cfHorizontalAlignment: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfMargin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0 0 0 0',
+                      },
+                    },
+                    cfPadding: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '24px 24px 24px 24px',
+                      },
+                    },
+                    cfBackgroundColor: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'rgba(247, 248, 250, 1)',
+                      },
+                    },
+                    cfWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '100%',
+                      },
+                    },
+                    cfHeight: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'fit-content',
+                      },
+                    },
+                    cfMaxWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '1192px',
+                      },
+                    },
+                    cfFlexDirection: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'column',
+                      },
+                    },
+                    cfFlexReverse: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfFlexWrap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'nowrap',
+                      },
+                    },
+                    cfBorder: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px solid rgba(0, 0, 0, 0)',
+                      },
+                    },
+                    cfGap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px',
+                      },
+                    },
+                    cfHyperlink: {
+                      type: 'UnboundValue',
+                      key: 'ICrX3vs',
+                    },
+                    cfOpenInNewTab: {
+                      type: 'UnboundValue',
+                      key: 'bAIeQt5',
+                    },
+                    cfBorderRadius: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px',
+                      },
+                    },
+                    cfBackgroundImageUrl: {
+                      type: 'UnboundValue',
+                      key: 'fupk4k7',
+                    },
+                    cfBackgroundImageOptions: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: {
+                          scaling: 'fill',
+                          alignment: 'left top',
+                          targetSize: '2000px',
+                        },
+                      },
+                    },
+                  },
+                  children: [
+                    {
+                      id: 'jPGXtwTT',
+                      definitionId: 'fullWidthActionBlock',
+                      patternProperties: {},
+                      variables: {
+                        image: {
+                          path: '/w3A8mGao/fields/image/~locale/fields/file/~locale',
+                          type: 'BoundValue',
+                        },
+                        overline: {
+                          path: '/XXpWcD4q/fields/actionBlockOverline/~locale',
+                          type: 'BoundValue',
+                        },
+                        title: {
+                          path: '/x7pyjFFj/fields/title/~locale',
+                          type: 'BoundValue',
+                        },
+                        description: {
+                          path: '/WIYCSsvX/fields/shortDescription/~locale',
+                          type: 'BoundValue',
+                        },
+                        primaryButton: {
+                          path: '/xSo60zbz/fields/primaryLinkRef/~locale',
+                          type: 'BoundValue',
+                        },
+                        secondaryButton: {
+                          path: '/baGfsFOR/fields/secondaryLinkRef/~locale',
+                          type: 'BoundValue',
+                        },
+                        background: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'secondary',
+                          },
+                        },
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                      },
+                      children: [],
+                    },
+                  ],
+                },
+              ],
+            }),
+            createContentfulSectionWrapper({
+              name: 'Button',
+
+              children: [
+                {
+                  id: 'sqnBKCvr',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xxl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'lzUBFGk045vgYma7aXjur',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'ZA7w0xDd',
+                  displayName: 'Button',
+                  definitionId: 'button',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'purple',
+                      },
+                    },
+                    type: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    text: {
+                      key: 'hXGMAy_S9tLUATPGf5Zry',
+                      type: 'UnboundValue',
+                    },
+                    href: {
+                      key: 'm5B_-isX7sffstDtAWTWi',
+                      type: 'UnboundValue',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    ariaLabel: {
+                      key: 'Jr3_e_AP72m0PxsOOIzg6',
+                      type: 'UnboundValue',
+                    },
+                    iconLeftName: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'sMndlIZK',
+                  displayName: 'Button 1',
+                  definitionId: 'button',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'black',
+                      },
+                    },
+                    type: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'secondary',
+                      },
+                    },
+                    text: {
+                      key: 'C2eh9B38',
+                      type: 'UnboundValue',
+                    },
+                    href: {
+                      key: 'JwQMnloG',
+                      type: 'UnboundValue',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    ariaLabel: {
+                      key: 'Xyg0Z-kNXwLoS7tUWKWe4',
+                      type: 'UnboundValue',
+                    },
+                    iconLeftName: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'home',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'i9TQ90r1',
+                  displayName: 'Button 2',
+                  definitionId: 'button',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'white',
+                      },
+                    },
+                    type: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'secondary',
+                      },
+                    },
+                    text: {
+                      key: '7PWBeER6',
+                      type: 'UnboundValue',
+                    },
+                    href: {
+                      key: '6ktx3JHv',
+                      type: 'UnboundValue',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    ariaLabel: {
+                      key: 'BHheSJr0-DKiQ2KV6nT9b',
+                      type: 'UnboundValue',
+                    },
+                    iconLeftName: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'smile',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'LLoJaXAe',
+                  definitionId: 'divider',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    margin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'xs',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'fdLp3ahg',
+                  displayName: 'Left Aligned Button',
+                  definitionId: 'button',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'purple',
+                      },
+                    },
+                    type: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    text: {
+                      key: 'C820WrIq2MCzdJJuM4oiI',
+                      type: 'UnboundValue',
+                    },
+                    href: {
+                      type: 'UnboundValue',
+                      key: 'uMhUcdTnHh9zPBFXifvKq',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    ariaLabel: {
+                      key: 'Q8S_CqSaOYMVwDMKlR3jr',
+                      type: 'UnboundValue',
+                    },
+                    iconLeftName: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'n4kkpjAV',
+                  displayName: 'Centered Button',
+                  definitionId: 'button',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'purple',
+                      },
+                    },
+                    type: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    text: {
+                      key: 'WasTGlxj',
+                      type: 'UnboundValue',
+                    },
+                    href: {
+                      type: 'UnboundValue',
+                      key: 'NhzwQJMw',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    ariaLabel: {
+                      key: 'jjrfcFBAJ5AspsCCOO2xO',
+                      type: 'UnboundValue',
+                    },
+                    iconLeftName: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'UkQimeF2',
+                  displayName: 'Right Aligned Button',
+                  definitionId: 'button',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'purple',
+                      },
+                    },
+                    type: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    text: {
+                      key: 'B1N7IJY8',
+                      type: 'UnboundValue',
+                    },
+                    href: {
+                      type: 'UnboundValue',
+                      key: 'dczpwBQS',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    ariaLabel: {
+                      key: 'SHqULneHIzJfEOPmKB4fN',
+                      type: 'UnboundValue',
+                    },
+                    iconLeftName: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'right',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+              ],
+            }),
+            createContentfulSectionWrapper({
+              name: 'Column',
+
+              children: [
+                {
+                  id: 'kSaqrZkL',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xxl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: '7tPoQs29dgRnwZubnGEms',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: '1xhHBB2q',
+                  definitionId: 'contentful-columns',
+                  patternProperties: {},
+                  variables: {
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfBorderRadius: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px',
+                      },
+                    },
+                    cfBackgroundColor: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'rgba(0, 0, 0, 0)',
+                      },
+                    },
+                    cfBackgroundImageUrl: {
+                      key: 'PWEyhxSkmxTGO951MgkM_',
+                      type: 'UnboundValue',
+                    },
+                    cfBackgroundImageOptions: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: {
+                          scaling: 'fill',
+                          alignment: 'left top',
+                          targetSize: '2000px',
+                        },
+                      },
+                    },
+                    cfMargin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0 0 0 0',
+                      },
+                    },
+                    cfWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '100%',
+                      },
+                    },
+                    cfMaxWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '1192px',
+                      },
+                    },
+                    cfPadding: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '10px 10px 10px 10px',
+                      },
+                    },
+                    cfBorder: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '1px solid rgba(0, 0, 0, 1)',
+                      },
+                    },
+                    cfGap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '10px 10px',
+                      },
+                    },
+                    cfColumns: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '[3,3,3,3]',
+                      },
+                    },
+                    cfWrapColumns: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfWrapColumnsCount: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '2',
+                      },
+                    },
+                  },
+                  children: [
+                    {
+                      id: '4aK86X01',
+                      definitionId: 'contentful-single-column',
+                      patternProperties: {},
+                      variables: {
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          key: '-hiP47xkS8H9dfmgslbdh',
+                          type: 'UnboundValue',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
+                            },
+                          },
+                        },
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'start',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1px solid rgba(0, 0, 0, 1)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfColumnSpan: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '6',
+                          },
+                        },
+                        cfColumnSpanLock: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: 'zAfKojaP',
+                          definitionId: 'paragraph',
+                          patternProperties: {},
+                          variables: {
+                            visualAppearance: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'body-one',
+                              },
+                            },
+                            color: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'primary',
+                              },
+                            },
+                            removeMarginBottom: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
                                 desktop: false,
                               },
                             },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px solid rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
+                            children: {
+                              key: 'uyEiVj6ofeCIPPsOLAAcg',
                               type: 'UnboundValue',
-                              key: 'Idr0CiO',
                             },
-                            cfOpenInNewTab: {
-                              type: 'UnboundValue',
-                              key: 'JFCnn0N',
-                            },
-                            cfBorderRadius: {
+                            isStrong: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: '0px',
+                                desktop: false,
                               },
                             },
-                            cfBackgroundImageUrl: {
-                              type: 'UnboundValue',
-                              key: 'xbPE1--',
-                            },
-                            cfBackgroundImageOptions: {
+                            cfVisibility: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
+                                desktop: true,
+                              },
+                            },
+                            cfTextAlign: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'left',
                               },
                             },
                           },
-                          children: [
-                            {
-                              id: '8oIklkai',
-                              definitionId: 'image',
-                              patternProperties: {},
-                              variables: {
-                                src: {
-                                  path: '/JtSxyKC/fields/file/~locale',
-                                  type: 'BoundValue',
-                                },
-                                altText: {
-                                  key: 'KU5oIGN',
-                                  type: 'UnboundValue',
-                                },
-                                decoration: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'none',
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfWidth: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: '100%',
-                                  },
-                                },
-                                cfHeight: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'fit-content',
-                                  },
-                                },
-                              },
-                              children: [],
+                          children: [],
+                        },
+                      ],
+                    },
+                    {
+                      id: 'ivBBNdu3',
+                      definitionId: 'contentful-single-column',
+                      patternProperties: {},
+                      variables: {
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          key: 'h1C3gxnYgR9u4L8CDjo3D',
+                          type: 'UnboundValue',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
                             },
-                          ],
+                          },
+                        },
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1px solid rgba(0, 0, 0, 1)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfColumnSpan: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '6',
+                          },
+                        },
+                        cfColumnSpanLock: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: 'gbRF7ltC',
+                          definitionId: 'paragraph',
+                          patternProperties: {},
+                          variables: {
+                            visualAppearance: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'body-one',
+                              },
+                            },
+                            color: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'primary',
+                              },
+                            },
+                            removeMarginBottom: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: false,
+                              },
+                            },
+                            children: {
+                              key: 'fLRxfb9Ecsh1B9F3VCTCi',
+                              type: 'UnboundValue',
+                            },
+                            isStrong: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: false,
+                              },
+                            },
+                            cfVisibility: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: true,
+                              },
+                            },
+                            cfTextAlign: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'center',
+                              },
+                            },
+                          },
+                          children: [],
+                        },
+                      ],
+                    },
+                    {
+                      id: '2fCB1Xtu',
+                      definitionId: 'contentful-single-column',
+                      patternProperties: {},
+                      variables: {
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          key: 'jUIXS8jmgg7N0QAzowItS',
+                          type: 'UnboundValue',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
+                            },
+                          },
+                        },
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'end',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1px solid rgba(0, 0, 0, 1)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfColumnSpan: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '6',
+                          },
+                        },
+                        cfColumnSpanLock: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: 'L9hvodcz',
+                          definitionId: 'paragraph',
+                          patternProperties: {},
+                          variables: {
+                            visualAppearance: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'body-one',
+                              },
+                            },
+                            color: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'primary',
+                              },
+                            },
+                            removeMarginBottom: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: false,
+                              },
+                            },
+                            children: {
+                              key: '3BFpKy2b749t3Z0j19D9a',
+                              type: 'UnboundValue',
+                            },
+                            isStrong: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: false,
+                              },
+                            },
+                            cfVisibility: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: true,
+                              },
+                            },
+                            cfTextAlign: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'right',
+                              },
+                            },
+                          },
+                          children: [],
+                        },
+                      ],
+                    },
+                    {
+                      id: 'lv1SSmyU',
+                      definitionId: 'contentful-single-column',
+                      patternProperties: {},
+                      variables: {
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          key: 'fP6j0_ZupHdFnUUB_Ia5H',
+                          type: 'UnboundValue',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
+                            },
+                          },
+                        },
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px solid rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfColumnSpan: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '6',
+                          },
+                        },
+                        cfColumnSpanLock: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                      },
+                      children: [],
+                    },
+                  ],
+                },
+              ],
+            }),
+            createContentfulSectionWrapper({
+              name: 'Container',
+
+              children: [
+                {
+                  id: 'eDgH4prd',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xxl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'V8YHlFRp',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'uCuOdCYT',
+                  definitionId: 'contentful-container',
+                  patternProperties: {},
+                  variables: {
+                    cfVerticalAlignment: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                    cfHorizontalAlignment: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfMargin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0 0 0 0',
+                      },
+                    },
+                    cfPadding: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0 0 0 0',
+                      },
+                    },
+                    cfBackgroundColor: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'rgba(0, 0, 0, 0)',
+                      },
+                    },
+                    cfWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '100%',
+                      },
+                    },
+                    cfHeight: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'fit-content',
+                      },
+                    },
+                    cfMaxWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '1192px',
+                      },
+                    },
+                    cfFlexDirection: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'row',
+                      },
+                    },
+                    cfFlexReverse: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfFlexWrap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'nowrap',
+                      },
+                    },
+                    cfBorder: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px solid rgba(0, 0, 0, 0)',
+                      },
+                    },
+                    cfGap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px',
+                      },
+                    },
+                    cfHyperlink: {
+                      key: 'IsyZ4DkUsAKB5tReDxD1q',
+                      type: 'UnboundValue',
+                    },
+                    cfOpenInNewTab: {
+                      key: 'rpWptElOUBNuPNQXKsjMo',
+                      type: 'UnboundValue',
+                    },
+                    cfBorderRadius: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px',
+                      },
+                    },
+                    cfBackgroundImageUrl: {
+                      key: 'mFzwT6KHtA9j1FYYT0dvh',
+                      type: 'UnboundValue',
+                    },
+                    cfBackgroundImageOptions: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: {
+                          scaling: 'fill',
+                          alignment: 'left top',
+                          targetSize: '2000px',
+                        },
+                      },
+                    },
+                  },
+                  children: [
+                    {
+                      id: 'a9I1ElrU',
+                      definitionId: 'contentful-container',
+                      patternProperties: {},
+                      variables: {
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'start',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfMargin: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '25%',
+                          },
+                        },
+                        cfHeight: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'fit-content',
+                          },
+                        },
+                        cfMaxWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1192px',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexReverse: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1px solid rgba(0, 0, 0, 1)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfHyperlink: {
+                          key: 'XeBIpyktpVkLEy45skA7l',
+                          type: 'UnboundValue',
+                        },
+                        cfOpenInNewTab: {
+                          key: '2T84aGT0sd1wyPrlXpm_v',
+                          type: 'UnboundValue',
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          key: 'cKcaNJOJ3vHPn3yBMhHgh',
+                          type: 'UnboundValue',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
+                            },
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: 'FNbhC3Xu',
+                          definitionId: 'heading',
+                          patternProperties: {},
+                          variables: {
+                            visualAppearance: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'heading-xxl',
+                              },
+                            },
+                            removeMarginBottom: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: false,
+                              },
+                            },
+                            children: {
+                              key: 'op-Qp-gdr8uf9I9-WXcdr',
+                              type: 'UnboundValue',
+                            },
+                            cfVisibility: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: true,
+                              },
+                            },
+                            cfTextAlign: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'left',
+                              },
+                            },
+                          },
+                          children: [],
                         },
                         {
-                          id: 'K3kEoR9T',
-                          definitionId: 'contentful-container',
+                          id: 'UDIwg6gf',
+                          definitionId: 'paragraph',
                           patternProperties: {},
                           variables: {
-                            cfVerticalAlignment: {
+                            visualAppearance: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: 'center',
+                                desktop: 'body-one',
                               },
                             },
-                            cfHorizontalAlignment: {
+                            color: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: 'center',
+                                desktop: 'primary',
+                              },
+                            },
+                            removeMarginBottom: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: false,
+                              },
+                            },
+                            children: {
+                              key: 'QcBjAcsD-IhgBz5nwADMs',
+                              type: 'UnboundValue',
+                            },
+                            isStrong: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: false,
                               },
                             },
                             cfVisibility: {
@@ -5525,159 +4156,203 @@ export async function createAllTheThingsExperienceEntry() {
                                 desktop: true,
                               },
                             },
-                            cfMargin: {
+                            cfTextAlign: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
+                                desktop: 'left',
                               },
                             },
-                            cfPadding: {
+                          },
+                          children: [],
+                        },
+                      ],
+                    },
+                    {
+                      id: 'E07pN8W4',
+                      definitionId: 'contentful-container',
+                      patternProperties: {},
+                      variables: {
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfMargin: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '25%',
+                          },
+                        },
+                        cfHeight: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'fit-content',
+                          },
+                        },
+                        cfMaxWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1192px',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexReverse: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1px solid rgba(0, 0, 0, 1)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfHyperlink: {
+                          key: 'Vbrs8KDX',
+                          type: 'UnboundValue',
+                        },
+                        cfOpenInNewTab: {
+                          key: '6lSOjmKa',
+                          type: 'UnboundValue',
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          key: 'zkx5V9ed',
+                          type: 'UnboundValue',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
+                            },
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: 'o6xpiMNG',
+                          definitionId: 'heading',
+                          patternProperties: {},
+                          variables: {
+                            visualAppearance: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
+                                desktop: 'heading-xxl',
                               },
                             },
-                            cfBackgroundColor: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '100%',
-                              },
-                            },
-                            cfHeight: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'fit-content',
-                              },
-                            },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
-                            },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
-                            },
-                            cfFlexReverse: {
+                            removeMarginBottom: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
                                 desktop: false,
                               },
                             },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px solid rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
+                            children: {
+                              key: 'M8tEEkEnbhdKkkzZSTBRd',
                               type: 'UnboundValue',
-                              key: 'FHSW9Y15',
                             },
-                            cfOpenInNewTab: {
-                              type: 'UnboundValue',
-                              key: 'eI0ylAC7',
-                            },
-                            cfBorderRadius: {
+                            cfVisibility: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: '0px',
+                                desktop: true,
                               },
                             },
-                            cfBackgroundImageUrl: {
-                              type: 'UnboundValue',
-                              key: 'uNXnh4Ev',
-                            },
-                            cfBackgroundImageOptions: {
+                            cfTextAlign: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
+                                desktop: 'left',
                               },
                             },
                           },
-                          children: [
-                            {
-                              id: 'fSh2sEYp',
-                              definitionId: 'image',
-                              patternProperties: {},
-                              variables: {
-                                src: {
-                                  path: '/gxYbZM71/fields/file/~locale',
-                                  type: 'BoundValue',
-                                },
-                                altText: {
-                                  key: 'm93uQB8b',
-                                  type: 'UnboundValue',
-                                },
-                                decoration: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'border',
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfWidth: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: '100%',
-                                  },
-                                },
-                                cfHeight: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'fit-content',
-                                  },
-                                },
-                              },
-                              children: [],
-                            },
-                          ],
+                          children: [],
                         },
                         {
-                          id: 'N7Aakgl2',
-                          definitionId: 'contentful-container',
+                          id: 'NcKsyTr5',
+                          definitionId: 'paragraph',
                           patternProperties: {},
                           variables: {
-                            cfVerticalAlignment: {
+                            visualAppearance: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: 'center',
+                                desktop: 'body-one',
                               },
                             },
-                            cfHorizontalAlignment: {
+                            color: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: 'center',
+                                desktop: 'primary',
+                              },
+                            },
+                            removeMarginBottom: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: false,
+                              },
+                            },
+                            children: {
+                              key: 'l2UKloU9',
+                              type: 'UnboundValue',
+                            },
+                            isStrong: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: false,
                               },
                             },
                             cfVisibility: {
@@ -5686,22 +4361,855 @@ export async function createAllTheThingsExperienceEntry() {
                                 desktop: true,
                               },
                             },
-                            cfMargin: {
+                            cfTextAlign: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
+                                desktop: 'center',
                               },
                             },
-                            cfPadding: {
+                          },
+                          children: [],
+                        },
+                      ],
+                    },
+                    {
+                      id: '1vmrSFao',
+                      definitionId: 'contentful-container',
+                      patternProperties: {},
+                      variables: {
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'end',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfMargin: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '25%',
+                          },
+                        },
+                        cfHeight: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'fit-content',
+                          },
+                        },
+                        cfMaxWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1192px',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexReverse: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1px solid rgba(0, 0, 0, 1)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfHyperlink: {
+                          key: 'yzVjh0Ni',
+                          type: 'UnboundValue',
+                        },
+                        cfOpenInNewTab: {
+                          key: '18Loxedj',
+                          type: 'UnboundValue',
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          key: '5OJDXQCx',
+                          type: 'UnboundValue',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
+                            },
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: '48VmFOtI',
+                          definitionId: 'heading',
+                          patternProperties: {},
+                          variables: {
+                            visualAppearance: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: '0 0 0 0',
+                                desktop: 'heading-xxl',
                               },
                             },
-                            cfBackgroundColor: {
+                            removeMarginBottom: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: 'rgba(0, 0, 0, 0)',
+                                desktop: false,
+                              },
+                            },
+                            children: {
+                              key: 'sfjHI0Y3PWcC6rm8lYfap',
+                              type: 'UnboundValue',
+                            },
+                            cfVisibility: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: true,
+                              },
+                            },
+                            cfTextAlign: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'right',
+                              },
+                            },
+                          },
+                          children: [],
+                        },
+                        {
+                          id: 'VkXRXr2S',
+                          definitionId: 'paragraph',
+                          patternProperties: {},
+                          variables: {
+                            visualAppearance: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'body-one',
+                              },
+                            },
+                            color: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'primary',
+                              },
+                            },
+                            removeMarginBottom: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: false,
+                              },
+                            },
+                            children: {
+                              key: '7Cj0SIqV',
+                              type: 'UnboundValue',
+                            },
+                            isStrong: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: false,
+                              },
+                            },
+                            cfVisibility: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: true,
+                              },
+                            },
+                            cfTextAlign: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'right',
+                              },
+                            },
+                          },
+                          children: [],
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            }),
+            createContentfulSectionWrapper({
+              name: 'Divider',
+
+              children: [
+                {
+                  id: 's5HoxC42',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xxl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'fvbdsWsT',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'pHAqHABK',
+                  displayName: 'Divider',
+                  definitionId: 'divider',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    margin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'none',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'WydkYUZS',
+                  displayName: 'Divider 1',
+                  definitionId: 'divider',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'strong',
+                      },
+                    },
+                    margin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'l',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                  },
+                  children: [],
+                },
+              ],
+            }),
+            createContentfulSectionWrapper({
+              name: 'Heading',
+
+              children: [
+                {
+                  id: 'QeFTqe9z',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xxl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: '1O9vd7afmvcqJPb-Hst2m',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 's9BWm87K',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'ppcJTpQrNNmiFzRpoKuk7',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'g7eJTxtZ',
+                  displayName: 'Heading 1',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-lg',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'k7cc4DWU',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'Og5azalB',
+                  displayName: 'Heading 1',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-md',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'J8z7Qo1L',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'aqtlS0Go',
+                  displayName: 'Heading 1',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-sm',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'mCXPy8Sk',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'B3ylIbTZ',
+                  displayName: 'Heading 1',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xs',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'rMO0UpAm',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'right',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+              ],
+            }),
+            createContentfulSectionWrapper({
+              name: 'Image',
+
+              children: [
+                {
+                  id: 'AI1IIxgR',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xxl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'ZJnqNzR6',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'pW9sYR0b',
+                  definitionId: 'contentful-container',
+                  patternProperties: {},
+                  variables: {
+                    cfVerticalAlignment: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                    cfHorizontalAlignment: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfMargin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0 0 0 0',
+                      },
+                    },
+                    cfPadding: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0 0 0 0',
+                      },
+                    },
+                    cfBackgroundColor: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'rgba(0, 0, 0, 0)',
+                      },
+                    },
+                    cfWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '100%',
+                      },
+                    },
+                    cfHeight: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '178px',
+                      },
+                    },
+                    cfMaxWidth: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '1192px',
+                      },
+                    },
+                    cfFlexDirection: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'row',
+                        mobile: 'column',
+                      },
+                    },
+                    cfFlexReverse: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfFlexWrap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'nowrap',
+                      },
+                    },
+                    cfBorder: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px solid rgba(0, 0, 0, 0)',
+                      },
+                    },
+                    cfGap: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px 24px',
+                        mobile: '24px 24px',
+                      },
+                    },
+                    cfHyperlink: {
+                      type: 'UnboundValue',
+                      key: 'Fe4Bfar',
+                    },
+                    cfOpenInNewTab: {
+                      type: 'UnboundValue',
+                      key: 'baOMaPo',
+                    },
+                    cfBorderRadius: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: '0px',
+                      },
+                    },
+                    cfBackgroundImageUrl: {
+                      type: 'UnboundValue',
+                      key: 'KBQ3_Cb',
+                    },
+                    cfBackgroundImageOptions: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: {
+                          scaling: 'fill',
+                          alignment: 'left top',
+                          targetSize: '2000px',
+                        },
+                      },
+                    },
+                  },
+                  children: [
+                    {
+                      id: 'Jk6x2y8G',
+                      definitionId: 'contentful-container',
+                      patternProperties: {},
+                      variables: {
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfMargin: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '100%',
+                          },
+                        },
+                        cfHeight: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'fit-content',
+                          },
+                        },
+                        cfMaxWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1192px',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexReverse: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px solid rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfHyperlink: {
+                          type: 'UnboundValue',
+                          key: 'Idr0CiO',
+                        },
+                        cfOpenInNewTab: {
+                          type: 'UnboundValue',
+                          key: 'JFCnn0N',
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          type: 'UnboundValue',
+                          key: 'xbPE1--',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
+                            },
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: '8oIklkai',
+                          definitionId: 'image',
+                          patternProperties: {},
+                          variables: {
+                            src: {
+                              path: '/JtSxyKC/fields/file/~locale',
+                              type: 'BoundValue',
+                            },
+                            altText: {
+                              key: 'KU5oIGN',
+                              type: 'UnboundValue',
+                            },
+                            decoration: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'none',
+                              },
+                            },
+                            cfVisibility: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: true,
                               },
                             },
                             cfWidth: {
@@ -5716,113 +5224,330 @@ export async function createAllTheThingsExperienceEntry() {
                                 desktop: 'fit-content',
                               },
                             },
-                            cfMaxWidth: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '1192px',
-                              },
+                          },
+                          children: [],
+                        },
+                      ],
+                    },
+                    {
+                      id: 'K3kEoR9T',
+                      definitionId: 'contentful-container',
+                      patternProperties: {},
+                      variables: {
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfMargin: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '100%',
+                          },
+                        },
+                        cfHeight: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'fit-content',
+                          },
+                        },
+                        cfMaxWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1192px',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexReverse: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px solid rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfHyperlink: {
+                          type: 'UnboundValue',
+                          key: 'FHSW9Y15',
+                        },
+                        cfOpenInNewTab: {
+                          type: 'UnboundValue',
+                          key: 'eI0ylAC7',
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          type: 'UnboundValue',
+                          key: 'uNXnh4Ev',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
                             },
-                            cfFlexDirection: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'column',
-                              },
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: 'fSh2sEYp',
+                          definitionId: 'image',
+                          patternProperties: {},
+                          variables: {
+                            src: {
+                              path: '/gxYbZM71/fields/file/~locale',
+                              type: 'BoundValue',
                             },
-                            cfFlexReverse: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: false,
-                              },
-                            },
-                            cfFlexWrap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: 'nowrap',
-                              },
-                            },
-                            cfBorder: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px solid rgba(0, 0, 0, 0)',
-                              },
-                            },
-                            cfGap: {
-                              type: 'DesignValue',
-                              valuesByBreakpoint: {
-                                desktop: '0px',
-                              },
-                            },
-                            cfHyperlink: {
+                            altText: {
+                              key: 'm93uQB8b',
                               type: 'UnboundValue',
-                              key: 'La3LNBan',
                             },
-                            cfOpenInNewTab: {
-                              type: 'UnboundValue',
-                              key: 'DdGHC1uP',
-                            },
-                            cfBorderRadius: {
+                            decoration: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: '0px',
+                                desktop: 'border',
                               },
                             },
-                            cfBackgroundImageUrl: {
-                              type: 'UnboundValue',
-                              key: 'LlO8NttI',
-                            },
-                            cfBackgroundImageOptions: {
+                            cfVisibility: {
                               type: 'DesignValue',
                               valuesByBreakpoint: {
-                                desktop: {
-                                  scaling: 'fill',
-                                  alignment: 'left top',
-                                  targetSize: '2000px',
-                                },
+                                desktop: true,
+                              },
+                            },
+                            cfWidth: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: '100%',
+                              },
+                            },
+                            cfHeight: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'fit-content',
                               },
                             },
                           },
-                          children: [
-                            {
-                              id: 'WRfAXA8Z',
-                              definitionId: 'image',
-                              patternProperties: {},
-                              variables: {
-                                src: {
-                                  path: '/6xDlDPPs/fields/file/~locale',
-                                  type: 'BoundValue',
-                                },
-                                altText: {
-                                  key: 'T8hhqfhy',
-                                  type: 'UnboundValue',
-                                },
-                                decoration: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'shadow',
-                                  },
-                                },
-                                cfVisibility: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: true,
-                                  },
-                                },
-                                cfWidth: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: '100%',
-                                  },
-                                },
-                                cfHeight: {
-                                  type: 'DesignValue',
-                                  valuesByBreakpoint: {
-                                    desktop: 'fit-content',
-                                  },
-                                },
-                              },
-                              children: [],
+                          children: [],
+                        },
+                      ],
+                    },
+                    {
+                      id: 'N7Aakgl2',
+                      definitionId: 'contentful-container',
+                      patternProperties: {},
+                      variables: {
+                        cfVerticalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfHorizontalAlignment: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'center',
+                          },
+                        },
+                        cfVisibility: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: true,
+                          },
+                        },
+                        cfMargin: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfPadding: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0 0 0 0',
+                          },
+                        },
+                        cfBackgroundColor: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '100%',
+                          },
+                        },
+                        cfHeight: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'fit-content',
+                          },
+                        },
+                        cfMaxWidth: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '1192px',
+                          },
+                        },
+                        cfFlexDirection: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'column',
+                          },
+                        },
+                        cfFlexReverse: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: false,
+                          },
+                        },
+                        cfFlexWrap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: 'nowrap',
+                          },
+                        },
+                        cfBorder: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px solid rgba(0, 0, 0, 0)',
+                          },
+                        },
+                        cfGap: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfHyperlink: {
+                          type: 'UnboundValue',
+                          key: 'La3LNBan',
+                        },
+                        cfOpenInNewTab: {
+                          type: 'UnboundValue',
+                          key: 'DdGHC1uP',
+                        },
+                        cfBorderRadius: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: '0px',
+                          },
+                        },
+                        cfBackgroundImageUrl: {
+                          type: 'UnboundValue',
+                          key: 'LlO8NttI',
+                        },
+                        cfBackgroundImageOptions: {
+                          type: 'DesignValue',
+                          valuesByBreakpoint: {
+                            desktop: {
+                              scaling: 'fill',
+                              alignment: 'left top',
+                              targetSize: '2000px',
                             },
-                          ],
+                          },
+                        },
+                      },
+                      children: [
+                        {
+                          id: 'WRfAXA8Z',
+                          definitionId: 'image',
+                          patternProperties: {},
+                          variables: {
+                            src: {
+                              path: '/6xDlDPPs/fields/file/~locale',
+                              type: 'BoundValue',
+                            },
+                            altText: {
+                              key: 'T8hhqfhy',
+                              type: 'UnboundValue',
+                            },
+                            decoration: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'shadow',
+                              },
+                            },
+                            cfVisibility: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: true,
+                              },
+                            },
+                            cfWidth: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: '100%',
+                              },
+                            },
+                            cfHeight: {
+                              type: 'DesignValue',
+                              valuesByBreakpoint: {
+                                desktop: 'fit-content',
+                              },
+                            },
+                          },
+                          children: [],
                         },
                       ],
                     },
@@ -5832,27 +5557,28 @@ export async function createAllTheThingsExperienceEntry() {
             }),
             createContentfulSectionWrapper({
               name: 'Overline',
+
               children: [
                 {
-                  id: '85sUjnT6',
-                  displayName: 'Section',
-                  definitionId: 'section',
+                  id: 'b2f0KDFZ',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    visualAppearance: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'primary',
+                        desktop: 'heading-xxl',
                       },
                     },
-                    padding: {
+                    removeMarginBottom: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: false,
                       },
                     },
-                    id: {
-                      key: 'vYKqsBQ5xXnkpbPCxrnKb',
+                    children: {
+                      key: '-KqdBQBCJexO6AUlN6Hdk',
                       type: 'UnboundValue',
                     },
                     cfVisibility: {
@@ -5861,202 +5587,220 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
                   },
-                  children: [
-                    {
-                      id: 'b2f0KDFZ',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: '-KqdBQBCJexO6AUlN6Hdk',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                  children: [],
+                },
+                {
+                  id: 'L9QvdEUS',
+                  displayName: 'Overline',
+                  definitionId: 'overline',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'L9QvdEUS',
-                      displayName: 'Overline',
-                      definitionId: 'overline',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        size: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'm',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: '1eCExq2WLGpJwNbRFYPCg',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    size: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'm',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'H2y2eW6g',
-                      displayName: 'Overline 1',
-                      definitionId: 'overline',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'secondary',
-                          },
-                        },
-                        size: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 's',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'Lu9xfUr8',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'K6qaxqTv',
-                      displayName: 'Overline 2',
-                      definitionId: 'overline',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        size: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'l',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'tgfqSQxT',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'right',
-                          },
-                        },
+                    children: {
+                      key: '1eCExq2WLGpJwNbRFYPCg',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
                       },
-                      children: [],
                     },
-                  ],
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'H2y2eW6g',
+                  displayName: 'Overline 1',
+                  definitionId: 'overline',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'secondary',
+                      },
+                    },
+                    size: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 's',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'Lu9xfUr8',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'K6qaxqTv',
+                  displayName: 'Overline 2',
+                  definitionId: 'overline',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    size: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'l',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'tgfqSQxT',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'right',
+                      },
+                    },
+                  },
+                  children: [],
                 },
               ],
             }),
             createContentfulSectionWrapper({
               name: 'Paragraph',
+
               children: [
                 {
-                  id: '5XxdQJUA',
-                  displayName: 'Section',
-                  definitionId: 'section',
+                  id: 'KesTZnYJ',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xxl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: '4fZ-pGgFlP7R6tach397W',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'AMYwkYNk',
+                  displayName: 'Paragraph',
+                  definitionId: 'paragraph',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'body-four',
+                      },
+                    },
+                    color: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
                         desktop: 'primary',
                       },
                     },
-                    padding: {
+                    removeMarginBottom: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: false,
                       },
                     },
-                    id: {
-                      key: 'L6HfuP4oVMvQ_xwZqzQc7',
+                    children: {
+                      key: 'joR8i87odA3R7JLfvzfCw',
                       type: 'UnboundValue',
+                    },
+                    isStrong: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
                     },
                     cfVisibility: {
                       type: 'DesignValue',
@@ -6064,268 +5808,188 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
                   },
-                  children: [
-                    {
-                      id: 'KesTZnYJ',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: '4fZ-pGgFlP7R6tach397W',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                  children: [],
+                },
+                {
+                  id: 'zJvuD0HD',
+                  displayName: 'Paragraph 1',
+                  definitionId: 'paragraph',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'body-two',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'AMYwkYNk',
-                      displayName: 'Paragraph',
-                      definitionId: 'paragraph',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'body-four',
-                          },
-                        },
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'joR8i87odA3R7JLfvzfCw',
-                          type: 'UnboundValue',
-                        },
-                        isStrong: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'secondary',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'zJvuD0HD',
-                      displayName: 'Paragraph 1',
-                      definitionId: 'paragraph',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'body-two',
-                          },
-                        },
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'secondary',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'TSFzv7B9',
-                          type: 'UnboundValue',
-                        },
-                        isStrong: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'SJd9fYto',
-                      displayName: 'Paragraph 2',
-                      definitionId: 'paragraph',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'body-two',
-                          },
-                        },
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'secondary',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'avmUJimV',
-                          type: 'UnboundValue',
-                        },
-                        isStrong: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'right',
-                          },
-                        },
+                    children: {
+                      key: 'TSFzv7B9',
+                      type: 'UnboundValue',
+                    },
+                    isStrong: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'pl5CZVbe',
-                      displayName: 'Paragraph',
-                      definitionId: 'paragraph',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'body-one',
-                          },
-                        },
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'hRhxjrt3N9VU1NMl2QRh3',
-                          type: 'UnboundValue',
-                        },
-                        isStrong: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
                       },
-                      children: [],
                     },
-                  ],
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'SJd9fYto',
+                  displayName: 'Paragraph 2',
+                  definitionId: 'paragraph',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'body-two',
+                      },
+                    },
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'secondary',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'avmUJimV',
+                      type: 'UnboundValue',
+                    },
+                    isStrong: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'right',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'pl5CZVbe',
+                  displayName: 'Paragraph',
+                  definitionId: 'paragraph',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'body-one',
+                      },
+                    },
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'hRhxjrt3N9VU1NMl2QRh3',
+                      type: 'UnboundValue',
+                    },
+                    isStrong: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
                 },
               ],
             }),
             createContentfulSectionWrapper({
               name: 'Section',
+
               children: [
                 {
-                  id: 'jIECLTTH',
-                  displayName: 'Section',
-                  definitionId: 'section',
+                  id: 'io9EJVj6',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    visualAppearance: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'patternDark',
+                        desktop: 'heading-xxl',
                       },
                     },
-                    padding: {
+                    removeMarginBottom: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: false,
                       },
                     },
-                    id: {
-                      key: 'TPp4t_zOnGYYUCQCHczCd',
+                    children: {
+                      key: 'uqryIUsQ',
                       type: 'UnboundValue',
                     },
                     cfVisibility: {
@@ -6334,46 +5998,14 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
-                  },
-                  children: [
-                    {
-                      id: 'io9EJVj6',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'uqryIUsQ',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
                       },
-                      children: [],
                     },
-                  ],
+                  },
+                  children: [],
                 },
                 {
                   id: 'Ko7M7vnH',
@@ -6446,27 +6078,28 @@ export async function createAllTheThingsExperienceEntry() {
             }),
             createContentfulSectionWrapper({
               name: 'Text Link',
+
               children: [
                 {
-                  id: 'wrGEKnPn',
-                  displayName: 'Section',
-                  definitionId: 'section',
+                  id: 'WF76U7uH',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    visualAppearance: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'primary',
+                        desktop: 'heading-xxl',
                       },
                     },
-                    padding: {
+                    removeMarginBottom: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: false,
                       },
                     },
-                    id: {
-                      key: '7W1Qi2iLcCJo1S5FoTklH',
+                    children: {
+                      key: 'ws1Q0E4GP0WIGLne79bIY',
                       type: 'UnboundValue',
                     },
                     cfVisibility: {
@@ -6475,455 +6108,424 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
                   },
-                  children: [
-                    {
-                      id: 'WF76U7uH',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'ws1Q0E4GP0WIGLne79bIY',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                  children: [],
+                },
+                {
+                  id: 'OYIhzN9w',
+                  displayName: 'Text Link 2',
+                  definitionId: 'link',
+                  patternProperties: {},
+                  variables: {
+                    size: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'xs',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'OYIhzN9w',
-                      displayName: 'Text Link 2',
-                      definitionId: 'link',
-                      patternProperties: {},
-                      variables: {
-                        size: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'xs',
-                          },
-                        },
-                        children: {
-                          key: 'ERvTdJXH',
-                          type: 'UnboundValue',
-                        },
-                        href: {
-                          key: 'zQNTpdsD',
-                          type: 'UnboundValue',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: 'ReHgFwZk-BHm9gAcpYww7',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    children: {
+                      key: 'ERvTdJXH',
+                      type: 'UnboundValue',
+                    },
+                    href: {
+                      key: 'zQNTpdsD',
+                      type: 'UnboundValue',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'bTLH9bp5',
-                      displayName: 'Text Link',
-                      definitionId: 'link',
-                      patternProperties: {},
-                      variables: {
-                        size: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 's',
-                          },
-                        },
-                        children: {
-                          key: 'EX79hiIuw8_2Ria-2tQkj',
-                          type: 'UnboundValue',
-                        },
-                        href: {
-                          key: 'L7sMSlH7Y_F-LSZzoglh6',
-                          type: 'UnboundValue',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: 'dDFAtpAu4xTWTM3cwvHX_',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'Bobqy9W3',
-                      displayName: 'Text Link 1',
-                      definitionId: 'link',
-                      patternProperties: {},
-                      variables: {
-                        size: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'm',
-                          },
-                        },
-                        children: {
-                          key: 'lIsy1GAr',
-                          type: 'UnboundValue',
-                        },
-                        href: {
-                          key: '92O5l7Xr',
-                          type: 'UnboundValue',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: 'KGUo-pbAmZDeE_onnJmeM',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    ariaLabel: {
+                      key: 'ReHgFwZk-BHm9gAcpYww7',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
                       },
-                      children: [],
                     },
-                    {
-                      id: '8WDnlPms',
-                      displayName: 'Text Link 1',
-                      definitionId: 'link',
-                      patternProperties: {},
-                      variables: {
-                        size: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'l',
-                          },
-                        },
-                        children: {
-                          key: 'nBnzzrrg',
-                          type: 'UnboundValue',
-                        },
-                        href: {
-                          key: 'Icqsu9JA',
-                          type: 'UnboundValue',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: 'vNE31MABBbkMScnKL4BMU',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'bBEfl0Ck',
-                      definitionId: 'divider',
-                      patternProperties: {},
-                      variables: {
-                        color: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'primary',
-                          },
-                        },
-                        margin: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'xs',
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'bTLH9bp5',
+                  displayName: 'Text Link',
+                  definitionId: 'link',
+                  patternProperties: {},
+                  variables: {
+                    size: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 's',
                       },
-                      children: [],
                     },
-                    {
-                      id: '5IqQIrwI',
-                      displayName: 'Left aligned',
-                      definitionId: 'link',
-                      patternProperties: {},
-                      variables: {
-                        size: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'm',
-                          },
-                        },
-                        children: {
-                          type: 'UnboundValue',
-                          key: 'c6Xllyd',
-                        },
-                        href: {
-                          type: 'UnboundValue',
-                          key: '6znvK3h',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: '4GGacxRsnhMslE0UcSJ97',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    children: {
+                      key: 'EX79hiIuw8_2Ria-2tQkj',
+                      type: 'UnboundValue',
+                    },
+                    href: {
+                      key: 'L7sMSlH7Y_F-LSZzoglh6',
+                      type: 'UnboundValue',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'MjacnNa2',
-                      displayName: 'Centered',
-                      definitionId: 'link',
-                      patternProperties: {},
-                      variables: {
-                        size: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'm',
-                          },
-                        },
-                        children: {
-                          type: 'UnboundValue',
-                          key: 'PeTivMde',
-                        },
-                        href: {
-                          type: 'UnboundValue',
-                          key: '5wXRsLJn',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: '0v9inr8Fpqnw8F8ElhUQT',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'center',
-                          },
-                        },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'nLDuaCau',
-                      displayName: 'Right aligned',
-                      definitionId: 'link',
-                      patternProperties: {},
-                      variables: {
-                        size: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'm',
-                          },
-                        },
-                        children: {
-                          type: 'UnboundValue',
-                          key: 'DEtHVoSd',
-                        },
-                        href: {
-                          type: 'UnboundValue',
-                          key: '1VT4PEqW',
-                        },
-                        isLinkExternal: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        ariaLabel: {
-                          key: '46SVVu7SVI_27igWB64S2',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'right',
-                          },
-                        },
+                    ariaLabel: {
+                      key: 'dDFAtpAu4xTWTM3cwvHX_',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
                       },
-                      children: [],
                     },
-                  ],
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'Bobqy9W3',
+                  displayName: 'Text Link 1',
+                  definitionId: 'link',
+                  patternProperties: {},
+                  variables: {
+                    size: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'm',
+                      },
+                    },
+                    children: {
+                      key: 'lIsy1GAr',
+                      type: 'UnboundValue',
+                    },
+                    href: {
+                      key: '92O5l7Xr',
+                      type: 'UnboundValue',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    ariaLabel: {
+                      key: 'KGUo-pbAmZDeE_onnJmeM',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: '8WDnlPms',
+                  displayName: 'Text Link 1',
+                  definitionId: 'link',
+                  patternProperties: {},
+                  variables: {
+                    size: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'l',
+                      },
+                    },
+                    children: {
+                      key: 'nBnzzrrg',
+                      type: 'UnboundValue',
+                    },
+                    href: {
+                      key: 'Icqsu9JA',
+                      type: 'UnboundValue',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    ariaLabel: {
+                      key: 'vNE31MABBbkMScnKL4BMU',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'bBEfl0Ck',
+                  definitionId: 'divider',
+                  patternProperties: {},
+                  variables: {
+                    color: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'primary',
+                      },
+                    },
+                    margin: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'xs',
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: '5IqQIrwI',
+                  displayName: 'Left aligned',
+                  definitionId: 'link',
+                  patternProperties: {},
+                  variables: {
+                    size: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'm',
+                      },
+                    },
+                    children: {
+                      type: 'UnboundValue',
+                      key: 'c6Xllyd',
+                    },
+                    href: {
+                      type: 'UnboundValue',
+                      key: '6znvK3h',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    ariaLabel: {
+                      key: '4GGacxRsnhMslE0UcSJ97',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'MjacnNa2',
+                  displayName: 'Centered',
+                  definitionId: 'link',
+                  patternProperties: {},
+                  variables: {
+                    size: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'm',
+                      },
+                    },
+                    children: {
+                      type: 'UnboundValue',
+                      key: 'PeTivMde',
+                    },
+                    href: {
+                      type: 'UnboundValue',
+                      key: '5wXRsLJn',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    ariaLabel: {
+                      key: '0v9inr8Fpqnw8F8ElhUQT',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'center',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'nLDuaCau',
+                  displayName: 'Right aligned',
+                  definitionId: 'link',
+                  patternProperties: {},
+                  variables: {
+                    size: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'm',
+                      },
+                    },
+                    children: {
+                      type: 'UnboundValue',
+                      key: 'DEtHVoSd',
+                    },
+                    href: {
+                      type: 'UnboundValue',
+                      key: '1VT4PEqW',
+                    },
+                    isLinkExternal: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    ariaLabel: {
+                      key: '46SVVu7SVI_27igWB64S2',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'right',
+                      },
+                    },
+                  },
+                  children: [],
                 },
               ],
             }),
             createContentfulSectionWrapper({
               name: 'Video',
+
               children: [
                 {
-                  id: 'rtrOzYi0',
-                  displayName: 'Section',
-                  definitionId: 'section',
+                  id: 'AdqCNDR9',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    visualAppearance: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'primary',
+                        desktop: 'heading-xxl',
                       },
                     },
-                    padding: {
+                    removeMarginBottom: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: false,
                       },
                     },
-                    id: {
-                      key: '6AjZi52JdcRm7jrVI6Sal',
+                    children: {
+                      key: 'K0KxrTFkzU8KmLwowRzGo',
                       type: 'UnboundValue',
                     },
                     cfVisibility: {
@@ -6932,305 +6534,274 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
                   },
-                  children: [
-                    {
-                      id: 'AdqCNDR9',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'K0KxrTFkzU8KmLwowRzGo',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                  children: [],
+                },
+                {
+                  id: 'CuFH5tMP',
+                  displayName: 'Heading',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xl',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'CuFH5tMP',
-                      displayName: 'Heading',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'Is-QBxBKRvrSLF5e6k8WM',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'e56jD7Ml',
-                      displayName: 'Video',
-                      definitionId: 'video',
-                      patternProperties: {},
-                      variables: {
-                        videoTitle: {
-                          key: 'FdwpeSt6bn8LpSSV0pbtv',
-                          type: 'UnboundValue',
-                        },
-                        videoDesc: {
-                          key: 'aL5ooU7rF-Cfhi4sEFovm',
-                          type: 'UnboundValue',
-                        },
-                        uploadDate: {
-                          key: 'YfZC6-Hmjrj20Loaq6-FT',
-                          type: 'UnboundValue',
-                        },
-                        youTubeId: {
-                          key: 'n0l5OgPZtTMQsbZ3GNKiR',
-                          type: 'UnboundValue',
-                        },
-                        videoFallback: {
-                          key: 'qg0XcsQhQK20HDFZctW0_',
-                          type: 'UnboundValue',
-                        },
-                        showCaption: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
+                    children: {
+                      key: 'Is-QBxBKRvrSLF5e6k8WM',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
                       },
-                      children: [],
                     },
-                    {
-                      id: '51WBcL8X',
-                      displayName: 'Heading 1',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'nOVfFtTI',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
                       },
-                      children: [],
                     },
-                    {
-                      id: 'WVvTAVCW',
-                      displayName: 'Video 1',
-                      definitionId: 'video',
-                      patternProperties: {},
-                      variables: {
-                        videoTitle: {
-                          key: 'uTgCIxZc',
-                          type: 'UnboundValue',
-                        },
-                        videoDesc: {
-                          key: '7cjXZUvesiyPKoMJZUraJ',
-                          type: 'UnboundValue',
-                        },
-                        uploadDate: {
-                          key: 'aRYsNWTbO_8er8D_crzl2',
-                          type: 'UnboundValue',
-                        },
-                        youTubeId: {
-                          key: 'vNAYFsDQ',
-                          type: 'UnboundValue',
-                        },
-                        videoFallback: {
-                          key: '5OKBDu4C',
-                          type: 'UnboundValue',
-                        },
-                        showCaption: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'e56jD7Ml',
+                  displayName: 'Video',
+                  definitionId: 'video',
+                  patternProperties: {},
+                  variables: {
+                    videoTitle: {
+                      key: 'FdwpeSt6bn8LpSSV0pbtv',
+                      type: 'UnboundValue',
+                    },
+                    videoDesc: {
+                      key: 'aL5ooU7rF-Cfhi4sEFovm',
+                      type: 'UnboundValue',
+                    },
+                    uploadDate: {
+                      key: 'YfZC6-Hmjrj20Loaq6-FT',
+                      type: 'UnboundValue',
+                    },
+                    youTubeId: {
+                      key: 'n0l5OgPZtTMQsbZ3GNKiR',
+                      type: 'UnboundValue',
+                    },
+                    videoFallback: {
+                      key: 'qg0XcsQhQK20HDFZctW0_',
+                      type: 'UnboundValue',
+                    },
+                    showCaption: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'jkcCZDp5',
-                      displayName: 'Heading 1',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: '8tSwOMzw',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
                       },
-                      children: [],
                     },
-                    {
-                      id: 'x1xIoh5c',
-                      displayName: 'Video',
-                      definitionId: 'video',
-                      patternProperties: {},
-                      variables: {
-                        videoTitle: {
-                          key: 'jNBarAZvvExnBW0FccdXk',
-                          type: 'UnboundValue',
-                        },
-                        videoDesc: {
-                          key: 'SQ455se7uXiseEPWsgHS4',
-                          type: 'UnboundValue',
-                        },
-                        uploadDate: {
-                          key: 'UnsmjdqCrmrO4Trj1nuzn',
-                          type: 'UnboundValue',
-                        },
-                        youTubeId: {
-                          key: 'HkS6sKTzMLaB2xX5evo7Z',
-                          type: 'UnboundValue',
-                        },
-                        videoFallback: {
-                          key: 'WWIhqOfAkCpzLs6ZV3raO',
-                          type: 'UnboundValue',
-                        },
-                        showCaption: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
+                  },
+                  children: [],
+                },
+                {
+                  id: '51WBcL8X',
+                  displayName: 'Heading 1',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xl',
                       },
-                      children: [],
                     },
-                  ],
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: 'nOVfFtTI',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'WVvTAVCW',
+                  displayName: 'Video 1',
+                  definitionId: 'video',
+                  patternProperties: {},
+                  variables: {
+                    videoTitle: {
+                      key: 'uTgCIxZc',
+                      type: 'UnboundValue',
+                    },
+                    videoDesc: {
+                      key: '7cjXZUvesiyPKoMJZUraJ',
+                      type: 'UnboundValue',
+                    },
+                    uploadDate: {
+                      key: 'aRYsNWTbO_8er8D_crzl2',
+                      type: 'UnboundValue',
+                    },
+                    youTubeId: {
+                      key: 'vNAYFsDQ',
+                      type: 'UnboundValue',
+                    },
+                    videoFallback: {
+                      key: '5OKBDu4C',
+                      type: 'UnboundValue',
+                    },
+                    showCaption: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'jkcCZDp5',
+                  displayName: 'Heading 1',
+                  definitionId: 'heading',
+                  patternProperties: {},
+                  variables: {
+                    visualAppearance: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'heading-xl',
+                      },
+                    },
+                    removeMarginBottom: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: false,
+                      },
+                    },
+                    children: {
+                      key: '8tSwOMzw',
+                      type: 'UnboundValue',
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
+                  },
+                  children: [],
+                },
+                {
+                  id: 'x1xIoh5c',
+                  displayName: 'Video',
+                  definitionId: 'video',
+                  patternProperties: {},
+                  variables: {
+                    videoTitle: {
+                      key: 'jNBarAZvvExnBW0FccdXk',
+                      type: 'UnboundValue',
+                    },
+                    videoDesc: {
+                      key: 'SQ455se7uXiseEPWsgHS4',
+                      type: 'UnboundValue',
+                    },
+                    uploadDate: {
+                      key: 'UnsmjdqCrmrO4Trj1nuzn',
+                      type: 'UnboundValue',
+                    },
+                    youTubeId: {
+                      key: 'HkS6sKTzMLaB2xX5evo7Z',
+                      type: 'UnboundValue',
+                    },
+                    videoFallback: {
+                      key: 'WWIhqOfAkCpzLs6ZV3raO',
+                      type: 'UnboundValue',
+                    },
+                    showCaption: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
+                      },
+                    },
+                  },
+                  children: [],
                 },
               ],
             }),
             createContentfulSectionWrapper({
               name: 'Video Carousel',
+
               children: [
                 {
-                  id: 'nnW16yI0',
-                  definitionId: 'section',
+                  id: '89PlsO6u',
+                  definitionId: 'heading',
                   patternProperties: {},
                   variables: {
-                    background: {
+                    visualAppearance: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'primary',
+                        desktop: 'heading-xxl',
                       },
                     },
-                    padding: {
+                    removeMarginBottom: {
                       type: 'DesignValue',
                       valuesByBreakpoint: {
-                        desktop: 'l',
+                        desktop: false,
                       },
                     },
-                    id: {
-                      key: 'sU117GEiAbQOFMhXtxs7a',
+                    children: {
+                      key: 'zyqjhLXToMUDWS9_Gj5le',
                       type: 'UnboundValue',
                     },
                     cfVisibility: {
@@ -7239,63 +6810,32 @@ export async function createAllTheThingsExperienceEntry() {
                         desktop: true,
                       },
                     },
+                    cfTextAlign: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: 'left',
+                      },
+                    },
                   },
-                  children: [
-                    {
-                      id: '89PlsO6u',
-                      definitionId: 'heading',
-                      patternProperties: {},
-                      variables: {
-                        visualAppearance: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'heading-xxl',
-                          },
-                        },
-                        removeMarginBottom: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: false,
-                          },
-                        },
-                        children: {
-                          key: 'zyqjhLXToMUDWS9_Gj5le',
-                          type: 'UnboundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
-                        cfTextAlign: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: 'left',
-                          },
-                        },
-                      },
-                      children: [],
+                  children: [],
+                },
+                {
+                  id: 'CzL11C45',
+                  definitionId: 'carousel-video',
+                  patternProperties: {},
+                  variables: {
+                    slides: {
+                      path: '/9g-7kZ472XQBkhnml-mZ-/fields/slides/~locale',
+                      type: 'BoundValue',
                     },
-                    {
-                      id: 'CzL11C45',
-                      definitionId: 'carousel-video',
-                      patternProperties: {},
-                      variables: {
-                        slides: {
-                          path: '/9g-7kZ472XQBkhnml-mZ-/fields/slides/~locale',
-                          type: 'BoundValue',
-                        },
-                        cfVisibility: {
-                          type: 'DesignValue',
-                          valuesByBreakpoint: {
-                            desktop: true,
-                          },
-                        },
+                    cfVisibility: {
+                      type: 'DesignValue',
+                      valuesByBreakpoint: {
+                        desktop: true,
                       },
-                      children: [],
                     },
-                  ],
+                  },
+                  children: [],
                 },
               ],
             }),
