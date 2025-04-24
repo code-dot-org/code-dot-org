@@ -87,7 +87,7 @@ export const DefaultLoggedOut: Story = {
       name: 'Go to homepage',
     });
     await expect(logoLink).toBeVisible();
-    await expect(logoLink).toHaveAttribute('href', 'https://code.org');
+    await expect(logoLink).toHaveAttribute('href', '/');
 
     // check that main navigation is visible
     const mainNav = await canvas.findByRole('navigation', {
