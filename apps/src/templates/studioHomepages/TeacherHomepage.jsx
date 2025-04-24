@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import Alert from '@code-dot-org/component-library/alert';
+// import Alert from '@code-dot-org/component-library/alert';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
@@ -163,7 +163,7 @@ export const UnconnectedTeacherHomepage = ({
 
   return (
     <div>
-      <Alert
+      {/* <Alert
         size={'s'}
         text={i18n.teacherHomePageFeedback()}
         type="primary"
@@ -180,7 +180,7 @@ export const UnconnectedTeacherHomepage = ({
           setIsFeedbackAlertClosed(true);
           trySetLocalStorage(LOCAL_STORAGE_KEY, 'true');
         }}
-      />
+      /> */}
       <HeaderBanner
         headingText={i18n.homepageHeading()}
         backgroundUrl={backgroundUrl}
