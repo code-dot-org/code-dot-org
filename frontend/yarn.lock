@@ -1107,6 +1107,7 @@ __metadata:
     eslint-plugin-jest: "npm:^28.9.0"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
+    nanoid: "npm:~3.1.30"
     next: "npm:^15.2.4"
     playwright-core: "npm:~1.49.1"
     prettier: "npm:3.4.2"
@@ -14028,6 +14029,15 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 10c0/4b1bb29f6cfebf3be3bc4ad1f1296fb0a10a3043a79f34fbffe75d1621b4318319211cd420549459018ea3592f0d2f159247a6f874911d6d26eaaadda2478120
+  languageName: node
+  linkType: hard
+
+"nanoid@npm:~3.1.30":
+  version: 3.1.32
+  resolution: "nanoid@npm:3.1.32"
+  bin:
+    nanoid: bin/nanoid.cjs
+  checksum: 10c0/2089532e6eca638e98edd33e7d64b245a9bf7e3b2ca59b03f83a8052ec1adcb945a869b053d53137d24d2219a4c6504188e22e8d29267fd0a68abbe634f812c0
   languageName: node
   linkType: hard
 
