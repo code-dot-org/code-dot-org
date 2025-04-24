@@ -62,9 +62,9 @@ export function getDefaultHeaderProps({
         hasDisplayLogic: true,
       },
       {
-        key: 'helpUs',
-        label: 'Help Us',
-        href: '/help',
+        key: 'donate',
+        label: 'Donate',
+        href: '/donate',
         hasDisplayLogic: true,
       },
       {
@@ -207,7 +207,7 @@ export function getDefaultHeaderProps({
       {
         key: 'donate',
         label: 'Donate',
-        href: '/help',
+        href: '/donate',
       },
       {
         key: 'incubator',
