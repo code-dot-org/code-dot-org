@@ -21,6 +21,9 @@ OptionParser.new do |opts|
   opts.on("-o", "--output-dir DIR", "Name of output directory in local filesystem under /mnt/tmp-curriculum-export/sourced/. default: INPUT_DIR") do |output_dir|
     $options[:output_dir] = output_dir
   end
+  opts.on("-v", "--source-versions", "Include source versions") do
+    $options[:source_versions] = true
+  end
 
   opts.on("-h", "--help", "Prints this help") do
     puts opts
@@ -78,7 +81,9 @@ def process_s3_file(bucket, key)
     channel_id = data['channel_id']
     source = get_project_source(channel_id)
     data['source'] = source
-    data['source_versions'] = get_source_versions(channel_id, latest_source: source)
+    if $options[:source_versions]
+      data['source_versions'] = get_source_versions(channel_id, latest_source: source)
+    end
     data.to_json
   rescue JSON::ParserError => exception
     puts "Error parsing JSON: #{exception}"
