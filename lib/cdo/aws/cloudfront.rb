@@ -208,7 +208,7 @@ module AWS
                 OriginSSLProtocols: %w(TLSv1.2),
                 OriginReadTimeout: 30
               },
-              DomainName: "code.marketing-sites.#{CDO.rack_env == 'production' ? 'code.org' : 'dev-code.org'}",
+              DomainName: {Ref: 'MarketingDomainName'},
               OriginPath: '',
               OriginShield: {
                 Enabled: true,
