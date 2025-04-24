@@ -24,6 +24,10 @@ const Sortable: React.FunctionComponent<SortableProps> = ({
     opacity: isDragging ? 0.3 : 1.0,
   };
 
+  // Call the provided onKeyDown function if it exists,
+  // then call the listeners.onKeyDown function if it exists.
+  // This allows for custom keyboard handling while still
+  // allowing the default keyboard handling provided by dnd-kit.
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (onKeyDown) {
       onKeyDown(event);
