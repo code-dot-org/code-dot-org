@@ -158,7 +158,10 @@ sorted in any order. Here are some of the key fields:
 
 ### Evaluations
 
-There are three files that can appear in the `evals` directory.
+There are three files that can appear in the `evals` directory. Note that all 3
+of these files apply only to a small subset of levels which have rubrics and AI
+/ teacher assessments enabled for them. These levels typically represent longer
+assignments that students spent more time on than other levels.
 
 #### AI Evaluations
 
