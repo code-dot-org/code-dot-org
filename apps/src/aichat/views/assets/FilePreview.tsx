@@ -84,12 +84,14 @@ const FilePreview: React.FC<{
         <div
           className={!imageLoaded ? styles['preview-image-loading'] : undefined}
         >
-          <img
-            alt=""
-            src={url}
-            ref={imageRef}
-            className={(!imageLoaded && styles.hide) || undefined}
-          />
+          {!isUploading && (
+            <img
+              alt=""
+              src={url}
+              ref={imageRef}
+              className={(!imageLoaded && styles.hide) || undefined}
+            />
+          )}
         </div>
       ) : (
         <>
