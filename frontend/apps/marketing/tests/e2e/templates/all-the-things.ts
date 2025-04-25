@@ -15,6 +15,7 @@ import OverlineSection from './sections/overline';
 import ParagraphSection from './sections/paragraph';
 import TextLinkSection from './sections/text-link';
 import VideoSection from './sections/video';
+import LocalizationSection from './sections/localization';
 
 export async function createAllTheThingsExperienceEntry() {
   const managementClient = createClient({
@@ -29,6 +30,7 @@ export async function createAllTheThingsExperienceEntry() {
   const environment = await space.getEnvironment('development');
 
   const introductionSection = new IntroductionSection();
+  const localizationSection = new LocalizationSection();
   const actionBlockSection = new ActionBlockSection();
   const buttonSection = new ButtonSection();
   const columnSection = new ColumnSection();
@@ -42,6 +44,7 @@ export async function createAllTheThingsExperienceEntry() {
 
   const sections = [
     introductionSection,
+    localizationSection,
     actionBlockSection,
     buttonSection,
     columnSection,
@@ -57,8 +60,11 @@ export async function createAllTheThingsExperienceEntry() {
   const unboundValues = sections.reduce((acc, section) => {
     return Object.assign(acc, section.unboundValues);
   }, {});
+  const boundValues = sections.reduce((acc, section) => {
+    return Object.assign(acc, section.boundValues);
+  }, {});
 
-  console.log(unboundValues);
+  console.log(boundValues);
 
   const entry = await environment.createEntry('experience', {
     fields: {
@@ -81,6 +87,7 @@ export async function createAllTheThingsExperienceEntry() {
           schemaVersion: '2023-09-28',
           children: [
             introductionSection.getComponentTree(),
+            localizationSection.getComponentTree(),
             createContentfulSectionWrapper({
               name: 'Localization',
               children: [
@@ -3398,6 +3405,7 @@ export async function createAllTheThingsExperienceEntry() {
       },
       dataSource: {
         'en-US': {
+          ...boundValues,
           JtSxyKC: {
             sys: {
               id: '6fdNRFZbNXpiXQd6v7fHen',

@@ -19,7 +19,7 @@ class ContainerSection extends Section {
     });
 
     subContainerComponenTree.createParagraph({
-      paragraph: paragraphText,
+      paragraph: {type: 'UnboundValue', value: paragraphText},
       cfTextAlign: paragraphAlignment,
     });
 

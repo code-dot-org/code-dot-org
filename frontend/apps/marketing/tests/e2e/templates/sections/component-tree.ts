@@ -1,11 +1,26 @@
 import {nanoid} from 'nanoid';
 
+type ContentfulBoundValue = {
+  type: 'BoundValue';
+  path: string;
+  entryId: string;
+};
+
+type ContentfulUnboundValue = {
+  type: 'UnboundValue';
+  value: string;
+};
+
+type ContentfulValue = ContentfulBoundValue | ContentfulUnboundValue;
+
 export class ComponentTree {
   public unboundValues: object;
+  public boundValues: object;
   public children: any[];
 
   constructor() {
     this.unboundValues = {};
+    this.boundValues = {};
     this.children = [];
   }
 
@@ -368,6 +383,15 @@ export class ComponentTree {
     });
   }
 
+  getContentfulChildrenFromValue(value: ContentfulValue) {
+    switch (value.type) {
+      case 'BoundValue':
+        return this.createBoundValue(value.entryId, value.path);
+      case 'UnboundValue':
+        return this.createUnboundValue(value.value);
+    }
+  }
+
   createParagraph({
     paragraph,
     visualAppearance,
@@ -380,10 +404,10 @@ export class ComponentTree {
     color?: string;
     removeMarginBottom?: boolean;
     isStrong?: boolean;
-    paragraph: string;
+    paragraph: ContentfulValue;
     cfTextAlign?: string;
   }) {
-    const paragraphChild = this.createUnboundValue(paragraph);
+    const paragraphChild = this.getContentfulChildrenFromValue(paragraph);
 
     this.children.push({
       displayName: 'Paragraph',
@@ -438,6 +462,23 @@ export class ComponentTree {
     return {
       key: id,
       type: 'UnboundValue',
+    };
+  }
+
+  createBoundValue(entryId: string, path: string) {
+    const id = nanoid();
+
+    this.boundValues[id] = {
+      sys: {
+        id: entryId,
+        type: 'Link',
+        linkType: 'Entry',
+      },
+    };
+
+    return {
+      path: `${id}/${path}`,
+      type: 'BoundValue',
     };
   }
 }

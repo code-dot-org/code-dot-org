@@ -10,7 +10,7 @@ class ColumnSection extends Section {
     const paragraphComponenTree = new ComponentTree();
 
     paragraphComponenTree.createParagraph({
-      paragraph: text,
+      paragraph: {type: 'UnboundValue', value: text},
     });
 
     this.unboundValues = {
