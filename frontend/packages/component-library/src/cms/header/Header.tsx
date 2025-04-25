@@ -13,6 +13,9 @@ import ProjectsMenu, {ProjectsMenuProps} from './ProjectsMenu';
 import moduleStyles from './header.module.scss';
 
 export interface HeaderProps extends HTMLAttributes<HTMLElement> {
+  /** Studio.code.org base url
+   * sets correct stage for use with user signed_in api */
+  studioBaseUrl: string;
   /** Home link */
   homeLink: {
     /** Home link url */
@@ -67,7 +70,7 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   className?: string;
 }
 
-function getUserSignedInStatus(studioBaseUrl: string = '') {
+function getUserSignedInStatus(studioBaseUrl: string) {
   return fetch(`${studioBaseUrl}/api/v1/users/signed_in`, {
     credentials: 'include',
   })
@@ -96,6 +99,7 @@ function getUserSignedInStatus(studioBaseUrl: string = '') {
  * Acts as the main page header navigation.
  */
 const Header: React.FC<HeaderProps> = ({
+  studioBaseUrl,
   homeLink,
   logo,
   navLabel,
@@ -117,7 +121,7 @@ const Header: React.FC<HeaderProps> = ({
   >('loading');
 
   useEffect(() => {
-    getUserSignedInStatus('http://localhost-studio.code.org:3000')
+    getUserSignedInStatus(studioBaseUrl)
       .then(data => {
         if (data) {
           const renderState = data.is_signed_in ? 'signedIn' : 'signedOut';
