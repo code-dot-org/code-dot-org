@@ -835,6 +835,94 @@ roles.each do |name, config| %>
     Type: AWS::IAM::ServiceLinkedRole
     Properties: 
       AWSServiceName: logger.cloudfront.amazonaws.com
+
+  # GitHub Deployer Resources for the marketing application
+  GithubDeployerUser:
+    Type: AWS::IAM::User
+    Properties:
+      UserName: !Sub "marketing-${MarketingApplicationStackName}-github-deployer"
+      PermissionsBoundary: !Ref DevPermissions
+
+  GithubDeployerUserPolicy:
+    Type: 'AWS::IAM::Policy'
+    Version: '2012-10-17'
+    Properties:
+      PolicyName: GithubDeployerUserIamUserPolicy
+      Users:
+        - Ref: GithubDeployerUser
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'cloudformation:CreateStack'
+              - 'cloudformation:DescribeStacks'
+              - 'cloudformation:CreateChangeSet'
+              - 'cloudformation:DescribeChangeSet'
+              - 'cloudformation:DeleteChangeSet'
+              - 'cloudformation:ExecuteChangeSet'
+            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${MarketingApplicationStackName}/*"
+          - Effect: Allow
+            Action:
+              - 'iam:GetRole'
+              - 'iam:PassRole'
+            Resource:
+              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-FargateServiceTaskDefExecutionRoleArn"
+          - Effect: Allow
+            Action:
+              - 'iam:GetRole'
+              - 'iam:PassRole'
+            Resource:
+              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-FargateServiceTaskDefTaskRoleArn"
+          - Effect: Allow
+            Action:
+              - 'ecs:RegisterTaskDefinition'
+            Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/MarketingStackStagingFargateServiceTaskDef:*"
+          - Effect: Allow
+            Action:
+              - 'ecs:DeregisterTaskDefinition'
+              - 'ecs:DescribeTaskDefinition'
+              - 'elasticloadbalancing:DescribeLoadBalancers'
+              - 'ec2:DescribeSecurityGroups'
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - 'ecs:DescribeServices'
+              - 'ecs:UpdateService'
+            Resource:
+              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-FargateServiceArn"
+          - Effect: Allow
+            Action:
+              - "s3:PutObject"
+              - "s3:ListBucket"
+            Resource:
+              - Fn::ImportValue: !Sub "${MarketingApplicationStackName}-StaticAssetsBucketArn"
+              - !Sub
+                - "${StaticAssetsBucketArn}/*"
+                - StaticAssetsBucketArn:
+                    Fn::ImportValue: !Sub "${MarketingApplicationStackName}-StaticAssetsBucketArn"
+
+  GithubDeployerAccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName:
+        Ref: GithubDeployerUser
+
+  GithubDeployerAccessKeySecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      SecretString:
+        Fn::Join:
+          - ""
+          - - '{"accessKeyId":"'
+            - Ref: GithubDeployerAccessKey
+            - '","secretAccessKey":"'
+            - Fn::GetAtt:
+                - GithubDeployerAccessKey
+                - SecretAccessKey
+            - '"}'
+    UpdateReplacePolicy: Delete
+  DeletionPolicy: Delete
+
 Outputs:
   DevPermissions:
     Description: Developer Permissions
