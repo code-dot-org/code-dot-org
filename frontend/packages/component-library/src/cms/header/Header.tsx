@@ -4,6 +4,7 @@ import {HTMLAttributes, useEffect, useState} from 'react';
 import {Image, ImageProps} from '@/image';
 
 import AccountButtons, {AccountButtonsProps} from './AccountButtons';
+import SignInContext from './context/signInContext';
 import HamburgerMenu, {HamburgerMenuProps} from './HamburgerMenu';
 import HelpMenu, {HelpMenuProps} from './HelpMenu';
 import MainLinks, {MainLinksProps} from './MainLinks';
@@ -157,20 +158,20 @@ const Header: React.FC<HeaderProps> = ({
           projectsButtonLabel={projectsButtonLabel}
           projectsButtonAriaLabel={projectsButtonAriaLabel}
         />
-        <AccountButtons
-          signIn={accountLinks.signIn}
-          createAccount={accountLinks.createAccount}
-          goToDashboard={accountLinks.goToDashboard}
-          isInHamburger={false}
-          signInState={renderState}
-        />
-        <HelpMenu helpButtonLabel={helpButtonLabel} helpLinks={helpLinks} />
-        <HamburgerMenu
-          hamburgerButtonLabel={hamburgerButtonLabel}
-          hamburgerLinks={hamburgerLinks}
-          accountLinks={accountLinks}
-          signInState={renderState}
-        />
+        <SignInContext.Provider value={renderState}>
+          <AccountButtons
+            signIn={accountLinks.signIn}
+            createAccount={accountLinks.createAccount}
+            goToDashboard={accountLinks.goToDashboard}
+            isInHamburger={false}
+          />
+          <HelpMenu helpButtonLabel={helpButtonLabel} helpLinks={helpLinks} />
+          <HamburgerMenu
+            hamburgerButtonLabel={hamburgerButtonLabel}
+            hamburgerLinks={hamburgerLinks}
+            accountLinks={accountLinks}
+          />
+        </SignInContext.Provider>
       </nav>
     </header>
   );

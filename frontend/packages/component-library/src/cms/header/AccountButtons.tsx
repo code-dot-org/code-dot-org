@@ -1,7 +1,9 @@
 import classNames from 'classnames';
-import {HTMLAttributes} from 'react';
+import {HTMLAttributes, useContext} from 'react';
 
 import {LinkButton, LinkButtonProps} from '@/button';
+
+import SignInContext from './context/signInContext';
 
 import moduleStyles from './header.module.scss';
 
@@ -27,8 +29,6 @@ export interface AccountButtonsProps extends HTMLAttributes<HTMLElement> {
     /** Go to Dashboard button href */
     href: string;
   };
-  /** Render state for if a user is signed in */
-  signInState: 'loading' | 'signedIn' | 'signedOut' | 'error';
   /** Is button in Hamburger Menu */
   isInHamburger: boolean;
 }
@@ -37,9 +37,10 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
   signIn,
   createAccount,
   goToDashboard,
-  signInState,
   isInHamburger,
 }) => {
+  const signInState = useContext(SignInContext);
+
   const renderAccountButtons = () => {
     switch (signInState) {
       case 'loading':
