@@ -68,4 +68,24 @@ class TeacherDashboardController < ApplicationController
     @sections = current_user.sections_instructed.map(&:concise_summarize)
     render layout: false
   end
+
+  def download_progress_csv
+    pp 'lfm', params[:section_id], params
+    headers = ['student_name', 'level1']
+    fake_data = [{student_name: 'anna', level1: 'in progress'}, {student_name: 'beth', level1: 'in progress'}]
+    send_data(
+      CSV.generate do |csv|
+        csv << headers
+        fake_data.each do |data|
+          csv << [
+            data[:student_name],
+            data[:level1]
+          ]
+        end
+      end,
+      filename: 'progress.csv',
+      disposition: 'attachment',
+      type: 'text/csv',
+    )
+  end
 end
