@@ -48,9 +48,8 @@ def filter_evals_pii
   teacher_evals_filename = get_evals_filename('_teacher_evals_')
   evidence_levels_filename = get_evals_filename('_evidence_levels_')
 
-  # allow ai evals to be missing, because some units don't have them
   filter_file_pii(ai_evals_filename, 'ai_evals') if ai_evals_filename
-  filter_file_pii(teacher_evals_filename, 'teacher_evals')
+  filter_file_pii(teacher_evals_filename, 'teacher_evals') if teacher_evals_filename
 
   command = "cp #{$input_dir}/evals/#{evidence_levels_filename} #{$output_dir}/evals/"
   puts "command: #{command}"
