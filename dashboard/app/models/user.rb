@@ -766,8 +766,6 @@ class User < ApplicationRecord
     end
   end
 
-  end
-
   def username_required?
     manual? || username_changed?
   end
