@@ -1,3 +1,8 @@
+import {
+  BodyFourText,
+  Heading4,
+  Heading6,
+} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -31,7 +36,7 @@ function getStatusForResult(result: ValidationResult) {
 const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   className,
 }) => {
-  const {validationResults, satisfied} = useAppSelector(
+  const {validationResults} = useAppSelector(
     state => state.lab.validationState
   );
   const isValidating = useAppSelector(state => state.lab2System.isValidating);
@@ -42,51 +47,40 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
 
   return (
     <div className={classNames(className, moduleStyles.validationResults)}>
-      <h4>{codebridgeI18n.validationResults()}</h4>
+      <Heading4>{codebridgeI18n.validationResults()}</Heading4>
       {isValidating && <i className="fa fa-spinner fa-spin" />}
       {!isValidating && (
         <div>
           <table className={moduleStyles.validationResultsTable}>
             <thead>
               <tr>
-                <td>{codebridgeI18n.testName()}</td>
-                <td>{codebridgeI18n.result()}</td>
+                <td>
+                  <Heading6>{codebridgeI18n.testName()}</Heading6>
+                </td>
+                <td>
+                  <Heading6>{codebridgeI18n.result()}</Heading6>
+                </td>
               </tr>
             </thead>
             <tbody>
               {validationResults.map((result, index) => (
                 <tr key={index}>
-                  <td>{result.message}</td>
                   <td>
-                    <ValidationStatusIcon
-                      status={getStatusForResult(result)}
-                      className={moduleStyles.icon}
-                    />
-                    {result.result}
+                    <BodyFourText>{result.message}</BodyFourText>
+                  </td>
+                  <td>
+                    <div className={moduleStyles.results}>
+                      <ValidationStatusIcon
+                        status={getStatusForResult(result)}
+                        className={moduleStyles.icon}
+                      />
+                      <div>{result.result}</div>
+                    </div>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
-          <div className={moduleStyles.testSummary}>
-            {satisfied ? (
-              <>
-                <ValidationStatusIcon
-                  status="passed"
-                  className={moduleStyles.icon}
-                />{' '}
-                {codebridgeI18n.allTestsPassed()}
-              </>
-            ) : (
-              <>
-                <ValidationStatusIcon
-                  status="failed"
-                  className={moduleStyles.icon}
-                />{' '}
-                {codebridgeI18n.testsDidNotPass()}
-              </>
-            )}
-          </div>
         </div>
       )}
     </div>

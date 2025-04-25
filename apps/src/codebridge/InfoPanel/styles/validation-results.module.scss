@@ -1,4 +1,4 @@
-@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 .icon {
   margin-right: 4px;
@@ -8,7 +8,7 @@
   table-layout: auto;
   width: 100%;
   border-collapse: collapse;
-  border: 1px solid $light_white;
+  border: 1px solid var(--borders-neutral-primary); // TODO: ask Mark, this is different from mock
 
   thead td{
     font-weight: bold;
@@ -16,7 +16,7 @@
   }
 
   td {
-    border: 1px solid $light_white;
+    border: 1px solid var(--borders-neutral-primary);
     padding: 4px 6px;
   }
 }
@@ -25,4 +25,10 @@
   margin-top: 10px;
   font-size: 16px;
   font-weight: bold;
+}
+
+.results {
+  // TODO: make it actually centered
+  justify-content: center;
+  align-items: center;
 }
