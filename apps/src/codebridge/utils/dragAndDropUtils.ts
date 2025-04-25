@@ -228,5 +228,5 @@ export const dragAndDropKeyboardCodes = {
   // TODO: expose a menu to users of our keyboard options, until then this is a hidden feature.
   start: ['KeyM'],
   cancel: ['Escape'],
-  end: ['KeyM'],
+  end: ['KeyM', 'Enter', 'Space'],
 };
