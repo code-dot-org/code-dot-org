@@ -40,7 +40,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   openDetailedAnalysis,
 }) => {
   const currentUserId = useAppSelector(state => state.currentUser.userId);
-  const proficienceyThreshold = totalNumberOfStudents * 0.8;
+  const proficienceyThreshold = totalNumberOfStudents * 0.75;
   const aiSummaryTag = (proficiencyCount: number) => {
     return (
       <Tags
@@ -76,8 +76,8 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
       <BodyTwoText>
         <strong>{`${i18n.reasoning()}: `}</strong>
         {proficiencyCount > proficienceyThreshold
-          ? 'More than 80% of the students demonstrated proficiency in their responses. '
-          : 'Less than 80% of the students demonstrated proficiency in their responses. '}
+          ? 'More than 75% of the students demonstrated proficiency in their responses. '
+          : 'Less than 75% of the students demonstrated proficiency in their responses. '}
         <Link
           type="primary"
           size="m"
