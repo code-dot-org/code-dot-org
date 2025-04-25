@@ -1,8 +1,8 @@
 import {documentToHtmlString} from '@contentful/rich-text-html-renderer';
+import {documentToPlainTextString} from '@contentful/rich-text-plain-text-renderer';
 import {BLOCKS} from '@contentful/rich-text-types';
 import {EntryFields, BaseEntry} from 'contentful';
 import {useMemo} from 'react';
-import TurndownService from 'turndown';
 
 import FAQAccordion, {
   FAQAccordionItem,
@@ -29,17 +29,6 @@ const isRichText = (
 const FAQAccordionContentful: React.FunctionComponent<
   FAQAccordionContentfulProps
 > = ({faqs}) => {
-  const htmlToMarkdownConverter = new TurndownService();
-
-  // Converts decorated inline elements to plain text for JSON-LD
-  htmlToMarkdownConverter.addRule('plainText', {
-    filter: ['p', 'b', 'strong', 'i', 'em'],
-    replacement: (content, node) =>
-      node.parentNode && ['P', 'LI'].includes(node.parentNode.nodeName)
-        ? content
-        : content + '\n\n',
-  });
-
   const faqItems = useMemo(
     () =>
       faqs?.filter(Boolean).map(faq => {
@@ -47,9 +36,8 @@ const FAQAccordionContentful: React.FunctionComponent<
 
         if (isRichText(faq.fields.question)) {
           question = <RichText content={faq.fields.question} />;
-          questionString = htmlToMarkdownConverter.turndown(
-            documentToHtmlString(faq.fields.question),
-          );
+          // See: https://developers.google.com/search/docs/appearance/structured-data/faqpage#question
+          questionString = documentToPlainTextString(faq.fields.question);
         } else {
           question = faq.fields.question;
           questionString = question;
@@ -61,9 +49,10 @@ const FAQAccordionContentful: React.FunctionComponent<
               <RichText content={faq.fields.answer} />
             </div>
           );
-          answerString = htmlToMarkdownConverter.turndown(
-            documentToHtmlString(faq.fields.answer),
-          );
+          // See: https://developers.google.com/search/docs/appearance/structured-data/faqpage#answer
+          answerString = documentToHtmlString(faq.fields.answer, {
+            preserveWhitespace: true,
+          });
         } else {
           answer = faq.fields.answer;
           answerString = answer;

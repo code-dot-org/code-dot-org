@@ -73,6 +73,7 @@ const extractNodeContent = (node: RichTextNode): ReactNode[] => {
 };
 
 const richTextRenderOptions: Options = {
+  preserveWhitespace: true,
   renderNode: {
     [BLOCKS.PARAGRAPH]: (paragraphNode: RichTextNode) => {
       const paragraphContent = extractNodeContent(paragraphNode);

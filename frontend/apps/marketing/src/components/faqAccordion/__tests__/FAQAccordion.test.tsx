@@ -8,6 +8,7 @@ import {
   ListItem,
 } from '@contentful/rich-text-types';
 import {render, screen} from '@testing-library/react';
+import {escape} from 'lodash';
 
 import FAQAccordion from '@/components/faqAccordion/FAQAccordion';
 
@@ -90,11 +91,11 @@ describe('FAQAccordion component', () => {
       expect(screen.getByText(questionText)).toBeVisible();
       expect(screen.getByText(answerText)).toBeInTheDocument();
       expect(queryJsonLdScript()).toHaveTextContent(
-        buildJsonLdContent(questionText, answerText),
+        buildJsonLdContent(questionText, escape(`<p>${answerText}</p>`)),
       );
     });
 
-    it('renders with bold text as plain text in JSON-LD script', () => {
+    it('renders with bold text in valid JSON-LD script format', () => {
       renderComponent({
         faqs: [
           {
@@ -115,11 +116,11 @@ describe('FAQAccordion component', () => {
       });
 
       expect(queryJsonLdScript()).toHaveTextContent(
-        buildJsonLdContent(questionText, answerText),
+        buildJsonLdContent(questionText, escape(`<p><b>${answerText}</b></p>`)),
       );
     });
 
-    it('renders with italic text as plain text in JSON-LD script', () => {
+    it('renders with italic text in valid JSON-LD script format', () => {
       renderComponent({
         faqs: [
           {
@@ -140,11 +141,11 @@ describe('FAQAccordion component', () => {
       });
 
       expect(queryJsonLdScript()).toHaveTextContent(
-        buildJsonLdContent(questionText, answerText),
+        buildJsonLdContent(questionText, escape(`<p><i>${answerText}</i></p>`)),
       );
     });
 
-    it('renders link in markdown format for JSON-LD script', () => {
+    it('renders link in valid JSON-LD script format', () => {
       const questionLinkHref = 'https://question.example';
       const answerLinkHref = 'https://answer.example';
 
@@ -187,17 +188,17 @@ describe('FAQAccordion component', () => {
 
       expect(queryJsonLdScript()).toHaveTextContent(
         buildJsonLdContent(
-          `[${questionText}](${questionLinkHref})`,
-          `[${answerText}](${answerLinkHref})`,
+          `${questionText}`,
+          escape(`<p><a href="${answerLinkHref}">${answerText}</a></p>`),
         ),
       );
     });
 
-    it('renders lists in markdown format for JSON-LD script', () => {
+    it('renders unordered list in valid JSON-LD script format', () => {
       const questionListItemA = questionText + ' A';
       const questionListItemB = questionText + ' B';
-      const answerListItem1 = answerText + ' 1';
-      const answerListItem2 = answerText + ' 2';
+      const answerListItemA = answerText + ' A';
+      const answerListItemB = answerText + ' B';
 
       renderComponent({
         faqs: [
@@ -210,6 +211,51 @@ describe('FAQAccordion component', () => {
                   content: [
                     buildRichTextListItem(questionListItemA),
                     buildRichTextListItem(questionListItemB),
+                  ],
+                },
+              ]),
+              answer: buildRichTextDocument([
+                {
+                  nodeType: BLOCKS.UL_LIST,
+                  data: {},
+                  content: [
+                    buildRichTextListItem(answerListItemA),
+                    buildRichTextListItem(answerListItemB),
+                  ],
+                },
+              ]),
+            },
+          },
+        ],
+      });
+
+      expect(queryJsonLdScript()).toHaveTextContent(
+        buildJsonLdContent(
+          `${questionListItemA} ${questionListItemB}`,
+          escape(
+            `<ul><li><p>${answerListItemA}</p></li><li><p>${answerListItemB}</p></li></ul>`,
+          ),
+        ),
+      );
+    });
+
+    it('renders ordered list in valid JSON-LD script format', () => {
+      const questionListItem1 = questionText + ' 1';
+      const questionListItem2 = questionText + ' 2';
+      const answerListItem1 = answerText + ' 1';
+      const answerListItem2 = answerText + ' 2';
+
+      renderComponent({
+        faqs: [
+          {
+            fields: {
+              question: buildRichTextDocument([
+                {
+                  nodeType: BLOCKS.OL_LIST,
+                  data: {},
+                  content: [
+                    buildRichTextListItem(questionListItem1),
+                    buildRichTextListItem(questionListItem2),
                   ],
                 },
               ]),
@@ -230,8 +276,10 @@ describe('FAQAccordion component', () => {
 
       expect(queryJsonLdScript()).toHaveTextContent(
         buildJsonLdContent(
-          `* ${questionListItemA}\n* ${questionListItemB}`,
-          `1. ${answerListItem1}\n2. ${answerListItem2}`,
+          `${questionListItem1} ${questionListItem2}`,
+          escape(
+            `<ol><li><p>${answerListItem1}</p></li><li><p>${answerListItem2}</p></li></ol>`,
+          ),
         ),
       );
     });
