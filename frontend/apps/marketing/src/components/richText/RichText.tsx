@@ -50,9 +50,9 @@ const extractNodeContent = (node: RichTextNode): ReactNode[] => {
         node.marks.reduce((value: ReactNode, {type}: Mark) => {
           switch (type) {
             case MARKS.BOLD:
-              return <StrongText key={type} children={value} />;
+              return <StrongText key={type + value} children={value} />;
             case MARKS.ITALIC:
-              return <EmText key={type} children={value} />;
+              return <EmText key={type + value} children={value} />;
             default:
               return value;
           }
