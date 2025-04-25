@@ -21,5 +21,5 @@ export interface DialogProps {
   removeAsset: (filename: string) => void;
   loading: boolean;
   handleError: (error: Error, userErrorMessage?: string) => void;
-  currentErrorMessage?: string;
+  errorMessage?: string;
 }

@@ -13,9 +13,9 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
   const {levelName, mode, onError} = props;
   const [assets, setAssets] = useState<AssetData[]>([]);
   const [loading, setLoading] = useState(false);
-  const [currentErrorMessage, setCurrentErrorMessage] = useState<
-    string | undefined
-  >(undefined);
+  const [errorMessage, setErrorMessage] = useState<string | undefined>(
+    undefined
+  );
 
   const abortControllerRef = useRef(new AbortController());
 
@@ -70,7 +70,7 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
     (error: Error, userErrorMessage?: string) => {
       onError?.(error);
       if (userErrorMessage) {
-        setCurrentErrorMessage(userErrorMessage);
+        setErrorMessage(userErrorMessage);
       } else {
         setDefaultErrorMessage();
       }
@@ -78,14 +78,14 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
     [onError]
   );
 
-  const clearError = () => setCurrentErrorMessage(undefined);
+  const clearError = () => setErrorMessage(undefined);
   const setDefaultErrorMessage = () =>
-    setCurrentErrorMessage('Something went wrong. Please try again!');
+    setErrorMessage('Something went wrong. Please try again!');
 
   const dialogProps = {
     assets,
     loading,
-    currentErrorMessage,
+    errorMessage,
     // Used by UploadAssetDialog
     addAsset,
     removeAsset,

@@ -36,7 +36,7 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
   loading,
   levelName,
   handleError,
-  currentErrorMessage,
+  errorMessage,
   clearError,
 }) => {
   const [requestInProgress, setRequestInProgress] = useState<
@@ -127,9 +127,7 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
       secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
       customContent={loading ? <Loading /> : <ModalBody />}
       customBottomContent={
-        currentErrorMessage && (
-          <ErrorAlert currentErrorMessage={currentErrorMessage} />
-        )
+        errorMessage && <ErrorAlert message={errorMessage} />
       }
     />
   );
