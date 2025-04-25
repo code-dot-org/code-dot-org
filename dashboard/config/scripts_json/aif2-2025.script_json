@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 21:05:57 UTC",
+    "serialized_at": "2025-04-24 22:57:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4050,18 +4050,34 @@
       }
     },
     {
-      "key": "4a284003-bb8b-4512-b4a8-29bb75994f3b",
+      "key": "c534b9ce-dcc1-4437-b070-ddef4f0a6650",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *bias*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *ethics*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 2 of their activity guide where they analyze the self-driving car decision-making algorithm by identifying what it does, the factors it considers, the trade-offs involved, and who benefits or is harmed. Encourage them to think critically about the algorithm’s priorities and limitations. Remind them that real-world algorithms must balance multiple factors, often leading to ethical dilemmas.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s steps, such as detecting obstacles, assessing risks, and making a decision. Look for students recognizing the factors considered, like pedestrian safety, passenger safety, and legal concerns. Encourage analysis of trade-offs, such as whether avoiding one accident increases the risk of another. Pay attention to conversations about ethical implications, including who benefits, who is at risk, and what makes a decision \"fair.\" ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *bias*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *ethics*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  ",
         "duration": "20",
-        "name": "Ethical Exploration of Autonomous Vehicle Algorithms",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, consider showing the Waymo Self-Driving gif located in the Teacher Resources to demonstrate a real-life autonomous vehicle swerving to avoid a pedestrian. Use this example to highlight how real-world AI must make split-second ethical decisions and how different scenarios could lead to different outcomes.\n\nThroughout this part of the activity, ask guiding questions like, “What criteria does the car prioritize? What factors are missing?” to deepen student thinking. Encourage discussion among partners by prompting students to consider whether there is a \"right\" decision or if it depends on the situation. Connect the discussion to real-world AI challenges, highlighting how autonomous vehicles must make split-second ethical decisions with real consequences."
-          }
-        ]
+        "name": "Ethical Exploration of Autonomous Vehicle Algorithms"
+      },
+      "seeding_key": {
+        "activity_section.key": "c534b9ce-dcc1-4437-b070-ddef4f0a6650",
+        "lesson_activity.key": "402be37a-a02b-4e89-91db-4fa2b0fd766b"
+      }
+    },
+    {
+      "key": "b6fbfab7-f252-4b89-99f9-2c5ad10c9ec0",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the Waymo Self-Driving GIF to demonstrate a real-life autonomous vehicle swerving to avoid a pedestrian. Use this example to highlight how real-world AI must make split-second ethical decisions and how different scenarios could lead to different outcomes.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How do the music algorithm and self-driving car algorithm affect people’s lives?*\n- *How can we make these algorithms more fair?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should make a connection between the music algorithm and self-driving car algorithm as two ways that humans are affected by AI-powered algorithms. The software engineers who created these algorithms made certain decisions for the AI to take, such as what genre of music to recommend or what to have the car do if a pedestrian unexpectedly runs into the road. Encourage students to continue thinking of real-world decisions that are made by AI algorithms."
+      },
+      "seeding_key": {
+        "activity_section.key": "b6fbfab7-f252-4b89-99f9-2c5ad10c9ec0",
+        "lesson_activity.key": "402be37a-a02b-4e89-91db-4fa2b0fd766b"
+      }
+    },
+    {
+      "key": "4a284003-bb8b-4512-b4a8-29bb75994f3b",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 2 of their activity guide where they analyze the self-driving car decision-making algorithm by identifying what it does, the factors it considers, the trade-offs involved, and who benefits or is harmed. Encourage them to think critically about the algorithm’s priorities and limitations. Remind them that real-world algorithms must balance multiple factors, often leading to ethical dilemmas.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s steps, such as detecting obstacles, assessing risks, and making a decision. Look for students recognizing the factors considered, like pedestrian safety, passenger safety, and legal concerns. Encourage analysis of trade-offs, such as whether avoiding one accident increases the risk of another. Pay attention to conversations about ethical implications, including who benefits, who is at risk, and what makes a decision \"fair.\" "
       },
       "seeding_key": {
         "activity_section.key": "4a284003-bb8b-4512-b4a8-29bb75994f3b",
@@ -4070,8 +4086,9 @@
     },
     {
       "key": "d270cde4-71b9-4ac4-bae2-d656773df516",
-      "position": 8,
+      "position": 10,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** With their partners, have students examine the presented scenarios involving self-driving cars within the activity guide. Students should examine each scenario and describe the considerations that they would have to make in order to have their algorithm respond to the scenarios.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask guiding questions like, “What criteria would you prioritize?” to deepen student thinking. Encourage discussion among partners by prompting students to consider whether there is a \"right\" decision or if it depends on the situation. Connect the discussion to real-world AI challenges, highlighting how autonomous vehicles must make split-second ethical decisions with real consequences.\n"
       },
       "seeding_key": {
         "activity_section.key": "d270cde4-71b9-4ac4-bae2-d656773df516",
@@ -4079,8 +4096,29 @@
       }
     },
     {
+      "key": "e4acef8c-6a13-4960-9564-be43fbfe2362",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share some of their ideas that developed for how to update the algorithms for the self-driving car hypothetical scenarios."
+      },
+      "seeding_key": {
+        "activity_section.key": "e4acef8c-6a13-4960-9564-be43fbfe2362",
+        "lesson_activity.key": "402be37a-a02b-4e89-91db-4fa2b0fd766b"
+      }
+    },
+    {
+      "key": "50c3b7a9-f9dc-4106-b3f6-ff71fd573ca9",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "50c3b7a9-f9dc-4106-b3f6-ff71fd573ca9",
+        "lesson_activity.key": "402be37a-a02b-4e89-91db-4fa2b0fd766b"
+      }
+    },
+    {
       "key": "5da7bd5c-6cb8-4d17-8078-4ac3d4c124e0",
-      "position": 9,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What challenges arise when designing algorithms that make critical decisions affecting people’s lives?*\n- *How does public trust in autonomous systems depend on ethical decision-making?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the challenges of designing decision-making algorithms that balance fairness, ethics, and functionality, and how these challenges impact public trust in autonomous systems. Listen for students identifying trade-offs in algorithmic decisions, such as prioritizing safety vs. efficiency, and discussing how bias, transparency, or accountability affect trust in AI systems.",
         "tips": [
@@ -4101,7 +4139,7 @@
     },
     {
       "key": "229d7187-ce33-4bd9-99e6-98d0fe4a44dd",
-      "position": 10,
+      "position": 14,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -4211,7 +4249,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The images are presented in order from easiest (top left) to most difficult (bottom right). If students are struggling to pick an image to discuss with their partner, consider guiding them to choose an image based on difficulty-level."
+            "markdown": "The images are presented in order from easiest (top left) to most difficult (bottom right). If students are struggling to pick an image to discuss with their partner, consider guiding them to choose an image based on difficulty-level. If students struggle to get started and/or to visualize the shapes that make up the larger picture, consider sharing a copy of the **Digital Manipulative Support - Decomposing a Pixel Image** resource with them which should provide support for these students and allow them to get unstuck.\n"
           }
         ]
       },
@@ -10597,6 +10635,18 @@
       }
     },
     {
+      "name": "Digital Manipulative Support - Decomposing a Pixel Image",
+      "url": "https://docs.google.com/presentation/d/1k2M9ePhNgAXp3ba-fBi9aLI9Cf2SyEQoD9hABlTr-Zo/edit?usp=sharing",
+      "key": "decomposing_a_pixel_image_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "decomposing_a_pixel_image_1"
+      }
+    },
+    {
       "name": "Decomposition",
       "url": "https://docs.google.com/presentation/d/1VHClwbKc66EJXAwzOO5E-7-ZS8tz8_lWKsD2Kt1VNbA/edit?usp=drive_link",
       "key": "decomposition",
@@ -10920,6 +10970,12 @@
       "seeding_key": {
         "lesson.key": "Decomposition",
         "resource.key": "decomposing_a_pixel_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Decomposition",
+        "resource.key": "decomposing_a_pixel_image_1"
       }
     },
     {

@@ -1085,7 +1085,9 @@ __metadata:
     "@applitools/eyes-playwright": "npm:^1.36.3"
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
-    "@contentful/experiences-sdk-react": "npm:^1.34.1"
+    "@contentful/experiences-sdk-react": "npm:^1.37.1"
+    "@contentful/rich-text-html-renderer": "npm:^17.0.0"
+    "@contentful/rich-text-plain-text-renderer": "npm:^17.0.0"
     "@next/eslint-plugin-next": "npm:^15.0.3"
     "@next/third-parties": "npm:^15.2.1"
     "@playwright/test": "npm:~1.49.1"
@@ -1130,41 +1132,41 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@contentful/experiences-components-react@npm:1.34.1":
-  version: 1.34.1
-  resolution: "@contentful/experiences-components-react@npm:1.34.1"
+"@contentful/experiences-components-react@npm:1.37.1":
+  version: 1.37.1
+  resolution: "@contentful/experiences-components-react@npm:1.37.1"
   dependencies:
-    "@contentful/experiences-core": "npm:1.34.1"
+    "@contentful/experiences-core": "npm:1.37.1"
     "@contentful/rich-text-react-renderer": "npm:^16.0.1"
     postcss-import: "npm:^16.0.1"
     style-inject: "npm:^0.3.0"
   peerDependencies:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
-  checksum: 10c0/d00891492cb53e13a7fe1017d5ebd8f1a98a6c89d6d3a652683e393254221274ae263b79b2602c6d6a75b6c1f16196abbf69dccbcb6f7f915c21174db4133113
+  checksum: 10c0/524e59dae111f64142a67da47f6ab613929c9a276c855058775fe25895a45c0842a4081430f9bb9df14084ac8a1386c173b0c3e79a4b7c6c78f6c256383d9005
   languageName: node
   linkType: hard
 
-"@contentful/experiences-core@npm:1.34.1":
-  version: 1.34.1
-  resolution: "@contentful/experiences-core@npm:1.34.1"
+"@contentful/experiences-core@npm:1.37.1":
+  version: 1.37.1
+  resolution: "@contentful/experiences-core@npm:1.37.1"
   dependencies:
-    "@contentful/experiences-validators": "npm:1.34.1"
+    "@contentful/experiences-validators": "npm:1.37.1"
     "@contentful/rich-text-types": "npm:^17.0.0"
   peerDependencies:
     contentful: ">=10.6.0"
-  checksum: 10c0/b3223de72e60c1a3f91691d6ae821a3f1f5c0a491d28b900bb8aad4a011fcf875d8b59e96c89feefaa2339cdc27483a4553623566bfacba52067e495069ffb5a
+  checksum: 10c0/1eb5930c6517e0dec8b497ed65d001a875285a21c624c5f46dccccfeebce2d213cb3cd318594ffd35e2e157351b852345ddd1316a086ad1a5c3a8a478b18a41f
   languageName: node
   linkType: hard
 
-"@contentful/experiences-sdk-react@npm:^1.34.1":
-  version: 1.34.1
-  resolution: "@contentful/experiences-sdk-react@npm:1.34.1"
+"@contentful/experiences-sdk-react@npm:^1.37.1":
+  version: 1.37.1
+  resolution: "@contentful/experiences-sdk-react@npm:1.37.1"
   dependencies:
-    "@contentful/experiences-components-react": "npm:1.34.1"
-    "@contentful/experiences-core": "npm:1.34.1"
-    "@contentful/experiences-validators": "npm:1.34.1"
-    "@contentful/experiences-visual-editor-react": "npm:1.34.1"
+    "@contentful/experiences-components-react": "npm:1.37.1"
+    "@contentful/experiences-core": "npm:1.37.1"
+    "@contentful/experiences-validators": "npm:1.37.1"
+    "@contentful/experiences-visual-editor-react": "npm:1.37.1"
     "@contentful/rich-text-types": "npm:^17.0.0"
     classnames: "npm:^2.3.2"
     csstype: "npm:^3.1.2"
@@ -1176,25 +1178,25 @@ __metadata:
     contentful: ">=10.6.0"
     react: ">=16.0.0"
     react-dom: ">=16.0.0"
-  checksum: 10c0/a8131462b6d59a93c73af2925b254ea7703b58a631b58522a7d51a5775d6a68fb980659d89d4dae9c9449237a5aeb719cca53b7b1e44ec13a3677ae00fb423c7
+  checksum: 10c0/342d50ad29fb78b91560689c1e9d34e11d68d1a7eefc1cd238b00a00ed0ca381df380fbc0376ba48a166d9be57f6066b68dd30eca10147de542ebd600e0a71b0
   languageName: node
   linkType: hard
 
-"@contentful/experiences-validators@npm:1.34.1":
-  version: 1.34.1
-  resolution: "@contentful/experiences-validators@npm:1.34.1"
+"@contentful/experiences-validators@npm:1.37.1":
+  version: 1.37.1
+  resolution: "@contentful/experiences-validators@npm:1.37.1"
   dependencies:
     zod: "npm:^3.22.4"
-  checksum: 10c0/612323e5745e49094709ffc1f10f740d48aaf3dd83ed2ef875e01565ff529a2cff435c0737f9fa57e8086c48a57230ab43ef949aa5392e0f6203a0664ae1beec
+  checksum: 10c0/7f60205c53e8d557d0a203686777cce083ffdca6f6dcc2abb2f4cbf36e73a5ef83814140dc3e3fbd34c1b1e58de0dc4df9e3ff3cebf5127f778d110da334efc8
   languageName: node
   linkType: hard
 
-"@contentful/experiences-visual-editor-react@npm:1.34.1":
-  version: 1.34.1
-  resolution: "@contentful/experiences-visual-editor-react@npm:1.34.1"
+"@contentful/experiences-visual-editor-react@npm:1.37.1":
+  version: 1.37.1
+  resolution: "@contentful/experiences-visual-editor-react@npm:1.37.1"
   dependencies:
-    "@contentful/experiences-components-react": "npm:1.34.1"
-    "@contentful/experiences-core": "npm:1.34.1"
+    "@contentful/experiences-components-react": "npm:1.37.1"
+    "@contentful/experiences-core": "npm:1.37.1"
     "@hello-pangea/dnd": "npm:^16.3.0"
     classnames: "npm:^2.3.2"
     contentful: "npm:^10.6.14"
@@ -1208,7 +1210,26 @@ __metadata:
   peerDependencies:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
-  checksum: 10c0/11275de4fba2dfb9957b5c52efcf1e85b68f27966c481f5ce8f85fd03350222953196ce85937d7fc9ca7a00c89183c07eab7041183f564725d8101e9d950fb0f
+  checksum: 10c0/d3942e08cfd06efae01463a835a168103b2a01afc85f45c6253ef48cd4331bfeb94b8f6a1e876aee8e87c688f19d06514da17b35a1ab6e90875829c98d8f8ab8
+  languageName: node
+  linkType: hard
+
+"@contentful/rich-text-html-renderer@npm:^17.0.0":
+  version: 17.0.0
+  resolution: "@contentful/rich-text-html-renderer@npm:17.0.0"
+  dependencies:
+    "@contentful/rich-text-types": "npm:^17.0.0"
+    escape-html: "npm:^1.0.3"
+  checksum: 10c0/cbc48d53c52753e61158c099b936924cdea957323d41188320629da9396dc82ad01b40bf583d3faba9c8ce03a25e8ac699d66af6429036511d82eaf235de86d7
+  languageName: node
+  linkType: hard
+
+"@contentful/rich-text-plain-text-renderer@npm:^17.0.0":
+  version: 17.0.0
+  resolution: "@contentful/rich-text-plain-text-renderer@npm:17.0.0"
+  dependencies:
+    "@contentful/rich-text-types": "npm:^17.0.0"
+  checksum: 10c0/ae9fe420e6cfb82a83e5dda2d26cfa6bb9c18a365e5bee0f1e2ed4f74c69641053cf3dffc97c548c82ff08e93bbe81a470fee3bc6c651ecda3678e581955e9ed
   languageName: node
   linkType: hard
 
@@ -9509,6 +9530,13 @@ __metadata:
   version: 4.0.0
   resolution: "escape-goat@npm:4.0.0"
   checksum: 10c0/9d2a8314e2370f2dd9436d177f6b3b1773525df8f895c8f3e1acb716f5fd6b10b336cb1cd9862d4709b36eb207dbe33664838deca9c6d55b8371be4eebb972f6
+  languageName: node
+  linkType: hard
+
+"escape-html@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "escape-html@npm:1.0.3"
+  checksum: 10c0/524c739d776b36c3d29fa08a22e03e8824e3b2fd57500e5e44ecf3cc4707c34c60f9ca0781c0e33d191f2991161504c295e98f68c78fe7baa6e57081ec6ac0a3
   languageName: node
   linkType: hard
 

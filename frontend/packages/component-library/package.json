@@ -124,6 +124,14 @@
       "import": "./dist/esm/cms/footer/index.mjs",
       "require": "./dist/cjs/cms/footer/index.js"
     },
+    "./cms/header": {
+      "types": {
+        "import": "./dist/esm/cms/header/index.d.ts",
+        "require": "./dist/cjs/cms/header/index.d.ts"
+      },
+      "import": "./dist/esm/cms/header/index.mjs",
+      "require": "./dist/cjs/cms/header/index.js"
+    },
     "./cms/heroBanner": {
       "types": {
         "import": "./dist/esm/cms/heroBanner/index.d.ts",

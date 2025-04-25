@@ -7834,6 +7834,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-csv@npm:^1.1.10":
+  version: 1.1.10
+  resolution: "@types/react-csv@npm:1.1.10"
+  dependencies:
+    "@types/react": "npm:*"
+  checksum: 10/424b3eefc565e5cc438cce3e64a1a6181be3ae2c9824570283dea7eccd4c31405e9ee88926ab1f8901817df47777fca2fab41e39dcf03c04b53817ba2353ae0d
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:^18.0.11":
   version: 18.0.11
   resolution: "@types/react-dom@npm:18.0.11"
@@ -10218,6 +10227,7 @@ __metadata:
     "@types/qrcode.react": "npm:^1.0.5"
     "@types/react": "npm:^18.0.28"
     "@types/react-bootstrap": "npm:^0.32.36"
+    "@types/react-csv": "npm:^1.1.10"
     "@types/react-dom": "npm:^18.0.11"
     "@types/react-router-dom": "npm:^5.3.3"
     "@types/react-select": "npm:^1.2.1"

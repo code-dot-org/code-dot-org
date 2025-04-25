@@ -7,11 +7,14 @@ import {FileRowName} from './FileRowName';
 import {useFileRowOptions} from './hooks';
 import {ItemRow} from './ItemRow';
 
+import moduleStyles from '@codebridge/FileBrowser/styles/filebrowser.module.scss';
+
 export type FileRowProps = {
   item: ProjectFile;
   // If the pop-up menu is enabled, we will show the 3-dot menu button on hover.
   enableMenu: boolean;
   hasValidationFile: boolean; // If the project has a validation file already.
+  isDragging?: boolean; // If the file is actively being dragged.
 };
 
 /**
@@ -25,6 +28,7 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
   item,
   enableMenu,
   hasValidationFile,
+  isDragging,
 }) => {
   const {openFile} = useCodebridgeContext();
   const dropdownOptions = useFileRowOptions(item, hasValidationFile);
@@ -37,6 +41,7 @@ export const FileRow: React.FunctionComponent<FileRowProps> = ({
       IconComponent={FileRowIcon}
       NameComponent={FileRowName}
       openFunction={openFile}
+      className={isDragging ? moduleStyles.dragging : undefined}
     />
   );
 };

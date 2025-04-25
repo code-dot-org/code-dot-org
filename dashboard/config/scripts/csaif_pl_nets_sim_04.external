@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Handling Packets
 
-#### In <a href='https://studio.code.org/s/nati-pilot-content-2024/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 5</a>, students will develop and test a protocol to handle packets.
+#### In <a href='https://studio.code.org/s/aif4-2025/lessons/5' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 5</a>, students will develop and test a protocol to handle packets.
 
 
 #### Students will again join a different router than your partner and get their IP address. Then, using the simulator, they’ll chat about any topic (e.g., favorite movie, band, or superpower).

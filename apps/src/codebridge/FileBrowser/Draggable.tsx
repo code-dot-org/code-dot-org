@@ -15,6 +15,7 @@ type DraggableProps = {
   children: React.ReactNode;
   data: DragDataType;
   Component?: keyof JSX.IntrinsicElements;
+  className?: string;
 };
 
 /**
@@ -32,6 +33,7 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
   children,
   data,
   Component = 'div',
+  className,
 }: DraggableProps) => {
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
     id: `${data.type}-${data.id}`,
@@ -48,6 +50,7 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
     {
       ref: setNodeRef,
       style: style,
+      className,
       ...listeners,
       ...attributes,
     },

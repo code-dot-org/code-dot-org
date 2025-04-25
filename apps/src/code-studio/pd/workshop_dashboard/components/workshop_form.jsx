@@ -847,8 +847,8 @@ export class WorkshopForm extends React.Component {
       course_offerings: this.state.course_offerings,
       participant_group_type: this.state.participant_group_type,
       time_zone: this.workshopTimezone,
-      // TODO: ACQ-3081 remove legacy flag
-      legacy: true,
+      // TODO: ACQ-3081 remove legacyForm2025 flag
+      legacyForm2025: true,
     };
 
     if (this.state.organizer) {

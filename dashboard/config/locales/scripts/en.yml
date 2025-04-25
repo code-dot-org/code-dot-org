@@ -19688,15 +19688,15 @@ en:
           description_short: ''
           description: |-
             ##Welcome!
-            #### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Insights from Data and AI Unit.
 
-            #### The Data Science unit is part of the ***Computer Science and AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+            #### The Data Science unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
 
             #### **Find the learning that works for you**
 
             #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
 
-            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Data Science unit. However, you can engage with the content in the order that best meets your needs.
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Insights from Data and AI  unit. However, you can engage with the content in the order that best meets your needs.
           student_description: |-
             ##Welcome!
             #### This professional learning module is designed to help you prepare to teach Code.org’s Data Science Unit.
@@ -21061,8 +21061,28 @@ en:
           title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts Unit.
+
+            #### The Cybersecurity and Global Impacts unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts Unit.
+
+            #### The Cybersecurity and Global Impacts unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
         sandbox-csaif-pl-networks:
           lessons:
             lesson-1:
@@ -21071,11 +21091,31 @@ en:
               name: Lesson Exploration
           lesson_groups: {}
           name: sandbox-csaif-pl-networks
-          title: Networks and the Internet
+          title: The Fabric of the Internet and AI
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s The Fabric of the Internet and AI Unit.
+
+            #### The The Fabric of the Internet and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the The Fabric of the Internet and AI unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s The Fabric of the Internet and AI Unit.
+
+            #### The The Fabric of the Internet and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the The Fabric of the Internet and AI unit. However, you can engage with the content in the order that best meets your needs.
         sandbox-csaif-pl-python:
           lessons:
             lesson-1:
@@ -21090,11 +21130,31 @@ en:
               name: Preparing for the Final Project
           lesson_groups: {}
           name: sandbox-csaif-pl-python
-          title: Foundations of AI Programming
+          title: Programming Fundamentals
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Programming Fundamentals Unit.
+
+            #### The Data Science unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Programming Fundamentals unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Programming Fundamentals Unit.
+
+            #### The Data Science unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Programming Fundamentals unit. However, you can engage with the content in the order that best meets your needs.
         gen-ai-spanish-test-a-unit:
           lessons:
             lesson-1:
@@ -21118,11 +21178,31 @@ en:
               name: Ethical Use and the Final Project
           lesson_groups: {}
           name: sandbox-csaif-pl-computer-systems
-          title: Computer Systems and Devices
+          title: AI and the Systems That Power It
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s AI and the Systems that Power It Unit.
+
+            #### The Data Science unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI and the Systems That Power It unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s AI and the Systems that Power It Unit.
+
+            #### The Data Science unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI and the Systems That Power It unit. However, you can engage with the content in the order that best meets your needs.
         customizing-llms-latm-pilot:
           lessons: {}
           lesson_groups:
@@ -21311,6 +21391,10 @@ en:
             We recommend completing the free [**Exploring Generative AI Self-Paced Professional Learning Module**](https://studio.code.org/courses/self-paced-exploring-gen-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science or AI experience is required.
 
             We also recommend watching the [5-Part Exploring Generative AI Video Series](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfJLo5nNGPHo0xCd9Xw5lSs) which introduces key concepts for generative AI. The entire video series takes ~15 minutes to watch.
+
+            ## Optional Lessons
+
+            This unit includes two optional lessons that provide a deeper technical understanding of how Embeddings and Neural Networks are created "from scratch" to be used in language models. These lessons are not required to complete the final project of the unit, but can provide a deeper technical understanding of these topics for programs with a technical or career-ready focus.
 
             ## Finished Teaching This Unit?
             Answer this [**short survey**](https://studio.code.org/form/exploring_with_generative_ai_post_survey?survey_data%5Bunit_number%5D=unit_1) to let the Code.org curriculum team know how the unit went.
@@ -23000,8 +23084,28 @@ en:
           title: Problem Solving with AI
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Problem Solving with AI Unit.
+
+            #### The Problem Solving with AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Problem Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            ##Welcome!
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Problem Solving with AI Unit.
+
+            #### The Problem Solving with AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Problem Solving with AI unit. However, you can engage with the content in the order that best meets your needs.
         self-paced-pl-csa1-2025:
           lessons: {}
           lesson_groups: {}
@@ -23583,7 +23687,7 @@ en:
           title: Teaching Problem Solving with AI
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "#### Self-Paced PL Coming Soon!"
           student_description: ''
         self-paced-pl-aif2-2025:
           lessons: {}
@@ -23592,26 +23696,71 @@ en:
           title: Teaching Programming Fundamentals
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Programming Fundamentals unit.
+
+            #### The Programming Fundamentals unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Programming Fundamentals and AI unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Programming Fundamentals unit.
+
+            #### The Programming Fundamentals unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Programming Fundamentals and AI unit. However, you can engage with the content in the order that best meets your needs.
         self-paced-pl-aif3-2025:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-aif3-2025
-          title: AI and the Systems that Power It
+          title: Teaching AI and the Systems that Power It
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s AI and the Systems that Power It unit.
+
+            #### The AI and the Systems that Power It unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the AI and the Systems that Power It unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: This PL unit prepares you to lead high school students in an investigation of AI and computing systems, covering information processing, hardware/software interaction, and emerging technologies like IoT and robotics. You'll gain familiarity with the student activities focused on system design and troubleshooting, the analysis of AI's societal and ethical implications, and the application of human-centered design. We will explore how the AI Chat tool supports student learning in areas such as understanding system layers and evaluating AI content. You will also learn how to facilitate student discussions on bias and the societal role of AI to foster creativity, critical thinking, and collaboration.
         self-paced-pl-aif4-2025:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-aif4-2025
-          title: Teaching Networks and the Internet
+          title: Teaching The Fabric of the Internet and AI
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s The Fabric of the Internet and AI unit.
+
+            #### The Fabric of the Internet and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the The Fabric of the Internet and AI unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s The Fabric of the Internet and AI unit.
+
+            #### The Fabric of the Internet and AI unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the The Fabric of the Internet and AI unit. However, you can engage with the content in the order that best meets your needs.
         self-paced-pl-aif5-2025:
           lessons: {}
           lesson_groups: {}
@@ -23619,8 +23768,26 @@ en:
           title: Teaching Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts unit.
+
+            #### The Cybersecurity and Global Impacts unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
+          student_description: |-
+            #### This professional learning module is designed to help you prepare to teach Code.org’s Cybersecurity and Global Impacts unit.
+
+            #### The Cybersecurity and Global Impacts unit is part of the ***AI Foundations*** curriculum but can also stand alone for grades 9-12. Designed for flexibility, it can be seamlessly integrated into any existing curriculum, allowing teachers to introduce it at their own pace and align it with their educational goals.
+
+            #### **Find the learning that works for you**
+
+            #### **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson. However, we encourage you to engage with the content at your own pace.
+
+            #### **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Cybersecurity and Global Impacts unit. However, you can engage with the content in the order that best meets your needs.
         self-paced-pl-aif6-2025:
           lessons: {}
           lesson_groups: {}

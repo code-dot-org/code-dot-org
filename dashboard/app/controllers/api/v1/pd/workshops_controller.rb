@@ -167,15 +167,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   # PATCH /api/v1/pd/workshops/1
   def update
     adjust_facilitators
-
-    if params[:pd_workshop][:course] == Pd::Workshop::COURSE_BUILD_YOUR_OWN
-      supplied_course_offering_ids = params[:pd_workshop].delete(:course_offerings)
-      if supplied_course_offering_ids.blank?
-        return render json: {error: "Cannot create a Build Your Own workshop without PL topics"}, status: :bad_request
-      else
-        @workshop.course_offerings = supplied_course_offering_ids.filter_map {|id| CourseOffering.find_by(id: id)}
-      end
-    end
+    adjust_course_offerings
+    adjust_grades
 
     # The below user types have permission to set the regional partner. CSF Facilitators
     # can initially set the regional partner, but cannot edit it once it is set.
@@ -197,15 +190,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   def create
     @workshop.organizer = current_user
     adjust_facilitators
-
-    if params[:pd_workshop][:course] == Pd::Workshop::COURSE_BUILD_YOUR_OWN
-      supplied_course_offering_ids = params[:pd_workshop].delete(:course_offerings)
-      if supplied_course_offering_ids.blank?
-        return render json: {error: "Cannot create a Build Your Own workshop without PL topics"}, status: :bad_request
-      else
-        @workshop.course_offerings = supplied_course_offering_ids.filter_map {|id| CourseOffering.find_by(id: id)}
-      end
-    end
+    adjust_course_offerings
+    adjust_grades
 
     if @workshop.save
       render json: @workshop, serializer: Api::V1::Pd::WorkshopSerializer
@@ -228,7 +214,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
 
   # POST /api/v1/pd/workshops/1/unstart (admin only)
   def unstart
-    @workshop.update!(started_at: nil)
+    # using update_attribute to skip validation
+    @workshop.update_attribute(:started_at, nil)
     head :no_content
   end
 
@@ -240,7 +227,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
 
   # POST /api/v1/pd/workshops/1/reopen (admin only)
   def reopen
-    @workshop.update!(ended_at: nil)
+    # using update_attribute to skip validation
+    @workshop.update_attribute(:ended_at, nil)
     head :no_content
   end
 
@@ -300,25 +288,31 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   end
 
   private def adjust_facilitators
-    supplied_facilitator_ids = params[:pd_workshop].delete(:facilitators)
-    return unless supplied_facilitator_ids
+    ws_params = params[:pd_workshop]
+    return unless ws_params.key?(:facilitators) || ws_params.key?("facilitators")
+    supplied_facilitator_ids = ws_params.delete(:facilitators) || ws_params.delete("facilitators")
+    supplied_facilitator_ids = [] if supplied_facilitator_ids.blank?
 
-    existing_facilitator_ids = @workshop.facilitators.map(&:id)
-    new_facilitator_ids = supplied_facilitator_ids - existing_facilitator_ids
-    facilitator_ids_to_remove = existing_facilitator_ids - supplied_facilitator_ids
+    valid_facilitators = User.joins(:permissions).where(id: supplied_facilitator_ids, user_permissions: {permission: 'facilitator'}).distinct
 
-    facilitator_ids_to_remove.each do |facilitator_id|
-      @workshop.facilitators.delete(facilitator_id)
-    end
+    @workshop.facilitators = valid_facilitators
+  end
 
-    new_facilitator_ids.each do |facilitator_id|
-      facilitator = User.find_by(id: facilitator_id)
+  private def adjust_course_offerings
+    ws_params = params[:pd_workshop]
 
-      # Since these ids are supplied by the caller, make sure they each actually represent a real user
-      # and that the user is actually a facilitator before adding.
-      next unless facilitator&.facilitator?
-      @workshop.facilitators << facilitator
-    end
+    return unless ws_params.key?(:course_offerings) ||  ws_params.key?("course_offerings")
+    supplied_course_offering_ids = ws_params.delete(:course_offerings) || ws_params.delete("course_offerings")
+    supplied_course_offering_ids = [] if supplied_course_offering_ids.blank?
+    @workshop.course_offerings = CourseOffering.where(id: supplied_course_offering_ids)
+  end
+
+  private def adjust_grades
+    ws_params = params[:pd_workshop]
+    return unless ws_params.key?(:grades) || ws_params.key?("grades")
+    new_grades = ws_params.delete(:grades) || ws_params.delete("grades")
+    new_grades = [] if new_grades.blank?
+    @workshop.grades = new_grades
   end
 
   private def workshop_params(can_update_regional_partner = true)
@@ -346,7 +340,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       :prereq,
       :hidden,
       :grades,
-      :time_zone
+      :time_zone,
+      :legacyForm2025
     ]
 
     allowed_params.delete :regional_partner_id unless can_update_regional_partner

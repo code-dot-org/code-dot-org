@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 16:52:54 UTC",
+    "serialized_at": "2025-04-24 20:19:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,12 +34,14 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Teaching Networks and the Internet",
+      "name": "Teaching The Fabric of the Internet and AI",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Get an overview of the The Fabric of the Internet and AI curriculum and resources.\n\n**Suggested Time:** 10 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Get an overview of the The Fabric of the Internet and AI curriculum and resources.\n\n**Suggested Time:** 10 minutes "
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -55,6 +57,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Understand core networks concepts and how the Internet works.\n- Preview activities in the lessons.\n- Explore best practices for teaching The Fabric of the Internet and AI.\n\n**Suggested Time:** 50 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Understand core networks concepts and how the Internet works.\n- Preview activities in the lessons.\n- Explore best practices for teaching The Fabric of the Internet and AI.\n\n**Suggested Time:** 50 minutes "
       },
       "seeding_key": {
         "lesson.key": "lesson-2",

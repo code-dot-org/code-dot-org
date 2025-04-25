@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-20T17:10:40.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Create Version 2\r\n\r\n**First, organize your workspace:**\r\n- Drag out a `play random` block into your workspace, but **do not** connect it under `when run`.\r\n- Take your first backtrack loop and place the whole thing inside the `play random` block floating in your workspace. \r\n\r\n**Then, code Version 2**:\r\n- Create a second backtrack for your GIF. \r\n- When you have something you like, take that code and add it inside the play random block. \r\n- Connect the `play random` block with both sets of backtracks back under `when run`. \r\n- Create a second trigger with a new sound effect to go with your new backtrack. \r\n- Press \"Run\" and practice triggering your sound effect based on which backtrack was chosen. ",
+    "long_instructions": "### Create Version 2\r\n\r\n**Do This**:\r\n- Choose the second mood you described in your Activity Guide for you GIF.\r\n- Create a sequence of sounds that go with that mood and put it underneath your first sequence\r\n  - **Your sounds must last at least 6 measures!**\r\n  - You can click the header of the timeline to \"skip ahead\" in your song to the second backtrack.\r\n- Create a second trigger with a new sound effect to go with your new backtrack. \r\n\r\nWhen you are finished, you should have two backtracks that play sequentially underneath the `when run` block and two `trigger` blocks. Here is an example of what this could look like.\r\n\r\n![](https://images.code.org/3a6477583a3a3dfa7a74d7402e1ad5b4-image-1745528231537.png)",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -134,10 +135,59 @@
       "validationEnabled": false
     },
     "project_template_level_name": "test-music-lab-mini-project-gif-template",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-gif-2_d230067c-5352-4a54-8612-e1e1fd4d5120",
+        "message": "Your code is on the right track - make sure it sounds good before continuing!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:2"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-2_794584ce-913f-4c3a-b4e3-50d37e447fed",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ❌ at least 6 sound blocks\n- ✅ Two trigger blocks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:2"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-2_eea72c48-f4b3-4951-95f3-b7493c185de9",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ✅ at least 6 sound blocks\n- ❌ Two trigger blocks",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:6"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-2_71901673-a9b4-4b35-8bd5-9ed2f8d9e7fc",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ❌ at least 6 sound blocks\n- ❌ Two trigger blocks",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-20T17:10:40.965+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-1\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-1\"},{\"changed_at\":\"2025-03-20 17:23:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:32:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-06 15:44:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-20T17:10:40.965+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-1\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-1\"},{\"changed_at\":\"2025-03-20 17:23:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:32:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-06 15:44:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 20:56:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 20:57:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:41:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

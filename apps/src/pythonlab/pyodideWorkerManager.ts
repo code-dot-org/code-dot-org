@@ -119,9 +119,11 @@ const setUpPyodideWorker = () => {
         writeConsoleMessage(message);
         break;
       case 'run_complete': {
-        writeConsoleMessage(
-          getSystemMessage(pythonlabI18n.programCompleted(), appName)
-        );
+        // Write a blank line to the console if we are not on a neighborhood level (which handles
+        // this for us).
+        if (!outputToNeighborhood) {
+          writeConsoleMessage('');
+        }
         delete callbacks[id];
         onSuccess(event.data);
         break;
@@ -285,15 +287,22 @@ const asyncRun = (() => {
 })();
 
 const restartPyodideIfProgramIsRunning = () => {
+  // Always send a stop message, as some programs will still
+  // look like they are "running" to the user even if they aren't truly running
+  // (for example, the neighborhood). We send via the console manager rather than
+  // the message handler because the neighborhood stops processing messages on stop,
+  // and we want to always show this to the user.
+  const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+  consoleManager?.writeConsoleMessage(
+    getSystemMessage(pythonlabI18n.programStopped(), appName)
+  );
+  consoleManager?.writeConsoleMessage('');
+
   // Only restart if there are pending callbacks, as that means the worker is currently
   // running a program.
   if (Object.keys(callbacks).length > 0) {
     pyodideWorker.terminate();
     pyodideWorker = setUpPyodideWorker();
-
-    writeConsoleMessage(
-      getSystemMessage(pythonlabI18n.programStopped(), appName)
-    );
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .incrementCounter('PythonLab.PyodideRestarted');

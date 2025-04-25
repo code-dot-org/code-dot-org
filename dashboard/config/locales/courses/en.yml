@@ -1478,7 +1478,7 @@ en:
           description_teacher: ''
           version_title: ''
         self-paced-pl-teaching-computer-science-discoveries-music-lab:
-          title: Teaching Programming with Game Lab
+          title: Teaching Programming with Music Lab
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -5492,6 +5492,15 @@ en:
         self-paced-pl-ai-foundations-2025:
           title: Teaching AI Foundations
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: This Professional Learning (PL) unit on AI Foundations will equip you to guide your students in exploring the core principles of how computers and artificial intelligence empower individuals to solve problems, make decisions, and foster creativity. You will gain insights into the student learning journey as they write their own programs in Python, unravel the workings of devices and the Internet, and learn to analyze data to identify patterns and construct narratives. This PL will also focus on how to effectively integrate AI tools into the learning process, facilitate critical discussions around privacy and fairness, and cultivate the essential skills students need to become creators of technology, rather than just consumers. By engaging with this unit, you will be prepared to build a strong foundation in AI and computing for your students, fostering both their understanding and their capacity for innovation.
+          description_teacher: |-
+            AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+            * This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.
+
+            * No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.
+
+            ## Did you know?
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
           version_title: ''

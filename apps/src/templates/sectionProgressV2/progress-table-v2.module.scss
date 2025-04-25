@@ -166,6 +166,14 @@ $level-cell-width: 52;
       margin-inline-start: 8px;
     }
   }
+
+  .downloadCsv {
+    display: flex;
+
+    button {
+      height: 32px;
+    }
+  }
 }
 
 .lesson {
