@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
@@ -18,23 +19,40 @@ const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
   const classes = useMemo(() => {
     const isDuotone = status !== 'pending';
     const names = isDuotone
-      ? classNames(moduleStyles.duotone, 'fa-duotone fa-solid')
+      ? classNames(moduleStyles.duotone, 'fa-duotone fa-regular')
       : 'fa-regular';
     switch (status) {
       case 'passed':
-        return classNames(names, 'fa-check-circle', moduleStyles.green);
+        return classNames(names, 'fa-circle-check', moduleStyles.green);
       case 'failed':
-        return classNames(names, 'fa-times-circle', moduleStyles.red);
+        return classNames(names, 'fa-circle-xmark', moduleStyles.red);
       case 'pending':
         return classNames(names, 'fa-circle', moduleStyles.green);
       case 'caution':
-        return classNames(names, 'fa-minus-circle', moduleStyles.yellow);
+        return classNames(names, 'fa-circle-minus', moduleStyles.yellow);
       case 'error':
-        return classNames(names, 'fa-exclamation-circle', moduleStyles.red);
+        return classNames(names, 'fa-circle-exlamation', moduleStyles.red);
     }
   }, [status]);
 
-  return <i className={classNames(classes, className)} />;
+  // return (
+  //   <FontAwesomeV6Icon
+  //     iconName={'circle-check'}
+  //     iconStyle="regular"
+  //     iconFamily="duotone"
+  //     className={classNames(moduleStyles.duotone, moduleStyles.green)}
+  //   />
+  // );
+  return (
+    <i
+      className={classNames(
+        'fa-duotone fa-circle-check fa-regular',
+        moduleStyles.testColors
+      )}
+    />
+  );
+
+  //return <i className={classNames(classes, className)} />;
 };
 
 export default ValidationStatusIcon;

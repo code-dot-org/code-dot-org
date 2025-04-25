@@ -1,11 +1,13 @@
 @import 'color';
+@import '@code-dot-org/component-library-styles/colors.scss';
 .duotone {
-  --fa-primary-color: white;
-  --fa-secondary-opacity: 1.0;
+  // --fa-primary-color: white;
+  // --fa-secondary-opacity: 1.0;
+  // --fa-primary-opacity: 1.0;
 }
 
 .green {
-  color: $light_affirmative_500;
+  --fa-secondary-color: var(--background-success-primary);
 }
 
 .red {
@@ -14,4 +16,10 @@
 
 .yellow {
   color: $light_caution_700;
+}
+
+.testColors {
+  --fa-secondary-opacity: 1;
+  --fa-primary-color: rgb(225,19,131);
+  --fa-secondary-color: rgb(245,130,31);
 }
