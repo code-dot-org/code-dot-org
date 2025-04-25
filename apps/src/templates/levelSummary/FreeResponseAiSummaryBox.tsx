@@ -75,8 +75,8 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
     <>
       <BodyTwoText>
         <strong>{`${i18n.reasoning()}: `}</strong>
-        {proficiencyCount > proficienceyThreshold
-          ? 'More than 75% of the students demonstrated proficiency in their responses. '
+        {proficiencyCount >= proficienceyThreshold
+          ? '75% or more of the students demonstrated proficiency in their responses. '
           : 'Less than 75% of the students demonstrated proficiency in their responses. '}
         <Link
           type="primary"
