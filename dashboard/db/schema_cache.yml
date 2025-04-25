@@ -3377,6 +3377,23 @@ columns:
     default_function: 
     collation: 
     comment: 
+  levels_skills:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: level_id
+    sql_type_metadata: *10
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: skill_id
+    sql_type_metadata: *10
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
   libraries:
   - *5
   - *54
@@ -8241,6 +8258,7 @@ primary_keys:
   level_sources_multi_types: id
   levels: id
   levels_script_levels: 
+  levels_skills: 
   libraries: id
   lti_courses: id
   lti_deployments: id
@@ -8452,6 +8470,7 @@ data_sources:
   level_sources_multi_types: true
   levels: true
   levels_script_levels: true
+  levels_skills: true
   libraries: true
   lti_courses: true
   lti_deployments: true
@@ -10451,6 +10470,35 @@ indexes:
     unique: false
     columns:
     - script_level_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  levels_skills:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: levels_skills
+    name: index_levels_skills_on_level_id_and_skill_id
+    unique: false
+    columns:
+    - level_id
+    - skill_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: levels_skills
+    name: index_levels_skills_on_skill_id_and_level_id
+    unique: false
+    columns:
+    - skill_id
+    - level_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -14364,7 +14412,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250421191829
+version: 20250423171750
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

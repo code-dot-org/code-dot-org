@@ -27,6 +27,13 @@
   overflow: hidden;
   flex: 1;
   grid-column: span 2;
+
+  &:focus {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+    z-index: 1;
+  }
 }
 
 .workplaceEditorWrapper.withFileBrowser {

@@ -10,7 +10,11 @@ import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ACCEPTED_FILE_TYPES, MAX_NUM_FILES} from '../../constants';
+import {
+  ACCEPTED_FILE_TYPES,
+  MAX_FILE_SIZE_MB,
+  MAX_NUM_FILES,
+} from '../../constants';
 import aichatI18n from '../../locale';
 import {
   addStagedFile,
@@ -66,6 +70,17 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
     let sizeLimitExceededCount = 0;
     let uploadFailureCount = 0;
     for (const [key, filename, file] of allowedFiles) {
+      if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
+        sizeLimitExceededCount += 1;
+        dispatch(
+          stagedFileUploadFinished({
+            key,
+            status: 'sizeLimitExceeded',
+          })
+        );
+        continue; // Skip uploading this file if it exceeds the size limit
+      }
+
       try {
         await HttpClient.put(
           `/v3/assets/${currentChannelId}/${encodeURIComponent(filename)}`,
