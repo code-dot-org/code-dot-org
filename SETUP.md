@@ -264,6 +264,76 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
 1. Return to the [overview](#overview) and continue setup.
 
+### Fedora
+
+The following procedure was initially drafted on Fedora 42 Workstation.
+
+#### 1. Install Required System Packages
+
+```sh
+sudo dnf update -y
+
+sudo dnf install -y git mysql-server mysql mysql-devel \
+libxslt libxslt-devel openssl openssl-devel zlib-devel \
+ImageMagick ImageMagick-devel java-11-openjdk-headless \
+cairo-devel libjpeg-turbo-devel pango-devel giflib-devel \
+curl pdftk enscript make gcc gcc-c++ redhat-rpm-config \
+redis rbenv chromium parallel python3-pip
+```
+
+Leave MySQL root password blank during setup prompts if asked.
+
+Fedora includes pdftk via snap or flatpak if unavailable in dnf.
+
+#### 2. Setup Shell Configuration for ~/.bashrc
+
+Ensure your shell sources .bashrc. Add this to ~/.bash_profile or ~/.profile:
+
+```sh
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi
+```
+
+#### 3. Install git LFS
+
+```sh
+sudo dnf install git-lfs
+
+cd ~
+git lfs install
+```
+
+#### 4. Install Node JS via NVM
+
+Install NVM [per the official docs](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating).
+
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+```
+
+Then from within the project root, where you'll find an ".nvmrc" file, install the appropriate version of node.
+
+```sh
+nvm install # or `nvm use`
+```
+
+#### 5. Install Ruby
+
+Install Ruby with Rbenv per the [instructions published by the Fedora Project](https://developer.fedoraproject.org/tech/languages/ruby/ruby-installation.html). First, install dependencies.
+
+```sh
+sudo dnf install rbenv
+git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+```
+
+Then, from the project root, run the following to install the version specified in `.ruby-version`
+
+```
+rbenv install
+```
+
+
 ### Windows
 
 Windows Subsystem for Linux (WSL) allows you to run a GNU/Linux environment directly on Windows without the overhead of a virtual machine. This is the easiest way to get Ruby and other prerequisites running on Windows.
