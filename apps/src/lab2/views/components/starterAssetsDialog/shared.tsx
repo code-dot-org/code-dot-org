@@ -2,18 +2,14 @@ import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
-import {isNetworkError} from '@cdo/apps/util/HttpClient';
-
 import styles from './starter-assets-dialog.module.scss';
 
-const ErrorAlert: React.FC<{currentError?: Error}> = ({currentError}) => (
+const ErrorAlert: React.FC<{currentErrorMessage: string}> = ({
+  currentErrorMessage,
+}) => (
   <div className={styles.alertContainer}>
     <Alert
-      text={
-        isNetworkError(currentError) && currentError.getDetails().status === 413
-          ? 'Uploaded images must be less than 20MB. Please try a smaller image.'
-          : 'Something went wrong. Please try again!'
-      }
+      text={currentErrorMessage}
       type="danger"
       size="xs"
       className={styles.alert}

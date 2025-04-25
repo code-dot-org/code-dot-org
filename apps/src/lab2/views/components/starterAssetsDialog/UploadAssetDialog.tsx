@@ -2,6 +2,7 @@ import Modal from '@code-dot-org/component-library/modal';
 import React, {ChangeEvent, useState} from 'react';
 
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
+import {isNetworkError} from '@cdo/apps/util/HttpClient';
 
 import {deleteFile, uploadFile} from './api';
 import FileIcon from './FileIcon';
@@ -35,7 +36,7 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
   loading,
   levelName,
   handleError,
-  currentError,
+  currentErrorMessage,
   clearError,
 }) => {
   const [requestInProgress, setRequestInProgress] = useState<
@@ -54,7 +55,12 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
       const asset = await uploadFile(files[0], levelName);
       addAsset(asset);
     } catch (error) {
-      handleError(error as Error);
+      let userErrorMessage;
+      if (isNetworkError(error) && error.getDetails().status === 413) {
+        userErrorMessage =
+          'Images must be less than 20 MB, and PDFs less than 5 MB. Please try a smaller asset.';
+      }
+      handleError(error as Error, userErrorMessage);
     }
     setRequestInProgress(undefined);
   };
@@ -121,7 +127,9 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
       secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
       customContent={loading ? <Loading /> : <ModalBody />}
       customBottomContent={
-        currentError && <ErrorAlert currentError={currentError} />
+        currentErrorMessage && (
+          <ErrorAlert currentErrorMessage={currentErrorMessage} />
+        )
       }
     />
   );
