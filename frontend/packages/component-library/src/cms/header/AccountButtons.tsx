@@ -27,8 +27,8 @@ export interface AccountButtonsProps extends HTMLAttributes<HTMLElement> {
     /** Go to Dashboard button href */
     href: string;
   };
-  /** Is user logged in */
-  isSignedIn: boolean;
+  /** Render state for if a user is signed in */
+  signInState: 'loading' | 'signedIn' | 'signedOut' | 'error';
   /** Is button in Hamburger Menu */
   isInHamburger: boolean;
 }
@@ -37,9 +37,21 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
   signIn,
   createAccount,
   goToDashboard,
-  isSignedIn = false,
+  signInState,
   isInHamburger,
 }) => {
+  const renderAccountButtons = () => {
+    switch (signInState) {
+      case 'loading':
+        return <span className={moduleStyles.loading}>Loading...</span>;
+      case 'signedIn':
+        return renderDashboardButton();
+      case 'signedOut':
+      case 'error':
+        return renderSignInButtons();
+    }
+  };
+
   const renderDashboardButton = () => (
     <LinkButton
       text={goToDashboard.label || 'Go to Dashboard'}
@@ -101,10 +113,9 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
     );
   };
 
+  console.log(signInState);
   return (
-    <div className={moduleStyles.accountLinks}>
-      {isSignedIn ? renderDashboardButton() : renderSignInButtons()}
-    </div>
+    <div className={moduleStyles.accountLinks}>{renderAccountButtons()}</div>
   );
 };
 

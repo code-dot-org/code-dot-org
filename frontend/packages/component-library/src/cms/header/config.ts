@@ -157,7 +157,6 @@ export function getDefaultHeaderProps({
         href: `${studioUrl}/home`,
       },
     },
-    isSignedIn: false,
     helpButtonLabel: {
       open: 'Open Help menu',
       close: 'Close Help menu',

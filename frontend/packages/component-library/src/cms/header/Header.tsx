@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {HTMLAttributes} from 'react';
+import {HTMLAttributes, useEffect, useState} from 'react';
 
 import {Image, ImageProps} from '@/image';
 
@@ -54,8 +54,6 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
     /** Go to Dashboard button */
     goToDashboard: AccountButtonsProps['goToDashboard'];
   };
-  /** Is user logged in */
-  isSignedIn: AccountButtonsProps['isSignedIn'];
   /** Help menu label */
   helpButtonLabel: HelpMenuProps['helpButtonLabel'];
   /** Help menu links */
@@ -66,6 +64,21 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   hamburgerLinks: HamburgerMenuProps['hamburgerLinks'];
   /** Header custom class name */
   className?: string;
+}
+
+function getUserSignedInStatus(studioBaseUrl: string = '') {
+  return fetch(`${studioBaseUrl}/api/v1/users/signed_in`, {
+    credentials: 'include',
+  })
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error('Network response was not ok');
+    })
+    .catch(error => {
+      console.error('There was a problem with the fetch operation:', error);
+    });
 }
 
 /**
@@ -91,57 +104,76 @@ const Header: React.FC<HeaderProps> = ({
   projectsButtonAriaLabel,
   projectsLinks,
   accountLinks,
-  isSignedIn = false,
   helpButtonLabel,
   helpLinks,
   hamburgerButtonLabel,
   hamburgerLinks,
   className,
   ...HTMLAttributes
-}) => (
-  <header
-    {...HTMLAttributes}
-    className={classNames(moduleStyles.headerNavigation, className)}
-  >
-    <nav
-      className={moduleStyles.mainLinksWrapper}
-      aria-label={navLabel.main || 'Main navigation'}
-    >
-      <a
-        href={homeLink.href}
-        className={moduleStyles.homeLink}
-        aria-label={homeLink.ariaLabel}
-      >
-        <Image src={logo.src} alt={logo.altText} loading={'eager'} />
-      </a>
-      <MainLinks mainLinksLabel={mainLinksLabel} mainLinks={mainLinks} />
-    </nav>
+}) => {
+  const [renderState, setRenderState] = useState<
+    'loading' | 'signedIn' | 'signedOut' | 'error'
+  >('loading');
 
-    <nav
-      className={moduleStyles.buttonLinks}
-      aria-label={navLabel.secondary || 'Secondary navigation'}
+  useEffect(() => {
+    getUserSignedInStatus('http://localhost-studio.code.org:3000')
+      .then(data => {
+        if (data) {
+          const renderState = data.is_signed_in ? 'signedIn' : 'signedOut';
+          setRenderState(renderState);
+        }
+      })
+      .catch(error => {
+        console.error('Error fetching user signed in status:', error);
+        setRenderState('error');
+      });
+  }, []);
+
+  return (
+    <header
+      {...HTMLAttributes}
+      className={classNames(moduleStyles.headerNavigation, className)}
     >
-      <ProjectsMenu
-        projectsLinks={projectsLinks}
-        projectsButtonLabel={projectsButtonLabel}
-        projectsButtonAriaLabel={projectsButtonAriaLabel}
-      />
-      <AccountButtons
-        signIn={accountLinks.signIn}
-        createAccount={accountLinks.createAccount}
-        goToDashboard={accountLinks.goToDashboard}
-        isSignedIn={isSignedIn}
-        isInHamburger={false}
-      />
-      <HelpMenu helpButtonLabel={helpButtonLabel} helpLinks={helpLinks} />
-      <HamburgerMenu
-        hamburgerButtonLabel={hamburgerButtonLabel}
-        hamburgerLinks={hamburgerLinks}
-        accountLinks={accountLinks}
-        isSignedIn={isSignedIn}
-      />
-    </nav>
-  </header>
-);
+      <nav
+        className={moduleStyles.mainLinksWrapper}
+        aria-label={navLabel.main || 'Main navigation'}
+      >
+        <a
+          href={homeLink.href}
+          className={moduleStyles.homeLink}
+          aria-label={homeLink.ariaLabel}
+        >
+          <Image src={logo.src} alt={logo.altText} loading={'eager'} />
+        </a>
+        <MainLinks mainLinksLabel={mainLinksLabel} mainLinks={mainLinks} />
+      </nav>
+
+      <nav
+        className={moduleStyles.buttonLinks}
+        aria-label={navLabel.secondary || 'Secondary navigation'}
+      >
+        <ProjectsMenu
+          projectsLinks={projectsLinks}
+          projectsButtonLabel={projectsButtonLabel}
+          projectsButtonAriaLabel={projectsButtonAriaLabel}
+        />
+        <AccountButtons
+          signIn={accountLinks.signIn}
+          createAccount={accountLinks.createAccount}
+          goToDashboard={accountLinks.goToDashboard}
+          isInHamburger={false}
+          signInState={renderState}
+        />
+        <HelpMenu helpButtonLabel={helpButtonLabel} helpLinks={helpLinks} />
+        <HamburgerMenu
+          hamburgerButtonLabel={hamburgerButtonLabel}
+          hamburgerLinks={hamburgerLinks}
+          accountLinks={accountLinks}
+          signInState={renderState}
+        />
+      </nav>
+    </header>
+  );
+};
 
 export default Header;
