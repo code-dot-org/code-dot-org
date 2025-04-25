@@ -110,7 +110,7 @@ end
 # There are several fonts we sometimes load associated with Font Awesome, but Font Awesome 6 at the "solid" weight (900) is our default,
 # so we wait for that one to load at least.
 def font_awesome_loaded?
-  @browser.execute_script('return [...document.fonts].find(font => font.family === "Font Awesome 6" && font.weight === 900).status === "loaded"') == true
+  @browser.execute_script('return [...document.fonts].find(font => font.family === "Font Awesome 6 Pro" && font.weight === "900")?.status === "loaded"') == true
 end
 
 def fonts_loaded?
