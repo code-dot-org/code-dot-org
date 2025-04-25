@@ -114,7 +114,6 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
     );
   };
 
-  console.log(signInState);
   return (
     <div className={moduleStyles.accountLinks}>{renderAccountButtons()}</div>
   );
