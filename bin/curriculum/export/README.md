@@ -121,3 +121,94 @@ aws s3 cp <local-file-2> s3://cdo-data-sharing-internal/unloaded-unit-progress/c
 ```
 then use `csd3-2023-1K` as the unit name for subsequent steps. 
 * To use a dataset that's already been truncated, look at `s3://cdo-data-sharing-internal/unloaded-unit-progress/csd3-2023-30K/progress/`. this directory should contain 3 files with 10K lines each.
+
+## Understanding the data
+
+Here is the layout of the data in a typical dataset:
+```
+$ aws s3 ls --recursive s3://cdo-data-sharing/filtered-unit-progress/csd3-2024-ending-2025-04-22-rubrics/
+evals/csd3-2024_ai_evals_000.jsonl
+evals/csd3-2024_evidence_levels_000.jsonl
+evals/csd3-2024_teacher_evals_000.jsonl
+progress/csd3-2024_0000_part_00.jsonl
+progress/csd3-2024_0001_part_00.jsonl
+...
+progress/csd3-2024_0011_part_00.jsonl
+```
+
+### Progress
+
+The files in the `progress` directory includes student source code, except where
+PII was detected. The rows are split into multiple files and are not bucketed or
+sorted in any order. Here are some of the key fields:
+* `hashed_user_id`: anonymized identifier for the student
+* `level_id`: the level id for the level the student was working on
+* `script_id`: the script id for the script (a.k.a. unit) the student was working on
+* `user_level_id`: unique identifier for a row in this dataset representing a
+  student's work on this level within this script / unit.
+* `source`: the source code the student wrote, unless PII score was above a threshold of 0.7
+* `source_pii_score`: the PII score for the source code
+* `source_pii_entities`: metadata regarding the pii entities detected in the source code
+* `student_answer`: in some cases the student's answer to a question will appear
+  here instead of in `source`. this can be an answer to a free response
+  question, or it can in some cases be source code. the location of the
+  student's work will be consistent for a given level.
+* `student_answer_pii_score`: see `source_pii_score` 
+* `student_answer_pii_entities`: see `source_pii_entities`
+
+### Evaluations
+
+There are three files that can appear in the `evals` directory.
+
+#### AI Evaluations
+
+AI evaluations of student work, as well as any teacher feedback regarding the
+accuracy or quality of the AI response. key fields:
+* `user_level_id`: the join key to join against the `progress` file.
+  alternately, `[hashed_user_id, script_id, level_id]` can be used.
+* `learning_goal_text` and `learning_goal_tips` describe what the student is 
+  expected to do on this level to achieve the learning goal (together with 
+  "evidence levels" below)
+* `project_version` the version of the project which was evaluated. if the
+  dataset includes past versions, this can be matched against the `versionId`
+  field in the `source_versions` array in the `progress` file.
+* `ai_understanding`: the understanding level assigned by the AI. this is a number
+  between 0 and 3, where 0 means "no evidence" and 3 means "extensive evidence".
+  see "evidence levels" below for a definition of what each level means for the
+  particular learning goal.
+* `ai_confidence_exact_match`: our confidence level that the `ai_understanding` is correct on the 0-3 scale. 
+* `ai_confidence_pass_fail`: our confidence level that the `ai_understanding` is
+  correct on a pass-fail basis, where scores of 0 or 1 are failing and 2 or 3 are
+  passing. e.g. if the `ai_understanding` is 2, then this field indicates our
+  confidence that either 2 or 3 is correct.
+* `ai_feedback`: if present, indicates whether the teacher agreed with the AI assessment.
+* `ai_feedback_*`: other fields containing more details on what the teacher said about the AI assessment.
+
+#### Teacher Evaluations
+
+Teacher evaluations of student work. key fields:
+* `user_level_id`: the join key to join against the `progress` file. alternately, 
+  `[hashed_user_id, script_id, level_id]` can be used.
+* `understanding`: the understanding level assigned by the teacher. see "evidence levels" below.
+* `teacher_feedback`: any free text the teacher included to justify or elaborate upon their assessment.
+* `project_version` the version of the project which was evaluated (see above).
+
+#### Evidence Levels
+
+Metadata for each level describing what is required to achieve each evidence
+level 0-3 for each learning goal on the rubric for the specified level. Note
+that it will generally be necessary to consider all rows for a given script_id +
+level_id + learning goal, because the teacher or AI will typically look at the
+requirements for all evidence levels for that learning goal before deciding what
+understanding level to assign. while it might be tempting to just look at the
+evidence level which matches the understanding level assigned by the teacher or
+AI, this would likely leave out key context.
+
+key fields: 
+* `learning_goal_id`: the join key to join against the other datasets.
+  alternately, `[script_id, level_id, learning_goal_position]` can be used.
+* `learning_goal_description`: same as `learning_goal_text` in the other files.
+* `learning_goal_tips`: see above
+* `understanding`: the understanding level described by this row.
+* `teacher_description`: teacher-facing text describing what the student must do
+  to achieve this `understanding` level.
