@@ -1,9 +1,9 @@
 @import 'color';
 @import '@code-dot-org/component-library-styles/colors.scss';
 .duotone {
-  // --fa-primary-color: white;
-  // --fa-secondary-opacity: 1.0;
-  // --fa-primary-opacity: 1.0;
+  --fa-primary-color: var(--text-neutral-primary);
+  --fa-secondary-opacity: 1.0;
+  --fa-primary-opacity: 1.0;
 }
 
 .green {
@@ -11,15 +11,13 @@
 }
 
 .red {
-  color: $light_negative_500;
+  color: var(--background-error-primary);
 }
 
 .yellow {
-  color: $light_caution_700;
+  color: var(--background-warning-primary);
 }
 
-.testColors {
-  --fa-secondary-opacity: 1;
-  --fa-primary-color: rgb(225,19,131);
-  --fa-secondary-color: rgb(245,130,31);
+.icon {
+  font-size: 16px;
 }

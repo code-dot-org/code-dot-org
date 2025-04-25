@@ -1,4 +1,3 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
@@ -35,24 +34,7 @@ const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
     }
   }, [status]);
 
-  // return (
-  //   <FontAwesomeV6Icon
-  //     iconName={'circle-check'}
-  //     iconStyle="regular"
-  //     iconFamily="duotone"
-  //     className={classNames(moduleStyles.duotone, moduleStyles.green)}
-  //   />
-  // );
-  return (
-    <i
-      className={classNames(
-        'fa-duotone fa-circle-check fa-regular',
-        moduleStyles.testColors
-      )}
-    />
-  );
-
-  //return <i className={classNames(classes, className)} />;
+  return <i className={classNames(classes, className, moduleStyles.icon)} />;
 };
 
 export default ValidationStatusIcon;
