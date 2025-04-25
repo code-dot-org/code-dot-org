@@ -13,8 +13,8 @@ Feature: Header navigation bar - Signed out
     And element "#header-districts" contains text "Districts"
     And I see "#header-stats"
     And element "#header-stats" contains text "Stats"
-    And I see "#header-help"
-    And element "#header-help" contains text "Help Us"
+    And I see "#header-donate"
+    And element "#header-donate" contains text "Donate"
     And I see "#header-about"
     And element "#header-about" contains text "About"
     And I see "#header-incubator"
@@ -32,7 +32,7 @@ Feature: Header navigation bar - Signed out
     And I see "#header-districts"
     And element "#header-districts" contains text "Districts"
     And element "#header-stats" is not visible
-    And element "#header-help" is not visible
+    And element "#header-donate" is not visible
     And element "#header-about" is not visible
     And element "#header-incubator" is not visible
     Then I maximize the browser window
@@ -51,8 +51,8 @@ Feature: Header navigation bar - Signed out
     And element "#header-districts" has "es" text from key "nav.header.districts"
     And I see "#header-stats"
     And element "#header-stats" has "es" text from key "nav.header.stats"
-    And I see "#header-help"
-    And element "#header-help" has "es" text from key "nav.header.help_us"
+    And I see "#header-donate"
+    And element "#header-donate" has "es" text from key "nav.header.donate"
     And I see "#header-incubator"
     And element "#header-incubator" has "es" text from key "nav.header.incubator"
     And I see "#header-about"
@@ -76,8 +76,8 @@ Feature: Header navigation bar - Signed out
     Then check that I am on "http://code.org/administrators"
     And I press "header-stats" to load a new page
     Then check that I am on "http://code.org/promote"
-    And I press "header-help" to load a new page
-    Then check that I am on "http://code.org/help"
+    And I press "header-donate" to load a new page
+    Then check that I am on "http://code.org/donate"
     And I press "header-incubator" to load a new page
     Then check that I am on "http://studio.code.org/incubator"
     And I press "header-about" to load a new page

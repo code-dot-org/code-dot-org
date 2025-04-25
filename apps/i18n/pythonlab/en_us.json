@@ -12,13 +12,9 @@
   "moduleNotSupported": "ModuleNotFoundError: The module {module} is not supported in Python Lab.",
   "neighborhood": "Neighborhood",
   "neighborhoodDescription": "A project that uses the Neighborhood.",
-  "programCompleted": "Program completed.",
   "programStopped": "Program stopped.",
   "projectPickerTitle": "Select an output type",
   "projectPickerReplaceRestoreInfo": "You can restore your old project using Version History.",
   "projectPickerReplaceWarning": "This will clear your code and start over with the new output type.",
-  "runningLevelTests": "Running level tests...",
-  "runningProgram": "Running program...",
-  "runningProjectTests": "Running your project's tests...",
   "switchProjectTypeTitle": "Switch your output type"
 }

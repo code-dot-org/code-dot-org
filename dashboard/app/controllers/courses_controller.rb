@@ -2,7 +2,7 @@ class CoursesController < ApplicationController
   include VersionRedirectOverrider
   include TeacherDashboardUtils
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :vocab, :resources, :code, :standards]
+  before_action :require_levelbuilder_mode, except: [:index, :show, :vocab, :resources, :code, :standards]
   before_action :authenticate_user!, except: [:index, :show, :vocab, :resources, :code, :standards]
   check_authorization except: [:index]
   before_action :set_unit_group, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :get_rollup_resources]
@@ -108,7 +108,7 @@ class CoursesController < ApplicationController
     raise ActiveRecord::ReadOnlyRecord if @unit_group.try(:plc_course)
     @unit_group_data = {
       course_summary: @unit_group.summarize(@current_user, for_edit: true),
-      script_names: Unit.all.map(&:name),
+      script_names: Unit.all.select {|unit| unit.is_course? == false && unit.unit_groups.none?}.map(&:name),
       course_families: UnitGroup.family_names,
       version_year_options: UnitGroup.get_version_year_options,
       missing_required_device_compatibilities: @unit_group&.course_version&.course_offering&.missing_required_device_compatibility?

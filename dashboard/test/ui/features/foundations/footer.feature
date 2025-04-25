@@ -16,7 +16,7 @@ Feature: Checking the footer appearance
 
     Then I close my eyes
 
-  @eyes @skip
+  @eyes
   Scenario: Desktop Minecraft puzzle using dark small footer
     When I open my eyes to test "Desktop Minecraft puzzle using dark small footer"
     Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"

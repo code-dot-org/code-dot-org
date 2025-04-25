@@ -2,13 +2,11 @@
   "name": "ui-test-course-2017",
   "script_names": [
     "ui-test-script-in-course-2017",
-    "ui-test-script-2-in-course-2017",
-    "ui-test-shared-unit"
+    "ui-test-script-2-in-course-2017"
   ],
   "original_script_names": [
     "ui-test-script-in-course-2017",
-    "ui-test-script-2-in-course-2017",
-    "ui-test-shared-unit"
+    "ui-test-script-2-in-course-2017"
   ],
   "published_state": "stable",
   "instruction_type": "teacher_led",

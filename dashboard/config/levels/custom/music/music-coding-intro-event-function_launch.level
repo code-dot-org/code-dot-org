@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-18T19:57:06.000Z",
   "level_num": "custom",
@@ -10,7 +11,7 @@
     "hint_prompt_attempts_threshold": "1",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "packId": "tinashe_gravity",
@@ -355,6 +356,16 @@
           },
           {
             "kind": "block",
+            "type": "triggered_at_simple2",
+            "id": "triggered_at_simple2",
+            "fields": {
+              "trigger": "<field name=\"trigger\">trigger3</field>",
+              "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
             "type": "play_sounds_together",
             "id": "play_sounds_together",
             "extraState": {
@@ -364,8 +375,17 @@
           },
           {
             "kind": "block",
-            "type": "play_sounds_together",
-            "id": "]=*e_UkZp0u_8*9XF0d$",
+            "type": "play_sounds_sequential",
+            "id": "play_sounds_sequential",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "enabled": true
+          },
+          {
+            "kind": "block",
+            "type": "play_sounds_random",
+            "id": "play_sounds_random",
             "extraState": {
               "disableNextConnection": false
             },
@@ -382,22 +402,12 @@
               "times": 1
             },
             "enabled": true
-          },
-          {
-            "kind": "block",
-            "type": "triggered_at_simple2",
-            "id": "triggered_at_simple2",
-            "fields": {
-              "trigger": "<field name=\"trigger\">trigger1</field>",
-              "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
-            },
-            "enabled": true
           }
         ],
         "kind": "flyoutToolbox"
       }
     },
-    "long_instructions": "### <i class=\"fa-solid fa-gamepad-modern\"></i> Code the mood! \r\n**Buttons 1 & 2 set different moods for levels in a game or parts of a story.**\r\n\r\n1. Press Run then try the first two trigger events (press 1 or 2).\r\n\r\n- **Code the third event trigger.** What mood will you set? \r\n\r\n\t- Winning or loosing the game?\r\n    - A new battle?\r\n    - A fun fast-paced level? \r\n",
+    "long_instructions": "### <i class=\"fa-duotone fa-solid fa-masks-theater\"></i> Sound is also a feeling. \r\n**Buttons 1 & 2 create different feelings for levels in a game.**\r\n\r\n1. Try it first. Press Run then press 1 or 2 to trigger the sounds.\r\n\r\n- **Next, code the third event trigger.** What feeling will you set? \r\n\r\n\t- Celebrating winning the game?\r\n    - An intense new battle?\r\n    - A fun fast-paced level? \r\n",
     "validations": [
       {
         "key": "music-coding-intro-event-function_6ac8d0df-d8f7-489a-9f29-b79b2e8fd1bc",
@@ -432,8 +442,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:06.577+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function\\\"\"],\"cloned_from\":\"music-coding-intro-event-function\"},{\"changed_at\":\"2025-04-23 16:09:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:11:24 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:12:53 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:14:05 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:18:26 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:24:38 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:03:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:09:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:11:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:17:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:17:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:18:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:06.577+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function\\\"\"],\"cloned_from\":\"music-coding-intro-event-function\"},{\"changed_at\":\"2025-04-23 16:09:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:11:24 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:12:53 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:14:05 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:18:26 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:24:38 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:03:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:09:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:11:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:17:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:17:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:18:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:10:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:16:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:33:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 17:11:43 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

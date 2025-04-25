@@ -76,15 +76,6 @@ class CourseVersion < ApplicationRecord
   delegate :link, to: :content_root, allow_nil: false
   delegate :localized_assignment_family_title, to: :content_root, allow_nil: false
 
-  before_destroy :ensure_no_resources
-
-  def ensure_no_resources
-    if resources.any? || vocabularies.any? || reference_guides.any?
-      errors.add(:base, "Cannot delete CourseVersion with resources or vocabularies")
-      throw :abort
-    end
-  end
-
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #

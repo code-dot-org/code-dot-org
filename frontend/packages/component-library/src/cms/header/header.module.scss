@@ -6,7 +6,9 @@
 $desktop-breakpoint: 1268px;
 $tablet-breakpoint: 1023px;
 $mobile-breakpoint: 425px;
-$box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
+$box-shadow:
+  0px 4px 6px -1px rgb(0 0 0 / 0.1),
+  0px 2px 4px -1px rgb(0 0 0 / 0.06);
 
 // Header common styles
 .headerNavigation {
@@ -16,6 +18,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
   display: flex;
   justify-content: space-between;
   z-index: variables.$zindex-fixed;
+  box-shadow: $box-shadow;
 }
 
 // Main links styles

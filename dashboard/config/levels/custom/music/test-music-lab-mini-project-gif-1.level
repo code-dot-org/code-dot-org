@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-03-19T21:05:43.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "### Create Version 1\r\n\r\n**Do This:**\r\n- Choose one of the moods you described in your Activity Guide for you GIF. \r\n- Create a sequence of sounds that go with that mood and put it under `when run`.\r\n- Use `1 triggered immediately` to code one sound effect that goes with your GIF. ",
+    "long_instructions": "### Create Version 1\r\n\r\n**Do This:**\r\n- Choose one of the moods you described in your Activity Guide for you GIF.\r\n- Create a sequence of sounds that go with that mood and put it under `when run`. **Your sounds must last at least 6 measures!**\r\n- Use `1 triggered immediately` to code one sound effect that goes with your GIF.\r\n\r\nWhen you are finished, you should have one backtrack underneath the `when run` block and a `trigger` block with a sound effect. Here is an example of what this could look like\r\n\r\n![](https://images.code.org/38cbdf49784908ebdb36e8f93456cfea-image-1745527719822.png)",
     "offer_browser_tts": "false",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -134,10 +135,59 @@
       "validationEnabled": false
     },
     "project_template_level_name": "test-music-lab-mini-project-gif-template",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "validations": [
+      {
+        "key": "test-music-lab-mini-project-gif-1_5b5c757a-1cc6-4602-8b01-a948967df1ac",
+        "message": "Your code is on the right track - make sure it sounds good before continuing!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:1"
+          },
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:3"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-1_224bda64-47ba-4bf8-b4b4-6eeddffb5060",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ❌ at least 3 sound blocks\n- ✅ A trigger block",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "triggered_at_simple2:1"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-1_dafe62f1-d285-4831-a0dc-8518e7b477b0",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ✅ at least 3 sound blocks\n- ❌ A trigger block",
+        "next": false,
+        "conditions": [
+          {
+            "name": "block_count_by_type",
+            "value": "play_sound_at_current_location_simple2:3"
+          }
+        ]
+      },
+      {
+        "key": "test-music-lab-mini-project-gif-1_470f0fff-6438-4223-a26a-9cae6fad4d1a",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot is looking for...\n\n- ❌ at least 3 sound blocks\n- ❌ A trigger block",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-20 17:06:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 17:10:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:30:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:33:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-06 15:43:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-20 17:06:23 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 17:10:25 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:30:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:33:52 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-06 15:43:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 20:48:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:00:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:39:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:47:10 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

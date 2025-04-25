@@ -11,7 +11,7 @@ markdown <<MARKDOWN
 
 #### When you're just starting out with coding, it's easy to write the same lines of code over and over. For example, imagine you’re making a birthday program that prints a greeting for three friends:
 
-<img src="https://images.code.org/509ee403d4b4a39439a3248a068054bc-image-1745420914259.png" alt="design process graph of the cycle" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+<img src="https://images.code.org/509ee403d4b4a39439a3248a068054bc-image-1745420914259.png" alt="Python code printing Happy Birthday to 3 different people" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
 
 
 #### That’s a lot of repeating! It works, but what if you wanted to change the message? You’d have to update every section by hand.
@@ -24,7 +24,7 @@ markdown <<MARKDOWN
 
 #### Here's how that birthday example looks using a function: 
 
-<img src="https://images.code.org/4bcfc9203dd932bd5393016a5e8a27fb-image-1745421696182.png" alt="design process graph of the cycle" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
+<img src="https://images.code.org/4bcfc9203dd932bd5393016a5e8a27fb-image-1745421696182.png" alt="Happy birthday Python code condensed with a function" width="350px" style="display: block; margin-left: auto; margin-right: auto; border-radius:10px;">
 
 #### Much cleaner, right?
 

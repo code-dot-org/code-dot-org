@@ -151,7 +151,9 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         data-theme="Dark"
       >
         <div className={moduleStyles.header}>
-          <Heading6>{commonI18n.settings()}</Heading6>
+          <Heading6 className={moduleStyles.heading}>
+            {commonI18n.settings()}
+          </Heading6>
           <CloseButton
             onClick={closeDropdown}
             aria-label={codebridgeI18n.closeSettings()}
@@ -203,12 +205,14 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             size="s"
             onClick={closeDropdown}
             color="black"
+            className={moduleStyles.footerButton}
           />
           <Button
             text={commonI18n.save()}
             type="primary"
             size="s"
             onClick={onSave}
+            className={moduleStyles.footerButton}
           />
         </div>
       </div>
