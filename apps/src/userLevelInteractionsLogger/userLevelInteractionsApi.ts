@@ -8,6 +8,7 @@ export async function logUserLevelInteraction(
   interactionData: UserLevelInteraction
 ) {
   try {
+    console.log('Logging User Level interaction:', interactionData);
     const response = await fetch('/user_level_interactions', {
       method: 'POST',
       headers: {
