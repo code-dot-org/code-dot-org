@@ -28,7 +28,7 @@ export interface AccountButtonsProps extends HTMLAttributes<HTMLElement> {
     href: string;
   };
   /** Is user logged in */
-  isLoggedIn: boolean;
+  isSignedIn: boolean;
   /** Is button in Hamburger Menu */
   isInHamburger: boolean;
 }
@@ -37,7 +37,7 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
   signIn,
   createAccount,
   goToDashboard,
-  isLoggedIn = false,
+  isSignedIn = false,
   isInHamburger,
 }) => {
   const renderDashboardButton = () => (
@@ -103,7 +103,7 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
 
   return (
     <div className={moduleStyles.accountLinks}>
-      {isLoggedIn ? renderDashboardButton() : renderSignInButtons()}
+      {isSignedIn ? renderDashboardButton() : renderSignInButtons()}
     </div>
   );
 };

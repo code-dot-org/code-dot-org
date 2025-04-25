@@ -55,7 +55,7 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
     goToDashboard: AccountButtonsProps['goToDashboard'];
   };
   /** Is user logged in */
-  isLoggedIn: AccountButtonsProps['isLoggedIn'];
+  isSignedIn: AccountButtonsProps['isSignedIn'];
   /** Help menu label */
   helpButtonLabel: HelpMenuProps['helpButtonLabel'];
   /** Help menu links */
@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProps> = ({
   projectsButtonAriaLabel,
   projectsLinks,
   accountLinks,
-  isLoggedIn = false,
+  isSignedIn = false,
   helpButtonLabel,
   helpLinks,
   hamburgerButtonLabel,
@@ -130,7 +130,7 @@ const Header: React.FC<HeaderProps> = ({
         signIn={accountLinks.signIn}
         createAccount={accountLinks.createAccount}
         goToDashboard={accountLinks.goToDashboard}
-        isLoggedIn={isLoggedIn}
+        isSignedIn={isSignedIn}
         isInHamburger={false}
       />
       <HelpMenu helpButtonLabel={helpButtonLabel} helpLinks={helpLinks} />
@@ -138,7 +138,7 @@ const Header: React.FC<HeaderProps> = ({
         hamburgerButtonLabel={hamburgerButtonLabel}
         hamburgerLinks={hamburgerLinks}
         accountLinks={accountLinks}
-        isLoggedIn={isLoggedIn}
+        isSignedIn={isSignedIn}
       />
     </nav>
   </header>

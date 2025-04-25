@@ -96,7 +96,7 @@ describe('Header Component', () => {
   });
 
   it('renders the account buttons correctly when user is logged in', () => {
-    render(<Header {...defaultProps} isLoggedIn={true} />);
+    render(<Header {...defaultProps} isSignedIn={true} />);
 
     // check that Sign In button is not rendered
     const signInButton = screen.queryByText('Sign In');

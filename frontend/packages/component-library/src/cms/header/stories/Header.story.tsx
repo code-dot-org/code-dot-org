@@ -128,7 +128,7 @@ export const DefaultLoggedOut: Story = {
 export const LoggedIn: Story = {
   args: {
     ...defaultArgs,
-    isLoggedIn: true,
+    isSignedIn: true,
   },
   parameters: {
     layout: 'fullscreen',
