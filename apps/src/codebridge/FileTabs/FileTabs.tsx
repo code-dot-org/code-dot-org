@@ -77,19 +77,7 @@ export const FileTabs = React.memo(() => {
       setActiveFile(fileId);
     }
     if (event.key === 'Backspace' || event.key === 'Delete') {
-      const fileIndex = files.findIndex(file => file.id === fileId); // Find the index of the file being deleted
-
-      // Determine the new active file
-      const newActiveFile =
-        fileIndex > 0
-          ? files[fileIndex - 1] // Set to the previous file if it exists
-          : files[fileIndex + 1]; // Otherwise, set to the next file
-
       closeFile(fileId);
-
-      if (newActiveFile) {
-        setActiveFile(newActiveFile.id);
-      }
     }
   }
 
