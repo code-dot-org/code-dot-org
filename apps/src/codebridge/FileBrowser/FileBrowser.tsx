@@ -1,6 +1,11 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {
+  dragAndDropKeyboardCodes,
+  fileBrowserCollisionDetector,
+  fileBrowserKeyboardCoordinateGetter,
+} from '@codebridge/utils/dragAndDropUtils';
+import {
   DndContext,
   DragStartEvent,
   DragOverEvent,
@@ -20,10 +25,6 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DndDataContextProvider} from './DnDDataContextProvider';
-import {
-  fileBrowserCollisionDetector,
-  fileBrowserKeyboardCoordinateGetter,
-} from './dragAndDropUtils';
 import {Droppable} from './Droppable';
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {useHandleDragEnd} from './hooks';
@@ -65,13 +66,7 @@ export const FileBrowser = React.memo(() => {
     }),
     useSensor(KeyboardSensor, {
       coordinateGetter: fileBrowserKeyboardCoordinateGetter(projectFolders),
-      keyboardCodes: {
-        // Start dragging on 'm', so 'enter' and 'space' can be used to open/close a folder.
-        // TODO: expose a menu to users of our keyboard options, until then this is a hidden feature.
-        start: ['KeyM'],
-        cancel: ['Escape'],
-        end: ['KeyM', 'Enter', 'Space'],
-      },
+      keyboardCodes: dragAndDropKeyboardCodes,
     })
   );
 

@@ -24,12 +24,7 @@ import {
 } from '../containedLevels';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 
-import {
-  CsaViewMode,
-  ExecutionType,
-  InputMessageType,
-  STATUS_MESSAGE_PREFIX,
-} from './constants';
+import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
 import {getDisplayThemeFromString} from './DisplayTheme';
 import JavabuilderConnection from './JavabuilderConnection';
 import JavalabView from './JavalabView';
@@ -145,7 +140,6 @@ Javalab.prototype.init = function (config) {
         this.onOutputMessage,
         this.onNewlineMessage,
         this.setIsRunning,
-        STATUS_MESSAGE_PREFIX,
         // In Java Lab we don't distinguish between partial lines and full lines,
         // the provided message should have a newline at the end to be treated as
         // a full line.

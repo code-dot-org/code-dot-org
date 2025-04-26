@@ -487,7 +487,7 @@
     "validations": [
       {
         "key": "music-lab-functions-practiceC_1d6ad25c-08b2-40bf-a405-e144ade88b80",
-        "message": "You called a function!",
+        "message": "<i class=\"fa-solid fa-robot\"></i> DJ Robot says: \"You Did It!\"",
         "next": true,
         "conditions": [
           {
@@ -512,16 +512,16 @@
         "message": "You haven't called any functions yet - you should need to call your functions two times!",
         "next": false,
         "conditions": [
-          {
-            "name": "played_anything_in_same_function",
-            "value": 0
-          }
+
         ]
       }
     ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-19T23:29:55.297+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practiceC\\\"\"],\"cloned_from\":\"music-lab-functions-practiceC\"},{\"changed_at\":\"2025-03-19 23:30:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-19T23:29:55.297+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practiceC\\\"\"],\"cloned_from\":\"music-lab-functions-practiceC\"},{\"changed_at\":\"2025-03-19 23:30:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 23:27:18 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

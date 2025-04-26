@@ -1,4 +1,6 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {DragType} from '@codebridge/FileBrowser/types';
+import {getFolderChildren} from '@codebridge/utils';
 import {
   KeyboardCode,
   KeyboardCoordinateGetter,
@@ -9,12 +11,9 @@ import {
   ClientRect,
 } from '@dnd-kit/core';
 import {RectMap} from '@dnd-kit/core/dist/store';
+import {sortableKeyboardCoordinates} from '@dnd-kit/sortable';
 
 import {ProjectFolder} from '@cdo/apps/lab2/types';
-
-import {getFolderChildren} from '../utils/getFolderChildren';
-
-import {DragType} from './types';
 
 export const FOLDER_DROP_OFFSET = 16;
 
@@ -197,4 +196,37 @@ export const getHighestPriorityCollision = (
   });
 
   return [rectangleCollisions[0]];
+};
+
+// Extend sortableKeyboardCoordinates to support tab and shift+tab to move items.
+export const sortableKeyboardCoordinatesWithTab: KeyboardCoordinateGetter = (
+  event,
+  args
+) => {
+  if (event.code === KeyboardCode.Tab && event.shiftKey) {
+    event.preventDefault();
+    const newEvent = new KeyboardEvent('keydown', {
+      code: KeyboardCode.Left,
+    });
+    // Shift tab is equivalent to left arrow
+    return sortableKeyboardCoordinates(newEvent, args);
+  } else if (event.code === KeyboardCode.Tab) {
+    // Tab is equivalent to right arrow
+    event.preventDefault();
+    const newEvent = new KeyboardEvent('keydown', {
+      code: KeyboardCode.Right,
+    });
+    return sortableKeyboardCoordinates(newEvent, args);
+  } else {
+    // Otherwise, call the original function
+    return sortableKeyboardCoordinates(event, args);
+  }
+};
+
+export const dragAndDropKeyboardCodes = {
+  // Start dragging on 'm', so 'enter' and 'space' can be used to open/close a file/folder.
+  // TODO: expose a menu to users of our keyboard options, until then this is a hidden feature.
+  start: ['KeyM'],
+  cancel: ['Escape'],
+  end: ['KeyM', 'Enter', 'Space'],
 };

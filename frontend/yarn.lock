@@ -1086,6 +1086,8 @@ __metadata:
     "@code-dot-org/component-library": "workspace:*"
     "@code-dot-org/fonts": "workspace:*"
     "@contentful/experiences-sdk-react": "npm:^1.37.1"
+    "@contentful/rich-text-html-renderer": "npm:^17.0.0"
+    "@contentful/rich-text-plain-text-renderer": "npm:^17.0.0"
     "@next/eslint-plugin-next": "npm:^15.0.3"
     "@next/third-parties": "npm:^15.2.1"
     "@playwright/test": "npm:~1.49.1"
@@ -1209,6 +1211,25 @@ __metadata:
     react: ">=17.0.0"
     react-dom: ">=17.0.0"
   checksum: 10c0/d3942e08cfd06efae01463a835a168103b2a01afc85f45c6253ef48cd4331bfeb94b8f6a1e876aee8e87c688f19d06514da17b35a1ab6e90875829c98d8f8ab8
+  languageName: node
+  linkType: hard
+
+"@contentful/rich-text-html-renderer@npm:^17.0.0":
+  version: 17.0.0
+  resolution: "@contentful/rich-text-html-renderer@npm:17.0.0"
+  dependencies:
+    "@contentful/rich-text-types": "npm:^17.0.0"
+    escape-html: "npm:^1.0.3"
+  checksum: 10c0/cbc48d53c52753e61158c099b936924cdea957323d41188320629da9396dc82ad01b40bf583d3faba9c8ce03a25e8ac699d66af6429036511d82eaf235de86d7
+  languageName: node
+  linkType: hard
+
+"@contentful/rich-text-plain-text-renderer@npm:^17.0.0":
+  version: 17.0.0
+  resolution: "@contentful/rich-text-plain-text-renderer@npm:17.0.0"
+  dependencies:
+    "@contentful/rich-text-types": "npm:^17.0.0"
+  checksum: 10c0/ae9fe420e6cfb82a83e5dda2d26cfa6bb9c18a365e5bee0f1e2ed4f74c69641053cf3dffc97c548c82ff08e93bbe81a470fee3bc6c651ecda3678e581955e9ed
   languageName: node
   linkType: hard
 
@@ -9509,6 +9530,13 @@ __metadata:
   version: 4.0.0
   resolution: "escape-goat@npm:4.0.0"
   checksum: 10c0/9d2a8314e2370f2dd9436d177f6b3b1773525df8f895c8f3e1acb716f5fd6b10b336cb1cd9862d4709b36eb207dbe33664838deca9c6d55b8371be4eebb972f6
+  languageName: node
+  linkType: hard
+
+"escape-html@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "escape-html@npm:1.0.3"
+  checksum: 10c0/524c739d776b36c3d29fa08a22e03e8824e3b2fd57500e5e44ecf3cc4707c34c60f9ca0781c0e33d191f2991161504c295e98f68c78fe7baa6e57081ec6ac0a3
   languageName: node
   linkType: hard
 

@@ -1,6 +1,10 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {getOpenFiles} from '@codebridge/utils';
 import {
+  dragAndDropKeyboardCodes,
+  sortableKeyboardCoordinatesWithTab,
+} from '@codebridge/utils/dragAndDropUtils';
+import {
   DndContext,
   DragEndEvent,
   DragOverlay,
@@ -19,7 +23,6 @@ import {
   arrayMove,
   horizontalListSortingStrategy,
   SortableContext,
-  sortableKeyboardCoordinates,
 } from '@dnd-kit/sortable';
 import React, {useState} from 'react';
 
@@ -40,7 +43,8 @@ export const FileTabs = React.memo(() => {
       },
     }),
     useSensor(KeyboardSensor, {
-      coordinateGetter: sortableKeyboardCoordinates,
+      coordinateGetter: sortableKeyboardCoordinatesWithTab,
+      keyboardCodes: dragAndDropKeyboardCodes,
     })
   );
   const [draggingFileId, setDraggingFileId] = useState<string | null>(null);
@@ -66,6 +70,13 @@ export const FileTabs = React.memo(() => {
     }
   }
 
+  function handleTabActivation(event: React.KeyboardEvent, fileId: string) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      // We don't stop event propagation here because we want the close button to work.
+      setActiveFile(fileId);
+    }
+  }
+
   return (
     <div className={moduleStyles.fileTabs}>
       <DndContext
@@ -77,7 +88,12 @@ export const FileTabs = React.memo(() => {
       >
         <SortableContext items={files} strategy={horizontalListSortingStrategy}>
           {files.map(f => (
-            <Sortable id={f.id} key={f.id} isDragging={f.id === draggingFileId}>
+            <Sortable
+              id={f.id}
+              key={f.id}
+              isDragging={f.id === draggingFileId}
+              onKeyDown={event => handleTabActivation(event, f.id)}
+            >
               <FileTab file={f} />
             </Sortable>
           ))}

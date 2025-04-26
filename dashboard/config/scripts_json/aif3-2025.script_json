@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 18:09:30 UTC",
+    "serialized_at": "2025-04-24 18:51:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5858,6 +5858,18 @@
       }
     },
     {
+      "name": "[KEY] The Internet of Things",
+      "url": "https://docs.google.com/document/d/11FSYNswG6MqJzWekFKQgx0J_T6OGXBHu7-Rg3BgCOiM/edit?usp=sharing",
+      "key": "_key_the_internet_of_things",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_the_internet_of_things"
+      }
+    },
+    {
       "name": "[KEY] User Testing",
       "url": "https://docs.google.com/document/d/1w5XAC55XcShdJEqr6aNyqdFcxVctCVz0oahF2ffpXDY/edit?usp=drive_link",
       "key": "_key_user_testing",
@@ -5948,7 +5960,7 @@
     },
     {
       "name": "Build a Computer System",
-      "url": "https://docs.google.com/document/d/1HaOTj31J9bhujOWbGkBP3ki0tPUwnZiG2T6JJSppczE/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/18i-SIXawiNb588vIFm4Ob22GwYwUFrNVTiJJJBdAkHM/",
       "key": "build_a_computer_system",
       "properties": {
         "audience": "Student",
@@ -5997,7 +6009,7 @@
       }
     },
     {
-      "name": "Computer Systems and Devices Unit Guide",
+      "name": "AI and the Systems That Power It Unit Guide",
       "url": "https://docs.google.com/document/d/1xgkyggbdaHpxDhD_Cvx1RptJUrzf8sUcGHKfDLs5-CU/view",
       "key": "computer_systems_and_devices_unit_guide",
       "properties": {
@@ -6613,6 +6625,12 @@
       "seeding_key": {
         "lesson.key": "Introduction to Computer Systems",
         "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "IoT and Emerging Technologies",
+        "resource.key": "_key_the_internet_of_things"
       }
     },
     {

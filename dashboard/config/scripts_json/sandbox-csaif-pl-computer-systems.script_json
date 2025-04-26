@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-21 20:33:12 UTC",
+    "serialized_at": "2025-04-24 19:29:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,12 +34,14 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Teaching Computer Systems and Devices",
+      "name": "Teaching AI and the Systems That Power It",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Get an overview of the AI and the Systems That Power It  curriculum and resources.\n\n**Suggested Time:** 10 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Get an overview of the AI and the Systems That Power It  curriculum and resources.\n\n**Suggested Time:** 10 minutes "
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -55,8 +57,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
-        "overview": "**You will:**\n- Identify key hardware components, such as RAM and CPU\n- Describe the functionality of a computer system using the IPSO model\n- Describe various types of software, including operating systems, and their applications in real-world contexts\n- Work together with AI to program a device\n- Troubleshoot issues in hardware and software using appropriate strategies\n\n**Suggested time:** 30 minutes\n",
-        "student_overview": "**You will:**\n- Identify key hardware components, such as RAM and CPU\n- Describe the functionality of a computer system using the IPSO model\n- Describe various types of software, including operating systems, and their applications in real-world contexts\n- Work together with AI to program a device\n- Troubleshoot issues in hardware and software using appropriate strategies\n\n**Suggested time:** 30 minutes"
+        "overview": "**You will:**\n- Identify key hardware components, such as RAM and CPU\n- Describe the functionality of a computer system using the IPSO model\n- Describe various types of software, including operating systems, and their applications in real-world contexts\n- Work together with AI to program a device\n- Troubleshoot issues in hardware and software using appropriate strategies\n\n**Suggested time:** 20 minutes\n",
+        "student_overview": "**You will:**\n- Identify key hardware components, such as RAM and CPU\n- Describe the functionality of a computer system using the IPSO model\n- Describe various types of software, including operating systems, and their applications in real-world contexts\n- Work together with AI to program a device\n- Troubleshoot issues in hardware and software using appropriate strategies\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -72,8 +74,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "**In this lesson, you will:**\n- Describe various types of data\n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n\n**Suggested Time:** 15 minutes",
-        "student_overview": "**In this lesson, you will:**\n- Describe various types of data\n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n\n**Suggested Time:** 15 minutes"
+        "overview": "**In this lesson, you will:**\n- Describe various types of data\n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**In this lesson, you will:**\n- Describe various types of data\n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n\n**Suggested Time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -89,6 +91,8 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
+        "overview": "**By the end of this lesson, you will:**\n\n- Introduce the Final Project Framework\n- Develop a Teaching Plan\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**By the end of this lesson, you will:**\n\n- Introduce the Final Project Framework\n- Develop a Teaching Plan\n\n**Suggested Time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -102,6 +106,7 @@
       "key": "a0f43d1f-193f-41ab-af46-3eb73aea9dc5",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "a0f43d1f-193f-41ab-af46-3eb73aea9dc5",
@@ -114,7 +119,7 @@
       "key": "4967c50b-914e-41ec-9a22-51f4b98fa43a",
       "position": 1,
       "properties": {
-        "duration": 30
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "4967c50b-914e-41ec-9a22-51f4b98fa43a",
@@ -127,6 +132,7 @@
       "key": "df8a58fa-a4d2-4b22-8410-a374b23e0061",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "df8a58fa-a4d2-4b22-8410-a374b23e0061",
@@ -139,6 +145,7 @@
       "key": "1231f7c7-4744-4661-a294-e87d7a609984",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "1231f7c7-4744-4661-a294-e87d7a609984",
@@ -1203,6 +1210,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev"
+        ],
         "progression": "Ethics and Data"
       },
       "bonus": false,
@@ -1225,6 +1235,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_ethic-teaching-tips-L10-CSandDev"
+        ],
         "progression": "Ethics and Data"
       },
       "bonus": false,
@@ -1247,6 +1260,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_data_forum_L10_CSandDev"
+        ],
         "progression": "Ethics and Data"
       },
       "bonus": false,
@@ -1269,6 +1285,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_lesson_overview_endofUnit_L1_CSandDev"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -1291,6 +1310,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_project-description-L2-CSandDev"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -1313,6 +1335,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -1335,6 +1360,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev"
+        ],
         "progression": "Preparing for the Project"
       },
       "bonus": false,
@@ -1357,6 +1385,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csaif-pl-nextsteps-L6-csandDev"
+        ],
         "progression": "Next Steps"
       },
       "bonus": false,

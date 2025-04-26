@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 18:09:56 UTC",
+    "serialized_at": "2025-04-24 19:46:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6122,6 +6122,18 @@
       }
     },
     {
+      "name": "[Dataset] Data Science Salaries",
+      "url": "https://docs.google.com/spreadsheets/d/1VOIgI_fhXSwYI_pWyIXbEKaXlfFL3EaLdT-gfPhY-DY/edit?usp=drive_link",
+      "key": "data_science_salaries",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "data_science_salaries"
+      }
+    },
+    {
       "name": "Data Scientist Bingo",
       "url": "https://docs.google.com/document/d/1AneTWDfmrXLWXQ_LSagemgSD_a8BRjFl5_FC-gx5ovU/view",
       "key": "data_scientist_bingo",
@@ -6140,7 +6152,6 @@
       "key": "data_scientist_tents",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -6173,6 +6184,30 @@
       }
     },
     {
+      "name": "[Dataset] Domestic House Cats",
+      "url": "https://docs.google.com/spreadsheets/d/1psomJCWm4YG1O-YAX31aD9nvY5h7ousCgTHQfLK1Z4A/edit?usp=drive_link",
+      "key": "domestic_house_cats_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "domestic_house_cats_dataset"
+      }
+    },
+    {
+      "name": "[Dataset] Earthquakes",
+      "url": "https://docs.google.com/spreadsheets/d/1uP7X-D1wKEzuSiB8SSimNVs88ivmm9fydr8yyPT6ioA/edit?usp=drive_link",
+      "key": "earthquakes",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "earthquakes"
+      }
+    },
+    {
       "name": "Effective Data Questions",
       "url": "https://docs.google.com/presentation/d/1-5wOHz__mvmw2qo3XjTZVkSsIGVUcqLkCWvz8c29jps/view",
       "key": "effective_data_questions",
@@ -6197,6 +6232,42 @@
       }
     },
     {
+      "name": "[Dataset] Event Space Popularity",
+      "url": "https://drive.google.com/file/d/1UFyVN_xYoAM1P5fZ1H0EkD64TfQgKFms/view?usp=drive_link",
+      "key": "event_space_popularity_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "event_space_popularity_dataset"
+      }
+    },
+    {
+      "name": "[Dataset] Four Elephant Seals",
+      "url": "https://docs.google.com/spreadsheets/d/12k4NhORPptNdieJahOTr3EYzR-ZZ2FVcEWWyZiTKhVw/edit?usp=drive_link",
+      "key": "four_elephant_seals",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "four_elephant_seals"
+      }
+    },
+    {
+      "name": "[Dataset] Granola Bars",
+      "url": "https://docs.google.com/spreadsheets/d/12YiWs0DNGc40lMtNyiJIq6Zt7Uhf8D-9F9QK930mUEI/edit?usp=drive_link",
+      "key": "granola_bars_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "granola_bars_dataset"
+      }
+    },
+    {
       "name": "Guide to Anchor Charts and Word Walls",
       "url": "https://docs.google.com/document/d/1lHva75FXZmYRlubTIGvVgyT1PE36wgJDyfJGkhf_qo4/view",
       "key": "guide_to_anchor_charts_and_word_walls",
@@ -6214,6 +6285,18 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_language_routines"
+      }
+    },
+    {
+      "name": "[Dataset] Gym Temperatures",
+      "url": "https://drive.google.com/file/d/1zFV0vof1TUTtXXuJmpHQYagycoSfqiH6/view?usp=drive_link",
+      "key": "gym_temperature_data",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "gym_temperature_data"
       }
     },
     {
@@ -6265,6 +6348,78 @@
       }
     },
     {
+      "name": "[Dataset] Mammal Lifespan",
+      "url": "https://docs.google.com/spreadsheets/d/1LJL1ELRLPyAsA-iG7grsWuBAiK5JemqqWqETLR3CYTc/edit?usp=drive_link",
+      "key": "mammal_lifespans_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "mammal_lifespans_dataset"
+      }
+    },
+    {
+      "name": "[Dataset] Mammals",
+      "url": "https://docs.google.com/spreadsheets/d/1aY2l5-Vab7DXpJzmj3LCwnLVu7BrxppHwY2FEvz3hdQ/edit?usp=drive_link",
+      "key": "mammals",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "mammals"
+      }
+    },
+    {
+      "name": "[Dataset] Micah's Room Dataset 1",
+      "url": "https://docs.google.com/spreadsheets/d/1Xu7BcsK5mff6Q-dgr3WeGLFPdLG5w6NXK5wxuO0wmoI/edit?usp=drive_link",
+      "key": "micah_s_room_dataset_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "micah_s_room_dataset_1"
+      }
+    },
+    {
+      "name": "[Dataset] Micah's Room Dataset 2",
+      "url": "https://docs.google.com/spreadsheets/d/1NMANXj87by_FNgs1OqzS_y-bEtfg-8ui83BFhIZ-Zfw/edit?usp=drive_link",
+      "key": "micah_s_room_dataset_2",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "micah_s_room_dataset_2"
+      }
+    },
+    {
+      "name": "[Dataset] Micah's Room Dataset 3",
+      "url": "https://docs.google.com/spreadsheets/d/1iYoCXOwAOMfvW2KRB90eS4gFm1B3aKhfcCUEsLkhdHQ/edit?usp=drive_link",
+      "key": "micah_s_room_dataset_3",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "micah_s_room_dataset_3"
+      }
+    },
+    {
+      "name": "[Dataset] Micah's Room Dataset 4",
+      "url": "https://docs.google.com/spreadsheets/d/1PZAxC7sooK_U2769JW-hYhx_GpjNJ7zqVYaDMjs30Y0/edit?usp=drive_link",
+      "key": "micha_s_room_dataset_4",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "micha_s_room_dataset_4"
+      }
+    },
+    {
       "name": "More Visualization Techniques",
       "url": "https://docs.google.com/presentation/d/1r06gRF-64qnEtmfF781Lns3ny9ODkW4jDyp3oUTlPyY/view",
       "key": "more_visualization_techniques",
@@ -6277,6 +6432,30 @@
       }
     },
     {
+      "name": "[Dataset] Movie Characters",
+      "url": "https://docs.google.com/spreadsheets/d/1Xt_ZQkvIAr8Bqx4ME-aqmKPEz9WW7saz84a6b4CatO4/edit?usp=drive_link",
+      "key": "movie_characters",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "movie_characters"
+      }
+    },
+    {
+      "name": "[Dataset] PISA",
+      "url": "https://docs.google.com/spreadsheets/d/1ykscSyKjzQI3WtYdMwVyJWG1jtN_JGDN84bII7IzX7c/edit?usp=drive_link",
+      "key": "pisa",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "pisa"
+      }
+    },
+    {
       "name": "Pizza Party Survey Dataset",
       "url": "https://docs.google.com/spreadsheets/d/1AlVNpxzypX82fNlPDxDEa5ww72J_G2kyfZ2sFJedBJA/view",
       "key": "pizza_party_survey_dataset",
@@ -6286,6 +6465,18 @@
       },
       "seeding_key": {
         "resource.key": "pizza_party_survey_dataset"
+      }
+    },
+    {
+      "name": "[Dataset] Pizza Topping Survey",
+      "url": "https://docs.google.com/spreadsheets/d/1MMsZwVwDaGNSol6RMsQk9NklsYBtgQyiEIxuSwmykIA/edit?usp=drive_link",
+      "key": "pizza_topping_survey_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "pizza_topping_survey_dataset"
       }
     },
     {
@@ -6315,7 +6506,43 @@
       }
     },
     {
-      "name": "Introduction to Data Science Unit Guide",
+      "name": "[Dataset] Roller Coasters",
+      "url": "https://docs.google.com/spreadsheets/d/1lg67vrIpnXaCe7P-XjqLmf6x91UcEvB-Ikw_rpqJDG8/edit?usp=drive_link",
+      "key": "roller_coaster_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "roller_coaster_dataset"
+      }
+    },
+    {
+      "name": "[Dataset] Song Popularity",
+      "url": "https://drive.google.com/file/d/1AuPv9YSlfkY3EtkVJOZd_Ngzg9aXy0Ij/view?usp=drive_link",
+      "key": "song_popularity_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "song_popularity_dataset"
+      }
+    },
+    {
+      "name": "[Dataset] States' Education",
+      "url": "https://docs.google.com/spreadsheets/d/1ykscSyKjzQI3WtYdMwVyJWG1jtN_JGDN84bII7IzX7c/edit?usp=drive_link",
+      "key": "states_education",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "states_education"
+      }
+    },
+    {
+      "name": "Insights from Data and AI Unit Guide",
       "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=sharing",
       "key": "unit_guide",
       "properties": {
@@ -6323,18 +6550,6 @@
       },
       "seeding_key": {
         "resource.key": "unit_guide"
-      }
-    },
-    {
-      "name": "Unit Guide - Criteria for Creating Effective Questions",
-      "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?tab=t.0#heading=h.s6o6eebg8sla",
-      "key": "unit_guide_-_criteria_for_creating_effective_questions",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "unit_guide_-_criteria_for_creating_effective_questions"
       }
     },
     {
@@ -6393,6 +6608,48 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "data_science_salaries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "earthquakes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "four_elephant_seals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "mammals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "movie_characters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "pisa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "states_education"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Data Cleaning and Analysis Techniques",
         "resource.key": "anchor_charts_in_data_science"
       }
@@ -6401,6 +6658,12 @@
       "seeding_key": {
         "lesson.key": "Data Cleaning and Analysis Techniques",
         "resource.key": "cleaning_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Cleaning and Analysis Techniques",
+        "resource.key": "pizza_topping_survey_dataset"
       }
     },
     {
@@ -6425,6 +6688,30 @@
       "seeding_key": {
         "lesson.key": "Data Interpretation",
         "resource.key": "data_interpretation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "micah_s_room_dataset_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "micah_s_room_dataset_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "micah_s_room_dataset_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Interpretation",
+        "resource.key": "micha_s_room_dataset_4"
       }
     },
     {
@@ -6472,6 +6759,24 @@
     {
       "seeding_key": {
         "lesson.key": "Data Storytelling",
+        "resource.key": "event_space_popularity_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Storytelling",
+        "resource.key": "gym_temperature_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Storytelling",
+        "resource.key": "song_popularity_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Data Storytelling",
         "resource.key": "unit_guide"
       }
     },
@@ -6491,12 +6796,6 @@
       "seeding_key": {
         "lesson.key": "Effective Data Questions",
         "resource.key": "unit_guide"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Effective Data Questions",
-        "resource.key": "unit_guide_-_criteria_for_creating_effective_questions"
       }
     },
     {
@@ -6604,7 +6903,31 @@
     {
       "seeding_key": {
         "lesson.key": "More Visualization Techniques",
+        "resource.key": "domestic_house_cats_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
+        "resource.key": "granola_bars_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
+        "resource.key": "mammal_lifespans_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
         "resource.key": "more_visualization_techniques"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "More Visualization Techniques",
+        "resource.key": "roller_coaster_dataset"
       }
     },
     {

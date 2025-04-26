@@ -11,7 +11,7 @@
     "hint_prompt_attempts_threshold": "1",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "level_data": {
       "library": "launch2024",
       "packId": "default",
@@ -37,7 +37,7 @@
             {
               "type": "triggered_at_simple2",
               "id": "IF`z{bw{e*6/VdHdAYkB",
-              "x": 30,
+              "x": 50,
               "y": 50,
               "deletable": false,
               "fields": {
@@ -48,6 +48,8 @@
                 "block": {
                   "type": "play_chord_at_current_location_simple2",
                   "id": "notes",
+                  "deletable": false,
+                  "movable": false,
                   "extraState": {
                     "disableNextConnection": false
                   },
@@ -77,6 +79,8 @@
                 "block": {
                   "type": "play_pattern_at_current_location_simple2",
                   "id": "drums",
+                  "deletable": false,
+                  "movable": false,
                   "extraState": {
                     "disableNextConnection": false
                   },
@@ -169,7 +173,7 @@
         "callout": "run-button"
       }
     ],
-    "long_instructions": "####<i class=\"fa-solid fa-music\"></i> Make your own melody!\r\nThe blocks are already in place but you need to define the notes & drums.\r\n1. Click on the `play notes` block to create a unique melody. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id:notes)\r\n2. Then, click on the `play drums` block to make your own beat. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id:drums)\r\n3. Press [Run](#clickable=run-button) then trigger your new sounds!",
+    "long_instructions": "####<i class=\"fa-solid fa-music\"></i> Try the Bonus Blocks!\r\nThe blocks are already in place but you need to define the notes & drums.\r\n1. Click on the `play notes` block to create a unique melody. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id:notes)\r\n2. Then, click on the `play drums` block to make your own beat. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id:drums)\r\n3. Press [Run](#clickable=run-button) then trigger your new sounds!",
     "name_suffix": "_launch",
     "predict_settings": {
       "isPredictLevel": false
@@ -180,7 +184,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:07.187+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects\\\"\"],\"cloned_from\":\"music-coding-intro-effects\"},{\"changed_at\":\"2025-04-23 22:17:52 +0000\",\"changed\":[\"validations\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:24:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:25:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:27:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:35:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:07.187+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-effects\\\"\"],\"cloned_from\":\"music-coding-intro-effects\"},{\"changed_at\":\"2025-04-23 22:17:52 +0000\",\"changed\":[\"validations\",\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:24:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:25:23 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:27:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 22:35:02 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:42:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:43:01 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 17:12:06 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
