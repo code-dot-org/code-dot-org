@@ -3,6 +3,8 @@ import React from 'react';
 
 import {DragDataType} from './types';
 
+import moduleStyles from './styles/filebrowser.module.scss';
+
 /*
   This component adds draggable functionality to files/folders in the file browser. The intent is that the user can drag a file into a new folder as well
   as drag a folder into a new parent folder.
@@ -33,7 +35,7 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
   children,
   data,
   Component = 'div',
-  className,
+  className = moduleStyles.draggable,
 }: DraggableProps) => {
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
     id: `${data.type}-${data.id}`,
