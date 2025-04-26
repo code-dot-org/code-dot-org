@@ -116,14 +116,6 @@
       "import": "./dist/esm/cms/editorialCard/index.mjs",
       "require": "./dist/cjs/cms/editorialCard/index.js"
     },
-    "./cms/footer": {
-      "types": {
-        "import": "./dist/esm/cms/footer/index.d.ts",
-        "require": "./dist/cjs/cms/footer/index.d.ts"
-      },
-      "import": "./dist/esm/cms/footer/index.mjs",
-      "require": "./dist/cjs/cms/footer/index.js"
-    },
     "./cms/header": {
       "types": {
         "import": "./dist/esm/cms/header/index.d.ts",
@@ -131,6 +123,14 @@
       },
       "import": "./dist/esm/cms/header/index.mjs",
       "require": "./dist/cjs/cms/header/index.js"
+    },
+    "./cms/footer": {
+      "types": {
+        "import": "./dist/esm/cms/footer/index.d.ts",
+        "require": "./dist/cjs/cms/footer/index.d.ts"
+      },
+      "import": "./dist/esm/cms/footer/index.mjs",
+      "require": "./dist/cjs/cms/footer/index.js"
     },
     "./cms/heroBanner": {
       "types": {

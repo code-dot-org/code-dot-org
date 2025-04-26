@@ -1,0 +1,21 @@
+.informationContainer {
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  .tabPanels {
+    overflow: auto;
+    padding: 0 0.5rem;
+  }
+
+  .tabs {
+    padding: 0 0.5rem;
+  }
+}

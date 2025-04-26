@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import {HTMLAttributes, useEffect, useState} from 'react';
+import {HTMLAttributes, useEffect, useState, PropsWithChildren} from 'react';
 
 import {Image, ImageProps} from '@/image';
 
@@ -12,7 +12,8 @@ import ProjectsMenu, {ProjectsMenuProps} from './ProjectsMenu';
 
 import moduleStyles from './header.module.scss';
 
-export interface HeaderProps extends HTMLAttributes<HTMLElement> {
+export interface HeaderProps
+  extends PropsWithChildren<HTMLAttributes<HTMLElement>> {
   /** Studio.code.org base url
    * sets correct stage for use with user signed_in api */
   studioBaseUrl: string;
@@ -37,9 +38,9 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   /** Main links */
   mainLinks: MainLinksProps['mainLinks'];
   /** Projects button label */
-  projectsButtonLabel: ProjectsMenuProps['projectsButtonLabel'];
+  projectsButtonLabel?: ProjectsMenuProps['projectsButtonLabel'];
   /** Projects button aria-label */
-  projectsButtonAriaLabel: {
+  projectsButtonAriaLabel?: {
     /** Open label */
     open: 'Open Projects menu' | string;
     /** Close label */
@@ -48,7 +49,7 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
     menu: 'Projects menu' | string;
   };
   /** Projects menu links */
-  projectsLinks: ProjectsMenuProps['projectsLinks'];
+  projectsLinks?: ProjectsMenuProps['projectsLinks'];
   /** Account links */
   accountLinks: {
     /** Sign In button */
@@ -119,12 +120,14 @@ const Header: React.FC<HeaderProps> = ({
   hamburgerButtonLabel,
   hamburgerLinks,
   className,
+  children,
   ...HTMLAttributes
 }) => {
   const [renderState, setRenderState] = useState<
     'loading' | 'signedIn' | 'signedOut' | 'error'
   >('loading');
 
+<<<<<<< HEAD
   useEffect(() => {
     async function getUserStatus() {
       try {
@@ -166,11 +169,21 @@ const Header: React.FC<HeaderProps> = ({
         className={moduleStyles.buttonLinks}
         aria-label={navLabel.secondary || 'Secondary navigation'}
       >
+=======
+    {children}
+
+    <nav
+      className={moduleStyles.buttonLinks}
+      aria-label={navLabel.secondary || 'Secondary navigation'}
+    >
+      {projectsLinks && projectsButtonLabel && projectsButtonAriaLabel && (
+>>>>>>> 6ac13618730 (Initial maze level test build.)
         <ProjectsMenu
           projectsLinks={projectsLinks}
           projectsButtonLabel={projectsButtonLabel}
           projectsButtonAriaLabel={projectsButtonAriaLabel}
         />
+<<<<<<< HEAD
         <SignInContext.Provider value={renderState}>
           <AccountButtons
             signIn={accountLinks.signIn}
@@ -189,5 +202,25 @@ const Header: React.FC<HeaderProps> = ({
     </header>
   );
 };
+=======
+      )}
+      <AccountButtons
+        signIn={accountLinks.signIn}
+        createAccount={accountLinks.createAccount}
+        goToDashboard={accountLinks.goToDashboard}
+        isLoggedIn={isLoggedIn}
+        isInHamburger={false}
+      />
+      <HelpMenu helpButtonLabel={helpButtonLabel} helpLinks={helpLinks} />
+      <HamburgerMenu
+        hamburgerButtonLabel={hamburgerButtonLabel}
+        hamburgerLinks={hamburgerLinks}
+        accountLinks={accountLinks}
+        isLoggedIn={isLoggedIn}
+      />
+    </nav>
+  </header>
+);
+>>>>>>> 6ac13618730 (Initial maze level test build.)
 
 export default Header;

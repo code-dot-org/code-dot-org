@@ -1,0 +1,69 @@
+.progress {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+
+  h6.progressHeader {
+    a {
+      color: var(--neutral-base-white);
+      text-decoration: none;
+    }
+
+    margin: 0;
+  }
+
+  .progressContainer {
+    align-items: center;
+    background: var(--background-neutral-tertiary);
+    border: 0.125rem solid var(--borders-brand-teal-strong);
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    height: 100%;
+    padding: 0.125rem 0.5rem;
+
+    div {
+      display: inline-block;
+      padding: 0;
+
+      a {
+        height: 0.75rem;
+        min-width: 0;
+        padding: 0;
+        width: 0.75rem;
+
+        i {
+          height: 0;
+          position: absolute;
+          width: 0;
+        }
+      }
+
+      a.currentLevel {
+        border-radius: 50%;
+        height: 1.75rem;
+        width: 1.75rem;
+      }
+    }
+  }
+
+  button.unitOverviewButton {
+    background-color: transparent;
+
+    &:hover {
+      background-color: var(--background-brand-teal-strong);
+    }
+  }
+}
+
+div.tooltip {
+  z-index: 1100;
+}
+
+.unitOverview {
+  max-height: 90%;
+  overflow: auto;
+}

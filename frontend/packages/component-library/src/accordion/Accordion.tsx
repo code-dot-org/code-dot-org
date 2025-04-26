@@ -17,6 +17,8 @@ export interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
   items: AccordionItem[];
   /** Custom className for additional styling */
   className?: string;
+  /** Whether or not the accordion is programmably open */
+  open?: boolean;
 }
 
 /**
@@ -34,6 +36,7 @@ export interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
  */
 const Accordion: React.FC<AccordionProps> = ({
   items,
+  open,
   className,
   ...HTMLAttributes
 }) => (
@@ -42,7 +45,7 @@ const Accordion: React.FC<AccordionProps> = ({
     {...HTMLAttributes}
   >
     {items.map(({id, label, content}) => (
-      <details key={id}>
+      <details key={id} open={open}>
         <summary>
           {typeof label === 'string' ? (
             <BodyTwoText>
