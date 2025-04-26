@@ -32,7 +32,8 @@ import Sortable from './Sortable';
 import moduleStyles from './styles/fileTabs.module.scss';
 
 export const FileTabs = React.memo(() => {
-  const {source, rearrangeFiles, setActiveFile} = useCodebridgeContext();
+  const {source, rearrangeFiles, setActiveFile, closeFile} =
+    useCodebridgeContext();
 
   const files = getOpenFiles(source);
 
@@ -74,6 +75,21 @@ export const FileTabs = React.memo(() => {
     if (event.key === 'Enter' || event.key === ' ') {
       // We don't stop event propagation here because we want the close button to work.
       setActiveFile(fileId);
+    }
+    if (event.key === 'Backspace' || event.key === 'Delete') {
+      const fileIndex = files.findIndex(file => file.id === fileId); // Find the index of the file being deleted
+
+      // Determine the new active file
+      const newActiveFile =
+        fileIndex > 0
+          ? files[fileIndex - 1] // Set to the previous file if it exists
+          : files[fileIndex + 1]; // Otherwise, set to the next file
+
+      closeFile(fileId);
+
+      if (newActiveFile) {
+        setActiveFile(newActiveFile.id);
+      }
     }
   }
 

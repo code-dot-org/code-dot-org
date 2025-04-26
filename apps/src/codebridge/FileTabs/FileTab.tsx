@@ -19,7 +19,6 @@ type FileTabProps = {
 const FileTab = ({file}: FileTabProps) => {
   const {source, closeFile, setActiveFile} = useCodebridgeContext();
   const activeFile = getActiveFileForSource(source);
-  const activeFileRef = useRef<HTMLDivElement | null>(null);
   const {iconName, iconStyle, isBrand} = getFileIconNameAndStyle(file);
   const iconClassName = isBrand ? 'fa-brands' : undefined;
   const isActive = file.active || file === activeFile;
@@ -47,21 +46,11 @@ const FileTab = ({file}: FileTabProps) => {
       window.removeEventListener('resize', throttledScrollTabIntoView);
   }, [isActive, throttledScrollTabIntoView]);
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === 'Delete') {
-      closeFile(file.id);
-      console.log(activeFile);
-      console.log(activeFile?.contents);
-      activeFileRef.current?.focus();
-    }
-  };
-
   return (
     <div className={className} key={file.id}>
       <div
         className={moduleStyles.label}
         onClick={() => setActiveFile(file.id)}
-        onKeyDown={handleKeyDown}
         ref={tabRef}
       >
         <FontAwesomeV6Icon
