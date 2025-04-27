@@ -1,5 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
+import YAML from 'yaml';
 
 /** Defines a lesson in the raw, internal data */
 interface LessonDefinition {
@@ -478,8 +479,47 @@ export const loadUnit: (slug: string) => Promise<UnitDefinition> = async (
     `${slug}.script_json`,
   );
 
-  const fileContents = await fs.readFile(fallbackPath, 'utf8');
-  return JSON.parse(fileContents);
+  const fallbackContents = await fs.readFile(fallbackPath, 'utf8');
+  const ret = JSON.parse(fallbackContents);
+
+  // Add locale information
+  const localePath = path.join(
+    process.cwd(),
+    '..',
+    '..',
+    '..',
+    'dashboard',
+    'config',
+    'locales',
+    'courses',
+    'en.yml',
+  );
+  const localeContents = await fs.readFile(localePath, 'utf8');
+  const localeData = YAML.parse(localeContents);
+
+  const altLocalePath = path.join(
+    process.cwd(),
+    '..',
+    '..',
+    '..',
+    'dashboard',
+    'config',
+    'locales',
+    'scripts',
+    'en.yml',
+  );
+  const altLocaleContents = await fs.readFile(altLocalePath, 'utf8');
+  const altLocaleData = YAML.parse(altLocaleContents);
+
+  ret.locale_data =
+    localeData?.en?.data?.course?.name?.[slug] ||
+    altLocaleData?.en?.data?.script?.name?.[slug] ||
+    {};
+
+  ret.locale_data.description_student ||= ret.locale_data.student_description;
+  ret.locale_data.description_teacher ||= ret.locale_data.teacher_description;
+
+  return ret;
 };
 
 /**
@@ -624,10 +664,12 @@ export const parseUnitData: (data: UnitDefinition) => UnitData = (
     position: lessonGroup.position,
     userFacing: lessonGroup.user_facing,
     lessons: data.lessons
+      .map((lesson, i) => [lesson, i])
       .filter(
-        lesson => lesson.seeding_key?.['lesson_group.key'] === lessonGroup.key,
+        ([lesson, _]) =>
+          lesson.seeding_key?.['lesson_group.key'] === lessonGroup.key,
       )
-      .map((_, i) => ret.lessons[i]),
+      .map(([_, i]) => ret.lessons[i]),
   }));
 
   return ret;

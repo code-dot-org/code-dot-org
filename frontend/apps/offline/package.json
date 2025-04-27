@@ -47,7 +47,8 @@
     "next": "^15.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-schemaorg": "^2.0.0"
+    "react-schemaorg": "^2.0.0",
+    "yaml": "^2.7.1"
   },
   "devDependencies": {
     "@applitools/eyes-playwright": "^1.36.3",

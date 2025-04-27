@@ -1,8 +1,6 @@
-import fs from 'fs/promises';
 import {notFound} from 'next/navigation';
-import path from 'path';
 
-import {parseUnitData} from '@/app/models/unit';
+import {loadUnit, parseUnitData} from '@/app/models/unit';
 import Header from '@/components/header';
 import Unit from '@/components/unit';
 
@@ -14,19 +12,11 @@ export default async function UnitPage({
   const {slug} = await params;
 
   // Load unit data
-  const filePath = path.join(
-    process.cwd(),
-    'data',
-    'units',
-    `${slug}.script_json`,
-  );
-
   let data = {};
   try {
-    const fileContents = await fs.readFile(filePath, 'utf8');
-    data = JSON.parse(fileContents);
+    data = await loadUnit(slug);
   } catch (_) {
-    //If the file doesn't exist or is malformed, return 404
+    // If the file doesn't exist or is malformed, return 404
     return notFound();
   }
 
