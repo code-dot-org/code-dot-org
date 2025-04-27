@@ -3,8 +3,18 @@ import * as BlocklyLibrary from 'blockly/core';
 /**
  * The default blockly theme used to typically style the blocks in labs.
  */
-export const theme = {
+export const definition = {
   name: 'cdo-default',
+  blockLimits: {
+    indicator: {
+      fill: 'var(--background-info-primary)',
+      text: 'var(--background-info-light)',
+    },
+    overLimit: {
+      fill: 'var(--background-warning-primary)',
+      text: 'var(--text-warning-secondary)',
+    },
+  },
   blockStyles: {
     default: {
       colourPrimary: '#00b0bc',
@@ -61,13 +71,20 @@ export const theme = {
     },
   },
   categoryStyles: {},
-  componentStlyes: {
+  componentStyles: {
     toolboxBackgroundColor: '#dddddd',
   },
   startHats: null,
 };
 
-export default BlocklyLibrary.Theme.defineTheme(theme.name, {
+const instance = BlocklyLibrary.Theme.defineTheme(definition.name, {
   base: BlocklyLibrary.Themes.Classic,
-  ...theme,
+  ...definition,
 });
+
+const theme = {
+  definition,
+  instance,
+};
+
+export default theme;

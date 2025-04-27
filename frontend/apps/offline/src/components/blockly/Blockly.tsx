@@ -1,14 +1,17 @@
 import useResizeObserver from '@react-hook/resize-observer';
 import * as BlocklyLibrary from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
-import React, {useEffect, useRef, useContext} from 'react';
+import React, {createElement, useEffect, useRef, useContext} from 'react';
 
 import BlocklyContext from '@/contexts/BlocklyContext';
 
+import BlockLimitMap from './BlockLimitMap';
+import {disableOrphans, updateBlockLimits} from './events';
 import {
   forciblyInsertTopBlock,
   positionBlocksOnWorkspace,
 } from './serialization';
+import type {Theme} from './types';
 
 import moduleStyles from './blockly.module.scss';
 
@@ -22,7 +25,7 @@ export interface BlocklyProps {
   /** The blockly renderer to use. */
   renderer?: string;
   /** The blockly theme to use. */
-  theme?: string;
+  theme?: Theme;
   /** Whether or not to render this workspace as inline, useful for documentation */
   inline?: boolean;
   /** When specified, this ensures that the given block exists and is the top block. */
@@ -126,18 +129,15 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
 
   useEffect(() => {
     // Determine the location of the workspace
+    // For inline workspaces (like those within markdown instructions) create
+    // the container to build it offscreen before copying it to its final
+    // location.
     const container = inline ? document.createElement('div') : anchor.current;
-    console.log(
-      'FORCE RENDER',
-      forceInsertTopBlock,
-      toolboxBlocks,
-      startBlocks,
-      BlocklyLibrary,
-      javascriptGenerator,
-    );
+
+    // Create the workspace within the container
     workspace.current = BlocklyLibrary.inject(container, {
       renderer: renderer?.name || 'geras',
-      theme: theme || 'classic',
+      theme: theme.instance || 'classic',
       toolbox: toolboxBlocks,
       media: '/blockly/media/',
       ...(inline
@@ -148,6 +148,9 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
           }
         : {}),
     });
+
+    // Apply the custom styles to our custom elements
+    console.log('THEME', theme, BlocklyLibrary.Theme);
 
     // Massage start blocks to at least a valid empty document
     if (startBlocks === undefined || startBlocks.trim() === '') {
@@ -177,10 +180,8 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
     }
 
     if (inline) {
-      // Move top block to corner
-      const topBlocks = workspace.current.getTopBlocks();
-
-      for (const block of topBlocks) {
+      // Move top block to corner (hopefully there is only one)
+      for (const block of workspace.current.getTopBlocks()) {
         block.moveTo(new BlocklyLibrary.utils.Coordinate(0, 0));
       }
 
@@ -216,32 +217,42 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
       }
     }
 
+    // Add custom events
+    // Add the orphan disabler which disables blocks that aren't connected to top
+    // blocks or procedures, etc.
+    workspace.current.addChangeListener(disableOrphans);
+
+    // Create a block limit map for the toolbox options, if they exist
+    if (typeof toolboxBlocks === 'string') {
+      // TODO have an event for theme changes
+      const blockLimitMap = new BlockLimitMap(toolboxBlocks, theme);
+      workspace.current.addChangeListener(
+        updateBlockLimits.bind(null, blockLimitMap),
+      );
+    }
+
+    // Level implementation callback for custom behaviors per-level type
     if (onInject) {
       onInject();
     }
 
+    // Deconstruct the blockly instance when the component is unmounted
     return () => {
       workspace.current?.dispose();
     };
   }, [anchor.current, renderer]);
 
   // Resize the Blockly workspace when the container changes size
-  if (inline) {
-    useResizeObserver(anchor, () =>
-      BlocklyLibrary.svgResize(workspace.current),
-    );
+  if (!inline) {
+    useResizeObserver(anchor, () => {
+      BlocklyLibrary.svgResize(workspace.current);
+    });
   }
 
-  return (
-    <>
-      {inline && (
-        <span ref={anchor} className={moduleStyles.blocklyWorkspace} />
-      )}
-      {!inline && (
-        <div ref={anchor} className={moduleStyles.blocklyWorkspace} />
-      )}
-    </>
-  );
+  return createElement(inline ? 'span' : 'div', {
+    ref: anchor,
+    className: moduleStyles.blocklyWorkspace,
+  });
 };
 
 export default Blockly;

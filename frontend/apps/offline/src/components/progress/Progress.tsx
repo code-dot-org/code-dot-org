@@ -24,8 +24,6 @@ export interface ProgressProps {
 const Progress: React.FunctionComponent<ProgressProps> = ({
   unit,
   unitKey,
-  lessonGroups,
-  lessons,
   lessonIndex,
   levelIndex,
 }) => {
@@ -87,12 +85,7 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
           className={moduleStyles.unitOverview}
           onClose={() => setOpenOverview(false)}
         >
-          <Unit
-            unitKey={unitKey}
-            data={unit}
-            lessonGroups={lessonGroups}
-            lessons={lessons}
-          />
+          <Unit unit={unit} />
         </CustomDialog>
       )}
     </nav>

@@ -54,8 +54,6 @@ export default async function UnitLevelPage({
         <Progress
           unit={unit}
           unitKey={slug}
-          lessonGroups={unit.lessonGroups}
-          lessons={unit.lessons}
           lessonIndex={realLessonIndex}
           levelIndex={realLevelIndex}
         />

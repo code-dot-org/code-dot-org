@@ -1,3 +1,5 @@
+import * as BlocklyLibrary from 'blockly/core';
+
 /**
  * Describes a custom block.
  */
@@ -18,9 +20,29 @@ export interface BlockDefinition {
   style?: string;
 }
 
+/**
+ * Describes a collision region.
+ */
 export interface Collider {
   x: number;
   y: number;
   height: number;
   width: number;
+}
+
+/**
+ * Our custom theme interface.
+ */
+export interface Theme {
+  definition: {
+    blockLimits: {
+      indicator: {
+        fill: string;
+      };
+      overLimit: {
+        fill: string;
+      };
+    };
+  } & BlocklyLibrary.Theme.ITheme;
+  instance: BlocklyLibrary.Theme;
 }
