@@ -185,6 +185,12 @@ export function moveForward(id: string) {
   });
 }
 
+export function moveBackward(id: string) {
+  API_FUNCTION.bind(this)(() => {
+    move.bind(this)(MoveDirection.BACKWARD, id);
+  });
+}
+
 export function turnLeft(id: string) {
   API_FUNCTION.bind(this)(() => {
     turn.bind(this)(TurnDirection.LEFT, id);

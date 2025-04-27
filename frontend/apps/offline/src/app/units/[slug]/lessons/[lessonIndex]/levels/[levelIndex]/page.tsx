@@ -35,6 +35,7 @@ export default async function UnitLevelPage({
     rawLevelData = await loadLevel(levelKey);
   } catch (_) {
     // If the file doesn't exist or is malformed, return 404
+    console.log('CANNOT PARSE LEVEL', levelKey);
     return notFound();
   }
 

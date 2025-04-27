@@ -16,6 +16,20 @@ const copyBlocklyAssets = async () => {
 };
 copyBlocklyAssets(); // This runs when Next.js starts (dev or build)
 
+// Copy over skins
+const copySkinAssets = async () => {
+  const source = path.resolve(__dirname, '../../../apps/static/skins');
+  const target = path.resolve(__dirname, 'public/skins');
+
+  try {
+    await fs.cp(source, target, {recursive: true, overwrite: true});
+    console.log('[next.config.js] Copied Maze skin assets.');
+  } catch (err) {
+    console.warn('Failed to copy Maze skin assets:', err);
+  }
+};
+copySkinAssets(); // This runs when Next.js starts (dev or build)
+
 const nextConfig: NextConfig = {
   reactStrictMode: false,
   output: 'standalone',

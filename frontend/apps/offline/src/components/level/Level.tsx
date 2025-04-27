@@ -39,6 +39,7 @@ const Level: React.FunctionComponent<LevelProps> = ({levelData}) => (
         <FontAwesomeV6Icon {...spinnerIcon} style={{fontSize: '3rem'}} />
       )}
       {levelData?.type === 'Maze' && <MazeLevel levelData={levelData} />}
+      {levelData?.type === 'Karel' && <MazeLevel levelData={levelData} />}
       {levelData?.type === 'StandaloneVideo' && (
         <StandaloneVideoLevel levelData={levelData} />
       )}

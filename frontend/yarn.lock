@@ -1283,6 +1283,8 @@ __metadata:
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
     blockly: "npm:11.1.1"
+    csv-parse: "npm:^5.6.0"
+    csv-parser: "npm:^3.2.0"
     dotenv: "npm:^16.4.7"
     eslint: "npm:^9.16.0"
     eslint-plugin-jest: "npm:^28.9.0"
@@ -9218,6 +9220,22 @@ __metadata:
   version: 3.1.3
   resolution: "csstype@npm:3.1.3"
   checksum: 10c0/80c089d6f7e0c5b2bd83cf0539ab41474198579584fa10d86d0cafe0642202343cbc119e076a0b1aece191989477081415d66c9fefbf3c957fc2fc4b7009f248
+  languageName: node
+  linkType: hard
+
+"csv-parse@npm:^5.6.0":
+  version: 5.6.0
+  resolution: "csv-parse@npm:5.6.0"
+  checksum: 10c0/52f5e6c45359902e0c8e57fc2eeed41366dc6b6d283b495b538dd50c8e8510413d6f924096ea056319cbbb8ed26e111c3a3485d7985c021bcf5abaa9e92425c7
+  languageName: node
+  linkType: hard
+
+"csv-parser@npm:^3.2.0":
+  version: 3.2.0
+  resolution: "csv-parser@npm:3.2.0"
+  bin:
+    csv-parser: bin/csv-parser
+  checksum: 10c0/650769916607dae9679187803c71ef70d3b724cfb18e4adff187167b282faf18ac7c14a318c4ea6e92ae3483d3ed4b8d92ff213e77979e3049a5c0029034ac65
   languageName: node
   linkType: hard
 

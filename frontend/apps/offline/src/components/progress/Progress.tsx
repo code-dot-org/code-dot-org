@@ -1,5 +1,6 @@
 'use client';
 
+import classNames from 'classnames';
 import React, {useState} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
@@ -37,22 +38,75 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
         </Link>
       </Heading6>
       <div className={moduleStyles.progressContainer}>
-        {unit.lessons[lessonIndex].levels.map((level, i) => (
+        {levelIndex === 0 && (
+          <Button
+            className={moduleStyles.progressButton}
+            alt="Go back to previous level"
+            size="xs"
+            color="gray"
+            useAsLink
+            type="secondary"
+            icon={{
+              iconName: 'left',
+              iconStyle: 'solid',
+            }}
+            isIconOnly
+            disabled
+            href={`/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex}`}
+          />
+        )}
+        {levelIndex !== 0 && (
           <WithTooltip
-            key={`progress-lesson-${lessonIndex}-level-${i}`}
             tooltipProps={{
-              text: unit.lessons[lessonIndex].activitySections[
-                level.activitySectionIndex
-              ].title,
+              text:
+                levelIndex +
+                  '. ' +
+                  unit.lessons[lessonIndex].activitySections[
+                    unit.lessons[lessonIndex].levels[levelIndex - 1]
+                      ?.activitySectionIndex
+                  ]?.title || '',
               size: 'm',
               direction: 'onBottom',
               className: moduleStyles.tooltip,
             }}
           >
             <Button
-              className={
-                i === levelIndex ? moduleStyles.currentLevel : undefined
-              }
+              className={moduleStyles.progressButton}
+              alt="Go back to previous level"
+              size="xs"
+              color="gray"
+              useAsLink
+              type="secondary"
+              icon={{
+                iconName: 'left',
+                iconStyle: 'solid',
+              }}
+              isIconOnly
+              href={`/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex}`}
+            />
+          </WithTooltip>
+        )}
+        {unit.lessons[lessonIndex].levels.map((level, i) => (
+          <WithTooltip
+            key={`progress-lesson-${lessonIndex}-level-${i}`}
+            tooltipProps={{
+              text:
+                i +
+                1 +
+                '. ' +
+                unit.lessons[lessonIndex].activitySections[
+                  level.activitySectionIndex
+                ].title,
+              size: 'm',
+              direction: 'onBottom',
+              className: moduleStyles.tooltip,
+            }}
+          >
+            <Button
+              className={classNames(
+                i === levelIndex ? moduleStyles.currentLevel : undefined,
+                moduleStyles.progressBubble,
+              )}
               type="secondary"
               color="gray"
               useAsLink
@@ -65,10 +119,60 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
             />
           </WithTooltip>
         ))}
+        {levelIndex === unit.lessons[lessonIndex].levels.length && (
+          <Button
+            className={moduleStyles.progressButton}
+            alt="Skip to next level"
+            size="xs"
+            color="gray"
+            useAsLink
+            type="secondary"
+            icon={{
+              iconName: 'right',
+              iconStyle: 'solid',
+            }}
+            isIconOnly
+            disabled
+            href={`/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex + 2}`}
+          />
+        )}
+        {levelIndex !== unit.lessons[lessonIndex].levels.length && (
+          <WithTooltip
+            tooltipProps={{
+              text:
+                levelIndex +
+                  2 +
+                  '. ' +
+                  unit.lessons[lessonIndex].activitySections[
+                    unit.lessons[lessonIndex].levels[levelIndex + 1]
+                      ?.activitySectionIndex
+                  ]?.title || '',
+              size: 'm',
+              direction: 'onBottom',
+              className: moduleStyles.tooltip,
+            }}
+          >
+            <Button
+              className={moduleStyles.progressButton}
+              alt="Skip to next level"
+              size="xs"
+              color="gray"
+              useAsLink
+              type="secondary"
+              icon={{
+                iconName: 'right',
+                iconStyle: 'solid',
+              }}
+              isIconOnly
+              disabled={levelIndex === unit.lessons[lessonIndex].levels.length}
+              href={`/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex + 2}`}
+            />
+          </WithTooltip>
+        )}
       </div>
       <Button
         alt="Open unit overview"
-        className={moduleStyles.unitOverviewButton}
+        className={moduleStyles.button}
         size="s"
         color="white"
         type="secondary"

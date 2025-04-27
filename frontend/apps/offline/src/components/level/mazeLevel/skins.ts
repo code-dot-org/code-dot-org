@@ -24,6 +24,40 @@ const skins = {
     pegmanYOffset: -14,
     turnAfterVictory: true,
   },
+  scrat: {
+    goalIdle: 'goal.png',
+    goalAnimation: 'goal.png',
+    maze_forever: 'maze_forever.png',
+    largerObstacleAnimationTiles: 'tiles-broken.png',
+
+    additionalSound: true,
+    idlePegmanAnimation: 'idle_avatar_sheet.png',
+    idlePegmanAnimationSpeedScale: 1.5,
+    idlePegmanCol: 4,
+    idlePegmanRow: 11,
+
+    hittingWallAnimation: 'wall_avatar_sheet.png',
+    hittingWallAnimationFrameNumber: 20,
+    hittingWallAnimationSpeedScale: 1.5,
+    hittingWallPegmanCol: 1,
+    hittingWallPegmanRow: 20,
+
+    celebrateAnimation: 'jump_acorn_sheet.png',
+    celebratePegmanCol: 1,
+    celebratePegmanRow: 9,
+
+    movePegmanAnimation: 'move_avatar.png',
+    movePegmanAnimationSpeedScale: 1.5,
+    // This is required when move pegman animation is set
+    movePegmanAnimationFrameNumber: 9,
+
+    approachingGoalAnimation: 'close_goal.png',
+    pegmanHeight: 107,
+    pegmanWidth: 80,
+    pegmanXOffset: -12,
+    pegmanYOffset: -30,
+    turnAfterVictory: true,
+  },
 };
 
 export const skinFor: (id: string) => SkinDefinition = id => {
@@ -99,7 +133,7 @@ export const skinFor: (id: string) => SkinDefinition = id => {
   };
 
   // Load individual skin
-  const config = skins[id];
+  const config = skins[id] || skins['birds'];
 
   // (2) Default values for properties common across maze skins.
   skin.obstacleScale = 1.0;
@@ -145,7 +179,7 @@ export const skinFor: (id: string) => SkinDefinition = id => {
     return val;
   }
 
-  for (const [prop, val] of Object.entries(config)) {
+  for (const [prop, val] of Object.entries(config || {})) {
     console.log(prop, val);
     if (Array.isArray(val)) {
       skin[prop] = val.map(determineAssetUrl);

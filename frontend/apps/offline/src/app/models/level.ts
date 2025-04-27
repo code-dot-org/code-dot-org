@@ -1,3 +1,5 @@
+import csv from 'csv-parser';
+import {createReadStream} from 'fs';
 import fs from 'fs/promises';
 import {JSDOM} from 'jsdom';
 import path from 'path';
@@ -74,10 +76,10 @@ export interface LevelData {
 }
 
 /** Loads a level file. */
-export const loadLevel: (key: string) => Promise<string> = async (
+export const loadLevel: (
   key: string,
-  extension: string = 'level',
-) => {
+  extension?: string,
+) => Promise<string> = async (key: string, extension: string = 'level') => {
   // File the .level file within the ./data path
   const filePath = path.join(
     process.cwd(),
@@ -85,16 +87,128 @@ export const loadLevel: (key: string) => Promise<string> = async (
     'levels',
     `${key}.${extension}`,
   );
-  return await fs.readFile(filePath, 'utf8');
+
+  try {
+    return await fs.readFile(filePath, 'utf8');
+  } catch (_) {
+    // Could not find the level data in the ./data path
+  }
+
+  const levelTypes = [
+    'aichat',
+    'ailab',
+    'applab',
+    'bounce',
+    'calc',
+    'craft',
+    'curriculum_reference',
+    'dance',
+    'eval',
+    'external_link',
+    'fish',
+    'flappy',
+    'free_response',
+    'frequency_analysis',
+    'gamelab',
+    'javalab',
+    'maze',
+    'music',
+    'netsim',
+    'odometer',
+    'panels',
+    'pixelation',
+    'poetry',
+    'public_key_cryptography',
+    'pythonlab',
+    'spritelab',
+    'standalone_video',
+    'studio',
+    'text_compression',
+    'turtle',
+    'unplug',
+    'vigenere',
+    'weblab',
+    'weblab2',
+    '../../scripts',
+  ];
+
+  for (const levelType of levelTypes) {
+    try {
+      const fallbackPath = path.join(
+        process.cwd(),
+        '..',
+        '..',
+        '..',
+        'dashboard',
+        'config',
+        'levels',
+        'custom',
+        levelType,
+        `${key}.${extension}`,
+      );
+
+      try {
+        return await fs.readFile(fallbackPath, 'utf8');
+      } catch (_) {
+        return await fs.readFile(fallbackPath.toLowerCase(), 'utf8');
+      }
+    } catch (_) {
+      // Keep trying
+    }
+  }
+
+  throw new Error(`Cannot find the ${extension} file for key ${key}`);
 };
 
+/**
+ * Loads video metadata for the given video key.
+ *
+ * It will look in `./data/videos/{key}.json` for data unique to this application
+ * and otherwise will parse `videos.csv` for the video information.
+ *
+ * @param key - The video key.
+ */
 export const loadVideo: (key: string) => Promise<VideoDefinition> = async (
   key: string,
 ) => {
   // File the .json file within the ./data/videos path
   const filePath = path.join(process.cwd(), 'data', 'videos', `${key}.json`);
-  const fileContents = await fs.readFile(filePath, 'utf8');
-  return JSON.parse(fileContents);
+
+  try {
+    const fileContents = await fs.readFile(filePath, 'utf8');
+    return JSON.parse(fileContents);
+  } catch (_) {
+    // Use the fallback
+  }
+
+  // Load the videos.csv and look for the details within that
+  const fallbackPath = path.join(
+    process.cwd(),
+    '..',
+    '..',
+    '..',
+    'dashboard',
+    'config',
+    'videos.csv',
+  );
+  const promise = new Promise((resolve, reject) => {
+    createReadStream(fallbackPath)
+      .pipe(csv())
+      .on('data', data => {
+        if (data.Key === key) {
+          resolve({
+            download: data.Download,
+            youtube: data.YoutubeCode,
+            locale: data.Locale,
+          });
+        }
+      })
+      .on('end', () => reject());
+  });
+
+  const record = await promise;
+
+  return record;
 };
 
 /**
@@ -109,7 +223,6 @@ export const parseLevelData: (
   const config = JSON.parse(
     xml.querySelector('config')?.textContent || '{}',
   ) as LevelConfiguration;
-  console.log('LEVEL DATA', config);
 
   // Gather the general data from the level file
   const ret: LevelData = {
@@ -133,9 +246,9 @@ export const parseLevelData: (
     return ret;
   });
 
-  // Parse maze data
+  // Parse maze data for such levels
   let isBlockly = false;
-  if (ret.type === 'Maze') {
+  if (ret.type === 'Maze' || ret.type === 'Karel') {
     isBlockly = true;
     ret.mazeData = {
       skin: config.properties.skin,
@@ -199,9 +312,9 @@ export const parseLevelData: (
           };
         }),
     };
-    console.log('MULTI', multiData, multipleChoice);
     ret.multipleChoice = multipleChoice;
   }
 
+  console.log('LEVEL DATA', config, ret);
   return ret;
 };

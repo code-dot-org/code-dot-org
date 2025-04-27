@@ -4,7 +4,7 @@
   flex-direction: row;
   gap: 0.5rem;
 
-  h6.progressHeader {
+  .progressHeader {
     a {
       color: var(--neutral-base-white);
       text-decoration: none;
@@ -28,8 +28,9 @@
     div {
       display: inline-block;
       padding: 0;
+      line-height: 0;
 
-      a {
+      a.progressBubble {
         height: 0.75rem;
         min-width: 0;
         padding: 0;
@@ -48,9 +49,13 @@
         width: 1.75rem;
       }
     }
+
+    a.progressButton {
+      padding: 0.125rem;
+    }
   }
 
-  button.unitOverviewButton {
+  .button {
     background-color: transparent;
 
     &:hover {

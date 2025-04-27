@@ -451,14 +451,34 @@ export interface UnitData {
 export const loadUnit: (slug: string) => Promise<UnitDefinition> = async (
   slug: string,
 ) => {
-  // File the .script_json file within the ./data path
+  // File the .script_json file within the ./data path and fallback to the
+  // dashboard/config/... path
   const filePath = path.join(
     process.cwd(),
     'data',
     'units',
     `${slug}.script_json`,
   );
-  const fileContents = await fs.readFile(filePath, 'utf8');
+
+  try {
+    const fileContents = await fs.readFile(filePath, 'utf8');
+    return JSON.parse(fileContents);
+  } catch (_) {
+    // Could not find the file in the ./data path
+  }
+
+  const fallbackPath = path.join(
+    process.cwd(),
+    '..',
+    '..',
+    '..',
+    'dashboard',
+    'config',
+    'scripts_json',
+    `${slug}.script_json`,
+  );
+
+  const fileContents = await fs.readFile(fallbackPath, 'utf8');
   return JSON.parse(fileContents);
 };
 
@@ -561,7 +581,7 @@ export const parseUnitData: (data: UnitDefinition) => UnitData = (
     };
 
     let lessonLevelIndex = -1;
-    (data.script_levels || []).forEach((level, i) => {
+    (data.script_levels || []).forEach(level => {
       if (level.seeding_key?.['lesson.key'] === lesson.key) {
         lessonLevelIndex++;
         const key = level.seeding_key?.['activity_section.key'];
@@ -572,8 +592,8 @@ export const parseUnitData: (data: UnitDefinition) => UnitData = (
 
           if (activitySectionDefinition) {
             lastActivitySection = {
-              from: i + 1,
-              to: i + 1,
+              from: lessonLevelIndex + 1,
+              to: lessonLevelIndex + 1,
               key: activitySectionDefinition.key,
               position: activitySectionDefinition.position,
               description: activitySectionDefinition.properties.description,
@@ -589,7 +609,7 @@ export const parseUnitData: (data: UnitDefinition) => UnitData = (
           }
         } else {
           // The following level is part of the same activity section
-          lastActivitySection.to = i + 1;
+          lastActivitySection.to = lessonLevelIndex + 1;
           lesson.levels[lessonLevelIndex].activitySectionIndex =
             lesson.activitySections.length - 1;
         }

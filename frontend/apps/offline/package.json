@@ -41,6 +41,7 @@
     "@next/third-parties": "^15.2.1",
     "@rexxars/react-split-pane": "^1.0.0",
     "blockly": "11.1.1",
+    "csv-parser": "^3.2.0",
     "jsdom": "^20.0.3",
     "markdown-to-jsx": "^7.4.7",
     "next": "^15.2.4",

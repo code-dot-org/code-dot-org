@@ -297,7 +297,7 @@ export function forciblyInsertTopBlock(root, blockType) {
 
   if (firstBlock !== null) {
     // when run -> next -> firstBlock
-    const next = doc.createElement('next');
+    const next = document.createElement('next');
     next.appendChild(firstBlock);
     topBlock.appendChild(next);
   }

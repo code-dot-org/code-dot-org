@@ -50,3 +50,7 @@ test-results
 
 # Generated Icons
 /src/icons
+
+# Blockly media found elsewhere
+/public/blockly
+/public/skins
