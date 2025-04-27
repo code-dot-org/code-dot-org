@@ -229,18 +229,54 @@ class ExperimentTest < ActiveSupport::TestCase
     refute experiment.enabled?(user: facilitator_no)
   end
 
+  test 'mix of experiment types' do
+    disabled_experiment = create :user_based_experiment, percentage: 0
+    fully_enabled_experiment = create :user_based_experiment, percentage: 100
+    enabled_teacher_experiment = create :teacher_based_experiment, percentage: 100, script: @script
+    single_teacher_experiment = create :single_user_experiment, min_user_id: @teacher.id
+    single_teacher_experiment_2 = create :single_user_experiment, min_user_id: @teacher.id
+    single_student_experiment = create :single_user_experiment, min_user_id: @student.id
+
+    refute Experiment.enabled?(experiment_name: disabled_experiment.name, user: @teacher)
+    assert_equal [
+      fully_enabled_experiment,
+      enabled_teacher_experiment,
+      single_teacher_experiment,
+      single_teacher_experiment_2
+    ], Experiment.get_all_enabled(user: @teacher, script: @script)
+    assert_equal [
+      fully_enabled_experiment,
+      enabled_teacher_experiment,
+      single_student_experiment,
+    ], Experiment.get_all_enabled(user: @student, script: @script)
+  end
+
   test 'experiment cache contains only active experiments' do
     now = DateTime.now
     active_experiments = [
-      create(:single_user_experiment),
-      create(:single_user_experiment, end_at: now + 1.day),
-      create(:single_user_experiment, start_at: now - 1.day),
-      create(:single_user_experiment, start_at: now - 1.day, end_at: now + 1.day),
+      create(:user_based_experiment),
+      create(:user_based_experiment, end_at: now + 1.day),
+      create(:user_based_experiment, start_at: now - 1.day),
+      create(:user_based_experiment, start_at: now - 1.day, end_at: now + 1.day),
     ]
-    create(:single_user_experiment, end_at: now - 1.day)
-    create(:single_user_experiment, start_at: now + 1.day)
+    create(:user_based_experiment, end_at: now - 1.day)
+    create(:user_based_experiment, start_at: now + 1.day)
 
     assert_equal active_experiments, Experiment.experiments
+  end
+
+  test 'single user experiment cache contains only active experiments' do
+    now = DateTime.now
+    active_experiments = [
+      create(:single_user_experiment, min_user_id: 42),
+      create(:single_user_experiment, min_user_id: 42, end_at: now + 1.day),
+      create(:single_user_experiment, min_user_id: 42, start_at: now - 1.day),
+      create(:single_user_experiment, min_user_id: 42, start_at: now - 1.day, end_at: now + 1.day),
+    ]
+    create(:single_user_experiment, min_user_id: 42, end_at: now - 1.day)
+    create(:single_user_experiment, min_user_id: 42, start_at: now + 1.day)
+
+    assert_equal active_experiments, Experiment.single_user_experiments[42]
   end
 
   test 'editor experiments' do

@@ -38,7 +38,9 @@ class Experiment < ApplicationRecord
 
   # Accessible for tests
   cattr_accessor :experiments
+  cattr_accessor :single_user_experiments
   @@experiments = nil
+  @@single_user_experiments = nil
 
   # users in these experiments can create levels on levelbuilder, as well as
   # edit scripts and levels marked with the same editor_experiment.
@@ -57,11 +59,19 @@ class Experiment < ApplicationRecord
     if @@experiments.nil? || @@experiments_loaded < DateTime.now - MAX_CACHE_AGE
       update_cache
     end
-    @@experiments.select do |experiment|
+    enabled = @@experiments.select do |experiment|
       (experiment_name.nil? || experiment.name == experiment_name) &&
         (experiment.script_id.nil? || experiment.script_id == script.try(:id)) &&
         experiment.enabled?(user: user)
     end
+    if user.present? && @@single_user_experiments[user.id].present?
+      enabled += @@single_user_experiments[user.id].select do |experiment|
+        (experiment_name.nil? || experiment.name == experiment_name) &&
+          (experiment.script_id.nil? || experiment.script_id == script.try(:id)) &&
+          experiment.enabled?(user: user)
+      end
+    end
+    enabled
   rescue => exception
     Honeybadger.notify(
       exception,
@@ -110,7 +120,19 @@ class Experiment < ApplicationRecord
     @@experiments = Experiment.
       where('start_at IS NULL or start_at < ?', now).
       where('end_at IS NULL or end_at > ?', now).
+      where.not(type: 'SingleUserExperiment').
       to_a
+    single_user_array = SingleUserExperiment.
+      where('start_at IS NULL or start_at < ?', now).
+      where('end_at IS NULL or end_at > ?', now).
+      to_a
+    single_user_hash = {}
+    single_user_array.each do |experiment|
+      next if experiment.min_user_id.blank?
+      single_user_hash[experiment.min_user_id] ||= []
+      single_user_hash[experiment.min_user_id] <<= experiment
+    end
+    @@single_user_experiments = single_user_hash
     @@experiments_loaded = now
   end
 
