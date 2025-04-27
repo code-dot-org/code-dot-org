@@ -1,8 +1,13 @@
 import React from 'react';
 
+import type {LevelData} from '@/app/models/level';
 import Level from '@/components/level';
 
-const UnitLevel: React.FunctionComponent = ({levelData}) => {
+export interface UnitLevelProps {
+  levelData: LevelData;
+}
+
+const UnitLevel: React.FunctionComponent<UnitLevelProps> = ({levelData}) => {
   return <Level levelData={levelData} />;
 };
 

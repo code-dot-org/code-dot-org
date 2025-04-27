@@ -7,7 +7,7 @@ export interface Action {
  * Stores information about a current Maze execution.  Execution consists of a
  * series of steps, where each step may contain one or more actions.
  */
-export class ExecutionInfo {
+class ExecutionInfo {
   terminated_: boolean;
   terminationValue_: number | boolean | null;
   steps_: Action[][];

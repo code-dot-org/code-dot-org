@@ -21,6 +21,13 @@ export interface MultipleChoiceData {
   }[];
 }
 
+/** Internal video metadata */
+export interface VideoDefinition {
+  youtube: string;
+  download: string;
+  locale: string;
+}
+
 /** Describes a video. */
 export interface VideoData {
   download: string;
@@ -81,7 +88,7 @@ export const loadLevel: (key: string) => Promise<string> = async (
   return await fs.readFile(filePath, 'utf8');
 };
 
-export const loadVideo: (key: string) => Promise<object> = async (
+export const loadVideo: (key: string) => Promise<VideoDefinition> = async (
   key: string,
 ) => {
   // File the .json file within the ./data/videos path
@@ -93,7 +100,10 @@ export const loadVideo: (key: string) => Promise<object> = async (
 /**
  * Parses a Code.org level file.
  */
-export const parseLevelData = async (key: string, xmlString: string) => {
+export const parseLevelData: (
+  key: string,
+  xmlString: string,
+) => Promise<LevelData> = async (key: string, xmlString: string) => {
   const parser = new new JSDOM().window.DOMParser();
   const xml = parser.parseFromString(xmlString, 'application/xml');
   const config = JSON.parse(

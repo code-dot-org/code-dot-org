@@ -6,6 +6,7 @@ import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
+import type {LevelData} from '@/app/models/level';
 import LevelProvider from '@/providers/LevelProvider';
 
 import MazeLevel from './mazeLevel';
@@ -18,7 +19,7 @@ const spinnerIcon: FontAwesomeV6IconProps = {
 };
 
 export interface LevelProps {
-  levelData: object;
+  levelData: LevelData;
 }
 
 /**

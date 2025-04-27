@@ -35,7 +35,7 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
     <nav className={moduleStyles.progress}>
       <Heading6 className={moduleStyles.progressHeader}>
         <Link href={`/units/${unitKey}`}>
-          Lesson {lessonIndex + 1}: {unit.lessons[lessonIndex].name}
+          Lesson {lessonIndex + 1}: {unit.lessons[lessonIndex].title}
         </Link>
       </Heading6>
       <div className={moduleStyles.progressContainer}>
@@ -43,9 +43,9 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
           <WithTooltip
             key={`progress-lesson-${lessonIndex}-level-${i}`}
             tooltipProps={{
-              text:
-                level.activitySection.properties.name ||
-                level.activitySection.properties.progression_name,
+              text: unit.lessons[lessonIndex].activitySections[
+                level.activitySectionIndex
+              ].title,
               size: 'm',
               direction: 'onBottom',
               className: moduleStyles.tooltip,

@@ -8,6 +8,7 @@ import React, {
 
 import Maze, {tiles} from '@code-dot-org/maze';
 
+import type {LevelData} from '@/app/models/level';
 import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
 import DefaultTheme from '@/components/blockly/themes/default';
 import {getAllGeneratedCode} from '@/components/blockly/utils';
@@ -17,12 +18,13 @@ import LevelContext from '@/contexts/LevelContext';
 
 import * as api from './api';
 import blocks from './blocks';
+import ExecutionInfo from './ExecutionInfo';
 import {evalWith} from './interpreter';
 import {skinFor} from './skins';
 import Visualization from './Visualization';
 
 export interface MazeLevelProps extends BlocklyLevelProps {
-  levelData: object;
+  levelData: LevelData;
 }
 
 const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({levelData}) => {

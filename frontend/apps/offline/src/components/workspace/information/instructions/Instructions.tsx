@@ -103,7 +103,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       // Scroll it down
       tabPanels.scrollTop = tabPanels.scrollHeight;
     }
-  }, [hintsShown, confirmHint]);
+  }, [hintsShown, instructions, confirmHint, containerRef.current]);
 
   return (
     <div className={moduleStyles.instructionsContainer} ref={containerRef}>

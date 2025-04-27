@@ -19,17 +19,15 @@ export default async function UnitLevelPage({
     data = await loadUnit(slug);
   } catch (_) {
     // If the file doesn't exist or is malformed, return 404
-    console.log('UNIT ERROR', _);
     return notFound();
   }
 
-  const {config: unit, lessonGroups, lessons} = parseUnitData(data);
-  console.log('UNIT', unit, unit.lessons[0].activitySections[0]);
+  const unit = parseUnitData(data);
 
   const realLessonIndex = parseInt(lessonIndex) - 1;
   const realLevelIndex = parseInt(levelIndex) - 1;
   const level = unit?.lessons?.[realLessonIndex]?.levels?.[realLevelIndex];
-  const levelKey = level.level_keys[0];
+  const levelKey = level.levelKeys[0];
 
   // Parse level data
   let rawLevelData = {};
@@ -37,7 +35,6 @@ export default async function UnitLevelPage({
     rawLevelData = await loadLevel(levelKey);
   } catch (_) {
     // If the file doesn't exist or is malformed, return 404
-    console.log('LEVEL ERROR', _);
     return notFound();
   }
 
@@ -55,10 +52,10 @@ export default async function UnitLevelPage({
     >
       <Header inLevel>
         <Progress
-          unit={data}
+          unit={unit}
           unitKey={slug}
-          lessonGroups={lessonGroups}
-          lessons={lessons}
+          lessonGroups={unit.lessonGroups}
+          lessons={unit.lessons}
           lessonIndex={realLessonIndex}
           levelIndex={realLevelIndex}
         />

@@ -4,13 +4,22 @@ import Accordion from '@code-dot-org/component-library/accordion';
 import Button from '@code-dot-org/component-library/button';
 import {Heading5} from '@code-dot-org/component-library/typography';
 
+import type {LessonData} from '@/app/models/unit';
 import JointIcon from '@/icons/JointIcon';
 import WireEndIcon from '@/icons/WireEndIcon';
 import WireIcon from '@/icons/WireIcon';
 
 import moduleStyles from './unit.module.scss';
 
-const LessonOverview: React.FunctionComponent = ({unitKey, lesson}) => {
+interface LessonOverviewProps {
+  unitKey: string;
+  lesson: LessonData;
+}
+
+const LessonOverview: React.FunctionComponent<LessonOverviewProps> = ({
+  unitKey,
+  lesson,
+}) => {
   return (
     <div className={moduleStyles.lessonOverview}>
       {(lesson?.activitySections || []).map((activitySection, i) => {
@@ -30,53 +39,43 @@ const LessonOverview: React.FunctionComponent = ({unitKey, lesson}) => {
                   iconStyle: 'solid',
                 }}
                 color="black"
-                href={`/units/${unitKey}/lessons/${lesson.index}/levels/${activitySection.from}`}
+                href={`/units/${unitKey}/lessons/${lesson.index + 1}/levels/${activitySection.from}`}
                 text={
                   singleLevel
                     ? activitySection.from || '0'
                     : `${activitySection.from}-${activitySection.to}`
                 }
-                style={{
-                  width: '5rem',
-                  paddingLeft: 0,
-                  paddingRight: 0,
-                  color: 'var(--text-neutral-primary)',
-                }}
+                className={moduleStyles.activityButton}
               />
-              <Heading5>
-                {activitySection.properties.name ||
-                  activitySection.properties.progression_name}
-              </Heading5>
+              <Heading5>{activitySection.title}</Heading5>
             </div>
             {!singleLevel && (
               <div
                 className={moduleStyles.lessonActivitySectionLevelProgression}
               >
                 <JointIcon role="presentation" alt="" />
-                {Array(activitySection.to - activitySection.from + 1)
-                  .fill()
-                  .map((_, i) => {
-                    const levelIndex = i + activitySection.from;
-                    return (
-                      <React.Fragment
-                        key={`lesson-${lesson.index}-level-${levelIndex}`}
-                      >
-                        <Button
-                          type="secondary"
-                          color="black"
-                          href={`/units/${unitKey}/lessons/${lesson.index}/levels/${levelIndex}`}
-                          useAsLink={true}
-                          text={levelIndex}
-                        />
-                        {levelIndex !== activitySection.to && (
+                <div>
+                  {Array(activitySection.to - activitySection.from + 1)
+                    .fill()
+                    .map((_, i) => {
+                      const levelIndex = i + activitySection.from;
+                      return (
+                        <div key={`lesson-${lesson.index}-level-${levelIndex}`}>
                           <WireIcon role="presentation" alt="" />
-                        )}
-                        {levelIndex === activitySection.to && (
-                          <WireEndIcon role="presentation" alt="" />
-                        )}
-                      </React.Fragment>
-                    );
-                  })}
+                          <Button
+                            type="secondary"
+                            color="black"
+                            href={`/units/${unitKey}/lessons/${lesson.index + 1}/levels/${levelIndex}`}
+                            useAsLink={true}
+                            text={levelIndex}
+                          />
+                          {levelIndex === activitySection.to && (
+                            <WireEndIcon role="presentation" alt="" />
+                          )}
+                        </div>
+                      );
+                    })}
+                </div>
               </div>
             )}
           </div>
@@ -85,6 +84,12 @@ const LessonOverview: React.FunctionComponent = ({unitKey, lesson}) => {
     </div>
   );
 };
+
+export interface LessonProps {
+  lesson: LessonData;
+  unitKey: string;
+  open: boolean;
+}
 
 const Lesson: React.FunctionComponent<LessonProps> = ({
   lesson,
@@ -98,7 +103,7 @@ const Lesson: React.FunctionComponent<LessonProps> = ({
         items={[
           {
             id: lesson?.key,
-            label: lesson?.name,
+            label: lesson?.title,
             content: <LessonOverview lesson={lesson} unitKey={unitKey} />,
           },
         ]}

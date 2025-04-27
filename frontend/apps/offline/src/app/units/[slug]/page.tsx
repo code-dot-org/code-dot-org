@@ -30,7 +30,7 @@ export default async function UnitPage({
     return notFound();
   }
 
-  const {config, lessonGroups, lessons} = await parseUnitData(data);
+  const unit = await parseUnitData(data);
 
   return (
     <div
@@ -43,12 +43,7 @@ export default async function UnitPage({
       }}
     >
       <Header />
-      <Unit
-        unitKey={slug}
-        data={config}
-        lessonGroups={lessonGroups}
-        lessons={lessons}
-      />
+      <Unit unitKey={slug} unit={unit} />
     </div>
   );
 }

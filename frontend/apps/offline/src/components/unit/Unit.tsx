@@ -6,37 +6,35 @@ import {
   BodyOneText,
 } from '@code-dot-org/component-library/typography';
 
+import type {UnitData} from '@/app/models/unit';
+
 import LessonGroup from './LessonGroup';
 
 import moduleStyles from './unit.module.scss';
 
 export interface UnitProps {
-  unitKey: string;
+  unit: UnitData;
 }
 
 /**
  * Renders the Unit overview for a course.
  */
-const Unit: React.FunctionComponent<UnitProps> = ({
-  data,
-  lessonGroups,
-  unitKey,
-}) => {
+const Unit: React.FunctionComponent<UnitProps> = ({unit}) => {
   return (
     <div>
       <Section
         backgroundImageUrl={'/images/bg-pattern.png'}
         background="patternPrimary"
       >
-        <Heading2>{data?.locale_data?.title}</Heading2>
-        <BodyOneText>{data?.locale_data?.description_student}</BodyOneText>
+        <Heading2>{unit.title}</Heading2>
+        <BodyOneText>{unit.description.student}</BodyOneText>
       </Section>
       <div className={moduleStyles.unitContainer}>
-        {lessonGroups.map((lesson_group, i) => (
+        {unit.lessonGroups.map((lessonGroup, i) => (
           <LessonGroup
             key={`lesson-group-${i}`}
-            unitKey={unitKey}
-            config={lesson_group}
+            unitKey={unit.key}
+            lessonGroup={lessonGroup}
             lessonIndex={i + 1}
             open={i === 0}
           />
