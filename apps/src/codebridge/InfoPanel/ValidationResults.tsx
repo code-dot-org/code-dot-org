@@ -2,6 +2,7 @@ import {
   BodyFourText,
   Heading4,
   Heading6,
+  StrongText,
 } from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
@@ -30,6 +31,23 @@ function getStatusForResult(result: ValidationResult) {
       return 'caution';
     case 'ERROR':
       return 'error';
+  }
+}
+
+function getTranslatedResult(result: ValidationResult) {
+  switch (result.result) {
+    case 'PASS':
+      return codebridgeI18n.pass();
+    case 'FAIL':
+      return codebridgeI18n.fail();
+    case 'SKIP':
+      return codebridgeI18n.skip();
+    case 'EXPECTED_FAILURE':
+      return codebridgeI18n.expectedFailure();
+    case 'UNEXPECTED_SUCCESS':
+      return codebridgeI18n.unexpectedSuccess();
+    case 'ERROR':
+      return codebridgeI18n.error();
   }
 }
 
@@ -74,7 +92,9 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
                         status={getStatusForResult(result)}
                         className={moduleStyles.icon}
                       />
-                      <div>{result.result}</div>
+                      <BodyFourText>
+                        <StrongText>{getTranslatedResult(result)}</StrongText>
+                      </BodyFourText>
                     </div>
                   </td>
                 </tr>

@@ -18,7 +18,7 @@ const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
   const classes = useMemo(() => {
     const isDuotone = status !== 'pending';
     const names = isDuotone
-      ? classNames(moduleStyles.duotone, 'fa-duotone fa-regular')
+      ? classNames(moduleStyles.duotone, 'fa-duotone fa-solid')
       : 'fa-regular';
     switch (status) {
       case 'passed':

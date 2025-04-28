@@ -28,7 +28,12 @@
 }
 
 .results {
-  // TODO: make it actually centered
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.resultsCell {
+  vertical-align: middle;
 }
