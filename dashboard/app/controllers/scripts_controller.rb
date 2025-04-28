@@ -50,7 +50,10 @@ class ScriptsController < ApplicationController
       end
     end
 
-    canonical_path = @course ? course_unit_path(@course, @unit_position) : script_path(@script)
+    canonical_path = script_path(@script)
+    if Policies::Courses.modularity_enabled? && @course && @unit_position
+      canonical_path = course_unit_path(@course, @unit_position)
+    end
     if request.path != canonical_path
       # return a temporary redirect rather than a permanent one, to avoid ever
       # serving a permanent redirect from a unit's new location to its old
