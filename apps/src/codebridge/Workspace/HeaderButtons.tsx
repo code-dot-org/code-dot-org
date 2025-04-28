@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
 import {
   TooltipProps,
   WithTooltip,
@@ -16,6 +16,7 @@ import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {currentLocation} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -45,6 +46,8 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const openFeedbackForm = () => {
     window.open('https://forms.gle/Z4FsGMFzE4NrFp369', '_blank');
   };
+
+  const documentationUrl = `${currentLocation().origin}/docs/ide/${appName}`;
 
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
@@ -131,6 +134,15 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           <span>{commonI18n.skipToProject()}</span>
         </Button>
       )}
+      <LinkButton
+        isIconOnly
+        icon={{iconStyle: 'solid', iconName: 'book'}}
+        href={documentationUrl}
+        size={'xs'}
+        type={'tertiary'}
+        target="_blank"
+        className={darkModeStyles.tertiaryButton}
+      />
     </div>
   );
 };
