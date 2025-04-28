@@ -69,21 +69,24 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
   /** Header custom class name */
   className?: string;
 }
+const fetchUserSignedInStatus = async (studioBaseUrl: string) => {
+  try {
+    const signInStatus = await fetch(
+      `${studioBaseUrl}/api/v1/users/signed_in`,
+      {
+        credentials: 'include',
+      },
+    );
 
-function getUserSignedInStatus(studioBaseUrl: string) {
-  return fetch(`${studioBaseUrl}/api/v1/users/signed_in`, {
-    credentials: 'include',
-  })
-    .then(response => {
-      if (response.ok) {
-        return response.json();
-      }
+    if (!signInStatus.ok) {
       throw new Error('Network response was not ok');
-    })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
-    });
-}
+    }
+
+    return await signInStatus.json();
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+  }
+};
 
 /**
  * ## Production-ready Checklist:
@@ -121,18 +124,22 @@ const Header: React.FC<HeaderProps> = ({
   >('loading');
 
   useEffect(() => {
-    getUserSignedInStatus(studioBaseUrl)
-      .then(data => {
+    async function getUserStatus() {
+      try {
+        const data = await fetchUserSignedInStatus(studioBaseUrl);
         if (data) {
           const renderState = data.is_signed_in ? 'signedIn' : 'signedOut';
           setRenderState(renderState);
+        } else {
+          setRenderState('error');
         }
-      })
-      .catch(error => {
+      } catch (error) {
         console.error('Error fetching user signed in status:', error);
-        setRenderState('error');
-      });
-  }, []);
+      }
+    }
+
+    getUserStatus();
+  }, [studioBaseUrl]);
 
   return (
     <header
