@@ -41,6 +41,22 @@ class ThrottleTest < Minitest::Test
     assert Cdo::Throttle.throttle(@throttle_id, 2, 2) # 3/2 reqs per 2s - throttled again
   end
 
+  def test_throttle_single_request_with_count_metric
+    refute Cdo::Throttle.throttle(@throttle_id, 1, 1, 1, 1) # 1/1 count per 1s - not throttled
+    Timecop.travel(Time.now.utc + 1)
+    assert Cdo::Throttle.throttle(@throttle_id, 1, 1, 1, 2) # 2/1 count per 1s - throttled
+  end
+
+  def test_throttle_multiple_requests_with_count_metric
+    refute Cdo::Throttle.throttle(@throttle_id, 4, 2, 1, 2) # 2/4 count per 2s - not throttled
+    Timecop.travel(Time.now.utc + 1)
+    assert Cdo::Throttle.throttle(@throttle_id, 4, 2, 1, 3) # 5/4 count per 2s - throttled
+    Timecop.travel(Time.now.utc + Cdo::Throttle.throttle_time)
+    refute Cdo::Throttle.throttle(@throttle_id, 4, 2, 1, 2) # 2/4 count per 2s after waiting - not throttled anymore
+    Timecop.travel(Time.now.utc + 1)
+    refute Cdo::Throttle.throttle(@throttle_id, 4, 2, 1, 2) # 4/4 count per 2s - not throttled
+  end
+
   def test_throttle_expiration
     period = 2.days
     throttle_time = 3.days
