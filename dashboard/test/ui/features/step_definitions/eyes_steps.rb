@@ -47,7 +47,7 @@ And(/^I close my eyes$/) do
 end
 
 # A Feature can optionally specify the stitch mode ('css' or 'scroll') for Eyes to create the full screenshot.
-And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?(?: without waiting for Font Awesome to load)?$/) do |identifier, stitch_mode, skip_fa_wait|
+And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?( without waiting for Font Awesome to load)?$/) do |identifier, stitch_mode, skip_fa_wait|
   # Wait until the fonts are fully loaded and rendering the page
   # Hopefully fixes many of the issues with font wiggle due to lazily loading
   # alternative fonts for symbols and localized glyphs.
