@@ -19,6 +19,14 @@
     border: 1px solid var(--borders-neutral-primary);
     padding: 4px 6px;
   }
+
+  h6 {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .testSummary {
@@ -32,8 +40,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.resultsCell {
-  vertical-align: middle;
+  padding-top: 4px;
 }
