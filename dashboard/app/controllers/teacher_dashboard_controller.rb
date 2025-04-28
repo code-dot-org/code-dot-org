@@ -72,7 +72,12 @@ class TeacherDashboardController < ApplicationController
 
   def download_progress_csv
     type = params[:type]
+    level_progress_csv if type == 'level'
 
+    nil
+  end
+
+  private def level_progress_csv
     section = load_section
     unit = load_unit(section)
 
@@ -83,49 +88,49 @@ class TeacherDashboardController < ApplicationController
     progress_table = deduplicated_students.map do |student|
       {student_name: student.family_name ? "#{student.name} #{student.family_name}" : student.name, student_id: student.id}
     end
-    if type == 'level'
-      level_names = []
-      unit.lessons.each do |lesson|
-        if lesson.relative_position < 3 || lesson.relative_position > 28
-          lesson.script_levels.each do |script_level|
-            next if script_level.assessment?
-            level = script_level.summarize
-            level_id = level[:activeId] || level[:id]
-            level_text = "#{lesson.relative_position}.#{script_level.level_display_text}"
-            pp 'lfm3', level_text, level_id, level
-            if level[:sublevels]
-              level[:sublevels].each do |sublevel|
-                sublevel_name = "#{level_text}#{sublevel[:letter]}"
-                level_names << sublevel_name
-                progress_table.each do |data_row|
-                  level_progress_for_student = student_progress[data_row[:student_id]][sublevel[:level_id].to_i]
 
-                  data_row[sublevel_name] = level_progress_for_student ? level_progress_for_student[:status] : 'not started'
-                end
-              end
-            else
-              progress_table.each do |data_row|
-                level_progress_for_student = student_progress[data_row[:student_id]][level_id]
+    level_names = []
 
-                data_row[level_text] = level_progress_for_student ? level_progress_for_student[:status] : 'not started'
-              end
-              level_names << level_text
-            end
+    unit.lessons.each do |lesson|
+      lesson.script_levels.each do |script_level|
+        next if script_level.assessment?
+
+        level = script_level.summarize
+        level_id = level[:activeId] || level[:id]
+        level_text = "#{lesson.relative_position}.#{script_level.level_display_text}"
+
+        if level[:sublevels]
+          level[:sublevels].each do |sublevel|
+            sublevel_name = "#{level_text}#{sublevel[:letter]}"
+            level_names << sublevel_name
+            add_level_data_for_all_students(progress_table, student_progress, sublevel[:level_id].to_i, sublevel_name)
           end
+        else
+          add_level_data_for_all_students(progress_table, student_progress, level_id, level_text)
+          level_names << level_text
         end
       end
-      headers = ['student_name'].concat(level_names)
-      send_data(
-        CSV.generate do |csv|
-          csv << headers
-          progress_table.each do |data_row|
-            csv << [data_row[:student_name]].concat(level_names.map {|column_name| data_row[column_name]})
-          end
-        end,
-        filename: 'progress.csv',
-        disposition: 'attachment',
-        type: 'text/csv',
-      )
+    end
+
+    headers = ['student_name'].concat(level_names)
+    send_data(
+      CSV.generate do |csv|
+        csv << headers
+        progress_table.each do |data_row|
+          csv << [data_row[:student_name]].concat(level_names.map {|column_name| data_row[column_name]})
+        end
+      end,
+      filename: 'progress.csv',
+      disposition: 'attachment',
+      type: 'text/csv',
+    )
+  end
+
+  private def add_level_data_for_all_students(progress_table, student_progress, level_id, level_text)
+    progress_table.each do |data_row|
+      level_progress_for_student = student_progress[data_row[:student_id]][level_id]
+
+      data_row[level_text] = level_progress_for_student ? level_progress_for_student[:status] : 'not started'
     end
   end
 
