@@ -1,0 +1,35 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 1,
+  "level_num": "2_2",
+  "video_key": "maze_intro",
+  "properties": {
+    "start_direction": 2,
+    "instructions_important": "true", 
+    "long_instructions": "Can you help me to catch the naughty pig? Stack a couple of \"move forward\" blocks together and press \"Run\" to help me get there.",
+    "short_instructions": "Can you help me to catch the naughty pig? Stack a couple of \"move forward\" blocks together and press \"Run\" to help me get there.",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,2,0,0,0,0],[0,0,0,1,0,0,0,0],[0,0,0,3,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "3",
+    "skin": "birds"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 1
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="maze_moveForward" x="70" y="70" id="startBlock"></block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" id="moveForward"></block>
+        <block type="maze_turn" id="turnLeft"><title name="DIR">turnLeft</title></block>
+        <block type="maze_turn" id="turnRight"><title name="DIR">turnRight</title></block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Maze>

@@ -1,0 +1,31 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 1,
+  "level_num": "2_10",
+  "video_key": "loop_until",
+  "properties": {
+    "start_direction": 1,
+    "long_instructions": "Ok, one last time for practice - can you solve this one using only 4 blocks?",
+    "short_instructions": "Ok, one last time for practice - can you solve this one using only 4 blocks?",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,3,1,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,2,1,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "5",
+    "skin": "birds"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_until_while": 4
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" id="moveForward"></block>
+        <block type="maze_turn" id="turnLeft"><title name="DIR">turnLeft</title></block>
+        <block type="maze_turn" id="turnRight"><title name="DIR">turnRight</title></block>
+        <block type="maze_forever" id="repeatForever"></block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Maze>

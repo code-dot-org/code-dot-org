@@ -1,0 +1,49 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 1,
+  "level_num": "2_13",
+  "video_key": "loop_until",
+  "properties": {
+    "start_direction": 1,
+    "long_instructions": "Use the new \"if\" block to let me decide when to turn. Hint: you only need one more block, but learn how we set it up so you can do it on your own next time.",
+    "short_instructions": "Use the new \"if\" block to let me decide when to turn. Hint: you only need one more block, but learn how we set it up so you can do it on your own next time.",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,3,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,2,1,1,0,0],[0,0,0,0,0,4,0,0]]",
+    "ideal": "5",
+    "step_speed": "3",
+    "skin": "pvz"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_until_while": 3,
+    "conditionals": 2
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="maze_forever" x="20" y="70" editable="false" deletable="false">
+          <statement name="DO">
+            <block type="maze_moveForward" editable="false" deletable="false">
+              <next>
+                <block type="maze_if" editable="false" deletable="false">
+                  <title name="DIR">isPathLeft</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" id="moveForward"></block>
+        <block type="maze_turn" id="turnLeft"><title name="DIR">turnLeft</title></block>
+        <block type="maze_turn" id="turnRight"><title name="DIR">turnRight</title></block>
+        <block type="maze_forever" id="repeatForever"></block>
+        <block type="maze_if"><title name="DIR">isPathLeft</title></block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Maze>

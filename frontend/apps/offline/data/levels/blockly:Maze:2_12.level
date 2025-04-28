@@ -1,0 +1,32 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 1,
+  "level_num": "2_12",
+  "video_key": "loop_until",
+  "properties": {
+    "start_direction": 1,
+    "long_instructions": "Ok, this is similar, but slightly different. Can you do it in only 5 blocks?",
+    "short_instructions": "Ok, this is similar, but slightly different. Can you do it in only 5 blocks?",
+    "maze": "[[1,0,0,0,0,0,0,0],[1,2,4,0,0,0,0,0],[0,1,1,0,0,0,0,0],[0,0,1,1,0,0,0,0],[0,0,0,1,1,0,0,0],[0,0,0,0,1,1,0,0],[0,0,0,0,0,1,3,0],[0,0,0,0,0,0,1,1]]",
+    "ideal": "6",
+    "step_speed": "3",
+    "skin": "pvz"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_until_while": 4
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" id="moveForward"></block>
+        <block type="maze_turn" id="turnLeft"><title name="DIR">turnLeft</title></block>
+        <block type="maze_turn" id="turnRight"><title name="DIR">turnRight</title></block>
+        <block type="maze_forever" id="repeatForever"></block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Maze>

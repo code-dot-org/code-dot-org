@@ -1,0 +1,43 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 1,
+  "level_num": "2_8",
+  "video_key": "loop_times",
+  "properties": {
+    "start_direction": 1,
+    "long_instructions": "When a block is grey, that means you can't delete it. Solve this puzzle using the \"repeat\" block that repeats 3 times. Try putting these 3 blocks inside the grey \"repeat\" block: move, move, turn.",
+    "short_instructions": "When a block is grey, that means you can't delete it. Solve this puzzle using the \"repeat\" block that repeats 3 times. Try putting these 3 blocks inside the grey \"repeat\" block: move, move, turn.",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,1,1,0,0,0],[0,0,0,0,1,0,0,0],[0,0,3,1,1,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "5",
+    "skin": "birds"
+  },
+  "level_incomplete_error": "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end.",
+  "too_few_blocks_msg": "To solve this, think carefully about the pattern of two moves and one turn to put in the \"repeat\" block.  It's okay to have an extra turn at the end.",
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="controls_repeat" x="70" y="70" editable="false"
+          deletable="false" id="undeletableRepeat">
+          <title name="TIMES">3</title>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" id="moveForward"></block>
+        <block type="maze_turn" id="turnLeft"><title name="DIR">turnLeft</title></block>
+        <block type="maze_turn" id="turnRight"><title name="DIR">turnRight</title></block>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Maze>

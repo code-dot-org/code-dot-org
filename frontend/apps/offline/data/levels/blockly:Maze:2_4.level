@@ -1,0 +1,29 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 1,
+  "level_num": "2_4",
+  "video_key": "maze_intro",
+  "properties": {
+    "start_direction": 1,
+    "long_instructions": "Keep calm and help me to find the bad pig. Otherwise I might get angry!",
+    "short_instructions": "Keep calm and help me to find the bad pig. Otherwise I might get angry!",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,2,4,0,3,0,0],[0,0,1,1,1,1,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "9",
+    "skin": "birds"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" id="moveForward"></block>
+        <block type="maze_turn" id="turnLeft"><title name="DIR">turnLeft</title></block>
+        <block type="maze_turn" id="turnRight"><title name="DIR">turnRight</title></block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Maze>

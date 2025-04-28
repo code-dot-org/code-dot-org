@@ -1,0 +1,33 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 1,
+  "level_num": "2_7",
+  "video_key": "loop_times",
+  "properties": {
+    "start_direction": 1,
+    "long_instructions": "Help me banish this bad piggy using the fewest number of blocks. Try using more than one \"repeat times\" block.",
+    "short_instructions": "Help me banish this bad piggy using the fewest number of blocks. Try using more than one \"repeat times\" block.",
+    "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,3,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,0,0,0,0,0,1,0],[0,0,2,1,1,1,1,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "6",
+    "skin": "birds"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "repeat_loops": 3
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" id="moveForward"></block>
+        <block type="maze_turn" id="turnLeft"><title name="DIR">turnLeft</title></block>
+        <block type="maze_turn" id="turnRight"><title name="DIR">turnRight</title></block>
+        <block type="controls_repeat">
+          <title name="TIMES">5</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Maze>

@@ -1,0 +1,34 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 1,
+  "level_num": "2_14",
+  "video_key": "if",
+  "properties": {
+    "start_direction": 1,
+    "long_instructions": "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together.",
+    "short_instructions": "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together.",
+    "maze": "[[0,0,0,4,0,0,0,0],[0,0,0,1,0,1,0,0],[0,0,2,1,1,1,0,0],[0,0,0,0,0,1,0,0],[0,0,0,0,0,1,1,4],[0,0,0,0,0,1,0,0],[0,3,1,1,1,1,0,0],[0,0,0,0,0,0,0,0]]",
+    "ideal": "5",
+    "step_speed": "2",
+    "skin": "pvz"
+  },
+  "published": true,
+  "notes": "",
+  "level_concept_difficulty": {
+    "sequencing": 4,
+    "repeat_until_while": 3,
+    "conditionals": 2
+  }
+}]]></config>
+  <blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="maze_moveForward" id="moveForward"></block>
+        <block type="maze_turn" id="turnLeft"><title name="DIR">turnLeft</title></block>
+        <block type="maze_turn" id="turnRight"><title name="DIR">turnRight</title></block>
+        <block type="maze_forever" id="repeatForever"></block>
+        <block type="maze_if"><title name="DIR">isPathLeft</title></block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Maze>
