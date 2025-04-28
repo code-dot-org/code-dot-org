@@ -80,25 +80,38 @@ class TeacherDashboardController < ApplicationController
 
     student_progress = script_progress_for_users(deduplicated_students, unit)[0]
 
-    # pp('lfm', student_progress, unit.levels.map {|level| {name: level.name, id: level.id}})
-
     progress_table = deduplicated_students.map do |student|
-      response = {}
-      response['student_name'] = student.name
-      response['student_id'] = student.id
-      response
+      {student_name: student.family_name ? "#{student.name} #{student.family_name}" : student.name, student_id: student.id}
     end
     if type == 'level'
-      level_names = unit.lessons.flat_map do |lesson|
-        lesson.script_levels.map do |script_level|
-          level_id = script_level.oldest_active_level.id
-          level_text = "#{lesson.relative_position}.#{script_level.level_display_text}"
-          progress_table.each do |data_row|
-            level_progress_for_student = student_progress[data_row['student_id']][level_id]
+      level_names = []
+      unit.lessons.each do |lesson|
+        if lesson.relative_position < 3 || lesson.relative_position > 28
+          lesson.script_levels.each do |script_level|
+            next if script_level.assessment?
+            level = script_level.summarize
+            level_id = level[:activeId] || level[:id]
+            level_text = "#{lesson.relative_position}.#{script_level.level_display_text}"
+            pp 'lfm3', level_text, level_id, level
+            if level[:sublevels]
+              level[:sublevels].each do |sublevel|
+                sublevel_name = "#{level_text}#{sublevel[:letter]}"
+                level_names << sublevel_name
+                progress_table.each do |data_row|
+                  level_progress_for_student = student_progress[data_row[:student_id]][sublevel[:level_id].to_i]
 
-            data_row[level_text] = level_progress_for_student ? level_progress_for_student[:status] : 'not started'
+                  data_row[sublevel_name] = level_progress_for_student ? level_progress_for_student[:status] : 'not started'
+                end
+              end
+            else
+              progress_table.each do |data_row|
+                level_progress_for_student = student_progress[data_row[:student_id]][level_id]
+
+                data_row[level_text] = level_progress_for_student ? level_progress_for_student[:status] : 'not started'
+              end
+              level_names << level_text
+            end
           end
-          level_text
         end
       end
       headers = ['student_name'].concat(level_names)
@@ -106,7 +119,7 @@ class TeacherDashboardController < ApplicationController
         CSV.generate do |csv|
           csv << headers
           progress_table.each do |data_row|
-            csv << headers.map {|column_name| data_row[column_name]}
+            csv << [data_row[:student_name]].concat(level_names.map {|column_name| data_row[column_name]})
           end
         end,
         filename: 'progress.csv',
