@@ -15,7 +15,7 @@ module Cdo
     # @param [Integer] count Metric count to add for a given request. Optional.
     #   Defaults to 1, and only needs to be set if the metric you're throttling on is not 1:1 with request count.
     # @returns [Boolean] Whether the request should be throttled.
-    def self.throttle(id, limit, period, throttle_for = throttle_time, count = 1)
+    def self.throttle(id, limit, period, throttle_for: throttle_time, count: 1)
       full_key = cache_key(id)
       raw_value = CDO.shared_cache.read(full_key)
       value = raw_value.nil? ?
