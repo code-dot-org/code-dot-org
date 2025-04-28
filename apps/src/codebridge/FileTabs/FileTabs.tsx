@@ -26,6 +26,8 @@ import {
 } from '@dnd-kit/sortable';
 import React, {useState} from 'react';
 
+import i18n from '@cdo/locale';
+
 import FileTab from './FileTab';
 import Sortable from './Sortable';
 
@@ -89,6 +91,9 @@ export const FileTabs = React.memo(() => {
         sensors={sensors}
         collisionDetection={closestCenter}
         modifiers={[restrictToParentElement, restrictToHorizontalAxis]}
+        accessibility={{
+          screenReaderInstructions: {draggable: i18n.dragAndDropInstructions()},
+        }}
       >
         <SortableContext items={files} strategy={horizontalListSortingStrategy}>
           {files.map(f => (
