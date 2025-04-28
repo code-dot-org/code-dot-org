@@ -208,6 +208,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       scriptName,
       selectedOption,
       unitName: unitDisplayName,
+      url: window.location.href,
     };
   }, [context, scriptId, scriptName, unitDisplayName, selectedOption]);
 
