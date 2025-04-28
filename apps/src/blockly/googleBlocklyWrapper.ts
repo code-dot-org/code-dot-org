@@ -1053,14 +1053,14 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.SourceCustomInputTypes = {};
 
   blocklyWrapper.refreshWorkspace = function (workspace) {
-    const xml = Blockly.Xml.workspaceToDom(workspace);
+    const state = Blockly.serialization.workspaces.save(workspace);
     // Do not allow the variables to be redefined as they will conflict when the
     // block data is reloaded.
     const variables = workspace.globalVariables;
     if (variables) {
       workspace.globalVariables = [];
     }
-    Blockly.Xml.clearWorkspaceAndLoadFromXml(xml, workspace);
+    Blockly.serialization.workspaces.load(state, workspace);
     if (variables) {
       workspace.globalVariables = variables;
     }
