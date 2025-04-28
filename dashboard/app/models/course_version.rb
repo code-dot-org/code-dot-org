@@ -80,8 +80,7 @@ class CourseVersion < ApplicationRecord
 
   def ensure_no_resources
     if resources.any? || vocabularies.any? || reference_guides.any?
-      errors.add(:base, "Cannot delete CourseVersion with resources or vocabularies")
-      throw :abort
+      raise ActiveRecord::RecordNotDestroyed, "Cannot delete CourseVersion with resources, vocabularies, or reference guides"
     end
   end
 
