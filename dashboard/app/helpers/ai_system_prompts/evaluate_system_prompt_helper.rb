@@ -13,7 +13,7 @@ module AiSystemPrompts::EvaluateSystemPromptHelper
     structure_without_skills = <<~TEXT
       Please review the student's work. Respond in correctly formatted JSON.
       evaluationCriteria should be a copy of #{evaluation_criteria}.
-      aiEvaluation should be your overall assessment of the student's work. Respond with "Great", "Ok", or "Needs revision".
+      aiEvaluation should be your overall assessment of the student's work. Respond with "Great" if the student's work meets all of the requirements of the instructions. Respond "Ok" if the student's work partially meets the requirements. Otherwise, respond "Needs revision". If the student's work is not complete or is not at all related to computer science, respond with "Needs revision".
       aiReasoning should be one sentence with your reasoning.
     TEXT
     single_student_evaluation_structure = skills ? structure_with_skills : structure_without_skills
