@@ -30,7 +30,7 @@ const ValidationStatusIcon: React.FunctionComponent<ValidationIconProps> = ({
       case 'caution':
         return classNames(names, 'fa-circle-minus', moduleStyles.yellow);
       case 'error':
-        return classNames(names, 'fa-circle-exlamation', moduleStyles.red);
+        return classNames(names, 'fa-circle-exclamation', moduleStyles.red);
     }
   }, [status]);
 
