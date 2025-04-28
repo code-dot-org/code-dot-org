@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-04-25T19:52:32.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Write a Review",
+    "long_instructions": "## Write a Review\r\n\r\n**Task:** Ask AI to help review a movie, book, or game you know well.\r\n\r\n**Things to Try:**\r\n- Ask for a short review (5 sentences)\r\n- Ask it to describe specific characters or scenes.\r\n- Check: Does it sound too generic or personal?",
+    "bubble_choice_description": "Ask AI to help review a movie, book, or game you know well.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/15c3fb2a5db62e7a0fe76c05d1ab997b-movie-review.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-25T19:52:32.685+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_d\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_d\"},{\"changed_at\":\"2025-04-25 19:56:24 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:08:28 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

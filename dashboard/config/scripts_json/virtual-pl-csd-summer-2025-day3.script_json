@@ -2,16 +2,19 @@
   "script": {
     "name": "virtual-pl-csd-summer-2025-day3",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
       "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSD",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
       "is_migrated": true,
+      "student_detail_progress_view": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-01 17:14:15 UTC",
+    "serialized_at": "2025-04-23 15:13:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1445,6 +1448,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L6 - Predict_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1467,6 +1473,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1489,6 +1498,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1511,6 +1523,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1533,6 +1548,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random reassign_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1555,6 +1573,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random practice_csd-vpl-23_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1577,6 +1598,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1599,6 +1623,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random challenge_csd-vpl-23_2025"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1621,6 +1648,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L7 - Predict_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1643,6 +1673,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1665,6 +1698,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1687,6 +1723,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1709,6 +1748,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites 2_csd-vpl-23_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1731,6 +1773,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1753,6 +1798,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1775,6 +1823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_csd-vpl-23_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1797,6 +1848,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_csd-vpl-23_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1819,6 +1873,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1841,6 +1898,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_csd-vpl-23_2025"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1863,6 +1923,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context1_2025"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1885,6 +1948,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-UnderstandingContext2_2025"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1907,6 +1973,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context3_2025"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1929,6 +1998,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context4_2025"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1951,6 +2023,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context5_2025"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1973,6 +2048,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Context6_2025"
+        ],
         "progression": "Understanding Context"
       },
       "bonus": false,
@@ -1995,6 +2073,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Levels1_2025"
+        ],
         "progression": "Completing TLO Lesson Levels"
       },
       "bonus": false,
@@ -2017,6 +2098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL-summer- CSD U3 L7 mini project_2025"
+        ],
         "progression": "Lesson 7: Mini-Project - Robot Faces"
       },
       "bonus": false,
@@ -2039,6 +2123,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL summer - CSD U3 Scene Example_2025"
+        ],
         "progression": "Lesson 11: Mini-Project - Captioned Scenes"
       },
       "bonus": false,
@@ -2061,6 +2148,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL Summer - CSD web project animated example_2025"
+        ],
         "progression": "Lesson 14: Mini-Project - Animation"
       },
       "bonus": false,
@@ -2083,6 +2173,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL Summer CSD U3 - Interactive Card - ExampleChoice_2025"
+        ],
         "progression": "Lesson 18: Project - Interactive Card"
       },
       "bonus": false,
@@ -2105,6 +2198,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Pt2_2025"
+        ],
         "progression": "Asynchronous Work Overview"
       },
       "bonus": false,
@@ -2127,6 +2223,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture2_2025"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2149,6 +2248,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture3_2025"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2171,6 +2273,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture4_2025"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2193,6 +2298,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture5_2025"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2215,6 +2323,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-ClassroomCulture1_2025"
+        ],
         "progression": "Classroom Culture"
       },
       "bonus": false,
@@ -2237,6 +2348,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day3-Pt2end_2025"
+        ],
         "progression": "Completing TLO Levels"
       },
       "bonus": false,
@@ -2715,7 +2829,7 @@
     },
     {
       "name": "CSD Virtual Summer Workshop Day 3 Agenda",
-      "url": "https://docs.google.com/document/d/15yqWZ9tthhTE86bCyYXZzztgPUtFKnc2DstALfxl-pM/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1RrAE-wLyzfFsN8kvuZulxtQYa6h-IC-V4an8cwmmbxk/edit?usp=drive_link",
       "key": "csd_virtual_summer_workshop_day_3_agenda",
       "properties": {
       },
@@ -2725,7 +2839,7 @@
     },
     {
       "name": "CSD Virtual Summer Workshop Day 3 Slides",
-      "url": "https://docs.google.com/presentation/d/1KgLJUemLBF1vjM4SGkfH1JSV0TCb5xuspVnkvQWHJpo/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1mAVTzmJGL6bxHVh42u63Euy14O0hR5tlidSzkQSrkKY/edit?usp=drive_link",
       "key": "csd_virtual_summer_workshop_day_3_slides",
       "properties": {
       },

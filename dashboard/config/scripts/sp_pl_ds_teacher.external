@@ -5,10 +5,10 @@ description 'description here'
 markdown <<MARKDOWN
 # Voices from the Classroom
 
-#### Data science is revolutionizing how we live and work. Understanding its principles and impacts is essential. **Code.org's Data Science** covers into key concepts, explores real-world applications, and highlights the importance of data ethics.
+#### Data science is revolutionizing how we live and work. Understanding its principles and impacts is essential. **Code.org's Insights from Data and AI** covers into key concepts, explores real-world applications, and highlights the importance of data ethics.
 
 
-#### See what educators are saying about teaching the Data Science unit. 
+#### See what educators are saying about teaching the Insights from Data and AI unit. 
 
 <hr style="clear:both">
 
@@ -54,7 +54,7 @@ markdown <<MARKDOWN
   <div style="flex: 3; background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; padding: 20px; color: #000000; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
     <p style="font-size: 50px; margin: 0px 0 0 0; opacity: 0.5;">&ldquo;</p>
     <p style="line-height: 1.5; font-size: 16px; margin: 0 0 10px 0;"> 
-      With so many new terms, using a word wall for all the new concepts in the Data Science course is a brilliant idea! It keeps students engaged and helps them quickly grasp and remember complex ideas.
+      With so many new terms, using a word wall for all the new concepts in the Insights from Data and AI course is a brilliant idea! It keeps students engaged and helps them quickly grasp and remember complex ideas.
     </p>
     <p style="font-size: 50px; text-align: right; opacity: 0.5; margin: 0;">&rdquo;</p>
   </div>
@@ -76,7 +76,7 @@ You've finished the first lesson in this professional learning module! <br><br><
 
 <table width="100%" cellspacing="0" cellpadding="15">
     <tr>
-        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching <br>Data Science</td>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching Insights <br>from Data and AI</td>
         <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Two</b><br>Introduction to<br> Data Science</td>
         <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Three</b><br>Data <br> Visualizations</td>
           

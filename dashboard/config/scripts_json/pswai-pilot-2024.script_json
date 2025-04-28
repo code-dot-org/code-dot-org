@@ -5,11 +5,12 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "csaif-problem-solving-with-ai-2025-pilot",
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-17 04:10:45 UTC",
+    "serialized_at": "2025-04-23 18:16:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -938,7 +939,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "For example:\n- **Opening Statement:** \"A mysterious talking cat started showing up to math class.\"\n- **Student 1:** \"Yes, and he said his name is Whiskers.\"\n- **Student 2:** \"Yes, and he happens to be very good at multiplication.\"\n- **Student 1:** \"Yes, and he has a sister who started showing up to English class.\"\n- **Student 2:** \"Yes, and he has a sister who started showing up to English class.\"\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that prom will be held on a spaceship this year.\"\n- \"Every locker in the main hallway suddenly started playing music.\"\n"
+            "markdown": "For example:\n- **Opening Statement:** \"A mysterious talking cat started showing up to math class.\"\n- **Student 1:** \"Yes, and he said his name is Whiskers.\"\n- **Student 2:** \"Yes, and he happens to be very good at multiplication.\"\n- **Student 1:** \"Yes, and he has a sister who started showing up to English class.\"\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that prom will be held on a spaceship this year.\"\n- \"Every locker in the main hallway suddenly started playing music.\"\n"
           }
         ]
       },

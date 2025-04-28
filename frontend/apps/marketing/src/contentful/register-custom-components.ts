@@ -24,6 +24,9 @@ import HeroBanner, {
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
+import EditorialCard, {
+  EditorialCardContentfulComponentDefinition,
+} from '@/components/editorialCard';
 import FAQAccordion, {
   FAQAccordionContentfulComponentDefinition,
 } from '@/components/faqAccordion';
@@ -87,6 +90,10 @@ defineComponents(
       options: {
         wrapContainerWidth: '100%',
       },
+    },
+    {
+      component: EditorialCard,
+      definition: EditorialCardContentfulComponentDefinition,
     },
     {
       component: FAQAccordion,

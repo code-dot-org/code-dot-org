@@ -8,13 +8,6 @@ import {States} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import './workshopFactory';
 
 describe('DetailsPanel', () => {
-  it('shows a readonly WorkshopForm by default', () => {
-    const wrapper = shallowDetailsPanel();
-    const workshopForm = wrapper.find('Connect(WorkshopForm)');
-    assert.isOk(workshopForm, 'WorkshopForm was rendered');
-    assert.isTrue(workshopForm.prop('readOnly'), 'WorkshopForm is readonly');
-  });
-
   it('shows an edit button when the workshop is in "Not Started" state', () => {
     const wrapper = shallowDetailsPanel({
       workshop: Factory.build('workshop', {state: 'Not Started'}),
@@ -24,6 +17,17 @@ describe('DetailsPanel', () => {
       .find('Button')
       .filterWhere(n => 'Edit' === n.text());
     assert.isOk(editButton, 'Edit button was rendered');
+  });
+
+  it('does not show an edit button when the workshop course config is not found', () => {
+    const wrapper = shallowDetailsPanel({
+      workshop: Factory.build('workshop', {course: 'Not in config'}),
+    });
+    const editButton = wrapper
+      .find('Connect(WorkshopForm)')
+      .find('Button')
+      .filterWhere(n => 'Edit' === n.text());
+    assert.isFalse(editButton.exists(), 'Edit button was not rendered');
   });
 
   it('does not show an edit button when the workshop is not in "Not Started" state', () => {
@@ -37,23 +41,6 @@ describe('DetailsPanel', () => {
         .filterWhere(n => 'Edit' === n.text());
       assert.isFalse(editButton.exists(), 'Edit button was not rendered');
     });
-  });
-
-  it('shows an editable WorkshopForm in edit mode', () => {
-    const wrapper = shallowDetailsPanel({
-      view: 'edit',
-    });
-    const workshopForm = wrapper.find('Connect(WorkshopForm)');
-    assert.isOk(workshopForm, 'WorkshopForm was rendered');
-    assert.isFalse(!!workshopForm.prop('readOnly'), 'WorkshopForm is editable');
-  });
-
-  it('edit mode includes a save button in the header', () => {
-    const wrapper = shallowDetailsPanel({
-      view: 'edit',
-    });
-    const headerSaveButton = findHeaderButton(wrapper, 'Save');
-    assert.isTrue(headerSaveButton.exists(), 'Save button is present');
   });
 
   it('Admin has an edit button in all workshop states', () => {

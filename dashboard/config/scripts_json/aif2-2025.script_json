@@ -5,7 +5,7 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -13,12 +13,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 02:13:01 UTC",
+    "serialized_at": "2025-04-28 00:30:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -69,7 +72,7 @@
       "user_facing": true,
       "position": 4,
       "properties": {
-        "display_name": "End of Unit Assessment"
+        "display_name": "End of Unit Assessment and Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
@@ -114,9 +117,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do your skills and preferences align with computing careers and emerging technologies?**\n\nIn this lesson, students explore how their skills and interests align with computing careers and emerging technologies. Through collaborative activities, they analyze career personas, connect traits to career categories, and identify technologies that enhance career opportunities. At the end of the lesson, students reflect on their own traits and how they align with potential computing careers.",
-        "preparation": "- Print copies of the Career Exploration activity guide (one for each pair of students)\n- Ensure students have access to their Unit Guides (print copies or provide digital copies)",
-        "student_overview": "**How do your skills and preferences align with computing careers and emerging technologies?**\n\nExplore how your skills and interests connect to exciting computing careers and technologies. Discover how emerging technologies solve real-world problems and reflect on the skills you have that align with your future goals."
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**How do your skills and interests align with computing careers and emerging technologies?**\n\nIn this lesson, students explore how their skills and interests align with computing careers and emerging technologies. Through collaborative activities, they analyze career personas, connect traits to career categories, and identify technologies that enhance career opportunities. At the end of the lesson, students reflect on their own traits and how they align with potential computing careers.",
+        "preparation": "- Provide copies of the Vision Board template (one for each pair of students)\n- Ensure students have access to their Unit Guides (print copies or provide digital copies)",
+        "student_overview": "**How do your skills and interests align with computing careers and emerging technologies?**\n\nExplore how your skills and interests connect to exciting computing careers and technologies. Discover how emerging technologies solve real-world problems and reflect on the skills you have that align with your future goals."
       },
       "seeding_key": {
         "lesson.key": "Computing Careers",
@@ -133,7 +136,7 @@
       "relative_position": 2,
       "properties": {
         "overview": "**How can computational thinking help us simplify and solve complex problems?**\n\nIn this lesson, students activate prior knowledge about breaking tasks into smaller steps and practice computational thinking as a structured problem solving approach. They work in pairs to plan a school event (e.g., fundraiser, dance, talent show), applying computational thinking pillars (decomposition and abstraction) to solve the challenge. Students have an opportunity to use an AI Chatbot to help them complete the activity guide. During the wrap up, students reflect on the activity they completed and discuss the computational skills they practiced.",
-        "preparation": "- Print copies of the Planning a School Event activity guide (one for each pair of students)\n- (Optional) Gather several sticky notes for each student",
+        "preparation": "- Print copies and cut up sets of Baking a Cake cards (one for each pair of students)\n- Print copies of the Planning a School Event activity guide (one for each pair of students)\n- (Optional) Gather several sticky notes for each student",
         "student_overview": "**How can computational thinking help us simplify and solve complex problems?**\n\nApply computational thinking principles —decomposition and abstraction — to plan a school event, and use an AI Chatbot for support."
       },
       "seeding_key": {
@@ -203,6 +206,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can writing your own functions help you solve problems more efficiently in your code?**\n\nIn this lesson, students explore how functions can help simplify and organize code. They begin with an unplugged activity where they create and name a sequence of steps, then connect this to function definitions and calls in Python. Through a series of short practice and challenge levels, students define and call functions, replace repeated code with function calls, and debug function-related errors. By the end of the lesson, students understand how functions support abstraction, reusability, and efficient problem-solving in programs.",
+        "preparation": "- Print copies of the Function Template (one for each group of 3-4 students)\n- Print copies of the Instruction Cards (one deck for each group of 3-4 students)\n- (Optional) Cut out the Instruction Cards and place in baggies",
         "student_overview": "**How can writing your own functions help you solve problems more efficiently in your code?**\n\nIn this lesson, you learn how to make your code easier to read and reuse by writing your own functions. You start by creating a sequence of steps and giving it a name, just like in programming. Then, you define and call functions in Python, fix common mistakes, and use the UMPIRE strategy to plan and debug your code."
       },
       "seeding_key": {
@@ -253,6 +257,8 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "**How can we use conditional statements to help a computer make decisions?**\n\nIn this lesson, students are introduced to conditional statements and how they help programs make decisions. The lesson begins with an unplugged activity to activate prior knowledge about conditions and selection, followed by a guided introduction to the structure and syntax of `if` statements in Python. Students explore simple conditionals and then apply their understanding, including debugging, direction-based decisions, and using `if` statements inside `while` loops.",
+        "student_overview": "**How can we use conditional statements to help a computer make decisions?**\n\nIn this lesson, you learn how to use conditional statements to help programs make decisions. The lesson starts with a real-world activity to explore how conditions work, then moves into writing `if` statements in Python to control what a program does based on different situations. You practice using conditionals with the `Painter` to solve challenges, fix bugs, and make the `Painter` respond to what's happening in its environment."
       },
       "seeding_key": {
         "lesson.key": "Conditional Statements",
@@ -298,12 +304,14 @@
     },
     {
       "key": "Two-Way and Nested Selection",
-      "name": "Two-Way and Nested Selection",
+      "name": "Two-Way Selection",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "**How can a program make a choice between two different outcomes, and when should it use `if` versus `if/else`?**\n\nIn this lesson, students deepen their understanding of conditional logic by learning how to use `if/else` statements to write programs that make decisions between two outcomes. Building on their prior experience with one-way selection (`if`), students compare the two structures, explore when each is appropriate, and write `if/else` statements in increasingly complex contexts—including within loops. Through scaffolded programming tasks in The Neighborhood, students modify, debug, and write original code that uses two-way selection to control behavior. By the end of the lesson, they are able to identify situations where two different actions are needed and structure their code to handle both paths effectively.",
+        "student_overview": "**How can a program make a choice between two different outcomes, and when should it use `if` versus `if/else`?**\n\nThis lesson introduces how to use `if/else` statements to help a program choose between two different actions. By exploring programs that use only `if` and comparing them to ones that use `if/else`, you get to see how two-way decisions work in real code. In The Neighborhood, the `Painter` follows paths, picks up paint, and reacts to obstacles based on conditions you write using `if/else`."
       },
       "seeding_key": {
         "lesson.key": "Two-Way and Nested Selection",
@@ -346,12 +354,27 @@
       }
     },
     {
-      "key": "Working with Objects (Lesson 5)",
-      "name": "Working with Objects (Lesson 5)",
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "key": "Working with Objects (Lesson 5)",
+      "name": "Working with Objects (Lesson 5)",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -363,10 +386,10 @@
     {
       "key": "Functions and Parameters (Lesson 6)",
       "name": "Functions and Parameters (Lesson 6)",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -378,10 +401,10 @@
     {
       "key": "Debugging Strategies (Lesson 7)",
       "name": "Debugging Strategies (Lesson 7)",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -393,10 +416,10 @@
     {
       "key": "Introduction to Loops (Lesson 8)",
       "name": "Introduction to Loops (Lesson 8)",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -408,10 +431,10 @@
     {
       "key": "Conditional Statements (Lesson 9)",
       "name": "Conditional Statements (Lesson 9)",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -423,10 +446,10 @@
     {
       "key": "Decomposition (Lesson 11)",
       "name": "Decomposition (Lesson 11)",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -438,10 +461,10 @@
     {
       "key": "Two-Way and Nested Selection (Lesson 12)",
       "name": "Two-Way and Nested Selection (Lesson 12)",
-      "absolute_position": 22,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -510,7 +533,7 @@
       "key": "9ccfa017-dd35-4bd3-b1a5-b029d6c4b4d6",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -538,7 +561,7 @@
       "key": "49c0d1e7-1633-49fc-9243-5171480f9c74",
       "position": 3,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -804,7 +827,7 @@
       "key": "261aa67b-5145-4596-b5ea-66ccd93d22b6",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -818,7 +841,7 @@
       "key": "346ae51d-5249-4a34-93bb-769546b27d35",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1023,6 +1046,18 @@
       }
     },
     {
+      "key": "eaf7552f-0f99-4f83-8055-45cf51493653",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eaf7552f-0f99-4f83-8055-45cf51493653",
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
       "key": "9b5a2c4a-21ef-4abe-95c2-090315da5b92",
       "position": 1,
       "properties": {
@@ -1140,6 +1175,13 @@
       "key": "51eed653-117b-4ec6-8ccc-c3a0a135039f",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Foundations of AI Programming Unit Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students will be using this every lesson throughout the unit. We highly recommend distributing physical copies of the Unit Guide for this unit to allow students to annotate code snippets. If you choose to have students make their own digital copies, you will need to provide guidance to students when annotating code since these code snippets are Drawings inserted into the documents.  \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "51eed653-117b-4ec6-8ccc-c3a0a135039f",
@@ -1215,10 +1257,10 @@
       "key": "31cb443d-0869-41be-b2d7-2832f85fc5bd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Career Exploration activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Before students start working, explain that careers can often be grouped based on the kind of work involved: working with People, working with Ideas, or working with Things. Explain to students that they'll use these categories throughout the activity to explore different computing careers and make connections to necessary skills and technologies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the activity. Explain that students analyze a fictional persona’s social media to determine their interests and skills in order to match them to computing careers that might align with that persona’s skills and interests. For example, a persona might enjoy doing escape rooms which could mean they enjoy working with others or that they enjoy problem solving. Students then get help from a chatbot to brainstorm ways that emerging technologies could be used with that career.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students into groups of two.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. \n- **Level 1:** Students choose one of the four personas and analyze the traits and match them to careers in Part 1 of their activity guide. \n- **Level 2:** Students use the information on the level to match their persona from Level 1 to a category, potential careers, and emerging technologies. \n- **Level 3:** Students use an AI Chatbot to explore more emerging technologies for their persona’s matched career. \n- **Level 4:** Students complete a Check for Understanding.",
-        "duration": "25",
-        "name": "Career Persona Exploration",
-        "progression_name": "Career Persona Exploration"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the My Interests and Skills section of their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** \nBefore students start working, explain that careers can often be grouped based on the kind of work involved: working with People, working with Ideas, or working with Things. Explain to students that they'll work with AI Chat to make connections between their skills and different computing careers.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. Have students copy and paste (or type out) their responses to the My Interests and Skills section of their unit guide into AI Chat. Have students go back and forth with AI Chat several times to give it key background information. \n",
+        "duration": "10",
+        "name": "My Skills and Interests",
+        "progression_name": "My Skills and Interests"
       },
       "seeding_key": {
         "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd",
@@ -1229,15 +1271,11 @@
       "key": "6fced135-358d-4aa5-9e84-24be43206f2a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students struggling to make connections between skills/interests and potential careers. Ask students probing questions such as, \"What traits or skills stand out about this persona?\" or \"What careers involve working with people (ideas … things)?\" As you walk around the room, ensure students are using the activity guide to document the traits they notice about their persona and writing a justification for their skill/interest and career matches. Reassure students that there is no one “right” answer! For example, \"Maya might enjoy being an AI Engineer or a Game Developer because she’s creative, loves puzzles, and enjoys solving big challenges, and both AI Engineers and Game Developers use creativity and logic to build systems that solve complex problems.\"",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students struggling to provide sufficient information about their skills and interests. Ask students probing questions such as, \"What activities do you do after school?\" or \"What are your favorite subjects in school?\" As you walk around the room, ensure students are giving AI Chat enough context for it to choose a career category.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "- Part 1: If students struggle to match personas to careers, encourage them to focus on the skills and interests first. Ask questions like: \"What interests or skills does this persona have?\" Then, reference the Computing Careers Handout to find careers that align with those traits.\n- Part 2: If students are unsure how to connect emerging technologies to careers, provide examples. For instance: \"How might AI make a Data Scientist's job easier?\" or \"How could robotics help a Systems Architect design better solutions?\""
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Career Exploration Activity Guide can be collected and used to formatively assess the lesson objectives.\n\nThe Check for Understanding on Level 4 can be used to formatively assess and provide feedback on students’ understanding of the lesson objectives."
+            "markdown": "Remind students that they should not give AI Chat any personally identifying information. For example, they can share that they are in the high school chorus, but should not share the name of their school.\n"
           }
         ]
       },
@@ -1247,9 +1285,46 @@
       }
     },
     {
-      "key": "072230f9-385e-456c-b83a-2c3efae2f398",
+      "key": "7fe05c39-b4d9-432c-853d-2ce680a1a591",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a quick assessment, ask students to raise their hands based on what category AI Chat suggested. “For example, raise your hand if AI Chat suggested you focus on people-oriented careers.” Explain to students that they'll use these categories throughout the next activity to explore different computing careers and make connections to necessary skills and technologies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each student make a copy of the Vision Board template. Explain that students will complete the first column, My Interests and Skills. As they look through Level 2, students should start thinking about careers they can add to the middle column.",
+        "duration": "5",
+        "name": "Career Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students will be adding to their vision boards throughout the lesson. The template is formatted as a table for students to add in bullet points, however depending on time you might encourage students to add images, videos, or links.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7fe05c39-b4d9-432c-853d-2ce680a1a591",
+        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
+      }
+    },
+    {
+      "key": "de33a9df-3f9b-4a23-a6d0-a14aa7d423da",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to choose the suggested career category suggested in the previous level. Students will look at the different careers and add one or two that interests them to the Future Careers column of their vision board.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Some students may have gotten more than one career category suggestion from AI Chat. Encourage students to look over the different levels but focus on two careers for their vision board."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "de33a9df-3f9b-4a23-a6d0-a14aa7d423da",
+        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
+      }
+    },
+    {
+      "key": "072230f9-385e-456c-b83a-2c3efae2f398",
+      "position": 5,
+      "properties": {
+        "progression_name": "Career Exploration"
       },
       "seeding_key": {
         "activity_section.key": "072230f9-385e-456c-b83a-2c3efae2f398",
@@ -1257,16 +1332,67 @@
       }
     },
     {
-      "key": "6e7b7d67-ecb6-41e6-8650-34562471bb0c",
-      "position": 4,
+      "key": "b7ca5133-3284-4c5e-8ebf-3054157977fc",
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Programming Fundamentals Unit Guide.",
-        "duration": "5",
-        "name": "Career Persona Self-Reflection",
+        "description": "Now that you’ve explored a few careers that align with your skills and interests, it’s time to start building your vision board. This will help you organize your thinking and connect what you're good at with careers you might want to explore further.\n\n",
+        "name": "Designing My Vision Board",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b7ca5133-3284-4c5e-8ebf-3054157977fc",
+        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
+      }
+    },
+    {
+      "key": "70a273fd-5138-4de0-a402-ac050c8e296f",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to begin creating their vision board by completing the first two columns. In Column 1, they should reflect on their interests and strengths, using examples from earlier discussions or their Unit Guide. In Column 2, they’ll add 1–2 careers they found intriguing in Level 2, making sure to include key details or visuals that explain why those careers stood out. Remind students that they’re building something they’ll use in the next step, so they should put effort into making it informative and personal before downloading it as an image.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are including personal touches in Column 1 (e.g., hobbies, school subjects, strengths). For Column 2, encourage students to add not just job titles, but what caught their attention about the careers — such as salary ranges, tools used, or tasks performed.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students will be using this every lesson throughout the unit. Determine if distributing physical copies of the Unit Guide or having students make their own digital copies will work best for you and your students."
+            "markdown": "If students finish early, encourage them to add icons, logos, or visuals from their research to make their vision board more engaging and unique to them.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "70a273fd-5138-4de0-a402-ac050c8e296f",
+        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
+      }
+    },
+    {
+      "key": "475adf23-042e-4c50-8b2b-433aa4695929",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 3 to collaborate with AI to get suggestions about emerging technology that align with students’ interests, skills, and career choices. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for how students are prompting AI. If responses feel generic, ask: “Can you be more specific about what you’re interested in?” or “What would you like to know about how this tech is used?”",
+        "name": "Emerging Technologies",
+        "progression_name": "Envisioning My Future",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reinforce digital safety—students should not include their real names or personal information when sharing their vision board image. Before students upload, remind them to double-check their file and chat messages to make sure no personal details are included.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "475adf23-042e-4c50-8b2b-433aa4695929",
+        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
+      }
+    },
+    {
+      "key": "6e7b7d67-ecb6-41e6-8650-34562471bb0c",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the AI suggestions as a springboard to explore technologies they might want to learn more about. Instruct them to complete the final column of their vision board with any emerging technologies they found exciting, relevant, or surprising. They can include descriptions, visuals, or links to support their choices. If time allows, invite students to share their vision boards with a partner or small group.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are thoughtfully connecting the AI suggestions to their existing interests or skills. Ask questions like: “Which tech seems like a good fit for your strengths or passions?” or \t“Can you see yourself using or building this tech in the future?” Support students who are unsure by helping them revisit earlier parts of their board or offering a few AI suggestions for inspiration. Encourage them to explain their choices — not just list a technology — and to make their boards visually engaging and personally meaningful.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, consider organizing a gallery walk or peer share so students can showcase their completed vision boards. This builds community and helps students see the variety of tech-career connections.\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Students’ completed vision boards can be used to assess their understanding of how personal interests connect to computing careers and emerging technologies. Look for evidence that students have made thoughtful connections between their skills and the AI-recommended tech, and that they can explain why those connections matter.\n"
           }
         ]
       },
@@ -1277,7 +1403,7 @@
     },
     {
       "key": "214841b5-2893-4086-a1a7-70c2bb26a5d4",
-      "position": 5,
+      "position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -1286,50 +1412,18 @@
       }
     },
     {
-      "key": "aaa5832e-9ced-46ab-a247-2fc1af897558",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Self-Reflection Activity and explain that students will now reflect on their own skills and interests. Direct students to complete the Career Self-Reflection section on page one of their Unit Guide so that they can refer back to this self-reflection throughout the unit. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are highlighting or circling their top 3 self-identified skills or interests from the list. There is a spot for them to write in additional skills or interests that are not listed. If students do not identify with any of the listed skills or interests, encourage them to add ones that they do identify with. Encourage students to prompt the chatbot on Level 3 more than once to see if they get different suggestions and to only record those that they are most interested in. ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "- If students are struggling to identify their interests or skills, encourage them to think about hobbies, school projects, or favorite subjects. For example: \"If you enjoy drawing or designing, creativity might be one of your strengths.\"\n- If time permits, students could also ask the AI Career Chat Buddy what emerging tech might be used with the career(s) that interests them. Students can also flip the question around and ask the Chat Buddy what careers use the type of emerging tech that interests them the most."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Career Self-Reflection section in the Unit Guide can be used to assess the lesson objectives."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "aaa5832e-9ced-46ab-a247-2fc1af897558",
-        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
-      }
-    },
-    {
-      "key": "a1d516fd-8fa9-4af7-94fd-ad670df5538a",
-      "position": 7,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "a1d516fd-8fa9-4af7-94fd-ad670df5538a",
-        "lesson_activity.key": "dfb7c878-3cc0-44d0-b416-89e2e604b4fb"
-      }
-    },
-    {
       "key": "b176f1d9-720a-43f8-8914-9001c5ee6140",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day aloud for students. Give students a moment to think about and record their answer individually in their Unit Guide before they share with a partner. If time allows, have students share with a second person not seated near them.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance: *\"Think about a skill or interest you rated yourself highly on earlier. How did it connect to one of the careers we explored?\"*",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the question aloud and let students know this is their chance to reflect on the connections they've made throughout the lesson. Then show the next slide for extra guidance.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Rephrase the question using the breakdown on the slide and in their Unit Guide to help students think more specifically. Direct them to write their answer in the Question of the Day section of Lesson 1 in their Unit Guide. If students are stuck, prompt them to refer to their vision board for inspiration.\n\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance: \"Think about a skill or interest you rated yourself highly on earlier. How did it connect to one of the careers we explored?\"",
         "tips": [
           {
-            "type": "assessmentOpportunity",
-            "markdown": "The question of the day in the Unit Guide can be used to assess the lesson objectives."
+            "type": "teachingTip",
+            "markdown": "If time allows, end the wrap-up with a whole-class share-out: Ask students if anyone would like to share a connection they made between their skills, a computing career, and an emerging technology? This can help reinforce key takeaways and provide inspiration for students who may have struggled.\n"
           },
           {
-            "type": "teachingTip",
-            "markdown": "If time allows, end the wrap-up with a whole-class share-out: Ask students if anyone would like to share a connection they made between their skills, a computing career, and an emerging technology? This can help reinforce key takeaways and provide inspiration for students who may have struggled."
+            "type": "assessmentOpportunity",
+            "markdown": "The question of the day in the Unit Guide can be used to assess the lesson objectives.\n"
           }
         ]
       },
@@ -1339,26 +1433,60 @@
       }
     },
     {
-      "key": "c8007228-6ec1-44a1-9c76-1ca6571abba8",
+      "key": "6841dd72-3c07-4971-bbd9-d8b7494590ac",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6841dd72-3c07-4971-bbd9-d8b7494590ac",
+        "lesson_activity.key": "f066a060-a428-405d-a6a3-fd9a52b4f9b6"
+      }
+    },
+    {
+      "key": "11519843-c123-4665-96e8-8ebccff5c41c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "11519843-c123-4665-96e8-8ebccff5c41c",
+        "lesson_activity.key": "f066a060-a428-405d-a6a3-fd9a52b4f9b6"
+      }
+    },
+    {
+      "key": "ad98f01c-e591-483b-a1ce-708ddd8f0cea",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What process do you take to clean up your room? How do you go about this task?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight the varied approaches that students suggest for accomplishing this common task. Point out any of the following if mentioned by students: the importance of breaking tasks into smaller steps (decomposition), the benefit of recognizing repeated steps (pattern recognition), the need to focus only on key information (abstraction).",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a set of the Baking a Cake cards.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The discussion protocol Think-Pair-Share allows students time to independently reflect on a discussion question and get peer feedback before a class-wide discussion. Allow 1-2 minutes for students to write down bullet points or steps in their process. Then have students share what they wrote down with a partner (or in a group of three). As students are sharing out with a partner, circulate the classroom to find one or two students whose responses you want to highlight. Bring the class back together, and have these one or two students share their responses with the class."
+            "markdown": "You also have the option to have students do this matching activity digitally with the Digital Option Baking Cake Cards"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "c8007228-6ec1-44a1-9c76-1ca6571abba8",
+        "activity_section.key": "ad98f01c-e591-483b-a1ce-708ddd8f0cea",
+        "lesson_activity.key": "9ccfa017-dd35-4bd3-b1a5-b029d6c4b4d6"
+      }
+    },
+    {
+      "key": "7b72f8cc-8a05-42bd-b7aa-9e3d993c1292",
+      "position": 2,
+      "properties": {
+        "description": " Don’t worry about getting this “right” — just focus on what makes sense to you. In a few minutes, we’ll give you the official names for these groups, but first we want to see how you think about organizing these ideas.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7b72f8cc-8a05-42bd-b7aa-9e3d993c1292",
         "lesson_activity.key": "9ccfa017-dd35-4bd3-b1a5-b029d6c4b4d6"
       }
     },
     {
       "key": "3b6e0c69-eb76-43e0-92fb-8ea88e65c02e",
-      "position": 2,
+      "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students group the cards by the kind of task they represent — even if they don’t know the formal terms yet. They should focus on what the card is doing: Is it describing a step? Repeating something? Leaving out extra details?\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n"
       },
       "seeding_key": {
         "activity_section.key": "3b6e0c69-eb76-43e0-92fb-8ea88e65c02e",
@@ -1366,8 +1494,37 @@
       }
     },
     {
+      "key": "53df3809-bd35-409a-9c00-05619fe7b2dd",
+      "position": 4,
+      "properties": {
+        "description": "Great work! You just used four powerful ways of thinking to organize a real-world task — even if you didn’t know it yet. These are the building blocks of something called computational thinking, and today we’re going to dive into two of them: decomposition and abstraction.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "53df3809-bd35-409a-9c00-05619fe7b2dd",
+        "lesson_activity.key": "9ccfa017-dd35-4bd3-b1a5-b029d6c4b4d6"
+      }
+    },
+    {
+      "key": "5829464a-b671-42f9-bb67-d61bb90963c4",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *computational thinking*. Explain that computational thinking is like cooking a recipe:\n- You break down the recipe into steps – prepping ingredients, cooking, plating.\n- You notice similarities with other recipes you've made – chopping vegetables, boiling water.\n- You focus on essential steps and ignore unnecessary details – you don't need to know how the oven works, just how to set the temperature.\n- You follow or create a step-by-step process to cook the dish.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that computational thinking consists of four pillars: decomposition, pattern recognition, abstraction, and algorithm design. Emphasize that computational thinking isn't just for coding – these pillars are useful for solving all kinds of real-world problems.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This lesson will focus on decomposition and abstraction only, and pattern recognition and algorithm design will be discussed in greater depth in upcoming lessons, so don't spend too much time explaining all four of these pillars now."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5829464a-b671-42f9-bb67-d61bb90963c4",
+        "lesson_activity.key": "9ccfa017-dd35-4bd3-b1a5-b029d6c4b4d6"
+      }
+    },
+    {
       "key": "de9e4af1-e992-4574-9742-b23078cd7ea7",
-      "position": 3,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -1377,38 +1534,11 @@
       }
     },
     {
-      "key": "9eeddeb8-5b6f-4890-95cf-df568d0aae74",
+      "key": "2592c796-cceb-4fb6-b00e-c385e430a96b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *computational thinking*. Explain that computational thinking is like cooking a recipe:\n- You break down the recipe into steps – prepping ingredients, cooking, plating.\n- You notice similarities with other recipes you've made – chopping vegetables, boiling water.\n- You focus on essential steps and ignore unnecessary details – you don't need to know how the oven works, just how to set the temperature.\n- You follow or create a step-by-step process to cook the dish.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that computational thinking consists of four pillars: decomposition, pattern recognition, abstraction, and algorithm design. Emphasize that computational thinking isn't just for coding – these pillars are useful for solving all kinds of real-world problems.",
-        "name": "School Event Planning Challenge",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This lesson will focus on decomposition and abstraction only, and pattern recognition and algorithm design will be discussed in greater depth in upcoming lessons, so don't spend too much time explaining all four of these pillars now."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "9eeddeb8-5b6f-4890-95cf-df568d0aae74",
-        "lesson_activity.key": "c32b75a0-affb-4678-a22e-3b53a7c1985a"
-      }
-    },
-    {
-      "key": "74e233f2-226c-4597-b7d7-1d67d9a312f7",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "74e233f2-226c-4597-b7d7-1d67d9a312f7",
-        "lesson_activity.key": "c32b75a0-affb-4678-a22e-3b53a7c1985a"
-      }
-    },
-    {
-      "key": "2592c796-cceb-4fb6-b00e-c385e430a96b",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *decomposition*."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *decomposition*.",
+        "name": "School Event Planning Challenge"
       },
       "seeding_key": {
         "activity_section.key": "2592c796-cceb-4fb6-b00e-c385e430a96b",
@@ -1417,7 +1547,7 @@
     },
     {
       "key": "c75e44e4-3ee0-4847-883f-d4f42c7a2aff",
-      "position": 4,
+      "position": 2,
       "properties": {
         "description": "When you start a jigsaw puzzle, you don't try to put everything together at once. Instead, you break it down into smaller steps – first sorting edge pieces, then grouping by colors or patterns, and finally assembling sections before putting everything together.",
         "remarks": true
@@ -1429,7 +1559,7 @@
     },
     {
       "key": "3a766650-15d4-4770-b17c-67fc399c8716",
-      "position": 5,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *abstraction*."
       },
@@ -1440,7 +1570,7 @@
     },
     {
       "key": "c7f93660-0f74-4c63-8fd2-2809d01170fd",
-      "position": 6,
+      "position": 4,
       "properties": {
         "description": "When you look at a map, you don't see every tree, building, or streetlight – only the important features like roads, landmarks, and distances. The map removes unnecessary details while keeping the essential information needed to navigate.",
         "remarks": true
@@ -1452,7 +1582,7 @@
     },
     {
       "key": "3d5ce63f-9fb8-4e18-a6f4-36e646089bc7",
-      "position": 7,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Planning a School Event activity guide.",
         "tips": [
@@ -1469,7 +1599,7 @@
     },
     {
       "key": "add1e159-a85e-412e-a612-0e78b40d263e",
-      "position": 8,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -1479,7 +1609,7 @@
     },
     {
       "key": "cae3332b-8709-40c7-8436-e0f69d4dcdce",
-      "position": 9,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will work with their partner to plan a school event (e.g., fundraiser, dance, talent show). Allow students to either select from a provided list or come up with their own school or community-related event.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2 Level 1. Students will use the AI chatbot to assist with completing the Decomposition section of the Planning a School Event activity guide.",
         "progression_name": "Decomposition"
@@ -1491,7 +1621,7 @@
     },
     {
       "key": "5002d390-eaf8-4fd5-8704-0026f3c63602",
-      "position": 10,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around and observe students as they work on their activity guide. Ask guiding questions like, \"What’s something you would need to buy for this type of event?\" and \"What types of tasks are similar to each other?\"",
         "tips": [
@@ -1508,7 +1638,7 @@
     },
     {
       "key": "abc992a3-e15c-4b3b-ab4f-5c01bb3696f3",
-      "position": 11,
+      "position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -1518,7 +1648,7 @@
     },
     {
       "key": "4db3e6e6-5dc5-4fb4-a474-676c47f19e59",
-      "position": 12,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once students have finished brainstorming their task list, have students pair up with another pair who chose the same (or a similar) event. Direct each pair to read through the other pair’s tasks before providing feedback.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around and observe students as they give each other feedback. Ask guiding questions like, \"What tasks might you want to add to your own list\" and \"What tasks should be broken up into separate tasks?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did breaking the event into smaller tasks make it easier to plan?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate that planning the event became easier because they were able to see all of the tasks that they would need to accomplish.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 and Level 3. \n- **Level 2**: Students will use the AI chatbot to assist with completing the Abstraction section of the Planning a School Event activity guide.\n- **Level 3:** Check for Understanding",
         "progression_name": "Abstraction",
@@ -1536,7 +1666,7 @@
     },
     {
       "key": "8de1bc9f-09d0-4c24-8214-6d18cbed1451",
-      "position": 13,
+      "position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -1546,7 +1676,7 @@
     },
     {
       "key": "f571dfe9-6bd5-4a2b-a790-d87360479f41",
-      "position": 14,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did abstraction help simplify your plan?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate that abstraction helped them eliminate unnecessary details and see the big picture of what tasks they would need to complete.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How can you use the skills of decomposition and abstraction in the real world?*\n- Use the Raise a Righteous Hand protocol to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students make connections to ways they might already be using decomposition and abstraction in the real world. Figuring out which classes have assigned homework due the next day is an example of decomposition. Using the internet is an example of abstraction, since you don’t need to know exactly how it works in order to use it. See if students can make connections to ways engineers might use decomposition and abstraction in their jobs."
       },
@@ -1557,7 +1687,7 @@
     },
     {
       "key": "325cf278-8c27-4792-b2ca-56372a3514de",
-      "position": 15,
+      "position": 13,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -1570,7 +1700,7 @@
       "key": "57151b32-b07e-462b-884a-d1d07c55f63c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day aloud for students. Give students a moment to think about and record their answer individually in their unit guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance. Have them think back to the Warm Up question “*What process do you take to clean up your room? How do you go about this task?*” Have students consider how decomposition and abstraction help solve this task. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day aloud for students. Give students a moment to think about and record their answer individually in their unit guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance. Have them think back to the Warm Up activity and consider how decomposition and abstraction help solve a task like baking something. ",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1647,11 +1777,11 @@
       "key": "263e8dcf-1907-47d2-9e15-56bb781d4277",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you notice?*\n- *What do you wonder?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share what they notice and wonder about the responses. Look for student responses that break down the problem into steps and responses that identify decisions points to help drive the discussion towards the idea of an algorithm.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display students’ anonymous responses for the class answering the question, “What steps would you take to create a playlist?”\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What patterns do you notice in the responses?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students students practice the computational thinking skill of pattern recognition to identify similarities in their responses.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Highlight any student responses that involve doing things in a certain order, any steps that happened more than once, or decisions they would need to make, such as sorting songs into groups based on their energy or mood. Point out any of those concepts in their steps and connect them to the idea of an algorithm - a step-by-step process that often involves steps in certain order (sequencing), decision-making (selection), and repetition (iteration)."
+            "markdown": "If you feel comfortable, this is a great opportunity to model walking through the steps of students’ algorithms. Open up Spotify or another music player and have students start to give you the order of steps you need to take. Note how many steps need to be taken before you can start adding songs (login to an account, create a new playlist, create a playlist title, etc). Tell students that they will work together as a class to create a flowchart for this process."
           }
         ]
       },
@@ -1664,6 +1794,7 @@
       "key": "696a8ff6-97f7-4c4f-b2a9-1e5daad168bf",
       "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n"
       },
       "seeding_key": {
         "activity_section.key": "696a8ff6-97f7-4c4f-b2a9-1e5daad168bf",
@@ -1712,12 +1843,12 @@
       "key": "07dcf5f3-3fed-4f9a-afdb-a2f70121ccb6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the steps for designing an algorithm. Explain that we follow these steps to make the process structured and logical. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce this flowchart example to students. Point out that different shapes represent either taking an action or making a decision. Have students read over the chart and be prepared to share what they notice and wonder.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* What did you notice?\n* What do you wonder?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share what they notice and wonder about the flowchart. Encourage students to reference specific steps or decision points in their responses. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the steps (or algorithm) for designing a flowchart. Explain that we follow these steps to make the process structured and logical. \n\n\n",
         "name": "Designing an Algorithm",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If time permits, you can engage students with a quick recall discussion and ask the following questions:\n- Why is it important to decompose a complex problem or break it into smaller steps?\n- How does decomposition help with creating an algorithm?\n- Reinforce that following these steps ensures clarity and helps avoid mistakes in problem-solving."
+            "markdown": "If time permits, you can engage students with a quick recall discussion and ask the following questions:\n- Why is it important to decompose a complex problem or break it into smaller steps?\n- How does decomposition help with creating an algorithm?\n\nReinforce that following these steps ensures clarity and helps avoid mistakes in problem-solving."
           }
         ]
       },
@@ -1757,6 +1888,13 @@
       "key": "fa891288-7e6d-4b28-aef7-8d813c8698e2",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the information on the slide to explain to students the \"Shout Out, Share Out\" protocol. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts. Have selected students who shouted out an answer record their response on a sticky note. Then use the sticky notes to build a class flowchart.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Rather than writing student responses on the board, consider having students write their response on a sticky note. Have one color represent steps (e.g. log in to my account) and another color represent decision points (e.g. decide on playlist name). This way you can build out a flowchart by rearranging decision points and steps as students provide their responses.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fa891288-7e6d-4b28-aef7-8d813c8698e2",
@@ -1764,14 +1902,31 @@
       }
     },
     {
-      "key": "8f538bf4-4ab2-4592-8f79-e9ecedd47c24",
+      "key": "339cfe78-4407-4163-8bd4-85304ce8cf27",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the information on the slide to explain to students the \"Shout Out, Share Out\" protocol. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts. Record students' responses on the board, and note any common answers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a moment and look at what was shared together. Point out any similarities from each step. Highlight the different decisions students mentioned and connect them to how we approach problem-solving. Click through the animated slide to explain that everyday decisions, like deciding what to wear, can be broken into simple steps. Algorithms help us solve more complex problems by organizing tasks and guiding decision-making efficiently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Go over the final step of designing an algorithm: organizing steps and decisions into a logical sequence using a flowchart. Point out how the flowchart visually connects actions and decisions to guide the process.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a handful of two different color sticky notes. Students will also need some space near their computers to arrange their sticky notes into a flowchart.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Go over the final step of designing an algorithm: organizing steps and decisions into a logical sequence using a flowchart. Rearrange sticky notes as needed and point out how the flowchart visually connects actions and decisions to guide the process. Explain that everyday problems, like playing music or deciding what to wear, can be broken into simple steps. Algorithms help us solve more complex problems by organizing tasks and guiding decision-making efficiently.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If your classroom setup doesn’t allow for students to easily work on the computer while using sticky notes to create flowcharts at their desk, consider using the optional activity guide instead and distributing copies to students when you distribute sticky notes. The optional activity guide has all of the same options for students to choose from as the options in Level 2. "
+            "markdown": "Highlight any sticky notes that involve doing things in a certain order (e.g. logging in to your account), decisions that need to be made (e.g. sorting songs into groups based on their energy or mood), and any steps that happened more than once (e.g. adding a song to the playlist). Connect these steps to the idea of an algorithm - a step-by-step process that often involves steps in certain order (sequencing), decision-making (selection), and repetition (iteration).\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "339cfe78-4407-4163-8bd4-85304ce8cf27",
+        "lesson_activity.key": "f3f34ac0-1f2d-4368-85fc-b62354f44b02"
+      }
+    },
+    {
+      "key": "8f538bf4-4ab2-4592-8f79-e9ecedd47c24",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* When you hear the word ‘algorithm,’ what comes to mind?\n* How do you think Spotify chooses what to play next?\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students reflect on any biases they hold or previous experiences they have had with the word “algorithm”. Then have students think about how an AI recommendation algorithm, such as Spotify, might work. Review the flowchart you built as a class and note where the Spotify algorithm might take a different approach.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students aren’t familiar with Spotify, use a different media site such as TikTok, Netflix, or YouTube to highlight the concept of an AI-powered recommendation algorithm.\n"
           }
         ]
       },
@@ -1782,8 +1937,15 @@
     },
     {
       "key": "dffa2adf-0eae-47bb-8d29-72e1238cc2f7",
-      "position": 6,
+      "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a handful of two different color sticky notes. Students will also need some space near their computers to arrange their sticky notes into a flowchart.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If your classroom setup doesn’t allow for students to easily work on the computer while using sticky notes to create flowcharts at their desk, consider having students use a digital whiteboard or Google Slides to create their flowchart."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "dffa2adf-0eae-47bb-8d29-72e1238cc2f7",
@@ -1792,9 +1954,9 @@
     },
     {
       "key": "7807355e-ab77-41ea-9e5a-b8de91e739ee",
-      "position": 7,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that their task is to design an algorithm using the algorithm design steps. Let students know that they will use sticky notes for their steps and decisions points - one color for the steps or processes and one color for decision points.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Levels 2 through 6 to pick one of the scenarios to work with and design an algorithm for. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that their task is to design an algorithm using the algorithm design steps. Let students know that they will use sticky notes for their steps and decisions points - one color for the steps or processes and one color for decision points.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Levels 2 through 6 have questions specific to the different scenarios. Have students pick **one** scenario. Then direct students to the level that matches their scenario and have them answer the questions on that level. Once they submit their answers, have them skip over the other levels and jump straight to the Check for Understanding on Level 7.\n",
         "progression_name": "Scenario Choices"
       },
       "seeding_key": {
@@ -1804,9 +1966,9 @@
     },
     {
       "key": "b7f96039-4268-492f-987c-7deb5b7a3f80",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are clearly identifying steps and decision points in their algorithms. Ask questions like: \"What is the goal of your algorithm?\" or \"Does your flowchart account for all possible outcomes?\"",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure that students are only answering questions for one scenario. Check that students are clearly identifying steps and decision points in their algorithms. Ask questions like: \"What is the goal of your algorithm?\" or \"Does your flowchart account for all possible outcomes?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1825,7 +1987,7 @@
     },
     {
       "key": "1ed541af-36d6-4f5a-811e-e0f2279fee02",
-      "position": 9,
+      "position": 10,
       "properties": {
       },
       "seeding_key": {
@@ -1835,7 +1997,7 @@
     },
     {
       "key": "a3d9ecde-432d-4c0a-a30b-bc703d966980",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to pair up with another group to share their flowcharts, use the questions on the slide to provide constructive feedback, and then revise their flowcharts based on that feedback. Emphasize that the goal is to make their algorithms clearer and more complete.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are giving meaningful feedback and incorporating it into their revisions. Ask questions like: *\"What feedback are you using to improve your flowchart?\"* or *\"How does your revision address missing steps or outcomes?\"",
         "tips": [
@@ -1852,7 +2014,7 @@
     },
     {
       "key": "5e791e23-a427-42e7-a572-00f996a64471",
-      "position": 11,
+      "position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -1862,13 +2024,13 @@
     },
     {
       "key": "08cd6fbf-d36a-4c8e-af6d-61c1c4765144",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 7 on Code Studio to answer the Check for Understanding questions.",
         "progression_name": "Check for Understanding",
         "tips": [
           {
-            "type": "teachingTip",
+            "type": "assessmentOpportunity",
             "markdown": "The responses in Level 7 can be used to formatively assess the lesson objectives. "
           }
         ]
@@ -1880,7 +2042,7 @@
     },
     {
       "key": "29d7c2cb-49ce-4d97-8fc0-90499f87a9b0",
-      "position": 13,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -1890,7 +2052,7 @@
     },
     {
       "key": "20e47a8d-2178-4394-9fbb-7dd8185425b3",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What challenges did you face when deciding what to keep, delete, or highlight?*\n- *How might AI handle similar challenges?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students reflect on the challenges they faced when designing their algorithms, such as balancing fairness or handling multiple outcomes. Encourage them to connect these challenges to how AI might tackle similar problems, highlighting both its strengths (e.g., efficiency) and limitations (e.g., bias or lack of context). The goal is for students to recognize the importance of thoughtful algorithm design in addressing complex, real-world issues.",
         "tips": [
@@ -1907,7 +2069,7 @@
     },
     {
       "key": "5805f6e9-f412-4a5b-afbd-7c8595e1482b",
-      "position": 15,
+      "position": 16,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -1930,6 +2092,17 @@
       },
       "seeding_key": {
         "activity_section.key": "c6960a8f-1133-48d9-8276-0f4a7850375a",
+        "lesson_activity.key": "dc416934-a45b-4896-83b2-2da6999a9734"
+      }
+    },
+    {
+      "key": "6fa481a2-cfdd-44ad-929d-b9c2f946876d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "6fa481a2-cfdd-44ad-929d-b9c2f946876d",
         "lesson_activity.key": "dc416934-a45b-4896-83b2-2da6999a9734"
       }
     },
@@ -2847,15 +3020,13 @@
       }
     },
     {
-      "key": "204e75a8-5d7e-4eef-a99c-7d4299b1ad30",
+      "key": "4a783761-32ea-4dfc-85e5-955e9d76a9a3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with a deck of Instruction Cards and a Function Template sheet.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *function*.",
-        "duration": "10",
-        "name": "You're the Function!"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *function*.\n"
       },
       "seeding_key": {
-        "activity_section.key": "204e75a8-5d7e-4eef-a99c-7d4299b1ad30",
+        "activity_section.key": "4a783761-32ea-4dfc-85e5-955e9d76a9a3",
         "lesson_activity.key": "87e468a2-14c1-4615-9956-6e79c0fc780f"
       }
     },
@@ -2872,8 +3043,21 @@
       }
     },
     {
-      "key": "25c83574-e25c-4333-a0b9-4fb924164bbe",
+      "key": "204e75a8-5d7e-4eef-a99c-7d4299b1ad30",
       "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with a deck of Instruction Cards and a Function Template sheet.\n\n",
+        "duration": "10",
+        "name": "You're the Function!"
+      },
+      "seeding_key": {
+        "activity_section.key": "204e75a8-5d7e-4eef-a99c-7d4299b1ad30",
+        "lesson_activity.key": "87e468a2-14c1-4615-9956-6e79c0fc780f"
+      }
+    },
+    {
+      "key": "25c83574-e25c-4333-a0b9-4fb924164bbe",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to choose three to five instruction cards with their group. Groups should work together to organize these into a meaningful sequence, then give the sequence a name (e.g., \"make silly move\" or \"dance\"). Students act out their function or simulate it on paper.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for groups choosing clear, logical sequences and naming their functions descriptively. Support students that are stuck on sequencing or naming. Listen for opportunities to highlight creative or well-named functions later.",
         "tips": [
@@ -2890,7 +3074,7 @@
     },
     {
       "key": "20934670-cf99-47a0-a105-8608fcd5214d",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -2900,7 +3084,7 @@
     },
     {
       "key": "a071346d-bb95-4d2b-bc71-4bb3a561fafb",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why was it helpful to name your sequence of steps?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students should recognize that naming the sequence makes it easier to describe and reuse, helps others understand what the function does, and saves time by avoiding repetition."
       },
@@ -2911,7 +3095,7 @@
     },
     {
       "key": "ac2739f4-54c7-4d22-81f4-70c84f204e10",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "When we notice patterns in code, we can group them together and give them a name. In computer science, this is called abstraction – and we use functions to do it!",
         "remarks": true
@@ -2923,7 +3107,7 @@
     },
     {
       "key": "8ca0d3d7-f129-4e93-a1e0-b3d0c5e7c5dc",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How would someone else know what your function does?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that a clear and descriptive function name helps others understand what the function does. They should understand that good naming makes it easier to read code without having to look at every individual step inside the function. When function names describe actions, they make the code more readable and easier to maintain over time.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What would happen if one of the steps in your function were missing?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students should understand that each step in a function matters, and missing a step can break the function or cause it to behave incorrectly. This sets up the importance of precision and debugging in programming."
       },
@@ -2934,7 +3118,7 @@
     },
     {
       "key": "87ffc087-16ef-4641-8b22-f870a87e11d9",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "This is just like in real code – if even one line is missing, a function might not work the way we expect. That's why we need to test and debug our code carefully.",
         "remarks": true
@@ -2946,9 +3130,9 @@
     },
     {
       "key": "a22c2487-d84b-4cc7-86e4-b03e033375d1",
-      "position": 9,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we define a function with the word**def**, which tells Python we're *defining* a function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we then give the function a name. This should describe what the function does.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that after the name, we add parentheses and a colon.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the steps that the function performs go *underneath*, and they must be indented. Python uses indentation to know what's inside the function. Tell students to use the Tab key to indent their code.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that once you've defined the function, you can call it by using its name with parentheses.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to complete Levels 1 through 8.\n- **Level #1:** In Python Lab, students complete a function that prints something and then call it.\n- **Level #2:** Students are given a defined function but the call is missing parentheses.\n- **Level #3:** Students are given a working function and must add code to call it three times in a row.\n- **Level #4:** Students debug a broken function definition with missing or incorrect syntax.\n- **Level #5:** Students complete a choice level where they are given a function and add a line of code to it.\n- **Level #6:** Students complete a choice level where they are given two small functions that are already defined and must write a new function that calls both in order.\n- **Level #7:** Students complete a vocabulary Check Your Understanding.\n- **Level #8:** Students complete a Check Your Understanding.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that whenever they are learning about a new coding concept, they will annotate a block of code in our Unit Guide. This means that they will either fill in the blanks by writing pieces of code or add descriptions to the pieces of code. Walk students through this first example of annotating code to ensure they understand.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we define a function with the word **def**, which tells Python we're *defining* a function. Have students fill in the blank on their Unit Guide by adding the word def.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that we then give the function a name. This should describe what the function does. Have students fill in the blank in their Unit Guide by adding the description “Function name” above the name of the function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that after the name, we add parentheses and a colon. Have students finish the first line of the function definition in their Unit Guide by adding the parentheses and colon.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the steps that the function performs go *underneath*, and they must be indented. Python uses indentation to know what's inside the function. Tell students to use the Tab key to indent their code.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that once you've defined the function, you can call it by using its name with parentheses. Have students fill in the blank in their Unit Guide code to match what’s on the slide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to complete Levels 1 through 8.\n- **Level #1:** In Python Lab, students complete a function that prints something and then call it.\n- **Level #2:** Students are given a defined function but the call is missing parentheses.\n- **Level #3:** Students are given a working function and must add code to call it three times in a row.\n- **Level #4:** Students debug a broken function definition with missing or incorrect syntax.\n- **Level #5:** Students complete a choice level where they are given a function and add a line of code to it.\n- **Level #6:** Students complete a choice level where they are given two small functions that are already defined and must write a new function that calls both in order.\n- **Level #7:** Students complete a vocabulary Check Your Understanding.\n- **Level #8:** Students complete a Check Your Understanding.",
         "duration": "10",
         "name": "Exploring Functions",
         "progression_name": "Exploring Functions"
@@ -2960,7 +3144,7 @@
     },
     {
       "key": "50a57a20-d64c-478e-8764-9a3d9c1d437d",
-      "position": 10,
+      "position": 11,
       "properties": {
         "progression_name": "Check Your Understanding",
         "tips": [
@@ -2977,7 +3161,7 @@
     },
     {
       "key": "916962af-d2dd-4051-8ba0-fc1d48146c05",
-      "position": 11,
+      "position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -2987,7 +3171,7 @@
     },
     {
       "key": "dabaa32f-0bf4-4242-b7b7-5a95369d8877",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, walk around the room and look for common mistakes. Check whether students are remembering to use parentheses when calling functions. Watch for issues with indentation in their function definitions, which can cause errors in Python. Make sure the function names they are using to call functions match the ones they defined. If students get stuck, remind them to use the UMPIRE strategy to help plan and debug their code.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How is writing and calling a function in code similar to the function you created and acted out earlier?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that both their acted-out function and a function written in code have a name that describes what the function does. They should understand that both include a specific sequence of steps that need to be followed in order. Students should also see that both types of functions can be reused simply by calling the name instead of repeating the steps.",
         "tips": [
@@ -3004,7 +3188,7 @@
     },
     {
       "key": "57c965a8-b1a0-470b-b4ec-d0a5051c6a1e",
-      "position": 13,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -3014,7 +3198,7 @@
     },
     {
       "key": "d7fa26c3-7251-422a-b269-266431da99a2",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why is it helpful to include a comment in a function?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that comments explain what a function is supposed to do without needing to read every line of code. They should also see comments as a way to communicate intent, especially when the function name alone doesn't tell the full story."
       },
@@ -3025,7 +3209,7 @@
     },
     {
       "key": "6edcc5de-2cc7-4828-b423-de6821c0d7ab",
-      "position": 15,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 9 to complete Levels 9 through 12.\n- **Level #9:** Students complete a choice level where they write a function to replace repetitive code.\n- **Level #10:** Students complete a choice level where they define a function and call it multiple times.\n- **Level #11:** Students debug a broken program (missing parentheses, name mismatch).\n- **Level #12:** Students complete a Check Your Understanding.",
         "duration": "15",
@@ -3039,7 +3223,7 @@
     },
     {
       "key": "8e939a7d-1c96-43ae-9b0c-abcf594e2af7",
-      "position": 16,
+      "position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -3049,7 +3233,7 @@
     },
     {
       "key": "65ebfd3e-423f-472a-a921-e6bee1045b1f",
-      "position": 17,
+      "position": 18,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, support them in identifying common errors:\n- Is the function being called with the correct name?\n- Are they remembering to include parentheses when calling it?\n- Are there missing or misordered steps? Prompt students to revisit the UMPIRE strategy when they get stuck.",
         "tips": [
@@ -3066,7 +3250,7 @@
     },
     {
       "key": "b44268c7-2958-44d2-a794-6317132f589b",
-      "position": 18,
+      "position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -3076,7 +3260,7 @@
     },
     {
       "key": "7569aa19-0b04-4524-b2e7-61573c917d31",
-      "position": 19,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What makes a function useful in a program?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain that functions are useful in a program because they help organize code into meaningful chunks. Functions make code easier to read and understand, especially for other people (or for themselves later on). They also allow programmers to reuse code without having to rewrite it every time. Finally, functions make debugging and updating code easier because they isolate specific parts of the program."
       },
@@ -3112,7 +3296,7 @@
       "key": "1d2c7df5-86c3-4842-a196-668191750c39",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *parameter*.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *parameter*.",
         "duration": "15",
         "name": "Parameters and Arguments",
         "tips": [
@@ -3358,7 +3542,7 @@
       "key": "276c83f9-0a2c-4967-9b08-4ecc18c8e983",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Suppose we wanted to move our `Painter` from (0,0) to the edge of The Neighborhood. Why might we want to reduce repetition?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that typing the same line of code over and over is repetitive, inefficient, and easy to mess up. They might say things like, \"This takes a lot of space,\" or \"If I wanted to change something, I'd have to change it in every line,\" or \"It’s boring to write.\" This sets up the motivation for using a loop – to make code shorter, cleaner, and easier to manage.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Suppose we wanted to move our `Painter` from (0,0) to the edge of The Neighborhood. Why might we want to reduce repetition?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that typing the same line of code over and over is repetitive, inefficient, and easy to mess up. They might say things like, \"This takes a lot of space,\" or \"If I wanted to change something, I'd have to change it in every line,\" or \"It’s boring to write.\" This sets up the motivation for using a loop – to make code shorter, cleaner, and easier to manage.",
         "duration": "15",
         "name": "Introduction to while Loops",
         "tips": [
@@ -3611,6 +3795,14 @@
       "key": "26cd2bd4-28e4-400b-b3e7-1240a66b4aaa",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions of the quick selection game. Students will listen to a description you give and then stand if it fits them. Pause and discuss after each instruction and ask a student who didn't stand to explain why. Here are a few descriptions to get the game started:\n- If you are wearing black, stand up.\n- If you are wearing jewelry, stand up.\n- If your name begins with the letter M or J.",
+        "name": "Yes or No",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each class will most likely use different conditions due to the uniqueness and variety of students, dress codes, etc. You may need to change these scenarios based on the makeup of your unique class and students. You can also change the conditions with each instruction and add more instructions to involve more students and if you have time."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "26cd2bd4-28e4-400b-b3e7-1240a66b4aaa",
@@ -3618,9 +3810,39 @@
       }
     },
     {
+      "key": "3073164e-b3e1-467a-b243-4d3489d30e2c",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3073164e-b3e1-467a-b243-4d3489d30e2c",
+        "lesson_activity.key": "261aa67b-5145-4596-b5ea-66ccd93d22b6"
+      }
+    },
+    {
+      "key": "59c85e10-3a8f-4d51-bc28-9b79cda72616",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the definition and components of an algorithm.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which component of an algorithm did you just experience when you either stood or stayed seated?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that they demonstrate selection.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "59c85e10-3a8f-4d51-bc28-9b79cda72616",
+        "lesson_activity.key": "261aa67b-5145-4596-b5ea-66ccd93d22b6"
+      }
+    },
+    {
       "key": "3ca5a9a4-4756-4d79-a204-409300ae2ba1",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a moment to think about what the program will do. Have students discuss their predictions with a partner. Then have a few students share their predictions.",
+        "duration": "15",
+        "name": "Introduction to if Statements",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Let the students know that they can assume a `Painter` object called `isabel` has been created and that it has taken paint from the bucket."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3ca5a9a4-4756-4d79-a204-409300ae2ba1",
@@ -3628,9 +3850,48 @@
       }
     },
     {
-      "key": "ca7c07ae-f729-45c2-8722-89d2a1edcd25",
+      "key": "41dad291-5f1f-4e8c-80fe-29be9279f997",
       "position": 2,
       "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "41dad291-5f1f-4e8c-80fe-29be9279f997",
+        "lesson_activity.key": "346ae51d-5249-4a34-93bb-769546b27d35"
+      }
+    },
+    {
+      "key": "43fedf26-56b0-4607-99d4-4a8a0160d3c1",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students compare what they predicted would happen to what they see happening. If their prediction differed from the actual output, ask them to reflect on why that is.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students should notice that the program contains two identical `if` statements. Both `if` statements check if the `Painter` can move south, but only the first one evaluates to `True`. This is because once the `Painter` takes a step forward it can no longer move south. As a result, the second `if` statement evaluates to `False` and that entire chunk of code is skipped."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "43fedf26-56b0-4607-99d4-4a8a0160d3c1",
+        "lesson_activity.key": "346ae51d-5249-4a34-93bb-769546b27d35"
+      }
+    },
+    {
+      "key": "3bac3ba1-1093-4a75-8f25-9baa462bf0bc",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3bac3ba1-1093-4a75-8f25-9baa462bf0bc",
+        "lesson_activity.key": "346ae51d-5249-4a34-93bb-769546b27d35"
+      }
+    },
+    {
+      "key": "ca7c07ae-f729-45c2-8722-89d2a1edcd25",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *conditional statement*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the word if tells the computer to check something – a condition – and only run the next steps if that condition is true.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that this is the condition. If it is true, then the steps that follow will run.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the colon tells Python that the next indented lines are part of the `if` block.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that these lines will only run if the condition is true.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that indentation is important in Python. Emphasize that if these lines weren't indented, they would always run, even if the condition were false.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think conditionals are useful in programs? What kinds of decisions might a program need to make?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect conditionals to decision-making like checking for input (e.g., \"Did the user click a button?\"), avoiding errors (e.g., \"Can the character move?\"), or controlling flow based on conditions (e.g., \"If a variable reaches 10, reset the game.\").\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1 through 5.\n- **Level #1:** In Python Lab, students modify the code so that the Painter paints only if it is facing west.\n- **Level #2:** Students modify the code so that the the Painter turns right if it can move south.\n- **Level #3:** Students write an if statement that makes the Painter turn right if it is on paint.\n- **Level #4:** Students debug indentation errors and syntax errors.\n- **Level #5:** Students complete a Check Your Understanding.",
         "progression_name": "Exploring Conditionals"
       },
       "seeding_key": {
@@ -3640,7 +3901,7 @@
     },
     {
       "key": "c0542057-c942-4b5a-b91e-198cee0abbae",
-      "position": 3,
+      "position": 6,
       "properties": {
         "progression_name": "Check Your Understanding"
       },
@@ -3650,9 +3911,23 @@
       }
     },
     {
-      "key": "ef6fcb18-665d-41d3-b426-66757294ed6e",
-      "position": 4,
+      "key": "406bbbae-1226-4e6c-ace3-157c23af92c5",
+      "position": 7,
       "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students struggling with forgetting colons or indentation, understanding how the `Painter`'s direction affects behavior, and reading the problem carefully to choose the correct condition."
+      },
+      "seeding_key": {
+        "activity_section.key": "406bbbae-1226-4e6c-ace3-157c23af92c5",
+        "lesson_activity.key": "346ae51d-5249-4a34-93bb-769546b27d35"
+      }
+    },
+    {
+      "key": "ef6fcb18-665d-41d3-b426-66757294ed6e",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you learn about `if` statements?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should mention that `if` runs code only when the condition is true and note the importance of indentation.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have about `if` statements?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share any questions they have. These might be questions like \"When do I need a colon?\" or \"What happens when the condition is false?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are the benefits of using `if` statements in our code?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share how programs make decisions, prevent unwanted actions, and make their code more flexible and dynamic.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 6 to complete Levels 6 through 9.\n- **Level #6:** Students complete a choice level where they modify the code to use an `if` statement inside a `while` loop.\n- **Level #7:** Students complete a choice level using `while` and `if` statements in The Neighborhood.\n- **Level #8:** Students complete a vocabulary Check Your Understanding.\n- **Level #9:** Students complete a Check Your Understanding.",
+        "duration": "15",
+        "name": "Decisions with the Painter",
         "progression_name": "Decisions with the Painter"
       },
       "seeding_key": {
@@ -3661,9 +3936,28 @@
       }
     },
     {
+      "key": "91dc411f-6bee-4a86-95cd-f264d4ee11d9",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Notice how students apply what they learned in new contexts with The Neighborhood.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Levels 6 and 7 are choice levels. Encourage students to try at least one and challenge themselves.\n\nEncourage students to plan their logic before coding. Ask \"What do you want the `Painter` to check for?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "91dc411f-6bee-4a86-95cd-f264d4ee11d9",
+        "lesson_activity.key": "346ae51d-5249-4a34-93bb-769546b27d35"
+      }
+    },
+    {
       "key": "54e033cc-1e71-4bb7-ad15-2d768898d0cf",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their unit guides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.",
+        "name": "Question of the Day Reflection"
       },
       "seeding_key": {
         "activity_section.key": "54e033cc-1e71-4bb7-ad15-2d768898d0cf",
@@ -3692,12 +3986,30 @@
       }
     },
     {
-      "key": "3fd3a870-dac1-4554-818c-b41a32469854",
+      "key": "154b669b-7c96-4524-816d-1da7e25a292a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students the Algorithm Decision-Making activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 1 of their activity guide where they analyze a flawed music selection algorithm using a flowchart, identify what the algorithm currently does, its limitations, and possible improvements. Guide them to focus on how the algorithm makes recommendations and whether it considers diverse user preferences. Clarify that this is an analysis activity, not about finding a single correct answer.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s behavior, such as only recommending songs from the first selected genre. Look for students recognizing limitations like lack of diversity or bias toward initial choices. Encourage creative improvement ideas, such as incorporating recent searches or expanding recommendations over time. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students the Algorithm Decision-Making activity guide. Or direct them to Level 1 to complete the Activity Guide on their device.\n\n",
         "duration": "15",
         "name": "Debugging a Music Selection Algorithm",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Decide in advance if you want to print out the Activity Guide for students or have them complete it digitally."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "154b669b-7c96-4524-816d-1da7e25a292a",
+        "lesson_activity.key": "402be37a-a02b-4e89-91db-4fa2b0fd766b"
+      }
+    },
+    {
+      "key": "3fd3a870-dac1-4554-818c-b41a32469854",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 1 of their activity guide where they analyze a flawed music selection algorithm using a flowchart, identify what the algorithm currently does, its limitations, and possible improvements. Guide them to focus on how the algorithm makes recommendations and whether it considers diverse user preferences. Clarify that this is an analysis activity, not about finding a single correct answer.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s behavior, such as only recommending songs from the first selected genre. Look for students recognizing limitations like lack of diversity or bias toward initial choices. Encourage creative improvement ideas, such as incorporating recent searches or expanding recommendations over time. ",
+        "progression_name": "Algorithms IRL",
         "tips": [
           {
             "type": "teachingTip",
@@ -3712,7 +4024,7 @@
     },
     {
       "key": "dacd6642-fb6f-4897-a200-8cb80664ecf7",
-      "position": 2,
+      "position": 3,
       "properties": {
       },
       "seeding_key": {
@@ -3722,7 +4034,7 @@
     },
     {
       "key": "68767580-36a0-41e5-b399-b2374f09acdd",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One to share their ideas for proposed solutions.",
         "tips": [
@@ -3739,7 +4051,7 @@
     },
     {
       "key": "38405927-030d-4242-9cf3-c2a3c51c4faf",
-      "position": 4,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -3749,7 +4061,7 @@
     },
     {
       "key": "fa5aaeb2-cf8e-4c97-8f62-58846c6032d9",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What similarities do you see across these suggestions?*\n- *What challenges might arise when implementing these improvements?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize common themes in their proposed improvements, such as increasing variety in recommendations or considering user feedback. They should also discuss challenges like balancing personalization with diversity or ensuring the algorithm adapts over time. "
       },
@@ -3759,18 +4071,34 @@
       }
     },
     {
-      "key": "4a284003-bb8b-4512-b4a8-29bb75994f3b",
-      "position": 6,
+      "key": "c534b9ce-dcc1-4437-b070-ddef4f0a6650",
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *bias*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *ethics*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 2 of their activity guide where they analyze the self-driving car decision-making algorithm by identifying what it does, the factors it considers, the trade-offs involved, and who benefits or is harmed. Encourage them to think critically about the algorithm’s priorities and limitations. Remind them that real-world algorithms must balance multiple factors, often leading to ethical dilemmas.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s steps, such as detecting obstacles, assessing risks, and making a decision. Look for students recognizing the factors considered, like pedestrian safety, passenger safety, and legal concerns. Encourage analysis of trade-offs, such as whether avoiding one accident increases the risk of another. Pay attention to conversations about ethical implications, including who benefits, who is at risk, and what makes a decision \"fair.\" ",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *bias*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *ethics*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  ",
         "duration": "20",
-        "name": "Ethical Exploration of Autonomous Vehicle Algorithms",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, consider showing the Waymo Self-Driving gif located in the Teacher Resources to demonstrate a real-life autonomous vehicle swerving to avoid a pedestrian. Use this example to highlight how real-world AI must make split-second ethical decisions and how different scenarios could lead to different outcomes.\n\nThroughout this part of the activity, ask guiding questions like, “What criteria does the car prioritize? What factors are missing?” to deepen student thinking. Encourage discussion among partners by prompting students to consider whether there is a \"right\" decision or if it depends on the situation. Connect the discussion to real-world AI challenges, highlighting how autonomous vehicles must make split-second ethical decisions with real consequences."
-          }
-        ]
+        "name": "Ethical Exploration of Autonomous Vehicle Algorithms"
+      },
+      "seeding_key": {
+        "activity_section.key": "c534b9ce-dcc1-4437-b070-ddef4f0a6650",
+        "lesson_activity.key": "402be37a-a02b-4e89-91db-4fa2b0fd766b"
+      }
+    },
+    {
+      "key": "b6fbfab7-f252-4b89-99f9-2c5ad10c9ec0",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the Waymo Self-Driving GIF to demonstrate a real-life autonomous vehicle swerving to avoid a pedestrian. Use this example to highlight how real-world AI must make split-second ethical decisions and how different scenarios could lead to different outcomes.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How do the music algorithm and self-driving car algorithm affect people’s lives?*\n- *How can we make these algorithms more fair?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should make a connection between the music algorithm and self-driving car algorithm as two ways that humans are affected by AI-powered algorithms. The software engineers who created these algorithms made certain decisions for the AI to take, such as what genre of music to recommend or what to have the car do if a pedestrian unexpectedly runs into the road. Encourage students to continue thinking of real-world decisions that are made by AI algorithms."
+      },
+      "seeding_key": {
+        "activity_section.key": "b6fbfab7-f252-4b89-99f9-2c5ad10c9ec0",
+        "lesson_activity.key": "402be37a-a02b-4e89-91db-4fa2b0fd766b"
+      }
+    },
+    {
+      "key": "4a284003-bb8b-4512-b4a8-29bb75994f3b",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 2 of their activity guide where they analyze the self-driving car decision-making algorithm by identifying what it does, the factors it considers, the trade-offs involved, and who benefits or is harmed. Encourage them to think critically about the algorithm’s priorities and limitations. Remind them that real-world algorithms must balance multiple factors, often leading to ethical dilemmas.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s steps, such as detecting obstacles, assessing risks, and making a decision. Look for students recognizing the factors considered, like pedestrian safety, passenger safety, and legal concerns. Encourage analysis of trade-offs, such as whether avoiding one accident increases the risk of another. Pay attention to conversations about ethical implications, including who benefits, who is at risk, and what makes a decision \"fair.\" "
       },
       "seeding_key": {
         "activity_section.key": "4a284003-bb8b-4512-b4a8-29bb75994f3b",
@@ -3779,8 +4107,9 @@
     },
     {
       "key": "d270cde4-71b9-4ac4-bae2-d656773df516",
-      "position": 7,
+      "position": 10,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** With their partners, have students examine the presented scenarios involving self-driving cars within the activity guide. Students should examine each scenario and describe the considerations that they would have to make in order to have their algorithm respond to the scenarios.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask guiding questions like, “What criteria would you prioritize?” to deepen student thinking. Encourage discussion among partners by prompting students to consider whether there is a \"right\" decision or if it depends on the situation. Connect the discussion to real-world AI challenges, highlighting how autonomous vehicles must make split-second ethical decisions with real consequences.\n"
       },
       "seeding_key": {
         "activity_section.key": "d270cde4-71b9-4ac4-bae2-d656773df516",
@@ -3788,8 +4117,29 @@
       }
     },
     {
+      "key": "e4acef8c-6a13-4960-9564-be43fbfe2362",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share some of their ideas that developed for how to update the algorithms for the self-driving car hypothetical scenarios."
+      },
+      "seeding_key": {
+        "activity_section.key": "e4acef8c-6a13-4960-9564-be43fbfe2362",
+        "lesson_activity.key": "402be37a-a02b-4e89-91db-4fa2b0fd766b"
+      }
+    },
+    {
+      "key": "50c3b7a9-f9dc-4106-b3f6-ff71fd573ca9",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "50c3b7a9-f9dc-4106-b3f6-ff71fd573ca9",
+        "lesson_activity.key": "402be37a-a02b-4e89-91db-4fa2b0fd766b"
+      }
+    },
+    {
       "key": "5da7bd5c-6cb8-4d17-8078-4ac3d4c124e0",
-      "position": 8,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What challenges arise when designing algorithms that make critical decisions affecting people’s lives?*\n- *How does public trust in autonomous systems depend on ethical decision-making?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the challenges of designing decision-making algorithms that balance fairness, ethics, and functionality, and how these challenges impact public trust in autonomous systems. Listen for students identifying trade-offs in algorithmic decisions, such as prioritizing safety vs. efficiency, and discussing how bias, transparency, or accountability affect trust in AI systems.",
         "tips": [
@@ -3810,7 +4160,7 @@
     },
     {
       "key": "229d7187-ce33-4bd9-99e6-98d0fe4a44dd",
-      "position": 9,
+      "position": 14,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -3848,15 +4198,79 @@
       }
     },
     {
-      "key": "3fbd6065-7feb-48a0-b134-3bc605358668",
+      "key": "6233eb7b-dedb-4ae0-a90c-c1429956de61",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two. \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Decomposing a Pixel Image activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through the tasks in their activity guide. Explain that they will first choose a pixel image to recreate, then identify patterns and define functions to break the image into smaller, manageable pieces. Next, they will write pseudocode to describe how they will code the image before sharing their plan with another group for T.A.G. feedback (Tell, Ask, Give). Encourage students to focus on decomposition and efficiency as they plan. Leave this slide up while students work so they can refer back to the steps.",
-        "name": "Decomposing a Pixel Image",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss with a partner: What patterns do you see in the image? Encourage them to look for repeated shapes, colors, or layout elements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After pairs have discussed, ask for a few volunteers to share out. Then click through the slide to reveal the example patterns: Purple Lines, Black Squares, Blue Squares.",
+        "name": "Decomposing an Image Example",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The images are presented in order from easiest (top left) to most difficult (bottom right). If students are struggling to pick an image to discuss with their partner, consider guiding them to choose an image based on difficulty-level."
+            "markdown": "If students are unsure where to start, prompt them to describe one row or one column and look for what repeats. Suggest tracing or counting colors to spot repetition more easily."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6233eb7b-dedb-4ae0-a90c-c1429956de61",
+        "lesson_activity.key": "b5c817be-275f-4e82-9148-4e3fbab7008e"
+      }
+    },
+    {
+      "key": "52d6a686-51cc-4e46-b610-1509ddb9f01a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to discuss with a partner: If we wanted to code this image, what functions could we create based on the patterns we just noticed?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After discussion, call on a few students to share their ideas. Then click to reveal the sample function names: `purple_line()`, `black_square()`, `blue_square()`.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to use function names that describe the outcome of the pattern. If students suggest vague names like do_it(), push them to explain what the function actually does."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "52d6a686-51cc-4e46-b610-1509ddb9f01a",
+        "lesson_activity.key": "b5c817be-275f-4e82-9148-4e3fbab7008e"
+      }
+    },
+    {
+      "key": "0abe1eb7-3e7f-4288-9d0c-8ebc0f028f87",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students talk with a partner about what pseudocode might look like for the `purple_line()` function. Encourage them to think through the steps the computer needs to follow.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask for a few students to share an idea of their pseudocode. Then click to reveal the two example versions — one using repeated steps, one using a loop.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this opportunity to reinforce why loops are helpful. Ask students which version is easier to read or change later — and which one they’d prefer to debug.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0abe1eb7-3e7f-4288-9d0c-8ebc0f028f87",
+        "lesson_activity.key": "b5c817be-275f-4e82-9148-4e3fbab7008e"
+      }
+    },
+    {
+      "key": "c0a763f9-1234-4e2c-9ca9-874740f29251",
+      "position": 4,
+      "properties": {
+        "description": "Now it’s your turn to decompose an image. You and your partner will choose one of the pixel images and break it down into patterns and functions — just like we practiced and then go code the image using your planned pseudocode.",
+        "name": "Decomposing a Pixel Image",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c0a763f9-1234-4e2c-9ca9-874740f29251",
+        "lesson_activity.key": "b5c817be-275f-4e82-9148-4e3fbab7008e"
+      }
+    },
+    {
+      "key": "3fbd6065-7feb-48a0-b134-3bc605358668",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two. \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Decomposing a Pixel Image activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through the tasks in their activity guide. Explain that they will first choose a pixel image to recreate, then identify patterns and define functions to break the image into smaller, manageable pieces. Next, they will write pseudocode to describe how they will code the image before sharing their plan with another group for T.A.G. feedback (Tell, Ask, Give). Encourage students to focus on decomposition and efficiency as they plan. Leave this slide up while students work so they can refer back to the steps.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The images are presented in order from easiest (top left) to most difficult (bottom right). If students are struggling to pick an image to discuss with their partner, consider guiding them to choose an image based on difficulty-level. If students struggle to get started and/or to visualize the shapes that make up the larger picture, consider sharing a copy of the **Digital Manipulative Support - Decomposing a Pixel Image** resource with them which should provide support for these students and allow them to get unstuck.\n"
           }
         ]
       },
@@ -3867,7 +4281,7 @@
     },
     {
       "key": "efd87425-4817-423c-a85c-f260118604a6",
-      "position": 2,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -3877,7 +4291,7 @@
     },
     {
       "key": "9ee0c3f1-be06-4944-adbf-d488e5427dae",
-      "position": 3,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the visual for the TAG feedback protocol. Remind them that their job is to Tell the group something they like about their code, Ask a question about the code, and Give a suggestion for improvement. Encourage them to focus on clarity, efficiency, and organization in the pseudocode.",
         "tips": [
@@ -3894,7 +4308,7 @@
     },
     {
       "key": "f257ade1-ced8-4bc8-a802-50d5ef356857",
-      "position": 4,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -3904,9 +4318,9 @@
     },
     {
       "key": "50d8a59b-c688-4f26-9311-2fe8a724896e",
-      "position": 5,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this activity, the focus is on designing algorithms to recreate a pixel image, rather than collecting paint. Since the exact amount of paint needed is unknown, there are no paint buckets in this level. Instead, students will use `painter.set_paint(amount)` to set the amount of paint directly in their programs, ensuring they have enough to complete their image efficiently.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 1 to convert their pseudocode into Python and create their pixel image.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this activity, the focus is on designing algorithms to recreate a pixel image, rather than collecting paint. Since the exact amount of paint needed is unknown, there are no paint buckets in this level. Instead, students will use `painter.set_paint(amount)` to set the amount of paint directly in their programs, ensuring they have enough to complete their image efficiently.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 1 to convert their pseudocode into Python and create their pixel image.",
         "progression_name": "My Pixel Image"
       },
       "seeding_key": {
@@ -3916,7 +4330,7 @@
     },
     {
       "key": "0f3e3960-2ff4-4c75-bbcc-29b851f3774a",
-      "position": 6,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they are defining and calling functions correctly and using consistent function names. Listen for debugging discussions and prompt students to compare their code to their pseudocode when they get stuck. Encourage them to test in small steps instead of writing everything at once.",
         "tips": [
@@ -3937,7 +4351,7 @@
     },
     {
       "key": "1235771e-693f-418b-a91c-61640d4d1efb",
-      "position": 7,
+      "position": 11,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -3998,6 +4412,14 @@
       "key": "88b5a390-9f65-4bea-bdb1-a2d7fb97c477",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What should the person do if the homework is not finished?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that when a condition is not true, something different can (and should) happen. They may say things like:\n- \"Do the homework first.\"\n- \"Set a timer and start working.\"\n- \"No Netflix until it's done.\"",
+        "name": "What Happens If Not?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to think in everyday terms. What makes sense in their own lives?\n\nIf students struggle, try rephrasing with a simpler prompt like \"If I can't watch Netflix yet, what should I do instead?\""
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "88b5a390-9f65-4bea-bdb1-a2d7fb97c477",
@@ -4005,9 +4427,39 @@
       }
     },
     {
+      "key": "a11e6fdb-3ecb-409b-a1ee-f34d84675944",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a11e6fdb-3ecb-409b-a1ee-f34d84675944",
+        "lesson_activity.key": "03caf5d1-103e-421f-83e4-91e4ae31d742"
+      }
+    },
+    {
+      "key": "854df642-a450-4af0-b71e-e1f58281665a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "854df642-a450-4af0-b71e-e1f58281665a",
+        "lesson_activity.key": "03caf5d1-103e-421f-83e4-91e4ae31d742"
+      }
+    },
+    {
       "key": "c5b08e21-d2ae-418e-b49e-bc7b63f6be1c",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the purpose and syntax of an `if` statement.",
+        "duration": "15",
+        "name": "Two-Way Selection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students need a refresher, ask \"What might happen if the `Painter` can't move south in this code? Will anything be painted?\""
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c5b08e21-d2ae-418e-b49e-bc7b63f6be1c",
@@ -4015,9 +4467,156 @@
       }
     },
     {
-      "key": "dd9662be-eea1-4b2c-8dbc-775dc9819142",
+      "key": "ac68d17f-8e7a-421e-b531-3899bf48d344",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What happens when the condition isn't true?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recall that when the condition is false, the program does nothing – it skips over the if block entirely."
+      },
+      "seeding_key": {
+        "activity_section.key": "ac68d17f-8e7a-421e-b531-3899bf48d344",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "346e43b7-7887-4851-8d67-1ebc1dcf4aed",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students take out their Programming Fundamentals Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define two-way selection."
+      },
+      "seeding_key": {
+        "activity_section.key": "346e43b7-7887-4851-8d67-1ebc1dcf4aed",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "d88698e6-ddbc-4a7b-98dd-3ccf94ae0f85",
+      "position": 4,
+      "properties": {
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Recall the syntax of an `if` statement."
+      },
+      "seeding_key": {
+        "activity_section.key": "d88698e6-ddbc-4a7b-98dd-3ccf94ae0f85",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "28454487-57de-4eff-87ae-4f21c95f802e",
+      "position": 5,
+      "properties": {
+        "description": "We already know how this part works. The `Painter` checks whether it's on a bucket. If that's true, it takes the paint. This part is a one-way selection – something happens only if the condition is true.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "28454487-57de-4eff-87ae-4f21c95f802e",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "62674c84-b21a-449e-8315-ca63db3773b1",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the `else` statement. Emphasize that the else gives the program a second path – something to do if the `if` is skipped."
+      },
+      "seeding_key": {
+        "activity_section.key": "62674c84-b21a-449e-8315-ca63db3773b1",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "8086afff-a076-4373-b199-1e638a8833ce",
+      "position": 7,
+      "properties": {
+        "description": "Now we're adding something new: the keyword `else`. This tells the program \"If the condition is false, do this instead.\"",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Compare it to a real-life example (e.g., \"If I finish my homework, I'll go outside. Else, I’ll stay in and work.\")"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8086afff-a076-4373-b199-1e638a8833ce",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "58b1b088-2326-4ea1-99cb-04401daf7dea",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "58b1b088-2326-4ea1-99cb-04401daf7dea",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "2ec20c1e-fe99-475c-b4eb-5a4ed3f66fab",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Emphasize how only one branch of the `if/else` will run."
+      },
+      "seeding_key": {
+        "activity_section.key": "2ec20c1e-fe99-475c-b4eb-5a4ed3f66fab",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "6705a10d-6b3c-4b8c-9283-47d848c56d07",
+      "position": 10,
+      "properties": {
+        "description": "This is the `else` block. The program only runs this line if the `Painter` is not on a bucket. If the condition is false, it skips the `if` block and runs the `else` block instead.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6705a10d-6b3c-4b8c-9283-47d848c56d07",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "3ae0d088-f934-4819-ac92-d6580f057a88",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that the code needs to be indented just like with functions, `while` loops, and `if` statements."
+      },
+      "seeding_key": {
+        "activity_section.key": "3ae0d088-f934-4819-ac92-d6580f057a88",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "4c09ff30-ec49-4d70-9294-cdb8f66e9035",
+      "position": 12,
+      "properties": {
+        "description": "Just like with `if` statements, the `else` block also needs to be indented. That tells the computer what belongs to that branch of the code.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle with indentation, ask \"What would happen if `marie.move()` wasn't indented here?\""
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4c09ff30-ec49-4d70-9294-cdb8f66e9035",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "4d5e4494-ffdc-41c0-9d13-0d1dea18db30",
+      "position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4d5e4494-ffdc-41c0-9d13-0d1dea18db30",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "dd9662be-eea1-4b2c-8dbc-775dc9819142",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 1 to complete Levels 1 through 4.\n- **Level #1:** In Python Lab, students predict what the `Painter` will do before running it.\n- **Level #2:** Students complete a choice level where they are given a `Painter` program that only uses an `if` and they need to add an `else` to handle the opposite case.\n- **Level #3:** Students are given a buggy `Painter` program that always does the wrong thing when the `if` condition is false.\n- **Level #4:** Students complete a Check Your Understanding.",
         "progression_name": "if/else Statements"
       },
       "seeding_key": {
@@ -4027,7 +4626,7 @@
     },
     {
       "key": "7b1012c1-393b-45cd-8991-aeb0f7a5d0d9",
-      "position": 3,
+      "position": 15,
       "properties": {
         "progression_name": "Check Your Understanding"
       },
@@ -4037,8 +4636,71 @@
       }
     },
     {
+      "key": "6249fb86-06df-401f-906e-e3e009461edf",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, walk around the room to observe their code and reasoning. Look for students who are correctly writing both branches of the `if/else` structure and using proper indentation. Pay close attention to whether students understand which part of the code will run based on whether the condition is true or false, and offer support if you notice confusion about which branch is being executed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Level 2 is a choice level. Encourage students to try at least one and challenge themselves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6249fb86-06df-401f-906e-e3e009461edf",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "65ff8f5b-ed97-41d7-8184-b009a5e1a8fd",
+      "position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "65ff8f5b-ed97-41d7-8184-b009a5e1a8fd",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "15b87fb6-c768-48f6-9c08-b8b015e736e6",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you notice about how `if/else` behaves?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that `if/else` allows the program to always run one of two blocks – either the `if` block when the condition is true, or the `else` block when it's false, but never both. They may also note that else gives the program a fallback action, and that indentation matters for both branches. Some students may notice how `if/else` behaves differently when placed inside a loop, especially when it runs repeatedly.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When is it better to use `if/else` instead of just `if`?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that `if/else` is helpful when two different outcomes are needed – one for when the condition is true, and one for when it's false.",
+        "duration": "20",
+        "name": "Painter Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "15b87fb6-c768-48f6-9c08-b8b015e736e6",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "0ac99af9-6dda-48f5-ab72-13626d538b1c",
+      "position": 19,
+      "properties": {
+        "description": "You've seen that `if` statements only run code when a condition is true. But `if/else` gives us a way to always make a decision—this or that, yes or no. It's useful when we want to make sure something happens either way.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0ac99af9-6dda-48f5-ab72-13626d538b1c",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
+      "key": "77c91732-739e-48f9-9e56-e2b2306e6e85",
+      "position": 20,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 5 to complete Levels 5 through 8.\n- **Level #5:** Students complete a choice level where they use an `if/else` statement.\n- **Level #6:** Students complete a choice level where they use an `if/else` statement inside a `while` loop.\n- **Level #7:** Students complete a vocabulary Check Your Understanding.\n- **Level #8:** Students complete a Check Your Understanding."
+      },
+      "seeding_key": {
+        "activity_section.key": "77c91732-739e-48f9-9e56-e2b2306e6e85",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
       "key": "86bfc1b1-0fa3-46f6-b8d2-fa88ee095a66",
-      "position": 4,
+      "position": 21,
       "properties": {
         "progression_name": "Solving Problems in The Neighborhood"
       },
@@ -4048,9 +4710,28 @@
       }
     },
     {
+      "key": "bbd43529-8cec-4383-8059-04f267c5945f",
+      "position": 22,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for whether they are correctly using both branches of `if/else` and nesting it properly within a loop in Level 6. Watch for issues with indentation or logic that causes infinite loops or skipped code blocks.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Levels 5 and 6 are choice levels. Encourage students to try at least one and challenge themselves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bbd43529-8cec-4383-8059-04f267c5945f",
+        "lesson_activity.key": "2ad50740-824e-4a8c-bca8-3c874d1886bc"
+      }
+    },
+    {
       "key": "458f0b3a-3637-4f9a-bfb7-6fa84f9eaecb",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "name": "Question of the Day Reflection"
       },
       "seeding_key": {
         "activity_section.key": "458f0b3a-3637-4f9a-bfb7-6fa84f9eaecb",
@@ -4396,6 +5077,17 @@
       }
     },
     {
+      "key": "15a1a055-8b1d-4b29-a11f-7961131c3b46",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "15a1a055-8b1d-4b29-a11f-7961131c3b46",
+        "lesson_activity.key": "eaf7552f-0f99-4f83-8055-45cf51493653"
+      }
+    },
+    {
       "key": "0fab5e90-7fc1-4b0c-8681-6b9419370225",
       "position": 1,
       "properties": {
@@ -4659,14 +5351,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "programming-fundamentals-lesson1-level1_2025"
+          "programming-fundamentals-lesson1-level1-launch_2025"
         ],
-        "progression": "Career Persona Exploration"
+        "progression": "My Skills and Interests"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level1_2025"
+          "programming-fundamentals-lesson1-level1-launch_2025"
         ],
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
@@ -4674,44 +5366,44 @@
         "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
       },
       "level_keys": [
-        "programming-fundamentals-lesson1-level1_2025"
+        "programming-fundamentals-lesson1-level1-launch_2025"
       ]
     },
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "programming-fundamentals-lesson1-level2_2025"
+          "programming-fundamentals-lesson1-level2-choice_2025"
         ],
-        "progression": "Career Persona Exploration"
+        "progression": "Career Exploration"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level2_2025"
+          "programming-fundamentals-lesson1-level2-choice_2025"
         ],
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
+        "activity_section.key": "072230f9-385e-456c-b83a-2c3efae2f398"
       },
       "level_keys": [
-        "programming-fundamentals-lesson1-level2_2025"
+        "programming-fundamentals-lesson1-level2-choice_2025"
       ]
     },
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "programming-fundamentals-lesson1-level3_2025"
         ],
-        "progression": "Career Persona Exploration"
+        "progression": "Envisioning My Future"
       },
       "bonus": false,
       "seeding_key": {
@@ -4721,7 +5413,7 @@
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
+        "activity_section.key": "475adf23-042e-4c50-8b2b-433aa4695929"
       },
       "level_keys": [
         "programming-fundamentals-lesson1-level3_2025"
@@ -4729,31 +5421,6 @@
     },
     {
       "chapter": 5,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson1-level4_2025"
-        ],
-        "progression": "Career Persona Exploration"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level4_2025"
-        ],
-        "lesson.key": "Computing Careers",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson1-level4_2025"
-      ]
-    },
-    {
-      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4778,7 +5445,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4803,7 +5470,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -4828,7 +5495,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4853,7 +5520,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4878,7 +5545,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4903,7 +5570,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4928,7 +5595,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4953,7 +5620,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4978,7 +5645,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5003,7 +5670,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5028,7 +5695,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5053,7 +5720,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5078,7 +5745,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5103,7 +5770,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5128,7 +5795,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -5153,7 +5820,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -5178,7 +5845,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5203,7 +5870,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 9,
       "activity_section_position": 2,
       "assessment": true,
@@ -5228,7 +5895,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5253,7 +5920,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5278,7 +5945,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5303,7 +5970,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5328,7 +5995,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5353,7 +6020,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5378,7 +6045,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5403,7 +6070,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5428,7 +6095,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -5453,7 +6120,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -5478,7 +6145,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -5503,7 +6170,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 11,
       "activity_section_position": 2,
       "assessment": true,
@@ -5528,7 +6195,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5553,7 +6220,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5578,7 +6245,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5603,7 +6270,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5628,7 +6295,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5653,7 +6320,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -5678,7 +6345,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -5703,7 +6370,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 8,
       "activity_section_position": 2,
       "assessment": true,
@@ -5728,7 +6395,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5753,7 +6420,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -5778,7 +6445,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
@@ -5803,7 +6470,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 12,
       "activity_section_position": 4,
       "assessment": true,
@@ -5828,7 +6495,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5853,7 +6520,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5878,7 +6545,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5903,7 +6570,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5928,7 +6595,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5953,7 +6620,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5978,7 +6645,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6003,7 +6670,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -6028,7 +6695,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -6053,7 +6720,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 10,
       "activity_section_position": 4,
       "assessment": true,
@@ -6078,7 +6745,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 11,
       "activity_section_position": 5,
       "assessment": true,
@@ -6103,7 +6770,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6128,7 +6795,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6153,7 +6820,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6178,7 +6845,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6203,7 +6870,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6228,7 +6895,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6253,7 +6920,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6278,11 +6945,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson8-level8a_2025-launch_2025"
+        ],
         "progression": "Loops with the Painter"
       },
       "bonus": false,
@@ -6300,7 +6970,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -6325,7 +6995,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 10,
       "activity_section_position": 4,
       "assessment": true,
@@ -6350,7 +7020,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 11,
       "activity_section_position": 5,
       "assessment": true,
@@ -6375,7 +7045,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6400,11 +7070,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-level2a_2025-launch_2025"
+        ],
         "progression": "Exploring Conditionals"
       },
       "bonus": false,
@@ -6422,7 +7095,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6447,7 +7120,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6472,7 +7145,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6497,7 +7170,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6522,7 +7195,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 76,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -6547,11 +7220,14 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 77,
       "position": 8,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson9-vocab_2025"
+        ],
         "progression": "Decisions with the Painter"
       },
       "bonus": false,
@@ -6569,7 +7245,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 78,
       "position": 9,
       "activity_section_position": 4,
       "assessment": true,
@@ -6591,6 +7267,31 @@
       },
       "level_keys": [
         "programming-fundamentals-lesson9-level10_2025-launch_2025"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson10-level1_2025"
+        ],
+        "progression": "Algorithms IRL"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson10-level1_2025"
+        ],
+        "lesson.key": "Algorithms IRL",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif2-2025",
+        "activity_section.key": "3fd3a870-dac1-4554-818c-b41a32469854"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson10-level1_2025"
       ]
     },
     {
@@ -6675,31 +7376,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "programming-fundamentals-lesson12-level3_2025-launch_2025"
-        ],
-        "progression": "if/else Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson12-level3_2025-launch_2025"
-        ],
-        "lesson.key": "Two-Way and Nested Selection",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "dd9662be-eea1-4b2c-8dbc-775dc9819142"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson12-level3_2025-launch_2025"
-      ]
-    },
-    {
-      "chapter": 84,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "programming-fundamentals-lesson12-level4_2025-launch_2025"
         ],
         "progression": "if/else Statements"
@@ -6719,59 +7395,9 @@
       ]
     },
     {
-      "chapter": 85,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson12-level5_2025-launch_2025"
-        ],
-        "progression": "if/else Statements"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson12-level5_2025-launch_2025"
-        ],
-        "lesson.key": "Two-Way and Nested Selection",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "dd9662be-eea1-4b2c-8dbc-775dc9819142"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson12-level5_2025-launch_2025"
-      ]
-    },
-    {
-      "chapter": 86,
-      "position": 6,
+      "chapter": 84,
+      "position": 4,
       "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "programming-fundamentals-lesson12-vocab_2025"
-        ],
-        "progression": "Check Your Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson12-vocab_2025"
-        ],
-        "lesson.key": "Two-Way and Nested Selection",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "7b1012c1-393b-45cd-8991-aeb0f7a5d0d9"
-      },
-      "level_keys": [
-        "programming-fundamentals-lesson12-vocab_2025"
-      ]
-    },
-    {
-      "chapter": 87,
-      "position": 7,
-      "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -6794,20 +7420,20 @@
       ]
     },
     {
-      "chapter": 88,
-      "position": 8,
+      "chapter": 85,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "programming-fundamentals-lesson12-level7_2025-launch_2025"
+          "programming-fundamentals-lesson12-level5_2025-launch_2025"
         ],
         "progression": "Solving Problems in The Neighborhood"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "programming-fundamentals-lesson12-level7_2025-launch_2025"
+          "programming-fundamentals-lesson12-level5_2025-launch_2025"
         ],
         "lesson.key": "Two-Way and Nested Selection",
         "lesson_group.key": "lessonGroup-3",
@@ -6815,12 +7441,12 @@
         "activity_section.key": "86bfc1b1-0fa3-46f6-b8d2-fa88ee095a66"
       },
       "level_keys": [
-        "programming-fundamentals-lesson12-level7_2025-launch_2025"
+        "programming-fundamentals-lesson12-level5_2025-launch_2025"
       ]
     },
     {
-      "chapter": 89,
-      "position": 9,
+      "chapter": 86,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -6844,9 +7470,34 @@
       ]
     },
     {
-      "chapter": 90,
-      "position": 10,
+      "chapter": 87,
+      "position": 7,
       "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "programming-fundamentals-lesson12-vocab_2025"
+        ],
+        "progression": "Solving Problems in The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-vocab_2025"
+        ],
+        "lesson.key": "Two-Way and Nested Selection",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif2-2025",
+        "activity_section.key": "86bfc1b1-0fa3-46f6-b8d2-fa88ee095a66"
+      },
+      "level_keys": [
+        "programming-fundamentals-lesson12-vocab_2025"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 8,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -6869,7 +7520,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6894,7 +7545,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 90,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6919,7 +7570,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 91,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6944,7 +7595,32 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 92,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_-programming_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif2-2025",
+        "activity_section.key": "15a1a055-8b1d-4b29-a11f-7961131c3b46"
+      },
+      "level_keys": [
+        "student-eou-survey_-programming_2025"
+      ]
+    },
+    {
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6969,7 +7645,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 94,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6994,7 +7670,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 95,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7019,7 +7695,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7044,7 +7720,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7069,7 +7745,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7094,7 +7770,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7119,7 +7795,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7144,7 +7820,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7169,7 +7845,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 102,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7194,7 +7870,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 103,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7219,7 +7895,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 104,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7244,7 +7920,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 105,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -7269,7 +7945,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7294,7 +7970,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 107,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7319,7 +7995,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 108,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7344,7 +8020,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 109,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7369,7 +8045,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 110,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7394,7 +8070,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 111,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7419,7 +8095,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 112,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7444,7 +8120,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 113,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7469,7 +8145,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 114,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7494,7 +8170,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 115,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7519,7 +8195,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 116,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7544,7 +8220,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 117,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7569,7 +8245,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 118,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7594,7 +8270,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 119,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7619,7 +8295,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 120,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7644,7 +8320,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 121,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -7669,7 +8345,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 122,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7694,7 +8370,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 123,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -7719,7 +8395,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 124,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7744,7 +8420,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 125,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7769,7 +8445,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 126,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7794,7 +8470,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 127,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7819,7 +8495,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 128,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7844,7 +8520,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 129,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7869,7 +8545,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 130,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7894,7 +8570,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 131,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -7919,7 +8595,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 132,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7944,7 +8620,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7969,7 +8645,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 134,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7994,7 +8670,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 135,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8019,7 +8695,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 136,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8044,7 +8720,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 137,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8069,7 +8745,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 138,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -8094,7 +8770,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 139,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -8134,9 +8810,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson1-level1_2025",
+        "level.key": "programming-fundamentals-lesson1-level1-launch_2025",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level1_2025"
+          "programming-fundamentals-lesson1-level1-launch_2025"
         ],
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
@@ -8146,14 +8822,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson1-level2_2025",
+        "level.key": "programming-fundamentals-lesson1-level2-choice_2025",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level2_2025"
+          "programming-fundamentals-lesson1-level2-choice_2025"
         ],
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
+        "activity_section.key": "072230f9-385e-456c-b83a-2c3efae2f398"
       }
     },
     {
@@ -8165,19 +8841,7 @@
         "lesson.key": "Computing Careers",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "programming-fundamentals-lesson1-level4_2025",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson1-level4_2025"
-        ],
-        "lesson.key": "Computing Careers",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "31cb443d-0869-41be-b2d7-2832f85fc5bd"
+        "activity_section.key": "475adf23-042e-4c50-8b2b-433aa4695929"
       }
     },
     {
@@ -9070,6 +9734,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "programming-fundamentals-lesson10-level1_2025",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson10-level1_2025"
+        ],
+        "lesson.key": "Algorithms IRL",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif2-2025",
+        "activity_section.key": "3fd3a870-dac1-4554-818c-b41a32469854"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "programming-fundamentals-lesson11-level1_2025",
         "script_level.level_keys": [
           "programming-fundamentals-lesson11-level1_2025"
@@ -9106,18 +9782,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson12-level3_2025-launch_2025",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson12-level3_2025-launch_2025"
-        ],
-        "lesson.key": "Two-Way and Nested Selection",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "dd9662be-eea1-4b2c-8dbc-775dc9819142"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "programming-fundamentals-lesson12-level4_2025-launch_2025",
         "script_level.level_keys": [
           "programming-fundamentals-lesson12-level4_2025-launch_2025"
@@ -9126,30 +9790,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "aif2-2025",
         "activity_section.key": "dd9662be-eea1-4b2c-8dbc-775dc9819142"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "programming-fundamentals-lesson12-level5_2025-launch_2025",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson12-level5_2025-launch_2025"
-        ],
-        "lesson.key": "Two-Way and Nested Selection",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "dd9662be-eea1-4b2c-8dbc-775dc9819142"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "programming-fundamentals-lesson12-vocab_2025",
-        "script_level.level_keys": [
-          "programming-fundamentals-lesson12-vocab_2025"
-        ],
-        "lesson.key": "Two-Way and Nested Selection",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "aif2-2025",
-        "activity_section.key": "7b1012c1-393b-45cd-8991-aeb0f7a5d0d9"
       }
     },
     {
@@ -9166,9 +9806,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "programming-fundamentals-lesson12-level7_2025-launch_2025",
+        "level.key": "programming-fundamentals-lesson12-level5_2025-launch_2025",
         "script_level.level_keys": [
-          "programming-fundamentals-lesson12-level7_2025-launch_2025"
+          "programming-fundamentals-lesson12-level5_2025-launch_2025"
         ],
         "lesson.key": "Two-Way and Nested Selection",
         "lesson_group.key": "lessonGroup-3",
@@ -9181,6 +9821,18 @@
         "level.key": "programming-fundamentals-lesson12-level8_2025-launch_2025",
         "script_level.level_keys": [
           "programming-fundamentals-lesson12-level8_2025-launch_2025"
+        ],
+        "lesson.key": "Two-Way and Nested Selection",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif2-2025",
+        "activity_section.key": "86bfc1b1-0fa3-46f6-b8d2-fa88ee095a66"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "programming-fundamentals-lesson12-vocab_2025",
+        "script_level.level_keys": [
+          "programming-fundamentals-lesson12-vocab_2025"
         ],
         "lesson.key": "Two-Way and Nested Selection",
         "lesson_group.key": "lessonGroup-3",
@@ -9234,6 +9886,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif2-2025",
         "activity_section.key": "b9ec9221-603b-4b08-91fe-8c9a71605f58"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-programming_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-programming_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif2-2025",
+        "activity_section.key": "15a1a055-8b1d-4b29-a11f-7961131c3b46"
       }
     },
     {
@@ -9815,6 +10479,18 @@
       }
     },
     {
+      "name": "[KEY] Baking a Cake",
+      "url": "https://drive.google.com/file/d/1J72Glvy5GQRmK_wXVNLDr_uW0kOKuzUX/view?usp=drive_link",
+      "key": "_key_baking_a_cake",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_key_baking_a_cake"
+      }
+    },
+    {
       "name": "[KEY] Decomposing a Pixel Image",
       "url": "https://docs.google.com/document/d/17m8szFTsM7DneesI50et0mqnmQhyTv0g-dqNRSGgYU0",
       "key": "_key_decomposing_a_pixel_image",
@@ -9836,6 +10512,16 @@
       },
       "seeding_key": {
         "resource.key": "_key_planning_a_school_event"
+      }
+    },
+    {
+      "name": "AI Chat FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_faq",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_faq"
       }
     },
     {
@@ -9865,7 +10551,7 @@
     },
     {
       "name": "Algorithms IRL",
-      "url": "https://docs.google.com/presentation/d/1TrMhPB-4coGmsYbedwyPJzdkSGzVlQ2dci64iYszsc4/view",
+      "url": "https://docs.google.com/presentation/d/1sKtkFPS_SVPTZ6M85YngP4-JMRwFnM3TrMM4zCVgnhc/edit?usp=drive_link",
       "key": "algorithms_irl",
       "properties": {
         "audience": "Verified Teacher",
@@ -9876,21 +10562,65 @@
       }
     },
     {
-      "name": "Career Exploration",
-      "url": "https://docs.google.com/document/d/1U4hP8EoWpT9LciVkr6JpCZhdyTAGoXpq6mwrTUOoHLY/edit?tab=t.0",
-      "key": "career_exploration",
+      "name": "All Resources",
+      "url": "/s/aif2-2025/resources",
+      "key": "all_resources_2",
       "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
+        "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "career_exploration"
+        "resource.key": "all_resources_2"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/aif2-2025/standards",
+      "key": "all_standards_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_2"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/aif2-2025/vocab",
+      "key": "all_vocabulary_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2"
+      }
+    },
+    {
+      "name": "Baking a Cake",
+      "url": "https://drive.google.com/file/d/1Hz3Jpw65nSHfHpGV4iIw3yYXbC9mIb16/view?usp=drive_link",
+      "key": "baking_a_cake",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "baking_a_cake"
+      }
+    },
+    {
+      "name": "Baking a Cake (Digital Option)",
+      "url": "https://docs.google.com/presentation/d/1S4Pq1TTn6KrvauIsb0ShVvpBfbxlrzB4aS_2_uAQLUE/edit?usp=drive_link",
+      "key": "baking_a_cake_digital_option_",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "baking_a_cake_digital_option_"
       }
     },
     {
       "name": "Computational Thinking",
-      "url": "https://docs.google.com/presentation/d/1CaywRbM7YHY6KccWXS_EM6xK8ULerskVbYpaMiOI09k/view",
+      "url": "https://docs.google.com/presentation/d/1qJjvG2fmfioHeduwsVIuW53l_bSU_cIzkjoLqyO3bFY/edit?usp=drive_link",
       "key": "computational_thinking",
       "properties": {
         "audience": "Verified Teacher",
@@ -9902,7 +10632,7 @@
     },
     {
       "name": "Computing Careers",
-      "url": "https://docs.google.com/presentation/d/11XfXkKvbVTNoHznxipHtkmt36NybViuHrwX7VePZsbk/view",
+      "url": "https://docs.google.com/presentation/d/1B37Ij94cu2d2kIFKTvC0g7FTegqKtsDWIvNUVWGrS-s/edit?usp=sharing",
       "key": "computing_careers",
       "properties": {
         "audience": "Verified Teacher",
@@ -9938,8 +10668,20 @@
       }
     },
     {
+      "name": "Digital Manipulative Support - Decomposing a Pixel Image",
+      "url": "https://docs.google.com/presentation/d/1k2M9ePhNgAXp3ba-fBi9aLI9Cf2SyEQoD9hABlTr-Zo/edit?usp=sharing",
+      "key": "decomposing_a_pixel_image_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "decomposing_a_pixel_image_1"
+      }
+    },
+    {
       "name": "Decomposition",
-      "url": "https://docs.google.com/presentation/d/1yO47BnEJYxIIyht0pRzLkbvZwO9Kl2XGuv3WPD_VkIY/view",
+      "url": "https://docs.google.com/presentation/d/1VHClwbKc66EJXAwzOO5E-7-ZS8tz8_lWKsD2Kt1VNbA/edit?usp=drive_link",
       "key": "decomposition",
       "properties": {
         "audience": "Verified Teacher",
@@ -9951,7 +10693,7 @@
     },
     {
       "name": "Designing Algorithms",
-      "url": "https://docs.google.com/presentation/d/14uQrrrUki-pFGH00pMV32DWJXl4-jB0rQT1hfQDzaSU/view",
+      "url": "https://docs.google.com/presentation/d/194J-dUdxm-w7l4y-nbpCkWmV-QuO3lRrabi2f9QUdHw/edit?usp=drive_link",
       "key": "designing_algorithms",
       "properties": {
         "audience": "Verified Teacher",
@@ -9959,6 +10701,16 @@
       },
       "seeding_key": {
         "resource.key": "designing_algorithms"
+      }
+    },
+    {
+      "name": "Function Template",
+      "url": "https://docs.google.com/document/d/1prp1Zm4JrPsyAtXeF98hmy-7nTEWOq-aEHvabhz2T_A/edit?usp=sharing",
+      "key": "function_template",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "function_template"
       }
     },
     {
@@ -9986,6 +10738,18 @@
       }
     },
     {
+      "name": "Instruction Cards",
+      "url": "https://docs.google.com/document/d/109jTdm1H8AtLmjqKoBNkmi_OgL71jwcj57s9VXCeRCM/edit?usp=sharing",
+      "key": "instruction_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "instruction_cards"
+      }
+    },
+    {
       "name": "Introduction to Loops",
       "url": "https://docs.google.com/presentation/d/1bQZbQip2x3a3cNsxl0JQHmfy9ieByolL5ic3o_QzVUI/edit?usp=sharing",
       "key": "introduction_to_loops",
@@ -9999,7 +10763,7 @@
     },
     {
       "name": "Pixels of Me Project",
-      "url": "https://docs.google.com/presentation/d/1bmcqAD0vP7hSRydyJq8jzN8LtTMplHgMtASi9GjUJe4/view",
+      "url": "https://docs.google.com/presentation/d/1Fx4_y67UTkJbdKuQgy9VS9-qyvip4TLjQetE0Gxv_Q4/edit?usp=drive_link",
       "key": "pixels_of_me_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -10048,6 +10812,16 @@
       }
     },
     {
+      "name": "Python Lab Documentation",
+      "url": "https://studio.code.org/docs/ide/pythonlab",
+      "key": "python_lab_documentation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "python_lab_documentation"
+      }
+    },
+    {
       "name": "Two-Way Selection",
       "url": "https://docs.google.com/presentation/d/1sQYoSuyu2WXOmOqaPMSrcYueigYXxgTaTgEMgy4NCBs/edit?usp=sharing",
       "key": "two-way_selection",
@@ -10057,6 +10831,18 @@
       },
       "seeding_key": {
         "resource.key": "two-way_selection"
+      }
+    },
+    {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
       }
     },
     {
@@ -10081,6 +10867,18 @@
       },
       "seeding_key": {
         "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
+      "name": "Vision Board",
+      "url": "https://docs.google.com/presentation/d/1VWtxphobT9lGbWUxWA2w1j_wvPJemCMuiJjJEhsj-Mw/view",
+      "key": "vision_board",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "vision_board"
       }
     },
     {
@@ -10136,7 +10934,25 @@
     {
       "seeding_key": {
         "lesson.key": "Computational Thinking",
+        "resource.key": "_key_baking_a_cake"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computational Thinking",
         "resource.key": "_key_planning_a_school_event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computational Thinking",
+        "resource.key": "baking_a_cake"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computational Thinking",
+        "resource.key": "baking_a_cake_digital_option_"
       }
     },
     {
@@ -10166,12 +10982,6 @@
     {
       "seeding_key": {
         "lesson.key": "Computing Careers",
-        "resource.key": "career_exploration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Computing Careers",
         "resource.key": "computing_careers"
       }
     },
@@ -10185,6 +10995,12 @@
       "seeding_key": {
         "lesson.key": "Computing Careers",
         "resource.key": "viewing_student_ai_chat_history_as_a_teacher"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Computing Careers",
+        "resource.key": "vision_board"
       }
     },
     {
@@ -10209,6 +11025,12 @@
       "seeding_key": {
         "lesson.key": "Decomposition",
         "resource.key": "decomposing_a_pixel_image"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Decomposition",
+        "resource.key": "decomposing_a_pixel_image_1"
       }
     },
     {
@@ -10250,7 +11072,19 @@
     {
       "seeding_key": {
         "lesson.key": "Functions",
+        "resource.key": "function_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
         "resource.key": "functions_and_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions",
+        "resource.key": "instruction_cards"
       }
     },
     {
@@ -10315,7 +11149,54 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai_chat_faq",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_2",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_2",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_2",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "programming_fundamentals_unit_guide",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "python_lab_documentation",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unlocking_assessments",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
+        "script.name": "aif2-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -10717,6 +11598,16 @@
       }
     },
     {
+      "key": "1090a91d-2c8e-4bca-b5a8-562db7f1b75a",
+      "properties": {
+        "description": "Describe how two-way selection (if/else) allows a program to choose between two different outcomes."
+      },
+      "seeding_key": {
+        "lesson.key": "Two-Way and Nested Selection",
+        "objective.key": "1090a91d-2c8e-4bca-b5a8-562db7f1b75a"
+      }
+    },
+    {
       "key": "118fb7bc-d8fb-4af2-b93b-82136de8daaf",
       "properties": {
         "description": "Evaluate ethical implications of algorithmic decision-making"
@@ -10887,6 +11778,16 @@
       }
     },
     {
+      "key": "999b2cbc-4fea-4f97-b3af-c057c579187a",
+      "properties": {
+        "description": "Compare one-way (if) and two-way (if/else) selection and describe when each is appropriate."
+      },
+      "seeding_key": {
+        "lesson.key": "Two-Way and Nested Selection",
+        "objective.key": "999b2cbc-4fea-4f97-b3af-c057c579187a"
+      }
+    },
+    {
       "key": "a60c6175-0f33-40a5-a80e-e7a9109c5259",
       "properties": {
         "description": "Break down a complex problem into smaller, manageable parts using decomposition"
@@ -10907,6 +11808,16 @@
       }
     },
     {
+      "key": "acb6c893-3de6-484b-bbc2-9dfbb6d975b1",
+      "properties": {
+        "description": "Write programs that use if/else statements to control the flow of execution."
+      },
+      "seeding_key": {
+        "lesson.key": "Two-Way and Nested Selection",
+        "objective.key": "acb6c893-3de6-484b-bbc2-9dfbb6d975b1"
+      }
+    },
+    {
       "key": "adff6d11-ce11-4a61-b9a0-1201cd41fd96",
       "properties": {
         "description": "Debug common errors related to parameters."
@@ -10914,6 +11825,26 @@
       "seeding_key": {
         "lesson.key": "Functions with Parameters",
         "objective.key": "adff6d11-ce11-4a61-b9a0-1201cd41fd96"
+      }
+    },
+    {
+      "key": "ae3bf9e1-0d07-4231-a08a-18b43d3b449c",
+      "properties": {
+        "description": "Identify and fix common errors in if statements."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditional Statements",
+        "objective.key": "ae3bf9e1-0d07-4231-a08a-18b43d3b449c"
+      }
+    },
+    {
+      "key": "afb41926-0193-4bf8-8201-b0e78796f246",
+      "properties": {
+        "description": "Write if statements in Python to control program flow."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditional Statements",
+        "objective.key": "afb41926-0193-4bf8-8201-b0e78796f246"
       }
     },
     {
@@ -10954,6 +11885,16 @@
       "seeding_key": {
         "lesson.key": "Decomposition",
         "objective.key": "cd84edd2-ccda-477d-a7ca-3c26489d40ca"
+      }
+    },
+    {
+      "key": "d0c98176-53f4-48ac-b3d3-53daa72a0606",
+      "properties": {
+        "description": "Explain what a conditional statement does and when to use one in a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditional Statements",
+        "objective.key": "d0c98176-53f4-48ac-b3d3-53daa72a0606"
       }
     },
     {

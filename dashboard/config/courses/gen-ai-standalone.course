@@ -3,6 +3,9 @@
   "script_names": [
     "gen-ai-standalone"
   ],
+  "original_script_names": [
+    "gen-ai-standalone"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

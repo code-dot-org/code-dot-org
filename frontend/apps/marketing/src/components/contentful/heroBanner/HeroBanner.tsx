@@ -5,6 +5,7 @@ import {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import {externalLinkIconProps} from '@/components/common/constants';
 import Video from '@/components/video';
+import {LinkEntry} from '@/types/contentful/entries/Link';
 
 type HeroBannerProps = {
   /** HeroBanner content mode (theme) value */
@@ -31,39 +32,39 @@ type HeroBannerProps = {
   sectionVideoFallback?: string;
   /** Whether to show the section video captions */
   sectionVideoShowCaption?: boolean;
-  /** HeroBanner button label */
-  buttonLabel?: string;
-  /** HeroBanner button URL */
-  buttonUrl?: string;
-  /** HeroBanner button is external link */
-  buttonIsLinkExternal?: boolean;
-  /** HeroBanner button aria label */
-  buttonAriaLabel?: string;
+  /** Hero Banner Button Link Entry **/
+  buttonLink?: LinkEntry;
   /** HeroBanner partner image URL */
   partnerLogo?: string;
   /** HeroBanner partner callout (title) */
   partnerCallout?: string;
   /** HeroBanner background image URL */
   backgroundImage?: string;
+  /** HeroBanner announcement banner icon name */
+  announcementBannerIconName?: string;
+  /** HeroBanner announcement banner text */
+  announcementBannerText?: string;
+  /** HeroBanner announcement banner link  entry*/
+  announcementBannerLink?: LinkEntry;
 };
 
 const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
   // Style Props
   contentMode,
   imageSize,
+  announcementBannerIconName,
   // Content Props
   heading,
   subHeading,
   description,
+  announcementBannerText = '',
+  announcementBannerLink,
   sectionImage,
   sectionVideoTitle,
   sectionVideoYouTubeId,
   sectionVideoFallback,
   sectionVideoShowCaption,
-  buttonLabel,
-  buttonUrl,
-  buttonIsLinkExternal,
-  buttonAriaLabel,
+  buttonLink,
   partnerLogo,
   partnerCallout,
   backgroundImage,
@@ -78,14 +79,33 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
       heading={heading}
       subHeading={subHeading}
       description={description}
+      announcementBannerProps={
+        announcementBannerText
+          ? {
+              icon: announcementBannerIconName
+                ? {iconName: announcementBannerIconName}
+                : undefined,
+              text: announcementBannerText,
+              link: announcementBannerLink
+                ? {
+                    text: announcementBannerLink.fields.label,
+                    'aria-label': announcementBannerLink.fields.ariaLabel,
+                    href: announcementBannerLink.fields.primaryTarget,
+                    external:
+                      announcementBannerLink.fields.isThisAnExternalLink,
+                  }
+                : undefined,
+            }
+          : undefined
+      }
       imageProps={sectionImage ? {src: sectionImage} : undefined}
       buttonProps={
-        buttonUrl && buttonLabel
+        buttonLink
           ? {
-              text: buttonLabel,
-              href: buttonUrl,
-              ariaLabel: buttonAriaLabel,
-              iconRight: buttonIsLinkExternal
+              text: buttonLink.fields.label,
+              href: buttonLink.fields.primaryTarget,
+              ariaLabel: buttonLink.fields.ariaLabel,
+              iconRight: buttonLink.fields.isThisAnExternalLink
                 ? externalLinkIconProps
                 : undefined,
             }

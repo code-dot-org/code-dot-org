@@ -17,6 +17,27 @@ export class MarketingPage {
     );
   }
 
+  getBaseDomain() {
+    const stage = process.env.STAGE;
+
+    if (!stage) {
+      console.error('No stage specified!');
+
+      throw new Error('Missing environment variable STAGE');
+    }
+
+    switch (stage) {
+      default:
+      case 'localhost':
+      case 'pr':
+        return 'localhost';
+      case 'test':
+        return 'dev.marketing.dev-code.org';
+      case 'production':
+        return 'code.org';
+    }
+  }
+
   getBaseUrl() {
     const stage = process.env.STAGE;
 
@@ -30,11 +51,10 @@ export class MarketingPage {
       default:
       case 'localhost':
       case 'pr':
-        return 'http://localhost:3001';
+        return `http://${this.getBaseDomain()}:3001`;
       case 'test':
-        return 'https://dev.marketing.dev-code.org';
       case 'production':
-        return 'https://code.org';
+        return `https://${this.getBaseDomain()}`;
     }
   }
 

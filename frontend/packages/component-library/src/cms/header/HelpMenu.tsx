@@ -67,7 +67,7 @@ const HelpMenu: React.FC<HelpMenuProps> = ({
           )}
           aria-label={helpButtonLabel.menu || 'Help menu'}
         >
-          {helpLinks.map(({key, href, label, ...link}) => (
+          {helpLinks?.map(({key, href, label, ...link}) => (
             <li key={key}>
               <a href={href} {...link}>
                 {label}

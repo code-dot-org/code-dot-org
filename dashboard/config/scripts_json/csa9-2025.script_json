@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-13 01:27:34 UTC",
+    "serialized_at": "2025-04-24 01:15:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -377,6 +377,21 @@
       },
       "seeding_key": {
         "lesson.key": "Sandbox: The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa9-2025"
       }
@@ -913,6 +928,18 @@
       "seeding_key": {
         "lesson_activity.key": "0b814f28-97c7-4b2f-bf2d-b4b0f6f80920",
         "lesson.key": "Sandbox: The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2025"
+      }
+    },
+    {
+      "key": "deabebcf-c6aa-46ab-8973-da82465a4bb9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "deabebcf-c6aa-46ab-8973-da82465a4bb9",
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa9-2025"
       }
@@ -2811,6 +2838,17 @@
         "activity_section.key": "7f3e4879-dcff-4310-a3ff-090784560c33",
         "lesson_activity.key": "0b814f28-97c7-4b2f-bf2d-b4b0f6f80920"
       }
+    },
+    {
+      "key": "934a0a3e-d890-4709-bab4-9bd792aa3f54",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "934a0a3e-d890-4709-bab4-9bd792aa3f54",
+        "lesson_activity.key": "deabebcf-c6aa-46ab-8973-da82465a4bb9"
+      }
     }
   ],
   "script_levels": [
@@ -2820,6 +2858,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Curriculum Videos_pilot_oo2025"
+        ],
         "progression": "CSA Curriculum Videos"
       },
       "bonus": false,
@@ -2933,6 +2974,31 @@
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
       ]
+    },
+    {
+      "chapter": 6,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2025",
+        "activity_section.key": "934a0a3e-d890-4709-bab4-9bd792aa3f54"
+      },
+      "level_keys": [
+        "student-eou-survey_-csa_2025"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2994,6 +3060,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa9-2025",
         "activity_section.key": "7f3e4879-dcff-4310-a3ff-090784560c33"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-csa_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa9-2025",
+        "activity_section.key": "934a0a3e-d890-4709-bab4-9bd792aa3f54"
       }
     }
   ],
@@ -3059,7 +3137,7 @@
     },
     {
       "name": "AP Classroom: Practice Exams",
-      "url": "https://apclassroom.clickhelp.co/articles/#!ap-classroom-user-guide-for-teachers-publication/tch-reports-practice-exams",
+      "url": "https://apclassroom.clickhelp.co/articles/ap-classroom-user-guide-for-teachers-publication/tch-cr-practice-exams\t",
       "key": "ap_classroom_practice_exams",
       "properties": {
         "audience": "Verified Teacher",

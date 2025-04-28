@@ -1,3 +1,7 @@
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
+
+import {RunType} from '../types';
+
 const IMAGE_WIDTH = 600;
 const IMAGE_HEIGHT = 600;
 
@@ -15,10 +19,38 @@ export function getImageMessage(base64Image: string) {
 
 export function getErrorMessage(message: string) {
   // This colors the message red in the terminal
-  // Reference for color codes: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
-  return `\x1b[38;5;203m${message}\x1b[0m`;
+  return getMessageWithColor(message, 203);
 }
 
 export function getSystemError(message: string, appName?: string) {
   return getErrorMessage(getSystemMessage(message, appName));
+}
+
+export function getTimestampMessage(runType: RunType) {
+  const currentDate = new Date();
+  const formattedTime = currentDate.toLocaleTimeString([], {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+  let runString = codebridgeI18n.runAt({time: formattedTime});
+  if (runType === RunType.TEST) {
+    runString = codebridgeI18n.testAt({time: formattedTime});
+  } else if (runType === RunType.VALIDATION) {
+    runString = codebridgeI18n.validateAt({time: formattedTime});
+  }
+  // The full message should be 32 characters long, padded with '-' on both sides
+  const stringLength = runString.length;
+  const paddingLeftCount = Math.max(Math.floor((32 - stringLength) / 2), 0);
+  const paddingRightCount = Math.max(32 - stringLength - paddingLeftCount, 0);
+  const fullMessage =
+    '-'.repeat(paddingLeftCount) + runString + '-'.repeat(paddingRightCount);
+  // Light gray color
+  return getMessageWithColor(fullMessage, 249);
+}
+
+// Return the message colored with the given ANSI color code.
+// The message will reset the color at the end so the next message will be the default color.
+// Reference for color codes: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
+function getMessageWithColor(message: string, ansiColor: number) {
+  return `\x1b[38;5;${ansiColor}m${message}\x1b[0m`;
 }

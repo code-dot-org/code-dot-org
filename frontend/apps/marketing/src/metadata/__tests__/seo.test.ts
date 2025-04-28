@@ -1,6 +1,7 @@
 import {Experience} from '@contentful/experiences-sdk-react';
 import {Metadata} from 'next';
 
+import {Brand} from '@/config/brand';
 import {getSeoMetadataFromExperience} from '@/selectors/contentful/getExperienceEntryFields';
 import {getAbsoluteImageUrl} from '@/selectors/contentful/getImage';
 import {SeoMetadata} from '@/types/contentful/entries/SeoMetadata';
@@ -56,7 +57,7 @@ describe('getSeoMetadata', () => {
 
   it('should return metadata when seoMetadata is defined', () => {
     const locale = 'en-US';
-    const result = getSeoMetadata(mockExperience, locale);
+    const result = getSeoMetadata(mockExperience, Brand.CODE_DOT_ORG, locale);
 
     expect(result).toEqual<Metadata>({
       title: 'Test Title',
@@ -71,13 +72,7 @@ describe('getSeoMetadata', () => {
         title: 'OG Title',
         description: 'OG Description',
         url: './',
-        images: [
-          {
-            url: 'https://example.com/test-image.jpg',
-            width: 1200,
-            height: 630,
-          },
-        ],
+        images: 'https://example.com/test-image.jpg',
       },
       robots: {
         index: true,
@@ -89,7 +84,7 @@ describe('getSeoMetadata', () => {
   it('should return undefined when seoMetadata is undefined', () => {
     (getSeoMetadataFromExperience as jest.Mock).mockReturnValue(undefined);
 
-    const result = getSeoMetadata(mockExperience, 'en-US');
+    const result = getSeoMetadata(mockExperience, Brand.CODE_DOT_ORG, 'en-US');
 
     expect(result).toBeUndefined();
   });
@@ -104,7 +99,28 @@ describe('getSeoMetadata', () => {
       seoMetadataWithoutImage,
     );
 
-    const result = getSeoMetadata(mockExperience, locale);
+    const result = getSeoMetadata(mockExperience, Brand.CODE_DOT_ORG, locale);
+
+    expect(result?.openGraph?.images).toBe(
+      'https://images.ctfassets.net/90t6bu6vlf76/6QAykNTAjFdgHya4lBchyF/539e119f045b74395ec9aca97bacf6ed/opengraph-default.png',
+    );
+  });
+
+  it('should handle missing openGraphImage default image gracefully', () => {
+    const locale = 'en-US';
+    const seoMetadataWithoutImage = {
+      ...mockSeoMetadata,
+      openGraphImage: undefined,
+    };
+    (getSeoMetadataFromExperience as jest.Mock).mockReturnValue(
+      seoMetadataWithoutImage,
+    );
+
+    const result = getSeoMetadata(
+      mockExperience,
+      'incorrect brand' as Brand,
+      locale,
+    );
 
     expect(result?.openGraph?.images).toBeUndefined();
   });
@@ -119,7 +135,7 @@ describe('getSeoMetadata', () => {
       seoMetadataWithoutRobots,
     );
 
-    const result = getSeoMetadata(mockExperience, 'en-US');
+    const result = getSeoMetadata(mockExperience, Brand.CODE_DOT_ORG, 'en-US');
 
     expect(result?.robots).toEqual({
       index: true,

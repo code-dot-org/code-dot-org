@@ -1,5 +1,7 @@
 import {GoogleAnalytics} from '@next/third-parties/google';
 
+import Footer from '@/components/footer';
+import Header from '@/components/header';
 import {Brand} from '@/config/brand';
 import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
 import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
@@ -41,7 +43,9 @@ export default async function Layout({
           clientKey={statsigClientKey}
           values={statsigBootstrapValues}
         >
+          <Header />
           {children}
+          <Footer />
         </StatsigProvider>
       </OneTrustProvider>
 

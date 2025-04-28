@@ -3,6 +3,9 @@
   "script_names": [
     "csa1-2022-exemplars"
   ],
+  "original_script_names": [
+    "csa1-2022-exemplars"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

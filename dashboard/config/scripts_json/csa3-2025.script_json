@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-26 20:43:30 UTC",
+    "serialized_at": "2025-04-21 23:55:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -420,6 +420,21 @@
       },
       "seeding_key": {
         "lesson.key": "Sandbox: The Theater",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa3-2025"
       }
@@ -1131,6 +1146,18 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa3-2025"
       }
+    },
+    {
+      "key": "541b7a34-1b5d-48a9-a8a5-b1a5f5ed63f3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "541b7a34-1b5d-48a9-a8a5-b1a5f5ed63f3",
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2025"
+      }
     }
   ],
   "activity_sections": [
@@ -1438,7 +1465,7 @@
       "key": "fe1cb3d0-13d3-4faf-b3b4-87a7a9bc0c26",
       "position": 9,
       "properties": {
-        "description": "Many of the apps and programs we use every day use large amounts of data to help us find information we are looking for, perform calculations, or recommend similar videos or products. 1D arrays give software engineers a way to store and analyze large amounts of data.",
+        "description": "When arrays are created, each element is automatically given a default value. Understanding these values—and how to find the length of an array—helps programmers write code that works reliably with any array.",
         "duration": "10",
         "name": "Default Values and Length",
         "remarks": true
@@ -5241,6 +5268,17 @@
         "activity_section.key": "0ef4f8a4-5ba2-4950-9c4a-258c02906cfa",
         "lesson_activity.key": "d64301e9-795f-425d-b8a6-0f2bf23f71ba"
       }
+    },
+    {
+      "key": "d544b5cc-9abd-4410-8344-de83c4cd11e0",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "d544b5cc-9abd-4410-8344-de83c4cd11e0",
+        "lesson_activity.key": "541b7a34-1b5d-48a9-a8a5-b1a5f5ed63f3"
+      }
     }
   ],
   "script_levels": [
@@ -7316,6 +7354,28 @@
       "level_keys": [
         "CSA 2023 Theater Sandbox_pilot_oo2025"
       ]
+    },
+    {
+      "chapter": 84,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2025",
+        "activity_section.key": "d544b5cc-9abd-4410-8344-de83c4cd11e0"
+      },
+      "level_keys": [
+        "student-eou-survey_-csa_2025"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -8313,6 +8373,18 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa3-2025",
         "activity_section.key": "0ef4f8a4-5ba2-4950-9c4a-258c02906cfa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-csa_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa3-2025",
+        "activity_section.key": "d544b5cc-9abd-4410-8344-de83c4cd11e0"
       }
     }
   ],

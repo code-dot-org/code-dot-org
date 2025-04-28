@@ -3,6 +3,9 @@
   "script_names": [
     "colehoc17"
   ],
+  "original_script_names": [
+    "colehoc17"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

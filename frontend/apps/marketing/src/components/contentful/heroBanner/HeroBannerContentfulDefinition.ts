@@ -45,6 +45,22 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: false,
       group: 'style',
     },
+    sectionVideoShowCaption: {
+      displayName: 'Show video caption',
+      type: 'Boolean',
+      defaultValue: true,
+      group: 'style',
+      description:
+        'Check this to show a caption (video title) under the video player.',
+    },
+    announcementBannerIconName: {
+      displayName: 'Announcement Banner Icon Name',
+      type: 'Text',
+      group: 'style',
+      description:
+        'Font Awesome icon name. This will be used in the announcement banner.',
+      defaultValue: '',
+    },
     // Content Props:
     heading: {
       displayName: 'Heading',
@@ -76,7 +92,7 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       type: 'Media',
       group: 'content',
       validations: {
-        bindingSourceType: ['asset'],
+        bindingSourceType: ['entry', 'asset'],
         required: true,
       },
     },
@@ -101,51 +117,15 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       description:
         'This is the URL of the video that will be used in place of the YouTube video if YouTube is blocked.',
     },
-    sectionVideoShowCaption: {
-      displayName: 'Show video caption',
-      type: 'Boolean',
-      defaultValue: true,
-      group: 'style',
-      description:
-        'Check this to show a caption (video title) under the video player.',
-    },
-    // sectionVideo: {
-    //   displayName: 'Section Video',
-    //   type: 'Media',
-    //   group: 'content',
-    //   validations: {
-    //     bindingSourceType: ['asset'],
-    //   },
-    // },
-    buttonLabel: {
-      displayName: 'Button Label',
-      type: 'Text',
+    buttonLink: {
+      displayName: 'Button Link',
+      type: 'Link',
       group: 'content',
+      description:
+        'This is the link that will be used in the button. This should be a link entry.',
       validations: {
         bindingSourceType: ['entry'],
       },
-    },
-    buttonUrl: {
-      displayName: 'Button Link URL',
-      type: 'Text',
-      group: 'content',
-      validations: {
-        bindingSourceType: ['entry'],
-      },
-    },
-    buttonIsLinkExternal: {
-      displayName:
-        'Is this link external? (Does this link leave the code.org site?)',
-      description:
-        'External links will be opened in a new tab, while internal links will be opened in the same tab.',
-      type: 'Boolean',
-      defaultValue: false,
-      group: 'content',
-    },
-    buttonAriaLabel: {
-      displayName: 'Button Aria Label',
-      type: 'Text',
-      group: 'content',
     },
     partnerLogo: {
       displayName: 'Partner Logo',
@@ -169,6 +149,26 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       group: 'content',
       validations: {
         bindingSourceType: ['asset'],
+      },
+    },
+    announcementBannerText: {
+      displayName: 'Announcement Banner Text',
+      type: 'Text',
+      group: 'content',
+      description:
+        'This is the text that will be displayed in the announcement banner.',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
+    },
+    announcementBannerLink: {
+      displayName: 'Announcement Banner Link',
+      type: 'Link',
+      group: 'content',
+      description:
+        'This is the link that will be used in the announcement banner.',
+      validations: {
+        bindingSourceType: ['entry'],
       },
     },
   },

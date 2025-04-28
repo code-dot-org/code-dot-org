@@ -3,6 +3,9 @@
   "script_names": [
     "csa-videos"
   ],
+  "original_script_names": [
+    "csa-videos"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

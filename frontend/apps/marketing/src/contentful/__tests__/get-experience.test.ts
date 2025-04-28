@@ -4,6 +4,16 @@ import {draftMode} from 'next/headers';
 import {getContentfulClient} from '../client';
 import {getExperience} from '../get-experience';
 
+jest.mock('react', () => {
+  const testCache = <T extends (...args: Array<unknown>) => unknown>(func: T) =>
+    func;
+  const originalModule = jest.requireActual('react');
+  return {
+    ...originalModule,
+    cache: testCache,
+  };
+});
+
 jest.mock('@contentful/experiences-sdk-react', () => ({
   fetchBySlug: jest.fn(),
 }));

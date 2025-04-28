@@ -69,17 +69,17 @@ describe('RegionalWorkshopCatalog', () => {
       json: () =>
         Promise.resolve({
           regional_workshop_data: {
-            regional_partner: '',
+            regional_partner: {name: '', additional_info: ''},
             available_workshops: [],
           },
         }),
     });
     render(<RegionalWorkshopCatalog />);
 
-    fireEvent.change(screen.getAllByRole('textbox')[0], {
+    fireEvent.change(screen.getByRole('textbox', {name: 'zipSearch'}), {
       target: {value: zip},
     });
-    fireEvent.click(screen.getAllByRole('button')[0]);
+    fireEvent.click(screen.getByRole('button', {name: 'submitZip'}));
 
     await waitFor(() => {
       screen.getByText('No workshops found');
@@ -112,10 +112,10 @@ describe('RegionalWorkshopCatalog', () => {
     });
     render(<RegionalWorkshopCatalog />);
 
-    fireEvent.change(screen.getAllByRole('textbox')[0], {
+    fireEvent.change(screen.getByRole('textbox', {name: 'zipSearch'}), {
       target: {value: zip},
     });
-    fireEvent.click(screen.getAllByRole('button')[0]);
+    fireEvent.click(screen.getByRole('button', {name: 'submitZip'}));
 
     await waitFor(() => {
       screen.getByText(regionalPartnerName);
@@ -134,6 +134,56 @@ describe('RegionalWorkshopCatalog', () => {
         method: 'GET',
       });
       fetchStub.mockRestore();
+    });
+  });
+
+  it('can open and close regional partner info dialog if regional partner is present', async () => {
+    const zip = '98122';
+    const regionalPartnerName = 'Reggie Partner';
+    const regionalPartnerInfo = 'Test partner info.';
+
+    jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: () =>
+        Promise.resolve({
+          regional_workshop_data: {
+            regional_partner: {
+              name: regionalPartnerName,
+              additional_info: regionalPartnerInfo,
+            },
+            available_workshops: TEST_WORKSHOPS,
+          },
+        }),
+    });
+    render(<RegionalWorkshopCatalog />);
+
+    // Button to open dialog starts not enabled
+    expect(screen.getByRole('button', {name: 'partnerInfo'})).toBeDisabled();
+
+    // Button to open dialog only becomes enabled once a zip has been entered and a regional partner is found
+    fireEvent.change(screen.getByRole('textbox', {name: 'zipSearch'}), {
+      target: {value: zip},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'submitZip'}));
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('button', {name: 'partnerInfo'})
+      ).not.toBeDisabled();
+    });
+
+    // Can open dialog
+    fireEvent.click(screen.getByRole('button', {name: 'partnerInfo'}));
+    await waitFor(() => {
+      expect(screen.getAllByText(regionalPartnerName).length).toBe(2);
+      screen.getByText(regionalPartnerInfo);
+    });
+
+    // Can close dialog
+    fireEvent.click(screen.getByRole('button', {name: 'Return to workshops'}));
+    await waitFor(() => {
+      expect(screen.getAllByText(regionalPartnerName).length).toBe(1);
+      expect(screen.queryByText(regionalPartnerInfo)).toBe(null);
     });
   });
 });

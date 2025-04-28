@@ -6,6 +6,12 @@
     "self-paced-pl-csa3-2024",
     "self-paced-pl-csa4-2024"
   ],
+  "original_script_names": [
+    "self-paced-pl-csa1-2024",
+    "self-paced-pl-csa2-2024",
+    "self-paced-pl-csa3-2024",
+    "self-paced-pl-csa4-2024"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

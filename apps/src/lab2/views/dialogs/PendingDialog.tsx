@@ -1,11 +1,10 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   BodyTwoText,
   Heading3,
 } from '@code-dot-org/component-library/typography';
-import React, {useContext} from 'react';
-
-import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
+import React from 'react';
 
 export type dialogCallback = (args?: unknown) => void;
 
@@ -43,7 +42,7 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
   message,
   bodyComponent,
 }) => {
-  const {theme} = useContext(ThemeContext);
+  const {theme} = useTheme();
   return (
     <div className={moduleStyles['genericDialog-' + theme]}>
       {titleComponent ? (

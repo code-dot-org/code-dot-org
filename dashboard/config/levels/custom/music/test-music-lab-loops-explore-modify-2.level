@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-03-12T20:33:44.000Z",
   "level_num": "custom",
@@ -16,7 +15,11 @@
       "library": "launch2024",
       "toolbox": {
         "blocks": {
-        }
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        },
+        "type": "flyout"
       },
       "packId": "default",
       "startSources": {
@@ -529,65 +532,21 @@
             {
               "type": "play_sounds_together",
               "id": "`fKCQ:e$5M_q^be_cKQq",
-              "x": 330,
-              "y": 50,
+              "x": 310,
+              "y": 70,
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
               "deletable": false,
               "extraState": {
                 "disableNextConnection": true
-              },
-              "inputs": {
-                "code": {
-                  "block": {
-                    "type": "play_sound_at_current_location_simple2",
-                    "id": "!o0}][+KKYeD$B4H(G`5",
-                    "deletable": false,
-                    "movable": false,
-                    "extraState": {
-                      "disableNextConnection": false
-                    },
-                    "fields": {
-                      "sound": "acoustic_arcade/drum_beat_trees"
-                    },
-                    "next": {
-                      "block": {
-                        "type": "play_sound_at_current_location_simple2",
-                        "id": "K=J-VOirvXJ?`oi,aoL.",
-                        "deletable": false,
-                        "movable": false,
-                        "extraState": {
-                          "disableNextConnection": false
-                        },
-                        "fields": {
-                          "sound": "acoustic_arcade/drum_beat_trees"
-                        },
-                        "next": {
-                          "block": {
-                            "type": "play_sound_at_current_location_simple2",
-                            "id": "_)tvHy$*aUsNK,CyRs5r",
-                            "deletable": false,
-                            "movable": false,
-                            "extraState": {
-                              "disableNextConnection": true
-                            },
-                            "fields": {
-                              "sound": "acoustic_arcade/drum_beat_trees"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
               }
             },
             {
               "type": "repeat_simple2",
               "id": "repeat_simple2",
-              "x": 330,
-              "y": 250,
+              "x": 310,
+              "y": 190,
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
@@ -603,7 +562,7 @@
               "type": "repeat_simple2",
               "id": "`4~^cc:uo(R-1jeiDNOi",
               "x": 490,
-              "y": 250,
+              "y": 190,
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
@@ -618,8 +577,8 @@
             {
               "type": "repeat_simple2",
               "id": "X=XP$Vf_LH(ZQ`b4*XX5",
-              "x": 650,
-              "y": 250,
+              "x": 670,
+              "y": 190,
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
@@ -634,115 +593,27 @@
             {
               "type": "play_sounds_together",
               "id": "[hKK*`^{6H@)R-pOK_f:",
-              "x": 570,
-              "y": 50,
+              "x": 490,
+              "y": 70,
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
               "deletable": false,
               "extraState": {
                 "disableNextConnection": true
-              },
-              "inputs": {
-                "code": {
-                  "block": {
-                    "type": "play_sound_at_current_location_simple2",
-                    "id": "J[5RH_LR`+9c9;e)46o1",
-                    "deletable": false,
-                    "movable": false,
-                    "extraState": {
-                      "disableNextConnection": false
-                    },
-                    "fields": {
-                      "sound": "acoustic_arcade/drum_beat_trees"
-                    },
-                    "next": {
-                      "block": {
-                        "type": "play_sound_at_current_location_simple2",
-                        "id": "uE?QyO82PZPVw+h;?D*:",
-                        "deletable": false,
-                        "movable": false,
-                        "extraState": {
-                          "disableNextConnection": false
-                        },
-                        "fields": {
-                          "sound": "acoustic_arcade/drum_beat_trees"
-                        },
-                        "next": {
-                          "block": {
-                            "type": "play_sound_at_current_location_simple2",
-                            "id": "m:VT@IY6BWs?cDBvhM;f",
-                            "deletable": false,
-                            "movable": false,
-                            "extraState": {
-                              "disableNextConnection": true
-                            },
-                            "fields": {
-                              "sound": "acoustic_arcade/drum_beat_trees"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
               }
             },
             {
               "type": "play_sounds_together",
               "id": "[=,00f5/Gl}c{KWFAx1:",
-              "x": 810,
-              "y": 50,
+              "x": 670,
+              "y": 70,
               "disabledReasons": [
                 "MANUALLY_DISABLED"
               ],
               "deletable": false,
               "extraState": {
                 "disableNextConnection": true
-              },
-              "inputs": {
-                "code": {
-                  "block": {
-                    "type": "play_sound_at_current_location_simple2",
-                    "id": "[f`FI0eG(+=eZeCT!!^^",
-                    "deletable": false,
-                    "movable": false,
-                    "extraState": {
-                      "disableNextConnection": false
-                    },
-                    "fields": {
-                      "sound": "acoustic_arcade/drum_beat_trees"
-                    },
-                    "next": {
-                      "block": {
-                        "type": "play_sound_at_current_location_simple2",
-                        "id": "ZmVjV(aU+ygcb9.xy54!",
-                        "deletable": false,
-                        "movable": false,
-                        "extraState": {
-                          "disableNextConnection": false
-                        },
-                        "fields": {
-                          "sound": "acoustic_arcade/drum_beat_trees"
-                        },
-                        "next": {
-                          "block": {
-                            "type": "play_sound_at_current_location_simple2",
-                            "id": "yfzI65/@$SH,2iXStCwe",
-                            "deletable": false,
-                            "movable": false,
-                            "extraState": {
-                              "disableNextConnection": true
-                            },
-                            "fields": {
-                              "sound": "acoustic_arcade/drum_beat_trees"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
               }
             }
           ]
@@ -802,7 +673,8 @@
     "display_name": "Evie's Remix",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-13 16:45:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:45:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:47:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:49:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:50:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:50:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:51:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:43:01 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:23:17 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:24:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:26:45 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-28 18:21:18 +0000\",\"changed\":[\"long_instructions\",\"offer_browser_tts\",\"validations\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:24:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:25:10 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:27:26 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:27:53 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:25:52 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:31:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:32:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:33:47 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:35:22 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 21:52:33 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-03-13 16:45:11 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:45:57 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:47:07 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:49:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:50:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:50:47 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 16:51:10 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-13 23:43:01 +0000\",\"changed\":[\"hide_share_and_remix\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:23:17 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:24:22 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-14 19:26:45 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-28 18:21:18 +0000\",\"changed\":[\"long_instructions\",\"offer_browser_tts\",\"validations\",\"exemplar_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:24:26 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:25:10 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:27:26 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 18:27:53 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:25:52 +0000\",\"changed\":[\"long_instructions\",\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:31:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:32:37 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:33:47 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-28 20:35:22 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-09 21:52:33 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-21 18:33:00 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-21 18:33:44 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

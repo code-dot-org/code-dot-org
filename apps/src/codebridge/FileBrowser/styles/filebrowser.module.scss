@@ -16,6 +16,7 @@
 .fileBrowserContents {
   overflow-y: auto;
   scrollbar-color: $light_gray_500 $light_gray_950;
+  height: 100%;
 }
 
 .file-browser div.folder {
@@ -133,4 +134,8 @@ div.row:hover .button-kebab {
 .backpackErrorMessage {
   color: $white;
   font-size: 1rem;
+}
+
+.dragging {
+  background-color: $light_gray_800;
 }

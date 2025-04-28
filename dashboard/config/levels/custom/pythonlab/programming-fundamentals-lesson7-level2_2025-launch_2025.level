@@ -23,16 +23,30 @@
           "language": "py",
           "contents": "def send_text(name):\n  print(\"Hey \" + name + \", you have a new message!\")\n\nsend_text()\n",
           "folderId": "0",
-          "active": true,
-          "open": true
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     },
-    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzgo6kB7zTrrH+Xh2S1yyZudsAusft802\nImNlRhI8O7JLx0D1WSHZSTPS1dqr5raQmRxGID3bL1efdBtiF/pOsVfamQod\naK7h5+5Pnyr//35EEsLRErGSIEWxYgsY0KbbdQYov0scMsHinbNgLQKHOGs9\nGH66HGHJd9rZfQh9NyMk9P1QKzDueVKdX9lQDMO1bPfHklgy2Kh4Ls9P/Hbc\nW/GzryAFM/WuOZakHQ2TcKKi\n"
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzgo6kB7zTrrH+Xh2S1yyZudsAusft802\nImNlRhI8O7JLx0D1WSHZSTPS1dqr5raQmRxGID3bL1efdBtiF/pOsVfamQod\naK7h5+5Pnyr//35EEsLRErGSIEWxYgsY0KbbdQYov0scMsHinbNgLQKHOGs9\nGH66HGHJd9rZfQh9NyMk9P1QKzDueVKdX9lQDMO1bPfHklgy2Kh4Ls9P/Hbc\nW/GzryAFM/WuOZakHQ2TcKKi\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "import inspect\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\nfrom main import send_text\n\nclass TestSendTextFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Set up validation and get stdout logs\"\"\"\n        cls.validation = ValidationProtocol()\n        cls.stdout_logs = cls.validation.get_stdout_logs()\n\n    def test_function_has_one_parameter(self):\n        \"\"\"send_text should accept exactly one parameter\"\"\"\n        params = inspect.signature(send_text).parameters\n        self.assertEqual(\n            len(params),\n            1,\n            \"The function send_text should have exactly one parameter for the name.\"\n        )\n\n    def test_output_uses_passed_name(self):\n        \"\"\"Printed output should dynamically use the name argument\"\"\"\n        self.assertGreaterEqual(\n            len(self.stdout_logs),\n            1,\n            \"No output was found. Make sure send_text() is called and prints a message.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:40.089+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level2_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level2_2025-launch\"},{\"changed_at\":\"2025-04-15 21:15:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 21:15:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 21:15:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:40.089+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson7-level2_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson7-level2_2025-launch\"},{\"changed_at\":\"2025-04-15 21:15:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 21:15:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 21:15:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 02:44:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

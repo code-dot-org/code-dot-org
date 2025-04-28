@@ -8,7 +8,6 @@ $bar-width-grab-area: 7px;
 $grab-area-offset: calc(($bar-width-grab-area - $visible-area) / 2);
 $negative-grab-area-offset: calc(-1 * $grab-area-offset);
 
-
 .resizeBar {
   background-color: $light_gray_800;
   flex-shrink: 0;
@@ -53,21 +52,48 @@ $negative-grab-area-offset: calc(-1 * $grab-area-offset);
   cursor: row-resize;
 }
 
-
 .horizontalGrabbable {
-  @include horizontal-absolute-bar($bar-width-grab-area, $negative-grab-area-offset, $grab-area-offset);
+  @include horizontal-absolute-bar(
+    $bar-width-grab-area,
+    $negative-grab-area-offset,
+    $grab-area-offset
+  );
 }
 
 .verticalGrabbable {
-  @include vertical-absolute-bar($bar-width-grab-area, $negative-grab-area-offset, $grab-area-offset);
+  @include vertical-absolute-bar(
+    $bar-width-grab-area,
+    $negative-grab-area-offset,
+    $grab-area-offset
+  );
 }
 
 .verticalResizing {
-  @include vertical-absolute-bar($visible-area, $visible-negative-area-offset, $visible-area-offset);
+  @include vertical-absolute-bar(
+    $visible-area,
+    $visible-negative-area-offset,
+    $visible-area-offset
+  );
+
+  &:focus-visible {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
 }
 
 .horizontalResizing {
-  @include horizontal-absolute-bar($visible-area, $visible-negative-area-offset, $visible-area-offset);
+  @include horizontal-absolute-bar(
+    $visible-area,
+    $visible-negative-area-offset,
+    $visible-area-offset
+  );
+
+  &:focus-visible {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
 }
 
 .visible {

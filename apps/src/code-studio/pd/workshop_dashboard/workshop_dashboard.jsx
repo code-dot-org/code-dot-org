@@ -14,6 +14,7 @@ import {
 } from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+import experiments from '@cdo/apps/util/experiments';
 
 import Header from '../components/header';
 import {
@@ -53,6 +54,10 @@ const store = createStore(
   })
 );
 
+const newWorkshopFormEnabled = experiments.isEnabled(
+  experiments.NEW_WORKSHOP_FORM
+);
+
 const routeConfigs = [
   {
     path: 'reports',
@@ -90,8 +95,9 @@ const routeConfigs = [
   {
     path: 'workshops/:workshopId/edit',
     breadcrumbs: 'Workshops,Edit Workshop',
-    component: Workshop,
-    props: {view: 'edit'},
+    component: newWorkshopFormEnabled ? WorkshopFormTemplate : Workshop,
+    noRouter: newWorkshopFormEnabled,
+    props: {view: newWorkshopFormEnabled ? undefined : 'edit'},
   },
   {
     path: 'workshops/:workshopId/attendance',

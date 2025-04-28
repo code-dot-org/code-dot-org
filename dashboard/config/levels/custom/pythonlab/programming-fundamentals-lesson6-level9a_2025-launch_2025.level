@@ -26,16 +26,30 @@
           "language": "py",
           "contents": "# TODO - Write the function remind_to_drink()\n\n\n\n# TODO - Call the remind_to_drink() function five times\n\n\n",
           "folderId": "0",
-          "active": true,
-          "open": true
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     },
-    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzo/vCfrTlS7rbhTcVqQNtXAfENkGDCLM\nWyXJ3oIgR4/gbTOivjgdAHKjmt30aSYOhpJcSWmT53pZai3ntwYx4DGeYoch\nGY1pUUnjnSER7KJeUSA/gjxYwNWjMZTQkpJlzdXH4kSoPVJXEGhjMp+3VIAJ\nmwEGuyO05LkAy19v9sR3gMjYuHNTCiKmzVFkC2YKwoBWMToXksQt/DRG5Aax\nlqTFrui2Z4brikN4Y32RFU5S1NO8/kGRPigHblTEU6MWjfH6nY3mv1QRI3cT\nDUOOclMHWKAUaGrcF1WcMe8F74wWm6NEPL1pDt6jQeBtoNRFlht6XLJKv6mp\n5+3/Raq1QmvPX0XicAc7sBvYK024MUu54YdmTPqmi+cTfk3toUA6tKoQI4Og\nSMuExQ+LLTVNpSDpRbTiFpKRh+v+bTxcC7czOoxbeOA8l/FRgDtREElCYg==\n"
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzo/vCfrTlS7rbhTcVqQNtXAfENkGDCLM\nWyXJ3oIgR4/gbTOivjgdAHKjmt30aSYOhpJcSWmT53pZai3ntwYx4DGeYoch\nGY1pUUnjnSER7KJeUSA/gjxYwNWjMZTQkpJlzdXH4kSoPVJXEGhjMp+3VIAJ\nmwEGuyO05LkAy19v9sR3gMjYuHNTCiKmzVFkC2YKwoBWMToXksQt/DRG5Aax\nlqTFrui2Z4brikN4Y32RFU5S1NO8/kGRPigHblTEU6MWjfH6nY3mv1QRI3cT\nDUOOclMHWKAUaGrcF1WcMe8F74wWm6NEPL1pDt6jQeBtoNRFlht6XLJKv6mp\n5+3/Raq1QmvPX0XicAc7sBvYK024MUu54YdmTPqmi+cTfk3toUA6tKoQI4Og\nSMuExQ+LLTVNpSDpRbTiFpKRh+v+bTxcC7czOoxbeOA8l/FRgDtREElCYg==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n# Try importing the student's function\ntry:\n    from main import remind_to_drink\n    function_exists = True\nexcept ImportError:\n    function_exists = False\n\nclass TestRemindToDrinkFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_remind_to_drink_function_exists(self):\n        \"\"\"remind_to_drink() should exist and be callable\"\"\"\n        if not function_exists:\n            self.fail(\"Make sure you define a function called remind_to_drink()!\")\n\n    def test_five_reminders_printed(self):\n        \"\"\"Five hydration reminders should be printed\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertEqual(\n            len(printed_messages),\n            5,\n            \"Make sure you call your remind_to_drink() function five times to print five reminders!\"\n        )\n\n        all_contain_hydration = all(\n            \"water\" in line.lower() or \"drink\" in line.lower() or \"hydration\" in line.lower()\n            for line in printed_messages\n        )\n\n        self.assertTrue(\n            all_contain_hydration,\n            \"Each reminder should encourage hydration! Make sure your remind_to_drink() function mentions drinking water.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:36.497+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9a_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9a_2025-launch\"},{\"changed_at\":\"2025-04-15 18:47:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:48:03 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:51:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:52:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:36.497+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9a_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9a_2025-launch\"},{\"changed_at\":\"2025-04-15 18:47:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:48:03 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:51:54 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:52:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 18:11:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>
