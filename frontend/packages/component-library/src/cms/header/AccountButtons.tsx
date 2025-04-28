@@ -58,7 +58,7 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
       text="Loading"
       className={classNames(
         isInHamburger ? moduleStyles.hamburger : moduleStyles.mainMenu,
-        moduleStyles.pending,
+        moduleStyles.loading,
       )}
       type="primary"
       href="#"
