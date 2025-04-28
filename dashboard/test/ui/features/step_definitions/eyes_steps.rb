@@ -52,8 +52,7 @@ And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?( withou
   # Hopefully fixes many of the issues with font wiggle due to lazily loading
   # alternative fonts for symbols and localized glyphs.
   wait_until do
-    fonts_loaded?
-    font_awesome_loaded? unless skip_fa_wait
+    fonts_loaded? && (skip_fa_wait || font_awesome_loaded?)
   end
 
   next if CDO.disable_all_eyes_running
@@ -108,7 +107,7 @@ def ensure_eyes_available
 end
 
 # There are several fonts we sometimes load associated with Font Awesome, but Font Awesome 6 at the "solid" weight (900) is our default,
-# so we wait for that one to load at least.
+# and used in the header (which appears across almost all pages), so we wait for that one to load at least.
 def font_awesome_loaded?
   @browser.execute_script('return [...document.fonts].find(font => font.family === "Font Awesome 6 Pro" && font.weight === "900")?.status === "loaded"') == true
 end
