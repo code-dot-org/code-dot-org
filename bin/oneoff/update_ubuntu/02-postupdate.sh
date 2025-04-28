@@ -6,10 +6,19 @@ fi
 
 set -e
 
+apt-mark unhold libffi7;
+
+# The staging server needed a manual apt upgrade after the distro upgrade;
+# we're not sure why. See thread at
+# https://codedotorg.slack.com/archives/C03CK49G9/p1745435644898249 for details
+apt update;
+apt upgrade --yes;
+reboot;
+
 # On an adhoc, the mysql 'root' user's password got reset, so we need to
 # reassign it to the desired value.
-# TODO: figure out what we should do here for our build pipeline servers
-mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';";
+# We did not need to do this on the staging server.
+# mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';";
 
 # Reinstall rmagick to resolve the error:
 #   This installation of RMagick was configured with ImageMagick 6.9.10 but
