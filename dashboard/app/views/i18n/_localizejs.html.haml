@@ -42,7 +42,8 @@
         const ensureSelector = (cdoLanguage) => {
           const localeSelect = document.querySelector("#locale") || document.querySelector("select[name='locale']");
           if (localeSelect) {
-            localeSelect.selectedIndex = localeSelect.querySelector("option[value='" + cdoLanguage + "']")?.index || 0;
+            const optionIndex = localeSelect.querySelector("option[value='" + cdoLanguage + "']")?.index || 0;
+            localeSelect.selectedIndex = optionIndex;
           }
         };
 

@@ -6,7 +6,12 @@ export type TranslatableHash = {[key: string]: string};
  */
 export type Translatable = string[] | string | HTMLElement | TranslatableHash;
 
-export type TranslationCallback = (code: string) => void;
+export type TranslationCallbackData = {
+  code: string;
+  rtl: boolean;
+};
+
+export type TranslationCallback = (info: TranslationCallbackData) => void;
 
 import {get} from 'js-cookie';
 
@@ -27,6 +32,10 @@ export type LanguageInfo = {
    * The language code. "en" or "hi-IN", for example.
    */
   value: string;
+  /**
+   * Whether or not it is right-to-left.
+   */
+  rtl: boolean;
 };
 
 /**
@@ -63,13 +72,17 @@ export class Localization {
 
     Localize?.on('setLanguage', _ => {
       // Call our own 'change' event
-      this.trigger('change', this.locale);
+      this.trigger('change', {
+        code: this.locale,
+        rtl: this.rtl,
+      });
     });
 
     Localize?.getAvailableLanguages((_, data) => {
       this.localeList = data.map(({name, code}) => ({
         text: name,
         value: code,
+        rtl: this.isRTL(code),
       }));
     });
   }
@@ -97,18 +110,33 @@ export class Localization {
     );
   }
 
+  /**
+   * Whether or not the current locale is right-to-left.
+   */
+  get rtl(): boolean {
+    return this.isRTL(this.locale);
+  }
+
+  /**
+   * The list of languages we currently support for the current page.
+   */
   get locales(): LanguageInfo[] {
     // These workarounds will go away when the localization is done completely
     // on the frontend.
     if (this.localeList.length === 0) {
       // Localize has not given us any languages... build from the existing
       // localization dropdown.
-      this.localeList =
+      this.localeList = (
         (
           getScriptData('smallfooter') as
-            | {localeOptions: LanguageInfo[]}
+            | {localeOptions: Omit<LanguageInfo, 'rtl'>[]}
             | undefined
-        )?.localeOptions || [];
+        )?.localeOptions || []
+      ).map(({text, value}) => ({
+        text,
+        value,
+        rtl: this.isRTL(value),
+      }));
     }
 
     if (this.localeList.length === 0) {
@@ -119,6 +147,7 @@ export class Localization {
       ).map(option => ({
         text: option.textContent as string,
         value: (option as HTMLInputElement).value,
+        rtl: this.isRTL((option as HTMLInputElement).value),
       }));
     }
 
@@ -139,7 +168,10 @@ export class Localization {
     if (event === 'change') {
       // If we aren't in the source language, let's trigger the change event
       // right away.
-      this.trigger('change', this.locale);
+      this.trigger('change', {
+        code: this.locale,
+        rtl: this.rtl,
+      });
     }
   }
 
@@ -162,10 +194,10 @@ export class Localization {
    * @param event - The name of the event to trigger.
    * @param data - The data to pass to the previously registered event callbacks.
    */
-  trigger(event: string, data: string) {
+  trigger(event: string, info: TranslationCallbackData) {
     const callbacks = this.callbacks[event] || [];
     for (const callback of callbacks) {
-      callback(data);
+      callback(info);
     }
   }
 
@@ -183,6 +215,15 @@ export class Localization {
   translatable(key: string, labels: string[] = []): string {
     this.translate(key);
     return key;
+  }
+
+  /**
+   * Whether or not the given language code represents a right-to-left language.
+   *
+   * @param code - The language code (e.g. 'en-US')
+   */
+  isRTL(code: string): boolean {
+    return ['fa'].includes(code.split('-')[0]);
   }
 
   /**

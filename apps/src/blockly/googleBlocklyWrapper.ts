@@ -1174,7 +1174,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return blocksByCategory;
   };
 
-  blocklyWrapper.updateLocale = function () {
+  blocklyWrapper.updateLocale = function (rtl) {
     // Call into our localization engine to get the new blocks and refresh all active
     // workspaces.
 
@@ -1225,6 +1225,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // Refresh the workspace so it redraws with the new localization
     const mainWorkspace = Blockly.getMainWorkspace();
     if (mainWorkspace) {
+      mainWorkspace.RTL = rtl;
       this.refreshWorkspace(mainWorkspace as ExtendedWorkspaceSvg);
       this.localizeVariables(mainWorkspace as ExtendedWorkspaceSvg);
     }
@@ -1235,6 +1236,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         workspace_id
       ) as ExtendedWorkspaceSvg;
       if (workspace) {
+        workspace.RTL = rtl;
         this.refreshWorkspace(workspace);
         this.localizeVariables(mainWorkspace as ExtendedWorkspaceSvg);
       }

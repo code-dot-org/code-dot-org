@@ -210,7 +210,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     blockDefinitions: BlockDefinition[],
     inputTypes: CustomInputTypes
   ) => BlocksByCategory;
-  updateLocale: () => void;
+  updateLocale: (rtl: boolean) => void;
 }
 
 export type GoogleBlocklyInstance = typeof GoogleBlockly;

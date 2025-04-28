@@ -542,9 +542,9 @@ StudioApp.prototype.init = function (config) {
   if (this.isUsingBlockly()) {
     // Hook the blockly environment into the localization engine
     if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
-      Localization.on('change', language => {
-        console.log('Blockly: changing locale to', language);
-        Blockly.updateLocale();
+      Localization.on('change', info => {
+        console.log('Blockly: changing locale to', info.code);
+        Blockly.updateLocale(info.rtl);
       });
     }
     Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {

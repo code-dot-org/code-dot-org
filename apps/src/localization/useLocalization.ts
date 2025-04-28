@@ -16,8 +16,8 @@ export const useLocalization = () => {
   );
 
   useEffect(() => {
-    localization().on('change', language => {
-      updateCallback(language);
+    localization().on('change', info => {
+      updateCallback(info.code);
     });
   }, [updateCallback]);
 
