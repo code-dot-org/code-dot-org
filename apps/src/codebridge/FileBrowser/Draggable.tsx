@@ -1,4 +1,5 @@
 import {useDraggable} from '@dnd-kit/core';
+import classNames from 'classnames';
 import React from 'react';
 
 import {DragDataType} from './types';
@@ -35,7 +36,7 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
   children,
   data,
   Component = 'div',
-  className = moduleStyles.draggable,
+  className,
 }: DraggableProps) => {
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
     id: `${data.type}-${data.id}`,
@@ -52,7 +53,7 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
     {
       ref: setNodeRef,
       style: style,
-      className,
+      className: classNames(moduleStyles.draggable, className),
       ...listeners,
       ...attributes,
     },
