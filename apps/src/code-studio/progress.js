@@ -284,8 +284,8 @@ progress.initViewAsWithoutStore = function (
 
 progress.retrieveProgress = function (scriptName, scriptData, currentLevelId) {
   const store = getStore();
-  const courseName = scriptData.course_name;
-  const unitPosition = scriptData.unit_position;
+  const courseName = scriptData?.course_name;
+  const unitPosition = scriptData?.unit_position;
   let fetchURL = `/api/script_structure/${scriptName}`;
   if (courseName && unitPosition) {
     fetchURL = `/api/script_structure/courses/${courseName}/units/${unitPosition}`;
