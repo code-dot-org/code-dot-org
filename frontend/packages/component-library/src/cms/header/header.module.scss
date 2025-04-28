@@ -92,6 +92,14 @@ header .buttonLinks {
   align-items: center;
   gap: 0.5rem;
 
+  .pending.mainMenu {
+    color: var(--text-brand-teal-primary-fixed) !important;
+    background-color: var(--background-neutral-white-fixed) !important;
+    border-color: var(--background-neutral-white-fixed) !important;
+    // Set the width to match sign in buttons to prevent layout shift
+    width: 13.713rem;
+  }
+
   .signIn.mainMenu,
   .newProject {
     background: transparent;

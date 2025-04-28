@@ -44,7 +44,7 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
   const renderAccountButtons = () => {
     switch (signInState) {
       case 'loading':
-        return <span className={moduleStyles.loading}>Loading...</span>;
+        return renderPlaceholderButton();
       case 'signedIn':
         return renderDashboardButton();
       case 'signedOut':
@@ -52,6 +52,22 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
         return renderSignInButtons();
     }
   };
+
+  const renderPlaceholderButton = () => (
+    <LinkButton
+      text={'Loading'}
+      className={classNames(
+        isInHamburger ? moduleStyles.hamburger : moduleStyles.mainMenu,
+        moduleStyles.pending,
+      )}
+      type="primary"
+      href="#"
+      size="s"
+      color={isInHamburger ? 'purple' : 'white'}
+      isPending={signInState === 'loading'}
+      disabled
+    />
+  );
 
   const renderDashboardButton = () => (
     <LinkButton
