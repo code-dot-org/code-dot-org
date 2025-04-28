@@ -71,18 +71,18 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
 }
 const fetchUserSignedInStatus = async (studioBaseUrl: string) => {
   try {
-    const signInStatus = await fetch(
+    const signedInStatus = await fetch(
       `${studioBaseUrl}/api/v1/users/signed_in`,
       {
         credentials: 'include',
       },
     );
 
-    if (!signInStatus.ok) {
+    if (!signedInStatus.ok) {
       throw new Error('Network response was not ok');
     }
 
-    return await signInStatus.json();
+    return await signedInStatus.json();
   } catch (error) {
     console.error('There was a problem with the fetch operation:', error);
   }
