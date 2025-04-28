@@ -1,6 +1,5 @@
-$desktop-breakpoint: 1268px;
-$tablet-breakpoint: 1023px;
 $mobile-breakpoint: 425px;
+$wire-color: var(--background-brand-purple-light);
 
 .unitContainer {
   display: flex;
@@ -47,6 +46,17 @@ $mobile-breakpoint: 425px;
   gap: 0.75rem;
   padding: 1rem;
 
+  // A lesson activity section without a name, which is for our hour-of-code
+  // style lessons with a single set of levels
+  .bareLesson {
+    &::before {
+      background-color: $wire-color;
+      content: '';
+      height: 0.25rem;
+      width: 5rem;
+    }
+  }
+
   a.activityButton {
     width: 5rem;
     min-width: 5rem;
@@ -79,9 +89,9 @@ $mobile-breakpoint: 425px;
 
     // Joint image
     & > svg {
-      position: absolute;
-      left: 1.25rem;
       bottom: 1.25rem;
+      left: 1.25rem;
+      position: absolute;
     }
 
     & > div {
@@ -89,11 +99,11 @@ $mobile-breakpoint: 425px;
 
       div {
         display: inline-block;
-        white-space: nowrap;
         margin-bottom: 0.25rem;
+        white-space: nowrap;
 
         & svg:first-child {
-          fill: var(--background-brand-purple-light);
+          fill: $wire-color;
           min-width: 1.0625rem;
           width: 1.0625rem;
         }
@@ -111,7 +121,7 @@ $mobile-breakpoint: 425px;
     }
 
     svg {
-      fill: var(--background-brand-purple-light);
+      fill: $wire-color;
       min-width: 4.5rem;
       width: 4.5rem;
     }
@@ -123,6 +133,10 @@ $mobile-breakpoint: 425px;
   .lessonActivitySection {
     h5 {
       font-size: 1rem;
+    }
+
+    & > div:first-child.bareLesson {
+      display: none;
     }
 
     .lessonActivitySectionLevelProgression {

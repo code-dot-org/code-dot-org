@@ -24,30 +24,37 @@ const LessonOverview: React.FunctionComponent<LessonOverviewProps> = ({
     <div className={moduleStyles.lessonOverview}>
       {(lesson?.activitySections || []).map((activitySection, i) => {
         const singleLevel = activitySection.from === activitySection.to;
+        const isProgression = singleLevel || activitySection.title !== '';
         return (
           <div
             key={`activity-section-${i}`}
             className={moduleStyles.lessonActivitySection}
           >
-            <div>
-              <Button
-                type="secondary"
-                useAsLink={true}
-                disabled={!singleLevel}
-                iconLeft={{
-                  iconName: i == 0 ? 'video' : 'desktop',
-                  iconStyle: 'solid',
-                }}
-                color="black"
-                href={`/units/${unitKey}/lessons/${lesson.index + 1}/levels/${activitySection.from}`}
-                text={
-                  singleLevel
-                    ? activitySection.from || '0'
-                    : `${activitySection.from}-${activitySection.to}`
-                }
-                className={moduleStyles.activityButton}
-              />
-              <Heading5>{activitySection.title}</Heading5>
+            <div
+              className={isProgression ? undefined : moduleStyles.bareLesson}
+            >
+              {isProgression && (
+                <>
+                  <Button
+                    type="secondary"
+                    useAsLink={true}
+                    disabled={!singleLevel}
+                    iconLeft={{
+                      iconName: i == 0 ? 'video' : 'desktop',
+                      iconStyle: 'solid',
+                    }}
+                    color="black"
+                    href={`/units/${unitKey}/lessons/${lesson.index + 1}/levels/${activitySection.from}`}
+                    text={
+                      singleLevel
+                        ? activitySection.from || '0'
+                        : `${activitySection.from}-${activitySection.to}`
+                    }
+                    className={moduleStyles.activityButton}
+                  />
+                  <Heading5>{activitySection.title}</Heading5>
+                </>
+              )}
             </div>
             {!singleLevel && (
               <div

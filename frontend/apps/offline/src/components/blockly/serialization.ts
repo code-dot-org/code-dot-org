@@ -210,7 +210,6 @@ export const positionBlocksOnWorkspace: (
     SETUP_TYPES,
   );
 
-  console.log(orderedBlocksSetupFirst);
   adjustBlockPositions(orderedBlocksSetupFirst, workspace);
 };
 

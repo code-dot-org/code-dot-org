@@ -11,6 +11,7 @@ import LevelProvider from '@/providers/LevelProvider';
 
 import MazeLevel from './mazeLevel';
 import StandaloneVideoLevel from './standaloneVideoLevel';
+import StarWarsLevel from './starWarsLevel';
 
 const spinnerIcon: FontAwesomeV6IconProps = {
   iconName: 'spinner',
@@ -40,6 +41,9 @@ const Level: React.FunctionComponent<LevelProps> = ({levelData}) => (
       )}
       {levelData?.type === 'Maze' && <MazeLevel levelData={levelData} />}
       {levelData?.type === 'Karel' && <MazeLevel levelData={levelData} />}
+      {levelData?.type === 'StarWarsGrid' && (
+        <StarWarsLevel levelData={levelData} />
+      )}
       {levelData?.type === 'StandaloneVideo' && (
         <StandaloneVideoLevel levelData={levelData} />
       )}

@@ -1,6 +1,17 @@
 import {SkinDefinition} from './types';
 
 const skins = {
+  pvz: {
+    goalIdle: 'goalIdle.gif',
+    obstacleIdle: 'obstacleIdle.gif',
+
+    goalAnimation: 'goal.gif',
+    maze_forever: 'maze_forever.png',
+
+    obstacleScale: 1.4,
+    pegmanYOffset: -8,
+    danceOnLoad: true,
+  },
   birds: {
     goalIdle: 'goalIdle.gif',
     obstacleIdle: 'obstacle.png',

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Blockly, {BlockDefinition} from '@/components/blockly';
+import Blockly, {BlockDefinition, BlocklyOptions} from '@/components/blockly';
 import type {BaseLevelProps} from '@/components/level/types';
 import Workspace from '@/components/workspace';
 import Instructions from '@/components/workspace/information/instructions';
@@ -9,24 +9,26 @@ import BlocklyProvider from '@/providers/BlocklyProvider';
 
 export interface BlocklyLevelProps extends BaseLevelProps {
   levelData: object;
+  data?: object;
+  options?: BlocklyOptions;
   customBlocks?: BlockDefinition[];
   visualization?: React.Node;
   theme?: string;
   renderer?: string;
   onInject?: () => void;
-  forceInsertTopBlock?: string;
   avatar?: string;
 }
 
 const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
   levelData,
+  data,
+  options,
   visualization,
   customBlocks,
   onInject,
   avatar,
   theme,
   renderer,
-  forceInsertTopBlock,
 }) => {
   return (
     <BlocklyProvider
@@ -58,9 +60,10 @@ const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
         ]}
       >
         <Blockly
+          data={data}
+          options={options}
           startBlocks={levelData.blocklyData.startBlocks}
           toolboxBlocks={levelData.blocklyData.toolboxBlocks}
-          forceInsertTopBlock={forceInsertTopBlock}
           onInject={onInject}
         />
       </Workspace>

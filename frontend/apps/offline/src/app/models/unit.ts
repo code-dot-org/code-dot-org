@@ -658,19 +658,23 @@ export const parseUnitData: (data: UnitDefinition) => UnitData = (
   });
 
   // Determine the lesson groups, if any
-  ret.lessonGroups = (data.lesson_groups || []).map(lessonGroup => ({
-    key: lessonGroup.key,
-    title: lessonGroup.properties.display_name,
-    position: lessonGroup.position,
-    userFacing: lessonGroup.user_facing,
-    lessons: data.lessons
-      .map((lesson, i) => [lesson, i])
-      .filter(
-        ([lesson, _]) =>
-          lesson.seeding_key?.['lesson_group.key'] === lessonGroup.key,
-      )
-      .map(([_, i]) => ret.lessons[i]),
-  }));
+  ret.lessonGroups = (data.lesson_groups || [])
+    .filter(lessonGroup => lessonGroup.key !== '')
+    .map(lessonGroup => ({
+      key: lessonGroup.key,
+      title: lessonGroup.properties.display_name,
+      position: lessonGroup.position,
+      userFacing: lessonGroup.user_facing,
+      lessons: data.lessons
+        .map((lesson, i) => [lesson, i])
+        .filter(
+          ([lesson, _]) =>
+            lesson.seeding_key?.['lesson_group.key'] === lessonGroup.key,
+        )
+        .map(([_, i]) => ret.lessons[i]),
+    }));
+
+  console.log('UNIT', ret);
 
   return ret;
 };

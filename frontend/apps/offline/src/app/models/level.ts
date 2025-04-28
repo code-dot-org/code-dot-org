@@ -61,6 +61,8 @@ export interface LevelData {
   longInstructions: string;
   /** Shorter description of what to do or what the level covers. */
   shortInstructions: string;
+  /** Whether or not we should highlight the instructions before the student can continue */
+  instructionsImportant: boolean;
   /** Hints to help folks progress within levels. */
   hints: HintData[];
   /** An optional video that is associated with the level. */
@@ -228,10 +230,17 @@ export const parseLevelData: (
   const ret: LevelData = {
     key: key,
     type: xml.querySelector(':root')?.tagName || 'Maze',
-    longInstructions: config.properties.long_instructions,
-    shortInstructions: config.properties.short_instructions,
+    longInstructions:
+      config.properties.long_instructions ||
+      config.properties.short_instructions ||
+      '',
+    shortInstructions: config.properties.short_instructions || '',
     containedLevelNames: config.properties.contained_level_names,
     videoKey: config.properties.video_key,
+    instructionsImportant: !!(
+      config.properties.instructions_important === 'true' ||
+      config.properties.instructions_important === true
+    ),
   };
 
   // Parse hint data
@@ -248,7 +257,11 @@ export const parseLevelData: (
 
   // Parse maze data for such levels
   let isBlockly = false;
-  if (ret.type === 'Maze' || ret.type === 'Karel') {
+  if (
+    ret.type === 'Maze' ||
+    ret.type === 'Karel' ||
+    ret.type === 'StarWarsGrid'
+  ) {
     isBlockly = true;
     ret.mazeData = {
       skin: config.properties.skin,

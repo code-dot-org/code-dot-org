@@ -7,7 +7,6 @@ const blocks = [
     title: 'when run',
     style: 'setup_blocks',
     helpUrl: '',
-    shouldBeGrayedOut: () => false,
     generator: () => '\n',
     nextStatement: true,
   },
@@ -65,6 +64,7 @@ const blocks = [
   {
     type: 'controls_repeat_dropdown',
     style: 'loop_blocks',
+    tooltip: '',
     message0: En.CONTROLS_REPEAT_TITLE,
     args0: [
       {
@@ -82,8 +82,113 @@ const blocks = [
     ],
     nextStatement: true,
     previousStatement: true,
-    tooltip: '',
     generator: javascriptGenerator.forBlock.controls_repeat,
+  },
+  {
+    // Do forever loop.
+    type: 'maze_forever',
+    style: 'loop_blocks',
+    helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
+    tooltip: 'Repeat the enclosed actions until finish point is reached.',
+    previousStatement: true,
+    init: function (Blockly, {skin}) {
+      this.appendDummyInput()
+        .appendField('repeat until')
+        .appendField(new Blockly.FieldImage(skin?.maze_forever, 35, 35));
+      this.appendStatementInput('DO').appendField('do');
+    },
+    generator: function () {
+      // Generate JavaScript for do forever loop.
+      let branch = javascriptGenerator.statementToCode(this, 'DO');
+      branch =
+        Blockly.getInfiniteLoopTrap() +
+        Blockly.loopHighlight('Maze', this.id) +
+        branch;
+      return 'while (Maze.notFinished()) {\n' + branch + '}\n';
+    },
+  },
+  {
+    // Block for 'if' conditional if there is a path.
+    type: 'maze_if',
+    style: 'logic_blocks',
+    helpUrl: '',
+    tooltip:
+      'If there is a path in the specified direction, then do some actions.',
+    previousStatement: true,
+    nextStatement: true,
+    message0: 'if path %1',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'DIR',
+        options: [
+          ['ahead', 'isPathForward'],
+          ['to the left \u21BA', 'isPathLeft'],
+          ['to the right \u21BB', 'isPathRight'],
+        ],
+      },
+    ],
+    message1: En.CONTROLS_REPEAT_INPUT_DO + ' %1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'DO',
+      },
+    ],
+    generator: function () {
+      // Generate JavaScript for 'if' conditional if there is a path.
+      const argument =
+        'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
+      const branch = generator.statementToCode(this, 'DO');
+      const code = 'if (' + argument + ') {\n' + branch + '}\n';
+      return code;
+    },
+  },
+  {
+    // Block for 'if/else' conditional if there is a path.
+    type: 'maze_ifElse',
+    style: 'logic_blocks',
+    helpUrl: '',
+    tooltip:
+      'If there is a path in the specified direction, then do the first block of actions. Otherwise, do the second block of actions.',
+    previousStatement: true,
+    nextStatement: true,
+    message0: 'if path %1',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'DIR',
+        options: [
+          ['ahead', 'isPathForward'],
+          ['to the left \u21BA', 'isPathLeft'],
+          ['to the right \u21BB', 'isPathRight'],
+        ],
+      },
+    ],
+    message1: En.CONTROLS_REPEAT_INPUT_DO + ' %1',
+    args1: [
+      {
+        type: 'input_statement',
+        name: 'DO',
+      },
+    ],
+    message2: 'else %1',
+    args2: [
+      {
+        type: 'input_statement',
+        name: 'ELSE',
+      },
+    ],
+    generator: function () {
+      // Generate JavaScript for 'if/else' conditional if there is a path.
+      const argument =
+        'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
+      const branch0 = generator.statementToCode(this, 'DO');
+      const branch1 = generator.statementToCode(this, 'ELSE');
+      const code =
+        'if (' + argument + ') {\n' + branch0 + '} else {\n' + branch1 + '}\n';
+      return code;
+    },
   },
 ];
 

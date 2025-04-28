@@ -8,6 +8,7 @@ import {
 
 import type {UnitData} from '@/app/models/unit';
 
+import Lesson from './Lesson';
 import LessonGroup from './LessonGroup';
 
 import moduleStyles from './unit.module.scss';
@@ -36,6 +37,14 @@ const Unit: React.FunctionComponent<UnitProps> = ({unit}) => {
             unitKey={unit.key}
             lessonGroup={lessonGroup}
             lessonIndex={i + 1}
+            open={i === 0}
+          />
+        ))}
+        {unit.lessons.map((lesson, i) => (
+          <Lesson
+            key={`lesson-${i}`}
+            unitKey={unit.key}
+            lesson={lesson}
             open={i === 0}
           />
         ))}

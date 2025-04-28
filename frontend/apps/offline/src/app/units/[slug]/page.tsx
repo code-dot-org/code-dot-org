@@ -4,7 +4,7 @@ import {loadUnit, parseUnitData} from '@/app/models/unit';
 import Header from '@/components/header';
 import Unit from '@/components/unit';
 
-export default async function UnitPage({
+export default async function UnitViewPage({
   params,
 }: {
   params: Promise<{slug: string}>;

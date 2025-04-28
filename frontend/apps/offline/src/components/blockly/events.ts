@@ -137,3 +137,57 @@ export function updateBlockLimits(
     }
   });
 }
+
+/**
+ * Grays out undeletable blocks.
+ */
+export function grayOutUndeletableBlocks(
+  event: BlocklyLibrary.Events.Abstract,
+) {
+  const expectedEventTypes: string[] = [
+    BlocklyLibrary.Events.BLOCK_CHANGE,
+    BlocklyLibrary.Events.BLOCK_CREATE,
+  ];
+
+  // Mask out only certain event types
+  if (!expectedEventTypes.includes(event.type)) {
+    return;
+  }
+
+  const blockEvent = event as
+    | BlocklyLibrary.Events.BlockCreate
+    | BlocklyLibrary.Events.BlockChange;
+
+  console.log('EVENT', blockEvent);
+  if (!blockEvent.blockId || !blockEvent.workspaceId) {
+    return;
+  }
+
+  const eventWorkspace = BlocklyLibrary.Workspace.getById(
+    blockEvent.workspaceId,
+  );
+
+  const grayOut = blockDefinition => {
+    const block = eventWorkspace?.getBlockById(blockDefinition.id);
+    console.log('GRAY?', blockDefinition, block);
+    if (
+      !block.isDeletable() &&
+      block.isMovable() &&
+      !eventWorkspace.options.readOnly
+    ) {
+      block.setColour('#888');
+    }
+
+    // Go through the connected blocks that were created with this block
+    if (blockDefinition.next?.block) {
+      grayOut(blockDefinition.next.block);
+    }
+
+    // Ditto for inputs
+    for (const input of Object.values(blockDefinition.inputs || {})) {
+      grayOut(input.block);
+    }
+  };
+
+  grayOut(blockEvent.json);
+}

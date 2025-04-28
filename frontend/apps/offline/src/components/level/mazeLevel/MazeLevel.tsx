@@ -9,6 +9,7 @@ import React, {
 import Maze, {tiles} from '@code-dot-org/maze';
 
 import type {LevelData} from '@/app/models/level';
+import type {BlockDefinition} from '@/components/blockly';
 import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
 import DefaultTheme from '@/components/blockly/themes/default';
 import {getAllGeneratedCode} from '@/components/blockly/utils';
@@ -25,9 +26,13 @@ import Visualization from './Visualization';
 
 export interface MazeLevelProps extends BlocklyLevelProps {
   levelData: LevelData;
+  customBlocks?: BlockDefinition[];
 }
 
-const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({levelData}) => {
+const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
+  levelData,
+  customBlocks,
+}) => {
   const controller = useRef(null);
   const svg = useRef(null);
   const executionInfo = useRef(null);
@@ -254,12 +259,10 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({levelData}) => {
     console.log('done');
   }, [controller, svg]);
 
+  const skinConfig = skinFor(levelData?.mazeData?.skin);
+
   useEffect(() => {
     // Parse out maze data
-    const config = {};
-    const skinConfig = skinFor(levelData.mazeData.skin);
-    config.forceInsertTopBlock = 'when_run';
-    config.skin = skinConfig;
     setAvatar(skinConfig.smallStaticAvatar);
     controller.current = new Maze.MazeController(
       {
@@ -268,7 +271,10 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({levelData}) => {
         ...levelData.mazeData,
       },
       skinConfig,
-      config,
+      {
+        skin: skinConfig,
+        skinId: levelData.mazeData.skin,
+      },
       {
         methods: {
           playAudio: (sound, options) => {
@@ -289,6 +295,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({levelData}) => {
   return (
     <BlocklyLevel
       levelData={levelData}
+      data={{skin: skinConfig}}
       theme={DefaultTheme}
       renderer={ThrasosRenderer}
       avatar={avatar}
@@ -302,8 +309,11 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({levelData}) => {
           onStep={onStep}
         />
       }
-      customBlocks={blocks}
-      forceInsertTopBlock="when_run"
+      customBlocks={[...blocks, ...(customBlocks || [])]}
+      options={{
+        forceInsertTopBlock: 'when_run',
+        grayOutUndeletableBlocks: true,
+      }}
       onInject={onInject}
     />
   );

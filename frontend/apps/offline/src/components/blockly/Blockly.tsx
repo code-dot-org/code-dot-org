@@ -1,12 +1,18 @@
 import useResizeObserver from '@react-hook/resize-observer';
+import * as libraryBlocks from 'blockly/blocks';
 import * as BlocklyLibrary from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
+import * as En from 'blockly/msg/en';
 import React, {createElement, useEffect, useRef, useContext} from 'react';
 
 import BlocklyContext from '@/contexts/BlocklyContext';
 
 import BlockLimitMap from './BlockLimitMap';
-import {disableOrphans, updateBlockLimits} from './events';
+import {
+  disableOrphans,
+  updateBlockLimits,
+  grayOutUndeletableBlocks,
+} from './events';
 import {
   forciblyInsertTopBlock,
   positionBlocksOnWorkspace,
@@ -15,9 +21,20 @@ import type {Theme} from './types';
 
 import moduleStyles from './blockly.module.scss';
 
+export interface BlocklyOptions {
+  /** When specified, this ensures that the given block exists and is the top block. */
+  forceInsertTopBlock?: string;
+  /** When specified, undeletable blocks are grayed out. */
+  grayOutUndeletableBlocks?: boolean;
+}
+
 export interface BlocklyProps {
   /** A set of custom blocks to load within the Blockly instance. */
   customBlocks?: BlockDefinition[];
+  /** A set of specialized options that is passed to block creators. */
+  data?: object;
+  /** Some options that will alter the typical Blockly behavior. */
+  options?: BlocklyOptions;
   /** A set of blocks to load as the starting point for the workspace */
   startBlocks?: string | object;
   /** A set of blocks to put into a single, simple toolbox within the workspace */
@@ -28,23 +45,25 @@ export interface BlocklyProps {
   theme?: Theme;
   /** Whether or not to render this workspace as inline, useful for documentation */
   inline?: boolean;
-  /** When specified, this ensures that the given block exists and is the top block. */
-  forceInsertTopBlock?: string;
   /** A callback when the Blockly environment is loaded into the container */
   onInject?: () => void;
 }
+
+const _ = libraryBlocks;
+const __ = En;
 
 /**
  * Represents a Blockly workspace.
  */
 const Blockly: React.FunctionComponent<BlocklyProps> = ({
   customBlocks,
+  data,
+  options,
   startBlocks,
   toolboxBlocks,
   renderer,
   theme,
   inline,
-  forceInsertTopBlock,
   onInject,
 }) => {
   const anchor = useRef<HTMLDivElement | HTMLSpanElement | null>();
@@ -83,34 +102,40 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
 
   // Register any new custom blocks
   useEffect(() => {
-    BlocklyLibrary.setLocale('en');
+    BlocklyLibrary.setLocale(En);
+
+    // Make sure we have the default blocks
+    console.log('BLOCKS', BlocklyLibrary, BlocklyLibrary.Blocks);
+
     (customBlocks || []).forEach(
-      ({type, title, tooltip, functionName, generator, ...options}) => {
-        if (options.message0) {
-          BlocklyLibrary.common.defineBlocksWithJsonArray([{type, ...options}]);
+      ({type, title, tooltip, functionName, generator, ...rest}) => {
+        if (rest.message0) {
+          BlocklyLibrary.common.defineBlocksWithJsonArray([
+            {type, tooltip, ...rest},
+          ]);
         } else {
           BlocklyLibrary.Blocks[type] ||= {
-            helpUrl: options.helpUrl || '',
+            helpUrl: rest.helpUrl || '',
             init: function () {
-              this.setStyle(options.style || 'default');
+              this.setStyle(rest.style || 'default');
               if (title) {
                 const input = this.appendEndRowInput();
                 input.appendField(title);
-              } else if (options.titleImage) {
+              } else if (rest.titleImage) {
                 const input = this.appendEndRowInput();
                 input.appendField(
-                  new BlocklyLibrary.FieldImage(options.titleImage),
+                  new BlocklyLibrary.FieldImage(rest.titleImage),
                 );
               }
-              if (options.previousStatement) {
-                this.setPreviousStatement(options.previousStatement);
+              if (rest.previousStatement) {
+                this.setPreviousStatement(rest.previousStatement);
               }
-              if (options.nextStatement) {
-                this.setNextStatement(options.nextStatement);
+              if (rest.nextStatement) {
+                this.setNextStatement(rest.nextStatement);
               }
               this.setTooltip(tooltip);
-              if (options.init) {
-                options.init.bind(this)(BlocklyLibrary);
+              if (rest.init) {
+                rest.init.bind(this)(BlocklyLibrary, data);
               }
             },
           };
@@ -157,6 +182,10 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
       startBlocks = '<xml></xml>';
     }
 
+    if (options?.grayOutUndeletableBlocks) {
+      workspace.current.addChangeListener(grayOutUndeletableBlocks);
+    }
+
     // For strings, these are XML starting blocks
     if (typeof startBlocks === 'string') {
       const parser = new DOMParser();
@@ -164,8 +193,8 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
         .parseFromString(startBlocks, 'text/xml')
         ?.querySelector(':root');
 
-      if (forceInsertTopBlock) {
-        forciblyInsertTopBlock(xmlDoc, forceInsertTopBlock);
+      if (options?.forceInsertTopBlock) {
+        forciblyInsertTopBlock(xmlDoc, options.forceInsertTopBlock);
       }
 
       BlocklyLibrary.Xml.clearWorkspaceAndLoadFromXml(
