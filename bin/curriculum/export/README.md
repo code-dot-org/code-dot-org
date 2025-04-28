@@ -155,6 +155,34 @@ sorted in any order. Here are some of the key fields:
   student's work will be consistent for a given level.
 * `student_answer_pii_score`: see `source_pii_score` 
 * `student_answer_pii_entities`: see `source_pii_entities`
+* `source_versions`: see below
+
+#### Source Versions
+
+The `source_versions` field is a JSON array containing the source code for each
+version of the project. Here is an example:
+```
+{
+  "source_versions": [
+    {
+      "versionId": "e6vJbk8B17DM9eag36pAfsPxI_2kkJ6A",
+      "lastModified": "2024-12-05T18:34:25.000Z",
+      "isLatest": true,
+      "version_source": "...",
+      "version_source_pii_score": 0,
+      "version_source_pii_entities": []
+    }
+    ...
+  ],
+  ...
+}
+```
+
+If any versions are present, one of them will be marked as `isLatest`. This will
+contain an exact copy of the `source`, `source_pii_score` and `source_pii_entities`
+top-level fields. Non-latest versions will contain past versions of the project source
+code, each with their own pii score and pii entities. `versionId` can be
+joined against the `project_version` field in the `evals` files.
 
 ### Evaluations
 
