@@ -12,6 +12,7 @@ import Localize, {
   LocalizeOptions,
   LocalizeSetLanguageData,
 } from '@cdo/apps/localization/Localize';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * This class handles our dynamic localization engine.
@@ -32,6 +33,12 @@ export class Localization {
    * widget.
    */
   constructor() {
+    // Only allow when enableExperiments=localizejs has been set
+    // or localizejs=1 is specified in the URL
+    if (!experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
+      return;
+    }
+
     // Hook into the widget code
     Localize?.on('initialize', options => {
       this.options = options as LocalizeOptions;
@@ -40,7 +47,7 @@ export class Localization {
     Localize?.on('setLanguage', data => {
       // Call our own 'change' event
       const language = (data as LocalizeSetLanguageData).to;
-      this.trigger('change', language);
+      this.trigger('change', language || 'en');
     });
   }
 
@@ -72,8 +79,8 @@ export class Localization {
     if (event === 'change') {
       // If we aren't in the source language, let's trigger the change event
       // right away.
-      if (Localize && Localize.getLanguage() !== 'en') {
-        this.trigger('change', Localize.getLanguage());
+      if (Localize && (Localize.getLanguage() || 'en') !== 'en') {
+        this.trigger('change', Localize.getLanguage() || 'en');
       }
     }
   }

@@ -537,10 +537,13 @@ StudioApp.prototype.init = function (config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
-    Localization.on('change', language => {
-      console.log('Blockly: changing locale to', language);
-      Blockly.updateLocale();
-    });
+    // Hook the blockly environment into the localization engine
+    if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
+      Localization.on('change', language => {
+        console.log('Blockly: changing locale to', language);
+        Blockly.updateLocale();
+      });
+    }
     Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
       utils.showUnusedBlockQtip(e.target);
     });

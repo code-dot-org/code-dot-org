@@ -6,16 +6,16 @@
   / Force English in both JS-land and Rails-land
   - I18n.locale = I18n.default_locale
   - request.locale = I18n.default_locale.to_s
-  %script{id: "localize-js", src: "https://global.localizecdn.com/localize.508.js", data: { locale: I18n.locale, blah: "foo", jslocale: request.env['cdo.locale'], path: request.path, prefixes: { "MlKri360o3v2T": csd_prefixes, "I0P5RaUEW8s5h": donor_prefixes, "3vPUSGZrdllW2": unplugged_prefixes, }.to_json}}
+  %script{id: "localize-js", src: "https://global.localizecdn.com/localize.js", data: { locale: I18n.locale, jslocale: request.env['cdo.locale'], path: request.path, prefixes: { "MlKri360o3v2T": csd_prefixes, "I0P5RaUEW8s5h": donor_prefixes, "3vPUSGZrdllW2": unplugged_prefixes, }.to_json}}
   :javascript
     // Currently, restrict the localize widget to these pages
     window.forcedLocale = "en-US";
-    const prefixes = JSON.parse(document.querySelector("script#localize-js").getAttribute("data-prefixes"));
-    console.log(prefixes);
-
+    const experiments = JSON.parse(window.localStorage.experimentsList || '[]');
+    const inExperiment = experiments.some((experiment) => experiment ? experiment.key === 'localizejs' : false) || window.location.search.includes("localizejs=");
+    const prefixes = JSON.parse(document.querySelector("script#localize-js")?.getAttribute("data-prefixes") || '{}');
     const projectKeys = Object.entries(prefixes).filter(([projectId, prefixes]) => prefixes.filter((prefix) => window.location.pathname.startsWith(prefix)).length > 0);
 
-    if (projectKeys.length > 0) {
+    if (projectKeys.length > 0 && inExperiment) {
       console.log(projectKeys[0][0]);
       !function(a){if(!a.Localize){a.Localize={};for(var e=["translate","untranslate","phrase","initialize","translatePage","setLanguage","getLanguage","getSourceLanguage","detectLanguage","getAvailableLanguages","setWidgetLanguages","hideLanguagesInWidget","untranslatePage","bootstrap","prefetch","on","off","hideWidget","showWidget"],t=0;t<e.length;t++)a.Localize[e[t]]=function(){}}}(window);
 
@@ -23,6 +23,7 @@
         key: projectKeys[0][0],
         rememberLanguage: true,
         retranslateOnNewPhrases: true,
+        disableWidget: true,
       });
 
       // Add a custom function to Localize:
@@ -35,10 +36,15 @@
         const mapping = {
           "fa-IR": "fa",
           "en-US": "en",
+          "es-MX": "es",
+          "es-ES": "es",
+          "hi-IN": "hi",
         };
 
         // Call LocalizeJS's setLanguage function (which we have renamed to override it)
         Localize.realSetLanguage(mapping[language] || language);
+
+        // Set the <html> direction to update it dynamically
         document.querySelector("html").setAttribute("dir", ["fa"].includes(lang) ? "rtl" : "ltr");
 
         // Craft the inverse map so we can get our internal language code from LocalizeJS's code
@@ -51,7 +57,7 @@
         const cdoLanguage = language === "source" ? "en-US" : inverseMapping[language] || language;
 
         const ensureSelector = (cdoLanguage) => {
-          const localeSelect = document.querySelector("#locale");
+          const localeSelect = document.querySelector("#locale") || document.querySelector("select[name='locale']");
           if (localeSelect) {
             localeSelect.selectedIndex = localeSelect.querySelector("option[value='" + cdoLanguage + "']").index;
           }
@@ -67,8 +73,18 @@
 
         // When the site loads, ensure the language selector has the correct value
         document.addEventListener('DOMContentLoaded', () => {
-          const localeSelect = document.querySelector("#locale");
+          const localeSelect = document.querySelector("#locale") || document.querySelector("select[name='locale']");
           if (localeSelect) {
+            console.log("found locale selector", localeSelect);
+            // Remove all options and replace them with the LocalizeJS options we have
+            Localize.getAvailableLanguages((err, data) => {
+              const codes = data.map((entry) => entry.code);
+              localeSelect.querySelectorAll("option").forEach((option) => {
+                if (!codes.some((code) => option.value.startsWith(code) && mapping[option.value])) {
+                  option.remove();
+                }
+              });
+            });
             localeSelect.addEventListener('change', handleChange);
           }
           console.log(cdoLanguage);
@@ -87,5 +103,7 @@
       // Ensure we are setting the correct direction on our <html> tag
       console.log("localizejs: current language:", Localize.getLanguage());
       Localize.cdoSetLanguage(Localize.getLanguage());
-      Localize.showWidget();
+
+      // Forcibly hide the widget for good measure
+      Localize.hideWidget();
     }
