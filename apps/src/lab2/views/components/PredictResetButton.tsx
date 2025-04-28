@@ -40,7 +40,7 @@ const PredictResetButton: React.FunctionComponent = () => {
   }
 
   return (
-    <div>
+    <div className={moduleStyles.resetButtonRow}>
       <Button
         text={i18n.deleteAnswer()}
         onClick={handleResetClick}
@@ -51,7 +51,9 @@ const PredictResetButton: React.FunctionComponent = () => {
         color={'destructive'}
         className={moduleStyles.resetButton}
       />
-      <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
+      <span className={moduleStyles.resetButtonRowSpace}>
+        <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
+      </span>
       {resetFailed && (
         <Alert
           type="danger"

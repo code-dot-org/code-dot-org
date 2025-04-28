@@ -39,7 +39,7 @@
 }
 
 .resetButton {
-  width: 212px;
+  flex: 0 0 auto;
 
   // We use important here because the disabled styles used by Button
   // are more specific than a single class.
@@ -48,4 +48,18 @@
     color: $light_gray_800 !important;
     border: none;
   }
+}
+
+.resetButtonRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.resetButtonRowSpace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
 }
