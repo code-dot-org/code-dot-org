@@ -98,6 +98,7 @@ header .buttonLinks {
     border-color: var(--background-neutral-white-fixed) !important;
     // Set the width to match sign in buttons to prevent layout shift
     width: 13.713rem;
+    opacity: 0.8;
   }
 
   .signIn.mainMenu,

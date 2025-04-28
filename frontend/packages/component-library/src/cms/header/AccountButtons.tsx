@@ -55,7 +55,7 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
 
   const renderPlaceholderButton = () => (
     <LinkButton
-      text={'Loading'}
+      text="Loading"
       className={classNames(
         isInHamburger ? moduleStyles.hamburger : moduleStyles.mainMenu,
         moduleStyles.pending,
