@@ -29,7 +29,7 @@ INFO_INTERVAL = 1_000
 sections_processed = 0
 sections_not_processed = 0
 
-Section.find_each(batch_size: BATCH_SIZE, start: options[:start_with]) do |section|
+Section.where(hidden: false, participant_type: 'student').find_each(batch_size: BATCH_SIZE, start: options[:start_with]) do |section|
   # Be kind to the database by limiting to 1000 sections processed per second
   sleep 0.001
 
