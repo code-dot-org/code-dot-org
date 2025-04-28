@@ -43,6 +43,14 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     className: darkModeStyles.tooltipLeft,
   };
 
+  const documentationTooltipProps: TooltipProps = {
+    text: commonI18n.documentation(),
+    direction: 'onLeft',
+    tooltipId: 'documentation-tooltip',
+    size: 'xs',
+    className: darkModeStyles.tooltipLeft,
+  };
+
   const openFeedbackForm = () => {
     window.open('https://forms.gle/Z4FsGMFzE4NrFp369', '_blank');
   };
@@ -119,6 +127,20 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           />
         </WithTooltip>
       )}
+      {/* For now, only python lab supports documentation */}
+      {appName === 'pythonlab' && (
+        <WithTooltip tooltipProps={documentationTooltipProps}>
+          <LinkButton
+            isIconOnly
+            icon={{iconStyle: 'solid', iconName: 'book'}}
+            href={documentationUrl}
+            size={'xs'}
+            type={'tertiary'}
+            target="_blank"
+            className={darkModeStyles.tertiaryButton}
+          />
+        </WithTooltip>
+      )}
       {skipUrl && (
         <Button
           iconRight={{iconStyle: 'solid', iconName: 'arrow-right'}}
@@ -134,15 +156,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           <span>{commonI18n.skipToProject()}</span>
         </Button>
       )}
-      <LinkButton
-        isIconOnly
-        icon={{iconStyle: 'solid', iconName: 'book'}}
-        href={documentationUrl}
-        size={'xs'}
-        type={'tertiary'}
-        target="_blank"
-        className={darkModeStyles.tertiaryButton}
-      />
     </div>
   );
 };
