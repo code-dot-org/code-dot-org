@@ -52,7 +52,9 @@ cd production
 ```bash
 SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/export_unit_progress.rb -u unit-name -o unit-name-and-date-range
 ```
-the above command runs a redshift query whose results are written to s3://cdo-data-sharing-internal via the `UNLOAD` command.
+where `unit-name-and-date-range` is something like `csd3-2024-ending-2025-04-01`.
+the above command runs a redshift query whose results are written to
+s3://cdo-data-sharing-internal via the `UNLOAD` command.
 
 5. add student source code from S3
 ```bash
