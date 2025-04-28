@@ -11,7 +11,7 @@
     "long_instructions": "### Make it Random\r\n\r\nIt's time to add the random element to make your song choose between each of your backing tracks!\r\n\r\n**Do This**:\r\n- Double-check your backtracks are inside a parent block like `repeat` or `play sequential` or `play together`\r\n- Drag out a `play random` block and put _all_ of your code inside of it\r\n  - Your timeline should update so all of the backtracks are stacked on top of each other!\r\n- Drag out a `repeat` block and put _all_ if your code inside! Then make the song repeat at least 5 times\r\n  - This gives your song enough time to choose each backtrack a random amount of times\r\n  \r\nRun your code! Each time you press run, it should select a different combination of your backtracks! Here is an example of what your code could look like inside the `repeat` and `play random` blocks:\r\n\r\n![](https://images.code.org/0f99ecf0ba3a816dd902f1ded001ee94-image-1745529017930.png)",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "level_data": {
       "library": "launch2024",
       "allowChangeStartingPlayheadPosition": true,
@@ -187,7 +187,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-24T21:03:06.950+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-3\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-3\"},{\"changed_at\":\"2025-04-24 21:08:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:10:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:46:53 +0000\",\"changed\":[\"offer_browser_tts\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:47:27 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-24T21:03:06.950+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-3\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-3\"},{\"changed_at\":\"2025-04-24 21:08:11 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:10:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:46:53 +0000\",\"changed\":[\"offer_browser_tts\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:47:27 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-25 15:47:44 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

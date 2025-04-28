@@ -7,7 +7,7 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "panels": [
       {
         "text": "",
@@ -69,6 +69,6 @@
     ],
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-15T21:29:58.164+00:00\",\"changed\":[\"cloned from \\\"emma-panel-data-science-lesson7-level1_2025_launch\\\"\"],\"cloned_from\":\"emma-panel-data-science-lesson7-level1_2025_launch\"},{\"changed_at\":\"2025-04-15 21:30:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:20:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-15T21:29:58.164+00:00\",\"changed\":[\"cloned from \\\"emma-panel-data-science-lesson7-level1_2025_launch\\\"\"],\"cloned_from\":\"emma-panel-data-science-lesson7-level1_2025_launch\"},{\"changed_at\":\"2025-04-15 21:30:00 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 18:20:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-25 16:52:52 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

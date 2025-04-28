@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-24 17:58:06 UTC",
+    "serialized_at": "2025-04-25 18:56:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -307,6 +307,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "In this lesson, students explore how \"smart\" generative AI really is by experimenting with a chatbot across a variety of newsroom-style tasks. They test the chatbot’s responses to creative, informative, and playful prompts, comparing the results to what they expected. Through hands-on exploration and guided reflection, students begin to build a personal understanding of what AI does well, where it struggles, and how it might fit into real-world writing and communication.",
+        "preparation": "- Print copies of the AI Newsroom Playground activity guide (one for each student)",
+        "student_overview": "In this lesson, you’ll explore what AI chatbots can do and where they might fall short. You'll try out different writing and media tasks like creating headlines, ads, or jokes, and see how the AI responds. By the end, you'll have a better sense of what AI is actually good at, what it struggles with, and when you might (or might not) want to use it."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -1105,6 +1108,48 @@
         "lesson_activity.key": "7d18c648-acbb-4461-b438-231ea9ca943c",
         "lesson.key": "Neural Networks: How They're Trained",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "97e3dc3e-e919-4220-b459-5d311dc2850e",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "exploring-gen-ai1-2025"
       }
     }
@@ -3009,6 +3054,37 @@
         "activity_section.key": "4f9fd910-c2d9-4c13-af73-9ee22d5dc719",
         "lesson_activity.key": "7d18c648-acbb-4461-b438-231ea9ca943c"
       }
+    },
+    {
+      "key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
+        "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6"
+      }
+    },
+    {
+      "key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc",
+      "position": 1,
+      "properties": {
+        "progression_name": "AI Newsroom Playground"
+      },
+      "seeding_key": {
+        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc",
+        "lesson_activity.key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377"
+      }
+    },
+    {
+      "key": "1a05e13d-d315-4b7e-9a08-58c7bbd96101",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1a05e13d-d315-4b7e-9a08-58c7bbd96101",
+        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e"
+      }
     }
   ],
   "script_levels": [
@@ -3043,6 +3119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson1-warmup-lv1_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -3090,6 +3169,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson2-warmup-lv1_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -3137,6 +3219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-warmup-lv1_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -3234,6 +3319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson6-warmup-lv1_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -3281,6 +3369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson8-warmup-v2_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -3378,6 +3469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson10-warmup-lv1_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -3450,6 +3544,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson5-warmup-lv1_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -3497,6 +3594,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson7-warmup-lv2_2025"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -3511,6 +3611,28 @@
       },
       "level_keys": [
         "genai-lesson7-warmup-lv2_2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Newsroom Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "exploring_generative_ai_lesson1_2_level1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
+      },
+      "level_keys": [
+        "exploring_generative_ai_lesson1_2_level1"
       ]
     }
   ],
@@ -3766,6 +3888,18 @@
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "200aae2d-f3f5-4527-8339-2950213c97e1"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "exploring_generative_ai_lesson1_2_level1",
+        "script_level.level_keys": [
+          "exploring_generative_ai_lesson1_2_level1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
+      }
     }
   ],
   "resources": [
@@ -3965,6 +4099,30 @@
       },
       "seeding_key": {
         "resource.key": "ai_auditors"
+      }
+    },
+    {
+      "name": "AI Newsroom Playground",
+      "url": "https://docs.google.com/document/d/1IvCgqCCvvrAeek7f-NHz2-8ng-NpZaiPHQ2wO7h_tlk",
+      "key": "ai_newsroom_playground",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "ai_newsroom_playground"
+      }
+    },
+    {
+      "name": "AI Newsroom Playground",
+      "url": "https://docs.google.com/document/d/1qRZGlkO7EJZakLC08-WTPoVsn4yTwhU-hvBeHzzxX10",
+      "key": "ai_newsroom_playground_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_newsroom_playground_1"
       }
     },
     {
@@ -4263,6 +4421,18 @@
       },
       "seeding_key": {
         "resource.key": "how_embeddings_are_made_version_b_"
+      }
+    },
+    {
+      "name": "How Smart Is It, Really?",
+      "url": "https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/",
+      "key": "how_smart_is_it_really_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "how_smart_is_it_really_"
       }
     },
     {
@@ -4964,6 +5134,24 @@
         "lesson.key": "Understanding Neural Networks",
         "resource.key": "understanding_neural_networks"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "ai_newsroom_playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "ai_newsroom_playground_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "how_smart_is_it_really_"
+      }
     }
   ],
   "scripts_resources": [
@@ -5192,6 +5380,26 @@
       }
     },
     {
+      "key": "1155018b-cb2a-4684-b240-9d03fbd344fc",
+      "properties": {
+        "description": "Interact with a chatbot to evaluate how it responds to different types of prompts."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "1155018b-cb2a-4684-b240-9d03fbd344fc"
+      }
+    },
+    {
+      "key": "1b0de192-d507-4575-82c3-5e6197db9eeb",
+      "properties": {
+        "description": "Reflect on how AI can impact a real-world industry."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "1b0de192-d507-4575-82c3-5e6197db9eeb"
+      }
+    },
+    {
       "key": "23b667de-e76c-4e36-98ce-5cbb32933e49",
       "properties": {
         "description": "Use trial-and-error and past data to increase their accuracy in a supervised learning process"
@@ -5259,6 +5467,16 @@
       "seeding_key": {
         "lesson.key": "Input & Training Data",
         "objective.key": "65faaae8-324f-430c-be9f-1f6b6d35a2a2"
+      }
+    },
+    {
+      "key": "79f4ef09-f6d3-4e20-8057-73f561c9d5b5",
+      "properties": {
+        "description": "Identify strengths and limitations in how the chatbot generates responses."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "79f4ef09-f6d3-4e20-8057-73f561c9d5b5"
       }
     },
     {

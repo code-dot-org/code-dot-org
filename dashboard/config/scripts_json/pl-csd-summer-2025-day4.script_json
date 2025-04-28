@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 15:28:58 UTC",
+    "serialized_at": "2025-04-25 13:51:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2111,19 +2111,6 @@
       }
     },
     {
-      "name": "Resource Packet",
-      "url": "https://docs.google.com/document/d/15ho43-c0njEcIEIr-RmHcUjZfIJPFdVZvQdpH6GC4B4/edit?usp=sharing",
-      "key": "resource_packet",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "resource_packet"
-      }
-    },
-    {
       "name": "The Problem Solving Process ",
       "url": "https://www.youtube.com/watch?v=z7RaFPT3DTE",
       "key": "the_problem_solving_process",
@@ -2138,24 +2125,6 @@
     }
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Differentiation",
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Unit 6 - Creating Apps for Devices ",
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Unit 7 - AI and Machine Learning",
-        "resource.key": "resource_packet"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "TLO 5 - U6L2 Physical Designs",

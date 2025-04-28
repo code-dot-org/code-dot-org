@@ -23,16 +23,30 @@
           "language": "py",
           "contents": "def clap():\n  # Print a hand-clapping emoji\n  print(\"👏\")\n\n# TODO - Call the clap() function three times to give a round of applause!\n\n\n",
           "folderId": "0",
-          "active": true,
-          "open": true
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     },
-    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzgEAdg6DuuVPhq1mYhWjFFhOB94A42tP\nf1NRvpXeTeIZpvNA6yQ+pns/ulJlrAMo2Xwi6n3Vu1hKLWH2NCKCPKRaLw1V\nFw8VpdQW4a0ppalrG+aTmtC6sLXoLGXraR1howxH6eMKmYTqKOzye0xoxGc3\nzIXkOdl5VOo/S38WkoQPDEOvq7yPepETuRVyPdQznM2Yo9XI5/1+aADM8CAe\nuvCWokFKM1mzmU9ISSzZ4C+J7KwLlzHfy7qzDGjqLrRckOXmF6GHnRoIC2g+\nz/VvDrCfjvjIyeWSRVJRX6/qpJfp3WQH8qVgUpMFv2F4RGxk9w==\n"
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzgEAdg6DuuVPhq1mYhWjFFhOB94A42tP\nf1NRvpXeTeIZpvNA6yQ+pns/ulJlrAMo2Xwi6n3Vu1hKLWH2NCKCPKRaLw1V\nFw8VpdQW4a0ppalrG+aTmtC6sLXoLGXraR1howxH6eMKmYTqKOzye0xoxGc3\nzIXkOdl5VOo/S38WkoQPDEOvq7yPepETuRVyPdQznM2Yo9XI5/1+aADM8CAe\nuvCWokFKM1mzmU9ISSzZ4C+J7KwLlzHfy7qzDGjqLrRckOXmF6GHnRoIC2g+\nz/VvDrCfjvjIyeWSRVJRX6/qpJfp3WQH8qVgUpMFv2F4RGxk9w==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestClapFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_three_claps_printed(self):\n        \"\"\"clap() should be called three times to print three claps\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertEqual(\n            len(printed_messages),\n            3,\n            \"Make sure you call the clap() function three times to give a full round of applause!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:31.503+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level3_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level3_2025-launch\"},{\"changed_at\":\"2025-04-15 02:51:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:49 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:08:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:42:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:42:18 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:31.503+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level3_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level3_2025-launch\"},{\"changed_at\":\"2025-04-15 02:51:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:49 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:07:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 03:08:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:42:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 13:42:18 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 16:12:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

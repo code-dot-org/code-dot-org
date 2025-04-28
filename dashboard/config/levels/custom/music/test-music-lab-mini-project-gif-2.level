@@ -9,9 +9,9 @@
     "encrypted": "false",
     "instructions_important": "false",
     "long_instructions": "### Create Version 2\r\n\r\n**Do This**:\r\n- Choose the second mood you described in your Activity Guide for you GIF.\r\n- Create a sequence of sounds that go with that mood and put it underneath your first sequence\r\n  - **Your sounds must last at least 6 measures!**\r\n  - You can click the header of the timeline to \"skip ahead\" in your song to the second backtrack.\r\n- Create a second trigger with a new sound effect to go with your new backtrack. \r\n\r\nWhen you are finished, you should have two backtracks that play sequentially underneath the `when run` block and two `trigger` blocks. Here is an example of what this could look like.\r\n\r\n![](https://images.code.org/3a6477583a3a3dfa7a74d7402e1ad5b4-image-1745528231537.png)",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "level_data": {
       "library": "launch2024",
       "allowChangeStartingPlayheadPosition": true,
@@ -187,7 +187,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-20T17:10:40.965+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-1\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-1\"},{\"changed_at\":\"2025-03-20 17:23:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:32:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-06 15:44:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 20:56:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 20:57:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:41:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-20T17:10:40.965+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-mini-project-gif-1\\\"\"],\"cloned_from\":\"test-music-lab-mini-project-gif-1\"},{\"changed_at\":\"2025-03-20 17:23:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-03-20 18:32:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2025-04-06 15:44:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 20:56:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 20:57:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 21:41:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-25 15:47:07 +0000\",\"changed\":[\"offer_browser_tts\",\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 15:30:00 UTC",
+    "serialized_at": "2025-04-25 13:54:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -381,40 +381,10 @@
       "seeding_key": {
         "resource.key": "csd_in-person_summer_workshop_day_5_slides"
       }
-    },
-    {
-      "name": "Resource Packet",
-      "url": "https://docs.google.com/document/d/15ho43-c0njEcIEIr-RmHcUjZfIJPFdVZvQdpH6GC4B4/edit?usp=sharing",
-      "key": "resource_packet",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "resource_packet"
-      }
     }
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Assessment ",
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Planning for the Year",
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Preparing for the Year",
-        "resource.key": "resource_packet"
-      }
-    }
+
   ],
   "scripts_resources": [
     {

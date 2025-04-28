@@ -6701,7 +6701,14 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - *49
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: properties
+    sql_type_metadata: *16
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lesson_group_id
     sql_type_metadata: *2
@@ -14412,7 +14419,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250423171750
+version: 20250424231217
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

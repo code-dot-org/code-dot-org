@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-24 18:51:21 UTC",
+    "serialized_at": "2025-04-25 16:55:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -964,7 +964,7 @@
       "key": "bedf9cdc-b572-479e-a8af-2b29f76c803b",
       "position": 1,
       "properties": {
-        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *computer system*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What are some examples of computing systems you use in everyday life?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Computer systems are everywhere in daily life, from smartphones and gaming consoles to self-checkout kiosks, smart home devices, and even AI-powered cars. This discussion helps students recognize how these systems process and respond to data in different ways. (e.g. *\"A smartwatch is a computer system because it tracks my steps and syncs data to my phone.\"*)",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student their own copy of the AI and the Systems That Power It Unit Guide. Students will use this resource throughout the unit.\n\n\n <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *computer system*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What are some examples of computing systems you use in everyday life?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Computer systems are everywhere in daily life, from smartphones and gaming consoles to self-checkout kiosks, smart home devices, and even AI-powered cars. This discussion helps students recognize how these systems process and respond to data in different ways. (e.g. *\"A smartwatch is a computer system because it tracks my steps and syncs data to my phone.\"*)",
         "tips": [
           {
             "type": "teachingTip",
@@ -1166,7 +1166,7 @@
       "key": "2d4a7854-da62-4335-bb0a-14f3d6c49315",
       "position": 1,
       "properties": {
-        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *hardware*."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *hardware*."
       },
       "seeding_key": {
         "activity_section.key": "2d4a7854-da62-4335-bb0a-14f3d6c49315",
@@ -1635,7 +1635,7 @@
       "key": "e47555da-ace5-46df-baf8-199a227f3145",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1807,7 +1807,7 @@
       "key": "3604bede-a836-44fa-aa4a-2222fae5e9d5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the Question of the Day.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Help students articulate that software enables hardware to perform meaningful tasks and makes devices useful. Ask guiding questions like, “Can you give specific examples from the scavenger hunt that relate to your everyday lives or future careers?”. Encourage students to consider how their own devices and software enable their daily tasks and what they would do if these systems failed.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the Question of the Day.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Help students articulate that software enables hardware to perform meaningful tasks and makes devices useful. Ask guiding questions like, “Can you give specific examples from the scavenger hunt that relate to your everyday lives or future careers?”. Encourage students to consider how their own devices and software enable their daily tasks and what they would do if these systems failed.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1978,7 +1978,7 @@
       "key": "f4007943-b0f1-414f-b39f-cfb744e30131",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2033,7 +2033,7 @@
       "key": "fa47fbf5-0090-4605-9dce-1a47e9c2befe",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *PC build*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Place students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Build a Computer System activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1. Students should select a user that they want to design a computer system for and complete the User Profile section of the activity guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *PC build*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Place students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Build a Computer System activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1. Students should select a user that they want to design a computer system for and complete the User Profile section of the activity guide.",
         "progression_name": "Computer Build User Profiles"
       },
       "seeding_key": {
@@ -2186,7 +2186,7 @@
       "key": "d428d9d0-3529-41cb-9998-9e8774ee08c9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers. Students should complete the **Empathize with the User** section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should complete the Define the Data and Ideate a Solution sections of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system. They should research sensors that came up as part of their solution to their scenarios that they explored in the station activity.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers. Students should complete the **Empathize with the User** section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should complete the Define the Data and Ideate a Solution sections of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system. They should research sensors that came up as part of their solution to their scenarios that they explored in the station activity.\n",
         "progression_name": "Sensors and AI Chatbot",
         "tips": [
           {
@@ -2480,7 +2480,7 @@
       "key": "60fa35dd-5812-448a-9253-d148b68872bf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2520,7 +2520,7 @@
       "key": "0a8f027a-01e7-4c8f-a0cd-b54f20e40a77",
       "position": 1,
       "properties": {
-        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *processing unit*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these four processing units work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce CPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce GPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce FPGA.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce ASICs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 1. Students will select a computing task from a list of options and choose a processing unit (CPU, GPU, FPGA, or ASIC) to complete the task. They will observe the benchmarking results and receive a performance score based on their selection. Students should record their observations in their activity guide, analyzing which processor performed best for each task and why.",
+        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *processing unit*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these four processing units work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce CPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce GPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce FPGA.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce ASICs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 1. Students will select a computing task from a list of options and choose a processing unit (CPU, GPU, FPGA, or ASIC) to complete the task. They will observe the benchmarking results and receive a performance score based on their selection. Students should record their observations in their activity guide, analyzing which processor performed best for each task and why.",
         "duration": "15",
         "name": "AI Hardware",
         "progression_name": "Processing Unit Battle"
@@ -2672,7 +2672,7 @@
       "key": "b7adb601-af29-4660-9be1-60bba327b688",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Internet of Things activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce examples of standalone devices, such as pedometers or digital thermometers. Then give students examples of IoT devices, such as an Alexa speaker or a Ring camera.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one pair of devices and respond to the first question on the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are different ways that you might connect a device in order to communicate data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This should be a quick whole-class discussion to activate prior knowledge before reviewing some of the different methods that IoT devices communicate to the internet.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Transmission of Data Unit Guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Internet of Things activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce examples of standalone devices, such as pedometers or digital thermometers. Then give students examples of IoT devices, such as an Alexa speaker or a Ring camera.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one pair of devices and respond to the first question on the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are different ways that you might connect a device in order to communicate data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This should be a quick whole-class discussion to activate prior knowledge before reviewing some of the different methods that IoT devices communicate to the internet.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.",
         "duration": "15",
         "name": "Exploring IoT Systems, Hardware, and Privacy Concerns"
       },
@@ -3020,7 +3020,7 @@
       "key": "3e6ee1ee-1c51-4e74-a3af-e7a7074de9da",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. ",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3226,7 +3226,7 @@
       "key": "6fb9fd59-3610-4577-8a6d-569727f5d2a8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to their Unit Guides to answer the Question of the Day and give students 30 seconds to write a response. Have them share with a partner or read a few aloud.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",

@@ -4,7 +4,7 @@ import {
   fileBrowserKeyboardCoordinateGetter,
   FOLDER_DROP_OFFSET,
   getHighestPriorityCollision,
-} from '@cdo/apps/codebridge/FileBrowser/dragAndDropUtils';
+} from '@cdo/apps/codebridge/utils/dragAndDropUtils';
 
 import {
   folders,
@@ -14,7 +14,7 @@ import {
   folderActive,
   sampleDroppableRects,
   fileActive,
-} from './dragAndDropSampleData';
+} from '../FileBrowser/dragAndDropSampleData';
 
 describe('dragAndDropUtils', () => {
   describe('Keyboard coordinate getter', () => {
