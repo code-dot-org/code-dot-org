@@ -65,6 +65,7 @@ export function loadUnitProgress(scriptId, sectionId) {
   })
     .then(response => response.json())
     .then(scriptData => {
+      console.log('lfm', scriptData);
       structureLatencyMs = new Date().getTime() - startTime;
       sectionProgress.unitDataByUnit = {
         [scriptId]: postProcessDataByScript(

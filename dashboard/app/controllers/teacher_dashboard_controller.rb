@@ -1,5 +1,6 @@
 class TeacherDashboardController < ApplicationController
   load_and_authorize_resource :section
+  include LevelsHelper
 
   rescue_from CanCan::AccessDenied do
     if params[:path]&.include? 'courses'
@@ -70,22 +71,62 @@ class TeacherDashboardController < ApplicationController
   end
 
   def download_progress_csv
-    pp 'lfm', params[:section_id], params
-    headers = ['student_name', 'level1']
-    fake_data = [{student_name: 'anna', level1: 'in progress'}, {student_name: 'beth', level1: 'in progress'}]
-    send_data(
-      CSV.generate do |csv|
-        csv << headers
-        fake_data.each do |data|
-          csv << [
-            data[:student_name],
-            data[:level1]
-          ]
+    type = params[:type]
+
+    section = load_section
+    unit = load_unit(section)
+
+    deduplicated_students = section.students.distinct
+
+    student_progress = script_progress_for_users(deduplicated_students, unit)[0]
+
+    # pp('lfm', student_progress, unit.levels.map {|level| {name: level.name, id: level.id}})
+
+    progress_table = deduplicated_students.map do |student|
+      response = {}
+      response['student_name'] = student.name
+      response['student_id'] = student.id
+      response
+    end
+    if type == 'level'
+      level_names = unit.lessons.flat_map do |lesson|
+        lesson.script_levels.map do |script_level|
+          level_id = script_level.oldest_active_level.id
+          level_text = "#{lesson.relative_position}.#{script_level.level_display_text}"
+          progress_table.each do |data_row|
+            level_progress_for_student = student_progress[data_row['student_id']][level_id]
+
+            data_row[level_text] = level_progress_for_student ? level_progress_for_student[:status] : 'not started'
+          end
+          level_text
         end
-      end,
-      filename: 'progress.csv',
-      disposition: 'attachment',
-      type: 'text/csv',
-    )
+      end
+      headers = ['student_name'].concat(level_names)
+      send_data(
+        CSV.generate do |csv|
+          csv << headers
+          progress_table.each do |data_row|
+            csv << headers.map {|column_name| data_row[column_name]}
+          end
+        end,
+        filename: 'progress.csv',
+        disposition: 'attachment',
+        type: 'text/csv',
+      )
+    end
+  end
+
+  private def load_section
+    section = Section.find(params[:section_id])
+    authorize! :read, section
+    section
+  end
+
+  private def load_unit(section = nil)
+    unit_id = params[:unit_id] if params[:unit_id].present?
+    unit_id ||= section.default_script.try(:id)
+    unit = Unit.get_from_cache(unit_id) if unit_id
+    unit ||= Unit.twenty_hour_unit
+    unit
   end
 end

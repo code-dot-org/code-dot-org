@@ -4,7 +4,9 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import React from 'react';
+import {useSelector} from 'react-redux';
 
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import styles from './progress-table-v2.module.scss';
@@ -12,16 +14,16 @@ import styles from './progress-table-v2.module.scss';
 interface DownloadProgressCsvProps {}
 
 export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = () => {
+  const unitId = useSelector(
+    (state: {unitSelection: {scriptId: number}}) => state.unitSelection.scriptId
+  );
+
+  const sectionId = useAppSelector(
+    state => state.teacherSections.selectedSectionId
+  );
+
   return (
     <TooltipOverlay>
-      {/* <CSVLink
-        role="button"
-        filename="progress.csv"
-        data={() => getCsvData()}
-        headers={CSV_HEADERS}
-        ref={csvLinkRef}
-        asyncOnClick={true}
-      /> */}
       <WithTooltip
         tooltipOverlayClassName={styles.downloadCsv}
         tooltipProps={{
@@ -33,8 +35,7 @@ export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = () => {
         }}
       >
         <LinkButton
-          href="/teacher_dashboard/sections/1/download_progress_csv/test"
-          useAsLink={true}
+          href={`/teacher_dashboard/sections/${sectionId}/download_progress_csv?unit_id=${unitId}&type=level`}
           download={true}
           isIconOnly={true}
           icon={{iconName: 'download', iconStyle: 'solid'}}
@@ -42,21 +43,8 @@ export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = () => {
           color="gray"
           aria-label={i18n.downloadCSV()}
           type="secondary"
+          target="_blank"
         />
-        {/* <Button
-          isIconOnly={true}
-          icon={{iconName: 'download', iconStyle: 'solid'}}
-          onClick={() => {
-            if (csvLinkRef.current && csvLinkRef.current.link) {
-              csvLinkRef.current.link.click();
-            }
-          }} // Download is handled by CSVLink
-          size="s"
-          color="gray"
-          aria-label={i18n.downloadCSV()}
-          type="secondary"
-          isPending={isLoading}
-        /> */}
       </WithTooltip>
     </TooltipOverlay>
   );
