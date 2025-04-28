@@ -39,8 +39,7 @@
 }
 
 .resetButton {
-  flex: 0 0 auto;
-
+  flex-grow: 1;
   // We use important here because the disabled styles used by Button
   // are more specific than a single class.
   &:disabled {
@@ -58,8 +57,8 @@
 }
 
 .resetButtonRowSpace {
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
 }
