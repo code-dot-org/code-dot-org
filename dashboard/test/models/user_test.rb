@@ -1799,6 +1799,16 @@ class UserTest < ActiveSupport::TestCase
     assert_equal name, student.name
   end
 
+  describe '#update_email_for' do
+    it 'does not update migrated user AuthenticationOption if provider and uid are not present' do
+      user = create :user
+      user.update_email_for(provider: nil, uid: nil, email: 'new@email.com')
+      user.reload
+
+      _(user.hashed_email).wont_equal User.hash_email('new@email.com')
+    end
+  end
+
   test 'update_email_for does not update migrated user AuthenticationOption if provider and uid are not present' do
     user = create :user
     user.update_email_for(provider: nil, uid: nil, email: 'new@email.com')
