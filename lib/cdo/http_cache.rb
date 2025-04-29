@@ -174,7 +174,7 @@ class HttpCache
         behaviors: [
           # NextJS assets path for the marketing app
           {
-            path: '/_next/*',
+            path: '/_next/static/*',
             proxy: 'marketing',
             headers: ALLOWLISTED_HEADERS,
             cookies: default_cookies,
