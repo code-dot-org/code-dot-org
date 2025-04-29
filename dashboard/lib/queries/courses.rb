@@ -33,10 +33,8 @@ class Queries::Courses
   #     - `:unit` - The Unit for the given `unit_name`
   def self.get_course_context(unit_name)
     unit = Unit.get_from_cache(unit_name, raise_exceptions: false)
-    return nil unless unit
-    unit_group_unit = unit.unit_group_units&.first
-    return nil unless unit_group_unit
-    course = unit_group_unit.unit_group
+    unit_group_unit = unit&.unit_group_units&.first
+    course = unit_group_unit&.unit_group
     {course: course, unit_group_unit: unit_group_unit, unit: unit}
   end
 

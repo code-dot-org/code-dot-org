@@ -203,7 +203,7 @@ class ScriptLevel < ApplicationRecord
     elsif bonus
       # If we got to this bonus level from another lesson's lesson extras, go back
       # to that lesson
-      lesson_position = (extra_lesson || lesson).relative_position
+      lesson_position = (extras_lesson || lesson).relative_position
       if Policies::Courses.modularity_enabled? && unit_group_unit
         course_unit_lesson_extras_path(unit_group_unit.unit_group, unit_group_unit.position, lesson_position)
       else
@@ -215,7 +215,7 @@ class ScriptLevel < ApplicationRecord
       # overview page.
       if end_of_lesson? && script.show_unit_overview_between_lessons?
         if script.lesson_extras_available
-          lesson_position = (extra_lesson || lesson).relative_position
+          lesson_position = (extras_lesson || lesson).relative_position
           if Policies::Courses.modularity_enabled? && unit_group_unit
             course_unit_lesson_extras_path(unit_group_unit.unit_group, unit_group_unit.position, lesson_position)
           else
