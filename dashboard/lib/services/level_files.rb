@@ -39,16 +39,23 @@ module Services
     # @param [Hash] level_md5s_by_name for levels in db
     # @return [Level]
     def self.load_custom_level(level_path, level_md5s_by_name)
+      puts "load_custom_level(level_path = #{level_path.inspect})"
       name = Policies::LevelFiles.level_name_from_path(level_path)
       # Only reload level data when file contents change
       level_data = File.read(level_path)
       md5 = Digest::MD5.hexdigest(level_data)
+      puts "md5: #{md5.inspect}"
+      puts "level_md5s_by_name[name]: #{level_md5s_by_name[name].inspect}"
       if level_md5s_by_name[name] == md5
+        puts "nope"
         nil
       else
+        puts "yep"
         level = Level.find_by_name(name) || Level.new(name: name)
         level.md5 = md5
         level = Services::LevelFiles.load_custom_level_xml(level_data, level)
+        puts "md5: #{md5.inspect}"
+        puts "level.md5: #{level.md5.inspect}"
         level
       end
     rescue Exception => exception
