@@ -51,10 +51,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     className: darkModeStyles.tooltipLeft,
   };
 
-  const openFeedbackForm = () => {
-    window.open('https://forms.gle/Z4FsGMFzE4NrFp369', '_blank');
-  };
-
   const documentationUrl = `${currentLocation().origin}/docs/ide/${appName}`;
 
   const onClickSkip = useCallback(() => {
@@ -116,14 +112,15 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
       <VersionHistoryButton startSources={startSources} appName={appName} />
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
-          <Button
+          <LinkButton
             isIconOnly
             icon={{iconStyle: 'solid', iconName: 'commenting'}}
-            onClick={openFeedbackForm}
+            href={'https://forms.gle/Z4FsGMFzE4NrFp369'}
             ariaLabel={commonI18n.feedback()}
             size={'xs'}
             type={'tertiary'}
             className={darkModeStyles.tertiaryButton}
+            target="_blank"
           />
         </WithTooltip>
       )}
