@@ -265,9 +265,7 @@ class CodeWorkspace extends React.Component {
               this.props.pinWorkspaceToBottom ? 'pin_bottom' : '',
               this.props.inStartBlocksMode || this.props.inToolboxBlocksMode
                 ? 'has_banner'
-                : '',
-              // Do not let LocalizeJS translate the code/blockly content by default
-              'notranslate'
+                : ''
             )}
             canUpdate={true}
           >

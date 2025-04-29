@@ -774,6 +774,11 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   blocklyWrapper.inject = function (container, opt_options) {
+    // Ensure we do not translate content within the blockly workspace
+    if (typeof container !== 'string') {
+      (container as HTMLElement).classList.add('notranslate');
+    }
+
     // Set the default value for hasLoadedBlocks to false.
     blocklyWrapper.hasLoadedBlocks = false;
     if (!opt_options) {
@@ -854,6 +859,16 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       container,
       options
     ) as ExtendedWorkspaceSvg;
+
+    // Mark the blockly container as something we do not want translated
+    // and undo the container being marked as such
+    const div = workspace.getInjectionDiv();
+    if (div) {
+      div.classList.add('notranslate');
+    }
+    if (typeof container !== 'string') {
+      (container as HTMLElement).classList.remove('notranslate');
+    }
 
     workspace.defs = Blockly.createSvgElement(
       'defs',
@@ -1102,7 +1117,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.localizeVariables = function (workspace) {
     // Go through the original variables and translate them.
     if (workspace.globalVariables) {
-      console.log('source globals', workspace.sourceGlobalVariables);
       workspace.sourceGlobalVariables ||= workspace.globalVariables.slice();
     }
 
@@ -1119,13 +1133,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         if (newName.startsWith('[variable] ')) {
           newName = newName.substring(11);
         } else {
-          console.log(
+          console.error(
             'Global variable translation does not have the [variable] tag',
             oldName,
             newName
           );
         }
-        console.log('renaming', oldName, newName);
         workspace.renameVariableById(variable.getId(), newName);
         workspace.globalVariables[globalVariableIndex] = newName;
       }
@@ -1206,7 +1219,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
         if (newBlockText.startsWith('[behavior] ')) {
           newBlockText = newBlockText.substring(11);
         } else {
-          console.log(
+          console.error(
             'Behavior translation does not have the [behavior] tag',
             oldBlockText,
             newBlockText

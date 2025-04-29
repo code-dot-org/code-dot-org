@@ -50,11 +50,7 @@ class CodeWorkspaceContainer extends React.Component {
 
     return (
       <div style={mainStyle} className="editor-column">
-        <div
-          id="codeWorkspace"
-          style={styles.codeWorkspace}
-          className="notranslate"
-        >
+        <div id="codeWorkspace" style={styles.codeWorkspace}>
           {children}
         </div>
       </div>
