@@ -140,19 +140,27 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   useEscapeKeyboardTrap(cancelCallback);
   useEnterKeyboardTrap(confirmCallback);
 
+  const hasBodyComponent = !!bodyComponent;
+
   return (
     <FocusTrap>
       <div className={moduleStyles['genericDialog-' + theme]}>
         {titleComponent ? (
           titleComponent
         ) : title ? (
-          <Heading3>{title}</Heading3>
+          <Heading3 className={moduleStyles.title}>{title}</Heading3>
         ) : null}
-        <div className={moduleStyles.body}>
-          {bodyComponent || (
-            <BodyTwoText className={moduleStyles.bodyText}>
-              {message}
-            </BodyTwoText>
+        <div
+          className={
+            hasBodyComponent
+              ? moduleStyles.bodyComponent
+              : moduleStyles.bodyText
+          }
+        >
+          {hasBodyComponent ? (
+            bodyComponent
+          ) : (
+            <BodyTwoText>{message}</BodyTwoText>
           )}
         </div>
         <div className={moduleStyles.buttonContainer}>
