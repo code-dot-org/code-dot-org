@@ -72,9 +72,10 @@ class TeacherDashboardController < ApplicationController
 
   def download_progress_csv
     type = params[:type]
-    level_progress_csv if type == 'level'
 
-    nil
+    return head :bad_request unless type == 'level'
+
+    level_progress_csv if type == 'level'
   end
 
   private def level_progress_csv
