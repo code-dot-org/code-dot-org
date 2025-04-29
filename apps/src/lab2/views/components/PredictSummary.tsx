@@ -71,6 +71,7 @@ const PredictSummary: React.FunctionComponent = () => {
         text={commonI18n.viewStudentResponses()}
         size={'s'}
         type={'secondary'}
+        color={'black'}
         className={moduleStyles.studentResponsesButton}
       />
     </div>
