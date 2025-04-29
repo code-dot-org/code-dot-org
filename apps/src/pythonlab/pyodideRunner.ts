@@ -108,7 +108,6 @@ export async function runAllTests(
   progressManager: ProgressManager | null,
   validationFile?: ProjectFile
 ) {
-  console.log('running tests, validationFile:', validationFile);
   // We default to using the validation file passed in. If it does not exist,
   // we check the source for the validation file (this is the case in start mode).
   const validationToRun = validationFile || getValidationFromSource(source);
