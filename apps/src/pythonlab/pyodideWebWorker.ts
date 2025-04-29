@@ -128,16 +128,17 @@ onmessage = async event => {
   // If there is a results response, convert it to a JS object.
   // Documentation on this method:
   // https://pyodide.org/en/stable/usage/api/js-api.html#pyodide.ffi.PyProxy.toJs
-  console.log({results});
   const resultsObject = results?.toJs();
-  console.log({resultsObject});
   try {
-    postMessage({type: 'run_complete', message: resultsObject, id});
+    postMessage({
+      type: 'run_complete',
+      message: JSON.stringify(resultsObject),
+      id,
+    });
   } catch (e) {
     // Likely we hit a DataCloneError trying to send the resultsObject.
     // In this case, don't try to send the results object, as if it can't be
     // sent, it wasn't going to be parsed by us anyway.
-    console.log({e});
     postMessage({type: 'run_complete', id});
   }
 };
