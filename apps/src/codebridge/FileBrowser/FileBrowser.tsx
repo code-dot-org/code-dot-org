@@ -23,7 +23,6 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import i18n from '@cdo/locale';
 
 import {DndDataContextProvider} from './DnDDataContextProvider';
 import {Droppable} from './Droppable';
@@ -92,7 +91,7 @@ export const FileBrowser = React.memo(() => {
           collisionDetection={collisionDetector}
           accessibility={{
             screenReaderInstructions: {
-              draggable: i18n.dragAndDropInstructions(),
+              draggable: codebridgeI18n.dragAndDropInstructionsFolders(),
             },
           }}
         >

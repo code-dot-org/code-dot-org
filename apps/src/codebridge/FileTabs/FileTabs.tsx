@@ -26,7 +26,7 @@ import {
 } from '@dnd-kit/sortable';
 import React, {useState} from 'react';
 
-import i18n from '@cdo/locale';
+import i18n from '@cdo/apps/codebridge/locale';
 
 import FileTab from './FileTab';
 import Sortable from './Sortable';
@@ -92,7 +92,9 @@ export const FileTabs = React.memo(() => {
         collisionDetection={closestCenter}
         modifiers={[restrictToParentElement, restrictToHorizontalAxis]}
         accessibility={{
-          screenReaderInstructions: {draggable: i18n.dragAndDropInstructions()},
+          screenReaderInstructions: {
+            draggable: i18n.dragAndDropInstructionsTabs(),
+          },
         }}
       >
         <SortableContext items={files} strategy={horizontalListSortingStrategy}>

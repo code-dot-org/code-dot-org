@@ -1065,7 +1065,6 @@
   "downloadUnitXHandouts": "Download all handouts for Unit {unitNumber}",
   "downloadUnitLessonPlans": "Download all lesson plans for unit",
   "downloadUnitHandouts": "Download all handouts for unit",
-  "dragAndDropInstructions": "To pick up a file, press m. While dragging, use the arrow keys or tab to move the file. Press m, space or enter to drop the file in its new position, or press escape to cancel.",
   "dragBlocksToMatch": "Drag the blocks to match",
   "dragSection": "Drag section to reorder",
   "draw": "Draw",
