@@ -1,4 +1,5 @@
 require 'set'
+require 'json'
 
 class LevelLoader
   # Top-level entry point, called by rake seed:custom_levels
@@ -33,6 +34,10 @@ class LevelLoader
     # Use a transaction because loading levels requires two separate imports.
     Level.transaction do
       level_md5s_by_name = Level.pluck(:name, :md5).to_h
+      warn "########"
+      warn "level_md5s_by_name:"
+      warn JSON.pretty_generate(level_md5s_by_name)
+      warn "########"
       existing_level_names = level_md5s_by_name.keys.to_set
 
       level_file_names = level_file_paths.map do |path|
@@ -55,6 +60,10 @@ class LevelLoader
       changed_levels = level_file_paths.
         filter_map {|path| Services::LevelFiles.load_custom_level(path, level_md5s_by_name)}.
         select(&:changed?)
+
+      warn "########"
+      warn "identified #{changed_levels.count} changed levels out of #{level_file_paths.count} total level file paths"
+      warn "########"
 
       if [:development, :adhoc].include?(rack_env) && !CDO.properties_encryption_key
         puts "WARNING: skipping seeding encrypted levels because CDO.properties_encryption_key is not defined"
