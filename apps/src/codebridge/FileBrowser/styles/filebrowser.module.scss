@@ -74,13 +74,15 @@
 // (this allows it to take precedence over the component library button styles)
 button.button-kebab {
   display: none;
-  height: 20px;
-  width: 20px;
-  margin: 2px 2px 2px 0;
 }
 
-div.row:hover .button-kebab {
+div.draggable:hover .button-kebab,
+div.draggable:focus-within .button-kebab {
   display: inherit;
+  height: 20px;
+  width: 20px;
+  min-width: 1.25rem;
+  margin: 2px 2px 2px 0;
 }
 
 .nameContainer {
