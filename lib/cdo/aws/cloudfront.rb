@@ -293,6 +293,7 @@ module AWS
         ViewerProtocolPolicy: 'redirect-to-https'
       }.tap do |behavior|
         behavior[:PathPattern] = path if path
+        behavior[:ResponseHeadersPolicyId] = '!Ref CredentiallessCrossOriginEmbedderPolicy' if behavior_config[:credentialless_cross_origin_embedder_policy]
         behavior[:RealtimeLogConfigArn] = {'Fn::ImportValue': 'AccessLogs-Config'}
       end
     end

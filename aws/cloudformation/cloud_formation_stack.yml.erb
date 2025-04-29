@@ -404,6 +404,18 @@ Resources:
       DistributionConfig: <%= cloudfront_config(app) %>
 <%   end -%>
 
+<%   if cdn_enabled -%>
+  CredentiallessCrossOriginEmbedderPolicy:
+    Type: AWS::CloudFront::ResponseHeadersPolicy
+    Properties:
+      ResponseHeadersPolicyConfig:
+        Name: CredentiallessCrossOriginEmbedderPolicy
+        CustomHeadersConfig:
+          Items:
+            - Header: "Cross-Origin-Embedder-Policy"
+              Value: "credentialless"
+<%   end -%>
+
 <%   if cdn_enabled && app == 'Pegasus' -%>
 <%=    component 'www_redirect', app: app -%>
   MarketingRouterLambda:

@@ -246,6 +246,7 @@ class HttpCache
             path: '/assets/*',
             proxy: 'cdo-assets',
             headers: [],
+            credentialless_cross_origin_embedder_policy: true,
             cookies: 'none'
           },
           {
