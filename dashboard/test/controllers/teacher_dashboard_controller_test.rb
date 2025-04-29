@@ -171,7 +171,7 @@ class TeacherDashboardControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal "text/csv", response.content_type
-    assert_includes response.headers['Content-Disposition'], 'filename="progress.csv"'
+    assert_includes response.headers['Content-Disposition'], 'filename="level_progress.csv"'
     assert_includes response.headers['Content-Disposition'], 'attachment'
 
     csv_content = response.body

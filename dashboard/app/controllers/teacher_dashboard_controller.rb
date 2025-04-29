@@ -98,7 +98,7 @@ class TeacherDashboardController < ApplicationController
           csv << [data_row[:student_name]].concat(level_names.map {|column_name| data_row[column_name]})
         end
       end,
-      filename: 'progress.csv',
+      filename: 'level_progress.csv',
       disposition: 'attachment',
       type: 'text/csv',
     )
