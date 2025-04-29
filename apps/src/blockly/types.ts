@@ -86,8 +86,6 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   grayOutUndeletableBlocks: boolean;
   topLevelProcedureAutopopulate: boolean;
   isJigsaw: boolean;
-  getNewCursor: (type: string) => GoogleBlockly.Cursor;
-  LineCursor: typeof GoogleBlockly.BasicCursor;
   version: BlocklyVersion;
   blockly_: typeof GoogleBlockly;
   mainWorkspace: GoogleBlockly.WorkspaceSvg | undefined;
@@ -97,8 +95,6 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     ObservableParameterModel
   >;
   themes: {[key in Themes]: GoogleBlockly.Theme};
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  navigationController: any; // Navigation Controller is not typed by Blockly
   BlockSpace: {
     EVENTS: typeof WORKSPACE_EVENTS;
     onMainBlockSpaceCreated: (callback: () => void) => void;

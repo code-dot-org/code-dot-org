@@ -25,7 +25,7 @@
       },
       {
         "key": "music-coding-intro-functions-chorus2_7db882b2-6fc8-473e-9b9c-0a9a0f3959a3",
-        "message": "Almost there! Add the [chorusMusic](#clickable=flyout-third-block) block to each play together block under [when run](#clickable=when-run-block). ",
+        "message": "Almost there! Will the [chorus music](#clickable=flyout-third-block) function play together with all three parts of the vocals?",
         "next": false,
         "conditions": [
           {
@@ -36,7 +36,7 @@
       },
       {
         "key": "music-coding-intro-functions-chorus2_bcd459c6-c54d-4cac-8f7e-0970c7889a58",
-        "message": "You added the [chorusMusic](#clickable=flyout-third-block) to one play together block. Now, add the [chorusMusic](#clickable=flyout-third-block) block to the other two play together blocks under [when run](#clickable=when-run-block). ",
+        "message": "You added the [chorus music](#clickable=flyout-third-block) to one play together block. Is the [chorus music](#clickable=flyout-third-block) function in the other two play together blocks?",
         "next": false,
         "conditions": [
           {
@@ -47,18 +47,28 @@
       },
       {
         "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
-        "message": "Your function didn't play yet. Add the [chorusMusic](#clickable=flyout-third-block) to each [play together](#clickable=play_sounds_together) block under [when run](#clickable=when-run-block). ",
+        "message": "Your function didn't play yet. Add the [chorus music](#clickable=flyout-third-block) to each [play together](#clickable=play_sounds_together) block under [when run](#clickable=when-run-block). ",
         "next": false,
         "conditions": [
           {
-            "name": "played_sound_in_any_function"
+            "name": "played_sound_in_function",
+            "value": "0"
           }
+        ],
+        "callout": "flyout-third-block"
+      },
+      {
+        "key": "music-coding-intro-functions-chorus2_launch_b901786e-4e1a-4638-881f-2044c0d7d78d",
+        "message": "Call the [chorus music](#clickable=flyout-third-block) function to play together with the vocals.",
+        "next": false,
+        "conditions": [
+
         ],
         "callout": "flyout-third-block"
       }
     ],
     "level_data": {
-      "validationTimeout": 5,
+      "validationTimeout": 2,
       "library": "launch2024",
       "packId": "dove_cameron_boyfriend",
       "startSources": {
@@ -348,7 +358,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:55.146+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-chorus2\\\"\"],\"cloned_from\":\"music-coding-intro-functions-chorus2\"},{\"changed_at\":\"2025-04-14 20:58:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 20:59:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:43:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:44:18 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:44:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:45:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:44:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:44:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:45:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:50:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 21:59:34 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:55.146+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-chorus2\\\"\"],\"cloned_from\":\"music-coding-intro-functions-chorus2\"},{\"changed_at\":\"2025-04-14 20:58:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 20:59:38 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:43:18 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:44:18 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:44:57 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:45:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:44:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:44:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:45:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 02:50:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 21:59:34 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 17:19:16 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 17:19:35 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 17:21:44 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 17:25:39 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 17:28:52 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 17:29:59 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 17:32:16 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 17:34:21 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 17:34:56 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 17:36:45 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

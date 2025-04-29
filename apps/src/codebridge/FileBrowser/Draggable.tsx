@@ -1,7 +1,10 @@
 import {useDraggable} from '@dnd-kit/core';
+import classNames from 'classnames';
 import React from 'react';
 
 import {DragDataType} from './types';
+
+import moduleStyles from './styles/filebrowser.module.scss';
 
 /*
   This component adds draggable functionality to files/folders in the file browser. The intent is that the user can drag a file into a new folder as well
@@ -50,7 +53,7 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
     {
       ref: setNodeRef,
       style: style,
-      className,
+      className: classNames(moduleStyles.draggable, className),
       ...listeners,
       ...attributes,
     },

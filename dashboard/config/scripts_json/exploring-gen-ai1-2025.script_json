@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-25 18:56:58 UTC",
+    "serialized_at": "2025-04-28 18:19:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -99,12 +99,30 @@
       }
     },
     {
-      "key": "Input & Training Data",
-      "name": "Input & Training Data",
+      "key": "lesson-10",
+      "name": "1.2 How Smart Is It, Really?",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
+      "properties": {
+        "overview": "In this lesson, students explore how \"smart\" generative AI really is by experimenting with a chatbot across a variety of newsroom-style tasks. They test the chatbot’s responses to creative, informative, and playful prompts, comparing the results to what they expected. Through hands-on exploration and guided reflection, students begin to build a personal understanding of what AI does well, where it struggles, and how it might fit into real-world writing and communication.",
+        "preparation": "- Print copies of the AI Newsroom Playground activity guide (one for each student)",
+        "student_overview": "In this lesson, you’ll explore what AI chatbots can do and where they might fall short. You'll try out different writing and media tasks like creating headlines, ads, or jokes, and see how the AI responds. By the end, you'll have a better sense of what AI is actually good at, what it struggles with, and when you might (or might not) want to use it."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "Input & Training Data",
+      "name": "Input & Training Data",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
       "properties": {
         "background": "light",
         "overview": "In this lesson, students explore the process of recognizing and categorizing words, comparing it to how AI systems achieve similar tasks. Through discussion and activities, they consider the data sources an AI system requires to build a task-specific vocabulary, leading to the understanding that language models necessitate vast data amounts, like the entire internet. The lesson concludes with students updating a graphic organizer to reflect the Input step of generative AI.",
@@ -120,10 +138,10 @@
     {
       "key": "Bias in the Machine",
       "name": "Bias in the Machine",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
         "background": "light",
         "overview": "This lesson formally introduces the concept of bias, where certain information is favored over others. Students experience how bias can implicitly and unintentionally creep into large-language models by participating in an activity where they are asked to source articles and information for a RecipeBot. Once they've used search engine results to generate their training data, they analyze patterns in the data that the class found as a collection, noticing unintended biases such as certain cuisines being unintentionally excluded or all the articles falling within a certain narrow date range. After acknowledging how bias can appear, students analyze several scenarios and discuss how bias could appear in the training data of each one.",
@@ -137,12 +155,27 @@
       }
     },
     {
-      "key": "Understanding Embeddings",
-      "name": "Understanding Embeddings",
-      "absolute_position": 4,
+      "key": "lesson-2",
+      "name": "3.2 Is It Fair?",
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "Understanding Embeddings",
+      "name": "Understanding Embeddings",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
       "properties": {
         "background": "light",
         "overview": "In this lesson, students explore how language models understand and represent word meanings. Beginning with a game, they investigate the concept of words being \"close\" in meaning. This leads to an activity where students assume the roles of fictional characters, using a sequence of numbers to represent their \"character traits\" and comparing these numerical representations to others. The lesson demonstrates that language models use a similar method, known as embeddings, to represent words as sequences of numbers, with similar words being numerically close to each other. The lesson concludes with students updating the storage section of their graphic organizer to encapsulate the idea of word embeddings.",
@@ -158,10 +191,10 @@
     {
       "key": "Understanding Neural Networks",
       "name": "Understanding Neural Networks",
-      "absolute_position": 5,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 7,
       "properties": {
         "background": "light",
         "overview": "This lesson introduces neural networks through a hands-on activity where students create a lunch recommender for a school cafeteria. It starts with an exercise involving two mad-libs that use the same words in different orders, highlighting how word relations and grammar influence word choice. Students then work together to build a neural network model for the cafeteria's lunch choices, learning about key concepts like hidden layers and weights. The lesson concludes by tying these ideas back to language, prompting students to think about how words can change meaning in different contexts or phrases.",
@@ -177,10 +210,10 @@
     {
       "key": "Attention Is All You Need",
       "name": "Attention Is All You Need",
-      "absolute_position": 6,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 8,
       "properties": {
         "background": "light",
         "overview": "This lesson delves into the ambiguity of language and the necessity of context for meaning. Students first discuss examples of ambiguous language, followed by an activity where they brainstorm words with multiple meanings and craft sentences to clarify their intended meanings through context. After trading papers with a partner, students guess the intended meanings, identifying which words provided the most context. Reflecting on this, the lesson connects the activity to how language models use embeddings for word meanings and neural networks for relational meaning, introducing the concept of Attention as the process of updating word meanings based on context.",
@@ -194,12 +227,27 @@
       }
     },
     {
-      "key": "Outputs & Probabilities",
-      "name": "Outputs & Probabilities",
-      "absolute_position": 7,
+      "key": "lesson-3",
+      "name": "6.2 Who's Making the Choices?",
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "Outputs & Probabilities",
+      "name": "Outputs & Probabilities",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
       "properties": {
         "background": "light",
         "overview": "In this lesson, students investigate how language models generate output based on probabilities. The lesson kicks off with the class collaboratively crafting a story, with a twist to alternate between realistic and fantastical elements. This leads into a group activity where students fill in a mad lib with predetermined words, aiming for either coherent or absurd outcomes. They are then introduced to an app that aggregates responses from numerous users to the same mad lib, showcasing a variety of popular choices for each blank. Through selecting the most popular choices based on this data, students experience firsthand how language models select words with the highest probability from training data.",
@@ -215,10 +263,10 @@
     {
       "key": "Hallucinations and Fabrications",
       "name": "Hallucinations and Fabrications",
-      "absolute_position": 8,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 11,
       "properties": {
         "background": "light",
         "overview": "In this lesson, students investigate why language models may produce inaccurate outputs, known as hallucinations. They start by understanding the probabilistic nature of generative AI and how bias in training data can lead to such errors. Following discussions on examples of AI systems recalled for bias and hallucinations, students assume the role of AI Auditors to explore proactive measures for mitigating harm caused by deployed language models. After their exploration, they watch a video of a professional AI Auditor, reflecting on the parallels between the professional's work and their class activity.",
@@ -232,12 +280,27 @@
       }
     },
     {
-      "key": "Project: Demystifying Generative AI",
-      "name": "Project: Demystifying Generative AI",
-      "absolute_position": 9,
+      "key": "lesson-4",
+      "name": "9.2 Can You Trust the Bot?",
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "Project: Demystifying Generative AI",
+      "name": "Project: Demystifying Generative AI",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
       "properties": {
         "announcements": [
           {
@@ -265,10 +328,10 @@
     {
       "key": "Embeddings: How They're Created",
       "name": "Embeddings: How They're Created",
-      "absolute_position": 10,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 14,
       "properties": {
         "background": "light",
         "overview": "In this lesson, students delve into the creation of word embeddings. They start by interpreting a passage in a made-up language, using context clues to understand word meanings based on their relationships with other words. Following this, they engage in an activity to construct embeddings from sentences by noting word proximity. The climax reveals that students worked with two distinct passages, illustrating how the same word can have different representations based on its usage context. This insight sets the stage for upcoming lessons on how language models use sentence structure and context to determine word meanings accurately.\n\n### Optional Lesson\n\nThis lesson originally appeared after the \"Understanding Embeddings\" lesson, but was moved to an optional lesson based on teacher feedback and to better align with AI Literacy standards. The content of this lesson is relevant for classrooms interested in a deeper technical understanding of how embeddings are initially created \"from scratch\" using unsupervised learning so they can be used in large-language models.",
@@ -283,10 +346,10 @@
     {
       "key": "Neural Networks: How They're Trained",
       "name": "Neural Networks: How They're Trained",
-      "absolute_position": 11,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 15,
       "properties": {
         "background": "light",
         "overview": "This lesson explores supervised learning and its role in teaching neural networks language structure. Starting with a game, students learn through trial and error and use their past outcomes to inform future decisions. They then extend this approach to engaging in conversations in a fictional language, initially facing more failures but gradually improving as they identify patterns. This process illustrates how neural networks adjust their behavior based on new data. The lesson concludes with a reflection on whether this process signifies true \"intelligence\" or merely a sophisticated rule-following system.\n\n### Optional Lesson\n\nThis lesson originally appeared after the \"Understanding Neural Networks\" lesson, but was moved to an optional lesson based on teacher feedback and to better align with AI Literacy standards. The content of this lesson is relevant for classrooms interested in a deeper technical understanding of how neural networks are initially created \"from scratch\" in a supervised learning process so they can be used in large-language models.",
@@ -296,69 +359,6 @@
       "seeding_key": {
         "lesson.key": "Neural Networks: How They're Trained",
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "exploring-gen-ai1-2025"
-      }
-    },
-    {
-      "key": "lesson-10",
-      "name": "1.2 How Smart Is It, Really?",
-      "absolute_position": 12,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 12,
-      "properties": {
-        "overview": "In this lesson, students explore how \"smart\" generative AI really is by experimenting with a chatbot across a variety of newsroom-style tasks. They test the chatbot’s responses to creative, informative, and playful prompts, comparing the results to what they expected. Through hands-on exploration and guided reflection, students begin to build a personal understanding of what AI does well, where it struggles, and how it might fit into real-world writing and communication.",
-        "preparation": "- Print copies of the AI Newsroom Playground activity guide (one for each student)",
-        "student_overview": "In this lesson, you’ll explore what AI chatbots can do and where they might fall short. You'll try out different writing and media tasks like creating headlines, ads, or jokes, and see how the AI responds. By the end, you'll have a better sense of what AI is actually good at, what it struggles with, and when you might (or might not) want to use it."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "exploring-gen-ai1-2025"
-      }
-    },
-    {
-      "key": "lesson-2",
-      "name": "3.2 Is It Fair?",
-      "absolute_position": 13,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 13,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "exploring-gen-ai1-2025"
-      }
-    },
-    {
-      "key": "lesson-3",
-      "name": "6.2 Who's Making the Choices?",
-      "absolute_position": 14,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 14,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "exploring-gen-ai1-2025"
-      }
-    },
-    {
-      "key": "lesson-4",
-      "name": "9.2 Can You Trust the Bot?",
-      "absolute_position": 15,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 15,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-4",
         "script.name": "exploring-gen-ai1-2025"
       }
     }
@@ -440,6 +440,48 @@
       "seeding_key": {
         "lesson_activity.key": "11bf121a-ccd0-4229-8cf4-9688e915015d",
         "lesson.key": "Introduction to Generative AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "97e3dc3e-e919-4220-b459-5d311dc2850e",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
@@ -1110,48 +1152,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "exploring-gen-ai1-2025"
       }
-    },
-    {
-      "key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6",
-      "position": 1,
-      "properties": {
-        "duration": 5,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6",
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "exploring-gen-ai1-2025"
-      }
-    },
-    {
-      "key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377",
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "exploring-gen-ai1-2025"
-      }
-    },
-    {
-      "key": "97e3dc3e-e919-4220-b459-5d311dc2850e",
-      "position": 3,
-      "properties": {
-        "duration": 10,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e",
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "exploring-gen-ai1-2025"
-      }
     }
   ],
   "activity_sections": [
@@ -1348,6 +1348,37 @@
       "seeding_key": {
         "activity_section.key": "5e96e9a2-c874-4351-a26b-29c26bffa932",
         "lesson_activity.key": "11bf121a-ccd0-4229-8cf4-9688e915015d"
+      }
+    },
+    {
+      "key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
+        "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6"
+      }
+    },
+    {
+      "key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc",
+      "position": 1,
+      "properties": {
+        "progression_name": "AI Newsroom Playground"
+      },
+      "seeding_key": {
+        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc",
+        "lesson_activity.key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377"
+      }
+    },
+    {
+      "key": "1a05e13d-d315-4b7e-9a08-58c7bbd96101",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1a05e13d-d315-4b7e-9a08-58c7bbd96101",
+        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e"
       }
     },
     {
@@ -3054,37 +3085,6 @@
         "activity_section.key": "4f9fd910-c2d9-4c13-af73-9ee22d5dc719",
         "lesson_activity.key": "7d18c648-acbb-4461-b438-231ea9ca943c"
       }
-    },
-    {
-      "key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
-        "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6"
-      }
-    },
-    {
-      "key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc",
-      "position": 1,
-      "properties": {
-        "progression_name": "AI Newsroom Playground"
-      },
-      "seeding_key": {
-        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc",
-        "lesson_activity.key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377"
-      }
-    },
-    {
-      "key": "1a05e13d-d315-4b7e-9a08-58c7bbd96101",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1a05e13d-d315-4b7e-9a08-58c7bbd96101",
-        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e"
-      }
     }
   ],
   "script_levels": [
@@ -3619,6 +3619,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "exploring_generative_ai_lesson1_2_level1"
+        ],
         "progression": "AI Newsroom Playground"
       },
       "bonus": false,
@@ -3627,7 +3630,7 @@
           "exploring_generative_ai_lesson1_2_level1"
         ],
         "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
       },
@@ -3896,7 +3899,7 @@
           "exploring_generative_ai_lesson1_2_level1"
         ],
         "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
       }

@@ -5,11 +5,12 @@
     "login_required": false,
     "properties": {
       "is_migrated": true,
+      "pilot_experiment": "k5musiclabplpilot",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-10 22:22:09 UTC",
+    "serialized_at": "2025-04-28 18:37:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +35,7 @@
   "lessons": [
     {
       "key": "Welcome to Programming with Music Lab! ",
-      "name": "Welcome to Programming with Music Lab! ",
+      "name": "✈️ Welcome to Programming with Music Lab! ✈️ ",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -49,7 +50,7 @@
     },
     {
       "key": "Songwriter's Toolbox",
-      "name": "Songwriter's Toolbox",
+      "name": "✈️ Songwriter's Toolbox✈️ ",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -64,7 +65,7 @@
     },
     {
       "key": "Producer Power",
-      "name": "Producer Power",
+      "name": "✈️  Producer Power✈️ ",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -79,7 +80,7 @@
     },
     {
       "key": "Sound Designer's Studio",
-      "name": "Sound Designer's Studio",
+      "name": "✈️  Sound Designer's Studio✈️ ",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
@@ -94,7 +95,7 @@
     },
     {
       "key": "Next Steps",
-      "name": "Next Steps",
+      "name": "✈️  Next Steps ✈️ ",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,

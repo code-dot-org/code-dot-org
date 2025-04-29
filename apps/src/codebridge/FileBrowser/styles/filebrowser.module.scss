@@ -139,3 +139,9 @@ div.row:hover .button-kebab {
 .dragging {
   background-color: $light_gray_800;
 }
+
+.draggable:focus-visible {
+  outline: var(--borders-brand-teal-primary) solid 2px;
+  outline-offset: 2px;
+  border-radius: 0.375rem;
+}

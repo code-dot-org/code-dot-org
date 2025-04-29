@@ -3,7 +3,6 @@ import {
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
-import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
   ScrollBlockDragger,
@@ -196,14 +195,6 @@ const BlocklyWrapper = function (
   };
 };
 
-/**
- * Note that this can only be called once per page load, as this initializes
- * the navigation controller, and multiple calls to navigationController.init()
- * will throw an error.
- *
- * If this needs to be called multiple times (for example, in tests), call
- * Blockly.navigationController.dispose() before calling this function again.
- */
 function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
@@ -435,11 +426,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
 
   blocklyWrapper.JavaScript = javascriptGenerator;
-  blocklyWrapper.LineCursor = LineCursor;
-  blocklyWrapper.navigationController = new NavigationController();
-  // Initialize plugin.
-  blocklyWrapper.navigationController.init();
-  blocklyWrapper.navigationController.cursorType = cdoUtils.getUserCursorType();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -880,20 +866,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     if (options.noFunctionBlockFrame) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
-
-    blocklyWrapper.navigationController.addWorkspace(workspace);
-
-    blocklyWrapper.getNewCursor = function (type) {
-      switch (type) {
-        case 'basic':
-          return new blocklyWrapper.BasicCursor();
-        case 'line':
-          return new blocklyWrapper.LineCursor();
-        case 'default':
-        default:
-          return new blocklyWrapper.Cursor();
-      }
-    };
 
     // Typically, we need to handle disabling blocks that are not connected to an
     // appropriate top block. A few exceptions exist.

@@ -32,7 +32,8 @@ import Sortable from './Sortable';
 import moduleStyles from './styles/fileTabs.module.scss';
 
 export const FileTabs = React.memo(() => {
-  const {source, rearrangeFiles, setActiveFile} = useCodebridgeContext();
+  const {source, rearrangeFiles, setActiveFile, closeFile} =
+    useCodebridgeContext();
 
   const files = getOpenFiles(source);
 
@@ -60,6 +61,11 @@ export const FileTabs = React.memo(() => {
       rearrangeFiles(arrayMove(files, oldIndex, newIndex).map(file => file.id));
     }
   }
+
+  function handleDragCancel() {
+    setDraggingFileId(null);
+  }
+
   function handleDragStart(event: DragStartEvent) {
     // Handle drag start only if the file is in the list of open files.
     // This can get called when the close button is clicked, and we want to ignore
@@ -75,6 +81,9 @@ export const FileTabs = React.memo(() => {
       // We don't stop event propagation here because we want the close button to work.
       setActiveFile(fileId);
     }
+    if (event.key === 'Backspace' || event.key === 'Delete') {
+      closeFile(fileId);
+    }
   }
 
   return (
@@ -82,6 +91,7 @@ export const FileTabs = React.memo(() => {
       <DndContext
         onDragEnd={handleDragEnd}
         onDragStart={handleDragStart}
+        onDragCancel={handleDragCancel}
         sensors={sensors}
         collisionDetection={closestCenter}
         modifiers={[restrictToParentElement, restrictToHorizontalAxis]}

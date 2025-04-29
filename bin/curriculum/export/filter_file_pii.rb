@@ -3,7 +3,14 @@ require 'parallel'
 require 'json'
 require 'fileutils'
 
-$options = {}
+# This script operates on the output from add_unit_source.rb. It filters PII from
+# student source code within a single input file.
+
+INPUT_TYPES = %w[progress ai_evals teacher_evals]
+
+$options = {
+  input_type: 'progress'
+}
 OptionParser.new do |opts|
   opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
   opts.on("-i", "--s3-input-dir DIR", "Name of input directory under /mnt/tmp-curriculum-export/sourced/ .") do |input_dir|
@@ -14,6 +21,10 @@ OptionParser.new do |opts|
   end
   opts.on("-f", "--filename FILENAME", "Name of input file within input directory.") do |filename|
     $options[:filename] = filename
+  end
+  opts.on("-t", "--input_type TYPE", "Type of input file. One of: #{INPUT_TYPES} default: progress") do |type|
+    raise "Unsupported input file type: #{type}" unless INPUT_TYPES.include?(type)
+    $options[:input_type] = type
   end
 
   opts.on("-h", "--help", "Prints this help") do
@@ -30,13 +41,13 @@ raise "Input directory must exist: #{$input_dir}" unless Dir.exist?($input_dir)
 raise "Input directory must not be empty: #{$input_dir}" if Dir.empty?($input_dir)
 
 # work around a bug where the second call to Parallel.map fails with Parallel::DeadWorker
-# by temporarily requiring this script to be called on a single input file.
+# by requiring this script to be called on a single input file.
 raise "must specify a filename, or use filter_unit_pii.rb to process an entire directory." unless $options[:filename]
 
 $options[:output_dir] ||= $options[:input_dir]
 $output_dir = File.join(home, 'filtered', $options[:output_dir])
-FileUtils.mkdir_p($output_dir)
-
+$subdir = $options[:input_type] == 'progress' ? 'progress' : 'evals'
+FileUtils.mkdir_p("#{$output_dir}/#{$subdir}")
 require_relative '../../../deployment'
 
 start_time = Time.now
@@ -52,27 +63,17 @@ $max_processes = 25
 def main
   puts "Filtering PII..."
   start_time = Time.now
-  input_filenames = get_input_filenames
-  input_filenames.each do |input_filename|
-    process_file(input_filename)
-  end
+
+  input_filename = File.join($input_dir, $subdir, $options[:filename])
+  raise "Input file must exist: #{input_filename}" unless File.exist?(input_filename)
+  puts "#{File.basename(__FILE__)} found input file: #{input_filename}"
+
+  process_file(input_filename)
   puts "Filtered PII in #{(Time.now - start_time).to_i} seconds."
 end
 
-def get_input_filenames
-  if $options[:filename]
-    input_filename = File.join($input_dir, $options[:filename])
-    raise "Input file must exist: #{input_filename}" unless File.exist?(input_filename)
-    puts "#{File.basename(__FILE__)} found input file: #{input_filename}"
-    return [input_filename]
-  end
-  input_filenames = Dir.glob(File.join($input_dir, '*.jsonl'))
-  puts "Found #{input_filenames.size} input files in #{$input_dir}"
-  input_filenames
-end
-
 def process_file(input_filename)
-  output_filename = File.join($output_dir, File.basename(input_filename))
+  output_filename = File.join($output_dir, $subdir, File.basename(input_filename))
   if File.exist?(output_filename)
     puts "Skipping #{input_filename} because output file already exists: #{output_filename}"
     return
@@ -99,46 +100,96 @@ def process_file(input_filename)
 end
 
 def process_row_pii(data)
-  if data[:source].present?
-    pii_score, pii_entities = check_source_pii(data[:source])
-    data[:source_pii_score] = pii_score
-    data[:source_pii_entities] = pii_entities
-    if pii_score > $pii_threshold
-      data[:source] = nil
-      data[:link_to_project] = nil
-      data[:channel_id] = nil
-    end
-  end
-
-  if data[:student_answer].present?
-    pii_score, pii_entities = check_source_pii(data[:student_answer])
-    data[:student_answer_pii_score] = pii_score
-    data[:student_answer_pii_entities] = pii_entities
-    if pii_score > $pii_threshold
-      data[:student_answer] = nil
-    end
+  # process the row based on the input type, so that we don't (a) waste time
+  # scanning for irrelevant fields or (b) accidentally do PII filtering on the
+  # wrong field if there is overlap in field names between input types.
+  case $options[:input_type]
+  when 'progress'
+    process_source_pii(data)
+  when 'ai_evals'
+    process_ai_eval_pii(data)
+  when 'teacher_evals'
+    process_teacher_eval_pii(data)
+  else
+    raise "Unsupported input type: #{$options[:input_type]}"
   end
 
   data[:hashed_user_id] = hashed_user_id(data[:user_id])
   data.delete(:user_id)
 end
 
-def check_source_pii(source)
-  return [0, []] unless source.present?
+def process_source_pii(data)
+  process_field_pii(data, field: :source, related_fields: [:link_to_project, :channel_id])
+  process_field_pii(data, field: :student_answer)
+  process_source_versions_pii(data)
+end
+
+# returns a list of source versions in the following format:
+# [
+#   {
+#     :versionId=>"EL24MWXWEIZOQS4OC3PAzL0hlrq.GMcA",
+#     :lastModified=>2024-09-04 05:08:09 UTC,
+#     :isLatest=>true,
+#     :version_source=>"...",
+#     :version_source_pii_score=>0.9999105930328369,
+#     :version_source_pii_entities=>[...]
+#   },
+#   ...
+# ]
+def process_source_versions_pii(data)
+  data[:source_versions].each do |version|
+    if version[:isLatest]
+      version[:version_source] = data[:source]
+      version[:version_source_pii_score] = data[:source_pii_score]
+      version[:version_source_pii_entities] = data[:source_pii_entities]
+    else
+      process_field_pii(version, field: :version_source)
+    end
+  end
+end
+
+def process_ai_eval_pii(data)
+  process_field_pii(data, field: :ai_evidence)
+  process_field_pii(data, field: :ai_observations)
+  process_field_pii(data, field: :ai_feedback_other_content)
+end
+
+def process_teacher_eval_pii(data)
+  process_field_pii(data,  field: :teacher_feedback)
+end
+
+# if the field contains a pii score over the threshold, nil out that field and
+# any related fields.
+def process_field_pii(data, field:, related_fields: [])
+  return unless data[field].present?
+
+  pii_score, pii_entities = check_text_pii(data[field])
+  data[:"#{field}_pii_score"] = pii_score
+  data[:"#{field}_pii_entities"] = pii_entities
+  if pii_score > $pii_threshold
+    data[field] = nil
+    related_fields.each do |related_field|
+      data[related_field] = nil
+    end
+  end
+end
+
+def check_text_pii(text)
+  return [0, []] unless text.present?
 
   params = {
     language_code: "en",
-    text: source
+    text: text
   }
   response = $comprehend.detect_pii_entities(params)
 
   # a string without pii concerns will contain no entities. example responses:
   # {
-  #   "source": "the quick brown fox jumped over the lazy dog",
+  #   "text": "the quick brown fox jumped over the lazy dog",
   #   "response": []
   # }
   # {
-  #   "source": "the quick brown fox (206) 555-1212 jumped over the lazy dog at 55 main st",
+  #   "text": "the quick brown fox (206) 555-1212 jumped over the lazy dog at 55 main st",
   #   "response": [
   #     "{:score=>0.9999105930328369, :type=>\"PHONE\", :begin_offset=>20, :end_offset=>34}",
   #     "{:score=>0.9999832510948181, :type=>\"ADDRESS\", :begin_offset=>63, :end_offset=>73}"
@@ -149,7 +200,7 @@ def check_source_pii(source)
 
   [max_score, response.entities]
 rescue => exception
-  puts "Error checking source for PII: #{exception.message}"
+  puts "Error checking text for PII: #{exception.message}"
   [1, []]
 end
 

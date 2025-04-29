@@ -129,7 +129,7 @@ jobs:
     - name: Synthesize Cloudformation Template
       working-directory: ./aws/cloudformation/standalone/marketing/deployment
       run: |
-        ruby ./deploy.rb marketing
+        ruby ./render.rb --region us-east-2 --stage test
 
     - name: "Download Built Docker Image"
       run: |
@@ -145,11 +145,7 @@ jobs:
         BASE_DOMAIN: ${{ vars.MARKETING_BASE_DOMAIN }}
         SUBDOMAIN_NAME: ${{ vars.MARKETING_SUBDOMAIN_NAME }}
       run: |
-        if [ "$BASE_DOMAIN" = "dev-code.org" ]; then
-          BUCKET_NAME="cdo-dev-$SUBDOMAIN_NAME-static-assets"
-        else
-          BUCKET_NAME="cdo-$SUBDOMAIN_NAME-static-assets"
-        fi
+        BUCKET_NAME="$SUBDOMAIN_NAME.$BASE_DOMAIN-static-assets"
         
         echo "Uploading static assets to $BUCKET_NAME"
         
@@ -160,7 +156,7 @@ jobs:
       with:
         name: ${{ vars.MARKETING_CLOUDFORMATION_STACK_NAME }}
         template: ./aws/cloudformation/standalone/marketing/deployment/marketing.yml
-        parameter-overrides: "ContainerImageHashDigest=${{ needs.build-and-push-image.outputs.digest }},BaseDomainName=${{ vars.MARKETING_BASE_DOMAIN }},SubdomainName=${{ vars.MARKETING_SUBDOMAIN_NAME }}"
+        parameter-overrides: "ContainerImageHashDigest=${{ needs.build-and-push-image.outputs.digest }},BaseHostedZoneId=${{ vars.MARKETING_BASE_HOSTED_ZONE_ID }},BaseDomainName=${{ vars.MARKETING_BASE_DOMAIN }},SubdomainName=${{ vars.MARKETING_SUBDOMAIN_NAME }},CloudFrontTLSCertificateArn=${{ vars.MARKETING_CLOUDFRONT_TLS_CERTIFICATE_ARN }}"
         capabilities: CAPABILITY_IAM, CAPABILITY_NAMED_IAM
 
   ui-tests:
@@ -191,5 +187,5 @@ jobs:
           CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN}}
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
-          MARKETING_BASE_URL: ${{ vars.MARKETING_BASE_URL }}
+          MARKETING_BASE_URL: "https://${{ vars.MARKETING_SUBDOMAIN_NAME }}.${{ vars.MARKETING_BASE_DOMAIN }}"
           DRAFT_MODE_TOKEN: ${{ secrets.DRAFT_MODE_TOKEN }}

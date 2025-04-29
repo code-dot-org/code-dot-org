@@ -243,6 +243,7 @@ export interface BubbleChoiceLevelData {
 // Bubble Choice specific property
 export interface BubbleChoiceSublevel {
   display_name: string;
+  description?: string;
   level_id: string;
   thumbnail_url: string;
   url: string;

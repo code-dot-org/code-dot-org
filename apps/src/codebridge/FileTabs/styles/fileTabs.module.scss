@@ -13,6 +13,12 @@
   font-size: 14px;
   font-weight: 600;
   color: $light_gray_100;
+
+  *:focus-visible {
+    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline-offset: 2px;
+    border-radius: 0.375rem;
+  }
 }
 
 .fileTab {

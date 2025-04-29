@@ -134,6 +134,10 @@ button.validationButton {
 
   code {
     color: $light_primary_700;
+    // Allow code to wrap.
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
   }
 
   p {

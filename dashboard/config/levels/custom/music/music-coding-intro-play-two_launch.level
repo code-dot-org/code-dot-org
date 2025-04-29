@@ -13,139 +13,27 @@
     "hide_share_and_remix": "true",
     "validations": [
       {
-        "key": "music-ai-skill-sequence_d6a47c71-67df-4b83-950a-71b503c6cdb6",
+        "key": "music-coding-intro-play-two_launch_f4c3c7bf-85c3-4c4b-a528-094ad3fa1957",
         "message": "That sounds great! ",
         "next": true,
         "conditions": [
           {
-            "name": "played_sounds",
+            "name": "played_different_sounds",
             "value": 2
-          },
-          {
-            "name": "played_sound_id",
-            "value": "electro/drum_beat_edm"
-          }
-        ]
-      },
-      {
-        "key": "music-ai-skill-sequence2_3_cc846575-fc94-438c-a446-41ca46e828a2",
-        "message": "That sounds great! ",
-        "next": true,
-        "conditions": [
-          {
-            "name": "played_sounds_together",
-            "value": 2
-          },
-          {
-            "name": "played_sound_id",
-            "value": "electro/drum_beat_fashion"
-          }
-        ]
-      },
-      {
-        "key": "music-ai-skill-sequence2_3_a73de379-9a46-4c14-8cbf-e4af5ec56370",
-        "message": "That sounds great! ",
-        "next": true,
-        "conditions": [
-          {
-            "name": "played_sounds",
-            "value": 2
-          },
-          {
-            "name": "played_sound_id",
-            "value": "electro/drum_beat_noise"
-          }
-        ]
-      },
-      {
-        "key": "music-ai-skill-sequence2_3_4116f123-a6d2-499e-bd1e-aa81bdb77b6d",
-        "message": "That sounds great! ",
-        "next": true,
-        "conditions": [
-          {
-            "name": "played_sounds",
-            "value": 2
-          },
-          {
-            "name": "played_sound_id",
-            "value": "electro/bass_synth_candy"
-          }
-        ]
-      },
-      {
-        "key": "music-ai-skill-sequence2_3_bdf7ebe3-6e7c-41e2-950c-e7fbeaffeff2",
-        "message": "That sounds great! ",
-        "next": true,
-        "conditions": [
-          {
-            "name": "played_sounds",
-            "value": 2
-          },
-          {
-            "name": "played_sound_id",
-            "value": "electro/synth_cave"
-          }
-        ]
-      },
-      {
-        "key": "music-ai-skill-sequence2_3_0f4e2e3e-fbf3-4fb6-98f7-890d38a2e280",
-        "message": "That sounds great! ",
-        "next": true,
-        "conditions": [
-          {
-            "name": "played_sounds",
-            "value": 2
-          },
-          {
-            "name": "played_sound_id",
-            "value": "electro/bass_synth_blocks"
-          }
-        ]
-      },
-      {
-        "key": "music-ai-skill-sequence2_3_1aca0f88-2ab4-41e0-a026-8a3bbbd5cbd4",
-        "message": "That sounds great! ",
-        "next": true,
-        "conditions": [
-          {
-            "name": "played_sounds",
-            "value": 2
-          },
-          {
-            "name": "played_sound_id",
-            "value": "electro/synth_sleek"
-          }
-        ]
-      },
-      {
-        "key": "music-ai-skill-sequence2_3_ab984b1f-77bb-4212-b9b2-7f01679e3bca",
-        "message": "That sounds great! ",
-        "next": true,
-        "conditions": [
-          {
-            "name": "played_sounds",
-            "value": 2
-          },
-          {
-            "name": "played_sound_id",
-            "value": "electro/guitar_melody"
           }
         ]
       },
       {
         "key": "music-ai-skill-sequence2_3_42073586-a6b1-4601-8537-f251f003dbd4",
-        "message": "That sounds great! ",
-        "next": true,
+        "message": "Did you know you can change the sound? Click on the [sound's](#clickable=play-sound-block-workspace) name. ",
+        "next": false,
         "conditions": [
           {
-            "name": "played_sounds",
-            "value": 2
-          },
-          {
-            "name": "played_sound_id",
-            "value": "electro/guitar_shimmy"
+            "name": "played_different_sounds",
+            "value": 1
           }
-        ]
+        ],
+        "callout": "play-sound-block-workspace"
       },
       {
         "key": "music-ai-skill-sequence2_3_1e873460-2b14-4dd3-b75a-a97489b29c58",
@@ -153,8 +41,8 @@
         "next": false,
         "conditions": [
           {
-            "name": "played_sound_id",
-            "value": "electro/drum_beat_cowbell"
+            "name": "played_sounds",
+            "value": 1
           }
         ],
         "callout": "play-sound-block-workspace"
@@ -182,7 +70,7 @@
       }
     ],
     "level_data": {
-      "validationTimeout": 6,
+      "validationTimeout": 2,
       "library": "launch2024",
       "packId": "twinkle_twinkle",
       "startSources": {
@@ -230,7 +118,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:36.808+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-play-two\\\"\"],\"cloned_from\":\"music-coding-intro-play-two\"},{\"changed_at\":\"2025-03-20 21:12:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:17:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:18:15 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:35:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 15:30:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 15:35:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 16:32:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 21:28:42 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 21:30:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:56:36.808+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-play-two\\\"\"],\"cloned_from\":\"music-coding-intro-play-two\"},{\"changed_at\":\"2025-03-20 21:12:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:17:12 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 17:18:15 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-09 20:35:27 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 15:30:55 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 15:35:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 16:32:14 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 21:28:42 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 21:30:33 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 16:38:26 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 16:52:59 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 16:54:20 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
