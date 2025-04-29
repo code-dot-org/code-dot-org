@@ -85,7 +85,24 @@ class TeacherDashboardController < ApplicationController
 
     student_progress = script_progress_for_users(deduplicated_students, unit)[0]
 
-    progress_table = deduplicated_students.map do |student|
+    level_names, progress_table = get_csv_level_data(unit, deduplicated_students, student_progress)
+
+    headers = ['Student Name'].concat(level_names)
+    send_data(
+      CSV.generate do |csv|
+        csv << headers
+        progress_table.each do |data_row|
+          csv << [data_row[:student_name]].concat(level_names.map {|column_name| data_row[column_name]})
+        end
+      end,
+      filename: 'progress.csv',
+      disposition: 'attachment',
+      type: 'text/csv',
+    )
+  end
+
+  private def get_csv_level_data(unit, students, student_progress)
+    progress_table = students.map do |student|
       {student_name: student.family_name ? "#{student.name} #{student.family_name}" : student.name, student_id: student.id}
     end
 
@@ -103,34 +120,39 @@ class TeacherDashboardController < ApplicationController
           level[:sublevels].each do |sublevel|
             sublevel_name = "#{level_text}#{sublevel[:letter]}"
             level_names << sublevel_name
-            add_level_data_for_all_students(progress_table, student_progress, sublevel[:level_id].to_i, sublevel_name)
+
+            add_level_data_for_all_students(progress_table, student_progress, sublevel[:level_id].to_i, sublevel_name, false)
           end
         else
-          add_level_data_for_all_students(progress_table, student_progress, level_id, level_text)
+          add_level_data_for_all_students(progress_table, student_progress, level_id.to_i, level_text, level[:is_validated])
           level_names << level_text
         end
       end
     end
 
-    headers = ['student_name'].concat(level_names)
-    send_data(
-      CSV.generate do |csv|
-        csv << headers
-        progress_table.each do |data_row|
-          csv << [data_row[:student_name]].concat(level_names.map {|column_name| data_row[column_name]})
-        end
-      end,
-      filename: 'progress.csv',
-      disposition: 'attachment',
-      type: 'text/csv',
-    )
+    [level_names, progress_table]
   end
 
-  private def add_level_data_for_all_students(progress_table, student_progress, level_id, level_text)
+  private def add_level_data_for_all_students(progress_table, student_progress, level_id, level_text, is_validated_level)
     progress_table.each do |data_row|
       level_progress_for_student = student_progress[data_row[:student_id]][level_id]
 
-      data_row[level_text] = level_progress_for_student ? level_progress_for_student[:status] : 'not started'
+      status = level_progress_for_student ? level_progress_for_student[:status] : 'not_tried'
+
+      parsed_status = case status
+                      when 'not_tried'
+                        I18n.t('progress.not_started').capitalize
+                      when 'passed', 'perfect', 'submitted', 'completed_assessment', 'free_play_complete'
+                        if is_validated_level
+                          I18n.t('progress.validated').capitalize
+                        else
+                          I18n.t('progress.submitted').capitalize
+                        end
+                      when 'attempted'
+                        I18n.t('progress.attempted').capitalize
+                      end
+
+      data_row[level_text] = parsed_status
     end
   end
 
