@@ -26,5 +26,11 @@ reboot;
 bundle exec gem uninstall rmagick;
 bundle install;
 
+# The staging server also needed openssl1.1 to be reinstalled; we were able to
+# do so with ruby-build. See thread at
+# https://codedotorg.slack.com/archives/C0T0PNTM3/p1745506129199449 for details
+# TODO: see if we can hold the package prior to upgrade instead
+ruby-build 3.0.5 /usr/local;
+
 # Finally, run a regular build to get everything working again!
 echo "now kick off a regular build with something like 'start-build'";
