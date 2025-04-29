@@ -176,7 +176,7 @@ class HttpCache
           {
             path: '/_next/static/*',
             proxy: 'marketing',
-            headers: ALLOWLISTED_HEADERS,
+            headers: [],
             cookies: default_cookies,
             include_marketing_router_lambda: true,
           },
