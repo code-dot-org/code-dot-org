@@ -626,7 +626,8 @@ namespace :seed do
     ].exclude('db/ui_test_data.*')
     current_hash = HashUtils.file_contents_hash(watched_files)
 
-    if File.exist?(HASH_FILE)
+    # TODO: if File.exist?(HASH_FILE)
+    if false
       dump_hash = File.read(HASH_FILE)
 
       if current_hash == dump_hash
