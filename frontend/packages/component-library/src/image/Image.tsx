@@ -13,6 +13,8 @@ export interface ImageProps
   loading?: 'eager' | 'lazy';
   /** Image decoration */
   decoration?: 'none' | 'border' | 'shadow';
+  /** Has rounded corners */
+  hasRoundedCorners?: boolean;
   /** Custom className */
   className?: string;
   /** Image onLoad callback */
@@ -39,6 +41,7 @@ const Image: React.FC<ImageProps> = ({
   altText = '',
   loading = 'lazy',
   decoration = 'none',
+  hasRoundedCorners = true,
   style,
   className,
   onLoad,
@@ -51,6 +54,7 @@ const Image: React.FC<ImageProps> = ({
       {
         [moduleStyles['figure-hasBorder']]: decoration === 'border',
         [moduleStyles['figure-hasBoxShadow']]: decoration === 'shadow',
+        [moduleStyles['figure-hasRoundedCorners']]: hasRoundedCorners,
       },
       className,
     )}
