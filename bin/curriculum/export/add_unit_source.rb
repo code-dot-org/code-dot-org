@@ -21,6 +21,9 @@ OptionParser.new do |opts|
   opts.on("-o", "--output-dir DIR", "Name of output directory in local filesystem under /mnt/tmp-curriculum-export/sourced/. default: INPUT_DIR") do |output_dir|
     $options[:output_dir] = output_dir
   end
+  opts.on("-v", "--source-versions", "Include source versions") do
+    $options[:source_versions] = true
+  end
 
   opts.on("-h", "--help", "Prints this help") do
     puts opts
@@ -49,9 +52,7 @@ puts "Rails environment loaded in: #{(Time.now - start_time).to_i} seconds"
 def list_s3_files(bucket, prefix)
   s3 = Aws::S3::Client.new
   response = s3.list_objects_v2(bucket: bucket, prefix: prefix)
-  keys = response.contents.map(&:key)
-  raise "No files found in s3://#{bucket}/#{prefix}/" if keys.empty?
-  keys
+  response.contents.map(&:key)
 end
 
 $max_processes = 25
@@ -78,6 +79,9 @@ def process_s3_file(bucket, key)
     channel_id = data['channel_id']
     source = get_project_source(channel_id)
     data['source'] = source
+    if $options[:source_versions]
+      data['source_versions'] = get_source_versions(channel_id, latest_source: source)
+    end
     data.to_json
   rescue JSON::ParserError => exception
     puts "Error parsing JSON: #{exception}"
@@ -91,10 +95,10 @@ def process_s3_file(bucket, key)
   puts "Processed #{rows.size} rows in #{(Time.now - start_time).round(2)} seconds."
 end
 
-def get_project_source(channel_id)
+def get_project_source(channel_id, version_id: nil)
   return nil unless channel_id
 
-  source_data = SourceBucket.new.get(channel_id, "main.json")
+  source_data = SourceBucket.new.get(channel_id, "main.json", nil, version_id)
   return nil unless source_data && source_data[:body] && source_data[:body].respond_to?(:string)
 
   main_json = source_data[:body].string
@@ -102,6 +106,26 @@ def get_project_source(channel_id)
 rescue NoMethodError => exception
   puts "Error getting source for channel id: #{channel_id}: #{exception}"
   nil
+end
+
+# returns a list of source versions in the following format:
+# [
+#   {
+#     :versionId=>"EL24MWXWEIZOQS4OC3PAzL0hlrq.GMcA",
+#     :lastModified=>2024-09-04 05:08:09 UTC,
+#     :isLatest=>true,
+#     :version_source=>"...",
+#   },
+#   ...
+# ]
+def get_source_versions(channel_id, latest_source:)
+  return [] unless channel_id
+
+  versions = SourceBucket.new.list_versions(channel_id, "main.json")
+  versions.each do |version|
+    version[:version_source] = version[:isLatest] ? latest_source : get_project_source(channel_id, version_id: version[:versionId])
+  end
+  versions
 end
 
 def copy_eval_files

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-24 22:51:02 UTC",
+    "serialized_at": "2025-04-28 23:22:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -224,9 +224,34 @@
       "key": "b53897b4-968e-4864-b3b8-822d0e27f5cd",
       "position": 1,
       "properties": {
+        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Preview the vocabulary, objectives and Question of the Day for this lesson.",
+        "name": "Lesson Introduction"
       },
       "seeding_key": {
         "activity_section.key": "b53897b4-968e-4864-b3b8-822d0e27f5cd",
+        "lesson_activity.key": "d43e8caa-1832-424e-8e08-469f0ce73a6b"
+      }
+    },
+    {
+      "key": "ca2a6b03-e85b-4b74-be81-d669741c1734",
+      "position": 2,
+      "properties": {
+        "description": "**<i class=\"fa-solid fa-microphone\"></i> Say:** Today, we’re going to make music using code! Just like a song needs the right notes in the right order to sound great, a computer needs to be able to read a program with the right steps in the right order to work. You’ll be choosing the steps and creating a sequence that makes your music play just how you want."
+      },
+      "seeding_key": {
+        "activity_section.key": "ca2a6b03-e85b-4b74-be81-d669741c1734",
+        "lesson_activity.key": "d43e8caa-1832-424e-8e08-469f0ce73a6b"
+      }
+    },
+    {
+      "key": "60eb09bf-4a8a-4138-ab1c-b12c5672b38c",
+      "position": 3,
+      "properties": {
+        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Introduce students to the activity, The Sequence Shuffle, and remind them of the definition of sequence – the order of steps in a program or task.\n\n**<i class=\"fa-solid fa-microphone\"></i> Say:** In this activity you will start with an example of a task that can be done in three distinct steps. The task is only successful if the steps are done in a specific order.\n\n**<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal:** Students will start to understand the importance of carefully sequencing steps for a task and will later apply that to sequencing their code. \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Have students get into small groups of 2-3.  \n\n**<i class=\"fa-solid fa-microphone\"></i> Say:** Now it’s your turn to write the steps for one of these tasks! Look at the three pictures here and choose which task you will write steps for. Then, work together to write three steps someone would need to do to be successful. \n\n**<i class=\"fa-solid fa-arrows-retweet\"></i> Circulate:** Support students in writing simple steps. The priority of this activity is in reflecting on the order of the steps more than writing the steps at this time. \n\n**<i class=\"fa-solid fa-microphone\"></i> Say:** Great! You have three simple steps that if done in order, will complete the task. But what if you did the same steps in a different order? Draw a picture (or discuss) what the outcome would look like if the steps were done out of sequence. \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Finish the warm up activity with an explanation of how computers follow instructions in order. They will be practicing sequencing code in the next activity in Music Lab. ",
+        "name": "Warm Up Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "60eb09bf-4a8a-4138-ab1c-b12c5672b38c",
         "lesson_activity.key": "d43e8caa-1832-424e-8e08-469f0ce73a6b"
       }
     },
@@ -243,8 +268,19 @@
       }
     },
     {
-      "key": "2698fc62-190e-4a71-9734-1ac159a987fc",
+      "key": "e49967b4-1df4-4b54-8209-140ad9b7e39b",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Watch the video on the slides together as a class. \n\n<i class=\"fa-solid fa-comments\"></i> Discuss: How songwriters might use code to help them make music\n\n<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal: Students will begin to see a connection between songwriters and coding and how order or sequencing is important in both. "
+      },
+      "seeding_key": {
+        "activity_section.key": "e49967b4-1df4-4b54-8209-140ad9b7e39b",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
+      "key": "2698fc62-190e-4a71-9734-1ac159a987fc",
+      "position": 3,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -254,8 +290,19 @@
       }
     },
     {
+      "key": "df4774ec-fcd4-4554-8673-95ca3b423ef1",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Give students an introduction to the lab on this level with a demonstration that includes: \n- Where/how to read the instructions \n- Activate Speech to text by clicking on the speaker in the bottom right corner \n- Where the Run button is to start the program.\n- Point out the timeline and how it changes as you add coding blocks\n- Show students how to click on the blocks to change sounds \n- Show how to move blocks around, change the order and delete as needed\n- Be sure they know to click on the lightbulb for a hint\n- Demonstrate reading the feedback message if the code isn’t passing the level yet\n\n<i class=\"fa-solid fa-desktop\"></i> Transition: Have students transition to continuing the lesson on their own devices. They will work on levels 2-6 independently. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "df4774ec-fcd4-4554-8673-95ca3b423ef1",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
       "key": "615167db-875e-4764-9486-c336c00b7785",
-      "position": 3,
+      "position": 5,
       "properties": {
         "progression_name": "Music Integration Video"
       },
@@ -265,8 +312,25 @@
       }
     },
     {
+      "key": "30bd58e9-78d6-40f4-acae-c6bbecbc7748",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Watch the video together as a class. Use the next slide to pause and review/reinforce any musical concepts your students may need further clarification on. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A common misunderstanding in Music Lab is the difference between `play sequential` and `play together`.  Take some time to demonstrate the differences using the timeline to support the explanation.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "30bd58e9-78d6-40f4-acae-c6bbecbc7748",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
       "key": "e215148f-97f3-4a23-bb92-2b8abdf3ddc1",
-      "position": 4,
+      "position": 7,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -276,8 +340,19 @@
       }
     },
     {
+      "key": "819ad752-5f8f-4f62-99f0-81bec022d457",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Level 10 is an opportunity to check for understanding in the class. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "819ad752-5f8f-4f62-99f0-81bec022d457",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
       "key": "113e6612-aa7d-4b60-a733-6098f5bfe479",
-      "position": 5,
+      "position": 9,
       "properties": {
         "progression_name": "Career Exploration"
       },
@@ -287,8 +362,19 @@
       }
     },
     {
+      "key": "d8a6a20f-8673-4de2-b55a-9dc5d15efdba",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: This level has choices of three short videos to connect computer science to a songwriter career. Limit or expand the time spent on this level as needed for your class. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d8a6a20f-8673-4de2-b55a-9dc5d15efdba",
+        "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
+      }
+    },
+    {
       "key": "cab331d7-7c83-4c1a-9181-b1f4accff58a",
-      "position": 6,
+      "position": 11,
       "properties": {
         "progression_name": "Inspire & Try"
       },
@@ -298,13 +384,13 @@
       }
     },
     {
-      "key": "08bf6cda-2ecc-4375-8fab-410d75e151fe",
-      "position": 7,
+      "key": "f4639bac-e093-4c4a-9e2d-8c14cbc3f200",
+      "position": 12,
       "properties": {
-        "name": "Lesson Plan:"
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: This level has two choices of songs with the code for the beat drop. Use this level as review, exposure, and/or inspiration and expand or limit the time spent on this level as needed for your class. \n\n<i class=\"fa-solid fa-desktop\"></i> Transition: Have students spend the remainder of the class time using what they’ve learned to create their own music. The instructions include some suggestions for what their project should include.\n\n"
       },
       "seeding_key": {
-        "activity_section.key": "08bf6cda-2ecc-4375-8fab-410d75e151fe",
+        "activity_section.key": "f4639bac-e093-4c4a-9e2d-8c14cbc3f200",
         "lesson_activity.key": "7086910d-4698-49f4-92ea-ec29d5fb9ad7"
       }
     },
@@ -312,6 +398,8 @@
       "key": "abdfff4e-50aa-4eb9-8aa7-09e1b538d1ac",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Introduce the Mystery Melody activity where students will listen to a melody and guess what it is. \n\n<i class=\"fa-solid fa-comments\"></i> Discuss: What did you notice when the notes were out of order?\n\n<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal: This helps students articulate why sequencing matters and reinforces how things feel “off” without the right order.\n",
+        "name": "Wrap Up Activity"
       },
       "seeding_key": {
         "activity_section.key": "abdfff4e-50aa-4eb9-8aa7-09e1b538d1ac",
@@ -319,12 +407,42 @@
       }
     },
     {
+      "key": "b84fdc83-0131-4b65-8892-0f1eb09a233f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: This is an optional activity to encourage your students to share the creative music they’ve built with code. Consider adding an opportunity for students to share ‘glows and grows’ after they share their projects with each other. \n",
+        "name": "Optional Share Out"
+      },
+      "seeding_key": {
+        "activity_section.key": "b84fdc83-0131-4b65-8892-0f1eb09a233f",
+        "lesson_activity.key": "54811cc2-5273-4374-972e-182fd49db3e8"
+      }
+    },
+    {
       "key": "4ea2ace9-1e76-419f-be5b-574730181363",
       "position": 1,
       "properties": {
+        "description": "**<i class=\"fa-solid fa-comments\"></i> Discuss:** What are the benefits of efficient code? \n\n**<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal:** Using the definition of efficient as a guide, students might start to guess that efficient code is shorter code. \n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It is okay if there are not many ideas or connections at this point in the lesson. They will be learning all about functions and efficient code throughout the lesson.  "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4ea2ace9-1e76-419f-be5b-574730181363",
+        "lesson_activity.key": "ae7f1c03-e67f-4bf6-a09f-4e213e5f1fd1"
+      }
+    },
+    {
+      "key": "12745224-0614-4ad6-ac5c-d2c3fee7e9a1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-microphone\"></i> **Say:** Explaining a dance is like making a function! Start with the name, and explain all of the steps. \nThen, in the future just use the name and everyone will know what to do! \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Finish the warm up activity with an explanation of how functions can be used to make code more efficient and easier to use. They will be practicing customizing and creating functions in code in the next activity in Music Lab. "
+      },
+      "seeding_key": {
+        "activity_section.key": "12745224-0614-4ad6-ac5c-d2c3fee7e9a1",
         "lesson_activity.key": "ae7f1c03-e67f-4bf6-a09f-4e213e5f1fd1"
       }
     },
@@ -340,8 +458,47 @@
       }
     },
     {
-      "key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e",
+      "key": "44dad258-bd8c-4d13-9309-e4410d7e0be4",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Watch the video on level 1 together as a class. \n\n<i class=\"fa-solid fa-comments\"></i> Discuss: What does a music producer do?\n\n<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal: Students will understand that a producer is someone who puts all of the pieces of the music together. They will  move and work on functions with chunks of music to make it sound great."
+      },
+      "seeding_key": {
+        "activity_section.key": "44dad258-bd8c-4d13-9309-e4410d7e0be4",
+        "lesson_activity.key": "eb3dbace-f6fe-46cd-8e5a-0901a1957364"
+      }
+    },
+    {
+      "key": "41c8a3bc-a5ed-4424-a4cb-01b0d0b28963",
+      "position": 3,
+      "properties": {
+        "progression_name": "Notice & Predict"
+      },
+      "seeding_key": {
+        "activity_section.key": "41c8a3bc-a5ed-4424-a4cb-01b0d0b28963",
+        "lesson_activity.key": "eb3dbace-f6fe-46cd-8e5a-0901a1957364"
+      }
+    },
+    {
+      "key": "b1b79c10-96b6-4d98-920b-3067347346d3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Read the instructions to level 2 & 3 together as a class. Guide students to notice the repetition of the play together block in level 2 and the new use of a function in level 3. Make a connection to the activity in the warm up and encourage students to consider the use of a function in place of the repeated code.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can see an overview of the student responses on the level if you’re signed in as a teacher with the lesson assigned to a section."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b1b79c10-96b6-4d98-920b-3067347346d3",
+        "lesson_activity.key": "eb3dbace-f6fe-46cd-8e5a-0901a1957364"
+      }
+    },
+    {
+      "key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e",
+      "position": 5,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -351,10 +508,21 @@
       }
     },
     {
-      "key": "09bfb736-752a-40e7-abaf-2ea4278c2379",
-      "position": 3,
+      "key": "9c0f4766-89c9-4d6f-8965-69907a2a4d95",
+      "position": 6,
       "properties": {
-        "progression_name": "Remix & Freeplay"
+        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Level 10 is an opportunity to check for understanding in the class. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c0f4766-89c9-4d6f-8965-69907a2a4d95",
+        "lesson_activity.key": "eb3dbace-f6fe-46cd-8e5a-0901a1957364"
+      }
+    },
+    {
+      "key": "09bfb736-752a-40e7-abaf-2ea4278c2379",
+      "position": 7,
+      "properties": {
+        "progression_name": "Freeplay"
       },
       "seeding_key": {
         "activity_section.key": "09bfb736-752a-40e7-abaf-2ea4278c2379",
@@ -363,8 +531,9 @@
     },
     {
       "key": "fc9b743e-20a1-4932-81b3-004a10011ede",
-      "position": 4,
+      "position": 8,
       "properties": {
+        "description": "<i class=\"fa-solid fa-desktop\"></i> Transition: Have students spend the remainder of the class time using what they’ve learned to create their own music. The instructions include some suggestions for what their project should include."
       },
       "seeding_key": {
         "activity_section.key": "fc9b743e-20a1-4932-81b3-004a10011ede",
@@ -375,6 +544,7 @@
       "key": "2cd93f46-82cb-4a99-a539-55eb1dfd69f9",
       "position": 1,
       "properties": {
+        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective. \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Have students set up for a quick Turn & Talk to reexamine the Question of the Day. Some supportive leading questions might be: Why do we use functions instead of rewwriting out every single line of code? If you were a computer could you read a short paragraph or a long story quicker? What if we want to make a change to the code? \n\n**<i class=\"fa-solid fa-microphone\"></i> Say:** Take turns listening and answering the Question of the Day. Give me a thumbs up after you both have shared your answers.  \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** This is an optional activity to encourage your students to share the creative music they’ve built with code. Consider adding an opportunity for students to share ‘glows and grows’ after they share their projects with each other. \n"
       },
       "seeding_key": {
         "activity_section.key": "2cd93f46-82cb-4a99-a539-55eb1dfd69f9",
@@ -385,9 +555,23 @@
       "key": "b9ea5ada-cb79-46ff-92cf-2e05ee11dd97",
       "position": 1,
       "properties": {
+        "description": "**<i class=\"fa-solid fa-comments\"></i> Discuss:** How can we make our programs more interactive and expressive?\n\n**<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal:** Get students thinking about how they can make their programs more fun and creative by adding ways for people to interact with them. Help them imagine how cool it would be if their music changed when someone pressed a key or clicked a button, setting the stage for adding interactivity to their projects.",
+        "name": "Lesson Set Up"
       },
       "seeding_key": {
         "activity_section.key": "b9ea5ada-cb79-46ff-92cf-2e05ee11dd97",
+        "lesson_activity.key": "a0111bad-4a0f-428b-9b88-50570e07a43f"
+      }
+    },
+    {
+      "key": "94cc296b-6c01-456e-b2a6-6656743782e8",
+      "position": 2,
+      "properties": {
+        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Set students up to play Simon Says [Sounds Edition] using the instructions and example commands on the slide. Rotate the leader, Simon, for as long as time allows. \n\n**<i class=\"fa-solid fa-microphone\"></i> Say:** This game works similarly to events in computer programming. We were always waiting for the “trigger (Simon Says)” to signify we should do an action. If the trigger wasn’t there, we didn’t do anything. \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Finish the warm up activity with an explanation of how events can be used to make code more interactive and respond to user inputs. They will be practicing customizing and creating events in code in the next activity in Music Lab. \n",
+        "name": "Warm Up Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "94cc296b-6c01-456e-b2a6-6656743782e8",
         "lesson_activity.key": "a0111bad-4a0f-428b-9b88-50570e07a43f"
       }
     },
@@ -403,8 +587,40 @@
       }
     },
     {
-      "key": "d6a8aaea-c7a2-45db-a951-80dc471387a0",
+      "key": "b1b175df-1a47-47a3-a005-2e2a36bdad9b",
       "position": 2,
+      "properties": {
+        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Watch the video on level 1 together as a class. \n\n**<i class=\"fa-solid fa-comments\"></i> Discuss:** Discuss other creative jobs that connect music and technology\n\n**<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal:** Students might think of how a sound designer uses technology to create sound effects for movies and video games. They use special software to mix sounds and make everything sound realistic. Another example is a music producer, who uses digital tools to edit and improve songs before they are released.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b1b175df-1a47-47a3-a005-2e2a36bdad9b",
+        "lesson_activity.key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7"
+      }
+    },
+    {
+      "key": "2154567b-18d8-407a-8257-8ec95edf0c15",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2154567b-18d8-407a-8257-8ec95edf0c15",
+        "lesson_activity.key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7"
+      }
+    },
+    {
+      "key": "d0f68306-857d-439c-8f3c-4b4ed49836e6",
+      "position": 4,
+      "properties": {
+        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Read the instructions for level 2 together as a class. Important tips to point out:\nGuide students to notice the green event triggers. \nEvents stand alone and do not connecto the main program. \nThe sounds connected to events only play when the button (on the keyboard or on screen left of Run) is pressed. \nMake a connection to the Simon Says activity in the warm up and encourage students to consider the use of a event to make the program interactive and fun.\n\n**<i class=\"fa-solid fa-desktop\"></i> Transition:** Have students transition to continuing the lesson on their own devices. They will work on levels 3-10 independently. \n\n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0f68306-857d-439c-8f3c-4b4ed49836e6",
+        "lesson_activity.key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7"
+      }
+    },
+    {
+      "key": "d6a8aaea-c7a2-45db-a951-80dc471387a0",
+      "position": 5,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -414,8 +630,19 @@
       }
     },
     {
+      "key": "d42f0f9d-a40d-4332-b4bb-aacf814510ea",
+      "position": 6,
+      "properties": {
+        "description": "**<i class=\"fa-solid fa-microphone\"></i> Say:** Read the instructions for each level and try to complete the code. Press the Run button to try it out. If something is not quite right you will get a hint under the instructions. When you’ve successfully completed the challenge, a new message and a Continue button will appear. Click Continue to move to the next level and move at your speed. \n\n**<i class=\"fa-solid fa-retweet\"></i> Circulate:** Encourage students to read the instructions and hints on each level as you circulate. Ask guiding questions to support students if they get stuck. \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Level 8 is an opportunity to check for understanding in the class. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d42f0f9d-a40d-4332-b4bb-aacf814510ea",
+        "lesson_activity.key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7"
+      }
+    },
+    {
       "key": "0353181f-6c32-40a0-95dc-930ee1578205",
-      "position": 3,
+      "position": 7,
       "properties": {
         "progression_name": "Freeplay"
       },
@@ -425,12 +652,13 @@
       }
     },
     {
-      "key": "f356bf02-6e33-442f-9ae6-76bd0e813913",
-      "position": 4,
+      "key": "1e206d9c-d63e-418d-a857-46d9d7016ee1",
+      "position": 8,
       "properties": {
+        "description": "**<i class=\"fa-solid fa-desktop\"></i> Transition:** Have students spend the remainder of the class time using what they’ve learned to create their own music. The instructions include some suggestions for what their project should include.\n"
       },
       "seeding_key": {
-        "activity_section.key": "f356bf02-6e33-442f-9ae6-76bd0e813913",
+        "activity_section.key": "1e206d9c-d63e-418d-a857-46d9d7016ee1",
         "lesson_activity.key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7"
       }
     },
@@ -438,6 +666,7 @@
       "key": "2cd7b449-5201-4406-ba43-a96580ce0edd",
       "position": 1,
       "properties": {
+        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective. \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Review the question of the day.\n\n**<i class=\"fa-solid fa-comments\"></i> Discuss:** How did we make our programs more interactive and expressive?\n\n**<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal:** Encourage students to reflect on how they made their programs more fun and creative by adding ways for people to interact with them. Have them share examples of the sounds and events they used and why.\n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Give students time to write their reflections on paper or any avenue you prefer. If time allows have them share at least one reflection with a partner and and then submit the reflection to you. \n\n**<i class=\"fa-solid fa-square-check\"></i> Optional Do This:** This is an optional activity to encourage your students to share the creative music they’ve built with code. Consider adding an opportunity for students to share ‘glows and grows’ after they share their projects with each other. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "2cd7b449-5201-4406-ba43-a96580ce0edd",
@@ -802,10 +1031,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-need_launch"
-        ],
-        "progression": "Skill Building"
+        "progression": "Notice & Predict"
       },
       "bonus": false,
       "seeding_key": {
@@ -815,7 +1041,7 @@
         "lesson.key": "Producer Power",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+        "activity_section.key": "41c8a3bc-a5ed-4424-a4cb-01b0d0b28963"
       },
       "level_keys": [
         "music-coding-intro-functions-need_launch"
@@ -827,10 +1053,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-need2_launch"
-        ],
-        "progression": "Skill Building"
+        "progression": "Notice & Predict"
       },
       "bonus": false,
       "seeding_key": {
@@ -840,7 +1063,7 @@
         "lesson.key": "Producer Power",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+        "activity_section.key": "41c8a3bc-a5ed-4424-a4cb-01b0d0b28963"
       },
       "level_keys": [
         "music-coding-intro-functions-need2_launch"
@@ -849,7 +1072,7 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -874,7 +1097,7 @@
     {
       "chapter": 18,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -899,7 +1122,7 @@
     {
       "chapter": 19,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -924,7 +1147,7 @@
     {
       "chapter": 20,
       "position": 7,
-      "activity_section_position": 6,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -949,7 +1172,7 @@
     {
       "chapter": 21,
       "position": 8,
-      "activity_section_position": 7,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -974,7 +1197,7 @@
     {
       "chapter": 22,
       "position": 9,
-      "activity_section_position": 8,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -999,34 +1222,12 @@
     {
       "chapter": 23,
       "position": 10,
-      "activity_section_position": 9,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "music-intro-coding-loops-match_launch"
+          "music-coding-intro-functions-cfu"
         ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-intro-coding-loops-match_launch"
-        ],
-        "lesson.key": "Producer Power",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
-      },
-      "level_keys": [
-        "music-intro-coding-loops-match_launch"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 11,
-      "activity_section_position": 10,
-      "assessment": false,
-      "properties": {
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1044,15 +1245,15 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 12,
+      "chapter": 24,
+      "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-functions-panel2_launch"
         ],
-        "progression": "Remix & Freeplay"
+        "progression": "Freeplay"
       },
       "bonus": false,
       "seeding_key": {
@@ -1069,15 +1270,15 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 13,
+      "chapter": 25,
+      "position": 12,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "music-coding-intro-functions-beat_launch"
         ],
-        "progression": "Remix & Freeplay"
+        "progression": "Freeplay"
       },
       "bonus": false,
       "seeding_key": {
@@ -1094,7 +1295,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1119,15 +1320,11 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-event-try_launch"
-        ],
-        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1137,16 +1334,16 @@
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+        "activity_section.key": "2154567b-18d8-407a-8257-8ec95edf0c15"
       },
       "level_keys": [
         "music-coding-intro-event-try_launch"
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1169,9 +1366,9 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1194,11 +1391,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-video-hold3_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1216,9 +1416,9 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1241,9 +1441,9 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 7,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1266,11 +1466,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 8,
-      "activity_section_position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-events-cfu"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1288,11 +1491,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 9,
-      "activity_section_position": 8,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-effects-panel_launch"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1310,9 +1516,9 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 10,
-      "activity_section_position": 9,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1335,11 +1541,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-review"
+        ],
         "progression": "Freeplay"
       },
       "bonus": false,
@@ -1357,7 +1566,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -1560,7 +1769,7 @@
         "lesson.key": "Producer Power",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+        "activity_section.key": "41c8a3bc-a5ed-4424-a4cb-01b0d0b28963"
       }
     },
     {
@@ -1572,7 +1781,7 @@
         "lesson.key": "Producer Power",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
+        "activity_section.key": "41c8a3bc-a5ed-4424-a4cb-01b0d0b28963"
       }
     },
     {
@@ -1649,18 +1858,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-intro-coding-loops-match_launch",
-        "script_level.level_keys": [
-          "music-intro-coding-loops-match_launch"
-        ],
-        "lesson.key": "Producer Power",
-        "lesson_group.key": "",
-        "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "1e2f3b12-e527-4850-917e-e9b72e7ba66e"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "music-coding-intro-functions-cfu",
         "script_level.level_keys": [
           "music-coding-intro-functions-cfu"
@@ -1716,7 +1913,7 @@
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+        "activity_section.key": "2154567b-18d8-407a-8257-8ec95edf0c15"
       }
     },
     {

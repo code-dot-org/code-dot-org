@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-25 17:15:26 UTC",
+    "serialized_at": "2025-04-29 05:34:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -166,7 +166,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**Why do devices on the Internet need addresses?**\n\nIn this lesson, students explore how IP addresses enable communication across networks by acting as unique identifiers for devices. They trace the flow of data through a network, identify issues caused by duplicate IP addresses, and examine how AI optimizes network traffic and reliability.",
-        "preparation": "- Print copies of the IP Addressing and Visualizing activity guide (one for each student)",
+        "preparation": "- Print copies of the IP Addressing and Visualizing activity guide (one for each student)\n- Print and cut duplicate name cards (using four selected names) so each student receives one; prepare to have students communicate using these during the warm-up.",
         "student_overview": "**Why do devices on the Internet need addresses?**\n\nWhen you stream a video or visit a website, your device needs a way to send and receive information reliably. In this lesson, you have an opportunity to follow how data moves through a network, see what happens when two devices share an IP address, and discover ways in which AI can help keep the Internet running smoothly."
       },
       "seeding_key": {
@@ -1551,13 +1551,67 @@
       }
     },
     {
-      "key": "e23f4b53-f8cf-485a-9892-15e3db9a79e7",
+      "key": "f6654540-970d-4e67-ba36-7707f588ced3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Imagine you were in a room with 5 other people, all with the same name as you. What might happen when you start communicating?*\n- *How could you solve these problems?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students recognize the challenges of communication without unique identifiers. They may share examples like: \n- Struggling to get the right person’s attention\n- Multiple people responding at once\n- Needing a system to avoid mixups\n\nThis discussion sets the groundwork for the connection to devices needing unique addresses to communicate over the Internet.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After the discussion, explain that just like names can cause confusion, devices need unique IP addresses to communicate clearly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "**Warm Up Set Up**:\nTo simulate the confusion caused by non-unique identifiers (like repeated IP addresses), students will be given duplicate name cards and attempt to communicate across the room.\n- Choose four names (student names or randomly selected ones) and enter them on this slide.\n- Print enough copies so each student receives one name card.\n- Cut and distribute the cards as students enter the room. Make sure each name is used more than once.\n- Select one name to use as the target on the next slide (e.g., “Find out Alex’s favorite food”).\n\n**Goal:** Set up the confusion caused by non-unique identifiers in a network. Let the confusion and chaos highlight the problem before students are asked to explain it.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out name cards as students enter. Some names should be repeated.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the prompt aloud and encourage students to move around and ask each other questions to find “[Alex]’s favorite food.”",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This activity doesn’t need to take more than a minute or so. The goal is to create just enough confusion for students to feel the problem—multiple people sharing the same name—so the connection to IP addresses lands clearly in the follow-up discussion. Keep it fast, light, and playful to build energy at the start of class."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "e23f4b53-f8cf-485a-9892-15e3db9a79e7",
+        "activity_section.key": "f6654540-970d-4e67-ba36-7707f588ced3",
+        "lesson_activity.key": "946515f9-80bf-4695-89ff-892d17d42efd"
+      }
+    },
+    {
+      "key": "3998361f-791a-445a-b12e-f5db06422601",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3998361f-791a-445a-b12e-f5db06422601",
+        "lesson_activity.key": "946515f9-80bf-4695-89ff-892d17d42efd"
+      }
+    },
+    {
+      "key": "561b6223-019d-44e5-a6ab-3f308043c46e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**\n- What problems came up when you started communicating?\n- How might you solve these problems?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students identify challenges like confusion, overlapping answers, and miscommunication. This connects directly to the concept of unique addresses on a network.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use this slide to transition from student experience to Internet analogy. Read both speech bubbles aloud.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define IP address as a unique number assigned to each device on a network.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that just like using someone’s street address or phone number, an IP address helps ensure the message gets to the right place. Ask students if they’ve ever texted the wrong “Alex” and what happened."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "561b6223-019d-44e5-a6ab-3f308043c46e",
+        "lesson_activity.key": "946515f9-80bf-4695-89ff-892d17d42efd"
+      }
+    },
+    {
+      "key": "edabecce-af85-456e-b3b4-a5d243af57cb",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "edabecce-af85-456e-b3b4-a5d243af57cb",
+        "lesson_activity.key": "946515f9-80bf-4695-89ff-892d17d42efd"
+      }
+    },
+    {
+      "key": "14f91dae-cb8a-4d8b-b22d-a9691f323661",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "14f91dae-cb8a-4d8b-b22d-a9691f323661",
         "lesson_activity.key": "946515f9-80bf-4695-89ff-892d17d42efd"
       }
     },
@@ -1713,9 +1767,10 @@
       "key": "bad327c4-c875-4de5-ada7-56d4b2091dc6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Provide each student with a copy of *Network Diagram Analysis* activity guide.\n",
+        "description": "Redundancy means having backup paths. Just like cars can reroute when there's a roadblock, redundancy on the Internet allows data to reroute when parts of the network have issues.",
         "duration": "30",
-        "name": "Internet Simulator and Networks Diagram Analysis"
+        "name": "Internet Simulator and Networks Diagram Analysis",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "bad327c4-c875-4de5-ada7-56d4b2091dc6",
@@ -1723,8 +1778,39 @@
       }
     },
     {
-      "key": "4fcc7f7e-37c8-4193-8359-db42a428bd7d",
+      "key": "e775a5cf-351d-4cf9-8bee-ca10088f9995",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e775a5cf-351d-4cf9-8bee-ca10088f9995",
+        "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
+      }
+    },
+    {
+      "key": "3535f754-348d-4398-80a4-276afb73f25c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define redundancy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Provide each student with a copy of *Network Diagram Analysis* activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "3535f754-348d-4398-80a4-276afb73f25c",
+        "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
+      }
+    },
+    {
+      "key": "f55375c8-4c6c-4c1c-82e9-4a4e381fdfd9",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f55375c8-4c6c-4c1c-82e9-4a4e381fdfd9",
+        "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
+      }
+    },
+    {
+      "key": "4fcc7f7e-37c8-4193-8359-db42a428bd7d",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 and 2.\n- **Level 1:** Students use the Internet Simulator to diagram messages sent through the network. \n- **Level 2:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Before students begin to work, use slides 9-15 to review the instructions for the activity in order to demonstrate how to use the Internet Simulator in order to diagram the path their messages take.\n"
       },
@@ -1735,7 +1821,7 @@
     },
     {
       "key": "8587810a-b4b4-441c-bab3-f2888d8884be",
-      "position": 3,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Internet Simulator and how students should join. They can choose any of the the routers as long as it's not the same as their partner's.",
         "tips": [
@@ -1752,7 +1838,7 @@
     },
     {
       "key": "47882857-09b8-42e2-9954-118c5807d20f",
-      "position": 4,
+      "position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -1762,7 +1848,7 @@
     },
     {
       "key": "82d517a7-0bd4-46e6-90cd-55f7169e1631",
-      "position": 5,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students need to know the IP address to send their partner a message.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how to send a message to their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how to navigate to the \"Log Browser\" from the \"Router\" tab to access the message data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to read the logs."
       },
@@ -1773,7 +1859,7 @@
     },
     {
       "key": "231c42f3-d8a9-490d-95f8-074cfdb8ea11",
-      "position": 6,
+      "position": 9,
       "properties": {
         "description": "First, choose the \"show traffic to me\" option in the first dropdown menu and \"show all routers\" in the second dropdown menu. The path that these messages take are what you will be diagramming. If we look at this message that asks \"What’s your favorite color?\", we see that the message starts at Router 1 because this person has an id of router 1.1, then it goes to router 8, 6, and finally Router 2. This person’s partner is at Router 2.12, so the message got to them. If you’re unsure which router was pinged first, look at the timestamp in the first column. "
       },
@@ -1784,7 +1870,7 @@
     },
     {
       "key": "8bb4c38d-1a6d-4b41-95ab-673fe015f223",
-      "position": 7,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students should diagram the path their message took on their activity guide for up to three messages.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate adding the nodes and IP addresses of their device and their partner's device."
       },
@@ -1795,7 +1881,7 @@
     },
     {
       "key": "dc04abca-267e-4801-9305-5a4e8667bee5",
-      "position": 8,
+      "position": 11,
       "properties": {
         "description": "A node represents any device that connects to a network—this could be a phone, computer, printer, router, or even a smart thermostat. Routers play a crucial role in networking because they connect multiple devices (or nodes) to the Internet and help direct data between them. While routers themselves are also considered nodes, their primary function is to manage network traffic and assign local IP addresses to devices within a network.",
         "remarks": true
@@ -1807,7 +1893,7 @@
     },
     {
       "key": "19c9661b-d1b2-4d81-84ec-ff743d395f2e",
-      "position": 9,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to complete Levels 1 and 2.\n- **Level 1:** Students use the Internet Simulator to diagram messages sent through the network. \n- **Level 2:** Students complete a check for understanding.",
         "progression_name": "Internet Simulator and Networks Diagram Analysis"
@@ -1819,7 +1905,7 @@
     },
     {
       "key": "e161b563-9a64-4ab0-87b6-200442154752",
-      "position": 10,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they send messages. While they will diagram all messages sent over the network, ensure they only send messages to their partner. Check that they use the router logs correctly to follow the path each message took and ensure their diagrams accurately represent those paths. ",
         "tips": [
@@ -1840,7 +1926,7 @@
     },
     {
       "key": "98d55598-d74a-4ef3-ae5c-22cc68e079e5",
-      "position": 11,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -1849,8 +1935,19 @@
       }
     },
     {
+      "key": "399a8c46-6c83-4800-b3c0-5cc3f95b7f40",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to self-assess their understanding by choosing the answer that best explains what redundancy means for networks and how it helps keep the Internet reliable.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the correct answer (B) quickly before moving students into discussing their diagrams.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "399a8c46-6c83-4800-b3c0-5cc3f95b7f40",
+        "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
+      }
+    },
+    {
       "key": "e2365f5c-ab35-4e74-8ba7-175d5682e252",
-      "position": 12,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How did the redundancy in your network help prevent complete failure?*\n- *What might have happened if no redundant paths were available?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students explain how redundancy in a network helps maintain connectivity by providing alternative paths when a connection fails. They describe specific examples of how redundant paths allow data to continue flowing, such as rerouting traffic through different nodes or links. Additionally, students discuss the potential consequences of having no redundancy, including total network failure, loss of communication, or disruptions in internet access.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why do you think routers chose new paths for some messages?*\n- *How might redundant paths be important during high-traffic events, like streaming live sports or during natural disasters?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for and guide students to the following points:\nRouters often choose new paths for messages to avoid problems like traffic jams or broken connections. If one path is too busy or isn’t working well, the router can send the message along a different route so it still reaches its destination quickly and reliably. This process is similar to taking a detour on the way to school when your usual road is closed or too congested.\nRedundant paths are like backup routes on a map. During high-traffic events, such as live sports streaming when many people are online, or during natural disasters when some parts of the network might be damaged, these extra routes help keep the network working smoothly. If one path gets overloaded or fails, data can still travel through another route, ensuring that information gets to its destination without interruption.",
         "duration": "5",
@@ -1863,7 +1960,7 @@
     },
     {
       "key": "6d3aadf9-2586-44ca-a6db-29981f2a00f1",
-      "position": 13,
+      "position": 17,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -1876,7 +1973,7 @@
       "key": "ff2951fa-c230-42f9-a536-6a428dbaaef1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their The Fabric of the Internet and AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down idea for how data finds its way across the internet and one idea for how redundancy improves reliability. Instruct students to jot their ideas down in bullet points rather than complete sentences to allow time for them to share their ideas with a Give One, Get One protocol. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One to share their ideas to the Question of the Day.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their The Fabric of the Internet and AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the definition of redundancy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down idea for how data finds its way across the internet and one idea for how redundancy improves reliability. Instruct students to jot their ideas down in bullet points rather than complete sentences to allow time for them to share their ideas with a Give One, Get One protocol. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One to share their ideas to the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5734,6 +5831,16 @@
       }
     },
     {
+      "key": "redundancy",
+      "word": "redundancy",
+      "definition": "having multiple paths so information can still get through if something gets wrong.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "redundancy"
+      }
+    },
+    {
       "key": "router",
       "word": "router",
       "definition": "a type of computer that forwards data across a network",
@@ -5831,6 +5938,12 @@
       "seeding_key": {
         "lesson.key": "Packets",
         "vocabulary.key": "user_datagram_protocol_udp_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "vocabulary.key": "redundancy"
       }
     },
     {

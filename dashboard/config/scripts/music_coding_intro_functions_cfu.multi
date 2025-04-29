@@ -1,7 +1,7 @@
 name 'music-coding-intro-functions-cfu'
 title 'Functions make our code more ...'
 question '*Choose one to complete the sentence:*'
-wrong 'Confusing.'
+wrong 'Slow'
 wrong 'Long'
 wrong 'Difficult'
 right 'Efficient'

@@ -50,38 +50,40 @@ cd production
 
 4. export unit progress from redshift
 ```bash
-SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/export_unit_progress.rb -u unit-name -o unit-name-date-range
+SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/export_unit_progress.rb -u unit-name -o unit-name-and-date-range
 ```
-the above command runs a redshift query whose results are written to s3://cdo-data-sharing-internal via the `UNLOAD` command.
+where `unit-name-and-date-range` is something like `csd3-2024-ending-2025-04-01`.
+the above command runs a redshift query whose results are written to
+s3://cdo-data-sharing-internal via the `UNLOAD` command.
 
 5. add student source code from S3
 ```bash
-SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/add_unit_source.rb -i unit-name-date-range
+SKIP_SCRIPT_PRELOAD=1 bin/curriculum/export/add_unit_source.rb -i unit-name-and-date-range
 ```
 
 6. inspect the output for validity before performing the expensive PII filtering step
 ```bash
-ls -l /mnt/tmp-curriculum-export/sourced/<unit-name-date-range>/progress
-less /mnt/tmp-curriculum-export/sourced/<unit-name-date-range>/progress/<filename>
+ls -l /mnt/tmp-curriculum-export/sourced/<unit-name-and-date-range>/progress
+less /mnt/tmp-curriculum-export/sourced/<unit-name-and-date-range>/progress/<filename>
 ```
 
 7. filter the output to exclude PII
 ```bash
-bin/curriculum/export/filter_unit_pii.rb -i unit-name-date-range
+bin/curriculum/export/filter_unit_pii.rb -i unit-name-and-date-range
 ```
 
 8. inspect the output for validity before uploading to S3
 ```bash
-ls -l /mnt/tmp-curriculum-export/filtered/<unit-name-date-range>/progress
-less /mnt/tmp-curriculum-export/filtered/<unit-name-date-range>/progress/<filename>
+ls -l /mnt/tmp-curriculum-export/filtered/<unit-name-and-date-range>/progress
+less /mnt/tmp-curriculum-export/filtered/<unit-name-and-date-range>/progress/<filename>
 ```
 
 9. upload the filtered output to S3
 ```bash
 # s3 dir should be empty to start
-aws s3 ls s3://cdo-data-sharing/filtered-unit-progress/<unit-name-date-range>/
+aws s3 ls s3://cdo-data-sharing/filtered-unit-progress/<unit-name-and-date-range>/
 # if the dir is empty, go ahead and upload 
-aws s3 cp --recursive /mnt/tmp-curriculum-export/filtered/<unit-name-date-range> s3://cdo-data-sharing/filtered-unit-progress/<unit-name-date-range>
+aws s3 cp --recursive /mnt/tmp-curriculum-export/filtered/<unit-name-and-date-range> s3://cdo-data-sharing/filtered-unit-progress/<unit-name-and-date-range>
 ```
 
 10. add a row to the 
@@ -97,8 +99,8 @@ aws s3 cp --recursive /mnt/tmp-curriculum-export/filtered/<unit-name-date-range>
 
 Once you are happy with the data you've uploaded to S3, you should clean up the temporary files on production-daemon:
 ```bash
-rm -rf /mnt/tmp-curriculum-export/sourced/<unit-name-date-range>
-rm -rf /mnt/tmp-curriculum-export/filtered/<unit-name-date-range>
+rm -rf /mnt/tmp-curriculum-export/sourced/<unit-name-and-date-range>
+rm -rf /mnt/tmp-curriculum-export/filtered/<unit-name-and-date-range>
 ```
 ## Troubleshooting
 
@@ -155,6 +157,34 @@ sorted in any order. Here are some of the key fields:
   student's work will be consistent for a given level.
 * `student_answer_pii_score`: see `source_pii_score` 
 * `student_answer_pii_entities`: see `source_pii_entities`
+* `source_versions`: see below
+
+#### Source Versions
+
+The `source_versions` field is a JSON array containing the source code for each
+version of the project. Here is an example:
+```
+{
+  "source_versions": [
+    {
+      "versionId": "e6vJbk8B17DM9eag36pAfsPxI_2kkJ6A",
+      "lastModified": "2024-12-05T18:34:25.000Z",
+      "isLatest": true,
+      "version_source": "...",
+      "version_source_pii_score": 0,
+      "version_source_pii_entities": []
+    }
+    ...
+  ],
+  ...
+}
+```
+
+If any versions are present, one of them will be marked as `isLatest`. This will
+contain an exact copy of the `source`, `source_pii_score` and `source_pii_entities`
+top-level fields. Non-latest versions will contain past versions of the project source
+code, each with their own pii score and pii entities. `versionId` can be
+joined against the `project_version` field in the `evals` files.
 
 ### Evaluations
 

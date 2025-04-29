@@ -52,6 +52,10 @@ export const FileBrowser = React.memo(() => {
         setDragData(undefined);
         setDropData(undefined);
       },
+      onDragCancel: () => {
+        setDragData(undefined);
+        setDropData(undefined);
+      },
     }),
     [setDragData, setDropData]
   );

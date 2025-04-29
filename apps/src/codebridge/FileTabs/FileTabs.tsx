@@ -61,6 +61,11 @@ export const FileTabs = React.memo(() => {
       rearrangeFiles(arrayMove(files, oldIndex, newIndex).map(file => file.id));
     }
   }
+
+  function handleDragCancel() {
+    setDraggingFileId(null);
+  }
+
   function handleDragStart(event: DragStartEvent) {
     // Handle drag start only if the file is in the list of open files.
     // This can get called when the close button is clicked, and we want to ignore
@@ -86,6 +91,7 @@ export const FileTabs = React.memo(() => {
       <DndContext
         onDragEnd={handleDragEnd}
         onDragStart={handleDragStart}
+        onDragCancel={handleDragCancel}
         sensors={sensors}
         collisionDetection={closestCenter}
         modifiers={[restrictToParentElement, restrictToHorizontalAxis]}

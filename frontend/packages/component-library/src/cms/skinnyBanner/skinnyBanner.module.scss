@@ -1,0 +1,70 @@
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/variables' as variables;
+@use '@code-dot-org/component-library-styles/cms/cmsMixins' as cmsMixins;
+
+$mobileBreakpoint: 970px;
+
+.skinnyBannerWrapper {
+  width: 100%;
+  background: var(--background-brand-purple-extra-light);
+  background-size: cover;
+}
+
+.skinnyBannerContainer {
+  display: flex;
+  padding: 1.875rem 0;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  max-width: 60rem;
+  margin: 0 auto;
+
+  @media (max-width: $mobileBreakpoint) {
+    display: flex;
+    padding: 1.875rem 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+
+    .skinnyBannerMediaContainer figure {
+      height: unset;
+    }
+  }
+}
+
+.skinnyBannerTextContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex: 2;
+  width: 100%;
+
+  h5 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.skinnyBannerPartnerContainer {
+  @include cmsMixins.in-partnership-with-section;
+}
+
+.skinnyBannerMediaContainer {
+  display: flex;
+  flex: 1;
+
+  figure {
+    max-height: 28.125rem;
+    flex: 1;
+    border-radius: variables.$regular-border-radius;
+  }
+}
+
+.skinnyBannerButtonContainer {
+  flex: 1;
+}

@@ -20758,7 +20758,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: pilot-pl-teaching-k5-music-lab
-          title: 'Teaching Programming with Music Lab '
+          title: "✈️  Teaching Programming with Music Lab ✈️ "
           description_audience: ''
           description_short: ''
           description: "##### Welcome! This module prepares teachers for Code.org's Programming with Music Lab curriculum. Programming with Music Lab is a short, accessible curriculum for grades 3-5 that teaches programming through music creation. Students learn to code melodies, loops, and interactive compositions in a fun, engaging way while meeting accessibility standards. "
@@ -23822,3 +23822,87 @@ en:
         self-paced-pl-teaching-k5-music-lab-2025:
           lessons: {}
           lesson_groups: {}
+          name: self-paced-pl-teaching-k5-music-lab-2025
+          title: " \U0001F3B6 PL FOR LAUNCH Teaching Introduction to Programming with Music Lab  \U0001F3B6 "
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-k5-music-lab:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-k5-music-lab
+          title: Teaching Introduction to Programming with Music Lab
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csp-summer-day1-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csp-summer-day1-2025
+          title: Day 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csp-summer-day2-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csp-summer-day2-2025
+          title: Day 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csp-summer-day3-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Synchronous Part 1
+            lessonGroup-3:
+              display_name: Asynchronous Part 1
+            lessonGroup-4:
+              display_name: Synchronous Part 2
+            lessonGroup-5:
+              display_name: Asynchronous Part 2
+          name: virtual-pl-csp-summer-day3-2025
+          title: Day 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csp-summer-day4-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csp-summer-day4-2025
+          title: Day 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        virtual-pl-csp-summer-day5-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: virtual-pl-csp-summer-day5-2025
+          title: Day 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
