@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-04 16:41:11 UTC",
+    "serialized_at": "2025-04-23 15:27:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -951,6 +951,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L3 rect_CSD-PL-24_25"
+        ],
         "progression": "Predict - Introduction to Game Lab"
       },
       "bonus": false,
@@ -973,6 +976,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 rect_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -995,6 +1001,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Drawing Squares to Corners_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1017,6 +1026,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 fill_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1039,6 +1051,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 sequence_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1061,6 +1076,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 ellipse_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1083,6 +1101,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice choice_CSD-PL-24_25"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1105,6 +1126,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 debug_CSD-PL-24_25"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1127,6 +1151,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing challenges_CSD-PL-24_25"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1149,6 +1176,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where X_CSD-PL-24_25"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1171,6 +1201,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where XY_CSD-PL-24_25"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -1193,6 +1226,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3L5 - SB1_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1215,6 +1251,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables naming rules v2_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1237,6 +1276,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Draw Poppy_CSD-PL-24_25"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1259,6 +1301,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables practice_CSD-PL-24_25"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1281,6 +1326,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables assessment_CSD-PL-24_25"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1303,6 +1351,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables challenge_CSD-PL-24_25"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1529,7 +1580,7 @@
   "resources": [
     {
       "name": "CSD In-Person Summer Workshop Day 2 Agenda",
-      "url": "https://docs.google.com/document/d/1TPonGXsZIADY81p9Jp59NXvWcXHqpceJw5fMWjeHiis/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1ktmSbVgsobIUk1sAFzf5XLI-iavwyGe3DvF3hE41ivk/edit?usp=drive_link",
       "key": "csd_in-person_summer_workshop_day_2_agenda",
       "properties": {
       },
@@ -1539,7 +1590,7 @@
     },
     {
       "name": "CSD In-Person Summer Workshop Day 2 Slides",
-      "url": "https://docs.google.com/presentation/d/1mNdJqZ3-7pdcUBNeQIrtK7bFpdg3nrOgqs8Sqa57TQ8/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1oH_4wEwUo2pSiW2ZzXroehci4C9Lu7Sm6ObPKhREBT4/edit?usp=drive_link",
       "key": "csd_in-person_summer_workshop_day_2_agenda_1",
       "properties": {
       },

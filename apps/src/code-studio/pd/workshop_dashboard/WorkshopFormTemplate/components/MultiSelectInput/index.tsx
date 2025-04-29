@@ -90,7 +90,7 @@ export const MultiSelectInput: React.FC<{
   // listen for clicks outside the component to close the option menu
   // removes the listener when the component unmounts
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+    const handleClickOutside = (event: Event) => {
       if (
         wrapperRef.current &&
         !wrapperRef.current.contains(event.target as Node)
@@ -100,7 +100,11 @@ export const MultiSelectInput: React.FC<{
     };
 
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleClickOutside);
+    };
   }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {

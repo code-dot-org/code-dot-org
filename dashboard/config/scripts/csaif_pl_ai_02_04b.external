@@ -9,11 +9,9 @@ markdown <<MARKDOWN
 
 ## 📝 To Do
 
-#### In the next three levels, you'll choose one career to explore how providing minimal context affects AI responses.
+#### In the next level, you'll choose one career to explore how providing context affects AI responses.
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+    ➡️ This activity is from Lesson 3. You can find more details in the full <a href='https://studio.code.org/s/aif1-2025/lessons/3' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
 </p>
-
-
 MARKDOWN

@@ -26,16 +26,30 @@
           "language": "py",
           "contents": "# TODO - Write the take_break() function for the break reminders\n\n\n\n# TODO - Write the check_todo() function for the to-do list reminders\n\n\n\n# TODO - Replace the repeated blocks by calling your new functions\nprint(\"🧠 Don't forget to take a short break.\")\nprint(\"⏱️ Stretch, get water, and rest your eyes.\")\n\nprint(\"📋 What's next on your to-do list?\")\nprint(\"✅ Pick one task and get started.\")\n\nprint(\"🧠 Don't forget to take a short break.\")\nprint(\"⏱️ Stretch, get water, and rest your eyes.\")\n\nprint(\"📋 What's next on your to-do list?\")\nprint(\"✅ Pick one task and get started.\")\n",
           "folderId": "0",
-          "active": true,
-          "open": true
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     },
-    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzv35LW6UFjnWrlvHIHxXi4NdpbduQbTs\nOv0YQkmauBHFjmY8qdUtO0ByLzwBAD34k2lH4lEY9IJE0UeuzP+Dq2+7GrBX\nKi6cLWHf87KB1L5+Vq5fyqltnt5I6Wz5PMnsDaPFX5jmNip8ze9CmpfI7BRC\nsCTMkndAeewHZcCKJejDTvPR69zpQJ6D8rABrTh/mnzJHvDNYL9rFavVPIl3\nqzA7GkeUE+4lcYhSjCA88PxhRNDluqXN1WwbSCa+K8lumAsK2S0+3HdfA2TJ\nsotCnHaNNus4cA1Q4OoQE4jn2DGI1BSMIQRSO9vVy6AX2oTw+3rGswWAH99u\n/daENm6cEHzZUpebaswGhOek9znHJHnVch2yXbho2rG+f9H+29ovMUtJlVkQ\n+AtmyI1y7IgQ67D0cOl84N7Q5X3XMQOBm4A+qaSyeLKiPZTifkRXRpRMOEJB\n2nfuD9L1zYba008dk3p7BoLTVRbH+b6lBBqAhx6oOuRIm0Bq1jLDfWy9wayA\n8ZJN0FUEU+EzICiUSsDhNSPYDeykCtPkQpRogP2TxGgiTgvXy7ZB48G7jBwI\nVZ7UpTiR4oBJ7DkLCcYHZd0S2yz4V+027Au60TTEd1L3F7lbJpNxrd+cSNbP\nZML2sLHbgrWVZUcYxRMWRMRHcL9lHw3JCgWoYfPcsTbxp9XzLgEX9Yzh9keH\nteSQW55hpnPZkxqGdL/uPQn27BT/w2PDccEKnaGDPBG36ryqrdGDlZvTC7WH\nU+pvjDRBvkYrW6rvaw==\n"
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzv35LW6UFjnWrlvHIHxXi4NdpbduQbTs\nOv0YQkmauBHFjmY8qdUtO0ByLzwBAD34k2lH4lEY9IJE0UeuzP+Dq2+7GrBX\nKi6cLWHf87KB1L5+Vq5fyqltnt5I6Wz5PMnsDaPFX5jmNip8ze9CmpfI7BRC\nsCTMkndAeewHZcCKJejDTvPR69zpQJ6D8rABrTh/mnzJHvDNYL9rFavVPIl3\nqzA7GkeUE+4lcYhSjCA88PxhRNDluqXN1WwbSCa+K8lumAsK2S0+3HdfA2TJ\nsotCnHaNNus4cA1Q4OoQE4jn2DGI1BSMIQRSO9vVy6AX2oTw+3rGswWAH99u\n/daENm6cEHzZUpebaswGhOek9znHJHnVch2yXbho2rG+f9H+29ovMUtJlVkQ\n+AtmyI1y7IgQ67D0cOl84N7Q5X3XMQOBm4A+qaSyeLKiPZTifkRXRpRMOEJB\n2nfuD9L1zYba008dk3p7BoLTVRbH+b6lBBqAhx6oOuRIm0Bq1jLDfWy9wayA\n8ZJN0FUEU+EzICiUSsDhNSPYDeykCtPkQpRogP2TxGgiTgvXy7ZB48G7jBwI\nVZ7UpTiR4oBJ7DkLCcYHZd0S2yz4V+027Au60TTEd1L3F7lbJpNxrd+cSNbP\nZML2sLHbgrWVZUcYxRMWRMRHcL9lHw3JCgWoYfPcsTbxp9XzLgEX9Yzh9keH\nteSQW55hpnPZkxqGdL/uPQn27BT/w2PDccEKnaGDPBG36ryqrdGDlZvTC7WH\nU+pvjDRBvkYrW6rvaw==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n# Try importing the student's functions\ntry:\n    from main import take_break\n    take_break_exists = True\nexcept ImportError:\n    take_break_exists = False\n\ntry:\n    from main import check_todo\n    check_todo_exists = True\nexcept ImportError:\n    check_todo_exists = False\n\nclass TestStudySessionFunctions(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_take_break_function_exists(self):\n        \"\"\"take_break() should exist and be callable\"\"\"\n        if not take_break_exists:\n            self.fail(\"Make sure you define a function called take_break()!\")\n\n    def test_check_todo_function_exists(self):\n        \"\"\"check_todo() should exist and be callable\"\"\"\n        if not check_todo_exists:\n            self.fail(\"Make sure you define a function called check_todo()!\")\n\n    def test_eight_lines_printed(self):\n        \"\"\"Eight total lines should be printed (four blocks of two lines)\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertEqual(\n            len(printed_messages),\n            8,\n            \"Make sure your program prints eight lines total by calling take_break() and check_todo() twice each!\"\n        )\n\n        # Check for at least one break reminder and one to-do reminder\n        has_break_reminder = any(\"break\" in line.lower() or \"stretch\" in line.lower() for line in printed_messages)\n        has_todo_reminder = any(\"to-do\" in line.lower() or \"task\" in line.lower() for line in printed_messages)\n\n        self.assertTrue(\n            has_break_reminder,\n            \"Make sure your take_break() function reminds about taking breaks!\"\n        )\n\n        self.assertTrue(\n            has_todo_reminder,\n            \"Make sure your check_todo() function reminds about checking your to-do list!\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:35.841+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level8d_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level8d_2025-launch\"},{\"changed_at\":\"2025-04-15 14:31:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:34:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:35:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:35.841+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level8d_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level8d_2025-launch\"},{\"changed_at\":\"2025-04-15 14:31:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:34:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 14:35:08 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 18:09:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

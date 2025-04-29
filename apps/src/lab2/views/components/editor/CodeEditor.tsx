@@ -11,7 +11,6 @@ import {
   setEditorFontSizeLoaded,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import {AppName} from '@cdo/apps/lab2/types';
-import i18n from '@cdo/apps/pythonlab/locale';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -178,14 +177,6 @@ const CodeEditor: React.FunctionComponent<CodeEditorProps> = ({
     editorReadOnlyCompartment,
     editorEditableCompartment,
   ]);
-
-  // Sets aria-label on the input div once code mirror loads
-  useEffect(() => {
-    const cmContentDiv = editorRef.current?.querySelector('.cm-content');
-    if (cmContentDiv) {
-      cmContentDiv.setAttribute('aria-label', i18n.codeEditor());
-    }
-  }, []);
 
   if (!editorFontSizeLoaded) {
     return null;

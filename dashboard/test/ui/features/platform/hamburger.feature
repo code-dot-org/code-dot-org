@@ -10,7 +10,7 @@ Feature: Hamburger dropdown
     And I see "#learn"
     And I see "#districts"
     And I see "#stats"
-    And I see "#help-us"
+    And I see "#donate"
     And I see "#about_entries"
     And I see "#educate_entries"
     Then I click selector "#help-icon"
@@ -28,7 +28,7 @@ Feature: Hamburger dropdown
     And I see "#learn"
     And I see "#districts"
     And I see "#stats"
-    And I see "#help-us"
+    And I see "#donate"
     And I see "#about_entries"
     And I click selector "#about_entries"
     And I wait to see "#about-us"
@@ -74,7 +74,7 @@ Feature: Hamburger dropdown
     And I see "#educate_entries"
     And I see "#districts"
     And I see "#stats"
-    And I see "#help-us"
+    And I see "#donate"
     And I see "#about_entries"
     And I see "#legal_entries"
     Then I click selector "#help-icon"
@@ -96,7 +96,7 @@ Feature: Hamburger dropdown
     And I see "#educate_entries"
     And I see "#districts"
     And I see "#stats"
-    And I see "#help-us"
+    And I see "#donate"
     And I see "#about_entries"
     And I see "#legal_entries"
     Then I click selector "#help-icon"
@@ -173,7 +173,7 @@ Feature: Hamburger dropdown
       | Learn                  | http://code.org/students                     |
       | Districts              | http://code.org/administrators               |
       | Stats                  | http://code.org/promote                      |
-      | Help Us                | http://code.org/help                         |
+      | Donate                 | http://code.org/donate                       |
 
     # The Teach submenu
     Then I can navigate the following hamburger menu items within the educate_entries submenu:
@@ -232,7 +232,7 @@ Feature: Hamburger dropdown
       | Learn                  | http://code.org/students                     |
       | Districts              | http://code.org/administrators               |
       | Stats                  | http://code.org/promote                      |
-      | Help Us                | http://code.org/help                         |
+      | Donate                 | http://code.org/donate                       |
 
     # The Teach submenu
     Then I can navigate the following hamburger menu items within the educate_entries submenu:

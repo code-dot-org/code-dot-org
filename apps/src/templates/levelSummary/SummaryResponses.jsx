@@ -156,7 +156,6 @@ const SummaryResponses = ({
             }
           >
             <p>
-              <i className="fa fa-user" />
               <span>
                 {scriptData.responses[levelNumber].length}/{students.length}{' '}
                 {i18n.studentsAnswered()}

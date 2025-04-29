@@ -1,6 +1,8 @@
 name 'programming-fundamentals-lesson1-level2b_2025'
 title 'Careers and Emerging Technologies'
-description 'description here'
+display_name 'Things-Oriented Careers'
+bubble_choice_description 'Explore things-oriented careers based on your interests and skills.'
+thumbnail_url 'https://images.code.org/4f245e227cb52dd6f6793497be3fb313-electrician.png'
 
 markdown <<MARKDOWN
 # Things-Oriented Careers

@@ -1,6 +1,7 @@
 name 'csaif_pl_ai_04_03'
 title 'Check for Understanding'
 description 'Match the vocabulary term with the definition'
+height'75'
 question 'abstraction'
 question 'artificial intelligence'
 question 'neural network'

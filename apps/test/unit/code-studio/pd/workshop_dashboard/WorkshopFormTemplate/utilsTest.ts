@@ -357,7 +357,7 @@ describe('workshopStateToApi', () => {
       course_offerings: [1, 2, 3],
       participant_group_type: 'Test Group',
       time_zone: 'America/Denver',
-      legacy: null,
+      legacyForm2025: null,
     };
 
     const apiFormat = workshopStateToApi(workshopState);
@@ -405,7 +405,7 @@ describe('workshopStateToApi', () => {
       course_offerings: [],
       participant_group_type: null,
       time_zone: 'America/Denver',
-      legacy: null,
+      legacyForm2025: null,
     };
 
     const apiFormat = workshopStateToApi(workshopState);
@@ -453,7 +453,7 @@ describe('workshopStateToApi', () => {
       course_offerings: [],
       participant_group_type: null,
       time_zone: 'America/Denver',
-      legacy: null,
+      legacyForm2025: null,
     };
 
     const apiFormat = workshopStateToApi(workshopState);

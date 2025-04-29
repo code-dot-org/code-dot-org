@@ -8,7 +8,7 @@ markdown <<MARKDOWN
     <img src="https://images.code.org/a035808b2a48ce2f5885fe702272fbf2-image-1732312298159.51.29 PM.png" alt="Banner Background" style="width: 100%; border-radius: 10px;">
     <div style="position: absolute; top: 50%; left: 35%; transform: translate(-50%, -50%); padding: 20px; width: 90%; max-width: 800px; border-radius: 10px; display: flex; align-items: center; gap: 20px; justify-content: center;">
         <img src="https://images.code.org/23f8e4b3c5fa388bddebcf8eaf5ce33c-image-1741879027462.png" alt="Banner Icon" style="width: 100px; height: auto; border-radius: 10px; margin-left: 75px; ">
-        <p style="color: white; line-height: 1; font-size: 32px; font-weight: bold; margin: 0;">Teaching Computer Systems and Devices</p>
+        <p style="color: white; line-height: 1; font-size: 32px; font-weight: bold; margin: 0;">Teaching AI and the Systems that Power It</p>
     </div>
 </div>
 
@@ -17,11 +17,11 @@ markdown <<MARKDOWN
     <h2>Welcome!</h2>
     <p style = "font-size: 14pt">
         This professional learning module is designed to help you prepare to teach Code.org’s 
-        <strong>Computer Systems and Devices Unit</strong> from the <a href="https://courseinfo.code.org/csaif/" target="blank" rel="noopener noreferrer">Computer Science and AI Foundations Curriculum</a>.
+        <strong>AI and the Systems that Power It</strong> from the <a href="https://studio.code.org/courses/artificial-intelligence-foundations-2025" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a>.
     </p>
    
     <p style = "font-size: 14pt">
-        The Computer Systems and Devices content is designed for 9th - 12th grade students.
+        The AI and the Systems that Power It content is designed for 9th - 12th grade students.
     </p>
 </div>
 
@@ -41,7 +41,7 @@ markdown <<MARKDOWN
 </div>
 
 
-#### **Suggested Total Time:** 90 minutes
+#### **Suggested Total Time:** 60 minutes
 #### **Lesson One Suggested Time:** 10 minutes
 
 ---

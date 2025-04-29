@@ -13,12 +13,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 17:50:15 UTC",
+    "serialized_at": "2025-04-23 18:09:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2770,6 +2773,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-cyber_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -2994,6 +3000,39 @@
     }
   ],
   "resources": [
+    {
+      "name": "All Resources",
+      "url": "/s/aif5-2025/resources",
+      "key": "all_resources_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_4"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/aif5-2025/standards",
+      "key": "all_standards_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_4"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/aif5-2025/vocab",
+      "key": "all_vocabulary_4",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4"
+      }
+    },
     {
       "name": "Computer Science is Changing Everything",
       "url": "https://youtu.be/QvyTEx1wyOY",
@@ -3480,7 +3519,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_4",
+        "script.name": "aif5-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_4",
+        "script.name": "aif5-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_4",
+        "script.name": "aif5-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 

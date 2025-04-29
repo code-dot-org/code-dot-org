@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Voices from the Classroom
 
-#### Programming is the foundation of computer science and problem-solving. Understanding core coding concepts is essential for building computational thinking skills. Code.org's **Foundations of AI Programming** introduces key concepts like variables, loops, conditionals, and functions through hands-on coding in the Neighborhood IDE, making programming accessible and engaging for all learners.
+#### Programming is the foundation of computer science and problem-solving. Understanding core coding concepts is essential for building computational thinking skills. Code.org's **Programming Fundamentals** introduces key concepts like variables, loops, conditionals, and functions through hands-on coding in the Neighborhood IDE, making programming accessible and engaging for all learners.
 
 
 #### See what educators are saying about teaching the **Programming Fundamentals** unit. 
@@ -40,7 +40,7 @@ You've finished the first lesson in this professional learning module! <br><br><
 
 <table width="100%" cellspacing="0" cellpadding="15">
     <tr>
-        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching Foundations of <br>AI Programming</td>
+        <td style="background-color: #b2dee3; text-align: center;"><b>Lesson One</b><br>Teaching Programming <br>Fundamentals</td>
         <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Two</b><br>Computational <br> Thinking</td>
         <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Three</b><br>Python<br> Basics</td>
         <td style="background-color: #f7f8fa; text-align: center;"><b>Lesson Four</b><br>Advanced<br>Algorithms</td>

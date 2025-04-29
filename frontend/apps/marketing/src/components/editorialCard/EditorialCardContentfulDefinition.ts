@@ -22,7 +22,7 @@ export const EditorialCardContentfulComponentDefinition: ComponentDefinition = {
     layoutOpt: {
       displayName: 'Layout',
       type: 'Text',
-      group: 'content',
+      group: 'style',
       defaultValue: EDITORIAL_CARD_CONTENTFUL_LAYOUTS.HORIZONTAL_WITH_IMAGE,
       validations: {
         required: true,

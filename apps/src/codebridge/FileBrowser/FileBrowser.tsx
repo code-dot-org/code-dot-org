@@ -1,6 +1,11 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {
+  dragAndDropKeyboardCodes,
+  fileBrowserCollisionDetector,
+  fileBrowserKeyboardCoordinateGetter,
+} from '@codebridge/utils/dragAndDropUtils';
+import {
   DndContext,
   DragStartEvent,
   DragOverEvent,
@@ -8,11 +13,9 @@ import {
   PointerSensor,
   useSensor,
   useSensors,
+  KeyboardSensor,
 } from '@dnd-kit/core';
-import {
-  restrictToFirstScrollableAncestor,
-  restrictToVerticalAxis,
-} from '@dnd-kit/modifiers';
+import {restrictToVerticalAxis} from '@dnd-kit/modifiers';
 import classNames from 'classnames';
 import React, {useMemo, useState} from 'react';
 
@@ -37,6 +40,7 @@ export const FileBrowser = React.memo(() => {
 
   const [dragData, setDragData] = useState<DragDataType | undefined>(undefined);
   const [dropData, setDropData] = useState<DropDataType | undefined>(undefined);
+  const projectFolders = source.folders;
 
   const dndMonitor = useMemo(
     () => ({
@@ -45,6 +49,10 @@ export const FileBrowser = React.memo(() => {
       onDragOver: (e: DragOverEvent) =>
         setDropData(e.over?.data.current as DropDataType),
       onDragEnd: (e: DragEndEvent) => {
+        setDragData(undefined);
+        setDropData(undefined);
+      },
+      onDragCancel: () => {
         setDragData(undefined);
         setDropData(undefined);
       },
@@ -59,7 +67,16 @@ export const FileBrowser = React.memo(() => {
       activationConstraint: {
         distance: 2,
       },
+    }),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: fileBrowserKeyboardCoordinateGetter(projectFolders),
+      keyboardCodes: dragAndDropKeyboardCodes,
     })
+  );
+
+  const collisionDetector = useMemo(
+    () => fileBrowserCollisionDetector(projectFolders),
+    [projectFolders]
   );
 
   return (
@@ -74,10 +91,8 @@ export const FileBrowser = React.memo(() => {
         <DndContext
           onDragEnd={handleDragEnd}
           sensors={sensors}
-          modifiers={[
-            restrictToVerticalAxis,
-            restrictToFirstScrollableAncestor,
-          ]}
+          modifiers={[restrictToVerticalAxis]}
+          collisionDetection={collisionDetector}
         >
           <DndDataContextProvider
             value={{dragData, dropData}}

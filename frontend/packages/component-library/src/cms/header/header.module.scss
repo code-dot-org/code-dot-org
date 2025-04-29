@@ -6,7 +6,9 @@
 $desktop-breakpoint: 1268px;
 $tablet-breakpoint: 1023px;
 $mobile-breakpoint: 425px;
-$box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
+$box-shadow:
+  0px 4px 6px -1px rgb(0 0 0 / 0.1),
+  0px 2px 4px -1px rgb(0 0 0 / 0.06);
 
 // Header common styles
 .headerNavigation {
@@ -16,6 +18,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
   display: flex;
   justify-content: space-between;
   z-index: variables.$zindex-fixed;
+  box-shadow: $box-shadow;
 }
 
 // Main links styles
@@ -61,6 +64,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 
     a {
       @include typography.body-three;
+      line-height: 1;
       color: var(--text-neutral-white-fixed);
       text-decoration: none;
       padding: 1rem;
@@ -82,7 +86,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 }
 
 // Button links styles
-.buttonLinks {
+header .buttonLinks {
   position: relative;
   display: flex;
   align-items: center;
@@ -119,7 +123,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 }
 
 // Icon button styles
-.buttonLinks .iconButton {
+header .buttonLinks .iconButton {
   padding: 0;
   background: transparent;
   min-width: unset;
@@ -151,7 +155,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 }
 
 // Menu styles
-.menu {
+header .menu {
   @include mixins.border-styles;
   list-style: none;
   position: absolute;
@@ -190,10 +194,10 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 }
 
 // New Project menu styles
-.newProjectMenu {
+header .newProjectMenu {
   a {
     margin: 0;
-    padding-inline: 0.375rem;
+    padding: 0.375rem;
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -251,7 +255,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 // Large desktop
 @media (max-width: ($desktop-breakpoint - 1px)) {
   // Show Help menu
-  .helpButton {
+  header .helpButton {
     display: none;
   }
 }
@@ -259,7 +263,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 // Small desktop
 @media (min-width: $desktop-breakpoint) {
   // Show Hamburger menu
-  .hamburgerButton {
+  header .hamburgerButton {
     display: none;
   }
 }
@@ -274,8 +278,8 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 // Tablet
 @media (max-width: $tablet-breakpoint) {
   // Hide Main links and New Project menu
-  .mainLinksWrapper .mainLinks,
-  .newProject {
+  header .mainLinksWrapper .mainLinks,
+  header .newProject {
     display: none;
   }
 
@@ -287,7 +291,7 @@ $box-shadow: 0 2px 6px 0 rgb(0 0 0 / 0.08);
 // Mobile
 @media (max-width: $mobile-breakpoint) {
   // Hide Account links
-  .accountLinks {
+  header .accountLinks {
     display: none;
   }
 

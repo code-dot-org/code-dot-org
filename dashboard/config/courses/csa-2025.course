@@ -24,7 +24,7 @@
     "csa9-2025",
     "csa-postap-se-and-computer-vision-2025"
   ],
-  "published_state": "in_development",
+  "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -66,6 +66,16 @@
       },
       "seeding_key": {
         "resource.key": "all_vocabulary_16"
+      }
+    },
+    {
+      "name": "AP CSA Course and Exam Description (CED)",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf",
+      "key": "ap_csa_course_and_exam_description_ced_",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ap_csa_course_and_exam_description_ced_"
       }
     },
     {

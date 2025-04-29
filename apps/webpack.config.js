@@ -44,7 +44,6 @@ const nodeModulesToTranspile = [
   'playground-io',
   'json-parse-better-errors',
   '@blockly/field-grid-dropdown',
-  '@blockly/keyboard-navigation',
   '@blockly/plugin-scroll-options',
   '@blockly/field-angle',
   '@blockly/field-bitmap',

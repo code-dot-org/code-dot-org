@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 17:34:53 UTC",
+    "serialized_at": "2025-04-28 18:19:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -99,12 +99,30 @@
       }
     },
     {
-      "key": "Input & Training Data",
-      "name": "Input & Training Data",
+      "key": "lesson-10",
+      "name": "1.2 How Smart Is It, Really?",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
+      "properties": {
+        "overview": "In this lesson, students explore how \"smart\" generative AI really is by experimenting with a chatbot across a variety of newsroom-style tasks. They test the chatbot’s responses to creative, informative, and playful prompts, comparing the results to what they expected. Through hands-on exploration and guided reflection, students begin to build a personal understanding of what AI does well, where it struggles, and how it might fit into real-world writing and communication.",
+        "preparation": "- Print copies of the AI Newsroom Playground activity guide (one for each student)",
+        "student_overview": "In this lesson, you’ll explore what AI chatbots can do and where they might fall short. You'll try out different writing and media tasks like creating headlines, ads, or jokes, and see how the AI responds. By the end, you'll have a better sense of what AI is actually good at, what it struggles with, and when you might (or might not) want to use it."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "Input & Training Data",
+      "name": "Input & Training Data",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
       "properties": {
         "background": "light",
         "overview": "In this lesson, students explore the process of recognizing and categorizing words, comparing it to how AI systems achieve similar tasks. Through discussion and activities, they consider the data sources an AI system requires to build a task-specific vocabulary, leading to the understanding that language models necessitate vast data amounts, like the entire internet. The lesson concludes with students updating a graphic organizer to reflect the Input step of generative AI.",
@@ -120,10 +138,10 @@
     {
       "key": "Bias in the Machine",
       "name": "Bias in the Machine",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
         "background": "light",
         "overview": "This lesson formally introduces the concept of bias, where certain information is favored over others. Students experience how bias can implicitly and unintentionally creep into large-language models by participating in an activity where they are asked to source articles and information for a RecipeBot. Once they've used search engine results to generate their training data, they analyze patterns in the data that the class found as a collection, noticing unintended biases such as certain cuisines being unintentionally excluded or all the articles falling within a certain narrow date range. After acknowledging how bias can appear, students analyze several scenarios and discuss how bias could appear in the training data of each one.",
@@ -137,12 +155,27 @@
       }
     },
     {
-      "key": "Understanding Embeddings",
-      "name": "Understanding Embeddings",
-      "absolute_position": 4,
+      "key": "lesson-2",
+      "name": "3.2 Is It Fair?",
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "Understanding Embeddings",
+      "name": "Understanding Embeddings",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
       "properties": {
         "background": "light",
         "overview": "In this lesson, students explore how language models understand and represent word meanings. Beginning with a game, they investigate the concept of words being \"close\" in meaning. This leads to an activity where students assume the roles of fictional characters, using a sequence of numbers to represent their \"character traits\" and comparing these numerical representations to others. The lesson demonstrates that language models use a similar method, known as embeddings, to represent words as sequences of numbers, with similar words being numerically close to each other. The lesson concludes with students updating the storage section of their graphic organizer to encapsulate the idea of word embeddings.",
@@ -158,10 +191,10 @@
     {
       "key": "Understanding Neural Networks",
       "name": "Understanding Neural Networks",
-      "absolute_position": 5,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 7,
       "properties": {
         "background": "light",
         "overview": "This lesson introduces neural networks through a hands-on activity where students create a lunch recommender for a school cafeteria. It starts with an exercise involving two mad-libs that use the same words in different orders, highlighting how word relations and grammar influence word choice. Students then work together to build a neural network model for the cafeteria's lunch choices, learning about key concepts like hidden layers and weights. The lesson concludes by tying these ideas back to language, prompting students to think about how words can change meaning in different contexts or phrases.",
@@ -177,10 +210,10 @@
     {
       "key": "Attention Is All You Need",
       "name": "Attention Is All You Need",
-      "absolute_position": 6,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 8,
       "properties": {
         "background": "light",
         "overview": "This lesson delves into the ambiguity of language and the necessity of context for meaning. Students first discuss examples of ambiguous language, followed by an activity where they brainstorm words with multiple meanings and craft sentences to clarify their intended meanings through context. After trading papers with a partner, students guess the intended meanings, identifying which words provided the most context. Reflecting on this, the lesson connects the activity to how language models use embeddings for word meanings and neural networks for relational meaning, introducing the concept of Attention as the process of updating word meanings based on context.",
@@ -194,12 +227,27 @@
       }
     },
     {
-      "key": "Outputs & Probabilities",
-      "name": "Outputs & Probabilities",
-      "absolute_position": 7,
+      "key": "lesson-3",
+      "name": "6.2 Who's Making the Choices?",
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "Outputs & Probabilities",
+      "name": "Outputs & Probabilities",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
       "properties": {
         "background": "light",
         "overview": "In this lesson, students investigate how language models generate output based on probabilities. The lesson kicks off with the class collaboratively crafting a story, with a twist to alternate between realistic and fantastical elements. This leads into a group activity where students fill in a mad lib with predetermined words, aiming for either coherent or absurd outcomes. They are then introduced to an app that aggregates responses from numerous users to the same mad lib, showcasing a variety of popular choices for each blank. Through selecting the most popular choices based on this data, students experience firsthand how language models select words with the highest probability from training data.",
@@ -215,10 +263,10 @@
     {
       "key": "Hallucinations and Fabrications",
       "name": "Hallucinations and Fabrications",
-      "absolute_position": 8,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 11,
       "properties": {
         "background": "light",
         "overview": "In this lesson, students investigate why language models may produce inaccurate outputs, known as hallucinations. They start by understanding the probabilistic nature of generative AI and how bias in training data can lead to such errors. Following discussions on examples of AI systems recalled for bias and hallucinations, students assume the role of AI Auditors to explore proactive measures for mitigating harm caused by deployed language models. After their exploration, they watch a video of a professional AI Auditor, reflecting on the parallels between the professional's work and their class activity.",
@@ -232,12 +280,27 @@
       }
     },
     {
-      "key": "Project: Demystifying Generative AI",
-      "name": "Project: Demystifying Generative AI",
-      "absolute_position": 9,
+      "key": "lesson-4",
+      "name": "9.2 Can You Trust the Bot?",
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "Project: Demystifying Generative AI",
+      "name": "Project: Demystifying Generative AI",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
       "properties": {
         "announcements": [
           {
@@ -265,13 +328,13 @@
     {
       "key": "Embeddings: How They're Created",
       "name": "Embeddings: How They're Created",
-      "absolute_position": 10,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 14,
       "properties": {
         "background": "light",
-        "overview": "\nIn this lesson, students delve into the creation of word embeddings. They start by interpreting a passage in a made-up language, using context clues to understand word meanings based on their relationships with other words. Following this, they engage in an activity to construct embeddings from sentences by noting word proximity. The climax reveals that students worked with two distinct passages, illustrating how the same word can have different representations based on its usage context. This insight sets the stage for upcoming lessons on how language models use sentence structure and context to determine word meanings accurately.",
+        "overview": "In this lesson, students delve into the creation of word embeddings. They start by interpreting a passage in a made-up language, using context clues to understand word meanings based on their relationships with other words. Following this, they engage in an activity to construct embeddings from sentences by noting word proximity. The climax reveals that students worked with two distinct passages, illustrating how the same word can have different representations based on its usage context. This insight sets the stage for upcoming lessons on how language models use sentence structure and context to determine word meanings accurately.\n\n### Optional Lesson\n\nThis lesson originally appeared after the \"Understanding Embeddings\" lesson, but was moved to an optional lesson based on teacher feedback and to better align with AI Literacy standards. The content of this lesson is relevant for classrooms interested in a deeper technical understanding of how embeddings are initially created \"from scratch\" using unsupervised learning so they can be used in large-language models.",
         "preparation": "- Print copies of **both versions** of the activity guide for each student. Ensure some students get Version A while others get Version B.\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
@@ -283,79 +346,19 @@
     {
       "key": "Neural Networks: How They're Trained",
       "name": "Neural Networks: How They're Trained",
-      "absolute_position": 11,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 15,
       "properties": {
         "background": "light",
-        "overview": "This lesson explores supervised learning and its role in teaching neural networks language structure. Starting with a game, students learn through trial and error and use their past outcomes to inform future decisions. They then extend this approach to engaging in conversations in a fictional language, initially facing more failures but gradually improving as they identify patterns. This process illustrates how neural networks adjust their behavior based on new data. The lesson concludes with a reflection on whether this process signifies true \"intelligence\" or merely a sophisticated rule-following system.",
+        "overview": "This lesson explores supervised learning and its role in teaching neural networks language structure. Starting with a game, students learn through trial and error and use their past outcomes to inform future decisions. They then extend this approach to engaging in conversations in a fictional language, initially facing more failures but gradually improving as they identify patterns. This process illustrates how neural networks adjust their behavior based on new data. The lesson concludes with a reflection on whether this process signifies true \"intelligence\" or merely a sophisticated rule-following system.\n\n### Optional Lesson\n\nThis lesson originally appeared after the \"Understanding Neural Networks\" lesson, but was moved to an optional lesson based on teacher feedback and to better align with AI Literacy standards. The content of this lesson is relevant for classrooms interested in a deeper technical understanding of how neural networks are initially created \"from scratch\" in a supervised learning process so they can be used in large-language models.",
         "preparation": "- Print copies of the activity guide for each student\n- Print and cut out copies of the language cards for each group of students\n- Run through the slide deck and videos ahead of time\n  - Prepare to play the Green Glass Door game with the class\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how neural networks are trained to represent relationships between words"
       },
       "seeding_key": {
         "lesson.key": "Neural Networks: How They're Trained",
         "lesson_group.key": "lessonGroup-3",
-        "script.name": "exploring-gen-ai1-2025"
-      }
-    },
-    {
-      "key": "lesson-10",
-      "name": "1.2 How Smart Is It, Really?",
-      "absolute_position": 12,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "exploring-gen-ai1-2025"
-      }
-    },
-    {
-      "key": "lesson-2",
-      "name": "3.2 Is It Fair?",
-      "absolute_position": 13,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 13,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "exploring-gen-ai1-2025"
-      }
-    },
-    {
-      "key": "lesson-3",
-      "name": "6.2 Who's Making the Choices?",
-      "absolute_position": 14,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 14,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "exploring-gen-ai1-2025"
-      }
-    },
-    {
-      "key": "lesson-4",
-      "name": "9.2 Can You Trust the Bot?",
-      "absolute_position": 15,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 15,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-4",
         "script.name": "exploring-gen-ai1-2025"
       }
     }
@@ -437,6 +440,48 @@
       "seeding_key": {
         "lesson_activity.key": "11bf121a-ccd0-4229-8cf4-9688e915015d",
         "lesson.key": "Introduction to Generative AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "97e3dc3e-e919-4220-b459-5d311dc2850e",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
@@ -633,6 +678,19 @@
       }
     },
     {
+      "key": "1a7c70aa-8c4f-42d7-a24b-520ac50418ef",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a7c70aa-8c4f-42d7-a24b-520ac50418ef",
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
       "key": "de56a3e9-5413-4e84-9ec2-7ceefdd67197",
       "position": 1,
       "properties": {
@@ -695,6 +753,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "54bc7426-079e-498a-9c3e-eff74c153758",
+        "lesson.key": "Understanding Neural Networks",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "a20fca5a-39b1-4c69-b5e2-6c23183fea3e",
+      "position": 6,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a20fca5a-39b1-4c69-b5e2-6c23183fea3e",
         "lesson.key": "Understanding Neural Networks",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -1280,6 +1351,37 @@
       }
     },
     {
+      "key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
+        "lesson_activity.key": "1f95cfae-6c59-4feb-baf3-d0d0127c35e6"
+      }
+    },
+    {
+      "key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc",
+      "position": 1,
+      "properties": {
+        "progression_name": "AI Newsroom Playground"
+      },
+      "seeding_key": {
+        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc",
+        "lesson_activity.key": "c7568b69-e52e-4a80-ab7a-2e29d9b54377"
+      }
+    },
+    {
+      "key": "1a05e13d-d315-4b7e-9a08-58c7bbd96101",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1a05e13d-d315-4b7e-9a08-58c7bbd96101",
+        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e"
+      }
+    },
+    {
       "key": "28004903-bf4e-4458-b8c0-f371c73d508b",
       "position": 1,
       "properties": {
@@ -1827,6 +1929,18 @@
       }
     },
     {
+      "key": "1bb10be9-f630-4ebf-9ab4-a35288277564",
+      "position": 1,
+      "properties": {
+        "description": "This unit includes an optional lesson \"Embeddings: How They're Created\", which is a deeper dive into how embeddings are created \"from scratch\" using an unsupervised learning process. This content may be relevant to classrooms looking to continue to \"open the black box\" of AI and understand how large-language models are created, but is also more technical. Consider exploring this lesson and deciding if you would like to pursue it with your class, especially if your program has a technical or career-readiness AI focus.",
+        "name": "Optional Lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "1bb10be9-f630-4ebf-9ab4-a35288277564",
+        "lesson_activity.key": "1a7c70aa-8c4f-42d7-a24b-520ac50418ef"
+      }
+    },
+    {
       "key": "15c6d498-0e63-496e-bf3e-2dfa38a04228",
       "position": 1,
       "properties": {
@@ -2012,6 +2126,18 @@
       }
     },
     {
+      "key": "e5b75e0a-e1a7-498e-ba7e-b0c08de2c1d8",
+      "position": 1,
+      "properties": {
+        "description": "This unit includes an optional lesson \"Neural Networks: How They're Trained\", which is a deeper dive into how neural networks are trained on language \"from scratch\" using a supervised learning process. This content may be relevant to classrooms looking to continue to \"open the black box\" of AI and understand how large-language models are created, but is also more technical. Consider exploring this lesson and deciding if you would like to pursue it with your class, especially if your program has a technical or career-readiness AI focus.",
+        "name": "Optional Lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5b75e0a-e1a7-498e-ba7e-b0c08de2c1d8",
+        "lesson_activity.key": "a20fca5a-39b1-4c69-b5e2-6c23183fea3e"
+      }
+    },
+    {
       "key": "82aa656a-9d4b-4c94-8d92-255f3b787be9",
       "position": 1,
       "properties": {
@@ -2049,7 +2175,7 @@
       "key": "96dd57b1-da43-43c9-91c2-eaf6b93142e8",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/667e551c67843d5b0f3fd75de5644818-Slide4.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What animal do you see in the picture below?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This image is an optical illusion - some students may see a duck, while others will see a rabbit. Students who see the duck will think the animal is facing to the left, with the two long appenges acting as the beak. Students who see the rabbit will think the animal is facing to the right, with the two long appendages acting as the ears. Once students know how to view the image, they may find themselves switching back and forth in how they view the image. In the class discussion, both views are correct and let students surface that there are two different ways to view the image before pointing it out explicitly.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f076b05b51bc93d8dbca432fa119c8ab-Slide5.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Suppose I wanted you to see this animal as a duck. What could I have done to make that clearer?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There are many possible answers to this, such as adding color or drawing more items in the scene to indicate a setting (like water for a duck or a hole in the ground for a rabbit) or drawing more of the body. Emphasize answers that focus on how having additional information in the image helps add context that your brain can use to make sense of the image. Avoid answers that suggest re-drawing the image or clarifying details - the focus should be on how, even with this same ambiguous drawing, the surrounding details (like color or setting) can still give clues as to what this image is supposed to be.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f1c7abb0815c3362007be4ac4c9528c7-Slide6.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> A key detail in viewing this illusion is context - the surrounding details that help us decide the meaning of what we’re looking at. In this version of the illusion, it’s the same object but its orientation is the context we need to know what we’re supposed to be looking at - a duck on the left, and a rabbit on the right.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/fa84b0f476753b5c8459d62bf737f6f9-Slide7.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The same thing can happen with language, where words or sentences can sometimes have ambiguous meanings. For example, is this sentence saying “I saw the man…” [pause] “...with the telescope”\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Or is it saying “I saw…” [pause] “... the man with the telescope”\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br />Image credit: ChatGPT Generated image Prompt: png white background, a woman looking through a telescope, in the style of animated illustrations, standing in a window frame, full body, text-based --style raw\n\t\t<br />\n\t\t<br />ChaptGPT Generated Image Prompt: png white background, a man standing next to a telescope, in the style of animated illustrations, standing in classroom, full body, text-based --style raw\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2384e608dcf7b0e80361d533e2e4c214-Slide8.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This can be a problem for language models when they try to generate responses - how do they know the intended meaning of sentences as they get more complex? This is what we’re going to investigate today.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How does a language model determine the meaning of words within a sentence?\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/667e551c67843d5b0f3fd75de5644818-Slide4.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What animal do you see in the picture below?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This image is an optical illusion - some students may see a duck, while others will see a rabbit. Students who see the duck will think the animal is facing to the left, with the two long appendages acting as the beak. Students who see the rabbit will think the animal is facing to the right, with the two long appendages acting as the ears. Once students know how to view the image, they may find themselves switching back and forth in how they view the image. In the class discussion, both views are correct and let students surface that there are two different ways to view the image before pointing it out explicitly.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f076b05b51bc93d8dbca432fa119c8ab-Slide5.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Suppose I wanted you to see this animal as a duck. What could I have done to make that clearer?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There are many possible answers to this, such as adding color or drawing more items in the scene to indicate a setting (like water for a duck or a hole in the ground for a rabbit) or drawing more of the body. Emphasize answers that focus on how having additional information in the image helps add context that your brain can use to make sense of the image. Avoid answers that suggest re-drawing the image or clarifying details - the focus should be on how, even with this same ambiguous drawing, the surrounding details (like color or setting) can still give clues as to what this image is supposed to be.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/f1c7abb0815c3362007be4ac4c9528c7-Slide6.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> A key detail in viewing this illusion is context - the surrounding details that help us decide the meaning of what we’re looking at. In this version of the illusion, it’s the same object but its orientation is the context we need to know what we’re supposed to be looking at - a duck on the left, and a rabbit on the right.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/fa84b0f476753b5c8459d62bf737f6f9-Slide7.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The same thing can happen with language, where words or sentences can sometimes have ambiguous meanings. For example, is this sentence saying “I saw the man…” [pause] “...with the telescope”\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Or is it saying “I saw…” [pause] “... the man with the telescope”\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br />Image credit: ChatGPT Generated image Prompt: png white background, a woman looking through a telescope, in the style of animated illustrations, standing in a window frame, full body, text-based --style raw\n\t\t<br />\n\t\t<br />ChaptGPT Generated Image Prompt: png white background, a man standing next to a telescope, in the style of animated illustrations, standing in classroom, full body, text-based --style raw\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2384e608dcf7b0e80361d533e2e4c214-Slide8.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This can be a problem for language models when they try to generate responses - how do they know the intended meaning of sentences as they get more complex? This is what we’re going to investigate today.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How does a language model determine the meaning of words within a sentence?\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "96dd57b1-da43-43c9-91c2-eaf6b93142e8",
@@ -2994,14 +3120,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "gen-ai-foundations-L1-warmup_2025"
+          "genai-lesson1-warmup-lv1_2025"
         ],
         "progression": "Warm Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-foundations-L1-warmup_2025"
+          "genai-lesson1-warmup-lv1_2025"
         ],
         "lesson.key": "Introduction to Generative AI",
         "lesson_group.key": "lessonGroup-2",
@@ -3009,7 +3135,7 @@
         "activity_section.key": "1d2a8474-6418-4e2a-aaf6-febaaf76ad5d"
       },
       "level_keys": [
-        "gen-ai-foundations-L1-warmup_2025"
+        "genai-lesson1-warmup-lv1_2025"
       ]
     },
     {
@@ -3044,14 +3170,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "gen-ai-foundations-L2-warmup_2025"
+          "genai-lesson2-warmup-lv1_2025"
         ],
         "progression": "Warm Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-foundations-L2-warmup_2025"
+          "genai-lesson2-warmup-lv1_2025"
         ],
         "lesson.key": "Input & Training Data",
         "lesson_group.key": "lessonGroup-2",
@@ -3059,7 +3185,7 @@
         "activity_section.key": "4d5ff506-6642-4f52-b081-b7713f6e6c4b"
       },
       "level_keys": [
-        "gen-ai-foundations-L2-warmup_2025"
+        "genai-lesson2-warmup-lv1_2025"
       ]
     },
     {
@@ -3094,14 +3220,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "gen-ai-foundations-L3-warmup_2025"
+          "genai-lesson3-warmup-lv1_2025"
         ],
         "progression": "Warm Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-foundations-L3-warmup_2025"
+          "genai-lesson3-warmup-lv1_2025"
         ],
         "lesson.key": "Bias in the Machine",
         "lesson_group.key": "lessonGroup-2",
@@ -3109,7 +3235,7 @@
         "activity_section.key": "f498fcb6-0146-49ff-ac96-3eace73cd35f"
       },
       "level_keys": [
-        "gen-ai-foundations-L3-warmup_2025"
+        "genai-lesson3-warmup-lv1_2025"
       ]
     },
     {
@@ -3194,14 +3320,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "gen-ai-foundations-L6-warmup_2025"
+          "genai-lesson6-warmup-lv1_2025"
         ],
         "progression": "Warm Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-foundations-L6-warmup_2025"
+          "genai-lesson6-warmup-lv1_2025"
         ],
         "lesson.key": "Understanding Neural Networks",
         "lesson_group.key": "lessonGroup-2",
@@ -3209,7 +3335,7 @@
         "activity_section.key": "179f8e39-a509-4506-824d-8888c3790a3a"
       },
       "level_keys": [
-        "gen-ai-foundations-L6-warmup_2025"
+        "genai-lesson6-warmup-lv1_2025"
       ]
     },
     {
@@ -3244,14 +3370,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "gen-ai-foundations-L8-warmup_2025"
+          "genai-lesson8-warmup-v2_2025"
         ],
         "progression": "Warm Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-foundations-L8-warmup_2025"
+          "genai-lesson8-warmup-v2_2025"
         ],
         "lesson.key": "Attention Is All You Need",
         "lesson_group.key": "lessonGroup-2",
@@ -3259,7 +3385,7 @@
         "activity_section.key": "f4621e1e-229c-42ab-a059-037f0ef0574a"
       },
       "level_keys": [
-        "gen-ai-foundations-L8-warmup_2025"
+        "genai-lesson8-warmup-v2_2025"
       ]
     },
     {
@@ -3344,14 +3470,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "gen-ai-foundations-L10-warmup_2025"
+          "genai-lesson10-warmup-lv1_2025"
         ],
         "progression": "Warm Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-foundations-L10-warmup_2025"
+          "genai-lesson10-warmup-lv1_2025"
         ],
         "lesson.key": "Hallucinations and Fabrications",
         "lesson_group.key": "lessonGroup-2",
@@ -3359,7 +3485,7 @@
         "activity_section.key": "0f7faecc-20cb-481c-a578-373694398b93"
       },
       "level_keys": [
-        "gen-ai-foundations-L10-warmup_2025"
+        "genai-lesson10-warmup-lv1_2025"
       ]
     },
     {
@@ -3419,14 +3545,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "gen-ai-foundations-L5-warmup_2025"
+          "genai-lesson5-warmup-lv1_2025"
         ],
         "progression": "Warm Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-foundations-L5-warmup_2025"
+          "genai-lesson5-warmup-lv1_2025"
         ],
         "lesson.key": "Embeddings: How They're Created",
         "lesson_group.key": "lessonGroup-3",
@@ -3434,7 +3560,7 @@
         "activity_section.key": "0f9f8392-b7b4-40af-8694-3b8886462015"
       },
       "level_keys": [
-        "gen-ai-foundations-L5-warmup_2025"
+        "genai-lesson5-warmup-lv1_2025"
       ]
     },
     {
@@ -3469,14 +3595,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "gen-ai-foundations-L7-warmup_2025"
+          "genai-lesson7-warmup-lv2_2025"
         ],
         "progression": "Warm Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-foundations-L7-warmup_2025"
+          "genai-lesson7-warmup-lv2_2025"
         ],
         "lesson.key": "Neural Networks: How They're Trained",
         "lesson_group.key": "lessonGroup-3",
@@ -3484,7 +3610,32 @@
         "activity_section.key": "200aae2d-f3f5-4527-8339-2950213c97e1"
       },
       "level_keys": [
-        "gen-ai-foundations-L7-warmup_2025"
+        "genai-lesson7-warmup-lv2_2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "exploring_generative_ai_lesson1_2_level1"
+        ],
+        "progression": "AI Newsroom Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "exploring_generative_ai_lesson1_2_level1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
+      },
+      "level_keys": [
+        "exploring_generative_ai_lesson1_2_level1"
       ]
     }
   ],
@@ -3503,9 +3654,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-foundations-L1-warmup_2025",
+        "level.key": "genai-lesson1-warmup-lv1_2025",
         "script_level.level_keys": [
-          "gen-ai-foundations-L1-warmup_2025"
+          "genai-lesson1-warmup-lv1_2025"
         ],
         "lesson.key": "Introduction to Generative AI",
         "lesson_group.key": "lessonGroup-2",
@@ -3527,9 +3678,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-foundations-L2-warmup_2025",
+        "level.key": "genai-lesson2-warmup-lv1_2025",
         "script_level.level_keys": [
-          "gen-ai-foundations-L2-warmup_2025"
+          "genai-lesson2-warmup-lv1_2025"
         ],
         "lesson.key": "Input & Training Data",
         "lesson_group.key": "lessonGroup-2",
@@ -3551,9 +3702,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-foundations-L3-warmup_2025",
+        "level.key": "genai-lesson3-warmup-lv1_2025",
         "script_level.level_keys": [
-          "gen-ai-foundations-L3-warmup_2025"
+          "genai-lesson3-warmup-lv1_2025"
         ],
         "lesson.key": "Bias in the Machine",
         "lesson_group.key": "lessonGroup-2",
@@ -3599,9 +3750,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-foundations-L6-warmup_2025",
+        "level.key": "genai-lesson6-warmup-lv1_2025",
         "script_level.level_keys": [
-          "gen-ai-foundations-L6-warmup_2025"
+          "genai-lesson6-warmup-lv1_2025"
         ],
         "lesson.key": "Understanding Neural Networks",
         "lesson_group.key": "lessonGroup-2",
@@ -3623,9 +3774,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-foundations-L8-warmup_2025",
+        "level.key": "genai-lesson8-warmup-v2_2025",
         "script_level.level_keys": [
-          "gen-ai-foundations-L8-warmup_2025"
+          "genai-lesson8-warmup-v2_2025"
         ],
         "lesson.key": "Attention Is All You Need",
         "lesson_group.key": "lessonGroup-2",
@@ -3671,9 +3822,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-foundations-L10-warmup_2025",
+        "level.key": "genai-lesson10-warmup-lv1_2025",
         "script_level.level_keys": [
-          "gen-ai-foundations-L10-warmup_2025"
+          "genai-lesson10-warmup-lv1_2025"
         ],
         "lesson.key": "Hallucinations and Fabrications",
         "lesson_group.key": "lessonGroup-2",
@@ -3707,9 +3858,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-foundations-L5-warmup_2025",
+        "level.key": "genai-lesson5-warmup-lv1_2025",
         "script_level.level_keys": [
-          "gen-ai-foundations-L5-warmup_2025"
+          "genai-lesson5-warmup-lv1_2025"
         ],
         "lesson.key": "Embeddings: How They're Created",
         "lesson_group.key": "lessonGroup-3",
@@ -3731,14 +3882,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-foundations-L7-warmup_2025",
+        "level.key": "genai-lesson7-warmup-lv2_2025",
         "script_level.level_keys": [
-          "gen-ai-foundations-L7-warmup_2025"
+          "genai-lesson7-warmup-lv2_2025"
         ],
         "lesson.key": "Neural Networks: How They're Trained",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "200aae2d-f3f5-4527-8339-2950213c97e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "exploring_generative_ai_lesson1_2_level1",
+        "script_level.level_keys": [
+          "exploring_generative_ai_lesson1_2_level1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
       }
     }
   ],
@@ -3939,6 +4102,30 @@
       },
       "seeding_key": {
         "resource.key": "ai_auditors"
+      }
+    },
+    {
+      "name": "AI Newsroom Playground",
+      "url": "https://docs.google.com/document/d/1IvCgqCCvvrAeek7f-NHz2-8ng-NpZaiPHQ2wO7h_tlk",
+      "key": "ai_newsroom_playground",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "ai_newsroom_playground"
+      }
+    },
+    {
+      "name": "AI Newsroom Playground",
+      "url": "https://docs.google.com/document/d/1qRZGlkO7EJZakLC08-WTPoVsn4yTwhU-hvBeHzzxX10",
+      "key": "ai_newsroom_playground_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_newsroom_playground_1"
       }
     },
     {
@@ -4237,6 +4424,18 @@
       },
       "seeding_key": {
         "resource.key": "how_embeddings_are_made_version_b_"
+      }
+    },
+    {
+      "name": "How Smart Is It, Really?",
+      "url": "https://docs.google.com/presentation/d/1GQ6C1FXlocrS3rFuESLQNA1MtdNhi2nlpwJzdKTTICw/",
+      "key": "how_smart_is_it_really_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "how_smart_is_it_really_"
       }
     },
     {
@@ -4938,6 +5137,24 @@
         "lesson.key": "Understanding Neural Networks",
         "resource.key": "understanding_neural_networks"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "ai_newsroom_playground"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "ai_newsroom_playground_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "how_smart_is_it_really_"
+      }
     }
   ],
   "scripts_resources": [
@@ -5166,6 +5383,26 @@
       }
     },
     {
+      "key": "1155018b-cb2a-4684-b240-9d03fbd344fc",
+      "properties": {
+        "description": "Interact with a chatbot to evaluate how it responds to different types of prompts."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "1155018b-cb2a-4684-b240-9d03fbd344fc"
+      }
+    },
+    {
+      "key": "1b0de192-d507-4575-82c3-5e6197db9eeb",
+      "properties": {
+        "description": "Reflect on how AI can impact a real-world industry."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "1b0de192-d507-4575-82c3-5e6197db9eeb"
+      }
+    },
+    {
       "key": "23b667de-e76c-4e36-98ce-5cbb32933e49",
       "properties": {
         "description": "Use trial-and-error and past data to increase their accuracy in a supervised learning process"
@@ -5233,6 +5470,16 @@
       "seeding_key": {
         "lesson.key": "Input & Training Data",
         "objective.key": "65faaae8-324f-430c-be9f-1f6b6d35a2a2"
+      }
+    },
+    {
+      "key": "79f4ef09-f6d3-4e20-8057-73f561c9d5b5",
+      "properties": {
+        "description": "Identify strengths and limitations in how the chatbot generates responses."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "79f4ef09-f6d3-4e20-8057-73f561c9d5b5"
       }
     },
     {

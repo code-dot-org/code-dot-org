@@ -1,6 +1,8 @@
 name 'programming-fundamentals-lesson1-level2c_2025'
 title 'Careers and Emerging Technologies'
-description 'description here'
+display_name 'Ideas-Oriented Careers'
+bubble_choice_description 'Explore ideas-oriented careers based on your interests and skills.'
+thumbnail_url 'https://images.code.org/d92eb2e909879bd991385cbc19657bcd-brain.png'
 
 markdown <<MARKDOWN
 # Ideas-Oriented Careers
