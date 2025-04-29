@@ -742,7 +742,7 @@ class ScriptLevel < ApplicationRecord
         sublevel_position = oldest_active_level.sublevel_position(level)
         return [] unless sublevel_position
 
-        path = build_script_level_path(self, {sublevel_position: sublevel_position}, unit_group_unit: unit_group_unit)
+        path = build_script_level_path(self, sublevel_position: sublevel_position, unit_group_unit: unit_group_unit)
         level_example_links = [build_exemplar_url(path)]
       else
         # Otherwise, exemplar link should look like
