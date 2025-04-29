@@ -4,6 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
@@ -130,7 +131,7 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
-          <DownloadProgressCsv />
+          {DCDO.get('show-download-progress-csv') && <DownloadProgressCsv />}
           <MoreOptionsDropdown />
         </Heading6>
       </div>
