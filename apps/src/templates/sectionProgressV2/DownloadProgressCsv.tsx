@@ -11,9 +11,7 @@ import i18n from '@cdo/locale';
 
 import styles from './progress-table-v2.module.scss';
 
-interface DownloadProgressCsvProps {}
-
-export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = () => {
+export const DownloadProgressCsv: React.FC = () => {
   const unitId = useSelector(
     (state: {unitSelection: {scriptId: number}}) => state.unitSelection.scriptId
   );

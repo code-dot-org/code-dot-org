@@ -131,7 +131,9 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
-          {DCDO.get('show-download-progress-csv') && <DownloadProgressCsv />}
+          {DCDO.get('show-download-progress-csv', false) && (
+            <DownloadProgressCsv />
+          )}
           <MoreOptionsDropdown />
         </Heading6>
       </div>
