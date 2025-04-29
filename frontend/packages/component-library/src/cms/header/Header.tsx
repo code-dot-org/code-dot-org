@@ -79,7 +79,9 @@ const fetchUserSignedInStatus = async (studioBaseUrl: string) => {
     );
 
     if (!signedInStatus.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error(
+        `Received HTTP Code ${signedInStatus.status} while fetching signed in status`,
+      );
     }
 
     return await signedInStatus.json();
