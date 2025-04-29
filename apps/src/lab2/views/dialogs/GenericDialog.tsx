@@ -148,8 +148,13 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
         ) : title ? (
           <Heading3>{title}</Heading3>
         ) : null}
-
-        {bodyComponent || <BodyTwoText>{message}</BodyTwoText>}
+        <div className={moduleStyles.body}>
+          {bodyComponent || (
+            <BodyTwoText className={moduleStyles.bodyText}>
+              {message}
+            </BodyTwoText>
+          )}
+        </div>
         <div className={moduleStyles.buttonContainer}>
           <div className={moduleStyles.outerButtonContainer}>
             {buttons?.cancel ? (
