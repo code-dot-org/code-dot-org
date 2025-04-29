@@ -83,10 +83,6 @@ export function getUpdatedSourceAndDeleteFiles(
   const workingDir = (pyodide.FS as any).cwd();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const directoryData = (pyodide.FS.lookupPath(workingDir, {}) as any).node;
-  console.log({
-    directoryData,
-    lookupPath: pyodide.FS.lookupPath(workingDir, {}),
-  });
   const directoryContents = Object.values(
     directoryData.contents
   ) as PyodidePathContent[];
