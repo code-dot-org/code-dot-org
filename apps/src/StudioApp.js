@@ -543,7 +543,6 @@ StudioApp.prototype.init = function (config) {
     // Hook the blockly environment into the localization engine
     if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
       Localization.on('change', info => {
-        console.log('Blockly: changing locale to', info.code);
         Blockly.updateLocale(info.rtl);
       });
     }

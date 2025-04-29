@@ -74,7 +74,6 @@ class HeaderMiddle extends React.Component {
   setDesiredWidth(componentName, width) {
     const stateComponentName = componentName + 'DesiredWidth';
 
-    console.log('setting desired width', componentName, width);
     if (Math.ceil(width) !== this.state[stateComponentName]) {
       this.setState({[stateComponentName]: Math.ceil(width)});
     }
@@ -166,8 +165,6 @@ class HeaderMiddle extends React.Component {
       remainingWidth,
       scriptNameDesiredWidth + scriptNameExtraWidth
     );
-    console.log('scriptNameDesiredWidth', scriptNameDesiredWidth);
-    console.log('scriptNameWidth', scriptNameWidth);
 
     remainingWidth = remainingWidth - scriptNameWidth;
 

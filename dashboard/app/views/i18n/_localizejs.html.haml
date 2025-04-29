@@ -16,7 +16,6 @@
     const projectKeys = Object.entries(prefixes).filter(([projectId, prefixes]) => prefixes.filter((prefix) => window.location.pathname.startsWith(prefix)).length > 0);
 
     if (projectKeys.length > 0 && inExperiment) {
-      console.log(projectKeys[0][0]);
       !function(a){if(!a.Localize){a.Localize={};for(var e=["translate","untranslate","phrase","initialize","translatePage","setLanguage","getLanguage","getSourceLanguage","detectLanguage","getAvailableLanguages","setWidgetLanguages","hideLanguagesInWidget","untranslatePage","bootstrap","prefetch","on","off","hideWidget","showWidget"],t=0;t<e.length;t++)a.Localize[e[t]]=function(){}}}(window);
 
       Localize.initialize({
@@ -51,7 +50,6 @@
         const handleChange = (event) => {
           event.stopPropagation();
           event.preventDefault();
-          console.log("handleChange:", event.target, event.target.selectedOptions[0]);
           Localize.cdoSetLanguage(event.target.selectedOptions[0].value);
         };
 
@@ -59,7 +57,6 @@
         document.addEventListener('DOMContentLoaded', () => {
           const localeSelect = document.querySelector("#locale") || document.querySelector("select[name='locale']");
           if (localeSelect) {
-            console.log("found locale selector", localeSelect);
             // Remove all options and replace them with the LocalizeJS options we have
             Localize.getAvailableLanguages((err, data) => {
               const codes = data.map((entry) => entry.code);
@@ -74,8 +71,6 @@
             localeSelect.removeAttribute('onchange');
             localeSelect.addEventListener('change', handleChange);
           }
-          console.log(cdoLanguage);
-          console.log("looking for select");
           ensureSelector(cdoLanguage);
         });
 
@@ -88,7 +83,6 @@
       Localize.setLanguage = Localize.cdoSetLanguage;
 
       // Ensure we are setting the correct direction on our <html> tag
-      console.log("localizejs: current language:", Localize.getLanguage());
       Localize.cdoSetLanguage(Localize.getLanguage());
 
       // Forcibly hide the widget for good measure

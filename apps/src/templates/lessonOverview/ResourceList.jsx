@@ -40,7 +40,6 @@ export default class ResourceList extends Component {
   };
 
   localizedURL = resource => {
-    console.log(Localization);
     return Localization.translate(resource.url);
   };
 
