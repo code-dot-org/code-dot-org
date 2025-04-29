@@ -1,6 +1,5 @@
 import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
-
-import {PythonValidationResult} from '../types';
+import {PythonValidationResult} from '@cdo/apps/pythonlab/types';
 
 export default class PythonValidationTracker {
   private validationResults: ValidationResult[] | undefined = undefined;

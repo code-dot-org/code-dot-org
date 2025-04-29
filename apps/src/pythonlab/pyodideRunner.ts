@@ -126,7 +126,7 @@ export async function runAllTests(
     );
     if (result?.message) {
       // Get validation test results
-      // Message is an array of objects {name: string, result: string}
+      // After parsing, message is an array of objects {name: string, result: string}
       // where "name" is the name of the test and "result" is one of
       // "PASS/FAIL/ERROR/SKIP/EXPECTED_FAILURE/UNEXPECTED_SUCCESS"
       // See this PR for details: https://github.com/code-dot-org/pythonlab-packages/pull/5
