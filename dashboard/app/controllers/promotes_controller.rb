@@ -8,7 +8,17 @@ class PromotesController < ApplicationController
 
   # GET /promotes/map(/:us_state)
   def map
-    response.headers['Content-Security-Policy'] = 'frame-ancestors http://localhost:* https://*code.org'
+    response.headers['Content-Security-Policy'] = <<~CSP.squish
+      frame-ancestors 'self'
+      http://localhost:*
+      https://code.org
+      https://*.code.org
+      https://*.cdn-code.org
+      https://*.dev-code.org
+      https://*.marketing-sites.dev-code.org
+      https://*.marketing.dev-code.org
+      https://*.contentful.com
+    CSP
 
     # rubocop:disable CustomCops/PegasusDbUsage
     @hs_access_count = PEGASUS_DB[:cdo_state_promote].where(require_hs_s: 'Yes').count
