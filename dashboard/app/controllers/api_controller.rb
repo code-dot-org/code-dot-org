@@ -612,6 +612,7 @@ class ApiController < ApplicationController
   def section_text_responses
     section = load_section
     script = load_script(section)
+    unit_group_unit = script.unit_group_units.find {|ugu| ugu.unit_group.id == section.course_id}
 
     text_response_levels = script.text_response_levels
 
@@ -628,7 +629,7 @@ class ApiController < ApplicationController
           puzzle: level_hash[:script_level].position,
           question: last_attempt.level.properties['title'],
           response: response,
-          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
+          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id, unit_group_unit: unit_group_unit)
         }
       end
     end.flatten

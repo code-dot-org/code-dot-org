@@ -159,7 +159,7 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    canonical_path = build_script_level_path(@script_level, @extra_params, unit_group_unit: @unit_group_unit)
+    canonical_path = build_script_level_path(@script_level, unit_group_unit: @unit_group_unit, **@extra_params)
     if request.path != canonical_path && params[:view] != 'summary'
       canonical_path << "?#{request.query_string}" unless request.query_string.empty?
       redirect_to canonical_path, status: :moved_permanently

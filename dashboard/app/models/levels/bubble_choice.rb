@@ -175,11 +175,11 @@ class BubbleChoice < DSLDefined
       level_info[:display_name] = level.display_name || level.name
 
       level_info[:url] = script_level ?
-        build_script_level_url(script_level, {sublevel_position: index + 1}, unit_group_unit: unit_group_unit) :
+        build_script_level_url(script_level, sublevel_position: index + 1, unit_group_unit: unit_group_unit) :
         level_url(level.id)
 
       level_info[:path] = script_level ?
-        build_script_level_path(script_level, {sublevel_position: index + 1}, unit_group_unit: unit_group_unit) :
+        build_script_level_path(script_level, sublevel_position: index + 1, unit_group_unit: unit_group_unit) :
         level_path(level.id)
 
       if user_id
