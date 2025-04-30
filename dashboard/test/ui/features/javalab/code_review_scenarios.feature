@@ -12,7 +12,7 @@ Feature: Code review V2
 
     # Sign in as a student in the code review group
     Given I sign in as "student_0"
-    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/2?noautoplay=true"
 
     # Create a commit
     And I wait to see "#javalab-editor-save"
@@ -34,7 +34,7 @@ Feature: Code review V2
 
     # Log in as another student and review their peer
     Given I sign in as "student_1"
-    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/2?noautoplay=true"
     And I load the review tab
     And I load the code review for peer number 1 in the list
     Then I see no difference for "student code reviewing peer" using stitch mode "none"
@@ -42,7 +42,7 @@ Feature: Code review V2
 
     # Log in as the teacher and look at the student's review
     Given I sign in as "Code Review Teacher"
-    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/2?noautoplay=true"
     And I load student number 1's project from the blue teacher panel
     And I load the review tab
     Then I see no difference for "teacher code reviewing student" using stitch mode "none"
@@ -50,7 +50,7 @@ Feature: Code review V2
 
     # Log in as code review owner and close the code review
     Given I sign in as "student_0"
-    And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
+    And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/2?noautoplay=true"
     And I load the review tab
     Then I see no difference for "student viewing own code review" using stitch mode "none"
     And I press ".uitest-close-code-review" using jQuery
