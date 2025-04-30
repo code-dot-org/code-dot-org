@@ -1,6 +1,8 @@
 // Creates a definition for the Section component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
+import {dividerColorDefinition} from '@/components/common/definitions';
+
 export const SectionContentfulComponentDefinition: ComponentDefinition = {
   id: 'section',
   name: 'Section (Use me!)',
@@ -60,6 +62,14 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
+    hasDivider: {
+      displayName: 'Has bottom divider',
+      type: 'Boolean',
+      group: 'style',
+      description: 'Adds a bottom divider to the section.',
+      defaultValue: false,
+    },
+    dividerColor: dividerColorDefinition,
     id: {
       displayName: 'Section ID',
       type: 'Text',

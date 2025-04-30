@@ -36,3 +36,16 @@ export const removeMarginBottomDefinition: ComponentDefinitionVariable = {
   defaultValue: false,
   group: 'style',
 };
+
+export const dividerColorDefinition: ComponentDefinitionVariable = {
+  displayName: 'Divider color',
+  type: 'Text',
+  defaultValue: 'primary',
+  group: 'style',
+  validations: {
+    in: [
+      {value: 'primary', displayName: 'Primary'},
+      {value: 'strong', displayName: 'Strong'},
+    ],
+  },
+};

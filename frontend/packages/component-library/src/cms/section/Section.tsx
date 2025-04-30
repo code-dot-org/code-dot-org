@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
 import {SpacingNoneToS, SpacingNoneToL} from '@/common/types';
+import Divider, {DividerProps} from '@/divider';
 
 import moduleStyles from './section.module.scss';
 
@@ -35,6 +36,10 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
   padding?: Exclude<SpacingNoneToL, SpacingNoneToS>;
   /** Section theme */
   theme?: 'Light' | 'Dark';
+  /** Has bottom divider */
+  hasDivider?: boolean;
+  /** Divider color */
+  dividerColor?: DividerProps['color'];
   /** Section ID */
   id?: string;
   /** Section className */
@@ -62,6 +67,8 @@ const Section: React.FC<SectionProps> = ({
   backgroundImageUrl,
   padding = 'l',
   theme = 'Light',
+  hasDivider,
+  dividerColor,
   id,
   className,
   children,
@@ -82,6 +89,7 @@ const Section: React.FC<SectionProps> = ({
         moduleStyles.section,
         moduleStyles[`section-background-${background}`],
         moduleStyles[`section-padding-${padding}`],
+        hasDivider && moduleStyles.hasDivider,
         className,
       )}
       style={{
@@ -98,6 +106,7 @@ const Section: React.FC<SectionProps> = ({
       {...HTMLAttributes}
     >
       <div className={classNames(moduleStyles.container)}>{children}</div>
+      {hasDivider && <Divider color={dividerColor} />}
     </section>
   );
 };
