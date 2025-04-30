@@ -28,7 +28,6 @@ import {TeacherHomepage} from '@cdo/apps/templates/studioHomepages/teacherHomepa
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import teacherSections, {
-  setAuthProviders,
   selectSection,
   setRosterProvider,
   setRosterProviderName,
@@ -49,7 +48,6 @@ const {
   hasSeenStandardsReportInfo,
   canViewStudentAIChatMessages,
   sectionOrder,
-  providers,
 } = scriptData;
 
 $(document).ready(function () {
@@ -78,7 +76,6 @@ $(document).ready(function () {
   );
   store.dispatch(setSections(sections, false, sectionOrder));
   store.dispatch(setLocaleCode(localeCode));
-  store.dispatch(setAuthProviders(providers));
 
   const showAITutorTab = canViewStudentAIChatMessages;
 
