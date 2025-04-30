@@ -15,19 +15,19 @@
       %p.info
         Computer science drives innovation throughout the US economy, but it still isn't a core part of our education system.
 
-      %strong= hs_access_count
+      %strong= @hs_access_count
       states have adopted a policy to give all high school students access to CS courses (and of those, only
-      = k12_access_count
+      = @k12_access_count
       states give all K-12 students access)
 
-      %strong= format_integer_with_commas(jobs_nationwide)
+      %strong= number_with_delimiter(@jobs_nationwide)
       Open computing jobs nationwide
 
       %strong=number_to_percentage(51, precision: 0)
       of public high schools offer a CS class
 
       %strong
-        = format_integer_with_commas(grads_nationwide)
+        = number_with_delimiter(@grads_nationwide)
       Computer science students graduated into the workforce last year
 
       .summary-button

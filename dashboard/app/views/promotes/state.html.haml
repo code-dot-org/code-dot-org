@@ -9,14 +9,14 @@
     %p.fact{style: "margin-bottom: 0px;"}
       -unless @us_state_data[:cs_jobs_i] == 0
         %strong.figure
-          =format_integer_with_commas(@us_state_data[:cs_jobs_i])
+          = number_with_delimiter(@us_state_data[:cs_jobs_i])
         .info
           Open computing jobs
     -unless @us_state_data[:growth_vs_average_f] < 0.0
       %p.fact.subfact{style: "margin-bottom: 0px;"}
         (<b>#{@us_state_data[:growth_vs_average_f]}x</b> the state average demand rate)
     %p.fact.subfact
-      with an average salary of <b>$#{format_integer_with_commas(@us_state_data[:avg_sal_computing_i])}</b>
+      with an average salary of <b>$#{number_with_delimiter(@us_state_data[:avg_sal_computing_i])}</b>
     %p.fact
       %strong.figure
         =number_to_percentage(@us_state_data[:count_schools_teach_cs_i], precision: 0)
@@ -25,7 +25,7 @@
     %p.fact
       -unless @us_state_data[:cs_graduates] == 0
         %strong.figure
-          =format_integer_with_commas(@us_state_data[:cs_graduates_i])
+          = number_with_delimiter(@us_state_data[:cs_graduates_i])
         .info
           Computer science graduates
 
@@ -99,7 +99,7 @@
         .fact
           %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
           &nbsp;
-          = "#{format_integer_with_commas(@us_state_data[:ap_cs_exams_i])} AP CS exams were taken last year"
+          = "#{number_with_delimiter(@us_state_data[:ap_cs_exams_i])} AP CS exams were taken last year"
         .fact
           %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
           &nbsp;
