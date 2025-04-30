@@ -5,12 +5,7 @@ import DSCOSection, {
 // Import the background image used in the pattern backgrounds on Contentful
 import bgPatternImage from '@public/images/bg-pattern-lines.png';
 
-const Section: React.FC<SectionProps> = ({
-  background,
-  hasDivider,
-  dividerColor,
-  ...props
-}) => (
+const Section: React.FC<SectionProps> = ({background, ...props}) => (
   <DSCOSection
     {...props}
     background={background}
@@ -19,8 +14,6 @@ const Section: React.FC<SectionProps> = ({
         ? bgPatternImage.src
         : undefined
     }
-    hasDivider={hasDivider}
-    dividerColor={dividerColor}
   />
 );
 

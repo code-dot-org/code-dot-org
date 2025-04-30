@@ -1,8 +1,6 @@
 // Creates a definition for the Divider component to be used in Contentful Studio
 import {ComponentDefinition} from '@contentful/experiences-sdk-react';
 
-import {dividerColorDefinition} from '../common/definitions';
-
 export const DividerContentfulComponentDefinition: ComponentDefinition = {
   id: 'divider',
   name: 'Divider',
@@ -18,7 +16,18 @@ export const DividerContentfulComponentDefinition: ComponentDefinition = {
       'https://images.ctfassets.net/90t6bu6vlf76/3gRz7bA5miAVaFwJqM6w18/075ca1479e4c79c3969e3cb4a87a9992/component_divider_tooltip.png',
   },
   variables: {
-    color: dividerColorDefinition,
+    color: {
+      displayName: 'Color',
+      type: 'Text',
+      defaultValue: 'primary',
+      group: 'style',
+      validations: {
+        in: [
+          {value: 'primary', displayName: 'Primary'},
+          {value: 'strong', displayName: 'Strong'},
+        ],
+      },
+    },
     margin: {
       displayName: 'Margin',
       type: 'Text',

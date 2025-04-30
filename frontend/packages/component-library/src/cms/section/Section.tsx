@@ -27,6 +27,16 @@ export const sectionBackground: {
   patternPrimary: 'patternPrimary',
 };
 
+export type SectionDivider = 'none' | DividerProps['color'];
+
+export const sectionDivider: {
+  [key in Exclude<SectionDivider, undefined>]: SectionDivider;
+} = {
+  none: 'none',
+  primary: 'primary',
+  strong: 'strong',
+};
+
 export interface SectionProps extends HTMLAttributes<HTMLElement> {
   /** Background color */
   background?: SectionBackground;
@@ -36,10 +46,8 @@ export interface SectionProps extends HTMLAttributes<HTMLElement> {
   padding?: Exclude<SpacingNoneToL, SpacingNoneToS>;
   /** Section theme */
   theme?: 'Light' | 'Dark';
-  /** Has bottom divider */
-  hasDivider?: boolean;
-  /** Divider color */
-  dividerColor?: DividerProps['color'];
+  /** Has divider */
+  divider?: SectionDivider;
   /** Section ID */
   id?: string;
   /** Section className */
@@ -67,8 +75,7 @@ const Section: React.FC<SectionProps> = ({
   backgroundImageUrl,
   padding = 'l',
   theme = 'Light',
-  hasDivider,
-  dividerColor,
+  divider = sectionDivider.none,
   id,
   className,
   children,
@@ -89,7 +96,7 @@ const Section: React.FC<SectionProps> = ({
         moduleStyles.section,
         moduleStyles[`section-background-${background}`],
         moduleStyles[`section-padding-${padding}`],
-        hasDivider && moduleStyles.hasDivider,
+        divider && moduleStyles.hasDivider,
         className,
       )}
       style={{
@@ -106,7 +113,7 @@ const Section: React.FC<SectionProps> = ({
       {...HTMLAttributes}
     >
       <div className={classNames(moduleStyles.container)}>{children}</div>
-      {hasDivider && <Divider color={dividerColor} />}
+      {divider !== 'none' && <Divider color={divider} />}
     </section>
   );
 };

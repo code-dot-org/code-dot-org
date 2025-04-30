@@ -107,7 +107,7 @@ export const SectionWithBackgroundPattern: Story = {
 
 export const SectionWithBottomDivider: Story = {
   args: {
-    hasDivider: true,
+    divider: 'primary',
     padding: 'l',
     children: (
       <>
@@ -119,7 +119,7 @@ export const SectionWithBottomDivider: Story = {
   parameters: {
     docs: {
       description: {
-        story: `The \`hasDivider\` prop can be set if you want to add a divider to the bottom of the section. It will remove the bottom padding of the section and add a divider instead.`,
+        story: `The \`divider\` prop can be set if you want to add a divider to the bottom of the section. It will remove the bottom padding of the section and add a divider instead.`,
       },
     },
   },
