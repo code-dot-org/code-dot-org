@@ -89,7 +89,8 @@
       align-items: center;
       position: relative;
 
-      &:focus-visible {
+      &:focus-visible,
+      &.active {
         @include focus-styles;
         outline-offset: -2px;
       }
@@ -108,7 +109,8 @@
       }
 
       &:hover,
-      &.hover {
+      &.hover,
+      &.active {
         background-color: var(--background-neutral-tertiary);
       }
     }

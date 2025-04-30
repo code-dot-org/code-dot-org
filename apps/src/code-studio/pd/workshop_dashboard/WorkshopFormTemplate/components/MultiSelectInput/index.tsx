@@ -46,6 +46,7 @@ export const MultiSelectInput: React.FC<{
   const [menuOpen, setMenuOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
   const [focusedOptionId, setFocusedOptionId] = useState<OptionId | null>(null);
+  const [activeIndex, setActiveIndex] = useState(-1);
   const [hoveredOptionId, setHoveredOptionId] = useState<OptionId | null>(null);
 
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -71,19 +72,19 @@ export const MultiSelectInput: React.FC<{
   // focusedOptionId is set when navigating the option menu
   // via keyboard interaction
   useEffect(() => {
-    if (focusedOptionId !== null && menuOpen) {
-      const activeElement = optionRefs.current.get(focusedOptionId ?? '');
+    if (activeIndex >= 0 && menuOpen) {
+      const activeElement = optionRefs.current.get(activeIndex ?? '');
       if (activeElement instanceof HTMLDivElement) {
         activeElement.scrollIntoView({behavior: 'smooth', block: 'nearest'});
-        activeElement.focus();
+        // activeElement.focus();
       }
     }
-  }, [focusedOptionId, menuOpen]);
+  }, [activeIndex, menuOpen]);
 
   // clear the focusedOptionId when the option menu is closed
   useEffect(() => {
     if (!menuOpen) {
-      setFocusedOptionId(null);
+      setActiveIndex(-1);
     }
   }, [menuOpen]);
 
@@ -136,23 +137,37 @@ export const MultiSelectInput: React.FC<{
   const handleInputKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     switch (e.key) {
       case 'Enter':
-        if (menuOpen && searchText && filteredOptions.length > 0) {
+      case 'Space':
+        if (
+          e.key === 'Enter' &&
+          menuOpen &&
+          searchText &&
+          filteredOptions.length > 0 &&
+          activeIndex === -1
+        ) {
           const option = filteredOptions[0];
           handleToggleOption(option.id);
           setSearchText('');
         }
+        if (menuOpen && activeIndex >= 0) {
+          const option = filteredOptions[activeIndex];
+          handleToggleOption(option.id);
+        }
         break;
       case 'ArrowDown':
-        e.preventDefault();
+        console.log('IN ARROW DOWN');
+        // e.preventDefault();
         setMenuOpen(true);
-        setFocusedOptionId(filteredOptions[0]?.id ?? null);
+        setActiveIndex(prev => Math.min(prev + 1, filteredOptions.length - 1));
+        // setFocusedOptionId(filteredOptions[0]?.id ?? null);
         break;
       case 'ArrowUp':
-        e.preventDefault();
+        // e.preventDefault();
         setMenuOpen(true);
-        setFocusedOptionId(
-          filteredOptions[filteredOptions.length - 1]?.id ?? null
-        );
+        setActiveIndex(prev => Math.max(prev - 1, 0));
+        // setFocusedOptionId(
+        //   filteredOptions[filteredOptions.length - 1]?.id ?? null
+        // );
         break;
       case 'Tab':
         if (!anyOptionsSelected) {
@@ -173,32 +188,32 @@ export const MultiSelectInput: React.FC<{
   const handleMenuKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
     if (!filteredOptions.length) return;
     switch (e.key) {
-      case 'ArrowDown':
-        e.preventDefault();
-        setFocusedOptionId(prev =>
-          prev === null
-            ? filteredOptions[0]?.id ?? null
-            : filteredOptions[
-                Math.min(
-                  filteredOptions.findIndex(option => option.id === prev) + 1,
-                  filteredOptions.length - 1
-                )
-              ]?.id ?? null
-        );
-        break;
-      case 'ArrowUp':
-        e.preventDefault();
-        setFocusedOptionId(prev =>
-          prev === null
-            ? filteredOptions[filteredOptions.length - 1]?.id ?? null
-            : filteredOptions[
-                Math.max(
-                  filteredOptions.findIndex(option => option.id === prev) - 1,
-                  0
-                )
-              ]?.id ?? null
-        );
-        break;
+      // case 'ArrowDown':
+      //   e.preventDefault();
+      //   setFocusedOptionId(prev =>
+      //     prev === null
+      //       ? filteredOptions[0]?.id ?? null
+      //       : filteredOptions[
+      //           Math.min(
+      //             filteredOptions.findIndex(option => option.id === prev) + 1,
+      //             filteredOptions.length - 1
+      //           )
+      //         ]?.id ?? null
+      //   );
+      //   break;
+      // case 'ArrowUp':
+      //   e.preventDefault();
+      //   setFocusedOptionId(prev =>
+      //     prev === null
+      //       ? filteredOptions[filteredOptions.length - 1]?.id ?? null
+      //       : filteredOptions[
+      //           Math.max(
+      //             filteredOptions.findIndex(option => option.id === prev) - 1,
+      //             0
+      //           )
+      //         ]?.id ?? null
+      //   );
+      //   break;
       // intentional fallthrough case
       case 'Escape':
       case 'Tab':
@@ -220,6 +235,7 @@ export const MultiSelectInput: React.FC<{
   const closeMenu = (options?: {skipFocus?: boolean}) => {
     setMenuOpen(false);
     setSearchText('');
+    setActiveIndex(-1);
     setFocusedOptionId(null);
     if (!options?.skipFocus) {
       inputRef.current?.focus();
@@ -246,10 +262,10 @@ export const MultiSelectInput: React.FC<{
     [selectedOptions]
   );
 
-  const activeDescendant = useMemo(
-    () => (focusedOptionId ? `${id}-option-${focusedOptionId}` : undefined),
-    [focusedOptionId, id]
-  );
+  // const activeDescendant = useMemo(
+  //   () => (focusedOptionId ? `${id}-option-${focusedOptionId}` : undefined),
+  //   [focusedOptionId, id]
+  // );
 
   return (
     <div ref={wrapperRef}>
@@ -336,7 +352,9 @@ export const MultiSelectInput: React.FC<{
               id={`${id}-listbox`}
               role="listbox"
               aria-multiselectable
-              aria-activedescendant={activeDescendant}
+              aria-activedescendant={
+                activeIndex >= 0 ? `${id}-item-${activeIndex}` : undefined
+              }
               aria-labelledby={`${id}-label`}
               tabIndex={-1}
               onKeyDown={handleMenuKeyDown}
@@ -346,7 +364,7 @@ export const MultiSelectInput: React.FC<{
                   const selected = isOptionSelected(option.id);
                   const optionFocused = isOptionFocused(option.id);
                   const optionHovered = isOptionHovered(option.id);
-                  const optionId = `${id}-option-${option.id}`;
+                  const optionId = `${id}-option-${i}`;
 
                   return (
                     <div
@@ -354,6 +372,7 @@ export const MultiSelectInput: React.FC<{
                       id={optionId}
                       className={classNames(styles.option, {
                         [styles.hover]: i === 0 && searchText.length,
+                        [styles.active]: activeIndex === i,
                       })}
                       onClick={() => handleToggleOption(option.id)}
                       onKeyDown={e => handleOptionKeyDown(e, option.id)}
@@ -364,8 +383,8 @@ export const MultiSelectInput: React.FC<{
                       tabIndex={-1}
                       ref={el =>
                         el
-                          ? optionRefs.current.set(option.id, el)
-                          : optionRefs.current.delete(option.id)
+                          ? optionRefs.current.set(i, el)
+                          : optionRefs.current.delete(i)
                       }
                     >
                       <div className={styles.optionLabelText}>
