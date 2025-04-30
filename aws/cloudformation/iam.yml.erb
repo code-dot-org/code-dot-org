@@ -836,20 +836,25 @@ roles.each do |name, config| %>
     Properties: 
       AWSServiceName: logger.cloudfront.amazonaws.com
 
-  # GitHub Deployer Resources for the marketing application
-  GithubDeployerUser:
+  # ------------------------------------------------------------
+  # Create one AWS IAM User for each type of marketing sites environment that GitHub Actions will create, with
+  # permissions needed to create/update/delete a marketing sites CloudFormation Stack.
+  # ------------------------------------------------------------
+  <%
+    %w(development test production).each do |environment_type|
+  %>
+  GithubUser<%=environment_type%>:
     Type: AWS::IAM::User
     Properties:
-      UserName: !Sub "marketing-${MarketingApplicationStackName}-github-deployer"
+      UserName: "github-actions-marketing-sites-<%=environment_type%>"
       PermissionsBoundary: !Ref DevPermissions
-
-  GithubDeployerUserPolicy:
+  GithubPolicy<%=environment_type%>:
     Type: 'AWS::IAM::Policy'
     Version: '2012-10-17'
     Properties:
-      PolicyName: GithubDeployerUserIamUserPolicy
+      PolicyName: GithubPolicy<%=environment_type%>
       Users:
-        - Ref: GithubDeployerUser
+        - !Ref GithubUser<%=environment_type%>
       PolicyDocument:
         Statement:
           - Effect: Allow
@@ -860,23 +865,24 @@ roles.each do |name, config| %>
               - 'cloudformation:DescribeChangeSet'
               - 'cloudformation:DeleteChangeSet'
               - 'cloudformation:ExecuteChangeSet'
-            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${MarketingApplicationStackName}/*"
+            # The Stack Name must match this naming convention. Examples:
+            # marketing-sites-production-code-org
+            # marketing-sites-production-hourofcode-com
+            # marketing-sites-test-teachai-org
+            # marketing-sites-test-code-org
+            # marketing-sites-development-code-org-my-feature-branch
+            # marketing-sites-development-code-org-my-other-branch
+            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/marketing-sites-<%=environment_type%>-*"
+          # Deployment User can Get and Pass any Fargate Task and Task Execution Roles for the current environment type.
           - Effect: Allow
             Action:
               - 'iam:GetRole'
               - 'iam:PassRole'
-            Resource:
-              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-FargateServiceTaskDefExecutionRoleArn"
-          - Effect: Allow
-            Action:
-              - 'iam:GetRole'
-              - 'iam:PassRole'
-            Resource:
-              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-FargateServiceTaskDefTaskRoleArn"
+            Resource: marketing-sites-<%=environment_type%>-*"
           - Effect: Allow
             Action:
               - 'ecs:RegisterTaskDefinition'
-            Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/MarketingStackStagingFargateServiceTaskDef:*"
+            Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/marketing-sites-<%=environment_type%>-:*"
           - Effect: Allow
             Action:
               - 'ecs:DeregisterTaskDefinition'
@@ -888,40 +894,30 @@ roles.each do |name, config| %>
             Action:
               - 'ecs:DescribeServices'
               - 'ecs:UpdateService'
-            Resource:
-              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-FargateServiceArn"
+            Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/marketing-sites-<%=environment_type%>-*/marketing-sites-<%=environment_type%>-*"
           - Effect: Allow
             Action:
               - "s3:PutObject"
               - "s3:ListBucket"
             Resource:
-              - Fn::ImportValue: !Sub "${MarketingApplicationStackName}-StaticAssetsBucketArn"
-              - !Sub
-                - "${StaticAssetsBucketArn}/*"
-                - StaticAssetsBucketArn:
-                    Fn::ImportValue: !Sub "${MarketingApplicationStackName}-StaticAssetsBucketArn"
-
-  GithubDeployerAccessKey:
+              # TODO: @sureshc fix this to match the naming convention that the marketing sites template uses.
+              - "cdo-dev-marketing-sites-<%=environment_type%>"
+              - "cdo-dev-marketing-sites-<%=environment_type%>/*"
+  GithubUserAccessKey<%=environment_type%>:
     Type: AWS::IAM::AccessKey
     Properties:
-      UserName:
-        Ref: GithubDeployerUser
-
-  GithubDeployerAccessKeySecret:
+      UserName: !Ref GithubUser<%=environment_type%>
+  GithubUserAccessKeySecret<%=environment_type%>:
     Type: AWS::SecretsManager::Secret
     Properties:
-      SecretString:
-        Fn::Join:
-          - ""
-          - - '{"accessKeyId":"'
-            - Ref: GithubDeployerAccessKey
-            - '","secretAccessKey":"'
-            - Fn::GetAtt:
-                - GithubDeployerAccessKey
-                - SecretAccessKey
-            - '"}'
+      SecretString: !Sub |-
+        {
+          "accessKeyId": "${GithubUserAccessKey<%=environment_type%>}",
+          "secretAccessKey": "${GithubUserAccessKey<%=environment_type%>.SecretAccessKey}"
+        }
     UpdateReplacePolicy: Delete
   DeletionPolicy: Delete
+<% end %>
 
 Outputs:
   DevPermissions:
