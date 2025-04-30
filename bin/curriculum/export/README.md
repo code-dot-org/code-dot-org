@@ -86,21 +86,40 @@ aws s3 ls s3://cdo-data-sharing/filtered-unit-progress/<unit-name-and-date-range
 aws s3 cp --recursive /mnt/tmp-curriculum-export/filtered/<unit-name-and-date-range> s3://cdo-data-sharing/filtered-unit-progress/<unit-name-and-date-range>
 ```
 
-10. add a row to the 
+10. create and upload a tarball
+```bash
+cd /mnt/tmp-curriculum-export/filtered
+tar -czvf <unit-name-and-date-range>.tgz <unit-name-and-date-range>/
+ls -l <unit-name-and-date-range>.tgz
+```
+S3 cannot accept uploads larger than 5GB, so if the file exceeds that size, you'll have to split it:
+```bash
+split -b 5G <unit-name-and-date-range>.tgz <unit-name-and-date-range>.tgz.part_
+ls -l <unit-name-and-date-range>.tgz.part_*
+```
+finally, upload the tarball (or its parts):
+```bash
+aws s3 cp <unit-name-and-date-range>.tgz s3://cdo-data-sharing/filtered-unit-progress/<unit-name-and-date-range>/
+```
+
+11. add a row to the 
    [unit progress shares](https://docs.google.com/spreadsheets/d/1BiK3a3rlEEto1x9_ITjX7l0CsbhO0WZQrdYNdISWKQA/edit)
    gsheet describing your data so that it can be used again by others. be sure to include exact date range.
 
-11. share the data with the requester
+12. share the data with the requester
 
     - login to AWS console in your web browser
-    - navigate to https://us-east-1.console.aws.amazon.com/s3/buckets/cdo-data-sharing?region=us-east-1&bucketType=general&prefix=unit-export/&showversions=false 
+    - navigate to https://us-east-1.console.aws.amazon.com/s3/buckets/cdo-data-sharing?prefix=filtered-unit-progress%2F&region=us-east-1&bucketType=general&tab=objects
+    - open the dataset and select the `.tgz` file(s)
+    - choose `Actions` > `Share with presigned url`
 
-12. clean up
+13. clean up
 
 Once you are happy with the data you've uploaded to S3, you should clean up the temporary files on production-daemon:
 ```bash
 rm -rf /mnt/tmp-curriculum-export/sourced/<unit-name-and-date-range>
 rm -rf /mnt/tmp-curriculum-export/filtered/<unit-name-and-date-range>
+rm /mnt/tmp-curriculum-export/filtered/<unit-name-and-date-range>.tgz*
 ```
 ## Troubleshooting
 

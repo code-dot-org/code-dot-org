@@ -3765,7 +3765,7 @@ en:
           description_teacher: "## Welcome\n\nThis self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features. Educators will learn how to set up their classrooms, navigate the platform’s resources, and implement Code.org’s beginner-friendly coding curriculum. The module combines instructional videos, interactive activities, and practical assignments to help teachers gain confidence in using Code.org effectively in their classrooms. Upon completing this module, teachers will have a pathway to start using Code.org with their students immediately."
           version_title: ''
         facilitator-access-csaif-2025:
-          title: Facilitator Early Access - CSAIF
+          title: Facilitator Early Access - AIF
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -3779,8 +3779,8 @@ en:
         self-paced-pl-csp-2025:
           title: Teaching CS Principles
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: "## Welcome\n\n##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.\n\n### Find the learning that works for you\n\n##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.\n\n### Pick your content\n\n##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started."
+          description_teacher: "## Welcome\n\n##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.\n\n### Find the learning that works for you\n\n##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.\n\n### Pick your content\n\n##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started."
           version_title: ''
         vpl-csa-2025:
           title: CSA Virtual Professional Learning '25-'26
@@ -4748,7 +4748,7 @@ en:
             -   Become a part of a network of teachers who are doing similar work.
           version_title: ''
         faciliators-ea-pl-python-2025:
-          title: faciliators-ea-pl-python-2025
+          title: AIF - Programming Fundamentals PL - EARLY ACCESS
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -4783,6 +4783,60 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        coursea-2025:
+          title: coursea-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        courseb-2025:
+          title: courseb-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        coursec-2025:
+          title: coursec-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        coursed-2025:
+          title: coursed-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        coursee-2025:
+          title: coursee-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        coursef-2025:
+          title: coursef-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        express-2025:
+          title: express-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        pre-express-2025:
+          title: pre-express-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        artificial-intelligence-foundations-2025:
+          title: AI Foundations (AIF)
+          description_short: ''
+          description_student: ''
+          description_teacher: "CS and AI Foundations (CSAIF) introduces students to essential computer science concepts and the transformative role of artificial intelligence (AI) in today's world. Designed for high school students with no prior computer science or programming experience, this curriculum equips them with foundational skills in programming, data science, networks, cybersecurity, and AI. Students will gain hands-on experience with AI tools for problem-solving, debugging, and data analysis, while also exploring the ethical implications of technology, such as bias, privacy, and fairness.\n\n## Prerequisites\n\nCSAIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.\n\nThis curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).\n\nNo specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects."
+          version_title: "'25-'26"
     resources:
       curriculum/csd/2017:
         name: Curriculum

@@ -93,6 +93,11 @@ export const FileBrowser = React.memo(() => {
           sensors={sensors}
           modifiers={[restrictToVerticalAxis]}
           collisionDetection={collisionDetector}
+          accessibility={{
+            screenReaderInstructions: {
+              draggable: codebridgeI18n.dragAndDropInstructionsFolders(),
+            },
+          }}
         >
           <DndDataContextProvider
             value={{dragData, dropData}}

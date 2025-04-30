@@ -46,5 +46,11 @@ export const ImageContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
+    hasRoundedCorners: {
+      displayName: 'Rounded corners',
+      type: 'Boolean',
+      defaultValue: true,
+      group: 'style',
+    },
   },
 };
