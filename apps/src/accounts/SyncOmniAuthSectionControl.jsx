@@ -241,7 +241,7 @@ export function SyncOmniAuthSectionButton({
       disabled={[IN_PROGRESS, DISABLED].includes(buttonState)}
       onClick={onClick}
       {...iconProps(buttonState)}
-      style={{float: 'left'}}
+      style={{float: 'left', margin: '0'}}
       title={
         buttonState === DISABLED
           ? i18n.ltiSectionSyncButtonDisabledAltText()
