@@ -1,0 +1,129 @@
+= javascript_include_tag 'promotes/state'
+
+#promote-page
+  #state-section.clear
+    -statename = get_us_state_from_abbr(@us_state, include_dc: true)
+    -statename_no_space = statename.gsub(/\s+/, "")
+    %p#state-title
+      #{statename}
+    %p.fact{style: "margin-bottom: 0px;"}
+      -unless @us_state_data[:cs_jobs_i] == 0
+        %strong.figure
+          =format_integer_with_commas(@us_state_data[:cs_jobs_i])
+        .info
+          Open computing jobs
+    -unless @us_state_data[:growth_vs_average_f] < 0.0
+      %p.fact.subfact{style: "margin-bottom: 0px;"}
+        (<b>#{@us_state_data[:growth_vs_average_f]}x</b> the state average demand rate)
+    %p.fact.subfact
+      with an average salary of <b>$#{format_integer_with_commas(@us_state_data[:avg_sal_computing_i])}</b>
+    %p.fact
+      %strong.figure
+        =number_to_percentage(@us_state_data[:count_schools_teach_cs_i], precision: 0)
+      .info
+        of public high schools teach a CS class
+    %p.fact
+      -unless @us_state_data[:cs_graduates] == 0
+        %strong.figure
+          =format_integer_with_commas(@us_state_data[:cs_graduates_i])
+        .info
+          Computer science graduates
+
+    .policy-title.fact
+      = precede "Policy Environment (" do
+        = succeed "):" do
+          %a{href: 'http://bit.ly/9policiesrubric', target: '_blank'} rubric
+
+.icon-facts.info
+  .fact.icon-fact
+    - if @us_state_data[:pd_funding_s] == "No"
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-2x
+      .fact-text
+        No dedicated state funding for CS PD
+    - elsif @us_state_data[:pd_funding_s] == "Yes"
+      %i.fa.fa-check-circle
+      .fact-text
+        Dedicated state funding for CS PD
+    - elsif @us_state_data[:pd_funding_s] == "Other"
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-2x
+      .fact-text
+        = @us_state_data[:pd_funding_exception_s]
+  .fact.icon-fact
+    - if @us_state_data[:require_hs_s] == "No"
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-2x
+      .fact-text
+        Does not require all high schools to offer CS
+    - elsif @us_state_data[:require_hs_s] == "Yes"
+      %i.fa.fa-check-circle
+      .fact-text
+        Requires all high schools to offer CS
+    - elsif @us_state_data[:require_hs_s] == "Other"
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-2x
+      .fact-text
+        = @us_state_data[:require_hs_exception_s]
+
+  .fact.icon-fact
+    - if @us_state_data[:cs_standards_s] == "No"
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-2x
+      .fact-text
+        No K-12 CS curriculum standards
+    - elsif @us_state_data[:cs_standards_s] == "Yes"
+      %i.fa.fa-check-circle
+      .fact-text
+        K-12 CS curriculum standards
+    - elsif @us_state_data[:cs_standards_s] == "Other"
+      .fa-stack
+        %i.fa.fa-circle.fa-stack-2x
+        %i.fa.fa-times-circle.fa-stack-2x
+      .fact-text
+        = @us_state_data[:cs_standards_exception_s]
+
+    %p.fact{style: "margin-top: 5px; margin-bottom: 0px; text-align: left"}
+      #show-ap-stats{style: "cursor: pointer;"} &#9654;&nbsp; AP Stats
+      #hide-ap-stats{style: "display: none;"}
+        %div{style: "cursor: pointer;"} &#9660;&nbsp; AP Stats
+        .fact
+          %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
+          &nbsp;
+          = "#{@us_state_data[:percent_schools_ap_cs_i]}% of schools teach AP CS"
+        .fact
+          %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
+          &nbsp;
+          = "#{format_integer_with_commas(@us_state_data[:ap_cs_exams_i])} AP CS exams were taken last year"
+        .fact
+          %i.fa.fa-circle.fa-1{style: "font-size: 14px;"}
+          &nbsp;
+          = "#{@us_state_data[:percent_ap_female_i]}% of them were taken by female students"
+
+    .state-buttons
+      .state-button.download-fact-sheet
+        %a{href: "https://code.org/assets/advocacy/stateofcs/2023/#{statename_no_space}.pdf", target: '_blank'}
+          %button<
+            View state fact-sheet
+      .state-button.take-action
+        %a{:href=>'https://www.votervoice.net/Code/campaigns/58463/respond', target: '_blank'}
+          %button<
+            Take action in your state
+
+    -if @us_state_data[:text_t]
+      %p
+        =@us_state_data[:text_t]
+
+      -if @us_state_data[:action_text_s] && @us_state_data[:action_url_s]
+        %a{href: @us_state_data[:action_url_s], target: '_blank'}
+          %button{class: 'state-petition-btn'}
+            = @us_state_data[:action_text_s]
+      - else
+        %a{href: @us_state_data[:action_url_s], target: '_blank'}
+          %button{class: 'state-petition-btn', style: 'visibility: hidden'}
+            Sign petition
