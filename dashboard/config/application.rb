@@ -179,6 +179,7 @@ module Dashboard
       jquery.handsontable.full.js
       video-js/*.css
       font-awesome.css
+      promotes/*
     )
 
     # Support including code from directories outside of the normal Rails directory
