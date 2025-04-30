@@ -3,6 +3,9 @@
   "script_names": [
     "coursed-draft"
   ],
+  "original_script_names": [
+    "coursed-draft"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

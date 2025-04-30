@@ -2,6 +2,7 @@
 
 .sessionRow {
   align-items: flex-end;
+  margin-bottom: 1rem;
 
   div.deleteButtonContainer {
     flex: 0;
@@ -10,6 +11,11 @@
 
     button.deleteButton {
       min-width: 100%;
+      // specific margin top needed is to align delete button with inputs.
+      // top align would align it with the input label and bottom align
+      // would align it with the input helper/error messages
+      margin-top: 1.354rem;
+      height: 100%;
     }
   }
 
@@ -31,12 +37,4 @@
 
 .addDateButton {
   border: 1px dashed var(--borders-neutral-primary);
-}
-
-.copyPreviousCheckbox {
-  display: inline-block;
-  margin-top: 0.75rem;
-  i::before {
-    background-color: var(--background-neutral-primary);
-  }
 }

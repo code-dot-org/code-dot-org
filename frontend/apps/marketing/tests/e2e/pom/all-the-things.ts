@@ -3,6 +3,8 @@ import {type Locator, type Page} from '@playwright/test';
 import {MarketingPage} from './marketing';
 
 type Section =
+  | 'Action Block'
+  | 'Full Width Action Block'
   | 'Button'
   | 'Divider'
   | 'Heading'
@@ -21,8 +23,12 @@ export class AllTheThingsPage extends MarketingPage {
     super(page, locale);
   }
 
+  async enableDraftMode(token: string = 'ci-draft-mode') {
+    return await super.enableDraftMode(token, 'all-the-things');
+  }
+
   async goto() {
-    await super.goto('/all-the-things');
+    return await super.goto('/all-the-things');
   }
 
   getSectionLocator(heading: Section): Locator {

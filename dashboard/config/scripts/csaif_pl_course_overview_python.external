@@ -39,14 +39,17 @@ markdown <<MARKDOWN
 
 #### This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
 
-#### Check out the <a href="https://studio.code.org/s/pf-aitutor-pilot-content-2024" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+#### Check out the <a href="https://studio.code.org/s/aif2-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
 
 <p align="center">
 
-<img src="https://images.code.org/075430f6f244afc930aa6f0398f07659-image-1741375452584.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
+<img src="https://images.code.org/0c3d591a3e253687ce50f80c82666f98-image-1745512375892.png" alt="calendar of lesson overview" width="700px" style="border-radius:10px; ">
 </p>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ Explore the full unit curriculum  <a href='https://studio.code.org/courses/programming-fundamentals-aitutor-2024' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>here</a>.
+    ➡️ Explore the full unit curriculum  <a href='https://studio.code.org/s/aif2-2025' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>here</a>.
 </p>
+
+![]()
+
 MARKDOWN

@@ -2,115 +2,52 @@
 @eyes
 Feature: Workshop Dashboard
 
-# This test has become flaky, so skipping until we can address the cause of the flakiness
-# See https://codedotorg.atlassian.net/browse/ACQ-2623
 @skip
-Scenario: New workshop: CSF intro
-  Given I am a CSF facilitator named "Test CSF Facilitator" for regional partner "Test Partner"
+Scenario: New workshop: BYOW
+  Given I am a program manager named "Test BYO PM" for regional partner "Test Partner"
+  Given there is a facilitator named "Test BYO Facilitator 1" for course "Build Your Own Workshop"
+  Given there is a facilitator named "Test BYO Facilitator 2" for course "Build Your Own Workshop"
   Then I open the new workshop form
-  Then I open my eyes to test "New workshop: CSF intro"
+  Then I open my eyes to test "New workshop: BYOW"
 
-  And I press keys "Code.org Office" for element "input#location_name"
-  And I press keys "Seattle, WA" for element "#mapbox-location-search-container input"
-  And I press keys "25" for element "input#capacity"
-  And I select the "CS Fundamentals" option in dropdown "course"
-  And I select the "Intro" option in dropdown "subject"
+  And I press keys "Cool new workshop" for element "input[name='name']"
+  And I click selector "#grades-dropdown-button"
+  And I wait until element "input[name='K']" is visible
+  And I click selector "input[name='K']"
+  And I select the "Has prerequisites" option in dropdown named "hasPrereq"
+  And I wait until element "input[name='prereq']" is visible
+  And I press keys "Must be awesome" for element "input[name='prereq']"
+  And I press keys "123" for element "input[name='capacity']"
+  And I press keys "This is a great workshop" for element "textarea[name='description']"
+  And I click selector "#courseOfferings-dropdown-button"
+  And I wait until element "label:contains('Self Paced PL Course')" is visible
+  And I click selector "label:contains('Self Paced PL Course')"
+  And I press keys "01012025" for element "input[name='date']"
+  And I select the "9:00am" option in dropdown named "start"
+  And I select the "2:00pm" option in dropdown named "end"
+  And I press keys "The auditorium" for element "input[name='locationName']"
+  And I press keys "123 Main St" for element "input[name='locationAddress']"
+  And I click selector "button:contains('Add Date')"
+  And I select the "Virtual" option in the last dropdown named "format"
+  And I press keys "example.com" for element "input[name='meetingLink']"
+  And I wait until the dropdown named "regionalPartnerId" has option "Test Partner"
+  And I select the "Test Partner" option in dropdown named "regionalPartnerId"
+  And I press keys "Test BYO Facilitator 1\n" for element "#multiselect"
+  And I press keys "Test BYO Facilitator 2\n" for element "#multiselect"
+  And I click selector "label:contains('3 and 10-days prior to start date')"
+  And I press keys "$100" for element "input[name='fee']"
+  And I select the "National" option in dropdown named "participantGroupType"
+  And I press keys "Get ready to learn!" for element "textarea[name='notes']"
+  And I press keys "register.org" for element "input[name='registrationLink']"
+  And I click selector "label:contains('Hide this workshop from the public workshop catalog')"
 
-  And I wait until element "label:contains('Workshop Type Options')" is visible
-  And I press the first "input[name='on_map'][value='no']" element
-  And I select the "Yes, it is funded. Please pay the Regional Partner." option in dropdown "funded"
+  And I see no difference for "new workshop details: BYO"
 
-  And I press keys "Test" for element "#regional-partner-select"
-  And I press the first ".Select-option[aria-label='Test Partner']" element
+  And I click selector "button:contains('Publish')"
+  And I wait until element "span:contains('Workshop Information: ')" is visible
 
-  And I press keys "These are my CSF notes" for element "textarea#notes"
-  And I select the "Test CSF Facilitator" facilitator at index 0
-
-  # Before doing eyes check, accept suggestion from Mapbox if visible on the page.
-  # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
-  # and cause the eyes check to fail.
-  And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
-  And I focus selector "select#facilitator0"
-
-  And I see no difference for "new workshop details: CSF"
-
-  And I press "button:contains('Publish')" using jQuery
-  And I wait until element ".panel-title:contains('Your workshop sign-up link:')" is visible
-  And I see jquery selector button.btn-orange:contains('Start Workshop')
-
-  And I see no difference for "created workshop details: CSF"
+  And I see no difference for "created workshop details: BYO"
   And I close my eyes
 
-Scenario: New workshop: CSD units 2-3 with 2 facilitators
-  Given I am a program manager named "Test CSD PM" for regional partner "Test Partner"
-  Given there is a facilitator named "Test CSD Facilitator 1" for course "CS Discoveries"
-  Given there is a facilitator named "Test CSD Facilitator 2" for course "CS Discoveries"
-  Then I open the new workshop form
-  Then I open my eyes to test "New workshop: CSD units 2-3 with 2 facilitators"
-
-  And I press keys "Code.org Office" for element "input#location_name"
-  And I press keys "Seattle, WA" for element "#mapbox-location-search-container input"
-  And I press keys "25" for element "input#capacity"
-  And I select the "CS Discoveries" option in dropdown "course"
-  And I select the "Academic Year Workshop 1" option in dropdown "subject"
-
-  And I wait until element "label:contains('Workshop Type Options')" is visible
-  And I select the "Yes, it is funded." option in dropdown "funded"
-
-  And I see "#regional-partner-name"
-
-  And I press keys "These are my CSD notes" for element "textarea#notes"
-
-  And I select the "Test CSD Facilitator 1" facilitator at index 0
-  And I press the first "#add-facilitator-btn" element
-  And I select the "Test CSD Facilitator 2" facilitator at index 1
-
-  # Before doing eyes check, accept suggestion from Mapbox if visible on the page.
-  # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
-  # and cause the eyes check to fail.
-  And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
-  And I focus selector "select#facilitator1"
-
-  And I see no difference for "new workshop details: CSD"
-
-  And I press "button:contains('Publish')" using jQuery
-  And I wait until element ".panel-title:contains('Your workshop sign-up link:')" is visible
-  And I see jquery selector button.btn-orange:contains('Start Workshop')
-
-  And I see no difference for "created workshop details: CSD"
-  And I close my eyes
-
-Scenario: New workshop: CSP local summer with 1 facilitator
-  Given I am a program manager named "Test CSP PM" for regional partner "Test Partner"
-  Given there is a facilitator named "Test CSP Facilitator" for course "CS Principles"
-  Then I open the new workshop form
-  Then I open my eyes to test "New workshop: CSP local summer with 1 facilitator"
-
-  And I press keys "Code.org Office" for element "input#location_name"
-  And I press keys "Seattle, WA" for element "#mapbox-location-search-container input"
-  And I press keys "25" for element "input#capacity"
-  And I select the "CS Principles" option in dropdown "course"
-  And I select the "5-day Summer" option in dropdown "subject"
-
-  And I wait until element "label:contains('Workshop Type Options')" is visible
-  And I select the "Yes, it is funded." option in dropdown "funded"
-
-  And I see "#regional-partner-name"
-
-  And I press keys "These are my CSP notes" for element "textarea#notes"
-  And I select the "Test CSP Facilitator" facilitator at index 0
-
-  # Before doing eyes check, accept suggestion from Mapbox if visible on the page.
-  # If we do not accept a suggestion, a dropdown of location options can obscure part of the page
-  # and cause the eyes check to fail.
-  And I click "#mapbox-geocoder-container > div > div.suggestions-wrapper > ul > li" if it is visible
-  And I focus selector "select#facilitator0"
-
-  And I see no difference for "new workshop details: CSP"
-
-  And I press "button:contains('Publish')" using jQuery
-  And I wait until element ".panel-title:contains('Your workshop sign-up link:')" is visible
-  And I see jquery selector button.btn-orange:contains('Start Workshop')
-
-  And I see no difference for "created workshop details: CSP"
-  And I close my eyes
+  And I get the workshop id from the current url
+  And I clean up my records

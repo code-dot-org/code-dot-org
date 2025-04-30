@@ -3,6 +3,9 @@
   "script_names": [
     "courseb-2018"
   ],
+  "original_script_names": [
+    "courseb-2018"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

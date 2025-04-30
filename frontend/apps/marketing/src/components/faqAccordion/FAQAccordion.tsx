@@ -1,3 +1,6 @@
+import {documentToHtmlString} from '@contentful/rich-text-html-renderer';
+import {documentToPlainTextString} from '@contentful/rich-text-plain-text-renderer';
+import {BLOCKS} from '@contentful/rich-text-types';
 import {EntryFields, BaseEntry} from 'contentful';
 import {useMemo} from 'react';
 
@@ -5,7 +8,11 @@ import FAQAccordion, {
   FAQAccordionItem,
 } from '@code-dot-org/component-library/accordrion/faqAccordion';
 
-type FAQAccordionContentfulProps = {
+import RichText from '@/components/richText';
+
+import moduleStyles from './faqAccordion.module.scss';
+
+export type FAQAccordionContentfulProps = {
   faqs?: (BaseEntry & {
     fields: {
       question: EntryFields.Text | EntryFields.RichText;
@@ -14,14 +21,10 @@ type FAQAccordionContentfulProps = {
   })[];
 };
 
-const checkIfEntryFieldIsRichText = (
-  entry: BaseEntry & {
-    fields: {[key: string]: EntryFields.Text | EntryFields.RichText};
-  },
-  fieldName: string,
-) =>
-  typeof entry.fields[fieldName] !== 'string' &&
-  'content' in entry.fields[fieldName];
+const isRichText = (
+  field: EntryFields.Text | EntryFields.RichText,
+): field is EntryFields.RichText =>
+  typeof field === 'object' && field?.nodeType === BLOCKS.DOCUMENT;
 
 const FAQAccordionContentful: React.FunctionComponent<
   FAQAccordionContentfulProps
@@ -29,30 +32,34 @@ const FAQAccordionContentful: React.FunctionComponent<
   const faqItems = useMemo(
     () =>
       faqs?.filter(Boolean).map(faq => {
-        let id, question, questionString, answer, answerString;
+        let question, questionString, answer, answerString;
 
-        if (checkIfEntryFieldIsRichText(faq, 'question')) {
-          question =
-            'Rich Text is not supported yet. Please use Text type instead';
-          questionString = question;
-          id = 'rich-text-not-supported-yet';
+        if (isRichText(faq.fields.question)) {
+          question = <RichText content={faq.fields.question} />;
+          // See: https://developers.google.com/search/docs/appearance/structured-data/faqpage#question
+          questionString = documentToPlainTextString(faq.fields.question);
         } else {
-          question = faq.fields.question as string;
+          question = faq.fields.question;
           questionString = question;
-          id = question.replace(' ', '-').toLowerCase();
         }
 
-        if (checkIfEntryFieldIsRichText(faq, 'answer')) {
-          answer =
-            'Rich Text is not supported yet. Please use Text type instead';
-          answerString = answer;
+        if (isRichText(faq.fields.answer)) {
+          answer = (
+            <div className={moduleStyles.faqAccordionAnswer}>
+              <RichText content={faq.fields.answer} />
+            </div>
+          );
+          // See: https://developers.google.com/search/docs/appearance/structured-data/faqpage#answer
+          answerString = documentToHtmlString(faq.fields.answer, {
+            preserveWhitespace: true,
+          });
         } else {
-          answer = faq.fields.answer as string;
+          answer = faq.fields.answer;
           answerString = answer;
         }
 
         return {
-          id,
+          id: questionString,
           label: question,
           questionString,
           content: answer,
@@ -75,7 +82,9 @@ const FAQAccordionContentful: React.FunctionComponent<
     );
   }
 
-  return <FAQAccordion items={faqItems} />;
+  return (
+    <FAQAccordion className={moduleStyles.faqAccordion} items={faqItems} />
+  );
 };
 
 export default FAQAccordionContentful;

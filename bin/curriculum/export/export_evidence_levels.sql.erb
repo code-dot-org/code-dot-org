@@ -1,0 +1,43 @@
+--
+-- this is an analytics query, to be run against the redshift database.
+--
+UNLOAD ($$
+  WITH
+    evidence_levels AS (
+      SELECT
+        r.lesson_id
+        , r.level_id
+        , r.id rubric_id
+        , lg.position learning_goal_position
+        , lg.learning_goal learning_goal_description
+        , lg.tips learning_goal_tips
+        , lgel.*
+      FROM dashboard_production.rubrics r
+        JOIN dashboard_production.learning_goals lg ON r.id = lg.rubric_id
+        JOIN dashboard_production.learning_goal_evidence_levels lgel ON lg.id = lgel.learning_goal_id
+    )
+  SELECT
+    evidence_levels.learning_goal_id
+    , cs.script_id
+    , cs.level_id
+    , cs.script_name
+    , cs.relative_position lesson_position
+    , cs.level_number
+    , evidence_levels.learning_goal_position
+    , evidence_levels.learning_goal_description
+    , evidence_levels.learning_goal_tips
+    , evidence_levels.understanding
+    , evidence_levels.teacher_description
+  FROM evidence_levels
+    JOIN analysis.course_structure cs ON cs.level_id = evidence_levels.level_id AND cs.stage_id = evidence_levels.lesson_id
+  WHERE
+    cs.script_name = '<%=unit_name%>'
+    <%= level_id && "and cs.level_id = #{level_id}" %>
+  ORDER BY script_name, lesson_position, level_number, learning_goal_position, understanding
+$$)
+TO 's3://cdo-data-sharing-internal/unloaded-unit-progress/<%=output_dir%>/evals/<%=unit_name%>_evidence_levels_'
+FORMAT JSON
+EXTENSION 'jsonl'
+IAM_ROLE 'arn:aws:iam::475661607190:role/redshift-s3'
+PARALLEL OFF
+;

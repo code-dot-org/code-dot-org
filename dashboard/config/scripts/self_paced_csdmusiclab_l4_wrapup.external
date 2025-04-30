@@ -1,0 +1,69 @@
+name 'self-paced-CSDMusicLab-L4-wrapup'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Congratulations, you are finished! 
+
+<img src="https://images.code.org/2df93307f477af0f75dc1c179d9a9a4c-image-1707852636486.30.31 AM.png" alt="" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
+
+<div style="clear:both"/>
+
+<table width="100%" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+  <tr>
+    <td style="width: 25%; background-color: #B7E0E5; color: #000000; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+      ⭐️<br>
+      Introduction to Programming with Music Lab
+    </td>
+    <td style="width: 25%; background-color: #B7E0E5; color: #000000; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold;">
+      🔢<br>
+      Teaching Lessons 1 – 5: Sequencing
+    </td>
+    <td style="width: 25%; background-color: #B7E0E5; color: #000000; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold;">
+      🔁<br>
+      Teaching Lessons 6 – 9: Loops
+    </td>
+    <td style="width: 25%; background-color: #026C7A; color: #ffffff; padding: 20px; text-align: center; font-size: 13pt; font-weight: bold; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+      🎶<br>
+      Teaching Lessons 10 – 13: Functions
+    </td>
+  </tr>
+</table>
+
+
+## Help Us Make This Module Better!
+
+#### Code.org values and is responsive to feedback. Please fill out this short survey to provide your feedback on this module.
+
+#### <mark>**Note for pilot teachers**: Please complete this post-survey to help us note your participation in the pilot!</mark>
+
+<div style="margin: 20px 0px">
+<a class="btn btn-large btn-primary" href="https://usabi.li/do/drbvetjkxidf/ahhsfl" target="blank" rel="noopener noreferrer">Take the Post-Survey</a>
+</div>
+
+## Next Steps
+
+### **Start Teaching**
+
+#### Check out this <a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-Classroom-Section" target="blank" rel="noopener noreferrer">support article</a> to learn how to create a class section. Once you've created a section, assign <a href="https://studio.code.org/s/csd-programming-with-music-lab-2025-pilot/" target="blank" rel="noopener noreferrer">Programming with Music Lab</a> to your class!
+
+### **Continue Learning**
+
+#### Join us for a facilitator-led professional learning workshop. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer" >Click here</a> to learn about opportunities in your area. 
+
+### **Revisit This Content**
+
+#### You can return to this professional learning at any time to review your learning, access links or resources, or just refresh your memory!
+
+### **Stay Connected** 
+
+* #### Continue participating in the <a href="https://forum.code.org/" target="blank" rel="noopener noreferrer">Code.org teacher forum</a>. 
+
+* #### Connect with <a href="http://twitter.com/teachcode" target="blank" rel="noopener noreferrer">@teachcode</a> on Twitter.
+
+* #### Explore opportunities with the <a href="https://code.org/afe" target="blank" rel="noopener noreferrer">Amazon Future Engineer program</a>. 
+
+* #### Join the <a href="https://www.csteachers.org/" target="blank" rel="noopener noreferrer">Computer Science Teachers Association (CSTA)</a>. 
+
+### Thank you for learning with us!
+MARKDOWN

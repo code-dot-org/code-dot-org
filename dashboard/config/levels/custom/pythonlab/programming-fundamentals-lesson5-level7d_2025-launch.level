@@ -7,7 +7,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "instructions",
+    "long_instructions": "instructions\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAnything inside the quotation marks is called a **string** -- it's a type of data Python uses for text.",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -16,6 +16,6 @@
       "isPredictLevel": false
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-02T19:34:46.308+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level7c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level7c_2025-launch\"},{\"changed_at\":\"2025-04-02 19:34:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-02T19:34:46.308+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level7c_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level7c_2025-launch\"},{\"changed_at\":\"2025-04-02 19:34:50 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-12 04:03:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -3,17 +3,18 @@ import {tiles, MazeController} from '@code-dot-org/maze';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
 import {LOOK_ID, SVG_ID} from '@cdo/apps/maze/constants';
-import commonI18n from '@cdo/locale';
 
-import {NeighborhoodSignalType} from './constants';
+import {ConsoleSignalType, NeighborhoodSignalType} from './constants';
 import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
-import {NeighborhoodSignal} from './types';
+import {ConsoleSignal, NeighborhoodSignal} from './types';
 
 const Direction = tiles.Direction;
 
 const PAUSE_BETWEEN_SIGNALS = 200;
 const ANIMATED_STEP_SPEED = 500;
-const ANIMATED_STEPS = [NeighborhoodSignalType.MOVE];
+const ANIMATED_STEPS: (ConsoleSignalType | NeighborhoodSignalType)[] = [
+  NeighborhoodSignalType.MOVE,
+];
 const SIGNAL_CHECK_TIME = 200;
 
 // We are relying on old maze skins here, which are not typed.
@@ -21,30 +22,30 @@ type SkinType = Record<string, unknown>;
 
 export default class Neighborhood {
   private controller: typeof MazeController | null;
-  private seenFirstSignal: boolean;
   private onOutputMessage: (message: string) => void;
   private onNewlineMessage: () => void;
+  private onPartialOutputMessage: (message: string) => void;
   private setIsRunning: (isRunning: boolean) => void;
-  private statusMessagePrefix: string;
-  private signals: NeighborhoodSignal[];
+  private signals: (NeighborhoodSignal | ConsoleSignal)[];
   private nextSignalIndex: number;
   private speedTracker: NeighborhoodSpeedTracker;
+  private isProcessingSignals: boolean;
 
   constructor(
     onOutputMessage: (message: string) => void,
     onNewlineMessage: () => void,
     setIsRunning: (isRunning: boolean) => void,
-    statusMessagePrefix: string
+    onPartialOutputMessage: (message: string) => void
   ) {
     this.controller = null;
-    this.seenFirstSignal = false;
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.setIsRunning = setIsRunning;
-    this.statusMessagePrefix = statusMessagePrefix;
     this.signals = [];
     this.nextSignalIndex = -1;
     this.speedTracker = NeighborhoodSpeedTracker.getInstance();
+    this.onPartialOutputMessage = onPartialOutputMessage;
+    this.isProcessingSignals = false;
   }
 
   afterInject(
@@ -100,20 +101,12 @@ export default class Neighborhood {
     }
   }
 
-  handleSignal(signal: NeighborhoodSignal | null) {
+  handleSignal(signal: NeighborhoodSignal | ConsoleSignal | null) {
     if (!signal) {
       return;
     }
     // Add next signal to our queue of signals.
     this.signals.push(signal);
-    // if this is the first signal, send a starting painter message
-    if (!this.seenFirstSignal) {
-      this.seenFirstSignal = true;
-      this.onOutputMessage(
-        `${this.statusMessagePrefix} ${commonI18n.startingPainter()}`
-      );
-      this.onNewlineMessage();
-    }
   }
 
   // Process avaiable signals recursively. We process recursively to ensure
@@ -126,6 +119,7 @@ export default class Neighborhood {
         // we are done processing commands and can stop checking for signals.
         // Set isRunning to false, add a blank line to the console, and return
         this.setIsRunning(false);
+        this.onNewlineMessage();
         return;
       }
       const timeForSignal =
@@ -134,7 +128,13 @@ export default class Neighborhood {
         timeForSignal + PAUSE_BETWEEN_SIGNALS * this.getPegmanSpeedMultiplier();
 
       const beginTime = Date.now();
-      this.mazeCommand(signal, timeForSignal);
+      if (signal.value === ConsoleSignalType.CONSOLE_LOG) {
+        this.onOutputMessage(signal.detail);
+      } else if (signal.value === ConsoleSignalType.PARTIAL_LOG) {
+        this.onPartialOutputMessage(signal.detail);
+      } else {
+        this.mazeCommand(signal as NeighborhoodSignal, timeForSignal);
+      }
       this.nextSignalIndex++;
       const remainingTime = totalSignalTime - (Date.now() - beginTime);
 
@@ -214,7 +214,7 @@ export default class Neighborhood {
     }
   }
 
-  getAnimationTime(signal: NeighborhoodSignal) {
+  getAnimationTime(signal: NeighborhoodSignal | ConsoleSignal) {
     return ANIMATED_STEPS.includes(signal.value) ? ANIMATED_STEP_SPEED : 0;
   }
 
@@ -228,6 +228,7 @@ export default class Neighborhood {
 
   setProcessSignals() {
     this.controller.hideDefaultPegman();
+    this.isProcessingSignals = true;
     // start checking for signals after the specified wait time
     timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
   }
@@ -253,7 +254,11 @@ export default class Neighborhood {
   resetSignalQueue() {
     this.signals = [];
     this.nextSignalIndex = 0;
-    this.seenFirstSignal = false;
+    this.isProcessingSignals = false;
+  }
+
+  isRunning() {
+    return this.isProcessingSignals;
   }
 
   // Multiplier on the time per action or step at execution time.

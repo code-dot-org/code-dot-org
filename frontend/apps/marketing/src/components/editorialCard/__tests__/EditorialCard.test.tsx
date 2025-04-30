@@ -1,0 +1,106 @@
+import {render, screen, within} from '@testing-library/react';
+
+import EditorialCard, {
+  EditorialCardContentfulProps,
+  EDITORIAL_CARD_CONTENTFUL_LAYOUTS,
+} from '@/components/editorialCard/EditorialCard';
+
+describe('EditorialCard component', () => {
+  const layoutOpt = EDITORIAL_CARD_CONTENTFUL_LAYOUTS.HORIZONTAL_WITH_IMAGE;
+  const heading = 'Icon Highlight Heading';
+  const text = 'Icon Highlight Text';
+  const iconName = 'smile';
+  const image =
+    'https://images.ctfassets.net/90t6bu6vlf76/1SptVYIyW5meSA34NcP99o/499a67854db82f98ee7717dbc9b95c6e/component_editorial_card_thumbnail.png';
+  const linkEntry = {
+    fields: {
+      label: 'Link',
+      primaryTarget: 'https://code.org/link',
+      ariaLabel: 'Link aria label',
+      isThisAnExternalLink: true,
+    },
+  };
+
+  const renderCard = (props: Partial<EditorialCardContentfulProps> = {}) =>
+    render(
+      <EditorialCard
+        layoutOpt={layoutOpt}
+        heading={heading}
+        text={text}
+        iconName={iconName}
+        image={image}
+        linkEntry={linkEntry}
+        {...props}
+      />,
+    );
+
+  const getCard = () => screen.getByRole('complementary');
+
+  it('renders card in "horizontal_with_image" layout with image', () => {
+    renderCard();
+
+    const img = getCard().querySelector('img');
+
+    expect(img).toBeInTheDocument();
+    expect(img).toHaveAttribute('src', image);
+  });
+
+  it('renders card in "vertical_with_image" layout with image', () => {
+    renderCard({
+      layoutOpt: EDITORIAL_CARD_CONTENTFUL_LAYOUTS.VERTICAL_WITH_IMAGE,
+    });
+
+    const img = getCard().querySelector('img');
+
+    expect(img).toBeInTheDocument();
+    expect(img).toHaveAttribute('src', image);
+  });
+
+  it('renders card in "vertical_with_icon" layout with icon', () => {
+    renderCard({
+      layoutOpt: EDITORIAL_CARD_CONTENTFUL_LAYOUTS.VERTICAL_WITH_ICON,
+    });
+    expect(getCard().querySelector('i')).toBeInTheDocument();
+  });
+
+  it('renders card heading', () => {
+    renderCard();
+    expect(screen.getByRole('heading', {name: heading})).toBeVisible();
+  });
+
+  it('renders card text', () => {
+    renderCard();
+    expect(screen.getByText(text)).toBeVisible();
+  });
+
+  it('renders card link', () => {
+    renderCard();
+
+    const internalLink = screen.getByRole('link', {
+      name: linkEntry.fields.ariaLabel,
+    });
+
+    expect(internalLink).toBeVisible();
+    expect(internalLink).toHaveTextContent(linkEntry.fields.label);
+    expect(internalLink).toHaveAttribute(
+      'href',
+      linkEntry.fields.primaryTarget,
+    );
+    expect(internalLink).toHaveAttribute('target', '_blank');
+    expect(
+      within(internalLink).queryByRole('img', {name: 'external link'}),
+    ).toBeInTheDocument();
+  });
+
+  it('renders empty card placeholder when no media provided', () => {
+    renderCard({iconName: undefined, image: undefined});
+
+    const placeholder = screen.getByText(
+      (_, node) =>
+        node?.tagName === 'EM' &&
+        !!node?.textContent?.includes('Editorial Card placeholder'),
+    );
+
+    expect(placeholder).toBeVisible();
+  });
+});

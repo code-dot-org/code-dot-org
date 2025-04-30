@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2025-03-21T21:34:13.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "####Look at two graphs trying to help a human answer the question: “When should we have the party?”\r\n\r\n\r\n![](https://images.code.org/7e010252c79b9ea18ad1709c47913cde-image-1721314333157.png)\r\n\r\n![](https://images.code.org/376f6fc4810525fd42748cf7661b5f71-image-1721314350825.png)\r\n####What do you notice? What do you wonder?\r\n####Which of these makes it easier for a human to decide when the party should be? Explain your answer.",
+    "long_instructions": "####Look at two graphs trying to help a human answer the question: “When should we have the party?”\r\n\r\n![bar graph showing when students want to have a party and each of the many options has a count of 1](https://images.code.org/88cc6295c0c3bc43351554e65c5ebd38-image-1744311924443.05.10 PM.png)\r\n&nbsp;\r\n\r\n![bar graph showing when students want to have a party with after school receiving 8 votes, during lunch receiving 6, and either receiving 6](https://images.code.org/d1e512fef214a5dca7dd3c0988581a9c-image-1744311969647.04.08 PM.png)\r\n\r\n####What do you notice? What do you wonder?\r\n####Which of these makes it easier for a human to decide when the party should be? Explain your answer.\r\n",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -15,10 +16,10 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:13.275+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson8-level1\\\"\"],\"cloned_from\":\"data-science-ch1-lesson8-level1\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:13.275+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson8-level1\\\"\"],\"cloned_from\":\"data-science-ch1-lesson8-level1\"},{\"changed_at\":\"2025-04-10 18:57:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 19:01:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 19:05:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 19:06:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 20:27:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-10 20:49:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,0 +1,9 @@
+name 'music-coding-intro-inspiration_1'
+display_name 'Get Inspired'
+description '<i class="fa-solid fa-person-chalkboard"></i> **Teacher Tip:** 
+##### The following levels are provided to scaffold student learning utilizing the Use-Modify-Create pedagogical practice. In this level, students complete the Use and Modify step. This means they play existing code and make changes to understand what it does. Explore and tinker with the code in these example projects! 
+'
+
+sublevels
+level 'music-coding-intro-drop3_launch_1'
+level 'music-coding-intro-drop2_launch_1'

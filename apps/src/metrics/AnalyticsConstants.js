@@ -296,6 +296,12 @@ const EVENTS = {
   AI_DIFF_CHAT_EVENT: 'AI Differentiation Message Event',
   AI_DIFF_FEEDBACK_EVENT: 'AI Differentiation Feedback Event',
   AI_DIFF_CHAT_TOGGLED: 'AI Differentiation Chat Toggled on/off',
+  AI_DIFF_GET_STARTED: 'AI Teaching Assistant Get Started',
+  AI_DIFF_CHOOSE_FLOW: 'AI Teaching Assistant Choose Flow',
+  AI_DIFF_FINISH_FIRST: 'AI Teaching Assistant Finish First Chat',
+  AI_DIFF_CELEBRATION: 'AI Teaching Assistant Celebration screen',
+  AI_DIFF_101: 'AI Teaching Assistant AI 101 CTA',
+  AI_DIFF_SKIP_WELCOME: 'AI Teaching Assistant Skip Welcome',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',
@@ -478,6 +484,10 @@ const EVENTS = {
   SUBMIT_AICHAT_TEACHER_FEEDBACK: 'Teacher submits feedback on aichat message',
   AICHAT_MULTIMODAL_UPLOAD_OPENED: 'User clicks to upload multimodal assets',
   AICHAT_MULTIMODAL_UPLOAD_STAGED: 'User stages multimodal assets',
+
+  // Measures of learning
+  AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
+    'Teacher gave feedback on AIs summary of student work',
 
   // Codebridge - File broswer-related events
   CODEBRIDGE_DELETE_FILE: 'Delete file on codebridge',

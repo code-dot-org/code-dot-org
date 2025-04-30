@@ -17,11 +17,11 @@ import {
   setConsoleFontSize,
   setEditorFontSize,
 } from '@cdo/apps/lab2/redux/lab2ViewRedux';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {trySetSessionStorage} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -97,7 +97,8 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   ) => {
     if (selectedKey !== currentKey && FontSize[selectedKey]) {
       if (signInState === SignInState.SignedIn) {
-        trySetSessionStorage(`${appName}${type}FontSizeKey`, selectedKey);
+        const field = type === 'Console' ? 'consoleFontSize' : 'editorFontSize';
+        new UserPreferences().setFontSize(selectedKey, appName, field);
       }
       const reduxAction =
         type === 'Console' ? setConsoleFontSize : setEditorFontSize;
@@ -113,8 +114,8 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     const selectedEditorKey = getSelectedKey(selectedEditorFontSizeValue);
     const selectedConsoleKey = getSelectedKey(selectedConsoleFontSizeValue);
 
-    // We want the user preference for selected font size to persist across a session
-    // for signed-in users per app type.
+    // We want the user preference for selected font size to persist for signed-in users
+    // per app type so we save on backend.
     handleFontSizeChange(
       'CodeEditor',
       selectedEditorKey,
@@ -150,7 +151,9 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         data-theme="Dark"
       >
         <div className={moduleStyles.header}>
-          <Heading6>{commonI18n.settings()}</Heading6>
+          <Heading6 className={moduleStyles.heading}>
+            {commonI18n.settings()}
+          </Heading6>
           <CloseButton
             onClick={closeDropdown}
             aria-label={codebridgeI18n.closeSettings()}
@@ -202,12 +205,14 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             size="s"
             onClick={closeDropdown}
             color="black"
+            className={moduleStyles.footerButton}
           />
           <Button
             text={commonI18n.save()}
             type="primary"
             size="s"
             onClick={onSave}
+            className={moduleStyles.footerButton}
           />
         </div>
       </div>

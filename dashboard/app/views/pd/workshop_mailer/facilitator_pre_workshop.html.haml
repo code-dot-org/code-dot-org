@@ -20,8 +20,8 @@
       =link_to('facilitator landing page', 'https://studio.code.org/professional-learning/facilitator/computer-science-a') + '.'
     - elsif @workshop.course == Pd::Workshop::COURSE_CSF
       =link_to('facilitator landing page', 'https://studio.code.org/professional-learning/facilitator/computer-science-fundamentals') + '.'
-    - elsif @workshop.course == Pd::Workshop::COURSE_CSAIF
-      =link_to('facilitator landing page', 'https://studio.code.org/professional-learning/facilitator/computer-science-ai-fundamentals') + '.'
+    - elsif @workshop.course == Pd::Workshop::COURSE_AIF
+      =link_to('facilitator landing page', 'https://studio.code.org/professional-learning/facilitator/ai-fundamentals') + '.'
   %li
     Have quick questions about resources, agendas, or participant requests? Post them in the facilitator
     - if @workshop.course == 'CS Fundamentals'

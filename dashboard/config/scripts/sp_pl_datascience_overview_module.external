@@ -7,30 +7,51 @@ markdown <<MARKDOWN
 
 ## What's included in this module?
 
-<img src="https://images.code.org/29853488a851de70a5c2e34c9e6f16aa-image-1707522795571.53.06 PM.png" style="float: right; height: 200px; clear: both; margin: 10px 10px 10px 10px; border-radius: 30px" alt="A young student in a library smiles while holding a laptop open to the camera.">
+#### This professional learning module is made up of **three lessons:**
 
-#### This professional learning module is made up of **four lessons:**
 
-### 🏘️ **Lesson 1- Introduction to Teaching Data Science** - ⭐️ You're here!
-#### This lesson provides an introduction to the Data Science course and professional learning module. It offers a brief overview of key data science concepts and familiarizes you with the structure and flow of the lessons you'll explore throughout the course. *10 minutes*
+<div style="display: flex; flex-direction: column; gap: 20px; max-width: 900px; margin: auto;">
 
-### 🖥️ **Lesson 2- Overview of Unit 1: Introduction to Data Science**
-#### This lesson focuses on building skills in data analysis and visualization using tools like CODAP. You will explore how to transform raw data into meaningful visualizations while addressing ethical considerations, such as data privacy and bias. *30 minutes*
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/d7a2764589820d4023ca876e49c892c1-image-1740592077414.png" alt="Teacher icon" style="width: 20%; max-width: 120px; height: auto;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
+      <h3><b>Lesson 1 - Introduction to Teaching Insights from Data and AI</b></h3>
+      <p style="font-size: 14pt;"><strong>⭐️ You're here! ⭐️</strong></p>
+      <p style="font-size: 14pt;">
+        This lesson provides an introduction to the Insights from Data and AI course and professional learning module. It offers a brief overview of key data science concepts and familiarizes you with the structure and flow of the lessons you'll explore throughout the course.<br><br><em>10 minutes</em>
+      </p>
+    </div>
+  </div>
 
-### 📊 **Unit 2: Data Science and Python**
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/df2e7acfa0455af64459b2eaa3ba4e89-image-1741879516634.png" alt="computer icon" style="width: 20%; max-width: 120px; height: auto;">
+    <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <h3><b>Lesson 2 - Introduction to Data Science</b></h3>
+      <p style="font-size: 14pt;">
+        This lesson explores the foundational concepts of data science, focusing on developing and refining data questions to guide investigations and analysis.<br><br><em>20 minutes</em>
+      </p>
+    </div>
+  </div>
 
-#### This unit is divided into two lessons. 
+  <div style="display: flex; align-items: center; gap: 15px;">
+    <img src="https://images.code.org/6d3ac52686bbe7be150302b3562d3da3-image-1744385182730.png" alt="pie graph icon with a bar chart" style="width: 20%; max-width: 120px; height: auto;">
+    <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+      <h3><b>Lesson 3 - Visualizing Data</b></h3>
+      <p style="font-size: 14pt;">
+        This lesson focuses on building skills in data analysis and visualization using tools like Google Sheets. You will explore how to transform raw data into meaningful visualizations while addressing ethical considerations, such as data privacy and bias.<br><br><em>30 minutes</em>
+      </p>
+    </div>
+  </div>
 
-#### **Lesson 3- Part 1: Introduction to Python, Pandas, and Matplotlib**
-#### Learn how to guide students through Python basics, data manipulation using Pandas, and creating visualizations with Matplotlib. This part builds foundational skills in programming and data analysis. *45 minutes*
-
-#### **Lesson 4- Part 2: Advanced Data Science Concepts**
-#### Delve into advanced topics such as cleaning data, analyzing datasets, and creating custom visualizations. Students will develop the skills to communicate insights effectively through a real-world, data-driven project. *35 minutes*
+</div>
 
 
 
 ## Engaging with This Module
 
-#### Feel free to complete as much or as little of this module as is useful for you and your students! Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. You'll be able to give Code.org your feedback on the last level of this module.
+#### Feel free to complete as much or as little of this module as is useful for you and your students!
+#### **Stop, start, and revisit** content as you see fit. We hope you'll find these activities useful to start teaching this unit. 
+#### You'll be able to give Code.org your feedback on the last level of this module.
+
 
 MARKDOWN

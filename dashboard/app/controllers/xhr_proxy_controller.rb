@@ -117,6 +117,7 @@ class XhrProxyController < ApplicationController
     restcountries.com
     roblox.com
     runescape.com
+    serpapi.com
     sessionserver.mojang.com
     stats.minecraftservers.org
     swapi.dev

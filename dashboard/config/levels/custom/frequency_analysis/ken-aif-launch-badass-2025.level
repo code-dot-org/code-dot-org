@@ -1,0 +1,23 @@
+<FrequencyAnalysis>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 47,
+  "created_at": "2025-04-27T22:08:44.000Z",
+  "level_num": "custom",
+  "user_id": 42,
+  "properties": {
+    "short_instructions": "Instructions",
+    "long_instructions": "# Crack a Caesar cipher!\r\n\r\nThis tool lets you play with text and do Caesar ciphers. \r\n\r\n# Do this\r\n\r\n- Using the buttons in the Caesar substitution tab, you can shift the alphabet forwards or backwards to try to unscramble the message.\r\n\r\n![](https://images.code.org/ef9ebc16d2f1442dc46fba9bd48b5d43-image-1476285966821.gif)\r\n\r\nSee how long it takes you to crack the cipher! Is this a good method of encrypting secret data?",
+    "skip_dialog": true,
+    "href": "frequency/frequency.html",
+    "cipher": "caesar",
+    "texts": "[\r\n  {\"title\": \"Word\",\"message\":\"mloldd\"}\r\n]",
+    "instructions_important": "false",
+    "parent_level_id": 19627,
+    "name_suffix": "_2024",
+    "encrypted": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2025-04-27T22:08:44.379+00:00\",\"changed\":[\"cloned from \\\"Crack a Caesar Cipher_2024\\\"\"],\"cloned_from\":\"Crack a Caesar Cipher_2024\"},{\"changed_at\":\"2025-04-27 22:09:10 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-27 22:18:26 +0000\",\"changed\":[\"texts\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-04-27 22:20:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</FrequencyAnalysis>

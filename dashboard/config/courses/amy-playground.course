@@ -3,6 +3,9 @@
   "script_names": [
     "amy-playground"
   ],
+  "original_script_names": [
+    "amy-playground"
+  ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -3,6 +3,9 @@
   "script_names": [
     "text-compression"
   ],
+  "original_script_names": [
+    "text-compression"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

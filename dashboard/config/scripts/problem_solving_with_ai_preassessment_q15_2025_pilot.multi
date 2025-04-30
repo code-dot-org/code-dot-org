@@ -7,7 +7,7 @@ wrong 'AI should be trusted more than humans in all situations.'
 right 'AI can improve lives but must be monitored for fairness and sustainability.'
 wrong 'AI is neutral and doesn\'t impact different people in different ways.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 12: AI's Role in Society

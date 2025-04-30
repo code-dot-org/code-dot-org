@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-04 16:57:53 UTC",
+    "serialized_at": "2025-04-25 13:51:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1671,6 +1671,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd5_pl_25"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -1693,6 +1696,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L1 - Design Templates_2023a_pl_25"
+        ],
         "progression": "Physical Design Prototypes"
       },
       "bonus": false,
@@ -1715,6 +1721,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd6_pl_25"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -1737,6 +1746,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_25"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -1759,6 +1771,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_25"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -1781,6 +1796,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_25"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
@@ -1803,6 +1821,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_pl_25"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -1960,7 +1981,7 @@
     },
     {
       "name": "CSD In-Person Summer Workshop Day 4 Agenda",
-      "url": "https://docs.google.com/document/d/1auEy8yk3R-h5lSBjD5XxZM5fGq_zDGZKyDUid0JyDXA/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1VYGCLJDaPl54gGfYK9PBFrY_egAZgOsVvp1zLkb_X4o/edit?usp=drive_link",
       "key": "csd_in-person_summer_workshop_day_4_agenda",
       "properties": {
       },
@@ -1970,7 +1991,7 @@
     },
     {
       "name": "CSD In-Person Summer Workshop Day 4 Slides",
-      "url": "https://docs.google.com/presentation/d/1w_fANSxO9Ke2TUSlNs-Xbd1YdXeIe0AyQ5KtogOVrkc/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1y72hWSaYI9iueQrcAvQpyfdcTJBSt1HDJ0XqdhI02ag/edit?usp=drive_link",
       "key": "csd_in-person_summer_workshop_day_4_slides",
       "properties": {
       },
@@ -2090,19 +2111,6 @@
       }
     },
     {
-      "name": "Resource Packet",
-      "url": "https://docs.google.com/document/d/15ho43-c0njEcIEIr-RmHcUjZfIJPFdVZvQdpH6GC4B4/edit?usp=sharing",
-      "key": "resource_packet",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "resource_packet"
-      }
-    },
-    {
       "name": "The Problem Solving Process ",
       "url": "https://www.youtube.com/watch?v=z7RaFPT3DTE",
       "key": "the_problem_solving_process",
@@ -2117,24 +2125,6 @@
     }
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Differentiation",
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Intro to Unit 6 - Creating Apps for Devices ",
-        "resource.key": "resource_packet"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Introduction to Unit 7 - AI and Machine Learning",
-        "resource.key": "resource_packet"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "TLO 5 - U6L2 Physical Designs",

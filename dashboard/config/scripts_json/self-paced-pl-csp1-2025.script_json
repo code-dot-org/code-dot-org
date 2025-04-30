@@ -6,13 +6,14 @@
     "properties": {
       "content_area": "self_paced_pl_9_12",
       "curriculum_umbrella": "Self-paced PL - CSP",
+      "has_verified_resources": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-01 01:22:25 UTC",
+    "serialized_at": "2025-04-23 03:54:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -157,6 +158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSP-mod1-Overview-Welcome_2025"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -179,6 +183,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_2025"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -201,6 +208,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_2025"
+        ],
         "progression": "Welcome to Code.org"
       },
       "bonus": false,
@@ -223,6 +233,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-AboutCSP_2025"
+        ],
         "progression": "Welcome to CS Principles"
       },
       "bonus": false,
@@ -245,6 +258,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-22-CSP-mod1-NewTeacherAdvice_2025"
+        ],
         "progression": "Welcome to CS Principles"
       },
       "bonus": false,
@@ -267,6 +283,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-ModuleOverview-CSP_2025"
+        ],
         "progression": "Engaging with professional learning modules"
       },
       "bonus": false,
@@ -289,6 +308,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-ActivityOverview-CSP_2025"
+        ],
         "progression": "Engaging with professional learning modules"
       },
       "bonus": false,
@@ -311,6 +333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSP-21-Navigation_2025"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

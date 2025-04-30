@@ -34,7 +34,9 @@
   "resolutions": {
     "firmata": "^2.2.0",
     "@types/react": "^18.0.28",
-    "@types/react-dom": "^18.0.11"
+    "@types/react-dom": "^18.0.11",
+    "ua-parser-js": "^0.7.40",
+    "@amplitude/ua-parser-js": "^0.7.33"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -68,6 +70,7 @@
     "@types/js-cookie": "^3.0.6",
     "@types/mocha": "^10.0.1",
     "@types/react-bootstrap": "^0.32.36",
+    "@types/react-csv": "^1.1.10",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-select": "^1.2.1",
     "@types/reactabular-table": "^8.14.6",
@@ -182,7 +185,6 @@
     "@blockly/field-colour": "^5.0.9",
     "@blockly/field-grid-dropdown": "~5.0.9",
     "@blockly/keyboard-experiment": "^0.0.1",
-    "@blockly/keyboard-navigation": "~0.6.9",
     "@blockly/plugin-cross-tab-copy-paste": "~6.0.9",
     "@blockly/plugin-scroll-options": "~6.0.9",
     "@blockly/theme-dark": "7.0.7",

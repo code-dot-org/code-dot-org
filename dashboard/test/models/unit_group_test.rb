@@ -277,6 +277,65 @@ class UnitGroupTest < ActiveSupport::TestCase
     refute unit_group.stable?
   end
 
+  class UpdateOriginalScriptsTests < ActiveSupport::TestCase
+    setup do
+      File.stubs(:write)
+    end
+
+    test "update original scripts" do
+      unit_group = create :unit_group
+
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_original_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert_equal 2, unit_group.original_units.length
+      assert_equal unit_group, unit1.original_unit_group
+      assert_equal unit_group, unit2.original_unit_group
+    end
+
+    test "remove original scripts" do
+      unit_group = create :unit_group
+
+      create(:script, name: 'unit1')
+      create(:script, name: 'unit2')
+
+      unit_group.update_original_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+
+      assert_equal 2, unit_group.original_units.length
+
+      unit_group.update_original_scripts(['unit1'])
+      unit_group.reload
+      assert_equal 1, unit_group.original_units.length
+    end
+
+    test "change original unit group if a unit already has a unit group" do
+      unit_group1 = create :unit_group
+
+      unit1 = create(:script, name: 'unit1')
+      create(:script, name: 'unit2')
+
+      unit_group1.update_original_scripts(['unit1', 'unit2'])
+      unit_group1.reload
+      unit1.reload
+      assert_equal 2, unit_group1.original_units.length
+
+      unit_group2 = create :unit_group
+      unit_group2.update_original_scripts(['unit1'])
+      unit_group2.reload
+      unit1.reload
+      assert_equal 1, unit_group2.original_units.length
+      assert_equal unit_group2, unit1.original_unit_group
+    end
+  end
+
   class UpdateScriptsTests < ActiveSupport::TestCase
     setup do
       File.stubs(:write)
@@ -296,6 +355,52 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 'unit1', unit_group.default_unit_group_units[0].script.name
       assert_equal 2, unit_group.default_unit_group_units[1].position
       assert_equal 'unit2', unit_group.default_unit_group_units[1].script.name
+    end
+
+    test "add original unit if unit does not have original unit" do
+      # Original unit group = the first unit group the unit was assigned
+      unit_group = create :unit_group
+
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
+      assert_equal 2, unit_group.default_unit_group_units.length
+      assert_equal 1, unit_group.default_unit_group_units[0].position
+      assert_equal 'unit1', unit_group.default_unit_group_units[0].script.name
+      assert_equal 2, unit_group.default_unit_group_units[1].position
+      assert_equal 'unit2', unit_group.default_unit_group_units[1].script.name
+      assert_equal 2, unit_group.original_units.length
+      assert_equal unit_group, unit1.original_unit_group
+      assert_equal unit_group, unit2.original_unit_group
+    end
+
+    test "do not add original unit group if a unit already has an original unit group" do
+      unit_group1 = create :unit_group
+
+      unit1 = create(:script, name: 'unit1')
+
+      unit_group1.update_original_scripts(['unit1'])
+      unit_group1.reload
+      unit1.reload
+
+      assert_equal 1, unit_group1.original_units.length
+      assert_equal unit_group1, unit1.original_unit_group
+
+      unit_group2 = create :unit_group
+      unit_group2.update_scripts(['unit1'])
+
+      unit_group2.reload
+      unit1.reload
+
+      assert_equal 0, unit_group2.original_units.length
+      assert_equal 1, unit_group2.default_units.length
+      assert_equal unit_group1, unit1.original_unit_group
     end
 
     test "removes course version for new UnitGroupUnits" do
@@ -419,6 +524,24 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 2, unit_group.default_unit_group_units.length
     end
 
+    test "cannot remove UnitGroupUnits from their original course" do
+      course_version = create :course_version
+      unit_group = create :unit_group, course_version: course_version
+
+      create :script, name: 'unit1'
+      create :script, name: 'unit2'
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+      error = assert_raises RuntimeError do
+        unit_group.update_scripts(['unit2'])
+      end
+      assert_includes error.message, 'Cannot remove units from their original course'
+
+      unit_group.reload
+      assert_equal 2, unit_group.default_unit_group_units.length
+    end
+
     test "cannot add UnitGroupUnits that cannot change course version" do
       course_version1 = create :course_version
       unit_group1 = create :unit_group, course_version: course_version1
@@ -446,7 +569,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "remove UnitGroupUnits" do
-      unit_group = create(
+      original_unit_group = create(
         :unit_group,
         published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
         instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
@@ -466,7 +589,16 @@ class UnitGroupTest < ActiveSupport::TestCase
       )
       create(:script, name: 'unit2')
 
-      unit_group.update_scripts(['unit1', 'unit2'])
+      new_unit_group = create(
+        :unit_group,
+        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
+        instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
+        instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
+        participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+      )
+
+      original_unit_group.update_scripts(['unit1'])
+      new_unit_group.update_scripts(['unit1', 'unit2'])
 
       unit1.reload
 
@@ -478,14 +610,14 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit1.is_course
       assert_equal unit1.version_year, '1991'
 
-      unit_group.update_scripts(['unit2'])
+      new_unit_group.update_scripts(['unit2'])
 
-      unit_group.reload
+      new_unit_group.reload
       unit1.reload
 
-      assert_equal 1, unit_group.default_unit_group_units.length
-      assert_equal 1, unit_group.default_unit_group_units[0].position
-      assert_equal 'unit2', unit_group.default_unit_group_units[0].script.name
+      assert_equal 1, new_unit_group.default_unit_group_units.length
+      assert_equal 1, new_unit_group.default_unit_group_units[0].position
+      assert_equal 'unit2', new_unit_group.default_unit_group_units[0].script.name
       assert_equal unit1.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
       assert_equal unit1.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
       assert_equal unit1.instructor_audience, Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
@@ -493,13 +625,16 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "removed units have their published state instruction type participant audience and instructor audience reset" do
-      unit_group = create :unit_group
+      original_unit_group = create :unit_group
+      new_unit_group = create :unit_group
       unit1 = create(:script, name: 'unit1')
       unit2 = create(:script, name: 'unit2')
 
-      unit_group.update_scripts(['unit1', 'unit2'])
+      original_unit_group.update_scripts(['unit1'])
+      new_unit_group.update_scripts(['unit1', 'unit2'])
 
-      unit_group.reload
+      original_unit_group.reload
+      new_unit_group.reload
       unit1.reload
       unit2.reload
 
@@ -513,19 +648,19 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit2.instructor_audience
       assert_nil unit2.participant_audience
 
-      unit_group.update_scripts(['unit2'])
+      new_unit_group.update_scripts(['unit2'])
 
-      unit_group.reload
+      new_unit_group.reload
       unit1.reload
       unit2.reload
 
-      assert_equal unit_group.published_state, unit1.published_state
+      assert_equal new_unit_group.published_state, unit1.published_state
       refute_nil unit1.published_state
-      assert_equal unit_group.instruction_type, unit1.instruction_type
+      assert_equal new_unit_group.instruction_type, unit1.instruction_type
       refute_nil unit1.instruction_type
-      assert_equal unit_group.instructor_audience, unit1.instructor_audience
+      assert_equal new_unit_group.instructor_audience, unit1.instructor_audience
       refute_nil unit1.instructor_audience
-      assert_equal unit_group.participant_audience, unit1.participant_audience
+      assert_equal new_unit_group.participant_audience, unit1.participant_audience
       refute_nil unit1.participant_audience
 
       assert_nil unit2.published_state
@@ -535,13 +670,16 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "units with published state set independent of the unit group maintain that published state when removed" do
-      unit_group = create :unit_group
+      original_unit_group = create :unit_group
+      new_unit_group = create :unit_group
       unit1 = create(:script, name: 'unit1')
       unit2 = create(:script, name: 'unit2')
 
-      unit_group.update_scripts(['unit1', 'unit2'])
+      original_unit_group.update_scripts(['unit2'])
+      new_unit_group.update_scripts(['unit1', 'unit2'])
 
-      unit_group.reload
+      original_unit_group.reload
+      new_unit_group.reload
       unit1.reload
       unit2.reload
 
@@ -560,18 +698,18 @@ class UnitGroupTest < ActiveSupport::TestCase
 
       assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
 
-      unit_group.update_scripts(['unit1'])
+      new_unit_group.update_scripts(['unit1'])
 
-      unit_group.reload
+      new_unit_group.reload
       unit2.reload
 
-      refute_equal unit_group.published_state, unit2.published_state
+      refute_equal new_unit_group.published_state, unit2.published_state
       assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
-      assert_equal unit_group.instruction_type, unit2.instruction_type
+      assert_equal new_unit_group.instruction_type, unit2.instruction_type
       refute_nil unit2.instruction_type
-      assert_equal unit_group.instructor_audience, unit2.instructor_audience
+      assert_equal new_unit_group.instructor_audience, unit2.instructor_audience
       refute_nil unit2.instructor_audience
-      assert_equal unit_group.participant_audience, unit2.participant_audience
+      assert_equal new_unit_group.participant_audience, unit2.participant_audience
       refute_nil unit2.participant_audience
     end
   end

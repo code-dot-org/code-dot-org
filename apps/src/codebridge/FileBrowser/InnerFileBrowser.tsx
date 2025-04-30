@@ -50,21 +50,25 @@ const InnerFileBrowser = React.memo(
               <Droppable
                 data={{id: f.id}}
                 key={f.id + f.open}
-                Component="li"
+                Component="div"
                 className={classNames(moduleStyles.droppableArea, {
-                  [moduleStyles.acceptingDrop]:
-                    f.id === dropData?.id && dragData?.parentId !== f.id,
+                  [moduleStyles.acceptingDrop]: f.id === dropData?.id,
                 })}
               >
                 <MaybeDraggable
                   data={{id: f.id, type: DragType.FOLDER, parentId: f.parentId}}
+                  className={
+                    f.id === dragData?.id && dragData?.type === DragType.FOLDER
+                      ? moduleStyles.dragging
+                      : undefined
+                  }
                 >
                   <FolderRow
                     item={f}
                     enableMenu={!isReadOnly && !dragData?.id}
                   />
                   {f.open && (
-                    <ul>
+                    <div className={moduleStyles.folder}>
                       <InnerFileBrowser
                         folders={folders}
                         parentId={f.id}
@@ -72,7 +76,7 @@ const InnerFileBrowser = React.memo(
                         setFileType={setFileType}
                         appName={appName}
                       />
-                    </ul>
+                    </div>
                   )}
                 </MaybeDraggable>
               </Droppable>
@@ -89,13 +93,15 @@ const InnerFileBrowser = React.memo(
               item: f,
               hasValidationFile,
               enableMenu: !isReadOnly && (!dragData?.id || isDraggingLocked),
+              isDragging:
+                dragData?.id === f.id && dragData?.type === DragType.FILE,
             };
             const MaybeDraggable = isDraggingLocked ? NotDraggable : Draggable;
             return (
               <MaybeDraggable
                 data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
                 key={f.id}
-                Component="li"
+                Component="div"
               >
                 <FileRow {...fileRowProps} />
               </MaybeDraggable>

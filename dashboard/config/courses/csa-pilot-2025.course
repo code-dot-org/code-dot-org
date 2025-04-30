@@ -11,6 +11,17 @@
     "csa8-pilot-2025",
     "csa9-pilot-2025"
   ],
+  "original_script_names": [
+    "csa1-pilot-2025",
+    "csa2-pilot-2025",
+    "csa3-pilot-2025",
+    "csa4-pilot-2025",
+    "csa5-pilot-2025",
+    "csa6-pilot-2025",
+    "csa7-pilot-2025",
+    "csa8-pilot-2025",
+    "csa9-pilot-2025"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

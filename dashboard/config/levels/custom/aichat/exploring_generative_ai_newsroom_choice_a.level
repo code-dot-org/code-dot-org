@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-04-25T19:38:51.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Write a School Event Ad",
+    "long_instructions": "## Write a School Event Ad\r\n\r\n**Task:** Ask AI to write a short ad or announcement for a school event.\r\n\r\n**Things to Try:**\r\n- Give the AI details (event name, date, location, reason to come)\r\n- Ask for two versions: one formal, one fun\r\n- See if the AI can add a catchy slogan or tagline",
+    "bubble_choice_description": "Ask AI to write a short ad or announcement for a school event.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/9d05ad9deaa6d0b4be3293ac25f811b2-calendar.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-25 19:38:58 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 21:59:56 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>
