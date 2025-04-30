@@ -8,6 +8,8 @@ class PromotesController < ApplicationController
 
   # GET /promotes/map(/:us_state)
   def map
+    response.headers['Content-Security-Policy'] = 'frame-ancestors http://localhost:* https://*code.org'
+
     # rubocop:disable CustomCops/PegasusDbUsage
     @hs_access_count = PEGASUS_DB[:cdo_state_promote].where(require_hs_s: 'Yes').count
     @k12_access_count = PEGASUS_DB[:cdo_state_promote].where(require_k12_s: 'Yes').count
