@@ -96,7 +96,7 @@ const Section: React.FC<SectionProps> = ({
         moduleStyles.section,
         moduleStyles[`section-background-${background}`],
         moduleStyles[`section-padding-${padding}`],
-        divider && moduleStyles.hasDivider,
+        divider !== 'none' && moduleStyles.hasDivider,
         className,
       )}
       style={{
