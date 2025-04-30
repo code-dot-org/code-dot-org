@@ -37,7 +37,7 @@ Given(/^the unit slug input contains the temp script name$/) do
     And element ".newUnitSlug" has value "#{@temp_script_name}"
   }
 end
-
+#TODO: Check this!
 Given(/^I view the temp unit overview page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}"
