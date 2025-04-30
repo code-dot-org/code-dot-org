@@ -42,11 +42,11 @@ class ValidationTestResult(TextTestResult):
       self.simplified_results.append({'name': self.getDescription(test), 'result': "UNEXPECTED_SUCCESS"})
 
 
-  # Override of unittest.TextTestResult.
+  # Override of unittest.TextTestResult._exc_info_to_string
   # The original method prints the stack trace and error message,
   # we just print the error message, colored in red.
+  # Color code reference: https://en.wikipedia.org/wiki/ANSI_escape_code#Colors
   def _exc_info_to_string(self, err, test):
-    """Convert an exception to a string."""
+    """Print the value of the exception in red."""
     exception_type, value, traceback = err
     return f"\x1b[38;5;203m{value}\x1b[0m"
-
