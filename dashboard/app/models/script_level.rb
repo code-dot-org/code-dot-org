@@ -778,7 +778,7 @@ class ScriptLevel < ApplicationRecord
       end
     elsif level.ideal_level_source_id && script # old style 'solutions' for blockly-type levels
       unless ScriptConfig.allows_public_caching_for_script(script.name)
-        level_example_links.push(build_script_level_url(self, {solution: true}.merge(section_id ? {section_id: section_id} : {})))
+        level_example_links.push(build_script_level_url(self, **{solution: true}.merge(section_id ? {section_id: section_id} : {})))
       end
     end
 
