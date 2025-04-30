@@ -13,6 +13,7 @@ describe('PythonValidator', () => {
       ['result', 'PASS'],
     ]),
   ];
+  // TODO: add tests after pyodide upgrade
 
   const SOME_FAILED_TESTS = [
     new Map<string, string>([
