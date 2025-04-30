@@ -4,7 +4,7 @@ Feature: Using the V2 progress page
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+  And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
@@ -32,7 +32,7 @@ Scenario: Teacher can open and close Icon Key and details
 Scenario: Viewing student metadata
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-  And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/9?noautoplay=true"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/9?noautoplay=true"
   And I wait to see "#runButton"
   And I submit this level
 
@@ -133,10 +133,10 @@ Scenario: Teacher can view lesson progress for when students have completed a le
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
   # Student completes one of many levels in lesson 2
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+  And I complete the level on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/2/levels/1"
 
   # Student completes all the levels in lesson 10 (there is only one level)
-  Given I am on "http://studio.code.org/s/allthethings/lessons/10/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/10/levels/1?noautoplay=true"
   Then I wait for 3 seconds
   And I wait until element ".submitButton" is visible
   And I press ".answerbutton[index=1]" using jQuery
@@ -161,7 +161,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   Given I am assigned to unit "allthethings"
 
   # Student submits project
-  Given I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/38/levels/1?noautoplay=true"
   Then I wait to see "#runButton"
   And I press "runButton"
   And I wait to see "#finishButton"
@@ -219,7 +219,7 @@ Scenario: Teacher can view choice levels
   Given I am assigned to unit "allthethings"
 
   # Student submits choice level
-  Given I am on "http://studio.code.org/s/allthethings/lessons/40/levels/1/sublevel/2?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/2?noautoplay=true"
   And I wait until I see selector "button:contains(Submit)"
   And I click selector "button:contains(Submit)"
   And I wait to see "#confirm-button"
