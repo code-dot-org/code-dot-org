@@ -9,6 +9,7 @@ import FontAwesomeV6Icon, {
 import type {LevelData} from '@/app/models/level';
 import LevelProvider from '@/providers/LevelProvider';
 
+import KarelLevel from './karelLevel';
 import MazeLevel from './mazeLevel';
 import StandaloneVideoLevel from './standaloneVideoLevel';
 import StarWarsLevel from './starWarsLevel';
@@ -40,7 +41,7 @@ const Level: React.FunctionComponent<LevelProps> = ({levelData}) => (
         <FontAwesomeV6Icon {...spinnerIcon} style={{fontSize: '3rem'}} />
       )}
       {levelData?.type === 'Maze' && <MazeLevel levelData={levelData} />}
-      {levelData?.type === 'Karel' && <MazeLevel levelData={levelData} />}
+      {levelData?.type === 'Karel' && <KarelLevel levelData={levelData} />}
       {levelData?.type === 'StarWarsGrid' && (
         <StarWarsLevel levelData={levelData} />
       )}

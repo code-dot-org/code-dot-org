@@ -169,7 +169,6 @@ export function grayOutUndeletableBlocks(
 
   const grayOut = blockDefinition => {
     const block = eventWorkspace?.getBlockById(blockDefinition.id);
-    console.log('GRAY?', blockDefinition, block);
     if (
       !block.isDeletable() &&
       block.isMovable() &&
@@ -189,5 +188,9 @@ export function grayOutUndeletableBlocks(
     }
   };
 
-  grayOut(blockEvent.json);
+  grayOut(
+    blockEvent.json || {
+      id: blockEvent.blockId,
+    },
+  );
 }

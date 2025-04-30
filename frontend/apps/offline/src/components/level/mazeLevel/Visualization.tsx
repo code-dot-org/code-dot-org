@@ -10,13 +10,14 @@ export interface VisualizationProps {
   onRun: () => void;
   onReset: () => void;
   onStep: () => void;
+  className?: string;
 }
 
 const Visualization: React.FunctionComponent<VisualizationProps> = forwardRef(
-  ({running, stepping, onRun, onReset, onStep}, ref) => {
+  ({running, stepping, onRun, onReset, onStep, className}, ref) => {
     console.log('visualization', running, stepping);
     return (
-      <div>
+      <div className={className}>
         <svg version="1.1" id={SVG_ID} ref={ref}>
           <g id={LOOK_ID}>
             <path d="M 0,-15 a 15 15 0 0 1 15 15" />

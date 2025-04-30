@@ -31,15 +31,20 @@ export default async function UnitLevelPage({
 
   // Parse level data
   let rawLevelData = {};
+  let levelPath: string | undefined;
   try {
-    rawLevelData = await loadLevel(levelKey);
+    const {path, data} = await loadLevel(levelKey);
+    rawLevelData = data;
+    levelPath = path;
   } catch (_) {
     // If the file doesn't exist or is malformed, return 404
     console.log('CANNOT PARSE LEVEL', levelKey);
     return notFound();
   }
 
-  const levelData = await parseLevelData(levelKey, rawLevelData);
+  console.log('LEVEL?', levelPath, levelKey);
+  const levelData = await parseLevelData(levelKey, rawLevelData, levelPath);
+  console.log('LEVEL?', levelData);
 
   return (
     <div

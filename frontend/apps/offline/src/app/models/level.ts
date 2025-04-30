@@ -37,9 +37,15 @@ export interface VideoData {
   locale: string;
 }
 
+/** Describes Maze level tile data in serialized mazes */
+export interface MazeTileData {
+  tileType: number;
+}
+
 /** Describes maze level initial data. */
 export interface MazeData {
   maze?: number[][];
+  serializedMaze?: MazeTileData[][];
   skin?: string;
   startDirection?: number;
 }
@@ -65,6 +71,8 @@ export interface LevelData {
   instructionsImportant: boolean;
   /** Hints to help folks progress within levels. */
   hints: HintData[];
+  /** The path to the level data, if it is locally sourced. */
+  path?: string;
   /** An optional video that is associated with the level. */
   videoKey?: string;
   /** The metadata about the associated video. */
@@ -77,11 +85,19 @@ export interface LevelData {
   multipleChoice?: MultipleChoiceData;
 }
 
+export interface LevelLoadInfo {
+  path: string;
+  data: string;
+}
+
 /** Loads a level file. */
 export const loadLevel: (
   key: string,
   extension?: string,
-) => Promise<string> = async (key: string, extension: string = 'level') => {
+) => Promise<LevelLoadInfo> = async (
+  key: string,
+  extension: string = 'level',
+) => {
   // File the .level file within the ./data path
   const filePath = path.join(
     process.cwd(),
@@ -91,7 +107,10 @@ export const loadLevel: (
   );
 
   try {
-    return await fs.readFile(filePath, 'utf8');
+    return {
+      path: filePath,
+      data: await fs.readFile(filePath, 'utf8'),
+    };
   } catch (_) {
     // Could not find the level data in the ./data path
   }
@@ -150,9 +169,16 @@ export const loadLevel: (
       );
 
       try {
-        return await fs.readFile(fallbackPath, 'utf8');
+        return {
+          path: fallbackPath,
+          data: await fs.readFile(fallbackPath, 'utf8'),
+        };
       } catch (_) {
-        return await fs.readFile(fallbackPath.toLowerCase(), 'utf8');
+        // Attempt the lowercase version of the level key
+        return {
+          path: fallbackPath.toLowerCase(),
+          data: await fs.readFile(fallbackPath.toLowerCase(), 'utf8'),
+        };
       }
     } catch (_) {
       // Keep trying
@@ -219,7 +245,12 @@ export const loadVideo: (key: string) => Promise<VideoDefinition> = async (
 export const parseLevelData: (
   key: string,
   xmlString: string,
-) => Promise<LevelData> = async (key: string, xmlString: string) => {
+  path?: string,
+) => Promise<LevelData> = async (
+  key: string,
+  xmlString: string,
+  path?: string,
+) => {
   const parser = new new JSDOM().window.DOMParser();
   const xml = parser.parseFromString(xmlString, 'application/xml');
   const config = JSON.parse(
@@ -243,16 +274,21 @@ export const parseLevelData: (
     ),
   };
 
+  // Retain path, if it is given to us
+  if (path) {
+    ret.path = path;
+  }
+
   // Parse hint data
   ret.hints = JSON.parse(config.properties.authored_hints || '[]').map(hint => {
-    const ret = {};
-    ret.class = hint.hint_class;
-    ret.id = hint.hint_id;
-    ret.path = hint.hint_path ? JSON.parse(hint.hint_path) : undefined;
-    ret.type = hint.hint_type;
-    ret.video = hint.hint_video ? hint.hint_video : undefined;
-    ret.markdown = hint.hint_markdown;
-    return ret;
+    const hintData = {};
+    hintData.class = hint.hint_class;
+    hintData.id = hint.hint_id;
+    hintData.path = hint.hint_path ? JSON.parse(hint.hint_path) : undefined;
+    hintData.type = hint.hint_type;
+    hintData.video = hint.hint_video ? hint.hint_video : undefined;
+    hintData.markdown = hint.hint_markdown;
+    return hintData;
   });
 
   // Parse maze data for such levels
@@ -267,6 +303,9 @@ export const parseLevelData: (
       skin: config.properties.skin,
       maze: config.properties.maze
         ? JSON.parse(config.properties.maze)
+        : undefined,
+      serializedMaze: config.properties.serialized_maze
+        ? JSON.parse(config.properties.serialized_maze)
         : undefined,
       startDirection: config.properties.start_direction
         ? parseInt(config.properties.start_direction)
@@ -302,7 +341,7 @@ export const parseLevelData: (
   if (ret.containedLevelNames?.[0]) {
     // Get the contained level data, too
     const multiKey = ret.containedLevelNames[0];
-    const multiData = (await loadLevel(multiKey, 'multi')).split('\n');
+    const multiData = (await loadLevel(multiKey, 'multi')).data.split('\n');
 
     // Parse the multiple choice question
     const multipleChoice = {

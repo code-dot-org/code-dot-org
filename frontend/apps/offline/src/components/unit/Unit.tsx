@@ -23,6 +23,7 @@ export interface UnitProps {
 const Unit: React.FunctionComponent<UnitProps> = ({unit}) => {
   return (
     <div>
+      {/* Render the top header describing the unit */}
       <Section
         backgroundImageUrl={'/images/bg-pattern.png'}
         background="patternPrimary"
@@ -30,7 +31,9 @@ const Unit: React.FunctionComponent<UnitProps> = ({unit}) => {
         <Heading2>{unit.title}</Heading2>
         <BodyOneText>{unit.description.student}</BodyOneText>
       </Section>
+
       <div className={moduleStyles.unitContainer}>
+        {/* Render lesson groups */}
         {unit.lessonGroups.map((lessonGroup, i) => (
           <LessonGroup
             key={`lesson-group-${i}`}
@@ -40,14 +43,18 @@ const Unit: React.FunctionComponent<UnitProps> = ({unit}) => {
             open={i === 0}
           />
         ))}
-        {unit.lessons.map((lesson, i) => (
-          <Lesson
-            key={`lesson-${i}`}
-            unitKey={unit.key}
-            lesson={lesson}
-            open={i === 0}
-          />
-        ))}
+
+        {/* Render lessons that are not within a lesson group */}
+        {unit.lessons
+          .filter(lesson => lesson.lessonGroupIndex === undefined)
+          .map(lesson => (
+            <Lesson
+              key={`lesson-${lesson.index}`}
+              unitKey={unit.key}
+              lesson={lesson}
+              open={lesson.index === 0}
+            />
+          ))}
       </div>
     </div>
   );

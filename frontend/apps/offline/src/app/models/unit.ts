@@ -352,6 +352,8 @@ export interface LessonData {
   relativePosition: number;
   /** The index of the lesson in the Unit's lesson array. */
   index: number;
+  /** The index of the lesson group in the Unit's lessonGroup array this lesson belongs to */
+  lessonGroupIndex?: number;
   /** Other properties that are useful metadata for the lesson */
   properties: {
     /** The content license for this lesson, typically a Creative Commons license */
@@ -660,18 +662,21 @@ export const parseUnitData: (data: UnitDefinition) => UnitData = (
   // Determine the lesson groups, if any
   ret.lessonGroups = (data.lesson_groups || [])
     .filter(lessonGroup => lessonGroup.key !== '')
-    .map(lessonGroup => ({
+    .map((lessonGroup, i) => ({
       key: lessonGroup.key,
       title: lessonGroup.properties.display_name,
       position: lessonGroup.position,
       userFacing: lessonGroup.user_facing,
       lessons: data.lessons
-        .map((lesson, i) => [lesson, i])
+        .map((lesson, j) => [lesson, j])
         .filter(
           ([lesson, _]) =>
             lesson.seeding_key?.['lesson_group.key'] === lessonGroup.key,
         )
-        .map(([_, i]) => ret.lessons[i]),
+        .map(([_, j]) => {
+          ret.lessons[j].lessonGroupIndex = i;
+          return ret.lessons[j];
+        }),
     }));
 
   console.log('UNIT', ret);

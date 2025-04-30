@@ -119,7 +119,7 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
             />
           </WithTooltip>
         ))}
-        {levelIndex === unit.lessons[lessonIndex].levels.length && (
+        {levelIndex === unit.lessons[lessonIndex].levels.length - 1 && (
           <Button
             className={moduleStyles.progressButton}
             alt="Skip to next level"
@@ -136,7 +136,7 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
             href={`/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex + 2}`}
           />
         )}
-        {levelIndex !== unit.lessons[lessonIndex].levels.length && (
+        {levelIndex !== unit.lessons[lessonIndex].levels.length - 1 && (
           <WithTooltip
             tooltipProps={{
               text:

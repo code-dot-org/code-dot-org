@@ -1,6 +1,6 @@
-import {SkinDefinition} from './types';
+import {Skin, SkinsData} from './types';
 
-const skins = {
+const defaultSkins: SkinsData = {
   pvz: {
     goalIdle: 'goalIdle.gif',
     obstacleIdle: 'obstacleIdle.gif',
@@ -71,7 +71,7 @@ const skins = {
   },
 };
 
-export const skinFor: (id: string) => SkinDefinition = id => {
+export const skinFor: (skins: SkinsData, id: string) => Skin = (skins, id) => {
   const assetUrl: (path: string) => string = (path: string) =>
     `/blockly/${path}`;
 
@@ -144,7 +144,7 @@ export const skinFor: (id: string) => SkinDefinition = id => {
   };
 
   // Load individual skin
-  const config = skins[id] || skins['birds'];
+  const config = skins[id] || defaultSkins['birds'];
 
   // (2) Default values for properties common across maze skins.
   skin.obstacleScale = 1.0;
@@ -201,3 +201,5 @@ export const skinFor: (id: string) => SkinDefinition = id => {
 
   return skin;
 };
+
+export default defaultSkins;

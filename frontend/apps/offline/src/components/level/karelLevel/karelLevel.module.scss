@@ -1,0 +1,16 @@
+$counter-fill: #fff;
+$counter-stroke: #000;
+
+.karelMaze {
+  // The counters next to collectable items in karel levels
+  :global(.karel-counter-text) {
+    cursor: default;
+    fill: $counter-fill;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    stroke: $counter-stroke;
+    stroke-width: 1;
+    text-anchor: end;
+  }
+}

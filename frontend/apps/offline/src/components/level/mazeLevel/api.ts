@@ -17,7 +17,7 @@ function _executeIfConditional(conditional, fn) {
 /**
  * Only call API functions if we haven't yet terminated execution
  */
-const API_FUNCTION = function (fn, ...rest) {
+export const API_FUNCTION = function (fn, ...rest) {
   if (!this.executionInfo.isTerminated()) {
     fn.apply(this, ...rest);
   }
@@ -179,28 +179,38 @@ function turn(direction: number, id: string) {
   );
 }
 
+/**
+ * Moves the character forward.
+ */
 export function moveForward(id: string) {
   API_FUNCTION.bind(this)(() => {
     move.bind(this)(MoveDirection.FORWARD, id);
   });
 }
 
+/**
+ * Moves the character backward.
+ */
 export function moveBackward(id: string) {
   API_FUNCTION.bind(this)(() => {
     move.bind(this)(MoveDirection.BACKWARD, id);
   });
 }
 
+/**
+ * Turns the character to their left.
+ */
 export function turnLeft(id: string) {
   API_FUNCTION.bind(this)(() => {
     turn.bind(this)(TurnDirection.LEFT, id);
   });
 }
 
+/**
+ * Turns the character to their right.
+ */
 export function turnRight(id: string) {
   API_FUNCTION.bind(this)(() => {
     turn.bind(this)(TurnDirection.RIGHT, id);
   });
 }
-
-export function collect() {}

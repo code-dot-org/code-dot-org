@@ -17,21 +17,35 @@ import BlocklyLevel, {BlocklyLevelProps} from '@/components/level/blocklyLevel';
 import {useTimeout} from '@/components/useTimeout';
 import LevelContext from '@/contexts/LevelContext';
 
-import * as api from './api';
+import * as defaultAPI from './api';
 import blocks from './blocks';
 import ExecutionInfo from './ExecutionInfo';
 import {evalWith} from './interpreter';
-import {skinFor} from './skins';
+import defaultSkins, {skinFor} from './skins';
+import type {SkinsData, API} from './types';
 import Visualization from './Visualization';
 
 export interface MazeLevelProps extends BlocklyLevelProps {
   levelData: LevelData;
+  skins?: SkinsData;
+  api?: API;
   customBlocks?: BlockDefinition[];
+  visualization?: React.Node;
+  visualizationClassName?: string;
 }
 
 const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   levelData,
   customBlocks,
+  skins,
+  theme,
+  renderer,
+  avatar,
+  visualization,
+  visualizationClassName,
+  api,
+  options,
+  ...rest
 }) => {
   const controller = useRef(null);
   const svg = useRef(null);
@@ -49,7 +63,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     }
   }, [hintsShown]);
 
-  const [avatar, setAvatar] = useState<string>('');
+  const [currentAvatar, setCurrentAvatar] = useState<string>(avatar || '');
   const [running, setRunning] = useState<boolean>(false);
   const [stepping, setStepping] = useState<boolean>(false);
 
@@ -77,7 +91,8 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
         Maze: {
           executionInfo: executionInfo.current,
           controller: controller.current,
-          ...api,
+          ...defaultAPI,
+          ...(api || {}),
           Maze: {},
         },
       });
@@ -259,14 +274,16 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     console.log('done');
   }, [controller, svg]);
 
-  const skinConfig = skinFor(levelData?.mazeData?.skin);
+  // Pull out the skin asset paths
+  const skinConfig = skinFor(skins || defaultSkins, levelData?.mazeData?.skin);
 
   useEffect(() => {
     // Parse out maze data
-    setAvatar(skinConfig.smallStaticAvatar);
+    setCurrentAvatar(skinConfig.smallStaticAvatar);
     controller.current = new Maze.MazeController(
       {
         map: levelData.mazeData.maze,
+        serializedMaze: levelData.mazeData.serializedMaze,
         skinId: levelData.mazeData.skin,
         ...levelData.mazeData,
       },
@@ -296,25 +313,30 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     <BlocklyLevel
       levelData={levelData}
       data={{skin: skinConfig}}
-      theme={DefaultTheme}
-      renderer={ThrasosRenderer}
-      avatar={avatar}
+      theme={theme || DefaultTheme}
+      renderer={renderer || ThrasosRenderer}
+      avatar={currentAvatar}
       visualization={
-        <Visualization
-          ref={svg}
-          running={running}
-          stepping={stepping}
-          onRun={onRun}
-          onReset={onReset}
-          onStep={onStep}
-        />
+        visualization || (
+          <Visualization
+            ref={svg}
+            running={running}
+            stepping={stepping}
+            onRun={onRun}
+            onReset={onReset}
+            onStep={onStep}
+            className={visualizationClassName}
+          />
+        )
       }
       customBlocks={[...blocks, ...(customBlocks || [])]}
       options={{
         forceInsertTopBlock: 'when_run',
         grayOutUndeletableBlocks: true,
+        ...(options || {}),
       }}
       onInject={onInject}
+      {...rest}
     />
   );
 };
