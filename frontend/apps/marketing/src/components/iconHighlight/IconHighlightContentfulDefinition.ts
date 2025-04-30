@@ -24,6 +24,7 @@ export const IconHighlightContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'Icon Highlight Heading',
       validations: {
         required: true,
+        bindingSourceType: ['entry', 'manual'],
       },
     },
     text: {
@@ -33,6 +34,7 @@ export const IconHighlightContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'Icon Highlight\nMultiline Text',
       validations: {
         required: true,
+        bindingSourceType: ['entry', 'manual'],
       },
     },
     iconName: {

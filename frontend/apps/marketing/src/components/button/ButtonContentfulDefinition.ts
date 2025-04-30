@@ -44,12 +44,18 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       defaultValue: 'Button',
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     href: {
       displayName: 'Link URL',
       type: 'Text',
       defaultValue: 'https://code.org',
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     isLinkExternal: {
       displayName:
@@ -59,11 +65,17 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
       type: 'Boolean',
       defaultValue: false,
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     ariaLabel: {
       displayName: 'Aria Label',
       type: 'Text',
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     iconLeftName: {
       displayName: 'Left Icon Name',

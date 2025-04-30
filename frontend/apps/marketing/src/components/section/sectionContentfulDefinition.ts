@@ -65,6 +65,9 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       group: 'content',
       description: 'Adds a custom ID to a section; can be used for skip links.',
+      validations: {
+        bindingSourceType: ['manual'],
+      },
     },
   },
 };

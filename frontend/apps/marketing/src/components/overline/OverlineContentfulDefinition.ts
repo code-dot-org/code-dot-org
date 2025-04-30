@@ -48,6 +48,9 @@ export const OverlineContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       defaultValue: 'Overline',
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
   },
 };

@@ -50,6 +50,7 @@ export const EditorialCardContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'Editorial Card Heading',
       validations: {
         required: true,
+        bindingSourceType: ['entry', 'manual'],
       },
     },
     text: {
@@ -59,6 +60,7 @@ export const EditorialCardContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'Editorial Card\nMultiline Text',
       validations: {
         required: true,
+        bindingSourceType: ['entry', 'manual'],
       },
     },
     image: {

@@ -50,6 +50,9 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'Paragraph',
       group: 'content',
       description: 'The text or other elements to display inside the paragraph',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     isStrong: {
       displayName: 'Make this paragraph bold',
