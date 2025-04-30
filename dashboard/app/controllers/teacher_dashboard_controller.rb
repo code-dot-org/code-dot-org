@@ -2,6 +2,8 @@ class TeacherDashboardController < ApplicationController
   load_and_authorize_resource :section
   include LevelsHelper
 
+  ALPHABET = ('a'..'z').to_a
+
   rescue_from CanCan::AccessDenied do
     if request.fullpath.include? 'home'
       redirect_to "/users/sign_in"
@@ -81,10 +83,11 @@ class TeacherDashboardController < ApplicationController
   end
 
   private def level_progress_csv
-    section = load_section
-    unit = load_unit(section)
+    return :bad_request unless params[:unit_id]
 
-    deduplicated_students = section.students.distinct
+    unit = Unit.get_from_cache(params[:unit_id])
+
+    deduplicated_students = @section.students.distinct
 
     student_progress = script_progress_for_users(deduplicated_students, unit)[0]
 
@@ -115,19 +118,19 @@ class TeacherDashboardController < ApplicationController
       lesson.script_levels.each do |script_level|
         next if script_level.assessment?
 
-        level = script_level.summarize
-        level_id = level[:activeId] || level[:id]
+        level_id = script_level.oldest_active_level.id || script_level.id
         level_text = "#{lesson.relative_position}.#{script_level.level_display_text}"
 
-        if level[:sublevels]
-          level[:sublevels].each do |sublevel|
-            sublevel_name = "#{level_text}#{sublevel[:letter]}"
+        if script_level.bubble_choice?
+          sublevels = script_level.level.sublevels
+          sublevels.each_with_index do |sublevel, index|
+            sublevel_name = "#{level_text}#{ALPHABET[index]}"
             level_names << sublevel_name
 
-            add_level_data_for_all_students(progress_table, student_progress, sublevel[:level_id].to_i, sublevel_name, false)
+            add_level_data_for_all_students(progress_table, student_progress, sublevel.id, sublevel_name, sublevel.validated?)
           end
         else
-          add_level_data_for_all_students(progress_table, student_progress, level_id.to_i, level_text, level[:is_validated])
+          add_level_data_for_all_students(progress_table, student_progress, level_id, level_text, script_level.level.validated?)
           level_names << level_text
         end
       end
@@ -157,19 +160,5 @@ class TeacherDashboardController < ApplicationController
 
       data_row[level_text] = parsed_status
     end
-  end
-
-  private def load_section
-    section = Section.find(params[:section_id])
-    authorize! :read, section
-    section
-  end
-
-  private def load_unit(section = nil)
-    unit_id = params[:unit_id] if params[:unit_id].present?
-    unit_id ||= section.default_script.try(:id)
-    unit = Unit.get_from_cache(unit_id) if unit_id
-    unit ||= Unit.twenty_hour_unit
-    unit
   end
 end

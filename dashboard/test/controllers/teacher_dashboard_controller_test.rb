@@ -148,6 +148,7 @@ class TeacherDashboardControllerTest < ActionController::TestCase
     lesson = create(:lesson, script: script, lesson_group: lesson_group, relative_position: 1, name: "Lesson 1")
     script_level1 = create(:script_level, script: script, lesson: lesson, position: 1)
     create(:script_level, script: script, lesson: lesson, position: 2)
+    create(:script_level, script: script, lesson: lesson, position: 3, assessment: true)
 
     student1 = create(:student, name: "Kyle", family_name: "Example")
     student2 = create(:student, name: "Jane", family_name: "Doe")
