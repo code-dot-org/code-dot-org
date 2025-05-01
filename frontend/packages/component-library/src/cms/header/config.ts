@@ -26,6 +26,7 @@ export function getDefaultHeaderProps({
   studioUrl,
 }: DefaultProps): HeaderProps {
   return {
+    studioBaseUrl: studioUrl,
     homeLink: {
       href: '/',
       ariaLabel: 'Go to homepage',
@@ -157,7 +158,6 @@ export function getDefaultHeaderProps({
         href: `${studioUrl}/home`,
       },
     },
-    isLoggedIn: false,
     helpButtonLabel: {
       open: 'Open Help menu',
       close: 'Close Help menu',

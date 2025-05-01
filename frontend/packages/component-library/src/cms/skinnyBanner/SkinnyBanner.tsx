@@ -80,7 +80,7 @@ const SkinnyBanner: React.FC<SkinnyBannerProps> = ({
         {partner && (
           <span className={moduleStyles.skinnyBannerPartnerContainer}>
             {partner.title}
-            <Image {...partner.logo} />
+            <Image {...partner.logo} hasRoundedCorners={false} />
           </span>
         )}
       </div>

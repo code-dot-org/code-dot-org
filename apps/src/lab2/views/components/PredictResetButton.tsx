@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {Button} from '@code-dot-org/component-library/button';
 import React from 'react';
 
 import {resetPredictProgress} from '@cdo/apps/lab2/redux/predictLevelRedux';
@@ -40,18 +40,22 @@ const PredictResetButton: React.FunctionComponent = () => {
   }
 
   return (
-    <div>
-      <Button
-        text={i18n.deleteAnswer()}
-        onClick={handleResetClick}
-        size={'s'}
-        disabled={!hasSubmitted}
-        iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
-        type={'secondary'}
-        color={buttonColors.destructive}
-        className={moduleStyles.resetButton}
-      />
-      <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
+    <>
+      <div className={moduleStyles.resetButtonRow}>
+        <Button
+          text={i18n.deleteAnswer()}
+          onClick={handleResetClick}
+          size={'s'}
+          disabled={!hasSubmitted}
+          iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
+          type={'secondary'}
+          color={'destructive'}
+          className={moduleStyles.resetButton}
+        />
+        <span className={moduleStyles.resetButtonRowSpace}>
+          <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
+        </span>
+      </div>
       {resetFailed && (
         <Alert
           type="danger"
@@ -59,7 +63,7 @@ const PredictResetButton: React.FunctionComponent = () => {
           className={moduleStyles.resetError}
         />
       )}
-    </div>
+    </>
   );
 };
 

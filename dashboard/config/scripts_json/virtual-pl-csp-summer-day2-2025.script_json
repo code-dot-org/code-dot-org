@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-28 19:13:35 UTC",
+    "serialized_at": "2025-04-29 12:26:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1335,6 +1335,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2_2025"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -1357,6 +1360,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2_2025"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -1379,6 +1385,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2_2025"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -1401,6 +1410,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2_2025"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -1423,6 +1435,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1445,6 +1460,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C_2_2025"
+        ],
         "progression": "Sampling an Analog Image: Challenge C"
       },
       "bonus": false,
@@ -1467,6 +1485,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU pixel data2022_2_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1489,6 +1510,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU Sampling_2_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1511,6 +1535,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L11 Widget: Text Compression_2_2025"
+        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -1533,6 +1560,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression2022_2_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1555,6 +1585,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CFU Compression for Email_2_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1577,6 +1610,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-01_2025"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1599,6 +1635,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-02_2025"
+        ],
         "progression": "CED Scavenger Hunt"
       },
       "bonus": false,
@@ -1621,6 +1660,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch1-03_2025"
+        ],
         "progression": "CED Scavenger Hunt"
       },
       "bonus": false,
@@ -1643,6 +1685,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v1_3_2025"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -1665,6 +1710,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v2_3_2025"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -1687,6 +1735,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone_3_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1709,6 +1760,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-01_2025"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1731,6 +1785,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-02_2025"
+        ],
         "progression": "Unit 1 Connections and Conclusions"
       },
       "bonus": false,
@@ -1753,6 +1810,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-03_2025"
+        ],
         "progression": "Previously, On...Unit 2"
       },
       "bonus": false,
@@ -1775,6 +1835,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day2-asynch2-04_2025"
+        ],
         "progression": "Understanding Self: Identity Map"
       },
       "bonus": false,
@@ -2048,6 +2111,26 @@
   ],
   "resources": [
     {
+      "name": "2025 Virtual CSP Summer Workshop Agenda - Day 2",
+      "url": "https://docs.google.com/document/d/1SmfGrK9JCWdFIYAL_q-zUo3W6o-11rduf3iSygkExmE/edit?usp=drive_link",
+      "key": "2025_virtual_csp_summer_workshop_slides_-_day_2",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_slides_-_day_2"
+      }
+    },
+    {
+      "name": "2025 Virtual CSP Summer Workshop Slides - Day 2",
+      "url": "https://docs.google.com/presentation/d/13jhhW7j2m4InRc33r0rk7lTv-wlWmyCpmfp4b_O8zfc/edit?usp=drive_link",
+      "key": "2025_virtual_csp_summer_workshop_slides_-_day_2_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_slides_-_day_2_1"
+      }
+    },
+    {
       "name": "Activity Guide - Black and White Images",
       "url": "https://docs.google.com/document/d/1-W0LMRihs84dIlC6VwKowq3FcTE3hCZGes8Duda1TqM/edit?usp=sharing",
       "key": "activity_guide_-_black_and_white_images",
@@ -2183,7 +2266,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_slides_-_day_2",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_slides_-_day_2_1",
+        "script.name": "virtual-pl-csp-summer-day2-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 

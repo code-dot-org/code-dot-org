@@ -128,7 +128,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
         {partner && (
           <span className={moduleStyles.heroBannerPartnerContainer}>
             {partner.title}
-            <Image {...partner.logo} />
+            <Image {...partner.logo} hasRoundedCorners={false} />
           </span>
         )}
 

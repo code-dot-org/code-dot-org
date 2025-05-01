@@ -167,7 +167,7 @@
         ]
       }
     },
-    "long_instructions": "###<i class=\"fa-solid fa-head-side-gear\"></i> What do you predict? \r\n\r\nLook closely at this code to answer the question below. Then [Run](#clickable=run-button) the code to hear the song.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i>Hint](#clickable=id-left:8Bb[IV38`R6Vq7n,t4|O)\r\n\r\n\r\n---\r\n\r\n**What will you hear *first*?**\r\n\r\n\r\n",
+    "long_instructions": "###<i class=\"fa-solid fa-head-side-gear\"></i> Introducing, functions!\r\n\r\nThis is the same song but now it uses a [function](#clickable=id-left:8Bb[IV38`R6Vq7n,t4|O)! \r\n\r\nLook closely at the code. \r\n\r\nPredict what sounds will play first, then try it out.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i>Hint](#clickable=id-left:8Bb[IV38`R6Vq7n,t4|O)\r\n\r\n",
     "validations": [
       {
         "key": "music-coding-intro-functions-need_4e41262d-17d3-46b7-9d4d-2404f9fc902e",
@@ -194,17 +194,7 @@
     ],
     "name_suffix": "_launch",
     "predict_settings": {
-      "isPredictLevel": true,
-      "solution": "Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Main Beat, Bass Main, Chorus 1 play together,Three sounds together",
-      "questionType": "multipleChoice",
-      "allowMultipleAttempts": false,
-      "multipleChoiceOptions": [
-        "Drum Fill",
-        "Crash",
-        "Three sounds together",
-        "Drum and Crash together"
-      ],
-      "codeEditableAfterSubmit": false
+      "isPredictLevel": false
     },
     "exemplar_settings": {
       "playerEnabled": false,
@@ -212,7 +202,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-14T18:09:38.837+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need_launch\"},{\"changed_at\":\"2025-04-14 18:13:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 18:14:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 18:17:53 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:13:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:13:35 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:19:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:20:27 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:45:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:47:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T18:09:38.837+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need_launch\"},{\"changed_at\":\"2025-04-14 18:13:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 18:14:45 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 18:17:53 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:13:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:13:35 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:19:21 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-14 21:20:27 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:45:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-16 20:47:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 20:10:47 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 20:23:03 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 20:23:45 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 20:24:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
