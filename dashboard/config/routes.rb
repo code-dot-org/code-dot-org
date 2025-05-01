@@ -9,6 +9,7 @@ Dashboard::Application.routes.draw do
 
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
+  
   # Redirect old sign up flow to current sign up flow
   get "/users/sign_up", to: redirect("/users/sign_up/account_type")
 
