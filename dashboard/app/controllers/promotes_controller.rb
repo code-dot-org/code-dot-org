@@ -4,22 +4,11 @@ require 'state_abbr'
 class PromotesController < ApplicationController
   layout false, only: %i[map state]
 
+  before_action :allow_embedding, only: %i[map]
   before_action :assign_us_state, only: %i[map state]
 
   # GET /promotes/map(/:us_state)
   def map
-    response.headers['Content-Security-Policy'] = <<~CSP.squish
-      frame-ancestors 'self'
-      http://localhost:*
-      https://code.org
-      https://*.code.org
-      https://*.cdn-code.org
-      https://*.dev-code.org
-      https://*.marketing-sites.dev-code.org
-      https://*.marketing.dev-code.org
-      https://*.contentful.com
-    CSP
-
     # rubocop:disable CustomCops/PegasusDbUsage
     @hs_access_count = PEGASUS_DB[:cdo_state_promote].where(require_hs_s: 'Yes').count
     @k12_access_count = PEGASUS_DB[:cdo_state_promote].where(require_k12_s: 'Yes').count

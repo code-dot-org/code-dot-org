@@ -118,6 +118,11 @@ class ApplicationController < ActionController::Base
     response.headers['Access-Control-Allow-Credentials'] = 'true'
   end
 
+  # Allow embedding in any frame
+  def allow_embedding
+    response.headers['Content-Security-Policy'] = 'frame-ancestors *'
+  end
+
   # These are sometimes updated from the registration form
   SCHOOL_INFO_ATTRIBUTES = [
     :country,
