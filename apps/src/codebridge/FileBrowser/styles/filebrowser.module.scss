@@ -76,6 +76,8 @@ button.button-kebab {
   display: none;
 }
 
+div.row:hover .button-kebab,
+div.notDraggable:focus-within .button-kebab,
 div.draggable:hover .button-kebab,
 div.draggable:focus-within .button-kebab {
   display: inherit;
@@ -142,6 +144,7 @@ div.draggable:focus-within .button-kebab {
   background-color: $light_gray_800;
 }
 
+.notDraggable:focus-visible,
 .draggable:focus-visible {
   outline: var(--borders-brand-teal-primary) solid 2px;
   outline-offset: 2px;

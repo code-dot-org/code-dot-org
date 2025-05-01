@@ -52,7 +52,6 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
   return React.createElement(
     Component,
     {
-      id: draggableId,
       ref: setNodeRef,
       style: style,
       className: classNames(moduleStyles.draggable, className),
@@ -65,4 +64,14 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
 
 export const NotDraggable: React.FunctionComponent<DraggableProps> = ({
   children,
-}) => <>{children}</>;
+}) => {
+  return React.createElement(
+    'div',
+    {
+      className: moduleStyles.notDraggable,
+      tabIndex: 0,
+      role: 'button',
+    },
+    children
+  );
+};
