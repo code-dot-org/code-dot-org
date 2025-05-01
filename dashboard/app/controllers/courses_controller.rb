@@ -30,6 +30,20 @@ class CoursesController < ApplicationController
     @course_families_course_types = @course_families_course_types.to_h
   end
 
+  def index
+    redirect_to CDO.code_org_url("/students") unless Rails.application.config.levelbuilder_mode
+
+    # If the user is not a levelbuilder, redirect to /students
+    begin
+      authorize! :manage, UnitGroup
+    rescue CanCan::AccessDenied
+      return redirect_to CDO.code_org_url("/students")
+    end
+
+    # Show all the units that a user has created.
+    @courses = UnitGroup.all
+  end
+
   def show
     # If this is a single-unit course, redirect to the unit overview
     if @unit_group.single_unit_course?

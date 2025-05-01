@@ -8,7 +8,6 @@ Dashboard::Application.routes.draw do
   get '/robots.txt' => 'robots#index'
 
   # Redirect studio.code.org/courses to code.org/students
-  get "/courses", to: redirect(CDO.code_org_url("/students"))
 
   # Redirect old sign up flow to current sign up flow
   get "/users/sign_up", to: redirect("/users/sign_up/account_type")
@@ -471,6 +470,7 @@ Dashboard::Application.routes.draw do
       get 'pull-review', to: 'peer_reviews#pull_review', as: 'pull_review'
     end
 
+    resources :courses, only: [:index]
     resources :courses, param: 'course_name' do
       member do
         get 'vocab'
