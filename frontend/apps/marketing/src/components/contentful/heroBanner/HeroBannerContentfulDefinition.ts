@@ -5,12 +5,12 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
   name: 'Hero Banner (Add me first!)',
   category: '01: Page Structure',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/67aFKYrjrRbMNjKEmtXHHe/99e04a9a3ea65b519ca13a83713b92f8/8e462e79b08569d982fa2c794d937e60.png',
+    'https://contentful-images.code.org/90t6bu6vlf76/67aFKYrjrRbMNjKEmtXHHe/99e04a9a3ea65b519ca13a83713b92f8/8e462e79b08569d982fa2c794d937e60.png',
   tooltip: {
     description:
       'Use this as an opening section on all pages. Supports backgrounds, media, text, and CTAs, and an optional announcement strip.',
     imageUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/4dPbIf680q8TdPkclC2iWc/e5c7603213244f437b38844cc981c3af/95755ce51ecc6c825f50de34f1c419a4.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/4dPbIf680q8TdPkclC2iWc/e5c7603213244f437b38844cc981c3af/95755ce51ecc6c825f50de34f1c419a4.png',
   },
   builtInStyles: ['cfBackgroundColor'],
   variables: {
