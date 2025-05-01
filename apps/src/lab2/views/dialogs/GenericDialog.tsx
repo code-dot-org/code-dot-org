@@ -1,4 +1,4 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {
   BodyTwoText,
@@ -173,7 +173,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                 })}
                 type="secondary"
                 disabled={buttons.cancel.disabled}
-                color={theme === 'Dark' ? 'black' : buttonColors.gray}
+                color={theme === 'Dark' ? 'white' : 'gray'}
                 text={buttons.cancel.text || commonI18n.cancel()}
               />
             ) : (
@@ -185,7 +185,9 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                   onClick={neutralCallback}
                   type="secondary"
                   disabled={buttons.neutral.disabled}
-                  color="black"
+                  color={
+                    buttons?.neutral?.destructive ? 'destructive' : 'white'
+                  }
                   text={buttons.neutral.text}
                 />
               )}
