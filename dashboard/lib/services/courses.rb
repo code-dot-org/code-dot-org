@@ -16,10 +16,10 @@ class Services::Courses
 
     # URLs is /s/:script_id/... so generate a /courses/... URL
     course_context = Queries::Courses.get_course_context(script_name)
-    return path unless course_context
+    course_name = course_context[:course]&.name
+    unit_position = course_context[:unit_group_unit]&.position
 
-    course_name = course_context[:course].name
-    unit_position = course_context[:unit_group_unit].position
+    return path unless course_name && unit_position
 
     # Replace /s/.../ with /courses/.../units/.../
     path.sub(/\/s\/#{script_name}/, "/courses/#{course_name}/units/#{unit_position}")

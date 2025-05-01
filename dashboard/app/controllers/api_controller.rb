@@ -413,10 +413,10 @@ class ApiController < ApplicationController
       unit_position = params[:unit_position]
       context = Queries::Courses.get_unit_context(course_name, unit_position)
     end
-    return render json: {error: 'Unit not found'}, status: :bad_request unless context
     unit = context[:unit]
     unit_group = context[:course]
     ugu = context[:unit_group_unit]
+    return render json: {error: 'Unit not found'}, status: :bad_request unless unit
     overview_path = CDO.studio_url(script_path(unit))
     if Policies::Courses.modularity_enabled? && ugu
       overview_path = CDO.studio_url(course_unit_path(unit_group, ugu.position))
@@ -436,6 +436,7 @@ class ApiController < ApplicationController
     unit_id = params[:unit_id]
     context = Queries::Courses.get_course_context(unit_id)
     unit = context[:unit]
+    return render json: {error: "Can't find Unit id=#{unit_id}"}, status: :bad_request unless unit
     render json: unit.summarize_for_lesson_materials_view(current_user, unit_group_unit: context[:unit_group_unit])
   end
 
@@ -490,6 +491,7 @@ class ApiController < ApplicationController
       unit = context[:unit]
       unit_group_unit = context[:unit_group_unit]
     end
+    return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless unit
 
     redirect_unit_url = unit.redirect_to_unit_url(current_user, locale: request.locale)
 
