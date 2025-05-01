@@ -1,4 +1,5 @@
 import Button from '@code-dot-org/component-library/button';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FocusTrap from 'focus-trap-react';
 import React, {useState, useCallback, useRef, useEffect} from 'react';
 import {createPortal} from 'react-dom';
@@ -31,6 +32,7 @@ export const PopUpButton = ({
   const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [updatedStyles, setUpdatedStyles] = useState(false);
+  const {theme} = useTheme();
 
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
@@ -116,7 +118,6 @@ export const PopUpButton = ({
         ariaLabel={ariaLabel}
         aria-expanded={isOpen}
         color={'black'}
-        // TODO: Should we have a special hover color?
       />
       {isOpen &&
         // We use a portal so the dropdown can appear above all other elements.
@@ -143,6 +144,7 @@ export const PopUpButton = ({
               style={dropdownStyleProps}
               ref={dropdownRef}
               role="menu"
+              data-theme={theme}
             >
               {children}
             </div>

@@ -4,7 +4,6 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
 import {MiniApps} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
-import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
@@ -163,7 +162,7 @@ const ControlButtons: React.FunctionComponent = () => {
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
             size={'xs'}
             type={'primary'}
-            className={classNames(moduleStyles.controlButton)}
+            className={moduleStyles.controlButton}
           />
         </WithConditionalTooltip>
       )}
