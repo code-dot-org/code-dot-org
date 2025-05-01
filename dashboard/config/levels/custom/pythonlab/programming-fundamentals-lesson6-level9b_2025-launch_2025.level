@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-04-14T23:13:36.000Z",
   "level_num": "custom",
@@ -26,16 +27,29 @@
           "language": "py",
           "contents": "# TODO - Write the function look_both_ways()\n\n\n\n# TODO - Call the look_both_ways() function four times\n\n\n",
           "folderId": "0",
-          "active": true,
-          "open": true
+          "active": false,
+          "open": true,
+          "type": "locked_starter"
         }
       },
       "folders": {
-      }
+      },
+      "openFiles": [
+        "0"
+      ]
     },
-    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzo0zAk3BjpdxCyHEEH56ePLNRfyC/fuV\ngz0fD54n4VvvmlHA7RFBQBL+yD6aQcHz+mmFhoaoPdrWDk4tyXeNGifzCawU\n0XULucdNuVJkBU+WyVX0GzPwnfkQOmF8UkvwnJeIgXxPx6XgCTwJiKJTi5aJ\no91zdIqo0Gn8ofr8yqS1XxxIMtf4CK9zZNiOEshZuTE3mRzN8b4/IzXLDcXu\ni3fwxY9sgsknVBlTLG9GNajOqC0cgCi5DBj8cdBWAqdC+UonuB38jRh8PttC\nv3EY/XxWd5KY5lLq7A1jU6NMVB9xeDTd5eP1Oit1YiTw8FmzIfE+ZBdffmYC\n184npA2YCqbWjOaztptx2u/KRWz7wp48wHJW2dcOeCiWKG/dpmVk6eUTbO/p\nGqboX/oRIumA7/ydUBKwlYPguzOlyvyGmOfg\n"
+    "encrypted_exemplar_sources": "Cy05mEYW43yx3lpwk/lyQYs4qPKDc2JDG2xzW6EZ2HXNXiuQgI6R1SlqPKPt\nlYISiQp/Zt7oXvHNpBSUY2/tVcAoh32dY5clMNiyTLp2qQ5O47DJ0rGD0IJV\nXDiO//IRW/LZBlXyH5JryMNp/3+nzlLlnXfGyKokFOrhXT9s/5jh7GWOykMD\n8G1esmtVhwPyHssNAx7e0P1hlkeAOv+aYsxezrWaqJpT09DCI4tNh+Q3up0n\naOC8PxDw5/vqlkPnikwax2a3nsR00u0HQKBnomP9wFYajOxOeK5NaBz/4bzN\ncb6iV04YvO1OGkh4AwpfkMMEU5flT4t2yaedQLcFxOxmj8Ih9eM/EbIJQDP6\nrM7loJHGx6pNu89wtFVDEMl3jbA06xEmHHkzhxgf5zWUOGtqS+oMnmXZoffG\n5Oe1nOK/vh7a0d/+4qjkmzR+b6Kulg5lTGb8PtMZwZxEXbM9KPiEwjjMbV05\n1bz7VzpRGIqupq8PpQR/vz+T6gaznI48bKHxpH21KCO8K1aEj840f7pJmTTW\nNxTQO2IkOHN30Wvr8GPtsZDqM+A+pJxsrEZrCUbbGNz6NeaWROMVwFks/Q==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n# Try importing the student's function\ntry:\n    from main import look_both_ways\n    function_exists = True\nexcept ImportError:\n    function_exists = False\n\nclass TestLookBothWaysFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n    def test_look_both_ways_function_exists(self):\n        \"\"\"look_both_ways() should exist and be callable\"\"\"\n        if not function_exists:\n            self.fail(\"Make sure you define a function called look_both_ways()!\")\n\n    def test_four_safety_reminders_printed(self):\n        \"\"\"Four crossing reminders should be printed\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertEqual(\n            len(printed_messages),\n            4,\n            \"Make sure you call your look_both_ways() function four times to print four reminders!\"\n        )\n\n        all_contain_crossing = all(\n            \"cross\" in line.lower() or \"look\" in line.lower() for line in printed_messages\n        )\n\n        self.assertTrue(\n            all_contain_crossing,\n            \"Each reminder should encourage looking both ways or crossing safely! Make sure your look_both_ways() function mentions crossing or looking.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:36.698+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9b_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9b_2025-launch\"},{\"changed_at\":\"2025-04-15 18:31:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:32:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:35:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:36.698+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson6-level9b_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson6-level9b_2025-launch\"},{\"changed_at\":\"2025-04-15 18:31:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:32:34 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-15 18:35:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 18:13:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 18:13:38 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-29 18:18:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:07:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:07:59 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

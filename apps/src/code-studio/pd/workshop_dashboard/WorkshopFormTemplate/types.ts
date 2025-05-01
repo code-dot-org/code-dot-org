@@ -120,8 +120,8 @@ export interface WorkshopRequest
   id?: number;
   facilitators: number[];
   organizer?: number;
-  // TODO: ACQ-3081 remove legacy flag
-  legacy?: boolean | null;
+  // TODO: ACQ-3081 remove legacyForm2025 flag
+  legacyForm2025?: boolean | null;
 }
 
 export interface CourseOffering {

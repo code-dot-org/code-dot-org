@@ -329,7 +329,7 @@ svg text[fill] {
   padding: 16px;
   background-color: var(--background-neutral-secondary);
   border: 1px solid var(--borders-neutral-primary);
-  gap: 40px;
+  gap: 28px;
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 20px;
@@ -362,7 +362,7 @@ svg text[fill] {
 
 .aiDataContainer {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   background-color: var(--background-neutral-primary);
   border-radius: 4px;
   border: 1px solid var(--borders-neutral-primary);
@@ -372,7 +372,7 @@ svg text[fill] {
   .group {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 4px;
 
     .labelText {
       margin-bottom: 0 !important;

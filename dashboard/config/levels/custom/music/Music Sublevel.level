@@ -72,10 +72,11 @@
       }
     ],
     "thumbnail_url": "https://images.code.org/e9a6bb95b36116a2f41f99d406010e3a-bubblechoice-1.png",
+    "bubble_choice_description": "This is a Music Lab sublevel.",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-09T10:44:31.898-07:00\",\"changed\":[\"cloned from \\\"Music Level 1\\\"\"],\"cloned_from\":\"Music Level 1\"},{\"changed_at\":\"2024-05-09 10:44:35 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-03-24 18:07:49 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-09T10:44:31.898-07:00\",\"changed\":[\"cloned from \\\"Music Level 1\\\"\"],\"cloned_from\":\"Music Level 1\"},{\"changed_at\":\"2024-05-09 10:44:35 -0700\",\"changed\":[\"level_data\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2025-03-24 18:07:49 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-29 18:11:15 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-29 18:11:26 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-29 18:11:55 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-29 18:12:20 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-29 18:12:44 +0000\",\"changed\":[],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

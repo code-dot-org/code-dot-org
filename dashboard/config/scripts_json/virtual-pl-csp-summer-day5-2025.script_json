@@ -1,0 +1,922 @@
+{
+  "script": {
+    "name": "virtual-pl-csp-summer-day5-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSP",
+      "is_migrated": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-04-29 12:32:33 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "virtual-pl-csp-summer-day5-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Synchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Introduction to Module 5",
+      "name": "Introduction to Module 5",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**Purpose:**\nThis activity welcomes and orients participants to Module 5.\n\n**Objectives:**\n* Participants are oriented to the module.\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**You will:**\n* Get an orientation to the module."
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Module 5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Recruiting Students Recap",
+      "name": "Recruiting Students Recap",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**Purpose:**\nIn this session we wrap up our discussion of recruiting students for CSP with a recap of the last asynchronous session.\n\n**Objectives:**\n* Participants can identify concrete and reasonable strategies to address the barriers they have the power to influence.\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**You will:**\n* Identify concrete and reasonable strategies to address the barriers they have the power to influence."
+      },
+      "seeding_key": {
+        "lesson.key": "Recruiting Students Recap",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Mapping our Equity Journey",
+      "name": "Mapping our Equity Journey",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**Purpose:**\nOver the course of the week we have been able to spend time in each step of the equity framework. This session is intended to take stock of that journey and spend time in the last step “Making and pursuing a commitment”.\n\n**Objectives:**\n* Participants can describe the commitment they will pursue in support of equity in CS, and the strategies they will use to support that commitment.\n* Participants can define the support they will need to pursue that commitment.\n* Participants can identify the measurement(s) they will use to track progress toward the commitment.\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will:**\n* Describe the commitment you will pursue in support of equity in CS, and the strategies you will use to support that commitment.\n* Define the support you will need to pursue that commitment.\n* Identify the measurement(s) you will use to track progress toward the commitment."
+      },
+      "seeding_key": {
+        "lesson.key": "Mapping our Equity Journey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Connecting Values and Assessment in CSP",
+      "name": "Connecting Values and Assessment in CSP",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**Purpose:**\nParticipants reflect on their own values for the course and consider how this translates to creating an assessment approach that reflects these values.\n\n**Objectives:**\n* Participants have reflected on their own values for the course.\n* Participants have identified how those values could be used to form an assessment approach for the course.\n\n**Suggested Time:** 45 minutes",
+        "student_overview": "**You will:**\n* Reflected on your own values for the course.\n* Identified how those values could be used to form an assessment approach for the course.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Connecting Values and Assessment in CSP",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Creating Your Assessment Approach for Units 1-3",
+      "name": "Creating Your Assessment Approach for Units 1-3",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nThis session takes things from the “theoretical” to the “real-world” of assessment. Participants will decide what they will use for summative assessment with students in Units 1-3. Then, they will share their ideas with other participants and plan how they will us formative assessment and re-learning/redos/retakes during the year.\n\n**Objectives:**\n* Participants have a plan for how they will use summative assessment, formative assessment, and potentially “re-dos” in Units 1-3.\n\n**Suggested Time:** 50 minutes",
+        "student_overview": "**You will:**\n* Have a plan for how you will use summative assessment, formative assessment, and potentially “re-dos” in Units 1-3."
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Your Assessment Approach for Units 1-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Asynchronous Part 1",
+      "name": "Asynchronous Part 1",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**Purpose:**\nTo explore AP Classroom and the Code.org Platform.\n\n**Objectives:**\n\n* Participants navigate the College Board Resources.\n* Participants get familiar with navigating the Code.org website, especially how they use it to manage a class.\n\n**Suggested time:** 75 minutes",
+        "student_overview": "**You will:**\n\n* Navigate the College Board Resources.\n* Get familiar with navigating the Code.org website, especially how you use it to manage a class.\n\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "AP Scavenger Hunt Debrief",
+      "name": "AP Scavenger Hunt Debrief",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "**Purpose:**\nThis session is an opportunity to address any questions that may have arisen as a result of the scavenger hunt.\n\n**Objectives:**\n* Participants can explain the role of the pre-approved provider syllabus and how to submit it for course authorization.\n* Participants will review the College Board specific Curricular and Resource Requirements found on the Course Audit page for the course.\n* Participants know where we have integrated AP Classroom resources, specifically the practice questions, personal progress checks and use of the question bank into your curriculum.\n* Participants know how the curriculum addresses a pairing of content and skill in your curriculum and resources and then how that same pairing of content and skill aligns to the AP assessment and all other resources.\n* Participants are aware of the appropriate use of AP Classroom resources, in particular personal progress checks and performance dashboard, practice exam, AP Central resources, AP Teacher community, AP classroom\n* Participants are aware of the availability and location of the following resources: practice exam, AP Central resources, AP Teacher Community, AP Classroom.\n\n**Suggested Time:** 5 minutes",
+        "student_overview": "**You will:**\n* Explain the role of the pre-approved provider syllabus and how to submit it for course authorization.\n* Review the College Board specific Curricular and Resource Requirements found on the Course Audit page for the course.\n* Know where we have integrated AP Classroom resources, specifically the practice questions, personal progress checks and use of the question bank into your curriculum.\n* Know how the curriculum addresses a pairing of content and skill in your curriculum and resources and then how that same pairing of content and skill aligns to the AP assessment and all other resources.\n* Be aware of the appropriate use of AP Classroom resources, in particular personal progress checks and performance dashboard, practice exam, AP Central resources, AP Teacher community, AP classroom\n* Be aware of the availability and location of the following resources: practice exam, AP Central resources, AP Teacher Community, AP Classroom."
+      },
+      "seeding_key": {
+        "lesson.key": "AP Scavenger Hunt Debrief",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Planning Your Year",
+      "name": "Planning Your Year",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "overview": "**Purpose:**\nThe goals of this session are twofold:\n* To emphasize the importance of future workshops, especially Workshop 1 where participants will be introduced to a new pedagogical tool used throughout the programming lessons in the curriculum as well as learn key computer science content.\n* To provide participants with space to reflect on their next steps and to make a plan for pacing during the upcoming school year\n\n**Objectives:**\n* Participants understand the topics for the upcoming academic year workshops.\n* Participants have recorded items they want to research or understand further after this workshop.\n* Participants have looked at pacing and planning for the curriculum for the 21-22 school year.\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will:**\n* Understand the topics for the upcoming academic year workshops.\n* Record items they want to research or understand further after this workshop.\n* Look at pacing and planning for the curriculum for the 21-22 school year."
+      },
+      "seeding_key": {
+        "lesson.key": "Planning Your Year",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "Closing Ceremonies",
+      "name": "Closing Ceremonies",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "**Purpose:**\nCelebrate the week, answer remaining questions, and take the final survey\n\n**Objectives:**\n* Participants will have any final questions answered.\n* Participants understand when the next workshop is.\n* Participants will take the final survey.\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will:**\n* Have any final questions answered.\n* Understand when the next workshop is.\n* Take the final survey."
+      },
+      "seeding_key": {
+        "lesson.key": "Closing Ceremonies",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "af420ff5-103c-4cc7-9218-ab7d413447dc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "af420ff5-103c-4cc7-9218-ab7d413447dc",
+        "lesson.key": "Introduction to Module 5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "43c511e6-67b8-4f3c-b0c6-fba95d0b25ab",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "43c511e6-67b8-4f3c-b0c6-fba95d0b25ab",
+        "lesson.key": "Recruiting Students Recap",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "80a9b6fa-099d-4528-89d3-0b4ebf73761e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80a9b6fa-099d-4528-89d3-0b4ebf73761e",
+        "lesson.key": "Mapping our Equity Journey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "4f709ea4-2ed7-4a76-958a-2436a1bb577b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f709ea4-2ed7-4a76-958a-2436a1bb577b",
+        "lesson.key": "Connecting Values and Assessment in CSP",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "69be15f9-dde0-4bf8-a1db-d466b326ee63",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69be15f9-dde0-4bf8-a1db-d466b326ee63",
+        "lesson.key": "Creating Your Assessment Approach for Units 1-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "96d1f623-10db-4c22-926f-536038c88bac",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96d1f623-10db-4c22-926f-536038c88bac",
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "5ac17cb7-04de-452e-9ede-ca9c9ba45fb7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5ac17cb7-04de-452e-9ede-ca9c9ba45fb7",
+        "lesson.key": "AP Scavenger Hunt Debrief",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "c12f05d3-ed7b-4784-8488-650a3240bbb7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c12f05d3-ed7b-4784-8488-650a3240bbb7",
+        "lesson.key": "Planning Your Year",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "key": "993a8408-1595-452a-926c-3c97e140fb53",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "993a8408-1595-452a-926c-3c97e140fb53",
+        "lesson.key": "Closing Ceremonies",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9f930d34-e4eb-4edf-8d94-0ca5a9eb7711",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9f930d34-e4eb-4edf-8d94-0ca5a9eb7711",
+        "lesson_activity.key": "af420ff5-103c-4cc7-9218-ab7d413447dc"
+      }
+    },
+    {
+      "key": "b5d9a49b-f284-44b6-bafb-cc09b3f07955",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b5d9a49b-f284-44b6-bafb-cc09b3f07955",
+        "lesson_activity.key": "43c511e6-67b8-4f3c-b0c6-fba95d0b25ab"
+      }
+    },
+    {
+      "key": "5a08bb6c-d512-45c3-bf6f-1b6eb9b00c39",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5a08bb6c-d512-45c3-bf6f-1b6eb9b00c39",
+        "lesson_activity.key": "80a9b6fa-099d-4528-89d3-0b4ebf73761e"
+      }
+    },
+    {
+      "key": "0ddd2029-deb8-423a-a124-dc74b92d8014",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0ddd2029-deb8-423a-a124-dc74b92d8014",
+        "lesson_activity.key": "4f709ea4-2ed7-4a76-958a-2436a1bb577b"
+      }
+    },
+    {
+      "key": "45447bfc-b347-40ab-a548-392c10eaedc3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "45447bfc-b347-40ab-a548-392c10eaedc3",
+        "lesson_activity.key": "69be15f9-dde0-4bf8-a1db-d466b326ee63"
+      }
+    },
+    {
+      "key": "56f751ff-ecce-4adc-9e58-a1483d9d1198",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "56f751ff-ecce-4adc-9e58-a1483d9d1198",
+        "lesson_activity.key": "96d1f623-10db-4c22-926f-536038c88bac"
+      }
+    },
+    {
+      "key": "4e33a9f4-d201-428c-a5ab-3e5fb27ca533",
+      "position": 2,
+      "properties": {
+        "progression_name": "AP Scavenger Hunt"
+      },
+      "seeding_key": {
+        "activity_section.key": "4e33a9f4-d201-428c-a5ab-3e5fb27ca533",
+        "lesson_activity.key": "96d1f623-10db-4c22-926f-536038c88bac"
+      }
+    },
+    {
+      "key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff",
+      "position": 3,
+      "properties": {
+        "progression_name": "Code.org Platform Tour"
+      },
+      "seeding_key": {
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff",
+        "lesson_activity.key": "96d1f623-10db-4c22-926f-536038c88bac"
+      }
+    },
+    {
+      "key": "794602f5-a3e4-4c62-aab5-68234a9f68f7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "794602f5-a3e4-4c62-aab5-68234a9f68f7",
+        "lesson_activity.key": "5ac17cb7-04de-452e-9ede-ca9c9ba45fb7"
+      }
+    },
+    {
+      "key": "5c5bb4a5-7712-4803-b268-cc87d41dccdb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5c5bb4a5-7712-4803-b268-cc87d41dccdb",
+        "lesson_activity.key": "c12f05d3-ed7b-4784-8488-650a3240bbb7"
+      }
+    },
+    {
+      "key": "95eeea01-eb41-497f-98c0-a2f05dc13e98",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "95eeea01-eb41-497f-98c0-a2f05dc13e98",
+        "lesson_activity.key": "993a8408-1595-452a-926c-3c97e140fb53"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-01_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "56f751ff-ecce-4adc-9e58-a1483d9d1198"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-01_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AP Scavenger Hunt"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-02_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4e33a9f4-d201-428c-a5ab-3e5fb27ca533"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-02_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-03_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-03_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-04_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-04_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-05_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-05_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-06_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-06_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-07_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-07_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-08_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-08_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-09_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-09_2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-10_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-10_2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-11_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-11_2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Code.org Platform Tour"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-12_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day5-asynch1-12_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-01_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-01_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "56f751ff-ecce-4adc-9e58-a1483d9d1198"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-02_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-02_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4e33a9f4-d201-428c-a5ab-3e5fb27ca533"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-03_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-03_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-04_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-04_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-05_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-05_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-06_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-06_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-07_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-07_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-08_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-08_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-09_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-09_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-10_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-10_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-11_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-11_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day5-asynch1-12_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day5-asynch1-12_2025"
+        ],
+        "lesson.key": "Asynchronous Part 1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day5-2025",
+        "activity_section.key": "4216fe38-d532-4a8a-9f29-77ca1d5e2dff"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "2025 Virtual CSP Summer Workshop Agenda - Day 5",
+      "url": "https://docs.google.com/document/d/1czvbLTCP9mKPk9Y8gQ2qQzlPS8b2oCBC8KCrVTpk4lE/edit?usp=drive_link",
+      "key": "2025_virtual_csp_summer_workshop_agenda_-_day_5",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_agenda_-_day_5"
+      }
+    },
+    {
+      "name": "2025 Virtual CSP Summer Workshop Slides - Day 5",
+      "url": "https://docs.google.com/presentation/d/1VIkVEeuTP4Gy7KKaPPj3CKWydwtB5e7shaSKuDbj61s/edit?usp=drive_link",
+      "key": "2025_virtual_csp_summer_workshop_slides_-_day_5",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_slides_-_day_5"
+      }
+    }
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_agenda_-_day_5",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_slides_-_day_5",
+        "script.name": "virtual-pl-csp-summer-day5-2025"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

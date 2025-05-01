@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-04-25T19:48:57.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Design a Word Puzzle",
+    "long_instructions": "## Design a Word Puzzle\r\n\r\n**Task:** See if AI can create a word search or crossword clue list.\r\n\r\n**Things to Try:**\r\n- Pick a theme (like sports, music, or classes)\r\n- Ask AI to give 8-10 words for a word search\r\n- Try solving the puzzle. Does it work?",
+    "bubble_choice_description": "Ask AI to create a word search or crossword clue list.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/f6275a080b405f3cb1b4d35b885263ba-crossword.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-25T19:48:57.485+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_c\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_c\"},{\"changed_at\":\"2025-04-25 19:51:31 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:07:32 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

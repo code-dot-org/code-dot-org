@@ -6,12 +6,12 @@ export const IconHighlightContentfulComponentDefinition: ComponentDefinition = {
   name: 'Icon Highlight',
   category: '03: Basic',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/1Hmduomo4RMBD7E3N3kWKc/5ced16462aa02176586777ccdd04f869/component_icon_highlight_thumbnail.png',
+    'https://contentful-images.code.org/90t6bu6vlf76/1Hmduomo4RMBD7E3N3kWKc/5ced16462aa02176586777ccdd04f869/component_icon_highlight_thumbnail.png',
   tooltip: {
     description:
       'Use to highlight information at a glance like key features and resources. Supports a custom icon and links.',
     imageUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/55Tf3bhFiUdkvScJc7NHhu/3090d5797a14005ac69fe3a9cb9255c2/component_icon_highlight_tooltip.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/55Tf3bhFiUdkvScJc7NHhu/3090d5797a14005ac69fe3a9cb9255c2/component_icon_highlight_tooltip.png',
   },
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],
@@ -24,6 +24,7 @@ export const IconHighlightContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'Icon Highlight Heading',
       validations: {
         required: true,
+        bindingSourceType: ['entry', 'manual'],
       },
     },
     text: {
@@ -33,6 +34,7 @@ export const IconHighlightContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'Icon Highlight\nMultiline Text',
       validations: {
         required: true,
+        bindingSourceType: ['entry', 'manual'],
       },
     },
     iconName: {

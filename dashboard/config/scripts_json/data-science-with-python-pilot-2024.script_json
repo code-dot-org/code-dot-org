@@ -10,14 +10,15 @@
       "pilot_experiment": "data-science-with-python-pilot-2024",
       "show_calendar": true,
       "topic_tags": [
-        "data_science"
+        "data_science",
+        "ai"
       ],
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 21:23:55 UTC",
+    "serialized_at": "2025-04-23 18:14:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

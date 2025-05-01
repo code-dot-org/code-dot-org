@@ -23,8 +23,6 @@ FactoryBot.define do
       num_enrollments {0}
       enrolled_and_attending_users {0}
       enrolled_unattending_users {0}
-      num_completed_surveys {0}
-      randomized_survey_answers {false}
       assign_session_code {false}
     end
 
@@ -35,6 +33,7 @@ FactoryBot.define do
     capacity {10}
     on_map {true}
     funded {false}
+    legacyForm2025 {true}
 
     #
     # Traits
@@ -103,15 +102,6 @@ FactoryBot.define do
 
       evaluator.num_facilitators.times do
         workshop.facilitators << (create :facilitator, course: workshop.course)
-      end
-
-      evaluator.num_completed_surveys.times do
-        enrollment = create :pd_enrollment, workshop: workshop
-        if workshop.teachercon?
-          create :pd_teachercon_survey, pd_enrollment: enrollment, randomized_survey_answers: evaluator.randomized_survey_answers
-        else
-          raise 'Num_completed_surveys trait unsupported for this workshop type'
-        end
       end
     end
 
@@ -260,14 +250,6 @@ FactoryBot.define do
       end
       factory(:csd_summer_workshop) {csd}
 
-      trait :csd_virtual do
-        course {Pd::Workshop::COURSE_CSD}
-        subject {Pd::Workshop::SUBJECT_VIRTUAL_KICKOFF}
-        virtual {true}
-        capacity {35}          # Average capacity
-      end
-      factory(:csd_virtual_workshop) {csd_virtual}
-
       trait :csa do
         course {Pd::Workshop::COURSE_CSA}
         subject {Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP}
@@ -330,17 +312,6 @@ FactoryBot.define do
       num_sessions {1}       # Most have 1 session
       num_facilitators {0}   # Most have no facilitators
       each_session_hours {6} # The most common session length
-    end
-
-    factory :csp_wfrt do
-      course {Pd::Workshop::COURSE_CSP}
-      subject {Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS}
-      capacity {40}
-      on_map {false}
-      funded {false}
-      num_sessions {1}
-      num_facilitators {2}
-      each_session_hours {7}
     end
   end
 end

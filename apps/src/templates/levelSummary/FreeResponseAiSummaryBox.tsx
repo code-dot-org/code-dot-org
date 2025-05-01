@@ -40,21 +40,22 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   openDetailedAnalysis,
 }) => {
   const currentUserId = useAppSelector(state => state.currentUser.userId);
-  const proficienceyThreshold = totalNumberOfStudents * 0.8;
+  const PROFICIENCY_PERCENT = 0.75;
+  const proficiencyStudentGoal = totalNumberOfStudents * PROFICIENCY_PERCENT;
   const aiSummaryTag = (proficiencyCount: number) => {
+    const sectionMeetsProficiencyThreshold =
+      proficiencyCount >= proficiencyStudentGoal;
     return (
       <Tags
         tagsList={[
           {
-            label:
-              proficiencyCount > proficienceyThreshold
-                ? FEEDBACK_TYPE.PROFICIENT.label
-                : FEEDBACK_TYPE.NEEDS_REVIEW.label,
+            label: sectionMeetsProficiencyThreshold
+              ? FEEDBACK_TYPE.PROFICIENT.label
+              : FEEDBACK_TYPE.NEEDS_REVIEW.label,
             icon: {
-              iconName:
-                proficiencyCount > proficienceyThreshold
-                  ? FEEDBACK_TYPE.PROFICIENT.icon
-                  : FEEDBACK_TYPE.NEEDS_REVIEW.icon,
+              iconName: sectionMeetsProficiencyThreshold
+                ? FEEDBACK_TYPE.PROFICIENT.icon
+                : FEEDBACK_TYPE.NEEDS_REVIEW.icon,
               iconStyle: 'solid',
               title: 'check',
               placement: 'left',
@@ -63,7 +64,7 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
         ]}
         size="l"
         className={
-          proficiencyCount > proficienceyThreshold
+          sectionMeetsProficiencyThreshold
             ? styles.proficientTag
             : styles.needsReviewTag
         }
@@ -74,10 +75,10 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   const aiSummaryMessage = (proficiencyCount: number) => (
     <>
       <BodyTwoText>
-        <strong>{`${i18n.reasoning()}:`}</strong>
-        {proficiencyCount > proficienceyThreshold
-          ? 'More than 80% of the students demonstrated proficiency in their responses. '
-          : 'Less than 80% of the students demonstrated proficiency in their responses. '}
+        <strong>{`${i18n.reasoning()}: `}</strong>
+        {proficiencyCount >= proficiencyStudentGoal
+          ? '75% or more of the students demonstrated proficiency in their responses. '
+          : 'Less than 75% of the students demonstrated proficiency in their responses. '}
         <Link
           type="primary"
           size="m"
@@ -100,11 +101,11 @@ const FreeResponseAiSummaryBox: React.FC<FreeResponseAiSummaryBoxProps> = ({
   };
 
   const proficientStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['great', 'ok'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['Great', 'Ok'])
     : 0;
 
   const needsRevisionStudentCount = studentWorkEvaluations
-    ? countEvaluationsByType(studentWorkEvaluations, ['needs revision'])
+    ? countEvaluationsByType(studentWorkEvaluations, ['Needs revision'])
     : 0;
 
   const flaggedStudentCount = studentWorkEvaluations

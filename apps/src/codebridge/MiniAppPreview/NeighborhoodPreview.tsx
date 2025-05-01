@@ -80,7 +80,6 @@ const NeighborhoodPreview: React.FunctionComponent<
       onOutputMessage,
       onNewlineMessage,
       isRunning => dispatch(setIsRunning(isRunning)),
-      '[PYTHON LAB]',
       onPartialLineMessage
     );
     CodebridgeRegistry.getInstance().setNeighborhood(neighborhoodRef);

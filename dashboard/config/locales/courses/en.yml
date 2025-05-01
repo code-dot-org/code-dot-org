@@ -1153,7 +1153,7 @@ en:
             Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
 
             **Did You Know?**
-            * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
+            * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank">Click here</a> to learn more about professional learning opportunities in your region.
 
             * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
 
@@ -1163,7 +1163,7 @@ en:
 
             This version of the Code.org CSA curriculum follows an **object-first approach** and does not use the unit structure outlined in the AP Computer Science A Course and Exam Description (CED). **All required course content is still covered**, but topics are introduced in an order that prioritizes early engagement with object-oriented programming. You can read more about this approach [**here**](https://docs.google.com/document/d/1t7RbyhrgNM7xXNPiCq1g-lXSJvR2qbEA1fURYxfZ9N8/edit?usp=sharing).
 
-            If you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our [**CED-aligned version of the CSA curriculum**](https://studio.code.org/courses/csa-alt-2025).
+            If you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our **CED-aligned version of the CSA curriculum** (*Coming Soon!*).
 
             As noted on page 19 of the CED, **the College Board's unit structure is optional** - it is intended to provide teachers "one possible sequence they can adopt or modify rather than having to build from scratch . . . Experienced AP teachers who are satisfied with their current course organization and exam results should feel no pressure to adopt these units, which comprise an optional sequence for this course."
           version_title: "'25-'26"
@@ -1478,7 +1478,7 @@ en:
           description_teacher: ''
           version_title: ''
         self-paced-pl-teaching-computer-science-discoveries-music-lab:
-          title: Teaching Programming with Game Lab
+          title: Teaching Programming with Music Lab
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -4376,9 +4376,9 @@ en:
         virtual-pl-csd-summer-2025:
           title: CSD Virtual PL Workshop Course
           description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_student: "**You will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          description_teacher: "**Participants will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          version_title: 25 - 26
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -5381,7 +5381,7 @@ en:
             * Grow in your understanding of equitable CS education.
             * Develop empathy for the student experience.
             * Become a part of a network of teachers who are doing similar work.
-          version_title: ''
+          version_title: 25 - 26
         faciliators-ea-pl-python-2025:
           title: AIF - Programming Fundamentals PL - EARLY ACCESS
           description_short: ''
@@ -5475,7 +5475,7 @@ en:
 
             ## Prerequisites
 
-            CSAIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+            AIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
 
             This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
 
@@ -5492,6 +5492,27 @@ en:
         self-paced-pl-ai-foundations-2025:
           title: Teaching AI Foundations
           description_short: ''
+          description_student: This Professional Learning (PL) unit on AI Foundations will equip you to guide your students in exploring the core principles of how computers and artificial intelligence empower individuals to solve problems, make decisions, and foster creativity. You will gain insights into the student learning journey as they write their own programs in Python, unravel the workings of devices and the Internet, and learn to analyze data to identify patterns and construct narratives. This PL will also focus on how to effectively integrate AI tools into the learning process, facilitate critical discussions around privacy and fairness, and cultivate the essential skills students need to become creators of technology, rather than just consumers. By engaging with this unit, you will be prepared to build a strong foundation in AI and computing for your students, fostering both their understanding and their capacity for innovation.
+          description_teacher: |-
+            AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+            * This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.
+
+            * No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.
+
+            ## Did you know?
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+          version_title: ''
+        teaching-k5-music-lab-2025:
+          title: teaching-k5-music-lab-2025
+          description_short: ''
           description_student: ''
           description_teacher: ''
           version_title: ''
+        virtual-pl-csp-summer-2025:
+          title: virtual-pl-csp-summer-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: 25 - 26

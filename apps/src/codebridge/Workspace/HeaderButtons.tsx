@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button, LinkButton} from '@code-dot-org/component-library/button';
 import {
   TooltipProps,
   WithTooltip,
@@ -16,6 +16,7 @@ import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {sendPythonCodeToMicroBit} from '@cdo/apps/maker/boards/microBit/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {currentLocation} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
@@ -42,9 +43,15 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     className: darkModeStyles.tooltipLeft,
   };
 
-  const openFeedbackForm = () => {
-    window.open('https://forms.gle/Z4FsGMFzE4NrFp369', '_blank');
+  const documentationTooltipProps: TooltipProps = {
+    text: commonI18n.documentation(),
+    direction: 'onLeft',
+    tooltipId: 'documentation-tooltip',
+    size: 'xs',
+    className: darkModeStyles.tooltipLeft,
   };
+
+  const documentationUrl = `${currentLocation().origin}/docs/ide/${appName}`;
 
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
@@ -105,13 +112,28 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
       <VersionHistoryButton startSources={startSources} appName={appName} />
       {appName === 'pythonlab' && (
         <WithTooltip tooltipProps={feedbackTooltipProps}>
-          <Button
+          <LinkButton
             isIconOnly
             icon={{iconStyle: 'solid', iconName: 'commenting'}}
-            onClick={openFeedbackForm}
+            href={'https://forms.gle/Z4FsGMFzE4NrFp369'}
             ariaLabel={commonI18n.feedback()}
             size={'xs'}
             type={'tertiary'}
+            className={darkModeStyles.tertiaryButton}
+            target="_blank"
+          />
+        </WithTooltip>
+      )}
+      {/* For now, only python lab supports documentation */}
+      {appName === 'pythonlab' && (
+        <WithTooltip tooltipProps={documentationTooltipProps}>
+          <LinkButton
+            isIconOnly
+            icon={{iconStyle: 'solid', iconName: 'book'}}
+            href={documentationUrl}
+            size={'xs'}
+            type={'tertiary'}
+            target="_blank"
             className={darkModeStyles.tertiaryButton}
           />
         </WithTooltip>

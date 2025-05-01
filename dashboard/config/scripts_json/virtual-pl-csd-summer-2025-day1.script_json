@@ -7,13 +7,14 @@
       "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "has_verified_resources": true,
+      "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-01 16:33:48 UTC",
+    "serialized_at": "2025-04-23 15:10:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1383,6 +1384,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - Type Anything_CSD-PL-23_2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1405,6 +1409,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Inspector Warm Up_CSD-PL-23_2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1427,6 +1434,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs_CSD-PL-23_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1449,6 +1459,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2_CSD-PL-23_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1471,6 +1484,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Debug Paragraphs_CSD-PL-23_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1493,6 +1509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2 - Prac_CSD-PL-23_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1515,6 +1534,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L2 - PracC_CSD-PL-23_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1537,6 +1559,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L2 Assess FR_CSD-PL-23_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1559,6 +1584,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2 - Chal_CSD-PL-23_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1581,6 +1609,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Sample CSS text_CSD-PL-23_2025"
+        ],
         "progression": "Sample Website"
       },
       "bonus": false,
@@ -1603,6 +1634,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS explore CSS_CSD-PL-23_2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1625,6 +1659,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h1_CSD-PL-23_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1647,6 +1684,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h3_CSD-PL-23_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1669,6 +1709,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style rgb practice_CSD-PL-23_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1691,6 +1734,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style rgb practice 2_CSD-PL-23_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1713,6 +1759,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style size_CSD-PL-23_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1735,6 +1784,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 add file_CSD-PL-23_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1757,6 +1809,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS practice_pilot_CSD-PL-23_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1779,6 +1834,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Web CSS Assessment_CSD-PL-23_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1801,6 +1859,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L6 Assess FR_CSD-PL-23_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1823,6 +1884,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS challenge_pilot_CSD-PL-23_2025"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1845,6 +1909,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async8_2025"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1867,6 +1934,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async9_2025"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -1889,6 +1959,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async10_2025"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -1911,6 +1984,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async11_2025"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -1933,6 +2009,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async20_2025"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -1955,6 +2034,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async15_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1977,6 +2059,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async16_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1999,6 +2084,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async17_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2021,6 +2109,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async21_2025"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2043,6 +2134,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async19_2025"
+        ],
         "progression": "Journaling"
       },
       "bonus": false,
@@ -2065,6 +2159,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async22_2025"
+        ],
         "progression": "Journaling"
       },
       "bonus": false,
@@ -2087,6 +2184,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async23_2025"
+        ],
         "progression": "Discussion"
       },
       "bonus": false,
@@ -2109,6 +2209,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async24_2025"
+        ],
         "progression": "Discussion"
       },
       "bonus": false,
@@ -2131,6 +2234,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async25_2025"
+        ],
         "progression": "Completing Model Lesson Levels"
       },
       "bonus": false,
@@ -2153,6 +2259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async1_2025"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -2175,6 +2284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async2_2025"
+        ],
         "progression": "CS Discoveries Units 1 - 7"
       },
       "bonus": false,
@@ -2197,6 +2309,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async3_2025"
+        ],
         "progression": "CS Discoveries Units 1 - 7"
       },
       "bonus": false,
@@ -2219,6 +2334,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async4_2025"
+        ],
         "progression": "CS Discoveries Units 1 - 7"
       },
       "bonus": false,
@@ -2241,6 +2359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async5_2025"
+        ],
         "progression": "The Problem Solving Process Across CSD"
       },
       "bonus": false,
@@ -2263,6 +2384,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async6_2025"
+        ],
         "progression": "The Problem Solving Process Across CSD"
       },
       "bonus": false,
@@ -2285,6 +2409,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day1-async7_2025"
+        ],
         "progression": "The Problem Solving Process Across CSD"
       },
       "bonus": false,
@@ -2811,7 +2938,7 @@
   "resources": [
     {
       "name": "CSD Virtual Summer Workshop Day 1 Agenda",
-      "url": "https://docs.google.com/document/d/17dvQlqP5kbMpflsr6lQQ31Lmi0_5g3Upj_MehIacAZY/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1AHy2XJUc-GrBjmeZYpM5xbMgxywehefIFH6cMV5hXzw/edit?usp=drive_link",
       "key": "csd_virtual_summer_workshop_day_1_agenda",
       "properties": {
       },
@@ -2821,7 +2948,7 @@
     },
     {
       "name": "CSD Virtual Summer Workshop Day 1 Slides",
-      "url": "https://docs.google.com/presentation/d/1crRAq4BvjcVjBGhWK0NA6BxALnYCfm3pDk9r6AqinJY/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1HxWRF-LbzYOO6gzngngNwxPRsRA1b8ZRzEjxS_2UkaQ/edit?usp=drive_link",
       "key": "csd_virtual_summer_workshop_day_1_slides",
       "properties": {
       },
