@@ -12090,6 +12090,10 @@
     focus:
       heading: "Focus more on what matters"
       desc: "The AI Teaching Assistant transforms CS education, easing the workload for new and experienced teachers alike. It boosts educator confidence by offering constant customized support and streamlining assessments, enabling a focus on enriching student interactions and tailored learning experiences."
+    suggestions:
+      header_01: "What will you"
+      header_02: "dream up"
+      header_03: "with AI Teaching Assistant?"
     summary:
       header: "AI Teaching Assistant: Empowering teachers with confidence and efficiency"
       desc: "We’ve designed AI Teaching Assistant to integrate seamlessly into your existing workflow and keep you in control. It’s like having an assistant who knows Code.org inside and out!"
