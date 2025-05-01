@@ -841,31 +841,43 @@ roles.each do |name, config| %>
   # permissions needed to create/update/delete a marketing sites CloudFormation Stack.
   # ------------------------------------------------------------
   <%
-    %w(development test production).each do |environment_type|
+    marketing_sites_environment_type_configuration = {
+      development: {
+        base_domain_name: 'dev-code.org'
+      },
+      test: {
+        base_domain_name: 'test-code.org'
+      },
+      production: {
+        base_domain_name: 'code.org'
+      }
+    }
+    marketing_sites_environment_type_configuration.each do |environment_type, configuration|
   %>
-  GithubUser<%=environment_type%>:
+  # GitHub Actions authenticates as this user to deploy marketing sites Stacks.
+  GithubDeployerMarketingSites<%=environment_type%>:
     Type: AWS::IAM::User
     Properties:
-      UserName: "github-actions-marketing-sites-<%=environment_type%>"
+      UserName: "github-deployer-marketing-sites-<%=environment_type%>"
       PermissionsBoundary: !Ref DevPermissions
-  GithubPolicy<%=environment_type%>:
-    Type: 'AWS::IAM::Policy'
-    Version: '2012-10-17'
+  DeployMarketingSitesPolicy<%=environment_type%>:
+    Type: AWS::IAM::Policy
+    Version: 2012-10-17
     Properties:
-      PolicyName: GithubPolicy<%=environment_type%>
+      PolicyName: DeployMarketingSitesPolicy<%=environment_type%>
       Users:
-        - !Ref GithubUser<%=environment_type%>
+        - !Ref GithubDeployerMarketingSites<%=environment_type%>
       PolicyDocument:
         Statement:
           - Effect: Allow
             Action:
-              - 'cloudformation:CreateStack'
-              - 'cloudformation:DescribeStacks'
-              - 'cloudformation:CreateChangeSet'
-              - 'cloudformation:DescribeChangeSet'
-              - 'cloudformation:DeleteChangeSet'
-              - 'cloudformation:ExecuteChangeSet'
-            # The Stack Name must match this naming convention. Examples:
+              - cloudformation:CreateStack
+              - cloudformation:DescribeStacks
+              - cloudformation:CreateChangeSet
+              - cloudformation:DescribeChangeSet
+              - cloudformation:DeleteChangeSet
+              - cloudformation:ExecuteChangeSet
+            # The Stack Name must match this naming prefix convention. Examples:
             # marketing-sites-production-code-org
             # marketing-sites-production-hourofcode-com
             # marketing-sites-test-teachai-org
@@ -876,46 +888,35 @@ roles.each do |name, config| %>
           # Deployment User can Get and Pass any Fargate Task and Task Execution Roles for the current environment type.
           - Effect: Allow
             Action:
-              - 'iam:GetRole'
-              - 'iam:PassRole'
+              - iam:GetRole
+              - iam:PassRole
             Resource: marketing-sites-<%=environment_type%>-*"
           - Effect: Allow
             Action:
-              - 'ecs:RegisterTaskDefinition'
-            Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/marketing-sites-<%=environment_type%>-:*"
+              - ecs:RegisterTaskDefinition
+            Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/marketing-sites-<%=environment_type%>-*:*"
           - Effect: Allow
             Action:
-              - 'ecs:DeregisterTaskDefinition'
-              - 'ecs:DescribeTaskDefinition'
-              - 'elasticloadbalancing:DescribeLoadBalancers'
-              - 'ec2:DescribeSecurityGroups'
+              - ecs:DeregisterTaskDefinition
+              - ecs:DescribeTaskDefinition
+              - elasticloadbalancing:DescribeLoadBalancers
+              - ec2:DescribeSecurityGroups
             Resource: '*'
           - Effect: Allow
             Action:
-              - 'ecs:DescribeServices'
-              - 'ecs:UpdateService'
+              - ecs:DescribeServices
+              - ecs:UpdateService
             Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/marketing-sites-<%=environment_type%>-*/marketing-sites-<%=environment_type%>-*"
           - Effect: Allow
             Action:
-              - "s3:PutObject"
-              - "s3:ListBucket"
+              - s3:PutObject
+              - s3:ListBucket
             Resource:
-              # TODO: @sureshc fix this to match the naming convention that the marketing sites template uses.
-              - "cdo-dev-marketing-sites-<%=environment_type%>"
-              - "cdo-dev-marketing-sites-<%=environment_type%>/*"
-  GithubUserAccessKey<%=environment_type%>:
-    Type: AWS::IAM::AccessKey
-    Properties:
-      UserName: !Ref GithubUser<%=environment_type%>
-  GithubUserAccessKeySecret<%=environment_type%>:
-    Type: AWS::SecretsManager::Secret
-    Properties:
-      SecretString: !Sub |-
-        {
-          "accessKeyId": "${GithubUserAccessKey<%=environment_type%>}",
-          "secretAccessKey": "${GithubUserAccessKey<%=environment_type%>.SecretAccessKey}"
-        }
-    UpdateReplacePolicy: Delete
+              # For the marketing site `my-feature-branch-code.marketing-sites.dev-code.org` the NextJS assets Bucket
+              # will be named `org.dev-code.marketing-sites.my-feature-branch.static-assets` so the `development`
+              # Deployer should have permission to all Buckets with the naming pattern `org.dev-code*static-assets`
+              - "<%=configuration[:base_domain_name].split('.').tap(&:reverse!).join('.')%>*static-assets"
+              - "<%=configuration[:base_domain_name].split('.').tap(&:reverse!).join('.')%>*static-assets/*"
   DeletionPolicy: Delete
 <% end %>
 
