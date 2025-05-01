@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 18:16:52 UTC",
+    "serialized_at": "2025-04-30 16:39:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -266,6 +266,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "background": "light",
         "overview": "**How do human strengths and AI capabilities interact?**\n\nThis lesson explores how AI can support human creativity through a hands-on remixing challenge. Students interact with AI to refine both their own creative content and AI-generated work, comparing the role of human input in both processes. The lesson emphasizes that while AI can enhance creative work, human judgment is essential for originality, nuance, and meaning.",
         "preparation": "- Prepare copies of the AI Remix Challenge activity guide (one for each student)",
         "student_overview": "**How do human strengths and AI capabilities interact?**\n\nIn this lesson, you explore how AI can support creativity by remixing and refining content. You compare your ideas with AI’s suggestions and decide what makes something truly creative."

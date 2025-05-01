@@ -20,7 +20,7 @@ const FIELD_PADDING = 2;
 class FieldSounds extends GoogleBlockly.Field {
   constructor(options) {
     const currentValue =
-      options.currentValue || MusicLibrary.getInstance().getDefaultSound();
+      options.currentValue || MusicLibrary.getInstance()?.getDefaultSound();
 
     super(currentValue);
 
@@ -210,7 +210,7 @@ class FieldSounds extends GoogleBlockly.Field {
       height: 20,
     });
 
-    const soundType = MusicLibrary.getInstance().getSoundForId(
+    const soundType = MusicLibrary.getInstance()?.getSoundForId(
       this.getValue()
     )?.type;
 
@@ -293,7 +293,7 @@ class FieldSounds extends GoogleBlockly.Field {
 
   getText() {
     return (
-      MusicLibrary.getInstance().getSoundForId(this.getValue())?.name || ''
+      MusicLibrary.getInstance()?.getSoundForId(this.getValue())?.name || ''
     );
   }
 

@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-04-14T23:13:49.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Do This:\r\n\r\n1. Replace the repeated lines of code with a `while` loop.\r\n\r\n2. Use `painter_name.is_on_bucket()` as the loop condition.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can repeat actions until the `Painter` is no longer standing on a paint bucket using:\r\n\r\n```\r\nwhile painter_name.is_on_bucket():\r\n   # CODE TO REPEAT\r\n```",
+    "long_instructions": "## Do This:\r\n\r\n1. Replace the repeated lines of code with a `while` loop.\r\n\r\n2. Use `painter_name.is_on_bucket()` as the loop condition.\r\n\r\n<br/>\r\n\r\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Reference the Python documentation to learn more about the `is_on_bucket()`.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can repeat actions until the `Painter` is no longer standing on a paint bucket using:\r\n\r\n```\r\nwhile painter_name.is_on_bucket():\r\n   # CODE TO REPEAT\r\n```",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -385,7 +386,6 @@
       "type": "validation"
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:49.865+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson8-level3_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson8-level3_2025-launch\"},{\"changed_at\":\"2025-04-17 02:22:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:42:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:43:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:43:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-25 01:45:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:49.865+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson8-level3_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson8-level3_2025-launch\"},{\"changed_at\":\"2025-04-17 02:22:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:42:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:43:20 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-17 02:43:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-25 01:45:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-30 18:04:50 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Pythonlab>
