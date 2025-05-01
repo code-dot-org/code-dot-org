@@ -7,6 +7,7 @@ import {
   getImage,
   getButtons,
   getDetail,
+  getTag,
 } from '../ActionBlock';
 import {ActionBlockProps} from '../types';
 
@@ -31,6 +32,7 @@ export const FullWidthActionBlock: React.FC<ActionBlockProps> = ({
   description,
   image,
   overline,
+  tag,
   details,
   primaryButton,
   secondaryButton,
@@ -46,11 +48,14 @@ export const FullWidthActionBlock: React.FC<ActionBlockProps> = ({
     >
       {image && getImage(image)}
       <div>
-        {overline && (
-          <OverlineTwoText className={classNames(moduleStyles.overline)}>
-            {overline}
-          </OverlineTwoText>
-        )}
+        <div className={classNames(moduleStyles.topWrapper)}>
+          {overline && (
+            <OverlineTwoText className={classNames(moduleStyles.overline)}>
+              {overline}
+            </OverlineTwoText>
+          )}
+          {tag && getTag()}
+        </div>
         <Heading3
           className={classNames(moduleStyles.title)}
           visualAppearance={'heading-sm'}

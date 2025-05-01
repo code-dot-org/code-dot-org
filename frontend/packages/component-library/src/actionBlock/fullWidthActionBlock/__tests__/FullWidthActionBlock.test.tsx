@@ -58,6 +58,12 @@ describe('FullWidthActionBlock', () => {
     expect(screen.getByText('Full Width Overline Text')).toBeInTheDocument();
   });
 
+  it('renders a tag', () => {
+    render(<FullWidthActionBlock {...defaultProps} tag="New" />);
+
+    expect(screen.getByText('New')).toBeInTheDocument();
+  });
+
   it('renders detail', () => {
     render(
       <FullWidthActionBlock

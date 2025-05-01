@@ -2,6 +2,7 @@ import classNames from 'classnames';
 
 import {LinkButton, LinkButtonProps} from '@/button';
 import Image, {ImageProps} from '@/image';
+import Tag from '@/tags';
 import {
   Heading3,
   BodyThreeText,
@@ -61,6 +62,20 @@ export const getButtons = (
   );
 };
 
+export const getTag = () => {
+  return (
+    <Tag
+      className={classNames(moduleStyles.tag)}
+      tagsList={[
+        {
+          label: 'New',
+        },
+      ]}
+      size="s"
+    />
+  );
+};
+
 export const ActionBlockWrapper: React.FC<ActionBlockProps> = ({
   background = 'primary',
   className,
@@ -98,6 +113,7 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
   description,
   image,
   overline,
+  tag,
   details,
   primaryButton,
   secondaryButton,
@@ -112,11 +128,14 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
       {...HTMLAttributes}
     >
       <div>
-        {overline && (
-          <OverlineTwoText className={classNames(moduleStyles.overline)}>
-            {overline}
-          </OverlineTwoText>
-        )}
+        <div className={classNames(moduleStyles.topWrapper)}>
+          {overline && (
+            <OverlineTwoText className={classNames(moduleStyles.overline)}>
+              {overline}
+            </OverlineTwoText>
+          )}
+          {tag && getTag()}
+        </div>
         <Heading3
           className={classNames(moduleStyles.title)}
           visualAppearance={'heading-md'}
