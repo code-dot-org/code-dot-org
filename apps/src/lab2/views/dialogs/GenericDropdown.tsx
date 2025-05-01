@@ -43,7 +43,6 @@ const GenericDropdownBody: React.FunctionComponent<
           handleInputChange(e.target.value);
         }}
         labelText={dropdownLabel}
-        color="black"
       />
     </>
   );
