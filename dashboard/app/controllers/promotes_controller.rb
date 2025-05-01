@@ -7,7 +7,7 @@ class PromotesController < ApplicationController
   before_action :allow_embedding, only: %i[map]
   before_action :assign_us_state, only: %i[map state]
 
-  # GET /promotes/map(/:us_state)
+  # GET /promote/map(/:us_state)
   def map
     # rubocop:disable CustomCops/PegasusDbUsage
     @hs_access_count = PEGASUS_DB[:cdo_state_promote].where(require_hs_s: 'Yes').count
@@ -17,7 +17,7 @@ class PromotesController < ApplicationController
     # rubocop:enable CustomCops/PegasusDbUsage
   end
 
-  # GET /promotes/state/:us_state
+  # GET /promote/state/:us_state
   def state
     # Ensures this action is only accessible via AJAX requests
     return render_404 unless request.xhr?
