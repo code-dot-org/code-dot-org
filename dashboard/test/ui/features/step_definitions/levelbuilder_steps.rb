@@ -37,28 +37,28 @@ Given(/^the unit slug input contains the temp script name$/) do
     And element ".newUnitSlug" has value "#{@temp_script_name}"
   }
 end
-#TODO: Check this!
+#TODO: Leaving this for now until we figure out how to handle scripts without units (since this is levelbuilder steps)
 Given(/^I view the temp unit overview page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}"
     And I wait until element "#script-title" is visible
   }
 end
-
+#TODO: Leaving this for now until we figure out how to handle editing scripts
 Given(/^I view the temp unit edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
     And I wait until element ".edit_unit" is visible
   }
 end
-
+#TODO: Leaving this for now until we figure out how to handle editing scripts
 Given(/^I wait for the temp unit edit page to load$/) do
   steps %{
     And I wait until I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
     And I wait until element ".edit_unit" is visible
   }
 end
-
+#TODO: Leaving this for now until we figure out how to handle scripts without units (since this is levelbuilder steps)
 Given(/^I wait for the temp unit overview page to load$/) do
   steps %{
     And I wait until I am on "http://studio.code.org/s/#{@temp_script_name}"
@@ -66,6 +66,7 @@ Given(/^I wait for the temp unit overview page to load$/) do
   }
 end
 
+#TODO: Leaving this for now until we figure out how to handle editing scripts
 Given(/^I try to view the temp unit edit page$/) do
   steps %{
     Given I am on "http://studio.code.org/s/#{@temp_script_name}/edit"
