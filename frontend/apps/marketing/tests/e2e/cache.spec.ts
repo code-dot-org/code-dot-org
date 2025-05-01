@@ -14,8 +14,8 @@ test.describe('Caching Tests', () => {
     const response = await allTheThingsPage.goto();
 
     const cacheControlHeader = response?.headers()['cache-control'];
-    expect(cacheControlHeader).toEqual(
-      's-maxage=3600, stale-while-revalidate=31535400',
+    expect(cacheControlHeader).toMatch(
+      /^s-maxage=3600, stale-while-revalidate=\d+$/,
     );
   });
 

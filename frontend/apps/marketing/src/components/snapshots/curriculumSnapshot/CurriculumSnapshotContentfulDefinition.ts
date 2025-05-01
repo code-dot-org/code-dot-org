@@ -7,12 +7,12 @@ export const CurriculumSnapshotContentfulComponentDefinition: ComponentDefinitio
     name: 'Curriculum Snapshot',
     category: '04: Advanced',
     thumbnailUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/2EWViyGBTdt0mXADkbonFA/f77fc4788be65bc013d40c6965d782a4/component_curriculum_snapshot_thumbnail.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/2EWViyGBTdt0mXADkbonFA/f77fc4788be65bc013d40c6965d782a4/component_curriculum_snapshot_thumbnail.png',
     tooltip: {
       description:
         'Displays key curriculum details at a glance, automatically pulled from a curriculum entry (e.g., grade level, devices).',
       imageUrl:
-        'https://images.ctfassets.net/90t6bu6vlf76/79R7NhZ9XYliVAuQG7FPIt/8a96345c99647bb35e3a03195cec34db/component_curriculum_snapshot_tooltip.png',
+        'https://contentful-images.code.org/90t6bu6vlf76/79R7NhZ9XYliVAuQG7FPIt/8a96345c99647bb35e3a03195cec34db/component_curriculum_snapshot_tooltip.png',
     },
     // Adding an empty array here so no default style options show in the Design tab.
     builtInStyles: [],

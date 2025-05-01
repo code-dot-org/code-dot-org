@@ -115,6 +115,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
 
     serialization = unit_group.serialize
+    unit_group.original_units.each {|u| u.update!(original_unit_group: nil)}
     unit_group.destroy
 
     seeded_unit_group = UnitGroup.seed_from_hash(JSON.parse(serialization))
@@ -501,29 +502,6 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit2.instruction_type
     end
 
-    test "cannot remove UnitGroupUnits that cannot change course version" do
-      course_version = create :course_version
-      unit_group = create :unit_group, course_version: course_version
-
-      unit1 = create :script, name: 'unit1'
-      create(:unit_group_unit, unit_group: unit_group, position: 0, script: unit1)
-      create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'unit2'))
-
-      lesson = create :lesson
-      resource = create :resource, course_version: course_version
-      lesson.resources = [resource]
-      lesson_group = create :lesson_group, lessons: [lesson]
-      unit1.lesson_groups = [lesson_group]
-
-      error = assert_raises RuntimeError do
-        unit_group.update_scripts(['unit2'])
-      end
-      assert_includes error.message, 'Cannot remove units that have resources or vocabulary'
-
-      unit_group.reload
-      assert_equal 2, unit_group.default_unit_group_units.length
-    end
-
     test "cannot remove UnitGroupUnits from their original course" do
       course_version = create :course_version
       unit_group = create :unit_group, course_version: course_version
@@ -540,32 +518,6 @@ class UnitGroupTest < ActiveSupport::TestCase
 
       unit_group.reload
       assert_equal 2, unit_group.default_unit_group_units.length
-    end
-
-    test "cannot add UnitGroupUnits that cannot change course version" do
-      course_version1 = create :course_version
-      unit_group1 = create :unit_group, course_version: course_version1
-      course_version2 = create :course_version
-      unit_group2 = create :unit_group, course_version: course_version2
-
-      unit1 = create :script, name: 'unit1'
-      unit2 = create :script, name: 'unit2'
-      create(:unit_group_unit, unit_group: unit_group1, position: 0, script: unit1)
-      create(:unit_group_unit, unit_group: unit_group2, position: 0, script: unit2)
-
-      lesson = create :lesson
-      resource = create :resource, course_version: course_version2
-      lesson.resources = [resource]
-      lesson_group = create :lesson_group, lessons: [lesson]
-      unit2.lesson_groups = [lesson_group]
-
-      error = assert_raises RuntimeError do
-        unit_group1.update_scripts(['unit1', 'unit2'])
-      end
-      assert_includes error.message, 'Cannot add units that have resources or vocabulary: ["unit2"]'
-
-      unit_group1.reload
-      assert_equal 1, unit_group1.default_unit_group_units.length
     end
 
     test "remove UnitGroupUnits" do

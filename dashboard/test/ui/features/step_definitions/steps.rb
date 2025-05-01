@@ -1163,6 +1163,14 @@ Given(/^I am assigned to course "([^"]*)" and unit "([^"]*)"(?: with teacher "([
   )
 end
 
+Given(/^I am assigned to course "([^"]*)"(?: with teacher "([^"]*)")?(?: in a section named "([^"]*)")?$/) do |course_name, teacher_name, section_name|
+  browser_request(
+    url: '/api/test/assign_course_as_student',
+    method: 'POST',
+    body: {course_name: course_name, section_name: section_name, teacher_email: teacher_name ? (@users[teacher_name][:email]).to_s : nil}
+  )
+end
+
 Then(/^I fake completion of the assessment$/) do
   browser_request(url: '/api/test/fake_completion_assessment', method: 'POST', code: 204)
 end

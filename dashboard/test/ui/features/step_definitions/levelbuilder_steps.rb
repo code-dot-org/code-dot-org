@@ -191,3 +191,85 @@ Given(/^the temp data doc is not visible$/) do
     And element "a" does not contain text "#{@temp_data_doc_name}"
   }
 end
+
+Given(/^I create a temp course$/) do
+  response = browser_request(
+    url: '/api/test/create_course',
+    method: 'POST'
+  )
+  data = JSON.parse(response)
+  @temp_course_name = data['course_name']
+end
+
+Given(/^I enter a temp family name$/) do
+  @temp_family_name = "temp-course-#{Time.now.to_i}-#{rand(1_000_000)}"
+  puts "temp family name: #{@temp_family_name}"
+  steps %{
+    And element ".familyNameInput" is visible
+    And I press keys "#{@temp_family_name}" for element ".familyNameInput"
+  }
+end
+
+Given(/^I select that this course will (not )?get updated yearly$/) do |negation|
+  is_versioned = negation.nil? ? 'Yes' : 'No'
+  steps %{
+    And I select the "#{is_versioned}" option in dropdown with class "isVersionedSelector"
+  }
+  unless negation.nil?
+    @temp_course_name = @temp_family_name
+  end
+end
+
+Given(/^I select the version year "([^"]*)"$/) do |version_year|
+  steps %{
+    And I select the "#{version_year}" option in dropdown with class "versionYearSelector"
+  }
+  @temp_course_name = "#{@temp_family_name}-#{version_year}"
+end
+
+Given(/^I view the temp course overview page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/courses/#{@temp_course_name}"
+    And I wait until element "#course_overview" is visible
+  }
+end
+
+Given(/^I view the temp course edit page$/) do
+  steps %{
+    Given I am on "http://studio.code.org/courses/#{@temp_course_name}/edit"
+    And I wait until element ".edit_unit_group" is visible
+  }
+end
+
+Given(/^I wait for the temp course overview page to load$/) do
+  steps %{
+    And I wait until I am on "http://studio.code.org/courses/#{@temp_course_name}"
+    And I wait until element "#course_overview" is visible
+  }
+end
+
+Given(/^I wait for the temp course edit page to load$/) do
+  steps %{
+    And I wait until I am on "http://studio.code.org/courses/#{@temp_course_name}/edit"
+    And I wait until element ".edit_unit_group" is visible
+  }
+end
+
+Then(/^I add the temp unit to the course$/) do
+  steps %{
+    And I add the unit "#{@temp_script_name}" to the course
+  }
+end
+
+Then(/^I add the unit "([^"]*)" to the course$/) do |unit_name|
+  last_dropdown = @browser.find_elements(:css, '.uitest-unit-selector').last
+  select_dropdown(last_dropdown, unit_name, nil)
+end
+
+Given(/^I delete the temp course?$/) do
+  browser_request(
+    url: '/api/test/destroy_course',
+    method: 'POST',
+    body: {course_name: @temp_course_name}
+  )
+end
