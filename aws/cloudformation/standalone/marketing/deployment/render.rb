@@ -32,6 +32,9 @@ puts "\nTransforming ERB to YAML for template 'cloudfront-certificates'..."
 puts "\nTransforming ERB to YAML for template 'marketing'..."
 `erb aws_region=#{options[:region]} -T - -r ./config.rb  marketing.yml.erb > marketing.yml `
 
+puts "\nTransforming ERB to YAML for template 'oidc'..."
+`erb aws_region=#{options[:region]} -T - -r ./config.rb  oidc.yml.erb > oidc.yml `
+
 if $?&.exitstatus == 0
   puts "Success!"
 else
