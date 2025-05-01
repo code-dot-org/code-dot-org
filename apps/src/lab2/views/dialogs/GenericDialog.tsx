@@ -4,7 +4,6 @@ import {
   BodyTwoText,
   Heading3,
 } from '@code-dot-org/component-library/typography';
-import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import React, {useMemo} from 'react';
 
@@ -55,7 +54,6 @@ export type GenericDialogProps = GenericDialogTitleProps &
   };
 
 import moduleStyles from './generic-dialog.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 /**
  * Generic root dialog used in Lab2 labs.
@@ -155,9 +153,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
             {buttons?.cancel ? (
               <Button
                 onClick={cancelCallback}
-                className={classNames(moduleStyles.cancel, {
-                  [darkModeStyles.secondaryButton]: theme === 'Dark',
-                })}
+                className={moduleStyles.cancel}
                 type="secondary"
                 disabled={buttons.cancel.disabled}
                 color={
@@ -180,9 +176,6 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
               )}
               <Button
                 onClick={confirmCallback}
-                className={classNames({
-                  [darkModeStyles.primaryButton]: theme === 'Dark',
-                })}
                 disabled={buttons?.confirm?.disabled}
                 type="primary"
                 color={

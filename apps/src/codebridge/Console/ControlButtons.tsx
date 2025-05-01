@@ -29,7 +29,6 @@ import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import {getSystemMessage} from './MessageHelpers';
 
 import moduleStyles from './console.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 // Control buttons for running and stopping code.
 // Can be extended in the future to include a test button.
@@ -154,7 +153,6 @@ const ControlButtons: React.FunctionComponent = () => {
             text: disabledCodeActionsTooltip || '',
             size: 's',
             tooltipId: 'code-actions-tooltip',
-            className: darkModeStyles.tooltipRight,
           }}
         >
           <Button
@@ -165,10 +163,7 @@ const ControlButtons: React.FunctionComponent = () => {
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
             size={'xs'}
             type={'primary'}
-            className={classNames(
-              moduleStyles.controlButton,
-              darkModeStyles.primaryButton
-            )}
+            className={classNames(moduleStyles.controlButton)}
           />
         </WithConditionalTooltip>
       )}

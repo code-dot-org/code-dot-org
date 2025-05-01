@@ -1,12 +1,11 @@
 import {ComponentPlacementDirection} from '@code-dot-org/component-library/common/types';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import React, {useMemo} from 'react';
+import React from 'react';
 
 import commonI18n from '@cdo/locale';
 
 import styles from './project-template-workspace-icon-v2.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface ProjectTemplateWorkspaceIconV2Props {
   tooltipPlace?: ComponentPlacementDirection;
@@ -29,30 +28,12 @@ interface ProjectTemplateWorkspaceIconV2Props {
 const ProjectTemplateWorkspaceIconV2: React.FunctionComponent<
   ProjectTemplateWorkspaceIconV2Props
 > = ({tooltipPlace, darkMode, className}) => {
-  const tooltipClassName = useMemo(() => {
-    if (!darkMode) {
-      return undefined;
-    }
-    switch (tooltipPlace) {
-      case 'onTop':
-        return darkModeStyles.tooltipTop;
-      case 'onLeft':
-        return darkModeStyles.tooltipLeft;
-      case 'onRight':
-        return darkModeStyles.tooltipRight;
-      case 'onBottom':
-      default:
-        return darkModeStyles.tooltipBottom;
-    }
-  }, [tooltipPlace, darkMode]);
-
   return (
     <WithTooltip
       tooltipProps={{
         text: commonI18n.workspaceProjectTemplateLevel(),
         direction: tooltipPlace || 'onBottom',
         tooltipId: 'project-template-workspace-icon-tooltip',
-        className: tooltipClassName,
         size: 'xs',
       }}
       tooltipOverlayClassName={className}
