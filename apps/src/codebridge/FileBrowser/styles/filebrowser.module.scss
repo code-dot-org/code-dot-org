@@ -77,6 +77,14 @@ button.button-kebab {
   height: 20px;
   width: 20px;
   margin: 2px 2px 2px 0;
+
+  // We use important here because the hover, and active styles used by Button
+  // are more specific than a single class.
+  // We need a different hover color for the kebab button because it is on top of another
+  // element with the standard hover color.
+  &:hover, &:active {
+    background-color: var(--background-neutral-quinary) !important;
+  }
 }
 
 div.row:hover .button-kebab {
