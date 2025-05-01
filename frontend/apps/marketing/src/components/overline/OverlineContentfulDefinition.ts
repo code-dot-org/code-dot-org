@@ -8,12 +8,12 @@ export const OverlineContentfulComponentDefinition: ComponentDefinition = {
   name: 'Overline',
   category: '02: Typography',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/30ubXKEp07H0liw3w6jad/222daf47eb2d7f14dfef4e9711522217/component_overline_thumbnail.png',
+    'https://contentful-images.code.org/90t6bu6vlf76/30ubXKEp07H0liw3w6jad/222daf47eb2d7f14dfef4e9711522217/component_overline_thumbnail.png',
   tooltip: {
     description:
       'A short, all-caps preheader used to introduce or categorize content.',
     imageUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/2I1BvrvBam8kLhb248w1z4/db2323e89e0ee68853f276417ceada74/component_overline_tooltip.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/2I1BvrvBam8kLhb248w1z4/db2323e89e0ee68853f276417ceada74/component_overline_tooltip.png',
   },
   builtInStyles: ['cfTextAlign'],
   variables: {

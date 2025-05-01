@@ -6,12 +6,12 @@ export const VideoContentfulComponentDefinition: ComponentDefinition = {
   name: 'Video',
   category: '03: Basic',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/34JWsHE14EP6EoqJyoa3vI/516d08ada4c866195d86bc668fcaf458/component_video_thumbnail.png',
+    'https://contentful-images.code.org/90t6bu6vlf76/34JWsHE14EP6EoqJyoa3vI/516d08ada4c866195d86bc668fcaf458/component_video_thumbnail.png',
   tooltip: {
     description:
       'Add a video frame to your layout. Supports title, download, and fallback options.',
     imageUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/7I4Hd4Mf5rwUWgm8QfM1nu/1bdbedc97c9e2960a5444d23e0aabc20/component_video_tooltip.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/7I4Hd4Mf5rwUWgm8QfM1nu/1bdbedc97c9e2960a5444d23e0aabc20/component_video_tooltip.png',
   },
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],

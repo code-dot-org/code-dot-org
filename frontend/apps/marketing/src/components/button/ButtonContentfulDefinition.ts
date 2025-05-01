@@ -5,12 +5,12 @@ export const ButtonContentfulComponentDefinition: ComponentDefinition = {
   name: 'Button',
   category: '03: Basic',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/6fRMP55wwDZF2C4ubzygTO/bad1643a5db519e1e3f6886f0f7bc7cd/component_button_thumbnail.png',
+    'https://contentful-images.code.org/90t6bu6vlf76/6fRMP55wwDZF2C4ubzygTO/bad1643a5db519e1e3f6886f0f7bc7cd/component_button_thumbnail.png',
   tooltip: {
     description:
       'Use a button to create clear calls to action. Supports different styles, sizes, and links to guide users to key actions.',
     imageUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/6B9UVqsphQR9MUnNf4tYHU/94e6f32fcb793401f02399ceb0069722/component_button_tooltip.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/6B9UVqsphQR9MUnNf4tYHU/94e6f32fcb793401f02399ceb0069722/component_button_tooltip.png',
   },
   builtInStyles: ['cfTextAlign'],
   variables: {
