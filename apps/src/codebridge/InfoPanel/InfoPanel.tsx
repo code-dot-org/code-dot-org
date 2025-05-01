@@ -107,6 +107,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           isIconOnly
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           ariaLabel={'Information panel dropdown'}
+          aria-expanded={isDropdownOpen}
           size={'xs'}
           type={'tertiary'}
           className={darkModeStyles.tertiaryButton}

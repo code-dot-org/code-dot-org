@@ -36,11 +36,17 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       defaultValue: 'Link',
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     href: {
       displayName: 'Link URL',
       type: 'Text',
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     isLinkExternal: {
       displayName:
@@ -50,12 +56,18 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
       type: 'Boolean',
       defaultValue: false,
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     removeMarginBottom: {...removeMarginBottomDefinition},
     ariaLabel: {
       displayName: 'Aria Label',
       type: 'Text',
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
   },
 };

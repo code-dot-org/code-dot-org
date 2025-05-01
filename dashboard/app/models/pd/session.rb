@@ -93,8 +93,12 @@ class Pd::Session < ApplicationRecord
       id: id,
       start: start_time.utc.iso8601,
       end: end_time.utc.iso8601,
-      is_local: workshop.time_zone.blank?
+      is_local: local?
     }
+  end
+
+  def local?
+    workshop.time_zone.blank?
   end
 
   def start_date_us_format

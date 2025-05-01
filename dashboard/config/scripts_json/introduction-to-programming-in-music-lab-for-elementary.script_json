@@ -12,11 +12,12 @@
       "topic_tags": [
         "music_lab"
       ],
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-28 23:22:40 UTC",
+    "serialized_at": "2025-04-30 17:04:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1031,6 +1032,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-need_launch"
+        ],
         "progression": "Notice & Predict"
       },
       "bonus": false,
@@ -1053,6 +1057,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-functions-need2_launch"
+        ],
         "progression": "Notice & Predict"
       },
       "bonus": false,
@@ -1325,6 +1332,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-coding-intro-event-try_launch"
+        ]
       },
       "bonus": false,
       "seeding_key": {

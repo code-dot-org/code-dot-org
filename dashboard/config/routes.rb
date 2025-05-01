@@ -656,11 +656,7 @@ Dashboard::Application.routes.draw do
       resource :dynamic_config, only: [:show], controller: :dynamic_config
       resource :gatekeeper, only: [:show, :update, :destroy], controller: :gatekeeper
       resource :dcdo, only: [:show, :update], controller: :dcdo
-
-      controller :feature_mode do
-        get :feature_mode, action: :show
-        post :feature_mode, action: :update, as: 'feature_mode_update'
-      end
+      resource :feature_mode, only: [:show, :update], controller: :feature_mode
 
       # internal support tools
       controller :admin_users do

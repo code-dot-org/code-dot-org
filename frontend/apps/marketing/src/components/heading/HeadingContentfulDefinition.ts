@@ -39,6 +39,9 @@ export const HeadingContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       defaultValue: 'Heading',
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
   },
 };

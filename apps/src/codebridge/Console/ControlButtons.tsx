@@ -92,7 +92,7 @@ const ControlButtons: React.FunctionComponent = () => {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
         ?.writeConsoleMessage(
-          getSystemMessage("We don't know how to run your code.", appName)
+          getSystemMessage(codebridgeI18n.handleRunError(), appName)
         );
     }
   };
@@ -105,7 +105,7 @@ const ControlButtons: React.FunctionComponent = () => {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
         ?.writeConsoleMessage(
-          getSystemMessage("We don't know how to stop your code.", appName)
+          getSystemMessage(codebridgeI18n.handleStopError(), appName)
         );
       dispatch(setIsRunning(false));
     }

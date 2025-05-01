@@ -15,7 +15,7 @@ test.describe('Caching Tests', () => {
 
     const cacheControlHeader = response?.headers()['cache-control'];
     expect(cacheControlHeader).toEqual(
-      's-maxage=600, stale-while-revalidate=31535400',
+      's-maxage=3600, stale-while-revalidate=31535400',
     );
   });
 

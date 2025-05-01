@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-04-28T18:19:13.000Z",
   "level_num": "custom",
@@ -406,7 +407,7 @@
         "kind": "flyoutToolbox"
       }
     },
-    "long_instructions": "### <i class=\"fa-duotone fa-solid fa-masks-theater\"></i> Sound is also a feeling. \r\n**Buttons 1 & 2 create different feelings for levels in a game.**\r\n\r\n1. **Try it first.** Press Run then press 1 or 2 to trigger the sounds.\r\n- **Next, code the third event trigger.** What feeling will you set? \r\n\t- Celebrating winning the game?\r\n    - An intense new battle?\r\n    - A fun fast-paced level? \r\n",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:**\r\n##### This level provides an opportunity to revisit a key concept: functions. Remind students that defining a function alone is not enough—it must be called for it to execute.This time they call the function with the Trigger event.\r\n___\r\n### <i class=\"fa-duotone fa-solid fa-masks-theater\"></i> Sound is also a feeling. \r\n**Buttons 1 & 2 create different feelings for levels in a game.**\r\n\r\n1. **Try it first.** Press Run then press 1 or 2 to trigger the sounds.\r\n- **Next, code the third event trigger.** What feeling will you set? \r\n\t- Celebrating winning the game?\r\n    - An intense new battle?\r\n    - A fun fast-paced level? \r\n",
     "validations": [
       {
         "key": "music-coding-intro-event-function_6ac8d0df-d8f7-489a-9f29-b79b2e8fd1bc",
@@ -441,8 +442,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:13.906+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function_launch\\\"\"],\"cloned_from\":\"music-coding-intro-event-function_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:13.906+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function_launch\\\"\"],\"cloned_from\":\"music-coding-intro-event-function_launch\"},{\"changed_at\":\"2025-04-29 18:43:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
