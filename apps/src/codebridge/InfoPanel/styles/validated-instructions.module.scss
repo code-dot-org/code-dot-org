@@ -67,10 +67,6 @@
   display: flex;
   align-items: flex-start;
   gap: 4px;
-  height: auto;
-  overflow-x: auto;
-  overflow-y: hidden;
-  background-color: $light_gray_950;
 }
 
 %bubble {
@@ -117,6 +113,7 @@ button.validationButton {
 .markdownText {
   line-height: 0;
   user-select: text;
+  word-break: break-word;
 
   h1,
   h2,
