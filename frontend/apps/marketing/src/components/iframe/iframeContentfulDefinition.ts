@@ -22,6 +22,7 @@ export const IframeContentfulComponentDefinition: ComponentDefinition = {
       group: 'content',
       validations: {
         required: true,
+        bindingSourceType: ['entry', 'manual'],
       },
     },
     title: {
@@ -30,6 +31,7 @@ export const IframeContentfulComponentDefinition: ComponentDefinition = {
       group: 'content',
       validations: {
         required: true,
+        bindingSourceType: ['entry', 'manual'],
       },
     },
     height: {

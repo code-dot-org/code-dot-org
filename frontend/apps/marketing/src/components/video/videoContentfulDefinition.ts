@@ -22,18 +22,27 @@ export const VideoContentfulComponentDefinition: ComponentDefinition = {
       group: 'content',
       description:
         'The title of the video. This will double as the caption under the video player.',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     videoDesc: {
       displayName: 'Description',
       type: 'Text',
       group: 'content',
       description: 'The description of the video. Helpful for SEO.',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     uploadDate: {
       displayName: 'Published Date',
       type: 'Date',
       group: 'content',
       description: 'The upload date of the video. Required for SEO.',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     youTubeId: {
       displayName: 'YouTube ID',
@@ -41,6 +50,9 @@ export const VideoContentfulComponentDefinition: ComponentDefinition = {
       group: 'content',
       description:
         'The YouTube ID of the video. This is the unique identifier for the video on YouTube.',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     videoFallback: {
       displayName: 'Video fallback',
@@ -48,6 +60,9 @@ export const VideoContentfulComponentDefinition: ComponentDefinition = {
       group: 'content',
       description:
         'This is the URL of the video that will be used in place of the YouTube video if YouTube is blocked.',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     showCaption: {
       displayName: 'Show video caption',
