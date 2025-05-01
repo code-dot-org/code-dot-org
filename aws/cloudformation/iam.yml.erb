@@ -917,7 +917,6 @@ roles.each do |name, config| %>
               # Deployer should have permission to all Buckets with the naming pattern `org.dev-code*static-assets`
               - "<%=configuration[:base_domain_name].split('.').tap(&:reverse!).join('.')%>*static-assets"
               - "<%=configuration[:base_domain_name].split('.').tap(&:reverse!).join('.')%>*static-assets/*"
-  DeletionPolicy: Delete
 <% end %>
 
 Outputs:
