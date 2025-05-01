@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-04-14T23:13:56.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Do This:\r\n\r\n1. Read the existing code to see what the `Painter` currently does.\r\n\r\n2. Add an `if` statement to check if the `Painter` `is_facing_west()`\r\n\r\n3. Move the `paint(\"blue\")`command inside the `if` statement so it only runs when the condition is true.\r\n\r\n4. Run the program to check your result.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nUse this format for writing an `if` statement:\r\n\r\n```\r\nif condition:\r\n   do_something()\r\n```\r\n\r\nFor this problem, your condition will be `is_facing_west()`",
+    "long_instructions": "## Do This:\r\n\r\n1. Read the existing code to see what the `Painter` currently does.\r\n\r\n2. Add an `if` statement to check if the `Painter` `is_facing_west()`\r\n\r\n3. Move the `paint(\"blue\")`command inside the `if` statement so it only runs when the condition is true.\r\n\r\n4. Run the program to check your result.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nUse this format for writing an `if` statement:\r\n\r\n```\r\nif condition:\r\n   do_something()\r\n```\r\n\r\nFor this problem, your condition will be `is_facing_west()`\r\n\r\n<br/>",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -385,7 +386,6 @@
       "type": "validation"
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:56.393+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson9-level1_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson9-level1_2025-launch\"},{\"changed_at\":\"2025-04-18 03:34:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-18 03:37:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-18 03:37:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-18 03:40:54 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-24 20:42:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-24 20:43:27 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:56.393+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson9-level1_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson9-level1_2025-launch\"},{\"changed_at\":\"2025-04-18 03:34:06 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-18 03:37:10 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-18 03:37:58 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-18 03:40:54 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-24 20:42:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-24 20:43:27 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-30 18:13:04 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-30 18:36:57 +0000\",\"changed\":[\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 19:42:30 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

@@ -116,6 +116,7 @@ export const PopUpButton = ({
         id={id}
         disabled={disabled}
         ariaLabel={ariaLabel}
+        aria-expanded={isOpen}
       />
       {isOpen &&
         // We use a portal so the dropdown can appear above all other elements.

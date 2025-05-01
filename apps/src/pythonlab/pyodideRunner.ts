@@ -126,11 +126,11 @@ export async function runAllTests(
     );
     if (result?.message) {
       // Get validation test results
-      // Message is an array of Maps with the keys "name" and "result",
+      // After parsing, message is an array of objects {name: string, result: string}
       // where "name" is the name of the test and "result" is one of
       // "PASS/FAIL/ERROR/SKIP/EXPECTED_FAILURE/UNEXPECTED_SUCCESS"
       // See this PR for details: https://github.com/code-dot-org/pythonlab-packages/pull/5
-      const testResults = result.message as Map<string, string>[];
+      const testResults = JSON.parse(result.message);
       if (progressManager) {
         PythonValidationTracker.getInstance().setValidationResults(testResults);
         progressManager.updateProgress();

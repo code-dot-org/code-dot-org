@@ -3,10 +3,16 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Introduction to Programming with Music Lab
+<div style="position: relative; text-align: center; color: white; margin-top: 20px;">
+    <img src="https://images.code.org/8d2cd575d1cf97c6af82a4f469a8f92f-image-1746033040792.jpg" alt="Banner image that says, Welcome to Teaching Programming with Music Lab" style="width: 100%; border-radius: 10px;">
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; width: 70%; max-width: 800px; border-radius: 10px;">
+    </div>
+</div>
+<br>
 
+# Welcome!
 
-#### Start your music making journey with Music Lab!
+#### This professional learning module is designed to prepare you to teach Code.org's Introduction to Programming with Music Lab curriculum. This curriculum is an engaging, hands-on dive into the worlds of computer science, music, and problem solving.
 
 <img src="https://images.code.org/205cc0e8da353930786208309788529d-image-1679953465855.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 75px; height: 275px; clear: both; margin: 0 0px 0px 0;">
 
@@ -17,10 +23,25 @@ markdown <<MARKDOWN
 * #### Write code using sequencing, loops, functions, and events.
 * #### Practice the Use-Modify-Create Pedagogical Practice.
 
-### **Suggested time:**  60 minutes
+
+## Take Our Pre-Survey
+
+#### To better gauge your learning and improve this professional learning course, please take our pre-survey - it will take fewer than five minutes to complete.
+
+
+
+<div style="margin: 20px 0px">
+<a class="btn btn-large btn-primary" href="https://usabi.li/do/utikorbqr2kt/devjgh" target="blank" rel="noopener noreferrer">Take the Pre-Survey</a>
+</div>
+
+### **Suggested total time for this course:** 60 minutes
+
+
 
 
 ## Let's get started!
 
 <div style="clear:both"/>
+
+
 MARKDOWN

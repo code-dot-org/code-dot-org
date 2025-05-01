@@ -3,10 +3,12 @@
   "name": "Repeat",
   "category": "Control",
   "category_key": "control",
+  "block_name": "repeat_simple2",
   "content": "Repeat the sounds inside the block for the number of times specified",
   "palette_params": [
     {
       "name": "count",
+      "type": "Number",
       "required": true,
       "description": "The number of times to repeat."
     }

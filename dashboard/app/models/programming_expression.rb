@@ -334,7 +334,6 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def get_blocks
-    return unless block_name
     return unless programming_environment.block_pool_name
     Block.for(programming_environment.block_pool_name)
   end

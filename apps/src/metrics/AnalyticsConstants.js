@@ -232,6 +232,10 @@ const EVENTS = {
   CFU_RESPONSE_UNPINNED: 'Summary Page Response Unpinned',
   CFU_RESPONSE_ALL_UNHID: 'Summary Page Response Hidden Responses Unhidden',
   CFU_RESPONSE_ALL_UNPINNED: 'Summary Page Response All Unpinned',
+  CFU_SHOW_AI_INSIGHTS_TOGGLED_OFF: 'Summary Page AI Insights Toggled Off',
+  CFU_SHOW_AI_INSIGHTS_TOGGLED_ON: 'Summary Page AI Insights Toggled On',
+  CFU_AI_ANALYSIS_BUTTON_CLICKED: 'Summary Page AI Analysis Button Clicked',
+  CFU_AI_ANALYSIS_VIEW_DETAILS: 'Summary Page AI Analysis View Details',
 
   // Maker setup
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',

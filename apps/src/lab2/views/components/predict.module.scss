@@ -22,6 +22,10 @@
   box-sizing: border-box;
 }
 
+.predictQuestionContainer {
+  margin-bottom: 8px;
+}
+
 .predictSolutionContainer {
   margin: 10px;
   padding: 5px;
@@ -35,8 +39,7 @@
 }
 
 .resetButton {
-  width: 212px;
-
+  flex-grow: 1;
   // We use important here because the disabled styles used by Button
   // are more specific than a single class.
   &:disabled {
@@ -44,4 +47,18 @@
     color: $light_gray_800 !important;
     border: none;
   }
+}
+
+.resetButtonRow {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.resetButtonRowSpace {
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
 }

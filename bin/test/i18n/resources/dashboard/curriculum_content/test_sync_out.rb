@@ -363,9 +363,10 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncOut do
       end
     end
 
-    context 'when the course version is found by the lesson url data' do
+    context 'when the course version is not found by the lesson url data' do
       before do
-        course_version.destroy
+        reference_guide.destroy!
+        course_version.destroy!
       end
 
       it 'returns the types i18n data without unrestored reference guide i18n keys' do

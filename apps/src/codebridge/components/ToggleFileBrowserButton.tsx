@@ -50,6 +50,7 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
           size={'xs'}
           type={'tertiary'}
           className={darkModeStyles.tertiaryButton}
+          aria-expanded={config.showFileBrowser}
         />
       </WithTooltip>
     </span>

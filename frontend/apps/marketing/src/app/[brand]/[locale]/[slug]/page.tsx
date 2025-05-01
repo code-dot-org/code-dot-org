@@ -14,7 +14,7 @@ import {getSeoMetadata} from '@/metadata/seo';
 import {getPageHeading} from '@/selectors/contentful/getExperienceEntryFields';
 
 export const dynamic = 'force-static'; // Ensure ISR is enabled
-export const revalidate = 600; // Cache for five minutes until on-demand revalidation works
+export const revalidate = 3600; // Cache for one hour
 
 type ExperiencePageProps = {
   params: Promise<{locale?: string; slug?: string; brand?: Brand}>;

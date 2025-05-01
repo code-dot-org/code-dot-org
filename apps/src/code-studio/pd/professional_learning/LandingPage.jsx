@@ -209,7 +209,7 @@ function LandingPage({
         setLoadingWorkshopsAsFacilitator(true);
         try {
           const response = await fetch(
-            '/dashboardapi/v1/pd/workshops_as_facilitator_for_pl_page',
+            'professional-learning/workshops_as_facilitator_for_pl_page',
             {
               method: 'GET',
               headers: {
@@ -238,7 +238,7 @@ function LandingPage({
         try {
           setLoadingWorkshopsAsOrganizer(true);
           const response = await fetch(
-            '/dashboardapi/v1/pd/workshops_as_organizer_for_pl_page',
+            'professional-learning/workshops_as_organizer_for_pl_page',
             {
               method: 'GET',
               headers: {
@@ -267,7 +267,7 @@ function LandingPage({
         setLoadingWorkshopsAsProgramManager(true);
         try {
           const response = await fetch(
-            '/dashboardapi/v1/pd/workshops_as_program_manager_for_pl_page',
+            'professional-learning/workshops_as_program_manager_for_pl_page',
             {
               method: 'GET',
               headers: {
