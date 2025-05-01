@@ -31,7 +31,7 @@ class CoursesController < ApplicationController
   end
 
   def index
-    redirect_to CDO.code_org_url("/students") unless Rails.application.config.levelbuilder_mode
+    return redirect_to CDO.code_org_url("/students") unless Rails.application.config.levelbuilder_mode
 
     # If the user is not a levelbuilder, redirect to /students
     begin

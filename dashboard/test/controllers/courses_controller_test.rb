@@ -853,4 +853,31 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 2, response_body.length
     assert_equal(['All Resources', 'All Standards'], response_body.map {|r| r['name']})
   end
+
+  test "index: redirects to /students if not in levelbuilder mode" do
+    get :index
+    assert_redirected_to CDO.code_org_url("/students")
+  end
+
+  test "index: redirects to /students if user is not a levelbuilder" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    admin = create(:admin)
+    not_admin = create(:user)
+
+    [admin, not_admin].each do |user|
+      sign_in user
+      get :index
+      assert_redirected_to  CDO.code_org_url("/students")
+    end
+  end
+
+  test "index: shows all courses " do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    sign_in(create(:levelbuilder))
+    get :index
+    assert_response :success
+    refute_nil assigns(:courses)
+    assert_equal UnitGroup.all, assigns(:courses)
+  end
 end
