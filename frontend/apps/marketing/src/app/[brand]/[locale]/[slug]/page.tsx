@@ -77,7 +77,7 @@ export default async function ExperiencePage({
   const experienceJSON = experience ? JSON.stringify(experience) : null;
 
   return (
-    <main style={{width: '100%'}}>
+    <main>
       <FontLoader locale={pageProps.locale} />
       {stylesheet && <style>{stylesheet}</style>}
       <ExperiencePageLoader
