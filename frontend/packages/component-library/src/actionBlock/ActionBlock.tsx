@@ -2,12 +2,12 @@ import classNames from 'classnames';
 
 import {LinkButton, LinkButtonProps} from '@/button';
 import Image, {ImageProps} from '@/image';
-import Tag from '@/tags';
 import {
   Heading3,
   BodyThreeText,
   OverlineTwoText,
   StrongText,
+  BodyFourText,
 } from '@/typography';
 
 import {ActionBlockProps} from './types';
@@ -62,17 +62,9 @@ export const getButtons = (
   );
 };
 
-export const getTag = () => {
+export const getTag = (tag: string) => {
   return (
-    <Tag
-      className={classNames(moduleStyles.tag)}
-      tagsList={[
-        {
-          label: 'New',
-        },
-      ]}
-      size="s"
-    />
+    <BodyFourText className={classNames(moduleStyles.tag)}>{tag}</BodyFourText>
   );
 };
 
@@ -128,14 +120,12 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
       {...HTMLAttributes}
     >
       <div>
-        <div className={classNames(moduleStyles.topWrapper)}>
-          {overline && (
-            <OverlineTwoText className={classNames(moduleStyles.overline)}>
-              {overline}
-            </OverlineTwoText>
-          )}
-          {tag && getTag()}
-        </div>
+        {tag && getTag('New')}
+        {overline && (
+          <OverlineTwoText className={classNames(moduleStyles.overline)}>
+            {overline}
+          </OverlineTwoText>
+        )}
         <Heading3
           className={classNames(moduleStyles.title)}
           visualAppearance={'heading-md'}

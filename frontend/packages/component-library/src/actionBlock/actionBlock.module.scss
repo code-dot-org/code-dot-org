@@ -1,4 +1,5 @@
 @use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
+@use '@code-dot-org/component-library-styles/variables.scss' as variables;
 
 $mobileBreakpoint: 900px;
 
@@ -9,6 +10,7 @@ $mobileBreakpoint: 900px;
   padding: 1.25rem;
   box-sizing: border-box;
   width: 100%;
+  position: relative;
 
   figure {
     width: 100%;
@@ -30,13 +32,19 @@ $mobileBreakpoint: 900px;
     margin-block: -0.25rem 0.5rem;
   }
 
-  .tag > div {
+  .tag {
+    position: absolute;
+    inset-block-start: 0.5rem;
+    inset-inline-end: 0.5rem;
     background: var(--background-accent-strawberry-primary);
-    margin: -0.6rem -0.625rem 0 0;
-
-    span {
-      color: var(--text-neutral-white-fixed);
-    }
+    color: var(--text-neutral-white-fixed);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0.125rem 0.5rem;
+    border-radius: 1rem;
+    z-index: variables.$zindex-fixed;
   }
 
   p {
@@ -86,8 +94,10 @@ $mobileBreakpoint: 900px;
   }
 
   @media (max-width: $mobileBreakpoint) {
-    .tag > div {
-      margin: -0.25rem 0 0 0;
+    .tag {
+      inset-block-start: 2rem;
+      inset-inline-end: 2rem;
+      box-shadow: 0 0 6px rgba(0 0 0 / 0.2);
     }
   }
 }

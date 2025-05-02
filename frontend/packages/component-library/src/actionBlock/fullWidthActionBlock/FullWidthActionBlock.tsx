@@ -46,16 +46,14 @@ export const FullWidthActionBlock: React.FC<ActionBlockProps> = ({
       className={classNames(moduleStyles.fullWidth, className)}
       {...HTMLAttributes}
     >
+      {tag && getTag('New')}
       {image && getImage(image)}
       <div>
-        <div className={classNames(moduleStyles.topWrapper)}>
-          {overline && (
-            <OverlineTwoText className={classNames(moduleStyles.overline)}>
-              {overline}
-            </OverlineTwoText>
-          )}
-          {tag && getTag()}
-        </div>
+        {overline && (
+          <OverlineTwoText className={classNames(moduleStyles.overline)}>
+            {overline}
+          </OverlineTwoText>
+        )}
         <Heading3
           className={classNames(moduleStyles.title)}
           visualAppearance={'heading-sm'}
