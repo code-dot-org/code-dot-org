@@ -46,7 +46,7 @@ export const FullWidthActionBlock: React.FC<ActionBlockProps> = ({
       className={classNames(moduleStyles.fullWidth, className)}
       {...HTMLAttributes}
     >
-      {tag && getTag('New')}
+      {tag && getTag(tag)}
       {image && getImage(image)}
       <div>
         {overline && (

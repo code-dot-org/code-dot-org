@@ -120,7 +120,7 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
       {...HTMLAttributes}
     >
       <div>
-        {tag && getTag('New')}
+        {tag && getTag(tag)}
         {overline && (
           <OverlineTwoText className={classNames(moduleStyles.overline)}>
             {overline}
