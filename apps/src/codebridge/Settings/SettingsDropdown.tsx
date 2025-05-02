@@ -84,8 +84,6 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const onTextEditorDropdownChange = (value: string) => {
     const selectedEditorKey = getSelectedKey(value);
     setSelectedEditorFontSizeValue(selectedEditorKey);
-    // We want the user preference for selected font size to persist for signed-in users
-    // per app type so we save on backend.
     handleFontSizeChange(
       'CodeEditor',
       selectedEditorKey,
@@ -112,6 +110,8 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     event: string
   ) => {
     if (selectedKey !== currentKey && FontSize[selectedKey]) {
+      // We want the user preference for selected font size to persist for signed-in users
+      // per app type so we save on backend.
       if (signInState === SignInState.SignedIn) {
         const field = type === 'Console' ? 'consoleFontSize' : 'editorFontSize';
         new UserPreferences().setFontSize(selectedKey, appName, field);
