@@ -208,7 +208,7 @@ module AWS
                 OriginSSLProtocols: %w(TLSv1.2),
                 OriginReadTimeout: 30
               },
-              DomainName: {Ref: 'MarketingDomainName'},
+              DomainName: {Ref: 'InternalMarketingDomainName'},
               OriginPath: '',
               OriginShield: {
                 Enabled: true,
