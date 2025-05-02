@@ -140,7 +140,9 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
           </Heading4>
         )}
         {levelBubbleChoice.description && (
-          <div className={styles.text}>{levelBubbleChoice.description}</div>
+          <div className={styles.text}>
+            <EnhancedSafeMarkdown markdown={levelBubbleChoice.description} />
+          </div>
         )}
       </div>
       <div className={styles.subLevelsOuterContainer} ref={containerRef}>
