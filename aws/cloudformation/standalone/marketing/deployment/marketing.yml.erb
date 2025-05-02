@@ -21,6 +21,9 @@ Parameters:
   ContainerImageHashDigest:
     Type: String
     Description: "The sha256sum of the marketing container image."
+  GithubEnvironmentName:
+    Type: String
+    Description: The name of the GitHub environment to use for this deployment. (e.g. 'marketing-test')
 
 Mappings:
   # Cloudfront Mappings
@@ -711,47 +714,114 @@ Resources:
   # End AWS Cloudfront Resources #
   ################################
 
+  #################################
+  # START Github Actions IAM Role #
+  #################################
+
+  GithubDeployerUserPolicy:
+    Type: 'AWS::IAM::Policy'
+    Version: '2012-10-17'
+    Properties:
+      PolicyName: GithubDeployerUserIamUserPolicy
+      Roles:
+        - !Ref GitHubActionsRole
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Action:
+              - 'cloudformation:CreateStack'
+              - 'cloudformation:DescribeStacks'
+              - 'cloudformation:CreateChangeSet'
+              - 'cloudformation:DescribeChangeSet'
+              - 'cloudformation:DeleteChangeSet'
+              - 'cloudformation:ExecuteChangeSet'
+            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/${AWS::StackName}/*"
+          - Effect: Allow
+            Action:
+              - 'iam:GetRole'
+              - 'iam:PassRole'
+            Resource:
+              Fn::GetAtt:
+                - FargateServiceTaskDefExecutionRole
+                - Arn
+          - Effect: Allow
+            Action:
+              - 'iam:GetRole'
+              - 'iam:PassRole'
+            Resource:
+              Fn::GetAtt:
+                - FargateServiceTaskDefTaskRole
+                - Arn
+          - Effect: Allow
+            Action:
+              - 'ecs:RegisterTaskDefinition'
+            Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/${AWS::StackName}-FargateServiceTaskDef:*"
+          - Effect: Allow
+            Action:
+              - 'ecs:DeregisterTaskDefinition'
+              - 'ecs:DescribeTaskDefinition'
+              - 'elasticloadbalancing:DescribeLoadBalancers'
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - 'ec2:DescribeSecurityGroups'
+            Resource: '*'
+          - Effect: Allow
+            Action:
+              - 'ecs:DescribeServices'
+              - 'ecs:UpdateService'
+            Resource: !Ref FargateService
+          - Effect: Allow
+            Action:
+              - "s3:PutObject"
+              - "s3:ListBucket"
+            Resource:
+              - Fn::GetAtt:
+                  - StaticAssetsBucket
+                  - Arn
+              - !Sub
+                - "${StaticAssetsBucketArn}/*"
+                - StaticAssetsBucketArn:
+                    Fn::GetAtt:
+                      - StaticAssetsBucket
+                      - Arn
+          - Effect: Allow
+            Action:
+              - "cloudfront:GetFunction"
+              - "cloudfront:DescribeFunction"
+            Resource:
+              - Fn::GetAtt:
+                  - ViewerResponseCloudFrontFunction
+                  - FunctionARN
+
+  GitHubActionsRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: !Sub "GitHubActionsOIDCRole-${GithubEnvironmentName}"
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !Sub "arn:aws:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com"
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                # See: https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#configuring-the-role-and-trust-policy
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+                token.actions.githubusercontent.com:sub:
+                  - !Sub "repo:code-dot-org/code-dot-org:environment:${GithubEnvironmentName}"
+
+  ###############################
+  # End Github Actions IAM Role #
+  ###############################
+
 Outputs:
-  FargateServiceTaskDefExecutionRoleArn:
-    Value:
-      Fn::GetAtt:
-        - FargateServiceTaskDefExecutionRole
-        - Arn
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-FargateServiceTaskDefExecutionRoleArn'
-  FargateServiceTaskDefTaskRoleArn:
-    Value:
-      Fn::GetAtt:
-        - FargateServiceTaskDefTaskRole
-        - Arn
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-FargateServiceTaskDefTaskRoleArn'
-  FargateServiceArn:
-    Value:
-      Ref: FargateService
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-FargateServiceArn'
-  StaticAssetsBucketArn:
-    Value:
-      Fn::GetAtt:
-        - StaticAssetsBucket
-        - Arn
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-StaticAssetsBucketArn'
-  CloudfrontViewerResponseFunctionArn:
-    Value:
-      Fn::GetAtt:
-        - ViewerResponseCloudFrontFunction
-        - FunctionARN
-    Export:
-      Name:
-        'Fn::Sub': '${AWS::StackName}-CloudfrontViewerResponseFunctionArn'
   FargateServiceLoadBalancerDNS:
     Value:
       Fn::GetAtt:
         - FargateServiceLB
         - DNSName
+  GithubActionRoleArn:
+    Description: ARN of the IAM role to use in GitHub Actions
+    Value: !GetAtt GitHubActionsRole.Arn

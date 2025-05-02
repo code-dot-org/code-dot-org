@@ -126,7 +126,7 @@ jobs:
     - name: Configure ECS/Github Deployer AWS credentials
       uses: aws-actions/configure-aws-credentials@ececac1a45f3b08a01d2dd070d28d111c5fe6722 # v 4.1.0
       with:
-        role-to-assume: arn:aws:iam::165336972514:role/GitHubActionsOIDCRole
+        role-to-assume: arn:aws:iam::165336972514:role/GitHubActionsOIDCRole-marketing-test
         role-session-name: GithubActions-Marketing-Test
         aws-region: ${{ vars.AWS_REGION }}
 
@@ -161,7 +161,7 @@ jobs:
       with:
         name: ${{ vars.MARKETING_CLOUDFORMATION_STACK_NAME }}
         template: ./aws/cloudformation/standalone/marketing/deployment/marketing.yml
-        parameter-overrides: "ContainerImageHashDigest=${{ needs.build-and-push-image.outputs.digest }},BaseHostedZoneId=${{ vars.MARKETING_BASE_HOSTED_ZONE_ID }},BaseDomainName=${{ vars.MARKETING_BASE_DOMAIN }},SubdomainName=${{ vars.MARKETING_SUBDOMAIN_NAME }},CloudFrontTLSCertificateArn=${{ vars.MARKETING_CLOUDFRONT_TLS_CERTIFICATE_ARN }}"
+        parameter-overrides: "ContainerImageHashDigest=${{ needs.build-and-push-image.outputs.digest }},BaseHostedZoneId=${{ vars.MARKETING_BASE_HOSTED_ZONE_ID }},BaseDomainName=${{ vars.MARKETING_BASE_DOMAIN }},SubdomainName=${{ vars.MARKETING_SUBDOMAIN_NAME }},CloudFrontTLSCertificateArn=${{ vars.MARKETING_CLOUDFRONT_TLS_CERTIFICATE_ARN }},GithubEnvironmentName=marketing-test"
         capabilities: CAPABILITY_IAM, CAPABILITY_NAMED_IAM
 
   ui-tests:
