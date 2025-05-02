@@ -868,4 +868,5 @@ class CoursesControllerTest < ActionController::TestCase
   test_user_gets_response_for :all, user: :student, response: :forbidden
   test_user_gets_response_for :all, user: :teacher, response: :forbidden
   test_user_gets_response_for :all, user: :admin, response: :forbidden
+  test_user_gets_response_for :all, user: :levelbuilder, response: :success
 end
