@@ -20,11 +20,13 @@ Feature: Using Modular Courses
 
     And I click selector "a:contains(Course 2017)" once I see it to load a new page
     And I wait until element ".progress-table" is visible
+    And I wait until element "#uitest-course-dropdown" is visible
     And I select the "ui-test-shared-unit" option in dropdown "uitest-course-dropdown"
     Then I see no difference for "modular course progress - first section"
 
     Then I select the "Course 2019" option in dropdown "uitest-sidebar-section-dropdown"
     And I wait until element ".progress-table" is visible
+    And I wait until element "#uitest-course-dropdown" is visible
     And I select the "ui-test-shared-unit" option in dropdown "uitest-course-dropdown"
     Then I see no difference for "modular course progress - second section"
 

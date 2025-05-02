@@ -172,14 +172,6 @@ class HttpCache
     {
       pegasus: {
         behaviors: [
-          # NextJS assets path for the marketing app
-          {
-            path: '/_next/static/*',
-            proxy: 'marketing',
-            headers: [],
-            cookies: default_cookies,
-            include_marketing_router_lambda: true,
-          },
           {
             # Serve Sprockets-bundled assets directly from the S3 bucket synced via `assets:precompile`.
             #
@@ -238,13 +230,12 @@ class HttpCache
             query: false,
             headers: ALLOWLISTED_HEADERS,
             cookies: default_cookies
-          },
+          }
         ],
         # Remaining Pegasus paths are cached, and vary only on language, country, and default cookies.
         default: {
           headers: LANGUAGE_HEADER + COUNTRY_HEADER,
-          cookies: default_cookies,
-          include_marketing_router_lambda: true,
+          cookies: default_cookies
         }
       },
       dashboard: {

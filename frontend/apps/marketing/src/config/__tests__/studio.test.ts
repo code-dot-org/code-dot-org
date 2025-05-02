@@ -1,3 +1,6 @@
+/**
+ * @jest-environment node
+ */
 import {getStage} from '../stage';
 import {getStudioUrl} from '../studio';
 
