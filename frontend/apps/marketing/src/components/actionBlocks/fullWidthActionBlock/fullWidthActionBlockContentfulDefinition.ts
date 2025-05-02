@@ -90,7 +90,7 @@ export const FullWidthActionBlockContentfulComponentDefinition: ComponentDefinit
         displayName: 'Published date',
         type: 'Date',
         group: 'content',
-        description: 'Adds a "New" tag the action block.',
+        description: 'Adds a "New" tag on the action block.',
         validations: {
           bindingSourceType: ['entry'],
         },

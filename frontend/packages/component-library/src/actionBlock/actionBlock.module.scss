@@ -20,13 +20,6 @@ $mobileBreakpoint: 900px;
     border-radius: 0;
   }
 
-  .topWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    gap: 0.5rem;
-  }
-
   .overline {
     color: var(--text-brand-teal-primary);
     margin-block: -0.25rem 0.5rem;
