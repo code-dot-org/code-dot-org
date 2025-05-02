@@ -822,6 +822,3 @@ Outputs:
       Fn::GetAtt:
         - FargateServiceLB
         - DNSName
-  GithubActionRoleArn:
-    Description: ARN of the IAM role to use in GitHub Actions
-    Value: !GetAtt GitHubActionsRole.Arn
