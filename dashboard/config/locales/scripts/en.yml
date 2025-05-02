@@ -23500,11 +23500,13 @@ en:
               display_name: Loops
             lessonGroup-4:
               display_name: Events
-          title: Pre-reader Express (2024)
+          title: Pre-reader Express (2025)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
           description_short: 'An introduction to computer science for pre-readers: combines the best of our kindergarten and first grade courses.'
           description_audience: 'Ages: 4-8'
+          lessons: {}
+          name: pre-express-2025
         aif1-2025:
           title: Problem Solving with AI
           description: ''
@@ -23691,7 +23693,7 @@ en:
             lessonGroup-3:
               display_name: Content
             lessonGroup-4:
-              display_name: End Project
+              display_name: End of Unit Project
             lessonGroup-5:
               display_name: End of Unit Assessment and Survey
           title: Insights from Data and AI

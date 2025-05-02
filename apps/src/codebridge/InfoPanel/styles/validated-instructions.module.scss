@@ -94,6 +94,7 @@ button.validationButton {
 .markdownText {
   line-height: 0;
   user-select: text;
+  word-break: break-word;
 
   h1,
   h2,
@@ -117,8 +118,6 @@ button.validationButton {
     color: var(--brand-teal-70);
     // Allow code to wrap.
     white-space: pre-wrap;
-    word-break: break-all;
-    word-wrap: break-word;
   }
 
   p {

@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-30 23:12:36 UTC",
+    "serialized_at": "2025-05-02 03:45:51 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -413,32 +413,12 @@
       }
     },
     {
-      "key": "Functions with Harvester",
-      "name": "Functions with Harvester",
+      "key": "Designing for Accessibility",
+      "name": "Designing for Accessibility",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 17,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this **skill-building** lesson, students will use conditionals with functions to harvest crops in _Harvester_.",
-        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Make sure every student has a reflection journal.",
-        "purpose": "This lesson is meant to further push students to use conditionals with functions. These puzzles are intended to increase problem solving and critical thinking skills.",
-        "student_overview": "Functions will save you lots of work as you help the farmer with her harvest!"
-      },
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025"
-      }
-    },
-    {
-      "key": "Designing for Accessibility",
-      "name": "Designing for Accessibility",
-      "absolute_position": 18,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 18,
       "properties": {
         "overview": "In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
         "preparation": "* For context, read about the ***types of disabilities**. \n* Read through the speaker notes in the ***slide deck**.\n* Prepare enough sketching/drawing supplies for all students.",
@@ -454,10 +434,10 @@
     {
       "key": "Digital Sharing",
       "name": "Digital Sharing",
-      "absolute_position": 19,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 18,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **exploratory** lesson helps students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. ",
@@ -475,10 +455,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 20,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 19,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing new projects! ",
@@ -1373,48 +1353,6 @@
       "seeding_key": {
         "lesson_activity.key": "c7b0def9-9120-4185-ae2b-b9ff9609df26",
         "lesson.key": "Conditionals with the Farmer",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025"
-      }
-    },
-    {
-      "key": "947a9b1c-819f-4019-be62-d8efd0a5dea2",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "947a9b1c-819f-4019-be62-d8efd0a5dea2",
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025"
-      }
-    },
-    {
-      "key": "9d259022-6b92-4295-9873-f4e1abcedad7",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Main Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9d259022-6b92-4295-9873-f4e1abcedad7",
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025"
-      }
-    },
-    {
-      "key": "fc5f1489-9781-43f6-9b3f-cc7305a0344c",
-      "position": 3,
-      "properties": {
-        "duration": 15,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fc5f1489-9781-43f6-9b3f-cc7305a0344c",
-        "lesson.key": "Functions with Harvester",
         "lesson_group.key": "csf_nested_loops",
         "script.name": "coursee-2025"
       }
@@ -3385,13 +3323,7 @@
       "key": "37abcdf8-13e6-47a7-b564-070fb8d82ea8",
       "position": 1,
       "properties": {
-        "description": "**<i class=\"fa-solid fa-comments\"></i> Discuss:** What are the benefits of efficient code? \n\n**<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal:** Using the definition of efficient as a guide, students might start to guess that efficient code is shorter code. \n\n\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "It is okay if there are not many ideas or connections at this point in the lesson. They will be learning all about functions and efficient code throughout the lesson.  "
-          }
-        ]
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g317fe39f44b_0_281\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Reveal one vocabulary term & definition at a time. Briefly introduce each term as a preview of what students will learn in this lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g351fe46eccc_1_41\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Reveal one vocabulary term & definition at a time. Briefly introduce each term as a preview of what students will learn in this lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g317fe39f44b_0_298\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are the benefits of efficient code? \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Using the definition of efficient as a guide, students might start to guess that efficient code is shorter code. \n\t\t<br />\n\t\t<br />Teaching Tip\n\t\t<br />It is okay if there are not many ideas or connections at this point in the lesson. They will be learning all about functions and efficient code throughout the lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g317fe39f44b_0_302\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the objectives of this lesson. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we will get to experiment with a very powerful code in our programs! We will learn how to save a list of actions and reuse them without reprogramming them using something called a function. The shorter our programs are, the easier for humans (or us) to read shorter programs.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31fbcde91da_0_18\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Dance routines are very similar to functions in computer science! \n\t\t<br />\u000b<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Click the slide to trigger the animation and show the dance function being named and defined. \n\t\t<br />\u000b<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> First, the routine is named and the dance steps are defined. Once they learn the routine, the dancer remembers the steps and the order to do them whenever they hear the​​ name of the dance. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Click the slide to trigger the animation to show the Macarena function being used (called). \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It is much easier to tell the dancer to do the dance using just one word: Macarena!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g34f09cffe8c_0_2\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Explaining a dance is like making a function! Start with the name, and explain all of the steps. Then, in the future just use the name and everyone will know what to do!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a057cd68_0_89\"></td>\n    <td style=\"width: 75%\">\n      <strong>Do This:</strong> Explain the optional activity and allow students to work independently or in pairs. They will make a new dance using the dance moves in the chart. \n\t\t<br />\n\t\t<br />Teacher Tip \n\t\t<br />In this OPTIONAL activity the 3 part dance in equivalent to a computer program. The dance moves are like functions and the steps are like individual coding blocks.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31fbcde91da_0_32\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Finish the warm up activity with an explanation of how functions can be used to make code more efficient and easier to use. They will be practicing customizing and creating functions in code in the next activity in Music Lab.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "37abcdf8-13e6-47a7-b564-070fb8d82ea8",
@@ -3402,7 +3334,6 @@
       "key": "9827c330-615e-45cc-a076-e5629eaa65f2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-microphone\"></i> **Say:** Explaining a dance is like making a function! Start with the name, and explain all of the steps. \nThen, in the future just use the name and everyone will know what to do! \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Finish the warm up activity with an explanation of how functions can be used to make code more efficient and easier to use. They will be practicing customizing and creating functions in code in the next activity in Music Lab. "
       },
       "seeding_key": {
         "activity_section.key": "9827c330-615e-45cc-a076-e5629eaa65f2",
@@ -3424,7 +3355,6 @@
       "key": "9f63993a-42b6-4199-b542-6a850844672d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Watch the video on level 1 together as a class. \n\n<i class=\"fa-solid fa-comments\"></i> Discuss: What does a music producer do?\n\n<i class=\"fa-duotone fa-solid fa-lightbulb\"></i> Discussion Goal: Students will understand that a producer is someone who puts all of the pieces of the music together. They will  move and work on functions with chunks of music to make it sound great.",
         "progression_name": "The Basics"
       },
       "seeding_key": {
@@ -3444,25 +3374,8 @@
       }
     },
     {
-      "key": "0a9ff0cc-4d58-429e-97aa-4bcf2f3f7e6d",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-square-check\"></i> Do This: Read the instructions to level 2 & 3 together as a class. Guide students to notice the repetition of the play together block in level 2 and the new use of a function in level 3. Make a connection to the activity in the warm up and encourage students to consider the use of a function in place of the repeated code.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "You can see an overview of the student responses on the level if you’re signed in as a teacher with the lesson assigned to a section."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0a9ff0cc-4d58-429e-97aa-4bcf2f3f7e6d",
-        "lesson_activity.key": "0874a9ed-c664-479a-8e83-a0980cfd577d"
-      }
-    },
-    {
       "key": "37266783-a5e1-4556-801f-73f232de1063",
-      "position": 5,
+      "position": 4,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -3472,19 +3385,8 @@
       }
     },
     {
-      "key": "7f97b465-d63f-4187-b509-2fb44a449193",
-      "position": 6,
-      "properties": {
-        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Level 10 is an opportunity to check for understanding in the class. \n"
-      },
-      "seeding_key": {
-        "activity_section.key": "7f97b465-d63f-4187-b509-2fb44a449193",
-        "lesson_activity.key": "0874a9ed-c664-479a-8e83-a0980cfd577d"
-      }
-    },
-    {
       "key": "7e5e500b-4ab0-4f7a-b36e-f2175718f708",
-      "position": 7,
+      "position": 5,
       "properties": {
         "progression_name": "Freeplay"
       },
@@ -3495,9 +3397,9 @@
     },
     {
       "key": "4db01f56-6d69-411f-8acf-a98402f2b4a6",
-      "position": 8,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\"></i> Transition: Have students spend the remainder of the class time using what they’ve learned to create their own music. The instructions include some suggestions for what their project should include."
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a7af70e4_0_4\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on level 1 together as a class. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What does a music producer do?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students will understand that a producer is someone who puts all of the pieces of the music together. They will  move and work on functions with chunks of music to make it sound great.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g317fe39f44b_0_382\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the instructions to level 2 together as a class. Guide students to notice the repetition of the play together block. Make a connection to the activity in the warm up and encourage students to consider the use of a function in place of the repeated code.\n\t\t<br />\n\t\t<br />Teacher Tip: You can see an overview of the student responses on the level if you’re signed in as a teacher with the lesson assigned to a section.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g350eaf66457_0_77\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the instructions to level 3 together as a class. Guide students to notice the new function blocks. Make a connection to the activity in the warm up and encourage students to consider how a function might work.\n\t\t<br />\n\t\t<br />Teacher Tip: You can see an overview of the student responses on the level if you’re signed in as a teacher with the lesson assigned to a section.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g350eaf66457_0_98\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the instructions on each panel together as a class. This will prepare students to code their own functions in the next levels. \n\t\t<br />\n\t\t<br />Teacher Tip: Focus on how functions make code more efficient. It is easier to change code that’s in a function, it keeps your code cleaner and easier to read.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g317fe39f44b_0_398\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Read the instructions for each level and try to complete the code. Press the Run button to try it out. If something is not quite right you will get a hint under the instructions. When you’ve successfully completed the challenge, a new message and a Continue button will appear. Click Continue to move to the next level and move at your speed. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Encourage students to read the instructions and hints on each level as you circulate. Ask guiding questions to support students if they get stuck.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g350eaf66457_0_131\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Level 10 is an opportunity to check for understanding in the class.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g350eaf66457_0_148\"></td>\n    <td style=\"width: 75%\">\n      <strong>Transition:</strong> Have students spend the remainder of the class time using what they’ve learned to create their own music. The instructions include some suggestions for what their project should include.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "4db01f56-6d69-411f-8acf-a98402f2b4a6",
@@ -3508,7 +3410,7 @@
       "key": "0be59b1b-fafa-45a7-956e-7c99123c0c17",
       "position": 1,
       "properties": {
-        "description": "**<i class=\"fa-solid fa-square-check\"></i> Do This:** Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective. \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** Have students set up for a quick Turn & Talk to reexamine the Question of the Day. Some supportive leading questions might be: Why do we use functions instead of rewwriting out every single line of code? If you were a computer could you read a short paragraph or a long story quicker? What if we want to make a change to the code? \n\n**<i class=\"fa-solid fa-microphone\"></i> Say:** Take turns listening and answering the Question of the Day. Give me a thumbs up after you both have shared your answers.  \n\n**<i class=\"fa-solid fa-square-check\"></i> Do This:** This is an optional activity to encourage your students to share the creative music they’ve built with code. Consider adding an opportunity for students to share ‘glows and grows’ after they share their projects with each other. \n"
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g317fe39f44b_0_468\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g317fe39f44b_0_489\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students set up for a quick Turn & Talk to reexamine the Question of the Day. Some supportive leading questions might be: Why do we use functions instead of rewriting out every single line of code? If you were a computer could you read a short paragraph or a long story more quickly? What if we want to make a change to the code? \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Take turns listening and answering the Question of the Day. Give me a thumbs up after you both have shared your answers.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g350eaf66457_0_230\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> This is an optional activity to encourage your students to share the creative music they’ve built with code. Consider adding an opportunity for students to share ‘glows and grows’ after they share their projects with each other.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "0be59b1b-fafa-45a7-956e-7c99123c0c17",
@@ -4089,100 +3991,6 @@
       "seeding_key": {
         "activity_section.key": "842f5e2e-71ba-4ae7-b186-c41ead545a54",
         "lesson_activity.key": "c7b0def9-9120-4185-ae2b-b9ff9609df26"
-      }
-    },
-    {
-      "key": "03e88aa0-2999-4671-9815-864b373147c1",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**:\n* _When would you use a function?_\n* _Do you think functions make programming easier or harder? Why?_\n\nAt this point, your students should already be introduced to functions. Take this time to have them discuss the advantages and disadvantages of using functions in a program. Either have them pair-share or discuss as a class. Try using examples of hard or easy puzzles in either _Artist_ or _Bee_.\n",
-        "name": "Introduction\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "03e88aa0-2999-4671-9815-864b373147c1",
-        "lesson_activity.key": "947a9b1c-819f-4019-be62-d8efd0a5dea2"
-      }
-    },
-    {
-      "key": "aacd50ae-ed33-47e9-9f9a-0695e902141f",
-      "position": 2,
-      "properties": {
-        "description": "####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n- **Conditionals** - Statements that only run under certain conditions.\n- **Function** - A piece of code that you can call over and over again."
-      },
-      "seeding_key": {
-        "activity_section.key": "aacd50ae-ed33-47e9-9f9a-0695e902141f",
-        "lesson_activity.key": "947a9b1c-819f-4019-be62-d8efd0a5dea2"
-      }
-    },
-    {
-      "key": "58609bf2-3e26-4dd9-9188-1eae3a3f2f2a",
-      "position": 1,
-      "properties": {
-        "description": "Some puzzles will have a function pre-declared for the students to fill in. It may be helpful for the students to write the entire program without a function first, then determine where a function would be useful in the program.\n\nIt's important to make sure that every student is completing each puzzle with a dark green dot. If some of your students are struggling to simplify code and use functions, set up teams of expert students within your class to go around and answer questions.\n\nDon't forget to provide pencils and paper to help students sketch out possible solutions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"The Harvester\" video\n",
-        "name": "Online Puzzles",
-        "progression_name": "Video: The Harvester"
-      },
-      "seeding_key": {
-        "activity_section.key": "58609bf2-3e26-4dd9-9188-1eae3a3f2f2a",
-        "lesson_activity.key": "9d259022-6b92-4295-9873-f4e1abcedad7"
-      }
-    },
-    {
-      "key": "42c855db-4754-4396-b47d-b7adbb34cf56",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-12 - Skill Building” slide\n",
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56",
-        "lesson_activity.key": "9d259022-6b92-4295-9873-f4e1abcedad7"
-      }
-    },
-    {
-      "key": "eb02071f-0335-493e-9823-e013d11b6328",
-      "position": 3,
-      "properties": {
-        "progression_name": "Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "eb02071f-0335-493e-9823-e013d11b6328",
-        "lesson_activity.key": "9d259022-6b92-4295-9873-f4e1abcedad7"
-      }
-    },
-    {
-      "key": "a96e7c9a-0804-4d64-acbf-aaf21661ac35",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "a96e7c9a-0804-4d64-acbf-aaf21661ac35",
-        "lesson_activity.key": "9d259022-6b92-4295-9873-f4e1abcedad7"
-      }
-    },
-    {
-      "key": "0f7b7e0a-4694-47cc-b788-25a573295af6",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Prediction” slide\n",
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "0f7b7e0a-4694-47cc-b788-25a573295af6",
-        "lesson_activity.key": "9d259022-6b92-4295-9873-f4e1abcedad7"
-      }
-    },
-    {
-      "key": "89f69454-9f77-462f-851d-3d428e6899e1",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect** _How does a function help to simplify your program?_",
-        "name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "89f69454-9f77-462f-851d-3d428e6899e1",
-        "lesson_activity.key": "fc5f1489-9781-43f6-9b3f-cc7305a0344c"
       }
     },
     {
@@ -8370,332 +8178,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "harvester_skinOverview_video_2025"
-        ],
-        "progression": "Video: The Harvester"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "harvester_skinOverview_video_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "58609bf2-3e26-4dd9-9188-1eae3a3f2f2a"
-      },
-      "level_keys": [
-        "harvester_skinOverview_video_2025"
-      ]
-    },
-    {
-      "chapter": 154,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions1_2025"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      },
-      "level_keys": [
-        "courseE_farmer_functions1_2025"
-      ]
-    },
-    {
-      "chapter": 155,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions1a_2025"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions1a_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      },
-      "level_keys": [
-        "courseE_farmer_functions1a_2025"
-      ]
-    },
-    {
-      "chapter": 156,
-      "position": 4,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions2b_2025"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions2b_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      },
-      "level_keys": [
-        "courseE_farmer_functions2b_2025"
-      ]
-    },
-    {
-      "chapter": 157,
-      "position": 5,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions2ba_2025"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions2ba_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      },
-      "level_keys": [
-        "courseE_farmer_functions2ba_2025"
-      ]
-    },
-    {
-      "chapter": 158,
-      "position": 6,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions3c_2025"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions3c_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      },
-      "level_keys": [
-        "courseE_farmer_functions3c_2025"
-      ]
-    },
-    {
-      "chapter": 159,
-      "position": 7,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions3c1_2025"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions3c1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      },
-      "level_keys": [
-        "courseE_farmer_functions3c1_2025"
-      ]
-    },
-    {
-      "chapter": 160,
-      "position": 8,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions7a1_2025"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions7a1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      },
-      "level_keys": [
-        "courseE_farmer_functions7a1_2025"
-      ]
-    },
-    {
-      "chapter": 161,
-      "position": 9,
-      "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions8a1_2025"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions8a1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      },
-      "level_keys": [
-        "courseE_farmer_functions8a1_2025"
-      ]
-    },
-    {
-      "chapter": 162,
-      "position": 10,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions9a1_2025"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions9a1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      },
-      "level_keys": [
-        "courseE_farmer_functions9a1_2025"
-      ]
-    },
-    {
-      "chapter": 163,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "challenge": true,
-        "level_keys": [
-          "courseE_farmer_functions10a1_2025"
-        ],
-        "progression": "Challenge"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions10a1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "eb02071f-0335-493e-9823-e013d11b6328"
-      },
-      "level_keys": [
-        "courseE_farmer_functions10a1_2025"
-      ]
-    },
-    {
-      "chapter": 164,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions13_2025"
-        ],
-        "progression": "Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions13_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "a96e7c9a-0804-4d64-acbf-aaf21661ac35"
-      },
-      "level_keys": [
-        "courseE_farmer_functions13_2025"
-      ]
-    },
-    {
-      "chapter": 165,
-      "position": 13,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "courseE_farmer_functions11_predict_2025"
-        ],
-        "progression": "Prediction"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "courseE_farmer_functions11_predict_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "0f7b7e0a-4694-47cc-b788-25a573295af6"
-      },
-      "level_keys": [
-        "courseE_farmer_functions11_predict_2025"
-      ]
-    },
-    {
-      "chapter": 166,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "DesigningForAccessibilityMarkdownLevel2022_2025"
         ],
         "progression": "Designing for Accessibility"
@@ -8715,7 +8197,7 @@
       ]
     },
     {
-      "chapter": 167,
+      "chapter": 154,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8740,7 +8222,7 @@
       ]
     },
     {
-      "chapter": 168,
+      "chapter": 155,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8765,7 +8247,7 @@
       ]
     },
     {
-      "chapter": 169,
+      "chapter": 156,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8790,7 +8272,7 @@
       ]
     },
     {
-      "chapter": 170,
+      "chapter": 157,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8815,7 +8297,7 @@
       ]
     },
     {
-      "chapter": 171,
+      "chapter": 158,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -10667,162 +10149,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "harvester_skinOverview_video_2025",
-        "script_level.level_keys": [
-          "harvester_skinOverview_video_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "58609bf2-3e26-4dd9-9188-1eae3a3f2f2a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions1_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions1a_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions1a_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions2b_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions2b_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions2ba_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions2ba_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions3c_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions3c_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions3c1_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions3c1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions7a1_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions7a1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions8a1_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions8a1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions9a1_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions9a1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "42c855db-4754-4396-b47d-b7adbb34cf56"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions10a1_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions10a1_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "eb02071f-0335-493e-9823-e013d11b6328"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions13_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions13_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "a96e7c9a-0804-4d64-acbf-aaf21661ac35"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "courseE_farmer_functions11_predict_2025",
-        "script_level.level_keys": [
-          "courseE_farmer_functions11_predict_2025"
-        ],
-        "lesson.key": "Functions with Harvester",
-        "lesson_group.key": "csf_nested_loops",
-        "script.name": "coursee-2025",
-        "activity_section.key": "0f7b7e0a-4694-47cc-b788-25a573295af6"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "DesigningForAccessibilityMarkdownLevel2022_2025",
         "script_level.level_keys": [
           "DesigningForAccessibilityMarkdownLevel2022_2025"
@@ -11567,12 +10893,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "resource.key": "csf_-_course_e_-_slides"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Game Design",
         "resource.key": "csf_-_course_e_-_slides"
       }
@@ -12272,18 +11592,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "vocabulary.key": "conditionals"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "vocabulary.key": "function"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Game Design",
         "vocabulary.key": "behavior"
       }
@@ -12513,16 +11821,6 @@
       "seeding_key": {
         "lesson.key": "Variables as Score",
         "objective.key": "22e66d58-a4ae-4f43-83fd-ec2259d16b67"
-      }
-    },
-    {
-      "key": "2414b848-0d05-4ee7-95b9-b758a337f33d",
-      "properties": {
-        "description": "Use pre-determined functions to complete commonly repeated tasks."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "objective.key": "2414b848-0d05-4ee7-95b9-b758a337f33d"
       }
     },
     {
@@ -12846,16 +12144,6 @@
       }
     },
     {
-      "key": "df078137-fc8a-4450-9d5f-e7cc7815cb79",
-      "properties": {
-        "description": "Recognize when a function could help to simplify a program."
-      },
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "objective.key": "df078137-fc8a-4450-9d5f-e7cc7815cb79"
-      }
-    },
-    {
       "key": "e97593de-15c8-4313-a2d0-2290307f9c35",
       "properties": {
         "description": "Customize and call functions that organize and simplify your code "
@@ -13148,34 +12436,6 @@
     {
       "seeding_key": {
         "lesson.key": "Functions with Artist",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-08"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Functions with Harvester",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-17"
       }

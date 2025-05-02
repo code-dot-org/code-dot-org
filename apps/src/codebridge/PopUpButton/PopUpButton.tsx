@@ -1,12 +1,10 @@
 import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import React, {useState, useCallback, useRef, useEffect} from 'react';
 import {createPortal} from 'react-dom';
 
 import moduleStyles from './pop-up-button.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 type PopUpButtonProps = {
   iconName: string;
@@ -109,7 +107,7 @@ export const PopUpButton = ({
   return (
     <>
       <Button
-        className={classNames(className, darkModeStyles.tertiaryButton)}
+        className={className}
         size="xs"
         icon={{iconStyle: 'solid', iconName}}
         isIconOnly
@@ -119,6 +117,7 @@ export const PopUpButton = ({
         disabled={disabled}
         ariaLabel={ariaLabel}
         aria-expanded={isOpen}
+        color={'black'}
       />
       {isOpen &&
         // We use a portal so the dropdown can appear above all other elements.

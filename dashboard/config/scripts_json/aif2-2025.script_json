@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-30 21:59:00 UTC",
+    "serialized_at": "2025-05-02 00:53:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -111,7 +112,7 @@
     },
     {
       "key": "Computing Careers",
-      "name": "Computing Careers",
+      "name": "Lesson 1: Computing Careers",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -129,7 +130,7 @@
     },
     {
       "key": "Computational Thinking",
-      "name": "Computational Thinking",
+      "name": "Lesson 2: Computational Thinking",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -147,7 +148,7 @@
     },
     {
       "key": "Designing Algorithms",
-      "name": "Designing Algorithms",
+      "name": "Lesson 3: Designing Algorithms",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -165,7 +166,7 @@
     },
     {
       "key": "Variables and Data Flow",
-      "name": "Variables and Data Flow",
+      "name": "Lesson 4: Variables and Data Flow",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -182,7 +183,7 @@
     },
     {
       "key": "Working with Objects",
-      "name": "Working with Objects",
+      "name": "Lesson 5: Working with Objects",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -199,7 +200,7 @@
     },
     {
       "key": "Functions",
-      "name": "Functions",
+      "name": "Lesson 6: Functions",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -217,7 +218,7 @@
     },
     {
       "key": "Functions with Parameters",
-      "name": "Functions with Parameters",
+      "name": "Lesson 7: Functions with Parameters",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -234,7 +235,7 @@
     },
     {
       "key": "Introduction to Loops",
-      "name": "Introduction to Loops",
+      "name": "Lesson 8: Introduction to Loops",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -251,7 +252,7 @@
     },
     {
       "key": "Conditional Statements",
-      "name": "Conditional Statements",
+      "name": "Lesson 9: Conditional Statements",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -268,7 +269,7 @@
     },
     {
       "key": "Algorithms IRL",
-      "name": "Algorithms IRL",
+      "name": "Lesson 10: Algorithms IRL",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -286,7 +287,7 @@
     },
     {
       "key": "Decomposition",
-      "name": "Decomposition",
+      "name": "Lesson 11: Decomposition",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -304,7 +305,7 @@
     },
     {
       "key": "Two-Way and Nested Selection",
-      "name": "Two-Way Selection",
+      "name": "Lesson 12: Two-Way Selection",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -321,7 +322,7 @@
     },
     {
       "key": "Pixels of Me Project",
-      "name": "Pixels of Me Project",
+      "name": "Lesson 13: Pixels of Me Project",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -346,6 +347,7 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
+        "assessment": true
       },
       "seeding_key": {
         "lesson.key": "End of Unit Assessment",
@@ -355,7 +357,7 @@
     },
     {
       "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
@@ -370,7 +372,7 @@
     },
     {
       "key": "Working with Objects (Lesson 5)",
-      "name": "Working with Objects (Lesson 5)",
+      "name": "Working with Objects",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
@@ -385,7 +387,7 @@
     },
     {
       "key": "Functions and Parameters (Lesson 6)",
-      "name": "Functions and Parameters (Lesson 6)",
+      "name": "Functions and Parameters",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
@@ -400,7 +402,7 @@
     },
     {
       "key": "Debugging Strategies (Lesson 7)",
-      "name": "Debugging Strategies (Lesson 7)",
+      "name": "Debugging Strategies",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
@@ -415,7 +417,7 @@
     },
     {
       "key": "Introduction to Loops (Lesson 8)",
-      "name": "Introduction to Loops (Lesson 8)",
+      "name": "Introduction to Loops",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
@@ -430,7 +432,7 @@
     },
     {
       "key": "Conditional Statements (Lesson 9)",
-      "name": "Conditional Statements (Lesson 9)",
+      "name": "Conditional Statements",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": false,
@@ -445,7 +447,7 @@
     },
     {
       "key": "Decomposition (Lesson 11)",
-      "name": "Decomposition (Lesson 11)",
+      "name": "Decomposition",
       "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": false,
@@ -460,7 +462,7 @@
     },
     {
       "key": "Two-Way and Nested Selection (Lesson 12)",
-      "name": "Two-Way and Nested Selection (Lesson 12)",
+      "name": "Two-Way and Nested Selection",
       "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": false,
@@ -1028,6 +1030,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "2f668784-3bb4-4ac8-8e2f-a6e50a771a92",
+        "lesson.key": "Pixels of Me Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif2-2025"
+      }
+    },
+    {
+      "key": "fa6e5795-9981-4086-b0bf-9591634dc700",
+      "position": 4,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa6e5795-9981-4086-b0bf-9591634dc700",
         "lesson.key": "Pixels of Me Project",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "aif2-2025"
@@ -5277,6 +5292,18 @@
       }
     },
     {
+      "key": "7bb37f2f-f7ba-4b59-b225-c35ebfe64e37",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7bb37f2f-f7ba-4b59-b225-c35ebfe64e37",
+        "lesson_activity.key": "fa6e5795-9981-4086-b0bf-9591634dc700"
+      }
+    },
+    {
       "key": "b9ec9221-603b-4b08-91fe-8c9a71605f58",
       "position": 1,
       "properties": {
@@ -7782,6 +7809,28 @@
     },
     {
       "chapter": 91,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_programming-2025"
+        ],
+        "lesson.key": "Pixels of Me Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif2-2025",
+        "activity_section.key": "7bb37f2f-f7ba-4b59-b225-c35ebfe64e37"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_programming-2025"
+      ]
+    },
+    {
+      "chapter": 92,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7806,7 +7855,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7831,7 +7880,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7856,7 +7905,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7881,7 +7930,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7906,7 +7955,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7931,7 +7980,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7956,7 +8005,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7981,7 +8030,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8006,7 +8055,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -8031,7 +8080,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8056,7 +8105,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -8081,7 +8130,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -8106,7 +8155,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8131,7 +8180,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -8156,7 +8205,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8181,7 +8230,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8206,7 +8255,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8231,7 +8280,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8256,7 +8305,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8281,7 +8330,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8306,7 +8355,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -8331,7 +8380,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -8356,7 +8405,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8381,7 +8430,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8406,7 +8455,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8431,7 +8480,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8456,7 +8505,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8481,7 +8530,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -8506,7 +8555,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -8531,7 +8580,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -8556,7 +8605,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8581,7 +8630,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -8606,7 +8655,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8631,7 +8680,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8656,7 +8705,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8681,7 +8730,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8706,7 +8755,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -8731,7 +8780,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 130,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -8756,7 +8805,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 131,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8781,7 +8830,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 132,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -8806,7 +8855,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8831,7 +8880,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8856,7 +8905,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8881,7 +8930,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8906,7 +8955,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8931,7 +8980,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 138,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -8956,7 +9005,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 139,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -8981,7 +9030,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 140,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -10085,6 +10134,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "aif2-2025",
         "activity_section.key": "b1f55bf4-817c-422e-ab8c-bd50bfa7a2f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_programming-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_programming-2025"
+        ],
+        "lesson.key": "Pixels of Me Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif2-2025",
+        "activity_section.key": "7bb37f2f-f7ba-4b59-b225-c35ebfe64e37"
       }
     },
     {

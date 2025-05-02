@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-30 20:44:36 UTC",
+    "serialized_at": "2025-05-02 00:09:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -258,12 +258,28 @@
       }
     },
     {
-      "key": "Sprites in Action",
-      "name": "Sprites in Action",
+      "key": "Mini-Project: Career Journeys ",
+      "name": "Mini-Project: Career Journeys ",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
+      "properties": {
+        "overview": "This lesson introduces students to the wide range of careers that involve computer science and artificial intelligence. Through interactive videos and guided exploration, students learn about real-world jobs that use CS. They are then guided step by step to build their own coding projects using Sprite Lab to present an interactive scene that relates to a career or subject they may be interested in. The lesson wraps up with students reflecting on what they’ve learned and how it connects to their future goals."
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025"
+      }
+    },
+    {
+      "key": "Sprites in Action",
+      "name": "Sprites in Action",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
       "properties": {
         "overview": "In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. ",
         "preparation": "Play through the levels and review the lesson slides.",
@@ -279,10 +295,10 @@
     {
       "key": "Mini-Project: Virtual Pet",
       "name": "Mini-Project: Virtual Pet",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will create an interactive Virtual Pet that looks and behaves how they wish in this **mini-project** lesson. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to bring their project to life.",
@@ -299,10 +315,10 @@
     {
       "key": "Dance Party",
       "name": "Dance Party",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will program an interactive dance party. ",
@@ -319,10 +335,10 @@
     {
       "key": "✨FOR LAUNCH!!!!✨ Sound Designer's Studio",
       "name": "Events in Music Lab",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "background": "dark",
         "overview": "In this lesson, students will become sound designers, using Music Lab to create an interactive soundtracks for stories or games. They will learn how to use events to trigger actions, adding interactivity to their code, and explore effects to shape the mood of their music. This lesson highlights how sound designers enhance storytelling and player engagement through music and sound."
@@ -336,10 +352,10 @@
     {
       "key": "Loops with Rey and BB-8",
       "name": "Loops with Rey and BB-8",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson has students using loops to help BB-8 efficiently traverse a maze.",
@@ -356,10 +372,10 @@
     {
       "key": "Mini-Project: Sticker Art",
       "name": "Mini-Project: Sticker Art",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **mini-project** lesson builds on the understanding of loops from previous lessons. Students will create unique artwork with the Artist.\n",
@@ -376,10 +392,10 @@
     {
       "key": "Nested Loops in Maze",
       "name": "Nested Loops in Maze",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will learn how to program a loop inside of another loop.",
@@ -396,10 +412,10 @@
     {
       "key": "Snowflakes with Anna and Elsa",
       "name": "Snowflakes with Anna and Elsa",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **mini-project** lesson takes students through a series of exercises to create snowflake images using characters from the _Frozen_ movies.",
@@ -416,10 +432,10 @@
     {
       "key": "Looking Ahead with Minecraft",
       "name": "Looking Ahead with Minecraft",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "overview": "This **skill-building** lesson gives students the chance to practice concepts that they have learned up to this point and get their first experience with conditionals!",
         "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n",
@@ -435,10 +451,10 @@
     {
       "key": "If/Else with Bee",
       "name": "If/Else with Bee",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, your class will continue to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
@@ -455,10 +471,10 @@
     {
       "key": "While Loops in Farmer",
       "name": "While Loops in Farmer",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will be working to fill holes and dig dirt in Farmer, but they will not know the size of the holes or the height of the mounds of dirt. To solve these puzzles, students will use a new kind of loop.",
@@ -475,10 +491,10 @@
     {
       "key": "Conditionals in Minecraft: Voyage Aquatic",
       "name": "Conditionals in Minecraft: Voyage Aquatic",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building/context-setting** lesson, students will get the chance to practice content that they have learned up to this point, as well as getting a sneak peek at conditionals!",
@@ -495,10 +511,10 @@
     {
       "key": "Until Loops in Maze",
       "name": "Until Loops in Maze",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will learn about \"until\" loops. Students will build programs that have the main character repeat actions \"until\" they reach their desired stopping point.",
@@ -515,10 +531,10 @@
     {
       "key": "Harvesting with Conditionals",
       "name": "Harvesting with Conditionals",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will practice while loops, until loops, and if / else statements. All of these blocks use conditionals. By practicing all three, students will learn to write complex and flexible code.",
@@ -535,10 +551,10 @@
     {
       "key": "Functions in Minecraft",
       "name": "Functions in Minecraft",
-      "absolute_position": 21,
+      "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 21,
+      "relative_position": 22,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will begin to understand how functions can be helpful!",
@@ -555,10 +571,10 @@
     {
       "key": "✨FOR LAUNCH!!!!✨Producer Power",
       "name": "Functions in Music Lab",
-      "absolute_position": 22,
+      "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 22,
+      "relative_position": 23,
       "properties": {
         "background": "dark",
         "overview": "In this lesson, students will act as music producers, refining remixes in Music Lab while learning how functions can simplify and organize their code. They will learn how to make a new function and then call it into the main program. This lesson demonstrates how producers combine technology and creativity with a song's structure to create polished tracks."
@@ -572,10 +588,10 @@
     {
       "key": "Functions with Artist",
       "name": "Functions with Artist",
-      "absolute_position": 23,
+      "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 23,
+      "relative_position": 24,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will use functions with the Artist.",
@@ -592,10 +608,10 @@
     {
       "key": "Text and Prompts",
       "name": "Text and Prompts",
-      "absolute_position": 24,
+      "absolute_position": 25,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 24,
+      "relative_position": 25,
       "properties": {
         "overview": "In this **skill-building** lesson, students will get practice with variables in Sprite Lab. ",
         "preparation": "Play through the levels and review the lesson slides.",
@@ -611,10 +627,10 @@
     {
       "key": "Counting with Variables",
       "name": "Counting with Variables",
-      "absolute_position": 25,
+      "absolute_position": 26,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 25,
+      "relative_position": 26,
       "properties": {
         "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game.",
         "preparation": "Play through the levels and review the **lesson slides**.\n",
@@ -630,10 +646,10 @@
     {
       "key": "Using Variables with the Artist",
       "name": "Using Variables with the Artist",
-      "absolute_position": 26,
+      "absolute_position": 27,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 26,
+      "relative_position": 27,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will explore the creation of repetitive designs using variables in the Artist environment. Students will learn how variables make code easier to write and easier to read. After guided puzzles, students will end in a free play level to show what they have learned and create new designs.",
@@ -650,10 +666,10 @@
     {
       "key": "Variables with the Bee",
       "name": "Variables with the Bee",
-      "absolute_position": 27,
+      "absolute_position": 28,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 27,
+      "relative_position": 28,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson will help illustrate how variables can make programs more dynamic by allowing values to change while the code is running.",
@@ -670,10 +686,10 @@
     {
       "key": "For Loops with Bee",
       "name": "For Loops with Bee",
-      "absolute_position": 28,
+      "absolute_position": 29,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 28,
+      "relative_position": 29,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson focuses on for loops and using an incrementing variable to solve more complicated puzzles. ",
@@ -690,10 +706,10 @@
     {
       "key": "For Loops with Artist",
       "name": "For Loops with Artist",
-      "absolute_position": 29,
+      "absolute_position": 30,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 29,
+      "relative_position": 30,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students practice “for” loops with Artist. Students will complete puzzles to create complex designs and unique art.",
@@ -710,10 +726,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 30,
+      "absolute_position": 31,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 30,
+      "relative_position": 31,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing new projects!",
@@ -1070,6 +1086,48 @@
       "seeding_key": {
         "lesson_activity.key": "cc01211b-3cc3-4e32-b875-45bd9fcf18db",
         "lesson.key": "Making Sprites",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025"
+      }
+    },
+    {
+      "key": "6e6078b7-883f-418b-940a-14cee7e91a2b",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e6078b7-883f-418b-940a-14cee7e91a2b",
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025"
+      }
+    },
+    {
+      "key": "7e56bd73-4431-47da-8bc6-734b9664e285",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7e56bd73-4431-47da-8bc6-734b9664e285",
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025"
+      }
+    },
+    {
+      "key": "f6c17d68-4d55-4370-9541-a62679e3b27a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6c17d68-4d55-4370-9541-a62679e3b27a",
+        "lesson.key": "Mini-Project: Career Journeys ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "express-2025"
       }
@@ -3256,6 +3314,104 @@
       "seeding_key": {
         "activity_section.key": "b414ab09-a789-48cf-bb99-75f7d5492d0b",
         "lesson_activity.key": "cc01211b-3cc3-4e32-b875-45bd9fcf18db"
+      }
+    },
+    {
+      "key": "31e1b76f-19c3-4a23-b02b-baf697bcefc2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-video\"></i> **Video:** Show the short video, CS is Everything\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say**: Think about careers that work on ideas and things in the video.",
+        "progression_name": "Intro Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "31e1b76f-19c3-4a23-b02b-baf697bcefc2",
+        "lesson_activity.key": "6e6078b7-883f-418b-940a-14cee7e91a2b"
+      }
+    },
+    {
+      "key": "e8006ad7-e6bc-4393-9e4b-fbac3c430a9e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Now, let’s discuss! Think silently for a moment, then turn to a partner and answer one of the questions on the slide:\n- What did you like about this video?\n- What are some examples of careers that use CS? \n\n\n<i class=\"fa-solid fa-rotate\"></i> **Circulate:**  Listen to student discussions and encourage deeper thinking.\n\n<i class=\"fa-solid fa-lightbulb\"></i> **Discussion Goal:** Help students connect coding to real-world careers and reflect on their own interests."
+      },
+      "seeding_key": {
+        "activity_section.key": "e8006ad7-e6bc-4393-9e4b-fbac3c430a9e",
+        "lesson_activity.key": "6e6078b7-883f-418b-940a-14cee7e91a2b"
+      }
+    },
+    {
+      "key": "58c86996-1d20-411c-a6c4-e862e7780b28",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Transition to exploring more computer science career options.\n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Set the timer for four minutes so students know when to move to the next level\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** You are exploring some ideas of careers! Keep in mind what you’re interested in and will want to make your project about! ",
+        "duration": "15",
+        "name": "Career Exploration",
+        "progression_name": "Career Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guiding questions to promote deeper thinking and prepare students to code a small project representing a career they’re interested in.**\n- What would be the most fun part of that job for you? What might be hard?\n- Do you think someone like you could do this job? Why or why not?\n- Is there a job or interest you’d like to show in your project?\nWhat could your project include to tell others about this interest or career?\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "58c86996-1d20-411c-a6c4-e862e7780b28",
+        "lesson_activity.key": "7e56bd73-4431-47da-8bc6-734b9664e285"
+      }
+    },
+    {
+      "key": "370fb3ff-c1ae-459a-a211-f7b1c5206709",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> **Do This:** To transition into using Sprite Lab. Introduce sprite and event as the two key computer science concepts they will use in their project. \n\n**Show slide:** Tips for using Sprite Lab\n",
+        "duration": "15",
+        "name": "Code your Project ",
+        "progression_name": "Build Your Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Differentiation:** Level 10 has choices for students to expand their Sprite Lab skills.\n\nStudents do not need any of the skills in level 10 to finish their project but they are great extension ideas for those who are ready for a challenge and more coding!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709",
+        "lesson_activity.key": "7e56bd73-4431-47da-8bc6-734b9664e285"
+      }
+    },
+    {
+      "key": "6a4881af-f4d5-436a-afab-6b92d3385e28",
+      "position": 1,
+      "properties": {
+        "duration": "5",
+        "name": "Share your project",
+        "progression_name": "Share out"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a4881af-f4d5-436a-afab-6b92d3385e28",
+        "lesson_activity.key": "f6c17d68-4d55-4370-9541-a62679e3b27a"
+      }
+    },
+    {
+      "key": "3b286ab1-9446-4fc8-aa98-16fe2dedae5c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-rotate\"></i> **Circulate:** Use the guiding questions in the notes of slide 16 to support students as you move around the room."
+      },
+      "seeding_key": {
+        "activity_section.key": "3b286ab1-9446-4fc8-aa98-16fe2dedae5c",
+        "lesson_activity.key": "f6c17d68-4d55-4370-9541-a62679e3b27a"
+      }
+    },
+    {
+      "key": "229e944a-f543-4620-b602-d01276dd30b8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Share Out"
+      },
+      "seeding_key": {
+        "activity_section.key": "229e944a-f543-4620-b602-d01276dd30b8",
+        "lesson_activity.key": "f6c17d68-4d55-4370-9541-a62679e3b27a"
       }
     },
     {
@@ -15712,6 +15868,204 @@
       "level_keys": [
         "express_EOC2022_2025"
       ]
+    },
+    {
+      "chapter": 371,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-video_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "31e1b76f-19c3-4a23-b02b-baf697bcefc2"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-video_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 372,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "58c86996-1d20-411c-a6c4-e862e7780b28"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 373,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 374,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-plan_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-plan_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 375,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 376,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 377,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 378,
+      "position": 8,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express"
+      ]
+    },
+    {
+      "chapter": 379,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Out"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-share_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "229e944a-f543-4620-b602-d01276dd30b8"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-share_b_csf-e_csf-f_express"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -20154,6 +20508,114 @@
         "script.name": "express-2025",
         "activity_section.key": "22bc0f76-e05b-49cd-bfb0-825293784300"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-video_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-video_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "31e1b76f-19c3-4a23-b02b-baf697bcefc2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "58c86996-1d20-411c-a6c4-e862e7780b28"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-plan_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-plan_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-event-say_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "370fb3ff-c1ae-459a-a211-f7b1c5206709"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-share_b_csf-e_csf-f_express",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-share_b_csf-e_csf-f_express"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "express-2025",
+        "activity_section.key": "229e944a-f543-4620-b602-d01276dd30b8"
+      }
     }
   ],
   "resources": [
@@ -20322,6 +20784,19 @@
       },
       "seeding_key": {
         "resource.key": "debugging_guide_1"
+      }
+    },
+    {
+      "name": "Helpful Hints in Sprite Lab",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/edit#slide=id.g1b38224bb2a_0_20",
+      "key": "helpful_hints_in_sprite_lab",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_in_sprite_lab"
       }
     },
     {
@@ -20715,6 +21190,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "resource.key": "helpful_hints_in_sprite_lab"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: Sticker Art",
         "resource.key": "csf_-_express_-_slides_2024-2025"
       }
@@ -20947,6 +21428,16 @@
       }
     },
     {
+      "key": "career",
+      "word": "Career",
+      "definition": "A job you work toward by building skills and learning new things.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "career"
+      }
+    },
+    {
       "key": "code",
       "word": "code",
       "definition": "to write code, or to write instructions for a computer.",
@@ -20964,6 +21455,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "command"
+      }
+    },
+    {
+      "key": "computer_science",
+      "word": "Computer Science",
+      "definition": "Using computers to solve problems and create things.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer_science"
       }
     },
     {
@@ -21404,6 +21905,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "career"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "computer_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: Sticker Art",
         "vocabulary.key": "loop"
       }
@@ -21730,6 +22255,16 @@
       }
     },
     {
+      "key": "24dac9dd-09b6-457b-908c-d5d74f73ee17",
+      "properties": {
+        "description": "Explore and describe careers that use computer science"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "24dac9dd-09b6-457b-908c-d5d74f73ee17"
+      }
+    },
+    {
       "key": "2790617a-1637-404f-bc60-fbbfda184c7f",
       "properties": {
         "description": "Recognize when to use a for loop and when to use other loops such as repeat and while loops."
@@ -21777,6 +22312,16 @@
       "seeding_key": {
         "lesson.key": "Nested Loops in Maze",
         "objective.key": "38c0c22b-cb12-4a09-ab42-29b3160d27be"
+      }
+    },
+    {
+      "key": "3b45f25c-0cb2-4972-bd2d-e95dba52b6d2",
+      "properties": {
+        "description": "Design and build an interactive project"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "3b45f25c-0cb2-4972-bd2d-e95dba52b6d2"
       }
     },
     {
@@ -21837,6 +22382,16 @@
       "seeding_key": {
         "lesson.key": "Creating Art with Code",
         "objective.key": "57505647-ec79-4c26-8b45-5da205f0841e"
+      }
+    },
+    {
+      "key": "5a49b8d4-72b4-4960-b8b0-3ffd2102e0e2",
+      "properties": {
+        "description": "Practice basic coding skills"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "5a49b8d4-72b4-4960-b8b0-3ffd2102e0e2"
       }
     },
     {
@@ -22327,6 +22882,16 @@
       "seeding_key": {
         "lesson.key": "Swimming Fish with Sprite Lab",
         "objective.key": "f53e686f-d679-453c-90af-31dd5fad5cbc"
+      }
+    },
+    {
+      "key": "f6c22ee1-abec-4b64-81ae-c260eb9ddd15",
+      "properties": {
+        "description": "Present a project and explain the coding skills used"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "f6c22ee1-abec-4b64-81ae-c260eb9ddd15"
       }
     },
     {
