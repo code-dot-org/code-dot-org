@@ -79,6 +79,9 @@ const VersionHistoryDropdown: React.FunctionComponent<
     () => versionList?.find(v => v.isLatest)?.versionId || INITIAL_VERSION_ID,
     [versionList]
   );
+
+  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
+  // main lab container.
   const {theme} = useTheme();
 
   const viewingOldVersion = useAppSelector(

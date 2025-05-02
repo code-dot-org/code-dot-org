@@ -72,6 +72,9 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const {signInState} = useAppSelector(state => state.currentUser);
   const {levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
+
+  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
+  // main lab container.
   const {theme} = useTheme();
 
   const dispatch = useAppDispatch();

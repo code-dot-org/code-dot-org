@@ -32,6 +32,8 @@ export const PopUpButton = ({
   const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [updatedStyles, setUpdatedStyles] = useState(false);
+  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
+  // main lab container.
   const {theme} = useTheme();
 
   const setIsOpenFalse = useCallback(() => {
