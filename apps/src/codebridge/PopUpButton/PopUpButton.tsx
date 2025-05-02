@@ -1,10 +1,11 @@
 import Button from '@code-dot-org/component-library/button';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import React, {useState, useCallback, useRef, useEffect} from 'react';
 import {createPortal} from 'react-dom';
 
-import moduleStyles from './PopUpButton.module.scss';
+import moduleStyles from './pop-up-button.module.scss';
 import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 type PopUpButtonProps = {
@@ -33,6 +34,7 @@ export const PopUpButton = ({
   const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [updatedStyles, setUpdatedStyles] = useState(false);
+  const {theme} = useTheme();
 
   const setIsOpenFalse = useCallback(() => {
     setIsOpen(false);
@@ -143,6 +145,7 @@ export const PopUpButton = ({
               style={dropdownStyleProps}
               ref={dropdownRef}
               role="menu"
+              data-theme={theme}
             >
               {children}
             </div>
