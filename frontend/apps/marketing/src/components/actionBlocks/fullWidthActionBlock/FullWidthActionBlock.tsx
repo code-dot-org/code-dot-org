@@ -8,6 +8,8 @@ import {externalLinkIconProps} from '@/components/common/constants';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
+import {showNewTag} from '../helpers';
+
 export type FullWidthActionBlockContentfulProps = Omit<
   ActionBlockProps,
   'image'
@@ -19,6 +21,7 @@ export type FullWidthActionBlockContentfulProps = Omit<
   primaryButton: LinkEntry;
   secondaryButton: LinkEntry;
   background: EntryFields.Text;
+  publishedDate: EntryFields.Date;
 };
 
 const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
@@ -29,10 +32,12 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
   primaryButton,
   secondaryButton,
   background,
+  publishedDate,
 }) => (
   <DSCOFullWidthActionBlock
     image={{src: `https:${image}`}}
     overline={overline}
+    tag={showNewTag(publishedDate) ? 'New' : undefined}
     title={title}
     description={description}
     primaryButton={

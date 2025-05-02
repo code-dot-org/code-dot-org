@@ -85,5 +85,14 @@ export const ActionBlockContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
+    publishedDate: {
+      displayName: 'Published date',
+      type: 'Date',
+      group: 'content',
+      description: 'Adds a "New" tag the action block.',
+      validations: {
+        bindingSourceType: ['entry'],
+      },
+    },
   },
 };
