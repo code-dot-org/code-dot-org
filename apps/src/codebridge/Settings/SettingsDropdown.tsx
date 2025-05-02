@@ -1,5 +1,6 @@
 import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import SimpleDropdown, {
   SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown/simpleDropdown';
@@ -71,6 +72,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const {signInState} = useAppSelector(state => state.currentUser);
   const {levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
+  const {theme} = useTheme();
 
   const dispatch = useAppDispatch();
   const [selectedEditorFontSizeValue, setSelectedEditorFontSizeValue] =
@@ -148,7 +150,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         style={dropdownStyles}
         aria-modal="true"
         aria-label={commonI18n.settings()}
-        data-theme="Dark"
+        data-theme={theme}
       >
         <div className={moduleStyles.header}>
           <Heading6 className={moduleStyles.heading}>
