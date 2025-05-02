@@ -79,8 +79,7 @@ button.button-kebab {
   // are more specific than a single class.
   // We need a different hover color for the kebab button because it is on top of another
   // element with the standard hover color.
-  &:hover,
-  &:active {
+  &:hover, &:active {
     background-color: var(--background-neutral-quinary) !important;
   }
 }

@@ -9,8 +9,6 @@ import commonI18n from '@cdo/locale';
 
 import SettingsDropdown from './SettingsDropdown';
 
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
-
 const SettingsButton: React.FunctionComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const buttonContainerRef = useRef<HTMLDivElement>(null);
@@ -24,7 +22,6 @@ const SettingsButton: React.FunctionComponent = () => {
     direction: 'onLeft',
     tooltipId: 'settings-tooltip',
     size: 'xs',
-    className: darkModeStyles.tooltipLeft,
   };
 
   return (
@@ -36,8 +33,8 @@ const SettingsButton: React.FunctionComponent = () => {
           size="xs"
           onClick={() => setIsOpen(true)}
           type="tertiary"
-          className={darkModeStyles.tertiaryButton}
           ariaLabel={commonI18n.settings()}
+          color={'black'}
         />
       </WithTooltip>
       {isOpen && (

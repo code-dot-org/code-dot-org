@@ -1,0 +1,212 @@
+{
+  "title": "How AI Works",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro_text",
+          "html": "<h1>Thank you for teaching one or more of Code.org's How AI Works Lessons!\n<p><h3>Post-Lesson Teacher Survey\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to teachers, and to give you the opportunity to provide feedback about your experience teaching our curriculum.</strong></p>\n<p>The purpose of this survey is to understand better our teachers' experience with Code.org's How AI Works Lessons.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified</strong> responses will be used by Code.org and might be shared with our partners to improve our curriculum and programs.</li>\n</ul>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+        },
+        {
+          "type": "html",
+          "name": "curriculum_perceptions",
+          "html": "<h2>Your Perceptions About Code.org's How AI Works lessons</h1>\n<p><span style='font-size: 12pt;'>Thanks for teaching one of our How AI Works lessons! We'd love to learn a little more about your experience!.</span></p>"
+        },
+        {
+          "type": "checkbox",
+          "name": "lessons",
+          "title": "Which lesson(s) did you teach?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "lesson_1",
+              "text": "Lesson 1 - Introduction to Machine Learning"
+            },
+            {
+              "value": "lesson_2",
+              "text": "Lesson 2 - Computer Vision"
+            },
+            {
+              "value": "lesson_3",
+              "text": "Lesson 3 - Neural Networks"
+            },
+            {
+              "value": "lesson_4",
+              "text": "Lesson 4 - Chatbots and Large Language Models (LLMS)"
+            },
+            {
+              "value": "lesson_5",
+              "text": "Lesson 5 - Generative Images"
+            },
+            {
+              "value": "lesson_6",
+              "text": "Lesson 6 - Algorithmic Bias"
+            },
+            {
+              "value": "lesson_7",
+              "text": "Lesson 7 - Our AI Code of Ethics"
+            },
+            {
+              "value": "lesson_8",
+              "text": "Lesson 8 - How AI Works in a Day"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "lesson_entry_path",
+          "title": "How did you find these lessons?",
+          "choices": [
+            {
+              "value": "cdo_website",
+              "text": " From Code.org website (https://code.org/ai or https://code.org/ai/how-ai-works)"
+            },
+            {
+              "value": "course_catalog",
+              "text": "From Code.org's course catalog (https://studio.code.org/catalog)"
+            },
+            {
+              "value": "video_series",
+              "text": "From Code.org's  How AI Works video series on Youtube"
+            },
+            {
+              "value": "ap_online_community",
+              "text": "AP online community"
+            },
+            {
+              "value": "email",
+              "text": "Email"
+            },
+            {
+              "value": "social_media",
+              "text": "Social Media"
+            },
+            {
+              "value": "friend",
+              "text": "A Friend"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "checkbox",
+          "name": "grade_bands",
+          "title": "Which grade bands do you teach?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "k_5",
+              "text": "K - 5"
+            },
+            {
+              "value": "6_8",
+              "text": "6 - 8"
+            },
+            {
+              "value": "9_12",
+              "text": "9 - 12"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "checkbox",
+          "name": "class_type",
+          "title": "How would you describe the class you taught these lesson(s) to?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "cs_class",
+              "text": "I taught the lesson(s) in a computer science class"
+            },
+            {
+              "value": "stem_class",
+              "text": "I taught the lesson(s) in a STEM class"
+            },
+            {
+              "value": "core_subject_class",
+              "text": "I taught the lesson(s) in a core subject area class (ie: Math, Art, Science, Music, ELA, History, etc)"
+            },
+            {
+              "value": "out_of_school",
+              "text": "I taught the lesson(s) as part of an out-of-school program"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "checkbox",
+          "name": "taught_cdo_before",
+          "title": "Have you taught a Code.org lesson before?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes - I've taught other Code.org lesson(s) before"
+            },
+            {
+              "value": "hoc",
+              "text": "Sort of - I've run an Hour of Code, but this was my first lesson"
+            },
+            {
+              "value": "no",
+              "text": "No - this was my first lesson from Code.org"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "student_engagement",
+          "title": "Were students engaged and interested in the topics covered in this lesson(s)?",
+          "minRateDescription": "Not engaged at all",
+          "maxRateDescription": "Extremely engaged"
+        },
+        {
+          "type": "comment",
+          "name": "ap_connect_course",
+          "visibleIf": "{lesson_entry_path} = 'ap_online_community'",
+          "title": "How did you connect the content of this lesson with your AP course?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "additional_resources",
+          "title": "What additional resources would help you effectively incorporate learning about AI or applying AI in your AP course?",
+          "rows": 2
+        },
+        {
+          "type": "rating",
+          "name": "nps_how_ai_works_lessons",
+          "title": "How likely are you to recommend How AI Works lessons to a friend or colleague?",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not likely at all",
+          "maxRateDescription": "Extremely likely"
+        },
+        {
+          "type": "rating",
+          "name": "nps_how_ai_works_video_series",
+          "title": "How likely are you to recommend How AI Works video series to a friend or colleague?",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not likely at all",
+          "maxRateDescription": "Extremely likely"
+        },
+        {
+          "type": "comment",
+          "name": "how_ai_works_other_feedback",
+          "title": "Do you have any feedback about the How AI Works lessons that you would like to share with the Code.org team? "
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

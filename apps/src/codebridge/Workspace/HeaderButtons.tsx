@@ -5,7 +5,6 @@ import {
 } from '@code-dot-org/component-library/tooltip';
 import SettingsButton from '@codebridge/Settings/SettingsButton';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
-import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -22,7 +21,6 @@ import commonI18n from '@cdo/locale';
 import {useCodebridgeContext} from '../codebridgeContext';
 
 import moduleStyles from './workspace.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 const WorkspaceHeaderButtons: React.FunctionComponent = () => {
   const {startSources, levelProperties, projectPickerSettings} =
@@ -40,7 +38,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     direction: 'onLeft',
     tooltipId: 'feedback-tooltip',
     size: 'xs',
-    className: darkModeStyles.tooltipLeft,
   };
 
   const documentationTooltipProps: TooltipProps = {
@@ -48,7 +45,6 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
     direction: 'onLeft',
     tooltipId: 'documentation-tooltip',
     size: 'xs',
-    className: darkModeStyles.tooltipLeft,
   };
 
   const documentationUrl = `${currentLocation().origin}/docs/ide/${appName}`;
@@ -96,6 +92,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           onClick={projectPickerSettings.showProjectTypePicker}
           type={'primary'}
           aria-label={codebridgeI18n.projectPickerAriaLabel()}
+          color={'black'}
         />
       )}
       <SettingsButton />
@@ -106,7 +103,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           size={'xs'}
           type={'tertiary'}
           text={codebridgeI18n.sendToMicroBit()}
-          className={darkModeStyles.tertiaryButton}
+          color={'black'}
         />
       )}
       <VersionHistoryButton startSources={startSources} appName={appName} />
@@ -119,7 +116,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
             ariaLabel={commonI18n.feedback()}
             size={'xs'}
             type={'tertiary'}
-            className={darkModeStyles.tertiaryButton}
+            color={'black'}
             target="_blank"
           />
         </WithTooltip>
@@ -134,7 +131,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
             size={'xs'}
             type={'tertiary'}
             target="_blank"
-            className={darkModeStyles.tertiaryButton}
+            color={'black'}
           />
         </WithTooltip>
       )}
@@ -145,10 +142,8 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
           size={'xs'}
           type={'tertiary'}
           text={commonI18n.skipToProject()}
-          className={classNames(
-            darkModeStyles.tertiaryButton,
-            moduleStyles.buttonSkip
-          )}
+          className={moduleStyles.buttonSkip}
+          color={'black'}
         >
           <span>{commonI18n.skipToProject()}</span>
         </Button>

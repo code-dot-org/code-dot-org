@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-04-14T23:13:19.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Do This:\r\n\r\n1. Create a `Painter` using\r\n\r\n   ```\r\n   painter_name = Painter()\r\n   ```\r\n   \r\n   For example:\r\n   \r\n   ```\r\n   alicia = Painter()\r\n   ```\r\n\r\n&nbsp;\r\n\r\n2. Move the `Painter` forward **one space** using\r\n\r\n   ```\r\n   painter_name.move()\r\n   ```\r\n   \r\n   For example:\r\n   \r\n   ```\r\n   alicia.move()\r\n   ```\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can name the `Painter` whatever you want! Give it a name that is meaningful to you, like your own name, your best friend's name, your pet's name, or the name of someone you look up to.",
+    "long_instructions": "## Do This:\r\n\r\n1. Create a `Painter` using\r\n\r\n   ```\r\n   painter_name = Painter()\r\n   ```\r\n   \r\n   For example:\r\n   \r\n   ```\r\n   alicia = Painter()\r\n   ```\r\n\r\n&nbsp;\r\n\r\n2. Move the `Painter` forward **one space** using\r\n\r\n   ```\r\n   painter_name.move()\r\n   ```\r\n   \r\n   For example:\r\n   \r\n   ```\r\n   alicia.move()\r\n   ```\r\n   <i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Click the book icon above the workspace to learn more about the `Painter` object and `move()` method in the Python documentation.\r\n   \r\n   ![python documentation book icon](https://images.code.org/901506f120f08a705ac5c65077f31e2b-image-1746033222447.12.23 AM.png)\r\n---\r\n \r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can name the `Painter` whatever you want! Give it a name that is meaningful to you, like your own name, your best friend's name, your pet's name, or the name of someone you look up to.",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -385,7 +386,6 @@
       "type": "validation"
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:19.755+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level2_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level2_2025-launch\"},{\"changed_at\":\"2025-04-26 18:21:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 18:26:53 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 18:28:25 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:19.755+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level2_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level2_2025-launch\"},{\"changed_at\":\"2025-04-26 18:21:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 18:26:53 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-26 18:28:25 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-30 17:18:29 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:30:07 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:33:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:43:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-30 17:46:30 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

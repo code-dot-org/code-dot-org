@@ -47,14 +47,14 @@ And(/^I close my eyes$/) do
 end
 
 # A Feature can optionally specify the stitch mode ('css' or 'scroll') for Eyes to create the full screenshot.
-And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |identifier, stitch_mode|
+And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?( without waiting for Font Awesome to load)?$/) do |identifier, stitch_mode, skip_fa_wait|
   next if CDO.disable_all_eyes_running
 
   # Wait until the fonts are fully loaded and rendering the page
   # Hopefully fixes many of the issues with font wiggle due to lazily loading
   # alternative fonts for symbols and localized glyphs.
   wait_until do
-    fonts_loaded?
+    fonts_loaded? && (skip_fa_wait || font_awesome_loaded?)
   end
 
   if stitch_mode == "none"
@@ -104,6 +104,12 @@ def ensure_eyes_available
   @eyes = Applitools::Selenium::Eyes.new
   @eyes.api_key = CDO.applitools_eyes_api_key
   @eyes.log_handler = Logger.new('../../log/eyes.log')
+end
+
+# There are several fonts we sometimes load associated with Font Awesome, but Font Awesome 6 at the "solid" weight (900) is our default,
+# and used in the header (which appears across almost all pages), so we wait for that one to load at least.
+def font_awesome_loaded?
+  @browser.execute_script('return [...document.fonts].find(font => font.family === "Font Awesome 6 Pro" && font.weight === "900")?.status === "loaded"') == true
 end
 
 def fonts_loaded?

@@ -7,7 +7,6 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
-    "background": "music-black",
     "instructions_important": "false",
     "long_instructions": "#### Generate a Beat with A.I. \r\nUse A.I. to help you create a new drum beat.\r\n\r\n- Click the black box on the [play AI drums](#clickable=id-left:play_pattern_ai_at_current_location_simple2) block to generate your own beat.  \r\n\r\n<img src=\"https://images.code.org/f107e484c397d0c57a4d5fa3b4c2697c-image-1742674189869.png\" style=\"width: 150px\">\r\n\r\n- Make sure to select at least 4 beats so that the **Generate** button pops up.\r\n- You can customize the AI generated beat or even **Generate** a new beat.\r\n- When you have a beat you like, click off the pop up to save your beat.\r\n- Work with AI to see if you can generate beats to match different musical moods like elevator music, intense combat scene in a move, upbeat pop song, etc.\r\n- Press [Run](#clickable=run-button). \r\n\r\n",
     "hide_share_and_remix": "true",
