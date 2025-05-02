@@ -41,23 +41,23 @@ module Services
     def self.load_custom_level(level_path, level_md5s_by_name)
       $foo ||= 0
       $foo += 1
-      puts "load_custom_level(level_path = #{level_path.inspect})" unless foo > 16
+      puts "load_custom_level(level_path = #{level_path.inspect})" unless $foo > 16
       name = Policies::LevelFiles.level_name_from_path(level_path)
       # Only reload level data when file contents change
       level_data = File.read(level_path)
       md5 = Digest::MD5.hexdigest(level_data)
-      puts "md5: #{md5.inspect}" unless foo > 16
-      puts "level_md5s_by_name[name]: #{level_md5s_by_name[name].inspect}" unless foo > 16
+      puts "md5: #{md5.inspect}" unless $foo > 16
+      puts "level_md5s_by_name[name]: #{level_md5s_by_name[name].inspect}" unless $foo > 16
       if level_md5s_by_name[name] == md5
-        puts "nope" unless foo > 16
+        puts "nope" unless $foo > 16
         nil
       else
-        puts "yep" unless foo > 16
+        puts "yep" unless $foo > 16
         level = Level.find_by_name(name) || Level.new(name: name)
         level.md5 = md5
         level = Services::LevelFiles.load_custom_level_xml(level_data, level)
-        puts "md5: #{md5.inspect}" unless foo > 16
-        puts "level.md5: #{level.md5.inspect}" unless foo > 16
+        puts "md5: #{md5.inspect}" unless $foo > 16
+        puts "level.md5: #{level.md5.inspect}" unless $foo > 16
         level
       end
     rescue Exception => exception
