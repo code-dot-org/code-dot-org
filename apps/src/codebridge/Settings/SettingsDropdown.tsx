@@ -1,4 +1,3 @@
-import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import SimpleDropdown, {
   SimpleDropdownProps,
@@ -83,10 +82,27 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const dropdownStyles = useDropdownPosition(buttonRef, dropdownRef);
 
   const onTextEditorDropdownChange = (value: string) => {
-    setSelectedEditorFontSizeValue(getSelectedKey(value));
+    const selectedEditorKey = getSelectedKey(value);
+    setSelectedEditorFontSizeValue(selectedEditorKey);
+    // We want the user preference for selected font size to persist for signed-in users
+    // per app type so we save on backend.
+    handleFontSizeChange(
+      'CodeEditor',
+      selectedEditorKey,
+      currentEditorFontSizeKey,
+      EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE
+    );
   };
+
   const onConsoleDropdownChange = (value: string) => {
+    const selectedConsoleKey = getSelectedKey(value);
     setSelectedConsoleFontSizeValue(getSelectedKey(value));
+    handleFontSizeChange(
+      'Console',
+      selectedConsoleKey,
+      currentConsoleFontSizeKey,
+      EVENTS.CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE
+    );
   };
 
   const handleFontSizeChange = (
@@ -108,28 +124,6 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         fontSize: selectedKey,
       });
     }
-  };
-
-  const onSave = () => {
-    const selectedEditorKey = getSelectedKey(selectedEditorFontSizeValue);
-    const selectedConsoleKey = getSelectedKey(selectedConsoleFontSizeValue);
-
-    // We want the user preference for selected font size to persist for signed-in users
-    // per app type so we save on backend.
-    handleFontSizeChange(
-      'CodeEditor',
-      selectedEditorKey,
-      currentEditorFontSizeKey,
-      EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE
-    );
-    handleFontSizeChange(
-      'Console',
-      selectedConsoleKey,
-      currentConsoleFontSizeKey,
-      EVENTS.CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE
-    );
-
-    closeDropdown();
   };
 
   const hasConsole = codebridgeLabsWithConsole.includes(appName);
@@ -198,23 +192,6 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             />
           </div>
         )}
-        <div className={moduleStyles.footer}>
-          <Button
-            text={commonI18n.cancel()}
-            type="secondary"
-            size="s"
-            onClick={closeDropdown}
-            color="black"
-            className={moduleStyles.footerButton}
-          />
-          <Button
-            text={commonI18n.save()}
-            type="primary"
-            size="s"
-            onClick={onSave}
-            className={moduleStyles.footerButton}
-          />
-        </div>
       </div>
     </FocusTrap>,
     document.body
