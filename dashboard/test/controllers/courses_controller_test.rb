@@ -863,4 +863,9 @@ class CoursesControllerTest < ActionController::TestCase
     refute_nil assigns(:courses)
     assert_equal UnitGroup.all, assigns(:courses)
   end
+
+  test_user_gets_response_for :all, user: nil, response: :redirect
+  test_user_gets_response_for :all, user: :student, response: :forbidden
+  test_user_gets_response_for :all, user: :teacher, response: :forbidden
+  test_user_gets_response_for :all, user: :admin, response: :forbidden
 end
