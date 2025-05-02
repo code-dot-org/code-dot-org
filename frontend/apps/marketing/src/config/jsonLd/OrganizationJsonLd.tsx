@@ -13,7 +13,7 @@ const BRANDS_ORG_JSON_LD: {
     name: 'Code.org',
     alternateName: 'Code Dot Org',
     url: 'https://code.org',
-    logo: 'https://images.ctfassets.net/90t6bu6vlf76/2JhHPaRQiMUbjidN4gKuY2/c43817ca968471f1c0811d725025ee64/WordmarkS_Black_Solid.svg',
+    logo: 'https://contentful-images.code.org/90t6bu6vlf76/2JhHPaRQiMUbjidN4gKuY2/c43817ca968471f1c0811d725025ee64/WordmarkS_Black_Solid.svg',
     description:
       'Code.org® is an education innovation nonprofit dedicated to the vision ' +
       'that every student in every school has the opportunity to learn computer science ' +

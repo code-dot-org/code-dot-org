@@ -599,6 +599,31 @@ Resources:
             QueryStringBehavior: none
         Comment: Cache policy for the marketing app
 
+  ViewerResponseCloudFrontFunction:
+    Type: AWS::CloudFront::Function
+    Properties:
+      Name: MarketingAppViewerResponseFunction
+      AutoPublish: true
+      FunctionCode: |
+        function handler(event) {
+          let response = event.response;
+
+          // Set a default stale-while-revalidate cache control header if the origin does not send any cache-control header
+          // This is to workaround https://github.com/vercel/next.js/issues/73382
+          // Remove when the issue is fixed in Next.js (Cache-Control is consistently returned by the origin)
+          if (response.headers['cache-control'] === undefined) {
+              // This value should match the constant `revalidate` in `frontend/apps/marketing/src/app/[brand]/[locale]/[slug]/page.tsx`
+              response.headers['cache-control'] = {
+              value: `s-maxage=3600, stale-while-revalidate=31535400`
+            }
+          }
+
+          return response;
+        }
+      FunctionConfig:
+        Comment: Adds Cache-Control if not present
+        Runtime: cloudfront-js-2.0
+
   CloudFrontDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -631,6 +656,9 @@ Resources:
           Compress: true
           CachePolicyId: !Ref ApplicationCachingPolicy
           OriginRequestPolicyId: "216adef6-5c7f-47e4-b989-5492eafa07d3" # AllViewer
+          FunctionAssociations:
+            - EventType: viewer-response
+              FunctionARN: !GetAtt ViewerResponseCloudFrontFunction.FunctionARN
 
         ViewerCertificate:
           AcmCertificateArn:

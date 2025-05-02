@@ -1,7 +1,6 @@
 name 'Lab2 BubbleChoice Showcase'
 display_name 'Lab2 Bubble Choice'
 description 'This Bubble Choice level and all sublevels use Lab2.'
-uses_lab2
 
 sublevels
 level 'AI Chat Sublevel'

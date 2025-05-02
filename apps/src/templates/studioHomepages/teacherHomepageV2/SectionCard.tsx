@@ -59,12 +59,10 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               className={styles.sectionCardDragButton}
             />
           )}
-          {section.avatar_color && (
-            <SectionAvatar
-              color={section.avatar_color || 0}
-              emoji={section.avatar_emoji || 0}
-            />
-          )}
+          <SectionAvatar
+            color={section.avatar_color || 0}
+            emoji={section.avatar_emoji || 0}
+          />
           <div className={styles.sectionCardHeaderText}>
             <Heading5 id={`section-card-title-${section.id}`}>
               {section.name}

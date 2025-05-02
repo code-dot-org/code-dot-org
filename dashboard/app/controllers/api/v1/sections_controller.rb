@@ -128,8 +128,8 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     fields[:ai_tutor_enabled] = params[:ai_tutor_enabled] unless params[:ai_tutor_enabled].nil?
 
     # Get avatars data from other sections to prevent duplicates
-    last_color = current_user.sections_instructed.select(&:avatar_color)&.max_by(&:id)&.avatar_color || -1
-    last_emoji = current_user.sections_instructed.select(&:avatar_emoji)&.max_by(&:id)&.avatar_emoji || -1
+    last_color = current_user.sections_instructed.select(&:avatar_color)&.max_by(&:id)&.avatar_color || 0
+    last_emoji = current_user.sections_instructed.select(&:avatar_emoji)&.max_by(&:id)&.avatar_emoji || 0
 
     # Sets the avatar color and emoji if not already present
     fields[:avatar_color] = (last_color + 1) % 20 if section[:avatar_color].nil?
