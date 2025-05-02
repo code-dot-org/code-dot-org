@@ -257,7 +257,12 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               />
               {predictSettings?.isPredictLevel && (
                 <InstructorsOnly>
-                  <div className={moduleStyles['message-' + theme]}>
+                  <div
+                    className={classNames(
+                      moduleStyles['message-' + theme],
+                      moduleStyles.predictSummary
+                    )}
+                  >
                     <PredictSummary />
                   </div>
                 </InstructorsOnly>

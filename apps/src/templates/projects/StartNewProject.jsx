@@ -165,7 +165,7 @@ export class StartNewProject extends React.Component {
 
     return (
       <div>
-        {defaultProjectTypes.length && (
+        {!!defaultProjectTypes.length && (
           <>
             <h4 className="new-project-heading" style={styles.headingStartNew}>
               {i18n.projectStartNew()}
@@ -174,7 +174,7 @@ export class StartNewProject extends React.Component {
           </>
         )}
 
-        {fullListProjectButtonsData.length && (
+        {!!fullListProjectButtonsData.length && (
           <>
             <Button
               id="uitest-view-full-list"

@@ -86,7 +86,7 @@ class RegionalPartnerSearch extends Component {
     // (versus the regional partner's own application close date)
     $.ajax({
       method: 'GET',
-      url: `/dashboardapi/v1/pd/application/applications_closed`,
+      url: 'professional-learning/application/applications_closed',
       dataType: 'json',
     }).done(data => {
       this.setState({

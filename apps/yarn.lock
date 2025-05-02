@@ -10016,13 +10016,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"base-64@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "base-64@npm:1.0.0"
-  checksum: 10/d10b64a1fc9b2c5a5f39f1ce1e6c9d1c5b249222bbfa3a0604c592d90623caf74419983feadd8a170f27dc0c3389704f72faafa3e645aeb56bfc030c93ff074a
-  languageName: node
-  linkType: hard
-
 "base64-arraybuffer@npm:^1.0.1":
   version: 1.0.2
   resolution: "base64-arraybuffer@npm:1.0.2"
@@ -10348,7 +10341,7 @@ __metadata:
     progress-bar-webpack-plugin: "npm:^2.1.0"
     prop-types: "npm:^15.6.2"
     pusher-js: "npm:4.1.0"
-    pyodide: "npm:^0.25.1"
+    pyodide: "npm:^0.27.5"
     qrcode.react: "npm:^0.8.0"
     qtip2: "npm:2.2.0"
     query-string: "npm:4.1.0"
@@ -23275,13 +23268,12 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"pyodide@npm:^0.25.1":
-  version: 0.25.1
-  resolution: "pyodide@npm:0.25.1"
+"pyodide@npm:^0.27.5":
+  version: 0.27.5
+  resolution: "pyodide@npm:0.27.5"
   dependencies:
-    base-64: "npm:^1.0.0"
     ws: "npm:^8.5.0"
-  checksum: 10/6a2aa972ce15565089469524231da03706886d3f0c87fa411444c501300d7765f04576d889683a43fcd9fdb1a44c8bafd829bd223057a9dd2c5eec4399672eae
+  checksum: 10/a7ec95d13a14e0b27102963d34c366059be00b286430232cb0b7f548a4e340cd23c18ee9d1bdf87449f4d57b6ea32586e074edb246e0135f720fdbf98ba2043c
   languageName: node
   linkType: hard
 

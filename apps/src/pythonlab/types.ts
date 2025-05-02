@@ -25,3 +25,8 @@ export type MessageType =
   | 'loading_pyodide'
   | 'loaded_pyodide'
   | 'load_failed';
+
+export interface PythonValidationResult {
+  name: string;
+  result: string;
+}

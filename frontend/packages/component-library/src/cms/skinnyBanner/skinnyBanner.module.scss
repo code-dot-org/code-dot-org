@@ -15,7 +15,7 @@ $mobileBreakpoint: 970px;
   padding: 1.875rem 0;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
+  gap: 2.5rem;
   max-width: 60rem;
   margin: 0 auto;
 
@@ -25,7 +25,14 @@ $mobileBreakpoint: 970px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 2.5rem;
+
+    .skinnyBannerTextContainer {
+      align-items: center;
+    }
+
+    .skinnyBannerPartnerContainer {
+      justify-content: center;
+    }
 
     .skinnyBannerMediaContainer figure {
       height: unset;
@@ -41,7 +48,7 @@ $mobileBreakpoint: 970px;
   flex: 2;
   width: 100%;
 
-  h5 {
+  h2 {
     margin: 0;
   }
 
@@ -66,5 +73,7 @@ $mobileBreakpoint: 970px;
 }
 
 .skinnyBannerButtonContainer {
-  flex: 1;
+  display: flex;
+  flex: 0.75;
+  justify-content: end;
 }

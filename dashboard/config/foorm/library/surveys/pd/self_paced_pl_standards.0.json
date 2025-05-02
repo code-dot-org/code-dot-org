@@ -74,59 +74,23 @@
           "hasOther": true
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "better_understanding_concepts",
           "title": "After completing this module, I have a better understanding of {module} concepts.",
-          "choices": [
-            {
-              "value": "1",
-              "text": "Strongly disagree"
-            },
-            {
-              "value": "2",
-              "text": "Disagree"
-            },
-            {
-              "value": "3",
-              "text": "Neutral"
-            },
-            {
-              "value": "4",
-              "text": "Agree"
-            },
-            {
-              "value": "5",
-              "text": "Strongly agree"
-            }
-          ]
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "comfort_ability_to_teach",
           "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s {module} curriculum than I did before starting this professional learning experience.",
           "natalia_comment": "NOTE: set the {module} variable in the simple survey configuration to pass-through the value you want to appear in the survey (eg. computer vision)",
-          "choices": [
-            {
-              "value": "1",
-              "text": "Strongly disagree"
-            },
-            {
-              "value": "2",
-              "text": "Disagree"
-            },
-            {
-              "value": "3",
-              "text": "Neutral"
-            },
-            {
-              "value": "4",
-              "text": "Agree"
-            },
-            {
-              "value": "5",
-              "text": "Strongly agree"
-            }
-          ]
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
         },
         {
           "type": "rating",
@@ -165,31 +129,13 @@
           ]
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "familiar_student_programming_environments",
           "title": "After completing this module, I am more familiar with the programming environments and learning tools that students will use in the {module} curriculum.",
-          "choices": [
-            {
-              "value": "5",
-              "text": "Strongly agree"
-            },
-            {
-              "value": "4",
-              "text": "Agree"
-            },
-            {
-              "value": "3",
-              "text": "Neutral"
-            },
-            {
-              "value": "2",
-              "text": "Disagree"
-            },
-            {
-              "value": "1",
-              "text": "Strongly disagree "
-            }
-          ]
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
         },
         {
           "type": "radiogroup",
@@ -311,58 +257,22 @@
           ]
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "know_what_students_learn",
           "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s {module} curriculum.",
-          "choices": [
-            {
-              "value": "1",
-              "text": "Strongly disagree"
-            },
-            {
-              "value": "2",
-              "text": "Disagree"
-            },
-            {
-              "value": "3",
-              "text": "Neutral"
-            },
-            {
-              "value": "4",
-              "text": "Agree"
-            },
-            {
-              "value": "5",
-              "text": "Strongly agree"
-            }
-          ]
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "know_what_students_learn_module",
           "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} curriculum.",
-          "choices": [
-            {
-              "value": "1",
-              "text": "Strongly disagree"
-            },
-            {
-              "value": "2",
-              "text": "Disagree"
-            },
-            {
-              "value": "3",
-              "text": "Neutral"
-            },
-            {
-              "value": "4",
-              "text": "Agree"
-            },
-            {
-              "value": "5",
-              "text": "Strongly agree"
-            }
-          ]
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
         },
         {
           "type": "radiogroup",
@@ -372,15 +282,15 @@
           "choices": [
             {
               "value": "better_understand_module",
-              "text": "Better understand Code.org's {computer science and/or AI} curriculum"
+              "text": "Better understand Code.org's {module} curriculum"
             },
             {
               "value": "learn_content_module",
-              "text": "Learn the {computer science and/or AI} content covered in this module"
+              "text": "Learn the {module} content covered in this module"
             },
             {
               "value": "learn_cs_teaching_strategies",
-              "text": "Learn best strategies for teaching {computer science and/or AI}"
+              "text": "Learn best strategies for teaching {module}"
             },
             {
               "value": "continuing_education_requirements",
@@ -390,31 +300,13 @@
           "hasOther": true
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "module_navigation",
           "title": "Navigating this self-paced module was clear and easy.",
-          "choices": [
-            {
-              "value": "1",
-              "text": "Strongly disagree"
-            },
-            {
-              "value": "2",
-              "text": "Disagree"
-            },
-            {
-              "value": "3",
-              "text": "Neutral"
-            },
-            {
-              "value": "4",
-              "text": "Agree"
-            },
-            {
-              "value": "5",
-              "text": "Strongly agree"
-            }
-          ]
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
         },
         {
           "type": "matrix",
@@ -540,127 +432,62 @@
           "hasOther": true
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "plan_ongoing_assessment",
           "title": "After completing this module, I have a clear idea of how I will incorporate ongoing assessment into my {module} class",
-          "choices": [
-            {
-              "value": "1",
-              "text": "Strongly disagree"
-            },
-            {
-              "value": "2",
-              "text": "Disagree"
-            },
-            {
-              "value": "3",
-              "text": "Neutral"
-            },
-            {
-              "value": "4",
-              "text": "Agree"
-            },
-            {
-              "value": "5",
-              "text": "Strongly agree"
-            }
-          ]
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "plan_to_teach",
           "title": "Are you planning to teach Code.org's {module} content?",
           "natalia_comment": "NOTE: set the {module} variable in the simple survey configuration to pass-through the value you want to appear in the survey (eg. computer vision)",
-          "choices": [
-            {
-              "value": "def_yes",
-              "text": "Yes, definitely"
-            },
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "prob_yes",
-              "text": "Yes, probably"
-            },
-            {
-              "value": "dont_know",
-              "text": "I don't know yet"
-            },
-            {
-              "value": "prob_not",
-              "text": "I don't think so"
-            },
-            {
-              "value": "no",
-              "text": "No"
-            },
-            {
-              "value": "def_no",
-              "text": "Definitely no"
-            }
-          ]
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Definitely no",
+          "maxRateDescription": "Yes, definitely"
         },
         {
-          "type": "radiogroup",
+          "type": "rating",
           "name": "plan_use_skills_learned",
           "title": "Are you planning to use what you learned in this module in your role as an educator?",
-          "choices": [
-            {
-              "value": "def_yes",
-              "text": "Yes, definitely"
-            },
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "prob_yes",
-              "text": "Yes, probably"
-            },
-            {
-              "value": "dont_know",
-              "text": "I don't know yet"
-            },
-            {
-              "value": "prob_not",
-              "text": "I don't think so"
-            },
-            {
-              "value": "no",
-              "text": "No"
-            },
-            {
-              "value": "def_no",
-              "text": "Definitely no"
-            }
-          ]
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Definitely no",
+          "maxRateDescription": "Yes, definitely"
         },
         {
           "type": "checkbox",
           "name": "race_eth",
-          "title": "Which of the following best represents your racial or ethnic background? Please select all that apply. (optional)",
+          "title": "Which of the following best represents your racial or ethnic background? (Optional)",
+          "description": "(Select all that apply)",
           "choices": [
             {
-              "value": "white",
-              "text": "White/Caucasian"
+              "value": "black",
+              "text": "African American/Black"
+            },
+            {
+              "value": "asian",
+              "text": "Asian"
+            },
+            {
+              "value": "hawaiian_pi",
+              "text": "Hawaiian, or Pacific Islander"
             },
             {
               "value": "hispanic",
               "text": "Hispanic or Latino/Latina"
             },
             {
-              "value": "black",
-              "text": "African American/Black"
-            },
-            {
-              "value": "hawaiian_pi",
-              "text": "Asian, Hawaiian, or Pacific Islander"
-            },
-            {
               "value": "native_am",
               "text": "Native American or American Indian"
+            },
+            {
+              "value": "white",
+              "text": "White/Caucasian"
             },
             {
               "value": "not_listed",
@@ -716,12 +543,12 @@
               "text": "District level coach/specialist"
             },
             {
-              "value": "outside_school",
-              "text": "Out-of-school educator (e.g. tutor, after school teacher)"
+              "value": "administrator",
+              "text": "School/District administrator"
             },
             {
-              "value": "administrator",
-              "text": "Administrator"
+              "value": "outside_school",
+              "text": "Out-of-school educator (e.g. tutor, after school teacher)"
             }
           ],
           "hasOther": true

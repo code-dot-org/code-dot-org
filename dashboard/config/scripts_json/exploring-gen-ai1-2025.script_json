@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-28 18:19:42 UTC",
+    "serialized_at": "2025-05-01 16:47:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2372,7 +2372,7 @@
       "key": "700175f3-f651-4a30-82ee-8165f6e7b20b",
       "position": 2,
       "properties": {
-        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/4f39fb6057e7fee36c657f20c1bf253d-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Create a mad-lib using the cards in your group. You can be as silly or as serious as you’d like. Once you’re done, we’ll share a few as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in with groups as they use the cards to complete their mad-libs. Identify a few unique stories to share out as a class.\n\t\t<br />\n\t\t<br />As groups are finishing up, bring up the <a href=\"https://studio.code.org/s/gen-ai-foudations-pilot-v1/lessons/9/levels/1\" target=\"_blank\">Mad Lib Generator app</a> and go into the “Generate Mad Lib” screen. This app does not need to be used by students - instead, you can drive this app while projecting to the class.\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/4f39fb6057e7fee36c657f20c1bf253d-Slide10.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Create a mad-lib using the cards in your group. You can be as silly or as serious as you’d like. Once you’re done, we’ll share a few as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in with groups as they use the cards to complete their mad-libs. Identify a few unique stories to share out as a class.\n\t\t<br />\n\t\t<br />As groups are finishing up, bring up the Mad Lib Generator app and go into the “Generate Mad Lib” screen. This app does not need to be used by students - instead, you can drive this app while projecting to the class.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "700175f3-f651-4a30-82ee-8165f6e7b20b",
@@ -3170,6 +3170,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "exploring_generative_ai_lesson1_2_level1"
+        ],
+        "progression": "AI Newsroom Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "exploring_generative_ai_lesson1_2_level1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
+      },
+      "level_keys": [
+        "exploring_generative_ai_lesson1_2_level1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "genai-lesson2-warmup-lv1_2025"
         ],
         "progression": "Warm Up"
@@ -3189,7 +3214,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3214,7 +3239,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3239,7 +3264,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3264,7 +3289,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3289,7 +3314,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3314,7 +3339,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3339,7 +3364,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3364,7 +3389,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3389,7 +3414,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3414,7 +3439,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3439,7 +3464,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3464,7 +3489,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3489,7 +3514,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3514,7 +3539,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3539,7 +3564,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3564,7 +3589,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3589,7 +3614,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3611,31 +3636,6 @@
       },
       "level_keys": [
         "genai-lesson7-warmup-lv2_2025"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "exploring_generative_ai_lesson1_2_level1"
-        ],
-        "progression": "AI Newsroom Playground"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "exploring_generative_ai_lesson1_2_level1"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
-      },
-      "level_keys": [
-        "exploring_generative_ai_lesson1_2_level1"
       ]
     }
   ],
@@ -3674,6 +3674,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "7cf7df2c-6f73-4ea1-9f4e-615128b54e12"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "exploring_generative_ai_lesson1_2_level1",
+        "script_level.level_keys": [
+          "exploring_generative_ai_lesson1_2_level1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
       }
     },
     {
@@ -3890,18 +3902,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "200aae2d-f3f5-4527-8339-2950213c97e1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "exploring_generative_ai_lesson1_2_level1",
-        "script_level.level_keys": [
-          "exploring_generative_ai_lesson1_2_level1"
-        ],
-        "lesson.key": "lesson-10",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "exploring-gen-ai1-2025",
-        "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
       }
     }
   ],
