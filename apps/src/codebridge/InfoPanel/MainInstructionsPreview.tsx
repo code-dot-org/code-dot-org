@@ -24,10 +24,8 @@ const MainInstructionsPreview: React.FunctionComponent<
     <div
       key={instructionsText}
       id="instructions-text"
-      className={classNames(
-        moduleStyles['bubble-' + theme],
-        moduleStyles.bubbleNoSlide
-      )}
+      className={classNames(moduleStyles.bubble, moduleStyles.bubbleNoSlide)}
+      data-theme={theme}
     >
       <MainInstructionsContent
         instructionsText={instructionsText}
