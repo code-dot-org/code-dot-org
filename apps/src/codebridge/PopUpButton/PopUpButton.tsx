@@ -14,6 +14,7 @@ type PopUpButtonProps = {
   id?: string;
   disabled?: boolean;
   ariaLabel?: string;
+  initialFocusId?: string;
 };
 
 const TOP_PADDING = 5;
@@ -26,6 +27,7 @@ export const PopUpButton = ({
   id,
   disabled,
   ariaLabel,
+  initialFocusId,
 }: PopUpButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [buttonRef, setButtonRef] = useState<HTMLElement | null>(null);
@@ -127,7 +129,9 @@ export const PopUpButton = ({
           <FocusTrap
             focusTrapOptions={{
               clickOutsideDeactivates: true,
-              fallbackFocus: '#fallback-element',
+              fallbackFocus: initialFocusId
+                ? `#${initialFocusId}`
+                : '#fallback-element',
             }}
           >
             <div
