@@ -114,8 +114,6 @@ button.validationButton {
   }
 
   code {
-    // TODO: decide if we want to use a different background color on this/on pre blocks
-    // And decide what color text to use.
     color: var(--brand-teal-70);
     // Allow code to wrap.
     white-space: pre-wrap;
