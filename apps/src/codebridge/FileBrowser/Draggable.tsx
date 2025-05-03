@@ -40,8 +40,9 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
   className,
   onKeyDown,
 }: DraggableProps) => {
+  const draggableId = `${data.type}-${data.id}-draggable`;
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
-    id: `${data.type}-${data.id}`,
+    id: draggableId,
     data,
   });
   const style = transform
