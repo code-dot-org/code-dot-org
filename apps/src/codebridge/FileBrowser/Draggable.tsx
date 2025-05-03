@@ -85,8 +85,15 @@ type NotDraggableProps = {
 export const NotDraggable: React.FunctionComponent<NotDraggableProps> = ({
   children,
   handleKeyDown,
-}) => (
-  <div onKeyDown={handleKeyDown} tabIndex={-1}>
-    {children}
-  </div>
-);
+}: NotDraggableProps) => {
+  return React.createElement(
+    'div',
+    {
+      onkeydown: handleKeyDown,
+      className: moduleStyles.notDraggable,
+      tabIndex: 0,
+      role: 'button',
+    },
+    children
+  );
+};
