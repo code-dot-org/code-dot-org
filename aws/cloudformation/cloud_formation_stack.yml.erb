@@ -58,7 +58,7 @@ Parameters:
     MaxLength: 16
   DBInstanceType:
     Type: String
-    Default: db.r5.2xlarge
+    Default: <%=rack_env?(:production) ? 'db.r6i.8xlarge' : 'db.t4g.large'%>
   DBBackupRetention:
     Type: Number
     Default: 5
