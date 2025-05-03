@@ -94,7 +94,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
 
   const onConsoleDropdownChange = (value: string) => {
     const selectedConsoleKey = getSelectedKey(value);
-    setSelectedConsoleFontSizeValue(getSelectedKey(value));
+    setSelectedConsoleFontSizeValue(selectedConsoleKey);
     handleFontSizeChange(
       'Console',
       selectedConsoleKey,
