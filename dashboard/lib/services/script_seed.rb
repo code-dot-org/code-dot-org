@@ -267,8 +267,8 @@ module Services
         seed_context.learning_goals = import_learning_goals(learning_goals_data, seed_context)
         seed_context.learning_goal_evidence_levels = import_learning_goals_evidence_levels(learning_goals_evidence_levels_data, seed_context)
 
-        seed_context.skills = import_skills(skills_data, seed_context)
-        seed_context.levels_skills = import_levels_skills(levels_skills_data, seed_context)
+        seed_context.skills = Skill.all
+        seed_context.levels_skills = LevelsSkill.all
 
         # generate_plc_objects must be run after lessons are added.
         seed_context.script.generate_plc_objects
