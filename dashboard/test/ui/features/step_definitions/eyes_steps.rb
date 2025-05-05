@@ -27,9 +27,6 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
     config[:viewport_size] = {width: 1024, height: 690}
   end
   @browser.capabilities[:takes_screenshot] = true
-  @eyes.force_full_page_screenshot = true
-  # Default stitch mode can be customized for each checkpoint in the I See No Difference step.
-  @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
 
   @eyes.open(config)
 end
@@ -58,22 +55,7 @@ And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?( withou
   end
 
   is_full_page_screenshot = stitch_mode != "none"
-
-  if is_full_page_screenshot
-    @eyes.stitch_mode = stitch_mode == "scroll" ?
-      Applitools::STITCH_MODE[:scroll] :
-      Applitools::STITCH_MODE[:css]
-  else
-    @eyes.force_full_page_screenshot = false
-  end
-
   @eyes.check_window(identifier, MATCH_TIMEOUT, is_full_page_screenshot)
-
-  # Return to full page screenshot for remaining checkpoints in this Scenario.
-  @eyes.force_full_page_screenshot = true
-
-  # Return to default stitch mode for remaining checkpoints in this Scenario.
-  @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
 end
 
 And(/^I see no difference for "([^"]*)" within "([^"]*)"$/) do |identifier, selector|
@@ -85,12 +67,7 @@ And(/^I see no difference for "([^"]*)" within "([^"]*)"$/) do |identifier, sele
     element.displayed? && fonts_loaded?
   end
 
-  initial_force_full_page_screenshot = @eyes.force_full_page_screenshot
-  @eyes.force_full_page_screenshot = false
-
   @eyes.check_region(element, tag: identifier, match_timeout: MATCH_TIMEOUT, stitch_content: true)
-
-  @eyes.force_full_page_screenshot = initial_force_full_page_screenshot
 end
 
 And(/^The header is finished animating$/) do
