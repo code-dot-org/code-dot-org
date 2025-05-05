@@ -17,6 +17,7 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {BlocklySource} from '@cdo/apps/lab2/types';
+import Documentation from '@cdo/apps/lab2/views/components/Documentation';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -496,6 +497,16 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                 <AdvancedControls />
               </div>
             )}
+          </PanelContainer>
+        </div>
+        <div className={moduleStyles.documentationPanel}>
+          <PanelContainer
+            id="documentation-panel"
+            headerContent="Documentation"
+          >
+            <div className={moduleStyles.documentationArea}>
+              <Documentation expressionKey="play_sample" />
+            </div>
           </PanelContainer>
         </div>
 

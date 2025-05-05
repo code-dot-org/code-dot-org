@@ -105,7 +105,8 @@ class ProgrammingExpressionsController < ApplicationController
   def show_by_keys
     return render :not_found unless @programming_expression
     @programming_environment_categories = @programming_expression.programming_environment.categories_for_navigation
-    return render :show
+    #return render :show
+    render(status: :ok, json: @programming_expression.to_json)
   end
 
   def destroy
