@@ -95,4 +95,8 @@ div.heroBannerAnnouncementBanner {
     flex: 1;
     border-radius: variables.$regular-border-radius;
   }
+
+  .heroBannerMediaImage img {
+    object-fit: contain;
+  }
 }

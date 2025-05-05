@@ -34,8 +34,8 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       group: 'style',
       validations: {
         in: [
+          {value: 'Small', displayName: 'Small'},
           {value: 'Big', displayName: 'Big'},
-          {value: 'Large', displayName: 'Large'},
         ],
       },
     },
