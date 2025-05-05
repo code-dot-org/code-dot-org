@@ -57,15 +57,17 @@ And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?( withou
     fonts_loaded? && (skip_fa_wait || font_awesome_loaded?)
   end
 
-  if stitch_mode == "none"
-    @eyes.force_full_page_screenshot = false
-  else
+  is_full_page_screenshot = stitch_mode != "none"
+
+  if is_full_page_screenshot
     @eyes.stitch_mode = stitch_mode == "scroll" ?
       Applitools::STITCH_MODE[:scroll] :
       Applitools::STITCH_MODE[:css]
+  else
+    @eyes.force_full_page_screenshot = false
   end
 
-  @eyes.check_window(identifier, MATCH_TIMEOUT, false)
+  @eyes.check_window(identifier, MATCH_TIMEOUT, is_full_page_screenshot)
 
   # Return to full page screenshot for remaining checkpoints in this Scenario.
   @eyes.force_full_page_screenshot = true
