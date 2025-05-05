@@ -43,14 +43,15 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
   bodyComponent,
 }) => {
   const {theme} = useTheme();
+  const hasBodyComponent = !!bodyComponent;
   return (
     <div className={moduleStyles['genericDialog-' + theme]}>
       {titleComponent ? (
         titleComponent
       ) : title ? (
-        <Heading3>{title}</Heading3>
+        <Heading3 className={moduleStyles.title}>{title}</Heading3>
       ) : null}
-      {bodyComponent || <BodyTwoText>{message}</BodyTwoText>}
+      {hasBodyComponent ? bodyComponent : <BodyTwoText>{message}</BodyTwoText>}
       <div className={moduleStyles.spinnerContainer}>
         <FontAwesomeV6Icon
           iconName="spinner"

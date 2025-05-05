@@ -10,8 +10,7 @@
     "csp7-2025",
     "csp8-2025",
     "csp9-2025",
-    "csp10-2025",
-    "csp-post-survey-2025"
+    "csp10-2025"
   ],
   "original_script_names": [
     "csp1-2025",
@@ -23,8 +22,7 @@
     "csp7-2025",
     "csp8-2025",
     "csp9-2025",
-    "csp10-2025",
-    "csp-post-survey-2025"
+    "csp10-2025"
   ],
   "published_state": "beta",
   "instruction_type": "teacher_led",

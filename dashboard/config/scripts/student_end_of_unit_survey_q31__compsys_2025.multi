@@ -1,7 +1,7 @@
 name 'student-end-of-unit-survey-q31_-compsys_2025'
 type 'multi2'
 
-question 'What challenges did you face during this unit? (Choose top **two**)'
+question 'What challenges did you face during this unit? (Choose top **two**.)'
 
 right 'Understanding the concepts'
 right 'Keeping up with assignments'

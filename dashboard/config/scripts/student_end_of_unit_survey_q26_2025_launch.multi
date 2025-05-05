@@ -1,14 +1,14 @@
 name 'student-end-of-unit-survey-q26_2025-launch'
 
-question 'I had opportunities to problem solve when something didn\'t work the way I wanted it to work.'
+question 'Because of this unit, I see failure as a natural and expected part of the problem solving process.'
 
-right 'Strongly agree'
-right 'Agree'
-right 'Slightly agree'
-right 'Neither'
-right 'Slightly disagree'
-right 'Disagree'
 right 'Strongly disagree'
+right 'Disagree'
+right 'Slightly disagree'
+right 'Neither'
+right 'Slightly agree'
+right 'Agree'
+right 'Strongly agree'
 
 allow_multiple_attempts true
 

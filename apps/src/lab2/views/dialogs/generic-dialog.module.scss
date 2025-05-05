@@ -1,5 +1,5 @@
-@import 'color.scss';
 @import './dialog-manager.module.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 %generic-dialog {
   @extend %dialog;
@@ -19,9 +19,11 @@
   h4,
   h5,
   h6,
-  p,
   strong {
-    color: $light_white;
+    color: var(--text-neutral-primary);
+  }
+  p {
+    color: var(--text-neutral-secondary);
   }
 }
 
@@ -29,12 +31,26 @@
   @extend %generic-dialog;
 }
 
+.title {
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.bodyText {
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+.bodyComponent {
+  padding-bottom: 12px;
+}
+
 .buttonContainer {
   .outerButtonContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 16px;
 
     .innerButtonContainer {
       display: flex;
@@ -54,5 +70,5 @@
 
 .spinnerIcon {
   font-size: 36px;
-  color: $white;
+  color: var(--neutral-base-white);
 }

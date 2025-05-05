@@ -5,8 +5,7 @@ import {detachExperienceStyles} from '@contentful/experiences-sdk-react';
 import {Metadata} from 'next';
 import {draftMode} from 'next/headers';
 
-import FontLoader from '@code-dot-org/fonts/FontLoader';
-
+import Bootstrap from '@/bootstrap';
 import {Brand} from '@/config/brand';
 import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 import {getExperience} from '@/contentful/get-experience';
@@ -78,7 +77,7 @@ export default async function ExperiencePage({
 
   return (
     <main style={{width: '100%'}}>
-      <FontLoader locale={pageProps.locale} />
+      <Bootstrap locale={pageProps.locale} />
       {stylesheet && <style>{stylesheet}</style>}
       <ExperiencePageLoader
         experienceJSON={experienceJSON}

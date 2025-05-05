@@ -53,3 +53,16 @@
     padding-block: 4rem;
   }
 }
+
+// Section divider
+.hasDivider {
+  padding-bottom: 0;
+
+  .container {
+    margin-bottom: 4rem;
+  }
+
+  hr {
+    max-width: 960px;
+  }
+}

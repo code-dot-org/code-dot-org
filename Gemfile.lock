@@ -295,6 +295,7 @@ GEM
     childprocess (5.1.0)
       logger (~> 1.5)
     chronic (0.10.2)
+    chunky_png (1.3.6)
     cld (0.13.0)
       ffi
     cldr-plurals-runtime-rb (1.1.0)
@@ -321,7 +322,7 @@ GEM
     crowdin-api (1.10.0)
       open-uri (>= 0.1.0, < 0.2.0)
       rest-client (>= 2.0.0, < 2.2.0)
-    css_parser (1.21.1)
+    css_parser (1.19.0)
       addressable
     csv (3.3.0)
     cucumber (3.1.1)
@@ -376,22 +377,20 @@ GEM
     eventmachine (1.2.7)
     execjs (2.7.0)
     exifr (1.2.5)
-    eyes_core (4.6.3)
-      colorize
-      eyes_universal (~> 3.3.3)
+    eyes_core (3.18.4)
+      chunky_png (= 1.3.6)
       faraday
       faraday-cookie_jar
       faraday_middleware
+      oily_png (~> 1.2)
       oj
-      sorted_set
-      websocket
-    eyes_selenium (4.6.3)
+    eyes_selenium (3.18.4)
       crass
       css_parser
-      eyes_core (= 4.6.3)
-      selenium-webdriver (>= 3)
+      eyes_core (= 3.18.4)
+      nokogiri
+      selenium-webdriver
       state_machine
-    eyes_universal (3.3.3)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.2.0)
@@ -428,7 +427,7 @@ GEM
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
-    faraday_middleware (1.2.1)
+    faraday_middleware (1.2.0)
       faraday (~> 1.0)
     ffi (1.17.0)
     ffi-compiler (1.0.1)
@@ -633,6 +632,8 @@ GEM
     octokit (6.0.1)
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
+    oily_png (1.2.0)
+      chunky_png (~> 1.3.1)
     oj (3.16.5)
       bigdecimal (>= 3.0)
       ostruct (>= 0.2)
@@ -1024,7 +1025,7 @@ DEPENDENCIES
   dotiw
   drb
   execjs
-  eyes_selenium (~> 4.0)
+  eyes_selenium (= 3.18.4)
   factory_bot_rails (~> 6.2)
   fakefs (~> 2.5.0)
   faker (~> 3.4)
