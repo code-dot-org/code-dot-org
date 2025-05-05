@@ -52,9 +52,9 @@ const FreeResponseStudentResponseRow: React.FC<
         <Tags
           tagsList={[
             {
-              label: FEEDBACK_TYPE.NEEDS_REVIEW.label,
+              label: FEEDBACK_TYPE.NOT_PROFICIENT.label,
               icon: {
-                iconName: FEEDBACK_TYPE.NEEDS_REVIEW.icon,
+                iconName: FEEDBACK_TYPE.NOT_PROFICIENT.icon,
                 iconStyle: 'solid',
                 title: 'exclamation point',
                 placement: 'left',

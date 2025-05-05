@@ -22,7 +22,7 @@ Feature: Using the teacher homepage
     And I join the section
 
     # Navigate to the new teacher homepage
-    Then I sign out and sign in as "Hank"
+    Then I sign out and sign in as "Teacher Hank"
     Given I am on "http://studio.code.org/teacher_dashboard/home"
     And I wait to see "#ui-test-section-list"
     And I see no difference for "teacher homepage"
