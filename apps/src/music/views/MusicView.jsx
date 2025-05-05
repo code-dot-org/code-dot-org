@@ -657,10 +657,10 @@ class UnconnectedMusicView extends React.Component {
 
     const codeChanged = this.compileSong();
     if (codeChanged) {
-      this.executeCompiledSong().then(() => {
+      this.executeCompiledSong().then(playbackEvents => {
         // If code has changed mid-playback, clear and re-queue all events in the player
         if (this.props.isPlaying) {
-          this.player.playEvents(this.sequencer.getPlaybackEvents(), true);
+          this.player.playEvents(playbackEvents, true);
         }
       });
 
@@ -738,7 +738,7 @@ class UnconnectedMusicView extends React.Component {
   };
 
   // Execute a song that has already been compiled from Blockly sources.
-  executeCompiledSong = () => {
+  executeCompiledSong = async () => {
     if (!this.sequencer) {
       return;
     }
@@ -755,15 +755,31 @@ class UnconnectedMusicView extends React.Component {
     this.musicBlocklyWorkspace.executeAllTriggers();
     const allTriggerEvents = this.sequencer.getPlaybackEvents();
 
+    let lastMeasure = 0;
+    const playbackEvents = [];
+
+    // Execute main "when run" song code.
     this.sequencer.clear();
-    this.musicBlocklyWorkspace.executeCompiledSong(this.playingTriggers);
-    this.props.addPlaybackEvents(this.sequencer.getPlaybackEvents());
-    this.props.setLastMeasure(this.sequencer.getLastMeasure());
+    this.musicBlocklyWorkspace.executeCompiledSong();
+    lastMeasure = Math.max(lastMeasure, this.sequencer.getLastMeasure());
+    playbackEvents.push(...this.sequencer.getPlaybackEvents());
+
+    // Execute any active triggers
+    for (const {id, startPosition} of this.playingTriggers) {
+      this.sequencer.clear();
+      this.musicBlocklyWorkspace.executeTrigger(id, startPosition);
+      lastMeasure = Math.max(lastMeasure, this.sequencer.getLastMeasure());
+      playbackEvents.push(...this.sequencer.getPlaybackEvents());
+    }
+
+    this.props.addPlaybackEvents(playbackEvents);
+    this.props.setLastMeasure(lastMeasure);
     this.props.addOrderedFunctions({
       orderedFunctions: this.sequencer.getOrderedFunctions?.() || [],
     });
 
-    return this.preloadSounds(allTriggerEvents);
+    await this.preloadSounds(allTriggerEvents);
+    return playbackEvents;
   };
 
   // Execute some song code directly.  Called by the JavaScript editor.
