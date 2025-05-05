@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-02 00:59:12 UTC",
+    "serialized_at": "2025-05-02 18:39:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6401,7 +6401,7 @@
       }
     },
     {
-      "name": "Technology Ethics Roleplaying Discussion Guide",
+      "name": "Technology Ethics Discussion Guide",
       "url": "https://docs.google.com/document/d/1PZ_e2m9wDqctgwZCiTo6CZYu1yPVxAdl1yhJVfry5aI/edit?usp=sharing",
       "key": "technology_ethics_roleplaying_discussion_guide",
       "properties": {

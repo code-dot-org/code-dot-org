@@ -1,12 +1,16 @@
+import {env} from 'next-runtime-env';
+
 export type Stage = 'development' | 'pr' | 'test' | 'production';
 
 export function getStage(): Stage {
-  switch (process.env.STAGE) {
+  const stage = env('NEXT_PUBLIC_STAGE') as Stage;
+
+  switch (stage) {
     case 'development':
     case 'test':
     case 'production':
     case 'pr':
-      return process.env.STAGE;
+      return stage;
     default:
       return 'development';
   }

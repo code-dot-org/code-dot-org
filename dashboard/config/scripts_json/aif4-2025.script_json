@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-02 01:04:36 UTC",
+    "serialized_at": "2025-05-04 21:57:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1805,7 +1805,13 @@
       "key": "3535f754-348d-4398-80a4-276afb73f25c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define redundancy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Provide each student with a copy of *Network Diagram Analysis* activity guide."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define redundancy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Provide each student with a copy of *Network Diagram Analysis* activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider assigning rotating roles within each pair—Navigator (operates the simulator) and Logger (records diagrams and notes)—to ensure both students stay engaged and contribute meaningfully."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3535f754-348d-4398-80a4-276afb73f25c",

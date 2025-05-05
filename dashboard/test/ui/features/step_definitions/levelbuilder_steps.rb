@@ -262,8 +262,11 @@ Then(/^I add the temp unit to the course$/) do
 end
 
 Then(/^I add the unit "([^"]*)" to the course$/) do |unit_name|
+  steps %{
+    And I scroll the ".uitest-unit-selector" element into view
+  }
   last_dropdown = @browser.find_elements(:css, '.uitest-unit-selector').last
-  select_dropdown(last_dropdown, unit_name, nil)
+  Selenium::WebDriver::Support::Select.new(last_dropdown).select_by(:text, unit_name)
 end
 
 Given(/^I delete the temp course?$/) do
