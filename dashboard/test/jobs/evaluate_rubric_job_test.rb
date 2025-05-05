@@ -165,7 +165,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
 
     stub_get_openai_evaluations(code: violating_code)
 
-    ShareFiltering.stubs(:find_share_failure).with(violating_code, 'en', exceptions: true).raises(
+    ShareFiltering.stubs(:find_failure).with(violating_code, 'en', exceptions: true).raises(
       ProfanityFilterException.new(
         "Profanity Failure",
         ShareFailure.new('profanity', 'damn')
