@@ -30,15 +30,26 @@ export const getExperience = cache(
     }
 
     let experience: Awaited<ReturnType<typeof fetchBySlug>> | undefined;
+    const start = Date.now();
 
     try {
+      console.log(
+        `Fetching experience for slug: ${slug} and locale: ${localeCode} at ${start}`,
+      );
       experience = await fetchBySlug({
         client,
         slug,
         experienceTypeId: process.env.CONTENTFUL_EXPERIENCE_CONTENT_TYPE_ID!,
         localeCode,
       });
+      console.log(
+        `Finished fetching experience for slug: ${slug} and locale: ${localeCode} at ${Date.now() - start}`,
+      );
     } catch (error) {
+      console.error(
+        `ERROR fetching experience for slug: ${slug} and locale: ${localeCode} at ${Date.now() - start}`,
+        error,
+      );
       return {experience, error: error as Error};
     }
 
