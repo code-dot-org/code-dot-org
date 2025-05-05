@@ -64,45 +64,6 @@ Feature: Checking the footer appearance
 
     Then I close my eyes
 
-  # TODO: Fix and re-enable (find #sharing-dialog-copy-button element)
-  @eyes @skip
-  Scenario: Desktop Minecraft share small footer
-    When I open my eyes to test "Desktop Minecraft share small footer"
-    Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
-    And I wait for the lab page to fully load
-    And I press "runButton"
-    And I wait until element "#sharing-dialog-copy-button" is visible
-    And I navigate to the share URL
-    And I wait until element ".small-footer-base" is visible
-
-    Then I see no difference for "small footer"
-
-    When I open the small footer menu
-    Then I see no difference for "footer menu"
-
-    When I press menu item "Copyright"
-    Then I see no difference for "copyright modal"
-    And I wait for 0.25 seconds
-    And I close the small footer menu
-
-    # While we're at it, check the footer on the "How it Works" page
-    When I select the "How it Works (View Code)" small footer item
-    And I wait for 2 seconds
-    And I wait until element "#runButton" is visible
-    Then I see no difference for "how it works small footer"
-
-    When I open the small footer menu
-    And I wait for 0.25 seconds
-    Then I see no difference for "how it works footer menu"
-    And I close the small footer menu
-    And I wait for 0.25 seconds
-
-    When I press the first ".copyright-button" element
-    And I wait for 0.25 seconds
-    Then I see no difference for "how it works copyright modal"
-
-    Then I close my eyes
-
   @eyes @as_student
   Scenario: Desktop Applab share small footer
     When I open my eyes to test "Desktop Applab share small footer"
@@ -110,61 +71,6 @@ Feature: Checking the footer appearance
     And I navigate to the shared version of my project
     And I wait until element ".small-footer-base" is visible
     And I wait for 2 seconds
-
-    Then I see no difference for "small footer"
-
-    When I open the small footer menu
-    Then I see no difference for "footer menu"
-
-    When I press menu item "Copyright"
-    Then I see no difference for "copyright modal"
-
-    Then I close my eyes
-
-  @eyes_mobile @skip
-  Scenario: Mobile Star Wars share small footer
-    When I open my eyes to test "Mobile Star Wars share small footer"
-    Given I am on "http://studio.code.org/s/starwars/lessons/1/levels/15?noautoplay=true"
-    And I wait for the lab page to fully load
-    And I press "runButton"
-    And I wait until element "#finishButton" is visible
-    And I press "finishButton"
-    And I wait until element "#sharing-dialog-copy-button" is visible
-    And I rotate to portrait
-    And I wait for 0.5 seconds
-    And I navigate to the share URL
-    And I wait until element ".small-footer-base" is visible
-
-    # Additional wait to let scroll position settle and possibly have the
-    # pin-to-home-screen popup go away
-    And I wait for 10 seconds
-
-    Then I see no difference for "small footer"
-
-    When I open the small footer menu
-    Then I see no difference for "footer menu"
-
-    When I press menu item "Copyright"
-    Then I see no difference for "copyright modal"
-
-    Then I close my eyes
-
-  # TODO: Fix and re-enable (find #sharing-dialog-copy-button element)
-  @eyes_mobile @skip
-  Scenario: Mobile Minecraft share small footer
-    When I open my eyes to test "Mobile Minecraft share small footer"
-    Given I am on "http://studio.code.org/s/mc/lessons/1/levels/14?noautoplay=true"
-    And I wait for the lab page to fully load
-    And I press "runButton"
-    And I wait until element "#sharing-dialog-copy-button" is visible
-    And I rotate to portrait
-    And I wait for 0.5 seconds
-    And I navigate to the share URL
-    And I wait until element ".small-footer-base" is visible
-
-    # Additional wait to let scroll position settle and possibly have the
-    # pin-to-home-screen popup go away
-    And I wait for 10 seconds
 
     Then I see no difference for "small footer"
 

@@ -28,16 +28,6 @@ Scenario: Fallback player for embedded
   And I see no difference for "fallback video player for embedded"
   And I close my eyes
 
-# Starting in Chrome 62, sites can no longer automatically run plugins.
-# Skip entirely for now, because this does not work in other browsers
-# either, and therefore does not work in any browser we currently run.
-@skip
-Scenario: Flash fallback player gets injected in Chrome (assuming Flash is available)
-  Given I am on "http://studio.code.org/flappy/1?force_youtube_fallback"
-  When I wait to see "#x-close"
-  Then I see ".video-js"
-  Then I see jquery selector object[type='application/x-shockwave-flash']
-
 @no_mobile
 Scenario: Normal player
   Given I am on "http://studio.code.org/flappy/1"
