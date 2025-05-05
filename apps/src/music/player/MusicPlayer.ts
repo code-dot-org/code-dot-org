@@ -5,7 +5,15 @@ import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {DEFAULT_CHORD_LENGTH, MIN_BPM, MAX_BPM} from '../constants';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
-import {getPitchName, getTranposedNote, Key} from '../utils/Notes';
+import {
+  getPitchName,
+  getNotesInKey,
+  getTranposedNote,
+  Key,
+} from '../utils/Notes';
+
+const START_OCTAVE = 4;
+const DISPLAY_OCTAVES = 3;
 
 import {
   ChordEvent,
@@ -16,6 +24,7 @@ import {Effects} from './interfaces/Effects';
 import {
   InstrumentEvent,
   InstrumentEventValue,
+  InstrumentTickEvent,
   isInstrumentEvent,
 } from './interfaces/InstrumentEvent';
 import {PlaybackEvent} from './interfaces/PlaybackEvent';
@@ -454,11 +463,19 @@ export default class MusicPlayer {
     instrumentEvent: InstrumentEvent
   ): SamplerSequence | null {
     const {value, effects, when} = instrumentEvent;
-    const {instrument, events} = value;
+    const {instrument, events, scaleMode} = value;
+    const filterFn =
+      scaleMode === 'simple'
+        ? (event: InstrumentTickEvent) =>
+            getNotesInKey(this.key, START_OCTAVE, DISPLAY_OCTAVES).includes(
+              event.note
+            )
+        : () => true;
+
     return {
       instrument,
       effects,
-      events: events.map(event => {
+      events: events.filter(filterFn).map(event => {
         return {
           notes: [getPitchName(event.note)],
           playbackPosition: when + (event.tick - 1) / 16,

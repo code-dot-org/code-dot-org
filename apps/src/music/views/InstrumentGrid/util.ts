@@ -1,7 +1,8 @@
+import {ScaleMode} from '../../player/interfaces/InstrumentEvent';
 import MusicLibrary from '../../player/MusicLibrary';
 import {getNoteName, getNotesInKey, Key} from '../../utils/Notes';
 
-import {EditorType, ScaleMode} from '.';
+import {EditorType} from '.';
 
 const START_OCTAVE = 4;
 const DISPLAY_OCTAVES = 3;

@@ -2,8 +2,12 @@ import * as GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {InstrumentEventValue} from '../player/interfaces/InstrumentEvent';
-import {getNoteName} from '../utils/Notes';
+import MusicRegistry from '../MusicRegistry';
+import {
+  InstrumentTickEvent,
+  InstrumentEventValue,
+} from '../player/interfaces/InstrumentEvent';
+import {getNoteName, getNotesInKey} from '../utils/Notes';
 import {generateGraphDataFromTune, TuneGraphEvent} from '../utils/Tunes';
 import InstrumentGrid from '../views/InstrumentGrid';
 
@@ -14,6 +18,9 @@ const MAX_DISPLAY_NOTES = 3;
 const FIELD_WIDTH = 51;
 const FIELD_HEIGHT = 18;
 const FIELD_PADDING = 2;
+
+const START_OCTAVE = 4;
+const DISPLAY_OCTAVES = 3;
 
 interface FieldTuneOptions {
   currentValue: InstrumentEventValue;
@@ -110,8 +117,19 @@ export default class FieldTune extends GoogleBlockly.Field {
       this.backgroundElement
     );
 
+    const {events, scaleMode} = this.getValue();
+    const key = MusicRegistry.player.getKey();
+
+    const filterFn =
+      scaleMode === 'simple'
+        ? (event: InstrumentTickEvent) =>
+            getNotesInKey(key, START_OCTAVE, DISPLAY_OCTAVES).includes(
+              event.note
+            )
+        : () => true;
+
     const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({
-      value: this.getValue(),
+      notes: events.filter(filterFn),
       width: FIELD_WIDTH,
       height: FIELD_HEIGHT,
       numOctaves: 3,

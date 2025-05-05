@@ -10,7 +10,10 @@ import React, {
 } from 'react';
 
 import MusicRegistry from '../../MusicRegistry';
-import {InstrumentEventValue} from '../../player/interfaces/InstrumentEvent';
+import {
+  InstrumentEventValue,
+  ScaleMode,
+} from '../../player/interfaces/InstrumentEvent';
 import {getPitchName, isBlackKey} from '../../utils/Notes';
 import LoadingOverlay from '../LoadingOverlay';
 import PreviewControlsV2 from '../PreviewControlsV2';
@@ -28,7 +31,6 @@ interface Props {
 }
 
 export type EditorType = 'drums' | 'notes';
-export type ScaleMode = 'simple' | 'chromatic';
 
 /**
  * Instrument grid editor for selecting notes in a pattern.
@@ -44,7 +46,9 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   const [currentValue, setCurrentValue] = useState(initialValue);
   const [isLoading, setIsLoading] = useState(false);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
-  const [scaleMode, setScaleMode] = useState<ScaleMode>('simple');
+  //const [scaleMode, setScaleMode] = useState<ScaleMode>('simple');
+
+  const scaleMode = currentValue.scaleMode;
 
   useEffect(() => {
     onChange(currentValue);
@@ -113,7 +117,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     () =>
       getDisplayNotes(
         editorType,
-        scaleMode,
+        scaleMode || 'simple',
         currentValue.instrument,
         MusicRegistry.player.getKey()
       ).sort((a, b) => b.note - a.note), // Sort descending
@@ -122,12 +126,13 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
   const ticks = integers(lengthMeasures * 16, 1);
 
-  const interfaceMode = editorType === 'drums' ? 'drums' : scaleMode;
+  const interfaceMode =
+    editorType === 'drums' ? 'drums' : scaleMode || 'simple';
 
   const RowLabel = (props: {name: string; note: number; i: number}) => {
     const [style, label] = {
       drums: [styles.textLabel, props.name],
-      simple: [styles.label, ((displayNotes.length - props.i - 1) % 7) + 1],
+      simple: [styles.label, getPitchName(props.note)],
       chromatic: [styles.keyLabel, getPitchName(props.note)],
     }[interfaceMode];
 
@@ -146,7 +151,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
             styles.innerCell
           )}
         >
-          {label}
+          {label.replace('#', '♯')}
         </div>
       </button>
     );
@@ -163,7 +168,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     const topVisibleRow =
       displayNotes.length - notesInOctave - parseInt(displayRows);
     // Start scrolling a few rows below
-    const scrollStartRow = topVisibleRow + 5;
+    const scrollStartRow = topVisibleRow + 3;
     const cellHeightWithGap = parseInt(cellHeight) + parseInt(rowGap);
 
     return [
@@ -209,8 +214,10 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
               {label: 'Best Notes', value: 'simple'},
               {label: 'All Notes', value: 'chromatic'},
             ]}
-            onChange={value => setScaleMode(value as ScaleMode)}
-            selectedButtonValue={scaleMode}
+            onChange={value =>
+              setCurrentValue({...currentValue, scaleMode: value as ScaleMode})
+            }
+            selectedButtonValue={scaleMode || 'simple'}
             size="xs"
           />
         )}

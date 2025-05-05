@@ -7,6 +7,8 @@ export interface InstrumentEvent extends PlaybackEvent {
   instrumentType: 'drums' | 'melodic';
 }
 
+export type ScaleMode = 'simple' | 'chromatic';
+
 export interface InstrumentEventValue {
   /** Name of the instrument to play notes on */
   instrument: string;
@@ -16,6 +18,8 @@ export interface InstrumentEventValue {
   length: 1 | 2;
   /** If the notes were partially generated using AI */
   ai?: boolean;
+  /** For a melodic event, the notes shown. */
+  scaleMode?: ScaleMode;
 }
 
 /** A single note event. Ticks are 1-based and refer to 16th note subdivisions */
