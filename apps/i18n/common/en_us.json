@@ -1059,7 +1059,7 @@
   "downloadAssessmentCSV": "Download CSV of student responses",
   "downloadFeedbackCSV": "Download CSV of Feedback",
   "downloadParentLetter": "Download parent letter",
-  "downloadProgressCsv": "Download a .csv file of your students' progress in this unit.",
+  "downloadProgressCsv": "Download a .csv file of your students' progress in this unit",
   "downloadReplayVideoButtonDownload": "Animation",
   "downloadReplayVideoButtonError": "Sorry, we were unable to download your animation. Please try re-running your project and trying again.",
   "downloadUnitXLessonPlans": "Download all lesson plans for Unit {unitNumber}",

@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-29 05:34:00 UTC",
+    "serialized_at": "2025-05-04 21:57:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -123,7 +124,7 @@
     },
     {
       "key": "Introduction to the Internet",
-      "name": "Introduction to the Internet",
+      "name": "Lesson 1: Introduction to the Internet",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -141,7 +142,7 @@
     },
     {
       "key": "Sending Bits",
-      "name": "Sending Bits",
+      "name": "Lesson 2: Sending Bits",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -159,7 +160,7 @@
     },
     {
       "key": "IP Addresses",
-      "name": "IP Addresses",
+      "name": "Lesson 3: IP Addresses",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -177,7 +178,7 @@
     },
     {
       "key": "Routers and Redundancy",
-      "name": "Routers and Redundancy",
+      "name": "Lesson 4: Routers and Redundancy",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -195,7 +196,7 @@
     },
     {
       "key": "Packets",
-      "name": "Packets",
+      "name": "Lesson 5: Packets",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -213,7 +214,7 @@
     },
     {
       "key": "HTTP and DNS",
-      "name": "HTTP and DNS",
+      "name": "Lesson 6: HTTP and DNS",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -231,7 +232,7 @@
     },
     {
       "key": "The Internet's Hidden Barriers",
-      "name": "The Internet's Hidden Barriers",
+      "name": "Lesson 7: The Internet's Hidden Barriers",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -249,7 +250,7 @@
     },
     {
       "key": "Internet Access Advocacy Campaign Project",
-      "name": "Internet Access Advocacy Campaign Project",
+      "name": "Lesson 8: Internet Access Advocacy Campaign Project",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -268,7 +269,7 @@
     },
     {
       "key": "Network Security",
-      "name": "Network Security",
+      "name": "Lesson 9: Network Security",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -286,7 +287,7 @@
     },
     {
       "key": "Emerging Technologies",
-      "name": "Emerging Technologies",
+      "name": "Lesson 10: Emerging Technologies",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -304,7 +305,7 @@
     },
     {
       "key": "Network Security Risk Assessment Project",
-      "name": "Network Security Risk Assessment Project",
+      "name": "Lesson 11: Network Security Risk Assessment Project",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -339,7 +340,7 @@
     },
     {
       "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
@@ -823,6 +824,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "7d243d36-3e48-4142-aeef-3788f35c37f0",
+        "lesson.key": "Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "key": "fe3ed412-fdd7-4e18-8f7f-fea00a5c4184",
+      "position": 4,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe3ed412-fdd7-4e18-8f7f-fea00a5c4184",
         "lesson.key": "Network Security Risk Assessment Project",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "aif4-2025"
@@ -1791,7 +1805,13 @@
       "key": "3535f754-348d-4398-80a4-276afb73f25c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define redundancy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Provide each student with a copy of *Network Diagram Analysis* activity guide."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define redundancy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Provide each student with a copy of *Network Diagram Analysis* activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider assigning rotating roles within each pair—Navigator (operates the simulator) and Logger (records diagrams and notes)—to ensure both students stay engaged and contribute meaningfully."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "3535f754-348d-4398-80a4-276afb73f25c",
@@ -3557,6 +3577,18 @@
       }
     },
     {
+      "key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578",
+        "lesson_activity.key": "fe3ed412-fdd7-4e18-8f7f-fea00a5c4184"
+      }
+    },
+    {
       "key": "bf9d8dd4-bf50-44f3-9b7f-457bb189c1f8",
       "position": 1,
       "properties": {
@@ -4382,6 +4414,28 @@
     },
     {
       "chapter": 33,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_networks-2025"
+        ],
+        "lesson.key": "Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-2025",
+        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_networks-2025"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4406,7 +4460,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4814,6 +4868,18 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "aif4-2025",
         "activity_section.key": "9c223595-d04e-4db7-9bb8-3327f5b2c2f2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_networks-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_networks-2025"
+        ],
+        "lesson.key": "Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-2025",
+        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578"
       }
     },
     {

@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-05-04T03:39:18.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "long_instructions": "## **Refine Prompts to Mitigate Bias**\r\n\r\n1. Choose one of your original prompts from Level 1 and rewrite it to include a **specific group, style, or context**.\r\n\r\n   **Examples:**\r\n\r\n   * \"Recommend 5 foods\" → \"Recommend 5 traditional Filipino foods\"\r\n   * \"Recommend 5 hairstyles\" → \"Recommend 5 protective hairstyles for curly hair\"\r\n   * \"Recommend 5 games\" → \"Recommend 5 games that don't need a lot of equipment\"\r\n   * \"Recommend 5 clothing styles\" → \"Recommend 5 modest clothing styles for teen girls\"\r\n\r\n\r\n2. Ask the refined version of the prompt in AI Chat.\r\n\r\n3. Compare the responses. What changed? What stayed the same?\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-04T03:39:18.169+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_l32_l1\\\"\"],\"cloned_from\":\"exploring_generative_ai_l32_l1\"},{\"changed_at\":\"2025-05-04 03:40:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-04 03:41:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-04 03:41:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -38,8 +38,9 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
   Component = 'div',
   className,
 }: DraggableProps) => {
+  const draggableId = `${data.type}-${data.id}-draggable`;
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
-    id: `${data.type}-${data.id}`,
+    id: draggableId,
     data,
   });
   const style = transform
@@ -63,4 +64,14 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
 
 export const NotDraggable: React.FunctionComponent<DraggableProps> = ({
   children,
-}) => <>{children}</>;
+}) => {
+  return React.createElement(
+    'div',
+    {
+      className: moduleStyles.notDraggable,
+      tabIndex: 0,
+      role: 'button',
+    },
+    children
+  );
+};

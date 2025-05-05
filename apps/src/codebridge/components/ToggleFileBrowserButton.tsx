@@ -9,8 +9,6 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 
 import {useCodebridgeContext} from '../codebridgeContext';
 
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
-
 /*
   This component will look to the `showFileBrowser` boolean in the config and flip it back and forth.
   If we're showing it, the icon is solid, and if not, the icon is regular.
@@ -33,7 +31,6 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
     direction: 'onRight',
     tooltipId: 'toggle-file-browser-tooltip',
     size: 'xs',
-    className: darkModeStyles.tooltipRight,
   };
 
   return (
@@ -49,8 +46,8 @@ const ToggleFileBrowserButton: React.FunctionComponent = () => {
           ariaLabel={codebridgeI18n.toggleFileBrowser()}
           size={'xs'}
           type={'tertiary'}
-          className={darkModeStyles.tertiaryButton}
           aria-expanded={config.showFileBrowser}
+          color={'black'}
         />
       </WithTooltip>
     </span>

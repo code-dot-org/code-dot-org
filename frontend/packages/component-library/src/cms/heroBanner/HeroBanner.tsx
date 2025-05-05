@@ -119,22 +119,25 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
     )}
     <div className={classNames(moduleStyles.heroBannerContainer)}>
       <div className={moduleStyles.heroBannerTextContainer}>
-        <Heading1>{heading}</Heading1>
+        <div>
+          <Heading1>{heading}</Heading1>
 
-        {subHeading && <BodyOneText>{subHeading}</BodyOneText>}
+          {subHeading && <BodyOneText>{subHeading}</BodyOneText>}
 
-        {description && <BodyTwoText>{description}</BodyTwoText>}
+          {description && <BodyTwoText>{description}</BodyTwoText>}
 
-        {partner && (
-          <span className={moduleStyles.heroBannerPartnerContainer}>
-            {partner.title}
-            <Image {...partner.logo} hasRoundedCorners={false} />
-          </span>
-        )}
-
-        {buttonProps && (
-          <LinkButton color="purple" type="primary" {...buttonProps} />
-        )}
+          {partner && (
+            <span className={moduleStyles.heroBannerPartnerContainer}>
+              {partner.title}
+              <Image {...partner.logo} hasRoundedCorners={false} />
+            </span>
+          )}
+        </div>
+        <div>
+          {buttonProps && (
+            <LinkButton color="purple" type="primary" {...buttonProps} />
+          )}
+        </div>
       </div>
       {(imageProps || videoProps) && (
         <div className={moduleStyles.heroBannerMediaContainer}>
