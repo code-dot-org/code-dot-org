@@ -75,7 +75,7 @@ describe('ActionBlock', () => {
     expect(queryAllByTestId('font-awesome-v6-icon')).toHaveLength(2);
   });
 
-  it('renders New tag if publishedDate is within 3 months', () => {
+  it('renders New tag if publishedDate is within 3 months of the current date', () => {
     const now = new Date('2025-05-01T00:00:00Z'); // May 1, 2025 12:00 AM UTC
     jest.useFakeTimers().setSystemTime(now);
 
@@ -84,7 +84,7 @@ describe('ActionBlock', () => {
     expect(getByText('New')).toBeInTheDocument();
   });
 
-  it('does not render New tag if publishedDate is older than 3 months', () => {
+  it('does not render New tag if publishedDate is older than 3 months of the current date', () => {
     const now = new Date('2025-06-01T00:00:00Z'); // June 1, 2025 12:00 AM UTC
     jest.useFakeTimers().setSystemTime(now);
 
@@ -93,7 +93,7 @@ describe('ActionBlock', () => {
     expect(queryByText('New')).not.toBeInTheDocument();
   });
 
-  it('does not render New tag if publishedDate is before the current date', () => {
+  it('does not render New tag if publishedDate is after the current date', () => {
     const now = new Date('2025-02-28T00:00:00Z'); // Feb 28, 2025 12:00 AM UTC
     jest.useFakeTimers().setSystemTime(now);
 
