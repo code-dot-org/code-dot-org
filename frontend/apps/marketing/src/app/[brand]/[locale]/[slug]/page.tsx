@@ -69,11 +69,18 @@ export default async function ExperiencePage({
     return <div>{error.message}</div>;
   }
 
+  const start = Date.now();
+  console.log(
+    `PAGE: Starting to render experience for slug: ${pageProps.slug} at ${start}`,
+  );
   // extract the styles from the experience
   const stylesheet = experience ? detachExperienceStyles(experience) : null;
 
   // experience currently needs to be stringified manually to be passed to the component
   const experienceJSON = experience ? JSON.stringify(experience) : null;
+  console.log(
+    `PAGE: Finished rendering experience for slug: ${pageProps.slug} at ${Date.now() - start}`,
+  );
 
   return (
     <main style={{width: '100%'}}>
