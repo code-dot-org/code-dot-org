@@ -1,8 +1,4 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
-import {
-  TooltipOverlay,
-  WithTooltip,
-} from '@code-dot-org/component-library/tooltip';
+import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
@@ -20,31 +16,61 @@ export const DownloadProgressCsv: React.FC = () => {
     state => state.teacherSections.selectedSectionId
   );
 
+  const getDownloadUrl = React.useCallback(
+    (type: string) =>
+      `/teacher_dashboard/sections/${sectionId}/download_progress_csv?unit_id=${unitId}&type=${type}`,
+    [sectionId, unitId]
+  );
+
   return (
-    <TooltipOverlay>
-      <WithTooltip
-        tooltipOverlayClassName={styles.downloadCsv}
-        tooltipProps={{
-          tooltipId: 'csv-download-tooltip',
-          role: 'tooltip',
-          text: i18n.downloadProgressCsv(),
-          direction: 'onTop',
-          size: 'm',
-        }}
-      >
-        <LinkButton
-          href={`/teacher_dashboard/sections/${sectionId}/download_progress_csv?unit_id=${unitId}&type=level`}
-          download={true}
-          isIconOnly={true}
-          icon={{iconName: 'download', iconStyle: 'solid'}}
-          size="s"
-          color="gray"
-          aria-label={i18n.downloadCSV()}
-          type="secondary"
-          target="_blank"
-        />
-      </WithTooltip>
-    </TooltipOverlay>
+    <CustomDropdown
+      name="download-progress-csv"
+      labelText={i18n.downloadProgressCsv()}
+      size="s"
+      useDSCOButtonAsTrigger={true}
+      menuPlacement="right"
+      triggerButtonProps={{
+        isIconOnly: true,
+        icon: {
+          iconName: 'download',
+          iconStyle: 'solid',
+        },
+        color: 'gray',
+        type: 'secondary',
+        size: 's',
+        ariaLabel: i18n.sectionOptionsDropdown(),
+        className: styles.downloadCsvDropdown,
+      }}
+    >
+      <ul>
+        <li key="level">
+          <a
+            href={getDownloadUrl('level')}
+            aria-label={i18n.downloadCSV()}
+            type="secondary"
+            target="_blank"
+            rel="noreferrer"
+            download={true}
+            className={styles.dropdownMenuItem}
+          >
+            {i18n.downloadLevelProgressCSV()}
+          </a>
+        </li>
+        <li key="lesson">
+          <a
+            href={getDownloadUrl('lesson')}
+            aria-label={i18n.downloadCSV()}
+            type="secondary"
+            target="_blank"
+            rel="noreferrer"
+            download={true}
+            className={styles.dropdownMenuItem}
+          >
+            {i18n.downloadLessonProgressCSV()}
+          </a>
+        </li>
+      </ul>
+    </CustomDropdown>
   );
 };
 
