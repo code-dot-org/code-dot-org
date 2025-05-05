@@ -27,6 +27,7 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
     config[:viewport_size] = {width: 1024, height: 690}
   end
   @browser.capabilities[:takes_screenshot] = true
+  @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
 
   @eyes.open(config)
 end
