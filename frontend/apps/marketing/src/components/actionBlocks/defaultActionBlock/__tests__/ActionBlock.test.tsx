@@ -31,7 +31,6 @@ describe('ActionBlock', () => {
   };
 
   afterEach(() => {
-    jest.clearAllMocks();
     jest.useRealTimers();
   });
 

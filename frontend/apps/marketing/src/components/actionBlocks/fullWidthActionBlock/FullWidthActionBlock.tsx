@@ -21,7 +21,7 @@ export type FullWidthActionBlockContentfulProps = Omit<
   primaryButton: LinkEntry;
   secondaryButton: LinkEntry;
   background: EntryFields.Text;
-  publishedDate: EntryFields.Date;
+  publishedDate: EntryFields.Date | undefined;
 };
 
 const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
@@ -64,7 +64,7 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
         : undefined
     }
     background={background}
-    tag={showNewTag(publishedDate) ? 'New' : undefined}
+    tag={publishedDate && showNewTag(publishedDate) ? 'New' : undefined}
   />
 );
 
