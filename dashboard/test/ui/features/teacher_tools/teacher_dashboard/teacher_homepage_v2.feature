@@ -3,11 +3,11 @@ Feature: Using the teacher homepage
   @eyes
   Scenario: Teacher can view sections on new teacher homepage
     When I open my eyes to test "teacher homepage"
-    Given I create a teacher named "Hank"
+    Given I create a teacher named "Teacher Hank"
 
     # This line can be removed when the new teacher homepage is the default
     Then I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
-    And I sign in as "Hank" and go home
+    And I sign in as "Teacher Hank" and go home
     And I get levelbuilder access
 
     # Create an empty section
