@@ -30,6 +30,11 @@ describe('ActionBlock', () => {
     publishedDate: '2025-03-01T00:00:00Z', // March 1, 2025 12:00 AM UTC
   };
 
+  afterEach(() => {
+    jest.clearAllMocks();
+    jest.useRealTimers();
+  });
+
   it('renders component with all props', () => {
     const {getByText, getByAltText} = render(<ActionBlock {...defaultProps} />);
 
@@ -103,10 +108,10 @@ describe('ActionBlock', () => {
   });
 
   it('does not render New tag if publishedDate is not provided', () => {
-    const publishedDate = undefined;
-    const {queryByText} = render(
-      <ActionBlock {...defaultProps} tag={publishedDate} />,
-    );
+    const newProps = {...defaultProps};
+    newProps.publishedDate = undefined;
+
+    const {queryByText} = render(<ActionBlock {...newProps} />);
 
     expect(queryByText('New')).not.toBeInTheDocument();
   });
