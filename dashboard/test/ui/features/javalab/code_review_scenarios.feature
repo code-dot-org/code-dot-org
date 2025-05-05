@@ -36,7 +36,7 @@ Feature: Code review V2
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
     And I load the review tab
     And I load the code review for peer number 1 in the list
-    Then I see no difference for "student code reviewing peer" using stitch mode "none"
+    Then I see no difference for "student code reviewing peer" in the current viewport
     And I sign out using jquery
 
     # Log in as the teacher and look at the student's review
@@ -44,14 +44,14 @@ Feature: Code review V2
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
     And I load student number 1's project from the blue teacher panel
     And I load the review tab
-    Then I see no difference for "teacher code reviewing student" using stitch mode "none"
+    Then I see no difference for "teacher code reviewing student" in the current viewport
     And I sign out using jquery
 
     # Log in as code review owner and close the code review
     Given I sign in as "student_0"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
     And I load the review tab
-    Then I see no difference for "student viewing own code review" using stitch mode "none"
+    Then I see no difference for "student viewing own code review" in the current viewport
     And I press ".uitest-close-code-review" using jQuery
     And I wait until element ".uitest-open-code-review" is visible
     And I close my eyes

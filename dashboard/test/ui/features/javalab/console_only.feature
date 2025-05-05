@@ -9,7 +9,7 @@ Feature: Console only level
     And I wait for the lab page to fully load
     And I dismiss the teacher panel
     Then I press "#levelbuilder-menu-toggle" using jQuery
-    And I see no difference for "initial page load" using stitch mode "none"
+    And I see no difference for "initial page load" in the current viewport
 
     # Interact with program that asks your name
     Then I press "runButton"
@@ -17,5 +17,5 @@ Feature: Console only level
     And I type "Harry" into "#console-input"
     And I press enter key
     And I wait until element ".javalab-console" contains text "[JAVALAB] Program completed."
-    And I see no difference for "program completed" using stitch mode "none"
+    And I see no difference for "program completed" in the current viewport
     Then I close my eyes

@@ -44,8 +44,10 @@ And(/^I close my eyes$/) do
   end
 end
 
-# A Feature can optionally specify the stitch mode ('css' or 'scroll') for Eyes to create the full screenshot.
-And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?( without waiting for Font Awesome to load)?$/) do |identifier, stitch_mode, skip_fa_wait|
+# A Feature can optionally specify "in the current viewport" to avoid taking a
+# full-page screenshot, and/or "without waiting for Font Awesome to load" to
+# avoid adding an extra wait.
+And(/^I see no difference for "([^"]*)"( in the current viewport)?( without waiting for Font Awesome to load)?$/) do |identifier, skip_full_page, skip_fa_wait|
   next if CDO.disable_all_eyes_running
 
   # Wait until the fonts are fully loaded and rendering the page
@@ -55,7 +57,7 @@ And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?( withou
     fonts_loaded? && (skip_fa_wait || font_awesome_loaded?)
   end
 
-  is_full_page_screenshot = stitch_mode != "none"
+  is_full_page_screenshot = !skip_full_page
   @eyes.check_window(identifier, MATCH_TIMEOUT, is_full_page_screenshot)
 end
 

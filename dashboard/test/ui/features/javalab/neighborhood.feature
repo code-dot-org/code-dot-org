@@ -10,10 +10,10 @@ Feature: NeighborhoodPainting
     And I dismiss the teacher panel
     Then I press "#levelbuilder-menu-toggle" using jQuery
     Then I set slider speed to fast
-    And I see no difference for "initial page load" using stitch mode "none"
+    And I see no difference for "initial page load" in the current viewport
     Then I press "runButton"
     And I wait until element ".javalab-console" contains text "Done painting"
-    And I see no difference for "paint glomming" using stitch mode "none"
+    And I see no difference for "paint glomming" in the current viewport
     Then I close my eyes
 
   #Scenario: Stop Button Closes Connection

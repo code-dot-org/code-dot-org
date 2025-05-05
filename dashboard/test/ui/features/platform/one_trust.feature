@@ -8,7 +8,7 @@ Feature: OneTrust integration
     And I wait for jquery to load
     And I open my eyes to test "Hour of code Onetrust pop up"
     And I wait until element "#onetrust-banner-sdk" is visible
-    And I see no difference for "Onetrust pop up: Hour of Code" using stitch mode "none"
+    And I see no difference for "Onetrust pop up: Hour of Code" in the current viewport
     And I close my eyes
 
   @eyes
@@ -20,7 +20,7 @@ Feature: OneTrust integration
     And I wait for jquery to load
     And I open my eyes to test "Code.org Onetrust pop up"
     And I wait until element "#onetrust-banner-sdk" is visible
-    And I see no difference for "Onetrust pop up: code.org" using stitch mode "none"
+    And I see no difference for "Onetrust pop up: code.org" in the current viewport
     And I close my eyes
 
   Scenario: OneTrust cookie pop-up shows when self-hosting OneTrust libraries on hourofocode

@@ -9,8 +9,8 @@ Feature: Theater
     And I wait for the lab page to fully load
     And I dismiss the teacher panel
     Then I press "#levelbuilder-menu-toggle" using jQuery
-    And I see no difference for "initial page load" using stitch mode "none"
+    And I see no difference for "initial page load" in the current viewport
     Then I press "runButton"
     And I wait for 15 seconds
-    And I see no difference for "GIF end state" using stitch mode "none"
+    And I see no difference for "GIF end state" in the current viewport
     Then I close my eyes

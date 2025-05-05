@@ -9,11 +9,11 @@ Scenario: GameLab with a submittable contained level
   When I open my eyes to test "gamelab submittable contained level"
   Given I am on "http://studio.code.org/s/allthethings/lessons/41/levels/7"
   And I wait for the lab page to fully load
-  Then I see no difference for "initial load" using stitch mode "none"
+  Then I see no difference for "initial load" in the current viewport
   Then I press "unchecked_0"
-  And I see no difference for "answer entered" using stitch mode "none"
+  And I see no difference for "answer entered" in the current viewport
   Then I press "runButton"
-  And I see no difference for "level run" using stitch mode "none"
+  And I see no difference for "level run" in the current viewport
   And I press "submitButton" to load a new page
   And I wait until current URL contains "/lessons/41/levels/8"
   Then I close my eyes
@@ -23,19 +23,19 @@ Scenario: Gamelab with multiple choice contained level
   When I open my eyes to test "gamelab multiple choice contained level"
   Given I am on "http://studio.code.org/s/allthethings/lessons/41/levels/2"
   And I wait for the lab page to fully load
-  Then I see no difference for "initial load" using stitch mode "none"
+  Then I see no difference for "initial load" in the current viewport
   Then I press "unchecked_0"
-  And I see no difference for "answer entered" using stitch mode "none"
+  And I see no difference for "answer entered" in the current viewport
   Then I press "runButton"
-  And I see no difference for "level run" using stitch mode "none"
+  And I see no difference for "level run" in the current viewport
   # At this point, we should have submitted our result to the server, do
   # a reload and make sure we have the submission
   Then I am on "http://studio.code.org/s/allthethings/lessons/41/levels/2"
   And I wait for the lab page to fully load
-  And I see no difference for "reloaded with contained level answered" using stitch mode "none"
+  And I see no difference for "reloaded with contained level answered" in the current viewport
   Then I press "runButton"
   And I press "finishButton"
-  And I see no difference for "finished level with contained level" using stitch mode "none"
+  And I see no difference for "finished level with contained level" in the current viewport
   And I press "continue-button"
   # Make sure continue takes us to next level
   And I wait until current URL contains "/lessons/41/levels/3"

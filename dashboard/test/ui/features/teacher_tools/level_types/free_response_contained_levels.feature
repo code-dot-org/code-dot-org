@@ -33,11 +33,11 @@ Scenario: Javalab with free response contained level
   Given I am on "http://studio.code.org/s/allthethings/lessons/44/levels/6"
   And I wait to see ".response"
   And I scroll the ".response" element into view
-  Then I see no difference for "initial load" using stitch mode "none"
+  Then I see no difference for "initial load" in the current viewport
   Then I press keys "This is my answer" for element ".response"
-  And I see no difference for "answer entered" using stitch mode "none"
+  And I see no difference for "answer entered" in the current viewport
   Then I press "runButton"
-  And I see no difference for "level run" using stitch mode "none"
+  And I see no difference for "level run" in the current viewport
   # Wait until we see at least one message on the console, this means the program saved.
   And I wait until element ".javalab-console" contains text "[JAVALAB]"
 
@@ -45,9 +45,9 @@ Scenario: Javalab with free response contained level
   # a reload and make sure we have the submission
   Then I am on "http://studio.code.org/s/allthethings/lessons/44/levels/6"
   And I wait to see ".response"
-  And I see no difference for "reloaded with contained level answered" using stitch mode "none"
+  And I see no difference for "reloaded with contained level answered" in the current viewport
   Then I press "runButton"
-  And I see no difference for "finished level with contained level" using stitch mode "none"
+  And I see no difference for "finished level with contained level" in the current viewport
   Then I close my eyes
 
 @eyes
