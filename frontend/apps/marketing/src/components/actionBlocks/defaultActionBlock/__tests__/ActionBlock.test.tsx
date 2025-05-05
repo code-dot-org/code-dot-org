@@ -30,6 +30,15 @@ describe('ActionBlock', () => {
     publishedDate: '2025-03-01T00:00:00Z', // March 1, 2025 12:00 AM UTC
   };
 
+  beforeAll(() => {
+    const mockDate = new Date();
+    jest.spyOn(global, 'Date').mockImplementation(() => mockDate);
+  });
+
+  afterAll(() => {
+    jest.restoreAllMocks();
+  });
+
   it('renders component with all props', () => {
     const {getByText, getByAltText} = render(<ActionBlock {...defaultProps} />);
 
@@ -77,7 +86,7 @@ describe('ActionBlock', () => {
 
   it('renders New tag if publishedDate is within 3 months of the current date', () => {
     const now = new Date('2025-05-01T00:00:00Z'); // May 1, 2025 12:00 AM UTC
-    jest.setSystemTime(now);
+    jest.useFakeTimers().setSystemTime(now);
 
     const {getByText} = render(<ActionBlock {...defaultProps} />);
 
@@ -86,7 +95,7 @@ describe('ActionBlock', () => {
 
   it('does not render New tag if publishedDate is older than 3 months of the current date', () => {
     const now = new Date('2025-07-01T00:00:00Z'); // June 1, 2025 12:00 AM UTC
-    jest.setSystemTime(now);
+    jest.useFakeTimers().setSystemTime(now);
 
     const {queryByText} = render(<ActionBlock {...defaultProps} />);
 
@@ -95,7 +104,7 @@ describe('ActionBlock', () => {
 
   it('does not render New tag if publishedDate is after the current date', () => {
     const now = new Date('2025-02-28T00:00:00Z'); // Feb 28, 2025 12:00 AM UTC
-    jest.setSystemTime(now);
+    jest.useFakeTimers().setSystemTime(now);
 
     const {queryByText} = render(<ActionBlock {...defaultProps} />);
 
