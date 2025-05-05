@@ -37,7 +37,6 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
   <DSCOFullWidthActionBlock
     image={{src: `https:${image}`}}
     overline={overline}
-    tag={showNewTag(publishedDate) ? 'New' : undefined}
     title={title}
     description={description}
     primaryButton={
@@ -65,6 +64,7 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
         : undefined
     }
     background={background}
+    tag={showNewTag(publishedDate) ? 'New' : undefined}
   />
 );
 

@@ -33,7 +33,6 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
 }) => (
   <DSCOActionBlock
     overline={overline}
-    tag={showNewTag(publishedDate) ? 'New' : undefined}
     title={title}
     description={description}
     image={{src: `https:${image}`}}
@@ -62,6 +61,7 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
         : undefined
     }
     background={background}
+    tag={showNewTag(publishedDate) ? 'New' : undefined}
   />
 );
 

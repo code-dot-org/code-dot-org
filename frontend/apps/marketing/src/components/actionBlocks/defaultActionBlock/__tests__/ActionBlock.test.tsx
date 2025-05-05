@@ -27,6 +27,7 @@ describe('ActionBlock', () => {
       },
     },
     background: 'primary',
+    publishedDate: '2025-03-01T00:00:00Z', // March 1, 2025 12:00 AM UTC
   };
 
   it('renders component with all props', () => {
@@ -72,5 +73,41 @@ describe('ActionBlock', () => {
     );
 
     expect(queryAllByTestId('font-awesome-v6-icon')).toHaveLength(2);
+  });
+
+  it('renders New tag if publishedDate is within 3 months', () => {
+    const now = new Date('2025-05-01T00:00:00Z'); // May 1, 2025 12:00 AM UTC
+    jest.useFakeTimers().setSystemTime(now);
+
+    const {getByText} = render(<ActionBlock {...defaultProps} />);
+
+    expect(getByText('New')).toBeInTheDocument();
+  });
+
+  it('does not render New tag if publishedDate is older than 3 months', () => {
+    const now = new Date('2025-06-01T00:00:00Z'); // June 1, 2025 12:00 AM UTC
+    jest.useFakeTimers().setSystemTime(now);
+
+    const {queryByText} = render(<ActionBlock {...defaultProps} />);
+
+    expect(queryByText('New')).not.toBeInTheDocument();
+  });
+
+  it('does not render New tag if publishedDate is before the current date', () => {
+    const now = new Date('2025-02-28T00:00:00Z'); // Feb 28, 2025 12:00 AM UTC
+    jest.useFakeTimers().setSystemTime(now);
+
+    const {queryByText} = render(<ActionBlock {...defaultProps} />);
+
+    expect(queryByText('New')).not.toBeInTheDocument();
+  });
+
+  it('does not render New tag if publishedDate is not provided', () => {
+    const publishedDate = undefined;
+    const {queryByText} = render(
+      <ActionBlock {...defaultProps} tag={publishedDate} />,
+    );
+
+    expect(queryByText('New')).not.toBeInTheDocument();
   });
 });
