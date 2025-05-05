@@ -68,6 +68,17 @@
       }
     },
     {
+      "name": "AIF Teacher Forum",
+      "url": "https://forum.code.org/c/aif/487",
+      "key": "aif_teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "aif_teacher_forum"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/courses/artificial-intelligence-foundations-2025/resources",
       "key": "all_resources_5",

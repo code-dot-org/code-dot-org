@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-02 00:53:55 UTC",
+    "serialized_at": "2025-05-02 18:49:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11028,6 +11028,8 @@
       "url": "https://docs.google.com/document/d/1prp1Zm4JrPsyAtXeF98hmy-7nTEWOq-aEHvabhz2T_A/edit?usp=sharing",
       "key": "function_template",
       "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "function_template"
@@ -11120,7 +11122,7 @@
       }
     },
     {
-      "name": "Programming Fundamentals Unit Guide",
+      "name": "Foundations of AI Programming Unit Guide",
       "url": "https://docs.google.com/document/d/1Nj6Ftrl10jVhwmxZxkBO49n8tKXhU791VkGwEWQV1W4/edit?tab=t.0#heading=h.al7bg56kcf1",
       "key": "programming_fundamentals_unit_guide",
       "properties": {
