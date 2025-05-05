@@ -26,6 +26,11 @@ interface FieldTuneOptions {
   currentValue: InstrumentEventValue;
 }
 
+const relativeToMidiNote = (note: number): number => {
+  const key = MusicRegistry.player.getKey();
+  return note + 60 - key;
+};
+
 /**
  * A custom field that renders the tune selection UI, used in the
  * "play_tune" block. The UI is rendered by {@link InstrumentGrid}.
@@ -128,8 +133,13 @@ export default class FieldTune extends GoogleBlockly.Field {
             )
         : () => true;
 
+    const mapFn = (event: InstrumentTickEvent) => ({
+      ...event,
+      note: relativeToMidiNote(event.note),
+    });
+
     const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({
-      notes: events.filter(filterFn),
+      notes: events.map(mapFn).filter(filterFn),
       width: FIELD_WIDTH,
       height: FIELD_HEIGHT,
       numOctaves: 3,
