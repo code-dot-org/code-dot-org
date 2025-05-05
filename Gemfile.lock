@@ -376,22 +376,22 @@ GEM
     eventmachine (1.2.7)
     execjs (2.7.0)
     exifr (1.2.5)
-    eyes_core (6.7.0)
+    eyes_core (4.6.3)
       colorize
-      eyes_universal (= 4.37.0)
+      eyes_universal (~> 3.3.3)
       faraday
       faraday-cookie_jar
       faraday_middleware
       oj
       sorted_set
       websocket
-    eyes_selenium (6.9.0)
+    eyes_selenium (4.6.3)
       crass
       css_parser
-      eyes_core (= 6.7.0)
+      eyes_core (= 4.6.3)
       selenium-webdriver (>= 3)
-      state_machines
-    eyes_universal (4.37.0)
+      state_machine
+    eyes_universal (3.3.3)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.2.0)
@@ -889,7 +889,7 @@ GEM
     sshkit (1.20.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    state_machines (0.6.0)
+    state_machine (1.2.0)
     statsig (1.33.2)
       concurrent-ruby (~> 1.1)
       connection_pool (~> 2.4, >= 2.4.1)
@@ -1024,7 +1024,7 @@ DEPENDENCIES
   dotiw
   drb
   execjs
-  eyes_selenium (~> 6.0)
+  eyes_selenium (~> 4.0)
   factory_bot_rails (~> 6.2)
   fakefs (~> 2.5.0)
   faker (~> 3.4)
