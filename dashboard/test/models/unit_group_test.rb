@@ -607,6 +607,29 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal nil, unit2.original_unit_group
     end
 
+    test "remove UnitGroupUnits that cannot change course version from secondary unit groups" do
+      course_version = create :course_version
+      original_unit_group = create :unit_group, course_version: course_version
+      new_unit_group = create :unit_group
+
+      unit1 = create :script, name: 'unit1'
+      original_unit_group.update_scripts(['unit1'])
+      new_unit_group.update_scripts(['unit1'])
+
+      lesson = create :lesson
+      resource = create :resource, course_version: course_version
+      lesson.resources = [resource]
+      lesson_group = create :lesson_group, lessons: [lesson]
+      unit1.lesson_groups = [lesson_group]
+
+      original_unit_group.reload
+      new_unit_group.reload
+      unit1.reload
+
+      new_unit_group.update_scripts([])
+      assert_equal 0, new_unit_group.default_unit_group_units.length
+    end
+
     test "removed units have their published state instruction type participant audience and instructor audience reset" do
       unit_group = create :unit_group
       unit1 = create(:script, name: 'unit1')
