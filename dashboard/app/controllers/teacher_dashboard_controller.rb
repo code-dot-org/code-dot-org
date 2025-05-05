@@ -113,6 +113,8 @@ class TeacherDashboardController < ApplicationController
 
     student_progress = script_progress_for_users(deduplicated_students, unit)[0]
 
+    pp 'lfm', student_progress
+
     level_names, progress_table = get_csv_level_data(unit, deduplicated_students, student_progress)
 
     headers = ['Student Name'].concat(level_names)
