@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_23_171750) do
+ActiveRecord::Schema.define(version: 2025_04_24_231217) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2176,7 +2176,7 @@ ActiveRecord::Schema.define(version: 2025_04_23_171750) do
     t.datetime "updated_at"
     t.boolean "lockable", default: false, null: false
     t.integer "relative_position", null: false
-    t.text "properties"
+    t.text "properties", collation: "utf8mb4_unicode_ci"
     t.integer "lesson_group_id"
     t.string "key", null: false
     t.boolean "has_lesson_plan", null: false

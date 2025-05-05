@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 15:26:26 UTC",
+    "serialized_at": "2025-04-25 13:41:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2166,19 +2166,6 @@
       }
     },
     {
-      "name": "Resource Packet",
-      "url": "https://docs.google.com/document/d/15ho43-c0njEcIEIr-RmHcUjZfIJPFdVZvQdpH6GC4B4/edit?usp=sharing",
-      "key": "resource_packet",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "resource_packet"
-      }
-    },
-    {
       "name": "Sprites",
       "url": "https://drive.google.com/file/d/1WS_5m8Ffy0u4OKILPEVSjs2KamZr2a41/view",
       "key": "sprites",
@@ -2330,12 +2317,6 @@
       "seeding_key": {
         "lesson.key": "TLO 3 - U4L3 User Centered Design - Define and Prepare",
         "resource.key": "user_centered_design_define_prepare_2021"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Unit 3 Connections",
-        "resource.key": "resource_packet"
       }
     }
   ],

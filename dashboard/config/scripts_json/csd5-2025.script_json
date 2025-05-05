@@ -13,11 +13,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-12 21:03:59 UTC",
+    "serialized_at": "2025-04-29 20:42:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4664,6 +4665,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd5_2025"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -4686,6 +4690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation_2025"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4708,6 +4715,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 2_2025"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4730,6 +4740,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 3_2025"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4752,6 +4765,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 4_2025"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4774,6 +4790,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 black white images pixelation 5_2025"
+        ],
         "progression": "Representing Images"
       },
       "bonus": false,
@@ -4796,6 +4815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary widget_2025"
+        ],
         "progression": "Binary Number Widget"
       },
       "bonus": false,
@@ -4818,6 +4840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary 8 bits_2025"
+        ],
         "progression": "8-Bit Binary Number Widget"
       },
       "bonus": false,
@@ -4840,6 +4865,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U5Ch1_2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4862,6 +4890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Pizza_2025"
+        ],
         "progression": "Pizza Party Data"
       },
       "bonus": false,
@@ -4884,6 +4915,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_2025"
+        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -4906,6 +4940,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo_2025"
+        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -4928,6 +4965,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash_2025"
+        ],
         "progression": "AI for Oceans: Fish vs Not Fish"
       },
       "bonus": false,
@@ -4950,6 +4990,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_2025"
+        ],
         "progression": "AI for Oceans: Types of Fish"
       },
       "bonus": false,
@@ -4972,6 +5015,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_2025"
+        ],
         "progression": "AI for Oceans: Types of Fish"
       },
       "bonus": false,
@@ -4994,6 +5040,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd u5 recommender sample_2025"
+        ],
         "progression": "Sample App"
       },
       "bonus": false,
@@ -5016,6 +5065,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd5_2025"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -5038,6 +5090,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U5 test_2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {

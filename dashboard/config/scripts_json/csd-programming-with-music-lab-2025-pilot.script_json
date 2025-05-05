@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 19:44:24 UTC",
+    "serialized_at": "2025-04-24 22:25:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -238,7 +238,7 @@
             "key": "926e7a4b-21eb-4116-b6e3-5850cb0c2d77",
             "notice": "Just-In-Time Professional Learning",
             "details": "About to start these lessons on Functions? Feel prepared by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes!",
-            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/1",
+            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/1",
             "type": "information",
             "visibility": "Teacher-only",
             "dismissible": false,
@@ -1371,7 +1371,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Example Song Player:** This lesson is an opportunity for students to familiarize themselves with the \"Example Player\" embedded into levels. In these levels, this is the only way students can interact with each level. In future lessons, these examples provide guidance to students on how to complete their songs, so it's important students are familiar with this player! Here is where you can play each example song in a level:\n\n![](https://images.code.org/97e14300068e41eac7adb921a12c11fd-Screenshot 2025-04-09 091729.png)"
+            "markdown": "**Example Song Player:** This lesson is an opportunity for students to familiarize themselves with the \"Example Player\" embedded into levels. In these levels, this is the only way students can interact with each level. In future lessons, these examples provide guidance to students on how to complete their songs, so it's important students are familiar with this player!"
           }
         ]
       },
@@ -1816,10 +1816,26 @@
       }
     },
     {
-      "key": "6ca87f6d-c8b4-41d4-b343-417a60824d98",
+      "key": "a2299a48-5771-4569-a050-cdda120648bb",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Prompts to Build Algorithmic Thinking:** Algorithmic Thinking is all about developing a step-by-step solution to the problem, or the rules to follow to solve the problem. In Music Lab, algorithmic thinking shows up when students follow steps to create a song, such as \"first I'll get my backing beats, then I'll layer in my leads, and finally I'll add the vocals\". Use these questions to help students identify what’s essential in their song or code:\n\n* What steps did you follow to build your song? Could you explain them in order?\n* If you had to teach someone else to build a similar track, what instructions would you give them?\n* Could you create a checklist to build a track like this again?\n\nThese tips come from our Self-Paced Professional Learning module - [click here to see additional tips and learn more about Algorithmic Thinking](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/7)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a2299a48-5771-4569-a050-cdda120648bb",
+        "lesson_activity.key": "5501d6c6-fb4d-4225-a3b3-6355732cc7bf"
+      }
+    },
+    {
+      "key": "6ca87f6d-c8b4-41d4-b343-417a60824d98",
+      "position": 2,
+      "properties": {
         "progression_name": "Predict",
         "tips": [
           {
@@ -1835,7 +1851,7 @@
     },
     {
       "key": "8837fee8-d533-4832-a431-2dc10369135a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Play Sequential"
       },
@@ -1846,7 +1862,7 @@
     },
     {
       "key": "a3bd4a21-f724-4b81-8e2d-4b18ffa88825",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Check-in",
         "tips": [
@@ -1863,7 +1879,7 @@
     },
     {
       "key": "664b44db-1c3b-4988-87df-87915b3f09e8",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Rests"
       },
@@ -1874,7 +1890,7 @@
     },
     {
       "key": "5922da79-e111-42e8-ad86-0bd3e002ac47",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -1885,7 +1901,7 @@
     },
     {
       "key": "8c5edcd4-c183-41d6-99c4-4c0eef768581",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Make sure students split up from pair programming and go back to working independently for the Assessment level.",
         "progression_name": "Assessment",
@@ -1903,7 +1919,7 @@
     },
     {
       "key": "8c2f8e3f-92ed-47f1-8605-a1e1763f2f92",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge",
@@ -1921,7 +1937,7 @@
     },
     {
       "key": "71e677a1-e3b1-4784-9656-374e8f9e01d9",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -2494,10 +2510,26 @@
       }
     },
     {
-      "key": "89650d9e-09dd-4ef5-b50e-25737fb7e077",
+      "key": "5a8eb623-15e9-4a41-a450-193aa7ccc878",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Prompts to Build Pattern Recognition:** Pattern recognition is one of the key practices in computational thinking. In Music Lab, patterns can show up in track order, rhythm, and how certain song sections are structured. Helping students _notice and name_ these patterns gives them powerful tools for coding and creativity. Use questions like these to encourage students to think like pattern-spotters:\n\n- What parts of this song repeat? Can you show it in the code?\n- Where do you see the same blocks used more than once?\n- Do any instruments or beats create a repeating structure in this song?\n\nThese tips come from our Self-Paced Professional Learning module - [click here to see additional tips and learn more about Pattern Recognition](studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/7)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5a8eb623-15e9-4a41-a450-193aa7ccc878",
+        "lesson_activity.key": "dd2e95d8-ba74-4abe-9ef3-04a4229c5e94"
+      }
+    },
+    {
+      "key": "89650d9e-09dd-4ef5-b50e-25737fb7e077",
+      "position": 2,
+      "properties": {
         "progression_name": "Loops with Lyrics"
       },
       "seeding_key": {
@@ -2507,7 +2539,7 @@
     },
     {
       "key": "87a01dd2-b748-4e65-9997-7478f21cd5b9",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Nested Loops"
       },
@@ -2518,7 +2550,7 @@
     },
     {
       "key": "24922c66-85f7-4472-9948-deb36bdd6425",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Check-in",
         "tips": [
@@ -2535,7 +2567,7 @@
     },
     {
       "key": "66815e0b-5ff0-4333-b7be-27aac33dc6cb",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Loops with Rests"
       },
@@ -2546,7 +2578,7 @@
     },
     {
       "key": "94504ab1-1083-48c0-ac65-8da3fd881951",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2557,7 +2589,7 @@
     },
     {
       "key": "37783e65-abb5-488f-b0e5-7ba1a48aa229",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Make sure students split up from pair programming and go back to working independently for the Assessment level.",
         "progression_name": "Assessment",
@@ -2575,7 +2607,7 @@
     },
     {
       "key": "c2c62d2a-0ef8-4a37-9407-a263bd828d5a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge"
@@ -3113,10 +3145,26 @@
       }
     },
     {
-      "key": "d549825c-05b4-40f3-a57b-966cc92a6feb",
+      "key": "63a69b06-d79a-4b76-a992-b9f5a2465847",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Prompts to Build Abstraction:** Abstraction is all about focusing on what matters and ignoring what doesn't.  In Music Lab, abstraction shows up when students reduce complexity in their songs, like grouping individual blocks to focus on structure like verses and choruses, or giving meaningful names to functions and sections. Use these questions to help students identify what’s essential in their song or code:\n\n* What’s the main goal of this section of your code?\n* Are there any parts you could group together?\n* If someone new read your code, would they know what it does, or could you simplify it?\n\nThese tips come from our Self-Paced Professional Learning module - [click here to see additional tips and learn more about Abstraction](studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/12)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "63a69b06-d79a-4b76-a992-b9f5a2465847",
+        "lesson_activity.key": "2dd95518-8d84-4dd1-acb8-7068af1d5810"
+      }
+    },
+    {
+      "key": "d549825c-05b4-40f3-a57b-966cc92a6feb",
+      "position": 2,
+      "properties": {
         "progression_name": "Abstraction"
       },
       "seeding_key": {
@@ -3126,7 +3174,7 @@
     },
     {
       "key": "04b1b5df-0faa-43b0-97df-14d903518f99",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Reusing Functions"
       },
@@ -3137,7 +3185,7 @@
     },
     {
       "key": "1cabace9-699e-4e6a-bc79-7f403b086271",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Check-In",
         "tips": [
@@ -3154,7 +3202,7 @@
     },
     {
       "key": "b70aa25d-1caa-4fce-a27d-bf68d45bdf66",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Composing Functions"
       },
@@ -3165,7 +3213,7 @@
     },
     {
       "key": "1858a040-3d15-4b03-90e5-3e1786fb85bf",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -3176,7 +3224,7 @@
     },
     {
       "key": "0930435c-502e-4a9a-9612-2063c55bbf7b",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -3193,7 +3241,7 @@
     },
     {
       "key": "400864d9-b068-4e0f-b223-dceb66e2706a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge"
@@ -3205,7 +3253,7 @@
     },
     {
       "key": "c063b953-21b5-4fa2-a9ae-2ad2cf730201",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -5749,6 +5797,28 @@
     {
       "chapter": 91,
       "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Musical Cat GIFs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-5"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "2671e45f-3a29-49b0-a0dd-42f66fd70a68"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-gif-5"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5772,7 +5842,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5797,7 +5867,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5822,7 +5892,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5847,7 +5917,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5872,7 +5942,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5897,7 +5967,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5922,7 +5992,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5947,7 +6017,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 100,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5972,7 +6042,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 101,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5997,7 +6067,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6022,7 +6092,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6047,7 +6117,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 104,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6072,7 +6142,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 105,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6097,7 +6167,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 106,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6122,7 +6192,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 107,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6147,7 +6217,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6172,7 +6242,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -6197,7 +6267,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -6222,7 +6292,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 111,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6247,7 +6317,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 112,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -6272,7 +6342,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 113,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -6297,7 +6367,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 114,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -6322,7 +6392,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 115,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6347,7 +6417,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 116,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -6372,7 +6442,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 117,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6397,7 +6467,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 118,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6422,7 +6492,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 119,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6447,7 +6517,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 120,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6472,7 +6542,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 121,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6497,7 +6567,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 122,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6522,7 +6592,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 123,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6547,7 +6617,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 124,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6572,7 +6642,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 125,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6597,7 +6667,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 126,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6622,7 +6692,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 127,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6647,7 +6717,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 128,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6672,7 +6742,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 129,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7771,6 +7841,18 @@
         "level.key": "test-music-lab-mini-project-gif-3",
         "script_level.level_keys": [
           "test-music-lab-mini-project-gif-3"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "2671e45f-3a29-49b0-a0dd-42f66fd70a68"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-gif-5",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-5"
         ],
         "lesson.key": "Mini Project: Cat GIF Loops",
         "lesson_group.key": "",

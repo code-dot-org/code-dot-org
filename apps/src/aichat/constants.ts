@@ -39,6 +39,6 @@ export const RESET_CONVERSATION_CUSTOMIZATION_UPDATES = [
 
 // Maximum number of files that can be attached to a chat message in multimodal mode.
 export const MAX_NUM_FILES = 5;
-export const MAX_FILE_SIZE_MB = 20;
+export const MAX_FILE_SIZE_MB = 5;
 // Allowed file types for upload in multimodal mode.
 export const ACCEPTED_FILE_TYPES = ['.jpg', '.jpeg', '.png', '.pdf'];

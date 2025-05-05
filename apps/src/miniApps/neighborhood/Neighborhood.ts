@@ -3,7 +3,6 @@ import {tiles, MazeController} from '@code-dot-org/maze';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
 import {LOOK_ID, SVG_ID} from '@cdo/apps/maze/constants';
-import commonI18n from '@cdo/locale';
 
 import {ConsoleSignalType, NeighborhoodSignalType} from './constants';
 import NeighborhoodSpeedTracker from './NeighborhoodSpeedTracker';
@@ -23,12 +22,10 @@ type SkinType = Record<string, unknown>;
 
 export default class Neighborhood {
   private controller: typeof MazeController | null;
-  private seenFirstSignal: boolean;
   private onOutputMessage: (message: string) => void;
   private onNewlineMessage: () => void;
   private onPartialOutputMessage: (message: string) => void;
   private setIsRunning: (isRunning: boolean) => void;
-  private statusMessagePrefix: string;
   private signals: (NeighborhoodSignal | ConsoleSignal)[];
   private nextSignalIndex: number;
   private speedTracker: NeighborhoodSpeedTracker;
@@ -38,15 +35,12 @@ export default class Neighborhood {
     onOutputMessage: (message: string) => void,
     onNewlineMessage: () => void,
     setIsRunning: (isRunning: boolean) => void,
-    statusMessagePrefix: string,
     onPartialOutputMessage: (message: string) => void
   ) {
     this.controller = null;
-    this.seenFirstSignal = false;
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
     this.setIsRunning = setIsRunning;
-    this.statusMessagePrefix = statusMessagePrefix;
     this.signals = [];
     this.nextSignalIndex = -1;
     this.speedTracker = NeighborhoodSpeedTracker.getInstance();
@@ -113,14 +107,6 @@ export default class Neighborhood {
     }
     // Add next signal to our queue of signals.
     this.signals.push(signal);
-    // if this is the first non-console signal, send a starting painter message
-    if (!this.seenFirstSignal && !(signal.value in ConsoleSignalType)) {
-      this.seenFirstSignal = true;
-      this.signals.push({
-        value: ConsoleSignalType.CONSOLE_LOG,
-        detail: `${this.statusMessagePrefix} ${commonI18n.startingPainter()}\n`,
-      });
-    }
   }
 
   // Process avaiable signals recursively. We process recursively to ensure
@@ -268,7 +254,6 @@ export default class Neighborhood {
   resetSignalQueue() {
     this.signals = [];
     this.nextSignalIndex = 0;
-    this.seenFirstSignal = false;
     this.isProcessingSignals = false;
   }
 

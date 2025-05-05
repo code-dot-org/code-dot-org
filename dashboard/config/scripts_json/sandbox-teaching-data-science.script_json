@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 15:25:06 UTC",
+    "serialized_at": "2025-04-24 21:25:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -36,12 +36,14 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Introduction to Teaching Data Science",
+      "name": "Introduction to Insights from Data and AI",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "**In this lesson, you will:**\n\nGet an overview of the Insights from Data and AI curriculum and resources.\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**In this lesson, you will:**\n\nGet an overview of the Insights from Data and AI curriculum and resources.\n\n**Suggested Time:** 10 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -57,6 +59,8 @@
       "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
+        "overview": "   **In  this lesson, you will:**\n\n-  Review the content from Insights from Data and AI.\n  - Preview activities in the lessons.\n  - Explore the foundational concepts of data science.\n  - Develop and refine data questions to guide investigations and analysis.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "   **In  this lesson, you will:**\n\n-  Review the content from Insights from Data and AI.\n  - Preview activities in the lessons.\n  - Explore the foundational concepts of data science.\n  - Develop and refine data questions to guide investigations and analysis.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -72,6 +76,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
+        "overview": "**In this lesson, you will:**\n\n- Create bar charts and pie charts to describe data.\n- Filter and sort data to gain new insights from visualizations.\n- Utilize visualizations to answer data questions.\n- Perform essential data cleaning tasks to prepare data for accurate and effective analysis.\n- Preview lessons and the final project from the unit.\n\n**Suggested time:** 30 minutes",
+        "student_overview": "**In this lesson, you will:**\n\n- Create bar charts and pie charts to describe data.\n- Filter and sort data to gain new insights from visualizations.\n- Utilize visualizations to answer data questions.\n- Perform essential data cleaning tasks to prepare data for accurate and effective analysis.\n- Preview lessons and the final project from the unit.\n\n**Suggested time:** 30 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -115,7 +121,7 @@
       "key": "c559d204-9430-40a1-8f90-aa5ab9af17ee",
       "position": 1,
       "properties": {
-        "duration": 20
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "c559d204-9430-40a1-8f90-aa5ab9af17ee",
@@ -128,7 +134,7 @@
       "key": "d95067e8-9fc1-400b-b21d-223494fbe23e",
       "position": 1,
       "properties": {
-        "duration": 30
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "d95067e8-9fc1-400b-b21d-223494fbe23e",
@@ -141,6 +147,7 @@
       "key": "c20a020b-2588-4ed9-ba6b-18256417c7ed",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "c20a020b-2588-4ed9-ba6b-18256417c7ed",
@@ -1460,6 +1467,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-barchartPanel-L3-DS"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1482,6 +1492,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-piechartPanel-L4-DS"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1504,6 +1517,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-editchartPanel-L5-DS"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,
@@ -1526,6 +1542,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-donutchartPanel-L6-DS"
+        ],
         "progression": "Introduction to Data Visualizations"
       },
       "bonus": false,

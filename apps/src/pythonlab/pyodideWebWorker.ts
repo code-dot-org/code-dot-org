@@ -130,7 +130,11 @@ onmessage = async event => {
   // https://pyodide.org/en/stable/usage/api/js-api.html#pyodide.ffi.PyProxy.toJs
   const resultsObject = results?.toJs();
   try {
-    postMessage({type: 'run_complete', message: resultsObject, id});
+    postMessage({
+      type: 'run_complete',
+      message: JSON.stringify(resultsObject),
+      id,
+    });
   } catch (e) {
     // Likely we hit a DataCloneError trying to send the resultsObject.
     // In this case, don't try to send the results object, as if it can't be
@@ -170,7 +174,7 @@ async function loadPackages() {
       'matplotlib',
       // These are custom packages that we have built. They are defined in the
       // python/pythonlab/ folder in the codebase.
-      `/blockly/js/pyodide/${version}/unittest_runner-0.2.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/unittest_runner-0.3.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.2.0-py3-none-any.whl`,
       `/blockly/js/pyodide/${version}/neighborhood-0.4.0-py3-none-any.whl`,
     ],

@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-04-25T19:41:07.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Create a Comic or Joke",
+    "long_instructions": "## Create a Comic or Joke\r\n\r\n**Task:** Have AI come up with a one-panel comic idea or school-related joke.\r\n\r\n**Things to Try:**\r\n- Ask for a joke about school life (cafeteria, hallways, homework)\r\n- Ask for a funny caption for a cartoon of your choice\r\n- Test: Does the joke actually make sense?",
+    "bubble_choice_description": "Ask AI to come up with a one-panel comic idea or school-related joke.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/470b18e3980c747c59c41caa59bcc7c8-comedy.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-25T19:41:07.393+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_a\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_a\"},{\"changed_at\":\"2025-04-25 19:43:47 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-25 22:04:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Aichat>

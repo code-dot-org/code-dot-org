@@ -1,5 +1,6 @@
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
 import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
+import classNames from 'classnames';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -33,9 +34,13 @@ export const ItemRow: React.FunctionComponent<ItemRowProps> = ({
   IconComponent,
   NameComponent,
   openFunction,
+  className,
 }) => {
   return (
-    <div className={moduleStyles.row} id={`uitest-file-${item.id}-row`}>
+    <div
+      className={classNames(moduleStyles.row, className)}
+      id={`uitest-file-${item.id}-row`}
+    >
       <div className={moduleStyles.label} onClick={() => openFunction(item.id)}>
         <IconComponent item={item} />
         <NameComponent item={item} />

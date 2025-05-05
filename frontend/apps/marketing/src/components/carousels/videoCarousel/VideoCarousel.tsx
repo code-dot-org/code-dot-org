@@ -1,29 +1,30 @@
 'use client';
 
 import '@code-dot-org/component-library/carousel/index.css';
-import React, {ReactNode, useMemo} from 'react';
+import {EntryFields} from 'contentful';
+import React, {useMemo} from 'react';
 
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
 import Video from '@/components/video';
+import {Entry} from '@/types/contentful/Entry';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
+
+type VideoCarouselFields = {
+  videoTitle: EntryFields.Text;
+  youTubeId: EntryFields.Text;
+  videoFallbackFile: ExperienceAsset;
+};
+
+type VideoCarouselEntry = Entry<VideoCarouselFields>;
 
 export type VideoCarouselProps = {
   /** Carousel content w/ fields from Contentful */
-  slides: {
-    id: string;
-    slide: ReactNode;
-    fields: {
-      videoTitle: string;
-      youTubeId: string;
-      videoFallbackFile: ExperienceAsset;
-    };
-  }[];
+  slides: VideoCarouselEntry[];
 };
 
 const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
-  // Show placeholder text until a content entry is added
-  if (slides == null) {
+  if (!slides) {
     return (
       <div style={{color: 'var(--text-neutral-primary)'}}>
         <em>
@@ -37,9 +38,10 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
 
   const slidesData = useMemo(
     () =>
-      slides
-        .filter(Boolean) // Removes any falsy values
-        .map(({fields: {videoTitle, youTubeId, videoFallbackFile}}) => ({
+      slides.filter(Boolean).map(({fields}) => {
+        const {videoTitle, youTubeId, videoFallbackFile} = fields;
+
+        return {
           id: youTubeId,
           slide: (
             <Video
@@ -49,8 +51,9 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({slides}) => {
               videoFallback={videoFallbackFile?.fields?.file?.url}
             />
           ),
-        })),
-    [slides], // Dependencies: recompute only when `slides` changes
+        };
+      }),
+    [slides],
   );
 
   return <DSCOCarousel showNavArrows={true} slides={slidesData} />;

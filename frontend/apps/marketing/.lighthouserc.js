@@ -1,6 +1,7 @@
 const assertions = {
   'bf-cache': 'off',
   'color-contrast': 'off',
+  'errors-in-console': ['error', {maxLength: 2}],
   'inspector-issues': 'off',
   'offscreen-images': ['error', {minScore: 0.5, maxLength: 3}],
   'total-byte-weight': ['error', {minScore: 0.5}],

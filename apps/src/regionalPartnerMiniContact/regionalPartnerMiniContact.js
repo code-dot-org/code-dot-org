@@ -6,6 +6,7 @@ import {
   RegionalPartnerMiniContact,
   RegionalPartnerMiniContactPopupLink,
 } from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 window.showRegionalPartnerMiniContact = function () {
   const regionalPartnerMiniContactElement = $(
@@ -14,6 +15,7 @@ window.showRegionalPartnerMiniContact = function () {
   const sourcePageId = regionalPartnerMiniContactElement.data('source-page-id');
   const notes = regionalPartnerMiniContactElement.data('options-notes');
   let options = {notes: notes};
+  const zipFromUrlParams = queryParams()['zip'];
 
   $.ajax({
     type: 'GET',
@@ -23,7 +25,7 @@ window.showRegionalPartnerMiniContact = function () {
       options = {
         user_name: results.user_name,
         email: results.email,
-        zip: results.zip,
+        zip: zipFromUrlParams || results.zip,
         notes: notes,
       };
     })

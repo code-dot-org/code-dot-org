@@ -1,0 +1,559 @@
+{
+  "published": true,
+  "pages": [
+    {
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "barriers_implementation_ai",
+          "title": "Do you anticipate any barriers to using what you’ve learned?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "none",
+              "text": "I don't anticipate any barriers"
+            },
+            {
+              "value": "application_unclear",
+              "text": "It is not clear to me how to apply what I’ve learned"
+            },
+            {
+              "value": "school_discouraged_use",
+              "text": "AI use has been discouraged in my school/district"
+            },
+            {
+              "value": "need_learn_more",
+              "text": "I need to learn more about AI before using it in my classroom/role"
+            },
+            {
+              "value": "need_more_practice",
+              "text": "I need more practice on my own before using it in my classroom/role"
+            },
+            {
+              "value": "lack_access_ai_tools",
+              "text": "My school/district restricts access to AI tools"
+            },
+            {
+              "value": "lack_school_ai_policy",
+              "text": "My school/district doesn't have clear guidance or policies around using and teaching about AI"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "checkbox",
+          "name": "barriers_implementation_teaching_cs",
+          "title": "Do you anticipate any barriers to using what you’ve learned?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "none",
+              "text": "I don't anticipate any barriers"
+            },
+            {
+              "value": "application_unclear",
+              "text": "It is not clear to me how to apply what I’ve learned"
+            },
+            {
+              "value": "need_more_preparation",
+              "text": "I need more preparation before teaching this content in my classroom"
+            },
+            {
+              "value": "limited_time",
+              "text": "I have limited time to adopt new curriculum"
+            },
+            {
+              "value": "lack_admin_support",
+              "text": "I don't have enough support from my school's administration"
+            },
+            {
+              "value": "lack_student_interest",
+              "text": "My students don’t seem interested in computer science and/or this content"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "rating",
+          "name": "better_understanding_concepts",
+          "title": "After completing this module, I have a better understanding of {module} concepts.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "rating",
+          "name": "comfort_ability_to_teach",
+          "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s {module} curriculum than I did before starting this professional learning experience.",
+          "natalia_comment": "NOTE: set the {module} variable in the simple survey configuration to pass-through the value you want to appear in the survey (eg. computer vision)",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "rating",
+          "name": "confidence_use_skills",
+          "title": "After completing this module, do you feel more or less confident than before about using the skills you learned in your school or classroom?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "radiogroup",
+          "name": "current_level_cs_knowledge",
+          "title": "Which best describes your current level of knowledge about computer science?",
+          "choices": [
+            {
+              "value": "none",
+              "text": "I have no knowledge"
+            },
+            {
+              "value": "few_activities",
+              "text": "I have done a few activities/games online (e.g. the Hour of Code)"
+            },
+            {
+              "value": "few_courses",
+              "text": "I have taken a few courses in computer science (e.g. online classes, college courses)"
+            },
+            {
+              "value": "attended_pd",
+              "text": "I have attended facilitator-led professional development to teach computer science"
+            },
+            {
+              "value": "cs_degree",
+              "text": "I have a degree in computer science (e.g. an undergraduate or graduate degree)"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "familiar_student_programming_environments",
+          "title": "After completing this module, I am more familiar with the programming environments and learning tools that students will use in the {module} curriculum.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "radiogroup",
+          "name": "familiarity_ai",
+          "title": "Which best describes your current level of familiarity with Artificial Intelligence (AI)?",
+          "choices": [
+            {
+              "value": "limited",
+              "text": "I haven't used AI much"
+            },
+            {
+              "value": "used_few_times",
+              "text": "I have used AI a few times"
+            },
+            {
+              "value": "attended_pd_ai",
+              "text": "I have attended professional development around using AI"
+            },
+            {
+              "value": "regular_use",
+              "text": "I regularly use AI in my role"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "first_self_paced_pl",
+          "title": "Is this your first self-paced professional learning experience for teaching Code.org's AI and Computer Science curriculum?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "panel",
+          "name": "focus_group_panel",
+          "elements": [
+            {
+              "type": "radiogroup",
+              "name": "participate_focus_group",
+              "title": "OPTIONAL: Would you be willing to participate in a follow-up focus group to provide direct feedback about this professional learning experience?",
+              "choices": [
+                {
+                  "value": "yes",
+                  "text": "Yes"
+                },
+                {
+                  "value": "no",
+                  "text": "No"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "name": "computer_vision_email_focus_group",
+              "title": "Great! Please share an email address where we may contact you.",
+              "visibleIf": "{participate_focus_group}='yes'"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "gender",
+          "title": "Gender (optional):",
+          "choices": [
+            {
+              "value": "male",
+              "text": "Male"
+            },
+            {
+              "value": "female",
+              "text": "Female"
+            },
+            {
+              "value": "non_binary",
+              "text": "Non-binary"
+            },
+            {
+              "value": "not_listed",
+              "text": "Preferred term not listed"
+            },
+            {
+              "value": "prefer_no_answer",
+              "text": "Prefer not to answer"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "how_long_to_complete_module",
+          "title": "How long did you spend completing this module?",
+          "choices": [
+            {
+              "value": "00_30",
+              "text": "Fewer than 30 minutes"
+            },
+            {
+              "value": "30_60",
+              "text": "Between 30 minutes and 60 minutes"
+            },
+            {
+              "value": "60_90",
+              "text": "Between 60 minutes and 90 minutes"
+            },
+            {
+              "value": "90_120",
+              "text": "Between 90 minutes and 120 minutes"
+            },
+            {
+              "value": "over_120",
+              "text": "Over 120 minutes"
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "know_what_students_learn",
+          "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s {module} curriculum.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "rating",
+          "name": "know_what_students_learn_module",
+          "title": "After completing this professional learning experience, I understand what my students will learn in Code.org's {module} curriculum.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "radiogroup",
+          "name": "main_goal",
+          "title": "My main goal for this professional learning is to:",
+          "natalia_comment": "NOTE: This is a question that should be included in self-paced pl surveys, but would change per module to align with the module's content. Thus, this question is only to be used as a reference. Copy it and paste it in each module’s survey, changing what's in between curly brackets to align with the module. Add a suffix to the question's name indicating the module, e.g. main_goal_xyz",
+          "choices": [
+            {
+              "value": "better_understand_module",
+              "text": "Better understand Code.org's {module} curriculum"
+            },
+            {
+              "value": "learn_content_module",
+              "text": "Learn the {module} content covered in this module"
+            },
+            {
+              "value": "learn_cs_teaching_strategies",
+              "text": "Learn best strategies for teaching {module}"
+            },
+            {
+              "value": "continuing_education_requirements",
+              "text": "Fulfill continuing education requirements or pursue professional credentials"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "rating",
+          "name": "module_navigation",
+          "title": "Navigating this self-paced module was clear and easy.",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "matrix",
+          "name": "module_supported_learning",
+          "title": "How did each of the following supported your learning?",
+          "description": "Rate each option from least helpful (1) to most helpful (7).",
+          "columns": [
+            {
+              "value": "1",
+              "text": "1 - Least"
+            },
+            {
+              "value": "2",
+              "text": "2"
+            },
+            {
+              "value": "3",
+              "text": "3"
+            },
+            {
+              "value": "4",
+              "text": "4"
+            },
+            {
+              "value": "5",
+              "text": "5"
+            },
+            {
+              "value": "6",
+              "text": "6"
+            },
+            {
+              "value": "7",
+              "text": "7 - Most"
+            }
+          ],
+          "rows": [
+            {
+              "value": "reading",
+              "text": "Reading a page that contained text and images about a topic."
+            },
+            {
+              "value": "task_in_platform",
+              "text": "Trying a task or activity in the Code.org platform."
+            },
+            {
+              "value": "making_a_plan_for_teaching",
+              "text": "Making a plan for teaching {module}."
+            },
+            {
+              "value": "reflections",
+              "text": "Writing reflections on experiences and teaching practices."
+            },
+            {
+              "value": "forum_participation",
+              "text": "Sharing strategies in the Code.org forum."
+            },
+            {
+              "value": "video_content",
+              "text": "Engaging with video content."
+            }
+          ]
+        },
+        {
+          "type": "rating",
+          "name": "nps_self_paced_pd",
+          "title": "How likely are you to recommend this self-paced professional learning experience to a friend or colleague?",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not likely at all",
+          "maxRateDescription": "Extremely likely"
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission_to_quote",
+          "title": "I give Code.org permission to quote my written comments from this survey for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes, I give Code.org permission to quote me and use my name."
+            },
+            {
+              "value": "yes_anon",
+              "text": "Yes, I give Code.org permission to quote me, but I want to be anonymous."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give Code.org my permission."
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "pl_to_support_growth_teacher_cs",
+          "title": "How could Code.org continue to support your growth as a computer science teacher?",
+          "choices": [
+            {
+              "value": "cs_concepts",
+              "text": "Additional online self-paced professional learning topics on computer science concepts"
+            },
+            {
+              "value": "pedagogy",
+              "text": "Additional online self-paced professional learning topics on pedagogical and teaching practices"
+            },
+            {
+              "value": "community_spaces_synchronous",
+              "text": "Complement online self-paced professional learning experiences with synchronous spaces to connect with other teachers, share experiences, and receive guidance"
+            },
+            {
+              "value": "pacilitator_led_pd",
+              "text": "Facilitator-led, synchronous professional learning experience"
+            },
+            {
+              "value": "ai_coach_teaching_practices",
+              "text": "AI-assisted coaching tool to enhance CS teaching practices"
+            },
+            {
+              "value": "ai_coach_cs_concepts",
+              "text": "AI-assisted coaching tool to support learning computer science concepts"
+            }
+          ],
+          "hasOther": true
+        },
+        {
+          "type": "rating",
+          "name": "plan_ongoing_assessment",
+          "title": "After completing this module, I have a clear idea of how I will incorporate ongoing assessment into my {module} class",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Strongly disagree",
+          "maxRateDescription": "Strongly agree"
+        },
+        {
+          "type": "rating",
+          "name": "plan_to_teach",
+          "title": "Are you planning to teach Code.org's {module} content?",
+          "natalia_comment": "NOTE: set the {module} variable in the simple survey configuration to pass-through the value you want to appear in the survey (eg. computer vision)",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Definitely no",
+          "maxRateDescription": "Yes, definitely"
+        },
+        {
+          "type": "rating",
+          "name": "plan_use_skills_learned",
+          "title": "Are you planning to use what you learned in this module in your role as an educator?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Definitely no",
+          "maxRateDescription": "Yes, definitely"
+        },
+        {
+          "type": "checkbox",
+          "name": "race_eth",
+          "title": "Which of the following best represents your racial or ethnic background? (Optional)",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "black",
+              "text": "African American/Black"
+            },
+            {
+              "value": "asian",
+              "text": "Asian"
+            },
+            {
+              "value": "hawaiian_pi",
+              "text": "Hawaiian, or Pacific Islander"
+            },
+            {
+              "value": "hispanic",
+              "text": "Hispanic or Latino/Latina"
+            },
+            {
+              "value": "native_am",
+              "text": "Native American or American Indian"
+            },
+            {
+              "value": "white",
+              "text": "White/Caucasian"
+            },
+            {
+              "value": "not_listed",
+              "text": "Racial or ethnic background not listed"
+            },
+            {
+              "value": "prefer_no_answer",
+              "text": "Prefer not to answer"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "self_paced_pl_other_feedback",
+          "title": "Do you have any feedback about this module that you would like to share with the Code.org team? "
+        },
+        {
+          "type": "rating",
+          "name": "skills_content_relevant_role",
+          "title": "Was the content of the module relevant to your role?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not relevant at all",
+          "maxRateDescription": "Extremely relevant"
+        },
+        {
+          "type": "radiogroup",
+          "name": "teacher_role",
+          "title": "Which best describes you? ",
+          "choices": [
+            {
+              "value": "classroom",
+              "text": "Classroom teacher"
+            },
+            {
+              "value": "stem_tech_techer",
+              "text": "STEM / Tech teacher"
+            },
+            {
+              "value": "other_specialist",
+              "text": "Other specialist teacher"
+            },
+            {
+              "value": "librarian",
+              "text": "Librarian / school media specialist"
+            },
+            {
+              "value": "paraprofessional",
+              "text": "Paraprofessional/aide"
+            },
+            {
+              "value": "district_coach",
+              "text": "District level coach/specialist"
+            },
+            {
+              "value": "administrator",
+              "text": "School/District administrator"
+            },
+            {
+              "value": "outside_school",
+              "text": "Out-of-school educator (e.g. tutor, after school teacher)"
+            }
+          ],
+          "hasOther": true
+        }
+      ]
+    }
+  ]
+}

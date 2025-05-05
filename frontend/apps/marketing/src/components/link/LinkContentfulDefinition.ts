@@ -8,12 +8,12 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
   name: 'Text Link',
   category: '02: Typography',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/2CPKrKCB3KxD1n6wG9JTn9/aab22373a39e9cc5305b21c08bba588d/component_link_thumbnail.png',
+    'https://contentful-images.code.org/90t6bu6vlf76/2CPKrKCB3KxD1n6wG9JTn9/aab22373a39e9cc5305b21c08bba588d/component_link_thumbnail.png',
   tooltip: {
     description:
       'A standalone text link that directs users to internal or external pages, with options for styling and accessibility.',
     imageUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/2toB92KGYPO9yDK3bI3qD8/7bcfbe2819c43f6c5b9c89e6218bad10/component_link_tooltip.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/2toB92KGYPO9yDK3bI3qD8/7bcfbe2819c43f6c5b9c89e6218bad10/component_link_tooltip.png',
   },
   builtInStyles: ['cfTextAlign'],
   variables: {
@@ -36,11 +36,17 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
       type: 'Text',
       defaultValue: 'Link',
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     href: {
       displayName: 'Link URL',
       type: 'Text',
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     isLinkExternal: {
       displayName:
@@ -50,12 +56,18 @@ export const LinkContentfulComponentDefinition: ComponentDefinition = {
       type: 'Boolean',
       defaultValue: false,
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     removeMarginBottom: {...removeMarginBottomDefinition},
     ariaLabel: {
       displayName: 'Aria Label',
       type: 'Text',
       group: 'content',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
   },
 };

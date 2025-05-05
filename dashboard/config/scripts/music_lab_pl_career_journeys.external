@@ -1,0 +1,34 @@
+name 'music_lab_PL_career_journeys'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# In the Curriculum: Career Journeys
+
+## What are Career Journeys?
+
+#### To help students see the real-world applications of computer science and music, we've included Career Spotlights in the curriculum.Students solve **authentic problems** inspired by these careers.
+
+## Why Do Career Journeys Matter?
+#### Highlighting careers: 
+
+
+
+- #### **Builds Awareness:** Helps students explore future career possibilities early on.
+- #### **Makes Learning Personal:** Connects CS to students’ interests like music or games.
+- #### **Promotes Equity:** Highlights diverse role models and fosters a sense of belonging.
+- #### **Shows Real-World Use:** Demonstrates how CS applies across industries and jobs.
+- #### **Encourages Key Skills:** Reinforces creativity, collaboration, and problem-solving.
+- #### **Empowers Teachers:** Positions educators as mentors guiding meaningful learning.
+
+
+
+
+
+
+<div style="display: flex; justify-content: space-between; width: 100%; margin: 20pt auto; padding: 0 5px;">
+  <img src="https://images.code.org/794fce27e2665539fc2ee035962dd389-image-1744653846449.03.30 AM.png" style="border-radius: 5pt; width: 32%;" alt="Image of a woman singing with the text, A record producer is someone who brings the singers, the songwriters, the engineers, the musicians together">
+  <img src="https://images.code.org/34e053cb621b242bb88cccb1f7606df8-image-1744653848780.01.55 AM.png" style="border-radius: 5pt; width: 32%;" alt="A woman codes in front of a screen. The text says, Creative Coding - Roxanne performs music using code.">
+  <img src="https://images.code.org/fafa657031d5f3671fec4180da9f8a7a-image-1744653850201.01.41 AM.png" style="border-radius: 5pt; width: 32%;" alt="An image of a man with the text, Remix Artist - This is Altrice. He's an electronic and remix musical artist.">
+</div>
+MARKDOWN

@@ -123,6 +123,11 @@ const SummaryResponses = ({
     unitId: scriptData.reportingData.unitId,
   };
   const toggleAIAnalysis = () => {
+    if (showAIAnalysis) {
+      logEvent(EVENTS.CFU_SHOW_AI_INSIGHTS_TOGGLED_OFF);
+    } else {
+      logEvent(EVENTS.CFU_SHOW_AI_INSIGHTS_TOGGLED_ON);
+    }
     setShowAIAnalysis(prevShowAIAnalysis => !prevShowAIAnalysis);
   };
 
@@ -156,7 +161,6 @@ const SummaryResponses = ({
             }
           >
             <p>
-              <i className="fa fa-user" />
               <span>
                 {scriptData.responses[levelNumber].length}/{students.length}{' '}
                 {i18n.studentsAnswered()}

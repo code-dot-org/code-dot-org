@@ -4,6 +4,7 @@ import {expect, Locator} from '@playwright/test';
 import {EXPECTED_LOCALIZATION_STRINGS} from './config/i18n';
 import {test} from './fixtures/base';
 import {AllTheThingsPage} from './pom/all-the-things';
+import {MarketingPage} from './pom/marketing';
 
 test.describe('All the things UI e2e test', () => {
   test.describe('a11y', () => {
@@ -27,6 +28,67 @@ test.describe('All the things UI e2e test', () => {
     });
   });
 
+  test.describe('locale-less redirect', () => {
+    test('should redirect from localeless paths to english localized paths when no language cookie is set', async ({
+      page,
+    }) => {
+      const allTheThingsPage = new MarketingPage(page);
+      await allTheThingsPage.goto('/all-the-things');
+
+      await page.waitForURL('**/en-US/all-the-things');
+    });
+
+    test('should redirect from localeless paths to localized paths using the language cookie', async ({
+      page,
+      context,
+      browserName,
+    }) => {
+      test.skip(
+        browserName !== 'chromium',
+        'This test only needs to run once on Chromium',
+      );
+      const allTheThingsPage = new MarketingPage(page);
+
+      await context.addCookies([
+        {
+          name: 'language_',
+          path: '/',
+          domain: `.${allTheThingsPage.getBaseDomain()}`,
+          value: 'zh-CN',
+        },
+      ]);
+
+      await allTheThingsPage.goto('/all-the-things');
+
+      await page.waitForURL('**/zh-CN/all-the-things');
+    });
+
+    test('should redirect from localeless paths to localized english when language cookie is invalid', async ({
+      page,
+      browserName,
+      context,
+    }) => {
+      test.skip(
+        browserName !== 'chromium',
+        'This test only needs to run once on Chromium',
+      );
+      const allTheThingsPage = new MarketingPage(page);
+
+      await context.addCookies([
+        {
+          name: 'language_',
+          path: '/',
+          domain: `.${allTheThingsPage.getBaseDomain()}`,
+          value: 'invalid',
+        },
+      ]);
+
+      await allTheThingsPage.goto('/all-the-things');
+
+      await page.waitForURL('**/en-US/all-the-things');
+    });
+  });
+
   test('should have the correct top level SEO metadata', async ({page}) => {
     const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
     await allTheThingsPage.goto();
@@ -45,7 +107,7 @@ test.describe('All the things UI e2e test', () => {
       'OpenGraph Description',
     );
     expect(await allTheThingsPage.getOpenGraph('image')).toBe(
-      'https://images.ctfassets.net/90t6bu6vlf76/4hXiOPiRlCXpmtypRNOZqc/9ebe430094c1ae1faf742e1de3f8aa8b/engineering-only-opengraph-default.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/4hXiOPiRlCXpmtypRNOZqc/9ebe430094c1ae1faf742e1de3f8aa8b/engineering-only-opengraph-default.png',
     );
     expect(await allTheThingsPage.getOpenGraph('type')).toBe('website');
   });

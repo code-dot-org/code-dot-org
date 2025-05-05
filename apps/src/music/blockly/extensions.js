@@ -221,7 +221,7 @@ export const fieldPatternsValidator = function () {
    */
   patternField?.setValidator(newValue => {
     const kitNotes = MusicLibrary.getInstance()
-      .kits.find(kit => kit.id === newValue.instrument)
+      ?.kits.find(kit => kit.id === newValue.instrument)
       .sounds.map(sound => sound.note);
     const validatedEvents = newValue.events.filter(
       event =>

@@ -101,7 +101,8 @@ Scenario: Oceans uncustomized dashboard certificate pages
 
   When I press the first "#certificate-share img" element to load a new page
   And I wait until current URL contains "/print_certificates/"
-  And I see no difference for "oceans print certificate page"
+  # This page doesn't render any icons, so we don't need to wait for Font Awesome to load.
+  And I see no difference for "oceans print certificate page" without waiting for Font Awesome to load
 
   And I close my eyes
 
@@ -149,7 +150,8 @@ Scenario: customized dashboard certificate pages with no course name
   When I press the first "#certificate-share img" element to load a new page
   And I wait until current URL contains "/print_certificates/"
   Then I wait to see an image "/certificate_images/"
-  And I see no difference for "print certificate page"
+  # This page doesn't render any icons, so we don't need to wait for Font Awesome to load.
+  And I see no difference for "print certificate page" without waiting for Font Awesome to load
 
   And I close my eyes
 

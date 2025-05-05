@@ -8,7 +8,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
+import dropdownStyles from '@codebridge/styles/dropdown.module.scss';
 
 /*
   Please note - this is a fairly brittle component in that it's only allowing toggling between
@@ -56,7 +56,7 @@ const SwapLayoutDropdown: React.FunctionComponent = () => {
       disabled={isRunningOrValidating}
       ariaLabel={codebridgeI18n.consoleOptions()}
     >
-      <div onClick={onLayoutChange} className={darkModeStyles.dropdownItem}>
+      <div onClick={onLayoutChange} className={dropdownStyles.dropdownItem}>
         <FontAwesomeV6Icon iconName={iconName} iconStyle={'solid'} />
         <div>{layoutLabel}</div>
       </div>

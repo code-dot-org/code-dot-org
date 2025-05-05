@@ -10,7 +10,7 @@ module AichatAssetHelper
 
     unless result && result[:status] == 'FOUND'
       raise StandardError.new(
-        "Error fetching asset #{{**asset, channel_id: channel_id, level_name: level_name, **result}}"
+        "Error fetching asset #{{asset: asset, channel_id: channel_id, level_name: level_name, result: result}}"
         )
     end
 
@@ -24,9 +24,10 @@ module AichatAssetHelper
     if source == 'level'
       level = Level.find_by(name: level_name)
       uuid_name = (level&.starter_assets || level&.project_template_level&.starter_assets || {})&.dig(filename)
-      return nil if uuid_name.nil?
+      return {status: 'NOT_FOUND'} if uuid_name.nil?
       s3_object = LevelStarterAssetsHelper.get_object(uuid_name)
       return {status: 'FOUND', body: s3_object.get.body} if s3_object
     end
+    {status: 'NOT_FOUND'}
   end
 end

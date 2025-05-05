@@ -3,6 +3,7 @@
   "name": "Calling a Function",
   "category": "Functions",
   "category_key": "functions",
+  "block_name": "procedures_callnoreturn",
   "content": "When you *define* a function you give a name to a set of actions you want the computer to perform. When you *call* a function you are telling the computer to run that set of actions.\r\n\r\nWhen you call a function you tell the computer to run the code inside the function definition. Functions are called by placing their blocks anywhere in the program.",
   "examples": [
     {

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 17:11:57 UTC",
+    "serialized_at": "2025-04-28 20:26:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2981,6 +2981,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -3134,7 +3137,7 @@
     },
     {
       "name": "AP Classroom: Practice Exams",
-      "url": "https://apclassroom.clickhelp.co/articles/#!ap-classroom-user-guide-for-teachers-publication/tch-reports-practice-exams",
+      "url": "https://apclassroom.clickhelp.co/articles/ap-classroom-user-guide-for-teachers-publication/tch-cr-practice-exams\t",
       "key": "ap_classroom_practice_exams",
       "properties": {
         "audience": "Verified Teacher",
@@ -3578,7 +3581,7 @@
     },
     {
       "name": "Mock MCQ Exam - Day 3",
-      "url": "https://docs.google.com/presentation/d/1ybJATHDhe0WREFFACE9krNObEQNvstlrfmg0jFqXEVY/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1afqDmTEp6CBZbY4Y9qJqlfjFH1DnjGVNa4KNFfCsBho/",
       "key": "mock_mcq_exam_-_day_3_1",
       "properties": {
         "audience": "Verified Teacher",

@@ -13,7 +13,6 @@ import {sendCodebridgeAnalyticsEvent} from '../utils/analyticsReporterHelper';
 import ForTeachersOnly from './ForTeachersOnly';
 
 import moduleStyles from './styles/info-panel.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 enum Panels {
   Instructions = 'Instructions',
@@ -90,7 +89,9 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     // If we change levels and were on a panel that no longer exists,
     // switch to the first panel that does exist.
     if (!panelOptions.includes(currentPanel)) {
-      setCurrentPanel(panelOptions[0]);
+      const newPanel = panelOptions[0];
+      setCurrentPanel(newPanel);
+      setCurrentPanelHeader(panelHeaderNames[newPanel]);
     }
   }, [currentPanel, panelOptions]);
 
@@ -105,9 +106,10 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           isIconOnly
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
           ariaLabel={'Information panel dropdown'}
+          aria-expanded={isDropdownOpen}
           size={'xs'}
           type={'tertiary'}
-          className={darkModeStyles.tertiaryButton}
+          color={'black'}
         />
       </div>
     ) : null;
