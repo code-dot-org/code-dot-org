@@ -101,7 +101,7 @@ describe('ActionBlock', () => {
   });
 
   it('does not render New tag if publishedDate is older than 3 months of the current date', () => {
-    const now = new Date('2025-06-02T00:00:00Z'); // June 1, 2025 12:00 AM UTC
+    const now = new Date('2025-06-02T00:00:00Z'); // June 2, 2025 12:00 AM UTC
     jest.useFakeTimers().setSystemTime(now);
 
     const {queryByText} = render(<FullWidthActionBlock {...defaultProps} />);
