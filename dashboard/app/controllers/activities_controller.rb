@@ -135,6 +135,7 @@ class ActivitiesController < ApplicationController
           user: current_user,
           event_name: 'TA Rubric Student AI Level Submitted',
           metadata: metadata,
+          session: session,
         )
         EvaluateRubricJob.perform_later(user_id: current_user.id, requester_id: current_user.id, script_level_id: @script_level.id)
       end

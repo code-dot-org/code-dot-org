@@ -17,7 +17,7 @@ class HomeController < ApplicationController
   # The terms_and_privacy page gets loaded in an iframe on the signup page, so skip
   # clearing the sign up tracking variables
   skip_before_action :clear_sign_up_session_vars, only: [:terms_and_privacy]
-  skip_before_action :initialize_statsig_stable_id, only: [:health_check]
+  skip_before_action :statsig_stable_id, only: [:health_check]
 
   def set_locale
     redirect_path = if params[:i18npath]

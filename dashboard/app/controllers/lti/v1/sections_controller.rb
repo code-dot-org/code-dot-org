@@ -26,7 +26,8 @@ module Lti
             Metrics::Events.log_event(
               user: current_user,
               event_name: 'lti_section_owner_changed',
-              metadata: metadata
+              metadata: metadata,
+              session: session,
             )
           end
         end

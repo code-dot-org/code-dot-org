@@ -86,6 +86,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         user: current_user,
         event_name: 'lti_section_created_non_lti',
         metadata: metadata,
+        session: session,
       )
     end
     # Add all coteachers specified in params

@@ -189,6 +189,7 @@ class LtiV1Controller < ApplicationController
           user: user,
           event_name: 'lti_user_signin',
           metadata: metadata,
+          session: session,
         )
 
         # Add user's lti_user_identity to deployment if it doesn't exist
@@ -363,6 +364,7 @@ class LtiV1Controller < ApplicationController
       user: current_user,
       event_name: event_name,
       metadata: metadata,
+      session: session,
     )
 
     result[:course_name] = nrps_response.dig(:context, :title)
@@ -434,6 +436,7 @@ class LtiV1Controller < ApplicationController
         request: request,
         event_name: 'lti_portal_registration_completed',
         metadata: metadata,
+        session: session,
       )
     end
     render 'lti/v1/integration_status'
@@ -509,6 +512,7 @@ class LtiV1Controller < ApplicationController
       user: user,
       event_name: 'lti_account_linking_page_visit',
       metadata: metadata,
+      session: session,
     )
   end
 end
