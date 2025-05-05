@@ -42,7 +42,6 @@ import commonI18n from '@cdo/locale';
 import MainInstructionsContent from './MainInstructionsContent';
 import ValidationResults from './ValidationResults';
 
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
 interface InstructionsProps {
@@ -300,7 +299,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         disabled={shouldValidateBeDisabled}
         iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
         className={classNames(
-          darkModeStyles.secondaryButton,
           moduleStyles.buttonInstruction,
           moduleStyles.validationButton
         )}

@@ -109,7 +109,7 @@
           },
           {
             "name": "played_sound_type_multiple_times",
-            "value": "lead:3"
+            "value": "lead:2"
           },
           {
             "name": "played_sounds_in_different_functions",
@@ -131,7 +131,7 @@
     ],
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-14T22:26:40.680+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-practiceA\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-practiceA\"},{\"changed_at\":\"2025-03-14 22:26:43 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 22:45:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 22:58:57 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 23:03:08 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 23:10:32 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 23:11:11 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 23:25:22 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-14T22:26:40.680+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-practiceA\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-practiceA\"},{\"changed_at\":\"2025-03-14 22:26:43 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 22:45:19 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 22:58:57 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 23:03:08 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 23:10:32 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 23:11:11 +0000\",\"changed\":[\"predict_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-29 23:25:22 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-01 16:31:08 +0000\",\"changed\":[\"predict_settings\",\"validations\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

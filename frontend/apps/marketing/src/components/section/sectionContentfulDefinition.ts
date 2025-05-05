@@ -60,6 +60,20 @@ export const SectionContentfulComponentDefinition: ComponentDefinition = {
         ],
       },
     },
+    divider: {
+      displayName: 'Bottom divider',
+      type: 'Text',
+      group: 'style',
+      description: 'Adds a bottom divider to the section.',
+      defaultValue: 'none',
+      validations: {
+        in: [
+          {value: 'none', displayName: 'None'},
+          {value: 'primary', displayName: 'Primary'},
+          {value: 'strong', displayName: 'Strong'},
+        ],
+      },
+    },
     id: {
       displayName: 'Section ID',
       type: 'Text',

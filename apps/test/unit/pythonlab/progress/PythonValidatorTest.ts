@@ -6,6 +6,7 @@ describe('PythonValidator', () => {
   const PASSED_TESTS = [
     {name: 'test1', result: 'PASS'},
     {name: 'test2', result: 'PASS'},
+    {name: 'test3', result: 'EXPECTED_FAILURE'},
   ];
 
   const SOME_FAILED_TESTS = [

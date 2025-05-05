@@ -17,7 +17,7 @@ $space-l: 8px;
   vertical-align: top;
   z-index: 1000;
   right: 0;
-  padding: $space-l;
+  padding: $space-l $space-l 16px;
 }
 
 .header {
