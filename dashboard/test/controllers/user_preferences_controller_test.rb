@@ -39,6 +39,16 @@ class UserPreferencesControllerTest < ActionController::TestCase
     assert_equal editor_font_size, preference.editor_font_size
   end
 
+  test 'updates theme for the current user' do
+    theme = {'global' => 'Dark'}
+
+    patch :update, params: {theme: theme}
+
+    assert_response :success
+    preference = UserPreference.find_by(user_id: @user.id)
+    assert_equal theme, preference.theme
+  end
+
   test 'updates existing preference for section_order without creating a new record' do
     initial_order = ['3', '2', '1']
     preference = UserPreference.create!(user_id: @user.id, section_order: initial_order)
@@ -77,6 +87,30 @@ class UserPreferencesControllerTest < ActionController::TestCase
 
     preference.reload
     assert_equal merged_editor_font_size, preference.editor_font_size
+  end
+
+  test 'updates existing preference for theme without creating a new record and merges successfully' do
+    initial_theme = {
+      'global'=> 'Dark'
+    }
+    preference = UserPreference.create!(user_id: @user.id, theme: initial_theme)
+
+    new_theme = {
+      'Blockly' => 'HighContrast'
+    }
+    merged_theme = {
+      'global'=> 'Dark',
+      'Blockly' => 'HighContrast'
+    }
+
+    assert_no_difference 'UserPreference.count' do
+      patch :update, params: {theme: new_theme}
+    end
+
+    assert_response :success
+
+    preference.reload
+    assert_equal merged_theme, preference.theme
   end
 
   test 'ignores non-permitted parameters' do

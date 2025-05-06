@@ -13,10 +13,15 @@ class UserPreferencesController < ApplicationController
       preference.console_font_size.to_h.merge(update_params[:console_font_size]) :
       preference.console_font_size
 
+    merged_theme = update_params[:theme] ?
+      preference.theme.to_h.merge(update_params[:theme]) :
+      preference.theme
+
     preference.update!(
       section_order: update_params[:section_order] || preference.section_order,
       editor_font_size: merged_editor_font_size,
-      console_font_size: merged_console_font_size
+      console_font_size: merged_console_font_size,
+      theme: merged_theme,
     )
   end
 
@@ -44,7 +49,8 @@ class UserPreferencesController < ApplicationController
     params.transform_keys(&:underscore).permit(
       section_order: [],
       console_font_size: {},
-      editor_font_size: {}
+      editor_font_size: {},
+      theme: {},
     )
   end
 end
