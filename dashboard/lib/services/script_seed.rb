@@ -17,7 +17,7 @@ module Services
     # Storing this data together in a "data object" makes it easier to pass around.
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
-      :script_levels, :levels_script_levels, :levels,
+      :script_levels, :levels_script_levels, :levels, :skills, :levels_skills,
       :resources, :lessons_resources, :scripts_resources, :scripts_student_resources,
       :vocabularies, :lessons_vocabularies, :programming_environments,
       :programming_expressions, :lessons_programming_expressions, :objectives, :frameworks,
@@ -46,6 +46,7 @@ module Services
       resources = script.lessons.map(&:resources).flatten.concat(script.resources).concat(script.student_resources).uniq.sort_by(&:key)
       frameworks = Framework.all
       standards = Standard.all
+      skills = Skill.all
       vocabularies = script.lessons.map(&:vocabularies).flatten.sort_by(&:key).uniq
       programming_environments = ProgrammingEnvironment.all
       programming_expressions = ProgrammingExpression.all
@@ -59,6 +60,7 @@ module Services
         resources: resources,
         frameworks: frameworks,
         standards: standards,
+        skills: skills,
         vocabularies: vocabularies,
         programming_environments: programming_environments,
         programming_expressions: programming_expressions,
@@ -76,6 +78,8 @@ module Services
       rubrics = script.lessons.filter_map(&:rubric).sort_by {|r| r.seeding_key(sort_context).to_json}
       learning_goals = rubrics.map(&:learning_goals).flatten.sort_by(&:key)
       learning_goal_evidence_levels = learning_goals.map {|lg| lg.learning_goal_evidence_levels.sort_by(&:understanding)}.flatten
+
+      levels_skills = my_levels.map(&:levels_skills).flatten.sort_by {|ls| ls.seeding_key(sort_context).to_json}
 
       seed_context = SeedContext.new(
         script: script,
@@ -98,6 +102,8 @@ module Services
         objectives: objectives,
         frameworks: frameworks,
         standards: standards,
+        skills: skills,
+        levels_skills: levels_skills,
         lessons_standards: lessons_standards,
         lessons_opportunity_standards: lessons_opportunity_standards,
         rubrics: rubrics,
