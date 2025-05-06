@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-02 18:39:47 UTC",
+    "serialized_at": "2025-05-05 22:16:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1298,7 +1298,7 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 1. Each student will read about storage and memory components and take notes by by matching the phrase in the word bank to the correct analogy for each in the Storage & Memory section of their activity guide. Have students complete the Storage and Memory rows in their Unit Guide by providing at least one example of each.",
-        "progression_name": "Storage and Memory Components"
+        "progression_name": "Storage Components"
       },
       "seeding_key": {
         "activity_section.key": "5a12b4dd-171b-4f70-be8d-e97c60514e7c",
@@ -2197,8 +2197,19 @@
       }
     },
     {
-      "key": "d428d9d0-3529-41cb-9998-9e8774ee08c9",
+      "key": "6d221319-0695-4424-873e-867ea4a4d07e",
       "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video  \"Intro to Sensors\" (0:17 - 1:22)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Question to Consider While Watching:** *What might be an example of a sensor in an everyday object that you are familiar with? What data might it collect?*\n* **Think, Pair, Share:** Prompt students with a thought-provoking question and give them time to think independently. Have them discuss with a partner, then call on pairs to share key takeaways with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that sensors detect or measure physical properties. Student examples will vary, but some sample responses include the auto-dimming feature of their cell phone screen (light sensor), the way that lights are turned on when you walk into a room (motion sensor), or even when your car tells you that you are almost out of gas (fuel sensor)."
+      },
+      "seeding_key": {
+        "activity_section.key": "6d221319-0695-4424-873e-867ea4a4d07e",
+        "lesson_activity.key": "6295e538-22f8-4cb5-8df2-3c9a12babe7d"
+      }
+    },
+    {
+      "key": "d428d9d0-3529-41cb-9998-9e8774ee08c9",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers. Students should complete the **Empathize with the User** section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should complete the Define the Data and Ideate a Solution sections of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system. They should research sensors that came up as part of their solution to their scenarios that they explored in the station activity.\n",
         "progression_name": "Sensors and AI Chatbot",
@@ -2216,7 +2227,7 @@
     },
     {
       "key": "0afdf28e-d9d0-4d0a-bc42-ac1065918387",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students rotate around the room for 4 minutes, sharing information about one of the sensors that they encountered with a classmate, and getting information about a different sensor back in return. Note: students should not feel obligated to complete the entire chart. It should be used as a way to document their learning experience based on the sensors that were applicable to their station."
       },
@@ -3922,7 +3933,7 @@
         "level_keys": [
           "computer-systems-lesson2-level1_2025"
         ],
-        "progression": "Storage and Memory Components"
+        "progression": "Storage Components"
       },
       "bonus": false,
       "seeding_key": {
@@ -5019,6 +5030,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_compsys-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -7081,16 +7095,6 @@
       }
     },
     {
-      "key": "memory",
-      "word": "memory",
-      "definition": "temporarily saves active applications and data for quick access",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "memory"
-      }
-    },
-    {
       "key": "output_devices",
       "word": "output devices",
       "definition": "display information from the computer",
@@ -7133,7 +7137,7 @@
     {
       "key": "storage",
       "word": "storage",
-      "definition": "permanently saves files, applications, and the operating system",
+      "definition": "holds data both temporarily for quick access and permanently to save files, applications, and the operating system.",
       "properties": {
       },
       "seeding_key": {
@@ -7190,12 +7194,6 @@
       "seeding_key": {
         "lesson.key": "Hardware",
         "vocabulary.key": "input_devices"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Hardware",
-        "vocabulary.key": "memory"
       }
     },
     {

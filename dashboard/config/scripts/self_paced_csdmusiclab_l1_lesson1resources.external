@@ -81,6 +81,15 @@ markdown <<MARKDOWN
         </p>
    </div>
 </details>
+</details>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 45%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 16pt; font-weight: bold;"><b>5. </b>Quick Reference Sheets</summary>
+<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
+       	<p style= "font-size: 14pt">
+       Each lesson has a corresponding Quick Reference Sheet. These can serve as a "cheatsheet" for you as you teach to reference main ideas, vocabulary, and lesson tips. </b>.
+        </p>
+   </div>
+</details>
 
 <br>
 <br>
