@@ -63,10 +63,6 @@ experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
 // Use nested course URLs like /courses/csd-2024/units/1/...
 experiments.MODULARITY = 'modularity';
 
-// TODO: ACQ-3081 remove experiment
-// Use new workshop form
-experiments.NEW_WORKSHOP_FORM = 'new-workshop-form';
-
 /**
  * This was a gamified version of the finish dialog, built in 2018,
  * but never fully shipped.

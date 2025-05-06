@@ -1,3 +1,4 @@
+import Tags from '@code-dot-org/component-library/tags';
 import Toggle from '@code-dot-org/component-library/toggle';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState, useMemo} from 'react';
@@ -122,6 +123,11 @@ const SummaryResponses = ({
     unitId: scriptData.reportingData.unitId,
   };
   const toggleAIAnalysis = () => {
+    if (showAIAnalysis) {
+      logEvent(EVENTS.CFU_SHOW_AI_INSIGHTS_TOGGLED_OFF);
+    } else {
+      logEvent(EVENTS.CFU_SHOW_AI_INSIGHTS_TOGGLED_ON);
+    }
     setShowAIAnalysis(prevShowAIAnalysis => !prevShowAIAnalysis);
   };
 
@@ -155,7 +161,6 @@ const SummaryResponses = ({
             }
           >
             <p>
-              <i className="fa fa-user" />
               <span>
                 {scriptData.responses[levelNumber].length}/{students.length}{' '}
                 {i18n.studentsAnswered()}
@@ -199,14 +204,21 @@ const SummaryResponses = ({
                 name={'showStudentNames'}
               />
               {aiAnalysisAvailable && (
-                <Toggle
-                  onChange={toggleAIAnalysis}
-                  checked={showAIAnalysis}
-                  label={i18n.showAiInsights()}
-                  position={'right'}
-                  size={'s'}
-                  name={'showAIAnalysis'}
-                />
+                <div className={styles.aiToggleContainer}>
+                  <Toggle
+                    onChange={toggleAIAnalysis}
+                    checked={showAIAnalysis}
+                    label={i18n.showAiInsights()}
+                    position={'right'}
+                    size={'s'}
+                    name={'showAIAnalysis'}
+                  />
+                  <Tags
+                    className={styles.headerTag}
+                    tagsList={[{label: i18n.experiment()}]}
+                    size="s"
+                  />
+                </div>
               )}
             </div>
           )}

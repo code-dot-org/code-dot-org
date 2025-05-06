@@ -3,6 +3,9 @@
   "script_names": [
     "hourofcode"
   ],
+  "original_script_names": [
+    "hourofcode"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -7,7 +7,7 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
-    "offer_browser_tts": "false",
+    "offer_browser_tts": "true",
     "panels": [
       {
         "text": "### Make a Pie Chart\n- Highlight a column\n- Click **Insert** -> **Chart** \n",
@@ -48,6 +48,6 @@
     ],
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:31.882+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-panel3_2025_launch\\\"\"],\"cloned_from\":\"data-science-lesson7-panel3_2025_launch\"},{\"changed_at\":\"2025-04-16 15:58:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 22:40:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:15:31.882+00:00\",\"changed\":[\"cloned from \\\"data-science-lesson7-panel3_2025_launch\\\"\"],\"cloned_from\":\"data-science-lesson7-panel3_2025_launch\"},{\"changed_at\":\"2025-04-16 15:58:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-17 22:40:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-25 16:47:55 +0000\",\"changed\":[\"offer_browser_tts\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

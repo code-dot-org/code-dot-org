@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 20:52:34 UTC",
+    "serialized_at": "2025-04-30 15:04:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -40,6 +40,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "**In this lesson,  you will:** \n\n- Get an overview of the programming fundamentals curriculum and resources.\n\n**Suggested Time:** 10 minutes ",
+        "student_overview": "**In this lesson,  you will:** \n\n- Get an overview of the programming fundamentals curriculum and resources.\n\n**Suggested Time:** 10 minutes "
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -72,8 +74,8 @@
       "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
-        "overview": "**You will:**\n\n- Navigate the IDE and understand its essential features for coding instruction.\n- Identify and apply key coding concepts, including variables, print statements, objects, and functions.\n- Use a predict, investigate/modify, practice approach to engage students in coding exploration and skill development.\n\n**Suggested Time:** 30 minutes \n",
-        "student_overview": "**You will:**\n\n- Navigate the IDE and understand its essential features for coding instruction.\n- Identify and apply key coding concepts, including variables, print statements, objects, and functions.\n- Use a predict, investigate/modify, practice approach to engage students in coding exploration and skill development.\n\n**Suggested Time:** 30 minutes "
+        "overview": "**You will:**\n\n- Navigate the IDE and understand its essential features for coding instruction.\n- Identify and apply key coding concepts, including variables, print statements, objects, and functions.\n- Use a predict, investigate/modify, practice approach to engage students in coding exploration and skill development.\n\n**Suggested Time:** 25 minutes \n",
+        "student_overview": "**You will:**\n\n- Navigate the IDE and understand its essential features for coding instruction.\n- Identify and apply key coding concepts, including variables, print statements, objects, and functions.\n- Use a predict, investigate/modify, practice approach to engage students in coding exploration and skill development.\n\n**Suggested Time:** 25 minutes "
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -89,8 +91,8 @@
       "has_lesson_plan": false,
       "relative_position": 4,
       "properties": {
-        "overview": " **In this lesson, you will:**\n\n- Understand the role of flowcharts in algorithm design.\n- Apply conditional logic using if statements and nested/ two-way selection.\n- Use while loops to execute repeated actions efficiently.\n- Practice coding and debugging through a predict, investigate/modify, practice approach.\n\n\n**Suggested Time:** 30 minutes",
-        "student_overview": " **In this lesson, you will:**\n\n- Understand the role of flowcharts in algorithm design.\n- Apply conditional logic using if statements and nested/ two-way selection.\n- Use while loops to execute repeated actions efficiently.\n- Practice coding and debugging through a predict, investigate/modify, practice approach.\n\n\n**Suggested Time:** 30 minutes"
+        "overview": " **In this lesson, you will:**\n\n- Understand the role of flowcharts in algorithm design.\n- Apply conditional logic using if statements and nested/ two-way selection.\n- Use while loops to execute repeated actions efficiently.\n- Practice coding and debugging through a predict, investigate/modify, practice approach.\n\n\n**Suggested Time:** 25 minutes",
+        "student_overview": " **In this lesson, you will:**\n\n- Understand the role of flowcharts in algorithm design.\n- Apply conditional logic using if statements and nested/ two-way selection.\n- Use while loops to execute repeated actions efficiently.\n- Practice coding and debugging through a predict, investigate/modify, practice approach.\n\n\n**Suggested Time:** 25 minutes"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -147,6 +149,7 @@
       "key": "9995646c-8572-4ab7-a966-965a6064e7b7",
       "position": 1,
       "properties": {
+        "duration": 25
       },
       "seeding_key": {
         "lesson_activity.key": "9995646c-8572-4ab7-a966-965a6064e7b7",
@@ -159,6 +162,7 @@
       "key": "3bcc2f96-8fe7-4116-909c-89192e857892",
       "position": 1,
       "properties": {
+        "duration": 25
       },
       "seeding_key": {
         "lesson_activity.key": "3bcc2f96-8fe7-4116-909c-89192e857892",
@@ -171,6 +175,7 @@
       "key": "1d22f7aa-0988-44f8-a81b-a8e412f9a8e2",
       "position": 1,
       "properties": {
+        "duration": 10
       },
       "seeding_key": {
         "lesson_activity.key": "1d22f7aa-0988-44f8-a81b-a8e412f9a8e2",
@@ -867,6 +872,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-print-L3-2-Python"
+        ],
         "progression": "Variables and Print Statements "
       },
       "bonus": false,
@@ -889,6 +897,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-Pl-print-comment-L4-2-Python"
+        ],
         "progression": "Variables and Print Statements "
       },
       "bonus": false,
@@ -961,6 +972,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-variable-L7-2-Python"
+        ],
         "progression": "Variables and Print Statements "
       },
       "bonus": false,
@@ -983,6 +997,34 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif_pl_concat_LX_python"
+        ],
+        "progression": "Variables and Print Statements "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_concat_LX_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "49179b83-64fd-43ed-9003-2e3083a632dd"
+      },
+      "level_keys": [
+        "aif_pl_concat_LX_python"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 9,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif-PL-varible-choice-L8-2-Python"
+        ],
         "progression": "Variables and Print Statements "
       },
       "bonus": false,
@@ -1000,45 +1042,20 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 9,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csaif_pl_concat_L7_python"
-        ],
-        "progression": "Variables and Print Statements "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif_pl_concat_L7_python"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-csaif-pl-python",
-        "activity_section.key": "49179b83-64fd-43ed-9003-2e3083a632dd"
-      },
-      "level_keys": [
-        "csaif_pl_concat_L7_python"
-      ]
-    },
-    {
       "chapter": 29,
       "position": 10,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csaif-pl-choice_L8_python"
+          "aif-pl-math_expressions-L10-2-python"
         ],
         "progression": "Variables and Print Statements "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif-pl-choice_L8_python"
+          "aif-pl-math_expressions-L10-2-python"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1046,12 +1063,37 @@
         "activity_section.key": "49179b83-64fd-43ed-9003-2e3083a632dd"
       },
       "level_keys": [
-        "csaif-pl-choice_L8_python"
+        "aif-pl-math_expressions-L10-2-python"
       ]
     },
     {
       "chapter": 30,
       "position": 11,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif-pl-choice-math-L11-Python"
+        ],
+        "progression": "Variables and Print Statements "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-choice-math-L11-Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "49179b83-64fd-43ed-9003-2e3083a632dd"
+      },
+      "level_keys": [
+        "aif-pl-choice-math-L11-Python"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1075,8 +1117,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 12,
+      "chapter": 32,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1100,8 +1142,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 13,
+      "chapter": 33,
+      "position": 14,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1125,8 +1167,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 14,
+      "chapter": 34,
+      "position": 15,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1150,20 +1192,20 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 15,
+      "chapter": 35,
+      "position": 16,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csaif-PL-objects-code_L13_Python"
+          "aif-pl-object-predict-L16-2-python"
         ],
         "progression": "Objects and The Neighborhood"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif-PL-objects-code_L13_Python"
+          "aif-pl-object-predict-L16-2-python"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -1171,38 +1213,63 @@
         "activity_section.key": "11bc2711-f3f6-440f-b22e-5c3ea5c60cd1"
       },
       "level_keys": [
-        "csaif-PL-objects-code_L13_Python"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 16,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "csaif-pl_object-code-L14_Python"
-        ],
-        "progression": "Objects and The Neighborhood"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csaif-pl_object-code-L14_Python"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-csaif-pl-python",
-        "activity_section.key": "11bc2711-f3f6-440f-b22e-5c3ea5c60cd1"
-      },
-      "level_keys": [
-        "csaif-pl_object-code-L14_Python"
+        "aif-pl-object-predict-L16-2-python"
       ]
     },
     {
       "chapter": 36,
       "position": 17,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif-pl-objects-create-L17-2-python"
+        ],
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-objects-create-L17-2-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "11bc2711-f3f6-440f-b22e-5c3ea5c60cd1"
+      },
+      "level_keys": [
+        "aif-pl-objects-create-L17-2-python"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 18,
       "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif_pl_umpire-L18-2-python"
+        ],
+        "progression": "Objects and The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_umpire-L18-2-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "11bc2711-f3f6-440f-b22e-5c3ea5c60cd1"
+      },
+      "level_keys": [
+        "aif_pl_umpire-L18-2-python"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 19,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1225,9 +1292,159 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 18,
+      "chapter": 39,
+      "position": 20,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif_pl_function-intro-L20_Python"
+        ],
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_function-intro-L20_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      },
+      "level_keys": [
+        "aif_pl_function-intro-L20_Python"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 21,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif_pl_function-intro2-L21_Python"
+        ],
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif_pl_function-intro2-L21_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      },
+      "level_keys": [
+        "aif_pl_function-intro2-L21_Python"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 22,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif-pl-functionsLab-1-python"
+        ],
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-1-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      },
+      "level_keys": [
+        "aif-pl-functionsLab-1-python"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 23,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif-pl-functionsLab-2-python"
+        ],
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-2-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      },
+      "level_keys": [
+        "aif-pl-functionsLab-2-python"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 24,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif-pl-functionsLab-3-python"
+        ],
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-3-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      },
+      "level_keys": [
+        "aif-pl-functionsLab-3-python"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 25,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif-pl-functionsLab-4-python"
+        ],
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-4-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      },
+      "level_keys": [
+        "aif-pl-functionsLab-4-python"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 26,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1250,9 +1467,9 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 19,
-      "activity_section_position": 2,
+      "chapter": 46,
+      "position": 27,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1275,9 +1492,34 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 20,
-      "activity_section_position": 3,
+      "chapter": 47,
+      "position": 28,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif-pl-custommodule-L27-python"
+        ],
+        "progression": "Functions and Parameters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-custommodule-L27-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      },
+      "level_keys": [
+        "aif-pl-custommodule-L27-python"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 29,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1300,9 +1542,9 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 21,
-      "activity_section_position": 4,
+      "chapter": 49,
+      "position": 30,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1325,9 +1567,9 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 22,
-      "activity_section_position": 5,
+      "chapter": 50,
+      "position": 31,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1350,9 +1592,9 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 23,
-      "activity_section_position": 6,
+      "chapter": 51,
+      "position": 32,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1375,9 +1617,9 @@
       ]
     },
     {
-      "chapter": 43,
-      "position": 24,
-      "activity_section_position": 7,
+      "chapter": 52,
+      "position": 33,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1400,9 +1642,9 @@
       ]
     },
     {
-      "chapter": 44,
-      "position": 25,
-      "activity_section_position": 8,
+      "chapter": 53,
+      "position": 34,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1425,8 +1667,8 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 26,
+      "chapter": 54,
+      "position": 35,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1450,8 +1692,8 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 27,
+      "chapter": 55,
+      "position": 36,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1475,8 +1717,8 @@
       ]
     },
     {
-      "chapter": 47,
-      "position": 28,
+      "chapter": 56,
+      "position": 37,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1500,7 +1742,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1525,7 +1767,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1550,20 +1792,20 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csaif-pl-loop-modify-code_L3-python"
+          "aif-pl-while1-L3-Python"
         ],
         "progression": "While Loops"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif-pl-loop-modify-code_L3-python"
+          "aif-pl-while1-L3-Python"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -1571,24 +1813,24 @@
         "activity_section.key": "a81249d5-9bab-4cb9-b57d-aeeaa8e2bf20"
       },
       "level_keys": [
-        "csaif-pl-loop-modify-code_L3-python"
+        "aif-pl-while1-L3-Python"
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csaif-pl-loop-code-L4-python"
+          "aif-pl-while2-L4-python"
         ],
         "progression": "While Loops"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif-pl-loop-code-L4-python"
+          "aif-pl-while2-L4-python"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -1596,12 +1838,37 @@
         "activity_section.key": "a81249d5-9bab-4cb9-b57d-aeeaa8e2bf20"
       },
       "level_keys": [
-        "csaif-pl-loop-code-L4-python"
+        "aif-pl-while2-L4-python"
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 61,
       "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif-pl-whileloops3-L5-python"
+        ],
+        "progression": "While Loops"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-whileloops3-L5-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "a81249d5-9bab-4cb9-b57d-aeeaa8e2bf20"
+      },
+      "level_keys": [
+        "aif-pl-whileloops3-L5-python"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1625,8 +1892,8 @@
       ]
     },
     {
-      "chapter": 53,
-      "position": 6,
+      "chapter": 63,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1650,8 +1917,8 @@
       ]
     },
     {
-      "chapter": 54,
-      "position": 7,
+      "chapter": 64,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1675,8 +1942,8 @@
       ]
     },
     {
-      "chapter": 55,
-      "position": 8,
+      "chapter": 65,
+      "position": 9,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1700,20 +1967,20 @@
       ]
     },
     {
-      "chapter": 56,
-      "position": 9,
+      "chapter": 66,
+      "position": 10,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csaif-pl-conditional-practice-L10-python"
+          "aif-pl-conditional1-L10-python"
         ],
         "progression": "Conditionals "
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif-pl-conditional-practice-L10-python"
+          "aif-pl-conditional1-L10-python"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -1721,12 +1988,37 @@
         "activity_section.key": "43333686-a29c-4e5e-81ee-3d893b296c39"
       },
       "level_keys": [
-        "csaif-pl-conditional-practice-L10-python"
+        "aif-pl-conditional1-L10-python"
       ]
     },
     {
-      "chapter": 57,
-      "position": 10,
+      "chapter": 67,
+      "position": 11,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "aif-pl-conditionals2-L11-python"
+        ],
+        "progression": "Conditionals "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-pl-conditionals2-L11-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "43333686-a29c-4e5e-81ee-3d893b296c39"
+      },
+      "level_keys": [
+        "aif-pl-conditionals2-L11-python"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1750,8 +2042,8 @@
       ]
     },
     {
-      "chapter": 58,
-      "position": 11,
+      "chapter": 69,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1775,8 +2067,8 @@
       ]
     },
     {
-      "chapter": 59,
-      "position": 12,
+      "chapter": 70,
+      "position": 14,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1800,8 +2092,8 @@
       ]
     },
     {
-      "chapter": 60,
-      "position": 13,
+      "chapter": 71,
+      "position": 15,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1825,20 +2117,20 @@
       ]
     },
     {
-      "chapter": 61,
-      "position": 14,
+      "chapter": 72,
+      "position": 16,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "csaif-pl-nested-L15-python"
+          "aif-pl-two-waySelection-L16-python"
         ],
         "progression": "Two-way and Nested Selection"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csaif-pl-nested-L15-python"
+          "aif-pl-two-waySelection-L16-python"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -1846,12 +2138,12 @@
         "activity_section.key": "4f0aad1e-cc1b-4716-b2e5-b19670a58267"
       },
       "level_keys": [
-        "csaif-pl-nested-L15-python"
+        "aif-pl-two-waySelection-L16-python"
       ]
     },
     {
-      "chapter": 62,
-      "position": 15,
+      "chapter": 73,
+      "position": 17,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -1875,8 +2167,8 @@
       ]
     },
     {
-      "chapter": 63,
-      "position": 16,
+      "chapter": 74,
+      "position": 18,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1900,8 +2192,8 @@
       ]
     },
     {
-      "chapter": 64,
-      "position": 17,
+      "chapter": 75,
+      "position": 19,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1925,8 +2217,8 @@
       ]
     },
     {
-      "chapter": 65,
-      "position": 18,
+      "chapter": 76,
+      "position": 20,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1950,8 +2242,8 @@
       ]
     },
     {
-      "chapter": 66,
-      "position": 19,
+      "chapter": 77,
+      "position": 21,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1975,7 +2267,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2000,7 +2292,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2025,7 +2317,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 80,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2050,7 +2342,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 81,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -2075,7 +2367,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 82,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -2100,7 +2392,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 83,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -2440,6 +2732,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "aif_pl_concat_LX_python",
+        "script_level.level_keys": [
+          "aif_pl_concat_LX_python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "49179b83-64fd-43ed-9003-2e3083a632dd"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "aif-PL-varible-choice-L8-2-Python",
         "script_level.level_keys": [
           "aif-PL-varible-choice-L8-2-Python"
@@ -2452,9 +2756,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif_pl_concat_L7_python",
+        "level.key": "aif-pl-math_expressions-L10-2-python",
         "script_level.level_keys": [
-          "csaif_pl_concat_L7_python"
+          "aif-pl-math_expressions-L10-2-python"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2464,9 +2768,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-choice_L8_python",
+        "level.key": "aif-pl-choice-math-L11-Python",
         "script_level.level_keys": [
-          "csaif-pl-choice_L8_python"
+          "aif-pl-choice-math-L11-Python"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2524,9 +2828,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-PL-objects-code_L13_Python",
+        "level.key": "aif-pl-object-predict-L16-2-python",
         "script_level.level_keys": [
-          "csaif-PL-objects-code_L13_Python"
+          "aif-pl-object-predict-L16-2-python"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2536,9 +2840,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl_object-code-L14_Python",
+        "level.key": "aif-pl-objects-create-L17-2-python",
         "script_level.level_keys": [
-          "csaif-pl_object-code-L14_Python"
+          "aif-pl-objects-create-L17-2-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "11bc2711-f3f6-440f-b22e-5c3ea5c60cd1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif_pl_umpire-L18-2-python",
+        "script_level.level_keys": [
+          "aif_pl_umpire-L18-2-python"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2560,6 +2876,78 @@
     },
     {
       "seeding_key": {
+        "level.key": "aif_pl_function-intro-L20_Python",
+        "script_level.level_keys": [
+          "aif_pl_function-intro-L20_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif_pl_function-intro2-L21_Python",
+        "script_level.level_keys": [
+          "aif_pl_function-intro2-L21_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-functionsLab-1-python",
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-1-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-functionsLab-2-python",
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-2-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-functionsLab-3-python",
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-3-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-functionsLab-4-python",
+        "script_level.level_keys": [
+          "aif-pl-functionsLab-4-python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "csaif-pl-functions-L15-1-python",
         "script_level.level_keys": [
           "csaif-pl-functions-L15-1-python"
@@ -2575,6 +2963,18 @@
         "level.key": "csaif-PL-functions-L16_Python",
         "script_level.level_keys": [
           "csaif-PL-functions-L16_Python"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "3d5e0444-af5b-440a-a84c-e923a68fe136"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-custommodule-L27-python",
+        "script_level.level_keys": [
+          "aif-pl-custommodule-L27-python"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2716,9 +3116,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-loop-modify-code_L3-python",
+        "level.key": "aif-pl-while1-L3-Python",
         "script_level.level_keys": [
-          "csaif-pl-loop-modify-code_L3-python"
+          "aif-pl-while1-L3-Python"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -2728,9 +3128,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-loop-code-L4-python",
+        "level.key": "aif-pl-while2-L4-python",
         "script_level.level_keys": [
-          "csaif-pl-loop-code-L4-python"
+          "aif-pl-while2-L4-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "a81249d5-9bab-4cb9-b57d-aeeaa8e2bf20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-whileloops3-L5-python",
+        "script_level.level_keys": [
+          "aif-pl-whileloops3-L5-python"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -2788,9 +3200,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-conditional-practice-L10-python",
+        "level.key": "aif-pl-conditional1-L10-python",
         "script_level.level_keys": [
-          "csaif-pl-conditional-practice-L10-python"
+          "aif-pl-conditional1-L10-python"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csaif-pl-python",
+        "activity_section.key": "43333686-a29c-4e5e-81ee-3d893b296c39"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-pl-conditionals2-L11-python",
+        "script_level.level_keys": [
+          "aif-pl-conditionals2-L11-python"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -2848,9 +3272,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "csaif-pl-nested-L15-python",
+        "level.key": "aif-pl-two-waySelection-L16-python",
         "script_level.level_keys": [
-          "csaif-pl-nested-L15-python"
+          "aif-pl-two-waySelection-L16-python"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",

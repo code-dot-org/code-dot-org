@@ -3,6 +3,9 @@
   "script_names": [
     "csd4-draft"
   ],
+  "original_script_names": [
+    "csd4-draft"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

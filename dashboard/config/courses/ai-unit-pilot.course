@@ -3,6 +3,9 @@
   "script_names": [
     "ai-unit-pilot"
   ],
+  "original_script_names": [
+    "ai-unit-pilot"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

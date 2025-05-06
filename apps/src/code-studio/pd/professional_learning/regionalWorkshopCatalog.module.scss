@@ -1,7 +1,6 @@
 @import '@code-dot-org/component-library-styles/primitiveColors';
 @import '@code-dot-org/component-library-styles/colors';
 
-
 .workshopCatalog {
   background-color: var(--background-neutral-secondary);
 
@@ -104,6 +103,11 @@
       margin: 0 auto;
       align-items: flex-start;
       gap: 1.875rem;
+
+      .linkText {
+        cursor: pointer;
+        color: var(--brand-purple-50);
+      }
     }
 
     .noCardsContainer {

@@ -3,6 +3,9 @@
   "script_names": [
     "infinity"
   ],
+  "original_script_names": [
+    "infinity"
+  ],
   "published_state": "preview",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

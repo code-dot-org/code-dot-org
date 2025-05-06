@@ -3,6 +3,9 @@
   "script_names": [
     "craft18"
   ],
+  "original_script_names": [
+    "craft18"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

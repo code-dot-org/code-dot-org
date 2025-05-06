@@ -9,14 +9,15 @@
       "is_migrated": true,
       "show_calendar": true,
       "topic_tags": [
-        "data_science"
+        "data_science",
+        "ai"
       ],
       "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 21:23:33 UTC",
+    "serialized_at": "2025-04-23 18:14:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

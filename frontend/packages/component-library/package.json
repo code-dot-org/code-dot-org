@@ -124,6 +124,14 @@
       "import": "./dist/esm/cms/footer/index.mjs",
       "require": "./dist/cjs/cms/footer/index.js"
     },
+    "./cms/header": {
+      "types": {
+        "import": "./dist/esm/cms/header/index.d.ts",
+        "require": "./dist/cjs/cms/header/index.d.ts"
+      },
+      "import": "./dist/esm/cms/header/index.mjs",
+      "require": "./dist/cjs/cms/header/index.js"
+    },
     "./cms/heroBanner": {
       "types": {
         "import": "./dist/esm/cms/heroBanner/index.d.ts",
@@ -157,6 +165,14 @@
       "require": "./dist/cjs/cms/section/index.js"
     },
     "./cms/section/index.css": "./dist/esm/cms/section/index.css",
+    "./cms/skinnyBanner": {
+      "types": {
+        "import": "./dist/esm/cms/skinnyBanner/index.d.ts",
+        "require": "./dist/cjs/cms/skinnyBanner/index.d.ts"
+      },
+      "import": "./dist/esm/cms/skinnyBanner/index.mjs",
+      "require": "./dist/cjs/cms/skinnyBanner/index.js"
+    },
     "./cms/snapshot": {
       "types": {
         "import": "./dist/esm/cms/snapshot/index.d.ts",

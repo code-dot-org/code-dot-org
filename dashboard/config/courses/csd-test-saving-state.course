@@ -3,6 +3,9 @@
   "script_names": [
     "csd-test-saving-state"
   ],
+  "original_script_names": [
+    "csd-test-saving-state"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

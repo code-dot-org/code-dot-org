@@ -10,18 +10,14 @@ markdown <<MARKDOWN
 
 #### In this culminating project, students remix an existing song into a completely different genre. This task challenges them to apply everything they’ve learned about functions: organizing their code into reusable sections, shaping musical structure, and transforming tone through abstraction and design.
 
----
-
 ## Preparing to Teach
 
 ### 🧾 **What to Prepare**
 
-* #### Print copies of the <a href="https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit">Genre Mashup Activity Guide</a> for each student  
-* #### Print the <a href="https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0">Genre Mashup Rubric</a> to support peer feedback
-* #### Make a copy of the <a href="https://docs.google.com/presentation/d/13sI-kHNF7fvgy0ThzjmhtIQhE5d0Otg4yx_kEoHDFT8/template/preview" target="blank" rel="noopener noreferrer">lesson plan slides</a> and adapt for your class
+* #### Print copies of the <a href="https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit" target="blank" rel="noopener noreferrer">Genre Mashup Activity Guide</a> for each student  
+* #### Print the <a href="https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0" target="blank" rel="noopener noreferrer">Genre Mashup Rubric</a> to support peer feedback
+* #### Make a copy of the <a href="https://docs.google.com/presentation/d/13sI-kHNF7fvgy0ThzjmhtIQhE5d0Otg4yx_kEoHDFT8/template/preview" target="blank" rel="noopener noreferrer" target="blank" rel="noopener noreferrer">lesson plan slides</a> and adapt for your class
 * #### Preview the Prepare level (Level 1) and the coding level (Level 2) in Code Studio
-
----
 
 ### 🧠 **Lesson Summary**
 
@@ -31,15 +27,12 @@ markdown <<MARKDOWN
 
 #### This project bridges coding and creativity, asking students not only to demonstrate their technical knowledge but to use it to express musical transformation.
 
----
-
 ### 🧰 **Tips for Teaching**
 
 * #### **Encourage contrast.** Ask students to choose a new genre that’s quite different from the original to push their creative thinking.
 * #### **Connect musical choices to identity.** Prompt students to reflect: *What does your remix change about the song's mood?*
-* #### **Model reuse through functions.** Reinforce how defining reusable sections can simplify big remixes and encourage students to name their sections clearly (e.g., `chorus()`, `drop()`).
+* #### **Model reuse through functions.** Reinforce how defining reusable sections can simplify big remixes and encourage students to name their sections clearly (e.g., `chorus`, `drop`).
 
----
 
 ### 🔄 **Assessment Opportunity**
 
@@ -48,4 +41,11 @@ markdown <<MARKDOWN
 * #### Thoughtful use of functions to define and organize musical sections  
 * #### A clear genre transformation based on musical decisions  
 * #### Evidence of planning, experimentation, and iteration
+
+## Up Next
+
+#### In the next level, you'll see an example of a completed Genre Mashup project. Consider opening up the rubric (linked above) and comparing it with the exemplar:
+
+* #### How might you score the exemplar? 
+* #### What evidence (or non-evidence) do you see of rubric criteria?
 MARKDOWN

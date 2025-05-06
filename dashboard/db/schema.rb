@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_17_151841) do
+ActiveRecord::Schema.define(version: 2025_04_24_231217) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -951,6 +951,13 @@ ActiveRecord::Schema.define(version: 2025_04_17_151841) do
     t.index ["level_id"], name: "index_levels_script_levels_on_level_id"
     t.index ["script_level_id", "level_id"], name: "index_levels_script_levels_on_script_level_id_and_level_id", unique: true
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id"
+  end
+
+  create_table "levels_skills", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "level_id", null: false
+    t.bigint "skill_id", null: false
+    t.index ["level_id", "skill_id"], name: "index_levels_skills_on_level_id_and_skill_id"
+    t.index ["skill_id", "level_id"], name: "index_levels_skills_on_skill_id_and_level_id"
   end
 
   create_table "libraries", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2153,6 +2160,14 @@ ActiveRecord::Schema.define(version: 2025_04_17_151841) do
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
   end
 
+  create_table "skills", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.string "description", null: false
+    t.text "evaluation_criteria"
+    t.string "concept"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "stages", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.integer "absolute_position"
@@ -2161,7 +2176,7 @@ ActiveRecord::Schema.define(version: 2025_04_17_151841) do
     t.datetime "updated_at"
     t.boolean "lockable", default: false, null: false
     t.integer "relative_position", null: false
-    t.text "properties"
+    t.text "properties", collation: "utf8mb4_unicode_ci"
     t.integer "lesson_group_id"
     t.string "key", null: false
     t.boolean "has_lesson_plan", null: false

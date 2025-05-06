@@ -43,6 +43,7 @@ Dashboard::Application.routes.draw do
           get :parent_letter
           get :courses, params: :course_version_name, action: :show
           get :unit, params: :unitName, action: :show
+          get :download_progress_csv, action: :download_progress_csv
           get '*path', action: :show, via: :all, as: :subpath
         end
       end
@@ -656,11 +657,7 @@ Dashboard::Application.routes.draw do
       resource :dynamic_config, only: [:show], controller: :dynamic_config
       resource :gatekeeper, only: [:show, :update, :destroy], controller: :gatekeeper
       resource :dcdo, only: [:show, :update], controller: :dcdo
-
-      controller :feature_mode do
-        get :feature_mode, action: :show
-        post :feature_mode, action: :update, as: 'feature_mode_update'
-      end
+      resource :feature_mode, only: [:show, :update], controller: :feature_mode
 
       # internal support tools
       controller :admin_users do
@@ -867,12 +864,17 @@ Dashboard::Application.routes.draw do
 
     get 'my-professional-learning', to: 'pd/professional_learning#index', as: 'professional_learning'
     get 'professional-learning/workshops', to: 'pd/professional_learning#workshops'
+    get 'professional-learning/contact-regional-partner', to: 'pd/professional_learning#contact_regional_partner'
     get 'professional-learning/facilitator/computer-science-a', to: 'pd/professional_learning#csa'
     get 'professional-learning/facilitator/computer-science-discoveries', to: 'pd/professional_learning#csd'
     get 'professional-learning/facilitator/computer-science-fundamentals', to: 'pd/professional_learning#csf'
     get 'professional-learning/facilitator/computer-science-principles', to: 'pd/professional_learning#csp'
     get 'professional-learning/facilitator/ai-fundamentals', to: 'pd/professional_learning#aif'
     get 'professional-learning/regional-partner/playbook', to: 'pd/professional_learning#rp_playbook'
+    get 'professional-learning/application/applications_closed', to: 'pd/professional_learning#applications_closed'
+    get 'professional-learning/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning#workshops_as_facilitator_for_pl_page'
+    get 'professional-learning/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
+    get 'professional-learning/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
     get 'professional-learning/regional_workshop_data/:zip_code', to: 'pd/professional_learning#regional_workshop_data'
 
     namespace :pd do

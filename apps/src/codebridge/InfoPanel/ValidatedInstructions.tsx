@@ -1,11 +1,12 @@
 import {Button} from '@code-dot-org/component-library/button';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import {getSystemMessage} from '@codebridge/Console/MessageHelpers';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import classNames from 'classnames';
-import React, {useContext, useEffect, useMemo, useRef} from 'react';
+import React, {useEffect, useMemo, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
@@ -29,7 +30,6 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
-import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -42,7 +42,6 @@ import commonI18n from '@cdo/locale';
 import MainInstructionsContent from './MainInstructionsContent';
 import ValidationResults from './ValidationResults';
 
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
 interface InstructionsProps {
@@ -126,7 +125,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const dispatch = useAppDispatch();
 
-  const {theme} = useContext(ThemeContext);
+  const {theme} = useTheme();
 
   const vertical = layout === 'vertical';
 
@@ -300,7 +299,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         disabled={shouldValidateBeDisabled}
         iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
         className={classNames(
-          darkModeStyles.secondaryButton,
           moduleStyles.buttonInstruction,
           moduleStyles.validationButton
         )}

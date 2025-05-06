@@ -21,9 +21,15 @@ import VideoCarousel, {
 import HeroBanner, {
   HeroBannerContentfulComponentDefinition,
 } from '@/components/contentful/heroBanner';
+import SkinnyBanner, {
+  SkinnyBannerContentfulComponentDefinition,
+} from '@/components/contentful/skinnyBanner';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
+import EditorialCard, {
+  EditorialCardContentfulComponentDefinition,
+} from '@/components/editorialCard';
 import FAQAccordion, {
   FAQAccordionContentfulComponentDefinition,
 } from '@/components/faqAccordion';
@@ -89,6 +95,10 @@ defineComponents(
       },
     },
     {
+      component: EditorialCard,
+      definition: EditorialCardContentfulComponentDefinition,
+    },
+    {
       component: FAQAccordion,
       definition: FAQAccordionContentfulComponentDefinition,
     },
@@ -152,6 +162,13 @@ defineComponents(
     {
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
+    },
+    {
+      component: SkinnyBanner,
+      definition: SkinnyBannerContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Spacer,

@@ -88,3 +88,9 @@ export interface ProjectPickerSettings {
   currentType: string;
   showProjectTypePicker: () => void;
 }
+
+export enum RunType {
+  RUN,
+  TEST, // User-written tests
+  VALIDATION, // Levelbuilder-written tests
+}

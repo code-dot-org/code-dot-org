@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 #### This second chunk of lessons introduces students to loops in Music Lab. Across the Explore-Practice-Synthesize-Project arc, students learn how to reduce repetition in their code, layer patterns with musical structure, and use looping to power creative projects.
 
-#### This level is design to give you a *brief* overview of the lessons before we dive into coding practice.
+#### This level is designed to give you a *brief* overview of the lessons before we dive into coding practice.
 
 <div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 95%; margin: 20px auto;">
     <p style="font-size: 16pt; font-weight: bold; margin: 0; text-align: center;">What are Loops?</p>
@@ -75,7 +75,7 @@ Students choose a looping cat GIF and design a musical loop that matches its moo
 
 #### Ready? Let's dive in to loops. You'll learn the following:
 
-* #### **From Lesson 6:** How to use the `repeat` block to loop music
+* #### **From Lesson 6:** How to use the <code style="background-color: rgb(242, 24, 162); color: white; border: none; box-shadow: inset -1px -1px 1px rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px">repeat</code> block to loop music
 * #### **From Lesson 7:** How to loop music with lyrics and how to use nested loops
 * #### **From Lesson 8:** How to replicate live coding projects with Music Lab
 MARKDOWN

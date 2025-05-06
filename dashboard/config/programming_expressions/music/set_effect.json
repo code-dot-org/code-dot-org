@@ -3,15 +3,18 @@
   "name": "Set Effect",
   "category": "Effects",
   "category_key": "effects",
+  "block_name": "set_effect_at_current_location_simple2",
   "content": "This block applies effects to all sounds played in a function. Currently there are three effects:\n- Volume: Changes the loudness of the function\n- Filter: Changes the tone of the function, making the sounds muted or muffled.\n- Delay: Adds an echo to the sounds",
   "palette_params": [
     {
       "name": "effect",
+      "type": "Dropdown",
       "required": true,
       "description": "The effect to apply to the function.\n\n- Volume: Changes the loudness of the function\n- Filter: Changes the tone of the function, making the sounds muted or muffled.\n- Delay: Adds an echo to the sounds"
     },
     {
       "name": "amount",
+      "type": "Dropdown",
       "required": true,
       "description": "The amount of the effect. The options are:\n\nVolume: \n * Full: Plays sounds at their normal volume\n * Medium: Plays sounds at a lower volume\n * Low: Plays sounds quietly\n\nDelay:\n* High: Adds a large amount of delay\n* Low: Adds a small amount of delay\n* Off: Turns off the delay effect\n\nFilter: \n* Medium: Reduces tinny sounds like cymbals and noise, making the sounds seem muffled\n* Low: Reduces most sounds except low parts like bass drums & bass guitar, making the sounds seem very muffled\n* Off: Turns off the filter effect"
     }

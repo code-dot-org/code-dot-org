@@ -3,6 +3,9 @@
   "script_names": [
     "allthesurveys"
   ],
+  "original_script_names": [
+    "allthesurveys"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

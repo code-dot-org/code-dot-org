@@ -10,4 +10,5 @@ export const StandaloneVideoEntryPoint: Lab2EntryPoint = {
       })
     )
   ),
+  themes: ['Light', 'Dark'],
 };

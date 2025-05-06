@@ -3,6 +3,9 @@
   "script_names": [
     "cs4all-invasive-species"
   ],
+  "original_script_names": [
+    "cs4all-invasive-species"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -12,11 +12,11 @@ markdown <<MARKDOWN
   <div>
     <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      <li>Investigate how AI generates responses, using neural networks, transformers, and probabilistic models.</li>
-      <li>Critically evaluate AI-generated outputs, identifying bias, misinformation, and hallucinations.</li>
-      <li>Refine AI-generated content through prompt engineering and debugging techniques.</li>
-      <li>Explore AI's role in creativity, forecasting, and decision-making, balancing its strengths with ethical considerations.</li>
-		<li>Design and test AI-assisted solutions to real-world challenges, ensuring that AI is used responsibly and with human oversight.</li>
+      <li>Investigate how AI generates responses.</li>
+      <li>Critically evaluate AI-generated outputs.</li>
+      <li>Refine AI-generated content.</li>
+      <li>Explore AI's role in creativity, forecasting, and decision-making.</li>
+		<li>Design and test AI-assisted solutions to real-world challenges.</li>
     </ul>
   </div>
   <div>
@@ -27,7 +27,7 @@ markdown <<MARKDOWN
 </div>
 
 
-#### This unit consists of 13 lessons, takes about three weeks to complete, and does not have Python programming.
+#### This unit consists of 13 lessons, takes about three weeks to complete.
 
 <div style="clear:both;"></div>
 
@@ -36,7 +36,7 @@ markdown <<MARKDOWN
 </p>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ Preview the full <a href='https://studio.code.org/s/pswai-pilot-2024' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit</a>.
+    ➡️ Preview the full <a href='https://studio.code.org/s/aif1-2025' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Unit</a>.
 </p>
 
 MARKDOWN

@@ -4,6 +4,10 @@
     "self-paced-pl-csd-unit3-1-2023",
     "self-paced-pl-csd-unit3-2-2023"
   ],
+  "original_script_names": [
+    "self-paced-pl-csd-unit3-1-2023",
+    "self-paced-pl-csd-unit3-2-2023"
+  ],
   "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",

@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-04-23T18:58:08.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You're designing a fashion rewards app. Users earn style points for trying on outfits and for purchases. Your app needs to calculate their total points and compare different values.\r\n\r\n## Do This:\r\n\r\n1. Two variables are already set up: `try_on_points` and `purchase_points`\r\n\r\n2. Use math operations to:\r\n\r\n   * Add the points\r\n   \r\n   * Subtract one from the other\r\n   \r\n   * Multiply the points\r\n   \r\n   * Divide one by the other\r\n\r\n3. Use `print()` statements to show each result.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can use `+`, `-`, `*`, and `/` to do math with numbers in Python — just like on a calculator!",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "display_name": "Style Points",
+    "bubble_choice_description": "You're designing a fashion rewards app. Users earn style points for trying on outfits and for purchases. Your app needs to calculate their total points and compare different values.",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This program does math with fashion style points\n\ntry_on_points = 50\npurchase_points = 120\n\n# Add the points and print the result\n\n\n\n# Subtract the points and print the result\n\n\n\n# Multiply the points and print the result\n\n\n\n# Divide the points and print the result\n\n\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/6622926a497acaef3f04b44cc51214df-wardrobe.png",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-04-23T18:58:08.480+00:00\",\"changed\":[\"cloned from \\\"aif-pl-math-choice-score1\\\"\"],\"cloned_from\":\"aif-pl-math-choice-score1\"}]"
+}]]></config>
+</Pythonlab>

@@ -6,12 +6,12 @@ export const LabSnapshotContentfulComponentDefinition: ComponentDefinition = {
   name: 'Lab Snapshot',
   category: '04: Advanced',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/19yZ1MYtW4OTGM8Stz3XIz/01ca4f9c1be7ce150bf42275b07182bd/component_lab_snapshot_thumbnail.png',
+    'https://contentful-images.code.org/90t6bu6vlf76/19yZ1MYtW4OTGM8Stz3XIz/01ca4f9c1be7ce150bf42275b07182bd/component_lab_snapshot_thumbnail.png',
   tooltip: {
     description:
       'Shows essential lab information, such as ages, what you can make, and compatibility, pulled directly from a lab entry.',
     imageUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/4fjwt72cQecN3RakUuZPBu/ed24d0f2ea15329268900e102f57c80f/component_lab_snapshot_tooltip.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/4fjwt72cQecN3RakUuZPBu/ed24d0f2ea15329268900e102f57c80f/component_lab_snapshot_tooltip.png',
   },
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],

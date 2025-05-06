@@ -19,11 +19,14 @@ markdown <<MARKDOWN
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">If you come across a student message that was not flagged but you believe should have been, you can manually flag it as inappropriate. <em>This helps us enhance our safety filter and better protect students.</em>
 </p>
+<p align="center">
+<img src="https://images.code.org/d77f1ae6462c9a0c34dbbc287a114533-flagchat.gif" alt="lesson plan diagram" width="50%" style="border-radius:10px; border: 2px solid black;">
+</p>
 </div>
 
 #### For more information about safety with AI Chat check out the <a href="https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ" target="blank">FAQ Support Article</a>.
 
 ## 📝 To Do
 
-#### In the next few levels you'll explore additional prompts in AI Chat. As you’re working think about *how the responses AI Chat gave changed as the prompts changed.*
+#### In the next two levels you'll explore additional prompts in AI Chat. As you’re working think about *how the responses AI Chat gave changed as the prompts changed.*
 MARKDOWN

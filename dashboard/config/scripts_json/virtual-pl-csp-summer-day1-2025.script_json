@@ -1,0 +1,1177 @@
+{
+  "script": {
+    "name": "virtual-pl-csp-summer-day1-2025",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "content_area": "pl_workshop_activities",
+      "curriculum_umbrella": "PD Workshop Activity CSP",
+      "is_migrated": true,
+      "version_year": "2025"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-05 15:42:29 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "virtual-pl-csp-summer-day1-2025"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Synchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Asynchronous Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Synchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Asynchronous Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome to the Workshop!",
+      "name": "Welcome to the Workshop!",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**Purpose:**\nKick off the week! Get to know the people you are with and understand what will happen during the week.\n\n**Objectives:**\n\n* Participants have started to get to know others at the workshop.\n* Participants know what we’re doing this week.\n* Participants will generate examples of how aspects of their identity and experiences may have shaped their views on computer science.\n* Participants recognize disparities by race and gender in access, diversity, and inclusion in computer science education nationally.\n* Participants use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of computer science education.\n* Participants use a shared definition for identity.\n\n**Suggested time:** 53 minutes\n",
+        "student_overview": "**You will:**\n\n* Get to know others at the workshop.\n* Know what we’re doing this week.\n* Generate examples of how aspects of their identity and experiences may have shaped their views on computer science.\n* Recognize disparities by race and gender in access, diversity, and inclusion in computer science education nationally.\n* Use a shared definition for access, diversity, inclusion, equity, and “students from underrepresented groups” in the context of computer science education.\n* Use a shared definition for identity."
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to the Workshop!",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "Model Lesson U1L3",
+      "name": "Model Lesson U1L3",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Purpose:**\nThis lesson is chosen so that early on in the workshop participants see manipulatives as a valuable experience for students. We want participants to “buy-in” to the benefits of manipulatives as a way to make content approachable.\n\n**Objectives:**\n* Participants see that using manipulatives makes content and tasks more approachable for students.\n* Participants experience an intentional approach to introducing vocabulary after building a common experience for learners to connect vocabulary to.\n* Participants see how the lessons build on one another.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csp1-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
+        "preparation": "* Have scissors ready for groups to create [r shape_cutouts/virtual-pl-csp-summer/2025] or have these pre-cut and prepared before class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1-_Vfwz51mO8PpNobJt8T5XG1-YjBdsdJi5uD25-26PE/edit?usp=sharing)",
+        "student_overview": "Develop a system for creating and ordering patterns of shapes.\n\n<a href=\"https://studio.code.org/s/csp1-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
+        "unplugged": true
+      },
+      "seeding_key": {
+        "lesson.key": "Model Lesson U1L3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "Intro to CS Principles",
+      "name": "Intro to CS Principles",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**Purpose:**\nThis session provides an overview of CSP, how it was created, and the background on the AP.\n\n**Objectives:**\n\n* Participants can explain how AP CSP is different from other AP Courses.\n* Participants are informed that Code.org is one of several College Board-* endorsed providers.\n* Participants are aware that this professional development is NOT a College Board-sponsored AP workshop.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Explain how AP CSP is different from other AP Courses.\n* Be informed that Code.org is one of several College Board-* endorsed providers.\n* Be made aware that this professional development is NOT a College Board-sponsored AP workshop."
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to CS Principles",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "Intro to Lesson Planning",
+      "name": "Intro to Lesson Planning",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**Purpose:**\nThis is the first opportunity to expose participants to the curriculum and to the feel of a CS Principles classroom. This shows participants the teaching practices used in CS Principles lessons.\n\n**Objectives:**\n\n* Participants understand how to use curriculum resources to prepare for lessons, including how to read a lesson plan, the importance of doing the activities in the lesson plan, and reviewing the slides.\n* Participants understand how to navigate the Code.org website to access lesson plans and activities.\n\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Learn how to use curriculum resources to prepare for lessons, including how to read a lesson plan, the importance of doing the activities in the lesson plan, and reviewing the slides.\n* Learn how to navigate the Code.org website to access lesson plans and activities."
+      },
+      "seeding_key": {
+        "lesson.key": "Intro to Lesson Planning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "Introduction to Asynchronous Activities",
+      "name": "Introduction to Asynchronous Activities",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "**Purpose:**\nParticipants navigate to the CSP Virtual PL Workshop Course and gain an understanding of how to use it and of what is expected of them regarding submittables. \n\n**Objectives:**\n* Participants are able to navigate to the CSP Virtual PL Workshop Course\n* Participants understand types of asynchronous activities and the variety of ways to submit work in the CSP Virtual PL Workshop Course.\n\n**Suggested time:** 10 minutes\n",
+        "student_overview": "**You will:**\n\n* Participants are able to navigate to the CSP Virtual PL Workshop Course\n* Participants understand types of asynchronous activities and the variety of ways to submit work in the CSP Virtual PL Workshop Course."
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Asynchronous Activities",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "Lesson Planning: Understanding the Lesson",
+      "name": "Lesson Planning: Understanding the Lesson",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "overview": "**Purpose:**\nThe asynchronous session is an opportunity for participants to both explore a lesson plan for a CS Principles lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Objectives:**\n* Participants explore the lesson plan and additional resources for their assigned TLO lesson.\n* Participants complete the activities from their assigned TLO lesson. \n\n**Suggested Time:** 60 minutes",
+        "student_overview": "**You Will:**\n* Explore the lesson plan and additional resources for their assigned TLO lesson.\n* Complete the activities from their assigned TLO lesson. "
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "Binary Number Systems",
+      "name": "Binary Number Systems",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "**Purpose:**\nWe show that binary numbers don't need to be scary and this doesn't need to be overly math-y. This session puts a bow on the two previous lessons to show how we build on-ramps to content in order to make it more approachable to students.\n\n**Objectives:**\n\n* Participants will be able to use the binary number system to translate between decimal and binary representations of a number.\n* Participants will see how the two model lessons help provide a mental model and motivation for the binary number system.\n\n**Suggested time:** 37 minutes",
+        "student_overview": "**You will:**\n\n* Use the binary number system to translate between decimal and binary representations of a number.\n* See how the two model lessons help provide a mental model and motivation for the binary number system.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Binary Number Systems",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "Plugged and Unplugged",
+      "name": "Plugged and Unplugged",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+        "overview": "**Purpose:** Before we get to lesson planning, we want to introduce different types of lessons and the importance of mental models in both. This approach allows us to be more explicit about the teacher's role in each of these lessons - specifically, that the teacher needs to check for understanding in both of these lessons constantly. This foreshadows tomorrow's topic of “the teacher's role”.\n\n\n\n**Objectives:**\n* Participants can explain the similarities and differences between Unplugged and Plugged lessons.\n* Participants can explain the role the teacher plays in successfully implementing Unplugged and Plugged lessons.\n* Participants experience joining a section in Code Studio.\n\n**Suggested Time:** 30 minutes",
+        "student_overview": "**You will:**\n* Explain the similarities and differences between Unplugged and Plugged lessons.\n* Explain the role the teacher plays in successfully implementing Unplugged and Plugged lessons.\n* Experience joining a section in Code Studio."
+      },
+      "seeding_key": {
+        "lesson.key": "Plugged and Unplugged",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "Teacher's Role in the Classroom",
+      "name": "Teacher's Role in the Classroom",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+        "overview": "**Purpose:**\nWe are using this session to kick off the day and proactively discuss the role of the teacher, even in lessons that focus on discovery. We want teachers new to CS to feel comfortable with their role in the room as “lead learner” but also as one who creates classroom experiences for students while building their own CS knowledge.\n\n**Objectives:**\n\n* Participants can describe teaching and learning strategies used in the curriculum.\n* Participants can describe the influence they have over culture and student success in a CS classroom.\n\n\n**Suggested time:** 28 minutes",
+        "student_overview": "**You will:**\n\n* Describe teaching and learning strategies used in the curriculum.\n* Describe the influence they have over culture and student success in a CS classroom."
+      },
+      "seeding_key": {
+        "lesson.key": "Teacher's Role in the Classroom",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "Lesson Planning: Prepare Your Lesson",
+      "name": "Lesson Planning: Prepare Your Lesson",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "**Purpose:**\nIn this session, participants will create a plan for how to teach their lesson during a 40 minute TLO session. This plan should consider contingency plans if the lesson goes faster than expected, and consideration for how the teaching group will use formative assessment throughout the lesson to know that \"learners\" are making the needed progress toward the learning goals.\n\n**Objectives:**\n* Participants have developed a run-of-show and tech plan for their lesson.\n* Participants have developed contingency plans for short extensions or questions for deeper thinking if their lesson goes more quickly than anticipated.\n* Participants have a plan for formative assessment during the lesson.\n* Participants make sure everyone in the teaching group has a role.\n\n**Suggested time:** 75 minutes",
+        "student_overview": "**You Will:**\n* Develop a run-of-show and tech plan for their lesson.\n* Develop contingency plans for short extensions or questions for deeper thinking if their lesson goes more quickly than anticipated.\n* Have a plan for formative assessment during the lesson.\n* Make sure everyone in the teaching group has a role.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson Planning: Prepare Your Lesson",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "7d7530a1-ef93-44ee-8e86-ed2ce14b1c64",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d7530a1-ef93-44ee-8e86-ed2ce14b1c64",
+        "lesson.key": "Welcome to the Workshop!",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "9358ab87-531a-4f49-af5b-807f577bc966",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9358ab87-531a-4f49-af5b-807f577bc966",
+        "lesson.key": "Model Lesson U1L3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "33f6098b-1f03-4e96-b426-838b0de4d58e",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "33f6098b-1f03-4e96-b426-838b0de4d58e",
+        "lesson.key": "Model Lesson U1L3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "0d2da6f4-c503-4000-af09-c225d7d5ec8f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0d2da6f4-c503-4000-af09-c225d7d5ec8f",
+        "lesson.key": "Model Lesson U1L3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "22c8b797-570b-4159-a9d9-e0514571398c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22c8b797-570b-4159-a9d9-e0514571398c",
+        "lesson.key": "Intro to CS Principles",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "779e96a7-690f-4899-aaf2-dc1116d6548a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "779e96a7-690f-4899-aaf2-dc1116d6548a",
+        "lesson.key": "Intro to Lesson Planning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "3c454e3b-17ce-45ba-9082-78f46cb88102",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3c454e3b-17ce-45ba-9082-78f46cb88102",
+        "lesson.key": "Introduction to Asynchronous Activities",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "d536eebf-ca2a-45b9-b539-4ee049bb3747",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d536eebf-ca2a-45b9-b539-4ee049bb3747",
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "f40f7334-c369-4036-9402-b310a5775498",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f40f7334-c369-4036-9402-b310a5775498",
+        "lesson.key": "Binary Number Systems",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "c699a8e4-607e-42b5-a3b0-ffd3949553ea",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c699a8e4-607e-42b5-a3b0-ffd3949553ea",
+        "lesson.key": "Plugged and Unplugged",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "9220c612-168c-4f4d-8342-1dcd77fb0133",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9220c612-168c-4f4d-8342-1dcd77fb0133",
+        "lesson.key": "Teacher's Role in the Classroom",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "key": "19d1fe27-b9de-485b-ad50-793c8c15592c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "19d1fe27-b9de-485b-ad50-793c8c15592c",
+        "lesson.key": "Lesson Planning: Prepare Your Lesson",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "d8ecfbaa-661d-4b5a-a83e-d2a186285f08",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d8ecfbaa-661d-4b5a-a83e-d2a186285f08",
+        "lesson_activity.key": "7d7530a1-ef93-44ee-8e86-ed2ce14b1c64"
+      }
+    },
+    {
+      "key": "38dd4188-c971-47b4-b979-fd1930d05bb6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How many ways can you represent 7?*"
+      },
+      "seeding_key": {
+        "activity_section.key": "38dd4188-c971-47b4-b979-fd1930d05bb6",
+        "lesson_activity.key": "9358ab87-531a-4f49-af5b-807f577bc966"
+      }
+    },
+    {
+      "key": "ba1a4ef0-6352-4de0-a775-7dd9b052e1e1",
+      "position": 2,
+      "properties": {
+        "description": "Students should brainstorm individually before sharing in small groups. It is important to allow ample brainstorming time - students may generate familiar responses at first, but may stretch their thinking and get more creative with additional time. Some examples may include:\n\n* Linguistic examples - \"seven\", \"siete\" (spanish), \"sept\" (french), \"sieben\" (german), etc\n* Picture examples - dots, tallys, emojis, etc\n* Math & Geometry examples - 5 + 2, 8 - 1, a seven-sided shape, etc\n\nAfter a short time, ask students to share some responses with the whole class. Use these responses to quickly generate a wide variety of representations.\n\n**Discussion Goal:** Introduce the idea that the numeral '7' is just one commonly used symbol to represent the number seven. There are many ways to communicate this same number that may use different symbols or representations, all of which are valid. Sharing the variety of responses helps motivate the following activity that asks students to discover a system for using the circles and squares to represent numbers, including the number 7.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "ba1a4ef0-6352-4de0-a775-7dd9b052e1e1",
+        "lesson_activity.key": "9358ab87-531a-4f49-af5b-807f577bc966"
+      }
+    },
+    {
+      "key": "766695c1-a49d-491e-9146-7c7a74c23e49",
+      "position": 3,
+      "properties": {
+        "description": "There are a variety of ways we could represent the number 7 - we might use the numeral '7' or the word 'seven', but this might be different in other countries or other languages. Today we'll see how we might represent the number 7 using only two different shapes.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "766695c1-a49d-491e-9146-7c7a74c23e49",
+        "lesson_activity.key": "9358ab87-531a-4f49-af5b-807f577bc966"
+      }
+    },
+    {
+      "key": "59d8805a-6cd2-45ec-968d-f9092a5ee9fb",
+      "position": 1,
+      "properties": {
+        "description": "In the previous class, we ended by deciding that one of the best way to use our devices was to limit them to two options, let's say: option 1 is circles and option 2 is squares. Now let's figure out how we can use these shapes to communicate lots of different pieces of information.",
+        "name": "Generate Patterns (5 minutes)\r",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "59d8805a-6cd2-45ec-968d-f9092a5ee9fb",
+        "lesson_activity.key": "33f6098b-1f03-4e96-b426-838b0de4d58e"
+      }
+    },
+    {
+      "key": "efca2f3c-3ac6-4e2f-bcd5-e70714f933f3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** With a partner, work out how many different pieces of information (made of up of circles and squares) you can represent with three place values. For example: `circle-circle-circle` and `circle-square-circle` can represent two different pieces of information. \r\n\r\n**Discuss:** Give students time to work individually, then have them share with their neighbor and fill in any patterns they may have missed.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Confirm with the class that there are 8 possible patterns, but don't list all of them out. Ask students to share the 7th pattern in their list. Students will likely have different answers for this."
+      },
+      "seeding_key": {
+        "activity_section.key": "efca2f3c-3ac6-4e2f-bcd5-e70714f933f3",
+        "lesson_activity.key": "33f6098b-1f03-4e96-b426-838b0de4d58e"
+      }
+    },
+    {
+      "key": "21d72efe-b488-49d9-bd88-3bfef3554637",
+      "position": 3,
+      "properties": {
+        "description": "We agreed that there are 8 possible patterns we can make with 3 place values. But, not everyone wrote these patterns in the same order, which means we don't all have the same 7th pattern! Our goal is to create a clear set of rules where, if the class were to follow these rules, everyone should generate the same list of patterns in the same order.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "21d72efe-b488-49d9-bd88-3bfef3554637",
+        "lesson_activity.key": "33f6098b-1f03-4e96-b426-838b0de4d58e"
+      }
+    },
+    {
+      "key": "25281817-4de6-495c-a105-3a7dffca731b",
+      "position": 4,
+      "properties": {
+        "description": "**Group:** Place students in groups of 2, making one group of 3 if necessary\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:**  [r circle_square_patterns/virtual-pl-csp-summer/2025] - one for each group. Each group also gets the [r shape_cutouts/virtual-pl-csp-summer/2025] to use during the activity.\r\n\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #1:** Students again list all possible three place value patterns, but with an added focus on the order of their patterns.",
+        "name": "Circle Square Activity (25 minutes) \r"
+      },
+      "seeding_key": {
+        "activity_section.key": "25281817-4de6-495c-a105-3a7dffca731b",
+        "lesson_activity.key": "33f6098b-1f03-4e96-b426-838b0de4d58e"
+      }
+    },
+    {
+      "key": "a2a1a96a-e97a-4618-bcfd-3dfba163eff5",
+      "position": 5,
+      "properties": {
+        "description": "**Challenge #2:** Students describe the rules or strategy they used to create their list. They are aiming for clear directions that can be followed by another group to reproduce their same list in the same order."
+      },
+      "seeding_key": {
+        "activity_section.key": "a2a1a96a-e97a-4618-bcfd-3dfba163eff5",
+        "lesson_activity.key": "33f6098b-1f03-4e96-b426-838b0de4d58e"
+      }
+    },
+    {
+      "key": "1f0309f4-8928-47e7-8462-275ef7e7fc08",
+      "position": 6,
+      "properties": {
+        "description": "**Challenge #3:** Students extend their rules to generate all possible four place value patterns. This challenge has 2 parts: discovering all possible four place value combinations (there are 16) and extending the rules from the previous challenge so they work here as well. Most groups will need to change or add to their rules in order to accomplish Challenge #3.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Manipulatives:** Students are given manipulatives to help visualize any rules they are using to move from one element of the list to the next. You might see students use all their manipulatives at once to create the different patterns, then discuss how to arrange them into an ordered list. You might see students representing one pattern at a time, then discussing the rules for “replacing” shapes to generate each of the next patterns. Students might not use the manipulatives at all, using pen & paper or whiteboards instead.\n\n**Many Possible Answers:** It is okay for different groups to come up with different orders for their lists of patterns - this will help with the share-out discussion as you highlight different strategies.\n\n**Facilitating With Groups:** You should act as a facilitator during this part of the activity, guiding students in describing the rules & strategies that they used to create their list. These strategies may be implicit and unconscious to the student, but you can ask questions to help students realize their own thinking that went into generating their list. Aim to help students clarify their thinking to make it easier for other groups to follow.\n\n**Group Dynamics:** Be mindful of groups that appear to be dominated by a single student.  Asking each student individually about their strategy can help bring students back together and reinforce the collaborative aspect of this activity.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1f0309f4-8928-47e7-8462-275ef7e7fc08",
+        "lesson_activity.key": "33f6098b-1f03-4e96-b426-838b0de4d58e"
+      }
+    },
+    {
+      "key": "8f752151-c5b3-4591-90fb-4d5e6fb27329",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** Select a few groups to share out their rules, highlighting groups with different strategies and rules they used for their lists. Emphasize the 7th item in each list, connecting it back to the warm-up activity as another way to represent the number 7.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Goal:** There are many ways to structure this discussion, especially if you have your own established share-out routines. Here are a few that could work for this particular discussion:\r\n\r\n* Have each group trade with another group, and each group tries to re-create the original group's list. This strategy is useful if you have more class time than expected during the wrap-up.\r\n* A group reads their rules while you and the rest of the class try to recreate the list\r\n* A group reveals their list and the class tries to predict what the rules are, then the group shares their rules with the class\r\n* You can name different strategies you’ve seen from groups as you’ve been circulating, then ask groups to give a thumbs-up if their rules involved that particular pattern. This strategy is useful if you’re running short on time before the next part of the lesson.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8f752151-c5b3-4591-90fb-4d5e6fb27329",
+        "lesson_activity.key": "33f6098b-1f03-4e96-b426-838b0de4d58e"
+      }
+    },
+    {
+      "key": "c8e83adc-fc1f-40e6-942b-1b66d5a66924",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations! You just invented your own system for counting and we now have new ways to represent the number 7! This happens a lot as new technology is invented and fine-tuned - different technologies might count in different ways. Tomorrow we're going to learn about the counting system computers use to represent numbers!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c8e83adc-fc1f-40e6-942b-1b66d5a66924",
+        "lesson_activity.key": "0d2da6f4-c503-4000-af09-c225d7d5ec8f"
+      }
+    },
+    {
+      "key": "3c076103-900e-487f-a837-4090e0cf9aba",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How is counting in this circle/square system similar to how we count in our regular lives? How is it different?*\n\n**Discussion Goal:** \n* Similar: It follows agreed-upon rules\n* Different: Uses shapes rather than numbers\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c076103-900e-487f-a837-4090e0cf9aba",
+        "lesson_activity.key": "0d2da6f4-c503-4000-af09-c225d7d5ec8f"
+      }
+    },
+    {
+      "key": "6a47044f-7ca1-4084-9875-05576d412488",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "6a47044f-7ca1-4084-9875-05576d412488",
+        "lesson_activity.key": "0d2da6f4-c503-4000-af09-c225d7d5ec8f"
+      }
+    },
+    {
+      "key": "de034487-40ed-4f31-90a2-6003e694a8bb",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** How would you explain a number system to someone who had never seen numbers before?",
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "de034487-40ed-4f31-90a2-6003e694a8bb",
+        "lesson_activity.key": "0d2da6f4-c503-4000-af09-c225d7d5ec8f"
+      }
+    },
+    {
+      "key": "1be898ed-8479-4ff9-bd8e-d0587aa7bbc9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1be898ed-8479-4ff9-bd8e-d0587aa7bbc9",
+        "lesson_activity.key": "22c8b797-570b-4159-a9d9-e0514571398c"
+      }
+    },
+    {
+      "key": "99f1ce52-1933-4d07-85aa-515a58c04450",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "99f1ce52-1933-4d07-85aa-515a58c04450",
+        "lesson_activity.key": "779e96a7-690f-4899-aaf2-dc1116d6548a"
+      }
+    },
+    {
+      "key": "6e07aee5-1f30-40c7-84f8-f4100d9acf6f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6e07aee5-1f30-40c7-84f8-f4100d9acf6f",
+        "lesson_activity.key": "3c454e3b-17ce-45ba-9082-78f46cb88102"
+      }
+    },
+    {
+      "key": "0a161244-c026-40d3-9413-e034548747f4",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a161244-c026-40d3-9413-e034548747f4",
+        "lesson_activity.key": "d536eebf-ca2a-45b9-b539-4ee049bb3747"
+      }
+    },
+    {
+      "key": "a5348fc1-7080-4271-a9de-7a97753e63bc",
+      "position": 2,
+      "properties": {
+        "progression_name": "Get to Know Your Lesson"
+      },
+      "seeding_key": {
+        "activity_section.key": "a5348fc1-7080-4271-a9de-7a97753e63bc",
+        "lesson_activity.key": "d536eebf-ca2a-45b9-b539-4ee049bb3747"
+      }
+    },
+    {
+      "key": "e1ece0b6-114c-4bf6-a21a-37a14b6588b2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e1ece0b6-114c-4bf6-a21a-37a14b6588b2",
+        "lesson_activity.key": "f40f7334-c369-4036-9402-b310a5775498"
+      }
+    },
+    {
+      "key": "43f28a0c-7563-4ac2-bfef-8bec01e3510a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "43f28a0c-7563-4ac2-bfef-8bec01e3510a",
+        "lesson_activity.key": "c699a8e4-607e-42b5-a3b0-ffd3949553ea"
+      }
+    },
+    {
+      "key": "d3654fb2-42d5-4d72-a61c-414df6169dee",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d3654fb2-42d5-4d72-a61c-414df6169dee",
+        "lesson_activity.key": "9220c612-168c-4f4d-8342-1dcd77fb0133"
+      }
+    },
+    {
+      "key": "652f33cd-fac6-41ff-a649-f573cb13015d",
+      "position": 1,
+      "properties": {
+        "progression_name": "Asynchronous Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "652f33cd-fac6-41ff-a649-f573cb13015d",
+        "lesson_activity.key": "19d1fe27-b9de-485b-ad50-793c8c15592c"
+      }
+    },
+    {
+      "key": "0f6eebaa-add2-4ea4-a715-d9d12d929ece",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f6eebaa-add2-4ea4-a715-d9d12d929ece",
+        "lesson_activity.key": "19d1fe27-b9de-485b-ad50-793c8c15592c"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSP U1L4 CYU3_1_2025"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U1L4 CYU3_1_2025"
+        ],
+        "lesson.key": "Model Lesson U1L3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "de034487-40ed-4f31-90a2-6003e694a8bb"
+      },
+      "level_keys": [
+        "CSP U1L4 CYU3_1_2025"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-01_2025"
+        ],
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-01_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "0a161244-c026-40d3-9413-e034548747f4"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day1-asynch1-01_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-02_2025"
+        ],
+        "progression": "Get to Know Your Lesson"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-02_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "a5348fc1-7080-4271-a9de-7a97753e63bc"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day1-asynch1-02_2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-03_2025"
+        ],
+        "progression": "Get to Know Your Lesson"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-03_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "a5348fc1-7080-4271-a9de-7a97753e63bc"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day1-asynch1-03_2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-04_2025"
+        ],
+        "progression": "Get to Know Your Lesson"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-04_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "a5348fc1-7080-4271-a9de-7a97753e63bc"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day1-asynch1-04_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-05_2025"
+        ],
+        "progression": "Get to Know Your Lesson"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-05_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "a5348fc1-7080-4271-a9de-7a97753e63bc"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day1-asynch1-05_2025"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-06_2025"
+        ],
+        "progression": "Get to Know Your Lesson"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-06_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "a5348fc1-7080-4271-a9de-7a97753e63bc"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day1-asynch1-06_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch2-01_2025"
+        ],
+        "progression": "Asynchronous Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch2-01_2025"
+        ],
+        "lesson.key": "Lesson Planning: Prepare Your Lesson",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "652f33cd-fac6-41ff-a649-f573cb13015d"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day1-asynch2-01_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch2-02_2025"
+        ],
+        "progression": "Using Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch2-02_2025"
+        ],
+        "lesson.key": "Lesson Planning: Prepare Your Lesson",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "0f6eebaa-add2-4ea4-a715-d9d12d929ece"
+      },
+      "level_keys": [
+        "virtual-pl-csp-summer-day1-asynch2-02_2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSP U1L4 CYU3_1_2025",
+        "script_level.level_keys": [
+          "CSP U1L4 CYU3_1_2025"
+        ],
+        "lesson.key": "Model Lesson U1L3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "de034487-40ed-4f31-90a2-6003e694a8bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-01_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-01_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "0a161244-c026-40d3-9413-e034548747f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-02_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-02_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "a5348fc1-7080-4271-a9de-7a97753e63bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-03_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-03_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "a5348fc1-7080-4271-a9de-7a97753e63bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-04_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-04_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "a5348fc1-7080-4271-a9de-7a97753e63bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-05_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-05_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "a5348fc1-7080-4271-a9de-7a97753e63bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-06_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-06_2025"
+        ],
+        "lesson.key": "Lesson Planning: Understanding the Lesson",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "a5348fc1-7080-4271-a9de-7a97753e63bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day1-asynch2-01_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch2-01_2025"
+        ],
+        "lesson.key": "Lesson Planning: Prepare Your Lesson",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "652f33cd-fac6-41ff-a649-f573cb13015d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "virtual-pl-csp-summer-day1-asynch2-02_2025",
+        "script_level.level_keys": [
+          "virtual-pl-csp-summer-day1-asynch2-02_2025"
+        ],
+        "lesson.key": "Lesson Planning: Prepare Your Lesson",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "virtual-pl-csp-summer-day1-2025",
+        "activity_section.key": "0f6eebaa-add2-4ea4-a715-d9d12d929ece"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "2025 Virtual CSP Summer Workshop - Day 1 Agenda",
+      "url": "https://docs.google.com/document/d/1YrZ6pQ0p3k2yVOCNzUggYXfFGAzg4NjRb6Zr98K5vFM/edit?usp=drive_link",
+      "key": "2025_virtual_csp_summer_workshop_-_day_1_agenda_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_-_day_1_agenda_1"
+      }
+    },
+    {
+      "name": "2025 Virtual CSP Summer Workshop - Day 1 Slides",
+      "url": "https://docs.google.com/presentation/d/111_QSKeFZfq7nK0uOirPzYKFQMoI0bzI4gs4m4n3D1E/edit?usp=drive_link",
+      "key": "2025_virtual_csp_summer_workshop_-_day_1_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_-_day_1_slides"
+      }
+    },
+    {
+      "name": "Circle Square Patterns",
+      "url": "https://docs.google.com/document/d/17GrZRYeVRMKwo9vbW-xVT1-Ccu0U2n88Thr-kMqu4s4/edit",
+      "key": "circle_square_patterns",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "circle_square_patterns"
+      }
+    },
+    {
+      "name": "Circle Square Patterns",
+      "url": "https://docs.google.com/presentation/d/1qRXtZdZDn4tmLqaQ6eK8BmaVKKWmibihy2WTozCLJeM/",
+      "key": "circle_square_patterns_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1qRXtZdZDn4tmLqaQ6eK8BmaVKKWmibihy2WTozCLJeM/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "circle_square_patterns_1"
+      }
+    },
+    {
+      "name": "Shape Cutouts",
+      "url": "https://docs.google.com/document/d/1l19mBWEkYLt-cIZbahv8JrrbRQFnwQQajmeq-r5InsU/edit",
+      "key": "shape_cutouts",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "shape_cutouts"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson U1L3",
+        "resource.key": "circle_square_patterns"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson U1L3",
+        "resource.key": "circle_square_patterns_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson U1L3",
+        "resource.key": "shape_cutouts"
+      }
+    }
+  ],
+  "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_-_day_1_agenda_1",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_-_day_1_slides",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    }
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "c8b65976-f0a1-492c-8c12-6d901472be57",
+      "properties": {
+        "description": "Explain the challenges of creating a clear set of rules for ordering patterns"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Lesson U1L3",
+        "objective.key": "c8b65976-f0a1-492c-8c12-6d901472be57"
+      }
+    },
+    {
+      "key": "f74612bf-8d2e-4047-b94c-4b2b4ca7c6f7",
+      "properties": {
+        "description": "Follow a set of rules for ordering sets of patterns"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Lesson U1L3",
+        "objective.key": "f74612bf-8d2e-4047-b94c-4b2b4ca7c6f7"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Model Lesson U1L3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-09"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

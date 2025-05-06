@@ -291,11 +291,11 @@ export default class EnrollmentsPanel extends React.Component {
       contents = <Spinner />;
     } else {
       const firstSessionDate = moment
-        .utc(workshop.sessions[0].start)
+        .utc(workshop.sessions[0]?.start)
         .format('MMMM Do');
 
       const lastSessionDate = new Date(
-        workshop.sessions[workshop.sessions.length - 1].end
+        workshop.sessions[workshop.sessions.length - 1]?.end
       );
 
       let viewSurveyUrl = this.getViewSurveyUrl(

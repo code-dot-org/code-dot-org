@@ -3,6 +3,9 @@
   "script_names": [
     "csp5-virtual-part2"
   ],
+  "original_script_names": [
+    "csp5-virtual-part2"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

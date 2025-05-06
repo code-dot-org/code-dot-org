@@ -138,25 +138,17 @@ export default class MusicValidator extends Validator {
             });
           }
 
-          if (eventData.functionContext) {
-            if (
-              // Exclude 'when run' and trigger contexts.
-              eventData.functionContext.name !== 'when_run' &&
-              !Triggers.map(trigger => trigger.id).includes(
-                eventData.functionContext.name
-              )
-            ) {
-              this.conditionsChecker.addSatisfiedCondition({
-                name: MusicConditions.PLAYED_SOUND_IN_ANY_FUNCTION.name,
-              });
-            }
+          if (eventHasFunctionContext(eventData)) {
             this.conditionsChecker.addSatisfiedCondition({
-              name: MusicConditions.PLAYED_SOUND_IN_FUNCTION.name,
-              value: eventData.functionContext.name,
+              name: MusicConditions.PLAYED_SOUND_IN_ANY_FUNCTION.name,
             });
             this.conditionsChecker.addSatisfiedCondition({
               name: MusicConditions.PLAYED_SOUND_IN_FUNCTION.name,
-              value: eventData.functionContext.procedureID,
+              value: eventData.functionContext!.name,
+            });
+            this.conditionsChecker.addSatisfiedCondition({
+              name: MusicConditions.PLAYED_SOUND_IN_FUNCTION.name,
+              value: eventData.functionContext!.procedureID,
             });
           }
 
@@ -180,10 +172,10 @@ export default class MusicValidator extends Validator {
           });
         }
         if (
-          eventData.functionContext &&
-          !uniqueFunctionContexts.includes(eventData.functionContext.name)
+          eventHasFunctionContext(eventData) &&
+          !uniqueFunctionContexts.includes(eventData.functionContext!.name)
         ) {
-          uniqueFunctionContexts.push(eventData.functionContext.name);
+          uniqueFunctionContexts.push(eventData.functionContext!.name);
           this.conditionsChecker.addSatisfiedCondition({
             name: MusicConditions.PLAYED_SOUNDS_IN_DIFFERENT_FUNCTIONS.name,
             value: uniqueFunctionContexts.length,
@@ -566,4 +558,19 @@ export default class MusicValidator extends Validator {
       }
     });
   }
+}
+
+// Determines whether the event has a function context that is an actual
+// invocation of a function, as opposed to a trigger or 'when run' context.
+function eventHasFunctionContext(eventData: PlaybackEvent): boolean {
+  if (!eventData.functionContext) {
+    return false;
+  }
+  // Exclude 'when run' and trigger contexts.
+  return (
+    eventData.functionContext.name !== 'when_run' &&
+    !Triggers.map(trigger => trigger.id).includes(
+      eventData.functionContext.name
+    )
+  );
 }

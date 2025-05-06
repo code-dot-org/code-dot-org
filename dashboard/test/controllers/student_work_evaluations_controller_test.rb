@@ -16,7 +16,7 @@ class StudentWorkEvaluationsControllerTest < ActionController::TestCase
       student_id: @student.id,
       evaluator: "AI",
       evaluation_criteria: 'Did the student answer the question?',
-      evaluation: 'great',
+      evaluation: 'Great',
       reasoning: 'The student answered all parts of the question correctly.',
       ai_model_version: 'robots-1.0',
     }
@@ -27,7 +27,7 @@ class StudentWorkEvaluationsControllerTest < ActionController::TestCase
       student_id: @student.id,
       evaluator: "AI",
       evaluation_criteria: 'Did the student declare a variable correctly?',
-      evaluation: 'needs revision',
+      evaluation: 'Needs revision',
       reasoning: 'The student declared a variable, but did not follow naming conventions.',
       ai_model_version: 'robots-1.0',
     }

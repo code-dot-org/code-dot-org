@@ -3,6 +3,9 @@
   "script_names": [
     "duino"
   ],
+  "original_script_names": [
+    "duino"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -30,7 +30,7 @@
   }
 }
 
-.instructions-dark {
+.instructions-Dark {
   @extend %instructions;
   background-color: $neutral_dark;
 
@@ -44,7 +44,7 @@
 
 }
 
-.instructions-light {
+.instructions-Light {
   @extend %instructions;
   background-color: $light_white;
 }
@@ -79,7 +79,7 @@
   }
 }
 
-.bubble-dark {
+.bubble-Dark {
   @extend %bubble;
   background-color: $light_gray_950;
   color: $light_white;
@@ -89,7 +89,7 @@
   }
 }
 
-.bubble-light {
+.bubble-Light {
   @extend %bubble;
   background-color: $light_white;
   color: $neutral_dark;
@@ -113,6 +113,7 @@ button.validationButton {
 .markdownText {
   line-height: 0;
   user-select: text;
+  word-break: break-word;
 
   h1,
   h2,
@@ -134,6 +135,8 @@ button.validationButton {
 
   code {
     color: $light_primary_700;
+    // Allow code to wrap.
+    white-space: pre-wrap;
   }
 
   p {

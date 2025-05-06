@@ -3,6 +3,9 @@
   "script_names": [
     "csl-vn"
   ],
+  "original_script_names": [
+    "csl-vn"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

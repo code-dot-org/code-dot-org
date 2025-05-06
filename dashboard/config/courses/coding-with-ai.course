@@ -3,6 +3,9 @@
   "script_names": [
     "coding-with-ai"
   ],
+  "original_script_names": [
+    "coding-with-ai"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
