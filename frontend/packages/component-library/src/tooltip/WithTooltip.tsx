@@ -44,6 +44,13 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
     const hideTimeoutRef = useRef<number | null>(null);
     const suppressNextFocusRef = useRef(false);
 
+    const clearHideTimeout = () => {
+      if (hideTimeoutRef.current) {
+        clearTimeout(hideTimeoutRef.current);
+        hideTimeoutRef.current = null;
+      }
+    };
+
     // Define the additional event handlers
     const handleShowTooltip = (
       show: boolean,
@@ -55,10 +62,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
         return;
       }
       setShowTooltip(show);
-      if (hideTimeoutRef.current) {
-        clearTimeout(hideTimeoutRef.current);
-        hideTimeoutRef.current = null;
-      }
+      clearHideTimeout();
       if (!isTooltip) {
         setNodePosition(show ? (event.target as HTMLElement) : null);
       }
@@ -73,9 +77,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
 
     useImperativeHandle(ref, () => ({
       hideTooltip: () => {
-        if (hideTimeoutRef.current) {
-          clearTimeout(hideTimeoutRef.current);
-        }
+        clearHideTimeout();
         setShowTooltip(false);
         setNodePosition(null);
         suppressNextFocusRef.current = true;
