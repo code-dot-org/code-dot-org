@@ -1,6 +1,6 @@
 name 'music-coding-intro-seq-match_launch_1'
 title '<i class="fa-solid fa-magnifying-glass"></i><i class="fa-sharp fa-solid fa-eyes"></i> Show What You Know!'
-description 'Move the timeline example to the code that matches.'
+description 'Move the timeline example to the code that matches. **Teacher Note**: This is Lesson 1, Level 10 from the curriculum.'
 
 height '210'
 width '200'

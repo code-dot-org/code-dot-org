@@ -302,7 +302,7 @@
       },
       "packId": "will_i_am_i_like_to_move_it"
     },
-    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:**\r\n##### Students can use the keypad or click on the numbers underneath the [Run](#clickable=run-button) button to trigger the events. \r\n___\r\n###<i class=\"fa-solid fa-play\"></i> Try it out! \r\n\r\nLook closely at the code to answer the question below. Then press Run and try the triggers. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id-left:triggerone)\r\n\r\n--- \r\n \r\n**What will play when the <code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">1</code> button is pressed?** \r\n\r\n",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:**\r\n##### Students can use the keypad or click on the numbers underneath the [Run](#clickable=run-button) button to trigger the events. \r\n##### **Teacher Note**: This is Lesson 3, Level 2 from the curriculum.\r\n___\r\n###<i class=\"fa-solid fa-play\"></i> Try it out! \r\n\r\nLook closely at the code to answer the question below. Then press Run and try the triggers. [<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=id-left:triggerone)\r\n\r\n--- \r\n \r\n**What will play when the <code style=\"background-color: #64d25a; color: white; border: none; box-shadow: inset -1px -1px 1px1 rgb(0 0 0 / 0.5), inset 1px 1px 1px 0 rgb(255 255 255 / 0.8); padding: 4px\">1</code> button is pressed?** \r\n\r\n",
     "validations": [
       {
         "key": "music-coding-intro-event-try_4819c55f-caa5-40b0-b2bc-0b2ee4635777",
@@ -366,7 +366,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:12.692+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-try_launch\\\"\"],\"cloned_from\":\"music-coding-intro-event-try_launch\"},{\"changed_at\":\"2025-04-29 15:43:56 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:12.692+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-try_launch\\\"\"],\"cloned_from\":\"music-coding-intro-event-try_launch\"},{\"changed_at\":\"2025-04-29 15:43:56 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-05-05 20:03:19 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
