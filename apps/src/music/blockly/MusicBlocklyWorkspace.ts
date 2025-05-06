@@ -278,6 +278,7 @@ export default class MusicBlocklyWorkspace {
       );
       return;
     }
+    this.blockMode = blockMode;
     Blockly.getGenerator().init(workspace);
 
     this.compiledEvents = {};
