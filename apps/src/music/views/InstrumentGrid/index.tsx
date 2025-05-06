@@ -43,7 +43,7 @@ const relativeToMidiNote = (note: number): number => {
 
 const midiToRelativeNote = (midiNote: number): number => {
   const key = MusicRegistry.player.getKey();
-  return midiNote - 60 + key;
+  return midiNote - 60 - key;
 };
 
 /**

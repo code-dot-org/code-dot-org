@@ -48,7 +48,7 @@ const DEFAULT_KEY = Key.C;
 
 const relativeToMidiNote = (note: number): number => {
   const key = MusicRegistry.player.getKey();
-  return note + 60 - key;
+  return note + 60 + key;
 };
 
 /**
