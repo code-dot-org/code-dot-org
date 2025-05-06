@@ -2,7 +2,7 @@
 
 // This variable is injected via CloudFormation string substitution. This file must be used
 // in conjunction with the CloudFormation Sub function to set the value of MarketingDomainName.
-const marketingDomain = '${MarketingDomainName}'
+const marketingDomain = '${InternalMarketingDomainName}'
 
 const marketingPaths = {
   // Add key-value pairs for each path that should be served by the CMS

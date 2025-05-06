@@ -57,8 +57,8 @@ const FreeResponseSummaryDataBox: React.FC<FreeResponseSummaryDataBoxProps> = ({
       )}
       {generateData(
         needsRevisionStudentCount,
-        FEEDBACK_TYPE.NEEDS_REVIEW.label,
-        FEEDBACK_TYPE.NEEDS_REVIEW.icon,
+        FEEDBACK_TYPE.NOT_PROFICIENT.label,
+        FEEDBACK_TYPE.NOT_PROFICIENT.icon,
         styles.needsReviewIcon
       )}
       {generateData(

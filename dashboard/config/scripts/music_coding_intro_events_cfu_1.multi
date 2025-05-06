@@ -1,6 +1,6 @@
 name 'music-coding-intro-events-cfu_1'
 title 'Use event triggers!'
-question '*Who should use event triggers? Tyler, Sammy, Pedro or Lizzy?*'
+question '**Teacher Note**: This is Lesson 3, Level 8 from the curriculum.  *Who should use event triggers? Tyler, Sammy, Pedro or Lizzy?*'
 right 'Tyler wants to **control when the drum sounds play** like a DJ.'
 wrong 'Sammy wants to **play Twinkle, Twinkle in order** when she presses Run.'
 wrong 'Pedro is trying to **make his code more efficient**.'

@@ -17,4 +17,28 @@ class Skill < ApplicationRecord
   def seeding_key(seed_context)
     {'skill.key': key}.stringify_keys
   end
+
+  def self.setup
+    sample_skills = [
+      {
+        description: "Declare variables correctly",
+        evaluation_criteria: "Did the students declare all of the variables in their code correctly?",
+        concept: "Variables"
+      },
+      {
+        description: "Name variables according to conventions",
+        evaluation_criteria: "Are there any spaces in variable names? Are there any misspelled variable names? Do variable names follow casing conventions?",
+        concept: "Variables"
+      },
+      {
+        description: "Increment values stored in variables",
+        evaluation_criteria: "Does the student's added code increment the values stored in the variables correctly?",
+        concept: "Variables"
+      },
+    ]
+    transaction do
+      reset_db
+      Skill.import! sample_skills
+    end
+  end
 end

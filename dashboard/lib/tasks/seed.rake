@@ -37,6 +37,10 @@ namespace :seed do
   CURRICULUM_CONTENT_DIR = ENV['CURRICULUM_CONTENT_DIR'] || '.'
   CURRICULUM_CONTENT_PATHNAME = Pathname(CURRICULUM_CONTENT_DIR)
 
+  timed_task_with_logging skills: :environment do
+    Skill.setup
+  end
+
   timed_task_with_logging videos: :environment do
     Video.setup(CURRICULUM_CONTENT_DIR)
   end
@@ -253,6 +257,7 @@ namespace :seed do
     :environment,
     :check_migrations,
     :games,
+    :skills,
     :deprecated_blockly_levels,
     :child_dsls,
     :custom_levels,
@@ -650,7 +655,7 @@ namespace :seed do
     files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :import_pegasus_data, :datablock_storage].freeze
+  FULL_SEED_TASKS = [:check_migrations, :skills, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :import_pegasus_data, :datablock_storage].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end

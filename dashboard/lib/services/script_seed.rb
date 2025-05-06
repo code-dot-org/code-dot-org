@@ -46,6 +46,7 @@ module Services
       resources = script.lessons.map(&:resources).flatten.concat(script.resources).concat(script.student_resources).uniq.sort_by(&:key)
       frameworks = Framework.all
       standards = Standard.all
+      skills = Skill.all
       vocabularies = script.lessons.map(&:vocabularies).flatten.sort_by(&:key).uniq
       programming_environments = ProgrammingEnvironment.all
       programming_expressions = ProgrammingExpression.all
@@ -60,6 +61,7 @@ module Services
         resources: resources,
         frameworks: frameworks,
         standards: standards,
+        skills: skills,
         vocabularies: vocabularies,
         programming_environments: programming_environments,
         programming_expressions: programming_expressions,
@@ -79,13 +81,8 @@ module Services
       learning_goals = rubrics.map(&:learning_goals).flatten.sort_by(&:key)
       learning_goal_evidence_levels = learning_goals.map {|lg| lg.learning_goal_evidence_levels.sort_by(&:understanding)}.flatten
 
-      levels_skills = script.levels.map(&:levels_skills).flatten.sort_by {|ls| ls.seeding_key(sort_context).to_json}
-      puts "HELLO!"
-      puts
-      puts "levels_skills"
-      puts
-      puts levels_skills
-      puts
+      levels_skills = my_levels.map(&:levels_skills).flatten.sort_by {|ls| ls.seeding_key(sort_context).to_json}
+
       seed_context = SeedContext.new(
         script: script,
         lesson_groups: script.lesson_groups,
@@ -107,6 +104,8 @@ module Services
         objectives: objectives,
         frameworks: frameworks,
         standards: standards,
+        skills: skills,
+        levels_skills: levels_skills,
         lessons_standards: lessons_standards,
         lessons_opportunity_standards: lessons_opportunity_standards,
         rubrics: rubrics,
