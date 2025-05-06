@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-04 21:57:45 UTC",
+    "serialized_at": "2025-05-06 06:48:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2478,7 +2478,7 @@
       "key": "e199d7e1-18a6-4c5b-9c7d-88fedeeb749b",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how DNS and HTTP work together to bring a website to a user’s browser.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to reinforce the analogy between sending a letter and retrieving a web page.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.",
         "duration": "10",
         "name": "HTTP Preview and Inspect Tool Exploration",
         "progression_name": "HTTP Requests Exploration",
@@ -2589,11 +2589,11 @@
       "key": "1d4565ee-70d3-4abe-9d01-ca02624224b1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the Four Corners upcoming activity to students. Make sure to point out which corner will be **Yes**, **No**, **Maybe**, and **Undecided**.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the first scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner to share why their group chose their position.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the Four Corners upcoming activity to students. Make sure to point out which corner will be **Yes**, **No**, **Maybe**, and **Undecided**.\n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage critical thinking about fairness, competition, and access on the Internet as well as cost barriers, freedom of information, or business interests."
+            "markdown": "If your classroom can’t accommodate movement or you have students uncomfortable sharing in large groups, consider using “Line Debate” (students hold up fingers to show agreement level) or silent discussion protocols like “Chalk Talk” or digital polls."
           }
         ]
       },
@@ -2603,8 +2603,35 @@
       }
     },
     {
-      "key": "f37d12dc-ae68-4742-aef6-eb0d9e5be301",
+      "key": "a83d464c-ff62-492e-ad37-61cf233db5e9",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a83d464c-ff62-492e-ad37-61cf233db5e9",
+        "lesson_activity.key": "29821fae-7deb-4274-83c1-c5ed058b6752"
+      }
+    },
+    {
+      "key": "2f9442e7-c0e0-448f-b397-427f3e0239fd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the first scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner to share why their group chose their position.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage critical thinking about fairness, competition, and access on the Internet as well as cost barriers, freedom of information, or business interests."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2f9442e7-c0e0-448f-b397-427f3e0239fd",
+        "lesson_activity.key": "29821fae-7deb-4274-83c1-c5ed058b6752"
+      }
+    },
+    {
+      "key": "f37d12dc-ae68-4742-aef6-eb0d9e5be301",
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -2614,7 +2641,7 @@
     },
     {
       "key": "797bdec2-7993-422a-a9d6-93f15b3232b5",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the second scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner who was not a spokesperson for scenario #1 to share why their group chose their position.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the third scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner who was not a spokesperson for the previous two scenarios to share why their group chose their position.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce Net Neutrality to students and that all of the scenarios relate to net neutrality. Explain to students that this means that without net neutrality, Internet Service Providers (ISPs) can prioritize, slow down or even block websites and companies can pay for faster access creating advantages for some and barriers for others. ",
         "tips": [
@@ -2631,7 +2658,7 @@
     },
     {
       "key": "bed658ec-f736-4973-bab5-cb9863e61c06",
-      "position": 4,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -2641,7 +2668,7 @@
     },
     {
       "key": "4325f997-2dd9-4806-a938-3c8e91b5539d",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to make direct connections between each scenario and net neutrality. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -4418,6 +4445,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_networks-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
