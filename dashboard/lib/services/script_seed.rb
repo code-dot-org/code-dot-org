@@ -214,7 +214,7 @@ module Services
       rubrics_data = data['rubrics'] || []
       learning_goals_data = data['learning_goals'] || []
       learning_goals_evidence_levels_data = data['learning_goal_evidence_levels'] || []
-      skills_data = data['skills'] || []
+      levels_skills_data = data['levels_skills'] || []
       seed_context = SeedContext.new
 
       Unit.transaction do
@@ -268,7 +268,7 @@ module Services
         seed_context.learning_goal_evidence_levels = import_learning_goals_evidence_levels(learning_goals_evidence_levels_data, seed_context)
 
         seed_context.skills = Skill.all
-        seed_context.levels_skills = LevelsSkill.all
+        seed_context.levels_skills = import_levels_skills(levels_skills_data, seed_context)
 
         # generate_plc_objects must be run after lessons are added.
         seed_context.script.generate_plc_objects
@@ -768,7 +768,7 @@ module Services
     end
 
     def self.import_levels_skills(levels_skills_data, seed_context)
-      level_skills_data.map do |levels_skill_data|
+      levels_skills_data.map do |levels_skill_data|
         level = seed_context.levels.find {|l| l.key == levels_skill_data['seeding_key']['level.key']}
         raise 'No level found' if level.nil?
         skill = seed_context.skills.find {|s| s.key == levels_skill_data['seeding_key']['skill.key']}
