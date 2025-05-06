@@ -240,7 +240,7 @@ class EvaluateRubricJob < ApplicationJob
     # Check for PII / sharing failures
     # Get the 2-character language code from the user's preferred locale
     locale = (user.locale || 'en')[0...2]
-    ShareFiltering.find_share_failure(code, locale, exceptions: true)
+    ShareFiltering.find_failure(code, locale, exceptions: true)
 
     openai_params = AiRubricConfig.get_openai_params(lesson_s3_name, code)
     response = get_openai_evaluations(openai_params)
