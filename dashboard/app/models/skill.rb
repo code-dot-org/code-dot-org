@@ -15,7 +15,7 @@ class Skill < ApplicationRecord
   has_and_belongs_to_many :levels, join_table: 'levels_skills'
 
   def seeding_key(seed_context)
-    {'skill.key': key}.stringify_keys
+    {'skill.key': id}.stringify_keys
   end
 
   def self.setup

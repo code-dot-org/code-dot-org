@@ -35,18 +35,22 @@ module Services
     # @param [Unit] script - the Unit object to serialize
     # @return [String] the JSON representation
     def self.serialize_seeding_json(script)
+      puts "we're in this method!"
       script = Unit.with_seed_models.find(script.id)
 
       # We need to retrieve the Levels anyway, and doing it this way makes it fast to get the Level keys for each ScriptLevel.
       my_script_levels = ScriptLevel.includes(:levels).where(script_id: script.id)
       my_levels = my_script_levels.map(&:levels).flatten
 
+      puts "Do we have levels?"
+      puts
+      puts my_levels.inspect
+
       activities = script.lessons.map(&:lesson_activities).flatten
       sections = activities.map(&:activity_sections).flatten
       resources = script.lessons.map(&:resources).flatten.concat(script.resources).concat(script.student_resources).uniq.sort_by(&:key)
       frameworks = Framework.all
       standards = Standard.all
-      skills = Skill.all
       vocabularies = script.lessons.map(&:vocabularies).flatten.sort_by(&:key).uniq
       programming_environments = ProgrammingEnvironment.all
       programming_expressions = ProgrammingExpression.all
@@ -61,11 +65,11 @@ module Services
         resources: resources,
         frameworks: frameworks,
         standards: standards,
-        skills: skills,
         vocabularies: vocabularies,
         programming_environments: programming_environments,
         programming_expressions: programming_expressions,
         skills: skills,
+        levels: my_levels,
       )
       lessons_resources = script.lessons.map(&:lessons_resources).flatten.sort_by {|lr| lr.seeding_key(sort_context).to_json}
       scripts_resources = script.scripts_resources.sort_by {|sr| sr.seeding_key(sort_context).to_json}
@@ -104,8 +108,6 @@ module Services
         objectives: objectives,
         frameworks: frameworks,
         standards: standards,
-        skills: skills,
-        levels_skills: levels_skills,
         lessons_standards: lessons_standards,
         lessons_opportunity_standards: lessons_opportunity_standards,
         rubrics: rubrics,
@@ -113,6 +115,12 @@ module Services
         skills: skills,
         levels_skills: levels_skills
       )
+
+      puts "seed_context in script_seed"
+      puts
+      puts seed_context.inspect
+      puts
+      puts
       scope = {seed_context: seed_context}
 
       data = {
