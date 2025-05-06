@@ -101,6 +101,11 @@ class LevelLoader
       # https://dev.mysql.com/doc/refman/8.0/en/optimizing-innodb-bulk-data-loading.html
       Level.import! changed_levels.sort_by(&:id), on_duplicate_key_update: update_columns, batch_size: 100
 
+      warn "########"
+      warn "post-import level_md5s_by_name:"
+      warn JSON.pretty_generate(Level.pluck(:name, :md5).to_h)
+      warn "########"
+
       # now we want to run some after_save callbacks, which didn't get run when
       # by run_callbacks earlier. it seems too risky to run all after_save
       # callbacks automatically, because someone modifying the level edit

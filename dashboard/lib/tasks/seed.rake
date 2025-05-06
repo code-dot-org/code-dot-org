@@ -639,8 +639,11 @@ namespace :seed do
 
     puts 'Cache mismatch, running full ui test seed'
     RakeUtils.rake_stream_output 'seed:ui_test'
+    puts "updating #{HASH_FILE} and db/ui_test_data.sql"
     File.write(HASH_FILE, current_hash)
-    sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
+    result = sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
+    puts "updated #{HASH_FILE} and db/ui_test_data.sql"
+    result
   end
 
   timed_task_with_logging :import_pegasus_data do
