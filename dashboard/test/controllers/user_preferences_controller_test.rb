@@ -96,11 +96,11 @@ class UserPreferencesControllerTest < ActionController::TestCase
     preference = UserPreference.create!(user_id: @user.id, theme: initial_theme)
 
     new_theme = {
-      'Blockly' => 'HighContrast'
+      'Blockly' => 'cdohighcontrast'
     }
     merged_theme = {
       'global'=> 'Dark',
-      'Blockly' => 'HighContrast'
+      'Blockly' => 'cdohighcontrast'
     }
 
     assert_no_difference 'UserPreference.count' do
@@ -160,6 +160,24 @@ class UserPreferencesControllerTest < ActionController::TestCase
     UserPreference.create!(user_id: @user.id, editor_font_size: nil)
 
     get :editor_font_size
+
+    assert_response :not_found
+  end
+
+  test 'gets theme for the current user' do
+    theme = {'global' => 'Light'}
+    UserPreference.create!(user_id: @user.id, theme: theme)
+
+    get :theme
+
+    assert_response :success
+    assert_equal theme, JSON.parse(response.body)['theme']
+  end
+
+  test 'returns 404 if no theme exists for the current user' do
+    UserPreference.create!(user_id: @user.id)
+
+    get :theme
 
     assert_response :not_found
   end

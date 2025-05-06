@@ -45,6 +45,15 @@ class UserPreferencesController < ApplicationController
     end
   end
 
+  def theme
+    preference = UserPreference.find_by(user_id: current_user.id)
+    if preference && preference.theme.present?
+      render json: {theme: preference.theme}
+    else
+      render json: {}, status: :not_found
+    end
+  end
+
   private def update_params
     params.transform_keys(&:underscore).permit(
       section_order: [],
