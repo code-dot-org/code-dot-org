@@ -80,7 +80,12 @@ module Services
       learning_goal_evidence_levels = learning_goals.map {|lg| lg.learning_goal_evidence_levels.sort_by(&:understanding)}.flatten
 
       levels_skills = script.levels.map(&:levels_skills).flatten.sort_by {|ls| ls.seeding_key(sort_context).to_json}
-
+      puts "HELLO!"
+      puts
+      puts "levels_skills"
+      puts
+      puts levels_skills
+      puts
       seed_context = SeedContext.new(
         script: script,
         lesson_groups: script.lesson_groups,
