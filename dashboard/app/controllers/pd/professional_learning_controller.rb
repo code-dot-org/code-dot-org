@@ -93,7 +93,7 @@ class Pd::ProfessionalLearningController < ApplicationController
 
   # GET professional-learning/regional-partner/playbook
   def rp_playbook
-    if current_user.permission?(UserPermission::PROGRAM_MANAGER) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+    if current_user&.permission?(UserPermission::PROGRAM_MANAGER) || current_user&.permission?(UserPermission::WORKSHOP_ADMIN)
       render 'pd/professional_learning/regional_partner/regional_partner_playbook'
     else
       render 'pd/professional_learning/regional_partner/not_permitted_to_view', :status => :forbidden

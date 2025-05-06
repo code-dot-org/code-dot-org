@@ -158,7 +158,10 @@ const BubbleChoice: React.FC<LabProps> = ({levelProperties}) => {
             <button
               type="button"
               key={index}
-              className={styles.sublevelButton}
+              className={classNames(
+                'uitest-bubble-choice',
+                styles.sublevelButton
+              )}
               style={{
                 width: imageWidth,
                 height: imageWidth / aspectRatio,
