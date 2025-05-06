@@ -23,7 +23,7 @@ const downloadLessonProgressCSV = () => {
   const columnNames = ['Student_Name'];
 
   console.log('lfm', {unitData, lessonProgressByStudent, students});
-  const table = students.map(student => ({
+  const table = students.map((student: {name: string}) => ({
     Student_Name: student.name,
   }));
 
