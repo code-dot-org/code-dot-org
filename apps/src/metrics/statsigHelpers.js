@@ -11,10 +11,8 @@ export function getUserType() {
 }
 
 export function findOrCreateStableId() {
-  const statsig_stable_id_element = document.querySelector(
-    'script[data-statsig-stable-id]'
-  );
-  return statsig_stable_id_element.dataset.statsigStableId;
+  const scriptTag = document.querySelector('script[data-statsig-stable-id]');
+  return scriptTag?.dataset?.statsigStableId || null;
 }
 
 export function formatUserId(userId) {
