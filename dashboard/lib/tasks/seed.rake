@@ -72,6 +72,7 @@ namespace :seed do
     ui-test-script-in-course-2019
     ui-test-script-2-in-course-2017
     ui-test-script-2-in-course-2019
+    ui-test-shared-unit
     ui-test-versioned-script-2017
     ui-test-versioned-script-2019
     ui-test-csa-family-script
@@ -79,6 +80,7 @@ namespace :seed do
     ui-test-facilitator-pl-course
     ui-test-single-unit-2025
     ui-test-single-unit-2026
+    ui-test-unnumbered-lessons
   ).map {|script| "test/ui/config/scripts_json/#{script}.script_json"}.freeze
   UI_TEST_SCRIPTS = SPECIAL_UI_TEST_SCRIPTS + %w(
     20-hour
@@ -148,6 +150,7 @@ namespace :seed do
     step
     oceans
     sports
+    jigsaw
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
@@ -311,6 +314,7 @@ namespace :seed do
        csp-2017
        csp-2019
        20-hour
+       algebra
        allthemigratedthings
        alltheselfpacedplthings
        allthettsthings
@@ -331,6 +335,7 @@ namespace :seed do
        coursec-2019
        coursee-2019
        coursea-2020
+       csp-ap
        interactive-games-animations-2023
        interactive-games-animations-2024
        customizing-llms-2024
@@ -348,18 +353,22 @@ namespace :seed do
        starwarsblocks
        step
        oceans
+       jigsaw
        sports).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
-    %w(ui-test-course-2017
-       ui-test-course-2019
-       ui-test-single-unit-course-2025
-       ui-test-single-unit-course-2026
-       ui-test-csa-family-script
-       ui-test-facilitator-pl-course
-       ui-test-teacher-pl-course
-       ui-test-versioned-script-2017
-       ui-test-versioned-script-2019).each do |course_name|
+    %w(
+      ui-test-course-2017
+      ui-test-course-2019
+      ui-test-single-unit-course-2025
+      ui-test-single-unit-course-2026
+      ui-test-csa-family-script
+      ui-test-facilitator-pl-course
+      ui-test-teacher-pl-course
+      ui-test-versioned-script-2017
+      ui-test-versioned-script-2019
+      ui-test-unnumbered-lessons
+    ).each do |course_name|
       UnitGroup.load_from_path("test/ui/config/courses/#{course_name}.course")
     end
   end
@@ -469,7 +478,15 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
-    %w(ui-test-course ui-test-csa-family-script ui-test-teacher-pl-course ui-test-facilitator-pl-course ui-test-single-unit-course ui-test-versioned-course).each do |course_offering_name|
+    %w(
+      ui-test-course
+      ui-test-csa-family-script
+      ui-test-teacher-pl-course
+      ui-test-facilitator-pl-course
+      ui-test-single-unit-course
+      ui-test-versioned-course
+      ui-test-unnumbered-lessons
+    ).each do |course_offering_name|
       CourseOffering.seed_record("test/ui/config/course_offerings/#{course_offering_name}.json")
     end
   end

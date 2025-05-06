@@ -963,7 +963,8 @@ class UnitTest < ActiveSupport::TestCase
       disablePostMilestone: false,
       student_detail_progress_view: false,
       age_13_required: false,
-      show_sign_in_callout: false
+      show_sign_in_callout: false,
+      hasUnnumberedLessons: false,
     }
     assert_equal expected, unit.summarize_header
   end
@@ -1637,14 +1638,15 @@ class UnitTest < ActiveSupport::TestCase
     assert_nil unit.course_link
   end
 
-  test "course_link returns nil if unit is in two courses" do
+  test "course_link returns first unit_group course link if unit is in two courses" do
     unit = create :script
     unit_group = create :unit_group, name: 'csp'
     other_unit_group = create :unit_group, name: 'othercsp'
     create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
     create :unit_group_unit, position: 1, unit_group: other_unit_group, script: unit
 
-    assert_nil unit.course_link
+    unit.reload
+    assert_equal '/courses/csp', unit.course_link
   end
 
   test "course_link returns course_path if unit is in one course" do
@@ -2626,6 +2628,7 @@ class UnitTest < ActiveSupport::TestCase
     unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
     course_unit_group = create(:unit_group)
     unit_gp_unit = create :unit_group_unit, unit_group: course_unit_group, script: unit_in_course, position: 1
+    unit_in_course.update!(original_unit_group: nil)
     CourseOffering.add_course_offering(course_unit_group)
 
     UnitGroup.any_instance.expects(:write_serialization).never
@@ -2663,6 +2666,24 @@ class UnitTest < ActiveSupport::TestCase
     refute unit_without_rubrics.ai_assessment_enabled?
     refute unit_with_non_ai_rubric.ai_assessment_enabled?
     assert unit_with_ai_rubric.ai_assessment_enabled?
+  end
+
+  test 'can summarize has_unnumbered_lessons' do
+    unit = create :unit
+    refute unit.summarize[:hasUnnumberedLessons]
+    unit.update!(has_unnumbered_lessons: true)
+    assert unit.summarize[:hasUnnumberedLessons]
+    unit.update!(has_unnumbered_lessons: false)
+    refute unit.summarize[:hasUnnumberedLessons]
+  end
+
+  test 'has ai tutor level' do
+    unit_without_ai_tutor = create :unit
+    refute unit_without_ai_tutor.has_ai_tutor_level?
+
+    unit_with_ai_tutor = create :unit, :with_levels
+    unit_with_ai_tutor.levels[0].update!(ai_tutor_available: true)
+    assert unit_with_ai_tutor.has_ai_tutor_level?
   end
 
   private def has_unlaunched_unit?(units)

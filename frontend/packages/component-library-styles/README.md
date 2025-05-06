@@ -54,8 +54,9 @@ yarn link @code-dot-org/component-library-styles
 To use it in your project:
 
 ```scss
-@import '@code-dot-org/component-library-styles/colors.scss';
-@import '@code-dot-org/component-library-styles/typography.module.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 ```
 
 ## Development

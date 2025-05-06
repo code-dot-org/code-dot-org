@@ -11,6 +11,33 @@ export class MarketingPage {
     this.locale = locale;
   }
 
+  async enableDraftMode(token: string, slug: string) {
+    return await this.page.goto(
+      `${this.getBaseUrl()}/api/draft?token=${token}&slug=${slug}&locale=${this.locale}`,
+    );
+  }
+
+  getBaseDomain() {
+    const stage = process.env.STAGE;
+
+    if (!stage) {
+      console.error('No stage specified!');
+
+      throw new Error('Missing environment variable STAGE');
+    }
+
+    switch (stage) {
+      default:
+      case 'localhost':
+      case 'pr':
+        return 'localhost';
+      case 'test':
+        return 'code.marketing-sites.dev-code.org';
+      case 'production':
+        return 'code.org';
+    }
+  }
+
   getBaseUrl() {
     const stage = process.env.STAGE;
 
@@ -24,11 +51,10 @@ export class MarketingPage {
       default:
       case 'localhost':
       case 'pr':
-        return 'http://localhost:3001';
+        return `http://${this.getBaseDomain()}:3001`;
       case 'test':
-        return 'https://dev.marketing.dev-code.org';
       case 'production':
-        return 'https://code.org';
+        return `https://${this.getBaseDomain()}`;
     }
   }
 
@@ -41,9 +67,11 @@ export class MarketingPage {
   }
 
   async goto(subPath: string) {
-    await this.page.goto(`${this.getBasePath()}${subPath}`);
+    const response = await this.page.goto(`${this.getBasePath()}${subPath}`);
 
     await this.loadFonts();
+
+    return response;
   }
 
   async loadFonts() {
@@ -58,5 +86,27 @@ export class MarketingPage {
       },
       {fn: loadFonts.toString(), fonts: FONT_FAMILY_NAMES},
     );
+  }
+
+  async getMetatag(name: string) {
+    return this.page.locator(`meta[name="${name}"]`)?.getAttribute('content');
+  }
+
+  async getOpenGraph(name: string) {
+    return this.page
+      .locator(`meta[property="og:${name}"]`)
+      ?.getAttribute('content');
+  }
+
+  get pageTitle() {
+    return this.page.title();
+  }
+
+  get description() {
+    return this.getMetatag('description');
+  }
+
+  get robots() {
+    return this.getMetatag('robots');
   }
 }

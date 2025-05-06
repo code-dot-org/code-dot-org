@@ -3,10 +3,12 @@
   "name": "Create Function",
   "category": "Functions",
   "category_key": "functions",
+  "block_name": "procedures_defnoreturn",
   "content": "Functions are blocks that represent a set of blocks to be played, in order to group together parts of a song. Functions can be used to represent a section of a song, like the chorus or verse, or a specific instrument's part in a song. \n\nOnce this code is added to the workspace, the new function is accessible in the \"Functions\" section of the toolbox, where it can be used anywhere in the project to play sounds as a group.",
   "palette_params": [
     {
       "name": "name",
+      "type": "Text",
       "required": true,
       "description": "The name of the function to create."
     }

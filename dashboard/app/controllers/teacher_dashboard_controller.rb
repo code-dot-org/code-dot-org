@@ -2,7 +2,9 @@ class TeacherDashboardController < ApplicationController
   load_and_authorize_resource :section
 
   rescue_from CanCan::AccessDenied do
-    if params[:path]&.include? 'courses'
+    if request.fullpath.include? 'home'
+      redirect_to "/users/sign_in"
+    elsif params[:path]&.include? 'courses'
       redirect_to "/#{params[:path]}"
     elsif params[:path]&.include? 'unit'
       params[:path].sub! 'unit', 's'
@@ -20,6 +22,7 @@ class TeacherDashboardController < ApplicationController
       end
       @section_summary = @section.selected_section_summarize
     end
+    @section_order = UserPreference.find_by(user_id: current_user.id)&.section_order
     @locale_code = request.locale
     view_options(full_width: true, no_padding_container: true)
   end

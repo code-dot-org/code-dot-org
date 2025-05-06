@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_03_185752) do
+ActiveRecord::Schema.define(version: 2025_04_24_231217) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -951,6 +951,13 @@ ActiveRecord::Schema.define(version: 2025_04_03_185752) do
     t.index ["level_id"], name: "index_levels_script_levels_on_level_id"
     t.index ["script_level_id", "level_id"], name: "index_levels_script_levels_on_script_level_id_and_level_id", unique: true
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id"
+  end
+
+  create_table "levels_skills", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "level_id", null: false
+    t.bigint "skill_id", null: false
+    t.index ["level_id", "skill_id"], name: "index_levels_skills_on_level_id_and_skill_id"
+    t.index ["skill_id", "level_id"], name: "index_levels_skills_on_skill_id_and_level_id"
   end
 
   create_table "libraries", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -1953,6 +1960,7 @@ ActiveRecord::Schema.define(version: 2025_04_03_185752) do
     t.string "community_type", limit: 16, comment: "Urban-centric community type"
     t.integer "student_female"
     t.integer "student_male"
+    t.string "status"
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id"
   end
 
@@ -2016,11 +2024,13 @@ ActiveRecord::Schema.define(version: 2025_04_03_185752) do
     t.string "instruction_type"
     t.string "instructor_audience"
     t.string "participant_audience"
+    t.integer "original_unit_group_id"
     t.index ["family_name"], name: "index_scripts_on_family_name"
     t.index ["instruction_type"], name: "index_scripts_on_instruction_type"
     t.index ["instructor_audience"], name: "index_scripts_on_instructor_audience"
     t.index ["name"], name: "index_scripts_on_name", unique: true
     t.index ["new_name"], name: "index_scripts_on_new_name", unique: true
+    t.index ["original_unit_group_id"], name: "index_scripts_on_original_unit_group_id"
     t.index ["participant_audience"], name: "index_scripts_on_participant_audience"
     t.index ["published_state"], name: "index_scripts_on_published_state"
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
@@ -2108,6 +2118,8 @@ ActiveRecord::Schema.define(version: 2025_04_03_185752) do
     t.string "participant_type", default: "student", null: false
     t.bigint "lti_integration_id"
     t.boolean "ai_tutor_enabled", default: false
+    t.integer "avatar_color"
+    t.integer "avatar_emoji"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["lti_integration_id"], name: "fk_rails_f0d4df9901"
@@ -2148,6 +2160,14 @@ ActiveRecord::Schema.define(version: 2025_04_03_185752) do
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
   end
 
+  create_table "skills", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.string "description", null: false
+    t.text "evaluation_criteria"
+    t.string "concept"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "stages", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.integer "absolute_position"
@@ -2156,7 +2176,7 @@ ActiveRecord::Schema.define(version: 2025_04_03_185752) do
     t.datetime "updated_at"
     t.boolean "lockable", default: false, null: false
     t.integer "relative_position", null: false
-    t.text "properties"
+    t.text "properties", collation: "utf8mb4_unicode_ci"
     t.integer "lesson_group_id"
     t.string "key", null: false
     t.boolean "has_lesson_plan", null: false
@@ -2331,22 +2351,6 @@ ActiveRecord::Schema.define(version: 2025_04_03_185752) do
     t.index ["user_id"], name: "index_user_geos_on_user_id"
   end
 
-  create_table "user_level_evaluations", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "level_id", null: false
-    t.integer "script_id", null: false
-    t.string "school_year", null: false
-    t.text "evaluation_criteria"
-    t.text "ai_evaluation"
-    t.text "ai_reasoning"
-    t.string "ai_model_version"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "code_version"
-    t.index ["level_id"], name: "index_user_level_evaluations_on_level_id"
-    t.index ["user_id"], name: "index_user_level_evaluations_on_user_id"
-  end
-
   create_table "user_level_interactions", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
@@ -2414,6 +2418,8 @@ ActiveRecord::Schema.define(version: 2025_04_03_185752) do
     t.json "section_order"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.json "editor_font_size"
+    t.json "console_font_size"
     t.index ["user_id"], name: "index_user_preferences_on_user_id"
   end
 
@@ -2645,6 +2651,7 @@ ActiveRecord::Schema.define(version: 2025_04_03_185752) do
   add_foreign_key "school_infos", "schools"
   add_foreign_key "school_stats_by_years", "schools"
   add_foreign_key "schools", "school_districts"
+  add_foreign_key "scripts", "unit_groups", column: "original_unit_group_id"
   add_foreign_key "section_instructors", "users", column: "instructor_id"
   add_foreign_key "section_instructors", "users", column: "invited_by_id"
   add_foreign_key "sections", "lti_integrations"

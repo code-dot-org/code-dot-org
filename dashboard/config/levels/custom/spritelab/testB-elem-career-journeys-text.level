@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2025-04-03T23:24:27.000Z",
   "level_num": "custom",
@@ -30,7 +31,7 @@
     "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "free_play": "true",
-    "hide_animation_mode": "true",
+    "hide_animation_mode": "false",
     "start_in_animation_tab": "false",
     "all_animations_single_frame": "false",
     "hide_view_data_button": "false",
@@ -65,7 +66,6 @@
     "validation_enabled": "false",
     "mini_toolbox": "false",
     "callout_json": "[{\"localization_key\":\"hello_world_click_hint\",\"callout_text\":\"Add this event block to your workspace.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"6\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"6\\\"]\",\"localization_key\":\"hello_world_click_hint\",\"callout_text\":\"Add this event block to your workspace.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
-    "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel5();",
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Use the `when clicked` event to make a sprite say something.",
@@ -74,16 +74,15 @@
     "skip_autosave": true,
     "encrypted_examples": "euHJQj7YqGu+N+OUKo15OCpg0KqUc7rk/mmOuESJ6sRj8wynVp7bqVM0CLk6\n77ADhiRQ/gElUamxZz0cF4zLEZH1yJO8XSh9s4e7rv2xfPuq8/bkmZ9ebHxE\n4JE0YujqaaSJHU9FK5Ke3e26ECgRPQ==\n",
     "standalone_app_name": "spritelab",
-    "enable_big_playspace": "false",
+    "enable_big_playspace": "true",
     "display_name": "Text",
     "bubble_choice_description": "Learn how to add text to your project.",
     "thumbnail_url": "https://images.code.org/103feda0c46231be0d9ce1e4b9fed878-text.jpg",
     "project_template_level_name": "testB-elem-career-journeys-template",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-03T23:24:27.312+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-add-text\\\"\"],\"cloned_from\":\"test-elem-career-journeys-add-text\"},{\"changed_at\":\"2025-04-03 23:28:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-04 15:34:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-04 15:34:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-03T23:24:27.312+00:00\",\"changed\":[\"cloned from \\\"test-elem-career-journeys-add-text\\\"\"],\"cloned_from\":\"test-elem-career-journeys-add-text\"},{\"changed_at\":\"2025-04-03 23:28:40 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-04 15:34:24 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-04 15:34:48 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-07 22:31:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"enable_big_playspace\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-07 22:53:58 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"validation_code\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-07 23:20:31 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_animation_mode\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

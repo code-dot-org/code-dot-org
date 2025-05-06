@@ -1,0 +1,16 @@
+name 'student-end-of-unit-survey-q34_-csa_2025'
+
+question 'What challenges did you face during this unit? (Choose top 2)'
+
+right 'Understanding the concepts'
+right 'Keeping up with assignments'
+right 'Working on group projects'
+right 'Lack of interest in the topic'
+right 'No challenges'
+
+type 'multi2'
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+
+MARKDOWN

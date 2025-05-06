@@ -268,7 +268,7 @@ class ScriptLevel < ApplicationRecord
   end
 
   def long_assessment?
-    assessment && level.is_a?(LevelGroup)
+    assessment && level.is_a?(LevelGroup) && !activity_guide_level?
   end
 
   def anonymous?
@@ -414,7 +414,7 @@ class ScriptLevel < ApplicationRecord
   end
 
   def summarize_for_lesson_edit
-    summary = summarize(for_edit: true)
+    summary = summarize(false, for_edit: true)
     summary[:id] = id.to_s
     summary[:activitySectionPosition] = activity_section_position
     summary[:levels] = levels.map do |level|

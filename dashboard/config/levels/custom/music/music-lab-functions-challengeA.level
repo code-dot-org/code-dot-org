@@ -461,9 +461,33 @@
     "long_instructions": "You've been given just the vocals for the chorus of this song. Your job is to come up with the backing tracks for beats, bass, and lead. Each instrument type must be in its own function! You can use tracks from the original song, or mix-and-match with other musical genres!\r\n\r\nWhen you're finished, your code should look similar to this:\r\n\r\n![](https://images.code.org/6eba847b3ad2ef5f4b5aaed4a25fc61f-image-1742271279390.png)",
     "display_name": "Always Been You",
     "bubble_choice_description": "Use functions to add backing beats, bass, and lead tracks to the chorus of this song.",
+    "validations": [
+      {
+        "key": "music-lab-functions-challengeA_6c3f0327-2e3d-4df2-95ee-26750159f2c8",
+        "message": "You did it!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds_in_different_functions",
+            "value": 4
+          }
+        ]
+      },
+      {
+        "key": "music-lab-functions-challengeA_d69978c3-5c12-4ffb-a645-62199615adb9",
+        "message": "Make your 3 functions, then call them!",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "predict_settings": {
+      "isPredictLevel": false
+    },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-14T22:16:23.018+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practiceF\\\"\"],\"cloned_from\":\"music-lab-functions-practiceF\"},{\"changed_at\":\"2025-03-14 22:16:25 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:09:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:11:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:14:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:14:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:15:48 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-14T22:16:23.018+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-practiceF\\\"\"],\"cloned_from\":\"music-lab-functions-practiceF\"},{\"changed_at\":\"2025-03-14 22:16:25 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:09:39 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:11:06 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:14:02 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:14:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-03-18 04:15:48 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-19 02:40:57 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-19 02:41:41 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

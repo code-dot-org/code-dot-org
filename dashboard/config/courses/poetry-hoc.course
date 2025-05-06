@@ -3,6 +3,9 @@
   "script_names": [
     "poetry-hoc"
   ],
+  "original_script_names": [
+    "poetry-hoc"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -22,10 +22,10 @@ header:
         url: /promote
         domain: code.org
         id: header-stats
-      - title: help_us
-        url: /help
+      - title: donate
+        url: /donate
         domain: code.org
-        id: header-help
+        id: header-donate
       - title: incubator
         url: /incubator
         domain: studio.code.org
@@ -124,10 +124,10 @@ header:
         domain: code.org
         url: /promote
         id: stats
-      - title: help_us
+      - title: donate
         domain: code.org
-        url: /help
-        id: help-us
+        url: /donate
+        id: donate
       - title: incubator
         url: /incubator
         domain: studio.code.org
@@ -225,10 +225,10 @@ header:
         domain: code.org
         url: /promote
         id: stats
-      - title: help_us
+      - title: donate
         domain: code.org
-        url: /help
-        id: help-us
+        url: /donate
+        id: donate
       - title: incubator
         url: /incubator
         domain: studio.code.org
@@ -345,7 +345,7 @@ footer:
       - title: privacy
         url: /privacy
         domain: code.org
-        style: 'color: #ffa400;'
+        style: "color: #ffa400;"
       - title: cookie_notice
         url: /cookies
         domain: code.org
@@ -366,7 +366,7 @@ footer:
       - title: privacy_policy
         url: /privacy
         domain: code.org
-        style: 'color: #ffa400;'
+        style: "color: #ffa400;"
       - title: cookie_notice
         url: /cookies
         domain: code.org
@@ -410,7 +410,6 @@ footer:
         domain: hourofcode.com
         url: /cookies
         target: _blank
-
 # These override specially wrapped components in particular pages.
 #
 # When we navigate to such a page that matches /global/:region<your mask>
@@ -439,7 +438,7 @@ footer:
 #           id: farsi-announcement
 #           image: /shared/images/teacher-announcement/incubator-announcement.png
 #           title: foo
-#       
+#
 # When we navigate to the /global/foo/home page, any MarketingAnnouncement will
 # have its normal announcement replaced with the configured one. Whereas, on any
 # other page, the '/' would match, and the `false` indicates the component should

@@ -2,31 +2,33 @@
 #
 # Table name: scripts
 #
-#  id                   :integer          not null, primary key
-#  name                 :string(255)      not null
-#  created_at           :datetime
-#  updated_at           :datetime
-#  wrapup_video_id      :integer
-#  user_id              :integer
-#  login_required       :boolean          default(FALSE), not null
-#  properties           :text(65535)
-#  new_name             :string(255)
-#  family_name          :string(255)
-#  published_state      :string(255)      default("in_development")
-#  instruction_type     :string(255)
-#  instructor_audience  :string(255)
-#  participant_audience :string(255)
+#  id                     :integer          not null, primary key
+#  name                   :string(255)      not null
+#  created_at             :datetime
+#  updated_at             :datetime
+#  wrapup_video_id        :integer
+#  user_id                :integer
+#  login_required         :boolean          default(FALSE), not null
+#  properties             :text(65535)
+#  new_name               :string(255)
+#  family_name            :string(255)
+#  published_state        :string(255)      default("in_development")
+#  instruction_type       :string(255)
+#  instructor_audience    :string(255)
+#  participant_audience   :string(255)
+#  original_unit_group_id :integer
 #
 # Indexes
 #
-#  index_scripts_on_family_name           (family_name)
-#  index_scripts_on_instruction_type      (instruction_type)
-#  index_scripts_on_instructor_audience   (instructor_audience)
-#  index_scripts_on_name                  (name) UNIQUE
-#  index_scripts_on_new_name              (new_name) UNIQUE
-#  index_scripts_on_participant_audience  (participant_audience)
-#  index_scripts_on_published_state       (published_state)
-#  index_scripts_on_wrapup_video_id       (wrapup_video_id)
+#  index_scripts_on_family_name             (family_name)
+#  index_scripts_on_instruction_type        (instruction_type)
+#  index_scripts_on_instructor_audience     (instructor_audience)
+#  index_scripts_on_name                    (name) UNIQUE
+#  index_scripts_on_new_name                (new_name) UNIQUE
+#  index_scripts_on_original_unit_group_id  (original_unit_group_id)
+#  index_scripts_on_participant_audience    (participant_audience)
+#  index_scripts_on_published_state         (published_state)
+#  index_scripts_on_wrapup_video_id         (wrapup_video_id)
 #
 
 require 'cdo/shared_constants'
@@ -65,6 +67,7 @@ class Unit < ApplicationRecord
   belongs_to :user, optional: true
   has_many :unit_group_units, foreign_key: 'script_id', dependent: :destroy
   has_many :unit_groups, through: :unit_group_units
+  belongs_to :original_unit_group, class_name: 'UnitGroup', optional: true
   has_one :course_version, as: :content_root, dependent: :destroy
 
   scope(
@@ -306,6 +309,7 @@ class Unit < ApplicationRecord
     project_widget_visible
     project_widget_types
     lesson_extras_available
+    has_unnumbered_lessons
     has_verified_resources
     curriculum_path
     announcements
@@ -1240,6 +1244,7 @@ class Unit < ApplicationRecord
         elsif destination_unit_group
           raise 'Destination unit group must be in a course version. please try saving the course edit page again.' if destination_unit_group.course_version.nil?
           UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
+          copied_unit.update!(original_unit_group: destination_unit_group)
           copied_unit.reload
         else
           raise "Must supply version year if new unit will be a standalone unit" unless version_year
@@ -1568,6 +1573,7 @@ class Unit < ApplicationRecord
         teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
         student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
         lesson_extras_available: lesson_extras_available,
+        hasUnnumberedLessons: has_unnumbered_lessons?,
         has_verified_resources: has_verified_resources?,
         curriculum_path: curriculum_path,
         announcements: localized_announcements,
@@ -1633,6 +1639,7 @@ class Unit < ApplicationRecord
       teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
       hasNumberedUnits: unit_group&.has_numbered_units?,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
       versionYear: unit_group&.version_year || version_year,
     }
     # Only get lessons with lesson plans
@@ -1701,7 +1708,8 @@ class Unit < ApplicationRecord
       disablePostMilestone: disable_post_milestone?,
       student_detail_progress_view: student_detail_progress_view?,
       age_13_required: logged_out_age_13_required?,
-      show_sign_in_callout: csf? || csc?
+      show_sign_in_callout: csf? || csc?,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
     }
   end
 
@@ -1710,7 +1718,8 @@ class Unit < ApplicationRecord
       displayName: title_for_display,
       link: link,
       lessonGroups: lesson_groups.select {|lg| lg.lessons.any?(&:has_lesson_plan)}.map {|lg| lg.summarize_for_lesson_dropdown(is_student)},
-      publishedState: get_published_state
+      publishedState: get_published_state,
+      hasUnnumberedLessons: has_unnumbered_lessons?,
     }
   end
 
@@ -1870,6 +1879,7 @@ class Unit < ApplicationRecord
       :topic_tags
     ]
     boolean_keys = [
+      :has_unnumbered_lessons,
       :has_verified_resources,
       :project_sharing,
       :tts,
@@ -1888,11 +1898,14 @@ class Unit < ApplicationRecord
     result
   end
 
-  # A unit is considered to have a matching course if there is exactly one
+  # A unit is considered to have a matching course if there is at least one
   # unit_group for this unit
   def unit_group
-    return nil if unit_group_units.length != 1
-    UnitGroup.get_from_cache(unit_group_units[0].course_id)
+    # rubocop:disable Style/ZeroLengthPredicate
+    return nil if unit_group_units.length < 1
+    # rubocop:enable Style/ZeroLengthPredicate
+    #
+    UnitGroup.get_from_cache(original_unit_group_id)
   end
 
   # If this unit is a standalone unit, returns its CourseVersion. Otherwise,
@@ -2162,6 +2175,10 @@ class Unit < ApplicationRecord
   def show_ai_assessments_announcement?(user)
     # limit to CSD to avoid showing on allthethings
     user&.teacher? && in_initiative?('CSD') && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
+  end
+
+  def has_ai_tutor_level?
+    levels&.any?(&:ai_tutor_available?)
   end
 
   private def teacher_feedback_enabled?

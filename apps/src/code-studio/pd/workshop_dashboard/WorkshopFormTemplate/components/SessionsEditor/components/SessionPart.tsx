@@ -1,5 +1,4 @@
 import Button from '@code-dot-org/component-library/button';
-import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
@@ -17,7 +16,12 @@ import React, {
 import {PdSessionFormats} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 import {TIME_FORMAT} from '../../../../workshopConstants';
-import {SessionFormState, SessionAction} from '../../../types';
+import {
+  SessionFormState,
+  SessionAction,
+  SessionFields,
+  Errors,
+} from '../../../types';
 
 import commonStyles from '../../../styles.module.scss';
 import styles from '../styles.module.scss';
@@ -31,8 +35,9 @@ export const SessionPart: FC<{
   locationName: SessionFormState['locationName'];
   locationAddress: SessionFormState['locationAddress'];
   meetingLink: SessionFormState['meetingLink'];
-  sameAsPrevious: SessionFormState['sameAsPrevious'];
-  showSameAsPrevious: boolean;
+  deleteDisabled: boolean;
+  fields: SessionFields;
+  errors?: Errors<keyof SessionFormState>;
   dispatchSessions: Dispatch<SessionAction>;
 }> = ({
   id,
@@ -43,8 +48,9 @@ export const SessionPart: FC<{
   locationName,
   locationAddress,
   meetingLink,
-  sameAsPrevious,
-  showSameAsPrevious,
+  deleteDisabled,
+  fields,
+  errors,
   dispatchSessions,
 }) => {
   const timeOptions = useMemo(() => {
@@ -62,17 +68,6 @@ export const SessionPart: FC<{
     return timeOptions;
   }, []);
 
-  const sameAsPreviousLabel = useMemo(() => {
-    switch (format) {
-      case 'in_person':
-        return 'Location';
-      case 'virtual':
-        return 'Meeting link';
-      default:
-        return '';
-    }
-  }, [format]);
-
   const handleSession = useCallback(
     (update: Partial<SessionFormState>) => {
       dispatchSessions({type: 'UPDATE_SESSION', id, payload: update});
@@ -84,20 +79,6 @@ export const SessionPart: FC<{
     dispatchSessions({type: 'DELETE_SESSION', id});
   }, [dispatchSessions, id]);
 
-  const handleSameAsPrevious = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => {
-      if (event.target.checked) {
-        dispatchSessions({
-          type: 'UPDATE_SESSION_SAME_AS_PREVIOUS',
-          id,
-        });
-      } else {
-        handleSession({sameAsPrevious: false});
-      }
-    },
-    [dispatchSessions, handleSession, id]
-  );
-
   const updateSession = useCallback(
     (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
       const update = {
@@ -108,21 +89,34 @@ export const SessionPart: FC<{
     [handleSession]
   );
 
+  const showAdditionalFields = useMemo(
+    () =>
+      Boolean(
+        fields.location_name || fields.location_address || fields.meeting_link
+      ),
+    [fields]
+  );
+
   return (
-    <>
+    <div>
       <div className={classNames(commonStyles.row, styles.sessionRow)}>
         <TextField
-          label="Date"
-          name="date"
+          label={fields.date.label}
+          name={fields.date.stateKey}
           inputType="date"
           size="s"
-          className={classNames(commonStyles.item, commonStyles.required)}
+          className={classNames(
+            commonStyles.item,
+            commonStyles.textField,
+            commonStyles.required
+          )}
           value={date}
           onChange={updateSession}
+          errorMessage={errors?.date}
         />
         <SimpleDropdown
-          name="start"
-          labelText="Start Time"
+          name={fields.start.stateKey}
+          labelText={fields.start.label}
           onChange={updateSession}
           iconLeft={{iconName: 'clock'}}
           selectedValue={start}
@@ -131,13 +125,15 @@ export const SessionPart: FC<{
           size="s"
           className={classNames(
             commonStyles.item,
+            commonStyles.simpleDropdown,
             styles.timeDropdown,
             commonStyles.required
           )}
+          errorMessage={errors?.start}
         />
         <SimpleDropdown
-          name="end"
-          labelText="End Time"
+          name={fields.end.stateKey}
+          labelText={fields.end.label}
           onChange={updateSession}
           iconLeft={{iconName: 'clock'}}
           selectedValue={end}
@@ -146,13 +142,15 @@ export const SessionPart: FC<{
           size="s"
           className={classNames(
             commonStyles.item,
+            commonStyles.simpleDropdown,
             styles.timeDropdown,
             commonStyles.required
           )}
+          errorMessage={errors?.end}
         />
         <SimpleDropdown
-          name="format"
-          labelText="Format"
+          name={fields.session_format.stateKey}
+          labelText={fields.session_format.label}
           onChange={updateSession}
           selectedValue={format}
           items={PdSessionFormats.map(({value, label}) => ({
@@ -161,19 +159,27 @@ export const SessionPart: FC<{
           }))}
           dropdownTextThickness="thin"
           size="s"
-          className={classNames(commonStyles.item, commonStyles.required)}
+          className={classNames(
+            commonStyles.item,
+            commonStyles.simpleDropdown,
+
+            commonStyles.required
+          )}
+          errorMessage={errors?.format}
         />
         <WithTooltip
           tooltipOverlayClassName={styles.deleteButtonContainer}
           tooltipProps={{
             tooltipId: `delete-session-tooltip-${id}`,
             size: 'xs',
-            text: 'delete workshop session',
+            text: 'Delete workshop session',
           }}
         >
           <Button
             icon={{iconName: 'minus'}}
             onClick={deleteSession}
+            disabled={deleteDisabled}
+            size="s"
             isIconOnly={true}
             className={styles.deleteButton}
             type="secondary"
@@ -184,56 +190,62 @@ export const SessionPart: FC<{
           />
         </WithTooltip>
       </div>
-      <div className={commonStyles.card}>
-        <div className={commonStyles.row}>
-          {format === 'in_person' && (
-            <>
-              <TextField
-                label="Location name"
-                name="locationName"
-                size="s"
-                className={classNames(commonStyles.item, commonStyles.required)}
-                onChange={updateSession}
-                value={locationName}
-              />
-              <TextField
-                label="Location address"
-                name="locationAddress"
-                size="s"
-                className={classNames(commonStyles.item, commonStyles.required)}
-                onChange={updateSession}
-                value={locationAddress}
-              />
-            </>
-          )}
-          {format === 'virtual' && (
-            <>
-              <TextField
-                label="Meeting link"
-                name="meetingLink"
-                size="s"
-                className={classNames(commonStyles.item, commonStyles.required)}
-                onChange={updateSession}
-                value={meetingLink}
-              />
-              {/* blank space */}
-              <div className={commonStyles.item} />
-            </>
-          )}
-        </div>
-        {showSameAsPrevious && (
-          <div className={styles.copyPreviousCheckbox}>
-            <Checkbox
-              label={`${sameAsPreviousLabel} same as previous`}
-              name={`${sameAsPreviousLabel} same as previous`}
-              checked={sameAsPrevious}
-              size="s"
-              onChange={handleSameAsPrevious}
-            />
+      {showAdditionalFields && (
+        <div className={commonStyles.card}>
+          <div className={commonStyles.row}>
+            {format === 'in_person' &&
+              fields.location_name &&
+              fields.location_address && (
+                <>
+                  <TextField
+                    label={fields.location_name.label}
+                    name={fields.location_name.stateKey}
+                    size="s"
+                    className={classNames(
+                      commonStyles.item,
+                      commonStyles.textField
+                    )}
+                    onChange={updateSession}
+                    value={locationName}
+                    errorMessage={errors?.locationName}
+                  />
+                  <TextField
+                    label={fields.location_address.label}
+                    name={fields.location_address.stateKey}
+                    size="s"
+                    className={classNames(
+                      commonStyles.item,
+
+                      commonStyles.textField
+                    )}
+                    onChange={updateSession}
+                    value={locationAddress}
+                    errorMessage={errors?.locationAddress}
+                  />
+                </>
+              )}
+            {format === 'virtual' && fields.meeting_link && (
+              <>
+                <TextField
+                  label={fields.meeting_link.label}
+                  name={fields.meeting_link.stateKey}
+                  size="s"
+                  className={classNames(
+                    commonStyles.item,
+                    commonStyles.textField
+                  )}
+                  onChange={updateSession}
+                  value={meetingLink}
+                  errorMessage={errors?.meetingLink}
+                />
+                {/* blank space */}
+                <div className={commonStyles.item} />
+              </>
+            )}
           </div>
-        )}
-      </div>
-    </>
+        </div>
+      )}
+    </div>
   );
 };
 

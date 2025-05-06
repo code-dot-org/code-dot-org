@@ -54,7 +54,7 @@ Scenario: Signed out courses, teach
   And I wait to see "#headerlinks"
   And I see "#header-teach"
   And I press "header-teach"
-  Then I am on "https://code.org/teach"
+  Then I am on "http://code.org/teach"
   And I see no difference for "signed-out courses page, teach"
   And I close my eyes
 

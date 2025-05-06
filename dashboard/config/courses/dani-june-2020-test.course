@@ -3,6 +3,9 @@
   "script_names": [
     "dani-june-2020-test"
   ],
+  "original_script_names": [
+    "dani-june-2020-test"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

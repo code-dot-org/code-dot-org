@@ -8,4 +8,4 @@ wrong '`city == "Seattle"`'
 right '`favorite_color = "green"`'
 wrong '`"game" = level_1`'
 
-allow_multiple_attempts true
+allow_multiple_attempts false

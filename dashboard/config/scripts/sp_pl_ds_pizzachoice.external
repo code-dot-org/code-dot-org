@@ -5,7 +5,7 @@ title 'Check for Understanding'
 markdown <<MARKDOWN
 #Check for Understanding
 
-> #### In this check for understanding level, students will practice cleaning data in CODAP. 
+> #### In this check for understanding level, students will practice cleaning data in Google Sheets. 
 
 #### Data scientists ***clean*** data by: 
 - #### Fixing errors (i.e. misspelled words)
@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 
 ### At the following link practice cleaning data:
 
-<p style="font-size:16pt;"> <a href="https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FdWwulootxTIlVBkHuHWu%2Ffile.json" target="blank" rel="noopener noreferrer">CODAP- Pizza Choice</a></p>
+<p style="font-size:16pt;"> <a href="https://docs.google.com/spreadsheets/d/1MMsZwVwDaGNSol6RMsQk9NklsYBtgQyiEIxuSwmykIA/edit?usp=drive_link">Google Sheets - Pizza Choice</a></p>
 
 
 ####For each response, decide if you want to:
@@ -26,8 +26,5 @@ markdown <<MARKDOWN
 #### Put your cleaned data in the second column--and graph it! See the sample below:
 
 
-<img src="https://images.code.org/bc5c7cc3989513c1f56687219d4eb46a-image-1731441343292.png" alt="snip from CODAP of pizza clean up activity" width="750px" style="display: block; margin-left: auto; margin-right: auto;">
-
-
-
+![Data set showing topping preferences and a sample bar chart](https://images.code.org/e18f3f41255f3b529344dba9dcb86677-image-1744731350249.png)
 MARKDOWN

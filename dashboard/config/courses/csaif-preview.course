@@ -8,6 +8,14 @@
     "csaif5-preview",
     "csaif6-preview"
   ],
+  "original_script_names": [
+    "csaif1-preview",
+    "csaif2-preview",
+    "csaif3-preview",
+    "csaif4-preview",
+    "csaif5-preview",
+    "csaif6-preview"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

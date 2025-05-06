@@ -10,6 +10,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "csd-programming-with-music-lab-2025-pilot",
       "show_calendar": true,
       "topic_tags": [
         "music_lab"
@@ -19,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-07 03:46:11 UTC",
+    "serialized_at": "2025-04-24 22:25:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -50,6 +51,18 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "announcements": [
+          {
+            "key": "05827675-5685-4018-9b5e-5dc0e7267f56",
+            "notice": "NEW! Self-Paced Professional Learning is here!",
+            "details": "Get started with our new Self-Paced Professional Learning to explore the curriculum and Music Lab! Feel confident and prepared as you start teaching the unit!",
+            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/1/levels/1",
+            "type": "information",
+            "visibility": "Teacher-only",
+            "dismissible": true,
+            "buttonText": "Start Learning!"
+          }
+        ],
         "overview": "To kick off a unit focused on creative coding and designing interactive music experiences, students will take on the role of music experience designers. Their challenge: help clients bring their ideas for unique songs to life using Music Lab.\n\nStudents begin by reviewing a variety of early song prototypes in Code Studio, each showcasing different interactive features. Then, they read through short client stories—each with a specific goal or mood in mind—and match each client with the prototype that best fits their vision.\n\nTo wrap up, students reflect on how understanding a user’s goals can shape creative decisions and consider how they might adapt or remix prototypes in Music Lab to better serve different needs.",
         "preparation": "* Print a copy of the activity guide for each student\n- Preview the prototype examples in Code Studio to get familiar with the student experience",
         "student_overview": "Today, you’ll be a music experience designer! Your job is to help different “clients” bring their song ideas to life. First, you’ll check out some song prototypes in Music Lab. Then, you’ll read each client’s story and decide which prototype fits their idea best.\n\nYou’ll explain your choice and think about how to make the music even better for them."
@@ -68,7 +81,19 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
+        "announcements": [
+          {
+            "key": "2f635d5a-70b6-4f4f-808e-8c42df337e21",
+            "notice": "Just-In-Time Professional Learning",
+            "details": "About to start these lessons on Sequencing? Feel prepared by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes!",
+            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/1",
+            "type": "information",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Start Now!"
+          }
+        ],
+        "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be). "
       },
       "seeding_key": {
         "lesson.key": "Sequencing - Explore",
@@ -132,6 +157,18 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "announcements": [
+          {
+            "key": "5347d987-f350-4175-bdd8-5c8a09f09804",
+            "notice": "Just-In-Time Professional Learning",
+            "details": "About to start these lessons on Loops? Feel prepared by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes!",
+            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/1",
+            "type": "information",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Start Now!"
+          }
+        ],
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -196,6 +233,18 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "announcements": [
+          {
+            "key": "926e7a4b-21eb-4116-b6e3-5850cb0c2d77",
+            "notice": "Just-In-Time Professional Learning",
+            "details": "About to start these lessons on Functions? Feel prepared by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes!",
+            "link": "https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/1",
+            "type": "information",
+            "visibility": "Teacher-only",
+            "dismissible": false,
+            "buttonText": "Start Now!"
+          }
+        ],
         "preparation": "- Review the levels from the curriculum and their example solutions. [Click here to see how to access example solutions](https://www.loom.com/share/36ee8c6709aa4e8dbe2449103e1b07be)."
       },
       "seeding_key": {
@@ -323,6 +372,19 @@
       }
     },
     {
+      "key": "9de60e29-602a-40f1-9e14-9f2b777a3724",
+      "position": 6,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9de60e29-602a-40f1-9e14-9f2b777a3724",
+        "lesson.key": "Introduction to Music Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    },
+    {
       "key": "768f4781-a97c-4a82-b41b-19106e8c6eac",
       "position": 1,
       "properties": {
@@ -339,6 +401,7 @@
       "key": "ad57c037-c71a-4e78-849f-e58668ea0226",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm-Up"
       },
       "seeding_key": {
@@ -352,6 +415,7 @@
       "key": "4d02d064-ba85-4a87-9f55-bf04c81897b7",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -365,6 +429,7 @@
       "key": "409a1d0e-1abd-4621-b114-29cc0ee9d5ad",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap-Up"
       },
       "seeding_key": {
@@ -404,6 +469,7 @@
       "key": "80724a82-9e02-4980-944a-325920f361b6",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -417,6 +483,7 @@
       "key": "5501d6c6-fb4d-4225-a3b3-6355732cc7bf",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -430,6 +497,7 @@
       "key": "67420271-79f1-4c53-bfcd-d963720b36b3",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -456,6 +524,7 @@
       "key": "b5ef3ffa-f4c9-453d-895d-5707e622d93e",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -469,6 +538,7 @@
       "key": "c7477057-dbfb-4037-8a76-4e9658283e40",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -482,6 +552,7 @@
       "key": "c49cf448-d8e1-4106-a959-e468b1cac25b",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -508,6 +579,7 @@
       "key": "516f6711-0881-4888-b5d8-7ef260dd7e40",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -521,6 +593,7 @@
       "key": "7d9f8da8-6f8c-43cf-8a9b-55292a187d92",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -534,10 +607,24 @@
       "key": "9222d79e-4b7e-438a-967a-5cecb7fdc9cc",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "9222d79e-4b7e-438a-967a-5cecb7fdc9cc",
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    },
+    {
+      "key": "47fa9dd0-0263-4ffb-bc0c-314ea9b90e9a",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47fa9dd0-0263-4ffb-bc0c-314ea9b90e9a",
         "lesson.key": "Mini Project: Walk-Up Songs",
         "lesson_group.key": "",
         "script.name": "csd-programming-with-music-lab-2025-pilot"
@@ -560,6 +647,7 @@
       "key": "094d8aaf-a21b-442f-abd4-7566f0ff4f2e",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -573,6 +661,7 @@
       "key": "262f7812-e1ef-4113-af40-4658da3f837e",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -586,6 +675,7 @@
       "key": "2a44d6ed-86bf-438c-969f-02d46bed8eab",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -625,6 +715,7 @@
       "key": "10e69378-8af9-468d-b159-8013f4bbc7cc",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -638,6 +729,7 @@
       "key": "dd2e95d8-ba74-4abe-9ef3-04a4229c5e94",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -651,6 +743,7 @@
       "key": "11e4f6ec-ee28-4d65-83ca-ba420051110c",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -677,6 +770,7 @@
       "key": "dbe5e7d4-c2a6-4ca6-bd3c-f1383897b6ca",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -690,6 +784,7 @@
       "key": "717dda98-21ec-4398-97db-8229b1a6bbf4",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -703,6 +798,7 @@
       "key": "5160e9b6-7544-4597-8ba9-07d8727eb928",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -729,6 +825,7 @@
       "key": "ffe5579a-d1da-44db-97ec-1b80761ff425",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -742,6 +839,7 @@
       "key": "f95b14e2-6381-4410-a951-1f33764e6ec9",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -755,10 +853,24 @@
       "key": "cb7f4200-865f-4ea3-b387-2c5dcc82d731",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "cb7f4200-865f-4ea3-b387-2c5dcc82d731",
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot"
+      }
+    },
+    {
+      "key": "cd2f7dbf-f004-4a4a-8e09-6ba037698181",
+      "position": 5,
+      "properties": {
+        "name": "After the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd2f7dbf-f004-4a4a-8e09-6ba037698181",
         "lesson.key": "Mini Project: Cat GIF Loops",
         "lesson_group.key": "",
         "script.name": "csd-programming-with-music-lab-2025-pilot"
@@ -781,6 +893,7 @@
       "key": "ba8ffbae-00d9-4320-b1a2-cc2b924cc82f",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -794,6 +907,7 @@
       "key": "65cbd735-ec7d-4505-b4cd-411ea080afb6",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -807,6 +921,7 @@
       "key": "77c05fe3-a34d-475b-ac18-684112d3a8c4",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -846,6 +961,7 @@
       "key": "d2f2cf96-8e1c-4763-a05a-58efa8db08a4",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -859,6 +975,7 @@
       "key": "2dd95518-8d84-4dd1-acb8-7068af1d5810",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -872,6 +989,7 @@
       "key": "7a50af40-bfff-418f-9c40-e95a2425c313",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -898,6 +1016,7 @@
       "key": "5126425f-d520-4857-91bf-b57a10169ccc",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -911,6 +1030,7 @@
       "key": "d4e44279-90fc-49de-abbe-70d2839f5719",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -924,6 +1044,7 @@
       "key": "be3228f5-ea0b-4f76-a1d9-052f4174a9d2",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -950,6 +1071,7 @@
       "key": "9a2633ff-8e1d-44cd-a092-7c1785c569fa",
       "position": 2,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -963,6 +1085,7 @@
       "key": "25c818c9-e3c9-4b09-abbc-6227e94613e4",
       "position": 3,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -976,6 +1099,7 @@
       "key": "9bbe411d-0cdd-4b37-ac53-e35305640c64",
       "position": 4,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -991,10 +1115,23 @@
       "key": "944b875d-9674-441c-815f-8ed23f92b3e9",
       "position": 1,
       "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
+        "name": "Pilot Information"
       },
       "seeding_key": {
         "activity_section.key": "944b875d-9674-441c-815f-8ed23f92b3e9",
+        "lesson_activity.key": "f2abce3f-f9ef-4fc9-941a-f7b2b06b5b2b"
+      }
+    },
+    {
+      "key": "3aab8e3e-14f5-4c29-86ab-68b63baaeaca",
+      "position": 2,
+      "properties": {
+        "description": "Get started with our new Self-Paced Professional Learning to explore the curriculum and Music Lab! Feel confident and prepared as you start teaching the unit! [**Click here to start learning!**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/1/levels/1)",
+        "name": "Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "3aab8e3e-14f5-4c29-86ab-68b63baaeaca",
         "lesson_activity.key": "f2abce3f-f9ef-4fc9-941a-f7b2b06b5b2b"
       }
     },
@@ -1043,7 +1180,7 @@
       "key": "97c3eb25-6cd9-4446-93e0-34f5838dff78",
       "position": 4,
       "properties": {
-        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [Word Search](https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/copy) to each student, face down. Make sure students don't start the word search ahead of time.\n"
+        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [Word Search](https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/view) to each student, face down. Make sure students don't start the word search ahead of time.\n"
       },
       "seeding_key": {
         "activity_section.key": "97c3eb25-6cd9-4446-93e0-34f5838dff78",
@@ -1213,7 +1350,7 @@
       "key": "4f9218ff-1d7c-4408-a619-e5f4085590ab",
       "position": 2,
       "properties": {
-        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [activity guide](https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/copy) to each student. ",
+        "description": "**Group:** Put students in pairs.\n\n**Distribute:** Pass out a copy of the [activity guide](https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/view) to each student. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1230,7 +1367,13 @@
       "key": "7374070a-7e02-44bf-9956-fd6d6bbea6bf",
       "position": 3,
       "properties": {
-        "description": "**Overview:** Have students read through the directions on the first page of the activity guide. The first part of this activity asks students to match different users to an song that suits their needs. Students will need to visit Code Studio to view the song prototypes."
+        "description": "**Overview:** Have students read through the directions on the first page of the activity guide. The first part of this activity asks students to match different users to an song that suits their needs. Students will need to visit Code Studio to view the song prototypes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Example Song Player:** This lesson is an opportunity for students to familiarize themselves with the \"Example Player\" embedded into levels. In these levels, this is the only way students can interact with each level. In future lessons, these examples provide guidance to students on how to complete their songs, so it's important students are familiar with this player!"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7374070a-7e02-44bf-9956-fd6d6bbea6bf",
@@ -1309,13 +1452,29 @@
         "progression_name": "Prepare & Try",
         "tips": [
           {
+            "type": "teachingTip",
+            "markdown": "**Exploring Different Sounds:** Music Lab provides a wide variety of custom sounds that students can integrate into songs. This level provides an explicit opportunity for students to explore this wide library of sounds in an open-ended way. Ideally, students \"get it all out of their system\" in this level and can then focus on solving problems in future lessons. So - really lean-in to letting students explore and identify sounds they like so it doesn't become a distraction in future lessons and projects!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "78301407-3054-4296-ac9d-c67ca916ee6c",
+        "lesson_activity.key": "911a527c-f6c9-45c4-8483-033415340b87"
+      }
+    },
+    {
+      "key": "220ea34d-be99-4278-9dc3-fdcb07f870ca",
+      "position": 9,
+      "properties": {
+        "tips": [
+          {
             "type": "assessmentOpportunity",
             "markdown": "**Following the Problem-Solving Process:** You can use student responses on the activity guide to determine how well they followed each step of the problem-solving process. This process will be reinforced throughout the unit, especially on projects."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "78301407-3054-4296-ac9d-c67ca916ee6c",
+        "activity_section.key": "220ea34d-be99-4278-9dc3-fdcb07f870ca",
         "lesson_activity.key": "911a527c-f6c9-45c4-8483-033415340b87"
       }
     },
@@ -1341,6 +1500,18 @@
       "seeding_key": {
         "activity_section.key": "18c98b22-3882-4ca9-bc84-f2d4595c72c7",
         "lesson_activity.key": "c9cd0acf-2725-4f6d-970b-c9c61216e759"
+      }
+    },
+    {
+      "key": "5ae8c28d-45ae-40f7-891e-e1d9fe3b5c6e",
+      "position": 1,
+      "properties": {
+        "description": "The next set of lessons introduces **Sequencing** with brand new blocks and programming strategies. Feel prepared to teach these lessons by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes! [**Click here to start now!**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/1)",
+        "name": "Just-In-Time Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ae8c28d-45ae-40f7-891e-e1d9fe3b5c6e",
+        "lesson_activity.key": "9de60e29-602a-40f1-9e14-9f2b777a3724"
       }
     },
     {
@@ -1371,7 +1542,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students open the Explore level and read the instructions. Students are asked to complete a series of tasks to help them become familiar with navigating Music Lab. Give students time to explore and experiment on their own.",
-        "progression_name": "Explore"
+        "progression_name": "Explore",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Play Together - an Impossible Task:** This level purposefully challenges students to do something that is not possible with the set of blocks they have: play 3 sounds simultaneously. This is the last challenge on the list and the only one that is not possible to do. While this may initially confuse students, it can be used as motivation for the next level which introduces the Play Together block. Once you notice students are starting to work on this challenge, regroup the class to explain this level and then continue to the next one where this block is introduced."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9ac1d7a0-0474-43cb-b2cd-791a27c69828",
@@ -1432,7 +1609,7 @@
       "key": "0aa3cbdd-b64f-4418-9cda-24858cc8fd21",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the investigate levels.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
         "progression_name": "Investigate",
         "tips": [
           {
@@ -1450,7 +1627,7 @@
       "key": "24ab1767-e0bc-4d27-ba75-f759d1cd7e9b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices to help complete the levels as a class."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices by calling on students to help you complete levels in front of the class."
       },
       "seeding_key": {
         "activity_section.key": "24ab1767-e0bc-4d27-ba75-f759d1cd7e9b",
@@ -1504,7 +1681,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
           }
         ]
       },
@@ -1540,7 +1717,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**High Ceiling:** Challenge levels provide opportunities for enrichment for students who complete the progression early or are looking for additional challenges. These levels go above the core concepts from the lesson and should be considered \"extra\". There is always a \"free play\" challenge level for students who want a more open-ended experience in building their songs."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels."
           }
         ]
       },
@@ -1639,10 +1816,26 @@
       }
     },
     {
-      "key": "6ca87f6d-c8b4-41d4-b343-417a60824d98",
+      "key": "a2299a48-5771-4569-a050-cdda120648bb",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Prompts to Build Algorithmic Thinking:** Algorithmic Thinking is all about developing a step-by-step solution to the problem, or the rules to follow to solve the problem. In Music Lab, algorithmic thinking shows up when students follow steps to create a song, such as \"first I'll get my backing beats, then I'll layer in my leads, and finally I'll add the vocals\". Use these questions to help students identify what’s essential in their song or code:\n\n* What steps did you follow to build your song? Could you explain them in order?\n* If you had to teach someone else to build a similar track, what instructions would you give them?\n* Could you create a checklist to build a track like this again?\n\nThese tips come from our Self-Paced Professional Learning module - [click here to see additional tips and learn more about Algorithmic Thinking](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/7)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a2299a48-5771-4569-a050-cdda120648bb",
+        "lesson_activity.key": "5501d6c6-fb4d-4225-a3b3-6355732cc7bf"
+      }
+    },
+    {
+      "key": "6ca87f6d-c8b4-41d4-b343-417a60824d98",
+      "position": 2,
+      "properties": {
         "progression_name": "Predict",
         "tips": [
           {
@@ -1658,7 +1851,7 @@
     },
     {
       "key": "8837fee8-d533-4832-a431-2dc10369135a",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Play Sequential"
       },
@@ -1669,7 +1862,7 @@
     },
     {
       "key": "a3bd4a21-f724-4b81-8e2d-4b18ffa88825",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Check-in",
         "tips": [
@@ -1686,7 +1879,7 @@
     },
     {
       "key": "664b44db-1c3b-4988-87df-87915b3f09e8",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Rests"
       },
@@ -1697,7 +1890,7 @@
     },
     {
       "key": "5922da79-e111-42e8-ad86-0bd3e002ac47",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -1708,7 +1901,7 @@
     },
     {
       "key": "8c5edcd4-c183-41d6-99c4-4c0eef768581",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Make sure students split up from pair programming and go back to working independently for the Assessment level.",
         "progression_name": "Assessment",
@@ -1726,7 +1919,7 @@
     },
     {
       "key": "8c2f8e3f-92ed-47f1-8605-a1e1763f2f92",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge",
@@ -1744,7 +1937,7 @@
     },
     {
       "key": "71e677a1-e3b1-4784-9656-374e8f9e01d9",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -1924,10 +2117,23 @@
       "key": "8f71d476-8f59-4a2b-9bed-0987484bef5b",
       "position": 1,
       "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
+        "name": "Pilot Information"
       },
       "seeding_key": {
         "activity_section.key": "8f71d476-8f59-4a2b-9bed-0987484bef5b",
+        "lesson_activity.key": "976d781f-a07d-4321-b589-e7389e242a99"
+      }
+    },
+    {
+      "key": "724a0a77-c5a0-41a5-a35f-603158f63031",
+      "position": 2,
+      "properties": {
+        "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/2/levels/20)",
+        "name": "Project Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "724a0a77-c5a0-41a5-a35f-603158f63031",
         "lesson_activity.key": "976d781f-a07d-4321-b589-e7389e242a99"
       }
     },
@@ -1943,21 +2149,10 @@
       }
     },
     {
-      "key": "ff0b9b76-4cb2-4689-9ff0-ce04439c3c59",
+      "key": "7ebb4d49-3ce2-4011-b4d3-4869b540cdcf",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Walk Up Songs Activity Guide](https://docs.google.com/document/d/1-NOQXuyOA4TXy2X4oACt97K0f64h2TlkP2tc3-YQKRI/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Trigger levels and the Prepare portion of the activity guide",
-        "progression_name": "Prepare"
-      },
-      "seeding_key": {
-        "activity_section.key": "ff0b9b76-4cb2-4689-9ff0-ce04439c3c59",
-        "lesson_activity.key": "7d9f8da8-6f8c-43cf-8a9b-55292a187d92"
-      }
-    },
-    {
-      "key": "7ebb4d49-3ce2-4011-b4d3-4869b540cdcf",
-      "position": 2,
-      "properties": {
         "progression_name": "Triggers"
       },
       "seeding_key": {
@@ -1966,10 +2161,21 @@
       }
     },
     {
+      "key": "ff0b9b76-4cb2-4689-9ff0-ce04439c3c59",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prepare"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff0b9b76-4cb2-4689-9ff0-ce04439c3c59",
+        "lesson_activity.key": "7d9f8da8-6f8c-43cf-8a9b-55292a187d92"
+      }
+    },
+    {
       "key": "185e350d-e4ba-4689-9e0f-e2b78df65ded",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, they can continue to the next levels."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, hand out a copy of the [Walk Up Songs Rubric](https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0) for students to use while coding. Then they can continue to the next levels."
       },
       "seeding_key": {
         "activity_section.key": "185e350d-e4ba-4689-9e0f-e2b78df65ded",
@@ -2034,6 +2240,18 @@
       }
     },
     {
+      "key": "26557c7a-b5b2-4188-9503-dd1cb92f51a2",
+      "position": 1,
+      "properties": {
+        "description": "The next set of lessons introduces **Loops** with brand new blocks and programming strategies. Feel prepared to teach these lessons by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes! [**Click here to start now!**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/1)",
+        "name": "Just-In-Time Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "26557c7a-b5b2-4188-9503-dd1cb92f51a2",
+        "lesson_activity.key": "47fa9dd0-0263-4ffb-bc0c-314ea9b90e9a"
+      }
+    },
+    {
       "key": "987c151d-4599-4844-b2f7-852fc7da7dd0",
       "position": 1,
       "properties": {
@@ -2048,7 +2266,7 @@
       "key": "193bca1f-b27d-405e-8111-1e22d24e631d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Choose from one of the following videos to show the class:\n- [Owen Pallewtt - Live on KEXP](https://youtu.be/kz4KASHRsT4?t=1440) (start at 24:00 - This is The Dream of Win and Regine)\n- [Carolina Eyck - Ennio Morricone cover with Theramin and Voice](https://www.youtube.com/watch?v=ajM4vYCZMZk)\n- [Hailey Knox - New Guitar Loop](https://www.youtube.com/watch?v=j4iqfYEx23c)\n- [Reggie Watts - I Just Want To](https://www.youtube.com/watch?v=344OpaQCAQI)\n\nEach video features an artist who uses a loop pedal to construct the backing tracks for their songs live as the song is being performed. You may decide to only show part of the video (usually up a minute) during a sequence that highlights this feature.\n\n",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Choose from one of the following videos to show the class:\n- [Owen Pallett - Live on KEXP](https://youtu.be/kz4KASHRsT4?t=1440) (start at 24:00 - This is The Dream of Win and Regine)\n- [Carolina Eyck - Ennio Morricone cover with Theramin and Voice](https://www.youtube.com/watch?v=ajM4vYCZMZk)\n- [Hailey Knox - New Guitar Loop](https://www.youtube.com/watch?v=j4iqfYEx23c)\n- [Reggie Watts - I Just Want To](https://www.youtube.com/watch?v=344OpaQCAQI)\n\nEach video features an artist who uses a loop pedal to construct the backing tracks for their songs live as the song is being performed. You may decide to only show part of the video (usually up a minute) during a sequence that highlights this feature.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2094,7 +2312,7 @@
       "key": "d26f0865-798d-4304-9d25-ea06d3f216c6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Once the class has seen the code, lead a discussion about what went as expected and what was surprising. Explicitly explain how the repeat` block works and ensure students understand why the code behaves the way it does before continuing. "
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Once the class has seen the code, lead a discussion about what went as expected and what was surprising. Explicitly explain how the `repeat` block works and ensure students understand why the code behaves the way it does before continuing. "
       },
       "seeding_key": {
         "activity_section.key": "d26f0865-798d-4304-9d25-ea06d3f216c6",
@@ -2105,7 +2323,7 @@
       "key": "b53475a7-0a77-4d5b-ab02-79454103847b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the investigate levels.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
         "progression_name": "Investigate",
         "tips": [
           {
@@ -2123,7 +2341,7 @@
       "key": "cd1f3aa7-ea9a-48af-a952-93d35565491c",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices to help complete the levels as a class."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices by calling on students to help you complete levels in front of the class."
       },
       "seeding_key": {
         "activity_section.key": "cd1f3aa7-ea9a-48af-a952-93d35565491c",
@@ -2157,7 +2375,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
           }
         ]
       },
@@ -2193,7 +2411,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**High Ceiling:** Challenge levels provide opportunities for enrichment for students who complete the progression early or are looking for additional challenges. These levels go above the core concepts from the lesson and should be considered \"extra\". There is always a \"free play\" challenge level for students who want a more open-ended experience in building their songs."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels."
           }
         ]
       },
@@ -2292,10 +2510,26 @@
       }
     },
     {
-      "key": "89650d9e-09dd-4ef5-b50e-25737fb7e077",
+      "key": "5a8eb623-15e9-4a41-a450-193aa7ccc878",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Prompts to Build Pattern Recognition:** Pattern recognition is one of the key practices in computational thinking. In Music Lab, patterns can show up in track order, rhythm, and how certain song sections are structured. Helping students _notice and name_ these patterns gives them powerful tools for coding and creativity. Use questions like these to encourage students to think like pattern-spotters:\n\n- What parts of this song repeat? Can you show it in the code?\n- Where do you see the same blocks used more than once?\n- Do any instruments or beats create a repeating structure in this song?\n\nThese tips come from our Self-Paced Professional Learning module - [click here to see additional tips and learn more about Pattern Recognition](studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/7)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5a8eb623-15e9-4a41-a450-193aa7ccc878",
+        "lesson_activity.key": "dd2e95d8-ba74-4abe-9ef3-04a4229c5e94"
+      }
+    },
+    {
+      "key": "89650d9e-09dd-4ef5-b50e-25737fb7e077",
+      "position": 2,
+      "properties": {
         "progression_name": "Loops with Lyrics"
       },
       "seeding_key": {
@@ -2305,7 +2539,7 @@
     },
     {
       "key": "87a01dd2-b748-4e65-9997-7478f21cd5b9",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Nested Loops"
       },
@@ -2316,7 +2550,7 @@
     },
     {
       "key": "24922c66-85f7-4472-9948-deb36bdd6425",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Check-in",
         "tips": [
@@ -2333,7 +2567,7 @@
     },
     {
       "key": "66815e0b-5ff0-4333-b7be-27aac33dc6cb",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Loops with Rests"
       },
@@ -2344,7 +2578,7 @@
     },
     {
       "key": "94504ab1-1083-48c0-ac65-8da3fd881951",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2355,7 +2589,7 @@
     },
     {
       "key": "37783e65-abb5-488f-b0e5-7ba1a48aa229",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Make sure students split up from pair programming and go back to working independently for the Assessment level.",
         "progression_name": "Assessment",
@@ -2373,7 +2607,7 @@
     },
     {
       "key": "c2c62d2a-0ef8-4a37-9407-a263bd828d5a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge"
@@ -2570,10 +2804,23 @@
       "key": "c39cf9ab-38b0-4f22-8d67-712abb02e005",
       "position": 1,
       "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
+        "name": "Pilot Information"
       },
       "seeding_key": {
         "activity_section.key": "c39cf9ab-38b0-4f22-8d67-712abb02e005",
+        "lesson_activity.key": "d04fb5be-ab67-4ab9-930f-d9e9e701f2d0"
+      }
+    },
+    {
+      "key": "53e5182b-ad4d-4c53-99dc-af7747e0659e",
+      "position": 2,
+      "properties": {
+        "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/3/levels/19)",
+        "name": "Project Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "53e5182b-ad4d-4c53-99dc-af7747e0659e",
         "lesson_activity.key": "d04fb5be-ab67-4ab9-930f-d9e9e701f2d0"
       }
     },
@@ -2589,21 +2836,10 @@
       }
     },
     {
-      "key": "6f019149-f344-414c-aa2e-2fd930a6c6b7",
+      "key": "963171d2-09c2-485a-9374-29dc7cfd8753",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Cat GIFs Activity Guide](https://docs.google.com/document/d/1JQWXQ39-DKoE2gbwLi7v-BdV0Dcn3Z9IMY0515-pKVI/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Play Random levels and the Prepare portion of the activity guide",
-        "progression_name": "Prepare"
-      },
-      "seeding_key": {
-        "activity_section.key": "6f019149-f344-414c-aa2e-2fd930a6c6b7",
-        "lesson_activity.key": "f95b14e2-6381-4410-a951-1f33764e6ec9"
-      }
-    },
-    {
-      "key": "963171d2-09c2-485a-9374-29dc7cfd8753",
-      "position": 2,
-      "properties": {
         "progression_name": "Play Random"
       },
       "seeding_key": {
@@ -2612,10 +2848,21 @@
       }
     },
     {
+      "key": "6f019149-f344-414c-aa2e-2fd930a6c6b7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prepare"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f019149-f344-414c-aa2e-2fd930a6c6b7",
+        "lesson_activity.key": "f95b14e2-6381-4410-a951-1f33764e6ec9"
+      }
+    },
+    {
       "key": "2671e45f-3a29-49b0-a0dd-42f66fd70a68",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, they can continue to the next levels.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, hand out a copy of the [Cat GIF Loops Rubric](https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0). Then they can continue to the next levels.",
         "progression_name": "Musical Cat GIFs"
       },
       "seeding_key": {
@@ -2644,6 +2891,18 @@
       "seeding_key": {
         "activity_section.key": "43cb3bf3-4ce3-4bf3-a0f7-493b93c31700",
         "lesson_activity.key": "cb7f4200-865f-4ea3-b387-2c5dcc82d731"
+      }
+    },
+    {
+      "key": "c1e90d94-1bfd-40a0-800c-777a7f22261f",
+      "position": 1,
+      "properties": {
+        "description": "The next set of lessons introduces **Functions** with brand new blocks and programming strategies. Feel prepared to teach these lessons by reviewing our Self-Paced Professional Learning specifically for these lessons - in under 30 minutes! [**Click here to start now!**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/1)",
+        "name": "Just-In-Time Professional Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1e90d94-1bfd-40a0-800c-777a7f22261f",
+        "lesson_activity.key": "cd2f7dbf-f004-4a4a-8e09-6ba037698181"
       }
     },
     {
@@ -2711,7 +2970,7 @@
       "key": "36b61d68-b2fd-4ac8-8067-4c9739cb2431",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the investigate levels.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
         "progression_name": "Investigate"
       },
       "seeding_key": {
@@ -2723,7 +2982,7 @@
       "key": "a5b6fd8f-04fc-420d-88c7-872cb2be5310",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices to help complete the levels as a class."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check-in on students as they complete these levels. If students get stuck, encourage them to:\n- Read the step-by-step instructions\n- Click the <i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i> icons for hints\n- Listen to the example song for clues\n- Talk through their process with a neighbor\n\nAlso notice students who have found success or unique ways to solve a level in case you want to call on them later to explain their thinking.\n\nOnce enough students have completed the Investigate levels, consider regrouping to talk through the levels as a class. This is a good opportunity to cement student thinking on key concepts from the lesson while also elevating student voices by calling on students to help you complete levels in front of the class."
       },
       "seeding_key": {
         "activity_section.key": "a5b6fd8f-04fc-420d-88c7-872cb2be5310",
@@ -2757,7 +3016,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
+            "markdown": "**Facilitating Practice Levels:** Practice levels are designed for students to apply their knowledge from the previous levels and develop fluency in using the new blocks of code to solve problems. Students can choose which practice levels they would like to complete, and it’s not necessary for a student to complete each practice level before continuing.\n\nStudents tend to be more engaged and respond better when they have an authentic choice about how to continue their learning. Allow students to choose practice levels according to their interests and level of comfort, and consider providing opportunities for students to demonstrate and explain their solutions to the practice levels they chose to the entire class.\n\n**Computational Thinking:** Practice levels intentionally incorporate computational thinking practices - as students complete levels, you can ask about the particular computational thinking practice they used in the level (for example: algorithmic thinking or debugging). This will also help prime students for the wrap-up reflection on computational thinking practices."
           }
         ]
       },
@@ -2793,23 +3052,12 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**High Ceiling:** Challenge levels provide opportunities for enrichment for students who complete the progression early or are looking for additional challenges. These levels go above the core concepts from the lesson and should be considered \"extra\". There is always a \"free play\" challenge level for students who want a more open-ended experience in building their songs."
+            "markdown": "**Facilitating Challenge Levels:** Challenge levels are designed as extensions to the concepts and skills students learn throughout a lesson. Challenge levels tend to focus on more open-ended tasks for students to complete, or opportunities to combine several skills from previous lessons together into one program.\n\nChallenge levels do **not** need to be completed for students to meet the core objectives of a lesson. Instead, every task in a challenge level is meant to supplement and enrich the learning objectives of a lesson, but are not required for future lessons. Students can still demonstrate mastery of the objectives of a lesson without completing any of the challenge levels."
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "ffbc1174-9440-4bb2-af8c-40c5616a0eb9",
-        "lesson_activity.key": "65cbd735-ec7d-4505-b4cd-411ea080afb6"
-      }
-    },
-    {
-      "key": "4af19b62-df01-432c-920c-861deeae3f37",
-      "position": 10,
-      "properties": {
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "4af19b62-df01-432c-920c-861deeae3f37",
         "lesson_activity.key": "65cbd735-ec7d-4505-b4cd-411ea080afb6"
       }
     },
@@ -2897,10 +3145,26 @@
       }
     },
     {
-      "key": "d549825c-05b4-40f3-a57b-966cc92a6feb",
+      "key": "63a69b06-d79a-4b76-a992-b9f5a2465847",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Prompts to Build Abstraction:** Abstraction is all about focusing on what matters and ignoring what doesn't.  In Music Lab, abstraction shows up when students reduce complexity in their songs, like grouping individual blocks to focus on structure like verses and choruses, or giving meaningful names to functions and sections. Use these questions to help students identify what’s essential in their song or code:\n\n* What’s the main goal of this section of your code?\n* Are there any parts you could group together?\n* If someone new read your code, would they know what it does, or could you simplify it?\n\nThese tips come from our Self-Paced Professional Learning module - [click here to see additional tips and learn more about Abstraction](studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/12)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "63a69b06-d79a-4b76-a992-b9f5a2465847",
+        "lesson_activity.key": "2dd95518-8d84-4dd1-acb8-7068af1d5810"
+      }
+    },
+    {
+      "key": "d549825c-05b4-40f3-a57b-966cc92a6feb",
+      "position": 2,
+      "properties": {
         "progression_name": "Abstraction"
       },
       "seeding_key": {
@@ -2910,7 +3174,7 @@
     },
     {
       "key": "04b1b5df-0faa-43b0-97df-14d903518f99",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Reusing Functions"
       },
@@ -2921,7 +3185,7 @@
     },
     {
       "key": "1cabace9-699e-4e6a-bc79-7f403b086271",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Check-In",
         "tips": [
@@ -2938,7 +3202,7 @@
     },
     {
       "key": "b70aa25d-1caa-4fce-a27d-bf68d45bdf66",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Composing Functions"
       },
@@ -2949,7 +3213,7 @@
     },
     {
       "key": "1858a040-3d15-4b03-90e5-3e1786fb85bf",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2960,7 +3224,7 @@
     },
     {
       "key": "0930435c-502e-4a9a-9612-2063c55bbf7b",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -2977,7 +3241,7 @@
     },
     {
       "key": "400864d9-b068-4e0f-b223-dceb66e2706a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge"
@@ -2989,7 +3253,7 @@
     },
     {
       "key": "c063b953-21b5-4fa2-a9ae-2ad2cf730201",
-      "position": 8,
+      "position": 9,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -3183,7 +3447,8 @@
       "key": "fe564595-6878-4b7f-8d9d-a1b7bb50570a",
       "position": 1,
       "properties": {
-        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. "
+        "description": "- **This is a pilot, so things change!** Please always refer to the Slide Decks and Speaker Notes for the latest updates.\n- If the rest of this lesson plan is blank, don't worry! It just means we're still in the process of updating this lesson plan on our website and that process can sometimes get delayed! However, **the slides are always up to date** and the speaker notes contain everything you need to run the lesson. ",
+        "name": "Pilot Information"
       },
       "seeding_key": {
         "activity_section.key": "fe564595-6878-4b7f-8d9d-a1b7bb50570a",
@@ -3191,16 +3456,22 @@
       }
     },
     {
+      "key": "ff66f412-efb9-4e80-a420-f31a7d3a48c2",
+      "position": 2,
+      "properties": {
+        "description": "After reviewing the project guide and rubric, you can view an exemplar for this project in our self-paced professional learning course. [**Click here to view the exemplar**](https://studio.code.org/s/self-paced-pl-teaching-computer-science-discoveries-music-lab/lessons/4/levels/18)",
+        "name": "Project Exemplar"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff66f412-efb9-4e80-a420-f31a7d3a48c2",
+        "lesson_activity.key": "a630facc-8d39-48ae-baa8-972a0cbc9039"
+      }
+    },
+    {
       "key": "c265b450-b548-49ca-a11e-0a05b78c7a56",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Try to create a definitive list of the different genres that the songs in Music Lab fall into. For example: Fireworks by Katy Perry and Espresso by Sabrina Carpenter are pop songs, but Karma by Denzel Kennedy is a hip-hop song and Beethoven's Symphony is a classical song. Try to come up with as many genres as you can!\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students share their ideas as a class. Don't aim for consensus amongst the class, but instead surface the idea that there are many different genres that a song can fall into and these genres can have distinct styles or feelings. Once a large list has been generated, transition to the next activity",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Genre Categories** If students struggle coming up with genres, consider sharing the [list of genres and categories used by the Grammy's](https://en.wikipedia.org/wiki/List_of_Grammy_Award_categories)"
-          }
-        ]
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Try to create a definitive list of the different genres that the songs in Music Lab fall into. For example: Fireworks by Katy Perry and Espresso by Sabrina Carpenter are pop songs, but Karma by Denzel Kennedy is a hip-hop song and Beethoven's Symphony is a classical song. Try to come up with as many genres as you can!\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students share their ideas as a class. If students struggle coming up with genres, consider sharing the [list of genres and categories used by the Grammy's](https://en.wikipedia.org/wiki/List_of_Grammy_Award_categories). Don't aim for consensus amongst the class, but instead surface the idea that there are many different genres that a song can fall into and these genres can have distinct styles or feelings. Once a large list has been generated, transition to the next activity"
       },
       "seeding_key": {
         "activity_section.key": "c265b450-b548-49ca-a11e-0a05b78c7a56",
@@ -3240,7 +3511,7 @@
       "key": "ef8b24c9-d31f-470d-af4a-bcf15fd34c69",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, they can continue to the next levels.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Prepare steps. They should check in with you before continuing to try and code their genre mashups.\n\nOnce you've approved students progress so far, pass out the [Genre Mashup Rubric](https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0). Then they can continue to the next levels.",
         "progression_name": "Genre Mashup"
       },
       "seeding_key": {
@@ -4154,6 +4425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-4"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4173,28 +4447,6 @@
     {
       "chapter": 37,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Prepare"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-lab-sequencing-project-prepare"
-        ],
-        "lesson.key": "Mini Project: Walk-Up Songs",
-        "lesson_group.key": "",
-        "script.name": "csd-programming-with-music-lab-2025-pilot",
-        "activity_section.key": "ff0b9b76-4cb2-4689-9ff0-ce04439c3c59"
-      },
-      "level_keys": [
-        "music-lab-sequencing-project-prepare"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4218,9 +4470,34 @@
       ]
     },
     {
+      "chapter": 38,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-lab-triggers-panel"
+        ],
+        "progression": "Triggers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-triggers-panel"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "7ebb4d49-3ce2-4011-b4d3-4869b540cdcf"
+      },
+      "level_keys": [
+        "music-lab-triggers-panel"
+      ]
+    },
+    {
       "chapter": 39,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4245,7 +4522,7 @@
     {
       "chapter": 40,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -4274,6 +4551,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "music-lab-sequencing-project-prepare"
+        ],
+        "progression": "Prepare"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-sequencing-project-prepare"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "ff0b9b76-4cb2-4689-9ff0-ce04439c3c59"
+      },
+      "level_keys": [
+        "music-lab-sequencing-project-prepare"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "test-music-lab-mini-project-walk-1"
         ],
         "progression": "Walk-Up Songs"
@@ -4293,8 +4595,8 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 6,
+      "chapter": 43,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4318,8 +4620,8 @@
       ]
     },
     {
-      "chapter": 43,
-      "position": 7,
+      "chapter": 44,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -4343,8 +4645,8 @@
       ]
     },
     {
-      "chapter": 44,
-      "position": 8,
+      "chapter": 45,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4368,11 +4670,14 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 9,
+      "chapter": 46,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-5"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4390,7 +4695,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4415,7 +4720,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4440,7 +4745,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4465,7 +4770,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4490,7 +4795,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4515,7 +4820,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4540,7 +4845,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -4565,7 +4870,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4590,7 +4895,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4615,7 +4920,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4640,7 +4945,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4665,20 +4970,20 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "test-music-lab-loops-practice-debug"
+          "music-lab-loops-practice-practice-4"
         ],
         "progression": "Loops with Lyrics"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "test-music-lab-loops-practice-debug"
+          "music-lab-loops-practice-practice-4"
         ],
         "lesson.key": "Loops - Practice",
         "lesson_group.key": "",
@@ -4686,11 +4991,11 @@
         "activity_section.key": "89650d9e-09dd-4ef5-b50e-25737fb7e077"
       },
       "level_keys": [
-        "test-music-lab-loops-practice-debug"
+        "music-lab-loops-practice-practice-4"
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4715,7 +5020,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4740,7 +5045,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4765,7 +5070,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -4790,7 +5095,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4815,7 +5120,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4840,7 +5145,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -4865,7 +5170,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4890,7 +5195,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -4915,7 +5220,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -4940,7 +5245,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -4965,7 +5270,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4990,7 +5295,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5015,7 +5320,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5040,7 +5345,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5065,7 +5370,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5090,7 +5395,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5115,7 +5420,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -5140,7 +5445,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -5165,7 +5470,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -5190,7 +5495,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5215,7 +5520,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 11,
       "activity_section_position": 1,
       "assessment": true,
@@ -5240,7 +5545,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -5265,11 +5570,14 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-8"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5287,30 +5595,8 @@
       ]
     },
     {
-      "chapter": 82,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Prepare"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-lab-loops-project-prepare"
-        ],
-        "lesson.key": "Mini Project: Cat GIF Loops",
-        "lesson_group.key": "",
-        "script.name": "csd-programming-with-music-lab-2025-pilot",
-        "activity_section.key": "6f019149-f344-414c-aa2e-2fd930a6c6b7"
-      },
-      "level_keys": [
-        "music-lab-loops-project-prepare"
-      ]
-    },
-    {
       "chapter": 83,
-      "position": 2,
+      "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5335,33 +5621,8 @@
     },
     {
       "chapter": 84,
-      "position": 3,
+      "position": 2,
       "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "test-music-lab-mini-project-gif-random-2"
-        ],
-        "progression": "Play Random"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "test-music-lab-mini-project-gif-random-2"
-        ],
-        "lesson.key": "Mini Project: Cat GIF Loops",
-        "lesson_group.key": "",
-        "script.name": "csd-programming-with-music-lab-2025-pilot",
-        "activity_section.key": "963171d2-09c2-485a-9374-29dc7cfd8753"
-      },
-      "level_keys": [
-        "test-music-lab-mini-project-gif-random-2"
-      ]
-    },
-    {
-      "chapter": 85,
-      "position": 4,
-      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5384,8 +5645,83 @@
       ]
     },
     {
+      "chapter": 85,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-random-2"
+        ],
+        "progression": "Play Random"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-random-2"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "963171d2-09c2-485a-9374-29dc7cfd8753"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-gif-random-2"
+      ]
+    },
+    {
       "chapter": 86,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "test-music-lab-mini-project-gif-random-4"
+        ],
+        "progression": "Play Random"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-random-4"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "963171d2-09c2-485a-9374-29dc7cfd8753"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-gif-random-4"
+      ]
+    },
+    {
+      "chapter": 87,
       "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-lab-loops-project-prepare"
+        ],
+        "progression": "Prepare"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-lab-loops-project-prepare"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "6f019149-f344-414c-aa2e-2fd930a6c6b7"
+      },
+      "level_keys": [
+        "music-lab-loops-project-prepare"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5409,8 +5745,8 @@
       ]
     },
     {
-      "chapter": 87,
-      "position": 6,
+      "chapter": 89,
+      "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5434,8 +5770,8 @@
       ]
     },
     {
-      "chapter": 88,
-      "position": 7,
+      "chapter": 90,
+      "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -5459,11 +5795,36 @@
       ]
     },
     {
-      "chapter": 89,
-      "position": 8,
+      "chapter": 91,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Musical Cat GIFs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-5"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "2671e45f-3a29-49b0-a0dd-42f66fd70a68"
+      },
+      "level_keys": [
+        "test-music-lab-mini-project-gif-5"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-9"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5481,7 +5842,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5506,7 +5867,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 94,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5531,7 +5892,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 95,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5556,7 +5917,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 96,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5581,7 +5942,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 97,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -5606,7 +5967,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 98,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5631,7 +5992,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 99,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5656,7 +6017,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 100,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5681,7 +6042,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 101,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5706,7 +6067,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5731,7 +6092,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5756,7 +6117,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 104,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5781,7 +6142,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 105,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5806,7 +6167,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 106,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5831,7 +6192,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 107,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5856,7 +6217,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 108,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5881,7 +6242,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 109,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -5906,7 +6267,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 110,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -5931,7 +6292,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 111,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5956,7 +6317,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 112,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -5981,7 +6342,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 113,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -6006,7 +6367,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 114,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -6031,7 +6392,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 115,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6056,7 +6417,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 116,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -6081,7 +6442,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 117,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6106,7 +6467,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 118,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6131,7 +6492,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 119,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6156,7 +6517,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 120,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6181,7 +6542,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 121,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6206,7 +6567,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 122,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6231,7 +6592,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 123,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6256,7 +6617,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 124,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -6281,7 +6642,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 125,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6306,11 +6667,14 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 126,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-12"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6328,11 +6692,14 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 127,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-functions-project-prepare"
+        ],
         "progression": "Prepare"
       },
       "bonus": false,
@@ -6350,7 +6717,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 128,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6375,11 +6742,14 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 129,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-lab-pilot-survey-lesson-13"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6832,21 +7202,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-lab-sequencing-project-prepare",
+        "level.key": "test-music-lab-mini-project-walk-triggers-1",
         "script_level.level_keys": [
-          "music-lab-sequencing-project-prepare"
+          "test-music-lab-mini-project-walk-triggers-1"
         ],
         "lesson.key": "Mini Project: Walk-Up Songs",
         "lesson_group.key": "",
         "script.name": "csd-programming-with-music-lab-2025-pilot",
-        "activity_section.key": "ff0b9b76-4cb2-4689-9ff0-ce04439c3c59"
+        "activity_section.key": "7ebb4d49-3ce2-4011-b4d3-4869b540cdcf"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-music-lab-mini-project-walk-triggers-1",
+        "level.key": "music-lab-triggers-panel",
         "script_level.level_keys": [
-          "test-music-lab-mini-project-walk-triggers-1"
+          "music-lab-triggers-panel"
         ],
         "lesson.key": "Mini Project: Walk-Up Songs",
         "lesson_group.key": "",
@@ -6876,6 +7246,18 @@
         "lesson_group.key": "",
         "script.name": "csd-programming-with-music-lab-2025-pilot",
         "activity_section.key": "7ebb4d49-3ce2-4011-b4d3-4869b540cdcf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-sequencing-project-prepare",
+        "script_level.level_keys": [
+          "music-lab-sequencing-project-prepare"
+        ],
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "ff0b9b76-4cb2-4689-9ff0-ce04439c3c59"
       }
     },
     {
@@ -7072,9 +7454,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-music-lab-loops-practice-debug",
+        "level.key": "music-lab-loops-practice-practice-4",
         "script_level.level_keys": [
-          "test-music-lab-loops-practice-debug"
+          "music-lab-loops-practice-practice-4"
         ],
         "lesson.key": "Loops - Practice",
         "lesson_group.key": "",
@@ -7372,21 +7754,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-lab-loops-project-prepare",
+        "level.key": "test-music-lab-mini-project-gif-random-1",
         "script_level.level_keys": [
-          "music-lab-loops-project-prepare"
+          "test-music-lab-mini-project-gif-random-1"
         ],
         "lesson.key": "Mini Project: Cat GIF Loops",
         "lesson_group.key": "",
         "script.name": "csd-programming-with-music-lab-2025-pilot",
-        "activity_section.key": "6f019149-f344-414c-aa2e-2fd930a6c6b7"
+        "activity_section.key": "963171d2-09c2-485a-9374-29dc7cfd8753"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-music-lab-mini-project-gif-random-1",
+        "level.key": "test-music-lab-mini-project-gif-random-3",
         "script_level.level_keys": [
-          "test-music-lab-mini-project-gif-random-1"
+          "test-music-lab-mini-project-gif-random-3"
         ],
         "lesson.key": "Mini Project: Cat GIF Loops",
         "lesson_group.key": "",
@@ -7408,14 +7790,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "test-music-lab-mini-project-gif-random-3",
+        "level.key": "test-music-lab-mini-project-gif-random-4",
         "script_level.level_keys": [
-          "test-music-lab-mini-project-gif-random-3"
+          "test-music-lab-mini-project-gif-random-4"
         ],
         "lesson.key": "Mini Project: Cat GIF Loops",
         "lesson_group.key": "",
         "script.name": "csd-programming-with-music-lab-2025-pilot",
         "activity_section.key": "963171d2-09c2-485a-9374-29dc7cfd8753"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-lab-loops-project-prepare",
+        "script_level.level_keys": [
+          "music-lab-loops-project-prepare"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "6f019149-f344-414c-aa2e-2fd930a6c6b7"
       }
     },
     {
@@ -7447,6 +7841,18 @@
         "level.key": "test-music-lab-mini-project-gif-3",
         "script_level.level_keys": [
           "test-music-lab-mini-project-gif-3"
+        ],
+        "lesson.key": "Mini Project: Cat GIF Loops",
+        "lesson_group.key": "",
+        "script.name": "csd-programming-with-music-lab-2025-pilot",
+        "activity_section.key": "2671e45f-3a29-49b0-a0dd-42f66fd70a68"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-music-lab-mini-project-gif-5",
+        "script_level.level_keys": [
+          "test-music-lab-mini-project-gif-5"
         ],
         "lesson.key": "Mini Project: Cat GIF Loops",
         "lesson_group.key": "",
@@ -7938,8 +8344,20 @@
       }
     },
     {
+      "name": "Cat GIF Loops Rubric",
+      "url": "https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0",
+      "key": "cat_gif_loops_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "cat_gif_loops_rubric"
+      }
+    },
+    {
       "name": "Client Stories",
-      "url": "https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/copy",
+      "url": "https://docs.google.com/document/d/1YDGmbxZSHZhvMWVPzoawNm0ceKRoPffgt1kc0HQDWhk/view",
       "key": "client_stories",
       "properties": {
         "audience": "Student",
@@ -7951,7 +8369,7 @@
     },
     {
       "name": "Functions - Explore",
-      "url": "https://docs.google.com/presentation/d/1niuLGiC8RNMM9GO1XlTxg3vZoLC2TZ5CPXs2OLAM5rw/copy",
+      "url": "https://docs.google.com/presentation/d/1niuLGiC8RNMM9GO1XlTxg3vZoLC2TZ5CPXs2OLAM5rw/template/preview",
       "key": "functions_-_explore",
       "properties": {
         "audience": "Teacher",
@@ -7963,7 +8381,7 @@
     },
     {
       "name": "Functions - Practice",
-      "url": "https://docs.google.com/presentation/d/1M5Dkkj6zLFROOD3QG9j2p3AbVLkvx0VBzD0ECysvn8Q/copy",
+      "url": "https://docs.google.com/presentation/d/1M5Dkkj6zLFROOD3QG9j2p3AbVLkvx0VBzD0ECysvn8Q/template/preview",
       "key": "functions_-_practice",
       "properties": {
         "audience": "Teacher",
@@ -7975,7 +8393,7 @@
     },
     {
       "name": "Functions - Synthesis",
-      "url": "https://docs.google.com/presentation/d/1j97kHjLKvm-yQbgT4bRSqKRdZin33ER2bobOJDAJ_OQ/copy",
+      "url": "https://docs.google.com/presentation/d/1j97kHjLKvm-yQbgT4bRSqKRdZin33ER2bobOJDAJ_OQ/template/preview",
       "key": "functions_-_synthesis",
       "properties": {
         "audience": "Teacher",
@@ -7999,8 +8417,20 @@
       }
     },
     {
+      "name": "Genre Mashup Rubric",
+      "url": "https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0",
+      "key": "genre_mashup_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "genre_mashup_rubric"
+      }
+    },
+    {
       "name": "Introduction to Music Lab",
-      "url": "https://docs.google.com/presentation/d/14X814gR4KUxcZKEkbqhOSR03pg-8XKWZZMhIn7AJo4w/copy",
+      "url": "https://docs.google.com/presentation/d/14X814gR4KUxcZKEkbqhOSR03pg-8XKWZZMhIn7AJo4w/template/preview",
       "key": "introduction_to_music_lab",
       "properties": {
         "audience": "Teacher",
@@ -8012,7 +8442,7 @@
     },
     {
       "name": "Loops - Explore",
-      "url": "https://docs.google.com/presentation/d/1n01W_XFQbH-gwSCfhJdvJRggagbapxXSx23tys4refA/copy",
+      "url": "https://docs.google.com/presentation/d/1n01W_XFQbH-gwSCfhJdvJRggagbapxXSx23tys4refA/template/preview",
       "key": "loops_-_explore",
       "properties": {
         "audience": "Teacher",
@@ -8024,7 +8454,7 @@
     },
     {
       "name": "Loops - Practice",
-      "url": "https://docs.google.com/presentation/d/1zj_nA_H4-fa-vKZWKNX6JylIdMj6rFQuu_UPN9NG_7o/copy",
+      "url": "https://docs.google.com/presentation/d/1zj_nA_H4-fa-vKZWKNX6JylIdMj6rFQuu_UPN9NG_7o/template/preview",
       "key": "loops_-_practice",
       "properties": {
         "audience": "Teacher",
@@ -8036,7 +8466,7 @@
     },
     {
       "name": "Loops - Synthesis",
-      "url": "https://docs.google.com/presentation/d/1s02366Iz1uO2K-ytHOjL1fQtamjKq8mcF3AUVDk8Ab8/copy",
+      "url": "https://docs.google.com/presentation/d/1s02366Iz1uO2K-ytHOjL1fQtamjKq8mcF3AUVDk8Ab8/template/preview",
       "key": "loops_-_synthesis",
       "properties": {
         "audience": "Teacher",
@@ -8061,7 +8491,7 @@
     },
     {
       "name": "Mini Project - Cat GIF Loops",
-      "url": "https://docs.google.com/presentation/d/1j5lpbvr9BM4UfC6z7Mju9mZSlKJpLz7dEVaGBbw1hbo/copy",
+      "url": "https://docs.google.com/presentation/d/1j5lpbvr9BM4UfC6z7Mju9mZSlKJpLz7dEVaGBbw1hbo/template/preview",
       "key": "mini_project_-_cat_gif_loops",
       "properties": {
         "audience": "Teacher",
@@ -8073,7 +8503,7 @@
     },
     {
       "name": "Mini Project - Walk Up Songs",
-      "url": "https://docs.google.com/presentation/d/1nQQ_vqwmOqhENzt-qAQYEjQ07R_xO8xTfteYVWnl3MY/copy",
+      "url": "https://docs.google.com/presentation/d/1nQQ_vqwmOqhENzt-qAQYEjQ07R_xO8xTfteYVWnl3MY/template/preview",
       "key": "mini_project_-_walk_up_songs",
       "properties": {
         "audience": "Teacher",
@@ -8085,7 +8515,7 @@
     },
     {
       "name": "Music Word Search",
-      "url": "https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/copy",
+      "url": "https://docs.google.com/document/d/1M1_eMuqtPX4Yo2eQl3JOo9MbSyPB-4C1mLYyNlh1HKc/view",
       "key": "music_word_search",
       "properties": {
         "audience": "Student",
@@ -8146,7 +8576,7 @@
     },
     {
       "name": "Project - Genre Mash Up",
-      "url": "https://docs.google.com/presentation/d/13sI-kHNF7fvgy0ThzjmhtIQhE5d0Otg4yx_kEoHDFT8/copy",
+      "url": "https://docs.google.com/presentation/d/13sI-kHNF7fvgy0ThzjmhtIQhE5d0Otg4yx_kEoHDFT8/template/preview",
       "key": "project_-_genre_mash_up",
       "properties": {
         "audience": "Teacher",
@@ -8158,7 +8588,7 @@
     },
     {
       "name": "Sequencing - Explore",
-      "url": "https://docs.google.com/presentation/d/1wvDRrS2P_cY9n-pR_pZd7yi5Ew8MjmJeUSkIFz2hpOo/copy",
+      "url": "https://docs.google.com/presentation/d/1wvDRrS2P_cY9n-pR_pZd7yi5Ew8MjmJeUSkIFz2hpOo/template/preview",
       "key": "sequencing_-_explore",
       "properties": {
         "audience": "Teacher",
@@ -8170,7 +8600,7 @@
     },
     {
       "name": "Sequencing - Practice",
-      "url": "https://docs.google.com/presentation/d/1ObRxUvZcal2jUOnuIaMSs6o_CIC9QnOnHzwAZGv_Nes/copy",
+      "url": "https://docs.google.com/presentation/d/1ObRxUvZcal2jUOnuIaMSs6o_CIC9QnOnHzwAZGv_Nes/template/preview",
       "key": "sequencing_-_practice",
       "properties": {
         "audience": "Teacher",
@@ -8182,7 +8612,7 @@
     },
     {
       "name": "Sequencing - Synthesis",
-      "url": "https://docs.google.com/presentation/d/1w_ZKy07bfN4k32dW4q_u0YpWRekM5Q3yk7DBEnqcHIQ/copy",
+      "url": "https://docs.google.com/presentation/d/1w_ZKy07bfN4k32dW4q_u0YpWRekM5Q3yk7DBEnqcHIQ/template/preview",
       "key": "sequencing_-_synthesis",
       "properties": {
         "audience": "Teacher",
@@ -8229,6 +8659,18 @@
       },
       "seeding_key": {
         "resource.key": "walk_up_songs"
+      }
+    },
+    {
+      "name": "Walk Up Songs Rubric",
+      "url": "https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0",
+      "key": "walk_up_songs_rubric",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "walk_up_songs_rubric"
       }
     }
   ],
@@ -8320,6 +8762,12 @@
     {
       "seeding_key": {
         "lesson.key": "Mini Project: Cat GIF Loops",
+        "resource.key": "cat_gif_loops_rubric"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini Project: Cat GIF Loops",
         "resource.key": "mini_project_-_cat_gif_loops"
       }
     },
@@ -8337,8 +8785,20 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini Project: Walk-Up Songs",
+        "resource.key": "walk_up_songs_rubric"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Project: Genre Mash-Up",
         "resource.key": "genre_mashup"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project: Genre Mash-Up",
+        "resource.key": "genre_mashup_rubric"
       }
     },
     {

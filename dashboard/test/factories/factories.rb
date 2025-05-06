@@ -63,6 +63,9 @@ FactoryBot.define do
   end
 
   factory :unit_group_unit do
+    after(:create) do |unit_group_unit|
+      unit_group_unit.script.update!(original_unit_group: unit_group_unit.unit_group) if unit_group_unit.script.original_unit_group_id.nil?
+    end
   end
 
   factory :unit_group do
@@ -79,7 +82,7 @@ FactoryBot.define do
         unit {nil}
       end
       after(:create) do |unit_group, evaluator|
-        create :unit_group_unit, unit_group: unit_group, script: (evaluator.unit || create(:unit)), position: 1
+        create :unit_group_unit, unit_group: unit_group, script: (evaluator.unit || create(:unit, original_unit_group: unit_group)), position: 1
       end
     end
   end
@@ -202,6 +205,12 @@ FactoryBot.define do
           ai_iteration_tools_user.permission = UserPermission::AI_TUTOR_ACCESS
           ai_iteration_tools_user.permission = UserPermission::LEVELBUILDER
           ai_iteration_tools_user.save
+        end
+      end
+      factory :student_work_dataset_maker do
+        after(:create) do |student_work_dataset_maker|
+          student_work_dataset_maker.permission = UserPermission::STUDENT_WORK_ACCESS
+          student_work_dataset_maker.save
         end
       end
       factory :facilitator do

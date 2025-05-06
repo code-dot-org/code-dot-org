@@ -2,6 +2,7 @@ district_s,state_s
 Birmingham City Schools,Alabama
 Dale County Schools,Alabama
 Elmore County Public Schools,Alabama
+Montgomery Public School,Alabama
 Montgomery Public Schools,Alabama
 Bering Strait School District,Alaska
 Galena City School District,Alaska
@@ -63,6 +64,8 @@ Pueblo School District 60,Colorado
 Telluride School District No. R-1,Colorado
 Berlin Public Schools,Connecticut
 Bethel School District,Connecticut
+East Granby Public Schools,Connecticut
+East Granby Public Schools,Connecticut
 Hartford Public Schools,Connecticut
 New Britain School District,Connecticut
 New Canaan Public Schools,Connecticut
@@ -198,12 +201,14 @@ Ipswich Public Schools,Massachusetts
 Maynard Public Schools,Massachusetts
 Melrose Public Schools,Massachusetts
 Natick Public Schools,Massachusetts
+Needham Public Schools,Massachusetts
 Phoenix Charter Academy,Massachusetts
 Plymouth Public Schools,Massachusetts
 Somerville Public Schools,Massachusetts
 Southeastern Massachusetts Educational Collaborative,Massachusetts
 Springfield International Charter School,Massachusetts
 Sudbury Public Schools,Massachusetts
+Advanced Technology Academy,Michigan
 Bedford Public Schools,Michigan
 Bessemer Area Schools,Michigan
 Chippewa Valley Schools,Michigan
@@ -235,11 +240,13 @@ Brooklyn Center Community Schools,Minnesota
 "Fosston Public Schools, ISD 601",Minnesota
 Kasson-Mantorville Schools,Minnesota
 Kingsland Public Schools,Minnesota
+Mahtomedi Public Schools,Minnesota
 Mankato Area Public Schools,Minnesota
 Martin County West Schools,Minnesota
 Mountain Iron-Buhl,Minnesota
 Nicollet Public 507,Minnesota
 Princeton Public Schools,Minnesota
+Shakopee Public Schools,Minnesota
 South Washington County Schools,Minnesota
 St. Louis County Schools ISD 2142,Minnesota
 "Thief River Falls Public Schools, District 564",Minnesota
@@ -309,6 +316,7 @@ Benjamin Banneker Preparatory Charter School,New Jersey
 Bloomfield Public Schools,New Jersey
 Brick Education Network,New Jersey
 Cape May County Vocational School District,New Jersey
+Cherry Hill Public Schools,New Jersey
 Clinton Township School District,New Jersey
 Dunellen Public Schools,New Jersey
 East Hanover Township School District,New Jersey
@@ -372,6 +380,7 @@ Millbrook Central School District,New York
 Mount Markham Central School District,New York
 New Visions Charter Network IV,New York
 Norwood-Norfolk Central School District,New York
+Odessa-Montour Central School District,New York
 Orchard Park Central School District,New York
 P.S. 354Q,New York
 Pathways in Technology Early College High School,New York
@@ -404,11 +413,13 @@ Guilford Preparatory Academy,North Carolina
 Hoke County Schools,North Carolina
 Johnston County Public Schools,North Carolina
 Martin County Schools,North Carolina
+Moore County Schools,North Carolina
 Providence Day School,North Carolina
 Public Schools of Robeson County,North Carolina
 Road to Hire,North Carolina
 Sugar Creek Charter School,North Carolina
 Telra Institute,North Carolina
+Transylvania County Schools,North Carolina
 Warren County Schools,North Carolina
 Wilson County Schools,North Carolina
 Winston-Salem/Forsyth County Schools,North Carolina
@@ -478,6 +489,7 @@ Oklahoma City Public Schools,Oklahoma
 Piedmont Independent School District 22,Oklahoma
 Tulsa Public Schools,Oklahoma
 Wayne Public Schools,Oklahoma
+Pine Eagle School District,Oregon
 Berwick Area School District,Pennsylvania
 Carbon Learning Achievement School,Pennsylvania
 Community Academy of Philadelphia Charter School,Pennsylvania
@@ -508,6 +520,7 @@ Cocke County School District,Tennessee
 Dyersburg City School District,Tennessee
 Germantown Municipal School District,Tennessee
 Green Dot Public School,Tennessee
+Greeneville City Schools,Tennessee
 Hickman County Schools,Tennessee
 Humphreys County Board of Education,Tennessee
 Jackson-Madison County School System,Tennessee
@@ -517,6 +530,7 @@ Manchester City School,Tennessee
 McKenzie Special School District,Tennessee
 Memphis Shelby County Schools,Tennessee
 Metro Nashville Public Schools,Tennessee
+Monroe County Schools,Tennessee
 Oak Ridge City School District,Tennessee
 Overton County,Tennessee
 Sevier County School System,Tennessee
@@ -546,6 +560,7 @@ Lubbock-Cooper ISD,Texas
 McGregor Independent School District,Texas
 Mineola Independent School District,Texas
 Prairie Valley Independent School District,Texas
+Rockwall ISD,Texas
 Santa Rosa ISD,Texas
 Southside Independent School District,Texas
 Springtown Independent School District,Texas
@@ -571,6 +586,7 @@ Marysville School District,Washington
 Omak School District,Washington
 Renton School District,Washington
 Seattle Public Schools,Washington
+Toppenish School District,Washington
 Trillium Academy,Washington
 Calhoun County Schools,West Virginia
 Fayette County Schools,West Virginia

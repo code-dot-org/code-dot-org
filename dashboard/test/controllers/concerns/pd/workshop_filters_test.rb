@@ -201,7 +201,7 @@ class Pd::WorkshopFiltersTest < ActionController::TestCase
   end
 
   # Normal sort fields
-  %w(location_name on_map funded course subject).each do |sort_field|
+  %w(on_map funded course subject).each do |sort_field|
     test "filter_workshops with order_by #{sort_field}" do
       expects(:order).with(sort_field)
       params order_by: sort_field

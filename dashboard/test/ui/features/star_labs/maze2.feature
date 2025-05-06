@@ -13,10 +13,7 @@ Feature: Complete a simple maze level
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     # Repeat: turn right, move forward, move forward
-    Then I drag block "repeatForever" to block "topBlock"
-    And I drag block "turnRight" into first position in repeat block "repeatForever"
-    And I drag block "moveForward" to block "turnRight"
-    And I drag block "moveForward" to block "moveForward"
+    Then I've initialized the workspace with incorrect maze blocks
     And I press "runButton"
     And I wait until element ".uitest-topInstructions-inline-feedback" is visible
     Then element "#runButton" is hidden
@@ -27,7 +24,7 @@ Feature: Complete a simple maze level
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     # Drag out repeat block.
-    Then I drag block "repeatForever" to block "topBlock"
+    Then I've initialized the workspace with empty repeat maze blocks
     And I press "runButton"
     And I wait until element ".uitest-topInstructions-inline-feedback" is visible
     Then element "#runButton" is hidden
@@ -41,11 +38,7 @@ Feature: Complete a simple maze level
     Then element "#runButton" is visible
     And element "#resetButton" is hidden
     # move forward, Repeat: move forward, turn left, move forward
-    Then I drag block "moveForward" to block "topBlock"
-    And I drag block "repeatForever" to block "moveForward"
-    And I drag block "turnLeft" into first position in repeat block "repeatForever"
-    And I drag block "moveForward" into first position in repeat block "repeatForever"
-    And I drag block "moveForward" to block "turnLeft"
+    Then I've initialized the workspace with too many maze blocks
     And I press "runButton"
     And I wait until element ".congrats" is visible
     And element ".congrats" has text "Congratulations! You completed Puzzle 11. (However, you could have used only 5 blocks.)"

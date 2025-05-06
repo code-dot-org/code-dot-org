@@ -29,12 +29,12 @@
   }
 }
 
-.instructions-dark {
+.instructions-Dark {
   @extend %instructions;
   background-color: $neutral_dark;
 }
 
-.instructions-light {
+.instructions-Light {
   @extend %instructions;
   background-color: $light_white;
 }
@@ -116,13 +116,13 @@
   animation: slidein 0.5s;
 }
 
-.text-dark {
+.text-Dark {
   @extend %text;
   background-color: $neutral_light;
   color: $neutral_dark;
 }
 
-.text-light {
+.text-Light {
   @extend %text;
   background-color: $light_white;
   color: $neutral_dark;
@@ -130,9 +130,10 @@
 
 .textContent {
   height: 100%;
-  overflow-y: auto;
   padding: 15px 20px 5px 20px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 %message {
@@ -142,16 +143,21 @@
   animation: slidein 0.5s;
 }
 
-.message-dark {
+.message-Dark {
   @extend %message;
   background-color: $neutral_light;
   color: $neutral_dark;
 }
 
-.message-light {
+.message-Light {
   @extend %message;
   background-color: $light_gray_50;
   color: $neutral_dark;
+}
+
+.predictSummary {
+  padding: 0;
+  margin-bottom: 6px;
 }
 
 .buttonInstruction {
@@ -162,6 +168,7 @@
 
 .markdownText {
   line-height: 0;
+  overflow-y: auto;
 
   h1,
   h2,

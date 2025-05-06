@@ -35,7 +35,9 @@ import styles from './teacher-navigation.module.scss';
 const TeacherNavigationBar: React.FC<{
   showAITutorTab: boolean;
 }> = showAITutorTab => {
-  const sections = useAppSelector(state => state.teacherSections.sections);
+  const {sections, sectionOrder} = useAppSelector(
+    state => state.teacherSections
+  );
 
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
@@ -48,15 +50,17 @@ const TeacherNavigationBar: React.FC<{
   );
 
   useEffect(() => {
-    const updatedSectionArray = Object.entries(sections)
-      .filter(([id, section]) => !section.hidden)
-      .map(([id, section]) => ({
-        value: id,
+    const updatedSectionArray = sectionOrder
+      .map(sectionId => sections[sectionId] || null)
+      .filter(section => section !== null)
+      .filter(section => !section.hidden)
+      .map(section => ({
+        value: section.id.toString(),
         text: section.name,
       }));
 
     setSectionArray(updatedSectionArray);
-  }, [sections, selectedSection]);
+  }, [sections, selectedSection, sectionOrder]);
 
   const getSectionHeader = (label: string) => {
     return (
@@ -169,9 +173,6 @@ const TeacherNavigationBar: React.FC<{
             unitName: sections[sectionId]?.unitName,
           })
         );
-        if (currentPathObject.url === TEACHER_NAVIGATION_PATHS.settings) {
-          window.location.reload();
-        }
       }
 
       analyticsReporter.sendEvent(EVENTS.NAVIGATE_TO_SECTION, {
@@ -208,6 +209,7 @@ const TeacherNavigationBar: React.FC<{
         isSelected={isOptionSelected(key)}
         sectionId={selectedSection.id}
         courseVersionName={selectedSection.courseVersionName}
+        unitPosition={selectedSection.unitPosition}
         unitName={selectedSection.unitName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
       />

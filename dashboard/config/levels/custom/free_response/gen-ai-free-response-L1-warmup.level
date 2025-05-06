@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-04-24T17:06:07.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "stay_on_level_after_submit": "true",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "**What's an example of a significant technological innovation from the last century?**\r\n\r\nFor example: think of something that didn’t exist when your grandparents were your age, but you use everyday now.",
+    "teacher_markdown": "This prompt is intentionally open-ended to invite all students into the conversation and offer some kind of technological innovation. Some potential answers might be the internet, social media, driverless cars, smartphones, and (of course) artificial intelligence."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-24T17:06:07.610+00:00\",\"changed\":[\"cloned from \\\"gen-ai-free-response-template\\\"\"],\"cloned_from\":\"gen-ai-free-response-template\"},{\"changed_at\":\"2025-04-24 17:06:10 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-24 17:09:09 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

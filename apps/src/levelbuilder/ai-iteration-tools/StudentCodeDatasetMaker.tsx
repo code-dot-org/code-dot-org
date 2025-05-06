@@ -11,8 +11,8 @@ interface StudentCodeSample {
   studentCode: string | undefined;
   codeVersion?: string;
   userId: number | undefined;
-  aiEvaluation?: string;
-  aiReasoning?: string;
+  evaluation?: string;
+  reasoning?: string;
   evaluationCriteria?: string;
 }
 
@@ -45,7 +45,15 @@ const StudentCodeDatasetMaker: React.FC = () => {
       levelId: Number(levelId),
     };
     const codeSamples = await fetchStudentCodeSamples(studentWorkRequest);
-    setFetchedSamples(codeSamples as unknown as StudentCodeSample[]);
+    if (!codeSamples) {
+      alert('No samples found for the given parameters.');
+    } else {
+      const fetchedCodeSamples = codeSamples as unknown as StudentCodeSample[];
+      const filteredCodeSamples = fetchedCodeSamples.filter(
+        item => item !== null
+      );
+      setFetchedSamples(filteredCodeSamples);
+    }
     setPending(false);
   };
 

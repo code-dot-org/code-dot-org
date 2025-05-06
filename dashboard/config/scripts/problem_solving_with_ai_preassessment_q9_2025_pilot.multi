@@ -7,7 +7,7 @@ wrong 'AI always improves the accuracy of reporting by pulling from the best sou
 wrong 'AI-generated news is more objective than human-written news because AI has no biases.'
 wrong 'AI prevents misinformation by filtering out unverified facts before publishing content.'
 
-allow_multiple_attempts false
+allow_multiple_attempts true
 
 teacher_markdown <<MARKDOWN
 Lesson 7: AI's Wild Imagination

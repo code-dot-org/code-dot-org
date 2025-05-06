@@ -568,8 +568,8 @@ en:
         virtual-pl-csa-summer-2024:
           title: CSA Virtual Summer Professional Learning '24-'25
           description_short: ''
-          description_student: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
-          description_teacher: "**Participants will:**\n\n* Prepare to teach CSA.\n* Practice key concepts in the CSA curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          description_student: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          description_teacher: "**Participants will:**\n\n* Prepare to teach CSA.\n* Practice key concepts in the CSA curriculum.\n* Grow in their understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: ''
         virtual-pl-csp-summer-2024:
           title: CS Principles Virtual PL Workshop Course
@@ -1153,7 +1153,7 @@ en:
             Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
 
             **Did You Know?**
-            * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
+            * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank">Click here</a> to learn more about professional learning opportunities in your region.
 
             * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
 
@@ -1163,7 +1163,7 @@ en:
 
             This version of the Code.org CSA curriculum follows an **object-first approach** and does not use the unit structure outlined in the AP Computer Science A Course and Exam Description (CED). **All required course content is still covered**, but topics are introduced in an order that prioritizes early engagement with object-oriented programming. You can read more about this approach [**here**](https://docs.google.com/document/d/1t7RbyhrgNM7xXNPiCq1g-lXSJvR2qbEA1fURYxfZ9N8/edit?usp=sharing).
 
-            If you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our [**CED-aligned version of the CSA curriculum**](https://studio.code.org/courses/csa-alt-2025).
+            If you prefer a version of the curriculum organized using the same structure as the CED (including unit titles and themes), check out our **CED-aligned version of the CSA curriculum** (*Coming Soon!*).
 
             As noted on page 19 of the CED, **the College Board's unit structure is optional** - it is intended to provide teachers "one possible sequence they can adopt or modify rather than having to build from scratch . . . Experienced AP teachers who are satisfied with their current course organization and exam results should feel no pressure to adopt these units, which comprise an optional sequence for this course."
           version_title: "'25-'26"
@@ -1478,17 +1478,24 @@ en:
           description_teacher: ''
           version_title: ''
         self-paced-pl-teaching-computer-science-discoveries-music-lab:
-          title: Teaching Programming with Game Lab
+          title: Teaching Programming with Music Lab
           description_short: ''
           description_student: ''
           description_teacher: ''
           version_title: ''
         csp-2025:
-          title: csp-2025
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          title: Computer Science Principles '25-'26
+          description_short: Learn foundational computer science concepts.
+          description_student: CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+          description_teacher: |-
+            CSP introduces students to the foundational concepts of computer science and challenges them to explore how computing and technology can impact the world. The AP Program designed AP Computer Science Principles with the goal of creating leaders in computer science fields and attracting and engaging those who are traditionally underrepresented with essential computing tools and multidisciplinary opportunities.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Principles. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region or <a href="https://code.org/educate/professional-development-online" target="blank" rel="noopener noreferrer">click here</a> to learn more about a self-paced online option.
+
+            - You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below
+          version_title: "'25-'26"
         exploring-gen-ai-2025:
           title: exploring-gen-ai-2025
           description_short: ''
@@ -1496,11 +1503,20 @@ en:
           description_teacher: ''
           version_title: ''
         csd-2025:
-          title: csd-2025
-          description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          title: Computer Science Discoveries ('25-'26)
+          description_short: An introductory computer science course that empowers students to create authentic artifacts
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers you to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+          description_teacher: |
+            Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
+
+            **Did You Know?**
+
+            - Professional development is available to help you get started teaching CS Discoveries. [Click here](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [click here](https://code.org/educate/professional-development-online) to learn more about a self-paced online option.
+
+            - This course has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [CSD Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information
+
+            - You can access the [Course Syllabus](https://docs.google.com/document/d/1wqoDRuGVb8ZNoVjikkq1ZflA_C57r-YHmn3awpJmSJQ/view) and [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about the course and get started.
+          version_title: "'25-'26"
         computer-science-and-artificial-intelligence-foundations-2025:
           title: CS and AI Foundations (CSAIF)
           description_short: ''
@@ -4306,7 +4322,7 @@ en:
             This self-paced module is designed to introduce educators to Code.org as a teaching tool, focusing on foundational aspects of the platform and its features. Educators will learn how to set up their classrooms, navigate the platform’s resources, and implement Code.org’s beginner-friendly coding curriculum. The module combines instructional videos, interactive activities, and practical assignments to help teachers gain confidence in using Code.org effectively in their classrooms. Upon completing this module, teachers will have a pathway to start using Code.org with their students immediately.
           version_title: ''
         facilitator-access-csaif-2025:
-          title: Facilitator Early Access - CSAIF
+          title: Facilitator Early Access - AIF
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -4320,8 +4336,30 @@ en:
         self-paced-pl-csp-2025:
           title: Teaching CS Principles
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: |-
+            ## Welcome
+
+            ##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.
+
+            ###Find the learning that works for you
+
+            ##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
+
+            ### Pick your content
+
+            ##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started.
+          description_teacher: |-
+            ## Welcome
+
+            ##### Welcome to Code.org's free self-paced online modules for educators to get started teaching CS Principles! After completing these online modules, you'll be ready to get started teaching Code.org’s Computer Science Principles course with your students.
+
+            ###Find the learning that works for you
+
+            ##### **Go at your own pace**: These self-paced modules are designed to put you in the driver's seat and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
+
+            ### Pick your content
+
+            ##### The content of these professional learning modules is organized in the suggested progression for teachers new to both Code.org and CS Principles. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about these professional learning modules before getting started.
           version_title: ''
         vpl-csa-2025:
           title: CSA Virtual Professional Learning '25-'26
@@ -4338,9 +4376,9 @@ en:
         virtual-pl-csd-summer-2025:
           title: CSD Virtual PL Workshop Course
           description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_student: "**You will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in your understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          description_teacher: "**Participants will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          version_title: 25 - 26
         iceage:
           title: Ice Age Play Lab
           description_short: Create a story or make a game with Ice Age Play Lab!
@@ -5253,7 +5291,7 @@ en:
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
-          version_title: ''
+          version_title: 25-26
         self-paced-pl-csd-unit2-2025:
           title: Teaching Web Development
           description_short: ''
@@ -5279,13 +5317,13 @@ en:
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 3 - Interactive Animations and Games** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 3 - Interactive Animations and Games. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 3 - Interactive Animations and Games** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 3 - Interactive Animations and Games. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
-          version_title: ''
+          version_title: 25-26
         self-paced-pl-csd-unit4-2025:
           title: Teaching the Design Process
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 4 - Teaching the Design Process** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 4 - Teaching the Design Process. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 4 - The Design Process** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 4 - The Design Process. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
-          version_title: ''
+          version_title: 25-26
         self-paced-pl-csd-unit5-2025:
           title: Teaching Data and Society
           description_short: ''
@@ -5305,25 +5343,25 @@ en:
             * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
 
             * **Pick your content:** The content is organized in to introduce all teachers CSD Unit 5 - Teaching Data and Society. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.**
-          version_title: ''
+          version_title: 25 - 26
         self-paced-pl-physical-computing-2025:
           title: Teaching Creating Apps with Devices (Circuit Playground)
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Creating Apps with Devices (Circuit Playground)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Unit 6 - Creating Apps with Devices (Circuit Playground). However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Creating Apps with Devices (Circuit Playground)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Unit 6 - Creating Apps with Devices (Circuit Playground). However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
-          version_title: ''
+          version_title: 25 - 26
         self-paced-pl-microbit-2025:
           title: Teaching Creating Apps with Devices (micro:bit)
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 6 - Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 6 - Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
-          version_title: ''
+          version_title: 25 - 26
         self-paced-pl-aiml-2025:
           title: Teaching AI and Machine Learning
           description_short: ''
           description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 7 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 7 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 7 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 7 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
-          version_title: ''
+          version_title: 25 - 26
         pl-csd-summer-2025:
           title: CSD In-Person PL Workshop Course 2025
           description_short: ''
@@ -5343,9 +5381,9 @@ en:
             * Grow in your understanding of equitable CS education.
             * Develop empathy for the student experience.
             * Become a part of a network of teachers who are doing similar work.
-          version_title: ''
+          version_title: 25 - 26
         faciliators-ea-pl-python-2025:
-          title: faciliators-ea-pl-python-2025
+          title: AIF - Programming Fundamentals PL - EARLY ACCESS
           description_short: ''
           description_student: ''
           description_teacher: ''
@@ -5355,10 +5393,126 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: 25-26
         self-paced-pl-k5-2025:
           title: Teaching Computer Science Fundamentals
           description_short: 'Welcome to Code.org’s free self-paced online educator course for getting started with Computer Science Fundamentals! '
           description_student: 'Welcome to Code.org’s free online educator course for CS Fundamentals! '
           description_teacher: ''
           version_title: ''
+        career-journey-pilot-a:
+          title: Career Journey Pilot Lesson (Version A)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        career-journey-pilot-b:
+          title: Career Journey Lesson Course B
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        ui-test-unnumbered-lessons:
+          title: ui-test-unnumbered-lessons
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        coursea-2025:
+          title: coursea-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        courseb-2025:
+          title: courseb-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        coursec-2025:
+          title: coursec-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        coursed-2025:
+          title: coursed-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        coursee-2025:
+          title: coursee-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        coursef-2025:
+          title: coursef-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        express-2025:
+          title: express-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        pre-express-2025:
+          title: pre-express-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        artificial-intelligence-foundations-2025:
+          title: AI Foundations (AIF)
+          description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
+          description_student: In AI Foundations, you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.
+          description_teacher: |-
+            AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+
+            AIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](http://studio.code.org/courses/self-paced-pl-ai-foundations-2025) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'25-'26"
+        self-paced-pl-ai-foundations-2025:
+          title: Teaching AI Foundations
+          description_short: ''
+          description_student: This Professional Learning (PL) unit on AI Foundations will equip you to guide your students in exploring the core principles of how computers and artificial intelligence empower individuals to solve problems, make decisions, and foster creativity. You will gain insights into the student learning journey as they write their own programs in Python, unravel the workings of devices and the Internet, and learn to analyze data to identify patterns and construct narratives. This PL will also focus on how to effectively integrate AI tools into the learning process, facilitate critical discussions around privacy and fairness, and cultivate the essential skills students need to become creators of technology, rather than just consumers. By engaging with this unit, you will be prepared to build a strong foundation in AI and computing for your students, fostering both their understanding and their capacity for innovation.
+          description_teacher: |-
+            AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+            * This professional learning experience is designed for high school educators with any level of computer science experience. It is accessible to those with no prior coding knowledge, and it also provides opportunities for educators with some background in computing to deepen their understanding of key pedagogical strategies for teaching computational thinking and coding.
+
+            * No specific prior coursework in computer science is required for educators; all necessary pedagogical approaches and curriculum-specific knowledge are introduced and reinforced through guided activities, collaborative learning, and practical implementation strategies.
+
+            ## Did you know?
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+          version_title: ''
+        teaching-k5-music-lab-2025:
+          title: teaching-k5-music-lab-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        virtual-pl-csp-summer-2025:
+          title: virtual-pl-csp-summer-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: 25 - 26

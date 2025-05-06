@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-23 16:02:14 UTC",
+    "serialized_at": "2025-04-21 17:11:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -343,6 +343,21 @@
       },
       "seeding_key": {
         "lesson.key": "Sandbox: The Theater",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa7-2025"
       }
@@ -896,6 +911,18 @@
       "seeding_key": {
         "lesson_activity.key": "b4d3f98c-26f0-4f06-aba5-5ff0a7edfb57",
         "lesson.key": "Sandbox: The Theater",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2025"
+      }
+    },
+    {
+      "key": "741134c3-14cf-46cf-864e-e94b2c62fded",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "741134c3-14cf-46cf-864e-e94b2c62fded",
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa7-2025"
       }
@@ -3564,6 +3591,17 @@
         "activity_section.key": "4ceaf51d-ef02-4d53-8c87-f559876dca75",
         "lesson_activity.key": "b4d3f98c-26f0-4f06-aba5-5ff0a7edfb57"
       }
+    },
+    {
+      "key": "b5366b06-5afc-437d-9d38-f7da014c9bd6",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5366b06-5afc-437d-9d38-f7da014c9bd6",
+        "lesson_activity.key": "741134c3-14cf-46cf-864e-e94b2c62fded"
+      }
     }
   ],
   "script_levels": [
@@ -4193,7 +4231,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4218,7 +4256,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4243,7 +4281,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4268,7 +4306,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4293,7 +4331,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4318,7 +4356,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4343,7 +4381,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4368,7 +4406,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4393,7 +4431,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4418,7 +4456,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4442,7 +4480,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4467,7 +4505,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4492,7 +4530,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4513,6 +4551,28 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2025",
+        "activity_section.key": "b5366b06-5afc-437d-9d38-f7da014c9bd6"
+      },
+      "level_keys": [
+        "student-eou-survey_-csa_2025"
       ]
     }
   ],
@@ -4971,6 +5031,18 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa7-2025",
         "activity_section.key": "4ceaf51d-ef02-4d53-8c87-f559876dca75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-csa_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa7-2025",
+        "activity_section.key": "b5366b06-5afc-437d-9d38-f7da014c9bd6"
       }
     }
   ],

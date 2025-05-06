@@ -13,68 +13,78 @@ import '@testing-library/jest-dom';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import {SectionList} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionList';
 import teacherSections, {
+  setSectionOrder,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import i18n from '@cdo/locale';
 
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  delete: jest.fn(() => Promise.resolve({})),
+  put: jest.fn(() => Promise.resolve({})),
+}));
+
+const sections = [
+  {
+    id: 11,
+    name: 'Period 1',
+    hidden: false,
+    courseVersionName: 'csd-2024',
+    unitName: null,
+    studentCount: 0,
+    participantType: 'student',
+  },
+  {
+    id: 12,
+    name: 'Period 2',
+    hidden: false,
+    courseVersionName: 'csd-2023',
+    unitName: null,
+    participantType: 'student',
+  },
+  {
+    id: 13,
+    name: 'Period 3',
+    hidden: false,
+    courseVersionName: 'csd-2022',
+    unitName: 'csd3-2022',
+    participantType: 'student',
+  },
+  {
+    id: 14,
+    name: 'Period 4',
+    hidden: false,
+    courseVersionName: 'csd-2022',
+    unitName: 'csd6-2022',
+    participantType: 'student',
+  },
+  {
+    id: 15,
+    name: 'hidden',
+    hidden: true,
+    unitName: null,
+    participantType: 'student',
+  },
+  {
+    id: 16,
+    name: 'PL Section',
+    hidden: false,
+    unitName: null,
+    participantType: 'teacher',
+  },
+];
+
 describe('SectionList', () => {
-  const sections = [
-    {
-      id: 11,
-      name: 'Period 1',
-      hidden: false,
-      courseVersionName: 'csd-2024',
-      unitName: null,
-      studentCount: 0,
-      participantType: 'student',
-    },
-    {
-      id: 12,
-      name: 'Period 2',
-      hidden: false,
-      courseVersionName: 'csd-2023',
-      unitName: null,
-      participantType: 'student',
-    },
-    {
-      id: 13,
-      name: 'Period 3',
-      hidden: false,
-      courseVersionName: 'csd-2022',
-      unitName: 'csd3-2022',
-      participantType: 'student',
-    },
-    {
-      id: 14,
-      name: 'Period 4',
-      hidden: false,
-      courseVersionName: 'csd-2022',
-      unitName: 'csd6-2022',
-      participantType: 'student',
-    },
-    {
-      id: 15,
-      name: 'hidden',
-      hidden: true,
-      unitName: null,
-      participantType: 'student',
-    },
-    {
-      id: 16,
-      name: 'PL Section',
-      hidden: false,
-      unitName: null,
-      participantType: 'teacher',
-    },
-  ];
+  let store: Store;
+  beforeEach(() => {
+    const serverSections = sections.map(serverSectionFromSection);
 
-  const serverSections = sections.map(serverSectionFromSection);
-
-  const store: Store = getStore();
-  registerReducers({teacherSections});
-  store.dispatch(setSections(serverSections));
+    store = getStore();
+    registerReducers({teacherSections});
+    store.dispatch(setSections(serverSections));
+    store.dispatch(setSectionOrder([11, 12, 13, 14]));
+  });
 
   function renderComponent(initialRoute = '/teacher_dashboard/home') {
     return render(
@@ -84,7 +94,12 @@ describe('SectionList', () => {
             createRoutesFromElements([
               <Route
                 path={TEACHER_NAVIGATION_PATHS.home}
-                element={<SectionList showHiddenOnly={false} />}
+                element={
+                  <SectionList
+                    showHiddenOnly={false}
+                    studioUrlPrefix="https://studio.code.org"
+                  />
+                }
               />,
             ]),
             {initialEntries: [initialRoute], basename: '/teacher_dashboard'}
@@ -161,6 +176,29 @@ describe('SectionList', () => {
     });
 
     expect(p1.compareDocumentPosition(p3)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING
+    );
+  });
+
+  it('renders sections in the same order as specified in Redux', async () => {
+    const customOrder = [14, 13, 12, 11];
+    store.dispatch(setSectionOrder(customOrder));
+
+    renderComponent();
+
+    // Alternative verification by checking DOM order
+    const p4 = screen.getByRole('listitem', {name: 'Period 4'});
+    const p3 = screen.getByRole('listitem', {name: 'Period 3'});
+    const p2 = screen.getByRole('listitem', {name: 'Period 2'});
+    const p1 = screen.getByRole('listitem', {name: 'Period 1'});
+
+    expect(p4.compareDocumentPosition(p3)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING
+    );
+    expect(p3.compareDocumentPosition(p2)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING
+    );
+    expect(p2.compareDocumentPosition(p1)).toBe(
       Node.DOCUMENT_POSITION_FOLLOWING
     );
   });

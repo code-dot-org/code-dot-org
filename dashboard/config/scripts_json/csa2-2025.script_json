@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-26 20:56:13 UTC",
+    "serialized_at": "2025-04-22 06:56:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -406,6 +406,21 @@
       },
       "seeding_key": {
         "lesson.key": "Sandbox: The Neighborhood",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025"
+      }
+    },
+    {
+      "key": "Student End of Unit Survey",
+      "name": "Student End of Unit Survey",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2025"
       }
@@ -1117,6 +1132,18 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-2025"
       }
+    },
+    {
+      "key": "c3066021-5a37-40a0-8b1b-3964598b2f95",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c3066021-5a37-40a0-8b1b-3964598b2f95",
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025"
+      }
     }
   ],
   "activity_sections": [
@@ -1230,7 +1257,7 @@
       "key": "af382d6b-ee65-42f0-bdd4-adb9c630d51c",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a text-description of the Pet-Dog-Cat relationship would look like."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate what a text-based description of the `Pet`, `Dog`, `Cat`, and `PetOwner` classes might look like, including how they relate to one another.\n"
       },
       "seeding_key": {
         "activity_section.key": "af382d6b-ee65-42f0-bdd4-adb9c630d51c",
@@ -2688,7 +2715,7 @@
       "key": "047aa6b9-eac2-4c19-8133-47ac97fcb45d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to recall how subclasses inherit the attributes and methods of the superclass and explain that constructors are not inherited.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think we could assign values to the instance variables declared in the superclass from a subclass constructor?*\n\n**Discussion Goal:** Students suggest ways to assign the values to the instance variables declared in the superclass and may wonder if there is a keyword similar to the `this` keyword that they can use to achieve this.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to recall how subclasses inherit the attributes and methods of the superclass and explain that constructors are not inherited.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If a subclass inherits instance variables from the superclass but not its constructor, what problems might happen when we try to create a subclass object?*\n\n**Discussion Goal:** Students recognize that constructors are used to initialize instance variables. Without inheriting constructors, they may reason that subclass objects could be created without necessary values, leading to incorrect or incomplete objects. Some students might suggest that the subclass would need its own way to pass values to the superclass.",
         "name": "Revisiting Inheritance",
         "tips": [
           {
@@ -2857,7 +2884,7 @@
       "key": "0e9db2ed-9cfc-4ea6-b466-63deec1a32e8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Designate four corners or areas in the classroom for each constructor signature. Have students go to the corner they think is the correct constructor for the constructor call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the correct constructor signature. Have students work with the students at their corner to develop an explanation for why their corner is correct or incorrect. Ask students to share their explanations with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Designate four corners or areas in the classroom for each possible explanation of why we use `super()` in a subclass constructor. Have students go to the corner they believe is correct.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Once in their corners, have students work together to justify their choice. Encourage them to prepare a short explanation of why their answer is correct — or why other options are incorrect — and share out with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Constructor Corners",
         "tips": [
           {
@@ -5231,6 +5258,17 @@
         "activity_section.key": "b37c63f2-0a60-4fad-9d91-641ee2e2c9bc",
         "lesson_activity.key": "ac651e3d-b9b3-4cca-ba41-108577476da1"
       }
+    },
+    {
+      "key": "bee6ea8c-06f5-4175-9450-bc4c6feffa7a",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "bee6ea8c-06f5-4175-9450-bc4c6feffa7a",
+        "lesson_activity.key": "c3066021-5a37-40a0-8b1b-3964598b2f95"
+      }
     }
   ],
   "script_levels": [
@@ -5890,15 +5928,12 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L3-L4_pilot_oo2025"
-        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2L3-L4_pilot_oo2025"
+          "CSA U2L3-L4_pilot-2025"
         ],
         "lesson.key": "Parameterized Constructors",
         "lesson_group.key": "lessonGroup-7",
@@ -5906,7 +5941,7 @@
         "activity_section.key": "1c8e861f-42a8-4c25-9b01-e3f4e65dc453"
       },
       "level_keys": [
-        "CSA U2L3-L4_pilot_oo2025"
+        "CSA U2L3-L4_pilot-2025"
       ]
     },
     {
@@ -5990,15 +6025,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA-UserInput-L5_pilot_oo2025"
-        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA-UserInput-L5_pilot_oo2025"
+          "CSA-UserInput-L5_revised-2025"
         ],
         "lesson.key": "User Input",
         "lesson_group.key": "lessonGroup-7",
@@ -6006,7 +6038,7 @@
         "activity_section.key": "ec93c913-9a6d-42d3-8ed8-db91fad9c1b4"
       },
       "level_keys": [
-        "CSA-UserInput-L5_pilot_oo2025"
+        "CSA-UserInput-L5_revised-2025"
       ]
     },
     {
@@ -6915,15 +6947,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSA U2L9-L3_pilot_oo2025"
-        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U2L9-L3_pilot_oo2025"
+          "CSA U2L9-L3_revised-2025"
         ],
         "lesson.key": "Mutator Methods",
         "lesson_group.key": "lessonGroup-7",
@@ -6931,7 +6960,7 @@
         "activity_section.key": "6db4ef9a-f4ed-46e4-9653-e0e721777e76"
       },
       "level_keys": [
-        "CSA U2L9-L3_pilot_oo2025"
+        "CSA U2L9-L3_revised-2025"
       ]
     },
     {
@@ -7432,6 +7461,28 @@
       "level_keys": [
         "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
       ]
+    },
+    {
+      "chapter": 89,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "bee6ea8c-06f5-4175-9450-bc4c6feffa7a"
+      },
+      "level_keys": [
+        "student-eou-survey_-csa_2025"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -7749,9 +7800,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2L3-L4_pilot_oo2025",
+        "level.key": "CSA U2L3-L4_pilot-2025",
         "script_level.level_keys": [
-          "CSA U2L3-L4_pilot_oo2025"
+          "CSA U2L3-L4_pilot-2025"
         ],
         "lesson.key": "Parameterized Constructors",
         "lesson_group.key": "lessonGroup-7",
@@ -7797,9 +7848,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA-UserInput-L5_pilot_oo2025",
+        "level.key": "CSA-UserInput-L5_revised-2025",
         "script_level.level_keys": [
-          "CSA-UserInput-L5_pilot_oo2025"
+          "CSA-UserInput-L5_revised-2025"
         ],
         "lesson.key": "User Input",
         "lesson_group.key": "lessonGroup-7",
@@ -8241,9 +8292,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U2L9-L3_pilot_oo2025",
+        "level.key": "CSA U2L9-L3_revised-2025",
         "script_level.level_keys": [
-          "CSA U2L9-L3_pilot_oo2025"
+          "CSA U2L9-L3_revised-2025"
         ],
         "lesson.key": "Mutator Methods",
         "lesson_group.key": "lessonGroup-7",
@@ -8490,6 +8541,18 @@
         "script.name": "csa2-2025",
         "activity_section.key": "b37c63f2-0a60-4fad-9d91-641ee2e2c9bc"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-csa_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-2025",
+        "activity_section.key": "bee6ea8c-06f5-4175-9450-bc4c6feffa7a"
+      }
     }
   ],
   "resources": [
@@ -8519,7 +8582,7 @@
     },
     {
       "name": "[EXEMPLAR] Constructors and Inheritance Guided Notes",
-      "url": "https://docs.google.com/document/d/13MMiuWGRy1s9i6z8NC4WYhua9RnURF_gSZqQNNAHMXo/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1C475Kl3WxpNo8LrmYgfJMiGsE-qrqd73b0Y1bbtqXqs/edit?usp=sharing",
       "key": "_exemplar_constructors_and_inheritance_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -9076,7 +9139,7 @@
     },
     {
       "name": "Constructors and Inheritance",
-      "url": "https://docs.google.com/presentation/d/1DDPX-5n2LiunDvzbcUXQ3Tqgti34AkU3cnanZ-hcrc0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Pshd7JReSBppM-pkGVUSOPh0pqalZd4oZQqx0KEhaWE/edit?usp=sharing",
       "key": "constructors_and_inheritance_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -9101,7 +9164,7 @@
     },
     {
       "name": "Constructors and Inheritance Guided Notes",
-      "url": "https://docs.google.com/document/d/19pv-4euqU5eGMLFBKMUA-rnckd8efwmqzrr_2OwwHz4/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1terFzLj-6tl44bFql_MWa6073b915YXc9dzXYZQ99jg/edit?usp=sharing",
       "key": "constructors_and_inheritance_guided_notes",
       "properties": {
         "audience": "Student",
@@ -9126,11 +9189,9 @@
     },
     {
       "name": "CSA Unit 2 Slides",
-      "url": "https://docs.google.com/presentation/d/1nhCPN0RoHtQMdQ0jgJndUrMPejom-2w5vhGbVFTf3i8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Ge4mYh6RRgRqiwt_yiBjv2F1T3inE2BOR8644l8w_Yc/edit?usp=sharing",
       "key": "csa_unit_2_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_2_slides"
@@ -9426,7 +9487,7 @@
     },
     {
       "name": "Program Design",
-      "url": "https://docs.google.com/presentation/d/1s0MaMaaeI2u-9ZuglcSpXLbGQQDPCBA3-25ksu1JRDY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/11OjqTmz0y9g7vEJNBUK_KDg8I9_eksOps8u3gj7uxxk/edit?usp=sharing",
       "key": "program_design",
       "properties": {
         "audience": "Verified Teacher",

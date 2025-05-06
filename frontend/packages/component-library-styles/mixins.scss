@@ -1,11 +1,12 @@
 @use 'primitiveColors';
 @use 'colors';
 @use 'variables' as variables;
-@import 'font.scss';
+@use 'typography.module' as typography;
+@use 'font.scss' as font;
 
 // Typography - Label styles
 @mixin label-common {
-  @include main-font-semi-bold;
+  @include font.main-font-semi-bold;
   margin-bottom: 0.5rem;
 }
 
@@ -35,7 +36,7 @@
 
 // Typography - Link styles (Link Body styles)
 @mixin link-body-common {
-  @include main-font-semi-bold;
+  @include font.main-font-semi-bold;
   text-decoration: underline;
 }
 
@@ -65,7 +66,7 @@
 
 // Typography Button text styles
 @mixin button-text-common {
-  @include main-font-semi-bold;
+  @include font.main-font-semi-bold;
   margin-bottom: 0.5rem;
 }
 
@@ -101,19 +102,19 @@
 }
 
 @mixin field-helper-section-l {
-  @include body-two;
+  @include typography.body-two;
   margin-bottom: 0;
   gap: 0.375rem;
 }
 
 @mixin field-helper-section-m {
-  @include body-three;
+  @include typography.body-three;
   margin-bottom: 0;
   gap: 0.375rem;
 }
 
 @mixin field-helper-section-s {
-  @include body-four;
+  @include typography.body-four;
   margin-bottom: 0;
   gap: 0.25rem;
 }

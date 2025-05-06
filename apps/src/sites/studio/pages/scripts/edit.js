@@ -64,6 +64,7 @@ export default function initPage(unitEditorData) {
         initialProjectWidgetTypes={scriptData.project_widget_types || []}
         initialLastUpdatedAt={scriptData.updated_at}
         initialLessonExtrasAvailable={!!scriptData.lesson_extras_available}
+        initialHasUnnumberedLessons={scriptData.hasUnnumberedLessons}
         initialHasVerifiedResources={scriptData.has_verified_resources}
         initialCurriculumPath={scriptData.curriculum_path || ''}
         initialPilotExperiment={scriptData.pilot_experiment || ''}

@@ -1,0 +1,36 @@
+name 'aif-sp-pl-DS-lesson3Overview-DataVis'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Data Visualizations</h1>
+
+#### Now that you've explored how to ask and investigate data questions, let’s turn to data visualizations—tools that help students deepen their understanding by making data easier to see, interpret, and explain.
+
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;">
+
+  <div>
+    <h4 style="margin-top: 0; font-weight: bold;">By the end of this lesson, you will:</h4>
+    <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt;">
+      <li>Create bar charts and pie charts to describe data.</li><br>
+      <li>Filter and sort data to gain new insights from visualizations.</li><br>
+      <li>Utilize visualizations to answer data questions.</li><br>
+      <li>Perform essential data cleaning tasks to prepare data for accurate and effective analysis.</li><br>
+      <li>Preview lessons and the final project from the unit.</li>
+    </ul>
+  </div>
+
+
+
+
+  <div>
+    <img src="https://images.code.org/0a58f0dadd16c12579ebfc1eae4755e0-image-1744917936932.png" 
+         alt="icon of a computer with graphs on it" 
+         style="border-radius: 40px; width: 200px; height: auto; margin-left: 15px;">
+  </div>
+</div>
+
+#### **Suggested Time:** 30 minutes
+
+
+MARKDOWN
