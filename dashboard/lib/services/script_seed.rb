@@ -17,7 +17,7 @@ module Services
     # Storing this data together in a "data object" makes it easier to pass around.
     SeedContext = Struct.new(
       :script, :lesson_groups, :lessons, :lesson_activities, :activity_sections,
-      :script_levels, :levels_script_levels, :levels, :skills,
+      :script_levels, :levels_script_levels, :levels, :skills, :levels_skills,
       :resources, :lessons_resources, :scripts_resources, :scripts_student_resources,
       :vocabularies, :lessons_vocabularies, :programming_environments,
       :programming_expressions, :lessons_programming_expressions, :objectives, :frameworks,
@@ -79,6 +79,8 @@ module Services
       learning_goals = rubrics.map(&:learning_goals).flatten.sort_by(&:key)
       learning_goal_evidence_levels = learning_goals.map {|lg| lg.learning_goal_evidence_levels.sort_by(&:understanding)}.flatten
 
+      levels_skills = script.levels.map(&:levels_skills).flatten.sort_by {|ls| ls.seeding_key(sort_context).to_json}
+
       seed_context = SeedContext.new(
         script: script,
         lesson_groups: script.lesson_groups,
@@ -105,6 +107,7 @@ module Services
         rubrics: rubrics,
         learning_goals: learning_goals,
         skills: skills,
+        levels_skills: levels_skills
       )
       scope = {seed_context: seed_context}
 
@@ -130,6 +133,7 @@ module Services
         learning_goals: learning_goals.map {|lg| ScriptSeed::LearningGoalSerializer.new(lg, scope: scope).as_json},
         learning_goal_evidence_levels: learning_goal_evidence_levels.map {|lgel| ScriptSeed::LearningGoalEvidenceLevelSerializer.new(lgel, scope: scope).as_json},
         skills: skills.map {|s| ScriptSeed::SkillSerializer.new(s, scope: scope).as_json},
+        levels_skills: levels_skills.map {|ls| ScriptSeed::LevelsSkillSerializer.new(ls, scope: scope).as_json}
       }
       JSON.pretty_generate(data) + "\n"
     end

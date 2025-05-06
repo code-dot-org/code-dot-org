@@ -1151,5 +1151,7 @@
         "script.name": "test-serialize-seeding-json-script"
       }
     }
-  ]
+  ],
+  "skills": [],
+  "levels_skills": []
 }
