@@ -203,7 +203,6 @@ class RubricsController < ApplicationController
         user: current_user,
         event_name: 'TA Rubric AI Eval started from section request',
         metadata: metadata,
-        session: session,
       )
       EvaluateRubricJob.perform_later(
         user_id: @user.id,
