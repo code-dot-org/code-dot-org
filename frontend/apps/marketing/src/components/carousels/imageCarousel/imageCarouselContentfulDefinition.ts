@@ -30,7 +30,12 @@ export const ImageCarouselContentfulComponentDefinition: ComponentDefinition = {
       group: 'style',
       defaultValue: 2,
       validations: {
-        bindingSourceType: ['entry'],
+        in: [
+          {value: 1, displayName: '1'},
+          {value: 2, displayName: '2'},
+          {value: 3, displayName: '3'},
+          {value: 4, displayName: '4'},
+        ],
       },
     },
   },
