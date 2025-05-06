@@ -2,6 +2,7 @@ import Modal from '@code-dot-org/component-library/modal';
 import React, {ChangeEvent, useState} from 'react';
 
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
+import {isNetworkError} from '@cdo/apps/util/HttpClient';
 
 import {deleteFile, uploadFile} from './api';
 import FileIcon from './FileIcon';
@@ -24,6 +25,7 @@ const ACCEPTED_FILE_TYPES = [
 
 export interface UploadProps extends CommonProps {
   mode: 'upload';
+  clearError?: () => void;
 }
 
 const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
@@ -33,8 +35,9 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
   removeAsset,
   loading,
   levelName,
-  showError,
-  setError,
+  handleError,
+  errorMessage,
+  clearError,
 }) => {
   const [requestInProgress, setRequestInProgress] = useState<
     'upload' | 'delete'
@@ -52,7 +55,12 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
       const asset = await uploadFile(files[0], levelName);
       addAsset(asset);
     } catch (error) {
-      setError(error as Error);
+      let userErrorMessage;
+      if (isNetworkError(error) && error.getDetails().status === 413) {
+        userErrorMessage =
+          'Images must be less than 20 MB, and PDFs less than 5 MB. Please try a smaller asset.';
+      }
+      handleError(error as Error, userErrorMessage);
     }
     setRequestInProgress(undefined);
   };
@@ -63,12 +71,13 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
   );
 
   const onDelete = async (filename: string) => {
+    clearError?.();
     setRequestInProgress('delete');
     try {
       await deleteFile(filename, levelName);
       removeAsset(filename);
     } catch (error) {
-      setError(error as Error);
+      handleError(error as Error);
     }
     setRequestInProgress(undefined);
   };
@@ -105,7 +114,10 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
       title={'Manage Starter Assets'}
       primaryButtonProps={{
         text: buttonText,
-        onClick: openFileInput,
+        onClick: () => {
+          clearError?.();
+          openFileInput();
+        },
         iconLeft: {
           iconName: requestInProgress ? 'spinner' : 'upload',
           animationType: requestInProgress ? 'spin' : undefined,
@@ -114,7 +126,9 @@ const UploadAssetDialog: React.FC<DialogProps & UploadProps> = ({
       }}
       secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
       customContent={loading ? <Loading /> : <ModalBody />}
-      customBottomContent={showError && <ErrorAlert />}
+      customBottomContent={
+        errorMessage && <ErrorAlert message={errorMessage} />
+      }
     />
   );
 };

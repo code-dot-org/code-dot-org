@@ -20,7 +20,7 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
   levelName,
   onSelect,
   limit,
-  showError,
+  errorMessage,
 }) => {
   const [selectedFiles, setSelectedFiles] = useState<AssetData[]>([]);
 
@@ -64,7 +64,9 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
       }}
       secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
       customContent={loading ? <Loading /> : <ModalBody />}
-      customBottomContent={showError && <ErrorAlert />}
+      customBottomContent={
+        errorMessage && <ErrorAlert message={errorMessage} />
+      }
     />
   );
 };
