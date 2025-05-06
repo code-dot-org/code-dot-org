@@ -4,11 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "has_unnumbered_lessons": true,
+      "is_migrated": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 17:02:15 UTC",
+    "serialized_at": "2025-05-02 00:29:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,7 +35,7 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Student End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -72,6 +74,17 @@
         "activity_section.key": "7dde887b-2403-4f92-8906-130ba5cd9174",
         "lesson_activity.key": "4cec1213-101a-4de4-84b7-55fbabccd8fe"
       }
+    },
+    {
+      "key": "0dc6332d-56b2-4691-99ca-26243e2a08a3",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "0dc6332d-56b2-4691-99ca-26243e2a08a3",
+        "lesson_activity.key": "4cec1213-101a-4de4-84b7-55fbabccd8fe"
+      }
     }
   ],
   "script_levels": [
@@ -81,6 +94,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -96,6 +112,28 @@
       "level_keys": [
         "student-eou-survey"
       ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "student-end-of-unit-survey",
+        "activity_section.key": "0dc6332d-56b2-4691-99ca-26243e2a08a3"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -109,6 +147,18 @@
         "lesson_group.key": "",
         "script.name": "student-end-of-unit-survey",
         "activity_section.key": "7dde887b-2403-4f92-8906-130ba5cd9174"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "student-end-of-unit-survey",
+        "activity_section.key": "0dc6332d-56b2-4691-99ca-26243e2a08a3"
       }
     }
   ],

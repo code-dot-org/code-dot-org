@@ -12,7 +12,6 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import ConsoleManager from './ConsoleManager';
 
 import moduleStyles from './right-buttons.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface RightButtonsProps {
   clearOutput: () => void;
@@ -24,7 +23,6 @@ const tooltipProps: TooltipProps = {
   size: 'xs',
   direction: 'onLeft',
   tooltipId: 'clear-console-tooltip',
-  className: darkModeStyles.tooltipLeft,
 };
 
 const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
@@ -64,8 +62,8 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
           onClick={clearOutput}
           size={'xs'}
           type={'tertiary'}
-          className={darkModeStyles.tertiaryButton}
           disabled={isClearButtonDisabled}
+          color={'black'}
         />
       </WithTooltip>
       {!isShareView && <SwapLayoutDropdown />}

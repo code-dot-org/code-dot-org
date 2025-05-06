@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 18:09:48 UTC",
+    "serialized_at": "2025-05-02 01:11:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -59,7 +60,7 @@
   "lessons": [
     {
       "key": "Project - Innovation Simulation Part 1",
-      "name": "Project - Innovation Simulation Part 1",
+      "name": "Lesson 1: Project - Innovation Simulation Part 1",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -79,7 +80,7 @@
     },
     {
       "key": "Data Policies and Privacy",
-      "name": "Data Policies and Privacy",
+      "name": "Lesson 2: Data Policies and Privacy",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -98,7 +99,7 @@
     },
     {
       "key": "The Value of Privacy",
-      "name": "The Value of Privacy",
+      "name": "Lesson 3: The Value of Privacy",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -117,7 +118,7 @@
     },
     {
       "key": "Project - Innovation Simulation Part 2",
-      "name": "Project - Innovation Simulation Part 2",
+      "name": "Lesson 4: Project - Innovation Simulation Part 2",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -137,7 +138,7 @@
     },
     {
       "key": "Security Risks Part 1",
-      "name": "Security Risks Part 1",
+      "name": "Lesson 5: Security Risks Part 1",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -156,7 +157,7 @@
     },
     {
       "key": "Security Risks Part 2",
-      "name": "Security Risks Part 2",
+      "name": "Lesson 6: Security Risks Part 2",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -175,7 +176,7 @@
     },
     {
       "key": "Project - Innovation Simulation Part 3",
-      "name": "Project - Innovation Simulation Part 3",
+      "name": "Lesson 7: Project - Innovation Simulation Part 3",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -195,7 +196,7 @@
     },
     {
       "key": "Protecting Data Part 1",
-      "name": "Protecting Data Part 1",
+      "name": "Lesson 8: Protecting Data Part 1",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -214,7 +215,7 @@
     },
     {
       "key": "Protecting Data Part 2",
-      "name": "Protecting Data Part 2",
+      "name": "Lesson 9: Protecting Data Part 2",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -233,7 +234,7 @@
     },
     {
       "key": "Project - Innovation Simulation Part 4",
-      "name": "Project - Innovation Simulation Part 4",
+      "name": "Lesson 10: Project - Innovation Simulation Part 4",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -253,7 +254,7 @@
     },
     {
       "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": false,
@@ -716,6 +717,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "619286e2-1f45-4ef3-8e26-6287a5e896f6",
+        "lesson.key": "Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-2025"
+      }
+    },
+    {
+      "key": "93f7b516-d028-4ce7-8a0e-5db5d79e1a79",
+      "position": 4,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "93f7b516-d028-4ce7-8a0e-5db5d79e1a79",
         "lesson.key": "Project - Innovation Simulation Part 4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025"
@@ -2355,6 +2369,18 @@
       }
     },
     {
+      "key": "b49af7fb-4b34-4841-a9ad-1e2f1fed9736",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "b49af7fb-4b34-4841-a9ad-1e2f1fed9736",
+        "lesson_activity.key": "93f7b516-d028-4ce7-8a0e-5db5d79e1a79"
+      }
+    },
+    {
       "key": "19f33688-8b0c-42da-8aa3-8cab1869970a",
       "position": 1,
       "properties": {
@@ -2769,6 +2795,28 @@
     },
     {
       "chapter": 17,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_cybersecurity-2025"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-2025",
+        "activity_section.key": "b49af7fb-4b34-4841-a9ad-1e2f1fed9736"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_cybersecurity-2025"
+      ]
+    },
+    {
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2984,6 +3032,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif5-2025",
         "activity_section.key": "a1c95af8-ac13-4087-8ff6-cc7aa5586c3c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_cybersecurity-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_cybersecurity-2025"
+        ],
+        "lesson.key": "Project - Innovation Simulation Part 4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif5-2025",
+        "activity_section.key": "b49af7fb-4b34-4841-a9ad-1e2f1fed9736"
       }
     },
     {

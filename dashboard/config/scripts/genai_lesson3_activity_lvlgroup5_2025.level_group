@@ -1,0 +1,12 @@
+name 'genai-lesson3-activity-lvlgroup5_2025'
+title 'Activity'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+text 'genai-lesson3-activity-lv9_2025'
+level 'genai-lesson3-activity-lv9b_2025'
+level 'genai-lesson3-activity-lv9c_2025'
+
+

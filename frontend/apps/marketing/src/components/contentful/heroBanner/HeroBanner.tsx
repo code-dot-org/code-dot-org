@@ -11,7 +11,7 @@ type HeroBannerProps = {
   /** HeroBanner content mode (theme) value */
   contentMode: Theme;
   /** HeroBanner image size (whether show with wide text (text is wider than image)) */
-  imageSize: 'Big' | 'Large';
+  imageSize: 'Small' | 'Big';
   /** Whether to show the background color */
   removeBackground?: boolean;
   /** HeroBanner cf styles*/
@@ -74,7 +74,7 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
   return (
     <DSCOHeroBanner
       data-theme={contentMode}
-      withWideText={imageSize === 'Big'}
+      withWideText={imageSize === 'Small'}
       className={className}
       heading={heading}
       subHeading={subHeading}

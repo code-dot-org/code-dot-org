@@ -36,6 +36,11 @@ class Pd::ProfessionalLearningController < ApplicationController
     render :regional_workshop_catalog
   end
 
+  # GET professional-learning/contact-regional-partner
+  def contact_regional_partner
+    render :contact_regional_partner
+  end
+
   # GET professional-learning/facilitator/computer-science-a
   def csa
     @course_name = Pd::Workshop::COURSE_CSA
@@ -88,19 +93,21 @@ class Pd::ProfessionalLearningController < ApplicationController
 
   # GET professional-learning/regional-partner/playbook
   def rp_playbook
-    if current_user.permission?(UserPermission::PROGRAM_MANAGER) || current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+    if current_user&.permission?(UserPermission::PROGRAM_MANAGER) || current_user&.permission?(UserPermission::WORKSHOP_ADMIN)
       render 'pd/professional_learning/regional_partner/regional_partner_playbook'
     else
       render 'pd/professional_learning/regional_partner/not_permitted_to_view', :status => :forbidden
     end
   end
 
+  # GET professional-learning/application/applications_closed
   def applications_closed
     # true when teacher applications are closed site-wide
     closed = Rails.env.production? && !current_user.try(:workshop_admin?) && Gatekeeper.disallows('pd_teacher_application')
     render json: closed
   end
 
+  # GET professional-learning/workshops_as_facilitator_for_pl_page
   # Returns non-ended workshops the user is facilitating.
   def workshops_as_facilitator_for_pl_page
     workshops_as_facilitator =
@@ -115,6 +122,7 @@ class Pd::ProfessionalLearningController < ApplicationController
     render json: {status: :ok, workshops_as_facilitator: summarized_workshops_as_facilitator}
   end
 
+  # GET professional-learning/workshops_as_organizer_for_pl_page
   # Returns non-ended workshops the user is organizing.
   def workshops_as_organizer_for_pl_page
     workshops_as_organizer = current_user.
@@ -125,6 +133,7 @@ class Pd::ProfessionalLearningController < ApplicationController
     render json: {status: :ok, workshops_as_organizer: workshops_as_organizer}
   end
 
+  # GET professional-learning/workshops_as_program_manager_for_pl_page
   # Returns non-ended workshops the user is a program manager for.
   def workshops_as_program_manager_for_pl_page
     workshops_as_program_manager = Pd::Workshop.where(organizer_id: current_user.id).

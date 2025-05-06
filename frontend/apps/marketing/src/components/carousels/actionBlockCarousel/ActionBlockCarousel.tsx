@@ -113,8 +113,8 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
   return (
     <DSCOCarousel
       showNavArrows
-      slidesPerView={3}
-      slidesPerGroup={3}
+      slidesPerView={slidesData.length === 2 ? 2 : 3}
+      slidesPerGroup={slidesData.length === 2 ? 2 : 3}
       allowTouchMove
       slides={slidesData}
     />

@@ -1,0 +1,21 @@
+name 'genai-lesson3-activity-lv8_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Identifying Bias
+
+## Overview
+
+#### Our new job is to identify potential sources of bias in these resources.
+
+<!-- Quote 1 (image left, bubble right) -->
+<div style="margin-top: 20px; display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+  <img src="https://images.code.org/6d8b8c7ca55a68e55dc271eaf21211f5-image-1746467642053.png" alt="Teacher avatar" style="width: 70px; border-radius: 20%;">
+  <div style="background-color: #B7E0E5; padding: 15px; font-size: 17px; max-width: 600px; border-radius: 20px 20px 20px 0;">
+  Ina Garten is a cookbook author who's written tons of recipes from around the world. I found a collection of PDFs of her cookbooks - we can use those in the data for RecipeBot.
+  </div>
+</div>
+
+## Discuss
+MARKDOWN

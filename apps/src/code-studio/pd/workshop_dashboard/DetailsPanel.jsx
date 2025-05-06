@@ -1,28 +1,21 @@
 import moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Row, Col, Button, ButtonToolbar} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {Row, Col, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 import {WorkshopCourseConfigs} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import experiments from '@cdo/apps/util/experiments';
 
 import ConfirmationDialog from '../components/confirmation_dialog';
 
-import WorkshopForm from './components/workshop_form';
 import {TIME_FORMAT} from './workshopConstants';
 import WorkshopPanel from './WorkshopPanel';
-
-const newWorkshopFormEnabled = experiments.isEnabled(
-  experiments.NEW_WORKSHOP_FORM
-);
 
 /**
  * UI to view and edit workshop details.
  */
 export default class DetailsPanel extends React.Component {
   static propTypes = {
-    view: PropTypes.string,
     workshopId: PropTypes.string,
     workshop: PropTypes.shape({
       state: PropTypes.string,
@@ -36,7 +29,6 @@ export default class DetailsPanel extends React.Component {
       regional_partner_name: PropTypes.string,
     }),
     isWorkshopAdmin: PropTypes.bool,
-    onWorkshopSaved: PropTypes.func,
   };
 
   static contextType = RouterContext;
@@ -53,19 +45,9 @@ export default class DetailsPanel extends React.Component {
       : 'UTC';
   }
 
-  getToday = () => {
-    return new Date();
-  };
-
   handleEditClick = () => {
     const {workshopId} = this.props;
     this.context.router.push(`/workshops/${workshopId}/edit`);
-  };
-
-  handleSaveClick = () => {
-    // This button is just a shortcut to click the Save button in the form component,
-    // which will handle the logic.
-    $('#workshop-form-save-btn').trigger('click');
   };
 
   handleAdminEditClick = () => this.setState({showAdminEditConfirmation: true});
@@ -78,27 +60,8 @@ export default class DetailsPanel extends React.Component {
     this.handleEditClick();
   };
 
-  handleBackClick = () => {
-    this.context.router.push('/workshops');
-  };
-
   render() {
-    const {view, workshop, isWorkshopAdmin, onWorkshopSaved} = this.props;
-
-    if (view === 'edit') {
-      const header = <EditHeader handleSave={this.handleSaveClick} />;
-      return (
-        <WorkshopPanel header={header}>
-          <div>
-            <WorkshopForm
-              workshop={workshop}
-              onSaved={onWorkshopSaved}
-              today={this.getToday()}
-            />
-          </div>
-        </WorkshopPanel>
-      );
-    }
+    const {workshop, isWorkshopAdmin} = this.props;
 
     let header = <DetailsPanelHeader />;
     if (workshop.state === 'Not Started') {
@@ -113,112 +76,91 @@ export default class DetailsPanel extends React.Component {
     }
     return (
       <WorkshopPanel header={header}>
-        {newWorkshopFormEnabled ? (
-          <Row style={styles.container}>
-            <Col style={styles.section} md={4}>
-              <h3 style={styles.header}>
-                <strong>Workshop Name</strong>
-              </h3>
-              <p style={styles.truncate}>{workshop.name || workshop.course}</p>
+        <Row style={styles.container}>
+          <Col style={styles.section} md={4}>
+            <h3 style={styles.header}>
+              <strong>Workshop Name</strong>
+            </h3>
+            <p style={styles.truncate}>{workshop.name || workshop.course}</p>
 
-              <div style={styles.colDivider} />
+            <div style={styles.colDivider} />
 
-              <h3 style={styles.header}>
-                <strong>Subject/Topics</strong>
-              </h3>
-              <ul style={{...styles.list, ...styles.truncate}}>
-                {workshop.subject && <li>{workshop.subject}</li>}
-                {workshop.course_offering_names &&
-                  workshop.course_offering_names
-                    .split(', ')
-                    .map(course => <li key={course}>{course}</li>)}
-              </ul>
-            </Col>
+            <h3 style={styles.header}>
+              <strong>Subject/Topics</strong>
+            </h3>
+            <ul style={{...styles.list, ...styles.truncate}}>
+              {workshop.subject && <li>{workshop.subject}</li>}
+              {workshop.course_offering_names &&
+                workshop.course_offering_names
+                  .split(', ')
+                  .map(course => <li key={course}>{course}</li>)}
+            </ul>
+          </Col>
 
-            <div style={styles.divider} />
+          <div style={styles.divider} />
 
-            <Col style={styles.section} md={4}>
-              <Row>
-                <Col xs={3}>
-                  <h3 style={styles.header}>
-                    <strong>Date</strong>
-                  </h3>
+          <Col style={styles.section} md={4}>
+            <Row>
+              <Col xs={3}>
+                <h3 style={styles.header}>
+                  <strong>Date</strong>
+                </h3>
+              </Col>
+              <Col xs={4}>
+                <h3 style={styles.header}>
+                  <strong>Time</strong>
+                </h3>
+              </Col>
+              <Col xs={5}>
+                <h3 style={styles.header}>
+                  <strong>Location</strong>
+                </h3>
+              </Col>
+            </Row>
+            {workshop.sessions.map(session => (
+              <Row key={session.id}>
+                <Col style={styles.truncate} xs={3}>
+                  {moment.tz(session.start, this.timeZone).format('MM/DD/YYYY')}
                 </Col>
-                <Col xs={4}>
-                  <h3 style={styles.header}>
-                    <strong>Time</strong>
-                  </h3>
+                <Col style={styles.truncate} xs={4}>
+                  {moment.tz(session.start, this.timeZone).format(TIME_FORMAT)}-
+                  {moment.tz(session.end, this.timeZone).format(TIME_FORMAT)}
                 </Col>
-                <Col xs={5}>
-                  <h3 style={styles.header}>
-                    <strong>Location</strong>
-                  </h3>
-                </Col>
-              </Row>
-              {workshop.sessions.map(session => (
-                <Row key={session.id}>
-                  <Col style={styles.truncate} xs={3}>
-                    {moment
-                      .tz(session.start, this.timeZone)
-                      .format('MM/DD/YYYY')}
-                  </Col>
-                  <Col style={styles.truncate} xs={4}>
-                    {moment
-                      .tz(session.start, this.timeZone)
-                      .format(TIME_FORMAT)}
-                    -{moment.tz(session.end, this.timeZone).format(TIME_FORMAT)}
-                  </Col>
-                  <Col style={styles.truncate} xs={5}>
-                    {session.session_format === 'in_person'
-                      ? session.location_name ?? 'N/A'
-                      : 'Virtual'}
-                  </Col>
-                </Row>
-              ))}
-            </Col>
-
-            <div style={styles.divider} />
-
-            <Col style={styles.section} md={4}>
-              <h2 style={styles.header}>
-                <strong>Facilitators</strong>
-              </h2>
-              {workshop.facilitators?.length ? (
-                workshop.facilitators.map(facilitator => (
-                  <p style={styles.truncate} key={facilitator.id}>
-                    {facilitator.name}, {facilitator.email}
-                  </p>
-                ))
-              ) : (
-                <p>N/A</p>
-              )}
-
-              <div style={styles.colDivider} />
-
-              <h2 style={styles.header}>
-                <strong>Regional Partner</strong>
-              </h2>
-              <p style={styles.truncate}>
-                {workshop.regional_partner_name || 'N/A'}
-              </p>
-            </Col>
-          </Row>
-        ) : (
-          <div>
-            <WorkshopForm workshop={workshop} today={this.getToday()} readOnly>
-              <Row>
-                <Col sm={4}>
-                  <ButtonToolbar>
-                    {workshop.state === 'Not Started' && (
-                      <Button onClick={this.handleEditClick}>Edit</Button>
-                    )}
-                    <Button onClick={this.handleBackClick}>Back</Button>
-                  </ButtonToolbar>
+                <Col style={styles.truncate} xs={5}>
+                  {session.session_format === 'in_person'
+                    ? session.location_name ?? 'N/A'
+                    : 'Virtual'}
                 </Col>
               </Row>
-            </WorkshopForm>
-          </div>
-        )}
+            ))}
+          </Col>
+
+          <div style={styles.divider} />
+
+          <Col style={styles.section} md={4}>
+            <h2 style={styles.header}>
+              <strong>Facilitators</strong>
+            </h2>
+            {workshop.facilitators?.length ? (
+              workshop.facilitators.map(facilitator => (
+                <p style={styles.truncate} key={facilitator.id}>
+                  {facilitator.name}, {facilitator.email}
+                </p>
+              ))
+            ) : (
+              <p>N/A</p>
+            )}
+
+            <div style={styles.colDivider} />
+
+            <h2 style={styles.header}>
+              <strong>Regional Partner</strong>
+            </h2>
+            <p style={styles.truncate}>
+              {workshop.regional_partner_name || 'N/A'}
+            </p>
+          </Col>
+        </Row>
 
         <ConfirmationDialog
           show={isWorkshopAdmin && this.state.showAdminEditConfirmation}
@@ -291,9 +233,7 @@ const EditHeader = ({handleSave}) => (
 EditHeader.propTypes = {handleSave: PropTypes.func.isRequired};
 
 const DetailsPanelHeader = ({children}) => (
-  <span>
-    Workshop {newWorkshopFormEnabled ? 'Information' : 'Details'}: {children}
-  </span>
+  <span>Workshop Information: {children}</span>
 );
 DetailsPanelHeader.propTypes = {children: PropTypes.node};
 

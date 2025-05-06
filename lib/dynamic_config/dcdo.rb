@@ -63,6 +63,7 @@ class DCDOBase < DynamicConfigBase
       'exploring-gen-ai-launch': DCDO.get('exploring-gen-ai-launch', false),
       'ai-tutor-teacher-nav-v2': DCDO.get('ai-tutor-teacher-nav-v2', true),
       'music-lab-banner': DCDO.get('music-lab-banner', false),
+      'show-download-progress-csv': DCDO.get('show-download-progress-csv', false),
     }
   end
 end

@@ -48,7 +48,11 @@ const StudentCodeDatasetMaker: React.FC = () => {
     if (!codeSamples) {
       alert('No samples found for the given parameters.');
     } else {
-      setFetchedSamples(codeSamples as unknown as StudentCodeSample[]);
+      const fetchedCodeSamples = codeSamples as unknown as StudentCodeSample[];
+      const filteredCodeSamples = fetchedCodeSamples.filter(
+        item => item !== null
+      );
+      setFetchedSamples(filteredCodeSamples);
     }
     setPending(false);
   };

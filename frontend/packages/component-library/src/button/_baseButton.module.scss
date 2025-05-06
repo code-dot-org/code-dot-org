@@ -231,6 +231,7 @@ a.button-secondary {
   }
 
   &.button-destructive {
+    background-color: var(--background-neutral-primary);
     border: 1px solid var(--borders-error-primary);
     color: var(--text-error-primary);
 

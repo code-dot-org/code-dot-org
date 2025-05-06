@@ -1,7 +1,10 @@
 import {useDraggable} from '@dnd-kit/core';
+import classNames from 'classnames';
 import React from 'react';
 
 import {DragDataType} from './types';
+
+import moduleStyles from './styles/filebrowser.module.scss';
 
 /*
   This component adds draggable functionality to files/folders in the file browser. The intent is that the user can drag a file into a new folder as well
@@ -35,8 +38,9 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
   Component = 'div',
   className,
 }: DraggableProps) => {
+  const draggableId = `${data.type}-${data.id}-draggable`;
   const {attributes, listeners, setNodeRef, transform} = useDraggable({
-    id: `${data.type}-${data.id}`,
+    id: draggableId,
     data,
   });
   const style = transform
@@ -50,7 +54,7 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
     {
       ref: setNodeRef,
       style: style,
-      className,
+      className: classNames(moduleStyles.draggable, className),
       ...listeners,
       ...attributes,
     },
@@ -60,4 +64,14 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
 
 export const NotDraggable: React.FunctionComponent<DraggableProps> = ({
   children,
-}) => <>{children}</>;
+}) => {
+  return React.createElement(
+    'div',
+    {
+      className: moduleStyles.notDraggable,
+      tabIndex: 0,
+      role: 'button',
+    },
+    children
+  );
+};

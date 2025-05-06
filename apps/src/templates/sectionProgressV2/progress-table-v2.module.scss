@@ -169,10 +169,9 @@ $level-cell-width: 52;
 
   .downloadCsv {
     display: flex;
-
-    button {
-      height: 32px;
-    }
+    margin-inline-start: 5px;
+    height: 32px;
+    width: 32px;
   }
 }
 

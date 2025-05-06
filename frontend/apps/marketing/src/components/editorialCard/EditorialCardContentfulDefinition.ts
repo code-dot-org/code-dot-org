@@ -8,12 +8,12 @@ export const EditorialCardContentfulComponentDefinition: ComponentDefinition = {
   name: 'Editorial Card',
   category: '03: Basic',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/1SptVYIyW5meSA34NcP99o/499a67854db82f98ee7717dbc9b95c6e/component_editorial_card_thumbnail.png',
+    'https://contentful-images.code.org/90t6bu6vlf76/1SptVYIyW5meSA34NcP99o/499a67854db82f98ee7717dbc9b95c6e/component_editorial_card_thumbnail.png',
   tooltip: {
     description:
       'A customizable content card with an image, text, and optional link. Supports both vertical and landscape orientations.',
     imageUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/18GIGLig36NtxqDSFegTHX/bca85090d5410f0e31c49a44bfee6b64/component_editorial_card_tooltip.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/18GIGLig36NtxqDSFegTHX/bca85090d5410f0e31c49a44bfee6b64/component_editorial_card_tooltip.png',
   },
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],
@@ -50,6 +50,7 @@ export const EditorialCardContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'Editorial Card Heading',
       validations: {
         required: true,
+        bindingSourceType: ['entry', 'manual'],
       },
     },
     text: {
@@ -59,6 +60,7 @@ export const EditorialCardContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'Editorial Card\nMultiline Text',
       validations: {
         required: true,
+        bindingSourceType: ['entry', 'manual'],
       },
     },
     image: {
@@ -68,7 +70,7 @@ export const EditorialCardContentfulComponentDefinition: ComponentDefinition = {
       description:
         'The image to display in "Horizontal/Vertical with Image" layouts',
       defaultValue:
-        'https://images.ctfassets.net/90t6bu6vlf76/1SptVYIyW5meSA34NcP99o/499a67854db82f98ee7717dbc9b95c6e/component_editorial_card_thumbnail.png',
+        'https://contentful-images.code.org/90t6bu6vlf76/1SptVYIyW5meSA34NcP99o/499a67854db82f98ee7717dbc9b95c6e/component_editorial_card_thumbnail.png',
       validations: {
         bindingSourceType: ['entry', 'asset', 'manual'],
       },

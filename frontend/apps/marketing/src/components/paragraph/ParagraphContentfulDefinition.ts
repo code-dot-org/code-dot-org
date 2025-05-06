@@ -8,12 +8,12 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
   name: 'Paragraph',
   category: '02: Typography',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/5hP7jqXdP90BtLxMi6FSWm/09a555420c3313133d16e87a84e22826/component_paragraph_thumbnail.png',
+    'https://contentful-images.code.org/90t6bu6vlf76/5hP7jqXdP90BtLxMi6FSWm/09a555420c3313133d16e87a84e22826/component_paragraph_thumbnail.png',
   tooltip: {
     description:
       'Use a paragraph for body text and longer descriptions. Supports rich text formatting for emphasis, links, and structure.',
     imageUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/5qoQl0G7ZKxKCI8VYBaCzl/19a21cd2fbb6b037c397fcbc417f70b1/component_paragraph_tooltip.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/5qoQl0G7ZKxKCI8VYBaCzl/19a21cd2fbb6b037c397fcbc417f70b1/component_paragraph_tooltip.png',
   },
   builtInStyles: ['cfTextAlign'],
   variables: {
@@ -50,6 +50,9 @@ export const ParagraphContentfulComponentDefinition: ComponentDefinition = {
       defaultValue: 'Paragraph',
       group: 'content',
       description: 'The text or other elements to display inside the paragraph',
+      validations: {
+        bindingSourceType: ['entry', 'manual'],
+      },
     },
     isStrong: {
       displayName: 'Make this paragraph bold',

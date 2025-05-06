@@ -47,6 +47,8 @@
                   "type": "repeat_simple2",
                   "id": "repeat_simple2",
                   "deletable": false,
+                  "movable": false,
+                  "editable": false,
                   "extraState": {
                     "disableNextConnection": true
                   },
@@ -56,35 +58,82 @@
                   "inputs": {
                     "code": {
                       "block": {
-                        "type": "play_sounds_together",
-                        "id": "play_sounds_together",
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
                         "deletable": false,
+                        "movable": false,
+                        "editable": false,
                         "extraState": {
                           "disableNextConnection": true
                         },
-                        "inputs": {
-                          "code": {
-                            "block": {
-                              "type": "play_sound_at_current_location_simple2",
-                              "id": "play_sound_at_current_location_simple2",
-                              "deletable": false,
-                              "extraState": {
-                                "disableNextConnection": false
-                              },
-                              "fields": {
-                                "sound": "pop/bass_runner"
-                              },
-                              "next": {
-                                "block": {
-                                  "type": "play_sound_at_current_location_simple2",
-                                  "id": "k-2oy8[e`@rx@nD[|Pzo",
-                                  "deletable": false,
-                                  "extraState": {
-                                    "disableNextConnection": true
-                                  },
-                                  "fields": {
-                                    "sound": "pop/drum_beat_relax"
-                                  }
+                        "fields": {
+                          "sound": "acoustic_arcade/bass_giant"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "Trigger1",
+              "x": 50,
+              "y": 190,
+              "deletable": false,
+              "editable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+              },
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "iPeaFz}:QSiYnQf_dL$T",
+                  "deletable": false,
+                  "movable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "QN`:xw7WWNJ-_:J;w]Eq",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "tinashe_gravity/vocals_adlib_1"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "7Zdo2f_Q-g5{7gY?u~1R",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "tinashe_gravity/floaty_piano_vocal"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "Z2hHszbo7kMyC38.9Vs@",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "tinashe_gravity/bass_synth_1"
                                 }
                               }
                             }
@@ -98,101 +147,64 @@
             },
             {
               "type": "triggered_at_simple2",
-              "id": "trigger_1",
-              "x": 30,
-              "y": 250,
+              "id": "Trigger2",
+              "x": 330,
+              "y": 190,
               "deletable": false,
+              "editable": false,
               "fields": {
-                "trigger": "<field name=\"trigger\">trigger1</field>",
+                "trigger": "<field name=\"trigger\">trigger2</field>",
                 "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
-              }
-            },
-            {
-              "type": "procedures_defnoreturn",
-              "id": "17J:G#.cywF:/+$9ZunD",
-              "x": 370,
-              "y": 70,
-              "deletable": false,
-              "extraState": {
-                "procedureId": "Okdr*n;XUAA(u}Y0N~-F",
-                "initialDeleteConfig": false,
-                "initialEditConfig": true,
-                "initialMoveConfig": true
               },
-              "fields": {
-                "NAME": "power-up"
-              },
-              "inputs": {
-                "STACK": {
-                  "block": {
-                    "type": "repeat_simple2",
-                    "id": "mp5deKbx0Vt$DVOycb1e",
-                    "deletable": false,
-                    "extraState": {
-                      "disableNextConnection": true
-                    },
-                    "fields": {
-                      "times": 2
-                    },
-                    "inputs": {
-                      "code": {
-                        "block": {
-                          "type": "play_sounds_together",
-                          "id": "}rW%jdZt-w-)(pBXyq=~",
-                          "deletable": false,
-                          "extraState": {
-                            "disableNextConnection": true
-                          },
-                          "inputs": {
-                            "code": {
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": true
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "y4Qkl)bIS-sb]*eUkT[T",
+                        "deletable": false,
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "disableNextConnection": false
+                        },
+                        "fields": {
+                          "sound": "rock/power_guitar"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "~o%Y=.xoM}]gOaq;2^}N",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": false
+                            },
+                            "fields": {
+                              "sound": "rock/bass_fuzz_drop"
+                            },
+                            "next": {
                               "block": {
                                 "type": "play_sound_at_current_location_simple2",
-                                "id": "#)_B+XsTQ}w[V5a-?I`^",
+                                "id": "P!EN/bh:.ZPySGVDds]v",
                                 "deletable": false,
+                                "movable": false,
+                                "editable": false,
                                 "extraState": {
-                                  "disableNextConnection": false
+                                  "disableNextConnection": true
                                 },
                                 "fields": {
-                                  "sound": "electro/drum_beat_hyper"
-                                },
-                                "next": {
-                                  "block": {
-                                    "type": "play_sound_at_current_location_simple2",
-                                    "id": "|9}G0ltJPj6$sTc]@thU",
-                                    "deletable": false,
-                                    "extraState": {
-                                      "disableNextConnection": false
-                                    },
-                                    "fields": {
-                                      "sound": "pop/drum_beat_action"
-                                    },
-                                    "next": {
-                                      "block": {
-                                        "type": "play_sound_at_current_location_simple2",
-                                        "id": "M-DgO{3/8685,|Xre9js",
-                                        "deletable": false,
-                                        "extraState": {
-                                          "disableNextConnection": false
-                                        },
-                                        "fields": {
-                                          "sound": "electro/synth_sleek"
-                                        },
-                                        "next": {
-                                          "block": {
-                                            "type": "play_sound_at_current_location_simple2",
-                                            "id": "+]QgB^PdcXKU[yBJU#v!",
-                                            "deletable": false,
-                                            "extraState": {
-                                              "disableNextConnection": true
-                                            },
-                                            "fields": {
-                                              "sound": "groove/laser"
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
+                                  "sound": "rock/drum_kit_can"
                                 }
                               }
                             }
@@ -203,16 +215,20 @@
                   }
                 }
               }
+            },
+            {
+              "type": "triggered_at_simple2",
+              "id": "Trigger3",
+              "x": 50,
+              "y": 410,
+              "deletable": false,
+              "fields": {
+                "trigger": "<field name=\"trigger\">trigger3</field>",
+                "trigger_start": "<field name=\"trigger_start\">next_measure</field>"
+              }
             }
           ]
-        },
-        "procedures": [
-          {
-            "id": "Okdr*n;XUAA(u}Y0N~-F",
-            "name": "power-up",
-            "returnTypes": null
-          }
-        ]
+        }
       },
       "sounds": {
         "acoustic_arcade": [
@@ -407,28 +423,64 @@
         "kind": "flyoutToolbox"
       }
     },
-    "long_instructions": "### <i class=\"fa-duotone fa-solid fa-masks-theater\"></i> Sound is also a feeling. \r\n**Buttons 1 & 2 create different feelings for levels in a game.**\r\n\r\n1. Try it first. Press Run then press 1 or 2 to trigger the sounds.\r\n\r\n- **Next, code the third event trigger.** What feeling will you set? \r\n\r\n\t- Celebrating winning the game?\r\n    - An intense new battle?\r\n    - A fun fast-paced level? \r\n",
+    "long_instructions": "### <i class=\"fa-duotone fa-solid fa-masks-theater\"></i> Sound is also a feeling. \r\n**Buttons 1 & 2 create different feelings for levels in a game.**\r\n\r\n1. **Try it first.** Press Run, then press 1 or 2 to trigger the sounds.\r\n- **Next, code the third event trigger.** What feeling will you set? \r\n\t- Celebrating winning the game?\r\n    - An intense new battle?\r\n    - A fun fast-paced level? \r\n",
     "validations": [
       {
-        "key": "music-coding-intro-event-function_6ac8d0df-d8f7-489a-9f29-b79b2e8fd1bc",
-        "message": "You're playing sounds live just like a DJ! ",
+        "key": "music-coding-intro-event-function_launch_3fc14b1c-01e9-4af2-bfdc-4d7690260cec",
+        "message": "You triggered at least one new sound. Keep adding to it! \n\nWhen you created a mood you like, press Continue. ",
         "next": true,
         "conditions": [
           {
-            "name": "played_sound_triggered_multiple_times",
-            "value": 1
+            "name": "played_sound_triggered"
+          },
+          {
+            "name": "trigger_id_pressed",
+            "value": 3
           }
         ]
       },
       {
-        "key": "music-coding-intro-event-function_e06b7012-d35a-4d33-acc5-a93539067450",
-        "message": "Nothing has been triggered yet. Read the instructions to create your own trigger. ",
+        "key": "music-coding-intro-event-function_launch_a2495fc9-e277-4568-8b47-d2d4b89828c3",
+        "message": "You triggered button 3 but haven't programmed any sounds under the event yet.",
         "next": false,
         "conditions": [
           {
-            "name": "played_different_sounds_together_multiple_times",
+            "name": "trigger_id_pressed",
             "value": 3
           }
+        ],
+        "callout": "Trigger3"
+      },
+      {
+        "key": "music-coding-intro-event-function_launch_e167cd94-83e4-477d-84b6-63dabe7fe4db",
+        "message": "What mood does button 2 create? ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "trigger_id_pressed",
+            "value": 2
+          }
+        ],
+        "callout": ""
+      },
+      {
+        "key": "music-coding-intro-event-function_6ac8d0df-d8f7-489a-9f29-b79b2e8fd1bc",
+        "message": "What mood does button 1 create? ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "trigger_id_pressed",
+            "value": 1
+          }
+        ],
+        "callout": ""
+      },
+      {
+        "key": "music-coding-intro-event-function_e06b7012-d35a-4d33-acc5-a93539067450",
+        "message": "Nothing has been triggered yet. Press the 1 and 2 buttons to try it out. ",
+        "next": false,
+        "conditions": [
+
         ]
       }
     ],
@@ -442,7 +494,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:06.577+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function\\\"\"],\"cloned_from\":\"music-coding-intro-event-function\"},{\"changed_at\":\"2025-04-23 16:09:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:11:24 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:12:53 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:14:05 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:18:26 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:24:38 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:03:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:09:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:11:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:17:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:17:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:18:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:10:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:16:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:33:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 17:11:43 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-18T19:57:06.577+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-event-function\\\"\"],\"cloned_from\":\"music-coding-intro-event-function\"},{\"changed_at\":\"2025-04-23 16:09:49 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:11:24 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:12:53 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:14:05 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:18:26 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 16:24:38 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:03:16 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:09:32 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:11:13 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:17:40 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:17:53 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-23 17:18:02 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:10:40 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:16:05 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 16:33:29 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-24 17:11:43 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 16:15:43 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 16:16:44 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:26:03 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:26:16 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:32:23 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:34:34 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:34:37 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:36:08 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:37:45 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:38:31 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:39:25 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-04-28 18:41:58 +0000\",\"changed\":[\"validations\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-01 17:43:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

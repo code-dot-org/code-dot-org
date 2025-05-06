@@ -69,7 +69,7 @@ const PredictSummary: React.FunctionComponent = () => {
       <LinkButton
         href={summaryUrl}
         text={commonI18n.viewStudentResponses()}
-        size={'xs'}
+        size={'s'}
         type={'secondary'}
         color={'black'}
         className={moduleStyles.studentResponsesButton}
