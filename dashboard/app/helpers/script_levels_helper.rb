@@ -49,7 +49,7 @@ module ScriptLevelsHelper
       script.finish_url(unit_group_unit: unit_group_unit)
     else
       if Policies::Courses.modularity_enabled? && unit_group_unit
-        course_unit_path(unit_group_unit.course, unit_group_unit.position)
+        course_unit_path(unit_group_unit.unit_group, unit_group_unit.position)
       else
         script_path(script)
       end
