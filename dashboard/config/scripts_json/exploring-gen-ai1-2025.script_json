@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-01 16:47:11 UTC",
+    "serialized_at": "2025-05-04 03:43:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -156,12 +156,15 @@
     },
     {
       "key": "lesson-2",
-      "name": "3.2 Is It Fair?",
+      "name": "3.2 Is It Biased?",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "In this lesson, students explore how bias can show up in AI-generated content, particularly when the system is asked to describe people or recommend things. By prompting a chatbot with identity-based questions and analyzing its responses, students begin to identify biased patterns and reflect on how AI may reinforce assumptions or stereotypes. Through discussion and reflection, they develop a more critical lens on how generative AI systems handle representation.",
+        "preparation": "* Print copies of the Bias in AI Outputs activity guide (one for each student)",
+        "student_overview": "In this lesson, yo will explore how bias can show up in chatbot responses, especially when the AI is asked to describe people or make recommendations. You will test different prompts, compare how the chatbot responds, and look for patterns in what it includes or leaves out. By the end, you will be able to explain how bias shows up in AI and why it is important to notice."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -618,6 +621,48 @@
       "seeding_key": {
         "lesson_activity.key": "b9db636c-313b-481d-8141-0921716c10c5",
         "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "c8fa5880-4693-4667-8331-29178ef3cfaf",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c8fa5880-4693-4667-8331-29178ef3cfaf",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "367cfc90-877b-4d09-8bd9-5996e5df7f00",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "367cfc90-877b-4d09-8bd9-5996e5df7f00",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "2d3036a3-09c1-4dad-8499-2287364f9208",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2d3036a3-09c1-4dad-8499-2287364f9208",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
@@ -1706,6 +1751,59 @@
       "seeding_key": {
         "activity_section.key": "1e0b86d5-10e7-4d89-94ab-f7a00000dc5f",
         "lesson_activity.key": "b9db636c-313b-481d-8141-0921716c10c5"
+      }
+    },
+    {
+      "key": "38ab3236-0128-46da-ab1a-7c03c47834cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "38ab3236-0128-46da-ab1a-7c03c47834cb",
+        "lesson_activity.key": "c8fa5880-4693-4667-8331-29178ef3cfaf"
+      }
+    },
+    {
+      "key": "7b60682a-c5a1-4c00-a1f2-f14f559d5ec4",
+      "position": 1,
+      "properties": {
+        "progression_name": "Exploring AI Recommendations"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b60682a-c5a1-4c00-a1f2-f14f559d5ec4",
+        "lesson_activity.key": "367cfc90-877b-4d09-8bd9-5996e5df7f00"
+      }
+    },
+    {
+      "key": "f9bed184-f887-4727-9a74-095d6d5ae02b",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f9bed184-f887-4727-9a74-095d6d5ae02b",
+        "lesson_activity.key": "367cfc90-877b-4d09-8bd9-5996e5df7f00"
+      }
+    },
+    {
+      "key": "d4e5a2a3-a8c2-4233-a854-42505bf266ff",
+      "position": 3,
+      "properties": {
+        "progression_name": "Refine Prompts to Mitigate Bias"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4e5a2a3-a8c2-4233-a854-42505bf266ff",
+        "lesson_activity.key": "367cfc90-877b-4d09-8bd9-5996e5df7f00"
+      }
+    },
+    {
+      "key": "2b85ad2b-b0fe-41e9-9f89-cde1ffcfc2ba",
+      "position": 1,
+      "properties": {
+        "progression_name": "Ethical Checkpoint"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b85ad2b-b0fe-41e9-9f89-cde1ffcfc2ba",
+        "lesson_activity.key": "2d3036a3-09c1-4dad-8499-2287364f9208"
       }
     },
     {
@@ -3294,6 +3392,72 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Exploring AI Recommendations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "exploring_generative_ai_l32_l1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "7b60682a-c5a1-4c00-a1f2-f14f559d5ec4"
+      },
+      "level_keys": [
+        "exploring_generative_ai_l32_l1"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Refine Prompts to Mitigate Bias"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "exploring_generative_ai_l32_l2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "d4e5a2a3-a8c2-4233-a854-42505bf266ff"
+      },
+      "level_keys": [
+        "exploring_generative_ai_l32_l2"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ethical Checkpoint"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "exploring_generative_ai_l32_wrap_up"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "2b85ad2b-b0fe-41e9-9f89-cde1ffcfc2ba"
+      },
+      "level_keys": [
+        "exploring_generative_ai_l32_wrap_up"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "genai-lesson4-warmup-level1_2025"
         ],
@@ -3314,7 +3478,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3339,7 +3503,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3364,7 +3528,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3389,7 +3553,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3414,7 +3578,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3439,7 +3603,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3464,7 +3628,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3489,7 +3653,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3514,7 +3678,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3539,7 +3703,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3564,7 +3728,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3589,7 +3753,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3614,7 +3778,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3734,6 +3898,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "117bfdef-5e0d-4767-95b1-883c8d2a7819"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "exploring_generative_ai_l32_l1",
+        "script_level.level_keys": [
+          "exploring_generative_ai_l32_l1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "7b60682a-c5a1-4c00-a1f2-f14f559d5ec4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "exploring_generative_ai_l32_l2",
+        "script_level.level_keys": [
+          "exploring_generative_ai_l32_l2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "d4e5a2a3-a8c2-4233-a854-42505bf266ff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "exploring_generative_ai_l32_wrap_up",
+        "script_level.level_keys": [
+          "exploring_generative_ai_l32_wrap_up"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "2b85ad2b-b0fe-41e9-9f89-cde1ffcfc2ba"
       }
     },
     {
@@ -4199,6 +4399,30 @@
       }
     },
     {
+      "name": "Bias in AI Outputs",
+      "url": "https://docs.google.com/document/d/1FwCqYk3YzQa0kvBL3XqEPM3zx-dt2iPJCgs9UWKM42A/",
+      "key": "bias_in_ai_outputs",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "bias_in_ai_outputs"
+      }
+    },
+    {
+      "name": "Bias in AI Outputs",
+      "url": "https://docs.google.com/document/d/10aMGBAlFvCso_39a_dGwWKKFY9nR_AV928HH0Nts3y8/",
+      "key": "bias_in_ai_outputs_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "bias_in_ai_outputs_1"
+      }
+    },
+    {
       "name": "Bias in the Machine",
       "url": "https://docs.google.com/presentation/d/1ySQ7thNItzVa5ueyiYrADIvse9ZxBwD7nIVHxfHk1H0/template/preview",
       "key": "bias_in_the_machine",
@@ -4473,6 +4697,18 @@
       },
       "seeding_key": {
         "resource.key": "introduction_to_large_language_models"
+      }
+    },
+    {
+      "name": "Is It Biased?",
+      "url": "https://docs.google.com/presentation/d/1-E_VHTD2V9NAuucYo6l3VPyv8eKTRoo48sCVQMZ6F2I/edit",
+      "key": "is_it_biased_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "is_it_biased_"
       }
     },
     {
@@ -5155,6 +5391,24 @@
         "lesson.key": "lesson-10",
         "resource.key": "how_smart_is_it_really_"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "bias_in_ai_outputs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "bias_in_ai_outputs_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "is_it_biased_"
+      }
     }
   ],
   "scripts_resources": [
@@ -5363,6 +5617,16 @@
   ],
   "objectives": [
     {
+      "key": "0098d8b4-734d-4523-9ada-ec992b28c8ad",
+      "properties": {
+        "description": "Examine how identity-based prompts influence chatbot responses."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "0098d8b4-734d-4523-9ada-ec992b28c8ad"
+      }
+    },
+    {
       "key": "076c886e-5d15-46e3-8c7b-f7b94a0b10a0",
       "properties": {
         "description": "Identify and explain the four key components that make up a computer system."
@@ -5483,6 +5747,16 @@
       }
     },
     {
+      "key": "805dacb8-a510-4de4-8171-22bda6896b55",
+      "properties": {
+        "description": "Reflect on the potential impact of biased AI outputs in the real world."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "805dacb8-a510-4de4-8171-22bda6896b55"
+      }
+    },
+    {
       "key": "9162d7ef-c2d4-426f-ab36-97340dc73ec1",
       "properties": {
         "description": "Explain how different passages can create different embeddings"
@@ -5570,6 +5844,26 @@
       "seeding_key": {
         "lesson.key": "Project: Demystifying Generative AI",
         "objective.key": "f16b966e-1e35-4794-950d-5030ec847891"
+      }
+    },
+    {
+      "key": "f52f9f35-38e2-4250-94d4-07566e9e05f1",
+      "properties": {
+        "description": "Explain how training data shapes the patterns and representations in generative AI."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "f52f9f35-38e2-4250-94d4-07566e9e05f1"
+      }
+    },
+    {
+      "key": "fea975eb-9769-482b-9718-d0758493fe6b",
+      "properties": {
+        "description": "Analyze AI-generated responses for signs of bias, stereotypes, or assumptions."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "fea975eb-9769-482b-9718-d0758493fe6b"
       }
     }
   ],

@@ -64,6 +64,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "cross-fetch": "^4.1.0",
     "dotenv": "^16.4.7",
     "eslint": "^9.16.0",
     "eslint-plugin-jest": "^28.9.0",

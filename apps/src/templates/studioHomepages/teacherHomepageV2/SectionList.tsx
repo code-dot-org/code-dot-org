@@ -155,7 +155,7 @@ export const SectionList: React.FC<SectionListProps> = ({
     : sortableSectionIds;
 
   return (
-    <div>
+    <div id="ui-test-section-list">
       <DndContext
         sensors={sensors}
         collisionDetection={closestCenter}

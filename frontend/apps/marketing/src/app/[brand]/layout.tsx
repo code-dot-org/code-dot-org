@@ -1,4 +1,5 @@
 import {GoogleAnalytics} from '@next/third-parties/google';
+import {PublicEnvScript} from 'next-runtime-env';
 
 import Footer from '@/components/footer';
 import Header from '@/components/header';
@@ -32,6 +33,7 @@ export default async function Layout({
 
   return (
     <>
+      <PublicEnvScript disableNextScript={true} />
       <OneTrustLoader brand={brand} />
 
       <OneTrustProvider>
