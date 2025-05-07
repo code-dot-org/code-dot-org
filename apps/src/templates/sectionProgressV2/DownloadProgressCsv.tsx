@@ -1,8 +1,10 @@
-import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
+import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
+import {Student} from '@cdo/apps/types/redux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -12,25 +14,47 @@ import styles from './progress-table-v2.module.scss';
 
 const downloadLessonProgressCSV = () => {
   const store = getStore();
-  const unitData = getCurrentUnitData(store.getState());
+  const unitData = getCurrentUnitData(store.getState()) as {
+    lessons: {title: string; name: string; id: number}[];
+  };
+
   const unitId = store.getState().unitSelection.scriptId;
 
   const lessonProgressByStudent =
     store.getState().sectionProgress.studentLessonProgressByUnit[unitId];
 
-  const students = store.getState().teacherSections.selectedStudents;
+  const students = store.getState().teacherSections
+    .selectedStudents as Student[];
 
-  const columnNames = ['Student_Name'];
+  const columnNames = [
+    'Student_Name',
+    ...unitData.lessons.map(lesson => lesson.title),
+  ];
 
-  console.log('lfm', {unitData, lessonProgressByStudent, students});
-  const table = students.map((student: {name: string}) => ({
-    Student_Name: student.name,
-  }));
+  const table = students.map(student => {
+    const lessonProgress = lessonProgressByStudent[student.id];
+
+    let lessonData = {};
+
+    unitData.lessons.forEach(lesson => {
+      const progress = lessonProgress[lesson.id];
+      const percent = progress ? Math.round(progress.completedPercent) : '0';
+
+      lessonData = {...lessonData, [lesson.title]: percent + '%'};
+    });
+
+    return {
+      Student_Name: getFullName(student),
+      ...lessonData,
+    };
+  });
 
   downloadCSV(`lesson_progress_${unitId}.csv`, columnNames, table);
-  console.log('lfm', {unitData, lessonProgressByStudent});
 };
 
+// A custom CSV download function that sets up a fake URL with the CSV and triggers a download
+// We are using this instead of `react-csv` because we want to create the CSV when the user clicks the button
+// and not when the component mounts.
 const downloadCSV = (
   fileName: string,
   columnNames: string[],
@@ -71,11 +95,28 @@ export const DownloadProgressCsv: React.FC = () => {
   );
 
   return (
-    <CustomDropdown
+    <ActionDropdown
       name="download-progress-csv"
       labelText={i18n.downloadProgressCsv()}
       size="s"
-      useDSCOButtonAsTrigger={true}
+      options={[
+        {
+          label: i18n.downloadLessonProgressCSV(),
+          icon: {iconName: 'download', iconStyle: 'solid'},
+          value: 'lesson',
+          onClick: () => {
+            downloadLessonProgressCSV();
+          },
+        },
+        {
+          label: i18n.downloadLevelProgressCSV(),
+          icon: {iconName: 'download', iconStyle: 'solid'},
+          value: 'level',
+          onClick: () => {
+            window.open(getDownloadUrl('level'), '_blank');
+          },
+        },
+      ]}
       menuPlacement="right"
       triggerButtonProps={{
         isIconOnly: true,
@@ -89,41 +130,7 @@ export const DownloadProgressCsv: React.FC = () => {
         ariaLabel: i18n.sectionOptionsDropdown(),
         className: styles.downloadCsvDropdown,
       }}
-    >
-      <ul>
-        <li key="lesson test">
-          <button onClick={downloadLessonProgressCSV} type="button">
-            test download lesson
-          </button>
-        </li>
-        <li key="level">
-          <a
-            href={getDownloadUrl('level')}
-            aria-label={i18n.downloadCSV()}
-            type="secondary"
-            target="_blank"
-            rel="noreferrer"
-            download={true}
-            className={styles.dropdownMenuItem}
-          >
-            {i18n.downloadLevelProgressCSV()}
-          </a>
-        </li>
-        <li key="lesson">
-          <a
-            href={getDownloadUrl('lesson')}
-            aria-label={i18n.downloadCSV()}
-            type="secondary"
-            target="_blank"
-            rel="noreferrer"
-            download={true}
-            className={styles.dropdownMenuItem}
-          >
-            {i18n.downloadLessonProgressCSV()}
-          </a>
-        </li>
-      </ul>
-    </CustomDropdown>
+    />
   );
 };
 
