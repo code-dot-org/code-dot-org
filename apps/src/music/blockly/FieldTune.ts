@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom';
 
 import MusicRegistry from '../MusicRegistry';
 import {
-  InstrumentTickEvent,
   InstrumentEventValue,
+  InstrumentTickEvent,
 } from '../player/interfaces/InstrumentEvent';
 import {getNoteName, getTransposedNote} from '../utils/Notes';
 import {
   generateGraphDataFromTune,
-  TuneGraphEvent,
   getNoteAvailableInScaleMode,
+  TuneGraphEvent,
 } from '../utils/Tunes';
 import InstrumentGrid from '../views/InstrumentGrid';
 
