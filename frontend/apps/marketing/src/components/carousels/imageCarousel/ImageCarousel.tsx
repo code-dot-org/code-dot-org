@@ -35,14 +35,16 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
   const slidesData = useMemo(
     () =>
-      slides.filter(Boolean).map(({fields}) => {
-        const {title, file} = fields;
+      slides
+        .filter(slide => slide?.fields?.file?.url)
+        .map(({fields}) => {
+          const {title, description, file} = fields;
 
-        return {
-          id: title,
-          slide: <Image src={file?.url} altText="" />,
-        };
-      }),
+          return {
+            id: title,
+            slide: <Image src={file?.url} altText={description} />,
+          };
+        }),
     [slides],
   );
 
