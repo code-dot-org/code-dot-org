@@ -1,0 +1,23 @@
+{
+  "name": "@code-dot-org/browserslist-config",
+  "version": "0.0.0-alpha.1",
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/browserslist-config/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/browserslist-config"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "stylelint": {
+    "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
+  },
+  "devDependencies": {
+    "browserslist-ga-export": "^5.0.0",
+    "eslint": "^9.16.0",
+    "prettier": "3.4.2"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
