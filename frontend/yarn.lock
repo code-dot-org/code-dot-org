@@ -1282,6 +1282,7 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
+    "@types/react-typist": "npm:^2.0.6"
     blockly: "npm:11.1.1"
     csv-parser: "npm:^3.2.0"
     dotenv: "npm:^16.4.7"
@@ -1291,12 +1292,14 @@ __metadata:
     jest-environment-jsdom: "npm:^29.7.0"
     jsdom: "npm:^20.0.3"
     markdown-to-jsx: "npm:^7.4.7"
+    markdown-to-txt: "npm:^2.0.1"
     next: "npm:^15.2.4"
     playwright-core: "npm:~1.49.1"
     prettier: "npm:3.4.2"
     react: "npm:^18.3.1"
     react-dom: "npm:^18.3.1"
     react-schemaorg: "npm:^2.0.0"
+    react-typist: "npm:^2.0.5"
     schema-dts: "npm:^1.1.5"
     stylelint: "npm:^16.14.1"
     ts-node: "npm:^10.9.2"
@@ -6218,6 +6221,15 @@ __metadata:
   dependencies:
     "@types/react": "npm:*"
   checksum: 10c0/8b416551c60bb6bd8ec10e198c957910cfb271bc3922463040b0d57cf4739cdcd24b13224f8d68f10318926e1ec3cd69af0af79f0291b599a992f8c80d47f1eb
+  languageName: node
+  linkType: hard
+
+"@types/react-typist@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "@types/react-typist@npm:2.0.6"
+  dependencies:
+    "@types/react": "npm:*"
+  checksum: 10c0/0bf2f89bb5df0eb1340ab2c7c8503714829c172fab527200d6e9e8c44a7b654470700ad07bdebfea28b80e29ed587dcc95042f69cd6ac61c537ab0616384ca5e
   languageName: node
   linkType: hard
 
@@ -14587,6 +14599,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.escape@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "lodash.escape@npm:4.0.1"
+  checksum: 10c0/90ade409cec05b6869090476952fdfb84d4d87b1ff4a0e03ebd590f980d9a1248d93ba14579f10d80c6429e4d6af13ba137c28db64cae6dadb71442e54a3ad2b
+  languageName: node
+  linkType: hard
+
 "lodash.escaperegexp@npm:^4.1.2":
   version: 4.1.2
   resolution: "lodash.escaperegexp@npm:4.1.2"
@@ -14633,6 +14652,13 @@ __metadata:
   version: 4.4.2
   resolution: "lodash.truncate@npm:4.4.2"
   checksum: 10c0/4e870d54e8a6c86c8687e057cec4069d2e941446ccab7f40b4d9555fa5872d917d0b6aa73bece7765500a3123f1723bcdba9ae881b679ef120bba9e1a0b0ed70
+  languageName: node
+  linkType: hard
+
+"lodash.unescape@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "lodash.unescape@npm:4.0.1"
+  checksum: 10c0/b050d4e71a1459a397e615833ea296dd679e851ae13f7b2c91d6c2a5cd9a07e9a5be070a1cac3e27ee1c0dd0433d13bc8d3eda426c205cb5c2704a7c077f062a
   languageName: node
   linkType: hard
 
@@ -14852,6 +14878,26 @@ __metadata:
   peerDependencies:
     react: ">= 0.14.0"
   checksum: 10c0/be645e0e07cc54e52f2f934c879b10459e33a83f2592d8d7c03eb9ef2c91cdbd777f667040b3d15a5f6fb3b3d77fb7b3428d49e90573581eb85a21011533ee67
+  languageName: node
+  linkType: hard
+
+"markdown-to-txt@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "markdown-to-txt@npm:2.0.1"
+  dependencies:
+    lodash.escape: "npm:^4.0.1"
+    lodash.unescape: "npm:^4.0.1"
+    marked: "npm:^4.0.14"
+  checksum: 10c0/af5b9c80b0f234123a73652faeb7b3cf74830f297370d4816c957724b206e9f31010a2541a359a19e272db21492e647a81a8a873858b49190f19fe4b66a55902
+  languageName: node
+  linkType: hard
+
+"marked@npm:^4.0.14":
+  version: 4.3.0
+  resolution: "marked@npm:4.3.0"
+  bin:
+    marked: bin/marked.js
+  checksum: 10c0/0013463855e31b9c88d8bb2891a611d10ef1dc79f2e3cbff1bf71ba389e04c5971298c886af0be799d7fa9aa4593b086a136062d59f1210b0480b026a8c5dc47
   languageName: node
   linkType: hard
 
@@ -16893,7 +16939,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.5.10, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -17269,6 +17315,18 @@ __metadata:
     schema-dts: ">=0.7.4"
     typescript: ">=3.1.6"
   checksum: 10c0/34dd300c6154a908a26cd8a7c664e60ed30b583d9b4c3afc0de1ca6a8ce139bb5fac2630483639d73bf79089ff699d86d453e81cbbb6a3bd2c485f92506ff3c0
+  languageName: node
+  linkType: hard
+
+"react-typist@npm:^2.0.5":
+  version: 2.0.5
+  resolution: "react-typist@npm:2.0.5"
+  dependencies:
+    prop-types: "npm:^15.5.10"
+  peerDependencies:
+    react: ^0.14 || ^15.0 || ^16.0
+    react-dom: "*"
+  checksum: 10c0/1c105a87d324e3d296f8013a2a0529857224c55aedf3c6dc179027eeb86a97b5a970c250143cb469b4911eb4a6ef6c6aef8cd5dc87b6fdedf3943557686e78f6
   languageName: node
   linkType: hard
 

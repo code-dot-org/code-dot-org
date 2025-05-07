@@ -2,6 +2,8 @@ import fs from 'fs/promises';
 import path from 'path';
 import YAML from 'yaml';
 
+import {loadLevel, parseLevelData, LevelData} from './level';
+
 /** Defines a lesson in the raw, internal data */
 interface LessonDefinition {
   key: string;
@@ -334,6 +336,8 @@ export interface LessonLevelData {
    * The activity section is the better source of truth for this.
    */
   progression: string;
+  /** The realized level data, when known. */
+  data?: LevelData;
 }
 
 /** Describes a lesson */
@@ -369,6 +373,8 @@ export interface LessonData {
   };
   /** The activity sections within this lesson, which contain levels. */
   activitySections: ActivitySectionData[];
+  /** The levels within the lesson. */
+  levels: LessonLevelData[];
 }
 
 /** Describes a lesson group, which is a set of related lessons */
@@ -391,6 +397,8 @@ export interface UnitData {
   key: string;
   /** The human-readable title of the course/unit */
   title: string;
+  /** The local path for the unit data */
+  path?: string;
   /** The version identifier */
   version: string;
   /** The updated name for the unit (a rare field) */
@@ -448,12 +456,21 @@ export interface UnitData {
   lessons: LessonData[];
 }
 
+export interface UnitLoadInfo {
+  path: string;
+  data: UnitDefinition;
+}
+
 /**
  * Loads the raw course data from a 'script_json' file.
+ *
+ * It may cache the result in its normalized form, and on subsequent calls it
+ * will load from that file instead.
  */
-export const loadUnit: (slug: string) => Promise<UnitDefinition> = async (
+export const loadUnitDefinition: (
   slug: string,
-) => {
+) => Promise<UnitLoadInfo> = async (slug: string) => {
+  console.log('load unit def');
   // File the .script_json file within the ./data path and fallback to the
   // dashboard/config/... path
   const filePath = path.join(
@@ -465,7 +482,10 @@ export const loadUnit: (slug: string) => Promise<UnitDefinition> = async (
 
   try {
     const fileContents = await fs.readFile(filePath, 'utf8');
-    return JSON.parse(fileContents);
+    return {
+      path: filePath,
+      data: JSON.parse(fileContents),
+    };
   } catch (_) {
     // Could not find the file in the ./data path
   }
@@ -521,18 +541,23 @@ export const loadUnit: (slug: string) => Promise<UnitDefinition> = async (
   ret.locale_data.description_student ||= ret.locale_data.student_description;
   ret.locale_data.description_teacher ||= ret.locale_data.teacher_description;
 
-  return ret;
+  return {
+    path: fallbackPath,
+    data: ret,
+  };
 };
 
 /**
  * Parse the raw unit data.
  */
-export const parseUnitData: (data: UnitDefinition) => UnitData = (
+export const parseUnitData: (
   data: UnitDefinition,
-) => {
+  unitPath?: string,
+) => Promise<UnitData> = async (data: UnitDefinition, unitPath: string) => {
   const ret: UnitData = {
     key: data.script.name,
     title: data.locale_data.title,
+    path: unitPath,
     version: data.locale_data.version_title,
     serializedAt: data.script.serialized_at,
     publishedState: data.script.published_state,
@@ -679,7 +704,53 @@ export const parseUnitData: (data: UnitDefinition) => UnitData = (
         }),
     }));
 
+  // Load all level datas asynchronously
+  const levelLoader: (level: LessonLevelData) => Promise<void> = async (
+    level: LessonLevelData,
+  ) => {
+    if (level.levelKeys.length === 0) {
+      return;
+    }
+
+    const key = level.levelKeys[0];
+    const levelInfo = await loadLevel(key);
+    level.data = await parseLevelData(key, levelInfo.data, levelInfo.path);
+  };
+  const levelLoadPromises = []
+    .concat(...ret.lessons.map(lesson => lesson.levels))
+    .map(level => levelLoader(level));
+
+  await Promise.all(levelLoadPromises);
+
   console.log('UNIT', ret);
 
+  return ret;
+};
+
+export const loadUnit: (slug: string) => Promise<UnitData> = async (
+  slug: string,
+) => {
+  console.log('load unit!!', slug, path.join('a', 'b'));
+
+  // Look for a normalized file already there.
+  const cachePath = path.join(process.cwd(), 'cache', 'units', `${slug}.json`);
+
+  console.log('load unit!!');
+  console.log('load unit!!', cachePath);
+  try {
+    const fileContents = await fs.readFile(cachePath, 'utf8');
+    return JSON.parse(fileContents);
+  } catch (_) {
+    // Could not find the file in the ./data path
+  }
+
+  // Try to load the unit from unit definitions
+  const {path: unitPath, data: unit} = await loadUnitDefinition(slug);
+  const ret: UnitData = await parseUnitData(unit, unitPath);
+
+  // Preserve the cached data
+  await fs.writeFile(cachePath, JSON.stringify(ret), 'utf8');
+
+  // Return the unit data
   return ret;
 };

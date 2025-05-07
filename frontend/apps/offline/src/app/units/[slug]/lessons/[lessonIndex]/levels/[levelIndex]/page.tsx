@@ -1,9 +1,9 @@
 import {notFound} from 'next/navigation';
 
-import {loadLevel, parseLevelData} from '@/app/models/level';
-import {loadUnit, parseUnitData} from '@/app/models/unit';
+import {loadLevel} from '@/app/models/level';
+import {loadUnit} from '@/app/models/unit';
 import Header from '@/components/header';
-import Progress from '@/components/progress';
+import Progress from '@/components/header/progress';
 import UnitLevel from '@/components/unit/UnitLevel';
 
 export default async function UnitLevelPage({
@@ -14,15 +14,14 @@ export default async function UnitLevelPage({
   const {slug, lessonIndex, levelIndex} = await params;
 
   // Load unit data
-  let data = {};
+  let unit: UnitData | undefined;
   try {
-    data = await loadUnit(slug);
+    console.log('loading unit', slug);
+    unit = await loadUnit(slug);
   } catch (_) {
     // If the file doesn't exist or is malformed, return 404
     return notFound();
   }
-
-  const unit = parseUnitData(data);
 
   const realLessonIndex = parseInt(lessonIndex) - 1;
   const realLevelIndex = parseInt(levelIndex) - 1;
@@ -30,20 +29,15 @@ export default async function UnitLevelPage({
   const levelKey = level.levelKeys[0];
 
   // Parse level data
-  let rawLevelData = {};
-  let levelPath: string | undefined;
+  let levelData: LevelData | undefined;
   try {
-    const {path, data} = await loadLevel(levelKey);
-    rawLevelData = data;
-    levelPath = path;
+    levelData = await loadLevel(levelKey);
   } catch (_) {
     // If the file doesn't exist or is malformed, return 404
     console.log('CANNOT PARSE LEVEL', levelKey);
     return notFound();
   }
 
-  console.log('LEVEL?', levelPath, levelKey);
-  const levelData = await parseLevelData(levelKey, rawLevelData, levelPath);
   console.log('LEVEL?', levelData);
 
   return (

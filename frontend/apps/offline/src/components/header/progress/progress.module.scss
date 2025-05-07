@@ -5,12 +5,12 @@
   gap: 0.5rem;
 
   .progressHeader {
+    margin: 0;
+
     a {
       color: var(--neutral-base-white);
       text-decoration: none;
     }
-
-    margin: 0;
   }
 
   .progressContainer {
@@ -27,14 +27,29 @@
 
     div {
       display: inline-block;
-      padding: 0;
       line-height: 0;
+      padding: 0;
 
-      a.progressBubble {
+      .progressBubble {
+        border-radius: 50%;
         height: 0.75rem;
         min-width: 0;
         padding: 0;
         width: 0.75rem;
+
+        &.diamond {
+          border-radius: 0;
+          height: 0.6125rem;
+          margin-left: 0.0625rem;
+          margin-right: 0.0625rem;
+          transform: rotate(45deg);
+          width: 0.6125rem;
+
+          i,
+          span {
+            transform: rotate(-45deg);
+          }
+        }
 
         i {
           height: 0;
@@ -47,6 +62,12 @@
         border-radius: 50%;
         height: 1.75rem;
         width: 1.75rem;
+
+        &.diamond {
+          border-radius: 0.125rem;
+          height: 1.25rem;
+          width: 1.25rem;
+        }
       }
     }
 

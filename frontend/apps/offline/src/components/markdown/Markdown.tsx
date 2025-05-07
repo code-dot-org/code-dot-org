@@ -9,6 +9,8 @@ import {
   Heading3,
   Heading4,
   BodyTwoText,
+  StrongText,
+  EmText,
 } from '@code-dot-org/component-library/typography';
 
 import moduleStyles from './markdown.module.scss';
@@ -68,7 +70,10 @@ export const reactMarkdownOptions = {
       },
     },
     strong: {
-      component: BodyTwoText,
+      component: StrongText,
+    },
+    em: {
+      component: EmText,
     },
     a: {
       component: Link,

@@ -75,6 +75,12 @@ const LessonOverview: React.FunctionComponent<LessonOverviewProps> = ({
                             href={`/units/${unitKey}/lessons/${lesson.index + 1}/levels/${levelIndex}`}
                             useAsLink={true}
                             text={levelIndex}
+                            data-path={lesson.levels[levelIndex - 1].data?.path}
+                            className={
+                              lesson.levels[levelIndex - 1].data?.isConcept
+                                ? moduleStyles.diamond
+                                : undefined
+                            }
                           />
                           {levelIndex === activitySection.to && (
                             <WireEndIcon role="presentation" alt="" />

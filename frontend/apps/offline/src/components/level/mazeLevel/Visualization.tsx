@@ -7,15 +7,17 @@ import {LOOK_ID, SVG_ID} from './constants';
 export interface VisualizationProps {
   stepping: boolean;
   running: boolean;
+  stepButton: boolean;
+  finishButton: boolean;
   onRun: () => void;
   onReset: () => void;
   onStep: () => void;
+  onFinish: () => void;
   className?: string;
 }
 
 const Visualization: React.FunctionComponent<VisualizationProps> = forwardRef(
   ({running, stepping, onRun, onReset, onStep, className}, ref) => {
-    console.log('visualization', running, stepping);
     return (
       <div className={className}>
         <svg version="1.1" id={SVG_ID} ref={ref}>
@@ -54,13 +56,23 @@ const Visualization: React.FunctionComponent<VisualizationProps> = forwardRef(
               }}
             />
           )}
-          <Button
-            text="Step"
-            type="secondary"
-            color="black"
-            disabled={running}
-            onClick={onStep}
-          />
+          {!!finishButton && (
+            <Button
+              text="Finish"
+              type="secondary"
+              color="black"
+              onClick={onFinish}
+            />
+          )}
+          {stepButton !== false && (
+            <Button
+              text="Step"
+              type="secondary"
+              color="black"
+              disabled={running}
+              onClick={onStep}
+            />
+          )}
         </div>
       </div>
     );

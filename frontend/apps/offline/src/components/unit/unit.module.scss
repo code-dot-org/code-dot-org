@@ -58,11 +58,11 @@ $wire-color: var(--background-brand-purple-light);
   }
 
   a.activityButton {
-    width: 5rem;
+    color: var(--text-neutral-primary);
     min-width: 5rem;
     padding-left: 0;
     padding-right: 0;
-    color: var(--text-neutral-primary);
+    width: 5rem;
   }
 }
 
@@ -111,6 +111,18 @@ $wire-color: var(--background-brand-purple-light);
         a {
           margin-top: 0.75rem;
           width: 2.75rem;
+
+          &.diamond {
+            height: 2.25rem;
+            margin-left: -0.25rem;
+            margin-right: -0.25rem;
+            transform: rotate(45deg);
+            width: 2.25rem;
+
+            span {
+              transform: rotate(-45deg);
+            }
+          }
         }
 
         &:last-child a + svg {

@@ -11,6 +11,7 @@ import LevelProvider from '@/providers/LevelProvider';
 
 import KarelLevel from './karelLevel';
 import MazeLevel from './mazeLevel';
+import PanelsLevel from './panelsLevel';
 import StandaloneVideoLevel from './standaloneVideoLevel';
 import StarWarsLevel from './starWarsLevel';
 
@@ -48,6 +49,7 @@ const Level: React.FunctionComponent<LevelProps> = ({levelData}) => (
       {levelData?.type === 'StandaloneVideo' && (
         <StandaloneVideoLevel levelData={levelData} />
       )}
+      {levelData?.type === 'Panels' && <PanelsLevel levelData={levelData} />}
     </div>
   </LevelProvider>
 );

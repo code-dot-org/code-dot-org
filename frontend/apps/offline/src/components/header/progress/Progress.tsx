@@ -106,6 +106,7 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
               className={classNames(
                 i === levelIndex ? moduleStyles.currentLevel : undefined,
                 moduleStyles.progressBubble,
+                level.data?.isConcept ? moduleStyles.diamond : undefined,
               )}
               type="secondary"
               color="gray"

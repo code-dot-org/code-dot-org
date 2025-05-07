@@ -37,6 +37,25 @@ export interface VideoData {
   locale: string;
 }
 
+export type PanelLayout =
+  | 'text-top-left'
+  | 'text-top-center'
+  | 'text-top-right'
+  | 'text-bottom-left'
+  | 'text-bottom-center'
+  | 'text-bottom-right';
+
+export interface PanelData {
+  imageUrl: string;
+  text: string;
+  key: string;
+  nextUrl?: string;
+  layout?: PanelLayout;
+  dark?: boolean;
+  typing?: boolean;
+  fadeInOverPrevious?: boolean;
+}
+
 /** Describes Maze level tile data in serialized mazes */
 export interface MazeTileData {
   tileType: number;
@@ -69,6 +88,8 @@ export interface LevelData {
   shortInstructions: string;
   /** Whether or not we should highlight the instructions before the student can continue */
   instructionsImportant: boolean;
+  /** Whether or not this is a concept level */
+  isConcept: boolean;
   /** Hints to help folks progress within levels. */
   hints: HintData[];
   /** The path to the level data, if it is locally sourced. */
@@ -77,6 +98,8 @@ export interface LevelData {
   videoKey?: string;
   /** The metadata about the associated video. */
   videoData?: VideoData;
+  /** The metadata about the associated panels. */
+  panels?: PanelData[];
   /** Other embedded levels, such as multiple choice or bubble levels */
   containedLevelNames?: string[];
   /** Maze level data. */
@@ -91,28 +114,38 @@ export interface LevelLoadInfo {
 }
 
 /** Loads a level file. */
-export const loadLevel: (
+export const loadLevelDefinition: (
   key: string,
   extension?: string,
-) => Promise<LevelLoadInfo> = async (
-  key: string,
-  extension: string = 'level',
-) => {
-  // File the .level file within the ./data path
-  const filePath = path.join(
-    process.cwd(),
-    'data',
-    'levels',
-    `${key}.${extension}`,
-  );
+) => Promise<LevelLoadInfo> = async (key: string, extension?: string) => {
+  // We sometimes replace certain characters in keys when building paths
+  const normalizedKey = key.replaceAll('-', '_');
 
-  try {
-    return {
-      path: filePath,
-      data: await fs.readFile(filePath, 'utf8'),
-    };
-  } catch (_) {
-    // Could not find the level data in the ./data path
+  // The possible extensions to look out for
+  const extensions = extension
+    ? [extension]
+    : ['level', 'multi', 'bubble_choice'];
+
+  // File the .level file within the ./data path
+  for (const k of [key, normalizedKey]) {
+    for (const extension of extensions) {
+      const filePath = path.join(
+        process.cwd(),
+        'data',
+        'levels',
+        `${k}.${extension}`,
+      );
+
+      try {
+        return {
+          path: filePath,
+          data: await fs.readFile(filePath, 'utf8'),
+        };
+      } catch (_) {
+        // Could not find the level data in the ./data path
+        // Keep looking
+      }
+    }
   }
 
   const levelTypes = [
@@ -153,39 +186,45 @@ export const loadLevel: (
     '../../scripts',
   ];
 
-  for (const levelType of levelTypes) {
-    try {
-      const fallbackPath = path.join(
-        process.cwd(),
-        '..',
-        '..',
-        '..',
-        'dashboard',
-        'config',
-        'levels',
-        'custom',
-        levelType,
-        `${key}.${extension}`,
-      );
+  for (const k of [key, normalizedKey]) {
+    for (const levelType of levelTypes) {
+      for (const extension of extensions) {
+        try {
+          const fallbackPath = path.join(
+            process.cwd(),
+            '..',
+            '..',
+            '..',
+            'dashboard',
+            'config',
+            'levels',
+            'custom',
+            levelType,
+            `${k}.${extension}`,
+          );
 
-      try {
-        return {
-          path: fallbackPath,
-          data: await fs.readFile(fallbackPath, 'utf8'),
-        };
-      } catch (_) {
-        // Attempt the lowercase version of the level key
-        return {
-          path: fallbackPath.toLowerCase(),
-          data: await fs.readFile(fallbackPath.toLowerCase(), 'utf8'),
-        };
+          try {
+            return {
+              path: fallbackPath,
+              data: await fs.readFile(fallbackPath, 'utf8'),
+            };
+          } catch (_) {
+            // Attempt the lowercase version of the level key
+            return {
+              path: fallbackPath.toLowerCase(),
+              data: await fs.readFile(fallbackPath.toLowerCase(), 'utf8'),
+            };
+          }
+        } catch (_) {
+          // Keep trying
+        }
       }
-    } catch (_) {
-      // Keep trying
     }
   }
 
-  throw new Error(`Cannot find the ${extension} file for key ${key}`);
+  throw new Error(
+    `Cannot find the ${extension || 'level'} file for key ${key}`,
+  );
 };
 
 /**
@@ -239,6 +278,8 @@ export const loadVideo: (key: string) => Promise<VideoDefinition> = async (
   return record;
 };
 
+export const conceptLevelTypes: string[] = ['StandaloneVideo', 'Panels'];
+
 /**
  * Parses a Code.org level file.
  */
@@ -262,17 +303,23 @@ export const parseLevelData: (
     key: key,
     type: xml.querySelector(':root')?.tagName || 'Maze',
     longInstructions:
-      config.properties.long_instructions ||
-      config.properties.short_instructions ||
+      config.properties?.long_instructions ||
+      config.properties?.short_instructions ||
       '',
-    shortInstructions: config.properties.short_instructions || '',
-    containedLevelNames: config.properties.contained_level_names,
-    videoKey: config.properties.video_key,
+    shortInstructions: config.properties?.short_instructions || '',
+    containedLevelNames: config.properties?.contained_level_names,
+    videoKey: config.properties?.video_key,
+    isConcept: false,
     instructionsImportant: !!(
-      config.properties.instructions_important === 'true' ||
-      config.properties.instructions_important === true
+      config.properties?.instructions_important === 'true' ||
+      config.properties?.instructions_important === true
     ),
   };
+
+  // Is this a concept level?
+  if (conceptLevelTypes.includes(ret.type)) {
+    ret.isConcept = true;
+  }
 
   // Retain path, if it is given to us
   if (path) {
@@ -280,16 +327,18 @@ export const parseLevelData: (
   }
 
   // Parse hint data
-  ret.hints = JSON.parse(config.properties.authored_hints || '[]').map(hint => {
-    const hintData = {};
-    hintData.class = hint.hint_class;
-    hintData.id = hint.hint_id;
-    hintData.path = hint.hint_path ? JSON.parse(hint.hint_path) : undefined;
-    hintData.type = hint.hint_type;
-    hintData.video = hint.hint_video ? hint.hint_video : undefined;
-    hintData.markdown = hint.hint_markdown;
-    return hintData;
-  });
+  ret.hints = JSON.parse(config.properties?.authored_hints || '[]').map(
+    hint => {
+      const hintData = {};
+      hintData.class = hint.hint_class;
+      hintData.id = hint.hint_id;
+      hintData.path = hint.hint_path ? JSON.parse(hint.hint_path) : undefined;
+      hintData.type = hint.hint_type;
+      hintData.video = hint.hint_video ? hint.hint_video : undefined;
+      hintData.markdown = hint.hint_markdown;
+      return hintData;
+    },
+  );
 
   // Parse maze data for such levels
   let isBlockly = false;
@@ -300,15 +349,15 @@ export const parseLevelData: (
   ) {
     isBlockly = true;
     ret.mazeData = {
-      skin: config.properties.skin,
-      maze: config.properties.maze
-        ? JSON.parse(config.properties.maze)
+      skin: config.properties?.skin,
+      maze: config.properties?.maze
+        ? JSON.parse(config.properties?.maze)
         : undefined,
-      serializedMaze: config.properties.serialized_maze
-        ? JSON.parse(config.properties.serialized_maze)
+      serializedMaze: config.properties?.serialized_maze
+        ? JSON.parse(config.properties?.serialized_maze)
         : undefined,
-      startDirection: config.properties.start_direction
-        ? parseInt(config.properties.start_direction)
+      startDirection: config.properties?.start_direction
+        ? parseInt(config.properties?.start_direction)
         : undefined,
     };
   }
@@ -335,6 +384,11 @@ export const parseLevelData: (
       youTubeId: videoData.youtube,
       locale: videoData.locale,
     };
+  }
+
+  // Read panel data
+  if (config.properties?.panels) {
+    ret.panels = config.properties.panels as PanelData[];
   }
 
   // Embed associated level data
@@ -367,6 +421,37 @@ export const parseLevelData: (
     ret.multipleChoice = multipleChoice;
   }
 
-  console.log('LEVEL DATA', config, ret);
+  return ret;
+};
+
+export const loadLevel: (
+  slug: string,
+  extension?: string,
+) => Promise<LevelData> = async (slug: string, extension?: string) => {
+  console.log('load unit!!', slug, path.join('a', 'b'));
+
+  // Look for a normalized file already there.
+  const cachePath = path.join(process.cwd(), 'cache', 'levels', `${slug}.json`);
+
+  console.log('load unit!!');
+  console.log('load unit!!', cachePath);
+  try {
+    const fileContents = await fs.readFile(cachePath, 'utf8');
+    return JSON.parse(fileContents);
+  } catch (_) {
+    // Could not find the file in the ./data path
+  }
+
+  // Try to load the unit from unit definitions
+  const {path: levelPath, data: level} = await loadLevelDefinition(
+    slug,
+    extension,
+  );
+  const ret: LevelData = await parseLevelData(slug, level, levelPath);
+
+  // Preserve the cached data
+  await fs.writeFile(cachePath, JSON.stringify(ret), 'utf8');
+
+  // Return the level data
   return ret;
 };
