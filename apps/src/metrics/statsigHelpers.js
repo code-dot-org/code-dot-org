@@ -10,7 +10,7 @@ export function getUserType() {
   return user_type_element ? user_type_element.dataset.userType : null;
 }
 
-export function findOrCreateStableId() {
+export function getStableId() {
   const scriptTag = document.querySelector('script[data-statsig-stable-id]');
   return scriptTag?.dataset?.statsigStableId || null;
 }

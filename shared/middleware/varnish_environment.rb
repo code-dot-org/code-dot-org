@@ -85,10 +85,9 @@ class VarnishEnvironment < Sinatra::Base
     end
 
     def log_ge_region_select_event(ge_region)
-      session = request.session
       Metrics::Events.log_event(
         event_name: 'Global Edition Region Selected',
-        session: session,
+        session: request.session,
         metadata: {
           region: ge_region,
           locale: param_locale,
