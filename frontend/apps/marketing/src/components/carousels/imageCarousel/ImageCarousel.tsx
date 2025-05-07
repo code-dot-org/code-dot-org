@@ -3,7 +3,9 @@
 import '@code-dot-org/component-library/carousel/index.css';
 import React, {useMemo} from 'react';
 
-import DSCOCarousel from '@code-dot-org/component-library/carousel';
+import DSCOCarousel, {
+  CarouselProps,
+} from '@code-dot-org/component-library/carousel';
 
 import Image from '@/components/image';
 import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
@@ -12,7 +14,7 @@ export type ImageCarouselProps = {
   /** Carousel content w/ fields from Contentful */
   slides: ExperienceAsset[];
   /** Number of slides to show at once */
-  slidesPerView?: number;
+  slidesPerView?: Extract<CarouselProps['slidesPerView'], number>;
 };
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({
@@ -47,8 +49,8 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
   return (
     <DSCOCarousel
       showNavArrows={true}
-      slidesPerView={slidesPerView || 2}
-      slidesPerGroup={slidesPerView || 2}
+      slidesPerView={slidesPerView}
+      slidesPerGroup={1}
       allowTouchMove
       slides={slidesData}
     />
