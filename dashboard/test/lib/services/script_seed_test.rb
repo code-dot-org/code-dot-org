@@ -1531,7 +1531,7 @@ module Services
       end
 
       sl_num = 1
-      skill = create :skill, key: "#{lesson.name}-skill-#{1}"
+      skill = create :skill, key: "#{name_prefix}-skill-#{1}"
       script.lessons.each do |lesson|
         (1..num_activities_per_lesson).each do |activity_pos|
           activity = lesson.lesson_activities.create(
