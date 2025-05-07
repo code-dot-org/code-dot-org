@@ -7,7 +7,7 @@ import {
   InstrumentTickEvent,
   InstrumentEventValue,
 } from '../player/interfaces/InstrumentEvent';
-import {getNoteName, getNotesInKey} from '../utils/Notes';
+import {getNoteName, getNotesInKey, getTransposedNote} from '../utils/Notes';
 import {generateGraphDataFromTune, TuneGraphEvent} from '../utils/Tunes';
 import InstrumentGrid from '../views/InstrumentGrid';
 
@@ -25,11 +25,6 @@ const DISPLAY_OCTAVES = 3;
 interface FieldTuneOptions {
   currentValue: InstrumentEventValue;
 }
-
-const relativeToMidiNote = (note: number): number => {
-  const key = MusicRegistry.player.getKey();
-  return note + 60 + key;
-};
 
 /**
  * A custom field that renders the tune selection UI, used in the
@@ -135,7 +130,7 @@ export default class FieldTune extends GoogleBlockly.Field {
 
     const mapFn = (event: InstrumentTickEvent) => ({
       ...event,
-      note: relativeToMidiNote(event.note),
+      note: getTransposedNote(key, event.note),
     });
 
     const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({

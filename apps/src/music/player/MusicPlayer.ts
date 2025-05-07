@@ -3,13 +3,12 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 
 import {DEFAULT_CHORD_LENGTH, MIN_BPM, MAX_BPM} from '../constants';
-import MusicRegistry from '../MusicRegistry';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
 import {
   getPitchName,
   getNotesInKey,
-  getTranposedNote,
+  getTransposedNote,
   Key,
 } from '../utils/Notes';
 
@@ -45,11 +44,6 @@ import {
 
 const DEFAULT_BPM = 120;
 const DEFAULT_KEY = Key.C;
-
-const relativeToMidiNote = (note: number): number => {
-  const key = MusicRegistry.player.getKey();
-  return note + 60 + key;
-};
 
 /**
  * Main music player component which maintains the list of playback events and
@@ -425,8 +419,8 @@ export default class MusicPlayer {
     const samples: SampleEvent[] = [];
 
     events.forEach(event => {
-      const tranposedNote = getTranposedNote(this.key, event.noteOffset);
-      const sampleUrl = this.getSampleForNote(tranposedNote, instrument);
+      const transposedNote = getTransposedNote(this.key, event.noteOffset);
+      const sampleUrl = this.getSampleForNote(transposedNote, instrument);
       if (sampleUrl !== null) {
         const eventWhen = eventStart + (event.position - 1) / 16;
         samples.push({
@@ -474,7 +468,7 @@ export default class MusicPlayer {
       scaleMode === 'simple'
         ? (event: InstrumentTickEvent) =>
             getNotesInKey(this.key, START_OCTAVE, DISPLAY_OCTAVES).includes(
-              relativeToMidiNote(event.note)
+              getTransposedNote(this.key, event.note)
             )
         : () => true;
 
@@ -483,7 +477,7 @@ export default class MusicPlayer {
       effects,
       events: events.filter(filterFn).map(event => {
         return {
-          notes: [getPitchName(relativeToMidiNote(event.note))],
+          notes: [getPitchName(getTransposedNote(this.key, event.note))],
           playbackPosition: when + (event.tick - 1) / 16,
         };
       }),

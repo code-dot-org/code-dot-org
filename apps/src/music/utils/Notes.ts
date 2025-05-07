@@ -47,8 +47,11 @@ export const getPitchName = (note: number): string =>
 
 // Transpose the note by adding the note offset to the target note defined
 // by the target key.
-export const getTranposedNote = (targetKey: Key, noteOffset: number) =>
+export const getTransposedNote = (targetKey: Key, noteOffset: number) =>
   targetKey + ROOT_NOTE_START + noteOffset;
+
+export const getUntransposedNote = (targetKey: Key, note: number) =>
+  note - ROOT_NOTE_START - targetKey;
 
 /**
  * Returns diatonic notes in the given key and number of octaves.

@@ -12,10 +12,14 @@ import React, {
 import MusicRegistry from '../../MusicRegistry';
 import {
   InstrumentEventValue,
-  InstrumentTickEvent,
   ScaleMode,
 } from '../../player/interfaces/InstrumentEvent';
-import {getPitchName, isBlackKey, getNotesInKey} from '../../utils/Notes';
+import {
+  getPitchName,
+  isBlackKey,
+  getTransposedNote,
+  getUntransposedNote,
+} from '../../utils/Notes';
 import LoadingOverlay from '../LoadingOverlay';
 import PreviewControlsV2 from '../PreviewControlsV2';
 import EaseIntoView from '../util/EaseIntoView';
@@ -32,19 +36,6 @@ interface Props {
 }
 
 export type EditorType = 'drums' | 'notes';
-
-const START_OCTAVE = 4;
-const DISPLAY_OCTAVES = 3;
-
-const relativeToMidiNote = (note: number): number => {
-  const key = MusicRegistry.player.getKey();
-  return note + 60 - key;
-};
-
-const midiToRelativeNote = (midiNote: number): number => {
-  const key = MusicRegistry.player.getKey();
-  return midiNote - 60 - key;
-};
 
 /**
  * Instrument grid editor for selecting notes in a pattern.
@@ -63,6 +54,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   //const [scaleMode, setScaleMode] = useState<ScaleMode>('simple');
 
   const scaleMode = currentValue.scaleMode;
+  const key = MusicRegistry.player.getKey();
 
   useEffect(() => {
     onChange(currentValue);
@@ -95,10 +87,11 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     (note: number, tick: number) => {
       const newEvents = [...currentValue.events];
       const index = newEvents.findIndex(
-        event => relativeToMidiNote(event.note) === note && event.tick === tick
+        event =>
+          getTransposedNote(key, event.note) === note && event.tick === tick
       );
 
-      const relativeNote = midiToRelativeNote(note);
+      const relativeNote = getUntransposedNote(key, note);
 
       if (index !== -1) {
         newEvents.splice(index, 1);
@@ -108,23 +101,17 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       }
       setCurrentValue({...currentValue, events: newEvents});
     },
-    [currentValue]
+    [currentValue, key]
   );
 
   const isSelected = (note: number, tick: number) => {
     return !!currentValue.events.find(
-      event => relativeToMidiNote(event.note) === note && event.tick === tick
+      event =>
+        getTransposedNote(key, event.note) === note && event.tick === tick
     );
   };
 
   const startPreview = useCallback(() => {
-    /*const currentValueRelative = JSON.parse(JSON.stringify(currentValue));
-    currentValueRelative.events = currentValueRelative.events.map(
-      (event: InstrumentTickEvent) => ({
-        ...event,
-        note: relativeToMidiNote(event.note),
-      })
-    );*/
     MusicRegistry.player.previewNotes(
       currentValue,
       (tick: number) => setCurrentPreviewTick(tick),
@@ -166,7 +153,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         className={styles['cell-outer']}
         onClick={() =>
           MusicRegistry.player.previewNote(
-            midiToRelativeNote(props.note),
+            getUntransposedNote(key, props.note),
             currentValue.instrument
           )
         }
