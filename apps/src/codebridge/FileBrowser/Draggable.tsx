@@ -72,7 +72,7 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
       className: classNames(moduleStyles.draggable, className),
       ...listeners,
       ...attributes,
-      onKeyDown: {handleKeyDown},
+      onKeyDown: handleKeyDown,
     },
     children
   );
@@ -80,17 +80,23 @@ export const Draggable: React.FunctionComponent<DraggableProps> = ({
 
 type NotDraggableProps = {
   children: React.ReactNode;
-  handleKeyDown?: (event: React.KeyboardEvent) => void;
+  onKeyDown?: (event: React.KeyboardEvent) => void;
 };
 
 export const NotDraggable: React.FunctionComponent<NotDraggableProps> = ({
   children,
-  handleKeyDown,
+  onKeyDown,
 }: NotDraggableProps) => {
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (onKeyDown) {
+      onKeyDown(event);
+    }
+  };
+
   return React.createElement(
     'div',
     {
-      onkeydown: handleKeyDown,
+      onKeyDown: handleKeyDown,
       className: moduleStyles.notDraggable,
       tabIndex: 0,
       role: 'button',

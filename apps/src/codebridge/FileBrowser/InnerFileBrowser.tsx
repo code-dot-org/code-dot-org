@@ -64,12 +64,6 @@ const InnerFileBrowser = React.memo(
                       ? moduleStyles.dragging
                       : undefined
                   }
-                  onKeyDown={event => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      openFile(f.id);
-                      event.preventDefault();
-                    }
-                  }}
                 >
                   <FolderRow
                     item={f}
@@ -110,6 +104,12 @@ const InnerFileBrowser = React.memo(
                 data={{id: f.id, type: DragType.FILE, parentId: f.folderId}}
                 key={f.id}
                 Component="div"
+                onKeyDown={event => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    openFile(f.id);
+                    event.preventDefault();
+                  }
+                }}
               >
                 <FileRow {...fileRowProps} />
               </MaybeDraggable>
