@@ -1152,19 +1152,64 @@
       }
     }
   ],
-  "skills": [],
-  "levels_skills": [
+  "skills": [
+    {
+      "description": "Declares variables with conventional names",
+      "evaluation_criteria": "Does the student's work on this level demonstrate the skill?",
+      "concept": "Variables",
+      "seeding_key": {
+        "skill.key": "test-serialize-seeding-json-skill-1"
+      }
+    }
+  ],
+  "levels_skills":  [
     {
       "seeding_key": {
-        "level.key": "test-serialize-seeding-json-level-0",
-        "skill.key": "test-serialize-seeding-json-skill-0",
+        "level.key": "test-serialize-seeding-json_blockly_10",
+        "skill.key": "test-serialize-seeding-json-skill-1"
       }
     },
     {
       "seeding_key": {
-        "level.key": "test-serialize-seeding-json-level-0",
-        "skill.key": "test-serialize-seeding-json-skill-1",
+        "level.key": "test-serialize-seeding-json_blockly_12",
+        "skill.key": "test-serialize-seeding-json-skill-1"
       }
     },
+    {
+      "seeding_key": {
+        "level.key": "test-serialize-seeding-json_blockly_14",
+        "skill.key": "test-serialize-seeding-json-skill-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-serialize-seeding-json_blockly_16",
+        "skill.key": "test-serialize-seeding-json-skill-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-serialize-seeding-json_blockly_2",
+        "skill.key": "test-serialize-seeding-json-skill-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-serialize-seeding-json_blockly_4",
+        "skill.key": "test-serialize-seeding-json-skill-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-serialize-seeding-json_blockly_6",
+        "skill.key": "test-serialize-seeding-json-skill-1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-serialize-seeding-json_blockly_8",
+        "skill.key": "test-serialize-seeding-json-skill-1"
+      }
+    }
   ]
 }

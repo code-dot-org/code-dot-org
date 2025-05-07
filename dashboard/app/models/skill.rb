@@ -8,6 +8,11 @@
 #  concept             :string(255)
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  key                 :string(255)      not null
+#
+# Indexes
+#
+#  index_skills_on_key  (key) UNIQUE
 #
 class Skill < ApplicationRecord
   validates :description, presence: true
@@ -15,7 +20,7 @@ class Skill < ApplicationRecord
   has_and_belongs_to_many :levels, join_table: 'levels_skills'
 
   def seeding_key(seed_context)
-    {'skill.key': id}.stringify_keys
+    {'skill.key': key}.stringify_keys
   end
 
   def self.setup

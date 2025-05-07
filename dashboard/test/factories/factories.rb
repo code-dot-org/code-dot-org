@@ -1065,8 +1065,8 @@ FactoryBot.define do
   end
 
   factory :levels_skill do
-    level
-    skill
+    association :level
+    association :skill
   end
 
   factory :unit, aliases: [:script] do
