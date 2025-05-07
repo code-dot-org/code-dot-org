@@ -463,7 +463,7 @@ export default class MusicPlayer {
     instrumentEvent: InstrumentEvent
   ): SamplerSequence | null {
     const {value, effects, when} = instrumentEvent;
-    const {instrument, events, scaleMode} = value;
+    const {instrument, events, relative, scaleMode} = value;
     const filterFn =
       scaleMode === 'simple'
         ? (event: InstrumentTickEvent) =>
@@ -476,8 +476,11 @@ export default class MusicPlayer {
       instrument,
       effects,
       events: events.filter(filterFn).map(event => {
+        const note = relative
+          ? getTransposedNote(this.key, event.note)
+          : event.note;
         return {
-          notes: [getPitchName(getTransposedNote(this.key, event.note))],
+          notes: [getPitchName(note)],
           playbackPosition: when + (event.tick - 1) / 16,
         };
       }),

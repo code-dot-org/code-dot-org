@@ -51,7 +51,6 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   const [currentValue, setCurrentValue] = useState(initialValue);
   const [isLoading, setIsLoading] = useState(false);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
-  //const [scaleMode, setScaleMode] = useState<ScaleMode>('simple');
 
   const scaleMode = currentValue.scaleMode;
   const key = MusicRegistry.player.getKey();
@@ -91,13 +90,12 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
           getTransposedNote(key, event.note) === note && event.tick === tick
       );
 
-      const relativeNote = getUntransposedNote(key, note);
-
       if (index !== -1) {
         newEvents.splice(index, 1);
       } else {
+        const relativeNote = getUntransposedNote(key, note);
         newEvents.push({note: relativeNote, tick});
-        MusicRegistry.player.previewNote(relativeNote, currentValue.instrument);
+        MusicRegistry.player.previewNote(note, currentValue.instrument);
       }
       setCurrentValue({...currentValue, events: newEvents});
     },

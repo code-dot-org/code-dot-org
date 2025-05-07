@@ -18,6 +18,8 @@ export interface InstrumentEventValue {
   length: 1 | 2;
   /** If the notes were partially generated using AI */
   ai?: boolean;
+  /** If the notes are relative, e.g. 0 is the tonic for the current key. */
+  relative?: boolean;
   /** For a melodic event, the notes shown. */
   scaleMode?: ScaleMode;
 }
