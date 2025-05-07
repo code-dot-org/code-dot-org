@@ -18,7 +18,7 @@ export type ActionBlockContentfulProps = ActionBlockProps & {
   primaryButton: LinkEntry;
   secondaryButton: LinkEntry;
   background: EntryFields.Text;
-  publishedDate: EntryFields.Date | undefined;
+  publishedDate?: EntryFields.Date;
 };
 
 const ActionBlock: React.FC<ActionBlockContentfulProps> = ({

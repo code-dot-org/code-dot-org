@@ -21,7 +21,7 @@ export type FullWidthActionBlockContentfulProps = Omit<
   primaryButton: LinkEntry;
   secondaryButton: LinkEntry;
   background: EntryFields.Text;
-  publishedDate: EntryFields.Date | undefined;
+  publishedDate?: EntryFields.Date;
 };
 
 const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
