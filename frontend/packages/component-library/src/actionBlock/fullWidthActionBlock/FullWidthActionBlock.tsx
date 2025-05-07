@@ -7,6 +7,7 @@ import {
   getImage,
   getButtons,
   getDetail,
+  getTag,
 } from '../ActionBlock';
 import {ActionBlockProps} from '../types';
 
@@ -31,6 +32,7 @@ export const FullWidthActionBlock: React.FC<ActionBlockProps> = ({
   description,
   image,
   overline,
+  tag,
   details,
   primaryButton,
   secondaryButton,
@@ -44,6 +46,7 @@ export const FullWidthActionBlock: React.FC<ActionBlockProps> = ({
       className={classNames(moduleStyles.fullWidth, className)}
       {...HTMLAttributes}
     >
+      {tag && getTag(tag)}
       {image && getImage(image)}
       <div>
         {overline && (

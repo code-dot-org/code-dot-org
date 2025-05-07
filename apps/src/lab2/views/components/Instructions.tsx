@@ -244,29 +244,31 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              <EnhancedSafeMarkdown
-                markdown={text}
-                className={moduleStyles.markdownText}
-                handleInstructionsTextClick={handleInstructionsTextClick}
-              />
-              <PredictQuestion
-                predictSettings={predictSettings}
-                predictResponse={predictResponse}
-                setPredictResponse={setPredictResponse}
-                predictAnswerLocked={predictAnswerLocked}
-              />
-              {predictSettings?.isPredictLevel && (
-                <InstructorsOnly>
-                  <div
-                    className={classNames(
-                      moduleStyles['message-' + theme],
-                      moduleStyles.predictSummary
-                    )}
-                  >
-                    <PredictSummary />
-                  </div>
-                </InstructorsOnly>
-              )}
+              <div className={moduleStyles.scrollArea}>
+                <EnhancedSafeMarkdown
+                  markdown={text}
+                  className={moduleStyles.markdownText}
+                  handleInstructionsTextClick={handleInstructionsTextClick}
+                />
+                <PredictQuestion
+                  predictSettings={predictSettings}
+                  predictResponse={predictResponse}
+                  setPredictResponse={setPredictResponse}
+                  predictAnswerLocked={predictAnswerLocked}
+                />
+                {predictSettings?.isPredictLevel && (
+                  <InstructorsOnly>
+                    <div
+                      className={classNames(
+                        moduleStyles['message-' + theme],
+                        moduleStyles.predictSummary
+                      )}
+                    >
+                      <PredictSummary />
+                    </div>
+                  </InstructorsOnly>
+                )}
+              </div>
               {bottomComponent && <div>{bottomComponent}</div>}
             </div>
           </div>

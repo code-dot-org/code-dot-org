@@ -12,6 +12,8 @@ export interface ActionBlockProps extends HTMLAttributes<HTMLDivElement> {
   image?: ImageProps;
   /** Action Block overline */
   overline?: string;
+  /** Action Block tag */
+  tag?: string;
   /** Action Block Details */
   details?: {
     /** Detail label */

@@ -13,9 +13,9 @@ import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 type TabGroupContentfulProps = {
   tabs?: (BaseEntry & {
     fields: {
-      ctaLink: LinkEntry;
+      ctaLink?: LinkEntry;
       description: string;
-      image: ExperienceAsset;
+      image?: ExperienceAsset;
       tabLabel: string;
       title: string;
     };
@@ -33,17 +33,21 @@ const TabGroupContentful: React.FunctionComponent<TabGroupContentfulProps> = ({
         tabContent: {
           title: tab.fields.title,
           description: tab.fields.description,
-          image: {
-            src: `https:${tab.fields.image.fields?.file?.url}`,
-            alt: tab.fields.image.fields?.description,
-          },
-          button: {
-            href: tab.fields.ctaLink.fields?.primaryTarget || '#',
-            text: tab.fields.ctaLink.fields?.label || '#',
-            iconRight: tab.fields.ctaLink.fields?.isThisAnExternalLink
-              ? externalLinkIconProps
-              : undefined,
-          },
+          image: tab.fields.image
+            ? {
+                src: `https:${tab.fields.image.fields?.file?.url}`,
+                alt: tab.fields.image.fields?.description,
+              }
+            : undefined,
+          button: tab.fields.ctaLink
+            ? {
+                href: tab.fields.ctaLink.fields?.primaryTarget || '#',
+                text: tab.fields.ctaLink.fields?.label || '#',
+                iconRight: tab.fields.ctaLink.fields?.isThisAnExternalLink
+                  ? externalLinkIconProps
+                  : undefined,
+              }
+            : undefined,
         },
       })),
     [tabs],

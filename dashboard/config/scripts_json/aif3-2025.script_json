@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-05 22:16:50 UTC",
+    "serialized_at": "2025-05-06 21:49:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1262,7 +1262,7 @@
       "key": "8c929def-5fad-4302-8c08-97230f952ca7",
       "position": 3,
       "properties": {
-        "description": "Computers rely on both memory and storage to manage data efficiently. While they might seem similar, they have very different roles in how a computer operates.",
+        "description": "Computers rely on storage to manage data efficiently.",
         "remarks": true
       },
       "seeding_key": {
@@ -1274,7 +1274,7 @@
       "key": "68357f72-f130-4c37-94fb-702fee4cd616",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *memory* and *storage*."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *storage*."
       },
       "seeding_key": {
         "activity_section.key": "68357f72-f130-4c37-94fb-702fee4cd616",
@@ -1285,7 +1285,7 @@
       "key": "9d5e2970-c062-4734-b8d2-2d48b6c1f221",
       "position": 5,
       "properties": {
-        "description": "Let’s take a look at actual storage and memory components. These components play a crucial role in how a computer accesses and saves information. Everything from opening a file to loading a game depends on memory and storage working together. In this activity, you'll explore these components and complete the analogy to explain their roles.",
+        "description": "Let’s take a look at actual storage components. These components play a crucial role in how a computer accesses and saves information. Everything from opening a file to loading a game depends on memory and storage working together. In this activity, you'll explore these components and complete the analogy to explain their roles.",
         "remarks": true
       },
       "seeding_key": {
@@ -1297,7 +1297,7 @@
       "key": "5a12b4dd-171b-4f70-be8d-e97c60514e7c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 1. Each student will read about storage and memory components and take notes by by matching the phrase in the word bank to the correct analogy for each in the Storage & Memory section of their activity guide. Have students complete the Storage and Memory rows in their Unit Guide by providing at least one example of each.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 1. Each student will read about storage components and take notes by by matching the phrase in the word bank to the correct analogy for each in the Storage section of their activity guide. Have students complete the Storage rows in their Unit Guide by providing at least one example of each.",
         "progression_name": "Storage Components"
       },
       "seeding_key": {
@@ -1309,7 +1309,7 @@
       "key": "37425845-648d-4415-8aba-580740674c93",
       "position": 7,
       "properties": {
-        "description": "Now that we've talked about storage and memory, let's move on to another critical part of a computer—processing components.",
+        "description": "Now that we've talked about storage, let's move on to another critical part of a computer—processing components.",
         "remarks": true
       },
       "seeding_key": {
@@ -1362,7 +1362,7 @@
       "key": "637f8aaa-cdaa-41ac-b5df-f55f718080a9",
       "position": 11,
       "properties": {
-        "description": "Now that we’ve explored individual computer components, let’s see how they all come together to make a functioning system. In this activity, you’ll be using the PC Builder web app to assemble a computer by dragging and placing each component where it belongs. As you do this, think about how these components interact and depend on one another.",
+        "description": "Now that we’ve explored individual computer components, let’s see how they all come together to make a functioning system. In this activity, you’ll be matching the descriptions of each component to the names and pictures by dragging and dropping. As you do this, think about how these components interact and depend on one another.",
         "remarks": true
       },
       "seeding_key": {
@@ -1374,7 +1374,7 @@
       "key": "f0c5ce3b-9f1e-4c46-9357-625f8e83ae8a",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 3. Each student will open the PC Builder web app and drag and drop components from the left panel into the diagram, placing them in their correct locations. They will then select a highlight color to categorize each component based on its role in the computer system.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 3. Each student will open the PC Builder and drag and drop component descriptions from the left panel into the diagram, placing them in their correct locations. They will then select a highlight color to categorize each component based on its role in the computer system.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have had some time to complete their work, have them compare their work with others to answer any questions they might have or to discuss any differences in how they labeled their diagram.\n",
         "progression_name": "Connecting Components"
       },
       "seeding_key": {
@@ -1383,8 +1383,25 @@
       }
     },
     {
-      "key": "3f2f25bf-3fa1-4a78-ac5b-a90638f099cc",
+      "key": "4c49a3cc-f005-4e48-a0fe-f4c4cd85092b",
       "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Use the “Self Check” slide to have students check their work against the key. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Adding to the Unit Guide -** You may choose to have students take a screenshot of their PC Builder slide and add it to their Unit Guides as a reference for them to use throughout the rest of the unit."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4c49a3cc-f005-4e48-a0fe-f4c4cd85092b",
+        "lesson_activity.key": "e1af4c89-00db-4ecd-b097-ad8071b8c254"
+      }
+    },
+    {
+      "key": "3f2f25bf-3fa1-4a78-ac5b-a90638f099cc",
+      "position": 14,
       "properties": {
         "description": "Now that you’ve built a computer, let’s explore how different professionals rely on specific components for their work. Whether it's gaming, music production, content creation, or graphic design, each of these fields depends on certain hardware components to get the best performance. In this next activity, you'll choose a career perspective, watch a video from an expert in that field, and reflect on the role of a key component like the GPU, CPU, SSD, or RAM.",
         "duration": "10",
@@ -1398,7 +1415,7 @@
     },
     {
       "key": "4596b5a4-39a9-4eb5-a278-5616a202724c",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 2, Level 4 to complete Levels 4 and 5. Each student will select a career option—gamer, music producer, content creator, or graphic designer. They will watch a short video where the professional explains how a specific hardware component (GPU, CPU, SSD, or RAM) impacts their work.",
         "progression_name": "Career Hardware Needs",
@@ -2200,7 +2217,7 @@
       "key": "6d221319-0695-4424-873e-867ea4a4d07e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video  \"Intro to Sensors\" (0:17 - 1:22)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Question to Consider While Watching:** *What might be an example of a sensor in an everyday object that you are familiar with? What data might it collect?*\n* **Think, Pair, Share:** Prompt students with a thought-provoking question and give them time to think independently. Have them discuss with a partner, then call on pairs to share key takeaways with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that sensors detect or measure physical properties. Student examples will vary, but some sample responses include the auto-dimming feature of their cell phone screen (light sensor), the way that lights are turned on when you walk into a room (motion sensor), or even when your car tells you that you are almost out of gas (fuel sensor)."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give each group a copy of the Data in Computer Systems activity guide.  \n\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video  \"Intro to Sensors\" (0:17 - 1:22)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Question to Consider While Watching:** *What might be an example of a sensor in an everyday object that you are familiar with? What data might it collect?*\n* **Think, Pair, Share:** Prompt students with a thought-provoking question and give them time to think independently. Have them discuss with a partner, then call on pairs to share key takeaways with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that sensors detect or measure physical properties. Student examples will vary, but some sample responses include the auto-dimming feature of their cell phone screen (light sensor), the way that lights are turned on when you walk into a room (motion sensor), or even when your car tells you that you are almost out of gas (fuel sensor).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point students to the first page in their activity guides. They will use the AI Chat in order to explore several sensors. For each, they should put the sensor name, the data type, a description of what the sensor does, and where it might be used in a computer system or device.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "6d221319-0695-4424-873e-867ea4a4d07e",
@@ -2211,14 +2228,8 @@
       "key": "d428d9d0-3529-41cb-9998-9e8774ee08c9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers. Students should complete the **Empathize with the User** section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should complete the Define the Data and Ideate a Solution sections of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system. They should research sensors that came up as part of their solution to their scenarios that they explored in the station activity.\n",
-        "progression_name": "Sensors and AI Chatbot",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Data in Computer Systems Activity Guide can be collected and used to formatively assess the lesson objectives.\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system.",
+        "progression_name": "Sensors and AI Chatbot"
       },
       "seeding_key": {
         "activity_section.key": "d428d9d0-3529-41cb-9998-9e8774ee08c9",
@@ -2226,13 +2237,30 @@
       }
     },
     {
-      "key": "0afdf28e-d9d0-4d0a-bc42-ac1065918387",
+      "key": "602cb504-a598-43db-8c16-b7dc22f71d0e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students rotate around the room for 4 minutes, sharing information about one of the sensors that they encountered with a classmate, and getting information about a different sensor back in return. Note: students should not feel obligated to complete the entire chart. It should be used as a way to document their learning experience based on the sensors that were applicable to their station."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students lay out the first page of their activity guides on their desks or tables.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students rotate around the room for 5 minutes, gathering information about sensors that their classmates explored. They should record their findings in the Unit Guide. Note: students should not feel obligated to complete the entire chart; they can always revisit and fill in additional information later. \n\n\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Unit Guide can be collected and used to formatively assess the lesson objectives:\n- Describe various types of data \n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "0afdf28e-d9d0-4d0a-bc42-ac1065918387",
+        "activity_section.key": "602cb504-a598-43db-8c16-b7dc22f71d0e",
+        "lesson_activity.key": "6295e538-22f8-4cb5-8df2-3c9a12babe7d"
+      }
+    },
+    {
+      "key": "1e316c71-5847-4054-9222-998afa22043a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers that might be solved through the use of sensors and data. Students should complete the *Empathize with the User* section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the *Define the Data* and *Ideate a Solution* sections of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** On the sticky notes at each station, students write 1 - 2 examples of data that might be collected to aid in solving the challenge or problem outlined in their scenario. They can use the sentence stems available here to help draft their response.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e316c71-5847-4054-9222-998afa22043a",
         "lesson_activity.key": "6295e538-22f8-4cb5-8df2-3c9a12babe7d"
       }
     },
@@ -3352,10 +3380,27 @@
       }
     },
     {
-      "key": "f6d26389-0641-4a2e-95a5-575ee1323180",
+      "key": "197de49a-b494-427f-9529-659aeaa51b26",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should wrote a description of the system in the Project Description section of their project guide.\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them empathize with users.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should wrote a description of the system in the Project Description section of their project guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discussing project ideas with the group is part of the **Understand** step of the **UMPIRE** strategy. It helps students ensure they have a strong foundation from which to make their plan."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "197de49a-b494-427f-9529-659aeaa51b26",
+        "lesson_activity.key": "21f7128f-7daf-48ae-9f71-d3cab0a551af"
+      }
+    },
+    {
+      "key": "f6d26389-0641-4a2e-95a5-575ee1323180",
+      "position": 8,
+      "properties": {
+        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them empathize with users.",
         "progression_name": "Understanding Your Users",
         "tips": [
           {
@@ -3370,20 +3415,16 @@
       }
     },
     {
-      "key": "197de49a-b494-427f-9529-659aeaa51b26",
-      "position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "197de49a-b494-427f-9529-659aeaa51b26",
-        "lesson_activity.key": "21f7128f-7daf-48ae-9f71-d3cab0a551af"
-      }
-    },
-    {
       "key": "b5c35341-0ba4-43a3-bea6-053512672522",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Rapid Prototype section in their Project Guides which includes defining the data that might be needed and sketching a rapid prototype.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Rapid Prototype section in their Project Guides which includes defining the data that might be needed and sketching a rapid prototype.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Creating this diagram is part of the **Produce** step of the **UMPIRE** strategy. Help students to see this process as something cyclical where they may repeat steps over the course of a project. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b5c35341-0ba4-43a3-bea6-053512672522",
@@ -3394,10 +3435,16 @@
       "key": "4d4c0d66-70e5-4303-8611-64cc028acc1f",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the components section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n\n**Teaching Tip**If time permits, have students share their thoughts and ideas with a neighbor and with the class.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the components section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
         "duration": "5",
         "name": "Wrap Up",
-        "progression_name": "Survey"
+        "progression_name": "Survey",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor and with the class. This sharing is part of the **Inspect** step of the **UMPIRE** strategy. By sharing and hearing from others, students will be set up to iterate on their project the following day. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4d4c0d66-70e5-4303-8611-64cc028acc1f",
@@ -3409,7 +3456,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete Step 3 Data Flow in their project guide with the help of their group.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing ideas with their group members. If groups come up with more than one answer for these, remind them that their system can use multiple types of data to help solve the problem.",
-        "name": "Warm Up"
+        "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Working through the Data Flow is part of the **Make a Plan** step of the **UMPIRE** strategy. Hopefully students took some ideas away from the first day of their work on this project they can incorporate into this planning stage."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8aaeae24-4145-4a86-8200-0a4bcd5a240c",
@@ -3422,7 +3475,13 @@
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students a copy of the System Diagram slides template and a System Diagram Checklist.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write a problem statement in the Problem Statement section of their project guide. Students should add this to their system diagram.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work collaboratively on the System Diagram, starting with the system description and then moving on to building the diagram from the library of components provided and the template items provided.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure that groups are dividing up work and collaborating on the different parts of building this diagram, discussing issues and questions as they arise.",
         "duration": "35",
-        "name": "Activity"
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Creating the diagram is part of the **Produce** step of the **UMPIRE** strategy. Help students remember that a project that meets the guidelines should be the priority over making the “perfect” project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "af92c8ef-dca2-4e20-81c4-9c5837b8ad65",
@@ -3512,7 +3571,13 @@
       "key": "a893abef-705a-482f-94e1-10abe78718e9",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the remaining time in class to complete the reflection section of their diagram and to make any improvements or revisions to their project they think will help them align better with the criteria on the rubric."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the remaining time in class to complete the reflection section of their diagram and to make any improvements or revisions to their project they think will help them align better with the criteria on the rubric.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reflecting at the end of the project is part of the **Explain** step of the **UMPIRE** strategy. It helps students synthesize the experience and walk away with lessons learned. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a893abef-705a-482f-94e1-10abe78718e9",

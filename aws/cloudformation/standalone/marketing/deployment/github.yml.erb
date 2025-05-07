@@ -48,6 +48,11 @@ Resources:
               Fn::ImportValue: !Sub "${MarketingApplicationStackName}-FargateServiceTaskDefTaskRoleArn"
           - Effect: Allow
             Action:
+              - 'iam:GetRole'
+            Resource:
+              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-ECSAutoScalingRoleArn"
+          - Effect: Allow
+            Action:
               - 'ecs:RegisterTaskDefinition'
             Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/MarketingStackStagingFargateServiceTaskDef:*"
           - Effect: Allow

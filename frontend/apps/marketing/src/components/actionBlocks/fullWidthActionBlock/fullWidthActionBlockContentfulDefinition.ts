@@ -17,15 +17,6 @@ export const FullWidthActionBlockContentfulComponentDefinition: ComponentDefinit
     // Adding an empty array here so no default style options show in the Design tab.
     builtInStyles: [],
     variables: {
-      image: {
-        displayName: 'Image',
-        type: 'Media',
-        group: 'content',
-        description: 'The image to display in the action block.',
-        validations: {
-          bindingSourceType: ['entry', 'asset'],
-        },
-      },
       overline: {
         displayName: 'Overline',
         type: 'Text',
@@ -53,6 +44,15 @@ export const FullWidthActionBlockContentfulComponentDefinition: ComponentDefinit
         defaultValue: 'Action block description goes here.',
         validations: {
           bindingSourceType: ['entry', 'manual'],
+        },
+      },
+      image: {
+        displayName: 'Image',
+        type: 'Media',
+        group: 'content',
+        description: 'The image to display in the action block.',
+        validations: {
+          bindingSourceType: ['entry', 'asset'],
         },
       },
       primaryButton: {
@@ -84,6 +84,15 @@ export const FullWidthActionBlockContentfulComponentDefinition: ComponentDefinit
             {value: 'primary', displayName: 'Primary (light gray)'},
             {value: 'secondary', displayName: 'Secondary (white)'},
           ],
+        },
+      },
+      publishedDate: {
+        displayName: 'Published date',
+        type: 'Date',
+        group: 'content',
+        description: 'Adds a "New" tag on the action block.',
+        validations: {
+          bindingSourceType: ['entry'],
         },
       },
     },
