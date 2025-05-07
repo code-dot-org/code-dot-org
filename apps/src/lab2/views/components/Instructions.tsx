@@ -244,7 +244,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              <div className={moduleStyles.scrollArea}>
+              <div className={moduleStyles.scrollContent}>
                 <EnhancedSafeMarkdown
                   markdown={text}
                   className={moduleStyles.markdownText}
