@@ -107,7 +107,6 @@ const InnerFileBrowser = React.memo(
                 onKeyDown={event => {
                   if (event.key === 'Enter' || event.key === ' ') {
                     openFile(f.id);
-                    event.preventDefault();
                   }
                 }}
               >
