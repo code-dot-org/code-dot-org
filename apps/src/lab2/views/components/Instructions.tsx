@@ -269,7 +269,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   </InstructorsOnly>
                 )}
               </div>
-              {bottomComponent && <div>{bottomComponent}</div>}
+              {bottomComponent && (
+                <div className={moduleStyles.bottomComponent}>
+                  {bottomComponent}
+                </div>
+              )}
             </div>
           </div>
         )}
