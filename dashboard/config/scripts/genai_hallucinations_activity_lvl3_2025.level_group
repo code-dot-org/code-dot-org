@@ -1,0 +1,14 @@
+name 'genai-hallucinations-activity-lvl3_2025'
+title 'Activity'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+text 'genai-hallucinations-activity-lvl3a_2025'
+level 'genai-hallucinations-activity-lvl3b_2025'
+level 'genai-hallucinations-activity-lvl3c_2025'
+level 'genai-hallucinations-activity-lvl3d_2025'
+level 'genai-hallucinations-activity-lvl3e_2025'
+
+
