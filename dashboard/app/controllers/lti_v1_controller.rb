@@ -6,11 +6,15 @@ require "concerns/partial_registration"
 require "clients/lti_advantage_client"
 require "cdo/honeybadger"
 require 'metrics/events'
+require 'cdo/aws/metrics'
 
 class LtiV1Controller < ApplicationController
   # Don't require an authenticity token because LTI Platforms POST to this
   # controller.
   skip_before_action :verify_authenticity_token
+
+  LOGGING_NAMESPACE = 'LTI'.freeze
+  NAMESPACE = 'lti_v1_controller'.freeze
 
   # [GET/POST] /lti/v1/login(/:platform_id)
   #
@@ -27,17 +31,18 @@ class LtiV1Controller < ApplicationController
       query_params = {platform_id: params[:platform_id]}
     else
       return log_unauthorized(
-        'Missing required parameters for LTI authentication',
+        'MissingRequiredParameters',
         {
           client_id: params[:client_id],
           issuer: params[:iss],
           platform_id: params[:platform_id],
+          message: 'Missing required parameters in LTI login request'
         }
       )
     end
 
     lti_integration = LtiIntegration.find_by(query_params)
-    return log_unauthorized('LTI integration not found', query_params) unless lti_integration
+    return log_unauthorized('LTIIintegrationNotFound', query_params.merge({message: 'LTI integration not found'})) unless lti_integration
 
     state_and_nonce = create_state_and_nonce
     # set cache key as state value, since we get this back in the final response
@@ -46,7 +51,7 @@ class LtiV1Controller < ApplicationController
     begin
       write_cache(state_and_nonce[:state], state_and_nonce, 15.minutes)
     rescue => exception
-      Honeybadger.notify(exception, context: {message: 'Error writing state and nonce to cache'})
+      log_metric('LTIStateNonceCacheError', {lti_integration_id: lti_integration[:id], exception: exception, message: 'Error writing state and nonce to cache'})
       return render status: :internal_server_error
     end
 
@@ -69,17 +74,17 @@ class LtiV1Controller < ApplicationController
 
   def authenticate
     id_token = params[:id_token]
-    return log_unauthorized('Missing LTI ID token') unless id_token
+    return log_unauthorized('MissingIDToken', {message: 'Missing LTI ID token in response'}) unless id_token
     begin
       decoded_jwt_no_auth = JSON::JWT.decode(id_token, :skip_verification)
     rescue => exception
-      return log_unauthorized(exception)
+      return log_unauthorized('JWTError', {exception: exception, message: 'Error decoding JWT'})
     end
     # client_id is the aud[ience] in the JWT, it can be a string or an array
     extracted_client_id = decoded_jwt_no_auth[:aud].is_a?(Array) ? decoded_jwt_no_auth[:aud].first : decoded_jwt_no_auth[:aud]
     extracted_issuer_id = decoded_jwt_no_auth[:iss]
 
-    return log_unauthorized('Missing "aud" or "iss" from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
+    return log_unauthorized('MissingValuesInIDToken', {message: 'Missing "aud" or "iss" from ID token'}) unless extracted_client_id.present? && extracted_issuer_id.present?
     # set cache key
     integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
     # 'integration' can come back as a hash from the cache or as a class instance returned by ActiveRecord. In the case of the former, we are
@@ -92,23 +97,24 @@ class LtiV1Controller < ApplicationController
       # expires_in to 1 week
       write_cache(integration_cache_key, integration, 1.week)
     end
-    return log_unauthorized('LTI integration not found', {client_id: extracted_client_id, issuer: extracted_issuer_id}) unless integration
+    return log_unauthorized('LTIIntegrationNotFound', {client_id: extracted_client_id, issuer: extracted_issuer_id, message: 'LTI integration not found'}) unless integration
 
     # check state and nonce in response and id_token against cached values
     begin
       cached_state_and_nonce = read_cache params[:state]
     rescue => exception
-      Honeybadger.notify(exception, context: {message: 'Error reading state and nonce from cache'})
+      log_metric('LTIStateNonceCacheError', {exception: exception, message: 'Error reading state and nonce from cache'})
       return render status: :internal_server_error
     end
     if cached_state_and_nonce.nil? || (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
       return log_unauthorized(
-        'State or nonce mismatch in LTI JWT auth',
+        'StateNonceMismatch',
         {
           state: params[:state],
           nonce: decoded_jwt_no_auth[:nonce],
           cached_state: cached_state_and_nonce&.[](:state),
           cached_nonce: cached_state_and_nonce&.[](:nonce),
+          message: 'State or nonce mismatch in LTI JWT auth'
         }
       )
     end
@@ -117,7 +123,7 @@ class LtiV1Controller < ApplicationController
       # verify the jwt via the integration's public keyset
       decoded_jwt = get_decoded_jwt(integration, id_token)
     rescue => exception
-      return log_unauthorized(exception)
+      return log_unauthorized('ErrorDecodingJWT', {exception: exception, message: 'Error decoding JWT'})
     end
 
     # Schoology has multiple contexts that will launch LTI tools in an iframe.
@@ -227,7 +233,7 @@ class LtiV1Controller < ApplicationController
       end
     else
       jwt_error_message = jwt_verifier.errors.empty? ? 'Invalid JWT' : jwt_verifier.errors.join(', ')
-      return log_unauthorized('Invalid JWT', {errors: jwt_error_message})
+      return log_unauthorized('InvalidJWT', {errors: jwt_error_message})
     end
   end
 
@@ -239,11 +245,22 @@ class LtiV1Controller < ApplicationController
   end
 
   def render_sync_course_error(reason, status, error = nil, message: nil)
+    # We want to log the error to Honeybadger, as we don't expect this to happen
+    # often.
     honeybadger_id = Honeybadger.notify(
       'LTI roster sync error',
       context: {
         reason: reason,
         details: message,
+      }
+    )
+    log_metric(
+      'LTIRosterSyncError',
+      {
+        reason: reason,
+        status: status,
+        message: message,
+        error: error,
       }
     )
     @lti_section_sync_result = {error: error, message: message}
@@ -464,8 +481,6 @@ class LtiV1Controller < ApplicationController
     render status: :ok, json: {}
   end
 
-  NAMESPACE = 'lti_v1_controller'.freeze
-
   private def unauthorized_status
     render(status: :unauthorized, json: {error: 'Unauthorized'})
   end
@@ -493,11 +508,18 @@ class LtiV1Controller < ApplicationController
     SecureRandom.alphanumeric length
   end
 
-  private def log_unauthorized(exception, context = nil)
-    Honeybadger.notify(
-      exception,
-      context: context
+  private def log_metric(name:, value: 1, dimensions: nil)
+    dimensions ||= {}
+    Cdo::Metrics.put(
+      LOGGING_NAMESPACE,
+      name,
+      value,
+      dimensions,
     )
+  end
+
+  private def log_unauthorized(name:, value: 1, dimensions: nil)
+    log_metric(name: name, value: value, dimensions: dimensions)
     unauthorized_status
   end
 
