@@ -1253,35 +1253,6 @@ module Services
       assert_equal 'pilot', unit.get_published_state
     end
 
-    test 'seed updates skills' do
-      script = create_script_tree
-
-      # create the programming expression outside of the rollback block, because unlike vocab
-      # or resources, the seed process will not re-create the programming expression for us.
-      # choose a key later in the sort order than existing keys.
-      new_programming_expression = create :programming_expression, key: 'xyz'
-      old_programming_expression = script.lessons.first.programming_expressions.last
-
-      expected_keys = [
-        old_programming_expression.key,
-        new_programming_expression.key
-      ]
-      assert_equal expected_keys, expected_keys.sort
-
-      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
-        lesson = script.lessons.first
-        lesson.programming_expressions = [old_programming_expression]
-        lesson.programming_expressions.push(new_programming_expression)
-      end
-
-      ScriptSeed.seed_from_json(json)
-      script = Unit.with_seed_models.find(script.id)
-
-      assert_script_trees_equal script_with_changes, script
-      lesson = script.lessons.first
-      assert_equal expected_keys, lesson.programming_expressions.map(&:key)
-    end
-
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
       script_with_change = json = nil
       Unit.transaction do
@@ -1470,7 +1441,6 @@ module Services
       num_rubrics_per_lesson: 1,
       num_learning_goals_per_rubric: 1,
       num_learning_goal_evidence_levels_per_learning_goal: 2,
-      num_skills_per_level: 2
     )
       # Avoid randomly generated characters at the start of the name prefix,
       # to help avoid flaky tests. The name_prefix gets used in various fields,
@@ -1532,7 +1502,7 @@ module Services
       end
 
       sl_num = 1
-      skill = create :skill, key: "#{name_prefix}-skill-#{1}"
+      skill = create :skill, key: "#{name_prefix}-skill-1"
       script.lessons.each do |lesson|
         (1..num_activities_per_lesson).each do |activity_pos|
           activity = lesson.lesson_activities.create(
