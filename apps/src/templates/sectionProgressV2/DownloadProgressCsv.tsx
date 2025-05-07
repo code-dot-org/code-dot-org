@@ -8,17 +8,10 @@ import i18n from '@cdo/locale';
 
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 
+import {ITEM_TYPE} from './ItemType';
 import {getLevelCellValue} from './LevelDataCell';
 
 import styles from './progress-table-v2.module.scss';
-
-const getCellValue = (itemType?: string) => {
-  if (!itemType) {
-    return 'Not Started';
-  }
-
-  return itemType;
-};
 
 export const getLevelProgressCSVData = (
   students: {id: number; name: string; familyName?: string}[],
@@ -32,7 +25,7 @@ export const getLevelProgressCSVData = (
       levels: {
         id: string;
         bubbleText: string;
-        sublevels?: {id: number; bubbleText: string}[];
+        sublevels?: {id: string; bubbleText: string}[];
       }[];
     }[];
     name: string;
@@ -58,44 +51,32 @@ export const getLevelProgressCSVData = (
   );
 
   unitData.lessons.forEach(lesson => {
-    if (lesson.relative_position !== 3) return;
+    // Add all sublevels, but not the parent choice level.
+    const levelsToInclude = lesson.levels.flatMap(level =>
+      level.sublevels
+        ? level.sublevels.map(sublevel => ({
+            ...level,
+            levelName: `${lesson.relative_position}.${level.bubbleText}${sublevel.bubbleText}`,
+          }))
+        : [
+            {
+              ...level,
+              levelName: `${lesson.relative_position}.${level.bubbleText}`,
+            },
+          ]
+    );
 
-    lesson.levels.forEach(level => {
-      const levelName = `${lesson.relative_position}.${level.bubbleText}`;
-      if (level.sublevels) {
-        return level.sublevels.forEach(subLevel => {
-          const subLevelName = `${levelName}${subLevel.bubbleText}`;
-          columnNames.push(subLevelName);
-
-          table.forEach(row => {
-            const progress =
-              levelProgressByStudent[studentIds[row.Student_Name]][
-                _.toNumber(subLevel.id)
-              ];
-
-            row[subLevelName] = getCellValue(
-              progress
-                ? getLevelCellValue(progress, level, false).title
-                : undefined
-            );
-          });
-        });
-      }
-      columnNames.push(levelName);
+    levelsToInclude.forEach(level => {
+      columnNames.push(level.levelName);
 
       table.forEach(row => {
         const progress =
           levelProgressByStudent[studentIds[row.Student_Name]][
             _.toNumber(level.id)
           ];
-        console.log('lfm1', {
-          sName: row.Student_Name,
-          progress,
-          value: getLevelCellValue(progress, level, false).title,
-        });
-        row[levelName] = getCellValue(
-          progress ? getLevelCellValue(progress, level, false).title : undefined
-        );
+        row[level.levelName] = progress
+          ? getLevelCellValue(progress, level, false).title
+          : ITEM_TYPE.NO_PROGRESS.title;
       });
     });
   });
@@ -115,7 +96,7 @@ const downloadLevelProgressCSV = () => {
       levels: {
         id: string;
         bubbleText: string;
-        sublevels?: {id: number; bubbleText: string}[];
+        sublevels?: {id: string; bubbleText: string}[];
       }[];
     }[];
     name: string;
