@@ -1,27 +1,16 @@
 'use client';
 
 import '@code-dot-org/component-library/carousel/index.css';
-import {EntryFields} from 'contentful';
 import React, {useMemo} from 'react';
 
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
 import Image from '@/components/image';
-import {Entry} from '@/types/contentful/Entry';
-// import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
-
-type ImageCarouselFields = {
-  title: EntryFields.Text;
-  file: {
-    url: EntryFields.Text;
-  };
-};
-
-type ImageCarouselEntry = Entry<ImageCarouselFields>;
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 export type ImageCarouselProps = {
   /** Carousel content w/ fields from Contentful */
-  slides: ImageCarouselEntry[];
+  slides: ExperienceAsset[];
   /** Number of slides to show at once */
   slidesPerView?: number;
 };
@@ -49,7 +38,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
         return {
           id: title,
-          slide: <Image src={file.url} altText="" />,
+          slide: <Image src={file?.url} altText="" />,
         };
       }),
     [slides],
