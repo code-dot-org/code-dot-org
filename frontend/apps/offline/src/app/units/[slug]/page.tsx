@@ -1,24 +1,13 @@
-import {notFound} from 'next/navigation';
+'use client';
 
-import {loadUnit} from '@/app/models/unit';
+import {useContext} from 'react';
+
 import Header from '@/components/header';
 import Unit from '@/components/unit';
+import UnitContext from '@/contexts/UnitContext';
 
-export default async function UnitViewPage({
-  params,
-}: {
-  params: Promise<{slug: string}>;
-}) {
-  const {slug} = await params;
-
-  // Load unit data
-  let unit: UnitData | null = null;
-  try {
-    unit = await loadUnit(slug);
-  } catch (_) {
-    // If the file doesn't exist or is malformed, return 404
-    return notFound();
-  }
+export default function UnitViewPage() {
+  const {unit} = useContext(UnitContext);
 
   return (
     <div
@@ -31,7 +20,7 @@ export default async function UnitViewPage({
       }}
     >
       <Header />
-      <Unit unitKey={slug} unit={unit} />
+      <Unit unitKey={unit.key} unit={unit} />
     </div>
   );
 }

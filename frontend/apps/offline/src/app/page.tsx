@@ -1,7 +1,6 @@
 'use client';
 
 import Header from '@/components/header';
-import Level from '@/components/level';
 
 export default function Page() {
   return (
@@ -15,7 +14,6 @@ export default function Page() {
       }}
     >
       <Header />
-      <Level levelKey="courseC_maze_programming2_2025" />
     </div>
   );
 }

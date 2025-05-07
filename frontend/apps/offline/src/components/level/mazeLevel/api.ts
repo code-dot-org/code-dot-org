@@ -1,7 +1,3 @@
-import {tiles} from '@code-dot-org/maze';
-
-const {Direction, MoveDirection, TurnDirection, SquareType} = tiles;
-
 /**
  * Given two functions, generates a function that returns the result of the
  * second function if and only if the first function returns true
@@ -44,7 +40,6 @@ function checkSuccess() {
  * has finished running completely.
  */
 function shouldCheckSuccessOnMove() {
-  console.log(this);
   if (this.controller.map.hasMultiplePossibleGrids()) {
     return false;
   }
@@ -52,16 +47,12 @@ function shouldCheckSuccessOnMove() {
 }
 
 function isPath(direction: number, id: string): boolean {
+  const {Direction, SquareType} = this.tiles;
+
   const effectiveDirection = this.controller.getPegmanD() + direction;
-  console.log(
-    'eff',
-    effectiveDirection,
-    direction,
-    this.controller.getPegmanD(),
-  );
   let square;
   let command;
-  switch (tiles.constrainDirection4(effectiveDirection)) {
+  switch (this.tiles.constrainDirection4(effectiveDirection)) {
     case Direction.NORTH:
       square = this.controller.map.getTile(
         this.controller.getPegmanY() - 1,
@@ -102,9 +93,9 @@ function isPath(direction: number, id: string): boolean {
 }
 
 function move(direction: number, id: string) {
-  console.log('move!!!!', this, this.executionInfo.queueAction);
+  const {Direction} = this.tiles;
+
   if (!isPath.bind(this)(direction, '')) {
-    console.log('fail');
     this.executionInfo.queueAction(
       'fail_' + (direction ? 'backward' : 'forward'),
       id,
@@ -117,7 +108,7 @@ function move(direction: number, id: string) {
   let command;
   const currentPegmanX = this.controller.getPegmanX();
   const currentPegmanY = this.controller.getPegmanY();
-  switch (tiles.constrainDirection4(effectiveDirection)) {
+  switch (this.tiles.constrainDirection4(effectiveDirection)) {
     case Direction.NORTH:
       this.controller.setPegmanY(currentPegmanY - 1);
       command = 'north';
@@ -135,15 +126,6 @@ function move(direction: number, id: string) {
       command = 'west';
       break;
   }
-  const newPegmanX = this.controller.getPegmanX();
-  const newPegmanY = this.controller.getPegmanY();
-  console.log(
-    'move!!!!',
-    currentPegmanX,
-    currentPegmanY,
-    newPegmanX,
-    newPegmanY,
-  );
   this.executionInfo.queueAction(command, id);
   if (this.controller.subtype.isWordSearch()) {
     this.controller.subtype.markTileVisited(
@@ -152,7 +134,6 @@ function move(direction: number, id: string) {
       false,
     );
   }
-  console.log('hmm', this);
   if (shouldCheckSuccessOnMove.bind(this)()) {
     checkSuccess.bind(this)();
   }
@@ -164,6 +145,8 @@ function move(direction: number, id: string) {
  * @param id - ID of block that triggered this action.
  */
 function turn(direction: number, id: string) {
+  const {TurnDirection} = this.tiles;
+
   const currentD = this.controller.getPegmanD();
   if (direction === TurnDirection.RIGHT) {
     // Right turn (clockwise).
@@ -175,7 +158,7 @@ function turn(direction: number, id: string) {
     this.executionInfo.queueAction('left', id);
   }
   this.controller.setPegmanD(
-    tiles.constrainDirection4(this.controller.getPegmanD()),
+    this.tiles.constrainDirection4(this.controller.getPegmanD()),
   );
 }
 
@@ -183,6 +166,8 @@ function turn(direction: number, id: string) {
  * Moves the character forward.
  */
 export function moveForward(id: string) {
+  const {MoveDirection} = this.tiles;
+
   API_FUNCTION.bind(this)(() => {
     move.bind(this)(MoveDirection.FORWARD, id);
   });
@@ -192,6 +177,8 @@ export function moveForward(id: string) {
  * Moves the character backward.
  */
 export function moveBackward(id: string) {
+  const {MoveDirection} = this.tiles;
+
   API_FUNCTION.bind(this)(() => {
     move.bind(this)(MoveDirection.BACKWARD, id);
   });
@@ -201,6 +188,8 @@ export function moveBackward(id: string) {
  * Turns the character to their left.
  */
 export function turnLeft(id: string) {
+  const {TurnDirection} = this.tiles;
+
   API_FUNCTION.bind(this)(() => {
     turn.bind(this)(TurnDirection.LEFT, id);
   });
@@ -210,6 +199,8 @@ export function turnLeft(id: string) {
  * Turns the character to their right.
  */
 export function turnRight(id: string) {
+  const {TurnDirection} = this.tiles;
+
   API_FUNCTION.bind(this)(() => {
     turn.bind(this)(TurnDirection.RIGHT, id);
   });

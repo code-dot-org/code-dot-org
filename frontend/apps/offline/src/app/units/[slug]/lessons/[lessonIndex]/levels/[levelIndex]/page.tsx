@@ -1,44 +1,18 @@
-import {notFound} from 'next/navigation';
+'use client';
 
-import {loadLevel} from '@/app/models/level';
-import {loadUnit} from '@/app/models/unit';
+import {useContext} from 'react';
+
 import Header from '@/components/header';
-import Progress from '@/components/header/progress';
+import {ProgressNavigator} from '@/components/header/progress';
 import UnitLevel from '@/components/unit/UnitLevel';
+import LevelContext from '@/contexts/LevelContext';
+import UnitContext from '@/contexts/UnitContext';
 
-export default async function UnitLevelPage({
-  params,
-}: {
-  params: Promise<{slug: string; lessonIndex: string; levelIndex: string}>;
-}) {
-  const {slug, lessonIndex, levelIndex} = await params;
-
-  // Load unit data
-  let unit: UnitData | undefined;
-  try {
-    console.log('loading unit', slug);
-    unit = await loadUnit(slug);
-  } catch (_) {
-    // If the file doesn't exist or is malformed, return 404
-    return notFound();
-  }
-
+export default function UnitLevelPage() {
+  const {unit} = useContext(UnitContext);
+  const {lessonIndex, levelIndex, level} = useContext(LevelContext);
   const realLessonIndex = parseInt(lessonIndex) - 1;
   const realLevelIndex = parseInt(levelIndex) - 1;
-  const level = unit?.lessons?.[realLessonIndex]?.levels?.[realLevelIndex];
-  const levelKey = level.levelKeys[0];
-
-  // Parse level data
-  let levelData: LevelData | undefined;
-  try {
-    levelData = await loadLevel(levelKey);
-  } catch (_) {
-    // If the file doesn't exist or is malformed, return 404
-    console.log('CANNOT PARSE LEVEL', levelKey);
-    return notFound();
-  }
-
-  console.log('LEVEL?', levelData);
 
   return (
     <div
@@ -51,14 +25,14 @@ export default async function UnitLevelPage({
       }}
     >
       <Header inLevel>
-        <Progress
+        <ProgressNavigator
           unit={unit}
-          unitKey={slug}
+          unitKey={unit.key}
           lessonIndex={realLessonIndex}
           levelIndex={realLevelIndex}
         />
       </Header>
-      <UnitLevel levelData={levelData} />
+      <UnitLevel levelData={level} />
     </div>
   );
 }

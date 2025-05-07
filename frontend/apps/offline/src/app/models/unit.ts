@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import YAML from 'yaml';
 
-import {loadLevel, parseLevelData, LevelData} from './level';
+import {loadLevel, LevelData} from './level';
 
 /** Defines a lesson in the raw, internal data */
 interface LessonDefinition {
@@ -713,8 +713,19 @@ export const parseUnitData: (
     }
 
     const key = level.levelKeys[0];
-    const levelInfo = await loadLevel(key);
-    level.data = await parseLevelData(key, levelInfo.data, levelInfo.path);
+    let levelData: LevelData | undefined;
+    try {
+      levelData = await loadLevel(key);
+    } catch (_) {
+      console.log('LEVEL LOAD ERROR', key);
+      throw _;
+    }
+    console.log('LEVEL', levelData);
+    level.data = {
+      key: levelData?.key || key,
+      type: levelData?.type || 'Unknown',
+      isConcept: levelData?.isConcept || false,
+    };
   };
   const levelLoadPromises = []
     .concat(...ret.lessons.map(lesson => lesson.levels))
@@ -730,13 +741,9 @@ export const parseUnitData: (
 export const loadUnit: (slug: string) => Promise<UnitData> = async (
   slug: string,
 ) => {
-  console.log('load unit!!', slug, path.join('a', 'b'));
-
   // Look for a normalized file already there.
   const cachePath = path.join(process.cwd(), 'cache', 'units', `${slug}.json`);
 
-  console.log('load unit!!');
-  console.log('load unit!!', cachePath);
   try {
     const fileContents = await fs.readFile(cachePath, 'utf8');
     return JSON.parse(fileContents);

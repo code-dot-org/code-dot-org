@@ -18,8 +18,7 @@ export interface ProgressProps {
   unitKey: string;
   lessonIndex: number;
   levelIndex: number;
-  lessonGroups: object;
-  lessons: object;
+  onNavigate?: (level: LevelData) => void;
 }
 
 const Progress: React.FunctionComponent<ProgressProps> = ({
@@ -27,6 +26,7 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
   unitKey,
   lessonIndex,
   levelIndex,
+  onNavigate,
 }) => {
   const [openOverview, setOpenOverview] = useState<boolean>(false);
 
@@ -44,7 +44,8 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
             alt="Go back to previous level"
             size="xs"
             color="gray"
-            useAsLink
+            useAsLink={!onNavigate}
+            onClick={onNavigate ? () => {} : undefined}
             type="secondary"
             icon={{
               iconName: 'left',
@@ -52,7 +53,11 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
             }}
             isIconOnly
             disabled
-            href={`/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex}`}
+            href={
+              onNavigate
+                ? undefined
+                : `/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex}`
+            }
           />
         )}
         {levelIndex !== 0 && (
@@ -75,14 +80,25 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
               alt="Go back to previous level"
               size="xs"
               color="gray"
-              useAsLink
+              useAsLink={!onNavigate}
+              onClick={
+                onNavigate
+                  ? () => {
+                      onNavigate(levelIndex - 1);
+                    }
+                  : undefined
+              }
               type="secondary"
               icon={{
                 iconName: 'left',
                 iconStyle: 'solid',
               }}
               isIconOnly
-              href={`/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex}`}
+              href={
+                onNavigate
+                  ? undefined
+                  : `/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex}`
+              }
             />
           </WithTooltip>
         )}
@@ -110,13 +126,24 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
               )}
               type="secondary"
               color="gray"
-              useAsLink
+              useAsLink={!onNavigate}
+              onClick={
+                onNavigate
+                  ? () => {
+                      onNavigate(i);
+                    }
+                  : undefined
+              }
               size="s"
               alt={'level ' + (i + 1)}
               isIconOnly={i !== levelIndex}
               icon={i === levelIndex ? undefined : {}}
               text={i === levelIndex ? i + 1 : undefined}
-              href={`/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${i + 1}`}
+              href={
+                onNavigate
+                  ? undefined
+                  : `/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${i + 1}`
+              }
             />
           </WithTooltip>
         ))}
@@ -126,7 +153,8 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
             alt="Skip to next level"
             size="xs"
             color="gray"
-            useAsLink
+            useAsLink={!onNavigate}
+            onClick={onNavigate ? () => {} : undefined}
             type="secondary"
             icon={{
               iconName: 'right',
@@ -134,7 +162,11 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
             }}
             isIconOnly
             disabled
-            href={`/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex + 2}`}
+            href={
+              onNavigate
+                ? undefined
+                : `/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex + 2}`
+            }
           />
         )}
         {levelIndex !== unit.lessons[lessonIndex].levels.length - 1 && (
@@ -158,7 +190,14 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
               alt="Skip to next level"
               size="xs"
               color="gray"
-              useAsLink
+              useAsLink={!onNavigate}
+              onClick={
+                onNavigate
+                  ? () => {
+                      onNavigate(levelIndex + 1);
+                    }
+                  : undefined
+              }
               type="secondary"
               icon={{
                 iconName: 'right',
@@ -166,7 +205,11 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
               }}
               isIconOnly
               disabled={levelIndex === unit.lessons[lessonIndex].levels.length}
-              href={`/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex + 2}`}
+              href={
+                onNavigate
+                  ? undefined
+                  : `/units/${unitKey}/lessons/${lessonIndex + 1}/levels/${levelIndex + 2}`
+              }
             />
           </WithTooltip>
         )}

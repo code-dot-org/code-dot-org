@@ -1,11 +1,22 @@
+'use client';
+
 import React, {PropsWithChildren, useState} from 'react';
 
 import LevelContext from '@/contexts/LevelContext';
 
+export interface LevelProviderProps extends PropsWithChildren {
+  level?: UnitData;
+  lessonIndex?: number;
+  levelIndex?: number;
+}
+
 /**
- * This keesp track of the current level data.
+ * This keeps track of the current level data.
  */
-const LevelProvider: React.FunctionComponent<PropsWithChildren> = ({
+const LevelProvider: React.FunctionComponent<LevelProviderProps> = ({
+  level,
+  levelIndex,
+  lessonIndex,
   children,
 }) => {
   // Hints can be revealed by incrementing the hint shown count
@@ -14,6 +25,9 @@ const LevelProvider: React.FunctionComponent<PropsWithChildren> = ({
   return (
     <LevelContext.Provider
       value={{
+        level,
+        levelIndex,
+        lessonIndex,
         hintsShown,
         setHintsShown,
       }}

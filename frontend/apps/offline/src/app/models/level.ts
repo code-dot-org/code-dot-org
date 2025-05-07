@@ -82,16 +82,16 @@ export interface LevelData {
   key: string;
   /** The type of level (Maze, etc) */
   type: string;
-  /** Potentially long description of what to do in the level or what the goal is. */
-  longInstructions: string;
-  /** Shorter description of what to do or what the level covers. */
-  shortInstructions: string;
-  /** Whether or not we should highlight the instructions before the student can continue */
-  instructionsImportant: boolean;
   /** Whether or not this is a concept level */
   isConcept: boolean;
+  /** Potentially long description of what to do in the level or what the goal is. */
+  longInstructions?: string;
+  /** Shorter description of what to do or what the level covers. */
+  shortInstructions?: string;
+  /** Whether or not we should highlight the instructions before the student can continue */
+  instructionsImportant?: boolean;
   /** Hints to help folks progress within levels. */
-  hints: HintData[];
+  hints?: HintData[];
   /** The path to the level data, if it is locally sourced. */
   path?: string;
   /** An optional video that is associated with the level. */
@@ -298,6 +298,8 @@ export const parseLevelData: (
     xml.querySelector('config')?.textContent || '{}',
   ) as LevelConfiguration;
 
+  console.log(path);
+
   // Gather the general data from the level file
   const ret: LevelData = {
     key: key,
@@ -395,7 +397,9 @@ export const parseLevelData: (
   if (ret.containedLevelNames?.[0]) {
     // Get the contained level data, too
     const multiKey = ret.containedLevelNames[0];
-    const multiData = (await loadLevel(multiKey, 'multi')).data.split('\n');
+    let multiData = (await loadLevelDefinition(multiKey, 'multi')).data;
+    console.log(multiData);
+    multiData = multiData.split('\n');
 
     // Parse the multiple choice question
     const multipleChoice = {
@@ -428,13 +432,9 @@ export const loadLevel: (
   slug: string,
   extension?: string,
 ) => Promise<LevelData> = async (slug: string, extension?: string) => {
-  console.log('load unit!!', slug, path.join('a', 'b'));
-
   // Look for a normalized file already there.
   const cachePath = path.join(process.cwd(), 'cache', 'levels', `${slug}.json`);
 
-  console.log('load unit!!');
-  console.log('load unit!!', cachePath);
   try {
     const fileContents = await fs.readFile(cachePath, 'utf8');
     return JSON.parse(fileContents);

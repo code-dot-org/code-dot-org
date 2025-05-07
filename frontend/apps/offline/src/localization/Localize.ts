@@ -351,7 +351,7 @@ declare global {
   }
 }
 
-const Localize = window.Localize;
+const Localize = typeof window !== 'undefined' ? window.Localize : undefined;
 
 export {Localize};
 

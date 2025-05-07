@@ -6,8 +6,6 @@ import React, {
   useContext,
 } from 'react';
 
-import Maze, {tiles} from '@code-dot-org/maze';
-
 import type {LevelData} from '@/app/models/level';
 import type {BlockDefinition} from '@/components/blockly';
 import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
@@ -51,6 +49,8 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   const svg = useRef(null);
   const executionInfo = useRef(null);
 
+  const Maze = useRef(null);
+
   const {hintsShown} = useContext(LevelContext);
 
   // Respond to a hint showing a path
@@ -66,15 +66,18 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   const [currentAvatar, setCurrentAvatar] = useState<string>(avatar || '');
   const [running, setRunning] = useState<boolean>(false);
   const [stepping, setStepping] = useState<boolean>(false);
+  const [mazeLoaded, setMazeLoaded] = useState<boolean>(false);
+  const [blocklyLoaded, setBlocklyLoaded] = useState<boolean>(false);
 
+  // When the reset button is pressed
   const onReset = useCallback(() => {
-    console.log('onstep resetting');
     timeout.cancel();
     controller.current.reset();
     setRunning(false);
     setStepping(false);
   }, [controller]);
 
+  // Will run (or step) the program
   const execute = useCallback(
     (step: boolean) => {
       console.log('execute', step);
@@ -90,6 +93,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
       evalWith(code, {
         Maze: {
           executionInfo: executionInfo.current,
+          tiles: Maze.current.tiles,
           controller: controller.current,
           ...defaultAPI,
           ...(api || {}),
@@ -109,6 +113,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     [controller],
   );
 
+  // Schedules an animation
   const animateAction = useCallback(
     (action, timePerStep) => {
       if (action.blockId) {
@@ -118,28 +123,40 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
 
       switch (action.command) {
         case 'north':
-          controller.current.animatedMove(tiles.Direction.NORTH, timePerStep);
+          controller.current.animatedMove(
+            Maze.current.tiles.Direction.NORTH,
+            timePerStep,
+          );
           break;
         case 'east':
-          controller.current.animatedMove(tiles.Direction.EAST, timePerStep);
+          controller.current.animatedMove(
+            Maze.current.tiles.Direction.EAST,
+            timePerStep,
+          );
           break;
         case 'south':
-          controller.current.animatedMove(tiles.Direction.SOUTH, timePerStep);
+          controller.current.animatedMove(
+            Maze.current.tiles.Direction.SOUTH,
+            timePerStep,
+          );
           break;
         case 'west':
-          controller.current.animatedMove(tiles.Direction.WEST, timePerStep);
+          controller.current.animatedMove(
+            Maze.current.tiles.Direction.WEST,
+            timePerStep,
+          );
           break;
         case 'look_north':
-          controller.current.animatedLook(tiles.Direction.NORTH);
+          controller.current.animatedLook(Maze.current.tiles.Direction.NORTH);
           break;
         case 'look_east':
-          controller.current.animatedLook(tiles.Direction.EAST);
+          controller.current.animatedLook(Maze.current.tiles.Direction.EAST);
           break;
         case 'look_south':
-          controller.current.animatedLook(tiles.Direction.SOUTH);
+          controller.current.animatedLook(Maze.current.tiles.Direction.SOUTH);
           break;
         case 'look_west':
-          controller.current.animatedLook(tiles.Direction.WEST);
+          controller.current.animatedLook(Maze.current.tiles.Direction.WEST);
           break;
         case 'fail_forward':
           controller.current.animatedFail(true);
@@ -148,10 +165,14 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
           controller.current.animatedFail(false);
           break;
         case 'left':
-          controller.current.animatedTurn(tiles.TurnDirection.LEFT);
+          controller.current.animatedTurn(
+            Maze.current.tiles.TurnDirection.LEFT,
+          );
           break;
         case 'right':
-          controller.current.animatedTurn(tiles.TurnDirection.RIGHT);
+          controller.current.animatedTurn(
+            Maze.current.tiles.TurnDirection.RIGHT,
+          );
           break;
         case 'finish':
           this.finish_(timePerStep);
@@ -188,9 +209,10 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
           break;
       }
     },
-    [controller],
+    [controller, Maze],
   );
 
+  // Called when an animation finishes
   const finishAnimations = useCallback(() => {
     timeout.cancel();
     setRunning(false);
@@ -204,6 +226,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     }
   }, [controller]);
 
+  // Schedules an action (the program is run and it generates a set of actions)
   const scheduleAction = useCallback(
     (index, actions, singleStep, timePerAction) => {
       timeout.cancel();
@@ -239,6 +262,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     scheduleAction(index, actions, singleStep, timePerAction);
   }, 1000);
 
+  // When the 'step' button is pressed
   const onStep = useCallback(() => {
     timeout.cancel();
     console.log('onstep', stepping);
@@ -251,13 +275,63 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     }
   }, [controller, stepping]);
 
+  // When the 'run' button is pressed
   const onRun = useCallback(() => {
     timeout.cancel();
     execute(false);
   }, [controller, stepping]);
 
+  // When blockly is loaded and initialized
   const onInject = useCallback(() => {
-    if (controller.current) {
+    // Blockly is ready
+    setBlocklyLoaded(true);
+  }, [controller, Maze, svg]);
+
+  // Pull out the skin asset paths
+  const skinConfig = skinFor(skins || defaultSkins, levelData?.mazeData?.skin);
+
+  useEffect(() => {
+    (async () => {
+      // Dynamically import the maze code since it is only for client rendering
+      Maze.current = await import('@code-dot-org/maze');
+
+      // Maze is ready
+      setMazeLoaded(true);
+    })();
+  }, [Maze, setMazeLoaded]);
+
+  // This will initialize the maze controller when everything is loaded
+  useEffect(() => {
+    const svgElement = svg.current;
+
+    // Parse out maze data when the svg is ready
+    if (svgElement && blocklyLoaded && mazeLoaded) {
+      setCurrentAvatar(skinConfig.smallStaticAvatar);
+
+      controller.current = new Maze.current.default.MazeController(
+        {
+          map: levelData.mazeData.maze,
+          serializedMaze: levelData.mazeData.serializedMaze,
+          skinId: levelData.mazeData.skin,
+          ...levelData.mazeData,
+        },
+        skinConfig,
+        {
+          skin: skinConfig,
+          skinId: levelData.mazeData.skin,
+        },
+        {
+          methods: {
+            playAudio: (sound, options) => {
+              console.log('PLAY AUDIO', sound, options);
+            },
+            playAudioOnFailure: () => {},
+            loadAudio: () => {},
+            getTestResults: () => {},
+          },
+        },
+      );
+
       console.log('ON INJECT', controller.current.map, svg.current);
       controller.current.map.resetDirt();
       controller.current.subtype.initStartFinish();
@@ -268,46 +342,24 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
       svg.current.removeAttribute('width');
       svg.current.removeAttribute('height');
       svg.current.style.width = '100%';
-    } else {
-      console.log('too early');
+
+      return () => {
+        console.log('UNINIT THE MAZE LEVEL');
+        if (controller.current) {
+          console.log('UNINIT RESET??', controller.current.reset, svgElement);
+          // We need to remount the old <svg> so that the controller can uninitialize
+          const container = document.createElement('div');
+          container.style.hidden = true;
+          container.appendChild(svgElement);
+          document.body.appendChild(container);
+          controller.current.reset(null);
+          controller.current.destroy?.();
+          controller.current = null;
+          container.remove();
+        }
+      };
     }
-    console.log('done');
-  }, [controller, svg]);
-
-  // Pull out the skin asset paths
-  const skinConfig = skinFor(skins || defaultSkins, levelData?.mazeData?.skin);
-
-  useEffect(() => {
-    // Parse out maze data
-    setCurrentAvatar(skinConfig.smallStaticAvatar);
-    controller.current = new Maze.MazeController(
-      {
-        map: levelData.mazeData.maze,
-        serializedMaze: levelData.mazeData.serializedMaze,
-        skinId: levelData.mazeData.skin,
-        ...levelData.mazeData,
-      },
-      skinConfig,
-      {
-        skin: skinConfig,
-        skinId: levelData.mazeData.skin,
-      },
-      {
-        methods: {
-          playAudio: (sound, options) => {
-            console.log('PLAY AUDIO', sound, options);
-          },
-          playAudioOnFailure: () => {},
-          loadAudio: () => {},
-          getTestResults: () => {},
-        },
-      },
-    );
-
-    return () => {
-      console.log('UNINIT THE MAZE LEVEL');
-    };
-  }, [controller, levelData]);
+  }, [controller, mazeLoaded, blocklyLoaded, svg, levelData]);
 
   return (
     <BlocklyLevel

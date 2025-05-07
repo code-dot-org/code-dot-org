@@ -7,7 +7,6 @@ import FontAwesomeV6Icon, {
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
 import type {LevelData} from '@/app/models/level';
-import LevelProvider from '@/providers/LevelProvider';
 
 import KarelLevel from './karelLevel';
 import MazeLevel from './mazeLevel';
@@ -29,29 +28,27 @@ export interface LevelProps {
  * Represents a generic Code.org level (learning activity).
  */
 const Level: React.FunctionComponent<LevelProps> = ({levelData}) => (
-  <LevelProvider>
-    <div
-      style={{
-        flex: '1 1 100%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
-      {!levelData && (
-        <FontAwesomeV6Icon {...spinnerIcon} style={{fontSize: '3rem'}} />
-      )}
-      {levelData?.type === 'Maze' && <MazeLevel levelData={levelData} />}
-      {levelData?.type === 'Karel' && <KarelLevel levelData={levelData} />}
-      {levelData?.type === 'StarWarsGrid' && (
-        <StarWarsLevel levelData={levelData} />
-      )}
-      {levelData?.type === 'StandaloneVideo' && (
-        <StandaloneVideoLevel levelData={levelData} />
-      )}
-      {levelData?.type === 'Panels' && <PanelsLevel levelData={levelData} />}
-    </div>
-  </LevelProvider>
+  <div
+    style={{
+      flex: '1 1 100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}
+  >
+    {!levelData && (
+      <FontAwesomeV6Icon {...spinnerIcon} style={{fontSize: '3rem'}} />
+    )}
+    {levelData?.type === 'Maze' && <MazeLevel levelData={levelData} />}
+    {levelData?.type === 'Karel' && <KarelLevel levelData={levelData} />}
+    {levelData?.type === 'StarWarsGrid' && (
+      <StarWarsLevel levelData={levelData} />
+    )}
+    {levelData?.type === 'StandaloneVideo' && (
+      <StandaloneVideoLevel levelData={levelData} />
+    )}
+    {levelData?.type === 'Panels' && <PanelsLevel levelData={levelData} />}
+  </div>
 );
 
 export default Level;

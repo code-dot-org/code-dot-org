@@ -697,9 +697,11 @@ class CustomMarshalingInterpreter extends Interpreter {
             'Error does not have stack information. Throw `new Error()` ' +
             'instead of a string to get a full stack trace. Exception thrown ' +
             `when calling ${nativeFunc} on ${nativeParentObj}`;
+          newError.native = true;
+          throw newError;
+        } else {
+          throw e;
         }
-        newError.native = true;
-        throw newError;
       }
       return this.marshalNativeToInterpreter(nativeRetVal, null, maxDepth);
     };
