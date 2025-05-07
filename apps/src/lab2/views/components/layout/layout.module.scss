@@ -1,4 +1,5 @@
-@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
+
 .layoutContainer {
   grid-area: content;
   display: flex;
@@ -29,7 +30,7 @@
 
 .footerArea {
   grid-area: footer;
-  background-color: $light_gray_900;
+  background-color: var(--background-neutral-tertiary);
 }
 
 .containerWithFooter {

@@ -1,4 +1,5 @@
-@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
+@import '@code-dot-org/component-library-styles/primitiveColors';
 @import 'font.scss';
 
 @keyframes slidein {
@@ -12,7 +13,7 @@
   }
 }
 
-%instructions {
+.instructions {
   width: 100%;
   height: 100%;
   background-size: 100% 200%;
@@ -24,29 +25,11 @@
   display: flex;
   overflow: hidden;
   margin-bottom: 45px; // space for copyright footer
+  background-color: var(--background-neutral-primary);
 
   &.vertical {
     flex-direction: column;
   }
-}
-
-.instructions-Dark {
-  @extend %instructions;
-  background-color: $neutral_dark;
-
-  a {
-    color: $light_white;
-    text-decoration: underline;
-    &:hover {
-      color: #e4e6e9;
-    }
-  }
-
-}
-
-.instructions-Light {
-  @extend %instructions;
-  background-color: $light_white;
 }
 
 .item {
@@ -65,30 +48,28 @@
   white-space: normal;
 }
 
-%bubble {
+.bubble {
   padding: 12px;
   border-radius: 4px;
   animation: slidein 0.5s;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
+
+  h1, h2, h3, h4 {
+    color: var(--text-brand-teal-primary);
+  }
 
   &:not(:last-of-type) {
     margin-bottom: 10px;
   }
-}
 
-.bubble-Dark {
-  @extend %bubble;
-  background-color: $light_gray_950;
-  color: $light_white;
-
-  h1, h2, h3, h4 {
-    color: $light_white;
+  a:link, a {
+    color: var(--text-brand-purple-primary);
+    text-decoration: underline;
+    &:hover {
+      color: var(--text-brand-purple-secondary);
+    }
   }
-}
-
-.bubble-Light {
-  @extend %bubble;
-  background-color: $light_white;
-  color: $neutral_dark;
 }
 
 .bubbleNoSlide {
@@ -130,7 +111,7 @@ button.validationButton {
   }
 
   code {
-    color: $light_primary_700;
+    color: var(--brand-teal-70);
     // Allow code to wrap.
     white-space: pre-wrap;
   }
@@ -147,7 +128,7 @@ button.validationButton {
       margin: 4px 0;
 
       &:hover {
-        background-color: $light_gray_800;
+        background-color: var(--background-neutral-quaternary);
       }
     }
   }

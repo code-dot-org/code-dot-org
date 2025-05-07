@@ -109,11 +109,14 @@
 
 %text {
   position: relative;
-  overflow: hidden;
   white-space: pre-wrap;
   border-radius: 4px;
   margin-bottom: 10px;
   animation: slidein 0.5s;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 
 .text-Dark {
@@ -134,6 +137,12 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+}
+
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
 }
 
 %message {
