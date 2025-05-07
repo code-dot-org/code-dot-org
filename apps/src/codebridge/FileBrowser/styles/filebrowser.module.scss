@@ -1,21 +1,20 @@
-@import 'color.scss';
 @import '@code-dot-org/component-library-styles/colors.scss';
 
 .file-browser {
   height: 100%;
-  background-color: $light_gray_950;
-  color: $white;
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
   overflow: hidden;
 }
 
 .fileBrowserHeader {
-  background-color: $light_gray_950 !important;
-  border-bottom: 1px solid #54595e;
+  background-color: var(--background-neutral-secondary) !important;
+  border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
 .fileBrowserContents {
   overflow-y: auto;
-  scrollbar-color: $light_gray_500 $light_gray_950;
+  scrollbar-color: var(--background-neutral-senary) var(--background-neutral-secondary);
   height: 100%;
 }
 
@@ -37,7 +36,7 @@
   min-height: 24px;
 
   &:hover {
-    background-color: $light_gray_800;
+    background-color: var(--background-neutral-quaternary);
   }
 }
 
@@ -57,7 +56,7 @@
 }
 
 .file-browser div.folder div span.button-bar span:hover {
-  background-color: $dimgray;
+  background-color: var(--background-neutral-quaternary);
 }
 
 .file-browser div.folder div span.button-bar span {
@@ -120,7 +119,7 @@ div.draggable:focus-within .button-kebab {
 }
 
 .acceptingDrop {
-  background-color: $light_gray;
+  background-color: var(--background-neutral-senary);
 }
 
 .expandedDroppableArea {
@@ -144,12 +143,12 @@ div.draggable:focus-within .button-kebab {
 }
 
 .backpackErrorMessage {
-  color: $white;
+  color: var(--text-error-primary);;
   font-size: 1rem;
 }
 
 .dragging {
-  background-color: $light_gray_800;
+  background-color: var(--background-neutral-quaternary);;
 }
 
 .notDraggable:focus-visible,

@@ -7,8 +7,8 @@
   "user_id": 21093,
   "properties": {
     "encrypted": "false",
-    "title": "Step 4: Trend, Pattern, or Outlier Analysis",
-    "long_instructions": "What trends, patterns, or outliers did you identify in your data? What insights did they provide for your data question?",
+    "title": "Step 4: Ethical Considerations",
+    "long_instructions": "What ethical considerations, such as privacy, bias, or misrepresentation, did you take into account throughout the entire process? \r\n\r\n_Describe any ethical concerns you considered when selecting your data set, making decisions with our dataset, creating your visualizations, and answering your data question._",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -19,7 +19,7 @@
     "name_suffix": "_2025",
     "stay_on_level_after_submit": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:58.007+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level4d\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level4d\"},{\"changed_at\":\"2025-04-18 19:00:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-03-21T21:34:58.007+00:00\",\"changed\":[\"cloned from \\\"data-science-u1-lesson12-level4d\\\"\"],\"cloned_from\":\"data-science-u1-lesson12-level4d\"},{\"changed_at\":\"2025-04-18 19:00:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-06 17:25:38 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
