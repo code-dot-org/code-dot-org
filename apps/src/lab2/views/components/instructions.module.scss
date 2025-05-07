@@ -139,10 +139,11 @@
   flex-direction: column;
 }
 
-.scrollContent {
+.scrollingContent {
   flex: 1;
   overflow-y: auto;
   margin-bottom: 10px;
+  min-height: 70px;
 }
 
 %message {
