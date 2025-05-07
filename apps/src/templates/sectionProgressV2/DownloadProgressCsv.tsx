@@ -32,7 +32,7 @@ export const getLevelProgressCSVData = (
     id: number;
   },
   levelProgressByStudent: {
-    [studentId: number]: {[levelId: number]: {completedPercent: number} | null};
+    [studentId: number]: {[levelId: number]: {status: string} | null};
   }
 ) => {
   const columnNames = ['Student_Name'];
@@ -52,10 +52,10 @@ export const getLevelProgressCSVData = (
 
   unitData.lessons.forEach(lesson => {
     // Add all sublevels, but not the parent choice level.
-    const levelsToInclude = lesson.levels.flatMap(level =>
-      level.sublevels
+    const levelsToInclude = lesson.levels.flatMap(level => {
+      return level.sublevels
         ? level.sublevels.map(sublevel => ({
-            ...level,
+            ...sublevel,
             levelName: `${lesson.relative_position}.${level.bubbleText}${sublevel.bubbleText}`,
           }))
         : [
@@ -63,8 +63,8 @@ export const getLevelProgressCSVData = (
               ...level,
               levelName: `${lesson.relative_position}.${level.bubbleText}`,
             },
-          ]
-    );
+          ];
+    });
 
     levelsToInclude.forEach(level => {
       columnNames.push(level.levelName);
