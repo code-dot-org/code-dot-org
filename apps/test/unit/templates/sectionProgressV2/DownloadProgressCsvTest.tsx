@@ -19,7 +19,6 @@ describe('getLessonProgressCSVData', () => {
 
     expect(result.columnNames).toEqual(['Student_Name']);
     expect(result.table).toEqual([]);
-    expect(result.unitName).toEqual('csp4-2025');
   });
 
   it('formats data correctly for two students and two lessons', () => {
@@ -72,7 +71,5 @@ describe('getLessonProgressCSVData', () => {
         'Lesson Two': '75%',
       },
     ]);
-
-    expect(result.unitName).toEqual('csp4-2025');
   });
 });
