@@ -45,11 +45,12 @@ export const getNoteOctave = (note: number): number =>
 export const getPitchName = (note: number): string =>
   getNoteName(note) + getNoteOctave(note);
 
-// Transpose the note by adding the note offset to the target note defined
-// by the target key.
+// Transpose a note from relative to absolute, by adding the note offset
+// to the target note defined by the target key.
 export const getTransposedNote = (targetKey: Key, noteOffset: number) =>
   targetKey + ROOT_NOTE_START + noteOffset;
 
+// Untranspose a note from absolute to relative.
 export const getUntransposedNote = (targetKey: Key, note: number) =>
   note - ROOT_NOTE_START - targetKey;
 

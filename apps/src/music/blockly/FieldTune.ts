@@ -121,17 +121,6 @@ export default class FieldTune extends GoogleBlockly.Field {
     const {events, scaleMode} = this.getValue();
     const key = MusicRegistry.player.getKey();
 
-    /*
-    const filterFn =
-      scaleMode === 'simple'
-        ? (event: InstrumentTickEvent) =>
-            getNotesInKey(key, START_OCTAVE, DISPLAY_OCTAVES).includes(
-              event.note
-            )
-        : () => true;
-
-    */
-
     const mapFn = (event: InstrumentTickEvent) => ({
       ...event,
       note: getTransposedNote(key, event.note),
