@@ -47,6 +47,7 @@ class UserPreferencesController < ApplicationController
 
   def theme
     preference = UserPreference.find_by(user_id: current_user.id)
+
     if preference && preference.theme.present?
       render json: {theme: preference.theme}
     else

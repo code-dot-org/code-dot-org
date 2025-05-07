@@ -45,6 +45,7 @@ class UserPreferencesControllerTest < ActionController::TestCase
     patch :update, params: {theme: theme}
 
     assert_response :success
+
     preference = UserPreference.find_by(user_id: @user.id)
     assert_equal theme, preference.theme
   end
