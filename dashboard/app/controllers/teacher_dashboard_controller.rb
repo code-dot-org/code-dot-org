@@ -75,45 +75,21 @@ class TeacherDashboardController < ApplicationController
   end
 
   def download_progress_csv
-    return :bad_request unless params[:unit_id]
     type = params[:type]
 
-    return head :bad_request unless ['level', 'lesson'].include?(type)
+    return head :bad_request unless type == 'level'
 
     level_progress_csv if type == 'level'
-
-    lesson_progress_csv if type == 'lesson'
-  end
-
-  private def lesson_progress_csv
-    deduplicated_students = @section.students.distinct
-
-    progress_table = deduplicated_students.map do |student|
-      {student_name: student.family_name ? "#{student.name} #{student.family_name}" : student.name, student_id: student.id}
-    end
-
-    headers = ['Student Name']
-    send_data(
-      CSV.generate do |csv|
-        csv << headers
-        progress_table.each do |data_row|
-          csv << [data_row[:student_name]]
-        end
-      end,
-      filename: 'lesson_progress.csv',
-      disposition: 'attachment',
-      type: 'text/csv',
-    )
   end
 
   private def level_progress_csv
+    return :bad_request unless params[:unit_id]
+
     unit = Unit.get_from_cache(params[:unit_id])
 
     deduplicated_students = @section.students.distinct
 
     student_progress = script_progress_for_users(deduplicated_students, unit)[0]
-
-    pp 'lfm', student_progress
 
     level_names, progress_table = get_csv_level_data(unit, deduplicated_students, student_progress)
 
