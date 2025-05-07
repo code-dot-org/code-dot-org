@@ -30,6 +30,8 @@ import {
 } from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
+
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
   DEFAULT_PROJECT,
@@ -151,6 +153,9 @@ const PythonlabView: React.FunctionComponent<
   const handleProjectTypeChange = (type: 'console' | 'neighborhood') => {
     const project = standaloneStartSources[type];
     dispatch(changeProjectType({newSources: project}));
+    // Clear the console when switching project types.
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    consoleManager?.clearTerminalLines();
     setShowProjectPicker(false);
   };
 

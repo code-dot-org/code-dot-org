@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-05 22:39:39 UTC",
+    "serialized_at": "2025-05-06 18:38:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2610,8 +2610,30 @@
       }
     },
     {
-      "key": "457f2b6f-8dfa-41f4-ba8b-8acb40e5bc1a",
+      "key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d",
       "position": 2,
+      "properties": {
+        "progression_name": "Scenario 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d",
+        "lesson_activity.key": "b8039792-b2f5-4728-8704-0e4194b2a333"
+      }
+    },
+    {
+      "key": "b4cf8127-03e2-446d-853a-16c6dc2e4115",
+      "position": 3,
+      "properties": {
+        "progression_name": "Scenario 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115",
+        "lesson_activity.key": "b8039792-b2f5-4728-8704-0e4194b2a333"
+      }
+    },
+    {
+      "key": "457f2b6f-8dfa-41f4-ba8b-8acb40e5bc1a",
+      "position": 4,
       "properties": {
         "progression_name": "Wrap Up"
       },
@@ -3403,6 +3425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup_2025"
+        ],
         "progression": "RecipeBot Data Curation"
       },
       "bonus": false,
@@ -3425,6 +3450,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lv5_2025"
+        ],
         "progression": "RecipeBot Data Curation"
       },
       "bonus": false,
@@ -3447,6 +3475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup2_2025"
+        ],
         "progression": "Identifying Bias"
       },
       "bonus": false,
@@ -3469,6 +3500,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup3_2025"
+        ],
         "progression": "Identifying Bias"
       },
       "bonus": false,
@@ -3491,6 +3525,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup4_2025"
+        ],
         "progression": "Identifying Bias"
       },
       "bonus": false,
@@ -3513,6 +3550,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup5_2025"
+        ],
         "progression": "Identifying Bias"
       },
       "bonus": false,
@@ -3660,6 +3700,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-embeddings-widget_2025"
+        ],
         "progression": "Embeddings Activity"
       },
       "bonus": false,
@@ -3882,6 +3925,94 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Scenario 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl1_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl1_2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl2a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl2a_2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl3_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl3_2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl4a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl4a_2025"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "genai-lesson10-wrapup-lv1_2025"
         ],
@@ -3902,7 +4033,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3927,7 +4058,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3952,7 +4083,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3977,7 +4108,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4325,6 +4456,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "0f7faecc-20cb-481c-a578-373694398b93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl1_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl1_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl2a_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl2a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl3_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl3_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl4a_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl4a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
       }
     },
     {

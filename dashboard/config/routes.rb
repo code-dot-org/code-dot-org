@@ -473,6 +473,9 @@ Dashboard::Application.routes.draw do
     end
 
     resources :courses, param: 'course_name' do
+      collection do
+        get 'all'
+      end
       member do
         get 'vocab'
         get 'resources'
