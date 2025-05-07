@@ -4,7 +4,6 @@ import {useSelector} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
-import {Student} from '@cdo/apps/types/redux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
@@ -12,20 +11,18 @@ import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 
-const downloadLessonProgressCSV = () => {
-  const store = getStore();
-  const unitData = getCurrentUnitData(store.getState()) as {
+// Export for testing only
+export const getLessonProgressCSVData = (
+  students: {id: number; name: string; familyName?: string}[],
+  unitData: {
     lessons: {title: string; name: string; id: number}[];
-  };
-
-  const unitId = store.getState().unitSelection.scriptId;
-
-  const lessonProgressByStudent =
-    store.getState().sectionProgress.studentLessonProgressByUnit[unitId];
-
-  const students = store.getState().teacherSections
-    .selectedStudents as Student[];
-
+    name: string;
+    id: number;
+  },
+  lessonProgressByStudent: {
+    [studentId: number]: {[lessonId: number]: {completedPercent: number}};
+  }
+) => {
   const columnNames = [
     'Student_Name',
     ...unitData.lessons.map(lesson => lesson.title),
@@ -48,8 +45,28 @@ const downloadLessonProgressCSV = () => {
       ...lessonData,
     };
   });
+  return {unitName: unitData.name, columnNames, table};
+};
 
-  downloadCSV(`lesson_progress_${unitId}.csv`, columnNames, table);
+const downloadLessonProgressCSV = () => {
+  const store = getStore();
+  const unitData = getCurrentUnitData(store.getState()) as {
+    lessons: {title: string; name: string; id: number}[];
+    name: string;
+    id: number;
+  };
+
+  const lessonProgressByStudent =
+    store.getState().sectionProgress.studentLessonProgressByUnit[unitData.id];
+
+  const students = store.getState().teacherSections.selectedStudents;
+
+  const {unitName, columnNames, table} = getLessonProgressCSVData(
+    students,
+    unitData,
+    lessonProgressByStudent
+  );
+  downloadCSV(`lesson_progress_${unitName}.csv`, columnNames, table);
 };
 
 // A custom CSV download function that sets up a fake URL with the CSV and triggers a download
@@ -79,7 +96,9 @@ const downloadCSV = (
   URL.revokeObjectURL(url);
 };
 
-export const DownloadProgressCsv: React.FC = () => {
+interface DownloadProgressCsvProps {}
+
+export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = () => {
   const unitId = useSelector(
     (state: {unitSelection: {scriptId: number}}) => state.unitSelection.scriptId
   );
