@@ -1,7 +1,23 @@
-import {InstrumentTickEvent} from '../player/interfaces/InstrumentEvent';
+import {
+  InstrumentTickEvent,
+  ScaleMode,
+} from '../player/interfaces/InstrumentEvent';
 
-// This file contains a helper function for tunes, and is used by the
-// block's custom field.
+import {getNotesInKey} from './Notes';
+
+export const START_OCTAVE = 4;
+export const DISPLAY_OCTAVES = 3;
+
+export function getNoteAvailableInScaleMode(
+  key: number,
+  note: number,
+  scaleMode?: ScaleMode
+) {
+  return scaleMode === 'simple'
+    ? (event: InstrumentTickEvent) =>
+        getNotesInKey(key, START_OCTAVE, DISPLAY_OCTAVES).includes(note)
+    : true;
+}
 
 // A single event from a tune to be rendered in a graph.
 export interface TuneGraphEvent {

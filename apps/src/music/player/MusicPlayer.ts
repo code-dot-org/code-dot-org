@@ -5,15 +5,8 @@ import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {DEFAULT_CHORD_LENGTH, MIN_BPM, MAX_BPM} from '../constants';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
-import {
-  getPitchName,
-  getNotesInKey,
-  getTransposedNote,
-  Key,
-} from '../utils/Notes';
-
-const START_OCTAVE = 4;
-const DISPLAY_OCTAVES = 3;
+import {getPitchName, getTransposedNote, Key} from '../utils/Notes';
+import {getNoteAvailableInScaleMode} from '../utils/Tunes';
 
 import {
   ChordEvent,
@@ -24,7 +17,6 @@ import {Effects} from './interfaces/Effects';
 import {
   InstrumentEvent,
   InstrumentEventValue,
-  InstrumentTickEvent,
   isInstrumentEvent,
 } from './interfaces/InstrumentEvent';
 import {PlaybackEvent} from './interfaces/PlaybackEvent';
@@ -464,26 +456,23 @@ export default class MusicPlayer {
   ): SamplerSequence | null {
     const {value, effects, when} = instrumentEvent;
     const {instrument, events, relative, scaleMode} = value;
-    const filterFn =
-      scaleMode === 'simple'
-        ? (event: InstrumentTickEvent) =>
-            getNotesInKey(this.key, START_OCTAVE, DISPLAY_OCTAVES).includes(
-              getTransposedNote(this.key, event.note)
-            )
-        : () => true;
 
     return {
       instrument,
       effects,
-      events: events.filter(filterFn).map(event => {
-        const note = relative
-          ? getTransposedNote(this.key, event.note)
-          : event.note;
-        return {
-          notes: [getPitchName(note)],
-          playbackPosition: when + (event.tick - 1) / 16,
-        };
-      }),
+      events: events
+        .filter(event =>
+          getNoteAvailableInScaleMode(this.key, event.note, scaleMode)
+        )
+        .map(event => {
+          const note = relative
+            ? getTransposedNote(this.key, event.note)
+            : event.note;
+          return {
+            notes: [getPitchName(note)],
+            playbackPosition: when + (event.tick - 1) / 16,
+          };
+        }),
     };
   }
 

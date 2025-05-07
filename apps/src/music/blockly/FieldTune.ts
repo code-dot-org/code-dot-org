@@ -7,8 +7,12 @@ import {
   InstrumentTickEvent,
   InstrumentEventValue,
 } from '../player/interfaces/InstrumentEvent';
-import {getNoteName, getNotesInKey, getTransposedNote} from '../utils/Notes';
-import {generateGraphDataFromTune, TuneGraphEvent} from '../utils/Tunes';
+import {getNoteName, getTransposedNote} from '../utils/Notes';
+import {
+  generateGraphDataFromTune,
+  TuneGraphEvent,
+  getNoteAvailableInScaleMode,
+} from '../utils/Tunes';
 import InstrumentGrid from '../views/InstrumentGrid';
 
 const color = require('@cdo/apps/util/color');
@@ -18,9 +22,6 @@ const MAX_DISPLAY_NOTES = 3;
 const FIELD_WIDTH = 51;
 const FIELD_HEIGHT = 18;
 const FIELD_PADDING = 2;
-
-const START_OCTAVE = 4;
-const DISPLAY_OCTAVES = 3;
 
 interface FieldTuneOptions {
   currentValue: InstrumentEventValue;
@@ -120,6 +121,7 @@ export default class FieldTune extends GoogleBlockly.Field {
     const {events, scaleMode} = this.getValue();
     const key = MusicRegistry.player.getKey();
 
+    /*
     const filterFn =
       scaleMode === 'simple'
         ? (event: InstrumentTickEvent) =>
@@ -128,13 +130,21 @@ export default class FieldTune extends GoogleBlockly.Field {
             )
         : () => true;
 
+    */
+
     const mapFn = (event: InstrumentTickEvent) => ({
       ...event,
       note: getTransposedNote(key, event.note),
     });
 
+    const notes = events
+      .map(mapFn)
+      .filter((event: InstrumentTickEvent) =>
+        getNoteAvailableInScaleMode(key, event.note, scaleMode)
+      );
+
     const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({
-      notes: events.map(mapFn).filter(filterFn),
+      notes,
       width: FIELD_WIDTH,
       height: FIELD_HEIGHT,
       numOctaves: 3,
