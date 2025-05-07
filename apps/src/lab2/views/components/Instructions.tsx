@@ -244,7 +244,12 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              <div className={moduleStyles.scrollingContent}>
+              <div
+                className={classNames(
+                  offerBrowserTts && moduleStyles.scrollingContentWithTTS,
+                  !offerBrowserTts && moduleStyles.scrollingContentWithoutTTS
+                )}
+              >
                 <EnhancedSafeMarkdown
                   markdown={text}
                   className={moduleStyles.markdownText}
