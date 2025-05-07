@@ -42,7 +42,7 @@ class LtiV1Controller < ApplicationController
     end
 
     lti_integration = LtiIntegration.find_by(query_params)
-    return log_unauthorized('LTIIintegrationNotFound', query_params.merge({message: 'LTI integration not found'})) unless lti_integration
+    return log_unauthorized('LTIIntegrationNotFound', query_params.merge({message: 'LTI integration not found'})) unless lti_integration
 
     state_and_nonce = create_state_and_nonce
     # set cache key as state value, since we get this back in the final response
@@ -508,7 +508,7 @@ class LtiV1Controller < ApplicationController
     SecureRandom.alphanumeric length
   end
 
-  private def log_metric(name:, value: 1, dimensions: nil)
+  private def log_metric(name, dimensions, value = 1)
     dimensions ||= {}
     Cdo::Metrics.put(
       LOGGING_NAMESPACE,
@@ -518,8 +518,8 @@ class LtiV1Controller < ApplicationController
     )
   end
 
-  private def log_unauthorized(name:, value: 1, dimensions: nil)
-    log_metric(name: name, value: value, dimensions: dimensions)
+  private def log_unauthorized(name, dimensions, value = 1)
+    log_metric(name, dimensions, value)
     unauthorized_status
   end
 
