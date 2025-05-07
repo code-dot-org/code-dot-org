@@ -100,17 +100,10 @@ export const procedureDefMutator = {
   },
 
   /**
-   * Returns the state of this block as a JSON serializable object.
-   *
-   * @param doFullSerialization  Tells the block if it should serialize
-   *     its entire state (including data stored in the backing procedure
-   *     model). Used for copy-paste.
+   * Returns a JSON serializable value which represents the extra state of the block.
    * @returns The state of this block, e.g. the parameters and statements.
    */
-  saveExtraState: function (
-    this: ProcedureBlock,
-    doFullSerialization: boolean
-  ) {
+  saveExtraState: function (this: ProcedureBlock) {
     const state = Object.create(null);
     state['description'] = getBlockDescription(this);
     state['procedureId'] = this.getProcedureModel().getId();
@@ -120,22 +113,20 @@ export const procedureDefMutator = {
     state['userCreated'] = this.userCreated;
     state['invisible'] = this.invisible;
 
-    if (doFullSerialization) {
-      state['fullSerialization'] = true;
-      const params =
-        this.getProcedureModel().getParameters() as ObservableParameterModel[];
+    const params =
+      this.getProcedureModel().getParameters() as ObservableParameterModel[];
+    if (!params.length && this.hasStatements_) return state;
 
-      if (params.length) {
-        state['params'] = params.map(p => {
-          return {
-            name: p.getName(),
-            id: p.getVariableModel().getId(),
-            // Ideally this would be id, and the other would be varId,
-            // but backwards compatibility :/
-            paramId: p.getId(),
-          };
-        });
-      }
+    if (params.length) {
+      state['params'] = params.map(p => {
+        return {
+          name: p.getName(),
+          id: p.getVariableModel().getId(),
+          // Ideally this would be id, and the other would be varId,
+          // but backwards compatibility :/
+          paramId: p.getId(),
+        };
+      });
     }
     if (!this.hasStatements_) {
       state['hasStatements'] = false;

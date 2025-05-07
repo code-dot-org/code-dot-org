@@ -17,6 +17,7 @@ import {
 } from '@cdo/apps/p5lab/spritelab/constants';
 import {registerReducers} from '@cdo/apps/redux';
 import skinBase from '@cdo/apps/skins';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 /**
  * Prepares the blockly environment to allow for embedding blocks in divs
@@ -67,4 +68,14 @@ export const prepareBlocklyForEmbedding = function (
     blockDefinitions: customBlocksConfig,
     customInputTypes,
   });
+};
+
+export const prepareBlocklyForEmbeddingAllEnvironments = function () {
+  // customBlocksConfig encompasses blocks from block pools, which are used by Sprite Lab,
+  // Dance Party, and Minecraft Aquatic. They are not used by Music Lab.
+  const customBlocksConfig = getScriptData('customBlocksConfig');
+  // Lessons can include any blocks, so we need to prepare
+  // all Blockly environments with documentation for embedding.
+  prepareBlocklyForEmbedding(customBlocksConfig, 'spritelab');
+  prepareBlocklyForEmbedding(undefined, 'music');
 };
