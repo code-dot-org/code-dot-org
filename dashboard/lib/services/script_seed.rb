@@ -35,16 +35,11 @@ module Services
     # @param [Unit] script - the Unit object to serialize
     # @return [String] the JSON representation
     def self.serialize_seeding_json(script)
-      puts "we're in this method!"
       script = Unit.with_seed_models.find(script.id)
 
       # We need to retrieve the Levels anyway, and doing it this way makes it fast to get the Level keys for each ScriptLevel.
       my_script_levels = ScriptLevel.includes(:levels).where(script_id: script.id)
       my_levels = my_script_levels.map(&:levels).flatten
-
-      puts "Do we have levels?"
-      puts
-      puts my_levels.inspect
 
       activities = script.lessons.map(&:lesson_activities).flatten
       sections = activities.map(&:activity_sections).flatten
@@ -116,11 +111,6 @@ module Services
         levels_skills: levels_skills
       )
 
-      puts "seed_context in script_seed"
-      puts
-      puts seed_context.inspect
-      puts
-      puts
       scope = {seed_context: seed_context}
 
       data = {
