@@ -4,14 +4,9 @@ import React from 'react';
 
 import styles from './starter-assets-dialog.module.scss';
 
-const ErrorAlert: React.FC = () => (
+const ErrorAlert: React.FC<{message: string}> = ({message}) => (
   <div className={styles.alertContainer}>
-    <Alert
-      text="Something went wrong. Please try again!"
-      type="danger"
-      size="xs"
-      className={styles.alert}
-    />
+    <Alert text={message} type="danger" size="xs" className={styles.alert} />
   </div>
 );
 

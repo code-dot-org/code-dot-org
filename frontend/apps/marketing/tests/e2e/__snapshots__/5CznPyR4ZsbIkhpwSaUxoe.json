@@ -1,0 +1,22 @@
+{
+  "entryContent": {
+    "fields": {
+      "linkName": {
+        "en-US": "⛔️ [ENGINEERING ONLY] External link button test"
+      },
+      "label": {
+        "en-US": "External link button test"
+      },
+      "primaryTarget": {
+        "en-US": "https://google.com"
+      },
+      "isThisAnExternalLink": {
+        "en-US": true
+      },
+      "ariaLabel": {
+        "en-US": "External link button test"
+      }
+    }
+  },
+  "contentType": "link"
+}

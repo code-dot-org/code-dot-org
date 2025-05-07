@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-04 21:57:45 UTC",
+    "serialized_at": "2025-05-07 06:34:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2478,7 +2478,7 @@
       "key": "e199d7e1-18a6-4c5b-9c7d-88fedeeb749b",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how DNS and HTTP work together to bring a website to a user’s browser.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to reinforce the analogy between sending a letter and retrieving a web page.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.",
         "duration": "10",
         "name": "HTTP Preview and Inspect Tool Exploration",
         "progression_name": "HTTP Requests Exploration",
@@ -2589,11 +2589,11 @@
       "key": "1d4565ee-70d3-4abe-9d01-ca02624224b1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the Four Corners upcoming activity to students. Make sure to point out which corner will be **Yes**, **No**, **Maybe**, and **Undecided**.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the first scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner to share why their group chose their position.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the Four Corners upcoming activity to students. Make sure to point out which corner will be **Yes**, **No**, **Maybe**, and **Undecided**.\n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage critical thinking about fairness, competition, and access on the Internet as well as cost barriers, freedom of information, or business interests."
+            "markdown": "If your classroom can’t accommodate movement or you have students uncomfortable sharing in large groups, consider using “Line Debate” (students hold up fingers to show agreement level) or silent discussion protocols like “Chalk Talk” or digital polls."
           }
         ]
       },
@@ -2603,8 +2603,35 @@
       }
     },
     {
-      "key": "f37d12dc-ae68-4742-aef6-eb0d9e5be301",
+      "key": "a83d464c-ff62-492e-ad37-61cf233db5e9",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a83d464c-ff62-492e-ad37-61cf233db5e9",
+        "lesson_activity.key": "29821fae-7deb-4274-83c1-c5ed058b6752"
+      }
+    },
+    {
+      "key": "2f9442e7-c0e0-448f-b397-427f3e0239fd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the first scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner to share why their group chose their position.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage critical thinking about fairness, competition, and access on the Internet as well as cost barriers, freedom of information, or business interests."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2f9442e7-c0e0-448f-b397-427f3e0239fd",
+        "lesson_activity.key": "29821fae-7deb-4274-83c1-c5ed058b6752"
+      }
+    },
+    {
+      "key": "f37d12dc-ae68-4742-aef6-eb0d9e5be301",
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -2614,7 +2641,7 @@
     },
     {
       "key": "797bdec2-7993-422a-a9d6-93f15b3232b5",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the second scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner who was not a spokesperson for scenario #1 to share why their group chose their position.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the third scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner who was not a spokesperson for the previous two scenarios to share why their group chose their position.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce Net Neutrality to students and that all of the scenarios relate to net neutrality. Explain to students that this means that without net neutrality, Internet Service Providers (ISPs) can prioritize, slow down or even block websites and companies can pay for faster access creating advantages for some and barriers for others. ",
         "tips": [
@@ -2631,7 +2658,7 @@
     },
     {
       "key": "bed658ec-f736-4973-bab5-cb9863e61c06",
-      "position": 4,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -2641,7 +2668,7 @@
     },
     {
       "key": "4325f997-2dd9-4806-a938-3c8e91b5539d",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to make direct connections between each scenario and net neutrality. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -2840,7 +2867,13 @@
       "key": "0786aa16-4fe1-4b99-97bf-671d5af1011a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students should move into their project groups and prepare to discuss insights from the gallery walk. Assign or review team roles (Manager, Summarizer, Recorder, Time Keeper). They will use their notes to identify key issues, examples, and target groups for their advocacy campaign.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to debrief their Gallery Walks with their group. Ensure group Recorders are recording responses in the group’s Project Planning Guide.  \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups are discussing, use probing questions to support groups who may be stuck (e.g., “How does this evidence connect to your focus?”). Check shared notes and provide feedback to strengthen their ideas. Keep groups on track by reminding Time Keepers of the schedule.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to discuss different types of advocacy campaigns with students. Briefly explain each format (e.g., social media video, PSA, infographic) and ask students to consider which format would best suit their message and audience. Encourage them to think about clarity, reach, and impact when selecting a campaign type.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to turn to the Design Sprint page in their Advocacy Project Planning Guide. Instruct them to discuss each prompt as a group and record a common answer. Remind them to use team roles (Manager, Summarizer, Recorder, Time Keeper) to stay organized and ensure everyone contributes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to move beyond identifying problems and focus on action. Ask: ‘What specific change do you want to see? How will your campaign convince others to care about this issue?’ If students struggle with persuasion, suggest they include a real-world example or statistic to strengthen their argument."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students should move into their project groups and prepare to discuss insights from the gallery walk. Assign or review team roles (Manager, Summarizer, Recorder, Time Keeper). They will use their notes to identify key issues, examples, and target groups for their advocacy campaign.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to debrief their Gallery Walks with their group. Ensure group Recorders are recording responses in the group’s Project Planning Guide.  \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups are discussing, use probing questions to support groups who may be stuck (e.g., “How does this evidence connect to your focus?”). Check shared notes and provide feedback to strengthen their ideas. Keep groups on track by reminding Time Keepers of the schedule.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to discuss different types of advocacy campaigns with students. Briefly explain each format (e.g., social media video, PSA, infographic) and ask students to consider which format would best suit their message and audience. Encourage them to think about clarity, reach, and impact when selecting a campaign type.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to turn to the Design Sprint page in their Advocacy Project Planning Guide. Instruct them to discuss each prompt as a group and record a common answer. Remind them to use team roles (Manager, Summarizer, Recorder, Time Keeper) to stay organized and ensure everyone contributes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to move beyond identifying problems and focus on action. Ask: ‘What specific change do you want to see? How will your campaign convince others to care about this issue?’ If students struggle with persuasion, suggest they include a real-world example or statistic to strengthen their argument.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": " If students need more support, consider distributing a Persona Summary Sheet to each group. This quick-reference overview can help students connect real-world challenges to their campaign solutions.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0786aa16-4fe1-4b99-97bf-671d5af1011a",
@@ -2848,8 +2881,18 @@
       }
     },
     {
-      "key": "6ded7758-8e59-4c0f-8b20-480e5c45a7e0",
+      "key": "458a5b68-db59-4b3f-9b7a-3fbc28c2c118",
       "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "458a5b68-db59-4b3f-9b7a-3fbc28c2c118",
+        "lesson_activity.key": "18413d23-2b33-4a52-b8f2-05ba4d21a839"
+      }
+    },
+    {
+      "key": "6ded7758-8e59-4c0f-8b20-480e5c45a7e0",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What stood out to you the most today? Why does this issue matter? What can we do about it?*\n- Use the Three W's protocol to facilitate this discussion. First, students discuss answers in pairs or small groups. Then , select three or four students to share a takeaway.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on key takeaways from the lesson and connect the digital divide to real-world impacts. Guide them to recognize who is affected, why it matters, and how advocacy can drive change. This discussion will set the stage for their advocacy campaigns by helping them consider how to make their message compelling and actionable.",
         "duration": "10",
@@ -4418,6 +4461,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_networks-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -4909,6 +4955,30 @@
   ],
   "resources": [
     {
+      "name": "[EXEMPLAR] Gallery Walk Info Tracker",
+      "url": "https://docs.google.com/document/d/1--4w_KUPZRMk8VwiRSLlfeCHrPEbdprTOP6hdHpuzfY/edit?tab=t.0",
+      "key": "_exemplar_gallery_walk_info_tracker",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_gallery_walk_info_tracker"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Internet Access Advocacy Campaign Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1hzLrhFPAsDBoWE88SmCVV4Q5xXywveldG2BFg8W828U/edit?usp=sharing",
+      "key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide"
+      }
+    },
+    {
       "name": "[KEY] AI Networks Chat",
       "url": "https://docs.google.com/document/d/17m_80EDQvotN8ywKsOwArdgbBh_Df1z55c6yK0wp3Qw/edit?usp=sharing",
       "key": "_key_ai_networks_chat",
@@ -5347,6 +5417,18 @@
       }
     },
     {
+      "name": "Persona Summary Sheet",
+      "url": "https://docs.google.com/document/d/1ZkdJWs4XO1cBUAoBIrZ2OOdEsc3hyNRT2XCpP0jiaXo/edit?tab=t.0",
+      "key": "persona_summary_sheet",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "persona_summary_sheet"
+      }
+    },
+    {
       "name": "Role Cards for Challenge 1 and 2",
       "url": "https://docs.google.com/document/d/1ntvGt1aXcCQIlhDMPO3zxYJBFQbVANp5dzRDC092DJs/edit?usp=sharing",
       "key": "role_cards_for_challenge_1_and_2",
@@ -5604,6 +5686,18 @@
     {
       "seeding_key": {
         "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "_exemplar_gallery_walk_info_tracker"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
         "resource.key": "gallery_walk_info_tracker"
       }
     },
@@ -5629,6 +5723,12 @@
       "seeding_key": {
         "lesson.key": "Internet Access Advocacy Campaign Project",
         "resource.key": "persona_fact_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "persona_summary_sheet"
       }
     },
     {

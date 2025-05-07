@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-04 03:43:13 UTC",
+    "serialized_at": "2025-05-06 18:38:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1630,8 +1630,31 @@
       }
     },
     {
-      "key": "117bfdef-5e0d-4767-95b1-883c8d2a7819",
+      "key": "eef4b29c-0151-4d29-940d-050d1644558d",
       "position": 2,
+      "properties": {
+        "name": "Activity",
+        "progression_name": "RecipeBot Data Curation"
+      },
+      "seeding_key": {
+        "activity_section.key": "eef4b29c-0151-4d29-940d-050d1644558d",
+        "lesson_activity.key": "f7829a86-379e-46c4-83ef-d14b89f758cb"
+      }
+    },
+    {
+      "key": "70ee76c8-1ddc-4474-8d78-162e3e29e7f7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Identifying Bias"
+      },
+      "seeding_key": {
+        "activity_section.key": "70ee76c8-1ddc-4474-8d78-162e3e29e7f7",
+        "lesson_activity.key": "f7829a86-379e-46c4-83ef-d14b89f758cb"
+      }
+    },
+    {
+      "key": "117bfdef-5e0d-4767-95b1-883c8d2a7819",
+      "position": 4,
       "properties": {
         "progression_name": "Wrap Up"
       },
@@ -1909,10 +1932,23 @@
       }
     },
     {
-      "key": "6ae647e9-1a02-4ba5-99c1-13d073aaff70",
+      "key": "eede9d51-27e6-4d99-bd4b-b12cf97a56d8",
       "position": 1,
       "properties": {
+        "name": "Student Levels",
+        "progression_name": "Embeddings Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "eede9d51-27e6-4d99-bd4b-b12cf97a56d8",
+        "lesson_activity.key": "dac8dbd3-1b7b-45d4-8e81-256554e0c3d0"
+      }
+    },
+    {
+      "key": "6ae647e9-1a02-4ba5-99c1-13d073aaff70",
+      "position": 2,
+      "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/db4c80f29ebd1d8053abb9cf4b2adb1f-Slide15.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> To help understand how words can be similar, we’re going to investigate a similar idea but with characters from stories or movies. We’ll be completing a “personality quiz” as different characters, and then comparing them to see which characters are the most similar or most different.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong>  Pass out a copy of the <a href=\"https://docs.google.com/document/d/1Ewl1eYGCYx8pHLPBJ2NK7DOH5aRuYN6QhsZvC9QBB8Y/edit\" target=\"_blank\">Character Quiz Activity Guide</a> to each student. Also give each student a marker or crayon - ideally, each student has a different color. They will use these tools to draw dots on the appropriate part of the scale from 0-10 on their activity guides. If you use colored pencils, make sure students make large, dark marks - this will be important for later in the activity.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/7bfb1e11ef1176fe826ce2d0e3beb7c2-Slide16.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Provide directions for students:\n\t\t<br />- Choose a character you are familiar with to fill out this form. Write this person’s name at the top of the activity guide.\n\t\t<br />- Use the colored pencil to place a mark on the scale to represent how your character aligns with each trait. \n\t\t<br />- Come up with two additional traits and add them to the bottom of the table.\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Students can also choose characters from television cartoons, or historical figures. If you know a book they are reading in ELA, you may suggest those characters. If students are having a hard time picking a character, encourage them to just fill out the character questionnaire for themselves. \n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "name": "Teacher Guide",
         "tips": [
           {
             "type": "teachingTip",
@@ -1927,7 +1963,7 @@
     },
     {
       "key": "6098fce8-1bd8-4b07-b9c3-e670c5bfcbe1",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/b44045e26ae926218edd4495f05e9273-Slide17.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> So far, we’ve created a representation of our character based on their different traits. Now it’s time to compare our characters to others in the class. We’ll talk to at least 3 people to see how their characters compare with ours, numerically.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through the instructions. Students will:\n\t\t<br />- Walk around the room to find a classmate to share with\n\t\t<br />- Trade activity guides\n\t\t<br />- Fill out the other person’s questionnaire as your character\n\t\t<br />- Fill in the additional questions under the table to help with tracking\n\t\t<br />- Trade activity guides back\n\t\t<br />\n\t\t<br />The next slide has these same instructions as a visual.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
@@ -1944,7 +1980,7 @@
     },
     {
       "key": "2a8dba64-12e2-412a-a8f9-5bb908665a59",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/97a775a9ff85c09c25e8c2dd9dbe57a3-Slide18.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> If possible, demonstrate this process with a volunteer from the class. Otherwise, reiterate this process for students. Once students understand, they can begin finding partners.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Make sure students are finding people to match up with. Students should try to find at least 3 different partners to compare with before regrouping. This stage of the activity may feel very straightforward, as students are essentially gathering data for the next part of the activity. Students may naturally start commenting on which characters are similar or different based on the data - if you hear this, ask students who they know and listen for explanations that use the “closeness” or “farness” of dots for each trait to justify their answers.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/bed5925cbfe2b9a80368293aa21cf84b-Slide19.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Kim and Hawa’s characters are represented on the slide. How similar are their characters? How do you know?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before having a full-class discussion\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be comparing the two characters row-by-row, noticing when dots are close together or far apart. Even though this isn’t explicit in the question, be sure to emphasize the specific traits that are close or far - for example, these two characters are on opposite ends of the good/bad spectrum, but are close in several other areas. Emphasize responses that are explicitly counting spaces between dots and comparing distances.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6f25459796dd0ca711d19aa5fc61310c-Slide20.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students flip to the back of the activity guide. They will do a similar activity they was just completed as a class: decide how similar their character was to their classmates’ character based on the marks on the activity guide, and write their answers down.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Make sure students are on-task. If they need help deciding how similar characters are, you can encourage them to just count the distance between their marks and their classmates marks\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8e5e1377acc689f550424253391643eb-Slide21.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> I’m changing up the format of the quiz - instead of using dots on a spectrum, now we just have raw numbers.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong>  Are these two characters similar?\n\t\t<br />\n\t\t<br />Have students respond with thumbs up/ thumbs down. It may take a while for students t\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Scan the class for student answers. Ask one student with their thumb up why they think these characters are similar. Students will probably think these numbers are all similar, even though none of them are the same. This means the characters are similar.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
@@ -1961,7 +1997,7 @@
     },
     {
       "key": "fed3424c-5bdf-47f4-bcb3-671c64437074",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/3d83c1f988e645b8de16c95ee6709055-Slide22.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> That last slide looked a little complicated trying to represent each trait. On this slide, we’ve condensed that to just a list of numbers, where each number represents a different trait from your character questionnaire. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Are these characters similar? How can you tell?\n\t\t<br />\n\t\t<br />Have students chat with a neighbor first, then repeat the thumbs up/down. Call on someone with their thumbs down to share their response.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should leave this discussion understanding that they can compare numbers in each position to determine how similar or different characters are. This can be done by comparing each number from left-to-right. Students may also get caught up on the lack of labels, asking “what does each position represent?”. This can lead to a powerful insight: it doesn’t matter what each position represents, only how close or far the numbers are in that same position. This is a key concept that helps us generalize the idea of “character traits” to other uses, which we’ll see in a few slides.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/50ac7b901a05baa59f702538f7a68615-Slide23.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Are these characters similar? How can you tell?\n\t\t<br />\n\t\t<br />Scan the room to see that students still have their thumbs up. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should still put their thumbs up for these characters being similar – we’ve gotten rid of the human-readable words, but left the computer-readable numbers. Humans can still look at these numbers and realize that they’re similar.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
@@ -1978,7 +2014,7 @@
     },
     {
       "key": "e32c7d3f-c563-42dd-8c4c-c937eb653cb9",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/07f30c419482319f144a82967d2ab0da-Slide24.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Are these characters similar? How can you tell?\n\t\t<br />\n\t\t<br />Scan the room for who has thumbs up or down; some may have their thumb halfway between; allow that.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Unlike the previous several questions, this question does not necessarily have one easy answer – while the first 3 numbers are far from each other the last two are exact. Call on a student with their thumb down, who will probably note that the first three numbers are very far apart, and validate that answer. Then call on someone with their thumb up, who will probably note that the last two are exact. Validate that answer as well. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Characters can be similar in different ways, that may be more or less important in a given situation – it’s context dependent. For example, if two characters have the same sense of humor, they may behave similarly in a comedy scene. But if those same characters happen to be the hero and the villain, those differences will appear in other ways in different types of situations.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/bb5a282720176b1d9727c10d1e2b3707-Slide25.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There were only 5 traits we looked at for these characters. This means it’s possible that even though two personality quizzes have very similar traits, they’re actually different quizzes. They could even be very different from each other, but just happen to be similar with these specific traits.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How many traits do you think you’d need to:\n\t\t<br />- Make sure your character is uniquely guess-able just by the numbers?\n\t\t<br />- Ensure that similar characters are truly similar in their stories and not just in this questionnaire?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Give some thought time, then take hands. There isn’t a specific number of traits these questions looking for, merely that the more traits you are keeping track of the more accurately you can describe the character – this should answer both questions. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is why it’s important when describing concepts as numbers, to use a lot of numbers. Fewer numbers are less accurate.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/3ba96e16095cef2f270ed00c750dbe75-Slide26.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’ve been talking about personality traits for different characters and using a list of numbers to represent those characters. It turns out we can do the same thing with words - using a list of numbers to represent the meaning of words! We're going to learn more about that in this video\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=s1fhxAVpYx8\" target=\"_blank\">Generative AI: Storage + Embeddings</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What are embeddings and what are they used for?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should recall what they heard in the video, but it's okay if their answers aren't 100% accurate since this will be reinforced in the next slide. Once a few students have shared, transition to the next slide to present the definition.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/170a15084c6c3ae34f619c8d0ff22954-Slide27.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Embeddings are the set of numbers used to represent a word in a large-language model. These numbers, when taken altogether and compared with other words, can be used to represent the meaning of words.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
@@ -1995,7 +2031,7 @@
     },
     {
       "key": "d8826539-92e5-4736-8f12-b0fc6415fe8e",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/cc7151dd776c1c8464747939041a49ec-Slide28.PNG\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Take out your graphic organizer. Update the Storage section with an explanation of how a model represents words. Update the Embeddings section on the back as well\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Check in with students as they complete their graphic organizer and summarize their thoughts. It may be helpful to return to the previous slide so students can see the definition of Embeddings. There is no \"one right answer\" that should go in these boxes - instead, help students synthesize what they've learned in the lesson and seen in the video into their own words. Similarly, cue students to draw an illustration or a diagram representing this process. It's okay for it to be abstract, as long as the student understand what it means to them.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
@@ -2574,8 +2610,30 @@
       }
     },
     {
-      "key": "457f2b6f-8dfa-41f4-ba8b-8acb40e5bc1a",
+      "key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d",
       "position": 2,
+      "properties": {
+        "progression_name": "Scenario 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d",
+        "lesson_activity.key": "b8039792-b2f5-4728-8704-0e4194b2a333"
+      }
+    },
+    {
+      "key": "b4cf8127-03e2-446d-853a-16c6dc2e4115",
+      "position": 3,
+      "properties": {
+        "progression_name": "Scenario 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115",
+        "lesson_activity.key": "b8039792-b2f5-4728-8704-0e4194b2a333"
+      }
+    },
+    {
+      "key": "457f2b6f-8dfa-41f4-ba8b-8acb40e5bc1a",
+      "position": 4,
       "properties": {
         "progression_name": "Wrap Up"
       },
@@ -3368,6 +3426,156 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "genai-lesson3-activity-lvlgroup_2025"
+        ],
+        "progression": "RecipeBot Data Curation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lvlgroup_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "eef4b29c-0151-4d29-940d-050d1644558d"
+      },
+      "level_keys": [
+        "genai-lesson3-activity-lvlgroup_2025"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lv5_2025"
+        ],
+        "progression": "RecipeBot Data Curation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lv5_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "eef4b29c-0151-4d29-940d-050d1644558d"
+      },
+      "level_keys": [
+        "genai-lesson3-activity-lv5_2025"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup2_2025"
+        ],
+        "progression": "Identifying Bias"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lvlgroup2_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "70ee76c8-1ddc-4474-8d78-162e3e29e7f7"
+      },
+      "level_keys": [
+        "genai-lesson3-activity-lvlgroup2_2025"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup3_2025"
+        ],
+        "progression": "Identifying Bias"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lvlgroup3_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "70ee76c8-1ddc-4474-8d78-162e3e29e7f7"
+      },
+      "level_keys": [
+        "genai-lesson3-activity-lvlgroup3_2025"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup4_2025"
+        ],
+        "progression": "Identifying Bias"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lvlgroup4_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "70ee76c8-1ddc-4474-8d78-162e3e29e7f7"
+      },
+      "level_keys": [
+        "genai-lesson3-activity-lvlgroup4_2025"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup5_2025"
+        ],
+        "progression": "Identifying Bias"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lvlgroup5_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "70ee76c8-1ddc-4474-8d78-162e3e29e7f7"
+      },
+      "level_keys": [
+        "genai-lesson3-activity-lvlgroup5_2025"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "genai-lesson3-wrapup-lv1_2025"
         ],
         "progression": "Wrap Up"
@@ -3387,11 +3595,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "exploring_generative_ai_l32_l1"
+        ],
         "progression": "Exploring AI Recommendations"
       },
       "bonus": false,
@@ -3409,11 +3620,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "exploring_generative_ai_l32_l2"
+        ],
         "progression": "Refine Prompts to Mitigate Bias"
       },
       "bonus": false,
@@ -3431,11 +3645,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "exploring_generative_ai_l32_wrap_up"
+        ],
         "progression": "Ethical Checkpoint"
       },
       "bonus": false,
@@ -3453,7 +3670,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3478,8 +3695,33 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 19,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-embeddings-widget_2025"
+        ],
+        "progression": "Embeddings Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-embeddings-widget_2025"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "eede9d51-27e6-4d99-bd4b-b12cf97a56d8"
+      },
+      "level_keys": [
+        "genai-embeddings-widget_2025"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3503,7 +3745,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3528,7 +3770,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3553,7 +3795,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3578,7 +3820,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3603,7 +3845,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3628,7 +3870,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3653,7 +3895,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3678,8 +3920,96 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 28,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl1_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl1_2025"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl2a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl2a_2025"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl3_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl3_2025"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Scenario 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl4a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl4a_2025"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3703,7 +4033,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3728,7 +4058,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3753,7 +4083,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3778,7 +4108,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3890,6 +4220,78 @@
     },
     {
       "seeding_key": {
+        "level.key": "genai-lesson3-activity-lvlgroup_2025",
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lvlgroup_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "eef4b29c-0151-4d29-940d-050d1644558d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson3-activity-lv5_2025",
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lv5_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "eef4b29c-0151-4d29-940d-050d1644558d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson3-activity-lvlgroup2_2025",
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lvlgroup2_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "70ee76c8-1ddc-4474-8d78-162e3e29e7f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson3-activity-lvlgroup3_2025",
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lvlgroup3_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "70ee76c8-1ddc-4474-8d78-162e3e29e7f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson3-activity-lvlgroup4_2025",
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lvlgroup4_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "70ee76c8-1ddc-4474-8d78-162e3e29e7f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson3-activity-lvlgroup5_2025",
+        "script_level.level_keys": [
+          "genai-lesson3-activity-lvlgroup5_2025"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "70ee76c8-1ddc-4474-8d78-162e3e29e7f7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "genai-lesson3-wrapup-lv1_2025",
         "script_level.level_keys": [
           "genai-lesson3-wrapup-lv1_2025"
@@ -3946,6 +4348,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "fe4b8381-e60d-4655-9bd3-dc9b864fb455"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-embeddings-widget_2025",
+        "script_level.level_keys": [
+          "genai-embeddings-widget_2025"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "eede9d51-27e6-4d99-bd4b-b12cf97a56d8"
       }
     },
     {
@@ -4042,6 +4456,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "0f7faecc-20cb-481c-a578-373694398b93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl1_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl1_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl2a_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl2a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl3_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl3_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl4a_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl4a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
       }
     },
     {

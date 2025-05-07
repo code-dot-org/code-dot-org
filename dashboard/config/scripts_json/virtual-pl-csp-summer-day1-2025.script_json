@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-28 18:12:54 UTC",
+    "serialized_at": "2025-05-06 19:43:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -97,9 +97,9 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThis lesson is chosen so that early on in the workshop participants see manipulatives as a valuable experience for students. We want participants to “buy-in” to the benefits of manipulatives as a way to make content approachable.\n\n**Objectives:**\n* Participants see that using manipulatives makes content and tasks more approachable for students.\n* Participants experience an intentional approach to introducing vocabulary after building a common experience for learners to connect vocabulary to.\n* Participants see how the lessons build on one another.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csp1-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
+        "overview": "**Purpose:**\nThis lesson is chosen so that early on in the workshop participants see manipulatives as a valuable experience for students. We want participants to “buy-in” to the benefits of manipulatives as a way to make content approachable.\n\n**Objectives:**\n* Participants see that using manipulatives makes content and tasks more approachable for students.\n* Participants experience an intentional approach to introducing vocabulary after building a common experience for learners to connect vocabulary to.\n* Participants see how the lessons build on one another.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csp1-2025/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
         "preparation": "* Have scissors ready for groups to create [r shape_cutouts/virtual-pl-csp-summer/2025] or have these pre-cut and prepared before class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1-_Vfwz51mO8PpNobJt8T5XG1-YjBdsdJi5uD25-26PE/edit?usp=sharing)",
-        "student_overview": "Develop a system for creating and ordering patterns of shapes.\n\n<a href=\"https://studio.code.org/s/csp1-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
+        "student_overview": "Develop a system for creating and ordering patterns of shapes.\n\n<a href=\"https://studio.code.org/s/csp1-2025/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
         "unplugged": true
       },
       "seeding_key": {
@@ -694,6 +694,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U1L4 CYU3_1_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -716,6 +719,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-01_2025"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -738,6 +744,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-02_2025"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -760,6 +769,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-03_2025"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -782,6 +794,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-04_2025"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -804,6 +819,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-05_2025"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -826,6 +844,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch1-06_2025"
+        ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
@@ -848,6 +869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch2-01_2025"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -870,6 +894,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csp-summer-day1-asynch2-02_2025"
+        ],
         "progression": "Using Resources"
       },
       "bonus": false,
@@ -999,6 +1026,26 @@
   ],
   "resources": [
     {
+      "name": "2025 Virtual CSP Summer Workshop - Day 1 Agenda",
+      "url": "https://docs.google.com/document/d/1YrZ6pQ0p3k2yVOCNzUggYXfFGAzg4NjRb6Zr98K5vFM/edit?usp=drive_link",
+      "key": "2025_virtual_csp_summer_workshop_-_day_1_agenda_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_-_day_1_agenda_1"
+      }
+    },
+    {
+      "name": "2025 Virtual CSP Summer Workshop - Day 1 Slides",
+      "url": "https://docs.google.com/presentation/d/111_QSKeFZfq7nK0uOirPzYKFQMoI0bzI4gs4m4n3D1E/edit?usp=drive_link",
+      "key": "2025_virtual_csp_summer_workshop_-_day_1_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_-_day_1_slides"
+      }
+    },
+    {
       "name": "Circle Square Patterns",
       "url": "https://docs.google.com/document/d/17GrZRYeVRMKwo9vbW-xVT1-Ccu0U2n88Thr-kMqu4s4/edit",
       "key": "circle_square_patterns",
@@ -1059,7 +1106,18 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_-_day_1_agenda_1",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "2025_virtual_csp_summer_workshop_-_day_1_slides",
+        "script.name": "virtual-pl-csp-summer-day1-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 
