@@ -6,6 +6,7 @@ import {Metadata} from 'next';
 import {draftMode} from 'next/headers';
 
 import Bootstrap from '@/bootstrap';
+import ContentEditorHelper from '@/components/contentEditorHelper';
 import {Brand} from '@/config/brand';
 import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 import {getExperience} from '@/contentful/get-experience';
@@ -58,6 +59,7 @@ export default async function ExperiencePage({
   params,
   searchParams,
 }: ExperiencePageProps) {
+  const isDraftModeEnabled = (await draftMode()).isEnabled;
   const pageProps = await getPageProps({
     params,
     searchParams,
@@ -78,6 +80,7 @@ export default async function ExperiencePage({
   return (
     <main style={{width: '100%'}}>
       <Bootstrap locale={pageProps.locale} />
+      <ContentEditorHelper isDraftModeEnabled={isDraftModeEnabled} />
       {stylesheet && <style>{stylesheet}</style>}
       <ExperiencePageLoader
         experienceJSON={experienceJSON}

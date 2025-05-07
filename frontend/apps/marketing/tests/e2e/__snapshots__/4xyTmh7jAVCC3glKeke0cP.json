@@ -1,0 +1,25 @@
+{
+  "entryContent": {
+    "fields": {
+      "videoTitle": {
+        "en-US": "Introducing How Computers Work"
+      },
+      "youTubeId": {
+        "en-US": "OAx_6-wdslM"
+      },
+      "videoFallbackFile": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "2lkClZGdouHPDUTRZu8LxZ"
+          }
+        }
+      },
+      "videoFallbackUrl": {
+        "en-US": "https://videos.ctfassets.net/90t6bu6vlf76/2lkClZGdouHPDUTRZu8LxZ/271ce1df5c6909836589a34212476757/01_howcomputerswork_sm-mp4.mp4"
+      }
+    }
+  },
+  "contentType": "video"
+}

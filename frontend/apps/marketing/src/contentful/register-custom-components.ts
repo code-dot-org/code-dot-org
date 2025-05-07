@@ -27,6 +27,9 @@ import HeroBanner, {
 import SkinnyBanner, {
   SkinnyBannerContentfulComponentDefinition,
 } from '@/components/contentful/skinnyBanner';
+import TabGroup, {
+  TabGroupContentfulComponentDefinition,
+} from '@/components/contentful/tabGroup';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
@@ -67,9 +70,6 @@ import LabSnapshot, {
   LabSnapshotContentfulComponentDefinition,
 } from '@/components/snapshots/labSnapshot';
 import Spacer, {SpacerContentfulComponentDefinition} from '@/components/spacer';
-import TabGroup, {
-  TabGroupContentfulComponentDefinition,
-} from '@/components/tabGroup';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 defineComponents(

@@ -63,14 +63,10 @@
 
 .mainInstructions {
   white-space: normal;
-
-  display: flex;
-  align-items: flex-start;
-  gap: 4px;
 }
 
 %bubble {
-  padding: 8px;
+  padding: 12px;
   border-radius: 4px;
   animation: slidein 0.5s;
 
