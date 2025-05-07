@@ -110,8 +110,17 @@ button.validationButton {
     margin-bottom: 5px;
   }
 
+  code, pre {
+    color: var(--text-info-secondary);
+    background-color: var(--background-neutral-primary);
+    border: 1px solid var(--borders-neutral-strong);
+  }
+
+  pre code {
+    border: none;
+  }
+
   code {
-    color: var(--brand-teal-70);
     // Allow code to wrap.
     white-space: pre-wrap;
   }
