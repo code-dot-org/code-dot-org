@@ -14,8 +14,7 @@ export const getNoteAvailableInScaleMode = (
   scaleMode?: ScaleMode
 ) =>
   scaleMode === 'simple'
-    ? (event: InstrumentTickEvent) =>
-        getNotesInKey(key, START_OCTAVE, DISPLAY_OCTAVES).includes(note)
+    ? getNotesInKey(key, START_OCTAVE, DISPLAY_OCTAVES).includes(note)
     : true;
 
 // A single event from a tune to be rendered in a graph.
