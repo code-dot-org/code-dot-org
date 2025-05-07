@@ -1,8 +1,7 @@
-@import 'color';
 @import '@code-dot-org/component-library-styles/colors.scss';
 
 .duotone {
-  --fa-primary-color: var(--text-neutral-primary);
+  --fa-primary-color: var(--text-neutral-white-fixed);
   --fa-secondary-opacity: 1.0;
   --fa-primary-opacity: 1.0;
 }
