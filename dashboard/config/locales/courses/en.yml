@@ -566,7 +566,7 @@ en:
           description_teacher: ''
           version_title: '2023'
         virtual-pl-csa-summer-2024:
-          title: CSA Virtual Summer Professional Learning '24-'25
+          title: 'CSA Virtual Summer Professional Learning '
           description_short: ''
           description_student: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           description_teacher: "**Participants will:**\n\n* Prepare to teach CSA.\n* Practice key concepts in the CSA curriculum.\n* Grow in their understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
@@ -5516,3 +5516,15 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: 25 - 26
+        codechella2025:
+          title: Codechella 2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        virtual-pl-csa-summer-2025:
+          title: CSA Virtual Summer Professional Learning
+          description_short: ''
+          description_student: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          description_teacher: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          version_title: 24-25

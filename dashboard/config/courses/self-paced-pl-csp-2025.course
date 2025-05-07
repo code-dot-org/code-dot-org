@@ -12,7 +12,7 @@
     "self-paced-pl-csp3-2025",
     "self-paced-pl-csp4-2025"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
