@@ -33,6 +33,9 @@
     "test:ui:publish-snapshot": "tsx ./tests/e2e/scripts/all-the-things-updater.ts publish-snapshot",
     "test:ui:update-snapshot": "tsx ./tests/e2e/scripts/all-the-things-updater.ts update-snapshot"
   },
+  "browserslist": [
+    "extends @code-dot-org/browserslist-config"
+  ],
   "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
   "stylelint": {
     "extends": "@code-dot-org/lint-config/stylelint/index.mjs"
@@ -58,6 +61,7 @@
   },
   "devDependencies": {
     "@applitools/eyes-playwright": "^1.36.3",
+    "@code-dot-org/browserslist-config": "workspace:*",
     "@next/eslint-plugin-next": "^15.0.3",
     "@playwright/test": "~1.49.1",
     "@testing-library/dom": "^10.4.0",
@@ -68,6 +72,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "browserslist-ga-export": "^5.0.0",
     "contentful-management": "^11.52.1",
     "cross-fetch": "^4.1.0",
     "dotenv": "^16.4.7",
