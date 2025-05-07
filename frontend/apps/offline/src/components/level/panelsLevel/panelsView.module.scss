@@ -21,13 +21,13 @@ $light-primary-700: var(--text-primary-light);
 
 @keyframes slide-in {
   from {
-    margin-top: $text-offset-y;
     margin-bottom: -$text-offset-y;
+    margin-top: $text-offset-y;
   }
 
   to {
-    margin-top: 0;
     margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
@@ -43,18 +43,15 @@ $light-primary-700: var(--text-primary-light);
 
 .panelsContainer {
   align-items: center;
+  background-color: var(--neutral-base-black);
+  background-image: url('/images/bg-pattern.png');
+  background-repeat: repeat;
+  background-size: 18rem;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
-  left: 0;
-  position: absolute;
-  top: 0;
   width: 100%;
-  background-image: url('/images/bg-pattern.png');
-  background-repeat: repeat;
-  background-color: var(--neutral-base-black);
-  background-size: 18rem;
 
   .panel {
     container-name: panel;

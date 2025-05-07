@@ -11,13 +11,7 @@ export interface PanelsLevelProps {
 const PanelsLevel: React.FunctionComponent<PanelsLevelProps> = ({
   levelData,
 }) => {
-  return (
-    <div>
-      <div>
-        <PanelsView panels={levelData.panels || []} offerBrowserTts />
-      </div>
-    </div>
-  );
+  return <PanelsView panels={levelData.panels || []} offerBrowserTts />;
 };
 
 export default PanelsLevel;
