@@ -1153,5 +1153,18 @@
     }
   ],
   "skills": [],
-  "levels_skills": []
+  "levels_skills": [
+    {
+      "seeding_key": {
+        "level.key": "test-serialize-seeding-json-level-0",
+        "skill.key": "test-serialize-seeding-json-skill-0",
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-serialize-seeding-json-level-0",
+        "skill.key": "test-serialize-seeding-json-skill-1",
+      }
+    },
+  ]
 }
