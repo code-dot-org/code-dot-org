@@ -1,9 +1,5 @@
-def hoc_dir(*dirs)
-  pegasus_dir('sites.v3', 'hourofcode.com', *dirs)
-end
-
 def hoc_load_countries
-  JSON.parse(File.read(hoc_dir('i18n/countries.json')))
+  JSON.parse(File.read(pegasus_dir('config', 'countries.json')))
 end
 HOC_COUNTRIES = hoc_load_countries
 

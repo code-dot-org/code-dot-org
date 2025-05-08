@@ -16,9 +16,9 @@ def sites_dir(*paths)
   pegasus_dir('sites', *paths)
 end
 
-def sites_v3_dir(*paths)
-  pegasus_dir('sites.v3', *paths)
-end
+# def sites_v3_dir(*paths)
+#   pegasus_dir('sites.v3', *paths)
+# end
 
 def hoc_dir(*paths)
   pegasus_dir('sites.v3', 'hourofcode.com', *paths)
