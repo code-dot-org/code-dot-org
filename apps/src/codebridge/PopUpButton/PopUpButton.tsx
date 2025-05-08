@@ -130,6 +130,22 @@ export const PopUpButton = ({
         createPortal(
           <FocusTrap
             focusTrapOptions={{
+              isKeyForward: event => {
+                if (event.key === 'ArrowDown') {
+                  event.stopPropagation();
+                  return true;
+                }
+                // If we remove this line, tab will move focus but focus will
+                // not be trapped. Same with shift+tab below.
+                return event.key === 'Tab';
+              },
+              isKeyBackward: event => {
+                if (event.key === 'ArrowUp') {
+                  event.stopPropagation();
+                  return true;
+                }
+                return event.key === 'Tab' && event.shiftKey;
+              },
               clickOutsideDeactivates: true,
               fallbackFocus: initialFocusId
                 ? `#${initialFocusId}`
