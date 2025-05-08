@@ -1,7 +1,7 @@
-@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 .workspace {
-  color: $white;
+  color: var(--text-neutral-primary);
   overflow: hidden;
   z-index: 2;
 }
@@ -13,7 +13,7 @@
 }
 
 .workspaceToggleButtonContainer {
-  background-color: $light_gray_900;
+  background-color: var(--background-neutral-tertiary);
   display: flex;
   align-items: center;
   padding-left: 4px;
@@ -57,7 +57,7 @@
 }
 
 .workspaceHeader {
-  border-bottom: 1px solid $light_gray_800;
+  border-bottom: 1px solid var(--borders-neutral-primary);
 }
 
 .centerHeaderContent {

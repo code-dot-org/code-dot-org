@@ -52,6 +52,7 @@ Dashboard::Application.routes.draw do
     resource :user_preference, only: [:update] do
       get '/font_size/console', to: 'user_preferences#console_font_size'
       get '/font_size/editor', to: 'user_preferences#editor_font_size'
+      get '/theme', to: 'user_preferences#theme'
     end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
@@ -473,6 +474,9 @@ Dashboard::Application.routes.draw do
     end
 
     resources :courses, param: 'course_name' do
+      collection do
+        get 'all'
+      end
       member do
         get 'vocab'
         get 'resources'

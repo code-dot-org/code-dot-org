@@ -95,6 +95,7 @@ class User < ApplicationRecord
   include UserMultiAuthHelper
   include UserPermissionGrantee
   include EmailValidations
+  include ProviderFlags
   include PartialRegistration
   include Rails.application.routes.url_helpers
 
@@ -139,11 +140,6 @@ class User < ApplicationRecord
   PASSWORD_STRICT_MIN_LENGTH = 14
   # Countries that require a 14 character password minimum
   PASSWORD_STRICT_COUNTRIES = %w[AU NZ].freeze
-
-  # Provider variables
-  PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
-  PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
-  PROVIDER_MIGRATED = 'migrated'.freeze
 
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
@@ -1624,22 +1620,6 @@ class User < ApplicationRecord
 
   def has_ever_signed_in?
     current_sign_in_at.present?
-  end
-
-  def migrated?
-    provider == PROVIDER_MIGRATED
-  end
-
-  def manual?
-    provider == PROVIDER_MANUAL
-  end
-
-  def sponsored?
-    if migrated?
-      authentication_options.empty? && encrypted_password.blank?
-    else
-      provider == PROVIDER_SPONSORED
-    end
   end
 
   def should_see_edit_email_link?

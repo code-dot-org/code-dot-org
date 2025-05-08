@@ -80,6 +80,27 @@ export const DefaultFullWidthActionBlock: Story = {
   },
 };
 
+export const WithTag: Story = {
+  args: {
+    ...defaultArgs,
+    tag: 'New',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Shows a "New" tag.',
+      },
+    },
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const tag = await canvas.findByText('New');
+
+    // check if tag is visible
+    await expect(tag).toBeVisible();
+  },
+};
+
 export const WithDetail: Story = {
   args: {
     ...defaultArgs,

@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-04-28T18:19:02.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "encrypted": "false",
     "background": "music-black",
     "instructions_important": "false",
-    "long_instructions": "####<i class=\"fa-solid fa-list-music\"></i> Add chorus music \r\n\r\n1. Call the [chorus music](#clickable=flyout-third-block) function in three places to accompany each part of the lyrics.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-third-block)\r\n\r\n---\r\n\r\n*Example timeline:*\r\n\r\n![](https://images.code.org/224560938f7973318874f351508d9a2b-image-1744664311095.png)\r\n",
+    "long_instructions": "##### **Teacher Note**: This is Lesson 2, Level 9 from the curriculum.\r\n___\r\n####<i class=\"fa-solid fa-list-music\"></i> Add chorus music \r\n\r\n1. Call the [chorus music](#clickable=flyout-third-block) function in three places to accompany each part of the lyrics.\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-third-block)\r\n\r\n---\r\n\r\n*Example timeline:*\r\n\r\n![](https://images.code.org/224560938f7973318874f351508d9a2b-image-1744664311095.png)\r\n",
     "hide_share_and_remix": "true",
     "validations": [
       {
@@ -357,8 +358,7 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:02.566+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-chorus2_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-chorus2_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:02.566+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-chorus2_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-chorus2_launch\"},{\"changed_at\":\"2025-05-05 19:56:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

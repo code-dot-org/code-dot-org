@@ -38,7 +38,7 @@ describe('MultiSelectInput', () => {
     window.HTMLElement.prototype.scrollIntoView = mockScrollIntoView;
   });
 
-  const getInputElement = () => screen.getByRole('searchbox');
+  const getInputElement = () => screen.getByRole('combobox');
   const getMenuElement = () => screen.getByRole('listbox');
   const getOptionFromDropdown = optionText => {
     const listbox = getMenuElement();
@@ -67,7 +67,7 @@ describe('MultiSelectInput', () => {
 
       // Check if tags are rendered
       // Look for the tag container first
-      const multiSelectContainer = screen.getByRole('combobox');
+      const multiSelectContainer = screen.getByRole('combobox').parentNode;
       expect(
         within(multiSelectContainer).getByText('Option 1')
       ).toBeInTheDocument();
@@ -89,7 +89,8 @@ describe('MultiSelectInput', () => {
         'test-multiselect-listbox'
       );
       expect(combobox).toHaveAttribute('aria-expanded', 'false');
-      expect(combobox).toHaveAttribute('aria-haspopup', 'listbox');
+      const popupContainer = combobox.closest('[aria-haspopup="listbox"]');
+      expect(popupContainer).toBeInTheDocument();
 
       const input = getInputElement();
       expect(input).toHaveAttribute('aria-autocomplete', 'list');
@@ -291,7 +292,7 @@ describe('MultiSelectInput', () => {
       expect(getOptionFromDropdown('Option 3')).toBeInTheDocument();
     });
 
-    it('selects a focused option on Enter or Space', async () => {
+    it('selects an active option on Enter or Space', async () => {
       const mockSetSelectedOptions = jest.fn();
       const user = userEvent.setup();
 
@@ -315,6 +316,7 @@ describe('MultiSelectInput', () => {
       expect(mockSetSelectedOptions).toHaveBeenCalledWith(['1']);
 
       // focus on second menu option
+      await user.keyboard('{ArrowDown}');
       await user.keyboard('{ArrowDown}');
 
       // press Space
@@ -444,14 +446,37 @@ describe('MultiSelectInput', () => {
       const listbox = getMenuElement();
       expect(listbox).toBeInTheDocument();
       let option1 = getOptionFromDropdown('Option 1');
-      expect(option1).toHaveFocus();
+      let option2 = getOptionFromDropdown('Option 2');
+      expect(option1).toHaveAttribute(
+        'class',
+        expect.stringContaining('focused')
+      );
+      expect(option2).not.toHaveAttribute(
+        'class',
+        expect.stringContaining('focused')
+      );
 
       await user.keyboard('{ArrowDown}');
-      let option2 = getOptionFromDropdown('Option 2');
-      expect(option2).toHaveFocus();
+
+      expect(option1).not.toHaveAttribute(
+        'class',
+        expect.stringContaining('focused')
+      );
+      expect(option2).toHaveAttribute(
+        'class',
+        expect.stringContaining('focused')
+      );
 
       await user.keyboard('{ArrowUp}');
-      expect(option1).toHaveFocus();
+
+      expect(option1).toHaveAttribute(
+        'class',
+        expect.stringContaining('focused')
+      );
+      expect(option2).not.toHaveAttribute(
+        'class',
+        expect.stringContaining('focused')
+      );
     });
 
     it('focuses the input when tabbing in', async () => {

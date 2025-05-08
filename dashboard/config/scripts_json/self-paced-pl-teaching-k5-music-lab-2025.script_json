@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-30 19:58:11 UTC",
+    "serialized_at": "2025-05-05 21:01:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -394,6 +394,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-CSDMusicLab-L1-lesson1resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -415,6 +418,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_PL_career_journeys"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -528,30 +534,6 @@
     },
     {
       "chapter": 9,
-      "position": 9,
-      "activity_section_position": 9,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "MLCSC-SelfPaced-debugging2_2023_K5CSConcepts_1_1"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "MLCSC-SelfPaced-debugging2_2023_K5CSConcepts_1_1"
-        ],
-        "lesson.key": "✈️ Welcome to Programming with Music Lab! ✈️ ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
-        "activity_section.key": "21f08680-484e-4e1d-9e40-76f3d04029ef"
-      },
-      "level_keys": [
-        "MLCSC-SelfPaced-debugging2_2023_K5CSConcepts_1_1"
-      ]
-    },
-    {
-      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -576,7 +558,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -601,7 +583,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -626,7 +608,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -651,7 +633,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -676,7 +658,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -701,7 +683,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -726,7 +708,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -751,7 +733,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -776,7 +758,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -801,7 +783,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -826,7 +808,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -851,7 +833,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -876,7 +858,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -901,11 +883,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Music_lab_share_restart"
+        ],
         "progression": "Inspire & Try"
       },
       "bonus": false,
@@ -923,7 +908,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -948,7 +933,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -973,7 +958,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -998,7 +983,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1023,7 +1008,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -1048,7 +1033,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -1073,7 +1058,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -1098,7 +1083,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -1123,7 +1108,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 9,
       "activity_section_position": 7,
       "assessment": false,
@@ -1148,34 +1133,9 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 10,
       "activity_section_position": 8,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "music-coding-intro-functions-use_launch_1"
-        ],
-        "progression": "Skill Building"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "music-coding-intro-functions-use_launch_1"
-        ],
-        "lesson.key": "✨FOR LAUNCH!!!!✨Producer Power",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
-        "activity_section.key": "b962cfdf-9bfa-4dd5-9a67-e51bd4b3118a"
-      },
-      "level_keys": [
-        "music-coding-intro-functions-use_launch_1"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 11,
-      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1198,9 +1158,9 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 12,
-      "activity_section_position": 10,
+      "chapter": 34,
+      "position": 11,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1223,8 +1183,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 13,
+      "chapter": 35,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1248,8 +1208,8 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 14,
+      "chapter": 36,
+      "position": 13,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1273,8 +1233,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 15,
+      "chapter": 37,
+      "position": 14,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1298,7 +1258,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1323,7 +1283,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1348,7 +1308,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -1373,7 +1333,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -1398,7 +1358,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 42,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -1423,7 +1383,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 43,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -1448,7 +1408,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 44,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -1473,7 +1433,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 45,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -1498,7 +1458,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 46,
       "position": 9,
       "activity_section_position": 7,
       "assessment": false,
@@ -1523,7 +1483,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 47,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -1548,9 +1508,30 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "MLCSC-SelfPaced-debugging2_2023_K5CSConcepts_1_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
+        "activity_section.key": "66286062-3fb1-40f3-bf2e-ddcd06c516e5"
+      },
+      "level_keys": [
+        "MLCSC-SelfPaced-debugging2_2023_K5CSConcepts_1_1"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1572,9 +1553,9 @@
       ]
     },
     {
-      "chapter": 51,
-      "position": 2,
-      "activity_section_position": 2,
+      "chapter": 50,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1686,18 +1667,6 @@
         "level.key": "MLPLPLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL_prod_1_1",
         "script_level.level_keys": [
           "MLPLPLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL_prod_1_1"
-        ],
-        "lesson.key": "✈️ Welcome to Programming with Music Lab! ✈️ ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
-        "activity_section.key": "21f08680-484e-4e1d-9e40-76f3d04029ef"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "MLCSC-SelfPaced-debugging2_2023_K5CSConcepts_1_1",
-        "script_level.level_keys": [
-          "MLCSC-SelfPaced-debugging2_2023_K5CSConcepts_1_1"
         ],
         "lesson.key": "✈️ Welcome to Programming with Music Lab! ✈️ ",
         "lesson_group.key": "",
@@ -1995,18 +1964,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "music-coding-intro-functions-use_launch_1",
-        "script_level.level_keys": [
-          "music-coding-intro-functions-use_launch_1"
-        ],
-        "lesson.key": "✨FOR LAUNCH!!!!✨Producer Power",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
-        "activity_section.key": "b962cfdf-9bfa-4dd5-9a67-e51bd4b3118a"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "music-coding-intro-functions-chorus2_launch_1",
         "script_level.level_keys": [
           "music-coding-intro-functions-chorus2_launch_1"
@@ -2183,6 +2140,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
         "activity_section.key": "3de0679a-7e0b-4d24-9adc-66abf122e2bc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "MLCSC-SelfPaced-debugging2_2023_K5CSConcepts_1_1",
+        "script_level.level_keys": [
+          "MLCSC-SelfPaced-debugging2_2023_K5CSConcepts_1_1"
+        ],
+        "lesson.key": "Next Steps",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-k5-music-lab-2025",
+        "activity_section.key": "66286062-3fb1-40f3-bf2e-ddcd06c516e5"
       }
     },
     {

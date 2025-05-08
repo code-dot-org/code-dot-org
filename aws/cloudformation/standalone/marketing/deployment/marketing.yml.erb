@@ -343,13 +343,13 @@ Resources:
               ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:STATSIG_CLIENT_KEY::'
             - Name: STATSIG_SERVER_KEY
               ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:STATSIG_SERVER_KEY::'
-      Cpu: "256"
+      Cpu: "1024"
+      Memory: "2048"
       ExecutionRoleArn:
         Fn::GetAtt:
           - FargateServiceTaskDefExecutionRole
           - Arn
       Family: !Sub "${AWS::StackName}-FargateServiceTaskDef"
-      Memory: "512"
       NetworkMode: awsvpc
       RequiresCompatibilities:
         - FARGATE
@@ -404,6 +404,8 @@ Resources:
       EnableECSManagedTags: false
       HealthCheckGracePeriodSeconds: 60
       LaunchType: FARGATE
+      DesiredCount: 3
+      AvailabilityZoneRebalancing: ENABLED
       LoadBalancers:
         - ContainerName: web
           ContainerPort: 3000
@@ -457,6 +459,43 @@ Resources:
       ToPort: 3000
     DependsOn:
       - FargateServiceTaskDefTaskRole
+
+  ECSServiceScalableTarget:
+    Type: AWS::ApplicationAutoScaling::ScalableTarget
+    Properties:
+      MaxCapacity: 20 # Upper limit for scaling, can be increased as needed
+      MinCapacity: 3 # High availability minimum
+      ResourceId: !Sub "service/${EcsCluster}/${FargateService.Name}"
+      RoleARN: !GetAtt ECSAutoScalingRole.Arn
+      ScalableDimension: ecs:service:DesiredCount
+      ServiceNamespace: ecs
+
+  ECSServiceScalingPolicy:
+    Type: AWS::ApplicationAutoScaling::ScalingPolicy
+    Properties:
+      PolicyName: CpuTargetTrackingPolicy
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId: !Ref ECSServiceScalableTarget
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: 70.0
+        PredefinedMetricSpecification:
+          PredefinedMetricType: ECSServiceAverageCPUUtilization
+        ScaleInCooldown: 60 # Wait 60 seconds before scaling up
+        ScaleOutCooldown: 300 # Wait 5 minutes before scaling down
+
+  ECSAutoScalingRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: application-autoscaling.amazonaws.com
+            Action: sts:AssumeRole
+      Path: /
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole
 
   StaticAssetsBucket:
     Type: AWS::S3::Bucket
@@ -574,7 +613,7 @@ Resources:
     Type: AWS::CloudFront::CachePolicy
     Properties:
       CachePolicyConfig:
-        Name: MarketingAppCachePolicy
+        Name: !Sub '${AWS::StackName}-MarketingAppCachePolicy'
         DefaultTTL: 86400
         MaxTTL: 31536000
         MinTTL: 1
@@ -602,7 +641,7 @@ Resources:
   ViewerResponseCloudFrontFunction:
     Type: AWS::CloudFront::Function
     Properties:
-      Name: MarketingAppViewerResponseFunction
+      Name: !Sub '${AWS::StackName}-ViewerResponse'
       AutoPublish: true
       FunctionCode: |
         function handler(event) {
@@ -742,6 +781,14 @@ Outputs:
     Export:
       Name:
         'Fn::Sub': '${AWS::StackName}-StaticAssetsBucketArn'
+  ECSAutoScalingRoleArn:
+    Value:
+      Fn::GetAtt:
+        - ECSAutoScalingRole
+        - Arn
+    Export:
+      Name:
+        'Fn::Sub': '${AWS::StackName}-ECSAutoScalingRoleArn'
   FargateServiceLoadBalancerDNS:
     Value:
       Fn::GetAtt:

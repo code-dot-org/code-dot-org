@@ -141,7 +141,15 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
       </div>
       {(imageProps || videoProps) && (
         <div className={moduleStyles.heroBannerMediaContainer}>
-          {imageProps && !videoProps && <Image {...imageProps} />}
+          {imageProps && !videoProps && (
+            <Image
+              {...imageProps}
+              className={classNames(
+                imageProps.className,
+                moduleStyles.heroBannerMediaImage,
+              )}
+            />
+          )}
           {videoProps && <VideoComponent {...videoProps} />}
         </div>
       )}

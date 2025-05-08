@@ -15,7 +15,7 @@ markdown <<MARKDOWN
       Congratulations!
     </div>
     <div style="font-size: 20px; color: #333;">
-      You have completed the Teaching Foundations of Programming Module!
+      You have completed the Teaching Foundations of AI Programming Module!
     </div>
   </div>
   <div style="flex-shrink: 0;">
@@ -34,8 +34,8 @@ markdown <<MARKDOWN
 <a class="btn btn-large btn-primary" href="LINK" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 
-## Teach Computer Science and AI Foundations in your class
-#### Explore these curriculum options to get started teaching Data Science and other computer science topics in your class right away. 
+## Teach AI Foundations in your class
+#### Explore these curriculum options to get started teaching Foundations of AI Programming and other computer science topics in your class right away. 
 
 
 <table width="1000px">

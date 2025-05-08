@@ -100,10 +100,17 @@ export const procedureDefMutator = {
   },
 
   /**
-   * Returns a JSON serializable value which represents the extra state of the block.
+   * Returns the state of this block as a JSON serializable object.
+   *
+   * @param doFullSerialization  Tells the block if it should serialize
+   *     its entire state (including data stored in the backing procedure
+   *     model). Used for copy-paste.
    * @returns The state of this block, e.g. the parameters and statements.
    */
-  saveExtraState: function (this: ProcedureBlock) {
+  saveExtraState: function (
+    this: ProcedureBlock,
+    doFullSerialization: boolean
+  ) {
     const state = Object.create(null);
     state['description'] = getBlockDescription(this);
     state['procedureId'] = this.getProcedureModel().getId();
@@ -113,20 +120,26 @@ export const procedureDefMutator = {
     state['userCreated'] = this.userCreated;
     state['invisible'] = this.invisible;
 
-    const params =
-      this.getProcedureModel().getParameters() as ObservableParameterModel[];
-    if (!params.length && this.hasStatements_) return state;
+    if (doFullSerialization) {
+      // If fullSerialization is not true, the system will reuse an existing procedure model by ID.
+      // This is necessary for the modal function editor.
+      // If fullSerialization is true, it will instead use the model created at block instantiation.
+      // This is necessary for single-workspace labs so that multiple functions do not share the same model.
+      state['fullSerialization'] = !Blockly.useModalFunctionEditor;
+      const params =
+        this.getProcedureModel().getParameters() as ObservableParameterModel[];
 
-    if (params.length) {
-      state['params'] = params.map(p => {
-        return {
-          name: p.getName(),
-          id: p.getVariableModel().getId(),
-          // Ideally this would be id, and the other would be varId,
-          // but backwards compatibility :/
-          paramId: p.getId(),
-        };
-      });
+      if (params.length) {
+        state['params'] = params.map(p => {
+          return {
+            name: p.getName(),
+            id: p.getVariableModel().getId(),
+            // Ideally this would be id, and the other would be varId,
+            // but backwards compatibility :/
+            paramId: p.getId(),
+          };
+        });
+      }
     }
     if (!this.hasStatements_) {
       state['hasStatements'] = false;
