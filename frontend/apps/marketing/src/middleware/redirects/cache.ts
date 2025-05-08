@@ -1,15 +1,19 @@
 import {Brand, getBrandFromHostname} from '@/config/brand';
+import {getContentfulClient} from '@/contentful/client';
 import {getAllEntriesForContentType} from '@/contentful/get-entries';
 import {RedirectContentType} from '@/middleware/redirects/types';
-import {getContentfulClient} from '@/contentful/client';
 
 // TODO: Implement shared redis cache
 // This is a temporary in-memory cache for redirects
 // https://codedotorg.atlassian.net/browse/CMS-649
-const redirectCacheByBrand = new Map<Brand, Map<string, string>>([
+const _redirectCacheByBrand = new Map<Brand, Map<string, string>>([
   [Brand.CODE_DOT_ORG, new Map()],
   [Brand.HOUR_OF_CODE, new Map()],
 ]);
+
+const redirectCacheByBrand = populateRedirectCache().then(
+  () => _redirectCacheByBrand,
+);
 
 async function populateRedirectCache() {
   const deliveryClient = getContentfulClient();
@@ -31,7 +35,7 @@ async function populateRedirectCache() {
 
     const oldUrl = new URL(fields.oldUrl);
     const brand = getBrandFromHostname(oldUrl.host);
-    const redirectCache = redirectCacheByBrand.get(brand);
+    const redirectCache = _redirectCacheByBrand.get(brand);
 
     const newUrl = new URL(fields.newUrl);
     const destinationUrl =
@@ -45,7 +49,7 @@ async function populateRedirectCache() {
     console.log(
       `Redirect cache for ${brand}:`,
       Object.fromEntries(
-        Array.from(redirectCacheByBrand.get(brand)!.entries()),
+        Array.from(_redirectCacheByBrand.get(brand)!.entries()),
       ),
     );
   }

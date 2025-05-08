@@ -19,7 +19,7 @@ export const withRedirects: MiddlewareFactory = next => {
     // Note: the pathname is guaranteed to have at least 2 segments, due to the withBrand middleware
     const hostname = request.headers.get('host');
     const brand = getBrandFromHostname(hostname);
-    const redirectCache = redirectCacheByBrand.get(brand)!;
+    const redirectCache = (await redirectCacheByBrand).get(brand)!;
 
     if (redirectCache.has(pathname)) {
       const redirectPath = redirectCache.get(pathname)!;
