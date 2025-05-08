@@ -17,6 +17,11 @@ Parameters:
     Type: AWS::SSM::Parameter::Value<List<String>>
     Default: /IAM/GoogleBillingIDs
     Description: SSM Parameter with a list of Google ID's for users granted Billing access.
+  # https://github.blog/changelog/2023-06-27-github-actions-update-on-oidc-integration-with-aws/
+  GitHubIntermediateCertificateThumbprintList:
+    Type: CommaDelimitedList
+    Default: 6938fd4d98bab03faadb97b34396831e3780aea1, 1c58a3a8518e8759bf075b76b750d4f2df264fcd
+    Description: List of thumbprints of GitHub intermediate certificates that sign the certificates used by GitHub Actions.
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -836,6 +841,15 @@ roles.each do |name, config| %>
     Properties: 
       AWSServiceName: logger.cloudfront.amazonaws.com
 
+  GitHubOpenIDConnectProvider:
+    Type: AWS::IAM::OIDCProvider
+    Properties:
+      # See: https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#adding-the-identity-provider-to-aws
+      Url: https://token.actions.githubusercontent.com
+      ClientIdList:
+        - sts.amazonaws.com
+      ThumbprintList: !Ref GitHubIntermediateCertificateThumbprintList
+
   # ------------------------------------------------------------
   # Create one AWS IAM User for each type of marketing sites environment that GitHub Actions will create, with
   # permissions needed to create/update/delete a marketing sites CloudFormation Stack.
@@ -854,69 +868,208 @@ roles.each do |name, config| %>
     }
     marketing_sites_environment_type_configuration.each do |environment_type, configuration|
   %>
-  # GitHub Actions authenticates as this user to deploy marketing sites Stacks.
-  GithubDeployerMarketingSites<%=environment_type%>:
-    Type: AWS::IAM::User
+  MarketingSitesDeployerRole<%=environment_type.capitalize%>:
+    Type: AWS::IAM::Role
     Properties:
-      UserName: "github-deployer-marketing-sites-<%=environment_type%>"
-      PermissionsBoundary: !Ref DevPermissions
-  DeployMarketingSitesPolicy<%=environment_type%>:
-    Type: AWS::IAM::Policy
-    Version: 2012-10-17
-    Properties:
-      PolicyName: DeployMarketingSitesPolicy<%=environment_type%>
-      Users:
-        - !Ref GithubDeployerMarketingSites<%=environment_type%>
-      PolicyDocument:
+      RoleName: marketing-sites-deployer-<%=environment_type%>
+      Path: /marketing-sites/deployer/<%=environment_type%>
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
         Statement:
           - Effect: Allow
-            Action:
-              - cloudformation:CreateStack
-              - cloudformation:DescribeStacks
-              - cloudformation:CreateChangeSet
-              - cloudformation:DescribeChangeSet
-              - cloudformation:DeleteChangeSet
-              - cloudformation:ExecuteChangeSet
-            # The Stack Name must match this naming prefix convention. Examples:
-            # marketing-sites-production-code-org
-            # marketing-sites-production-hourofcode-com
-            # marketing-sites-test-teachai-org
-            # marketing-sites-test-code-org
-            # marketing-sites-development-code-org-my-feature-branch
-            # marketing-sites-development-code-org-my-other-branch
-            Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/marketing-sites-<%=environment_type%>-*"
-          # Deployment User can Get and Pass any Fargate Task and Task Execution Roles for the current environment type.
-          - Effect: Allow
-            Action:
-              - iam:GetRole
-              - iam:PassRole
-            Resource: marketing-sites-<%=environment_type%>-*"
-          - Effect: Allow
-            Action:
-              - ecs:RegisterTaskDefinition
-            Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/marketing-sites-<%=environment_type%>-*:*"
-          - Effect: Allow
-            Action:
-              - ecs:DeregisterTaskDefinition
-              - ecs:DescribeTaskDefinition
-              - elasticloadbalancing:DescribeLoadBalancers
-              - ec2:DescribeSecurityGroups
-            Resource: '*'
-          - Effect: Allow
-            Action:
-              - ecs:DescribeServices
-              - ecs:UpdateService
-            Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/marketing-sites-<%=environment_type%>-*/marketing-sites-<%=environment_type%>-*"
-          - Effect: Allow
-            Action:
-              - s3:PutObject
-              - s3:ListBucket
-            Resource:
-              # For the marketing site `my-feature-branch-code.marketing-sites.dev-code.org` the NextJS assets Bucket
-              # will be named `org.dev-code.marketing-sites.my-feature-branch.static-assets` so the `development`
-              # Deployer should have permission to all Buckets with the naming pattern `org.dev-code*static-assets`
-              - "<%=configuration[:base_domain_name].split('.').tap(&:reverse!).join('.')%>*static-assets"
-              - "<%=configuration[:base_domain_name].split('.').tap(&:reverse!).join('.')%>*static-assets/*"
+            Principal:
+              Federated: !Sub "arn:aws:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com"
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                # See: https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#configuring-the-role-and-trust-policy
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+                token.actions.githubusercontent.com:sub: 'repo:code-dot-org/code-dot-org:environment:marketing-sites-<%=environment_type%>'
+      # The permissions explicitly granted to this Role may never exceed the permissions granted to Engineers.
+      PermissionsBoundary: !Ref DevPermissions
+      ManagedPolicyArns: []
+      Policies:
+        - PolicyName: DeployMarketingSitesPolicy<%=environment_type.capitalize%>
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - cloudformation:CreateStack
+                  - cloudformation:DescribeStacks
+                  - cloudformation:CreateChangeSet
+                  - cloudformation:DescribeChangeSet
+                  - cloudformation:DeleteChangeSet
+                  - cloudformation:ExecuteChangeSet
+                  - cloudformation:ListStackResources
+                  - cloudformation:TagResource
+                # The Stack Name must match this naming prefix convention. Examples:
+                # marketing-sites-production-code-org
+                # marketing-sites-production-hourofcode-com
+                # marketing-sites-test-teachai-org
+                # marketing-sites-test-code-org
+                # marketing-sites-development-code-org-my-feature-branch
+                # marketing-sites-development-code-org-my-other-branch
+                Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/marketing-sites-<%=environment_type%>-*"
+              # IAM permissions for role management
+              - Effect: Allow
+                Action:
+                  - iam:GetRole
+                  - iam:PassRole
+                  - iam:CreateRole
+                  - iam:AttachRolePolicy
+                  - iam:PutRolePolicy
+                  - iam:CreatePolicy
+                Resource:
+                  - !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
+                  - !Sub "arn:aws:iam::${AWS::AccountId}:policy/marketing-sites-<%=environment_type%>-*"
+                Condition:
+                  StringEqualsIfExists:
+                    iam:PassedToService:
+                      - ecs-tasks.amazonaws.com
+                      - application-autoscaling.amazonaws.com
+              # VPC and networking resources
+              - Effect: Allow
+                Action:
+                  - ec2:CreateVpc
+                  - ec2:CreateSubnet
+                  - ec2:CreateRouteTable
+                  - ec2:CreateRoute
+                  - ec2:CreateInternetGateway
+                  - ec2:CreateNatGateway
+                  - ec2:CreateSecurityGroup
+                  - ec2:CreateTags
+                  - ec2:AllocateAddress
+                  - ec2:AssociateRouteTable
+                  - ec2:AttachInternetGateway
+                  - ec2:AuthorizeSecurityGroupEgress
+                  - ec2:AuthorizeSecurityGroupIngress
+                  - ec2:DescribeVpcs
+                  - ec2:DescribeSubnets
+                  - ec2:DescribeSecurityGroups
+                  - ec2:DescribeRouteTables
+                  - ec2:DescribeInternetGateways
+                  - ec2:DescribeAddresses
+                  - ec2:DescribeNatGateways
+                  - ec2:ModifyVpcAttribute
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    aws:RequestTag/environment-type: <%=environment_type%>
+              # ECS resources
+              - Effect: Allow
+                Action:
+                  - ecs:CreateCluster
+                  - ecs:RegisterTaskDefinition
+                  - ecs:CreateService
+                  - ecs:UpdateService
+                  - ecs:DeregisterTaskDefinition
+                  - ecs:DescribeTaskDefinition
+                  - ecs:DescribeServices
+                  - ecs:DescribeClusters
+                  - ecs:TagResource
+                Resource:
+                  - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:cluster/*"
+                  - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/marketing-sites-<%=environment_type%>-*:*"
+                  - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/*/marketing-sites-<%=environment_type%>-*"
+                Condition:
+                  StringEqualsIfExists:
+                    aws:RequestTag/environment-type: <%=environment_type%>
+              # ELB resources
+              - Effect: Allow
+                Action:
+                  - elasticloadbalancing:CreateLoadBalancer
+                  - elasticloadbalancing:CreateListener
+                  - elasticloadbalancing:CreateTargetGroup
+                  - elasticloadbalancing:RegisterTargets
+                  - elasticloadbalancing:DescribeLoadBalancers
+                  - elasticloadbalancing:DescribeTargetGroups
+                  - elasticloadbalancing:DescribeListeners
+                  - elasticloadbalancing:AddTags
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    aws:RequestTag/environment-type: <%=environment_type%>
+              # CloudFront resources
+              - Effect: Allow
+                Action:
+                  - cloudfront:CreateDistribution
+                  - cloudfront:UpdateDistribution
+                  - cloudfront:GetDistribution
+                  - cloudfront:TagResource
+                  - cloudfront:CreateInvalidation
+                  - cloudfront:CreateOriginAccessControl
+                  - cloudfront:CreateCachePolicy
+                  - cloudfront:CreateFunction
+                  - cloudfront:PublishFunction
+                  - cloudfront:DescribeFunction
+                  - cloudfront:GetFunction
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    aws:ResourceTag/environment-type: <%=environment_type%>
+              # Route53 and ACM resources
+              - Effect: Allow
+                Action:
+                  - route53:ChangeResourceRecordSets
+                  - route53:GetHostedZone
+                  - route53:ListResourceRecordSets
+                  - acm:RequestCertificate
+                  - acm:DescribeCertificate
+                  - acm:AddTagsToCertificate
+                Resource: '*'
+              # S3 resource management
+              - Effect: Allow
+                Action:
+                  - s3:CreateBucket
+                  - s3:PutBucketPolicy
+                  - s3:PutBucketEncryption
+                  - s3:PutBucketVersioning
+                  - s3:GetBucketLocation
+                  - s3:PutBucketPublicAccessBlock
+                  - s3:PutLifecycleConfiguration
+                  - s3:PutObject
+                  - s3:GetObject
+                  - s3:ListBucket
+                  - s3:PutBucketTagging
+                Resource:
+                  # For the marketing site `my-feature-branch-code.marketing-sites.dev-code.org` the NextJS assets Bucket
+                  # will be named `org.dev-code.marketing-sites.my-feature-branch.static-assets` so the `development`
+                  # Deployer should have permission to all Buckets with the naming pattern `org.dev-code*static-assets`
+                  - "<%=configuration[:base_domain_name].split('.').tap(&:reverse!).join('.')%>*static-assets"
+                  - "<%=configuration[:base_domain_name].split('.').tap(&:reverse!).join('.')%>*static-assets/*"
+              # Secrets Manager for ECS environment variables
+              - Effect: Allow
+                Action:
+                  - secretsmanager:GetSecretValue
+                  - secretsmanager:DescribeSecret
+                Resource: "arn:aws:secretsmanager:*:*:secret:marketing-sites/<%=environment_type%>/*"
+              # EFS resources for NextJS caching
+              - Effect: Allow
+                Action:
+                  - elasticfilesystem:CreateFileSystem
+                  - elasticfilesystem:CreateMountTarget
+                  - elasticfilesystem:CreateAccessPoint
+                  - elasticfilesystem:DescribeFileSystems
+                  - elasticfilesystem:DescribeMountTargets
+                  - elasticfilesystem:DescribeAccessPoints
+                  - elasticfilesystem:TagResource
+                  - elasticfilesystem:PutLifecycleConfiguration
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    aws:RequestTag/environment-type: <%=environment_type%>
+              # Application Autoscaling for ECS services
+              - Effect: Allow
+                Action:
+                  - application-autoscaling:RegisterScalableTarget
+                  - application-autoscaling:PutScalingPolicy
+                  - application-autoscaling:DescribeScalableTargets
+                  - application-autoscaling:DescribeScalingPolicies
+                Resource: '*'
+                Condition:
+                  StringLike:
+                    application-autoscaling:ResourceId: "service/*/marketing-sites-<%=environment_type%>-*"
 <% end %>
 
 Outputs:
