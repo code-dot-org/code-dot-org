@@ -212,14 +212,19 @@ const downloadCSV = (
   URL.revokeObjectURL(url);
 };
 
-interface DownloadProgressCsvProps {}
+interface DownloadProgressCsvProps {
+  isLoading: boolean;
+}
 
-export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = () => {
+export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = ({
+  isLoading,
+}) => {
   return (
     <ActionDropdown
       name="download-progress-csv"
       labelText={i18n.downloadProgressCsv()}
       size="s"
+      disabled={isLoading}
       options={[
         {
           label: i18n.downloadLessonProgressCSV(),
@@ -246,6 +251,7 @@ export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = () => {
         size: 's',
         ariaLabel: i18n.sectionOptionsDropdown(),
         className: styles.downloadCsvDropdown,
+        isPending: isLoading,
       }}
     />
   );
