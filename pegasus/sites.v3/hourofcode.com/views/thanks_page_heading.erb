@@ -1,6 +1,0 @@
-<%
-  facebook = {:u=>"http://#{request.host}/us"}
-
-  twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_donor_text, locals: {random_donor: PegasusCdoDonor.get_random_donor_twitter})}
-  twitter[:hashtags] = 'HourOfCode' unless hoc_s(:twitter_donor_text).include? '#HourOfCode'
-%>

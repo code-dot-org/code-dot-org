@@ -1,6 +1,0 @@
-#whats_next
-  %h2{:style=>'margin-top:25px'}=hoc_s(:whats_next_header)
-  %ul{:style=>"line-height:28px"}
-    %li!=hoc_s(:whats_next_how_to).gsub('/how-to', resolve_url('/how-to'))
-    %li!=hoc_s(:whats_next_how_to_promote_link).gsub('/promote', resolve_url('/promote'))
-    %li!=hoc_s(:whats_next_try, locals: {learn_url: resolve_url('/learn')})
