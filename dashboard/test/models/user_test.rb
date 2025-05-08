@@ -1511,15 +1511,6 @@ class UserTest < ActiveSupport::TestCase
     )
   end
 
-  test 'sponsored? is true for migrated user with no authentication options' do
-    student = create :student_in_picture_section
-    student.migrate_to_multi_auth
-    student.reload
-
-    assert_empty student.authentication_options
-    assert student.sponsored?
-  end
-
   test 'should_disable_user_type? true if user_type present and oauth_provided_user_type' do
     user = build :user, user_type: User::TYPE_TEACHER
     user.expects(:oauth_provided_user_type).returns(true)

@@ -107,10 +107,15 @@ class StudentWorkSampleController < ApplicationController
   end
 
   def fetch_student_code_samples_with_evaluations(level, unit_id, num_samples)
-    user_level_evaluations = UserLevelEvaluation.where(level_id: level.id, unit_id: unit_id)
-    if user_level_evaluations.empty?
-      return render status: :not_found, json: "There are no evaluations for the level with id #{level.id} in unit with id #{unit_id}"
+    # Only user user_level_evaluations that have skills-based evaluations associated with them.
+    user_level_skill_evaluations = UserLevelSkillEvaluation.where(level_id: level.id, unit_id: unit_id)
+
+    if user_level_skill_evaluations.empty?
+      return render status: :not_found, json: "There are no skill-based evaluations for the level with id #{level.id}"
     end
+
+    user_level_evaluations = user_level_skill_evaluations.map(&:user_level_evaluation)
+
     code_samples = []
     have_enough_samples = false
     user_level_evaluations.shuffle.each do |ule|
@@ -128,17 +133,13 @@ class StudentWorkSampleController < ApplicationController
             reasoning: ule.reasoning,
             evaluation_criteria: ule.evaluation_criteria,
           }
-          user_level_skill_evaluation_ids = StudentWorkEvaluationSummary.where(student_work_evaluation_summary_id: ule.id).pluck(:student_work_evaluation_id)
-          if user_level_skill_evaluation_ids.any?
-            user_level_skill_evaluations = UserLevelSkillEvaluation.where(id: user_level_skill_evaluation_ids)
-            # TODO: Use skill id instead of counter when we have Skills
-            counter = 1
-            user_level_skill_evaluations.each do |ulse|
-              code_sample["skill_evaluation_#{counter}"] = ulse.evaluation
-              code_sample["skill_evaluation_criteria_#{counter}"] = ulse.evaluation_criteria
-              code_sample["skill_evaluation_reasoning_#{counter}"] = ulse.reasoning
-              counter += 1
-            end
+          # TODO: Use skill id instead of counter when we have Skills
+          counter = 1
+          ule.user_level_skill_evaluations.each do |ulse|
+            code_sample["skill_evaluation_#{counter}"] = ulse.evaluation
+            code_sample["skill_evaluation_criteria_#{counter}"] = ulse.evaluation_criteria
+            code_sample["skill_evaluation_reasoning_#{counter}"] = ulse.reasoning
+            counter += 1
           end
         end
         code_samples << code_sample

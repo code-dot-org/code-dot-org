@@ -15,7 +15,7 @@
     "predict_settings": {
       "isPredictLevel": false
     },
-    "display_name": "Past the Food Truck",
+    "display_name": "Pass the Food Truck",
     "bubble_choice_description": "Help the `Painter` pass the food truck to get to the traffic cone.",
     "serialized_maze": [
       [
@@ -389,6 +389,6 @@
       "type": "validation"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:20.324+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level3a_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level3a_2025-launch\"},{\"changed_at\":\"2025-04-26 18:27:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-30 17:47:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-30 17:48:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-30 17:48:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:20.324+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level3a_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level3a_2025-launch\"},{\"changed_at\":\"2025-04-26 18:27:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-30 17:47:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-30 17:48:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-04-30 17:48:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-05-07 01:13:22 +0000\",\"changed\":[\"predict_settings\",\"display_name\",\"serialized_maze\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

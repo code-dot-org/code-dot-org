@@ -27,4 +27,8 @@ markdown <<MARKDOWN
 #### In the next levels you’ll get to try **AI Chat Lab**. Take your time exploring chatbot lab as you and your students will be using this tool for both the remainder of the Generative AI Unit.
 
 
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ This activity is from Lesson 1. You can find more details in the full <a href='https://studio.code.org' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.
+</p>
+
 MARKDOWN
