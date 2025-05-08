@@ -24057,3 +24057,14 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        python-madlibs:
+          lessons:
+            lesson-1:
+              name: Madlibs
+          lesson_groups: {}
+          name: python-madlibs
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

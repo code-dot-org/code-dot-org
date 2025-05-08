@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-06 18:38:54 UTC",
+    "serialized_at": "2025-05-07 16:24:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3925,6 +3925,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-hallucinations-activity-lvl1_2025"
+        ],
         "progression": "Scenario 1"
       },
       "bonus": false,
@@ -3947,6 +3950,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-hallucinations-activity-lvl2a_2025"
+        ],
         "progression": "Scenario 1"
       },
       "bonus": false,
@@ -3969,6 +3975,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-hallucinations-activity-lvl3_2025"
+        ],
         "progression": "Scenario 2"
       },
       "bonus": false,
@@ -3991,6 +4000,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-hallucinations-activity-lvl4a_2025"
+        ],
         "progression": "Scenario 2"
       },
       "bonus": false,
@@ -6231,7 +6243,7 @@
     {
       "key": "99ba38a6-262f-4917-aabb-5fff08c1c515",
       "properties": {
-        "description": "Explain how language models use embeddings to store the meaning of wordss"
+        "description": "Explain how language models use embeddings to store the meaning of words"
       },
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",

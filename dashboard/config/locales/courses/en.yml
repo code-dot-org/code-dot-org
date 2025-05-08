@@ -5528,3 +5528,32 @@ en:
           description_student: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           description_teacher: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: 24-25
+        testing-modular-2025:
+          title: Testing Modular AIF Unit 1 and 2
+          description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
+          description_student: In AI Foundations, you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.
+          description_teacher: |-
+            AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+
+            AIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](http://studio.code.org/courses/self-paced-pl-ai-foundations-2025) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'25-'26"
+        python-madlibs:
+          title: python-madlibs
+          description_short: 'Madlibs progression in Python Lab '
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

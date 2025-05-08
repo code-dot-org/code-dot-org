@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 ## Each lesson includes: 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 45%; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 16pt; font-weight: bold;"><b>1.</b> Clear Objectives</summary>
+    <summary style="font-size: 16pt; font-weight: bold;"><b>1.</b> Clear objectives</summary>
 <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
        	<p style= "font-size: 14pt">
          Statements outline the specific knowledge and skills students will gain by the end of each lesson.
@@ -47,8 +47,9 @@ markdown <<MARKDOWN
 </details>
 
 
+----
 
+#### *Optional*: Take a minute to explore these features in <a href='https://studio.code.org/s/aif5-2025/lessons/1' target='_blank' rel='noopener noreferrer'>Lesson 1</a> if you'd like to familiarize yourself with the lesson plan format.
 
-
-![]()
+<br>
 MARKDOWN

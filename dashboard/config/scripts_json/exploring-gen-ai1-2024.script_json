@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-01 16:21:54 UTC",
+    "serialized_at": "2025-05-07 16:23:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5249,7 +5249,7 @@
     {
       "key": "fed66330-2cb0-4d44-8268-679d776182ea",
       "properties": {
-        "description": "Explain how language models use embeddings to store the meaning of wordss"
+        "description": "Explain how language models use embeddings to store the meaning of words"
       },
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",
