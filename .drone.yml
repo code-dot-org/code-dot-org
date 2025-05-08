@@ -57,7 +57,7 @@ steps:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
       - "[ -d .git ] || (echo 'WARNING: get-cached-staging failed: checkout will be SLOW and LFS $$$!' && git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .)"
-      # Checkout our target branch (=the PR)
+      # Checkout our source branch (=the PR)
       - git fetch origin $DRONE_SOURCE_BRANCH
       - git checkout $DRONE_SOURCE_BRANCH
       - git pull
@@ -282,11 +282,12 @@ trigger:
     - pull_request
 
 ---
-# On push, cache a clone of staging to drone's S3 bucket.
-# The staging cache reduces git bandwidth in PR pipelines.
+# On push, cache a clone of staging and database snapshot to drone's S3 bucket.
+# The staging cache reduces git bandwidth in PR pipelines, and the database
+# snapshot reduces seed time.
 kind: pipeline
 type: docker
-name: cache-staging-clone
+name: update-cached-staging-build-artifacts
 
 clone:
   disable: true
@@ -309,12 +310,39 @@ steps:
       mount:
         - .
 
+  - name: seed
+    image: codedotorg/code-dot-org:1.15
+    pull: always
+    commands:
+      - bundle install
+      - bundle exec rake install
+      - bundle exec rake build
+      - mysqldump -u root -B dashboard_test > /tmp/dashboard_test.sql
+
+  - name: cache-staging-database
+    image: plugins/s3-cache
+    settings:
+      filename: cache-staging-database.tar
+      endpoint: s3://cdo-drone
+      rebuild: true
+      debug: true
+      pull: true
+      mount:
+        - /tmp/dashboard_test.sql
+
 trigger:
+  # branch:
+  #   - "staging"
+  #   - "staging-next"
+  # event:
+  #   - push
   branch:
-    - "staging"
-    - "staging-next"
+    exclude:
+      - "production"
+      - "test"
+      - "levelbuilder"
   event:
-    - push
+    - pull_request
 ---
 kind: signature
 hmac: c32532882fe8b8b8c24853dece9734ee85fc53fbb7fa866056d4eb2a055c9d87
