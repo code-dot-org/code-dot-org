@@ -731,12 +731,14 @@ Dashboard::Application.routes.draw do
     end
 
     # partial ports of legacy v3 APIs
-    namespace :v3, path: '/v3' do
-      get    'channels/:channel_id/abuse', to: 'report_abuse#show_abuse'
-      delete 'channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
-      post   'channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
-      patch  '(:endpoint)/:encrypted_channel_id', to: 'report_abuse#update_file_abuse',
-             constraints: {endpoint: /(animations|assets|sources|files|libraries)/}
+    scope path: '/v3' do
+      controller :report_abuse do
+        get    'channels/:channel_id/abuse', action: :show_abuse
+        delete 'channels/:channel_id/abuse', action: :reset_abuse
+        post   'channels/:channel_id/abuse/delete', action: :reset_abuse
+        patch  '(:endpoint)/:encrypted_channel_id', action: :update_file_abuse,
+               constraints: {endpoint: /(animations|assets|sources|files|libraries)/}
+      end
     end
 
     get '/too_young', to: 'too_young#index'
