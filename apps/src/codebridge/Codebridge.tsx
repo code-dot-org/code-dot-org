@@ -95,8 +95,6 @@ export const Codebridge = React.memo(
       [appName]
     );
 
-    //const aiTutorManager = new AiTutorManager();
-
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
 

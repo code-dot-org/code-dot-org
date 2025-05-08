@@ -169,6 +169,19 @@ const PythonlabView: React.FunctionComponent<
     restartPyodideIfProgramIsRunning
   );
 
+  const aiTutorManager = useRef<AiTutorManager | null>(null);
+  if (aiTutorManager.current === null) {
+    aiTutorManager.current = new AiTutorManager();
+  }
+  const askAiTutor = async (question: string) => {
+    const fullQuestion =
+      question + '\n Here is my code: \n' + source.files[0].contents;
+    const messages = await aiTutorManager.current?.askAiTutor(fullQuestion);
+    if (messages && messages.length > 1) {
+      setAiTutorResponse(messages[1].chatMessageText);
+    }
+  };
+
   const onRun = async (
     runTests: boolean,
     dispatch: AppDispatch,
@@ -202,17 +215,8 @@ const PythonlabView: React.FunctionComponent<
       );
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
-  };
 
-  const aiTutorManager = useRef<AiTutorManager | null>(null);
-  if (aiTutorManager.current === null) {
-    aiTutorManager.current = new AiTutorManager();
-  }
-  const askAiTutor = async (string: string) => {
-    const messages = await aiTutorManager.current?.askAiTutor(string);
-    if (messages && messages.length > 1) {
-      setAiTutorResponse(messages[1].chatMessageText);
-    }
+    askAiTutor("What's wrong with my code?");
   };
 
   return (

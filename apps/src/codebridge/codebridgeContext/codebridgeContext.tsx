@@ -1,6 +1,5 @@
 import React, {createContext, useContext} from 'react';
 
-import AiTutorManager from '@cdo/apps/lab2/ai/AiTutorManager';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {setFileType} from '../FileBrowser/types';

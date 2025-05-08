@@ -6,10 +6,6 @@ import {getStore} from '@cdo/apps/redux';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 export default class AiTutorManager {
-  constructor() {
-    // Initialize the AI Tutor
-  }
-
   async askAiTutor(message: string) {
     const state = getStore().getState();
 
@@ -39,7 +35,7 @@ export default class AiTutorManager {
       aiCustomizations,
       aichatContext
     );
-    console.log(messages);
+
     return messages;
   }
 }

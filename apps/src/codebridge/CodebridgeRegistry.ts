@@ -1,6 +1,5 @@
 import ConsoleManager from '@codebridge/Console/ConsoleManager';
 
-import AiTutor from '@cdo/apps/lab2/ai/AiTutorManager';
 import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 
 // Registry for Codebridge singletons that need to be accessed by
@@ -8,13 +7,11 @@ import Neighborhood from '@cdo/apps/miniApps/neighborhood/Neighborhood';
 export default class CodebridgeRegistry {
   private consoleManager: ConsoleManager | null;
   private neighborhood: Neighborhood | null;
-  //private aiTutor: AiTutor | null;
 
   private static _instance: CodebridgeRegistry;
   constructor() {
     this.consoleManager = null;
     this.neighborhood = null;
-    //this.aiTutor = null;
   }
 
   public static getInstance(): CodebridgeRegistry {
@@ -43,14 +40,4 @@ export default class CodebridgeRegistry {
   public getNeighborhood() {
     return this.neighborhood;
   }
-
-  /*
-  public setAiTutor(aiTutor: AiTutor | null) {
-    this.aiTutor = aiTutor;
-  }
-
-  public getAiTutor() {
-    return this.aiTutor;
-  }
-  */
 }
