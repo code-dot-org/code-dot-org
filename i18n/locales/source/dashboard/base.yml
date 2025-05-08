@@ -506,6 +506,8 @@ en:
     answer: Answer
     dashboard: 'Teacher Dashboard'
     for_teachers_only: For Teachers Only
+    teaching_tips: 'Teaching Tips'
+    example_solution: 'Example Solution'
     title:
       one: 'Your teacher:'
       other: 'Your teachers:'
