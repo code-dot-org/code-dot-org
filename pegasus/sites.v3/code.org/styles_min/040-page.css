@@ -33,12 +33,12 @@
   /* Typography */
   --barlowSemiCondensed-semibold: "Barlow Semi Condensed Semibold", sans-serif;
   --barlowSemiCondensed-medium: "Barlow Semi Condensed Medium", sans-serif;
-  --main-font: "Figtree", "Noto Sans", "Noto Sans Arabic",
-    "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans SC", "Noto Sans TC",
-    "Noto Sans Devanagari", "Noto Sans Georgian", "Noto Sans Hebrew",
-    "Noto Sans JP", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans KR",
-    "Noto Sans Myanmar", "Noto Sans Sinhala", "Noto Sans Tamil",
-    "Noto Sans Telugu", "Noto Sans Thai", "Noto Sans Thaana", sans-serif;
+  --main-font: "Figtree", "Noto Sans", "Noto Sans Arabic", "Noto Sans Armenian",
+    "Noto Sans Bengali", "Noto Sans SC", "Noto Sans TC", "Noto Sans Devanagari",
+    "Noto Sans Georgian", "Noto Sans Hebrew", "Noto Sans JP",
+    "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans KR", "Noto Sans Myanmar",
+    "Noto Sans Sinhala", "Noto Sans Tamil", "Noto Sans Telugu", "Noto Sans Thai",
+    "Noto Sans Thaana", sans-serif;
   --thin-font-weight: 100;
   --extra-light-font-weight: 200;
   --light-font-weight: 300;
@@ -522,13 +522,14 @@ td {
 nav.main {
   background-color: var(--brand_primary_default);
   margin: 0;
-  padding: 0.25rem 1rem;
+  padding: 0.375rem 0.875rem;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
+  box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 }
 
 nav .left,
@@ -539,7 +540,7 @@ nav .right {
 }
 
 nav .left {
-  gap: 2rem;
+  gap: 1.875rem;
 }
 
 nav .right {
@@ -552,7 +553,7 @@ nav.main ul {
   padding: 0;
   display: flex;
   justify-content: start;
-  gap: 2rem;
+  gap: 2.25rem;
 }
 
 nav.main ul li {
@@ -579,7 +580,7 @@ nav.main ul li a:hover {
 }
 
 nav.main img.logo {
-  width: 42px;
+  width: 38px;
 }
 
 nav.main i.fa-fw {
@@ -590,13 +591,13 @@ nav.main .create_menu,
 nav.main .user_menu,
 nav.main .button-signin,
 nav.main .button-create-account {
-  border: 2px solid var(--neutral_white);
+  border: 1px solid var(--neutral_white);
   border-radius: 4px;
   color: var(--neutral_white);
   font-size: 0.875rem;
   font-weight: var(--regular-font-weight);
   text-decoration: none;
-  padding: 7px 12px;
+  padding: 6.5px 16px;
   margin: 0;
 }
 
@@ -608,11 +609,11 @@ nav.main .button-create-account {
 
 nav.main .create_menu,
 nav.main .user_menu {
-  border: 2px solid;
   margin: 0;
   display: flex;
-  gap: 2px;
+  gap: 4px;
   cursor: pointer;
+  height: 36px;
 }
 
 nav.main .create_menu i,
@@ -623,7 +624,7 @@ nav.main .user_menu i {
 
 nav.main .create_menu i.create_menu_arrow_down,
 nav.main .user_menu i.user_menu_arrow_down {
-  margin-top: -4px;
+  margin-top: -3px;
 }
 
 nav.main .create_menu i.create_menu_arrow_up,
@@ -634,7 +635,7 @@ nav.main .user_menu i.user_menu_arrow_up {
 nav.main .help_button {
   padding: 0;
   height: unset;
-  margin-inline-end: -6px;
+  margin-inline-end: -4px;
 }
 
 nav.main .help_button .help_icon {
