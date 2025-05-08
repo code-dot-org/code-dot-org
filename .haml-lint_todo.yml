@@ -62,13 +62,6 @@ linters:
       - "dashboard/app/views/layouts/application.html.haml"
       - "dashboard/app/views/levels/editors/fields/_grid.html.haml"
       - "dashboard/app/views/sections/show.html.haml"
-      - "pegasus/sites.v3/code.org/layouts/default.haml"
-      - "pegasus/sites.v3/code.org/public/volunteer/engineer/edit/splat.haml"
-      - "pegasus/sites.v3/code.org/views/csa_testimonials.haml"
-      - "pegasus/sites.v3/code.org/views/homepage_hero.haml"
-      - "pegasus/sites.v3/hourofcode.com/layouts/default.haml"
-      - "pegasus/sites.v3/hourofcode.com/views/hoc_action_buttons.haml"
-      - "pegasus/sites/all/views/page.haml"
 
   # Offense count: 73
   ClassAttributeWithStaticValue:
@@ -78,4 +71,3 @@ linters:
   UnnecessaryInterpolation:
     exclude:
       - "dashboard/app/views/plc/user_course_enrollments/manager_view.html.haml"
-      - "pegasus/sites.v3/code.org/views/contributors.haml"
