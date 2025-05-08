@@ -5,7 +5,11 @@ import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {DEFAULT_CHORD_LENGTH, MIN_BPM, MAX_BPM} from '../constants';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
-import {getPitchName, getTransposedNote, Key} from '../utils/Notes';
+import {
+  getPitchName,
+  convertRelativeToAbsolutePitch,
+  Key,
+} from '../utils/Notes';
 import {getNoteAvailableInScaleMode} from '../utils/Tunes';
 
 import {
@@ -411,7 +415,10 @@ export default class MusicPlayer {
     const samples: SampleEvent[] = [];
 
     events.forEach(event => {
-      const transposedNote = getTransposedNote(this.key, event.noteOffset);
+      const transposedNote = convertRelativeToAbsolutePitch(
+        this.key,
+        event.noteOffset
+      );
       const sampleUrl = this.getSampleForNote(transposedNote, instrument);
       if (sampleUrl !== null) {
         const eventWhen = eventStart + (event.position - 1) / 16;
@@ -456,20 +463,24 @@ export default class MusicPlayer {
   ): SamplerSequence | null {
     const {value, effects, when} = instrumentEvent;
     const {instrument, events, relative, scaleMode} = value;
+    const key = this.key;
 
     return {
       instrument,
       effects,
       events: events
+        .map(event => ({
+          ...event,
+          note: relative
+            ? convertRelativeToAbsolutePitch(key, event.note)
+            : event.note,
+        }))
         .filter(event =>
-          getNoteAvailableInScaleMode(this.key, event.note, scaleMode)
+          getNoteAvailableInScaleMode(key, event.note, scaleMode)
         )
         .map(event => {
-          const note = relative
-            ? getTransposedNote(this.key, event.note)
-            : event.note;
           return {
-            notes: [getPitchName(note)],
+            notes: [getPitchName(event.note)],
             playbackPosition: when + (event.tick - 1) / 16,
           };
         }),

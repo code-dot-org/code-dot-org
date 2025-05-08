@@ -17,8 +17,8 @@ import {
 import {
   getPitchName,
   isBlackKey,
-  getTransposedNote,
-  getUntransposedNote,
+  convertRelativeToAbsolutePitch,
+  convertAbsoluteToRelativePitch,
 } from '../../utils/Notes';
 import LoadingOverlay from '../LoadingOverlay';
 import PreviewControlsV2 from '../PreviewControlsV2';
@@ -48,7 +48,20 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   lengthMeasures,
 }) => {
   const instruments = getInstruments(editorType);
-  const [currentValue, setCurrentValue] = useState(initialValue);
+  const [currentValue, setCurrentValue] = useState(() => {
+    // Convert to absolute before saving.
+    const convertedValue = {
+      ...initialValue,
+      events: initialValue.events.map(event => ({
+        ...event,
+        note: convertRelativeToAbsolutePitch(
+          MusicRegistry.player.getKey(),
+          event.note
+        ),
+      })),
+    };
+    return convertedValue;
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
@@ -56,8 +69,16 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   const key = MusicRegistry.player.getKey();
 
   useEffect(() => {
-    onChange(currentValue);
-  }, [onChange, currentValue]);
+    // Convert to relative before saving.
+    const convertedValue = {
+      ...currentValue,
+      events: currentValue.events.map(event => ({
+        ...event,
+        note: convertAbsoluteToRelativePitch(key, event.note),
+      })),
+    };
+    onChange(convertedValue);
+  }, [onChange, currentValue, key]);
 
   useEffect(() => {
     const instrument = currentValue.instrument;
@@ -86,32 +107,29 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     (note: number, tick: number) => {
       const newEvents = [...currentValue.events];
       const index = newEvents.findIndex(
-        event =>
-          getTransposedNote(key, event.note) === note && event.tick === tick
+        event => event.note === note && event.tick === tick
       );
 
       if (index !== -1) {
         newEvents.splice(index, 1);
       } else {
-        const relativeNote = getUntransposedNote(key, note);
-        newEvents.push({note: relativeNote, tick});
+        newEvents.push({note, tick});
         MusicRegistry.player.previewNote(note, currentValue.instrument);
       }
       setCurrentValue({...currentValue, events: newEvents});
     },
-    [currentValue, key]
+    [currentValue]
   );
 
   const isSelected = (note: number, tick: number) => {
     return !!currentValue.events.find(
-      event =>
-        getTransposedNote(key, event.note) === note && event.tick === tick
+      event => event.note === note && event.tick === tick
     );
   };
 
   const startPreview = useCallback(() => {
     MusicRegistry.player.previewNotes(
-      currentValue,
+      {...currentValue, relative: false},
       (tick: number) => setCurrentPreviewTick(tick),
       () => setCurrentPreviewTick(0)
     );
@@ -150,10 +168,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         type="button"
         className={styles['cell-outer']}
         onClick={() =>
-          MusicRegistry.player.previewNote(
-            getUntransposedNote(key, props.note),
-            currentValue.instrument
-          )
+          MusicRegistry.player.previewNote(props.note, currentValue.instrument)
         }
       >
         <div

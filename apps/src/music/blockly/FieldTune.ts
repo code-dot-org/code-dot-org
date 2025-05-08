@@ -7,7 +7,7 @@ import {
   InstrumentEventValue,
   InstrumentTickEvent,
 } from '../player/interfaces/InstrumentEvent';
-import {getNoteName, getTransposedNote} from '../utils/Notes';
+import {getNoteName, convertRelativeToAbsolutePitch} from '../utils/Notes';
 import {
   generateGraphDataFromTune,
   getNoteAvailableInScaleMode,
@@ -123,7 +123,7 @@ export default class FieldTune extends GoogleBlockly.Field {
 
     const mapFn = (event: InstrumentTickEvent) => ({
       ...event,
-      note: getTransposedNote(key, event.note),
+      note: convertRelativeToAbsolutePitch(key, event.note),
     });
 
     const notes = events
