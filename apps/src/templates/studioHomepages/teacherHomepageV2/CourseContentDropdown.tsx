@@ -50,8 +50,6 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
           key={lesson.value}
           value={lesson.value}
           label={lesson.text}
-          labelStyle={lesson.value.includes('/lessons/') ? 'indent' : 'bold'}
-          iconName=""
           url={lesson.value}
           eventName={
             lesson.value.includes('/lessons/')

@@ -12,8 +12,7 @@ import styles from './teacherHomepage.module.scss';
 interface LinkElementProps {
   value: string;
   label: string;
-  labelStyle?: 'bold' | 'indent';
-  iconName: string;
+  iconName?: string;
   url: string;
   eventName?: string;
   eventOptions?: object;
@@ -22,7 +21,6 @@ interface LinkElementProps {
 const LinkOption: React.FC<LinkElementProps> = ({
   value,
   label,
-  labelStyle,
   iconName,
   url,
   eventName,
@@ -44,7 +42,9 @@ const LinkOption: React.FC<LinkElementProps> = ({
               analyticsReporter.sendEvent(eventName, {}, PLATFORMS.BOTH);
           }}
         >
-          <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
+          {iconName && (
+            <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
+          )}
           <span>{label}</span>
         </Link>
       ) : (
@@ -60,15 +60,7 @@ const LinkOption: React.FC<LinkElementProps> = ({
               );
           }}
         >
-          {labelStyle === 'bold' ? (
-            <span>
-              <b>{label}</b>
-            </span>
-          ) : labelStyle === 'indent' ? (
-            <span style={{paddingLeft: '1em'}}>{label}</span>
-          ) : (
-            <span>{label}</span>
-          )}
+          <span>{label}</span>
         </a>
       )}
     </li>
