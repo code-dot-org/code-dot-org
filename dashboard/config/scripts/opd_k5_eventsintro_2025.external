@@ -6,5 +6,5 @@ hide_reference_area 'true'
 markdown <<MARKDOWN
 # Video:  The Big Event
 
-##### Video from Course A - Lesson 11, Level 1:  The Big Event Jr.
+#### Video from Course A - Lesson 11, Level 1:  The Big Event Jr.
 MARKDOWN

@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-07 06:34:05 UTC",
+    "serialized_at": "2025-05-08 05:21:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3278,7 +3278,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each pair of students a copy of the Threat Detected! Cards and the AI Threat Detection Notetaker activity guide.",
-        "name": "AI Threat Detection"
+        "name": "AI Threat Detection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "For early finishers or advanced groups, provide a set of Tier Two Threat Detected! Cards. These cards introduce more complex or ambiguous scenarios that require deeper analysis of AI limitations, ethical concerns, and the need for human oversight. Encourage students to use the same notetaker and apply their learning from earlier rounds."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "429e491e-6237-41a6-a206-d94e8eda8dae",
@@ -3286,8 +3292,18 @@
       }
     },
     {
-      "key": "b01e8e08-43e8-4d37-b009-dab905b8f9a5",
+      "key": "6d7e2370-b125-4874-b20f-f3b18ce9e87c",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6d7e2370-b125-4874-b20f-f3b18ce9e87c",
+        "lesson_activity.key": "3e8b0e7d-df72-4dd5-8ccd-13cce9038d80"
+      }
+    },
+    {
+      "key": "b01e8e08-43e8-4d37-b009-dab905b8f9a5",
+      "position": 3,
       "properties": {
         "description": "Today, you will act as security analysts, using an AI threat detection system to investigate and respond to security threats. Your goal is to evaluate how AI-based security tools work compared to traditional detection methods. Work with your partner to complete this activity. You will receive one set of AI Threat Detection Cards and you will each have your own Threat Detection Notetaker to fill out individually.",
         "remarks": true
@@ -3299,7 +3315,7 @@
     },
     {
       "key": "9694c474-d555-492d-b038-673570015ba4",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will act as security analysts interacting with an AI threat detection system to analyze and respond to network vulnerabilities. Review the steps for drawing a Threat Detected card, discussing the scenario with the AI Chatbot, recording the results of the discussion on the Activity Guide, and then drawing a new card to repeat the process.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 10, Level 1 to interact with the threat detection chatbot and complete their activity guide. ",
         "progression_name": "Threat Detection Chatbot"
@@ -3311,7 +3327,7 @@
     },
     {
       "key": "92d85e1b-9da8-437b-91c7-fe5d1cb4f43e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Give students at least 20 minutes to complete as many threat cards as possible in that time. Then, direct student to move on to Level 2 to complete a check for understanding. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Circulate and listen for students who assume AI is always accurate. If students trust the AI’s responses without question, ask: ‘Could AI ever misidentify a threat? How would that impact security?’ Ensure students also consider limitations like false positives, AI bias, and the need for human oversight.",
         "progression_name": "Check for Understanding",
@@ -3333,7 +3349,7 @@
     },
     {
       "key": "99808bea-215b-45a5-8b67-6c7870f5ab82",
-      "position": 5,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -3343,9 +3359,9 @@
     },
     {
       "key": "25834266-8fbf-42fb-b137-d4cd2b0c3043",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Show the model threat detection notes, emphasizing short, clear notes instead of full sentences. Remind students that they don’t need to capture every word from the chatbot, just the gist of its response.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of four. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to choose one scenario from their activity and discuss with their group how AI detected the threat and how that compared to traditional methods.**\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Encourage students to move beyond ‘AI is faster’ as their key argument. Ask: ‘Does AI replace human analysts completely? What tasks might still require human decision-making?’ Look for responses that mention AI’s adaptability, scalability, and data processing power while recognizing that human oversight is still necessary.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n- *What patterns did you notice in AI’s responses to each threat?*\n- *How did AI improve security compared to traditional methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students analyze patterns in AI’s responses to security threats and evaluate its strengths and weaknesses. Encourage them to consider what AI does well (speed, data analysis, automation) and where it struggles (bias, detecting new types of threats, false positives). Guide them to recognize that AI is a tool, not a replacement for human decision-making in cybersecurity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain to students that the next slides will have a statement about AI and cybersecurity. Students will hold a thumbs up for True, thumbs down for False, or thumbs sideways for unsure. Once students have held up their answer, you will reveal the correct answer and explain why.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: AI is powerful, but it’s not perfect—some scams still slip through. Hackers continuously adapt their methods, and AI can sometimes generate false positives or miss subtle attacks. Human judgement should be the first line of defense. Remind students that if they are unsure whether something is a scam, take a step back and cross-check with a trusted source, like speaking to the person who sent the message in person.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Social engineering works because it looks convincing—attackers impersonate real people, use familiar logos, and create a sense of urgency. Remind students to always examine the sender details, such as looking to see if the email address matches the school or company’s domain. Other ways you can tell are any red flags, like urgent requests, odd grammar, or messages that ask for personal information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Even responding to a scam email can be dangerous—attackers confirm active accounts based on responses and might target students again. Remind students that when in doubt, use this approach: ‘STOP-THINK-VERIFY’ before interacting with any suspicious message. Never respond to a message with any personal information before verifying that it is actually the person they say they are. The best way to do this is to ask the person in real life."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Show the model threat detection notes, emphasizing short, clear notes instead of full sentences. Remind students that they don’t need to capture every word from the chatbot, just the gist of its response.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of four. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one scenario from their activity and discuss with their group what the AI got right, where it needed human support, and what surprised them about how the AI handled the threat.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Encourage students to move beyond ‘AI is faster’ as their key argument. Ask: ‘Does AI replace human analysts completely? What tasks might still require human decision-making?’ Look for responses that mention AI’s adaptability, scalability, and data processing power while recognizing that human oversight is still necessary.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n- *What patterns did you notice in AI’s responses to each threat?*\n- *How did AI improve security compared to traditional methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students analyze patterns in AI’s responses to security threats and evaluate its strengths and weaknesses. Encourage them to consider what AI does well (speed, data analysis, automation) and where it struggles (bias, detecting new types of threats, false positives). Guide them to recognize that AI is a tool, not a replacement for human decision-making in cybersecurity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain to students that the next slides will have a statement about AI and cybersecurity. Students will hold a thumbs up for True, thumbs down for False, or thumbs sideways for unsure. Once students have held up their answer, you will reveal the correct answer and explain why.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: AI is powerful, but it’s not perfect—some scams still slip through. Hackers continuously adapt their methods, and AI can sometimes generate false positives or miss subtle attacks. Human judgement should be the first line of defense. Remind students that if they are unsure whether something is a scam, take a step back and cross-check with a trusted source, like speaking to the person who sent the message in person.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Social engineering works because it looks convincing—attackers impersonate real people, use familiar logos, and create a sense of urgency. Remind students to always examine the sender details, such as looking to see if the email address matches the school or company’s domain. Other ways you can tell are any red flags, like urgent requests, odd grammar, or messages that ask for personal information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Even responding to a scam email can be dangerous—attackers confirm active accounts based on responses and might target students again. Remind students that when in doubt, use this approach: ‘STOP-THINK-VERIFY’ before interacting with any suspicious message. Never respond to a message with any personal information before verifying that it is actually the person they say they are. The best way to do this is to ask the person in real life."
       },
       "seeding_key": {
         "activity_section.key": "25834266-8fbf-42fb-b137-d4cd2b0c3043",
@@ -3354,7 +3370,7 @@
     },
     {
       "key": "659965b0-39e1-4ac5-b5bc-f92cc79d402a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -3401,7 +3417,7 @@
       "key": "34397bf1-56ad-44ba-a853-c4ecfa3c531c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the Network Security Risk Assessment Project Planning Guide. This will guide them through all three days of the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that for the next three days, they will work as network security analysts. This means they will select a company scenario, identify vulnerabilities, assess their societal and ethical impacts, and propose both traditional and AI-driven solutions. Along the way, they will refine their recommendations through peer review.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about the project rubric?*\n- *What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 11, Level 1 to choose a company scenario. Instruct them to complete the graphic organizer on their Project Planning Guide for their chosen company. ",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the Network Security Risk Assessment Project Planning Guide. This will guide them through all three days of the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that for the next three days, they will work as network security analysts. This means they will select a company scenario, identify vulnerabilities, assess their societal and ethical impacts, and propose both traditional and AI-driven solutions. Along the way, they will refine their recommendations through peer review.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about the project rubric?*\n- *What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the first example to model what quality assessment looks like for Critical Vulnerabilities and how it connects to the rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example of societal / ethical impact risk assessment to model what quality work looks like and how it connects to the rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example of critical vulnerabilities risk assessment to model what quality work looks like and how it connects to the rubric.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 11, Level 1 to choose a company scenario. Instruct them to complete the graphic organizer on their Project Planning Guide for their chosen company. ",
         "duration": "30",
         "name": "Activity",
         "progression_name": "Company Case Study Choices"
