@@ -2,6 +2,8 @@ import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import _ from 'lodash';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils';
 import i18n from '@cdo/locale';
@@ -115,6 +117,10 @@ const downloadLevelProgressCSV = () => {
   );
 
   downloadCSV(`level_progress_${unitData.name}.csv`, columnNames, table);
+
+  analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DOWNLOAD_LEVEL_CSV, {
+    unitName: unitData.name,
+  });
 };
 
 // Export for testing only
@@ -173,6 +179,10 @@ const downloadLessonProgressCSV = () => {
     lessonProgressByStudent
   );
   downloadCSV(`lesson_progress_${unitData.name}.csv`, columnNames, table);
+
+  analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DOWNLOAD_LESSON_CSV, {
+    unitName: unitData.name,
+  });
 };
 
 // A custom CSV download function that sets up a fake URL with the CSV and triggers a download
