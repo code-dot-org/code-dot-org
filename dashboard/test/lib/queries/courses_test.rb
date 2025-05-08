@@ -6,11 +6,11 @@ class Queries::CoursesTest < ActiveSupport::TestCase
   describe '.get_course_context' do
     let(:script_name) {'test-script'}
     let(:unit) {nil}
-    let(:course) {nil}
+    let(:unit_group) {nil}
     let(:unit_group_unit) {nil}
     let(:course_context) do
       {
-        course: course,
+        unit_group: unit_group,
         unit_group_unit: unit_group_unit,
         unit: unit,
       }
@@ -33,9 +33,9 @@ class Queries::CoursesTest < ActiveSupport::TestCase
       end
 
       context 'unit_group_unit is defined' do
-        let(:course) {create :unit_group}
+        let(:unit_group) {create :unit_group}
         let(:unit_position) {123}
-        let!(:unit_group_unit) {create :unit_group_unit, course_id: course.id, position: unit_position, script_id: unit.id}
+        let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, position: unit_position, script_id: unit.id}
 
         it 'returns course context' do
           _(subject).must_equal course_context

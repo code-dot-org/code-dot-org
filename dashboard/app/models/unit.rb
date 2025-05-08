@@ -1547,7 +1547,7 @@ class Unit < ApplicationRecord
 
       has_older_course_progress = unit_group_unit&.unit_group.try(:has_older_version_progress?, user)
       has_older_unit_progress = has_older_version_progress?(user)
-      user_unit = user && user_scripts.find_by(user: user)
+      user_unit = user && user_scripts.find {|us| us.user ==  user}
 
       # If the current user is assigned to this unit, get the section
       # that assigned it.

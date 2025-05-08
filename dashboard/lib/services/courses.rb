@@ -16,7 +16,7 @@ class Services::Courses
 
     # URLs is /s/:script_id/... so generate a /courses/... URL
     course_context = Queries::Courses.get_course_context(script_name)
-    course_name = course_context[:course]&.name
+    course_name = course_context[:unit_group]&.name
     unit_position = course_context[:unit_group_unit]&.position
 
     return path unless course_name && unit_position

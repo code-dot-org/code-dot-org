@@ -5,16 +5,16 @@ class Queries::Courses
   # @return [Hash, nil] A hash containing the course and unit group unit,
   #   or `nil` if no valid context is found.
   #   The hash has the following structure:
-  #     - `:course` - The given UnitGroup/Course
+  #     - `:unit_group` - The given UnitGroup/Course
   #     - `:unit_group_unit` - The UnitGroupUnit for the given Course and position
   #     - `:unit` - The Unit in the given Course and position
   def self.get_unit_context(course_name, unit_position)
-    course = UnitGroup.get_from_cache(course_name)
-    return nil unless course
-    unit_group_unit = UnitGroupUnit.get_with_position_from_cache(course.id, unit_position)
+    unit_group = UnitGroup.get_from_cache(course_name)
+    return nil unless unit_group
+    unit_group_unit = UnitGroupUnit.get_with_position_from_cache(unit_group.id, unit_position)
     return nil unless unit_group_unit
     unit = Unit.get_from_cache(unit_group_unit.script_id)
-    {course: course, unit_group_unit: unit_group_unit, unit: unit}
+    {unit_group: unit_group, unit_group_unit: unit_group_unit, unit: unit}
   end
 
   # Fetches the course context for a given Unit name. This is needed because
@@ -33,9 +33,9 @@ class Queries::Courses
   #     - `:unit` - The Unit for the given `unit_name`
   def self.get_course_context(unit_name)
     unit = Unit.get_from_cache(unit_name, raise_exceptions: false)
-    course = unit&.original_unit_group
-    ugu = unit_group_unit(unit, course)
-    {course: course, unit_group_unit: ugu, unit: unit}
+    unit_group = unit&.original_unit_group
+    ugu = unit_group_unit(unit, unit_group)
+    {unit_group: unit_group, unit_group_unit: ugu, unit: unit}
   end
 
   def self.unit_group_unit(unit, unit_group)
