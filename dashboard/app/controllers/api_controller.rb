@@ -468,27 +468,20 @@ class ApiController < ApplicationController
     unless unit_name || (unit_position && course_name)
       return render json: {error: 'Must specify either unit_name or unit_position and course_name'}, status: :bad_request
     end
-    unit = nil
-    unit_group = nil
-    unit_group_unit = nil
 
     if unit_name
       context = Queries::Courses.get_course_context(unit_name)
-      if context
-        unit = context[:unit]
-        unit_group = context[:unit_group]
-        unit_group_unit = context[:unit_group_unit]
-        course_name = unit_group.name
-        unit_position = unit_group_unit.position
-      else
-        # Unit hasn't been migrated to have a Course/UnitGroup
-        unit = Unit.get_from_cache(unit_name)
-      end
+      unit = context[:unit]
+      unit_group = context[:unit_group]
+      unit_group_unit = context[:unit_group_unit]
+      course_name = unit_group&.name
+      unit_position = unit_group_unit&.position
     else
       course_name = params[:course_name]
       unit_position = params[:unit_position]&.to_i
       context = Queries::Courses.get_unit_context(course_name, unit_position)
       unit = context[:unit]
+      unit_group = context[:unit_group]
       unit_group_unit = context[:unit_group_unit]
     end
     return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless unit
