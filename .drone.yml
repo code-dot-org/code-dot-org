@@ -299,16 +299,16 @@ steps:
       - git lfs install
       - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
 
-  - name: cache-staging-clone
-    image: plugins/s3-cache
-    settings:
-      filename: cache-staging-clone.tar
-      endpoint: s3://cdo-drone
-      rebuild: true
-      debug: true
-      pull: true
-      mount:
-        - .
+  # - name: cache-staging-clone
+  #   image: plugins/s3-cache
+  #   settings:
+  #     filename: cache-staging-clone.tar
+  #     endpoint: s3://cdo-drone
+  #     rebuild: true
+  #     debug: true
+  #     pull: true
+  #     mount:
+  #       - .
 
   - name: seed
     image: codedotorg/code-dot-org:1.15
