@@ -26,6 +26,7 @@ import {
   setIsValidating,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import AiTutorUI from '@cdo/apps/lab2/views/components/AiTutorUI';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -74,7 +75,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
 }) => {
-  const {onRun, onStop, levelProperties} = useCodebridgeContext();
+  const {onRun, onStop, levelProperties, aiTutorResponse} =
+    useCodebridgeContext();
   const dialogControl = useDialogControl();
 
   const {
@@ -368,6 +370,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               {renderValidationButton()}
             </div>
           )}
+
+          <AiTutorUI response={aiTutorResponse} />
 
           {validationResults && (
             <>

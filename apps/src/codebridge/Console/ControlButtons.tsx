@@ -10,7 +10,10 @@ import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getActiveFileForSource,
+  getAppOptionsEditBlocks,
+} from '@cdo/apps/lab2/projects/utils';
 import {
   setHasRun,
   setIsRunning,
@@ -33,7 +36,8 @@ import moduleStyles from './console.module.scss';
 // Can be extended in the future to include a test button.
 const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const {onRun, onStop, labConfig, levelProperties} = useCodebridgeContext();
+  const {onRun, onStop, labConfig, levelProperties, askAiTutor} =
+    useCodebridgeContext();
   const {id: levelId, appName, predictSettings} = levelProperties;
   const isPredictLevel = predictSettings?.isPredictLevel;
 
@@ -56,6 +60,10 @@ const ControlButtons: React.FunctionComponent = () => {
     !isStartMode && isPredictLevel && !hasPredictResponse;
 
   const miniApp = labConfig?.miniApp?.name;
+
+  const pythonlabSource = useAppSelector(
+    state => state.lab2Project?.projectSources?.source
+  );
 
   const resetStatus = useCallback(() => {
     dispatch(setHasRun(false));
@@ -86,6 +94,17 @@ const ControlButtons: React.FunctionComponent = () => {
       });
       dispatch(setHasRun(true));
       dispatch(setShowSuggestedPrompts(true));
+
+      const studentCode =
+        typeof pythonlabSource !== 'string' && pythonlabSource
+          ? getActiveFileForSource(pythonlabSource)?.contents || ''
+          : '';
+
+      if (askAiTutor) {
+        askAiTutor(
+          "Why doesn't my code work?  \nHere is the code:\n" + studentCode
+        );
+      }
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()

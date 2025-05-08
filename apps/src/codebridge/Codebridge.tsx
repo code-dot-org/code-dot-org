@@ -38,6 +38,8 @@ type CodebridgeProps = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
+  askAiTutor?: (question: string) => void;
+  aiTutorResponse?: string;
 };
 
 export const Codebridge = React.memo(
@@ -54,6 +56,8 @@ export const Codebridge = React.memo(
     sendConsoleInput,
     levelProperties,
     projectPickerSettings,
+    askAiTutor,
+    aiTutorResponse,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       sourceReducer,
@@ -91,6 +95,8 @@ export const Codebridge = React.memo(
       [appName]
     );
 
+    //const aiTutorManager = new AiTutorManager();
+
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
 
@@ -109,6 +115,8 @@ export const Codebridge = React.memo(
           sendConsoleInput,
           levelProperties,
           projectPickerSettings,
+          askAiTutor,
+          aiTutorResponse,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

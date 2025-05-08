@@ -1,5 +1,6 @@
 import React, {createContext, useContext} from 'react';
 
+import AiTutorManager from '@cdo/apps/lab2/ai/AiTutorManager';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 
 import {setFileType} from '../FileBrowser/types';
@@ -58,6 +59,8 @@ export type CodebridgeContextType = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
+  askAiTutor?: (response: string) => void;
+  aiTutorResponse?: string;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

@@ -4,11 +4,12 @@ import {useSource} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useContext, useEffect, useMemo, useState} from 'react';
+import React, {useContext, useEffect, useMemo, useState, useRef} from 'react';
 
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
+import AiTutorManager from '@cdo/apps/lab2/ai/AiTutorManager';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -74,6 +75,9 @@ const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  const [aiTutorResponse, setAiTutorResponse] = useState<string | undefined>(
+    undefined
+  );
   const {
     source,
     setProject,
@@ -200,6 +204,17 @@ const PythonlabView: React.FunctionComponent<
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
   };
 
+  const aiTutorManager = useRef<AiTutorManager | null>(null);
+  if (aiTutorManager.current === null) {
+    aiTutorManager.current = new AiTutorManager();
+  }
+  const askAiTutor = async (string: string) => {
+    const messages = await aiTutorManager.current?.askAiTutor(string);
+    if (messages && messages.length > 1) {
+      setAiTutorResponse(messages[1].chatMessageText);
+    }
+  };
+
   return (
     <div className={moduleStyles.pythonlab}>
       {source && (
@@ -216,6 +231,8 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
+          aiTutorResponse={aiTutorResponse}
+          askAiTutor={askAiTutor}
         />
       )}
       {showProjectPickerModal && (
