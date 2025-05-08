@@ -16,11 +16,21 @@ def main
   # Pilot data collected before September 30th, 2024 is being retained for analysis.
   pilot_end_date = DateTime.new(2024, 10, 1, 0, 0, 0)
 
-  destroyed_event_count = AichatEvent.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).delete_all
-  ChatClient.message('cron-daily', "Deleted #{destroyed_event_count} AichatEvent records")
+  ActiveRecord::Base.connection_pool.with_connection do |conn|
+    old_read_timeout = conn.raw_connection.query_options[:read_timeout]
 
-  destroyed_request_count = AichatRequest.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).delete_all
-  ChatClient.message('cron-daily', "Deleted #{destroyed_request_count} AichatRequest records")
+    begin
+      conn.raw_connection.query_options[:read_timeout] = 300
+
+      destroyed_event_count = AichatEvent.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).delete_all
+      ChatClient.message('cron-daily', "Deleted #{destroyed_event_count} AichatEvent records")
+
+      destroyed_request_count = AichatRequest.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).delete_all
+      ChatClient.message('cron-daily', "Deleted #{destroyed_request_count} AichatRequest records")
+    ensure
+      conn.raw_connection.query_options[:read_timeout] = old_read_timeout
+    end
+  end
 end
 
 main
