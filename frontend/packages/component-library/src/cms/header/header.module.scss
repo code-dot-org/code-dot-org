@@ -109,6 +109,10 @@ header .buttonLinks {
     }
   }
 
+  .newProject i {
+    margin-inline-end: -3px;
+  }
+
   .createAccount.mainMenu,
   .goToDashboard.mainMenu {
     color: var(--text-brand-teal-primary-fixed);

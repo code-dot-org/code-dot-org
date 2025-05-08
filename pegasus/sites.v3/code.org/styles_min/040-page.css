@@ -610,26 +610,14 @@ nav.main .button-create-account {
 nav.main .create_menu,
 nav.main .user_menu {
   margin: 0;
-  display: flex;
-  gap: 4px;
   cursor: pointer;
-  height: 36px;
+  height: 35px;
 }
 
 nav.main .create_menu i,
 nav.main .user_menu i {
-  font-size: 1.5rem;
+  font-size: 0.875rem;
   width: auto;
-}
-
-nav.main .create_menu i.create_menu_arrow_down,
-nav.main .user_menu i.user_menu_arrow_down {
-  margin-top: -3px;
-}
-
-nav.main .create_menu i.create_menu_arrow_up,
-nav.main .user_menu i.user_menu_arrow_up {
-  margin-top: -1px;
 }
 
 nav.main .help_button {

@@ -23,23 +23,12 @@
   .user_menu_arrow_up,
   .create_menu_arrow_down,
   .create_menu_arrow_up {
-    font-size: 1.5rem;
-    margin-top: -4px;
-    .rtl & {
-      float: left;
-    }
-    html[dir='rtl'] & {
-      float: left;
-    }
-  }
-
-  .user_menu_arrow_up,
-  .create_menu_arrow_up {
-    margin-top: -2px;
+    font-size: 0.875rem;
+    margin-inline-start: 5px;
   }
 
   .user_options, .create_options {
-    top: 50px;
+    top: 46px;
   }
 
   .help_contents {
@@ -48,7 +37,7 @@
 
   .user_options, .create_options, .help_contents {
     position: absolute;
-    right: 0px;
+    inset-inline-start: 0px;
     background-color: $white;
     border: 1px solid $charcoal;
 
@@ -65,6 +54,7 @@
     a:hover {
       background-color: $lightest_gray;
       text-decoration: none;
+      border-radius: 4px;
     }
   }
 }
@@ -176,34 +166,41 @@
 
 .create_menu {
   .create_options {
-    width: max-content;
+    min-width: 228px;
+    max-width: 300px;
     z-index: 10000;
-    border-bottom: 0;
+    border: 1px solid $light_gray_200;
+    border-radius: 0.25rem;
+    padding: 0.375rem;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+    display: flex;
+    flex-direction: column;
+    text-align: initial;
     a {
       @include main-font-semi-bold;
-      min-width: 240px;
       font-size: 14px;
-      border-bottom: 1px solid $charcoal;
       box-sizing: content-box;
-      white-space: nowrap;
       cursor: pointer;
+      margin: 0;
+      padding: 0.375rem;
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+      gap: 0.625rem;
     }
     img {
-      height: 70px;
-      width: 70px;
+      height: 40px;
+      width: 40px;
+      border-radius: 4px;
     }
     .project_link_box {
-      display: block;
-
-      .project_link {
-        display: inline-block;
-        padding: 0 10px 0 4px;
-        line-height: 67px;
-      }
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
     }
+    .text,
     #view_all_projects {
-      height: 70px;
-      padding-left: 10px;
+      color: $light_black;
     }
   }
 
