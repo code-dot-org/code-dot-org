@@ -1,5 +1,5 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import React from 'react';
+import React, {useMemo} from 'react';
 // import {useNavigate, NavigateFunction, Link} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 
@@ -10,15 +10,17 @@ import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/Te
 import styles from './teacherHomepage.module.scss';
 
 interface LinkElementProps {
+  value: string;
   label: string;
   labelStyle?: 'bold' | 'indent';
-  iconName?: string;
+  iconName: string;
   url: string;
   eventName?: string;
   eventOptions?: object;
 }
 
 const LinkOption: React.FC<LinkElementProps> = ({
+  value,
   label,
   labelStyle,
   iconName,
@@ -26,8 +28,9 @@ const LinkOption: React.FC<LinkElementProps> = ({
   eventName,
   eventOptions,
 }) => {
-  const isTeacherDashboard = Object.values(TEACHER_NAVIGATION_PATHS).includes(
-    url
+  const isTeacherDashboard = useMemo(
+    () => Object.values(TEACHER_NAVIGATION_PATHS).includes(value),
+    [value]
   );
 
   return (
@@ -41,9 +44,7 @@ const LinkOption: React.FC<LinkElementProps> = ({
               analyticsReporter.sendEvent(eventName, {}, PLATFORMS.BOTH);
           }}
         >
-          {iconName && (
-            <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
-          )}
+          <FontAwesomeV6Icon iconName={iconName} iconStyle="solid" />
           <span>{label}</span>
         </Link>
       ) : (
@@ -59,7 +60,15 @@ const LinkOption: React.FC<LinkElementProps> = ({
               );
           }}
         >
-          <span>{label}</span>
+          {labelStyle === 'bold' ? (
+            <span>
+              <b>{label}</b>
+            </span>
+          ) : labelStyle === 'indent' ? (
+            <span style={{paddingLeft: '1em'}}>{label}</span>
+          ) : (
+            <span>{label}</span>
+          )}
         </a>
       )}
     </li>

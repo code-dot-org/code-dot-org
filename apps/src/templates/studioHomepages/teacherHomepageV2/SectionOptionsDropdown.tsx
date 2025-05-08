@@ -80,23 +80,26 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   const dropdownOptions = useMemo(() => {
     const options = [
       <LinkOption
-        key="sectionSettings"
+        key={'sectionSettings'}
+        value={TEACHER_NAVIGATION_PATHS.settings}
         label={i18n.sectionSettings()}
-        iconName="gear"
+        iconName={'gear'}
         url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}`}
         eventName={EVENTS.SECTION_CARD_SETTINGS_CLICKED}
       />,
       <LinkOption
-        key="roster"
+        key={'roster'}
+        value={TEACHER_NAVIGATION_PATHS.roster}
         label={i18n.roster()}
-        iconName="user"
+        iconName={'user'}
         url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.roster}`}
         eventName={EVENTS.SECTION_CARD_ROSTER_CLICKED}
       />,
       <LinkOption
-        key="loginCards"
+        key={'loginCards'}
+        value={TEACHER_NAVIGATION_PATHS.loginInfo}
         label={i18n.loginCards()}
-        iconName="id-card"
+        iconName={'id-card'}
         url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.loginInfo}`}
         eventName={EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED}
       />,
