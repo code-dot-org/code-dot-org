@@ -12,15 +12,17 @@ import styles from './teacherHomepage.module.scss';
 interface LinkElementProps {
   value: string;
   label: string;
+  labelStyle?: 'b' | 'i';
   iconName?: string;
   url: string;
   eventName?: string;
-  eventOptions?: object;
+  eventOptions: object;
 }
 
 const LinkOption: React.FC<LinkElementProps> = ({
   value,
   label,
+  labelStyle,
   iconName,
   url,
   eventName,
@@ -39,7 +41,11 @@ const LinkOption: React.FC<LinkElementProps> = ({
           className={styles.dropdownMenuItem}
           onClick={() => {
             if (eventName)
-              analyticsReporter.sendEvent(eventName, {}, PLATFORMS.BOTH);
+              analyticsReporter.sendEvent(
+                eventName,
+                eventOptions,
+                PLATFORMS.BOTH
+              );
           }}
         >
           {iconName && (
@@ -60,7 +66,15 @@ const LinkOption: React.FC<LinkElementProps> = ({
               );
           }}
         >
-          <span>{label}</span>
+          {labelStyle === 'b' ? (
+            <span>
+              <b>{label}</b>
+            </span>
+          ) : labelStyle === 'i' ? (
+            <span style={{paddingLeft: '1em'}}>{label}</span>
+          ) : (
+            <span>{label}</span>
+          )}
         </a>
       )}
     </li>
