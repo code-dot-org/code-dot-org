@@ -1,0 +1,393 @@
+{
+  "example": "value",
+  "map_starting_locations": {
+    "us": "38.6028331,-97.9062109,4z",
+    "eu": "49.5,22,4z"
+  },
+  "companies": {
+    "4-H": {
+      "name": "4-H Youth Development"
+    },
+    "abss": {
+      "name": "Alamance-Burlington School System"
+    },
+    "afterschool": {
+      "name": "after school"
+    },
+    "aldineisd": {
+      "name": "Aldine Independent School District"
+    },
+    "arlingtonpublicschools": {
+      "name": "Arlington Public Schools"
+    },
+    "asa": {
+      "name": "Afterschool Alliance"
+    },
+    "asd": {
+      "name": "Arlington Public Schools"
+    },
+    "asos": {
+      "name": "ASOS"
+    },
+    "auhsd": {
+      "name": "Anaheim Union High School District"
+    },
+    "beavertonschooldistrict": {
+      "name": "Beaverton School District"
+    },
+    "bellevuepublicschools": {
+      "name": "Bellevue Public Schools"
+    },
+    "bgca": {
+      "name": "Boys and Girls Club of America"
+    },
+    "bisd303": {
+      "name": "Bainbridge Island School District"
+    },
+    "blan": {
+      "name": "Blanchester Local Schools"
+    },
+    "bremertonschools": {
+      "name": "Bremerton School District"
+    },
+    "browardschools": {
+      "name": "Broward County Schools"
+    },
+    "bsusa": {
+      "name": "Boy Scouts of America"
+    },
+    "cajonvalley": {
+      "name": "Cajon Valley School District"
+    },
+    "calistogajointunified": {
+      "name": "Calistoga Joint Unified School District"
+    },
+    "canalwinchesterschools": {
+      "name": "Canal Winchester Local Schools"
+    },
+    "canyonsdistrict": {
+      "name": "Canyons School District"
+    },
+    "ccboe": {
+      "name": "Charles County Public Schools"
+    },
+    "ccsd": {
+      "name": "Clark County School District"
+    },
+    "ccsoh": {
+      "name": "Columbus City School District"
+    },
+    "centralunified": {
+      "name": "Central Unified School District"
+    },
+    "cgcs": {
+      "name": "Council of the Great City Schools"
+    },
+    "ChathamCountySchools": {
+      "name": "Chatham County Schools"
+    },
+    "chelmsfordpublicschooldistrict": {
+      "name": "Chelmsford School District"
+    },
+    "cheneysd": {
+      "name": "Cheney School District"
+    },
+    "chesterfieldschools": {
+      "name": "Chesterfield County Public Schools"
+    },
+    "cloverparkschooldistrict": {
+      "name": "Clover Park School District"
+    },
+    "codebrooklyn": {
+      "name": "Code Brooklyn"
+    },
+    "cps": {
+      "name": "Chicago Public Schools"
+    },
+    "cresskillboe": {
+      "name": "Cresskill Public Schools"
+    },
+    "cvsd": {
+      "name": "Central Valley School District"
+    },
+    "dadeschools": {
+      "name": "Miami-Dade Public Schools"
+    },
+    "dallasisd": {
+      "name": "Dallas Independent School District"
+    },
+    "dcsdk12": {
+      "name": "Douglas County Schools"
+    },
+    "disney": {
+      "name": "Disney"
+    },
+    "dpsk12": {
+      "name": "Denver Public Schools"
+    },
+    "dpsnc": {
+      "name": "Durham Public Schools"
+    },
+    "eastonvilleschooldistrict": {
+      "name": "Eatonville School District"
+    },
+    "enumclawschooldistrict": {
+      "name": "Enumclaw School District"
+    },
+    "everettsd": {
+      "name": "Everette Public Schools"
+    },
+    "evsd": {
+      "name": "East Valley School District"
+    },
+    "fayettecountypublicschools": {
+      "name": "Fayette County Public Schools"
+    },
+    "fcschools": {
+      "name": "Franklin County School"
+    },
+    "forsythcountyschools": {
+      "name": "Forsyth County Schools"
+    },
+    "fpschools": {
+      "name": "Franklin Pierce School District"
+    },
+    "frederickcountypublicschools": {
+      "name": "Frederick County Public Schools"
+    },
+    "fsusd": {
+      "name": "Fairfield-Suisun Unified School District"
+    },
+    "fultonschools": {
+      "name": "Fulton County Schools"
+    },
+    "gcisd": {
+      "name": "Grapevine-Colleyville ISD"
+    },
+    "gcs": {
+      "name": "Granville County Schools"
+    },
+    "godaddy": {
+      "name": "Go Daddy"
+    },
+    "greenupcountyschooldistrict": {
+      "name": "Greenup County Schools"
+    },
+    "gsusa": {
+      "name": "Girl Scouts of America"
+    },
+    "gwinnettcountypublicschools": {
+      "name": "Gwinnett County Public Schools"
+    },
+    "HamptonCitySchools": {
+      "name": "Hampton City Schools"
+    },
+    "HanoverCountyPublicSchools": {
+      "name": "Hanover County Public Schools"
+    },
+    "hcpss": {
+      "name": "Howard County Public Schools"
+    },
+    "HenricoCountyPublicSchools": {
+      "name": "Henrico County Public Schools"
+    },
+    "highlineschools": {
+      "name": "Highline School District"
+    },
+    "houstonisd": {
+      "name": "Houston Independent School District"
+    },
+    "idla": {
+      "name": "Idaho Digital Learning Academy"
+    },
+    "janesvilleschooldistrict": {
+      "name": "Janesville School District"
+    },
+    "johnstoncountyschools": {
+      "name": "Johnston County Schools"
+    },
+    "khanacademy": {
+      "name": "Khan Academy"
+    },
+    "kipp": {
+      "name": "KIPP"
+    },
+    "laalliance": {
+      "name": "Alliance College Ready Public Schools"
+    },
+    "lausd": {
+      "name": "Los Angeles Unified School District"
+    },
+    "lcps": {
+      "name": "Louisa County Public Schools"
+    },
+    "lcsedu": {
+      "name": "Lynchburg City Schools"
+    },
+    "littletonpublicschools": {
+      "name": "Littleton Public Schools"
+    },
+    "lps": {
+      "name": "Lincoln Public School"
+    },
+    "mesa": {
+      "name": "Mathematics Engineering Science Achievement"
+    },
+    "miltonps": {
+      "name": "Milton Public Schools"
+    },
+    "montgomeryschoolsmd": {
+      "name": "Montgomery County Public Schools"
+    },
+    "msvl": {
+      "name": "Marysville School District"
+    },
+    "napcs": {
+      "name": "National Alliance of Public Charter Schools"
+    },
+    "needhampublicschools": {
+      "name": "Needham Public Schools"
+    },
+    "NelsonCountyPublicSchools": {
+      "name": "Nelson County Public Schools"
+    },
+    "newalbanyschools": {
+      "name": "New Albany Plain Local Schools"
+    },
+    "newarkcityschools": {
+      "name": "Newark City Schools"
+    },
+    "newkentschools": {
+      "name": "New Kent County Public Schools"
+    },
+    "newtonpublicschools": {
+      "name": "Newton Public Schools"
+    },
+    "ngcp": {
+      "name": "National Girls Collaborative Project"
+    },
+    "nnschools": {
+      "name": "Newport News Public Schools"
+    },
+    "nps": {
+      "name": "Norfolk Public Schools"
+    },
+    "nycdoe": {
+      "name": "NYC Department of Education"
+    },
+    "ocps": {
+      "name": "Orange County Schools"
+    },
+    "ohlsd": {
+      "name": "Oak Hills Local School District"
+    },
+    "oneclay": {
+      "name": "One Clay County School District"
+    },
+    "orangeusd": {
+      "name": "Orange Unified School District"
+    },
+    "pbsd": {
+      "name": "Palm Beach School District"
+    },
+    "PetersburgCityPublicSchools": {
+      "name": "Petersburg City Public Schools"
+    },
+    "pgcps": {
+      "name": "Prince Georges County Public Schools"
+    },
+    "PowhatanCountyPublicSchools": {
+      "name": "Powhatan County Public Schools"
+    },
+    "provocityschooldistrict": {
+      "name": "Provo Public Schools"
+    },
+    "pvusd": {
+      "name": "Paradise Valley Unified School District"
+    },
+    "pylusd": {
+      "name": "Placentia-Yorba Linda Union School District"
+    },
+    "reyn": {
+      "name": "Reynoldsburg City School District"
+    },
+    "RichmondPublicSchools": {
+      "name": "Richmond Public Schools"
+    },
+    "RockinghamCountySchools": {
+      "name": "Rockingham County Schools"
+    },
+    "sfusd": {
+      "name": "San Francisco Unified School District"
+    },
+    "ShenandoahCountyPublicSchools": {
+      "name": "Shenandoah County Public Schools"
+    },
+    "shorelineschools": {
+      "name": "Shoreline School District"
+    },
+    "sjusd": {
+      "name": "San Juan Unified School District"
+    },
+    "sky": {
+      "name": "Sky"
+    },
+    "spokaneschools": {
+      "name": "Spokane Public Schools"
+    },
+    "StaffordCountyPublicSchools": {
+      "name": "Stafford County Public Schools"
+    },
+    "strongnet": {
+      "name": "Strongsville School District"
+    },
+    "svusd": {
+      "name": "Saddleback Valley Unified School District"
+    },
+    "teachforall": {
+      "name": "Teach for All"
+    },
+    "teachforamerica": {
+      "name": "Teach for America"
+    },
+    "tntp": {
+      "name": "TNTP"
+    },
+    "TukwilaSchoolDistrict": {
+      "name": "Tukwila School District"
+    },
+    "vadoe": {
+      "name": "Governor's School Programs"
+    },
+    "vermilionschools": {
+      "name": "Vermilion Local School District"
+    },
+    "vista-equity-partners": {
+      "name": "Vista Equity Partners"
+    },
+    "walthampublicschools": {
+      "name": "Waltham Public Schools"
+    },
+    "warrencountyschools": {
+      "name": "Warren County Schools"
+    },
+    "WaynesboroPublicSchools": {
+      "name": "Waynesboro Public Schools"
+    },
+    "wcschools": {
+      "name": "Wilson County Schools"
+    },
+    "WellesleyPublicSchools": {
+      "name": "Wellesley Public Schools"
+    },
+    "wuhsd": {
+      "name": "Whittier Union High School District"
+    },
+    "wvsd208": {
+      "name": "West Valley School District"
+    },
+    "yelp": {
+      "name": "Yelp"
+    }
+  }
+}
