@@ -140,6 +140,17 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     MusicRegistry.player.cancelPreviews();
   }, [setCurrentPreviewTick]);
 
+  const allNotes = useMemo(
+    () =>
+      getDisplayNotes(
+        editorType,
+        'chromatic',
+        currentValue.instrument,
+        MusicRegistry.player.getKey()
+      ).sort((a, b) => b.note - a.note), // Sort descending
+    [editorType, currentValue.instrument]
+  );
+
   const displayNotes = useMemo(
     () =>
       getDisplayNotes(
@@ -156,12 +167,23 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   const interfaceMode =
     editorType === 'drums' ? 'drums' : scaleMode || 'simple';
 
+  const colorsSimple = styles.colorsSimple.split(',');
+
   const RowLabel = (props: {name: string; note: number; i: number}) => {
     const [style, label] = {
       drums: [styles.textLabel, props.name],
       simple: [styles.label, getPitchName(props.note)],
       chromatic: [styles.keyLabel, getPitchName(props.note)],
     }[interfaceMode];
+
+    const backgroundColor =
+      interfaceMode === 'simple'
+        ? colorsSimple[
+            displayNotes.findIndex(
+              displayNote => displayNote.note === props.note
+            ) % colorsSimple.length
+          ]
+        : undefined;
 
     return (
       <button
@@ -177,6 +199,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
             isBlackKey(props.note) && styles.blackKey,
             styles.innerCell
           )}
+          style={{backgroundColor}}
         >
           {label.replace('#', '♯')}
         </div>
@@ -256,8 +279,23 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         scrollEnd={scrollEnd}
         className={classNames(styles[`sequence-editor-${interfaceMode}`])}
       >
-        {displayNotes.map(({note, name}, i) => (
-          <div className={styles.pitchRow} key={note}>
+        {allNotes.map(({note, name}, i) => (
+          <div
+            className={styles.pitchRow}
+            key={note}
+            style={{
+              opacity: displayNotes.find(
+                displayNote => displayNote.note === note
+              )
+                ? 1
+                : 0.5,
+              minHeight: displayNotes.find(
+                displayNote => displayNote.note === note
+              )
+                ? 22
+                : 0,
+            }}
+          >
             <RowLabel name={name} note={note} i={i} />
             <div className={styles.cellRow}>
               {ticks.map(tick => (

@@ -16,6 +16,7 @@ $peek-height: 5px;
   rowGap: $row-gap;
   displayRows: $display-rows;
   peekHeight: $peek-height;
+  colorsSimple: $colors-simple;
 }
 
 .container {
@@ -67,17 +68,8 @@ $peek-height: 5px;
   display: flex;
   gap: 4px;
   align-items: stretch;
-
-  @for $i from 1 through 22 {
-    &:nth-child(#{$i}) {
-      .cell-outer-simple > .innerCell.selected,
-      .cell-outer-simple:hover > .innerCell.selected,
-      .label,
-      .cell-outer:hover > .label {
-        background-color: nth($colors-simple, (22 - $i) % 7 + 1);
-      }
-    }
-  }
+  transition: opacity 1s ease, min-height 1s ease;
+  overflow: hidden;
 
   @for $i from 1 through 8 {
     &:nth-child(#{$i}) {
