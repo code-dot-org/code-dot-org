@@ -86,7 +86,10 @@ function StudentColumn({
   const getExpandedRow = (student, ind) => (
     <div className={styles.studentColumnExpandedHeader} key={ind}>
       <button
-        className={styles.studentColumnName}
+        className={classNames(
+          styles.studentColumnName,
+          ind % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
+        )}
         onClick={() => collapseRow(student.id)}
         type="button"
         aria-expanded={true}
