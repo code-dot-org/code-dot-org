@@ -22,6 +22,7 @@ import SimpleList, {
 import {
   BodyTwoText,
   StrongText,
+  EmText,
 } from '@code-dot-org/component-library/typography';
 
 import moduleStyles from './richText.module.scss';
@@ -43,20 +44,21 @@ const extractNodeContent = (node: RichTextNode): ReactNode[] => {
       ? node.content.map(extractNodeContent).flat()
       : [];
 
-  const isBold = (node: Text): boolean =>
-    node.marks.some(({type}: Mark) => type === MARKS.BOLD);
-
   switch (node.nodeType) {
-    case 'text':
-      return node.value
-        ? [
-            isBold(node) ? (
-              <StrongText key={node.value}>{node.value}</StrongText>
-            ) : (
-              node.value
-            ),
-          ]
-        : [];
+    case 'text': {
+      return [
+        node.marks.reduce((value: ReactNode, {type}: Mark) => {
+          switch (type) {
+            case MARKS.BOLD:
+              return <StrongText key={type + value} children={value} />;
+            case MARKS.ITALIC:
+              return <EmText key={type + value} children={value} />;
+            default:
+              return value;
+          }
+        }, node.value),
+      ];
+    }
     case INLINES.HYPERLINK: {
       const linkContent = getContent();
       return [
@@ -71,6 +73,7 @@ const extractNodeContent = (node: RichTextNode): ReactNode[] => {
 };
 
 const richTextRenderOptions: Options = {
+  preserveWhitespace: true,
   renderNode: {
     [BLOCKS.PARAGRAPH]: (paragraphNode: RichTextNode) => {
       const paragraphContent = extractNodeContent(paragraphNode);
@@ -85,9 +88,8 @@ const richTextRenderOptions: Options = {
     [BLOCKS.UL_LIST]: (listNode: Block | Inline) => (
       <SimpleList
         items={listNode.content.map(
-          (itemNode: RichTextNode): SimpleListItem => {
-            const listItemContent = extractNodeContent(itemNode);
-            return {key: listItemContent.join('-'), label: listItemContent};
+          (itemNode: RichTextNode, index): SimpleListItem => {
+            return {key: index, label: extractNodeContent(itemNode)};
           },
         )}
       />

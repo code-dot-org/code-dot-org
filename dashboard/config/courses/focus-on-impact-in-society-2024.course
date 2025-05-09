@@ -7,6 +7,13 @@
     "focus-on-impact-in-society4-2024",
     "focus-on-impact-in-society-post-survey-2024"
   ],
+  "original_script_names": [
+    "focus-on-impact-in-society1-2024",
+    "focus-on-impact-in-society2-2024",
+    "focus-on-impact-in-society3-2024",
+    "focus-on-impact-in-society4-2024",
+    "focus-on-impact-in-society-post-survey-2024"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

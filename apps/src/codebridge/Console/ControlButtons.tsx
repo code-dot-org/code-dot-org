@@ -4,7 +4,6 @@ import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
 import {MiniApps} from '@codebridge/constants';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
-import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
 import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
@@ -29,7 +28,6 @@ import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import {getSystemMessage} from './MessageHelpers';
 
 import moduleStyles from './console.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 // Control buttons for running and stopping code.
 // Can be extended in the future to include a test button.
@@ -92,7 +90,7 @@ const ControlButtons: React.FunctionComponent = () => {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
         ?.writeConsoleMessage(
-          getSystemMessage("We don't know how to run your code.", appName)
+          getSystemMessage(codebridgeI18n.handleRunError(), appName)
         );
     }
   };
@@ -105,7 +103,7 @@ const ControlButtons: React.FunctionComponent = () => {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
         ?.writeConsoleMessage(
-          getSystemMessage("We don't know how to stop your code.", appName)
+          getSystemMessage(codebridgeI18n.handleStopError(), appName)
         );
       dispatch(setIsRunning(false));
     }
@@ -154,7 +152,6 @@ const ControlButtons: React.FunctionComponent = () => {
             text: disabledCodeActionsTooltip || '',
             size: 's',
             tooltipId: 'code-actions-tooltip',
-            className: darkModeStyles.tooltipRight,
           }}
         >
           <Button
@@ -165,10 +162,7 @@ const ControlButtons: React.FunctionComponent = () => {
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
             size={'xs'}
             type={'primary'}
-            className={classNames(
-              moduleStyles.controlButton,
-              darkModeStyles.primaryButton
-            )}
+            className={moduleStyles.controlButton}
           />
         </WithConditionalTooltip>
       )}

@@ -1,8 +1,10 @@
+import Alert from '@code-dot-org/component-library/alert';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification from '@cdo/apps/sharedComponents/Notification';
@@ -12,7 +14,12 @@ import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import {
+  tryGetSessionStorage,
+  trySetSessionStorage,
+  tryGetLocalStorage,
+  trySetLocalStorage,
+} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import CensusTeacherBanner from '../census/CensusTeacherBanner';
@@ -30,6 +37,7 @@ import TeacherResources from './TeacherResources';
 import TeacherSections from './TeacherSections';
 
 const LOGGED_TEACHER_SESSION = 'logged_teacher_session';
+const LOCAL_STORAGE_KEY = 'new_teacher_homepage_announcement_closed';
 
 export const UnconnectedTeacherHomepage = ({
   announcement,
@@ -83,6 +91,10 @@ export const UnconnectedTeacherHomepage = ({
     useState(null);
   const [censusBannerInClassSelection, setCensusBannerInClassSelection] =
     useState(null);
+
+  const [isAnnouncementAlertClosed, setIsAnnouncementAlertClosed] = useState(
+    () => tryGetLocalStorage(LOCAL_STORAGE_KEY, '') === 'true'
+  );
 
   useEffect(() => {
     // The component used here is implemented in legacy HAML/CSS rather than React.
@@ -168,6 +180,28 @@ export const UnconnectedTeacherHomepage = ({
         backgroundImageStyling={{backgroundPosition: '90% 30%'}}
       />
       <div className={'container main'}>
+        {DCDO.get('teacher-homepage-v2-announcement', false) &&
+          !isAnnouncementAlertClosed && (
+            <Alert
+              style={{marginTop: 10}}
+              size={'s'}
+              text={i18n.teacherHomePageAnnouncement()}
+              type="primary"
+              showIcon={true}
+              icon={{iconName: 'party-horn'}}
+              isImmediateImportance={false}
+              link={{
+                text: i18n.teacherHomePageAnnouncementLink(),
+                href: '/teacher_dashboard/home',
+                openInNewTab: true,
+                external: true,
+              }}
+              onClose={() => {
+                setIsAnnouncementAlertClosed(true);
+                trySetLocalStorage(LOCAL_STORAGE_KEY, 'true');
+              }}
+            />
+          )}
         <ProtectedStatefulDiv ref={flashes} />
         <ProtectedStatefulDiv ref={teacherReminders} />
         {showNpsSurvey && <NpsSurveyBlock />}

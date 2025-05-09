@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Career Connections Overview
 
-#### The <a href="https://courseinfo.code.org/csaif/" target="blank" rel="noopener noreferrer">Computer Science and AI Foundations Curriculum</a> integrates career exploration and emerging technologies as students develop foundational skills in computing.
+#### The <a href="https://courseinfo.code.org/csaif/" target="blank" rel="noopener noreferrer">AI Foundations Curriculum</a> integrates career exploration and emerging technologies as students develop foundational skills in computing.
 
 #### Throughout the course, students engage with real-world case studies, hands-on projects, and industry-relevant tools to see how computer systems apply across various fields. 
 
@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 ## Career Journeys
 
 <h4>
-In <b>Computer Systems and Devices, </b> several lessons are labeled with a <span style="background-color: lightgray; padding: 2px;"><b> 🧑‍🎓 Career Journeys </b></span>  tag on the unit plan indicating that the lesson connects to real-world careers.  
+In <b>AI and the Systems that Power It, </b> several lessons are labeled with a <span style="background-color: lightgray; padding: 2px;"><b> 🧑‍🎓 Career Journeys </b></span>  tag on the unit plan indicating that the lesson connects to real-world careers.  
 </h4> 
 
 <div style="display: flex; justify-content: center; gap: 15px; padding: 20px;">
@@ -39,15 +39,15 @@ In <b>Computer Systems and Devices, </b> several lessons are labeled with a <spa
 ## Career Journey Examples
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ In <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 2</a>, explore how different careers rely on specific computer components.
+    ➡️ In <a href='https://studio.code.org/s/aif3-2025/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 2</a>, explore how different careers rely on specific computer components.
 </p>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ In <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 4</a>, explore how different careers rely on specialized software.
+    ➡️ In <a href='https://studio.code.org/s/aif3-2025/lessons/4' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 4</a>, explore how different careers rely on specialized software.
 </p>
 
 <p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
-    ➡️ In <a href='https://example.com/lesson1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 7</a>, analyze how different careers rely on different types of data. 
+    ➡️ In <a href='https://studio.code.org/s/aif3-2025/lessons/7' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 7</a>, analyze how different careers rely on different types of data. 
 </p>
 
 

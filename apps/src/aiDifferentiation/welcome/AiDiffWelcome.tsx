@@ -20,6 +20,8 @@ import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
+import {EVENTS, PLATFORMS} from '../../metrics/AnalyticsConstants';
+import analyticsReporter from '../../metrics/AnalyticsReporter';
 import AiDiffChat from '../AiDiffChat';
 import {
   EXAMPLE_PROMPT,
@@ -199,11 +201,56 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
 
   const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
 
-  const updateShowWelcomeExperience = React.useCallback(() => {
-    HttpClient.post(HAS_SEEN_WELCOME_URL, undefined, true).then(() => {
-      setShowWelcomeExperience(false);
-    });
-  }, [setShowWelcomeExperience]);
+  const reportingContext = React.useMemo(() => {
+    return {
+      aiDiffChatContext: context,
+      scriptId,
+      scriptName,
+      selectedOption,
+      unitName: unitDisplayName,
+      url: window.location.href,
+    };
+  }, [context, scriptId, scriptName, unitDisplayName, selectedOption]);
+
+  const updateShowWelcomeExperience = React.useCallback(
+    (statsigKey: string) => {
+      analyticsReporter.sendEvent(
+        statsigKey,
+        reportingContext,
+        PLATFORMS.STATSIG
+      );
+      HttpClient.post(HAS_SEEN_WELCOME_URL, undefined, true).then(() => {
+        setShowWelcomeExperience(false);
+      });
+    },
+    [reportingContext, setShowWelcomeExperience]
+  );
+
+  const moveForwardTo = React.useCallback(
+    (nextState: WelcomeState) => {
+      const statsigKey = (() => {
+        switch (nextState) {
+          case WelcomeStates.select_option:
+            return EVENTS.AI_DIFF_GET_STARTED;
+          case WelcomeStates.practice:
+            return EVENTS.AI_DIFF_CHOOSE_FLOW;
+          case WelcomeStates.end_page:
+            return EVENTS.AI_DIFF_FINISH_FIRST;
+        }
+        return null;
+      })();
+      if (statsigKey) {
+        analyticsReporter.sendEvent(
+          statsigKey,
+          reportingContext,
+          PLATFORMS.STATSIG
+        );
+      }
+
+      setCurrentWelcomeState(nextState);
+    },
+    [reportingContext]
+  );
 
   const continueAndSkipButtons = React.useCallback(
     (nextState: WelcomeState, continueDisabled: boolean) => {
@@ -211,13 +258,15 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         <div className={style.bottomButtons}>
           <Button
             id="uitest_aiDiffWelcomeContinue"
-            onClick={() => setCurrentWelcomeState(nextState)}
+            onClick={() => moveForwardTo(nextState)}
             text="Continue"
             disabled={continueDisabled}
           />
           <Link
             className={style.skipLink}
-            onClick={() => updateShowWelcomeExperience()}
+            onClick={() =>
+              updateShowWelcomeExperience(EVENTS.AI_DIFF_SKIP_WELCOME)
+            }
             text="Skip the tutorial"
             size="xs"
             type="secondary"
@@ -225,50 +274,47 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         </div>
       );
     },
-    [updateShowWelcomeExperience]
+    [updateShowWelcomeExperience, moveForwardTo]
   );
 
-  const selectAnOptionPage = React.useCallback(
-    (nextState: WelcomeState) => {
-      return (
-        <div className={style.selectOption}>
-          <div className={style.selectOptionPage}>
-            {progressBarHeader(30, () => setCurrentWelcomeState('get_started'))}
-            <div className={style.selectOptionContent}>
-              <Heading3>Pick a skill to practice</Heading3>
-              <Heading6 className={style.selectOptionSubtitle}>
-                Using AI in multiple ways increases productivity.
-              </Heading6>
-              {context === AiDiffContext.GENERAL &&
-                optionButton(
-                  selectedOption === 'support',
-                  () => setSelectedOption('support'),
-                  'rocket-launch',
-                  'Get Started',
-                  'Get help using the Code.org platform, learn about professional learning opportunities, suggest a curriculum, create a section'
-                )}
-              {optionButton(
-                selectedOption === 'plan',
-                () => setSelectedOption('plan'),
-                'folder-tree',
-                'Ideate',
-                'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
+  const selectAnOptionPage = React.useCallback(() => {
+    return (
+      <div className={style.selectOption}>
+        <div className={style.selectOptionPage}>
+          {progressBarHeader(30, () => setCurrentWelcomeState('get_started'))}
+          <div className={style.selectOptionContent}>
+            <Heading3>Pick a skill to practice</Heading3>
+            <Heading6 className={style.selectOptionSubtitle}>
+              Using AI in multiple ways increases productivity.
+            </Heading6>
+            {context === AiDiffContext.GENERAL &&
+              optionButton(
+                selectedOption === 'support',
+                () => setSelectedOption('support'),
+                'rocket-launch',
+                'Get Started',
+                'Get help using the Code.org platform, learn about professional learning opportunities, suggest a curriculum, create a section'
               )}
-              {optionButton(
-                selectedOption === 'create',
-                () => setSelectedOption('create'),
-                'file-pen',
-                'Create',
-                'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
-              )}
-            </div>
-            {continueAndSkipButtons(nextState, !selectedOption)}
+            {optionButton(
+              selectedOption === 'plan',
+              () => setSelectedOption('plan'),
+              'folder-tree',
+              'Ideate',
+              'Locate resources, brainstorm teaching strategies, ask questions about the curriculum, recommend a course'
+            )}
+            {optionButton(
+              selectedOption === 'create',
+              () => setSelectedOption('create'),
+              'file-pen',
+              'Create',
+              'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
+            )}
           </div>
+          {continueAndSkipButtons(WelcomeStates.practice, !selectedOption)}
         </div>
-      );
-    },
-    [continueAndSkipButtons, selectedOption, context]
-  );
+      </div>
+    );
+  }, [continueAndSkipButtons, selectedOption, context]);
 
   React.useEffect(() => {
     if (currentWelcomeState === WelcomeStates.end_page) {
@@ -307,6 +353,13 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
           <a
             className={classNames(style.optionRow, style.optionRowWithPic)}
             href="https://code.org/ai/pl/101"
+            onClick={() =>
+              analyticsReporter.sendEvent(
+                EVENTS.AI_DIFF_101,
+                reportingContext,
+                PLATFORMS.STATSIG
+              )
+            }
           >
             <div className={style.optionWithPicTop}>
               <FontAwesomeV6Icon
@@ -327,10 +380,15 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             />
           </a>
         </div>
-        <Button onClick={() => updateShowWelcomeExperience()} text="Finish" />
+        <Button
+          onClick={() =>
+            updateShowWelcomeExperience(EVENTS.AI_DIFF_CELEBRATION)
+          }
+          text="Finish"
+        />
       </div>
     );
-  }, [updateShowWelcomeExperience, confettiActive]);
+  }, [updateShowWelcomeExperience, confettiActive, reportingContext]);
 
   const practicePage = React.useCallback(() => {
     if (!selectedOption) {
@@ -375,11 +433,11 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   const currentWelcomePage = React.useMemo(() => {
     switch (currentWelcomeState) {
       case WelcomeStates.get_started:
-        return getStartedPage(() =>
-          setCurrentWelcomeState(WelcomeStates.select_option)
-        );
+        return getStartedPage(() => {
+          moveForwardTo(WelcomeStates.select_option);
+        });
       case WelcomeStates.select_option:
-        return selectAnOptionPage(WelcomeStates.practice);
+        return selectAnOptionPage();
       case WelcomeStates.practice:
         return practicePage();
       case WelcomeStates.end_page:
@@ -387,7 +445,13 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       default:
         return null;
     }
-  }, [currentWelcomeState, selectAnOptionPage, practicePage, endPage]);
+  }, [
+    currentWelcomeState,
+    selectAnOptionPage,
+    practicePage,
+    endPage,
+    moveForwardTo,
+  ]);
 
   return currentWelcomePage;
 };

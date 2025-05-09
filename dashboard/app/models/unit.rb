@@ -1248,6 +1248,7 @@ class Unit < ApplicationRecord
         elsif destination_unit_group
           raise 'Destination unit group must be in a course version. please try saving the course edit page again.' if destination_unit_group.course_version.nil?
           UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
+          copied_unit.update!(original_unit_group: destination_unit_group)
           copied_unit.reload
         else
           raise "Must supply version year if new unit will be a standalone unit" unless version_year
@@ -1546,7 +1547,7 @@ class Unit < ApplicationRecord
 
       has_older_course_progress = unit_group_unit&.unit_group.try(:has_older_version_progress?, user)
       has_older_unit_progress = has_older_version_progress?(user)
-      user_unit = user && user_scripts.find_by(user: user)
+      user_unit = user && user_scripts.find {|us| us.user ==  user}
 
       # If the current user is assigned to this unit, get the section
       # that assigned it.
@@ -1923,13 +1924,16 @@ class Unit < ApplicationRecord
     result
   end
 
-  # A unit is considered to have a matching course if there is exactly one
+  # A unit is considered to have a matching course if there is at least one
   # unit_group for this unit
   # @deprecated - This method should no longer be used. This from a time when
   # Units could only be in max 1 UnitGroup.
   def unit_group
-    return nil if unit_group_units.length != 1
-    UnitGroup.get_from_cache(unit_group_units[0].course_id)
+    # rubocop:disable Style/ZeroLengthPredicate
+    return nil if unit_group_units.length < 1
+    # rubocop:enable Style/ZeroLengthPredicate
+    #
+    UnitGroup.get_from_cache(original_unit_group_id)
   end
 
   # If this unit is a standalone unit, returns its CourseVersion. Otherwise,

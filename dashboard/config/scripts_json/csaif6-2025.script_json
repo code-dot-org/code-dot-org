@@ -14,14 +14,15 @@
       "show_calendar": true,
       "student_detail_progress_view": true,
       "topic_tags": [
-        "data_science"
+        "data_science",
+        "ai"
       ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 21:33:08 UTC",
+    "serialized_at": "2025-04-23 18:14:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

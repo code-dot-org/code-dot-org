@@ -72,6 +72,7 @@ namespace :seed do
     ui-test-script-in-course-2019
     ui-test-script-2-in-course-2017
     ui-test-script-2-in-course-2019
+    ui-test-shared-unit
     ui-test-versioned-script-2017
     ui-test-versioned-script-2019
     ui-test-csa-family-script
@@ -149,6 +150,7 @@ namespace :seed do
     step
     oceans
     sports
+    jigsaw
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
 
   # To improve adhoc start time, we only seed the most recent year of our common curriculum
@@ -312,6 +314,7 @@ namespace :seed do
        csp-2017
        csp-2019
        20-hour
+       algebra
        allthemigratedthings
        alltheselfpacedplthings
        allthettsthings
@@ -332,6 +335,7 @@ namespace :seed do
        coursec-2019
        coursee-2019
        coursea-2020
+       csp-ap
        interactive-games-animations-2023
        interactive-games-animations-2024
        customizing-llms-2024
@@ -349,6 +353,7 @@ namespace :seed do
        starwarsblocks
        step
        oceans
+       jigsaw
        sports).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end

@@ -5,6 +5,14 @@
     "sandbox-csaif-pl-networks",
     "sandbox-csaif-pl-python",
     "sandbox-csaif-pl-computer-systems",
+    "sandbox-csaif-pl-ai",
+    "self-paced-gen-ai-2024"
+  ],
+  "original_script_names": [
+    "sandbox-csaif-pl-cyber",
+    "sandbox-csaif-pl-networks",
+    "sandbox-csaif-pl-python",
+    "sandbox-csaif-pl-computer-systems",
     "sandbox-csaif-pl-ai"
   ],
   "published_state": "in_development",

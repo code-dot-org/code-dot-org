@@ -3,6 +3,9 @@
   "script_names": [
     "csd4-preview-2021"
   ],
+  "original_script_names": [
+    "csd4-preview-2021"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

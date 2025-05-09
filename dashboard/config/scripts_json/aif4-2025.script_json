@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -13,12 +14,15 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 17:49:40 UTC",
+    "serialized_at": "2025-05-07 06:34:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -120,7 +124,7 @@
     },
     {
       "key": "Introduction to the Internet",
-      "name": "Introduction to the Internet",
+      "name": "Lesson 1: Introduction to the Internet",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -138,7 +142,7 @@
     },
     {
       "key": "Sending Bits",
-      "name": "Sending Bits",
+      "name": "Lesson 2: Sending Bits",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -156,14 +160,14 @@
     },
     {
       "key": "IP Addresses",
-      "name": "IP Addresses",
+      "name": "Lesson 3: IP Addresses",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "overview": "**Why do devices on the Internet need addresses?**\n\nIn this lesson, students explore how IP addresses enable communication across networks by acting as unique identifiers for devices. They trace the flow of data through a network, identify issues caused by duplicate IP addresses, and examine how AI optimizes network traffic and reliability.",
-        "preparation": "- Print copies of the IP Addressing and Visualizing activity guide (one for each student)",
+        "preparation": "- Print copies of the IP Addressing and Visualizing activity guide (one for each student)\n- Print and cut duplicate name cards (using four selected names) so each student receives one; prepare to have students communicate using these during the warm-up.",
         "student_overview": "**Why do devices on the Internet need addresses?**\n\nWhen you stream a video or visit a website, your device needs a way to send and receive information reliably. In this lesson, you have an opportunity to follow how data moves through a network, see what happens when two devices share an IP address, and discover ways in which AI can help keep the Internet running smoothly."
       },
       "seeding_key": {
@@ -174,7 +178,7 @@
     },
     {
       "key": "Routers and Redundancy",
-      "name": "Routers and Redundancy",
+      "name": "Lesson 4: Routers and Redundancy",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -192,7 +196,7 @@
     },
     {
       "key": "Packets",
-      "name": "Packets",
+      "name": "Lesson 5: Packets",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -210,7 +214,7 @@
     },
     {
       "key": "HTTP and DNS",
-      "name": "HTTP and DNS",
+      "name": "Lesson 6: HTTP and DNS",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -228,7 +232,7 @@
     },
     {
       "key": "The Internet's Hidden Barriers",
-      "name": "The Internet's Hidden Barriers",
+      "name": "Lesson 7: The Internet's Hidden Barriers",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -246,7 +250,7 @@
     },
     {
       "key": "Internet Access Advocacy Campaign Project",
-      "name": "Internet Access Advocacy Campaign Project",
+      "name": "Lesson 8: Internet Access Advocacy Campaign Project",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -265,7 +269,7 @@
     },
     {
       "key": "Network Security",
-      "name": "Network Security",
+      "name": "Lesson 9: Network Security",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -283,7 +287,7 @@
     },
     {
       "key": "Emerging Technologies",
-      "name": "Emerging Technologies",
+      "name": "Lesson 10: Emerging Technologies",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -301,7 +305,7 @@
     },
     {
       "key": "Network Security Risk Assessment Project",
-      "name": "Network Security Risk Assessment Project",
+      "name": "Lesson 11: Network Security Risk Assessment Project",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -336,7 +340,7 @@
     },
     {
       "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
@@ -826,6 +830,19 @@
       }
     },
     {
+      "key": "fe3ed412-fdd7-4e18-8f7f-fea00a5c4184",
+      "position": 4,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe3ed412-fdd7-4e18-8f7f-fea00a5c4184",
+        "lesson.key": "Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
       "key": "964d503e-2a91-4284-a748-ced09b44b9bb",
       "position": 1,
       "properties": {
@@ -866,7 +883,7 @@
       "key": "cd96fcfa-1f74-4b74-8f2a-d4b0cf6c7449",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What components might be needed to connect two devices across the world?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should draw on their prior knowledge and ideas about technology to brainstorm potential tools or systems needed for global communication. The goal is to get them thinking about the overall infrastructure (e.g., \"a connection,\" \"a way to direct messages\") that enables communication between devices. Students might identify components such as a WiFi or a cell tour, or even a satellite as ones needed to connect two devices. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *router* and *switch*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *internet towers* and *servers*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How might these components (routers, switches, servers) work together to connect devices across the world?*\n- *What might happen if one of these components fails during communication?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify experiences with using networking components like routers to connect to the internet, and by extension, to other devices. They also likely make connections to at least one of those components failing and subsequently losing their connection. Making these connections, and introducing the names of the components, will create a shared vocabulary and understanding as the foundation for the lesson. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What components might be needed to connect two devices across the world?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should draw on their prior knowledge and ideas about technology to brainstorm potential tools or systems needed for global communication. The goal is to get them thinking about the overall infrastructure (e.g., \"a connection,\" \"a way to direct messages\") that enables communication between devices. Students might identify components such as a WiFi or a cell tour, or even a satellite as ones needed to connect two devices. \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student their own copy of the The Fabric of the Internet and AI Unit Guide. Students will use this resource throughout the unit.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *router* and *switch*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *internet towers* and *servers*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How might these components (routers, switches, servers) work together to connect devices across the world?*\n- *What might happen if one of these components fails during communication?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify experiences with using networking components like routers to connect to the internet, and by extension, to other devices. They also likely make connections to at least one of those components failing and subsequently losing their connection. Making these connections, and introducing the names of the components, will create a shared vocabulary and understanding as the foundation for the lesson. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "cd96fcfa-1f74-4b74-8f2a-d4b0cf6c7449",
@@ -1493,7 +1510,7 @@
       "key": "36450743-606d-49f2-a87d-5ef2f9c6cec8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to briefly share their thoughts about how messages are broken into bits and sent across networks before individually writing their own response to the Question of the Day in their Unit Guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their The Fabric of the Internet and AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to briefly share their thoughts about how messages are broken into bits and sent across networks before individually writing their own response to the Question of the Day in their Unit Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1548,13 +1565,67 @@
       }
     },
     {
-      "key": "e23f4b53-f8cf-485a-9892-15e3db9a79e7",
+      "key": "f6654540-970d-4e67-ba36-7707f588ced3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Imagine you were in a room with 5 other people, all with the same name as you. What might happen when you start communicating?*\n- *How could you solve these problems?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students recognize the challenges of communication without unique identifiers. They may share examples like: \n- Struggling to get the right person’s attention\n- Multiple people responding at once\n- Needing a system to avoid mixups\n\nThis discussion sets the groundwork for the connection to devices needing unique addresses to communicate over the Internet.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After the discussion, explain that just like names can cause confusion, devices need unique IP addresses to communicate clearly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "**Warm Up Set Up**:\nTo simulate the confusion caused by non-unique identifiers (like repeated IP addresses), students will be given duplicate name cards and attempt to communicate across the room.\n- Choose four names (student names or randomly selected ones) and enter them on this slide.\n- Print enough copies so each student receives one name card.\n- Cut and distribute the cards as students enter the room. Make sure each name is used more than once.\n- Select one name to use as the target on the next slide (e.g., “Find out Alex’s favorite food”).\n\n**Goal:** Set up the confusion caused by non-unique identifiers in a network. Let the confusion and chaos highlight the problem before students are asked to explain it.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out name cards as students enter. Some names should be repeated.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the prompt aloud and encourage students to move around and ask each other questions to find “[Alex]’s favorite food.”",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This activity doesn’t need to take more than a minute or so. The goal is to create just enough confusion for students to feel the problem—multiple people sharing the same name—so the connection to IP addresses lands clearly in the follow-up discussion. Keep it fast, light, and playful to build energy at the start of class."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "e23f4b53-f8cf-485a-9892-15e3db9a79e7",
+        "activity_section.key": "f6654540-970d-4e67-ba36-7707f588ced3",
+        "lesson_activity.key": "946515f9-80bf-4695-89ff-892d17d42efd"
+      }
+    },
+    {
+      "key": "3998361f-791a-445a-b12e-f5db06422601",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3998361f-791a-445a-b12e-f5db06422601",
+        "lesson_activity.key": "946515f9-80bf-4695-89ff-892d17d42efd"
+      }
+    },
+    {
+      "key": "561b6223-019d-44e5-a6ab-3f308043c46e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**\n- What problems came up when you started communicating?\n- How might you solve these problems?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students identify challenges like confusion, overlapping answers, and miscommunication. This connects directly to the concept of unique addresses on a network.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use this slide to transition from student experience to Internet analogy. Read both speech bubbles aloud.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define IP address as a unique number assigned to each device on a network.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that just like using someone’s street address or phone number, an IP address helps ensure the message gets to the right place. Ask students if they’ve ever texted the wrong “Alex” and what happened."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "561b6223-019d-44e5-a6ab-3f308043c46e",
+        "lesson_activity.key": "946515f9-80bf-4695-89ff-892d17d42efd"
+      }
+    },
+    {
+      "key": "edabecce-af85-456e-b3b4-a5d243af57cb",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "edabecce-af85-456e-b3b4-a5d243af57cb",
+        "lesson_activity.key": "946515f9-80bf-4695-89ff-892d17d42efd"
+      }
+    },
+    {
+      "key": "14f91dae-cb8a-4d8b-b22d-a9691f323661",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "14f91dae-cb8a-4d8b-b22d-a9691f323661",
         "lesson_activity.key": "946515f9-80bf-4695-89ff-892d17d42efd"
       }
     },
@@ -1562,7 +1633,7 @@
       "key": "e3d8eb1f-b493-4eef-8172-97c94e0eec38",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the IP Addressing and Visualizing Networks activity guide. Ensure that each pair has access to at least three different colored pens (or pencils, highlighters, etc.) for visualizing AI driven solutions in later scenarios. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to assign the correct IP addresses to the devices on the Network Diagram of their handout.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are correctly labeling devices based on the routing table. Watch for students mistakenly assigning the same IP to multiple devices or skipping octets.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click on the animated slide to display the prompts:\n- *Why do devices on a network need unique IP addresses?*\n- *What might happen if two devices had the same IP address? How could this impact communication?*\n- *How does the router know where to send data packets when multiple devices are connected to it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand why unique IP addresses are essential for clear and reliable communication within a network. Guide students to draw parallels to real-world addressing systems (e.g., postal addresses, phone numbers) and discuss how unique identifiers prevent confusion. Encourage them to consider the consequences of duplicate IP addresses, such as misdirected or lost data, similar to multiple people sharing the same phone number. Additionally, students should connect this concept to the routing table, recognizing how routers use IP addresses to efficiently direct network traffic. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *IP address*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 through 4 to illustrate the flow of information in each level’s scenario on their network diagrams by connecting devices, drawing arrows, and using colors for AI solutions.\n- **Level 1:** Students illustrate the flow of information in a local network scenario.\n- **Level 2:** Students illustrate the flow of information in a scenario with a local network that is connected to an ISP.\n- **Level 3:** Students illustrate the flow of information in a scenario involving requesting and receiving data from a website server.\n- **Level 4:** Students illustrate the flow of information in three scenarios involving AI-based solutions for network efficiency.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the IP Addressing and Visualizing Networks activity guide. Ensure that each pair has access to at least three different colored pens (or pencils, highlighters, etc.) for visualizing AI driven solutions in later scenarios. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to assign the correct IP addresses to the devices on the Network Diagram of their handout.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are correctly labeling devices based on the routing table. Watch for students mistakenly assigning the same IP to multiple devices or skipping octets.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click on the animated slide to display the prompts:\n- *Why do devices on a network need unique IP addresses?*\n- *What might happen if two devices had the same IP address? How could this impact communication?*\n- *How does the router know where to send data packets when multiple devices are connected to it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand why unique IP addresses are essential for clear and reliable communication within a network. Guide students to draw parallels to real-world addressing systems (e.g., postal addresses, phone numbers) and discuss how unique identifiers prevent confusion. Encourage them to consider the consequences of duplicate IP addresses, such as misdirected or lost data, similar to multiple people sharing the same phone number. Additionally, students should connect this concept to the routing table, recognizing how routers use IP addresses to efficiently direct network traffic. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their The Fabric of the Internet and AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *IP address*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 through 4 to illustrate the flow of information in each level’s scenario on their network diagrams by connecting devices, drawing arrows, and using colors for AI solutions.\n- **Level 1:** Students illustrate the flow of information in a local network scenario.\n- **Level 2:** Students illustrate the flow of information in a scenario with a local network that is connected to an ISP.\n- **Level 3:** Students illustrate the flow of information in a scenario involving requesting and receiving data from a website server.\n- **Level 4:** Students illustrate the flow of information in three scenarios involving AI-based solutions for network efficiency.",
         "name": "IP Addressing and Visualizing Networks",
         "progression_name": "IP Addressing and Visualizing"
       },
@@ -1710,9 +1781,10 @@
       "key": "bad327c4-c875-4de5-ada7-56d4b2091dc6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Provide each student with a copy of *Network Diagram Analysis* activity guide.\n",
+        "description": "Redundancy means having backup paths. Just like cars can reroute when there's a roadblock, redundancy on the Internet allows data to reroute when parts of the network have issues.",
         "duration": "30",
-        "name": "Internet Simulator and Networks Diagram Analysis"
+        "name": "Internet Simulator and Networks Diagram Analysis",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "bad327c4-c875-4de5-ada7-56d4b2091dc6",
@@ -1720,8 +1792,45 @@
       }
     },
     {
-      "key": "4fcc7f7e-37c8-4193-8359-db42a428bd7d",
+      "key": "e775a5cf-351d-4cf9-8bee-ca10088f9995",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e775a5cf-351d-4cf9-8bee-ca10088f9995",
+        "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
+      }
+    },
+    {
+      "key": "3535f754-348d-4398-80a4-276afb73f25c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define redundancy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Provide each student with a copy of *Network Diagram Analysis* activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider assigning rotating roles within each pair—Navigator (operates the simulator) and Logger (records diagrams and notes)—to ensure both students stay engaged and contribute meaningfully."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3535f754-348d-4398-80a4-276afb73f25c",
+        "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
+      }
+    },
+    {
+      "key": "f55375c8-4c6c-4c1c-82e9-4a4e381fdfd9",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f55375c8-4c6c-4c1c-82e9-4a4e381fdfd9",
+        "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
+      }
+    },
+    {
+      "key": "4fcc7f7e-37c8-4193-8359-db42a428bd7d",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 and 2.\n- **Level 1:** Students use the Internet Simulator to diagram messages sent through the network. \n- **Level 2:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Before students begin to work, use slides 9-15 to review the instructions for the activity in order to demonstrate how to use the Internet Simulator in order to diagram the path their messages take.\n"
       },
@@ -1732,7 +1841,7 @@
     },
     {
       "key": "8587810a-b4b4-441c-bab3-f2888d8884be",
-      "position": 3,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Internet Simulator and how students should join. They can choose any of the the routers as long as it's not the same as their partner's.",
         "tips": [
@@ -1749,7 +1858,7 @@
     },
     {
       "key": "47882857-09b8-42e2-9954-118c5807d20f",
-      "position": 4,
+      "position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -1759,7 +1868,7 @@
     },
     {
       "key": "82d517a7-0bd4-46e6-90cd-55f7169e1631",
-      "position": 5,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students need to know the IP address to send their partner a message.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how to send a message to their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how to navigate to the \"Log Browser\" from the \"Router\" tab to access the message data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how to read the logs."
       },
@@ -1770,7 +1879,7 @@
     },
     {
       "key": "231c42f3-d8a9-490d-95f8-074cfdb8ea11",
-      "position": 6,
+      "position": 9,
       "properties": {
         "description": "First, choose the \"show traffic to me\" option in the first dropdown menu and \"show all routers\" in the second dropdown menu. The path that these messages take are what you will be diagramming. If we look at this message that asks \"What’s your favorite color?\", we see that the message starts at Router 1 because this person has an id of router 1.1, then it goes to router 8, 6, and finally Router 2. This person’s partner is at Router 2.12, so the message got to them. If you’re unsure which router was pinged first, look at the timestamp in the first column. "
       },
@@ -1781,7 +1890,7 @@
     },
     {
       "key": "8bb4c38d-1a6d-4b41-95ab-673fe015f223",
-      "position": 7,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students should diagram the path their message took on their activity guide for up to three messages.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate adding the nodes and IP addresses of their device and their partner's device."
       },
@@ -1792,7 +1901,7 @@
     },
     {
       "key": "dc04abca-267e-4801-9305-5a4e8667bee5",
-      "position": 8,
+      "position": 11,
       "properties": {
         "description": "A node represents any device that connects to a network—this could be a phone, computer, printer, router, or even a smart thermostat. Routers play a crucial role in networking because they connect multiple devices (or nodes) to the Internet and help direct data between them. While routers themselves are also considered nodes, their primary function is to manage network traffic and assign local IP addresses to devices within a network.",
         "remarks": true
@@ -1804,7 +1913,7 @@
     },
     {
       "key": "19c9661b-d1b2-4d81-84ec-ff743d395f2e",
-      "position": 9,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to complete Levels 1 and 2.\n- **Level 1:** Students use the Internet Simulator to diagram messages sent through the network. \n- **Level 2:** Students complete a check for understanding.",
         "progression_name": "Internet Simulator and Networks Diagram Analysis"
@@ -1816,7 +1925,7 @@
     },
     {
       "key": "e161b563-9a64-4ab0-87b6-200442154752",
-      "position": 10,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they send messages. While they will diagram all messages sent over the network, ensure they only send messages to their partner. Check that they use the router logs correctly to follow the path each message took and ensure their diagrams accurately represent those paths. ",
         "tips": [
@@ -1837,7 +1946,7 @@
     },
     {
       "key": "98d55598-d74a-4ef3-ae5c-22cc68e079e5",
-      "position": 11,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -1846,8 +1955,19 @@
       }
     },
     {
+      "key": "399a8c46-6c83-4800-b3c0-5cc3f95b7f40",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to self-assess their understanding by choosing the answer that best explains what redundancy means for networks and how it helps keep the Internet reliable.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the correct answer (B) quickly before moving students into discussing their diagrams.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "399a8c46-6c83-4800-b3c0-5cc3f95b7f40",
+        "lesson_activity.key": "f4651556-ee76-45e8-be49-8db7258689fc"
+      }
+    },
+    {
       "key": "e2365f5c-ab35-4e74-8ba7-175d5682e252",
-      "position": 12,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How did the redundancy in your network help prevent complete failure?*\n- *What might have happened if no redundant paths were available?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students explain how redundancy in a network helps maintain connectivity by providing alternative paths when a connection fails. They describe specific examples of how redundant paths allow data to continue flowing, such as rerouting traffic through different nodes or links. Additionally, students discuss the potential consequences of having no redundancy, including total network failure, loss of communication, or disruptions in internet access.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why do you think routers chose new paths for some messages?*\n- *How might redundant paths be important during high-traffic events, like streaming live sports or during natural disasters?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for and guide students to the following points:\nRouters often choose new paths for messages to avoid problems like traffic jams or broken connections. If one path is too busy or isn’t working well, the router can send the message along a different route so it still reaches its destination quickly and reliably. This process is similar to taking a detour on the way to school when your usual road is closed or too congested.\nRedundant paths are like backup routes on a map. During high-traffic events, such as live sports streaming when many people are online, or during natural disasters when some parts of the network might be damaged, these extra routes help keep the network working smoothly. If one path gets overloaded or fails, data can still travel through another route, ensuring that information gets to its destination without interruption.",
         "duration": "5",
@@ -1860,7 +1980,7 @@
     },
     {
       "key": "6d3aadf9-2586-44ca-a6db-29981f2a00f1",
-      "position": 13,
+      "position": 17,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -1873,7 +1993,7 @@
       "key": "ff2951fa-c230-42f9-a536-6a428dbaaef1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down idea for how data finds its way across the internet and one idea for how redundancy improves reliability. Instruct students to jot their ideas down in bullet points rather than complete sentences to allow time for them to share their ideas with a Give One, Get One protocol. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One to share their ideas to the Question of the Day.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their The Fabric of the Internet and AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the definition of redundancy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down idea for how data finds its way across the internet and one idea for how redundancy improves reliability. Instruct students to jot their ideas down in bullet points rather than complete sentences to allow time for them to share their ideas with a Give One, Get One protocol. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One to share their ideas to the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2158,7 +2278,7 @@
       "key": "b5185288-2cfd-46f7-9a2c-be8813f8b7cb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of 3-4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This: **Direct students to briefly share their thoughts on how data travels reliably despite an unreliable network before writing their own response to the Question of the Day in their Unit Guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their The Fabric of the Internet and AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of 3-4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This: **Direct students to briefly share their thoughts on how data travels reliably despite an unreliable network before writing their own response to the Question of the Day in their Unit Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2358,7 +2478,7 @@
       "key": "e199d7e1-18a6-4c5b-9c7d-88fedeeb749b",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video segment of “The Internet: HTTP & HTML” Have students focus on how browsers retrieve content from servers and what GET and POST requests are.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how DNS and HTTP work together to bring a website to a user’s browser.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the HTTP protocol to students.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to reinforce the analogy between sending a letter and retrieving a web page.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete Levels 3 through 5.\n- **Level 3:** Students access the HTTP Cats exploration external site.\n- **Level 4:** Students complete a check for understanding.\n- **Level 5:** Students complete a check for understanding.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.",
         "duration": "10",
         "name": "HTTP Preview and Inspect Tool Exploration",
         "progression_name": "HTTP Requests Exploration",
@@ -2427,7 +2547,7 @@
       "key": "34f9f25d-16e4-4605-af5c-214651be6335",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a quick minute to jot down their thoughts on the Question of the Day. Encourage students to include at least one specific example from any of today’s activities.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to briefly share in one or two sentences how websites find their way to your browser using DNS and HTTP. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to small-group conversations and if time permits, call on two or three groups to share their key insights with the class.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their The Fabric of the Internet and AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a quick minute to jot down their thoughts on the Question of the Day. Encourage students to include at least one specific example from any of today’s activities.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to briefly share in one or two sentences how websites find their way to your browser using DNS and HTTP. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to small-group conversations and if time permits, call on two or three groups to share their key insights with the class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2469,11 +2589,11 @@
       "key": "1d4565ee-70d3-4abe-9d01-ca02624224b1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the Four Corners upcoming activity to students. Make sure to point out which corner will be **Yes**, **No**, **Maybe**, and **Undecided**.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the first scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner to share why their group chose their position.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the Four Corners upcoming activity to students. Make sure to point out which corner will be **Yes**, **No**, **Maybe**, and **Undecided**.\n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage critical thinking about fairness, competition, and access on the Internet as well as cost barriers, freedom of information, or business interests."
+            "markdown": "If your classroom can’t accommodate movement or you have students uncomfortable sharing in large groups, consider using “Line Debate” (students hold up fingers to show agreement level) or silent discussion protocols like “Chalk Talk” or digital polls."
           }
         ]
       },
@@ -2483,8 +2603,35 @@
       }
     },
     {
-      "key": "f37d12dc-ae68-4742-aef6-eb0d9e5be301",
+      "key": "a83d464c-ff62-492e-ad37-61cf233db5e9",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a83d464c-ff62-492e-ad37-61cf233db5e9",
+        "lesson_activity.key": "29821fae-7deb-4274-83c1-c5ed058b6752"
+      }
+    },
+    {
+      "key": "2f9442e7-c0e0-448f-b397-427f3e0239fd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the first scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner to share why their group chose their position.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage critical thinking about fairness, competition, and access on the Internet as well as cost barriers, freedom of information, or business interests."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2f9442e7-c0e0-448f-b397-427f3e0239fd",
+        "lesson_activity.key": "29821fae-7deb-4274-83c1-c5ed058b6752"
+      }
+    },
+    {
+      "key": "f37d12dc-ae68-4742-aef6-eb0d9e5be301",
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -2494,7 +2641,7 @@
     },
     {
       "key": "797bdec2-7993-422a-a9d6-93f15b3232b5",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the second scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner who was not a spokesperson for scenario #1 to share why their group chose their position.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the third scenario to students and direct them to move to the corner that best aligns whether they agree, disagree, think maybe or are unsure. Instruct students to discuss their reasoning with others who share their stance and then call on a student from each corner who was not a spokesperson for the previous two scenarios to share why their group chose their position.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce Net Neutrality to students and that all of the scenarios relate to net neutrality. Explain to students that this means that without net neutrality, Internet Service Providers (ISPs) can prioritize, slow down or even block websites and companies can pay for faster access creating advantages for some and barriers for others. ",
         "tips": [
@@ -2511,7 +2658,7 @@
     },
     {
       "key": "bed658ec-f736-4973-bab5-cb9863e61c06",
-      "position": 4,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -2521,7 +2668,7 @@
     },
     {
       "key": "4325f997-2dd9-4806-a938-3c8e91b5539d",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to make direct connections between each scenario and net neutrality. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -2587,7 +2734,7 @@
       "key": "5f25ecee-3c4f-4fa9-acdf-6cb9de1a9cda",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display possible answers to the annotated graph and discuss what students notice and are surprised by.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about Internet access across different groups (e.g., income, geography, age)?*\n- *How might these disparities impact education, employment, or civic participation?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that Internet access is not distributed equally and that disparities exist based on income, geography, education, and age. Encourage students to connect these inequalities to opportunities in education, employment, and civic engagement, considering how limited access can reinforce existing societal divides. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the digital divide to students."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display possible answers to the annotated graph and discuss what students notice and are surprised by.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about Internet access across different groups (e.g., income, geography, age)?*\n- *How might these disparities impact education, employment, or civic participation?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that Internet access is not distributed equally and that disparities exist based on income, geography, education, and age. Encourage students to connect these inequalities to opportunities in education, employment, and civic engagement, considering how limited access can reinforce existing societal divides. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their The Fabric of the Internet and AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the digital divide to students."
       },
       "seeding_key": {
         "activity_section.key": "5f25ecee-3c4f-4fa9-acdf-6cb9de1a9cda",
@@ -2720,7 +2867,13 @@
       "key": "0786aa16-4fe1-4b99-97bf-671d5af1011a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students should move into their project groups and prepare to discuss insights from the gallery walk. Assign or review team roles (Manager, Summarizer, Recorder, Time Keeper). They will use their notes to identify key issues, examples, and target groups for their advocacy campaign.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to debrief their Gallery Walks with their group. Ensure group Recorders are recording responses in the group’s Project Planning Guide.  \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups are discussing, use probing questions to support groups who may be stuck (e.g., “How does this evidence connect to your focus?”). Check shared notes and provide feedback to strengthen their ideas. Keep groups on track by reminding Time Keepers of the schedule.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to discuss different types of advocacy campaigns with students. Briefly explain each format (e.g., social media video, PSA, infographic) and ask students to consider which format would best suit their message and audience. Encourage them to think about clarity, reach, and impact when selecting a campaign type.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to turn to the Design Sprint page in their Advocacy Project Planning Guide. Instruct them to discuss each prompt as a group and record a common answer. Remind them to use team roles (Manager, Summarizer, Recorder, Time Keeper) to stay organized and ensure everyone contributes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to move beyond identifying problems and focus on action. Ask: ‘What specific change do you want to see? How will your campaign convince others to care about this issue?’ If students struggle with persuasion, suggest they include a real-world example or statistic to strengthen their argument."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students should move into their project groups and prepare to discuss insights from the gallery walk. Assign or review team roles (Manager, Summarizer, Recorder, Time Keeper). They will use their notes to identify key issues, examples, and target groups for their advocacy campaign.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to debrief their Gallery Walks with their group. Ensure group Recorders are recording responses in the group’s Project Planning Guide.  \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups are discussing, use probing questions to support groups who may be stuck (e.g., “How does this evidence connect to your focus?”). Check shared notes and provide feedback to strengthen their ideas. Keep groups on track by reminding Time Keepers of the schedule.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to discuss different types of advocacy campaigns with students. Briefly explain each format (e.g., social media video, PSA, infographic) and ask students to consider which format would best suit their message and audience. Encourage them to think about clarity, reach, and impact when selecting a campaign type.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to turn to the Design Sprint page in their Advocacy Project Planning Guide. Instruct them to discuss each prompt as a group and record a common answer. Remind them to use team roles (Manager, Summarizer, Recorder, Time Keeper) to stay organized and ensure everyone contributes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to move beyond identifying problems and focus on action. Ask: ‘What specific change do you want to see? How will your campaign convince others to care about this issue?’ If students struggle with persuasion, suggest they include a real-world example or statistic to strengthen their argument.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": " If students need more support, consider distributing a Persona Summary Sheet to each group. This quick-reference overview can help students connect real-world challenges to their campaign solutions.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0786aa16-4fe1-4b99-97bf-671d5af1011a",
@@ -2728,8 +2881,18 @@
       }
     },
     {
-      "key": "6ded7758-8e59-4c0f-8b20-480e5c45a7e0",
+      "key": "458a5b68-db59-4b3f-9b7a-3fbc28c2c118",
       "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "458a5b68-db59-4b3f-9b7a-3fbc28c2c118",
+        "lesson_activity.key": "18413d23-2b33-4a52-b8f2-05ba4d21a839"
+      }
+    },
+    {
+      "key": "6ded7758-8e59-4c0f-8b20-480e5c45a7e0",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What stood out to you the most today? Why does this issue matter? What can we do about it?*\n- Use the Three W's protocol to facilitate this discussion. First, students discuss answers in pairs or small groups. Then , select three or four students to share a takeaway.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on key takeaways from the lesson and connect the digital divide to real-world impacts. Guide them to recognize who is affected, why it matters, and how advocacy can drive change. This discussion will set the stage for their advocacy campaigns by helping them consider how to make their message compelling and actionable.",
         "duration": "10",
@@ -3204,7 +3367,7 @@
       "key": "a51ef2b8-6951-4a8f-aaf6-fe884544c2ab",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs or small groups of three.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to briefly share their thoughts about what makes AI effective at enhancing network security and how it compares to traditional methods before individually writing their own response to the Question of the Day in their Unit Guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their The Fabric of the Internet and AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs or small groups of three.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to briefly share their thoughts about what makes AI effective at enhancing network security and how it compares to traditional methods before individually writing their own response to the Question of the Day in their Unit Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3454,6 +3617,18 @@
       "seeding_key": {
         "activity_section.key": "d00e4259-128f-438e-a341-9fb8aa07ca56",
         "lesson_activity.key": "7d243d36-3e48-4142-aeef-3788f35c37f0"
+      }
+    },
+    {
+      "key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578",
+        "lesson_activity.key": "fe3ed412-fdd7-4e18-8f7f-fea00a5c4184"
       }
     },
     {
@@ -4282,6 +4457,31 @@
     },
     {
       "chapter": 33,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_networks-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_networks-2025"
+        ],
+        "lesson.key": "Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-2025",
+        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_networks-2025"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4306,11 +4506,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-networks_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -4715,6 +4918,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_networks-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_networks-2025"
+        ],
+        "lesson.key": "Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-2025",
+        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-postassessment_2025",
         "script_level.level_keys": [
           "networks-postassessment_2025"
@@ -4739,6 +4954,30 @@
     }
   ],
   "resources": [
+    {
+      "name": "[EXEMPLAR] Gallery Walk Info Tracker",
+      "url": "https://docs.google.com/document/d/1--4w_KUPZRMk8VwiRSLlfeCHrPEbdprTOP6hdHpuzfY/edit?tab=t.0",
+      "key": "_exemplar_gallery_walk_info_tracker",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_gallery_walk_info_tracker"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Internet Access Advocacy Campaign Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1hzLrhFPAsDBoWE88SmCVV4Q5xXywveldG2BFg8W828U/edit?usp=sharing",
+      "key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide"
+      }
+    },
     {
       "name": "[KEY] AI Networks Chat",
       "url": "https://docs.google.com/document/d/17m_80EDQvotN8ywKsOwArdgbBh_Df1z55c6yK0wp3Qw/edit?usp=sharing",
@@ -4800,6 +5039,16 @@
       }
     },
     {
+      "name": "AI Chat FAQ",
+      "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
+      "key": "ai_chat_faq",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ai_chat_faq"
+      }
+    },
+    {
       "name": "AI Chat Lab FAQ",
       "url": "https://support.code.org/hc/en-us/articles/30162711193741-AI-Chat-Lab-FAQ",
       "key": "ai_chat_lab_faq",
@@ -4822,6 +5071,39 @@
       },
       "seeding_key": {
         "resource.key": "ai_networks_chat"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/aif4-2025/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/aif4-2025/standards",
+      "key": "all_standards_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_3"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/aif4-2025/vocab",
+      "key": "all_vocabulary_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3"
       }
     },
     {
@@ -5072,7 +5354,7 @@
       }
     },
     {
-      "name": "Networks and the Internet Unit Guide",
+      "name": "The Fabric of the Internet and AI Unit Guide",
       "url": "https://docs.google.com/document/d/14YiuNXo8xwD2aQcmt2sBY0Oway5hI4RBHUez_CcWI4w/edit?usp=sharing",
       "key": "networks_and_the_internet_unit_guide",
       "properties": {
@@ -5132,6 +5414,18 @@
       },
       "seeding_key": {
         "resource.key": "persona_fact_sheet"
+      }
+    },
+    {
+      "name": "Persona Summary Sheet",
+      "url": "https://docs.google.com/document/d/1ZkdJWs4XO1cBUAoBIrZ2OOdEsc3hyNRT2XCpP0jiaXo/edit?tab=t.0",
+      "key": "persona_summary_sheet",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "persona_summary_sheet"
       }
     },
     {
@@ -5280,6 +5574,18 @@
       }
     },
     {
+      "name": "Unlocking Assessments",
+      "url": "https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys",
+      "key": "unlocking_assessments",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlocking_assessments"
+      }
+    },
+    {
       "name": "Viewing Student AI Chat History as a Teacher",
       "url": "https://support.code.org/hc/en-us/articles/30681531276045-Viewing-Student-AI-Chat-History-as-a-Teacher",
       "key": "viewing_student_ai_chat_history_as_a_teacher",
@@ -5380,6 +5686,18 @@
     {
       "seeding_key": {
         "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "_exemplar_gallery_walk_info_tracker"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
         "resource.key": "gallery_walk_info_tracker"
       }
     },
@@ -5405,6 +5723,12 @@
       "seeding_key": {
         "lesson.key": "Internet Access Advocacy Campaign Project",
         "resource.key": "persona_fact_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "persona_summary_sheet"
       }
     },
     {
@@ -5565,7 +5889,48 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "ai_chat_faq",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_3",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_3",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "networks_and_the_internet_unit_guide",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "unlocking_assessments",
+        "script.name": "aif4-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "viewing_student_ai_chat_history_as_a_teacher",
+        "script.name": "aif4-2025"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -5629,6 +5994,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "net_neutrality"
+      }
+    },
+    {
+      "key": "redundancy",
+      "word": "redundancy",
+      "definition": "having multiple paths so information can still get through if something gets wrong.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "redundancy"
       }
     },
     {
@@ -5729,6 +6104,12 @@
       "seeding_key": {
         "lesson.key": "Packets",
         "vocabulary.key": "user_datagram_protocol_udp_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Routers and Redundancy",
+        "vocabulary.key": "redundancy"
       }
     },
     {

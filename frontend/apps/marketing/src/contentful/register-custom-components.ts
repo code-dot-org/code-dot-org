@@ -21,9 +21,18 @@ import VideoCarousel, {
 import HeroBanner, {
   HeroBannerContentfulComponentDefinition,
 } from '@/components/contentful/heroBanner';
+import SkinnyBanner, {
+  SkinnyBannerContentfulComponentDefinition,
+} from '@/components/contentful/skinnyBanner';
+import TabGroup, {
+  TabGroupContentfulComponentDefinition,
+} from '@/components/contentful/tabGroup';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
+import EditorialCard, {
+  EditorialCardContentfulComponentDefinition,
+} from '@/components/editorialCard';
 import FAQAccordion, {
   FAQAccordionContentfulComponentDefinition,
 } from '@/components/faqAccordion';
@@ -58,9 +67,6 @@ import LabSnapshot, {
   LabSnapshotContentfulComponentDefinition,
 } from '@/components/snapshots/labSnapshot';
 import Spacer, {SpacerContentfulComponentDefinition} from '@/components/spacer';
-import TabGroup, {
-  TabGroupContentfulComponentDefinition,
-} from '@/components/tabGroup';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 defineComponents(
@@ -87,6 +93,10 @@ defineComponents(
       options: {
         wrapContainerWidth: '100%',
       },
+    },
+    {
+      component: EditorialCard,
+      definition: EditorialCardContentfulComponentDefinition,
     },
     {
       component: FAQAccordion,
@@ -152,6 +162,13 @@ defineComponents(
     {
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
+    },
+    {
+      component: SkinnyBanner,
+      definition: SkinnyBannerContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Spacer,

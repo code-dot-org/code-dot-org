@@ -89,14 +89,14 @@ class CoursesControllerTest < ActionController::TestCase
 
     test 'student views course overview with caching enabled' do
       sign_in create(:student)
-      assert_cached_queries(8) do
+      assert_cached_queries(7) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
 
     test 'teacher views course overview with caching enabled' do
       sign_in create(:teacher)
-      assert_cached_queries(13) do
+      assert_cached_queries(12) do
         get :show, params: {course_name: @unit_group.name}
       end
     end
@@ -854,6 +854,22 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 2, response_body.length
     assert_equal(['All Resources', 'All Standards'], response_body.map {|r| r['name']})
   end
+
+  test "all: shows all courses " do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    sign_in(create(:levelbuilder))
+    get :all
+    assert_response :success
+    refute_nil assigns(:courses)
+    assert_equal UnitGroup.all, assigns(:courses)
+  end
+
+  test_user_gets_response_for :all, user: nil, response: :redirect
+  test_user_gets_response_for :all, user: :student, response: :forbidden
+  test_user_gets_response_for :all, user: :teacher, response: :forbidden
+  test_user_gets_response_for :all, user: :admin, response: :forbidden
+  test_user_gets_response_for :all, user: :levelbuilder, response: :success
 
   describe '#show' do
     let(:modularity_enabled) {false}

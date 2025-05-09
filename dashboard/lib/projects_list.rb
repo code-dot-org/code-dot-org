@@ -20,7 +20,8 @@ module ProjectsList
     dance: ['dance'],
     poetry: ['poetry', 'poetry_hoc'],
     library: ['applab', 'gamelab'],
-    music: ['music']
+    music: ['music'],
+    pythonlab: ['pythonlab']
   }.freeze
 
   # Sharing of advanced project types to the public gallery is restricted for

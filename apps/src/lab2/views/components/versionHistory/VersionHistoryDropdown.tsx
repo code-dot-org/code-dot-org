@@ -1,6 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import Tags from '@code-dot-org/component-library/tags';
@@ -78,6 +79,10 @@ const VersionHistoryDropdown: React.FunctionComponent<
     () => versionList?.find(v => v.isLatest)?.versionId || INITIAL_VERSION_ID,
     [versionList]
   );
+
+  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
+  // main lab container.
+  const {theme} = useTheme();
 
   const viewingOldVersion = useAppSelector(
     state => state.lab2Project.viewingOldVersion
@@ -315,10 +320,12 @@ const VersionHistoryDropdown: React.FunctionComponent<
         style={dropdownStyles}
         aria-modal="true"
         aria-label={lab2I18n.versionHistoryList()}
-        data-theme="Dark"
+        data-theme={theme}
       >
-        <div className={moduleStyles.versionHistoryHeader}>
-          <Heading6>{commonI18n.versionHistory_header()}</Heading6>
+        <div className={moduleStyles.header}>
+          <Heading6 className={moduleStyles.heading}>
+            {commonI18n.versionHistory_header()}
+          </Heading6>
           <CloseButton
             onClick={closeDropdown}
             aria-label={lab2I18n.closeVersionHistory()}
@@ -328,7 +335,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         {listLoading && (
           <div
             className={classNames(
-              moduleStyles.versionHistoryMessage,
+              moduleStyles.message,
               moduleStyles.loadingVersionSpinner
             )}
           >
@@ -336,7 +343,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
           </div>
         )}
         {listLoadError && (
-          <div className={moduleStyles.versionHistoryMessage}>
+          <div className={moduleStyles.message}>
             <Alert
               type="danger"
               text={lab2I18n.versionHistoryLoadFailure()}
@@ -346,7 +353,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         )}
         {listLoaded && (
           <div>
-            <div className={moduleStyles.versionHistoryList}>
+            <div className={moduleStyles.list}>
               {versionList.map(version => (
                 <div id={version.versionId} key={version.versionId}>
                   <RadioButton
@@ -355,7 +362,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
                     label={parseDate(version.lastModified)}
                     onChange={onVersionChange}
                     checked={selectedVersion === version.versionId}
-                    className={moduleStyles.versionHistoryRow}
+                    className={moduleStyles.row}
                   >
                     {version.isLatest && renderLatestTag()}
                   </RadioButton>
@@ -368,7 +375,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
                   label={lab2I18n.initialVersion()}
                   onChange={onVersionChange}
                   checked={selectedVersion === INITIAL_VERSION_ID}
-                  className={moduleStyles.versionHistoryRow}
+                  className={moduleStyles.row}
                 >
                   {latestVersion === INITIAL_VERSION_ID && renderLatestTag()}
                 </RadioButton>
@@ -383,7 +390,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
                 />
               </div>
             )}
-            <div className={moduleStyles.versionDropdownFooter}>
+            <div className={moduleStyles.footer}>
               {versionLoading && (
                 <div className={classNames(moduleStyles.loadingVersionSpinner)}>
                   <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
@@ -395,7 +402,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
                   size={'s'}
                   onClick={restoreSelectedVersion}
                   disabled={versionLoading || latestVersion === selectedVersion}
-                  className={moduleStyles.actionButton}
+                  className={moduleStyles.footerButton}
                   type={'primary'}
                 />
               )}
@@ -404,8 +411,9 @@ const VersionHistoryDropdown: React.FunctionComponent<
                 size={'s'}
                 onClick={handleCancel}
                 disabled={versionLoading}
-                className={moduleStyles.actionButton}
+                className={moduleStyles.footerButton}
                 type={'secondary'}
+                color="black"
               />
             </div>
           </div>

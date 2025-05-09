@@ -117,7 +117,7 @@ class CourseScript extends Component {
       selectedSection.unitId === id;
     const isAssigned = assignedToStudent || assignedByTeacher;
 
-    let unitPath = location.pathname.includes('teacher_dashboard')
+    let unitPath = location.pathname.includes('/teacher_dashboard')
       ? `/teacher_dashboard/sections/${selectedSectionId}${path}`
       : path;
     return (

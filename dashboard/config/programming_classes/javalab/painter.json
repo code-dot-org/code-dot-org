@@ -10,9 +10,9 @@
   "tips": "",
   "methods": [
     {
-      "key": "painter",
-      "position": 0,
       "name": "Painter",
+      "position": 0,
+      "key": "painter",
       "content": "Creates a `Painter` object at `(0, 0)` facing `\"East\"` with `0` units of paint",
       "parameters": "[]",
       "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter();\\n```\",\"image\":\"https://images.code.org/e4916207b91ecdd04443697eede4a5fb-default.png\"}]",
@@ -22,9 +22,9 @@
       "return_value": null
     },
     {
-      "key": "painter2",
-      "position": 1,
       "name": "Painter",
+      "position": 1,
+      "key": "painter2",
       "content": "Creates a `Painter` at specific x and y coordinates facing a specified direction with a given number of units of paint.",
       "parameters": "[{\"name\":\"x\",\"type\":\"int\",\"required\":true,\"description\":\"the x coordinate to place the `Painter` object\"},{\"name\":\"y\",\"type\":\"int\",\"required\":true,\"description\":\"the y coordinate to place the `Painter` object\"},{\"name\":\"direction\",\"type\":\"String\",\"required\":true,\"description\":\"the direction for the `Painter` object to face\"},{\"name\":\"paint\",\"type\":\"int\",\"required\":true,\"description\":\"the number of units of paint the `Painter` object starts with\"}]",
       "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"South\\\", 10);\\n```\",\"image\":\"https://images.code.org/1c32a72231bec7eeda7e082abb5298f7-parameterized.png\"}]",
@@ -34,9 +34,9 @@
       "return_value": null
     },
     {
-      "key": "move",
-      "position": 2,
       "name": "move",
+      "position": 2,
+      "key": "move",
       "content": "Moves the `Painter` object one space forward in the direction it is facing.",
       "parameters": "[]",
       "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"South\\\", 10);\\nmyPainter.move();\\n```\",\"image\":\"https://images.code.org/54dfd250f1e30fa920e49e60c81a04b2-painter_move.gif\"}]",
@@ -46,9 +46,9 @@
       "return_value": null
     },
     {
-      "key": "turnleft",
-      "position": 3,
       "name": "turnLeft",
+      "position": 3,
+      "key": "turnleft",
       "content": "Turns a `Painter` object to the left.",
       "parameters": "[]",
       "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"South\\\", 10);\\nmyPainter .move();\\nmyPainter .turnLeft();\\n```\",\"image\":\"https://images.code.org/285693b2899683eeaa015837334f7355-painter_turnleft.gif\"}]",
@@ -58,9 +58,9 @@
       "return_value": null
     },
     {
-      "key": "paint",
-      "position": 4,
       "name": "paint",
+      "position": 4,
+      "key": "paint",
       "content": "Paints the space the `Painter` object is standing on.",
       "parameters": "[{\"name\":\"color\",\"type\":\"String\",\"required\":true,\"description\":\"the color of the paint - can be a color name or a hex value\"}]",
       "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"South\\\", 10);\\nmyPainter.paint(\\\"white\\\");\\n```\",\"image\":\"https://images.code.org/d66489311bf586df08f4b294621acc95-painter_paint.gif\"},{\"name\":\"Color Options\",\"code\":\"![](https://images.code.org/b5f030c497b6f6f61470fc3ab6dd7538-newColorChart.png)\"}]",
@@ -70,9 +70,9 @@
       "return_value": null
     },
     {
-      "key": "takepaint",
-      "position": 5,
       "name": "takePaint",
+      "position": 5,
+      "key": "takepaint",
       "content": "Takes paint from the paint bucket the `Painter` object is currently standing on and adds a single unit of paint to their paint bucket. The number of units of paint in the paint bucket decreases by `1`. If the `Painter` object is not on a paint bucket, nothing happens.",
       "parameters": "[]",
       "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter();\\nmyPainter.move();\\nmyPainter.takePaint();\\nmyPainter.move();\\n```\",\"image\":\"https://images.code.org/39e03713f0674462f0c07c3f4201326f-painter_takepaint.gif\"}]",
@@ -82,21 +82,21 @@
       "return_value": null
     },
     {
-      "key": "scrapepaint",
-      "position": 6,
       "name": "scrapePaint",
+      "position": 6,
+      "key": "scrapepaint",
       "content": "Removes the paint from the space the `Painter` object is standing on.",
       "parameters": "[]",
-      "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"South\\\", 10);\\n\\nmyPainter.paint(\\\"white\\\");\\nmyPainter.move();\\nmyPainter.paint(\\\"white\\\");\\n\\nmyPainter.turnLeft();\\nmyPainter.turnLeft();\\nmyPainter.move();\\n\\nb.scrapePaint();\\n```\\n\",\"image\":\"https://images.code.org/f188339711730bd441607e3ea4794d0f-painter_scrapepaint.gif\"}]",
+      "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"South\\\", 10);\\n\\nmyPainter.paint(\\\"white\\\");\\nmyPainter.move();\\nmyPainter.paint(\\\"white\\\");\\n\\nmyPainter.turnLeft();\\nmyPainter.turnLeft();\\nmyPainter.move();\\n\\nmyPainter.scrapePaint();\\n```\\n\",\"image\":\"https://images.code.org/f188339711730bd441607e3ea4794d0f-painter_scrapepaint.gif\"}]",
       "syntax": "`public void scrapePaint()`",
       "external_link": null,
       "overload_of": null,
       "return_value": null
     },
     {
-      "key": "canmove",
-      "position": 7,
       "name": "canMove",
+      "position": 7,
+      "key": "canmove",
       "content": "Returns `true` if there is no barrier one space ahead in the direction the `Painter` object is currently facing.",
       "parameters": "[]",
       "examples": "[{\"name\":\"canMove() Returns false\",\"code\":\"```\\nPainter myPainter = new Painter(2, 3, \\\"east\\\", 0);\\nboolean moveStatus = myPainter.canMove();\\n\\nSystem.out.println(\\\"Painter can move forward: \\\" + moveStatus);\\n```\\n\\n**Output**\\n\\n![](https://images.code.org/7bb491d4ce769ee30fe6853d5ab64492-canmove.png)\\n\\nPainter can move forward: false\",\"image\":\"\"},{\"name\":\"canMove() Returns true\",\"code\":\"```\\nPainter myPainter = new Painter(2, 3, \\\"east\\\", 0);\\nboolean moveStatus = myPainter.canMove();\\n\\nSystem.out.println(\\\"Painter can move forward: \\\" + moveStatus);\\n```\\n\\n**Output**\\n\\n![](https://images.code.org/2b3e41e537a3a1f55b903788b922671e-canmove2.png)\\n\\nPainter can move forward: true\",\"image\":\"\"}]",
@@ -106,9 +106,9 @@
       "return_value": null
     },
     {
-      "key": "canmove2",
-      "position": 8,
       "name": "canMove",
+      "position": 8,
+      "key": "canmove2",
       "content": "Returns `true` if there is no barrier one space ahead in the specified direction.",
       "parameters": "[{\"name\":\"direction\",\"type\":\"String\",\"required\":true,\"description\":\"the direction to check\"}]",
       "examples": "[{\"name\":\"canMove(\\\"south\\\") Returns false\",\"code\":\"```\\nPainter myPainter = new Painter(2, 3, \\\"east\\\", 0);\\nboolean moveStatus = myPainter.canMove(\\\"south\\\");\\n\\nSystem.out.println(\\\"Painter can move south: \\\" + moveStatus);\\n```\\n\\n**Output**\\n\\n![](https://images.code.org/8a67f0c913a130dd5107748f522f71c9-canmovesouth.png)\\n\\nPainter can move south: false\",\"image\":\"\"},{\"name\":\"canMove(\\\"south\\\") Returns true\",\"code\":\"```\\nPainter myPainter = new Painter(2, 3, \\\"east\\\", 0);\\nboolean moveStatus = myPainter.canMove(\\\"south\\\");\\n\\nSystem.out.println(\\\"Painter can move south: \\\" + moveStatus);\\n```\\n\\n**Output**\\n\\n![](https://images.code.org/20159154948642958952307badcf3e37-canmovesouth2.png)\\n\\nPainter can move south: true\",\"image\":\"\"}]",
@@ -118,9 +118,9 @@
       "return_value": null
     },
     {
-      "key": "isonpaint",
-      "position": 9,
       "name": "isOnPaint",
+      "position": 9,
+      "key": "isonpaint",
       "content": "Returns `true` if there is paint on the space the `Painter` object is currently standing on.",
       "parameters": "[]",
       "examples": "[{\"name\":\"isOnPaint() Returns true\",\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"South\\\", 10);\\nmyPainter.paint(\\\"white\\\");\\n\\nboolean onPaintStatus = myPainter.isOnPaint();\\n\\nSystem.out.println(\\\"Painter is on paint: \\\" + onPaintStatus);\\n```\\n\\n**Output**\\n\\n![](https://images.code.org/0bc4fdebb564d6c814417e5ad6f64e85-isonpaint.png)\\n\\nPainter is on paint: true\",\"image\":\"\"},{\"name\":\"isOnPaint() Returns false\",\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"South\\\", 10);\\nmyPainter.paint(\\\"white\\\");\\nmyPainter.move();\\n\\nboolean onPaintStatus = myPainter.isOnPaint();\\n\\nSystem.out.println(\\\"Painter is on paint: \\\" + onPaintStatus);\\n```\\n\\n**Output**\\n\\n![](https://images.code.org/c04f1f99e73b2b6caf432d7b8b399e98-isonpaint2.png)\\n\\nPainter is on paint: false\",\"image\":\"\"}]",
@@ -130,9 +130,9 @@
       "return_value": null
     },
     {
-      "key": "isonbucket",
-      "position": 10,
       "name": "isOnBucket",
+      "position": 10,
+      "key": "isonbucket",
       "content": "Returns `true` if there is a paint bucket on the space the `Painter` object is currently standing on and the paint bucket has paint in it.",
       "parameters": "[]",
       "examples": "[{\"name\":\"isOnBucket() Returns true\",\"code\":\"```\\nPainter myPainter = new Painter();\\nmyPainter.move();\\n\\nboolean status = myPainter.isOnBucket();\\n\\nSystem.out.println(\\\"Painter is on a paint bucket: \\\" + status);\\n```\\n\\n**Output**\\n\\n![](https://images.code.org/a275d22ba722ccd29816d2d9af6cc95d-isonbucket.png)\\n\\nPainter is on a paint bucket: true\",\"image\":\"\"},{\"name\":\"isOnBucket() Returns false\",\"code\":\"```\\nPainter myPainter = new Painter();\\nmyPainter.move();\\nmyPainter.move();\\n\\nboolean status = myPainter.isOnBucket();\\n\\nSystem.out.println(\\\"Painter is on a paint bucket: \\\" + status);\\n```\\n\\n**Output**\\n\\n![](https://images.code.org/923cc3f5982006a61b96f82e8625be9a-isonbucket2.png)\\n\\nPainter is on a paint bucket: false\",\"image\":\"\"}]",
@@ -142,9 +142,9 @@
       "return_value": null
     },
     {
-      "key": "haspaint",
-      "position": 11,
       "name": "hasPaint",
+      "position": 11,
+      "key": "haspaint",
       "content": "Returns `true` if the `Painter` object has paint in their paint bucket.",
       "parameters": "[]",
       "examples": "[{\"name\":\"hasPaint() Returns true\",\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"south\\\", 10);\\n\\nboolean result = myPainter.hasPaint();\\n\\nSystem.out.println(\\\"Painter has paint: \\\" + result);\\n```\\n\\n**Output**\\n\\nPainter has paint: true\"},{\"name\":\"hasPaint() Returns false\",\"code\":\"```\\nPainter myPainter = new Painter();\\n\\nboolean result = myPainter.hasPaint();\\n\\nSystem.out.println(\\\"Painter has paint: \\\" + result);\\n```\\n\\n**Output**\\n\\nPainter has paint: false\"}]",
@@ -154,9 +154,9 @@
       "return_value": null
     },
     {
-      "key": "isfacingnorth",
-      "position": 12,
       "name": "isFacingNorth",
+      "position": 12,
+      "key": "isfacingnorth",
       "content": "Returns `true` if the `Painter` object is currently facing `\"North\"`.",
       "parameters": "[]",
       "examples": "[{\"code\":\"![](https://images.code.org/040dd0b55ad97a20c4344297fedd1e00-isfacingnorth.png)\\n\\n`isFacingNorth()` returns `true`\",\"image\":\"\"}]",
@@ -166,9 +166,9 @@
       "return_value": null
     },
     {
-      "key": "isfacingsouth",
-      "position": 13,
       "name": "isFacingSouth",
+      "position": 13,
+      "key": "isfacingsouth",
       "content": "Returns `true` if the `Painter` object is currently facing `\"South\"`.",
       "parameters": "[]",
       "examples": "[{\"code\":\"![](https://images.code.org/b48d085f08d362d5941ae20fa3b5aea3-isfacingsouth.png)\\n\\n`isFacingSouth()` returns `true`\"}]",
@@ -178,9 +178,9 @@
       "return_value": null
     },
     {
-      "key": "isfacingeast",
-      "position": 14,
       "name": "isFacingEast",
+      "position": 14,
+      "key": "isfacingeast",
       "content": "Returns `true` if the `Painter` object is currently facing `\"East\"`.",
       "parameters": "[]",
       "examples": "[{\"code\":\"![](https://images.code.org/182c1395dddaafb79c1e9ab27693094a-isfacingeast.png)\\n\\n`isFacingEast()` returns `true`\"}]",
@@ -190,9 +190,9 @@
       "return_value": null
     },
     {
-      "key": "isfacingwest",
-      "position": 15,
       "name": "isFacingWest",
+      "position": 15,
+      "key": "isfacingwest",
       "content": "Returns `true` if the `Painter` object is currently facing `\"West\"`.",
       "parameters": "[]",
       "examples": "[{\"code\":\"![](https://images.code.org/3621acb058214516d9b78c0008f4c0b0-isfacingwest.png)\\n\\n`isFacingWest()` returns `true`\"}]",
@@ -202,9 +202,9 @@
       "return_value": null
     },
     {
-      "key": "getmypaint",
-      "position": 16,
       "name": "getMyPaint",
+      "position": 16,
+      "key": "getmypaint",
       "content": "Returns the number of units of paint that the `Painter` object has in their paint bucket.",
       "parameters": "[]",
       "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"south\\\", 10);\\nint paintAmount = myPainter.getMyPaint();\\nSystem.out.println(\\\"Painter has \\\" + paintAmount + \\\" units of paint.\\\");\\n```\\n\\n**Output**\\n\\nPainter has 10 units of paint.\"}]",
@@ -214,9 +214,9 @@
       "return_value": null
     },
     {
-      "key": "getcolor",
-      "position": 17,
       "name": "getColor",
+      "position": 17,
+      "key": "getcolor",
       "content": "Returns the color of the space the `Painter` object is currently standing on.",
       "parameters": "[]",
       "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter(2, 4, \\\"south\\\", 10);\\nmyPainter.paint(\\\"white\\\");\\n\\nString currentPaintColor = myPainter.getColor();\\n\\nSystem.out.println(\\\"Painter is standing on \\\" + currentPaintColor + \\\" paint.\\\");\\n```\\n\\n**Output**\\n\\n![](https://images.code.org/e5a7dcdb917c87d4d083798ca185f1cb-isonpaint.png)\\n\\nPainter is standing on white paint.\"}]",
@@ -226,9 +226,9 @@
       "return_value": null
     },
     {
-      "key": "getx",
-      "position": 18,
       "name": "getX",
+      "position": 18,
+      "key": "getx",
       "content": "Returns the x coordinate for the current position of the `Painter` object.",
       "parameters": "[]",
       "examples": "[{\"code\":\"![](https://images.code.org/c719dbdf1bac79a78eb35b617572124d-isfacingnorth.png)\\n\\n```\\nint currentXLocation= myPainter.getX();\\nSystem.out.println(\\\"Painter is at x location\\\" + currentXLocation);\\n```\\n\\n**Output**\\n\\nPainter is at x location 2\"}]",
@@ -238,9 +238,9 @@
       "return_value": null
     },
     {
-      "key": "gety",
-      "position": 19,
       "name": "getY",
+      "position": 19,
+      "key": "gety",
       "content": "Returns the y coordinate for the current position of the `Painter` object.",
       "parameters": "[]",
       "examples": "[{\"code\":\"![](https://images.code.org/c719dbdf1bac79a78eb35b617572124d-isfacingnorth.png)\\n\\n```\\nint currentYLocation= myPainter.getY();\\nSystem.out.println(\\\"Painter is at y location \\\" + currentYLocation);\\n```\\n\\n**Output**\\n\\nPainter is at y location 4\"}]",
@@ -250,9 +250,9 @@
       "return_value": null
     },
     {
-      "key": "getdirection",
-      "position": 20,
       "name": "getDirection",
+      "position": 20,
+      "key": "getdirection",
       "content": "Returns the direction that the `Painter` object is currently facing.",
       "parameters": "[]",
       "examples": "[{\"code\":\"![](https://images.code.org/c719dbdf1bac79a78eb35b617572124d-isfacingnorth.png)\\n\\n```\\nString currentDirection = myPainter.getDirection();\\nSystem.out.println(\\\"Painter is facing \\\" + currentDirection);\\n```\\n\\n**Output**\\n\\nPainter is facing north\"}]",
@@ -262,9 +262,9 @@
       "return_value": null
     },
     {
-      "key": "setpaint",
-      "position": 21,
       "name": "setPaint",
+      "position": 21,
+      "key": "setpaint",
       "content": "Sets the number of units of paint in the `Painter` object's paint bucket. If the value passed is a negative number, nothing happens.",
       "parameters": "[{\"name\":\"paint\",\"type\":\"int\",\"required\":true,\"description\":\"the number of units of paint that should be in the `Painter` object's paint bucket\"}]",
       "examples": "[{\"code\":\"```\\nPainter myPainter = new Painter(0);\\nint paintAmount = myPainter.getMyPaint();\\nSystem.out.println(\\\"Painter has \\\" + paintAmount + \\\" units of paint.\\\");\\n```\\n\\n**Output**\\n\\nPainter has 0 units of paint.\\n\\n```\\nmyPainter.setPaint(10);\\n\\nint paintAmount = myPainter.getMyPaint();\\nSystem.out.println(\\\"Painter has \\\" + paintAmount + \\\" units of paint.\\\");\\n```\\n\\n**Output**\\n\\nPainter has 10 units of paint.\"}]",

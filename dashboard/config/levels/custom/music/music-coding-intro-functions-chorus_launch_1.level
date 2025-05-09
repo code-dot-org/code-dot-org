@@ -1,0 +1,353 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2025-04-28T18:19:01.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "instructions_important": "false",
+    "long_instructions": "##### **Teacher Note**: This is Lesson 2, Level 6 from the curriculum.\r\n___\r\n####<i class=\"fa-duotone fa-regular fa-file-music\"></i> Step 2: Define the function\r\n\r\n\r\n1. Add <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-drum\" style=\"color: #E565F5; margin-right: 2px\"></i> Beat </span> and <span style=\"padding: 2px; font-size: 12px; color: white; background-color: rgb(76, 86, 97); border: solid 2px #999; border-radius: 5px; margin-right: 2px; white-space: nowrap; line-height: 2.5em;\"> <i class=\"fa-solid fa-boombox\" style=\"color: #58BEF9; margin-right: 2px\"></i> Bass </span> sounds to define the [beat](#clickable=id:thebeat) function.\r\n2. Press Run. Notice how the beat repeats!\r\n\r\n[<i class=\"fa-solid fa-lightbulb-on\"></i> Hint](#clickable=flyout-id:play---id-up-inside:hint_block)\r\n\r\n---\r\n*Example timeline:*\r\n\r\n![](https://images.code.org/1fcec58260addb806ab12a9d3af86304-image-1744664200641.png)",
+    "hide_share_and_remix": "true",
+    "validations": [
+      {
+        "key": "music-ai-skill-function-verse_fc9881f2-7571-49f1-8971-dcab68a657a9",
+        "message": "Great work! You're organizing your code with functions!",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sound_in_function",
+            "value": "beat"
+          }
+        ]
+      },
+      {
+        "key": "music-ai-skill-sequence_a0f44420-3323-439a-be62-f0aa67dbcbe1",
+        "message": "Nothing played in your [beat](#clickable=id:beat_function) function yet. ",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sound_type",
+            "value": "vocal"
+          }
+        ],
+        "callout": "flyout-id:play---id-up-inside:hint_block"
+      }
+    ],
+    "level_data": {
+      "validationTimeout": 2,
+      "library": "launch2024",
+      "packId": "benson_boone_in_the_stars",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when-run-block",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sounds_together",
+                  "id": "$?KUv+Cn|@?~MOOU,:^L",
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "disableNextConnection": false
+                  },
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "procedures_callnoreturn",
+                        "id": "3dL3[wJFA7v0!aKt9L}P",
+                        "movable": false,
+                        "editable": false,
+                        "extraState": {
+                          "name": "beat"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "J/`-LtA.rk~8(BW-/2/.",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "disableNextConnection": true
+                            },
+                            "fields": {
+                              "sound": "benson_boone_in_the_stars/vocals_chorus_1"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "d?4Q}?QHYAfA/bxc):lZ",
+                      "deletable": false,
+                      "movable": false,
+                      "editable": false,
+                      "extraState": {
+                        "disableNextConnection": false
+                      },
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "procedures_callnoreturn",
+                            "id": "p:o+x)5M]FrGx16h7zmD",
+                            "deletable": false,
+                            "movable": false,
+                            "editable": false,
+                            "extraState": {
+                              "name": "beat"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "AO;ZNEsT8oO17w:6Nvwk",
+                                "deletable": false,
+                                "movable": false,
+                                "editable": false,
+                                "extraState": {
+                                  "disableNextConnection": true
+                                },
+                                "fields": {
+                                  "sound": "benson_boone_in_the_stars/vocals_chorus_2"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "I{%rkRaHY)T$Fm|ow~8@",
+                          "deletable": false,
+                          "movable": false,
+                          "editable": false,
+                          "extraState": {
+                            "disableNextConnection": false
+                          },
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "procedures_callnoreturn",
+                                "id": "pM4l`$]S?rzA!8nY*NoT",
+                                "deletable": false,
+                                "movable": false,
+                                "extraState": {
+                                  "name": "beat"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "b(N06rwO4l{3A4/dbKcp",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "editable": false,
+                                    "extraState": {
+                                      "disableNextConnection": false
+                                    },
+                                    "fields": {
+                                      "sound": "benson_boone_in_the_stars/vocals_chorus_3"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "gixyt{4ys68^/0w2e0Mh",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": true
+                                        },
+                                        "fields": {
+                                          "sound": "benson_boone_in_the_stars/vocals_chorus_backups_3"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sounds_together",
+                              "id": "wl`NW-}NQm4K|!@Gf4.-",
+                              "deletable": false,
+                              "movable": false,
+                              "editable": false,
+                              "extraState": {
+                                "disableNextConnection": true
+                              },
+                              "inputs": {
+                                "code": {
+                                  "block": {
+                                    "type": "procedures_callnoreturn",
+                                    "id": "1HWK-=$}w7-tM1l1vP:S",
+                                    "deletable": false,
+                                    "movable": false,
+                                    "extraState": {
+                                      "name": "beat"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "VlK;u3tGj.xVcnM7aeB}",
+                                        "deletable": false,
+                                        "movable": false,
+                                        "editable": false,
+                                        "extraState": {
+                                          "disableNextConnection": false
+                                        },
+                                        "fields": {
+                                          "sound": "benson_boone_in_the_stars/vocals_chorus_4"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "k2aXwJ{3T1@AyBpYR9bH",
+                                            "deletable": false,
+                                            "movable": false,
+                                            "editable": false,
+                                            "extraState": {
+                                              "disableNextConnection": true
+                                            },
+                                            "fields": {
+                                              "sound": "benson_boone_in_the_stars/vocals_chorus_backups_4"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "type": "procedures_defnoreturn",
+              "id": "thebeat",
+              "x": 290,
+              "y": 50,
+              "deletable": false,
+              "editable": false,
+              "extraState": {
+                "procedureId": "c^8.V/v,CyY5dTsQxr%6",
+                "initialDeleteConfig": false,
+                "initialEditConfig": false,
+                "initialMoveConfig": true
+              },
+              "fields": {
+                "NAME": "beat"
+              },
+              "inputs": {
+                "STACK": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "hint_block",
+                    "deletable": false,
+                    "movable": false,
+                    "extraState": {
+                      "disableNextConnection": true
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "procedures": [
+          {
+            "id": "c^8.V/v,CyY5dTsQxr%6",
+            "name": "beat",
+            "returnTypes": null
+          }
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+          "Control": [
+            "play_sounds_together"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ],
+          "Functions": [
+
+          ]
+        },
+        "type": "flyout",
+        "addFunctionCalls": false,
+        "addFunctionDefinition": false
+      },
+      "sounds": {
+        "benson_boone_in_the_stars": [
+          "drums_kick_beat",
+          "drums_stomp_beat",
+          "drums_hats",
+          "bass_chorus_1",
+          "small_synth_chorus_1",
+          "ambience_chorus_1",
+          "vocals_chorus_1",
+          "vocals_chorus_2",
+          "vocals_chorus_3",
+          "vocals_chorus_4",
+          "vocals_chorus_backups_3",
+          "vocals_chorus_backups_4"
+        ]
+      },
+      "toolboxDefinition": {
+        "contents": [
+          {
+            "kind": "block",
+            "type": "play_sound_at_current_location_simple2",
+            "id": "play",
+            "extraState": {
+              "disableNextConnection": false
+            },
+            "fields": {
+              "sound": "benson_boone_in_the_stars/drums_kick_beat"
+            },
+            "enabled": true
+          }
+        ],
+        "kind": "flyoutToolbox"
+      },
+      "allowChangeStartingPlayheadPosition": true
+    },
+    "name_suffix": "_1",
+    "offer_browser_tts": "true",
+    "use_secondary_finish_button": "false",
+    "hint_prompt_attempts_threshold": "1",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:01.732+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-chorus_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-chorus_launch\"},{\"changed_at\":\"2025-05-05 19:48:49 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

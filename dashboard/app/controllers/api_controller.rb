@@ -414,7 +414,7 @@ class ApiController < ApplicationController
       context = Queries::Courses.get_unit_context(course_name, unit_position)
     end
     unit = context[:unit]
-    unit_group = context[:course]
+    unit_group = context[:unit_group]
     ugu = context[:unit_group_unit]
     return render json: {error: 'Unit not found'}, status: :bad_request unless unit
     overview_path = CDO.studio_url(script_path(unit))
@@ -468,27 +468,20 @@ class ApiController < ApplicationController
     unless unit_name || (unit_position && course_name)
       return render json: {error: 'Must specify either unit_name or unit_position and course_name'}, status: :bad_request
     end
-    unit = nil
-    course = nil
-    unit_group_unit = nil
 
     if unit_name
       context = Queries::Courses.get_course_context(unit_name)
-      if context
-        unit = context[:unit]
-        course = context[:course]
-        unit_group_unit = context[:unit_group_unit]
-        course_name = course.name
-        unit_position = unit_group_unit.position
-      else
-        # Unit hasn't been migrated to have a Course/UnitGroup
-        unit = Unit.get_from_cache(unit_name)
-      end
+      unit = context[:unit]
+      unit_group = context[:unit_group]
+      unit_group_unit = context[:unit_group_unit]
+      course_name = unit_group&.name
+      unit_position = unit_group_unit&.position
     else
       course_name = params[:course_name]
       unit_position = params[:unit_position]&.to_i
       context = Queries::Courses.get_unit_context(course_name, unit_position)
       unit = context[:unit]
+      unit_group = context[:unit_group]
       unit_group_unit = context[:unit_group_unit]
     end
     return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless unit
@@ -500,8 +493,8 @@ class ApiController < ApplicationController
       is_verified_instructor: current_user&.verified_instructor?,
       locale: Unit.locale_english_name_map[request.locale],
       locale_code: request.locale,
-      course_link: course&.link(section_id: params[:section_id]),
-      course_title: course&.localized_title || I18n.t('view_all_units'),
+      course_link: unit_group&.link(section_id: params[:section_id]),
+      course_title: unit_group&.localized_title || I18n.t('view_all_units'),
       course_name: course_name,
       redirect_unit_url: redirect_unit_url,
       unit_position: unit_position,

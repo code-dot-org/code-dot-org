@@ -1,4 +1,5 @@
 import {Button, LinkButton} from '@code-dot-org/component-library/button';
+import Modal from '@code-dot-org/component-library/modal';
 import TextField from '@code-dot-org/component-library/textField';
 import {
   Heading1,
@@ -6,54 +7,84 @@ import {
   BodyTwoText,
   OverlineTwoText,
 } from '@code-dot-org/component-library/typography';
-import React, {useState} from 'react';
+import PropTypes from 'prop-types';
+import React, {useEffect, useCallback, useState} from 'react';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import CalendarEmptyStateIllustration from '@cdo/apps/templates/teacherNavigation/images/CalendarEmptyStateIllustration.svg';
 import CalendarNotAvailable from '@cdo/apps/templates/teacherNavigation/images/CalendarNotAvailable.svg';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
+import RegionalWorkshopCatalogCard from './RegionalWorkshopCatalogCard';
+
 import style from './regionalWorkshopCatalog.module.scss';
 
-export default function RegionalWorkshopCatalog() {
+export default function RegionalWorkshopCatalog({zipFromSchoolInfo}) {
   const [zipCode, setZipCode] = useState('');
   const [hasSubmittedZip, setHasSubmittedZip] = useState(false);
-  const [hasValidRP, setHasValidRP] = useState(false);
   const [regionalPartnerText, setRegionalPartnerText] =
     useState('Zip code required');
+  const [regionalPartnerName, setRegionalPartnerName] = useState('');
+  const [regionalPartnerInfo, setRegionalPartnerInfo] = useState('');
+  const [showRPInfoDialog, setShowRPInfoDialog] = useState(false);
   const [availableWorkshops, setAvailableWorkshops] = useState([]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmitZip = async () => {
-    try {
-      const response = await fetch(`regional_workshop_data/${zipCode}`, {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': await getAuthenticityToken(),
-        },
-      });
-
-      if (response.ok) {
-        const jsonData = await response.json();
-        const rpName = jsonData.regional_workshop_data.regional_partner?.name;
-        if (rpName) {
-          setHasValidRP(true);
-          setRegionalPartnerText(rpName);
-        } else {
-          setHasValidRP(false);
-          setRegionalPartnerText('No regional partner found');
-        }
-        setAvailableWorkshops(
-          jsonData.regional_workshop_data.available_workshops
-        );
-        setHasSubmittedZip(true);
-      }
-    } catch (error) {
-      console.error(
-        'Error fetching regional partner and available workshops:',
-        error
-      );
+  // Load workshops for the given zip if one is present in the URL or is passed in as a prop
+  useEffect(() => {
+    const zipFromUrl = queryParams()['zip'];
+    const prepopulatedZip = zipFromUrl ? zipFromUrl : zipFromSchoolInfo;
+    if (prepopulatedZip) {
+      setZipCode(prepopulatedZip);
+      handleSubmitZip(prepopulatedZip);
     }
-  };
+  }, [zipFromSchoolInfo, handleSubmitZip]);
+
+  const handleSubmitZip = useCallback(
+    async submittedZip => {
+      if (isSubmitting) {
+        return;
+      }
+
+      setIsSubmitting(true);
+      try {
+        const response = await fetch(`regional_workshop_data/${submittedZip}`, {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-Token': await getAuthenticityToken(),
+          },
+        });
+
+        if (response.ok) {
+          const jsonData = await response.json();
+          const regionalPartner =
+            jsonData.regional_workshop_data.regional_partner;
+          if (regionalPartner.name) {
+            setRegionalPartnerText(regionalPartner.name);
+            setRegionalPartnerName(regionalPartner.name);
+            setRegionalPartnerInfo(regionalPartner.additional_info);
+          } else {
+            setRegionalPartnerText('No regional partner found');
+            setRegionalPartnerName('');
+            setRegionalPartnerInfo('');
+          }
+          setAvailableWorkshops(
+            jsonData.regional_workshop_data.available_workshops
+          );
+          setHasSubmittedZip(true);
+        }
+      } catch (error) {
+        console.error(
+          'Error fetching regional partner and available workshops:',
+          error
+        );
+      } finally {
+        setIsSubmitting(false);
+      }
+    },
+    [isSubmitting]
+  );
 
   const RenderWorkshopContent = () => {
     if (!hasSubmittedZip) {
@@ -71,13 +102,18 @@ export default function RegionalWorkshopCatalog() {
           <div className={style.zipSearchInput}>
             <TextField
               id="noZipSearch"
-              name="zipCode"
+              name="noZipSearch"
+              aria-label="zipCode"
               onChange={e => setZipCode(e.target.value)}
               value={zipCode}
               maxLength={255}
               placeholder="12345"
             />
-            <Button text="Submit" color="purple" onClick={handleSubmitZip} />
+            <Button
+              text="Submit"
+              color="purple"
+              onClick={() => handleSubmitZip(zipCode)}
+            />
           </div>
         </div>
       );
@@ -95,8 +131,9 @@ export default function RegionalWorkshopCatalog() {
           </div>
           <LinkButton
             text="Contact regional partner"
+            target="_blank"
             color="purple"
-            href={'/'}
+            href={`/professional-learning/contact-regional-partner?zip=${zipCode}`}
           />
         </div>
       );
@@ -107,23 +144,54 @@ export default function RegionalWorkshopCatalog() {
           <BodyTwoText>
             Workshops are always being added. If you do not see the workshop you
             are looking for check back again soon or{' '}
-            <a href="/">contact your regional partner</a>.
+            <a
+              className={style.linkText}
+              href={`/professional-learning/contact-regional-partner?zip=${zipCode}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              contact your Regional Partner
+            </a>
+            {'.'}
           </BodyTwoText>
           {availableWorkshops && (
-            <div>
-              <ul>
-                {availableWorkshops.map(workshop => (
-                  <li key={workshop.id}>{`Id: ${workshop.id}, Title: ${
-                    workshop.name
-                      ? workshop.name
-                      : workshop.course + ' - ' + workshop.subject
-                  }, Location: ${
-                    workshop.location_name
-                  }, Participant Group Type: ${
-                    workshop.participant_group_type
-                  }`}</li>
-                ))}
-              </ul>
+            <div className={style.wsCardContainer}>
+              {availableWorkshops.map(
+                ({
+                  id,
+                  course,
+                  subject,
+                  name,
+                  capacity,
+                  num_enrollments,
+                  sessions,
+                  format,
+                  location_name,
+                  fee,
+                  has_prereq,
+                  requires_application,
+                  custom_application_link,
+                  custom_registration_link,
+                }) => (
+                  <RegionalWorkshopCatalogCard
+                    id={id}
+                    key={id}
+                    course={course}
+                    subject={subject}
+                    name={name}
+                    capacity={capacity}
+                    numEnrollments={num_enrollments}
+                    sessions={sessions || []}
+                    format={format}
+                    locationName={location_name}
+                    fee={fee || ''}
+                    hasPrereq={has_prereq}
+                    requiresApplication={requires_application}
+                    customApplicationLink={custom_application_link}
+                    customRegistrationLink={custom_registration_link}
+                  />
+                )
+              )}
             </div>
           )}
         </div>
@@ -133,6 +201,16 @@ export default function RegionalWorkshopCatalog() {
 
   return (
     <div className={style.workshopCatalog}>
+      {showRPInfoDialog && (
+        <Modal
+          title={regionalPartnerName}
+          description={regionalPartnerInfo}
+          primaryButtonProps={{
+            text: 'Return to workshops',
+            onClick: () => setShowRPInfoDialog(false),
+          }}
+        />
+      )}
       <section className={style.headerContainer}>
         <div className={style.headerText}>
           <Heading1>Find your local workshop and apply</Heading1>
@@ -145,14 +223,21 @@ export default function RegionalWorkshopCatalog() {
           <div className={style.zipSearchInput}>
             <TextField
               id="zipSearch"
-              name="zipCode"
+              name="zipSearch"
+              aria-label="zipSearch"
               label="School ZIP Code:"
               onChange={e => setZipCode(e.target.value)}
               value={zipCode}
               maxLength={255}
               placeholder="12345"
             />
-            <Button text="Submit" color="purple" onClick={handleSubmitZip} />
+            <Button
+              aria-label="submitZip"
+              text="Submit"
+              color="purple"
+              onClick={() => handleSubmitZip(zipCode)}
+              isPending={isSubmitting}
+            />
           </div>
           <div className={style.rpInfoContainer}>
             <OverlineTwoText className={style.rpInfoHeader}>
@@ -160,26 +245,30 @@ export default function RegionalWorkshopCatalog() {
             </OverlineTwoText>
             <div className={style.rpInfo}>
               <BodyTwoText
-                className={hasValidRP ? style.rpName : style.rpNameMissing}
+                className={
+                  regionalPartnerName ? style.rpName : style.rpNameMissing
+                }
               >
                 {regionalPartnerText}
               </BodyTwoText>
               <div className={style.rpInfoButtons}>
-                <LinkButton
+                <Button
+                  aria-label="partnerInfo"
+                  text="Partner info"
                   color="black"
                   type="secondary"
-                  href={'/'}
                   size="xs"
-                  text="Partner info"
-                  disabled={!hasValidRP}
+                  onClick={() => setShowRPInfoDialog(true)}
+                  disabled={!regionalPartnerName}
                 />
                 <LinkButton
+                  text="Contact"
+                  target="_blank"
                   color="black"
                   type="secondary"
-                  href={'/'}
                   size="xs"
-                  text="Contact"
-                  disabled={!hasValidRP}
+                  href={`/professional-learning/contact-regional-partner?zip=${zipCode}`}
+                  disabled={!regionalPartnerName}
                 />
               </div>
             </div>
@@ -192,3 +281,7 @@ export default function RegionalWorkshopCatalog() {
     </div>
   );
 }
+
+RegionalWorkshopCatalog.propTypes = {
+  zipFromSchoolInfo: PropTypes.string,
+};

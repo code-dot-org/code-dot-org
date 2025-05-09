@@ -27,8 +27,8 @@ const FreeResponseStudentResponseRow: React.FC<
   // used to create the tag for the response
   const analysisTag = () => {
     if (
-      studentWorkEvaluation?.aiEvaluation === 'great' ||
-      studentWorkEvaluation?.aiEvaluation === 'ok'
+      studentWorkEvaluation?.aiEvaluation === 'Great' ||
+      studentWorkEvaluation?.aiEvaluation === 'Ok'
     ) {
       return (
         <Tags
@@ -47,14 +47,14 @@ const FreeResponseStudentResponseRow: React.FC<
           className={styles.proficientStudentTag}
         />
       );
-    } else if (studentWorkEvaluation?.aiEvaluation === 'needs revision') {
+    } else if (studentWorkEvaluation?.aiEvaluation === 'Needs revision') {
       return (
         <Tags
           tagsList={[
             {
-              label: FEEDBACK_TYPE.NEEDS_REVIEW.label,
+              label: FEEDBACK_TYPE.NOT_PROFICIENT.label,
               icon: {
-                iconName: FEEDBACK_TYPE.NEEDS_REVIEW.icon,
+                iconName: FEEDBACK_TYPE.NOT_PROFICIENT.icon,
                 iconStyle: 'solid',
                 title: 'exclamation point',
                 placement: 'left',

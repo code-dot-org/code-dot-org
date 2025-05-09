@@ -19,12 +19,14 @@ module AichatOpenaiHelper
       encrypted_channel_id
     )
 
+    start_time = Time.now
     # We expose a temperature scale of 0.1-1 to users of AI Chat Lab, but OpenAI's API allows a scale of 0-2.
     response, usage = request_chat_completion(
       messages,
       aichat_model_customizations['temperature'].to_f * 2
     )
-    report_usage_metrics(usage, messages, level_id, project_id, user_id)
+    response_time = Time.now - start_time
+    report_usage_metrics(usage, messages, level_id, project_id, user_id, response_time)
     response
   end
 
@@ -78,7 +80,7 @@ module AichatOpenaiHelper
   end
 
   # Reports and logs usage metrics to Cloudwatch
-  def self.report_usage_metrics(usage, messages, level_id, project_id, user_id)
+  def self.report_usage_metrics(usage, messages, level_id, project_id, user_id, response_time)
     return unless usage
 
     messages_with_assets_count = messages.count do |message|
@@ -121,6 +123,7 @@ module AichatOpenaiHelper
         output: "$#{format("%.6f", output_cost)}",
         total: "$#{format("%.6f", total_cost)}"
       },
+      responseTime: response_time,
       levelId: level_id,
       projectId: project_id,
       userId: user_id

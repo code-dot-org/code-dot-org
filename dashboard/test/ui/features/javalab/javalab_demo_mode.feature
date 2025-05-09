@@ -16,5 +16,5 @@ Feature: Javalab Demo Mode
     And I wait to see a modal containing text "Please confirm you're human"
     And I switch to the first iframe once it exists
     And I wait to see ".recaptcha-checkbox"
-    Then I see no difference for "initial modal view" using stitch mode "none"
+    Then I see no difference for "initial modal view" using stitch mode "none" without waiting for Font Awesome to load
     Then I close my eyes

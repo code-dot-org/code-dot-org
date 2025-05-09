@@ -3,6 +3,9 @@
   "script_names": [
     "hello-world-draft"
   ],
+  "original_script_names": [
+    "hello-world-draft"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

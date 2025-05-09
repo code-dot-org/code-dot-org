@@ -3,6 +3,9 @@
   "script_names": [
     "csc-pilot-2022-ecosystems"
   ],
+  "original_script_names": [
+    "csc-pilot-2022-ecosystems"
+  ],
   "published_state": "sunsetting",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

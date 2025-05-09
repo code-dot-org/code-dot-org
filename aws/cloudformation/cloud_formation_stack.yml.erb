@@ -27,11 +27,10 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
     Description: Subdomain name for corporate web site ("Pegasus").
-  MarketingDomainName:
+  InternalMarketingDomainName:
     Type: String
-    # Todo: update to handle multiple envs once the app is in prod
-    Default: 'dev.marketing.dev-code.org'
-    Description: Subdomain name for marketing site.
+    Default: <%="code.marketing-sites.#{rack_env?(:production) ? 'code.org' : 'dev-code.org'}"%>
+    Description: Interim domain name of the Contentful CMS-based marketing site. The DNS record for code.org still points to Pegasus, which dynamically routes some requests to the new Contentful site. This parameter is intended for internal routing and should not be used outside that context.
   HourOfCodeBaseDomainName:
     Type: String
     Default: hourofcode.com

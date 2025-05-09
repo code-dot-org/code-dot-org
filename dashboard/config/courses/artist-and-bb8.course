@@ -3,6 +3,9 @@
   "script_names": [
     "artist-and-bb8"
   ],
+  "original_script_names": [
+    "artist-and-bb8"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

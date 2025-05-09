@@ -12,6 +12,18 @@
     "csa9-2023",
     "csa-postap-se-and-computer-vision-2023"
   ],
+  "original_script_names": [
+    "csa1-2023",
+    "csa2-2023",
+    "csa3-2023",
+    "csa4-2023",
+    "csa5-2023",
+    "csa6-2023",
+    "csa7-2023",
+    "csa8-2023",
+    "csa9-2023",
+    "csa-postap-se-and-computer-vision-2023"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

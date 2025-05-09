@@ -15,7 +15,7 @@ import styles from './teacherHomepage.module.scss';
 const PermanentPromotions: React.FC = () => {
   const promotions = [
     {
-      id: '1',
+      id: 'static-1',
       title: 'Grow your knowledge',
       description:
         'Empower your teaching with workshops and self-paced learning.',
@@ -30,7 +30,7 @@ const PermanentPromotions: React.FC = () => {
       ),
     },
     {
-      id: '2',
+      id: 'static-2',
       title: 'Help improve Code.org',
       description:
         'Participate in user research to help us improve our platform for everyone.',
@@ -47,9 +47,9 @@ const PermanentPromotions: React.FC = () => {
   ];
 
   return (
-    <div className={styles.staticPromotions}>
+    <>
       {promotions.map(promotion => (
-        <div key={promotion.id} className={styles.staticPromotion}>
+        <li key={promotion.id} className={styles.staticPromotion}>
           <div className={styles.staticPromotionText}>
             <BodyTwoText>
               <StrongText>{promotion.title}</StrongText>
@@ -61,9 +61,9 @@ const PermanentPromotions: React.FC = () => {
             </Link>
           </div>
           {promotion.image}
-        </div>
+        </li>
       ))}
-    </div>
+    </>
   );
 };
 

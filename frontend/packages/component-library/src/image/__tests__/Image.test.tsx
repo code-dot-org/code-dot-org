@@ -20,6 +20,18 @@ describe('Image Component', () => {
     expect(figure.className).toMatch(/figure-hasBoxShadow/);
   });
 
+  it('applies rounded corners class', () => {
+    render(
+      <Image
+        src="test.jpg"
+        altText="Has rounded corners"
+        hasRoundedCorners={true}
+      />,
+    );
+    const figure = screen.getByRole('figure');
+    expect(figure.className).toMatch(/figure-hasRoundedCorners/);
+  });
+
   it('renders Image with provided className styles', () => {
     const className = 'customClass';
     const cssSelector = `figure.${className}`;

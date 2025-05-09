@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-22 06:01:20 UTC",
+    "serialized_at": "2025-04-23 05:10:19 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -10514,7 +10514,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA-UserInput-L5_revised-2025"
+          "CSA-UserInput-L5_alt-revised-2025"
         ],
         "lesson.key": "User Input",
         "lesson_group.key": "lessonGroup-18",
@@ -10522,7 +10522,7 @@
         "activity_section.key": "1c3450ba-a02d-48c5-a72c-0912c418850e"
       },
       "level_keys": [
-        "CSA-UserInput-L5_revised-2025"
+        "CSA-UserInput-L5_alt-revised-2025"
       ]
     },
     {
@@ -13031,9 +13031,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA-UserInput-L5_revised-2025",
+        "level.key": "CSA-UserInput-L5_alt-revised-2025",
         "script_level.level_keys": [
-          "CSA-UserInput-L5_revised-2025"
+          "CSA-UserInput-L5_alt-revised-2025"
         ],
         "lesson.key": "User Input",
         "lesson_group.key": "lessonGroup-18",
@@ -14594,7 +14594,7 @@
     },
     {
       "name": "Classes and Objects",
-      "url": "https://docs.google.com/presentation/d/1sMR2QXHNBTaW9SKgI7jA93aZesAUbogoTQqduyrHDUQ/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/10wz46H66aYhI-sKgC-IX2wRIOD-07WlyanJ-uvUVKZQ/edit?usp=sharing",
       "key": "classes_and_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -14640,7 +14640,7 @@
     },
     {
       "name": "Constructors and Inheritance",
-      "url": "https://docs.google.com/presentation/d/1AG3dZ85l3CdkKpqQt7jpaEPYZnKzBjWsa48NBmhk6Eo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1NeOHiyCvB7qfShvtPHfcy4j544pwR-GzWRO6WGHeYfc/edit#slide=id.g34e6851f59a_0_0",
       "key": "constructors_and_inheritance",
       "properties": {
         "audience": "Verified Teacher",
@@ -14701,7 +14701,7 @@
     },
     {
       "name": "Debugging Strategies",
-      "url": "https://docs.google.com/presentation/d/1JebRe7kA8gc80b3vrG9zrOZjNtezlIINHuMpAzkz4gk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1AZ69fzh8YayY5ikBj5GIsVeCRrzpiUd6IjY0eyEdYBo/edit?usp=sharing",
       "key": "debugging_strategies",
       "properties": {
         "audience": "Verified Teacher",
@@ -14782,7 +14782,7 @@
     },
     {
       "name": "Instantiating Objects",
-      "url": "https://docs.google.com/presentation/d/14S28Ksj3oLnR8GYbnIlWbdY8KqgHTFpPPcHuWW7mQo8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1wpMXFQtl4B5XjokMvkk2VU1RceU_soEnfMO6H8nwYoY/edit?usp=sharing",
       "key": "instantiating_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -15768,7 +15768,7 @@
     },
     {
       "name": "Writing Methods",
-      "url": "https://docs.google.com/presentation/d/1yST_x1sNq2yOtlmWqqXYT80-WxABrUsuu_S_w12VSWM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1h1xVg0eNuke62f1cbQmodYRgpPd7SkFm0j-Z8GKx9_E/edit?usp=sharing",
       "key": "writing_methods",
       "properties": {
         "audience": "Verified Teacher",

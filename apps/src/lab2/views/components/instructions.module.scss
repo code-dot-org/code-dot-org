@@ -29,12 +29,12 @@
   }
 }
 
-.instructions-dark {
+.instructions-Dark {
   @extend %instructions;
   background-color: $neutral_dark;
 }
 
-.instructions-light {
+.instructions-Light {
   @extend %instructions;
   background-color: $light_white;
 }
@@ -109,20 +109,23 @@
 
 %text {
   position: relative;
-  overflow: hidden;
   white-space: pre-wrap;
   border-radius: 4px;
   margin-bottom: 10px;
   animation: slidein 0.5s;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
 }
 
-.text-dark {
+.text-Dark {
   @extend %text;
   background-color: $neutral_light;
   color: $neutral_dark;
 }
 
-.text-light {
+.text-Light {
   @extend %text;
   background-color: $light_white;
   color: $neutral_dark;
@@ -136,6 +139,12 @@
   flex-direction: column;
 }
 
+.scrollArea {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
 %message {
   position: relative;
   padding: 15px 20px 5px 20px;
@@ -143,16 +152,22 @@
   animation: slidein 0.5s;
 }
 
-.message-dark {
+.message-Dark {
   @extend %message;
   background-color: $neutral_light;
   color: $neutral_dark;
 }
 
-.message-light {
+.message-Light {
   @extend %message;
   background-color: $light_gray_50;
   color: $neutral_dark;
+}
+
+.predictSummary {
+  padding: 0;
+  margin-top: 8px;
+  margin-bottom: 6px;
 }
 
 .buttonInstruction {

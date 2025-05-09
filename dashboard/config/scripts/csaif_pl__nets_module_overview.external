@@ -14,9 +14,9 @@ markdown <<MARKDOWN
 <div style="display: flex; align-items: center; gap: 15px;">
         <img src="https://images.code.org/d7a2764589820d4023ca876e49c892c1-image-1740592077414.png" alt="Lesson 1 Icon" style="width: 20%; max-width: 120px; height: auto;">
         <div style="flex: 1; background: #f7f8fa; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt;">
-            <h3><b>Lesson 1 -  Teaching Networks and the Internet</b></h3>
+            <h3><b>Lesson 1 -  Teaching The Fabric of the Internet and AI</b></h3>
             <p style = "font-size: 14pt";><strong>⭐️ You are here!⭐️</strong> </p><p style = "font-size: 14pt";>            
-           This lesson provides an introduction to the Networks and the Internet unit and professional learning module. It offers a brief overview of course resources and features.<br><br> <em>10 minutes</em></p>
+           This lesson provides an introduction to the The Fabric of the Internet and AI unit and professional learning module. It offers a brief overview of course resources and features.<br><br> <em>10 minutes</em></p>
         </div>
     </div>
 
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
         <img src="https://images.code.org/3d11b3154389d2caa405683ffda44ff6-image-1740592165845.png" alt="Lesson 2 Icon" style="width: 20%; max-width: 120px; height: auto;">
         <div style="flex: 1; background: #B7E0E5; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); ">
             <h3> <b>Lesson 2 - Lesson Exploration</b></h3>
-            <p style = "font-size: 14pt";>This lesson explores key networks and Internet concepts, introduces important pedagogical approaches to teaching the unit, and provides time for teachers to explore selected lessons and activities from the Networks and the Internet unit.<br><br> <em>50 minutes</em></p>
+            <p style = "font-size: 14pt";>This lesson explores key networks and Internet concepts, introduces important pedagogical approaches to teaching the unit, and provides time for teachers to explore selected lessons and activities from the The Fabric of the Internet and AI unit.<br><br> <em>50 minutes</em></p>
         </div>
     </div>
     

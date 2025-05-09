@@ -24,7 +24,6 @@ Feature: App Lab Scenarios
     And element "#designModeButton" is hidden
     And element "#viewDataButton" is hidden
 
-  @no_mobile
   Scenario: Can click a button in shared app
     Given I ensure droplet is in text mode
     And I append text to droplet "button('testButton1', 'Click me');\n"

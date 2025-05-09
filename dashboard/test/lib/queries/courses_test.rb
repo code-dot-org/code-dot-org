@@ -6,35 +6,36 @@ class Queries::CoursesTest < ActiveSupport::TestCase
   describe '.get_course_context' do
     let(:script_name) {'test-script'}
     let(:unit) {nil}
+    let(:unit_group) {nil}
+    let(:unit_group_unit) {nil}
+    let(:course_context) do
+      {
+        unit_group: unit_group,
+        unit_group_unit: unit_group_unit,
+        unit: unit,
+      }
+    end
     let(:subject) {Queries::Courses.get_course_context(script_name)}
 
     context 'unit is nil' do
-      it 'returns nil' do
-        _(subject).must_be_nil
+      it 'returns course context' do
+        _(subject).must_equal course_context
       end
     end
 
     context 'unit is defined' do
       let!(:unit) {create :unit, name: script_name}
-      let(:unit_group_unit) {nil}
 
       context 'unit_group_unit is nil' do
-        it 'returns nil' do
-          _(subject).must_be_nil
+        it 'returns course context' do
+          _(subject).must_equal course_context
         end
       end
 
       context 'unit_group_unit is defined' do
-        let(:course) {create :unit_group}
+        let(:unit_group) {create :unit_group}
         let(:unit_position) {123}
-        let!(:unit_group_unit) {create :unit_group_unit, course_id: course.id, position: unit_position, script_id: unit.id}
-        let(:course_context) do
-          {
-            course: course,
-            unit_group_unit: unit_group_unit,
-            unit: unit,
-          }
-        end
+        let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, position: unit_position, script_id: unit.id}
 
         it 'returns course context' do
           _(subject).must_equal course_context

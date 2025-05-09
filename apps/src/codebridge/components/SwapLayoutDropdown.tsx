@@ -1,14 +1,12 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {PopUpButton} from '@codebridge/PopUpButton/PopUpButton';
+import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 /*
   Please note - this is a fairly brittle component in that it's only allowing toggling between
@@ -55,11 +53,14 @@ const SwapLayoutDropdown: React.FunctionComponent = () => {
       alignment="right"
       disabled={isRunningOrValidating}
       ariaLabel={codebridgeI18n.consoleOptions()}
+      initialFocusId="swapLayoutButton"
     >
-      <div onClick={onLayoutChange} className={darkModeStyles.dropdownItem}>
-        <FontAwesomeV6Icon iconName={iconName} iconStyle={'solid'} />
-        <div>{layoutLabel}</div>
-      </div>
+      <PopUpButtonOption
+        id="swapLayoutButton"
+        iconName={iconName}
+        labelText={layoutLabel}
+        clickHandler={onLayoutChange}
+      />
     </PopUpButton>
   );
 };

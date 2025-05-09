@@ -1,0 +1,32 @@
+{
+  "name": "virtual-pl-csp-summer-2025",
+  "script_names": [
+    "virtual-pl-csp-summer-day1-2025",
+    "virtual-pl-csp-summer-day2-2025",
+    "virtual-pl-csp-summer-day3-2025",
+    "virtual-pl-csp-summer-day4-2025",
+    "virtual-pl-csp-summer-day5-2025"
+  ],
+  "original_script_names": [
+    "virtual-pl-csp-summer-day1-2025",
+    "virtual-pl-csp-summer-day2-2025",
+    "virtual-pl-csp-summer-day3-2025",
+    "virtual-pl-csp-summer-day4-2025",
+    "virtual-pl-csp-summer-day5-2025"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "virtual-pl-csp-summer",
+    "has_numbered_units": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

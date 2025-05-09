@@ -350,14 +350,18 @@ class ScriptsController < ApplicationController
 
   private def set_unit
     course_name = params[:course_course_name]
-    if course_name
-      @course = UnitGroup.get_from_cache(course_name)
-      raise ActiveRecord::RecordNotFound unless @course
-      @unit_position = params[:position]
-      @unit_group_unit = UnitGroupUnit.get_with_position_from_cache(@course.id, @unit_position)
-      @script = Unit.get_from_cache(@unit_group_unit.script_id) if @unit_group_unit
+    @unit_position = params[:position]
+    if course_name && @unit_position
+      context = Queries::Courses.get_unit_context(course_name, @unit_position)
+      @course = context[:unit_group]
+      @unit_group_unit = context[:unit_group_unit]
+      @script = context[:unit]
     else
       @script = get_unit_by_name
+      raise ActiveRecord::RecordNotFound unless @script
+      @course = @script.original_unit_group
+      @unit_group_unit = @script.unit_group_units.find {|ugu| ugu.unit_group == @course}
+      @unit_position = @unit_group_unit&.position
     end
     raise ActiveRecord::RecordNotFound unless @script
   end

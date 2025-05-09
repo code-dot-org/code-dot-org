@@ -3,6 +3,9 @@
   "script_names": [
     "elem-game-design-2024"
   ],
+  "original_script_names": [
+    "elem-game-design-2024"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
