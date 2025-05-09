@@ -75,6 +75,8 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
       }, 100); // Allows for small but visible close delay
     };
 
+    // Use useImperativeHandle hook to let the parent control visibility in certain cases
+    // without needing to refactor all components that use WithTooltip.
     useImperativeHandle(ref, () => ({
       hideTooltip: () => {
         clearHideTimeout();
