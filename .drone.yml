@@ -315,10 +315,9 @@ steps:
     image: codedotorg/code-dot-org:1.15
     pull: always
     commands:
-      - bundle install
-      - bundle exec rake install
-      - bundle exec rake build
-      - mysqldump -u root -B dashboard_test > /tmp/dashboard_test.sql
+      - sudo chown -R ci:ci .
+      - /entrypoint.sh docker/ui_tests.sh
+      - mysqldump -u root -B dashboard_test > dashboard/db/dashboard_test.sql
 
   - name: cache-staging-database
     image: plugins/s3-cache
@@ -329,7 +328,7 @@ steps:
       debug: true
       pull: true
       mount:
-        - /tmp/dashboard_test.sql
+        - dashboard/db/dashboard_test.sql
 
 trigger:
   # branch:
