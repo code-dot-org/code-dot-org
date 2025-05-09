@@ -41,6 +41,8 @@
 const chalk = require('chalk');
 const child_process = require('child_process');
 
+const {PEGASUS_ENTRIES} = require('../webpackEntryPoints');
+
 const SILENCED = [
   // app types loaded conditionally from _apps_dependencies.html.haml
   'ailab',
@@ -92,7 +94,7 @@ const SILENCED = [
   'googleblockly',
   'brambleHost',
   'levelbuilder',
-];
+].concat(Object.keys(PEGASUS_ENTRIES));
 const SITES_CONFIG = {
   studio: {
     entryPrefix: '',
