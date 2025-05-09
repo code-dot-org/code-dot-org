@@ -22,7 +22,7 @@ function ExpandedProgressDataColumn({
   expandedChoiceLevelIds,
 }) {
   const getSingleLevelColumn = React.useCallback(
-    (level, studentId, propOverrides = {}) => {
+    (level, studentId, index, propOverrides = {}) => {
       return (
         <LevelDataCell
           studentId={studentId}
@@ -32,6 +32,7 @@ function ExpandedProgressDataColumn({
           lessonId={lesson.id}
           metadataExpanded={expandedMetadataStudentIds.includes(studentId)}
           {...propOverrides}
+          index={index}
         />
       );
     },
@@ -39,16 +40,16 @@ function ExpandedProgressDataColumn({
   );
 
   const getExpandedChoiceLevel = React.useCallback(
-    (level, studentId) => [
-      getSingleLevelColumn(level, studentId, {
+    (level, studentId, rowIndex) => [
+      getSingleLevelColumn(level, studentId, rowIndex, {
         expandedChoiceLevel: true,
         className: styles.expandedLevelCellFirst,
       }),
-      ...level.sublevels.map((sublevel, index) => {
-        return getSingleLevelColumn(sublevel, studentId, {
+      ...level.sublevels.map((sublevel, colIndex) => {
+        return getSingleLevelColumn(sublevel, studentId, rowIndex, {
           parentLevelId: level.id,
           className:
-            index === level.sublevels.length - 1
+            colIndex === level.sublevels.length - 1
               ? classNames(
                   styles.expandedLevelCellLast,
                   styles.expandedLevelCell
@@ -64,7 +65,7 @@ function ExpandedProgressDataColumn({
   const progress = React.useMemo(
     () => (
       <tbody className={styles.expandedTable}>
-        {sortedStudents.map(student => (
+        {sortedStudents.map((student, index) => (
           <tr className={styles.expandedLevelColumn} key={student.id}>
             <th hidden={true} id={getStudentRowHeaderId(student.id)}>
               {getFullName(student)}
@@ -74,9 +75,9 @@ function ExpandedProgressDataColumn({
                 level.sublevels?.length > 0 &&
                 expandedChoiceLevelIds.includes(level.id)
               ) {
-                return getExpandedChoiceLevel(level, student.id);
+                return getExpandedChoiceLevel(level, student.id, index);
               }
-              return [getSingleLevelColumn(level, student.id)];
+              return [getSingleLevelColumn(level, student.id, index)];
             })}
           </tr>
         ))}

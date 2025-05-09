@@ -24,12 +24,17 @@ function LessonDataCell({
   addExpandedLesson,
   studentId,
   metadataExpanded,
+  index,
 }) {
   const noLevels = !lessonHasLevels(lesson);
   const finished = studentLessonProgress?.completedPercent === 100;
   const partiallyComplete = studentLessonProgress && !finished;
 
   const interactive = !noLevels;
+
+  console.log('lfm', {
+    class: index % 2 === 0 ? styles.darkerBackground : styles.lighterBackground,
+  });
 
   const getCellComponent = children => {
     if (lesson.lockable && interactive) {
@@ -38,7 +43,8 @@ function LessonDataCell({
           className={classNames(
             styles.gridBox,
             styles.gridBoxLesson,
-            locked && styles.littleLock
+            locked && styles.littleLock,
+            index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
           )}
           href={teacherDashboardUrl(sectionId, '/assessments')}
           openInNewTab
@@ -57,7 +63,8 @@ function LessonDataCell({
           styles.gridBox,
           styles.gridBoxLesson,
           locked && styles.littleLock,
-          interactive && styles.lessonInteractive
+          interactive && styles.lessonInteractive,
+          index % 2 === 0 ? styles.lighterBackground : styles.darkerBackground
         )}
         onClick={expandLesson}
         // eslint-disable-next-line react/forbid-dom-props
@@ -127,4 +134,5 @@ LessonDataCell.propTypes = {
   addExpandedLesson: PropTypes.func.isRequired,
   studentId: PropTypes.number.isRequired,
   metadataExpanded: PropTypes.bool,
+  index: PropTypes.number,
 };
