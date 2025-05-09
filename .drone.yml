@@ -297,7 +297,8 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+      # - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .
+      - git clone --branch $DRONE_SOURCE_BRANCH $DRONE_GIT_HTTP_URL .
 
   # - name: cache-staging-clone
   #   image: plugins/s3-cache
