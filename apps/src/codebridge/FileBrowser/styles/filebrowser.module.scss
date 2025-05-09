@@ -14,7 +14,8 @@
 
 .fileBrowserContents {
   overflow-y: auto;
-  scrollbar-color: var(--background-neutral-senary) var(--background-neutral-secondary);
+  scrollbar-color: var(--background-neutral-senary)
+    var(--background-neutral-secondary);
   height: 100%;
 }
 
@@ -78,7 +79,8 @@ button.button-kebab {
   // are more specific than a single class.
   // We need a different hover color for the kebab button because it is on top of another
   // element with the standard hover color.
-  &:hover, &:active {
+  &:hover,
+  &:active {
     background-color: var(--background-neutral-quinary) !important;
   }
 }
@@ -143,12 +145,12 @@ div.draggable:focus-within .button-kebab {
 }
 
 .backpackErrorMessage {
-  color: var(--text-error-primary);;
+  color: var(--text-error-primary);
   font-size: 1rem;
 }
 
 .dragging {
-  background-color: var(--background-neutral-quaternary);;
+  background-color: var(--background-neutral-quaternary);
 }
 
 .notDraggable:focus-visible,
