@@ -1,0 +1,48 @@
+{
+  "entryContent": {
+    "fields": {
+      "internalName": {
+        "en-US": "Video Carousel Test"
+      },
+      "carouselName": {
+        "en-US": "Video Carousel Test"
+      },
+      "carouselType": {
+        "en-US": "Video"
+      },
+      "slides": {
+        "en-US": [
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "53hnyQQVUfylnTa7f24dDJ"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3BLuF3jm0oTV17RPwLOgC6"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3oxrIQkHqzpbTrXqwk0aIa"
+            }
+          },
+          {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4xyTmh7jAVCC3glKeke0cP"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "contentType": "carousel"
+}

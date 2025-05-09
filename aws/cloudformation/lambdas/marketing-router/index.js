@@ -9,13 +9,15 @@ const marketingPaths = {
   // e.g. '/videos': true,
 }
 
+const nextJsAssetsPath = '/_next/static/';
+
 module.exports.handler = (event, context, callback) => {
   try {
     const request = event?.Records?.[0]?.cf?.request;
     const uri = request?.uri;
   
     // Set CMS origin if the requested path matches
-    if (marketingPaths[uri]) {
+    if (marketingPaths[uri] || (uri && uri.startsWith(nextJsAssetsPath))) {
       request.origin = {
         custom: {
           domainName: marketingDomain,

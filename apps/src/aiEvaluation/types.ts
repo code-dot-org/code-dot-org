@@ -4,20 +4,17 @@ export interface Evaluation {
   evaluation: string;
   reasoning: string;
   type: string;
+  studentId: number;
+  levelId: number;
+  unitId: number;
+  codeVersion?: string;
 }
 
 export interface UserLevelSkillEvaluation extends Evaluation {
   type: 'UserLevelSkillEvaluation';
-  studentId: number;
-  levelId: number;
-  unitId: number;
   // TODO: Add skillId
 }
 
 export interface UserLevelEvaluation extends Evaluation {
   type: 'UserLevelEvaluation';
-  studentId: number;
-  levelId: number;
-  unitId: number;
-  codeVersion?: string;
 }

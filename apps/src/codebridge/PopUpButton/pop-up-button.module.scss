@@ -1,11 +1,11 @@
-@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 .popup-button-menu {
   position: absolute;
   cursor: pointer;
-  border: 1px solid #54595e;
-  background-color: $light_gray_950;
-  color: $white;
+  border: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
   min-width: 100px;
   text-align: left;
   vertical-align: top;
