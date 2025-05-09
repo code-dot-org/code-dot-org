@@ -632,7 +632,7 @@ nav.main .help_button .help_icon {
 }
 
 nav.main .help_button .help_contents {
-  top: 44px;
+  top: 40px;
 }
 
 nav.main #hamburger #hamburger-icon {
@@ -641,7 +641,7 @@ nav.main #hamburger #hamburger-icon {
 }
 
 nav.main #hamburger #hamburger-contents {
-  top: 51px;
+  top: 42px;
   right: -3px;
 }
 
