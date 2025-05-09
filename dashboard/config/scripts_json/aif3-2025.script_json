@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-07 22:00:17 UTC",
+    "serialized_at": "2025-05-08 15:05:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2957,7 +2957,7 @@
       "key": "b34e517c-ce8c-46a8-9fe1-5b725e3cc316",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  What should the next steps be for Alice?\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no definitive right answer here, as long as students can explain and justify their thoughts. Some students may choose option A, given that the device works as intended for the specific target user – gamers with mobility issues. Other students may gravitate towards options B or C - either fixing it after launch, or delaying in order to fix - because it doesn’t work as well as it should for all users and it should be made more equitable before launching.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *Who should Alice prioritize in her design decisions, and how might her choice affect the product’s purpose and impact?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no definitive right answer here, as long as students can explain and justify their thoughts. Some students may choose option A, given that the device works as intended for the specific target user – gamers with mobility issues. Other students may gravitate towards options B or C - either fixing it after launch, or delaying in order to fix - because it doesn’t work as well as it should for all users and it should be made more equitable before launching.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3007,7 +3007,7 @@
       "key": "d9bc133d-d590-40f3-a581-a3971463d6ed",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What should Josh do about his device?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This answer tends to have a more moral or ethical component, since the technology shows a clear gender bias against women, who are more likely to have higher pitched voices and therefore not be able to use the technology. Students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are the risks of releasing a product that works better for some groups than others, and how could Josh design more fairly for all users?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This answer tends to have a more moral or ethical component, since the technology shows a clear gender bias against women, who are more likely to have higher pitched voices and therefore not be able to use the technology. Students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3057,7 +3057,7 @@
       "key": "55109ed7-85bc-47d7-862d-a7a67539256e",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What should the next steps be for Lydia?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Similar to the previous scenario, students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released. Because this device excludes a group of users who are color blind, launching it as is means that the device is inequitable and not accessible for all users. Students should consider how Lydia can improve her design by considering all intended users.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Give one example of something you heard a classmate share that made you think about one of the scenarios differently.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noting when someone shared something from a different perspective. You may need to push students to explore this part a bit more, but the goal here is for them to understand the collaborative decision making with a group of people who bring different perspectives leads to better outcomes.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How can Lydia redesign her product so that all users, including those who are color blind, can understand its signals clearly?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students understand that people experience technology differently, and that good design includes options that work for everyone—not just most people.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Give one example of something you heard a classmate share that made you think about one of the scenarios differently.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noting when someone shared something from a different perspective. You may need to push students to explore this part a bit more, but the goal here is for them to understand the collaborative decision making with a group of people who bring different perspectives leads to better outcomes.",
         "tips": [
           {
             "type": "assessmentOpportunity",

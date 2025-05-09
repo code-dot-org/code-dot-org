@@ -56,7 +56,6 @@ export const SectionCard: React.FC<SectionCardProps> = ({
               size="s"
               aria-label={i18n.dragSection()}
               type="tertiary"
-              className={styles.sectionCardDragButton}
             />
           )}
           <SectionAvatar

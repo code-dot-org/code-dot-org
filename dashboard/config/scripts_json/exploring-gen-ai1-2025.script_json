@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-07 16:24:50 UTC",
+    "serialized_at": "2025-05-08 22:45:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -880,6 +880,18 @@
       "seeding_key": {
         "lesson_activity.key": "3a11c3ce-e63e-4b61-a38c-0b0c1f0dc3ed",
         "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "781a7a9f-145d-4669-a6be-c11922c8845c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
@@ -2295,8 +2307,19 @@
       }
     },
     {
-      "key": "305ef97f-ae88-4d13-b79a-9beedbbdac24",
+      "key": "72f4a850-b0c9-42ba-92fe-0e98d7923768",
       "position": 2,
+      "properties": {
+        "progression_name": "Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "72f4a850-b0c9-42ba-92fe-0e98d7923768",
+        "lesson_activity.key": "c6d011d8-2e92-419d-8104-52fc7f2d879d"
+      }
+    },
+    {
+      "key": "305ef97f-ae88-4d13-b79a-9beedbbdac24",
+      "position": 3,
       "properties": {
         "progression_name": "Wrap Up"
       },
@@ -2421,6 +2444,17 @@
       "seeding_key": {
         "activity_section.key": "af42d55e-7b62-4d72-9dd6-9144c3a57921",
         "lesson_activity.key": "3a11c3ce-e63e-4b61-a38c-0b0c1f0dc3ed"
+      }
+    },
+    {
+      "key": "fa447aeb-24a4-4bb1-907f-f9536384dd34",
+      "position": 1,
+      "properties": {
+        "progression_name": "Prompt Pair Comparison"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa447aeb-24a4-4bb1-907f-f9536384dd34",
+        "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c"
       }
     },
     {
@@ -3825,6 +3859,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-attention-test-v1"
+        ],
+        "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "72f4a850-b0c9-42ba-92fe-0e98d7923768"
+      },
+      "level_keys": [
+        "genai-attention-test-v1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "genai-lesson8-wrapup-level1_2025"
         ],
@@ -3845,7 +3901,29 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompt Pair Comparison"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-choices-comparison"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "fa447aeb-24a4-4bb1-907f-f9536384dd34"
+      },
+      "level_keys": [
+        "genai-choices-comparison"
+      ]
+    },
+    {
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3870,7 +3948,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3895,7 +3973,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3920,7 +3998,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3945,7 +4023,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3970,7 +4048,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3995,7 +4073,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4020,7 +4098,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4045,7 +4123,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4070,7 +4148,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4095,7 +4173,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4120,7 +4198,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4424,6 +4502,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "genai-attention-test-v1",
+        "script_level.level_keys": [
+          "genai-attention-test-v1"
+        ],
+        "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "72f4a850-b0c9-42ba-92fe-0e98d7923768"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "genai-lesson8-wrapup-level1_2025",
         "script_level.level_keys": [
           "genai-lesson8-wrapup-level1_2025"
@@ -4432,6 +4522,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "305ef97f-ae88-4d13-b79a-9beedbbdac24"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-choices-comparison",
+        "script_level.level_keys": [
+          "genai-choices-comparison"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "fa447aeb-24a4-4bb1-907f-f9536384dd34"
       }
     },
     {
@@ -5357,6 +5459,19 @@
       }
     },
     {
+      "name": "Prompt Comparisons",
+      "url": "https://docs.google.com/document/d/1B5gl9KOOadsiHj0y6IsswjtEkohPxJ1lrbCbuXcm8zg/view",
+      "key": "prompt_comparisons",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "prompt_comparisons"
+      }
+    },
+    {
       "name": "RecipeBot Data Curation",
       "url": "https://docs.google.com/document/d/1HmdwAW236aJgN8xu3ezGHultrkwZSgKKpgySHLX_4ms/edit",
       "key": "recipebot_data_curation",
@@ -5454,6 +5569,18 @@
       },
       "seeding_key": {
         "resource.key": "what_makes_a_computer_a_computer_"
+      }
+    },
+    {
+      "name": "Who's Making the Choices?",
+      "url": "https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/edit",
+      "key": "who_s_making_the_choices_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "who_s_making_the_choices_"
       }
     }
   ],
@@ -5882,6 +6009,18 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "is_it_biased_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "prompt_comparisons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "who_s_making_the_choices_"
       }
     }
   ],

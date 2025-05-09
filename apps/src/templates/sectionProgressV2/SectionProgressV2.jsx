@@ -132,7 +132,7 @@ function SectionProgressV2({
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
           {DCDO.get('show-download-progress-csv', false) && (
-            <DownloadProgressCsv />
+            <DownloadProgressCsv isLoading={isLoading} />
           )}
           <MoreOptionsDropdown />
         </Heading6>

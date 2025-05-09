@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 17:11:02 UTC",
+    "serialized_at": "2025-05-09 06:00:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -221,7 +221,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nStudents have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, they explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. Students learn about short-circuit evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators.",
-        "preparation": "* **(Optional)** Print copies of the Logical Operators Guided Notes (one for each student)\n* Print copies of the Truth Tables handout (one for each student)\n* Gather the Dataset Summaries handouts collected in Lesson 5\n* Print copies of the Finding Patterns handout (one for each student)",
+        "preparation": "* **(Optional)** Print copies of the Logical Operators Guided Notes (one for each student)\n* Print copies of the Truth Tables handout (one for each student)\n* Gather the Dataset Summaries handouts collected in Lesson 5\n* Print copies of the Finding Patterns handout (one for each student)\n* Ensure students are able to access the Datasets in Level 5. If students do not have access, you may choose to download the datasets from the Lesson Resources and make them available to students through other means. ",
         "student_overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nYou have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, you explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. You learn about short-circuited evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators."
       },
       "seeding_key": {
@@ -6581,6 +6581,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -8105,6 +8108,18 @@
       }
     },
     {
+      "name": "Datasets",
+      "url": "https://drive.google.com/file/d/1OhrXnCwCDN4kW4xFnrHVX0srnGjfWA9X/view?usp=sharing",
+      "key": "datasets_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "datasets_1"
+      }
+    },
+    {
       "name": "De Morgan's Laws",
       "url": "https://docs.google.com/presentation/d/1frB5eO942R_r6JkYQBVHoXLXXSzDKvSuMWcVIoLYFZs/edit?usp=drive_link",
       "key": "de_morgan_s_laws_2",
@@ -8932,6 +8947,12 @@
       "seeding_key": {
         "lesson.key": "Logical Operators",
         "resource.key": "_key_truth_tables_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Logical Operators",
+        "resource.key": "datasets_1"
       }
     },
     {

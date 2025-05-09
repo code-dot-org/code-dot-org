@@ -1,3 +1,4 @@
+import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import classNames from 'classnames';
 import React, {ChangeEvent, useState} from 'react';
@@ -35,6 +36,10 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
   );
   const numAllowedFiles = MAX_NUM_FILES - numStagedFiles;
   const levelName = useAppSelector(state => state.lab.levelProperties?.name);
+  const hasStarterAssets = useAppSelector(state => {
+    const starterAssets = state.lab.levelProperties?.starterAssets;
+    return starterAssets && Object.keys(starterAssets).length > 0;
+  });
   const [showAssetManager, setShowAssetManager] = useState(false);
 
   const onUploadFiles = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -166,6 +171,51 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
     return null;
   }
 
+  const buttonProps: ButtonProps = {
+    type: 'secondary',
+    color: 'gray',
+    iconLeft: {iconName: 'upload'},
+    text: aichatI18n.upload(),
+  };
+
+  const commonProps = {
+    size: 's',
+    disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
+  } as const;
+
+  const uploadButton = hasStarterAssets ? (
+    <ActionDropdown
+      {...commonProps}
+      name="uploadDropdown"
+      labelText={aichatI18n.upload()}
+      triggerButtonProps={buttonProps}
+      className={classNames(styles.upload, styles.dropdown)}
+      options={[
+        {
+          value: 'fromLibrary',
+          label: 'From Library',
+          icon: {iconName: 'copy'},
+          onClick: () => {
+            setShowAssetManager(true);
+            dispatch(
+              sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_OPENED, {
+                source: AssetSource.LEVEL,
+              })
+            );
+          },
+        },
+        {
+          value: 'fromDevice',
+          label: 'From Device',
+          icon: {iconName: 'file-magnifying-glass'},
+          onClick: onDeviceUploadClick,
+        },
+      ]}
+    />
+  ) : (
+    <Button {...buttonProps} {...commonProps} onClick={onDeviceUploadClick} />
+  );
+
   return (
     <>
       {levelName && showAssetManager && (
@@ -178,40 +228,7 @@ const UploadButton: React.FC<{isDisabled: boolean}> = ({isDisabled}) => {
         />
       )}
       <FileInput />
-      <ActionDropdown
-        name="uploadDropdown"
-        labelText={aichatI18n.upload()}
-        disabled={numStagedFiles >= MAX_NUM_FILES || isDisabled}
-        size="s"
-        className={classNames(styles.upload, styles.dropdown)}
-        triggerButtonProps={{
-          type: 'secondary',
-          color: 'gray',
-          iconLeft: {iconName: 'upload'},
-          text: aichatI18n.upload(),
-        }}
-        options={[
-          {
-            value: 'fromLibrary',
-            label: 'From Library',
-            icon: {iconName: 'copy'},
-            onClick: () => {
-              setShowAssetManager(true);
-              dispatch(
-                sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_OPENED, {
-                  source: AssetSource.LEVEL,
-                })
-              );
-            },
-          },
-          {
-            value: 'fromDevice',
-            label: 'From Device',
-            icon: {iconName: 'file-magnifying-glass'},
-            onClick: onDeviceUploadClick,
-          },
-        ]}
-      />
+      {uploadButton}
     </>
   );
 };

@@ -133,15 +133,25 @@
 
 .textContent {
   height: 100%;
-  padding: 15px 20px 5px 20px;
+  padding: 15px 10px 5px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
 }
 
-.scrollArea {
+%scrolling-content {
   flex: 1;
   overflow-y: auto;
+  min-height: 70px;
+}
+
+.scrollingContentWithTTS {
+  @extend %scrolling-content;
+  margin-bottom: 25px;
+}
+
+.scrollingContentWithoutTTS {
+  @extend %scrolling-content;
   margin-bottom: 10px;
 }
 
@@ -214,4 +224,8 @@
   details {
     line-height: 1.2;
   }
+}
+
+.bottomComponent {
+  overflow: hidden;
 }

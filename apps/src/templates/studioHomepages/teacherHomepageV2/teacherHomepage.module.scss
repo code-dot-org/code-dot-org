@@ -36,14 +36,6 @@
   margin-bottom: 20px;
 }
 
-.sectionCardDragButton {
-  cursor: grab;
-}
-
-.sectionCardDragButton:active {
-  cursor: grabbing;
-}
-
 .headerButtonRowRight {
   display: flex;
   gap: 6px;
@@ -88,10 +80,15 @@
 
   button {
     margin-inline-end: 6px;
+    cursor: grab;
 
     i {
       font-size: 16px;
     }
+  }
+
+  button:active {
+    cursor: grabbing;
   }
 }
 
@@ -322,6 +319,7 @@
 
   &.promotion-gray {
     background-color: var(--background-neutral-secondary);
+    border: 1px solid var(--borders-neutral-primary);
   }
 
   &.promotion-purple {

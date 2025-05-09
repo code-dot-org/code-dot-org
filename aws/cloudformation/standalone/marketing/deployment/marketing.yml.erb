@@ -613,7 +613,7 @@ Resources:
     Type: AWS::CloudFront::CachePolicy
     Properties:
       CachePolicyConfig:
-        Name: MarketingAppCachePolicy
+        Name: !Sub '${AWS::StackName}-MarketingAppCachePolicy'
         DefaultTTL: 86400
         MaxTTL: 31536000
         MinTTL: 1
@@ -641,7 +641,7 @@ Resources:
   ViewerResponseCloudFrontFunction:
     Type: AWS::CloudFront::Function
     Properties:
-      Name: MarketingAppViewerResponseFunction
+      Name: !Sub '${AWS::StackName}-ViewerResponse'
       AutoPublish: true
       FunctionCode: |
         function handler(event) {

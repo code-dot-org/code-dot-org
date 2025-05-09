@@ -244,7 +244,13 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               id="instructions-text-content"
               className={moduleStyles.textContent}
             >
-              <div className={moduleStyles.scrollArea}>
+              <div
+                className={
+                  offerBrowserTts
+                    ? moduleStyles.scrollingContentWithTTS
+                    : moduleStyles.scrollingContentWithoutTTS
+                }
+              >
                 <EnhancedSafeMarkdown
                   markdown={text}
                   className={moduleStyles.markdownText}
@@ -269,7 +275,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   </InstructorsOnly>
                 )}
               </div>
-              {bottomComponent && <div>{bottomComponent}</div>}
+              {bottomComponent && (
+                <div className={moduleStyles.bottomComponent}>
+                  {bottomComponent}
+                </div>
+              )}
             </div>
           </div>
         )}
