@@ -35,6 +35,7 @@ module Services
                 message: 'Too many client_ids in the audience claim',
                 audience: id_token[:aud],
                 aud_count: id_token[:aud].length,
+                timestamp: (Time.now.to_f * 1000).to_i,
               }.to_json,
             )
             raise ArgumentError, "Invalid Audience Claim: #{id_token[:aud]}, with more than 1 client_id. #{id_token[:aud].length} client_ids given."
