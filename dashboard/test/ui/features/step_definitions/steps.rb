@@ -1185,6 +1185,12 @@ Then /^the overview page contains ([\d]+) assign (?:button|buttons)$/ do |expect
   expect(actual_num).to eq(expected_num.to_i)
 end
 
+When /^I click the button in the unit card for unit "([^"]*)"$/ do |unit_name|
+  unit_card = @browser.find_elements(css: '.uitest-CourseScript').find {|el| el.text.include?(unit_name)}
+  button = unit_card.find_element(xpath: ".//a[contains(., 'Go to Unit')]")
+  button.click
+end
+
 And /^I dismiss the language selector$/ do
   steps <<~GHERKIN
     And I click selector ".close" if I see it
