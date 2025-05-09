@@ -60,7 +60,7 @@ $arrow-size: 1.5rem;
     list-style: none;
     margin: 0;
     position: absolute;
-    top: 64px;
+    top: 54px;
     inset-inline-end: 0;
     min-width: 228px;
     max-width: 300px;
@@ -81,8 +81,6 @@ $arrow-size: 1.5rem;
       padding: 0.5rem;
       display: flex;
       justify-content: space-between;
-      text-overflow: ellipsis;
-      white-space: nowrap;
       overflow: hidden;
       transition: background 0.2s ease-in-out;
 
@@ -179,14 +177,14 @@ $arrow-size: 1.5rem;
   @media (max-width: 1268px) {
     &.show-small-desktop,
     .show-small-desktop {
-      display: block !important;
+      display: flex !important;
     }
   }
 
   @media(max-width: 1023px) {
     &.show-mobile,
     .show-mobile {
-      display: block !important;
+      display: flex !important;
     }
     .show-mobile.item {
       display: flex !important;
@@ -272,7 +270,9 @@ $arrow-size: 1.5rem;
     .header_button {
       margin: unset;
       width: 100%;
-      text-align: center;
+      justify-content: center;
+      height: unset;
+      white-space: unset;
     }
 
     .button-signin, #header_user_signin {

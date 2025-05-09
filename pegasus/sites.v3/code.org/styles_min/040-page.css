@@ -599,6 +599,8 @@ nav.main .button-create-account {
   text-decoration: none;
   padding: 6.5px 16px;
   margin: 0;
+  display: flex;
+  align-items: center;
 }
 
 nav.main .button-create-account {
@@ -616,7 +618,6 @@ nav.main .user_menu {
 
 nav.main .create_menu i,
 nav.main .user_menu i {
-  font-size: 0.875rem;
   width: auto;
 }
 
@@ -670,7 +671,7 @@ html[dir="rtl"] nav.main #hamburger #hamburger-contents {
 
   /* But show the hamburger link */
   nav.main #hamburger-contents > div.show-small-desktop {
-    display: block !important;
+    display: flex !important;
   }
 
   /* But not the mobile ones */
@@ -687,7 +688,7 @@ html[dir="rtl"] nav.main #hamburger #hamburger-contents {
 
   /* But show the hamburger links */
   nav.main #hamburger-contents > div.show-mobile {
-    display: block !important;
+    display: flex !important;
   }
 }
 
