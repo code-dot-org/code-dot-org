@@ -880,7 +880,6 @@ class Level < ApplicationRecord
     {
       name: name,
       id: id,
-      type: type,
       properties: properties,
       isDslDefined: is_a?(DSLDefined)
     }
