@@ -43,7 +43,6 @@ Dashboard::Application.routes.draw do
           get :parent_letter
           get :courses, params: :course_version_name, action: :show
           get :unit, params: :unitName, action: :show
-          get :download_progress_csv, action: :download_progress_csv
           get '*path', action: :show, via: :all, as: :subpath
         end
       end
