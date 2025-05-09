@@ -868,13 +868,51 @@ roles.each do |name, config| %>
     }
     marketing_sites_environment_type_configuration.each do |environment_type, configuration|
   %>
+  GitHubActions<%=environment_type.capitalize%>Role:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: github-actions-cloudformation-<%=environment_type%>-role
+      Description: Role for GitHub Actions to create/update CloudFormation stacks.
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Federated: !Sub "arn:aws:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com"
+            Action: sts:AssumeRoleWithWebIdentity
+            Condition:
+              StringEquals:
+                # See: https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#configuring-the-role-and-trust-policy
+                token.actions.githubusercontent.com:aud: sts.amazonaws.com
+                token.actions.githubusercontent.com:sub: 'repo:code-dot-org/code-dot-org:environment:marketing-sites-<%=environment_type%>'
+      Policies:
+        - PolicyName: github-actions-cloudformation-policy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Sid: CloudFormationPermissions
+                Effect: Allow
+                Action:
+                  - cloudformation:CreateStack
+                  - cloudformation:DescribeStacks
+                  - cloudformation:CreateChangeSet
+                  - cloudformation:DescribeChangeSet
+                  - cloudformation:DeleteChangeSet
+                  - cloudformation:ExecuteChangeSet
+                  - cloudformation:ListStackResources
+                Resource: '*'
+              - Sid: PassRoleToCloudFormation
+                Effect: Allow
+                Action:
+                  - iam:PassRole
+                Resource: !GetAtt CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role.Arn
 
   # Enforce least privilege on Roles created/passed/attached by the Role that provisions marketing site Stacks.
-  RoleCreationBoundaryPolicy<%=environment_type.capitalize%>:
+  MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
       Description: Permissions boundary for Roles created by CloudFormationMarketingSites<%=environment_type.capitalize%>Role
-      ManagedPolicyName: role-permissions-boundary-<%=environment_type%>
+      ManagedPolicyName: marketing-sites-role-permissions-boundary-<%=environment_type%>
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -884,8 +922,7 @@ roles.each do |name, config| %>
               - secretsmanager:GetSecretValue
               - secretsmanager:DescribeSecret
             Resource: 'arn:aws:secretsmanager:*:*:secret:marketing-sites/<%=environment_type%>/*'
-
-          - Sid: AllowCloudfrontInvalidationForDevEnvironment
+          - Sid: AllowCloudfrontInvalidation
             Effect: Allow
             Action:
               - cloudfront:CreateInvalidation
@@ -915,13 +952,8 @@ roles.each do |name, config| %>
         Statement:
           - Effect: Allow
             Principal:
-              Federated: !Sub "arn:aws:iam::${AWS::AccountId}:oidc-provider/token.actions.githubusercontent.com"
-            Action: sts:AssumeRoleWithWebIdentity
-            Condition:
-              StringEquals:
-                # See: https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services#configuring-the-role-and-trust-policy
-                token.actions.githubusercontent.com:aud: sts.amazonaws.com
-                token.actions.githubusercontent.com:sub: 'repo:code-dot-org/code-dot-org:environment:marketing-sites-<%=environment_type%>'
+              Service: cloudformation.amazonaws.com
+            Action: sts:AssumeRole
       # The permissions explicitly granted to this Role may never exceed the permissions granted to Engineers.
       PermissionsBoundary: !Ref DevPermissions
       ManagedPolicyArns: []
@@ -949,7 +981,7 @@ roles.each do |name, config| %>
                 # marketing-sites-development-code-org-my-other-branch
                 Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/marketing-sites-<%=environment_type%>-*"
               # The Role that provisions marketing site Stacks can only create/pass/attach Roles with policies
-              # constrained by a Permissions Boundary and that can only be assumed by a narrow set of services.
+              # constrained by a Permissions Boundary and those Roles can only be assumed by a specific set of services.
               - Sid: AllowRoleCreationWithBoundary
                 Effect: Allow
                 Action:
@@ -962,7 +994,7 @@ roles.each do |name, config| %>
                 Resource: '*'
                 Condition:
                   StringEquals:
-                    iam:PermissionsBoundary: !Ref RoleCreationBoundaryPolicy<%=environment_type.capitalize%>
+                    iam:PermissionsBoundary: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
                   StringEqualsIfExists:
                     iam:PassedToService:
                       - ecs-tasks.amazonaws.com
