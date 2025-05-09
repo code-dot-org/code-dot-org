@@ -15,6 +15,8 @@ import {evaluateStudentWork} from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
 import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import AiTutorManager from '@cdo/apps/lab2/ai/AiTutorManager';
+import {setAiTutorResponse} from '@cdo/apps/redux/instructions';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
@@ -147,6 +149,8 @@ function loadLevel() {
   Applab.softButtons_ = level.softButtons || {};
   Applab.appWidth = applabConstants.getAppWidth(level);
   Applab.appHeight = applabConstants.APP_HEIGHT;
+
+  Applab.aiTutorManager = new AiTutorManager();
 
   // In share mode we need to reserve some number of pixels for our in-app
   // footer. We do that by making the play space slightly smaller elsewhere.
@@ -1141,6 +1145,8 @@ Applab.runButtonClick = function () {
     );
   }
 
+  callAiTutor(config.getCode());
+
   // Enable the Finish button if is present:
   var shareCell = document.getElementById('share-cell');
   if (shareCell) {
@@ -1162,6 +1168,16 @@ Applab.runButtonClick = function () {
 
   postContainedLevelAttempt(studioApp());
 };
+
+async function callAiTutor(code) {
+  const messages = await Applab.aiTutorManager.askAiTutor(
+    "What's wrong with my code?  This is the code: " + code
+  );
+  if (messages && messages.length > 1) {
+    console.log(messages[1].chatMessageText);
+    getStore().dispatch(setAiTutorResponse(messages[1].chatMessageText));
+  }
+}
 
 /**
  * App specific displayFeedback function that calls into
