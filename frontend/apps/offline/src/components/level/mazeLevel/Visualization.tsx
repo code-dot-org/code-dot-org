@@ -1,4 +1,4 @@
-import React, {forwardRef} from 'react';
+import {forwardRef} from 'react';
 
 import Button from '@code-dot-org/component-library/button';
 
@@ -16,7 +16,7 @@ export interface VisualizationProps {
   className?: string;
 }
 
-const Visualization: React.FunctionComponent<VisualizationProps> = forwardRef(
+const Visualization = forwardRef<SVGSVGElement, VisualizationProps>(
   (
     {
       running,
@@ -24,6 +24,7 @@ const Visualization: React.FunctionComponent<VisualizationProps> = forwardRef(
       onRun,
       onReset,
       onStep,
+      onFinish,
       className,
       finishButton,
       stepButton,

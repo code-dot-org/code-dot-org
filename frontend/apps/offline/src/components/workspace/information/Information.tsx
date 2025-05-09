@@ -19,6 +19,8 @@ const Information: React.FunctionComponent<InformationProps> = ({tabs}) => {
         tabs={tabs}
         tabsContainerClassName={moduleStyles.tabs}
         tabPanelsContainerClassName={moduleStyles.tabPanels}
+        onChange={() => {}}
+        defaultSelectedTabValue=""
       />
     </div>
   );

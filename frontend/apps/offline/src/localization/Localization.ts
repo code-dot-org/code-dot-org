@@ -35,6 +35,12 @@ export type LanguageInfo = {
   rtl: boolean;
 };
 
+export const DefaultLanguageInfo: LanguageInfo = {
+  text: 'English',
+  value: 'en',
+  rtl: false,
+};
+
 /**
  * This class handles our dynamic localization engine.
  */
@@ -111,34 +117,9 @@ export class Localization {
    * The list of languages we currently support for the current page.
    */
   get locales(): LanguageInfo[] {
-    // These workarounds will go away when the localization is done completely
-    // on the frontend.
     if (this.localeList.length === 0) {
-      // Localize has not given us any languages... build from the existing
-      // localization dropdown.
-      this.localeList = (
-        (
-          getScriptData('smallfooter') as
-            | {localeOptions: Omit<LanguageInfo, 'rtl'>[]}
-            | undefined
-        )?.localeOptions || []
-      ).map(({text, value}) => ({
-        text,
-        value,
-        rtl: this.isRTL(value),
-      }));
-    }
-
-    if (this.localeList.length === 0) {
-      // There's no small footer either (or no smallfooter data)
-      // Query the locale dropdown on the page and read from the <option> listings
-      this.localeList = Array.from(
-        document.querySelectorAll('select#locale option'),
-      ).map(option => ({
-        text: option.textContent as string,
-        value: (option as HTMLInputElement).value,
-        rtl: this.isRTL((option as HTMLInputElement).value),
-      }));
+      // A fallback to just use the default locale
+      return [DefaultLanguageInfo];
     }
 
     return this.localeList;

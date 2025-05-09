@@ -1,10 +1,16 @@
 import * as BlocklyLibrary from 'blockly/core';
 
 import {frameSizes} from './constants';
+import {isFunctionBlock} from './mixins/functionBlockMixin';
 import {Collider} from './types';
 
 // Margins for SVG frames for unused blocks and functions
-const {MARGIN_TOP, MARGIN_BOTTOM, BLOCK_HEADER_HEIGHT} = frameSizes;
+const {
+  MARGIN_TOP,
+  MARGIN_BOTTOM,
+  MARGIN_SIDE: SVG_FRAME_SIDE_PADDING,
+  BLOCK_HEADER_HEIGHT,
+} = frameSizes;
 
 const WORKSPACE_PADDING = 16;
 const SVG_FRAME_HEIGHT = BLOCK_HEADER_HEIGHT + MARGIN_TOP + MARGIN_BOTTOM;
@@ -19,12 +25,11 @@ const SETUP_TYPES = ['when_run', 'Dancelab_whenSetup'];
  * @param {Blockly.Block} block - The block for which to determine vertical spacing
  * @returns {number} Vertical space in pixels; either the default or the default plus extra to accomodate an SVG frame.
  */
-function getSpaceBetweenBlocks(block: ExtendedBlockSvg) {
-  let verticalSpace = VERTICAL_SPACE_BETWEEN_BLOCKS;
-  if (block.functionalSvg_) {
-    verticalSpace += SVG_FRAME_TOP_PADDING;
-  }
-  return verticalSpace;
+function getSpaceBetweenBlocks(block: BlocklyLibrary.BlockSvg) {
+  return (
+    VERTICAL_SPACE_BETWEEN_BLOCKS +
+    (isFunctionBlock(block) ? SVG_FRAME_TOP_PADDING : 0)
+  );
 }
 
 /**
@@ -35,11 +40,11 @@ function getSpaceBetweenBlocks(block: ExtendedBlockSvg) {
  * @returns {Object[]} A new array of JSON blocks partitioned based on their types.
  */
 export function partitionJsonBlocksByType(
-  blocks: ExtendedBlockSvg[] = [],
+  blocks: BlocklyLibrary.BlockSvg[] = [],
   prioritizedBlockTypes: string[] = [],
 ) {
-  const prioritizedBlocks: ExtendedBlockSvg[] = [];
-  const remainingBlocks: ExtendedBlockSvg[] = [];
+  const prioritizedBlocks: BlocklyLibrary.BlockSvg[] = [];
+  const remainingBlocks: BlocklyLibrary.BlockSvg[] = [];
 
   blocks.forEach(block => {
     const blockType = block.type;
@@ -96,9 +101,9 @@ export function isOverlapping(collider1: Collider, collider2: Collider) {
  * @param block - the block being considered
  * @returns - true if the block is at the edge of the workspace
  */
-export function isBlockAtEdge(block: GoogleBlockly.Block) {
+export function isBlockAtEdge(block: BlocklyLibrary.Block) {
   const {defaultX, defaultY} = getDefaultLocation(
-    block.workspace as GoogleBlockly.WorkspaceSvg,
+    block.workspace as BlocklyLibrary.WorkspaceSvg,
   );
   const {x = 0, y = 0} = block.getRelativeToSurfaceXY();
   console.log(block, x, y, defaultX, defaultY);
@@ -108,28 +113,30 @@ export function isBlockAtEdge(block: GoogleBlockly.Block) {
 /**
  * Returns the desired x-coordinate for a block given the workspace properties
  * and whether the block needs extra offset to accomodate an SVG frame.
- * @param {Blockly.Block} block - The block for which to determine an x-coordinate
- * @param {Blockly.Workspace} workspace - The current Blockly workspace
- * @returns {number} Desired coordinate (as far left/right as possible depending on whether we are in LTR or RTL)
+ * @param block - The block for which to determine an x-coordinate
+ * @param workspace - The current Blockly workspace
+ * @returns Desired coordinate (as far left/right as possible depending on whether we are in LTR or RTL)
  */
 function getXCoordinate(
-  block: ExtendedBlockSvg,
-  workspace: GoogleBlockly.WorkspaceSvg,
+  block: BlocklyLibrary.BlockSvg,
+  workspace: BlocklyLibrary.WorkspaceSvg,
 ) {
-  const {contentWidth = 0, viewWidth = 0} = workspace.getMetrics();
+  const {contentWidth = 0, viewWidth = 0} = workspace
+    .getMetricsManager()
+    .getMetrics();
   const padding = viewWidth ? WORKSPACE_PADDING : 0;
   const width = viewWidth || contentWidth;
 
   // SVG frames need additional padding so their edges don't touch the edge of the workspace
-  const horizontalOffset = block.functionalSvg_
+  const horizontalOffset = isFunctionBlock(block)
     ? SVG_FRAME_SIDE_PADDING + padding
     : padding;
   // If the workspace is RTL, horizontally mirror the starting position
   return workspace.RTL ? width - horizontalOffset : horizontalOffset;
 }
 
-function getYCoordinate(block: ExtendedBlockSvg) {
-  return block.functionalSvg_
+function getYCoordinate(block: BlocklyLibrary.BlockSvg) {
+  return isFunctionBlock(block)
     ? WORKSPACE_PADDING + SVG_FRAME_TOP_PADDING
     : WORKSPACE_PADDING;
 }
@@ -141,13 +148,13 @@ function getYCoordinate(block: ExtendedBlockSvg) {
  * @param workspace - The current Blockly workspace
  */
 function adjustBlockPositions(
-  blocks: ExtendedBlockSvg[],
-  workspace: GoogleBlockly.WorkspaceSvg,
+  blocks: BlocklyLibrary.BlockSvg[],
+  workspace: BlocklyLibrary.WorkspaceSvg,
 ) {
   // Ordered colliders tracks the areas occupied by existing blocks; new blocks
   // are added to maintain top-to-bottom ordering
   const orderedColliders: Collider[] = [];
-  const blocksToPlace: ExtendedBlockSvg[] = [];
+  const blocksToPlace: BlocklyLibrary.BlockSvg[] = [];
   blocks.forEach(block => {
     console.log('block', block);
     if (isBlockAtEdge(block)) {
@@ -194,15 +201,15 @@ function adjustBlockPositions(
  * @param workspace - the current Blockly workspace
  */
 export const positionBlocksOnWorkspace: (
-  workspace: GoogleBlockly.WorkspaceSvg,
-) => void = (workspace: GoogleBlockly.WorkspaceSvg) => {
+  workspace: BlocklyLibrary.WorkspaceSvg,
+) => void = (workspace: BlocklyLibrary.WorkspaceSvg) => {
   if (!workspace.rendered) {
     return;
   }
 
   const topBlocks = workspace.getTopBlocks(
     SORT_BY_POSITION,
-  ) as ExtendedBlockSvg[];
+  ) as BlocklyLibrary.BlockSvg[];
 
   // Handles a rare case when immovable setup/when run blocks are not at the top of the workspace
   const orderedBlocksSetupFirst = partitionJsonBlocksByType(
@@ -214,12 +221,14 @@ export const positionBlocksOnWorkspace: (
 };
 
 export function getDefaultLocation(
-  workspaceOverride?: GoogleBlockly.WorkspaceSvg,
+  workspaceOverride?: BlocklyLibrary.WorkspaceSvg,
 ) {
-  const workspace = workspaceOverride || BlocklyLibrary.getMainWorkspace();
+  const workspace =
+    workspaceOverride ||
+    (BlocklyLibrary.getMainWorkspace() as BlocklyLibrary.WorkspaceSvg);
   const isRTL = workspace.RTL;
 
-  const {viewWidth = 0} = workspace.getMetrics();
+  const {viewWidth = 0} = workspace.getMetricsManager().getMetrics();
   const defaultX = isRTL ? viewWidth : 10;
   const defaultY = 10;
 
@@ -235,7 +244,7 @@ export function getDefaultLocation(
  * @property height - The height of the block, including the SVG frame height
  * @property width - The width of the block, accounting for SVG frame width on either side
  */
-function getCollider(block: ExtendedBlockSvg): Collider {
+function getCollider(block: BlocklyLibrary.BlockSvg): Collider {
   const position = block.getRelativeToSurfaceXY();
   const size = block.getHeightWidth();
 
@@ -245,7 +254,7 @@ function getCollider(block: ExtendedBlockSvg): Collider {
   };
 
   // SVG frames require us to account for additional height and width
-  if (block.functionalSvg_) {
+  if (isFunctionBlock(block)) {
     collider.x -= SVG_FRAME_SIDE_PADDING;
     collider.y -= SVG_FRAME_TOP_PADDING;
     collider.height += SVG_FRAME_HEIGHT;
@@ -260,8 +269,7 @@ function getCollider(block: ExtendedBlockSvg): Collider {
  * top level block inserted in front of the first non-function block.  If we already
  * have this block, does nothing.
  */
-export function forciblyInsertTopBlock(root, blockType) {
-  console.log('FORCE', root, blockType);
+export function forciblyInsertTopBlock(root: Element, blockType: string) {
   // Look for the given block in the starting blocks
   if (root.querySelector(`block[type="${blockType}"]`)) {
     return;
@@ -282,12 +290,13 @@ export function forciblyInsertTopBlock(root, blockType) {
     const child = root.childNodes[i];
     // only look at element nodes
     if (child.nodeType === 1) {
-      const type = child.getAttribute('type');
+      const childElement = child as Element;
+      const type = childElement.getAttribute('type');
       if (
         type !== 'procedures_defnoreturn' &&
         type !== 'procedures_defreturn'
       ) {
-        firstBlock = root.removeChild(child);
+        firstBlock = root.removeChild(childElement);
         numChildren--;
       }
     }

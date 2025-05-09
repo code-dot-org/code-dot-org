@@ -1,5 +1,6 @@
 import CustomMarshaler from './CustomMarshaler';
 import CustomMarshalingInterpreter from './CustomMarshalingInterpreter';
+import ExecutionInfo from './ExecutionInfo';
 
 export function evalWith(
   code: string,

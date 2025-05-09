@@ -1,16 +1,20 @@
 import {createContext} from 'react';
 
-import type {BlockDefinition} from '@/components/blockly/types';
+import type {
+  BlockDefinition,
+  Theme,
+  Renderer,
+} from '@/components/blockly/types';
 
 export interface BlocklyContent {
-  theme?: string;
-  setTheme: (value: string) => void;
-  renderer?: string;
+  theme?: Theme;
+  setTheme: (value: Theme) => void;
+  renderer?: Renderer;
   customBlocks: BlockDefinition[];
 }
 
 const BlocklyContext = createContext<BlocklyContent>({
-  setTheme: (_: string) => {},
+  setTheme: (_: Theme) => {},
   customBlocks: [],
 });
 

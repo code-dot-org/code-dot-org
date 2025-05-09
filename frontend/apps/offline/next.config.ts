@@ -7,8 +7,17 @@ const copyBlocklyAssets = async () => {
   const source = path.resolve(__dirname, '../../node_modules/blockly/media');
   const target = path.resolve(__dirname, 'public/blockly/media');
 
+  // Cancel it if there is already the target path
   try {
-    await fs.cp(source, target, {recursive: true, overwrite: true});
+    await fs.access(target);
+    return;
+  } catch (_) {
+    // If this fails, then the directory doesn't exist.
+    // Continue to copy it.
+  }
+
+  try {
+    await fs.cp(source, target, {recursive: true, force: true});
     console.log('[next.config.js] Copied Blockly media assets.');
   } catch (err) {
     console.warn('Failed to copy Blockly assets:', err);
@@ -21,8 +30,17 @@ const copySkinAssets = async () => {
   const source = path.resolve(__dirname, '../../../apps/static/skins');
   const target = path.resolve(__dirname, 'public/skins');
 
+  // Cancel it if there is already the target path
   try {
-    await fs.cp(source, target, {recursive: true, overwrite: true});
+    await fs.access(target);
+    return;
+  } catch (_) {
+    // If this fails, then the directory doesn't exist.
+    // Continue to copy it.
+  }
+
+  try {
+    await fs.cp(source, target, {recursive: true, force: true});
     console.log('[next.config.js] Copied Maze skin assets.');
   } catch (err) {
     console.warn('Failed to copy Maze skin assets:', err);

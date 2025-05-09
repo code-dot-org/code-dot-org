@@ -39,7 +39,6 @@ const Unit: React.FunctionComponent<UnitProps> = ({unit}) => {
             key={`lesson-group-${i}`}
             unitKey={unit.key}
             lessonGroup={lessonGroup}
-            lessonIndex={i + 1}
             open={i === 0}
           />
         ))}

@@ -1,4 +1,5 @@
 import {notFound} from 'next/navigation';
+import {ReactNode} from 'react';
 
 import {loadLevel, LevelData} from '@/app/models/level';
 import {loadUnit, UnitData} from '@/app/models/unit';
@@ -39,8 +40,8 @@ export default async function LevelLayout({
   return (
     <LevelProvider
       level={level}
-      lessonIndex={lessonIndex}
-      levelIndex={levelIndex}
+      lessonIndex={parseInt(lessonIndex)}
+      levelIndex={parseInt(levelIndex)}
     >
       {children}
     </LevelProvider>

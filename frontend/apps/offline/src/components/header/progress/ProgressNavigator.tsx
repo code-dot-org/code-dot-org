@@ -12,7 +12,7 @@ const ProgressNavigator: React.FunctionComponent<ProgressProps> = props => {
     <Progress
       onNavigate={levelIndex => {
         router.push(
-          `/units/${props.unitKey}/lessons/${props.lessonIndex + 1}/levels/${levelIndex + 1}`,
+          `/units/${props.unit.key}/lessons/${props.lessonIndex + 1}/levels/${levelIndex + 1}`,
         );
       }}
       {...props}

@@ -11,8 +11,8 @@ import UnitContext from '@/contexts/UnitContext';
 export default function UnitLevelPage() {
   const {unit} = useContext(UnitContext);
   const {lessonIndex, levelIndex, level} = useContext(LevelContext);
-  const realLessonIndex = parseInt(lessonIndex) - 1;
-  const realLevelIndex = parseInt(levelIndex) - 1;
+  const realLessonIndex = (lessonIndex || 1) - 1;
+  const realLevelIndex = (levelIndex || 1) - 1;
 
   return (
     <div
@@ -25,14 +25,15 @@ export default function UnitLevelPage() {
       }}
     >
       <Header inLevel>
-        <ProgressNavigator
-          unit={unit}
-          unitKey={unit.key}
-          lessonIndex={realLessonIndex}
-          levelIndex={realLevelIndex}
-        />
+        {unit && level && (
+          <ProgressNavigator
+            unit={unit}
+            lessonIndex={realLessonIndex}
+            levelIndex={realLevelIndex}
+          />
+        )}
       </Header>
-      <UnitLevel levelData={level} />
+      {unit && level && <UnitLevel levelData={level} />}
     </div>
   );
 }

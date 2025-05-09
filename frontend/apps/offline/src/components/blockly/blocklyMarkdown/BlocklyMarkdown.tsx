@@ -1,36 +1,49 @@
+import type {MarkdownToJSX} from 'markdown-to-jsx';
+import {RuleType} from 'markdown-to-jsx';
 import React from 'react';
 
-import Blockly, {BlockDefinition} from '../../blockly';
-import Markdown from '../../markdown';
+import Blockly, {BlockDefinition} from '@/components/blockly';
+import {Theme, Renderer} from '@/components/blockly/types';
+import Markdown, {MarkdownProps} from '@/components/markdown';
 
 export interface BlocklyMarkdownProps extends MarkdownProps {
   customBlocks?: BlockDefinition[];
+  renderer?: Renderer;
+  theme?: Theme;
 }
 
 // This takes the XML nodes from the markdown renderer and creates a DOM tree.
 // It will return a unique string built from that tree to use as a unique key.
 const xmlRenderer: (
   parent: HTMLElement,
-  node: MarkdownToJS.HTMLNode,
+  node: MarkdownToJSX.ParserResult,
 ) => string = (parent, node) => {
   let ret = '';
 
-  if (!node?.tag) {
-    parent.appendChild(node);
-    return node;
+  if (node.type === RuleType.text) {
+    const text: string = node.text;
+    const element = document.createTextNode(text);
+    parent.appendChild(element);
+    return text;
   }
 
-  const element = document.createElement(node.tag);
-  ret += node.tag;
+  if (
+    node.type === RuleType.htmlBlock ||
+    node.type === RuleType.htmlSelfClosing
+  ) {
+    const element = document.createElement(node.tag);
+    ret += node.tag;
+    parent.appendChild(element);
 
-  parent.appendChild(element);
+    for (const [key, value] of Object.entries(node.attrs || {})) {
+      element.setAttribute(key, value);
+    }
 
-  for (const [key, value] of Object.entries(node.attrs || {})) {
-    element.setAttribute(key, value);
-  }
-
-  for (const child of node.children || []) {
-    ret += xmlRenderer(element, child);
+    if (node.type === RuleType.htmlBlock) {
+      for (const child of node.children || []) {
+        ret += xmlRenderer(element, child);
+      }
+    }
   }
 
   return ret;
@@ -52,22 +65,27 @@ const BlocklyMarkdown: React.FunctionComponent<BlocklyMarkdownProps> = ({
     {...props}
     options={{
       renderRule(next, node) {
-        if (node?.tag === 'xml') {
-          // Render the <xml> into a DOM tree and pass it to a Blockly instance
-          const fragment = document.createDocumentFragment();
-          const root = document.createElement('body');
-          fragment.appendChild(root);
-          const key = xmlRenderer(root, node);
-          return (
-            <Blockly
-              customBlocks={customBlocks}
-              renderer={renderer}
-              theme={theme}
-              key={key}
-              inline
-              startBlocks={root.innerHTML}
-            />
-          );
+        if (
+          node.type === RuleType.htmlBlock ||
+          node.type === RuleType.htmlSelfClosing
+        ) {
+          if (node.tag === 'xml') {
+            // Render the <xml> into a DOM tree and pass it to a Blockly instance
+            const fragment = document.createDocumentFragment();
+            const root = document.createElement('body');
+            fragment.appendChild(root);
+            const key = xmlRenderer(root, node);
+            return (
+              <Blockly
+                customBlocks={customBlocks}
+                renderer={renderer}
+                theme={theme}
+                key={key}
+                inline
+                startBlocks={root.innerHTML}
+              />
+            );
+          }
         }
 
         // Just render the default and continue

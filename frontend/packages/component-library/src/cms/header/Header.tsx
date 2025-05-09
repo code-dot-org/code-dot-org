@@ -127,7 +127,6 @@ const Header: React.FC<HeaderProps> = ({
     'loading' | 'signedIn' | 'signedOut' | 'error'
   >('loading');
 
-<<<<<<< HEAD
   useEffect(() => {
     async function getUserStatus() {
       try {
@@ -164,26 +163,16 @@ const Header: React.FC<HeaderProps> = ({
         </a>
         <MainLinks mainLinksLabel={mainLinksLabel} mainLinks={mainLinks} />
       </nav>
-
+      {children}
       <nav
         className={moduleStyles.buttonLinks}
         aria-label={navLabel.secondary || 'Secondary navigation'}
       >
-=======
-    {children}
-
-    <nav
-      className={moduleStyles.buttonLinks}
-      aria-label={navLabel.secondary || 'Secondary navigation'}
-    >
-      {projectsLinks && projectsButtonLabel && projectsButtonAriaLabel && (
->>>>>>> 6ac13618730 (Initial maze level test build.)
         <ProjectsMenu
           projectsLinks={projectsLinks}
           projectsButtonLabel={projectsButtonLabel}
           projectsButtonAriaLabel={projectsButtonAriaLabel}
         />
-<<<<<<< HEAD
         <SignInContext.Provider value={renderState}>
           <AccountButtons
             signIn={accountLinks.signIn}
@@ -202,25 +191,5 @@ const Header: React.FC<HeaderProps> = ({
     </header>
   );
 };
-=======
-      )}
-      <AccountButtons
-        signIn={accountLinks.signIn}
-        createAccount={accountLinks.createAccount}
-        goToDashboard={accountLinks.goToDashboard}
-        isLoggedIn={isLoggedIn}
-        isInHamburger={false}
-      />
-      <HelpMenu helpButtonLabel={helpButtonLabel} helpLinks={helpLinks} />
-      <HamburgerMenu
-        hamburgerButtonLabel={hamburgerButtonLabel}
-        hamburgerLinks={hamburgerLinks}
-        accountLinks={accountLinks}
-        isLoggedIn={isLoggedIn}
-      />
-    </nav>
-  </header>
-);
->>>>>>> 6ac13618730 (Initial maze level test build.)
 
 export default Header;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Accordion from '@code-dot-org/component-library/accordion';
-import Button from '@code-dot-org/component-library/button';
+import {LinkButton} from '@code-dot-org/component-library/button';
 import {Heading5} from '@code-dot-org/component-library/typography';
 
 import type {LessonData} from '@/app/models/unit';
@@ -35,9 +35,8 @@ const LessonOverview: React.FunctionComponent<LessonOverviewProps> = ({
             >
               {isProgression && (
                 <>
-                  <Button
+                  <LinkButton
                     type="secondary"
-                    useAsLink={true}
                     disabled={!singleLevel}
                     iconLeft={{
                       iconName: i == 0 ? 'video' : 'desktop',
@@ -47,7 +46,7 @@ const LessonOverview: React.FunctionComponent<LessonOverviewProps> = ({
                     href={`/units/${unitKey}/lessons/${lesson.index + 1}/levels/${activitySection.from}`}
                     text={
                       singleLevel
-                        ? activitySection.from || '0'
+                        ? activitySection.from?.toString() || '0'
                         : `${activitySection.from}-${activitySection.to}`
                     }
                     className={moduleStyles.activityButton}
@@ -60,21 +59,20 @@ const LessonOverview: React.FunctionComponent<LessonOverviewProps> = ({
               <div
                 className={moduleStyles.lessonActivitySectionLevelProgression}
               >
-                <JointIcon role="presentation" alt="" />
+                <JointIcon role="presentation" />
                 <div>
                   {Array(activitySection.to - activitySection.from + 1)
-                    .fill()
+                    .fill(null)
                     .map((_, i) => {
                       const levelIndex = i + activitySection.from;
                       return (
                         <div key={`lesson-${lesson.index}-level-${levelIndex}`}>
-                          <WireIcon role="presentation" alt="" />
-                          <Button
+                          <WireIcon role="presentation" />
+                          <LinkButton
                             type="secondary"
                             color="black"
                             href={`/units/${unitKey}/lessons/${lesson.index + 1}/levels/${levelIndex}`}
-                            useAsLink={true}
-                            text={levelIndex}
+                            text={levelIndex.toString()}
                             data-path={lesson.levels[levelIndex - 1].data?.path}
                             className={
                               lesson.levels[levelIndex - 1].data?.isConcept
@@ -83,7 +81,7 @@ const LessonOverview: React.FunctionComponent<LessonOverviewProps> = ({
                             }
                           />
                           {levelIndex === activitySection.to && (
-                            <WireEndIcon role="presentation" alt="" />
+                            <WireEndIcon role="presentation" />
                           )}
                         </div>
                       );

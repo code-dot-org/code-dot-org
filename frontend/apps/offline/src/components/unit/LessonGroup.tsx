@@ -34,7 +34,7 @@ const LessonGroup: React.FunctionComponent<LessonGroupProps> = ({
                   <Lesson
                     lesson={lesson}
                     unitKey={unitKey}
-                    key={`lesson-${i}`}
+                    key={`lesson-${lesson.index}`}
                     open={i === 0}
                   />
                 ))}

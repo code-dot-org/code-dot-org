@@ -1,7 +1,7 @@
 import useResizeObserver from '@react-hook/resize-observer';
 import * as libraryBlocks from 'blockly/blocks';
 import * as BlocklyLibrary from 'blockly/core';
-import {javascriptGenerator} from 'blockly/javascript';
+import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 import React, {createElement, useEffect, useRef, useContext} from 'react';
 
@@ -13,11 +13,19 @@ import {
   updateBlockLimits,
   grayOutUndeletableBlocks,
 } from './events';
+import FunctionBlockMixin from './mixins/functionBlockMixin';
 import {
   forciblyInsertTopBlock,
   positionBlocksOnWorkspace,
 } from './serialization';
-import type {Theme} from './types';
+import DefaultTheme from './themes/default';
+import type {
+  BlockDefinition,
+  Theme,
+  Renderer,
+  SimpleBlockDefinition,
+  ComplexBlockDefinition,
+} from './types';
 
 import moduleStyles from './blockly.module.scss';
 
@@ -36,11 +44,11 @@ export interface BlocklyProps {
   /** Some options that will alter the typical Blockly behavior. */
   options?: BlocklyOptions;
   /** A set of blocks to load as the starting point for the workspace */
-  startBlocks?: string | object;
+  startBlocks?: string;
   /** A set of blocks to put into a single, simple toolbox within the workspace */
-  toolboxBlocks?: string | object;
+  toolboxBlocks?: string;
   /** The blockly renderer to use. */
-  renderer?: string;
+  renderer?: Renderer;
   /** The blockly theme to use. */
   theme?: Theme;
   /** Whether or not to render this workspace as inline, useful for documentation */
@@ -66,8 +74,8 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
   inline,
   onInject,
 }) => {
-  const anchor = useRef<HTMLDivElement | HTMLSpanElement | null>();
-  const workspace = useRef();
+  const anchor = useRef<HTMLDivElement | HTMLSpanElement | null>(null);
+  const workspace = useRef<BlocklyLibrary.WorkspaceSvg | null>(null);
 
   // Pull from the provider, if it exists there and we haven't specified it
   // ourselves.
@@ -89,11 +97,10 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
           "Renderer needs to have a string for a 'name' field that uniquely identifies the renderer",
         );
       } else {
-        console.log('renderer', BlocklyLibrary, renderer, renderer.name);
         BlocklyLibrary.registry.register(
           BlocklyLibrary.registry.Type.RENDERER,
           renderer.name,
-          renderer,
+          renderer.class,
           true,
         );
       }
@@ -102,54 +109,75 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
 
   // Register any new custom blocks
   useEffect(() => {
-    BlocklyLibrary.setLocale(En);
+    BlocklyLibrary.setLocale(En as unknown as {[key: string]: string});
 
     // Make sure we have the default blocks
     console.log('BLOCKS', BlocklyLibrary, BlocklyLibrary.Blocks);
 
-    (customBlocks || []).forEach(
-      ({type, title, tooltip, functionName, generator, ...rest}) => {
-        if (rest.message0) {
-          BlocklyLibrary.common.defineBlocksWithJsonArray([
-            {type, tooltip, ...rest},
-          ]);
-        } else {
-          BlocklyLibrary.Blocks[type] ||= {
-            helpUrl: rest.helpUrl || '',
-            init: function () {
-              this.setStyle(rest.style || 'default');
-              if (title) {
-                const input = this.appendEndRowInput();
-                input.appendField(title);
-              } else if (rest.titleImage) {
-                const input = this.appendEndRowInput();
-                input.appendField(
-                  new BlocklyLibrary.FieldImage(rest.titleImage),
-                );
-              }
-              if (rest.previousStatement) {
-                this.setPreviousStatement(rest.previousStatement);
-              }
-              if (rest.nextStatement) {
-                this.setNextStatement(rest.nextStatement);
-              }
-              this.setTooltip(tooltip);
-              if (rest.init) {
-                rest.init.bind(this)(BlocklyLibrary, data);
-              }
-            },
-          };
-        }
+    (customBlocks || []).forEach(blockDefinition => {
+      if ((blockDefinition as ComplexBlockDefinition).message0) {
+        const complexBlockDefinition =
+          blockDefinition as ComplexBlockDefinition;
+        BlocklyLibrary.common.defineBlocksWithJsonArray([
+          complexBlockDefinition,
+        ]);
 
-        if (functionName) {
-          javascriptGenerator.forBlock[type] = function () {
-            return `${functionName}('block_id_${this.id}');\n`;
-          };
-        } else if (generator) {
-          javascriptGenerator.forBlock[type] = generator;
-        }
-      },
-    );
+        javascriptGenerator.forBlock[complexBlockDefinition.type] = function (
+          _block: BlocklyLibrary.Block,
+          _generator: JavascriptGenerator,
+        ) {
+          if (complexBlockDefinition.generator) {
+            return complexBlockDefinition.generator(
+              _block,
+              javascriptGenerator,
+              {},
+            );
+          }
+
+          return '';
+        };
+      } else {
+        const simpleBlockDefinition = blockDefinition as SimpleBlockDefinition;
+        BlocklyLibrary.Blocks[blockDefinition.type] ||= {
+          helpUrl: simpleBlockDefinition.helpUrl,
+          init: function () {
+            this.setStyle(simpleBlockDefinition.style || 'default');
+            if (simpleBlockDefinition.title) {
+              const input = this.appendEndRowInput();
+              input.appendField(simpleBlockDefinition.title);
+            } else if (simpleBlockDefinition.titleImage) {
+              const input = this.appendEndRowInput();
+              input.appendField(
+                new BlocklyLibrary.FieldImage(
+                  simpleBlockDefinition.titleImage,
+                  32,
+                  32,
+                ),
+              );
+            }
+            if (simpleBlockDefinition.previousStatement) {
+              this.setPreviousStatement(
+                simpleBlockDefinition.previousStatement,
+              );
+            }
+            if (simpleBlockDefinition.nextStatement) {
+              this.setNextStatement(simpleBlockDefinition.nextStatement);
+            }
+            this.setTooltip(simpleBlockDefinition.tooltip);
+            if (simpleBlockDefinition.init) {
+              simpleBlockDefinition.init(this, data);
+            }
+          },
+        };
+
+        javascriptGenerator.forBlock[simpleBlockDefinition.type] = function (
+          _block: BlocklyLibrary.Block,
+          _generator: JavascriptGenerator,
+        ) {
+          return `${simpleBlockDefinition.functionName}('block_id_${this.id}');\n`;
+        };
+      }
+    });
   }, [customBlocks]);
 
   useEffect(() => {
@@ -159,10 +187,20 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
     // location.
     const container = inline ? document.createElement('div') : anchor.current;
 
+    if (!container) {
+      return;
+    }
+
+    // Add mixins
+    BlocklyLibrary.Extensions.registerMixin(
+      'function_block_mixin',
+      FunctionBlockMixin,
+    );
+
     // Create the workspace within the container
     workspace.current = BlocklyLibrary.inject(container, {
       renderer: renderer?.name || 'geras',
-      theme: theme.instance || 'classic',
+      theme: theme?.instance || 'classic',
       toolbox: toolboxBlocks,
       media: '/blockly/media/',
       ...(inline
@@ -193,14 +231,16 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
         .parseFromString(startBlocks, 'text/xml')
         ?.querySelector(':root');
 
-      if (options?.forceInsertTopBlock) {
-        forciblyInsertTopBlock(xmlDoc, options.forceInsertTopBlock);
-      }
+      if (xmlDoc) {
+        if (options?.forceInsertTopBlock) {
+          forciblyInsertTopBlock(xmlDoc, options.forceInsertTopBlock);
+        }
 
-      BlocklyLibrary.Xml.clearWorkspaceAndLoadFromXml(
-        xmlDoc,
-        workspace.current,
-      );
+        BlocklyLibrary.Xml.clearWorkspaceAndLoadFromXml(
+          xmlDoc,
+          workspace.current,
+        );
+      }
 
       // Reposition blocks if this is a full workspace
       if (!inline) {
@@ -216,9 +256,11 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
 
       // Copy over SVG rendered blocks to the span in our anchor
       document.body.appendChild(container);
-      BlocklyLibrary.svgResize(workspace.current);
-      const svg = container.querySelector('svg')?.cloneNode(true);
-      if (svg) {
+      if (workspace.current) {
+        BlocklyLibrary.svgResize(workspace.current);
+      }
+      const svg = container.querySelector('svg')?.cloneNode(true) as SVGElement;
+      if (svg && anchor.current) {
         svg.style.background = 'none';
         svg.style.position = 'relative';
         svg.style.display = 'inline-block';
@@ -228,8 +270,9 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
         anchor.current.appendChild(svg);
 
         // Fix width and height
-        const size = (svg.querySelector('.blocklyWorkspace').getClientRects() ||
-          [])[0] || {
+        const size = (svg
+          .querySelector('.blocklyWorkspace')
+          ?.getClientRects() || [])[0] || {
           width: 30,
           height: 30,
         };
@@ -238,7 +281,8 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
 
         // Copy classes over
         for (const blocklyClassName of Array.from(
-          container.querySelector('svg').parentNode?.classList || [],
+          (container?.querySelector('svg')?.parentNode as HTMLElement | null)
+            ?.classList || [],
         )) {
           console.log(blocklyClassName);
           anchor.current.classList.add(blocklyClassName);
@@ -254,7 +298,10 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
     // Create a block limit map for the toolbox options, if they exist
     if (typeof toolboxBlocks === 'string') {
       // TODO have an event for theme changes
-      const blockLimitMap = new BlockLimitMap(toolboxBlocks, theme);
+      const blockLimitMap = new BlockLimitMap(
+        toolboxBlocks,
+        theme || DefaultTheme,
+      );
       workspace.current.addChangeListener(
         updateBlockLimits.bind(null, blockLimitMap),
       );
@@ -274,7 +321,9 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
   // Resize the Blockly workspace when the container changes size
   if (!inline) {
     useResizeObserver(anchor, () => {
-      BlocklyLibrary.svgResize(workspace.current);
+      if (workspace.current) {
+        BlocklyLibrary.svgResize(workspace.current);
+      }
     });
   }
 

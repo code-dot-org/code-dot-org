@@ -4,6 +4,7 @@ import Button from '@code-dot-org/component-library/button';
 import Image from '@code-dot-org/component-library/image';
 import Typography from '@code-dot-org/component-library/typography';
 
+import type {HintData} from '@/app/models/level';
 import LevelContext from '@/contexts/LevelContext';
 
 import BlocklyMarkdown from '../../../blockly/blocklyMarkdown';
@@ -13,6 +14,8 @@ import moduleStyles from './instructions.module.scss';
 interface SpeechBubbleProps {
   text: string;
   avatar?: string;
+  hintCount?: number;
+  onHintClick?: () => void;
   onYes?: () => void;
   onNo?: () => void;
 }
@@ -31,7 +34,7 @@ const SpeechBubble: React.FunctionComponent<SpeechBubbleProps> = ({
         {avatar && (
           <>
             <Image src={avatar} className={moduleStyles.avatarImage} />
-            {hintCount > 0 && (
+            {hintCount && hintCount > 0 && (
               <>
                 <Button
                   className={moduleStyles.hintButton}
@@ -69,7 +72,7 @@ const SpeechBubble: React.FunctionComponent<SpeechBubbleProps> = ({
 
 export interface InstructionsProps {
   instructions: string;
-  hints?: string[];
+  hints?: HintData[];
   avatar?: string;
 }
 
@@ -83,7 +86,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 }) => {
   hints ||= [];
 
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const {hintsShown, setHintsShown} = useContext(LevelContext);
   const [confirmHint, setConfirmHint] = useState<boolean>(false);
@@ -92,13 +95,13 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   useEffect(() => {
     if (containerRef.current) {
       // Find the tab panel
-      let tabPanel = containerRef.current;
+      let tabPanel: HTMLDivElement | null = containerRef.current;
       while (tabPanel.getAttribute('role') !== 'tabpanel') {
-        tabPanel = tabPanel.parentNode;
+        tabPanel = tabPanel.parentNode as HTMLDivElement;
       }
 
       // The tab panel container is above the tab panel
-      const tabPanels = tabPanel.parentNode;
+      const tabPanels = tabPanel.parentNode as HTMLDivElement;
 
       // Scroll it down
       tabPanels.scrollTop = tabPanels.scrollHeight;
@@ -109,7 +112,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     <div className={moduleStyles.instructionsContainer} ref={containerRef}>
       <SpeechBubble
         text={instructions || ''}
-        avatar={hintsShown === 0 && !confirmHint && avatar}
+        avatar={hintsShown === 0 && !confirmHint ? avatar : undefined}
         hintCount={hints.length - hintsShown}
         onHintClick={() => setConfirmHint(true)}
       />

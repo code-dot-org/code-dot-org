@@ -279,7 +279,7 @@ interface UnitDefinition {
   lesson_activities: LessonActivityDefinition[];
   activity_sections: ActivitySectionDefinition[];
   script_levels: ScriptLevelDefinition[];
-  level_script_levels: LevelScriptLevelDefinition[];
+  levels_script_levels: LevelScriptLevelDefinition[];
   resources: ResourceDefinition[];
   lessons_resources: LessonsResourceDefinition[];
   scripts_resources: ScriptsResourceDefinition[];
@@ -553,20 +553,20 @@ export const loadUnitDefinition: (
 export const parseUnitData: (
   data: UnitDefinition,
   unitPath?: string,
-) => Promise<UnitData> = async (data: UnitDefinition, unitPath: string) => {
+) => Promise<UnitData> = async (data: UnitDefinition, unitPath?: string) => {
   const ret: UnitData = {
     key: data.script.name,
-    title: data.locale_data.title,
+    title: data.locale_data?.title || 'Unknown',
     path: unitPath,
-    version: data.locale_data.version_title,
+    version: data.locale_data?.version_title || '',
     serializedAt: data.script.serialized_at,
     publishedState: data.script.published_state,
     instructionType: data.script.instruction_type,
     instructorAudience: data.script.instructor_audience,
     description: {
-      short: data.locale_data.description_short,
-      student: data.locale_data.description_student,
-      teacher: data.locale_data.description_teacher,
+      short: data.locale_data?.description_short || '',
+      student: data.locale_data?.description_student || '',
+      teacher: data.locale_data?.description_teacher || '',
     },
     properties: {
       loginRequired: data.script.login_required,
@@ -609,12 +609,32 @@ export const parseUnitData: (
           levelScriptLevel.seeding_key?.['lesson.key'] === lesson.key,
       )
       .map(levelScriptLevel => {
-        const scriptLevel =
-          (data.script_levels || []).find(scriptLevel =>
-            scriptLevel.seeding_key?.['script_level.level_keys'].includes(
-              levelScriptLevel.seeding_key?.['level.key'],
-            ),
-          ) || {};
+        const scriptLevel: ScriptLevelDefinition = (
+          data.script_levels || []
+        ).find(scriptLevel =>
+          scriptLevel.seeding_key?.['script_level.level_keys'].includes(
+            levelScriptLevel.seeding_key?.['level.key'],
+          ),
+        ) || {
+          // Some empty script level description
+          chapter: 0,
+          position: 0,
+          activity_section_position: 0,
+          assessment: false,
+          bonus: false,
+          level_keys: [],
+          properties: {
+            level_keys: [],
+            progression: '',
+          },
+          seeding_key: {
+            ['script_level.level_keys']: [],
+            ['lesson.key']: '',
+            ['lesson_group.key']: '',
+            ['script.name']: '',
+            ['activity_section.key']: '',
+          },
+        };
 
         return {
           chapter: scriptLevel.chapter,
@@ -692,8 +712,12 @@ export const parseUnitData: (
       title: lessonGroup.properties.display_name,
       position: lessonGroup.position,
       userFacing: lessonGroup.user_facing,
-      lessons: data.lessons
-        .map((lesson, j) => [lesson, j])
+      lessons: (
+        data.lessons.map((lesson, j) => [lesson, j]) as [
+          LessonDefinition,
+          number,
+        ][]
+      )
         .filter(
           ([lesson, _]) =>
             lesson.seeding_key?.['lesson_group.key'] === lessonGroup.key,
@@ -727,7 +751,7 @@ export const parseUnitData: (
       isConcept: levelData?.isConcept || false,
     };
   };
-  const levelLoadPromises = []
+  const levelLoadPromises = ([] as LessonLevelData[])
     .concat(...ret.lessons.map(lesson => lesson.levels))
     .map(level => levelLoader(level));
 

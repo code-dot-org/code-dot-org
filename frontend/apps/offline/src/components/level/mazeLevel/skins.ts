@@ -1,4 +1,6 @@
-import {Skin, SkinsData} from './types';
+import type {Skin, SkinData} from '@code-dot-org/maze';
+
+import {SkinsData} from './types';
 
 const defaultSkins: SkinsData = {
   pvz: {
@@ -79,7 +81,7 @@ export const skinFor: (skins: SkinsData, id: string) => Skin = (skins, id) => {
     `/skins/${id}/${path}`;
 
   // (1) Properties common across Blockly apps
-  const skin = {
+  const skin: Skin = {
     id: id,
     assetUrl: skinUrl,
 
@@ -138,13 +140,19 @@ export const skinFor: (skins: SkinsData, id: string) => Skin = (skins, id) => {
     randomPurpleIcon: assetUrl('media/common_images/random-purple.png'),
 
     // Sounds
-    startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')],
-    winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')],
-    failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')],
+    startSound: [skinUrl('start.mp3'), skinUrl('start.ogg')] as [
+      string,
+      string,
+    ],
+    winSound: [skinUrl('win.mp3'), skinUrl('win.ogg')] as [string, string],
+    failureSound: [skinUrl('failure.mp3'), skinUrl('failure.ogg')] as [
+      string,
+      string,
+    ],
   };
 
   // Load individual skin
-  const config = skins[id] || defaultSkins['birds'];
+  const config: SkinData = skins[id] || defaultSkins['birds'];
 
   // (2) Default values for properties common across maze skins.
   skin.obstacleScale = 1.0;
@@ -162,9 +170,12 @@ export const skinFor: (skins: SkinsData, id: string) => Skin = (skins, id) => {
   skin.danceOnLoad = false;
 
   // Sounds
-  const soundAssetUrls = (skin, mp3Sound) => [
+  const soundAssetUrls: (skin: Skin, mp3Sound: string) => [string, string] = (
+    skin,
+    mp3Sound,
+  ) => [
     skin.assetUrl(mp3Sound),
-    skin.assetUrl(mp3Sound.match(/^(.*)\.mp3$/)[1] + '.ogg'),
+    skin.assetUrl((mp3Sound.match(/^(.*)\.mp3$/)?.[1] || mp3Sound) + '.ogg'),
   ];
 
   skin.obstacleSound = soundAssetUrls(skin, 'obstacle.mp3');
@@ -180,22 +191,52 @@ export const skinFor: (skins: SkinsData, id: string) => Skin = (skins, id) => {
   const isAsset = /\.\S{3}$/; // ends in dot followed by three non-whitespace chars
   const isSound = /^(.*)\.mp3$/; // something.mp3
 
-  function determineAssetUrl(val) {
+  const determineAssetUrl: (val: string) => string | [string, string] = (
+    val: string,
+  ): string | [string, string] => {
     if (isSound.test(val)) {
-      val = soundAssetUrls(skin, val);
+      return soundAssetUrls(skin, val);
     } else if (isAsset.test(val)) {
-      val = skin.assetUrl(val);
+      return skin.assetUrl(val) || val;
     }
 
     return val;
+  };
+
+  if (config.walkSound) {
+    skin.walkSound = soundAssetUrls(skin, config.walkSound);
   }
 
-  for (const [prop, val] of Object.entries(config || {})) {
-    console.log(prop, val);
-    if (Array.isArray(val)) {
-      skin[prop] = val.map(determineAssetUrl);
+  for (const key of Object.keys(config)) {
+    if (key === 'collectSounds') {
+      skin.collectSounds =
+        config.collectSounds?.map(sound => soundAssetUrls(skin, sound)) || [];
     } else {
-      skin[prop] = determineAssetUrl(val);
+      if (typeof config[key as keyof SkinData] === 'string') {
+        (
+          skin as unknown as {
+            [key: string]: string | [string, string];
+          }
+        )[key as keyof Skin] = determineAssetUrl(
+          config[key as keyof SkinData] as string,
+        );
+      } else {
+        (
+          skin as unknown as {
+            [key: string]:
+              | boolean
+              | number
+              | {
+                  [key: string]: number;
+                };
+          }
+        )[key as keyof Skin] = config[key as keyof SkinData] as
+          | boolean
+          | number
+          | {
+              [key: string]: number;
+            };
+      }
     }
   }
 

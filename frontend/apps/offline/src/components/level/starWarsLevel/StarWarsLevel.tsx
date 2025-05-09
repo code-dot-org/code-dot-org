@@ -1,4 +1,4 @@
-import MazeLevel from '../mazeLevel';
+import MazeLevel, {MazeLevelProps} from '../mazeLevel';
 
 import blocks from './blocks';
 

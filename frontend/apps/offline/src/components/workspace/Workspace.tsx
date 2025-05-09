@@ -1,5 +1,5 @@
 import {SplitPane} from '@rexxars/react-split-pane';
-import React, {PropsWithChildren} from 'react';
+import React, {ReactNode, PropsWithChildren} from 'react';
 
 import type {TabModel} from '@code-dot-org/component-library/tabs';
 
@@ -8,7 +8,7 @@ import Information from './information';
 import moduleStyles from './workspace.module.scss';
 
 export interface WorkspaceProps extends PropsWithChildren {
-  outputPane: React.Node;
+  outputPane: ReactNode;
   tabs: TabModel[];
 }
 

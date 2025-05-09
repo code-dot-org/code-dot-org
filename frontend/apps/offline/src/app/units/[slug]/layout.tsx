@@ -1,6 +1,7 @@
 import {notFound} from 'next/navigation';
+import {ReactNode} from 'react';
 
-import {loadUnit} from '@/app/models/unit';
+import {loadUnit, UnitData} from '@/app/models/unit';
 import UnitProvider from '@/providers/UnitProvider';
 
 export default async function UnitLayout({
@@ -18,7 +19,6 @@ export default async function UnitLayout({
     unit = await loadUnit(slug);
   } catch (_) {
     // If the file doesn't exist or is malformed, return 404
-    console.log(_);
     return notFound();
   }
 

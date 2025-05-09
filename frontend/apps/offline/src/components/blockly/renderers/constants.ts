@@ -2,11 +2,17 @@ import * as BlocklyLibrary from 'blockly/core';
 
 type PuzzleTab = BlocklyLibrary.blockRendering.PuzzleTab;
 
+export const DARK_THEME_SUFFIX = 'dark';
+export function isDarkTheme(theme: BlocklyLibrary.Theme | undefined): boolean {
+  return !!theme?.name.includes(DARK_THEME_SUFFIX);
+}
+
 export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
   .ConstantProvider {
   private RECT_INPUT_OUTPUT: PuzzleTab | undefined;
   private TRI_INPUT_OUTPUT: PuzzleTab | undefined;
   private ROUND_INPUT_OUTPUT: PuzzleTab | undefined;
+  private isDarkTheme: boolean | undefined;
 
   // Override the shapes constant to include the custom shapes.
   override SHAPES = {
@@ -17,6 +23,11 @@ export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
     ROUND: 5,
   };
 
+  setTheme(theme: BlocklyLibrary.Theme) {
+    super.setTheme(theme);
+    this.isDarkTheme = isDarkTheme(theme);
+  }
+
   /**
    * Get an object with connection shape and sizing information based on the
    * type of the connection.
@@ -26,7 +37,9 @@ export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
    * @override
    */
   shapeFor(connection: BlocklyLibrary.Connection) {
-    const blockTypeShapeMap = {
+    const blockTypeShapeMap: {
+      [key: string]: PuzzleTab;
+    } = {
       // TODO: USE THE PROVIDER TO ADD BLOCK TYPES
     };
     // `connection.check` returns a list of accepted value types for the connection
@@ -140,9 +153,10 @@ export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
   }
 
   protected generateSecondaryColour_(inputColour: string): string {
-    if (Blockly.isDarkTheme) {
+    if (this.isDarkTheme) {
       return (
-        Blockly.utils.colour.blend('#000', inputColour, 0.4) || inputColour
+        BlocklyLibrary.utils.colour.blend('#000', inputColour, 0.4) ||
+        inputColour
       );
     }
     return super.generateSecondaryColour_(inputColour);

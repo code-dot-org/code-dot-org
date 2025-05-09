@@ -7,11 +7,12 @@ import {Typist} from 'react-typist';
 
 import {Button} from '@code-dot-org/component-library/button';
 
+import type {PanelLayout} from '@/app/models/level';
 import Markdown from '@/components/markdown';
 import TextToSpeech from '@/components/textToSpeech';
 import {useBrowserTextToSpeech} from '@/components/textToSpeech/BrowserTextToSpeechWrapper';
 
-import {Panel} from './types';
+import {PanelData} from './types';
 
 import moduleStyles from './panelsView.module.scss';
 
@@ -30,12 +31,10 @@ const verticalMargin = 50;
 const childrenAreaHeight = 70;
 
 interface PanelsProps {
-  panels: Panel[];
+  panels: PanelData[];
   background: LessonBackground;
   onContinue: (nextUrl?: string) => void;
   onSkip?: () => void;
-  targetWidth: number;
-  targetHeight: number;
   offerBrowserTts: boolean;
   levelId: string | null;
   resetOnChange?: boolean;
@@ -190,7 +189,9 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const nextPanel =
     currentPanelIndex + 1 < panels.length && panels[currentPanelIndex + 1];
 
-  const layoutClassMap = {
+  const layoutClassMap: {
+    [key in PanelLayout]: string;
+  } = {
     'text-top-left': moduleStyles.textTopLeft,
     'text-top-center': moduleStyles.textTopCenter,
     'text-bottom-left': moduleStyles.textBottomLeft,
@@ -200,7 +201,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   };
 
   const textLayoutClass = panel.layout
-    ? layoutClassMap[panel.layout]
+    ? layoutClassMap[panel.layout as PanelLayout]
     : moduleStyles.textTopRight;
 
   const buttonText =
@@ -311,7 +312,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
                       : moduleStyles[`bubbleNotCurrent${backgroundSuffix}`],
                   )}
                   size="xs"
-                  alt={''}
+                  title={''}
                   color={index === currentPanelIndex ? 'white' : 'gray'}
                   type="secondary"
                   isIconOnly
@@ -329,20 +330,15 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
       </div>
       {onSkip && (
         <div className={moduleStyles.skipContainer}>
-          <button
+          <Button
             onClick={onSkip}
-            type="button"
+            icon={{
+              iconName: 'arrow-right',
+              iconStyle: 'solid',
+            }}
             className={moduleStyles.buttonSkip}
-          >
-            <span className={moduleStyles.buttonSkipContent}>
-              Skip to project
-            </span>
-            <FontAwesome
-              title="Skip to project"
-              icon="arrow-right"
-              className={'icon'}
-            />
-          </button>
+            title="Skip to project"
+          />
         </div>
       )}
     </div>

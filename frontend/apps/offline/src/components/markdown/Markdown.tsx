@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import ReactMarkdown, {MarkdownToJSX} from 'markdown-to-jsx';
-import React, {PropsWithChildren} from 'react';
+import React from 'react';
 
 import Link from '@code-dot-org/component-library/link';
 import {
@@ -15,7 +15,7 @@ import {
 
 import moduleStyles from './markdown.module.scss';
 
-export interface MarkdownProps extends PropsWithChildren {
+export interface MarkdownProps {
   /** Markdown content (used instead of child nodes) */
   content?: string;
   /** Markdown custom className */
@@ -45,6 +45,7 @@ export interface MarkdownProps extends PropsWithChildren {
    * Other options to the markdown library.
    */
   options?: MarkdownToJSX.Options;
+  children?: string;
 }
 
 export const reactMarkdownOptions = {
@@ -112,7 +113,7 @@ const Markdown: React.FunctionComponent<MarkdownProps> = ({
     }}
     className={classnames(moduleStyles.markdownContainer, className)}
   >
-    {content || children}
+    {content || children || ''}
   </ReactMarkdown>
 );
 

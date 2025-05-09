@@ -1,3 +1,5 @@
+import * as BlocklyLibrary from 'blockly/core';
+
 import BlockLimitIndicator from './BlockLimitIndicator';
 import type {Theme} from './types';
 

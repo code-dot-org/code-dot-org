@@ -1,33 +1,38 @@
-/**
- * Given two functions, generates a function that returns the result of the
- * second function if and only if the first function returns true
- */
-function _executeIfConditional(conditional, fn) {
-  return function (...rest) {
-    if (conditional()) {
-      return fn.apply(this, ...rest);
-    }
-  };
+import type {MazeController, Tiles, WordSearch} from '@code-dot-org/maze';
+
+import ExecutionInfo from '@/components/level/mazeLevel/ExecutionInfo';
+
+export interface APIGlobals {
+  controller: MazeController;
+  executionInfo: ExecutionInfo;
+  tiles: Tiles;
 }
 
 /**
  * Only call API functions if we haven't yet terminated execution
  */
-export const API_FUNCTION = function (fn, ...rest) {
+
+export const API_FUNCTION = function (
+  this: APIGlobals,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  fn: (this: APIGlobals, ...args: any[]) => void,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ...rest: any[]
+) {
   if (!this.executionInfo.isTerminated()) {
-    fn.apply(this, ...rest);
+    fn.apply(this, rest);
   }
 };
 
 /**
  * Check whether all goals have been accomplished
  */
-function checkSuccess() {
-  //const succeeded = this.resultsHandler.succeeded();
+function checkSuccess(this: APIGlobals) {
+  const succeeded = false; //this.resultsHandler.succeeded();
 
   if (succeeded) {
     // Finished.  Terminate the user's program.
-    this.executionInfo.queueAction('finish', null);
+    this.executionInfo.queueAction('finish');
     this.executionInfo.terminateWithValue(true);
   }
 
@@ -39,14 +44,14 @@ function checkSuccess() {
  * Quantum maps, don't want to check for success until the user's code
  * has finished running completely.
  */
-function shouldCheckSuccessOnMove() {
+function shouldCheckSuccessOnMove(this: APIGlobals) {
   if (this.controller.map.hasMultiplePossibleGrids()) {
     return false;
   }
   return 0; //this.resultsHandler.shouldCheckSuccessOnMove();
 }
 
-function isPath(direction: number, id: string): boolean {
+function isPath(this: APIGlobals, direction: number, id: string): boolean {
   const {Direction, SquareType} = this.tiles;
 
   const effectiveDirection = this.controller.getPegmanD() + direction;
@@ -82,7 +87,7 @@ function isPath(direction: number, id: string): boolean {
       command = 'look_west';
       break;
   }
-  if (id) {
+  if (id && command) {
     this.executionInfo.queueAction(command, id);
   }
   return (
@@ -92,7 +97,7 @@ function isPath(direction: number, id: string): boolean {
   );
 }
 
-function move(direction: number, id: string) {
+function move(this: APIGlobals, direction: number, id: string) {
   const {Direction} = this.tiles;
 
   if (!isPath.bind(this)(direction, '')) {
@@ -126,9 +131,11 @@ function move(direction: number, id: string) {
       command = 'west';
       break;
   }
-  this.executionInfo.queueAction(command, id);
+  if (command) {
+    this.executionInfo.queueAction(command, id);
+  }
   if (this.controller.subtype.isWordSearch()) {
-    this.controller.subtype.markTileVisited(
+    (this.controller.subtype as WordSearch).markTileVisited(
       this.controller.getPegmanY(),
       this.controller.getPegmanX(),
       false,
@@ -144,7 +151,7 @@ function move(direction: number, id: string) {
  * @param direction - Direction to turn (0 = left, 1 = right).
  * @param id - ID of block that triggered this action.
  */
-function turn(direction: number, id: string) {
+function turn(this: APIGlobals, direction: number, id: string) {
   const {TurnDirection} = this.tiles;
 
   const currentD = this.controller.getPegmanD();
@@ -165,7 +172,7 @@ function turn(direction: number, id: string) {
 /**
  * Moves the character forward.
  */
-export function moveForward(id: string) {
+export function moveForward(this: APIGlobals, id: string) {
   const {MoveDirection} = this.tiles;
 
   API_FUNCTION.bind(this)(() => {
@@ -176,7 +183,7 @@ export function moveForward(id: string) {
 /**
  * Moves the character backward.
  */
-export function moveBackward(id: string) {
+export function moveBackward(this: APIGlobals, id: string) {
   const {MoveDirection} = this.tiles;
 
   API_FUNCTION.bind(this)(() => {
@@ -187,7 +194,7 @@ export function moveBackward(id: string) {
 /**
  * Turns the character to their left.
  */
-export function turnLeft(id: string) {
+export function turnLeft(this: APIGlobals, id: string) {
   const {TurnDirection} = this.tiles;
 
   API_FUNCTION.bind(this)(() => {
@@ -198,7 +205,7 @@ export function turnLeft(id: string) {
 /**
  * Turns the character to their right.
  */
-export function turnRight(id: string) {
+export function turnRight(this: APIGlobals, id: string) {
   const {TurnDirection} = this.tiles;
 
   API_FUNCTION.bind(this)(() => {

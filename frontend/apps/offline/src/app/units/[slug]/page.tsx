@@ -20,7 +20,7 @@ export default function UnitViewPage() {
       }}
     >
       <Header />
-      <Unit unitKey={unit.key} unit={unit} />
+      {unit && <Unit unit={unit} />}
     </div>
   );
 }

@@ -1,1 +1,1 @@
-export type {PanelLayout, Panel} from '@/app/models/level';
+export type {PanelLayout, PanelData} from '@/app/models/level';

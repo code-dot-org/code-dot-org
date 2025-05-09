@@ -14,6 +14,8 @@ export interface TextToSpeechProps {
   higherPosition?: boolean;
 }
 
+const usePause: boolean = true;
+
 /**
  * TextToSpeech play button.
  */
@@ -88,11 +90,11 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({
       )}
       onClick={playText}
       onKeyDown={handleKeyDown}
-      aria-label={i18n.playTextToSpeech()}
+      aria-label="Play text-to-speech"
       type="button"
     >
       <FontAwesomeV6Icon
-        iconName={isPlaying ? stopIcon : playIcon}
+        iconName={isPlaying ? 'stop' : 'play'}
         iconStyle={'regular'}
         className={moduleStyles.icon}
       />

@@ -1,6 +1,7 @@
 import {useEffect, useRef} from 'react';
 
-export type TimeoutCallback = () => void;
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
+export type TimeoutCallback = (...args: any[]) => void;
 
 /**
  * Gives the ability to assign a callback to a timeout.

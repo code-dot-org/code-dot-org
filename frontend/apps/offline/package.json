@@ -15,8 +15,9 @@
   },
   "license": "SEE LICENSE IN LICENSE",
   "scripts": {
+    "//": "  icons - The source directory. We convery all SVGs here to TSX components.",
     "build": "next build && yarn copy:static-assets",
-    "compile:icons": "svgr --no-prettier --no-dimensions --typescript --no-index --out-dir src/icons icons",
+    "compile:icons": "svgr --no-prettier --no-dimensions --typescript --no-index --jsx-runtime 'automatic' --out-dir src/icons icons",
     "copy:static-assets": "cp -r public .next/standalone/apps/offline",
     "dev": "next dev --turbopack -p ${PORT:-3001}",
     "lint": "eslint .",

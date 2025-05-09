@@ -8,6 +8,8 @@ import BlockLimitMap from './BlockLimitMap';
 import {BLOCK_TYPES} from './constants';
 import {updateBlockEnabled, disableOrphanBlocks} from './utils';
 
+type State = BlocklyLibrary.serialization.blocks.State;
+
 /**
  * A custom version of Blockly's Events.disableOrphans. This makes a couple
  * changes to the original function.
@@ -117,25 +119,27 @@ export function updateBlockLimits(
     }
   });
 
-  const flyout = eventWorkspace.getFlyout();
-  if (!flyout) {
-    return;
-  }
+  if ((eventWorkspace as BlocklyLibrary.WorkspaceSvg).getFlyout) {
+    const eventWorkspaceSvg: BlocklyLibrary.WorkspaceSvg =
+      eventWorkspace as BlocklyLibrary.WorkspaceSvg;
+    const flyout = eventWorkspaceSvg.getFlyout();
+    if (flyout) {
+      // Get all blocks from the flyout
+      const flyoutBlocks = flyout.getWorkspace().getTopBlocks();
 
-  // Get all blocks from the flyout
-  const flyoutBlocks = flyout.getWorkspace().getTopBlocks();
-
-  // Create limit indicators on flyout blocks
-  flyoutBlocks.forEach(flyoutBlock => {
-    if (blockLimitMap.has(flyoutBlock.type)) {
-      const remainingCount = blockLimitMap.remainingFor(flyoutBlock.type);
-      const indicator: BlockLimitIndicator = blockLimitMap.indicatorFor(
-        flyoutBlock.type,
-        flyoutBlock,
-      );
-      indicator.updateCount(remainingCount);
+      // Create limit indicators on flyout blocks
+      flyoutBlocks.forEach(flyoutBlock => {
+        if (blockLimitMap.has(flyoutBlock.type)) {
+          const remainingCount = blockLimitMap.remainingFor(flyoutBlock.type);
+          const indicator: BlockLimitIndicator = blockLimitMap.indicatorFor(
+            flyoutBlock.type,
+            flyoutBlock,
+          );
+          indicator.updateCount(remainingCount);
+        }
+      });
     }
-  });
+  }
 }
 
 /**
@@ -167,9 +171,15 @@ export function grayOutUndeletableBlocks(
     blockEvent.workspaceId,
   );
 
-  const grayOut = blockDefinition => {
-    const block = eventWorkspace?.getBlockById(blockDefinition.id);
+  const grayOut: (state: State) => void = state => {
+    if (!state.id) {
+      return;
+    }
+
+    const block = eventWorkspace?.getBlockById(state.id);
     if (
+      block &&
+      eventWorkspace &&
       !block.isDeletable() &&
       block.isMovable() &&
       !eventWorkspace.options.readOnly
@@ -178,19 +188,24 @@ export function grayOutUndeletableBlocks(
     }
 
     // Go through the connected blocks that were created with this block
-    if (blockDefinition.next?.block) {
-      grayOut(blockDefinition.next.block);
+    if (state.next?.block) {
+      grayOut(state.next.block);
     }
 
     // Ditto for inputs
-    for (const input of Object.values(blockDefinition.inputs || {})) {
-      grayOut(input.block);
+    for (const input of Object.values(state.inputs || {})) {
+      if (input.block) {
+        grayOut(input.block);
+      }
     }
   };
 
-  grayOut(
-    blockEvent.json || {
-      id: blockEvent.blockId,
-    },
-  );
+  const blockState: State = (blockEvent.type ===
+    BlocklyLibrary.Events.BLOCK_CREATE &&
+    (blockEvent as BlocklyLibrary.Events.BlockCreate).json) || {
+    id: blockEvent.blockId,
+    type: '',
+  };
+
+  grayOut(blockState);
 }

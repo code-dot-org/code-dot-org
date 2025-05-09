@@ -1,6 +1,6 @@
 import {markdownToTxt} from 'markdown-to-txt';
 
-import {Localization} from '@/localization';
+import localization from '@/localization';
 
 /**
  * Manages native Browser Text to Speech functionality.
@@ -36,7 +36,7 @@ function speak(text: string) {
   }
   const plainText = markdownToTxt(text);
   const utterance = new SpeechSynthesisUtterance(plainText);
-  utterance.lang = Localization.locale;
+  utterance.lang = localization.locale;
   speechSynthesis.cancel();
   speechSynthesis.speak(utterance);
   return utterance;

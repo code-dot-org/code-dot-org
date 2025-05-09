@@ -2,12 +2,13 @@
 
 import React, {PropsWithChildren, useState} from 'react';
 
+import type {LevelData} from '@/app/models/level';
 import LevelContext from '@/contexts/LevelContext';
 
 export interface LevelProviderProps extends PropsWithChildren {
-  level?: UnitData;
-  lessonIndex?: number;
+  level?: LevelData;
   levelIndex?: number;
+  lessonIndex?: number;
 }
 
 /**

@@ -1,3 +1,5 @@
+import * as Blockly from 'blockly/core';
+
 const blocks = [
   {
     // Block for moving forward/backward
@@ -6,8 +8,8 @@ const blocks = [
     previousStatement: true,
     nextStatement: true,
     tooltip: 'Move an actor.',
-    init: function (Blockly) {
-      this.appendDummyInput().appendField(
+    init: (block: Blockly.Block) => {
+      block.appendDummyInput().appendField(
         new Blockly.FieldDropdown([
           ['move forward', 'moveForward'],
           ['move backward', 'moveBackward'],
@@ -15,10 +17,10 @@ const blocks = [
         'DIR',
       );
     },
-    generator: function () {
+    generator: (block: Blockly.Block) => {
       // Generate JavaScript for moving forward/backward
-      const dir = this.getFieldValue('DIR');
-      return 'Studio.' + dir + "('block_id_" + this.id + "');\n";
+      const dir = block.getFieldValue('DIR');
+      return 'Studio.' + dir + "('block_id_" + block.id + "');\n";
     },
   },
   {
@@ -28,8 +30,8 @@ const blocks = [
     previousStatement: true,
     nextStatement: true,
     tooltip: 'Turn an actor left or right by 90 degrees.',
-    init: function (Blockly) {
-      this.appendDummyInput().appendField(
+    init: (block: Blockly.Block) => {
+      block.appendDummyInput().appendField(
         new Blockly.FieldDropdown([
           ['turn left' + ' \u21BA', 'turnLeft'],
           ['turn right' + ' \u21BA', 'turnRight'],
@@ -37,10 +39,10 @@ const blocks = [
         'DIR',
       );
     },
-    generator: function () {
+    generator: (block: Blockly.Block) => {
       // Generate JavaScript for turning left or right.
-      const dir = this.getFieldValue('DIR');
-      return 'Studio.' + dir + "('block_id_" + this.id + "');\n";
+      const dir = block.getFieldValue('DIR');
+      return 'Studio.' + dir + "('block_id_" + block.id + "');\n";
     },
   },
 ];

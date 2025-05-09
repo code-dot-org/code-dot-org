@@ -4,7 +4,10 @@ import React, {
   useEffect,
   useCallback,
   useContext,
+  ReactNode,
 } from 'react';
+
+import type {MazeController} from '@code-dot-org/maze';
 
 import type {LevelData} from '@/app/models/level';
 import type {BlockDefinition} from '@/components/blockly';
@@ -17,7 +20,7 @@ import LevelContext from '@/contexts/LevelContext';
 
 import * as defaultAPI from './api';
 import blocks from './blocks';
-import ExecutionInfo from './ExecutionInfo';
+import ExecutionInfo, {Action} from './ExecutionInfo';
 import {evalWith} from './interpreter';
 import defaultSkins, {skinFor} from './skins';
 import type {SkinsData, API} from './types';
@@ -28,7 +31,7 @@ export interface MazeLevelProps extends BlocklyLevelProps {
   skins?: SkinsData;
   api?: API;
   customBlocks?: BlockDefinition[];
-  visualization?: React.Node;
+  visualization?: ReactNode;
   visualizationClassName?: string;
 }
 
@@ -45,23 +48,23 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   options,
   ...rest
 }) => {
-  const controller = useRef(null);
-  const svg = useRef(null);
-  const executionInfo = useRef(null);
+  const controller = useRef<MazeController | null>(null);
+  const svg = useRef<SVGSVGElement | null>(null);
+  const executionInfo = useRef<ExecutionInfo | null>(null);
 
-  const Maze = useRef(null);
+  const Maze = useRef<typeof import('@code-dot-org/maze') | null>(null);
 
   const {hintsShown} = useContext(LevelContext);
 
   // Respond to a hint showing a path
   useEffect(() => {
     if (hintsShown > 0) {
-      const hint = levelData.hints[hintsShown - 1];
-      if (hint.path) {
+      const hint = (levelData.hints || [])[hintsShown - 1];
+      if (hint.path && controller.current && svg.current) {
         controller.current.drawHintPath(svg.current, hint.path);
       }
     }
-  }, [hintsShown]);
+  }, [hintsShown, svg, controller]);
 
   const [currentAvatar, setCurrentAvatar] = useState<string>(avatar || '');
   const [running, setRunning] = useState<boolean>(false);
@@ -72,14 +75,26 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   // When the reset button is pressed
   const onReset = useCallback(() => {
     timeout.cancel();
-    controller.current.reset();
-    setRunning(false);
-    setStepping(false);
+    if (controller.current) {
+      controller.current.reset(false);
+      setRunning(false);
+      setStepping(false);
+    }
   }, [controller]);
 
   // Will run (or step) the program
   const execute = useCallback(
     (step: boolean) => {
+      // We must have loaded the Maze module
+      if (!Maze.current) {
+        return;
+      }
+
+      // Also need a valid MazeController
+      if (!controller.current) {
+        return;
+      }
+
       console.log('execute', step);
       onReset();
       setRunning(true);
@@ -103,22 +118,47 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
 
       // We now have a transcript of all user actions... replay it and
       // animate the steps.
-      controller.current.reset();
+      controller.current.reset(false);
       controller.current.resetDirtImages(true);
-      controller.current.animationsController.stopIdling();
+      controller.current.animationsController?.stopIdling();
 
       const actions = executionInfo.current.getActions(step);
       scheduleAction(0, actions, step, 1100);
     },
-    [controller],
+    [controller, Maze],
   );
+
+  const finish = useCallback((_timePerStep: number) => {
+    // Only schedule victory animation for certain conditions:
+    /*if (this.testResults >= TestResults.MINIMUM_PASS_RESULT) {
+      var finishButton = document.getElementById('finishButton');
+      if (finishButton) {
+        finishButton.removeAttribute('disabled');
+      }
+      var finishIcon = document.getElementById('finish');
+      if (finishIcon) {
+        studioApp().playAudio('winGoal');
+      }
+      studioApp().playAudioOnWin();
+      this.controller.animatedFinish(timePerStep);
+    } else {
+      timeoutList.setTimeout(function () {
+        studioApp().playAudioOnFailure();
+      }, this.stepSpeed);
+    }*/
+  }, []);
 
   // Schedules an animation
   const animateAction = useCallback(
-    (action, timePerStep) => {
+    (action: Action, timePerStep: number) => {
       if (action.blockId) {
         // Tell blockly to highlight (keep ref to blockly or use provider)
         //studioApp().highlight(String(action.blockId));
+      }
+
+      // Only handle an active MazeController
+      if (!Maze.current || !controller.current) {
+        return;
       }
 
       switch (action.command) {
@@ -175,7 +215,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
           );
           break;
         case 'finish':
-          this.finish_(timePerStep);
+          finish(timePerStep);
           break;
         case 'putdown':
           controller.current.scheduleFill();
@@ -187,22 +227,45 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
           controller.current.animatedFail(false);
           break;
         case 'nectar':
-          controller.current.subtype.animateGetNectar();
+          if (controller.current.subtype instanceof Maze.current.subtypes.Bee) {
+            controller.current.subtype.animateGetNectar();
+          }
           break;
         case 'honey':
-          controller.current.subtype.animateMakeHoney();
+          if (controller.current.subtype instanceof Maze.current.subtypes.Bee) {
+            controller.current.subtype.animateMakeHoney();
+          }
           break;
         case 'get_corn':
-          controller.current.subtype.animateGetCorn();
+          if (
+            controller.current.subtype instanceof
+            Maze.current.subtypes.Harvester
+          ) {
+            controller.current.subtype.animateGetCorn();
+          }
           break;
         case 'get_pumpkin':
-          controller.current.subtype.animateGetPumpkin();
+          if (
+            controller.current.subtype instanceof
+            Maze.current.subtypes.Harvester
+          ) {
+            controller.current.subtype.animateGetPumpkin();
+          }
           break;
         case 'get_lettuce':
-          controller.current.subtype.animateGetLettuce();
+          if (
+            controller.current.subtype instanceof
+            Maze.current.subtypes.Harvester
+          ) {
+            controller.current.subtype.animateGetLettuce();
+          }
           break;
         case 'plant':
-          controller.current.subtype.animatePlant();
+          if (
+            controller.current.subtype instanceof Maze.current.subtypes.Planter
+          ) {
+            controller.current.subtype.animatePlant();
+          }
           break;
         default:
           // action[0] is null if generated by studioApp().checkTimeout().
@@ -217,6 +280,11 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     timeout.cancel();
     setRunning(false);
 
+    // We need a valid runtime context
+    if (!executionInfo.current) {
+      return;
+    }
+
     const stepsRemaining = executionInfo.current.stepsRemaining();
     console.log('STEPS REMAINING', stepsRemaining);
     // Check for success
@@ -228,11 +296,21 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
 
   // Schedules an action (the program is run and it generates a set of actions)
   const scheduleAction = useCallback(
-    (index, actions, singleStep, timePerAction) => {
+    (
+      index: number,
+      actions: Action[],
+      singleStep: boolean,
+      timePerAction: number,
+    ) => {
       timeout.cancel();
       if (index >= actions.length) {
         console.log('DONE');
         finishAnimations();
+        return;
+      }
+
+      // We need an active MazeController
+      if (!controller.current) {
         return;
       }
 
@@ -257,10 +335,24 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
   );
 
   // Schedule the next animation
-  const timeout = useTimeout((index, actions, singleStep, timePerAction) => {
-    console.log('TIMEOUT CALLBACK', index, actions, singleStep, timePerAction);
-    scheduleAction(index, actions, singleStep, timePerAction);
-  }, 1000);
+  const timeout = useTimeout(
+    (
+      index: number,
+      actions: Action[],
+      singleStep: boolean,
+      timePerAction: number,
+    ) => {
+      console.log(
+        'TIMEOUT CALLBACK',
+        index,
+        actions,
+        singleStep,
+        timePerAction,
+      );
+      scheduleAction(index, actions, singleStep, timePerAction);
+    },
+    1000,
+  );
 
   // When the 'step' button is pressed
   const onStep = useCallback(() => {
@@ -269,26 +361,31 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     if (!stepping) {
       execute(true);
     } else {
-      const actions = executionInfo.current.getActions(true);
-      setRunning(true);
-      scheduleAction(0, actions, true, 1100);
+      if (executionInfo.current) {
+        const actions = executionInfo.current.getActions(true);
+        setRunning(true);
+        scheduleAction(0, actions, true, 1100);
+      }
     }
-  }, [controller, stepping]);
+  }, [controller, executionInfo, stepping]);
 
   // When the 'run' button is pressed
   const onRun = useCallback(() => {
     timeout.cancel();
     execute(false);
-  }, [controller, stepping]);
+  }, []);
 
   // When blockly is loaded and initialized
   const onInject = useCallback(() => {
     // Blockly is ready
     setBlocklyLoaded(true);
-  }, [controller, Maze, svg]);
+  }, [setBlocklyLoaded]);
 
   // Pull out the skin asset paths
-  const skinConfig = skinFor(skins || defaultSkins, levelData?.mazeData?.skin);
+  const skinConfig = skinFor(
+    skins || defaultSkins,
+    levelData?.mazeData?.skinId || 'birds',
+  );
 
   useEffect(() => {
     (async () => {
@@ -305,20 +402,21 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     const svgElement = svg.current;
 
     // Parse out maze data when the svg is ready
-    if (svgElement && blocklyLoaded && mazeLoaded) {
+    if (
+      svg.current &&
+      blocklyLoaded &&
+      mazeLoaded &&
+      Maze.current &&
+      levelData.mazeData
+    ) {
       setCurrentAvatar(skinConfig.smallStaticAvatar);
 
       controller.current = new Maze.current.default.MazeController(
-        {
-          map: levelData.mazeData.maze,
-          serializedMaze: levelData.mazeData.serializedMaze,
-          skinId: levelData.mazeData.skin,
-          ...levelData.mazeData,
-        },
+        levelData.mazeData,
         skinConfig,
         {
           skin: skinConfig,
-          skinId: levelData.mazeData.skin,
+          skinId: levelData.mazeData.skinId,
         },
         {
           methods: {
@@ -332,7 +430,6 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
         },
       );
 
-      console.log('ON INJECT', controller.current.map, svg.current);
       controller.current.map.resetDirt();
       controller.current.subtype.initStartFinish();
       controller.current.subtype.createDrawer(svg.current);
@@ -345,14 +442,14 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
 
       return () => {
         console.log('UNINIT THE MAZE LEVEL');
-        if (controller.current) {
+        if (controller.current && svgElement) {
           console.log('UNINIT RESET??', controller.current.reset, svgElement);
           // We need to remount the old <svg> so that the controller can uninitialize
           const container = document.createElement('div');
-          container.style.hidden = true;
+          container.style.display = 'hidden';
           container.appendChild(svgElement);
           document.body.appendChild(container);
-          controller.current.reset(null);
+          controller.current.reset(false);
           controller.current.destroy?.();
           controller.current = null;
           container.remove();
@@ -374,9 +471,12 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
             ref={svg}
             running={running}
             stepping={stepping}
+            finishButton={false}
+            stepButton
             onRun={onRun}
             onReset={onReset}
             onStep={onStep}
+            onFinish={() => {}}
             className={visualizationClassName}
           />
         )

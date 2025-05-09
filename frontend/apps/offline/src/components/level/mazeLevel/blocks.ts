@@ -1,11 +1,17 @@
-import {javascriptGenerator} from 'blockly/javascript';
+import * as Blockly from 'blockly/core';
+import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 
-const blocks = [
+import type {Skin} from '@code-dot-org/maze';
+
+import type {BlockDefinition} from '@/components/blockly/types';
+
+const blocks: BlockDefinition[] = [
   {
     type: 'when_run',
     title: 'when run',
     style: 'setup_blocks',
+    tooltip: '',
     helpUrl: '',
     generator: () => '\n',
     nextStatement: true,
@@ -26,8 +32,8 @@ const blocks = [
     tooltip: 'Move me forward/backward one space',
     previousStatement: true,
     nextStatement: true,
-    init: function (Blockly) {
-      this.appendDummyInput().appendField(
+    init: (block: Blockly.Block) => {
+      block.appendDummyInput().appendField(
         new Blockly.FieldDropdown([
           ['move forward', 'moveForward'],
           ['move backward', 'moveBackward'],
@@ -35,10 +41,10 @@ const blocks = [
         'DIR',
       );
     },
-    generator: function () {
+    generator: (block: Blockly.Block) => {
       // Generate JavaScript for moving forward/backward
-      const dir = this.getFieldValue('DIR');
-      return 'Maze.' + dir + "('block_id_" + this.id + "');\n";
+      const dir = block.getFieldValue('DIR');
+      return 'Maze.' + dir + "('block_id_" + block.id + "');\n";
     },
   },
   {
@@ -47,8 +53,8 @@ const blocks = [
     tooltip: 'Turns me left or right by 90 degrees.',
     previousStatement: true,
     nextStatement: true,
-    init: function (Blockly) {
-      this.appendDummyInput().appendField(
+    init: (block: Blockly.Block) => {
+      block.appendDummyInput().appendField(
         new Blockly.FieldDropdown([
           ['turn left \u21BA', 'turnLeft'],
           ['turn right \u21BB', 'turnRight'],
@@ -56,9 +62,9 @@ const blocks = [
         'DIR',
       );
     },
-    generator: function () {
-      const dir = this.getFieldValue('DIR');
-      return `Maze.${dir}('block_id_${this.id}');\n`;
+    generator: (block: Blockly.Block) => {
+      const dir = block.getFieldValue('DIR');
+      return `Maze.${dir}('block_id_${block.id}');\n`;
     },
   },
   {
@@ -91,19 +97,23 @@ const blocks = [
     helpUrl: 'http://code.google.com/p/blockly/wiki/Repeat',
     tooltip: 'Repeat the enclosed actions until finish point is reached.',
     previousStatement: true,
-    init: function (Blockly, {skin}) {
-      this.appendDummyInput()
-        .appendField('repeat until')
-        .appendField(new Blockly.FieldImage(skin?.maze_forever, 35, 35));
-      this.appendStatementInput('DO').appendField('do');
+    init: (block: Blockly.Block, options) => {
+      const skin = options?.skin as Skin;
+      const field = block.appendDummyInput().appendField('repeat until');
+      if (skin?.maze_forever) {
+        field.appendField(new Blockly.FieldImage(skin?.maze_forever, 35, 35));
+      }
+      block.appendStatementInput('DO').appendField('do');
     },
-    generator: function () {
+    generator: (block: Blockly.Block, generator: JavascriptGenerator) => {
       // Generate JavaScript for do forever loop.
-      let branch = javascriptGenerator.statementToCode(this, 'DO');
+      const branch = generator.statementToCode(block, 'DO');
+      /*
       branch =
         Blockly.getInfiniteLoopTrap() +
-        Blockly.loopHighlight('Maze', this.id) +
+        Blockly.loopHighlight('Maze', block.id) +
         branch;
+       */
       return 'while (Maze.notFinished()) {\n' + branch + '}\n';
     },
   },
@@ -135,11 +145,11 @@ const blocks = [
         name: 'DO',
       },
     ],
-    generator: function () {
+    generator: (block: Blockly.Block, generator: JavascriptGenerator) => {
       // Generate JavaScript for 'if' conditional if there is a path.
       const argument =
-        'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
-      const branch = generator.statementToCode(this, 'DO');
+        'Maze.' + block.getFieldValue('DIR') + "('block_id_" + block.id + "')";
+      const branch = generator.statementToCode(block, 'DO');
       const code = 'if (' + argument + ') {\n' + branch + '}\n';
       return code;
     },
@@ -179,12 +189,12 @@ const blocks = [
         name: 'ELSE',
       },
     ],
-    generator: function () {
+    generator: (block: Blockly.Block, generator: JavascriptGenerator) => {
       // Generate JavaScript for 'if/else' conditional if there is a path.
       const argument =
-        'Maze.' + this.getFieldValue('DIR') + "('block_id_" + this.id + "')";
-      const branch0 = generator.statementToCode(this, 'DO');
-      const branch1 = generator.statementToCode(this, 'ELSE');
+        'Maze.' + block.getFieldValue('DIR') + "('block_id_" + block.id + "')";
+      const branch0 = generator.statementToCode(block, 'DO');
+      const branch1 = generator.statementToCode(block, 'ELSE');
       const code =
         'if (' + argument + ') {\n' + branch0 + '} else {\n' + branch1 + '}\n';
       return code;

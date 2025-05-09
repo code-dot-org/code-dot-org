@@ -4,12 +4,15 @@ import fs from 'fs/promises';
 import {JSDOM} from 'jsdom';
 import path from 'path';
 
+import type {MazeData} from '@code-dot-org/maze';
+
 /** Describes a single level hint. */
 export interface HintData {
   class: string;
   id: string;
   type: string;
   markdown: string;
+  video?: string;
   path?: [number, number][];
 }
 
@@ -56,19 +59,6 @@ export interface PanelData {
   fadeInOverPrevious?: boolean;
 }
 
-/** Describes Maze level tile data in serialized mazes */
-export interface MazeTileData {
-  tileType: number;
-}
-
-/** Describes maze level initial data. */
-export interface MazeData {
-  maze?: number[][];
-  serializedMaze?: MazeTileData[][];
-  skin?: string;
-  startDirection?: number;
-}
-
 /** Generic description for Blockly data. */
 export interface BlocklyData {
   startBlocks?: string;
@@ -104,12 +94,42 @@ export interface LevelData {
   containedLevelNames?: string[];
   /** Maze level data. */
   mazeData?: MazeData;
+  /** Blockly level data. */
+  blocklyData?: BlocklyData;
   /** Multiple choice question data. */
   multipleChoice?: MultipleChoiceData;
 }
 
+export interface LevelConfiguration {
+  properties?: {
+    long_instructions?: string;
+    short_instructions?: string;
+    contained_level_names?: string[];
+    video_key?: string;
+    instructions_important?: boolean | string;
+    authored_hints?: string;
+    serialized_maze?: string;
+    maze?: string;
+    skin?: string;
+    start_direction?: string;
+    panels?: PanelData[];
+  };
+}
+
+interface AuthoredHintConfiguration {
+  hint_class: string;
+  hint_id: string;
+  hint_type: string;
+  hint_markdown: string;
+  hint_path?: string;
+  hint_video?: string;
+}
+
+/** The information reported when loading raw level data */
 export interface LevelLoadInfo {
+  /** The local file path for the level */
   path: string;
+  /** XML level data */
   data: string;
 }
 
@@ -329,18 +349,21 @@ export const parseLevelData: (
   }
 
   // Parse hint data
-  ret.hints = JSON.parse(config.properties?.authored_hints || '[]').map(
-    hint => {
-      const hintData = {};
-      hintData.class = hint.hint_class;
-      hintData.id = hint.hint_id;
-      hintData.path = hint.hint_path ? JSON.parse(hint.hint_path) : undefined;
-      hintData.type = hint.hint_type;
-      hintData.video = hint.hint_video ? hint.hint_video : undefined;
-      hintData.markdown = hint.hint_markdown;
-      return hintData;
-    },
-  );
+  ret.hints = (
+    JSON.parse(
+      config.properties?.authored_hints || '[]',
+    ) as AuthoredHintConfiguration[]
+  ).map(hint => {
+    const hintData: HintData = {
+      class: hint.hint_class,
+      id: hint.hint_id,
+      path: hint.hint_path ? JSON.parse(hint.hint_path) : undefined,
+      type: hint.hint_type,
+      video: hint.hint_video,
+      markdown: hint.hint_markdown,
+    };
+    return hintData;
+  });
 
   // Parse maze data for such levels
   let isBlockly = false;
@@ -351,8 +374,8 @@ export const parseLevelData: (
   ) {
     isBlockly = true;
     ret.mazeData = {
-      skin: config.properties?.skin,
-      maze: config.properties?.maze
+      skinId: config.properties?.skin || 'birds',
+      map: config.properties?.maze
         ? JSON.parse(config.properties?.maze)
         : undefined,
       serializedMaze: config.properties?.serialized_maze
@@ -366,15 +389,21 @@ export const parseLevelData: (
 
   if (isBlockly) {
     ret.blocklyData = {
-      startBlocks: xml
-        .querySelector('blocks > start_blocks > xml')
-        ?.parentNode?.innerHTML?.trim(),
-      toolboxBlocks: xml
-        .querySelector('blocks > toolbox_blocks > xml')
-        ?.parentNode?.innerHTML?.trim(),
-      solutionBlocks: xml
-        .querySelector('blocks > solution_blocks > xml')
-        ?.parentNode?.innerHTML?.trim(),
+      startBlocks: (
+        xml.querySelector('blocks > start_blocks > xml')?.parentNode as
+          | HTMLElement
+          | undefined
+      )?.innerHTML?.trim(),
+      toolboxBlocks: (
+        xml.querySelector('blocks > toolbox_blocks > xml')?.parentNode as
+          | HTMLElement
+          | undefined
+      )?.innerHTML?.trim(),
+      solutionBlocks: (
+        xml.querySelector('blocks > solution_blocks > xml')?.parentNode as
+          | HTMLElement
+          | undefined
+      )?.innerHTML?.trim(),
     };
   }
 
@@ -397,27 +426,26 @@ export const parseLevelData: (
   if (ret.containedLevelNames?.[0]) {
     // Get the contained level data, too
     const multiKey = ret.containedLevelNames[0];
-    let multiData = (await loadLevelDefinition(multiKey, 'multi')).data;
-    console.log(multiData);
-    multiData = multiData.split('\n');
+    const multiData = (await loadLevelDefinition(multiKey, 'multi')).data;
+    const multiLines: string[] = multiData.split('\n');
 
     // Parse the multiple choice question
-    const multipleChoice = {
+    const multipleChoice: MultipleChoiceData = {
       question: (
-        multiData.filter(line => line.startsWith('question '))[0] ||
+        multiLines.filter(line => line.startsWith('question '))[0] ||
         "question ''"
       )
         .substring(9)
         .replace(/^'|'$/g, ''),
-      choices: multiData
+      choices: multiLines
         .filter(line => line.startsWith('wrong ') || line.startsWith('right '))
         .map(line => {
           const matches = line.match(
             /^(right|wrong)\s*'(.*)',\s*feedback:\s*'(.*)'\s*$/,
           );
           return {
-            text: matches[2],
-            feedback: matches[3],
+            text: matches?.[2] || '',
+            feedback: matches?.[3] || '',
             correct: line.startsWith('right'),
           };
         }),

@@ -2,6 +2,7 @@
 
 import React, {PropsWithChildren} from 'react';
 
+import type {UnitData} from '@/app/models/unit';
 import UnitContext from '@/contexts/UnitContext';
 
 export interface UnitProviderProps extends PropsWithChildren {

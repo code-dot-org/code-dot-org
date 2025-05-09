@@ -1,22 +1,26 @@
 import React, {PropsWithChildren, useState} from 'react';
 
-import type {BlockDefinition} from '@/components/blockly/types';
+import type {
+  BlockDefinition,
+  Theme,
+  Renderer,
+} from '@/components/blockly/types';
 import BlocklyContext from '@/contexts/BlocklyContext';
 
-export interface BlocklyProviderProps {
+export interface BlocklyProviderProps extends PropsWithChildren {
   customBlocks?: BlockDefinition[];
-  theme?: string;
-  renderer?: string;
+  theme?: Theme;
+  renderer?: Renderer;
 }
 
-const BlocklyProvider: React.FunctionComponent<PropsWithChildren> = ({
+const BlocklyProvider: React.FunctionComponent<BlocklyProviderProps> = ({
   customBlocks,
   theme,
   renderer,
   children,
 }) => {
   // Themes can be updated
-  const [currentTheme, setTheme] = useState<string | undefined>(theme);
+  const [currentTheme, setTheme] = useState<Theme | undefined>(theme);
 
   return (
     <BlocklyContext.Provider
@@ -24,7 +28,7 @@ const BlocklyProvider: React.FunctionComponent<PropsWithChildren> = ({
         theme: currentTheme,
         setTheme,
         renderer,
-        customBlocks,
+        customBlocks: customBlocks || [],
       }}
     >
       {children}

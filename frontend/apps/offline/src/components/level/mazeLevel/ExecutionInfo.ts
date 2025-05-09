@@ -1,6 +1,6 @@
 export interface Action {
   command: string;
-  blockId: string;
+  blockId?: string;
 }
 
 /**
@@ -32,14 +32,12 @@ class ExecutionInfo {
    */
   terminateWithValue(value: boolean | number) {
     if (!this.terminated_) {
-      console.log('wait');
       this.terminationValue_ = value;
     }
     this.terminated_ = true;
   }
 
   isTerminated(): boolean {
-    console.log('hi', this.terminated_);
     return this.terminated_;
   }
 
@@ -47,18 +45,14 @@ class ExecutionInfo {
     return this.terminationValue_;
   }
 
-  queueAction(command: string, blockId: string | null) {
+  queueAction(command: string, blockId?: string) {
     const action = {command: command, blockId: blockId};
-    console.log('QUEUE', this.steps_);
     if (this.collection_) {
-      console.log('COLL');
       this.collection_.push(action);
     } else {
-      console.log('STEP');
       // single action step (most common case)
       this.steps_.push([action]);
     }
-    console.log('QUEUE DONE', this.steps_);
   }
 
   /**
@@ -66,16 +60,16 @@ class ExecutionInfo {
    * step is true, the list will contain the actions for one step, otherwise it
    * will be the entire queue.
    */
-  getActions(singleStep) {
-    const actions = [];
+  getActions(singleStep: boolean): Action[] {
+    const actions: (Action[] | Action[][])[] = [];
     if (singleStep && this.stepsRemaining()) {
-      actions.push(this.steps_.shift());
+      actions.push(this.steps_.shift() as Action[]);
       // dont leave queue with just a finish in it
       if (this.onLastStep(this.steps_)) {
-        actions.push(this.steps_.splice(0));
+        actions.push(this.steps_.splice(0) as Action[][]);
       }
     } else {
-      actions.push(this.steps_.splice(0));
+      actions.push(this.steps_.splice(0) as Action[][]);
     }
 
     // Some steps will contain multiple actions.  For example a K1 North block can
@@ -85,7 +79,7 @@ class ExecutionInfo {
     // Therefore, we flatten it twice: once to coalesce the steps with multiple
     // actions, and again to flatten all of the steps to produce just a single depth
     // list of actions.
-    return actions.flat().flat();
+    return actions.flat().flat() as Action[];
   }
 
   stepsRemaining(): boolean {
@@ -97,7 +91,7 @@ class ExecutionInfo {
    * we're done executing, and if we're in step mode won't want to wait around
    * for another step press.
    */
-  onLastStep(steps): boolean {
+  onLastStep(steps: Action[][]): boolean {
     if (steps.length === 0) {
       return true;
     }
@@ -135,9 +129,7 @@ class ExecutionInfo {
    * loop.  Set termination value to Infinity
    */
   checkTimeout() {
-    console.log('check');
     if (this.ticks-- < 0) {
-      console.log('done');
       this.terminateWithValue(Infinity);
     }
   }

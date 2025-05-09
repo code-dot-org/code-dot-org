@@ -1,10 +1,25 @@
 import Interpreter from '@code-dot-org/js-interpreter';
+import type {
+  StateStack,
+  InterpreterScope,
+  InterpreterObject,
+  MakeNativeOptions,
+} from '@code-dot-org/js-interpreter';
+
+import CustomMarshaler from './CustomMarshaler';
 
 /**
  * Property access wrapped in try/catch. This is in an indepedendent function
  * so the JIT compiler can optimize the calling function.
  */
-function safeReadProperty(object, property) {
+function safeReadProperty(
+  object: {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    [key: string]: any;
+  },
+  property: string,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+): any {
   try {
     return object[property];
   } catch (_) {
@@ -12,25 +27,35 @@ function safeReadProperty(object, property) {
   }
 }
 
-function isCanvasImageData(nativeVar) {
-  // IE 9/10 don't know about Uint8ClampedArray and call it CanvasPixelArray instead
-  if (typeof Uint8ClampedArray !== 'undefined') {
-    return nativeVar instanceof Uint8ClampedArray;
-  }
-  return nativeVar instanceof CanvasPixelArray;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function isCanvasImageData(nativeVar: any): boolean {
+  return nativeVar instanceof Uint8ClampedArray;
 }
 
 class CustomMarshalingInterpreter extends Interpreter {
-  constructor(code, customMarshaler, opt_initFunc) {
+  customMarshaler?: CustomMarshaler;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  asyncFunctionList?: any[];
+
+  constructor(
+    code: string,
+    customMarshaler: CustomMarshaler,
+    opt_initFunc: (
+      thisInterpreter: CustomMarshalingInterpreter,
+      scope: InterpreterScope,
+    ) => void,
+  ) {
     super(code, (thisInterpreter, scope) => {
+      const thisCustomInterpreter: CustomMarshalingInterpreter =
+        thisInterpreter as unknown as CustomMarshalingInterpreter;
       thisInterpreter.functionMap_.VariableDeclaration =
         thisInterpreter.stepVariableDeclaration.bind(thisInterpreter);
       thisInterpreter.functionMap_.VariableDeclarator =
         thisInterpreter.stepVariableDeclarator.bind(thisInterpreter);
-      thisInterpreter.asyncFunctionList = [];
-      thisInterpreter.customMarshaler = customMarshaler;
+      thisCustomInterpreter.asyncFunctionList = [];
+      thisCustomInterpreter.customMarshaler = customMarshaler;
       if (opt_initFunc) {
-        opt_initFunc(thisInterpreter, scope);
+        opt_initFunc(thisCustomInterpreter, scope);
       }
     });
 
@@ -52,14 +77,14 @@ class CustomMarshalingInterpreter extends Interpreter {
    * Look at a single frame on the stack.
    * @param {number} [i] - optional index to look down to on the stack
    */
-  peekStackFrame(i = 0) {
+  peekStackFrame(i = 0): StateStack {
     return this.stateStack[this.stateStack.length - 1 - i];
   }
 
   /**
    * Pop the top frame off the stack and return it.
    */
-  popStackFrame() {
+  popStackFrame(): StateStack | undefined {
     return this.stateStack.pop();
   }
 
@@ -67,14 +92,14 @@ class CustomMarshalingInterpreter extends Interpreter {
    * Push a new frame onto the stack
    * @returns the size of the stack after pushing the new frame
    */
-  pushStackFrame(state) {
+  pushStackFrame(state: StateStack): number {
     return this.stateStack.push(state);
   }
 
   /**
    * Get the current size/depth of the stack
    */
-  getStackDepth() {
+  getStackDepth(): number {
     return this.stateStack.length;
   }
 
@@ -82,7 +107,7 @@ class CustomMarshalingInterpreter extends Interpreter {
    * Set the entire stack to the provided value
    * @param {Array} stack - an array of stack frames
    */
-  setStack(stack) {
+  setStack(stack: StateStack[]) {
     this.stateStack = stack;
   }
 
@@ -97,14 +122,21 @@ class CustomMarshalingInterpreter extends Interpreter {
    * @param {Object} nativeParent Native parent object (if parented).
    * @return {boolean} true if property access should be blocked.
    */
-  shouldBlockCustomMarshalling_(name, obj, nativeParent) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  shouldBlockCustomMarshalling_(name: string, obj: any, nativeParent?: any) {
+    if (!this.customMarshaler) {
+      return true;
+    }
+
     if (-1 !== this.customMarshaler.blockedProperties.indexOf(name)) {
       return true;
     }
-    const value = obj.isCustomMarshal ? obj.data[name] : nativeParent[name];
+
+    const value = obj.isCustomMarshal ? obj.data[name] : nativeParent?.[name];
     if (value instanceof Node || value instanceof Window) {
       return true;
     }
+
     return false;
   }
 
@@ -117,7 +149,8 @@ class CustomMarshalingInterpreter extends Interpreter {
    * @return {!Object} Property value (may be UNDEFINED).
    * @override
    */
-  getProperty(obj, name) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  getProperty(obj: any, name: string): InterpreterObject | null {
     name = name.toString();
     let customMarshalValue;
     if (obj.isCustomMarshal) {
@@ -147,7 +180,9 @@ class CustomMarshalingInterpreter extends Interpreter {
     ) {
       return this.createPrimitive(customMarshalValue);
     } else {
-      return this.marshalNativeToInterpreter(customMarshalValue, obj.data);
+      return (
+        this.marshalNativeToInterpreter(customMarshalValue, obj.data) || null
+      );
     }
   }
 
@@ -156,7 +191,8 @@ class CustomMarshalingInterpreter extends Interpreter {
    * Specific cases that are accounted for are detailed in the conditional below.
    *
    */
-  getNativeParent_(obj, name) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  getNativeParent_(obj: any, name: string): any {
     let hasProperty = false;
     if (obj && !obj.isPrimitive) {
       hasProperty = super.hasProperty(obj, name);
@@ -178,7 +214,7 @@ class CustomMarshalingInterpreter extends Interpreter {
        * 3. Assuming the above conditions pass, lookup the native parent among the list
        * of global properties specified in the custom marshaler's configuration.
        */
-      !!(nativeParent = this.customMarshaler.globalProperties[name]) &&
+      !!(nativeParent = this.customMarshaler?.globalProperties?.[name]) &&
       /**
        * 4. If the property being looked up has been explicitly blocked from custom
        * marshalling, then don't return the native parent.
@@ -198,7 +234,8 @@ class CustomMarshalingInterpreter extends Interpreter {
    * @return {boolean} True if property exists.
    * @override
    */
-  hasProperty(obj, name) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  hasProperty(obj: any, name: string): boolean {
     name = name.toString();
     if (obj.isCustomMarshal) {
       if (this.shouldBlockCustomMarshalling_(name, obj)) {
@@ -226,7 +263,8 @@ class CustomMarshalingInterpreter extends Interpreter {
    *     needs to be called, otherwise undefined.
    * @override
    */
-  setProperty(obj, name, value, opt_descriptor) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  setProperty(obj: any, name: string, value: any, opt_descriptor?: object) {
     name = name.toString();
     if (obj.isCustomMarshal) {
       if (!this.shouldBlockCustomMarshalling_(name, obj)) {
@@ -259,8 +297,16 @@ class CustomMarshalingInterpreter extends Interpreter {
    * provides access to the original setProperty method to avoid
    * custom marshaling in certain very specific cases.
    */
-  setPropertyWithoutCustomMarshaling(...args) {
-    return super.setProperty(...args);
+
+  setPropertyWithoutCustomMarshaling(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    obj: any,
+    name: string,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    value: any,
+    opt_descriptor?: object,
+  ) {
+    return super.setProperty(obj, name, value, opt_descriptor);
   }
 
   // The following overridden methods need to be patched in order to support custom marshaling.
@@ -275,8 +321,8 @@ class CustomMarshalingInterpreter extends Interpreter {
    * @return {!Object} The value.
    * @override
    */
-  getValueFromScope(name) {
-    let scope = this.getScope();
+  getValueFromScope(name: string): object | null {
+    let scope: InterpreterScope | undefined = this.getScope();
     const nameStr = name.toString();
     while (scope) {
       if (this.hasProperty(scope, nameStr)) {
@@ -291,10 +337,7 @@ class CustomMarshalingInterpreter extends Interpreter {
     }
     // Typeof operator is unique: it can safely look at non-defined variables.
     const prevNode = this.stateStack[this.stateStack.length - 1].node;
-    if (
-      prevNode['type'] === 'UnaryExpression' &&
-      prevNode['operator'] === 'typeof'
-    ) {
+    if (prevNode.type === 'UnaryExpression' && prevNode.operator === 'typeof') {
       return this.UNDEFINED;
     }
     this.throwException(this.REFERENCE_ERROR, nameStr + ' is not defined');
@@ -308,9 +351,9 @@ class CustomMarshalingInterpreter extends Interpreter {
    * @param {boolean} declarator true if called from variable declarator.
    * @override
    */
-  setValueToScope(name, value, declarator) {
-    let scope = this.getScope();
-    const strict = scope.strict;
+  setValueToScope(name: string | object, value: string, declarator?: boolean) {
+    let scope: InterpreterScope | undefined = this.getScope();
+    const strict = scope?.strict || false;
     const nameStr = name.toString();
     while (scope) {
       if (this.hasProperty(scope, nameStr) || (!strict && !scope.parentScope)) {
@@ -334,12 +377,19 @@ class CustomMarshalingInterpreter extends Interpreter {
    * @param {boolean} declarator true if called from variable declarator.
    * @override
    */
-  setValue(left, value, declarator) {
+
+  setValue(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    left: [any, string] | string | object,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    value: any,
+    declarator?: boolean,
+  ) {
     if (left instanceof Array) {
       return super.setValue(left, value);
     } else {
       this.setValueToScope(left, value, declarator);
-      return undefined;
+      return;
     }
   }
 
@@ -355,7 +405,7 @@ class CustomMarshalingInterpreter extends Interpreter {
     const state = this.peekStackFrame();
     const node = state.node;
     const n = state.n_ || 0;
-    if (node.declarations[n]) {
+    if (node?.declarations?.[n]) {
       state.n_ = n + 1;
       this.stateStack.push({node: node.declarations[n]});
     } else {
@@ -378,7 +428,7 @@ class CustomMarshalingInterpreter extends Interpreter {
       return;
     }
     if (node.init) {
-      this.setValue(this.createPrimitive(node.id.name), state.value, true);
+      this.setValue(this.createPrimitive(node.id?.name), state.value, true);
     }
     this.popStackFrame();
   }
@@ -394,15 +444,27 @@ class CustomMarshalingInterpreter extends Interpreter {
    * @param {Object} interpreterObject Optional existing interpreter object
    * @return {!Object} The interpreter object, which was created if needed.
    */
-  marshalNativeToInterpreterObject(nativeObject, maxDepth, interpreterObject) {
+
+  marshalNativeToInterpreterObject(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    nativeObject: any,
+    maxDepth: number,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    interpreterObject?: any,
+  ): object {
     const retVal = interpreterObject || this.createObject(this.OBJECT);
     const isFunc = this.isa(retVal, this.FUNCTION);
+    const JQueryFunction = Function.prototype as unknown as {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      trigger: any;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      inherits: any;
+    };
     for (const prop in nativeObject) {
       const value = safeReadProperty(nativeObject, prop);
       if (
         isFunc &&
-        (value === Function.prototype.trigger ||
-          value === Function.prototype.inherits)
+        (value === JQueryFunction.trigger || value === JQueryFunction.inherits)
       ) {
         // Don't marshal these that were added by jquery or else we will recurse
         continue;
@@ -428,16 +490,27 @@ class CustomMarshalingInterpreter extends Interpreter {
    *        hold the unmarshaled return value as a 'value' property later.
    * @param {Function} intFunc The interpreter supplied callback function
    */
-  marshalNativeToInterpreter(nativeVar, nativeParentObj, maxDepth) {
+
+  marshalNativeToInterpreter(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    nativeVar: any,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    nativeParentObj: any,
+    maxDepth?: number,
+  ): InterpreterObject {
     if (maxDepth === 0 || typeof nativeVar === 'undefined') {
       return this.UNDEFINED;
     }
-    let i, retVal;
+    let i;
+    let retVal: InterpreterObject | undefined;
     if (typeof maxDepth === 'undefined') {
       maxDepth = Infinity; // default to infinite levels of depth
     }
     if (
-      this.customMarshaler.shouldCustomMarshalObject(nativeVar, nativeParentObj)
+      this.customMarshaler?.shouldCustomMarshalObject(
+        nativeVar,
+        nativeParentObj,
+      )
     ) {
       return this.customMarshaler.createCustomMarshalObject(
         this,
@@ -445,9 +518,11 @@ class CustomMarshalingInterpreter extends Interpreter {
         nativeParentObj,
       );
     }
+
     if (nativeVar instanceof Array) {
       retVal = this.createObject(this.ARRAY);
       for (i = 0; i < nativeVar.length; i++) {
+        retVal.properties ||= [];
         retVal.properties[i] = this.marshalNativeToInterpreter(
           nativeVar[i],
           null,
@@ -459,22 +534,24 @@ class CustomMarshalingInterpreter extends Interpreter {
       // Special case for canvas image data - could expand to support TypedArray
       retVal = this.createObject(this.ARRAY);
       for (i = 0; i < nativeVar.length; i++) {
+        retVal.properties ||= [];
         retVal.properties[i] = this.createPrimitive(nativeVar[i]);
       }
       retVal.length = nativeVar.length;
     } else if (nativeVar instanceof Function) {
-      const makeNativeOpts = {
+      const makeNativeOpts: MakeNativeOptions = {
         nativeFunc: nativeVar,
         nativeParentObj: nativeParentObj,
       };
-      if (this.asyncFunctionList.indexOf(nativeVar) !== -1) {
+      if (this.asyncFunctionList?.indexOf(nativeVar) !== -1) {
         // Mark if this should be nativeIsAsync:
         makeNativeOpts.nativeIsAsync = true;
       }
-      const extraOpts = this.customMarshaler.getCustomMarshalMethodOptions(
-        nativeParentObj,
-        nativeVar,
-      );
+      const extraOpts =
+        this.customMarshaler?.getCustomMarshalMethodOptions(
+          nativeParentObj,
+          nativeVar,
+        ) || {};
       // Add extra options if the parent of this function is in our custom marshal
       // modified object list:
       for (const prop in extraOpts) {
@@ -502,13 +579,13 @@ class CustomMarshalingInterpreter extends Interpreter {
       } else {
         retVal = this.marshalNativeToInterpreterObject(nativeVar, maxDepth - 1);
       }
-    } else {
-      retVal = this.createPrimitive(nativeVar);
     }
-    return retVal;
+
+    return retVal || this.createPrimitive(nativeVar);
   }
 
-  marshalInterpreterToNative(interpreterVar) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  marshalInterpreterToNative(interpreterVar: any): any {
     if (interpreterVar.isPrimitive || interpreterVar.isCustomMarshal) {
       return interpreterVar.data;
     } else if (this.isa(interpreterVar, this.ARRAY)) {
@@ -524,7 +601,10 @@ class CustomMarshalingInterpreter extends Interpreter {
       this.isa(interpreterVar, this.OBJECT) ||
       interpreterVar.type === 'object'
     ) {
-      const nativeObject = {};
+      const nativeObject: {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        [key: string]: any;
+      } = {};
       for (const prop in interpreterVar.properties) {
         if (interpreterVar.notEnumerable[prop]) {
           // skip properties which are not enumerable.
@@ -536,18 +616,19 @@ class CustomMarshalingInterpreter extends Interpreter {
       }
       return nativeObject;
     } else if (this.isa(interpreterVar, this.FUNCTION)) {
+      /*
       if (
         CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction
       ) {
         return CustomMarshalingInterpreter.createNativeFunctionFromInterpreterFunction(
           interpreterVar,
         );
-      } else {
-        // Just return the interpreter object if we can't convert it. This is needed
-        // for passing interpreter callback functions into native.
+      } else {*/
+      // Just return the interpreter object if we can't convert it. This is needed
+      // for passing interpreter callback functions into native.
 
-        return interpreterVar;
-      }
+      return interpreterVar;
+      /*}*/
     } else {
       throw new Error("Can't marshal type " + typeof interpreterVar);
     }
@@ -565,7 +646,11 @@ class CustomMarshalingInterpreter extends Interpreter {
    * @param {function} callback - The interpreter supplied callback function
    * @private
    */
-  createNativeCallbackForAsyncFunction_(opts, callback) {
+  createNativeCallbackForAsyncFunction_(
+    opts: MakeNativeOptions,
+    callback: (obj: object) => void,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  ): (nativeValue: any) => void {
     return nativeValue => {
       callback(
         this.marshalNativeToInterpreter(nativeValue, null, opts.maxDepth),
@@ -585,21 +670,28 @@ class CustomMarshalingInterpreter extends Interpreter {
    * @param {Function} intFunc The interpreter supplied callback function
    * @private
    */
-  createNativeInterpreterCallback_(opts, intFunc) {
-    return (...args) => {
+  createNativeInterpreterCallback_(
+    opts: MakeNativeOptions,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    intFunc: any,
+  ) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return (...args: any[]) => {
       const intArgs = args.map(arg =>
         this.marshalNativeToInterpreter(arg, null, opts.maxDepth),
       );
       // Shift a CallExpression node on the stack that already has its func_,
       // arguments, and other state populated:
-      const state = opts.callbackState || {};
-      state.node = {
-        type: 'CallExpression',
-        arguments:
-          intArgs /* this just needs to be an array of the same size */,
-        // give this node an end so that the interpreter doesn't treat it
-        // like polyfill code and do weird weird scray terrible things.
-        end: 1,
+      const state: StateStack = {
+        ...(opts.callbackState || {}),
+        node: {
+          type: 'CallExpression',
+          arguments:
+            intArgs /* this just needs to be an array of the same size */,
+          // give this node an end so that the interpreter doesn't treat it
+          // like polyfill code and do weird weird scray terrible things.
+          end: 1,
+        },
       };
       state.doneCallee_ = true;
       state.func_ = intFunc;
@@ -646,7 +738,7 @@ class CustomMarshalingInterpreter extends Interpreter {
    *     Interpreter.createAsyncFunction and Interpreter.createNativeFunction to give
    *     interpreted code safe access to native functions.
    */
-  makeNativeMemberFunction(opts) {
+  makeNativeMemberFunction(opts: MakeNativeOptions) {
     const {
       dontMarshal,
       nativeFunc,
@@ -655,8 +747,10 @@ class CustomMarshalingInterpreter extends Interpreter {
       nativeIsAsync,
       nativeCallsBackInterpreter,
     } = opts;
-    return (...args) => {
-      let nativeArgs = [];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    return (...args: any[]) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      let nativeArgs: any[] = [];
       if (dontMarshal) {
         nativeArgs = args;
       } else {
@@ -692,12 +786,15 @@ class CustomMarshalingInterpreter extends Interpreter {
         nativeRetVal = nativeFunc.apply(nativeParentObj, nativeArgs);
       } catch (e) {
         if (!(e instanceof Error)) {
-          const newError = new Error(e);
+          const newError = new Error(e as string);
           newError.stack =
             'Error does not have stack information. Throw `new Error()` ' +
             'instead of a string to get a full stack trace. Exception thrown ' +
             `when calling ${nativeFunc} on ${nativeParentObj}`;
-          newError.native = true;
+          Object.defineProperty(newError, 'native', {
+            value: true,
+            writable: false,
+          });
           throw newError;
         } else {
           throw e;
