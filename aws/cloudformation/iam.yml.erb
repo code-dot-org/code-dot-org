@@ -868,11 +868,48 @@ roles.each do |name, config| %>
     }
     marketing_sites_environment_type_configuration.each do |environment_type, configuration|
   %>
-  MarketingSitesDeployerRole<%=environment_type.capitalize%>:
+
+  # Enforce least privilege on Roles created/passed/attached by the Role that provisions marketing site Stacks.
+  RoleCreationBoundaryPolicy<%=environment_type.capitalize%>:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      Description: Permissions boundary for Roles created by CloudFormationMarketingSites<%=environment_type.capitalize%>Role
+      ManagedPolicyName: role-permissions-boundary-<%=environment_type%>
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowSecretsManagerForMarketingSites
+            Effect: Allow
+            Action:
+              - secretsmanager:GetSecretValue
+              - secretsmanager:DescribeSecret
+            Resource: 'arn:aws:secretsmanager:*:*:secret:marketing-sites/<%=environment_type%>/*'
+
+          - Sid: AllowCloudfrontInvalidationForDevEnvironment
+            Effect: Allow
+            Action:
+              - cloudfront:CreateInvalidation
+            Resource: '*'
+            Condition:
+              StringEquals:
+                aws:ResourceTag/environment-type: <%=environment_type%>
+
+          # Add more statements here as we need the Roles provisioned within a marketing sites Stack to have more permissions.
+
+          # Explicit deny for everything else to enforce least privilege
+          - Sid: DenyAllOtherActions
+            Effect: Deny
+            NotAction:
+              - secretsmanager:GetSecretValue
+              - secretsmanager:DescribeSecret
+              - cloudfront:CreateInvalidation
+            Resource: '*'
+
+  CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: marketing-sites-deployer-<%=environment_type%>
-      Path: /marketing-sites/deployer/<%=environment_type%>
+      RoleName: cloudformation-marketing-sites-<%=environment_type%>
+      Path: /cloudformation/marketing-sites/<%=environment_type%>
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -889,7 +926,7 @@ roles.each do |name, config| %>
       PermissionsBoundary: !Ref DevPermissions
       ManagedPolicyArns: []
       Policies:
-        - PolicyName: DeployMarketingSitesPolicy<%=environment_type.capitalize%>
+        - PolicyName: CloudFormationMarketingSites<%=environment_type.capitalize%>Policy
           PolicyDocument:
             Version: 2012-10-17
             Statement:
@@ -911,8 +948,10 @@ roles.each do |name, config| %>
                 # marketing-sites-development-code-org-my-feature-branch
                 # marketing-sites-development-code-org-my-other-branch
                 Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/marketing-sites-<%=environment_type%>-*"
-              # IAM permissions for role management
-              - Effect: Allow
+              # The Role that provisions marketing site Stacks can only create/pass/attach Roles with policies
+              # constrained by a Permissions Boundary and that can only be assumed by a narrow set of services.
+              - Sid: AllowRoleCreationWithBoundary
+                Effect: Allow
                 Action:
                   - iam:GetRole
                   - iam:PassRole
@@ -920,10 +959,10 @@ roles.each do |name, config| %>
                   - iam:AttachRolePolicy
                   - iam:PutRolePolicy
                   - iam:CreatePolicy
-                Resource:
-                  - !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-<%=environment_type%>-*"
-                  - !Sub "arn:aws:iam::${AWS::AccountId}:policy/marketing-sites-<%=environment_type%>-*"
+                Resource: '*'
                 Condition:
+                  StringEquals:
+                    iam:PermissionsBoundary: !Ref RoleCreationBoundaryPolicy<%=environment_type.capitalize%>
                   StringEqualsIfExists:
                     iam:PassedToService:
                       - ecs-tasks.amazonaws.com
