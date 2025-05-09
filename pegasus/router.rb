@@ -87,7 +87,7 @@ class Documents < Sinatra::Base
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now
     set :configs, load_configs_in(dir)
-    # set :views, dir
+    set :views, dir
     set :image_extnames, ['.png', '.jpeg', '.jpg', '.gif']
     set :exclude_extnames, ['.collate']
     set_max_age :document, ONE_HOUR * 4
@@ -238,19 +238,6 @@ class Documents < Sinatra::Base
 
     if @header['content-type']
       response.headers['Content-Type'] = @header['content-type']
-    end
-    layout = @header['layout'] || 'default'
-    unless ['', 'none'].include?(layout)
-      template = resolve_template('layouts', settings.template_extnames, layout)
-      raise Exception, "'#{layout}' layout not found." unless template
-      body render_template(template, {body: body.join.html_safe})
-    end
-
-    theme = @header['theme'] || 'default'
-    unless ['', 'none'].include?(theme)
-      template = resolve_template('themes', settings.template_extnames, theme)
-      raise Exception, "'#{theme}' theme not found." unless template
-      body render_template(template, {body: body.join.html_safe})
     end
   end
 
