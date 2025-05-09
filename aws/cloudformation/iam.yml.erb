@@ -930,17 +930,7 @@ roles.each do |name, config| %>
             Condition:
               StringEquals:
                 aws:ResourceTag/environment-type: <%=environment_type%>
-
           # Add more statements here as we need the Roles provisioned within a marketing sites Stack to have more permissions.
-
-          # Explicit deny for everything else to enforce least privilege
-          - Sid: DenyAllOtherActions
-            Effect: Deny
-            NotAction:
-              - secretsmanager:GetSecretValue
-              - secretsmanager:DescribeSecret
-              - cloudfront:CreateInvalidation
-            Resource: '*'
 
   CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role:
     Type: AWS::IAM::Role
