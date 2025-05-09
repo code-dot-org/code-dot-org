@@ -17,7 +17,7 @@ class HourOfCodeHelpersTest < Minitest::Test
 
   # Covers #hoc_canonicalized_i18n_path / #hoc_detect_country / #hoc_detect_language in helpers/hourofcode_helpers.rb
   def test_hourofcode_redirect
-    skip 'not needed once pegasus content is in CMS'
+    skip_unless_content_enabled
     gb_ip = '89.151.64.0' # Great Britain IP address range
     fr_ip = '176.31.96.198' # France IP address range
     cloudfront_ip = '54.240.158.170' # Whitelisted CloudFront-ip proxy range

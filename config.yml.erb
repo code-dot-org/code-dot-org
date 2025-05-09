@@ -435,6 +435,15 @@ pegasus_web_server_name: pegasus
 pegasus_workers: 8
 sinatra_session_secret:
 
+# Whether to enable features and tests which rely on pegasus content in the
+# sites/ and sites.v3/ directories. When set to false, the bulk of pegasus
+# content can be omitted from the local git client using git-sparse-checkout (to
+# be implemented). This allows dashboard and apps developers to have a smaller
+# git client while we are in the process of moving pegasus content to a CMS.
+#
+# **TODO: set to `true` before merging.**
+enable_pegasus_content: false
+
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
 read_only: false
 

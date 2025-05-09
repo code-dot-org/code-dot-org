@@ -10,7 +10,7 @@ class I18nHocRoutesTest < Minitest::Test
   end
 
   def test_hoc_pages_for_all_locales
-    skip 'not needed once pegasus content is in CMS'
+    skip_unless_content_enabled
     header 'Host', 'hourofcode.com'
     languages = DB[:cdo_languages].select(:unique_language_s).where(supported_hoc_b: 1)
     subpages = load_hoc_subpages

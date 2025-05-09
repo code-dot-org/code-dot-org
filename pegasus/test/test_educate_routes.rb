@@ -6,7 +6,7 @@ require_relative 'fixtures/mock_pegasus'
 class EducateRoutesTest < Minitest::Test
   describe 'Educate Routes' do
     before do
-      skip 'not needed once pegasus content is in CMS'
+      skip_unless_content_enabled
       $log.level = Logger::ERROR # Pegasus spams debug logging otherwise
       @mock_session = Rack::MockSession.new(MockPegasus.new, 'code.org')
       @pegasus = Rack::Test::Session.new(@mock_session)
