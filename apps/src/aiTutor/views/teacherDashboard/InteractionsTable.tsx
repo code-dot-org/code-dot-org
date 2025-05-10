@@ -50,6 +50,7 @@ const STATUS_LABELS: StatusLabels = {
   ok: 'Successful',
   unknown: 'Unknown Status',
   user_input_too_large: 'User Input Too Large',
+  model_timeout: 'Model Timeout',
 };
 
 enum TimeFilter {

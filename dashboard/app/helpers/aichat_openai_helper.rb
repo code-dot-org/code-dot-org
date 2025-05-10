@@ -1,5 +1,12 @@
 require 'cdo/aws/metrics'
 
+class OpenaiUserInputResponseTimeout < StandardError; end
+
+# This module is responsible for communicating with OpenAI's API to retrieve
+# responses from the AI Chat lab. It handles the formatting of messages,
+# sending requests, and processing responses.
+#
+# The get_openai_assistant_response method is the main entry point for
 # Prepares the input (user/level system prompt, context, existing chat history)
 # from AI Chat lab to be sent to the OpenAI API, and sends the request to the API.
 #
@@ -25,6 +32,7 @@ module AichatOpenaiHelper
       messages,
       aichat_model_customizations['temperature'].to_f * 2
     )
+
     response_time = Time.now - start_time
     report_usage_metrics(usage, messages, level_id, project_id, user_id, response_time)
     response
@@ -63,11 +71,19 @@ module AichatOpenaiHelper
   end
 
   def self.request_chat_completion(messages, temperature)
-    http_response = client.request_chat_completion(messages, temperature)
+    # raise OpenaiUserInputResponseTimeout.new("OpenAI request timed out.")
+    begin
+      http_response = client.request_chat_completion(messages, temperature)
+    rescue Net::ReadTimeout
+      throw OpenaiUserInputResponseTimeout.new("OpenAI request timed out.")
+    end
+
     body = JSON.parse(http_response.body)
     raise StandardError.new(body['error']) if body['error']
+
     response = body&.dig("choices")&.first&.dig('message', 'content')
     raise StandardError.new("Unexpected response from OpenAI: #{body}") unless response
+
     [response, body&.dig('usage')]
   end
 

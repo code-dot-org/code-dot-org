@@ -233,7 +233,7 @@ async function postChatCompletionAsyncPolling(
 
   if (executionStatus < AiRequestExecutionStatus.SUCCESS) {
     // Timed out
-    throw new Error('Chat completion request timed out');
+    throw new Error('Chat completion request timed out (client side)');
   }
 
   return getUpdatedMessages(newMessage, modelResponse, executionStatus).map(
@@ -316,6 +316,20 @@ function getUpdatedMessages(
           role: Role.ASSISTANT,
           timestamp: Date.now(),
           status: AiInteractionStatus.USER_INPUT_TOO_LARGE,
+        },
+      ];
+    // make sure these messages are being filtered when sent back to the model
+    case AiRequestExecutionStatus.MODEL_TIMEOUT:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.MODEL_TIMEOUT,
+        },
+        {
+          chatMessageText: modelResponse, // update
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.MODEL_TIMEOUT,
         },
       ];
     default:
