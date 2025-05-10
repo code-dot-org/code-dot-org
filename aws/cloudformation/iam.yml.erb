@@ -1075,10 +1075,21 @@ roles.each do |name, config| %>
                   - route53:ChangeResourceRecordSets
                   - route53:GetHostedZone
                   - route53:ListResourceRecordSets
+                Resource: '*'
+              - Effect: Allow
+                Action:
                   - acm:RequestCertificate
+                Resource: '*'
+                Condition:
+                  StringLike:
+                    'acm:DomainName':
+                      - "*loadbalancer*<%=configuration[:base_domain_name]%>"
+              - Effect: Allow
+                Action:
                   - acm:DescribeCertificate
                   - acm:AddTagsToCertificate
                 Resource: '*'
+
               # S3 resource management
               - Effect: Allow
                 Action:
