@@ -18,7 +18,7 @@ class Minitest::Test
     CDO.stubs(use_my_apps: true)
   end
 
-  def skip_unless_content_enabled
+  def skip_unless_pegasus_content_enabled
     skip unless CDO.enable_pegasus_content
   end
 end
