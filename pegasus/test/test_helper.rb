@@ -17,8 +17,4 @@ class Minitest::Test
     CDO.stubs(optimize_webpack_assets: false)
     CDO.stubs(use_my_apps: true)
   end
-
-  def skip_unless_pegasus_content_enabled
-    skip unless CDO.pegasus_content_enabled
-  end
 end
