@@ -21,6 +21,7 @@ Scenario: Signed Out - create account button shows on signed out studio page
   And I wait until element "#create_account_button" is visible
   And I wait until element ".display_name" is not visible
 
+@pegasus_content
 Scenario: Teacher Signed In - shows display name with correct links
   Given I create a teacher named "Ms_Frizzle" and go home
   And I wait until element ".display_name" is visible
@@ -41,6 +42,7 @@ Scenario: Teacher Signed In - shows display name with correct links
   And I wait until element "#signin_button" is visible
   And I wait until element ".display_name" is not visible
 
+@pegasus_content
 Scenario: Student Signed In - shows display name with correct links
   Given I create a student named "Arnold" and go home
   And I wait until element ".display_name" is visible
