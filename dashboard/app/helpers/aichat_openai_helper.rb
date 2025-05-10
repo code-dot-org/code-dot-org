@@ -2,14 +2,6 @@ require 'cdo/aws/metrics'
 
 class OpenaiUserInputResponseTimeout < StandardError; end
 
-# This module is responsible for communicating with OpenAI's API to retrieve
-# responses from the AI Chat lab. It handles the formatting of messages,
-# sending requests, and processing responses.
-#
-# The get_openai_assistant_response method is the main entry point for
-# Prepares the input (user/level system prompt, context, existing chat history)
-# from AI Chat lab to be sent to the OpenAI API, and sends the request to the API.
-#
 # This module is structured very similarly to the AichatSagemakerHelper module,
 # which manages AI Chat lab's interaction with models that use AWS Sagemaker.
 module AichatOpenaiHelper
