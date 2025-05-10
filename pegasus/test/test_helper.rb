@@ -19,6 +19,6 @@ class Minitest::Test
   end
 
   def skip_unless_pegasus_content_enabled
-    skip unless CDO.enable_pegasus_content
+    skip unless CDO.pegasus_content_enabled
   end
 end
