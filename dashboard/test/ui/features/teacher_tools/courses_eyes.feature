@@ -3,6 +3,7 @@
 Feature: Courses page
 
 @as_student
+@pegasus_content
 Scenario: Student courses
   Given I am on "http://studio.code.org/home"
   When I open my eyes to test "student courses"
@@ -25,6 +26,7 @@ Scenario: Teacher courses
   And I close my eyes
 
 @as_student
+@pegasus_content
 Scenario: Student courses, non-english
   When I open my eyes to test "student courses non-english"
   Given I am on "http://studio.code.org/home/lang/es"
