@@ -1,6 +1,7 @@
 @single_session
 Feature: Hamburger dropdown - Signed out
   @no_mobile
+  @pegasus_content
   Scenario: Signed out user in English should not see hamburger on large desktop
     Given I am on "http://code.org/"
     And I dismiss the language selector
@@ -11,6 +12,7 @@ Feature: Hamburger dropdown - Signed out
 
   @no_mobile
   @eyes
+  @pegasus_content
   Scenario: Signed out user in English should see hamburger on small desktop
     Given I am on "http://code.org/"
     And I dismiss the language selector
@@ -34,6 +36,7 @@ Feature: Hamburger dropdown - Signed out
     Then I maximize the browser window
 
   @no_mobile
+  @pegasus_content
   Scenario: Signed out user in English should see hamburger on tablet
     Given I am on "http://code.org/"
     And I dismiss the language selector
@@ -54,6 +57,7 @@ Feature: Hamburger dropdown - Signed out
     Then I maximize the browser window
 
   @only_phone
+  @pegasus_content
   Scenario: Signed out user should see Sign in and Create account buttons on code.org mobile
     Given I am on "http://code.org/"
     And I rotate to portrait
@@ -74,6 +78,7 @@ Feature: Hamburger dropdown - Signed out
     And I see "#create_account_button"
 
   @no_mobile
+  @pegasus_content
   Scenario: Signed out user viewing help dropdown in Spanish on desktop
     Given I am on "http://code.org/lang/es"
     Then I wait until I am on "http://code.org/"
@@ -88,6 +93,7 @@ Feature: Hamburger dropdown - Signed out
     And I wait for 2 seconds
 
   @chrome
+  @pegasus_content
   Scenario: Logged out user can click on the hamburger links
     Given I am on "http://code.org/"
     And I set the language cookie

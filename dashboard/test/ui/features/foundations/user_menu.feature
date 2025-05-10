@@ -1,12 +1,14 @@
 @no_mobile
 Feature: Sign In Button and User Menu in Header
 
+@pegasus_content
 Scenario: Signed Out - sign in button shows
   Given I am on "http://code.org/"
   And I set the language cookie
   And I wait until element "#signin_button" is visible
   And I wait until element ".display_name" is not visible
 
+@pegasus_content
 Scenario: Signed Out - create account button shows on code.org page
   Given I am on "http://code.org/"
   And I set the language cookie

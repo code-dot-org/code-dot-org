@@ -162,6 +162,7 @@ Feature: Hamburger dropdown
     And I wait for 2 seconds
 
   @chrome
+  @pegasus_content
   Scenario: Teacher can click on the hamburger links
     Given I create a teacher named "Sir Clicks-A-Lot Teacher" and go home
     And I set the language cookie
@@ -221,6 +222,7 @@ Feature: Hamburger dropdown
     Then I delete the cookie named "_loc_notice"
 
   @chrome
+  @pegasus_content
   Scenario: Student can click on the hamburger links
     Given I create a student named "Squire Clicks-A-Lot Student" and go home
     And I set the language cookie
@@ -307,6 +309,7 @@ Feature: Hamburger dropdown
     Then I delete the cookie named "_loc_notice"
 
   @chrome
+  @pegasus_content
   Scenario: Student can click on the header links in the hamburger menu on tablet
     Given I create a student named "Squire Clicks-A-Lot Student" and go home
     And I set the language cookie

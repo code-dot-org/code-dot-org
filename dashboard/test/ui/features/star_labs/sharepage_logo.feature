@@ -51,6 +51,7 @@ Feature: Lab share page logo
     And check that I am on "http://studio.code.org/home"
 
   @no_mobile
+  @pegasus_content
   Scenario: Select the logo on a playlab share page while logged out and visit the homepage
     Given I am on "http://studio.code.org/projects/playlab"
     And I wait for the lab page to fully load
@@ -65,6 +66,7 @@ Feature: Lab share page logo
     And check that I am on "http://code.org/"
 
   @no_mobile
+  @pegasus_content
   Scenario: Select the logo on a gamelab share page while logged out and visit the homepage
     Given I am on "http://studio.code.org/projects/gamelab"
     And I wait for the lab page to fully load

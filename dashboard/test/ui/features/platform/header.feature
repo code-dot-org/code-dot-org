@@ -1,5 +1,6 @@
 @no_mobile
 @single_session
+@pegasus_content
 Feature: Header navigation bar
   Scenario: Student in English should see 4 header links
     Given I create a student named "Sally Student" and go home

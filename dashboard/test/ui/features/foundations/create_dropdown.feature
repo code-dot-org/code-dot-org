@@ -3,6 +3,7 @@
 @no_safari
 @no_firefox
 @single_session
+@pegasus_content
 # This was recently renamed to "New project"
 Feature: Create Dropdown in Header
 

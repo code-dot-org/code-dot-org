@@ -1,4 +1,5 @@
 @no_mobile
+@pegasus_content
 Feature: Global Edition - Region Select
 
   Background:

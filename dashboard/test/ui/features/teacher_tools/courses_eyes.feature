@@ -36,6 +36,7 @@ Scenario: Student courses, non-english
   And I see no difference for "student non-english courses page"
   And I close my eyes
 
+@pegasus_content
 Scenario: Signed out courses, learn
   When I open my eyes to test "signed out courses, learn"
   Given I am on "http://code.org/"
@@ -47,6 +48,7 @@ Scenario: Signed out courses, learn
   And I see no difference for "signed-out courses page, learn"
   And I close my eyes
 
+@pegasus_content
 Scenario: Signed out courses, teach
   When I open my eyes to test "signed out courses, teach"
   Given I am on "http://code.org/"
@@ -58,6 +60,7 @@ Scenario: Signed out courses, teach
   And I see no difference for "signed-out courses page, teach"
   And I close my eyes
 
+@pegasus_content
 Scenario: Signed out courses, non-english
   When I open my eyes to test "signed out courses, non-english"
   Given I am on "http://studio.code.org/home/lang/es"
