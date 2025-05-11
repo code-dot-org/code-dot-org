@@ -124,7 +124,7 @@ $peek-height: 5px;
     height: $cell-height;
     background-color: $neutral_dark80;
     box-sizing: border-box;
-    transition: transform 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 
     &.preview {
       background-color: $neutral_dark70;
