@@ -184,7 +184,8 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       );
       if (displayNoteIndex !== -1) {
         color = 'white';
-        backgroundColor = colorsSimple[displayNoteIndex % colorsSimple.length];
+        backgroundColor =
+          colorsSimple[(21 - displayNoteIndex) % colorsSimple.length];
         selectedBackgroundColor = backgroundColor;
       }
     }
