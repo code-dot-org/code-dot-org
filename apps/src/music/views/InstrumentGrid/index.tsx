@@ -174,16 +174,6 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       return {style: styles.textLabel, label: name};
     }
 
-    /*
-    const [style, label] = {
-      drums: [styles.textLabel, name],
-      simple: [styles.keyLabel, getPitchName(note)],
-      chromatic: [styles.keyLabel, getPitchName(note)],
-    }[interfaceMode];
-    */
-
-    const label = getPitchName(note);
-
     let color = undefined,
       backgroundColor = undefined,
       selectedBackgroundColor = undefined;
@@ -196,68 +186,33 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         color = 'white';
         backgroundColor = colorsSimple[displayNoteIndex % colorsSimple.length];
         selectedBackgroundColor = backgroundColor;
-      } /*else {
-        actualStyle = styles.keyLabel;
-      }*/
+      }
     }
 
     if (backgroundColor === undefined) {
-      backgroundColor = isBlackKey(note) ? 'black' : 'white';
-      color = isBlackKey(note) ? 'white' : 'black';
+      backgroundColor = isBlackKey(note) ? styles.black : styles.white;
+      color = isBlackKey(note) ? styles.white : styles.black;
     }
 
     if (selectedBackgroundColor === undefined) {
-      selectedBackgroundColor = 'teal';
+      selectedBackgroundColor = styles.selectedColor;
     }
 
+    const pitchRowClass = displayNotes.find(
+      displayNote => displayNote.note === note
+    )
+      ? styles.pitchRowShowing
+      : styles.pitchRowHidden;
+
     return {
+      pitchRowClass,
       style: styles.keyLabel,
-      label,
+      label: getPitchName(note),
       backgroundColor,
       color,
       selectedBackgroundColor,
     };
   };
-
-  /*
-  const RowLabel = (props: {name: string; note: number; i: number}) => {
-    const [style, label] = {
-      drums: [styles.textLabel, props.name],
-      simple: [styles.label, getPitchName(props.note)],
-      chromatic: [styles.keyLabel, getPitchName(props.note)],
-    }[interfaceMode];
-
-    const backgroundColor =
-      interfaceMode === 'simple'
-        ? colorsSimple[
-            displayNotes.findIndex(
-              displayNote => displayNote.note === props.note
-            ) % colorsSimple.length
-          ]
-        : undefined;
-
-    return (
-      <button
-        type="button"
-        className={styles['cell-outer']}
-        onClick={() =>
-          MusicRegistry.player.previewNote(props.note, currentValue.instrument)
-        }
-      >
-        <div
-          className={classNames(
-            style,
-            isBlackKey(props.note) && styles.blackKey,
-            styles.innerCell
-          )}
-          style={{backgroundColor}}
-        >
-          {label.replace('#', '♯')}
-        </div>
-      </button>
-    );
-  };
-  */
 
   const [scrollStart, scrollEnd] = useMemo(() => {
     const {cellHeight, rowGap, displayRows, peekHeight} = styles;
@@ -333,6 +288,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       >
         {allNotes.map(({note, name}, i) => {
           const {
+            pitchRowClass,
             style,
             label,
             backgroundColor,
@@ -342,20 +298,8 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
           return (
             <div
-              className={styles.pitchRow}
+              className={classNames(styles.pitchRow, pitchRowClass)}
               key={note}
-              style={{
-                opacity: displayNotes.find(
-                  displayNote => displayNote.note === note
-                )
-                  ? 1
-                  : 0.5,
-                minHeight: displayNotes.find(
-                  displayNote => displayNote.note === note
-                )
-                  ? 22
-                  : 0,
-              }}
             >
               <button
                 type="button"
@@ -368,11 +312,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
                 }
               >
                 <div
-                  className={classNames(
-                    style,
-                    //isBlackKey(note) && styles.blackKey,
-                    styles.innerCell
-                  )}
+                  className={classNames(style, styles.innerCell)}
                   style={{backgroundColor, color}}
                 >
                   {label.replace('#', '♯')}

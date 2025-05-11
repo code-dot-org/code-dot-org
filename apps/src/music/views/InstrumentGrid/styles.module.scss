@@ -17,6 +17,9 @@ $peek-height: 5px;
   displayRows: $display-rows;
   peekHeight: $peek-height;
   colorsSimple: $colors-simple;
+  black: $black;
+  white: $white;
+  selectedColor: $brand_primary_default;
 }
 
 .container {
@@ -71,6 +74,16 @@ $peek-height: 5px;
   transition: opacity 0.8s ease, min-height 0.8s ease;
   overflow: hidden;
 
+  &Showing {
+    opacity: 1;
+    min-height: ($cell-height + $row-gap);
+  }
+
+  &Hidden {
+    opacity: 0;
+    min-height: 0;
+  }
+
   @for $i from 1 through 8 {
     &:nth-child(#{$i}) {
       .cell-outer-drums > .innerCell.selected,
@@ -111,7 +124,7 @@ $peek-height: 5px;
     height: $cell-height;
     background-color: $neutral_dark80;
     box-sizing: border-box;
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    transition: transform 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 
     &.preview {
       background-color: $neutral_dark70;
@@ -129,7 +142,7 @@ $peek-height: 5px;
   .label,
   %label {
     font-size: 12px;
-    width: 30px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,7 +169,7 @@ $peek-height: 5px;
     background-color: $neutral_light;
     color: $neutral_dark;
     border-radius: 0 2px 2px 0;
-    transition: color 0.8s ease, background-color 0.8s ease;
+    transition: color 0.8s ease, background-color 0.8s ease, transform 0.2s ease;
 
     &.blackKey {
       background-color: black;
