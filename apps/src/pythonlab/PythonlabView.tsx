@@ -95,6 +95,7 @@ const PythonlabView: React.FunctionComponent<
   const lastSavedLabConfig = useAppSelector(
     state => state.lab2Project.lastSavedLabConfig
   );
+
   const dispatch = useAppDispatch();
 
   const currentProjectType = useMemo(() => {
@@ -174,8 +175,23 @@ const PythonlabView: React.FunctionComponent<
     aiTutorManager.current = new AiTutorManager();
   }
   const askAiTutor = async (question: string) => {
-    const fullQuestion =
-      question + '\n Here is my code: \n' + source.files[0].contents;
+    const fullQuestion = [
+      question,
+      'Here is my code:',
+      source.openFiles
+        ?.map(openFile => source.files[openFile].contents)
+        .join('\n'),
+      'Here is the validation code:',
+      validationFile?.contents,
+      'Here are the validation test names along with their result, in JSON:',
+      //JSON.stringify(validationResults),
+      JSON.stringify(
+        PythonValidationTracker.getInstance().getValidationResults()
+      ),
+      'And here are the instructions:',
+      levelProperties.longInstructions,
+    ].join('\n\n');
+
     const messages = await aiTutorManager.current?.askAiTutor(fullQuestion);
     if (messages && messages.length > 1) {
       setAiTutorResponse(messages[1].chatMessageText);
@@ -187,6 +203,8 @@ const PythonlabView: React.FunctionComponent<
     dispatch: AppDispatch,
     source: MultiFileSource | undefined
   ) => {
+    setAiTutorResponse(undefined);
+
     // Flush any pending saves if we have a project manager on run. The user will likely
     // run their code before navigating away from the page, so switching pages
     // will be faster if we flush save now.
@@ -216,7 +234,7 @@ const PythonlabView: React.FunctionComponent<
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
 
-    askAiTutor("What's wrong with my code?");
+    askAiTutor("What's wrong with my code, if anything?");
   };
 
   return (
