@@ -68,7 +68,7 @@ $peek-height: 5px;
   display: flex;
   gap: 4px;
   align-items: stretch;
-  transition: opacity 1s ease, min-height 1s ease;
+  transition: opacity 0.8s ease, min-height 0.8s ease;
   overflow: hidden;
 
   @for $i from 1 through 8 {
@@ -156,6 +156,7 @@ $peek-height: 5px;
     background-color: $neutral_light;
     color: $neutral_dark;
     border-radius: 0 2px 2px 0;
+    transition: color 0.8s ease, background-color 0.8s ease;
 
     &.blackKey {
       background-color: black;

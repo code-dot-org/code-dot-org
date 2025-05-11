@@ -169,6 +169,57 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 
   const colorsSimple = styles.colorsSimple.split(',');
 
+  const getRowInfo = (name: string, note: number) => {
+    if (interfaceMode === 'drums') {
+      return {style: styles.textLabel, label: name};
+    }
+
+    /*
+    const [style, label] = {
+      drums: [styles.textLabel, name],
+      simple: [styles.keyLabel, getPitchName(note)],
+      chromatic: [styles.keyLabel, getPitchName(note)],
+    }[interfaceMode];
+    */
+
+    const label = getPitchName(note);
+
+    let color = undefined,
+      backgroundColor = undefined,
+      selectedBackgroundColor = undefined;
+
+    if (interfaceMode === 'simple') {
+      const displayNoteIndex = displayNotes.findIndex(
+        displayNote => displayNote.note === note
+      );
+      if (displayNoteIndex !== -1) {
+        color = 'white';
+        backgroundColor = colorsSimple[displayNoteIndex % colorsSimple.length];
+        selectedBackgroundColor = backgroundColor;
+      } /*else {
+        actualStyle = styles.keyLabel;
+      }*/
+    }
+
+    if (backgroundColor === undefined) {
+      backgroundColor = isBlackKey(note) ? 'black' : 'white';
+      color = isBlackKey(note) ? 'white' : 'black';
+    }
+
+    if (selectedBackgroundColor === undefined) {
+      selectedBackgroundColor = 'teal';
+    }
+
+    return {
+      style: styles.keyLabel,
+      label,
+      backgroundColor,
+      color,
+      selectedBackgroundColor,
+    };
+  };
+
+  /*
   const RowLabel = (props: {name: string; note: number; i: number}) => {
     const [style, label] = {
       drums: [styles.textLabel, props.name],
@@ -206,6 +257,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       </button>
     );
   };
+  */
 
   const [scrollStart, scrollEnd] = useMemo(() => {
     const {cellHeight, rowGap, displayRows, peekHeight} = styles;
@@ -279,51 +331,87 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         scrollEnd={scrollEnd}
         className={classNames(styles[`sequence-editor-${interfaceMode}`])}
       >
-        {allNotes.map(({note, name}, i) => (
-          <div
-            className={styles.pitchRow}
-            key={note}
-            style={{
-              opacity: displayNotes.find(
-                displayNote => displayNote.note === note
-              )
-                ? 1
-                : 0.5,
-              minHeight: displayNotes.find(
-                displayNote => displayNote.note === note
-              )
-                ? 22
-                : 0,
-            }}
-          >
-            <RowLabel name={name} note={note} i={i} />
-            <div className={styles.cellRow}>
-              {ticks.map(tick => (
-                <Fragment key={tick}>
-                  <button
-                    type="button"
-                    className={styles[`cell-outer-${interfaceMode}`]}
-                    key={tick}
-                    onClick={() => onClickCell(note, tick)}
-                  >
-                    <div
-                      className={classNames(
-                        styles.innerCell,
-                        isSelected(note, tick) && styles.selected,
-                        currentPreviewTick === tick && styles.preview
-                      )}
-                    />
-                  </button>
-                  {
-                    tick % 4 === 0 && (
-                      <div className={styles.spacer} />
-                    ) /* Spacer */
-                  }
-                </Fragment>
-              ))}
+        {allNotes.map(({note, name}, i) => {
+          const {
+            style,
+            label,
+            backgroundColor,
+            color,
+            selectedBackgroundColor,
+          } = getRowInfo(name, note);
+
+          return (
+            <div
+              className={styles.pitchRow}
+              key={note}
+              style={{
+                opacity: displayNotes.find(
+                  displayNote => displayNote.note === note
+                )
+                  ? 1
+                  : 0.5,
+                minHeight: displayNotes.find(
+                  displayNote => displayNote.note === note
+                )
+                  ? 22
+                  : 0,
+              }}
+            >
+              <button
+                type="button"
+                className={styles['cell-outer']}
+                onClick={() =>
+                  MusicRegistry.player.previewNote(
+                    note,
+                    currentValue.instrument
+                  )
+                }
+              >
+                <div
+                  className={classNames(
+                    style,
+                    //isBlackKey(note) && styles.blackKey,
+                    styles.innerCell
+                  )}
+                  style={{backgroundColor, color}}
+                >
+                  {label.replace('#', '♯')}
+                </div>
+              </button>
+
+              <div className={styles.cellRow}>
+                {ticks.map(tick => (
+                  <Fragment key={tick}>
+                    <button
+                      type="button"
+                      className={styles[`cell-outer-${interfaceMode}`]}
+                      key={tick}
+                      onClick={() => onClickCell(note, tick)}
+                    >
+                      <div
+                        className={classNames(
+                          styles.innerCell,
+                          isSelected(note, tick) && styles.selected,
+                          currentPreviewTick === tick && styles.preview
+                        )}
+                        style={{
+                          backgroundColor: isSelected(note, tick)
+                            ? selectedBackgroundColor
+                            : undefined,
+                        }}
+                      />
+                    </button>
+                    {
+                      tick % 4 === 0 && (
+                        <div className={styles.spacer} />
+                      ) /* Spacer */
+                    }
+                  </Fragment>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </EaseIntoView>
       <LoadingOverlay show={isLoading} />
     </div>
