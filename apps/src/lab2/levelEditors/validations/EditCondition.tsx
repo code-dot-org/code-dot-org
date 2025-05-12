@@ -1,6 +1,8 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useEffect} from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import Tooltip from '@cdo/apps/templates/Tooltip';
 
 import {Condition, ConditionType} from '../../types';
 
@@ -84,6 +86,10 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
     useDropdown,
   ]);
 
+  const conditionDescription = conditionTypes.find(
+    type => type.name === condition.name
+  )?.description;
+
   return (
     <div className={moduleStyles.row}>
       {/*<label htmlFor="conditionName" className={moduleStyles.label}>
@@ -111,6 +117,9 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
           );
         })}
       </select>
+      <Tooltip text={conditionDescription} place="bottom">
+        <FontAwesomeV6Icon iconName="circle-info" iconStyle="regular" />
+      </Tooltip>
       {hasValueType && (
         <>
           <label className={moduleStyles.label}>Value:</label>
