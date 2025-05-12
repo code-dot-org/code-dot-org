@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-04-30T20:39:31.000Z",
   "level_num": "custom",
@@ -235,7 +236,7 @@
     "encrypted": "false",
     "instructions_important": "false",
     "hint_prompt_attempts_threshold": "1",
-    "long_instructions": "####<i class=\"fa-solid fa-sparkles\"></i> Get inspired!\r\n\r\n1. Play this beat drop\r\n2. Explore and tinker with the code\r\n3. Press Continue when you are done ",
+    "long_instructions": "####<i class=\"fa-solid fa-sparkles\"></i> Get inspired!\r\n\r\n1. Play this song\r\n2. Explore and tinker with the code\r\n3. Press Continue when you are done ",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
     "hide_share_and_remix": "true",
@@ -276,8 +277,7 @@
     "thumbnail_url": "https://images.code.org/fc8e61fefda453ad380281775c5fb053-The_Chainsmokers_Grandoozy_2018_(45208197432).jpg",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-30T20:39:31.923+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop3_launch\\\"\"],\"cloned_from\":\"music-coding-intro-drop3_launch\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-30T20:39:31.923+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-drop3_launch\\\"\"],\"cloned_from\":\"music-coding-intro-drop3_launch\"},{\"changed_at\":\"2025-05-09 15:42:59 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

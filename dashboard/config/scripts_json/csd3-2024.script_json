@@ -30,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-18 15:53:49 UTC",
+    "serialized_at": "2025-05-10 00:33:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -17567,7 +17567,7 @@
     },
     {
       "name": "Velocity and the Counter Pattern",
-      "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
+      "url": "https://studio.code.org/docs/concepts/game-lab/velocity-and-the-counter-pattern/#:~:text=You%20can%20use%20a%20sprite's,speed%20up%20or%20slow%20down.",
       "key": "velocity_and_the_counter_pattern",
       "properties": {
         "audience": "Teacher",

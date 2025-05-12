@@ -114,7 +114,7 @@ class StudentWorkSampleController < ApplicationController
       return render status: :not_found, json: "There are no skill-based evaluations for the level with id #{level.id}"
     end
 
-    user_level_evaluations = user_level_skill_evaluations.map(&:user_level_evaluation)
+    user_level_evaluations = user_level_skill_evaluations.map(&:user_level_evaluation).compact
 
     code_samples = []
     have_enough_samples = false

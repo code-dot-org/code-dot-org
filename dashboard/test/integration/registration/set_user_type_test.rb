@@ -33,7 +33,7 @@ module RegistrationsControllerTests
       patch '/users/user_type', as: :json, params: {user: {user_type: 'student', admin: true}}
       assert_response :success
 
-      user.reload
+      user = User.find(user.id)
       assert user.student?
       refute user.admin?
     end
@@ -54,7 +54,7 @@ module RegistrationsControllerTests
       }
       assert_response :success
 
-      student.reload
+      student = User.find(student.id)
       assert_equal 'teacher', student.user_type
       assert_equal test_email, student.email
       assert_equal original_hashed_email, student.hashed_email
@@ -100,7 +100,7 @@ module RegistrationsControllerTests
       }
       assert_response :success
 
-      student.reload
+      student = User.find(student.id)
       assert_equal 'teacher', student.user_type
       assert_equal test_email, student.email
 
@@ -168,7 +168,7 @@ module RegistrationsControllerTests
       }
       assert_response :success
 
-      teacher.reload
+      teacher = User.find(teacher.id)
       assert_equal 'student', teacher.user_type
       assert_empty teacher.email
       assert_equal original_hashed_email, teacher.hashed_email
@@ -214,7 +214,7 @@ module RegistrationsControllerTests
       }
       assert_response :success
 
-      student.reload
+      student = User.find(student.id)
       assert_equal 'teacher', student.user_type
       assert_equal test_email, student.email
       assert_equal original_hashed_email, student.hashed_email
@@ -260,7 +260,7 @@ module RegistrationsControllerTests
       }
       assert_response :success
 
-      student.reload
+      student = User.find(student.id)
       assert_equal 'teacher', student.user_type
       assert_equal test_email, student.email
 
@@ -286,7 +286,7 @@ module RegistrationsControllerTests
       }
       assert_response :success
 
-      student.reload
+      student = User.find(student.id)
       assert_equal 'teacher', student.user_type
       assert_equal new_email, student.email
 
@@ -331,7 +331,7 @@ module RegistrationsControllerTests
       }
       assert_response :success
 
-      teacher.reload
+      teacher = User.find(teacher.id)
       teacher.authentication_options.reload
       assert_equal 'student', teacher.user_type
       assert_empty teacher.email

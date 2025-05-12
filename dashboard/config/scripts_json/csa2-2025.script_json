@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-22 06:56:43 UTC",
+    "serialized_at": "2025-05-10 01:53:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5928,6 +5928,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L4_pilot-2025"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -6025,6 +6028,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-UserInput-L5_revised-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6947,6 +6953,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L3_revised-2025"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -7468,6 +7477,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,

@@ -164,6 +164,7 @@ export default function RegionalWorkshopCatalog({zipFromSchoolInfo}) {
                   name,
                   capacity,
                   num_enrollments,
+                  grade_levels,
                   sessions,
                   format,
                   location_name,
@@ -181,6 +182,7 @@ export default function RegionalWorkshopCatalog({zipFromSchoolInfo}) {
                     name={name}
                     capacity={capacity}
                     numEnrollments={num_enrollments}
+                    supportedGradeLevels={grade_levels}
                     sessions={sessions || []}
                     format={format}
                     locationName={location_name}

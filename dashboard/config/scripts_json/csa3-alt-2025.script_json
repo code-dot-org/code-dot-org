@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 05:07:04 UTC",
+    "serialized_at": "2025-05-12 05:17:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,9 +65,21 @@
       }
     },
     {
-      "key": "lessonGroup-5",
+      "key": "lessonGroup-7",
       "user_facing": true,
       "position": 4,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 5,
       "properties": {
         "display_name": "Alternate Lessons"
       },
@@ -79,7 +91,7 @@
     {
       "key": "lessonGroup-6",
       "user_facing": true,
-      "position": 5,
+      "position": 6,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -391,12 +403,27 @@
       }
     },
     {
-      "key": "Store Management Project [1-Day Version]",
-      "name": "Store Management Project [1-Day Version]",
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 17,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "Store Management Project [1-Day Version]",
+      "name": "Store Management Project [1-Day Version]",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 18,
       "properties": {
         "assessment": true,
         "overview": "**What business or service do I want to manage using a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.",
@@ -412,10 +439,10 @@
     {
       "key": "lesson-1",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -427,10 +454,10 @@
     {
       "key": "lesson-2",
       "name": "Sandbox: Console",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -442,10 +469,10 @@
     {
       "key": "lesson-3",
       "name": "Sandbox: The Theater",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -1138,6 +1165,18 @@
         "lesson_activity.key": "557bcfcb-adb2-4640-9b15-463b05944479",
         "lesson.key": "Burger Class FRQ",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "ff1d7168-8577-472c-b8a2-37db4c0152b1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ff1d7168-8577-472c-b8a2-37db4c0152b1",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "csa3-alt-2025"
       }
     },
@@ -4004,7 +4043,7 @@
       "key": "f05e1182-de2a-4501-9108-c0f511843f80",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to write pseudocode to outline their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have pairs with the primitives as parameters compare their solutions with pairs with objects as parameters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about each solution?*\n* *What do you wonder about each solution?*\n\n**Discussion Goal:** Students identify similarities and differences between passing primitives and passing object references as parameters. Students may wonder about the impact on original variables and objects when passed as parameters.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to write pseudocode to outline their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to display a possible solution for primitives as parameters and for objects as parameters. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have pairs with the primitives as parameters compare their solutions with pairs with objects as parameters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about each solution?*\n* *What do you wonder about each solution?*\n\n**Discussion Goal:** Students identify similarities and differences between passing primitives and passing object references as parameters. Students may wonder about the impact on original variables and objects when passed as parameters.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5535,6 +5574,28 @@
       }
     },
     {
+      "key": "bd1fcb02-ffe8-4d86-ba29-14efedf55336",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd1fcb02-ffe8-4d86-ba29-14efedf55336",
+        "lesson_activity.key": "ff1d7168-8577-472c-b8a2-37db4c0152b1"
+      }
+    },
+    {
+      "key": "1ef5c40f-0428-43f9-99f7-8d308105f5a8",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ef5c40f-0428-43f9-99f7-8d308105f5a8",
+        "lesson_activity.key": "ff1d7168-8577-472c-b8a2-37db4c0152b1"
+      }
+    },
+    {
       "key": "e9a52cad-6495-4b9c-b9af-168fb1fb6710",
       "position": 1,
       "properties": {
@@ -6886,6 +6947,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L3_alt-revised-2025"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -7683,15 +7747,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa2_2025-cb-alt"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa2_2025-cb-alt"
+          "student-eou-survey_linked_page_csa3-project-2025"
         ],
         "lesson.key": "Store Management Project",
         "lesson_group.key": "lessonGroup-2",
@@ -7699,11 +7760,33 @@
         "activity_section.key": "8d60c585-6159-4c6a-88be-668a47c6bf17"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa2_2025-cb-alt"
+        "student-eou-survey_linked_page_csa3-project-2025"
       ]
     },
     {
       "chapter": 81,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csa3-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "bd1fcb02-ffe8-4d86-ba29-14efedf55336"
+      },
+      "level_keys": [
+        "student-eou-survey_csa3-alt-survey-2025"
+      ]
+    },
+    {
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7728,7 +7811,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7753,7 +7836,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7778,7 +7861,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7802,7 +7885,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8777,14 +8860,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa2_2025-cb-alt",
+        "level.key": "student-eou-survey_linked_page_csa3-project-2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa2_2025-cb-alt"
+          "student-eou-survey_linked_page_csa3-project-2025"
         ],
         "lesson.key": "Store Management Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025",
         "activity_section.key": "8d60c585-6159-4c6a-88be-668a47c6bf17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csa3-alt-survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csa3-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "bd1fcb02-ffe8-4d86-ba29-14efedf55336"
       }
     },
     {

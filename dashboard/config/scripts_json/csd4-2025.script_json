@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-29 20:42:05 UTC",
+    "serialized_at": "2025-05-10 01:08:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -49,6 +49,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd4-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd4-2025"
       }
     }
@@ -476,6 +488,21 @@
       "seeding_key": {
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd4-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd4-2025"
       }
     }
@@ -1466,6 +1493,18 @@
         "lesson_activity.key": "6c66ae3a-4aa9-4ae1-bdc6-ea0202619dac",
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd4-2025"
+      }
+    },
+    {
+      "key": "69dc5e07-cef0-4ee0-b3da-43cd198465de",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69dc5e07-cef0-4ee0-b3da-43cd198465de",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd4-2025"
       }
     }
@@ -5807,6 +5846,28 @@
         "activity_section.key": "209ccbf3-8f68-4aae-8651-408a6753a85d",
         "lesson_activity.key": "6c66ae3a-4aa9-4ae1-bdc6-ea0202619dac"
       }
+    },
+    {
+      "key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8",
+        "lesson_activity.key": "69dc5e07-cef0-4ee0-b3da-43cd198465de"
+      }
+    },
+    {
+      "key": "b590d822-9c38-4390-a222-734b4df0b1e4",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "b590d822-9c38-4390-a222-734b4df0b1e4",
+        "lesson_activity.key": "69dc5e07-cef0-4ee0-b3da-43cd198465de"
+      }
     }
   ],
   "script_levels": [
@@ -6608,6 +6669,28 @@
       "level_keys": [
         "CSD User Centered Design Post-Project Test_2025"
       ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csd4survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd4-2025",
+        "activity_section.key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8"
+      },
+      "level_keys": [
+        "student-eou-survey_csd4survey-2025"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -6993,6 +7076,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd4-2025",
         "activity_section.key": "209ccbf3-8f68-4aae-8651-408a6753a85d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csd4survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csd4survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd4-2025",
+        "activity_section.key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8"
       }
     }
   ],

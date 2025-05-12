@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 09:57:08 UTC",
+    "serialized_at": "2025-05-10 01:51:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,9 +53,21 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-6",
       "user_facing": true,
       "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
       "properties": {
         "display_name": "Alternate Lessons"
       },
@@ -67,7 +79,7 @@
     {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 4,
+      "position": 5,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -180,7 +192,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nStudents have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, they explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. Students learn about short-circuit evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators.",
-        "preparation": "* **(Optional)** Print copies of the U4L8 Guided Notes (one for each student)\n* Print copies of the Truth Tables handout (one for each student)\n* Gather the Dataset Summaries handouts collected in Lesson 5\n* Print copies of the Finding Patterns handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-8-logical-operators/37904) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U4L8 Guided Notes (one for each student)\n* Print copies of the Truth Tables handout (one for each student)\n* Gather the Dataset Summaries handouts collected in Lesson 5\n* Print copies of the Finding Patterns handout (one for each student)\n* Ensure students are able to access the Datasets in Level 5. If students do not have access, you may choose to download the datasets from the Lesson Resources and make them available to students through other means. \n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-8-logical-operators/37904) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nYou have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, you explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. You learn about short-circuited evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators."
       },
       "seeding_key": {
@@ -335,12 +347,27 @@
       }
     },
     {
-      "key": "Creative Coding with the Console Project [1-Day Version]",
-      "name": "Creative Coding with the Console Project [1-Day Version]",
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 15,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "Creative Coding with the Console Project [1-Day Version]",
+      "name": "Creative Coding with the Console Project [1-Day Version]",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the Console. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
@@ -355,10 +382,10 @@
     {
       "key": "Creative Coding with The Theater Project [1-Day Version]",
       "name": "Creative Coding with The Theater Project [1-Day Version]",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
@@ -373,10 +400,10 @@
     {
       "key": "lesson-1",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -388,10 +415,10 @@
     {
       "key": "lesson-2",
       "name": "Sandbox: Console",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -403,10 +430,10 @@
     {
       "key": "lesson-3",
       "name": "Sandbox: The Theater",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -1028,6 +1055,18 @@
         "lesson_activity.key": "1270720e-3c59-4cd0-87e7-0ed8993220ac",
         "lesson.key": "Creative Coding with The Theater Project",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-alt-2025"
       }
     },
@@ -4573,8 +4612,21 @@
       }
     },
     {
-      "key": "dc274385-2634-45b6-8fdc-d4339f9620d7",
+      "key": "7996e4df-4676-486a-9412-c222d09b492a",
       "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7996e4df-4676-486a-9412-c222d09b492a",
+        "lesson_activity.key": "fbc57a5a-3425-4ec9-b340-17c9469a2e1a"
+      }
+    },
+    {
+      "key": "dc274385-2634-45b6-8fdc-d4339f9620d7",
+      "position": 9,
       "properties": {
         "description": "---"
       },
@@ -4585,7 +4637,7 @@
     },
     {
       "key": "793743dc-9791-40e9-9170-7fe8be1d7d20",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Creative Coding with the Console Project Planning Guide:** Use the rubric in the Creative Coding with the Console Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -5065,6 +5117,28 @@
       }
     },
     {
+      "key": "2065f2d5-56df-4854-a8cb-961885c01ded",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2065f2d5-56df-4854-a8cb-961885c01ded",
+        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb"
+      }
+    },
+    {
+      "key": "f1dcc30d-8fe3-4e32-ac62-5bea6ca2c270",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1dcc30d-8fe3-4e32-ac62-5bea6ca2c270",
+        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb"
+      }
+    },
+    {
       "key": "5cd6163c-e2fc-4d1c-afb8-856da290b3d8",
       "position": 1,
       "properties": {
@@ -5498,6 +5572,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-4_revised2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -7116,6 +7193,28 @@
     },
     {
       "chapter": 70,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa2-project1-2025"
+        ],
+        "lesson.key": "Creative Coding with the Console Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "7996e4df-4676-486a-9412-c222d09b492a"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_csa2-project1-2025"
+      ]
+    },
+    {
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7140,20 +7239,17 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa7_2025-cb-alt"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa7_2025-cb-alt"
+          "student-eou-survey_linked_page_csa2-project2-2025"
         ],
         "lesson.key": "Creative Coding with The Theater Project",
         "lesson_group.key": "lessonGroup-2",
@@ -7161,11 +7257,33 @@
         "activity_section.key": "fc41f330-0024-4acf-9ce7-883900d14c9b"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa7_2025-cb-alt"
+        "student-eou-survey_linked_page_csa2-project2-2025"
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csa2-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "2065f2d5-56df-4854-a8cb-961885c01ded"
+      },
+      "level_keys": [
+        "student-eou-survey_csa2-alt-survey-2025"
+      ]
+    },
+    {
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7190,7 +7308,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7215,7 +7333,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7240,7 +7358,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7265,7 +7383,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7289,7 +7407,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8144,6 +8262,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_csa2-project1-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa2-project1-2025"
+        ],
+        "lesson.key": "Creative Coding with the Console Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "7996e4df-4676-486a-9412-c222d09b492a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U7 Creative Coding with The Theater Project_pilot_oo20_2025-cb-alt",
         "script_level.level_keys": [
           "CSA U7 Creative Coding with The Theater Project_pilot_oo20_2025-cb-alt"
@@ -8156,14 +8286,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa7_2025-cb-alt",
+        "level.key": "student-eou-survey_linked_page_csa2-project2-2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa7_2025-cb-alt"
+          "student-eou-survey_linked_page_csa2-project2-2025"
         ],
         "lesson.key": "Creative Coding with The Theater Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-alt-2025",
         "activity_section.key": "fc41f330-0024-4acf-9ce7-883900d14c9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csa2-alt-survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csa2-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "2065f2d5-56df-4854-a8cb-961885c01ded"
       }
     },
     {
@@ -8814,6 +8956,18 @@
       },
       "seeding_key": {
         "resource.key": "csa_implementing_string_algorithms_extra_practice"
+      }
+    },
+    {
+      "name": "Datasets",
+      "url": "https://drive.google.com/file/d/1OhrXnCwCDN4kW4xFnrHVX0srnGjfWA9X/view?usp=sharing",
+      "key": "datasets",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "datasets"
       }
     },
     {
@@ -9724,6 +9878,12 @@
       "seeding_key": {
         "lesson.key": "Logical Operators",
         "resource.key": "_key_u4l8_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Logical Operators",
+        "resource.key": "datasets"
       }
     },
     {

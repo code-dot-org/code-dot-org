@@ -51,6 +51,7 @@ export interface WorkshopCourseConfig {
 
 export interface WorkshopFormTemplateProps {
   config?: WorkshopCourseConfig;
+  regionalPartnerData?: RegionalPartner[];
 }
 
 export interface Organizer {
