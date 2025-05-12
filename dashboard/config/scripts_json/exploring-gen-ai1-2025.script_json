@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-08 22:45:23 UTC",
+    "serialized_at": "2025-05-09 17:26:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2450,10 +2450,32 @@
       "key": "fa447aeb-24a4-4bb1-907f-f9536384dd34",
       "position": 1,
       "properties": {
-        "progression_name": "Prompt Pair Comparison"
+        "progression_name": "Prompt Comparison"
       },
       "seeding_key": {
         "activity_section.key": "fa447aeb-24a4-4bb1-907f-f9536384dd34",
+        "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c"
+      }
+    },
+    {
+      "key": "226c5195-37c8-4985-b749-46085379aa66",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prompt Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "226c5195-37c8-4985-b749-46085379aa66",
+        "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c"
+      }
+    },
+    {
+      "key": "722592d3-fb7f-49a1-84de-1cc17c4bf6c7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "722592d3-fb7f-49a1-84de-1cc17c4bf6c7",
         "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c"
       }
     },
@@ -3859,6 +3881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-attention-test-v1"
+        ],
         "progression": "Activity"
       },
       "bonus": false,
@@ -3906,7 +3931,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Prompt Pair Comparison"
+        "level_keys": [
+          "genai-choices-comparison"
+        ],
+        "progression": "Prompt Comparison"
       },
       "bonus": false,
       "seeding_key": {
@@ -3924,6 +3952,50 @@
     },
     {
       "chapter": 27,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompt Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-choices-comparison-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "226c5195-37c8-4985-b749-46085379aa66"
+      },
+      "level_keys": [
+        "genai-choices-comparison-2"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-choices-cfu"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "722592d3-fb7f-49a1-84de-1cc17c4bf6c7"
+      },
+      "level_keys": [
+        "genai-choices-cfu"
+      ]
+    },
+    {
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3948,7 +4020,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3973,7 +4045,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3998,7 +4070,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4023,7 +4095,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4048,7 +4120,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4073,7 +4145,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4098,7 +4170,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4123,7 +4195,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4148,7 +4220,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4173,7 +4245,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4198,7 +4270,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4534,6 +4606,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "fa447aeb-24a4-4bb1-907f-f9536384dd34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-choices-comparison-2",
+        "script_level.level_keys": [
+          "genai-choices-comparison-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "226c5195-37c8-4985-b749-46085379aa66"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-choices-cfu",
+        "script_level.level_keys": [
+          "genai-choices-cfu"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "722592d3-fb7f-49a1-84de-1cc17c4bf6c7"
       }
     },
     {

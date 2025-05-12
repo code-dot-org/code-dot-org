@@ -22,8 +22,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-08 16:57:28 UTC",
-    "published_state": null,
+    "serialized_at": "2025-05-12 14:39:44 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -916,6 +916,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f3d7aba9-051a-4784-8bf6-0f74aa1d2332",
+        "lesson.key": "AI Time Capsule Project",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif1-2025"
+      }
+    },
+    {
+      "key": "e6c35d3c-356c-4e86-8b7a-84c554880eff",
+      "position": 4,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e6c35d3c-356c-4e86-8b7a-84c554880eff",
         "lesson.key": "AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif1-2025"
@@ -4581,25 +4594,15 @@
       }
     },
     {
-      "key": "d9833045-c010-4f73-a225-42c387a43b14",
-      "position": 5,
+      "key": "62cab8b9-b321-43ac-8f21-f516ee5fb931",
+      "position": 1,
       "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "d9833045-c010-4f73-a225-42c387a43b14",
-        "lesson_activity.key": "f3d7aba9-051a-4784-8bf6-0f74aa1d2332"
-      }
-    },
-    {
-      "key": "efa32269-42cc-471b-9f47-6ff00ca7a1bb",
-      "position": 6,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to complete the End of Lesson Survey.",
-        "progression_name": "Student Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "efa32269-42cc-471b-9f47-6ff00ca7a1bb",
-        "lesson_activity.key": "f3d7aba9-051a-4784-8bf6-0f74aa1d2332"
+        "activity_section.key": "62cab8b9-b321-43ac-8f21-f516ee5fb931",
+        "lesson_activity.key": "e6c35d3c-356c-4e86-8b7a-84c554880eff"
       }
     },
     {
@@ -4632,6 +4635,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-preassessment_2025-pilot_2025"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -4654,6 +4660,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level1_2025"
+        ],
         "progression": "AI Predictions"
       },
       "bonus": false,
@@ -4676,6 +4685,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level2_2025"
+        ],
         "progression": "Prompting AI"
       },
       "bonus": false,
@@ -4698,6 +4710,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level3_2025"
+        ],
         "progression": "Prompting AI"
       },
       "bonus": false,
@@ -4720,6 +4735,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson1-level4_2025"
+        ],
         "progression": "Prompting AI"
       },
       "bonus": false,
@@ -4742,6 +4760,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson1-level6_2025"
+        ],
         "progression": "Prompting Practice"
       },
       "bonus": false,
@@ -4764,6 +4785,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level6_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4786,6 +4810,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson1-level7_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4808,6 +4835,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level1_2025"
+        ],
         "progression": "AI's Image Observation Skills"
       },
       "bonus": false,
@@ -4830,6 +4860,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson2-level2_2025"
+        ],
         "progression": "AI's Image Observation Skills"
       },
       "bonus": false,
@@ -4852,6 +4885,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson2-level3_2025"
+        ],
         "progression": "Scenario-Based Prompting"
       },
       "bonus": false,
@@ -4874,6 +4910,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level4_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4896,6 +4935,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-problem-solving-with-ai-lesson2-level4_2025"
+        ],
         "progression": "Practice with a Multimodal Model"
       },
       "bonus": false,
@@ -4918,6 +4960,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson2-level6_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -4940,6 +4985,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level1_2025"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -4962,6 +5010,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level2_2025"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -4984,6 +5035,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level3_2025"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -5006,6 +5060,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level4_2024-pilot_2025"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -5028,6 +5085,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level4_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5050,6 +5110,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level1_2025"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -5072,6 +5135,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level2_2025"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -5094,6 +5160,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level3_2025"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -5116,6 +5185,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level4_2024-pilot_2025"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -5138,6 +5210,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level4_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5160,6 +5235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level5_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5182,6 +5260,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level1_2025"
+        ],
         "progression": "Two Truths and a Lie"
       },
       "bonus": false,
@@ -5204,6 +5285,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level2_2025"
+        ],
         "progression": "Examining AI Contradictions Activity Guide"
       },
       "bonus": false,
@@ -5226,6 +5310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level3_2025"
+        ],
         "progression": "AI Contradictions in Practice"
       },
       "bonus": false,
@@ -5248,6 +5335,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level4_2025"
+        ],
         "progression": "AI Contradictions in Practice"
       },
       "bonus": false,
@@ -5270,6 +5360,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level5_2025"
+        ],
         "progression": "AI Contradictions in Practice"
       },
       "bonus": false,
@@ -5292,6 +5385,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level6_2025"
+        ],
         "progression": "AI Contradictions in Practice"
       },
       "bonus": false,
@@ -5314,6 +5410,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level7_2025"
+        ],
         "progression": "Try Your Own"
       },
       "bonus": false,
@@ -5336,6 +5435,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level8_2024-pilot_2025"
+        ],
         "progression": "Try Your Own"
       },
       "bonus": false,
@@ -5358,6 +5460,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level8_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5380,6 +5485,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level9_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5402,6 +5510,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level10_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5424,6 +5535,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level1_2025"
+        ],
         "progression": "Describe a ____"
       },
       "bonus": false,
@@ -5446,6 +5560,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level2_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5468,6 +5585,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level3_2025"
+        ],
         "progression": "Decision-Making Roles"
       },
       "bonus": false,
@@ -5490,6 +5610,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level4_2025"
+        ],
         "progression": "AI Audit Challenge"
       },
       "bonus": false,
@@ -5512,6 +5635,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level5_2024-pilot_2025"
+        ],
         "progression": "AI Audit Challenge"
       },
       "bonus": false,
@@ -5534,6 +5660,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level5_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5556,6 +5685,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson7-level1_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5578,6 +5710,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson7-level2_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5600,6 +5735,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson7-level3_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5622,6 +5760,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level1_2025"
+        ],
         "progression": "Adding a Task"
       },
       "bonus": false,
@@ -5644,6 +5785,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level2_2025"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5666,6 +5810,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level3_2025"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5688,6 +5835,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level4_2025"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5710,6 +5860,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level5_2025"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5732,6 +5885,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level6_2024-pilot_2025"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5754,6 +5910,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level6_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5776,6 +5935,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level7_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5798,6 +5960,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level8_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5820,6 +5985,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level9_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5842,6 +6010,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1_2025"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -5864,6 +6035,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level2_2024-pilot_2025"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -5886,6 +6060,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level2_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5908,6 +6085,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level3_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5930,6 +6110,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level1_2025"
+        ],
         "progression": "AI in Music Lab"
       },
       "bonus": false,
@@ -5952,6 +6135,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level2_2025"
+        ],
         "progression": "Humans as the Creator"
       },
       "bonus": false,
@@ -5974,6 +6160,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level3_2025"
+        ],
         "progression": "AI as the Creator"
       },
       "bonus": false,
@@ -5996,6 +6185,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level4_2024-pilot_2025"
+        ],
         "progression": "AI as the Creator"
       },
       "bonus": false,
@@ -6018,6 +6210,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level4_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6040,6 +6235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level5_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6062,6 +6260,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson11-level1_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6084,6 +6285,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson11-level2_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6106,6 +6310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level1_2025"
+        ],
         "progression": "Articles"
       },
       "bonus": false,
@@ -6128,6 +6335,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level2_2025"
+        ],
         "progression": "AI in the Community"
       },
       "bonus": false,
@@ -6150,6 +6360,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level3_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6172,6 +6385,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level4_2025"
+        ],
         "progression": "Write a Video Script"
       },
       "bonus": false,
@@ -6194,6 +6410,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level5_2025"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6216,6 +6435,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson13-level1_2025"
+        ],
         "progression": "AI Prediction"
       },
       "bonus": false,
@@ -6238,6 +6460,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson13-level2_2025"
+        ],
         "progression": "Final Product"
       },
       "bonus": false,
@@ -6260,20 +6485,23 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Student Survey"
+        "level_keys": [
+          "student-eou-survey_linked_page_problemsolving-2025"
+        ],
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson13-level3_2025"
+          "student-eou-survey_linked_page_problemsolving-2025"
         ],
         "lesson.key": "AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif1-2025",
-        "activity_section.key": "efa32269-42cc-471b-9f47-6ff00ca7a1bb"
+        "activity_section.key": "62cab8b9-b321-43ac-8f21-f516ee5fb931"
       },
       "level_keys": [
-        "problem-solving-with-ai-lesson13-level3_2025"
+        "student-eou-survey_linked_page_problemsolving-2025"
       ]
     },
     {
@@ -6282,6 +6510,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-postassessment-pilot_2025"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -7215,14 +7446,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson13-level3_2025",
+        "level.key": "student-eou-survey_linked_page_problemsolving-2025",
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson13-level3_2025"
+          "student-eou-survey_linked_page_problemsolving-2025"
         ],
         "lesson.key": "AI Time Capsule Project",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif1-2025",
-        "activity_section.key": "efa32269-42cc-471b-9f47-6ff00ca7a1bb"
+        "activity_section.key": "62cab8b9-b321-43ac-8f21-f516ee5fb931"
       }
     },
     {

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_05_05_164605) do
+ActiveRecord::Schema.define(version: 2025_05_09_130059) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2166,6 +2166,8 @@ ActiveRecord::Schema.define(version: 2025_05_05_164605) do
     t.string "concept"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "key", null: false
+    t.index ["key"], name: "index_skills_on_key", unique: true
   end
 
   create_table "stages", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
