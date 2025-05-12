@@ -105,7 +105,7 @@ Feature: Using the teacher homepage sections feature
     Then the url contains the section id
 
     # loading non-existent section succeeds, with no section selected
-    When I am on "http://studio.code.org/courses/coursea-2019units/1?section_id=99999"
+    When I am on "http://studio.code.org/courses/coursea-2019/units/1?section_id=99999"
     And I wait until element "#script-title" is visible
     And element ".uitest-sectionselect" has value ""
 
