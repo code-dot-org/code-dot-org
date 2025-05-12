@@ -86,6 +86,7 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
         iconName={'gear'}
         url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}`}
         eventName={EVENTS.SECTION_CARD_SETTINGS_CLICKED}
+        eventOptions={{}}
       />,
       <LinkOption
         key={'roster'}
@@ -94,6 +95,7 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
         iconName={'user'}
         url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.roster}`}
         eventName={EVENTS.SECTION_CARD_ROSTER_CLICKED}
+        eventOptions={{}}
       />,
       <LinkOption
         key={'loginCards'}
@@ -102,6 +104,7 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
         iconName={'id-card'}
         url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.loginInfo}`}
         eventName={EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED}
+        eventOptions={{}}
       />,
       <li key={'certificates'}>
         <button

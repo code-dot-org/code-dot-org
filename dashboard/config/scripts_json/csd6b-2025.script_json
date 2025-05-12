@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-29 20:42:36 UTC",
+    "serialized_at": "2025-05-10 01:11:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -68,6 +68,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6b-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csd6b-2025"
       }
     }
@@ -402,6 +414,21 @@
       "seeding_key": {
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6b-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csd6b-2025"
       }
     }
@@ -1198,6 +1225,18 @@
         "lesson_activity.key": "d7c561c0-7230-4f7c-9e69-54206f8f3911",
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd6b-2025"
+      }
+    },
+    {
+      "key": "67d2c8f3-d69a-49e8-a7b2-b7b72ed1a4d4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "67d2c8f3-d69a-49e8-a7b2-b7b72ed1a4d4",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csd6b-2025"
       }
     }
@@ -4527,6 +4566,28 @@
       "seeding_key": {
         "activity_section.key": "e3270c0e-51bb-40f0-b562-4ecd26dcfff4",
         "lesson_activity.key": "d7c561c0-7230-4f7c-9e69-54206f8f3911"
+      }
+    },
+    {
+      "key": "440eacf6-7a66-4467-bc77-4e073e2fe212",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "440eacf6-7a66-4467-bc77-4e073e2fe212",
+        "lesson_activity.key": "67d2c8f3-d69a-49e8-a7b2-b7b72ed1a4d4"
+      }
+    },
+    {
+      "key": "0479015c-fbef-40b2-812a-e0f085e501f1",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "0479015c-fbef-40b2-812a-e0f085e501f1",
+        "lesson_activity.key": "67d2c8f3-d69a-49e8-a7b2-b7b72ed1a4d4"
       }
     }
   ],
@@ -7904,6 +7965,28 @@
       "level_keys": [
         "CSD Physical Computing Post-Project Test_6b2023_mb_2025"
       ]
+    },
+    {
+      "chapter": 136,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csd6bsurvey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd6b-2025",
+        "activity_section.key": "440eacf6-7a66-4467-bc77-4e073e2fe212"
+      },
+      "level_keys": [
+        "student-eou-survey_csd6bsurvey-2025"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -9525,6 +9608,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csd6b-2025",
         "activity_section.key": "e3270c0e-51bb-40f0-b562-4ecd26dcfff4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csd6bsurvey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csd6bsurvey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd6b-2025",
+        "activity_section.key": "440eacf6-7a66-4467-bc77-4e073e2fe212"
       }
     }
   ],

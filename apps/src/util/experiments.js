@@ -58,6 +58,8 @@ experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
 experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
 // Use glow effect for Blockly block highlighting
 experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
+// Allows users to view the download progress CSV button on the section progress page
+experiments.DOWNLOAD_PROGRESS_CSV = 'download-progress-csv';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

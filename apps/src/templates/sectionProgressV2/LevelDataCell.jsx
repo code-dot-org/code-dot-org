@@ -65,6 +65,45 @@ export const navigateToLevelOverviewUrl = (levelUrl, studentId, sectionId) => {
   return levelUrl;
 };
 
+export const getLevelCellValue = (
+  studentLevelProgress,
+  level,
+  expandedChoiceLevel
+) => {
+  if (expandedChoiceLevel) {
+    return ITEM_TYPE.CHOICE_LEVEL;
+  }
+  if (
+    studentLevelProgress?.teacherFeedbackReviewState === 'keepWorking' &&
+    studentLevelProgress?.teacherFeedbackNew
+  ) {
+    return ITEM_TYPE.KEEP_WORKING;
+  }
+  if (
+    !studentLevelProgress ||
+    studentLevelProgress.status === LevelStatus.not_tried
+  ) {
+    return ITEM_TYPE.NO_PROGRESS;
+  }
+  if (
+    studentLevelProgress.status === LevelStatus.perfect ||
+    studentLevelProgress.status === LevelStatus.submitted ||
+    studentLevelProgress.status === LevelStatus.free_play_complete ||
+    studentLevelProgress.status === LevelStatus.completed_assessment ||
+    studentLevelProgress.status === LevelStatus.passed
+  ) {
+    if (level.isValidated) {
+      return ITEM_TYPE.VALIDATED;
+    } else {
+      return ITEM_TYPE.SUBMITTED;
+    }
+  }
+  if (studentLevelProgress.status === LevelStatus.attempted) {
+    return ITEM_TYPE.IN_PROGRESS;
+  }
+  return ITEM_TYPE.NO_PROGRESS;
+};
+
 function LevelDataCell({
   level,
   studentId,
@@ -77,40 +116,10 @@ function LevelDataCell({
   lessonId,
   metadataExpanded,
 }) {
-  const itemType = React.useMemo(() => {
-    if (expandedChoiceLevel) {
-      return ITEM_TYPE.CHOICE_LEVEL;
-    }
-    if (
-      studentLevelProgress?.teacherFeedbackReviewState === 'keepWorking' &&
-      studentLevelProgress?.teacherFeedbackNew
-    ) {
-      return ITEM_TYPE.KEEP_WORKING;
-    }
-    if (
-      !studentLevelProgress ||
-      studentLevelProgress.status === LevelStatus.not_tried
-    ) {
-      return ITEM_TYPE.NO_PROGRESS;
-    }
-    if (
-      studentLevelProgress.status === LevelStatus.perfect ||
-      studentLevelProgress.status === LevelStatus.submitted ||
-      studentLevelProgress.status === LevelStatus.free_play_complete ||
-      studentLevelProgress.status === LevelStatus.completed_assessment ||
-      studentLevelProgress.status === LevelStatus.passed
-    ) {
-      if (level.isValidated) {
-        return ITEM_TYPE.VALIDATED;
-      } else {
-        return ITEM_TYPE.SUBMITTED;
-      }
-    }
-    if (studentLevelProgress.status === LevelStatus.attempted) {
-      return ITEM_TYPE.IN_PROGRESS;
-    }
-    return ITEM_TYPE.NO_PROGRESS;
-  }, [studentLevelProgress, level, expandedChoiceLevel]);
+  const itemType = React.useMemo(
+    () => getLevelCellValue(studentLevelProgress, level, expandedChoiceLevel),
+    [studentLevelProgress, level, expandedChoiceLevel]
+  );
 
   const feedbackStyle = React.useMemo(() => {
     if (expandedChoiceLevel) {

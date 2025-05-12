@@ -98,6 +98,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    width: 100%;
 
     > div,
     input,
@@ -114,6 +115,12 @@
       textarea,
       select {
         border-color: var(--text-error-primary);
+      }
+    }
+
+    &.textField {
+      input {
+        height: 2rem;
       }
     }
 

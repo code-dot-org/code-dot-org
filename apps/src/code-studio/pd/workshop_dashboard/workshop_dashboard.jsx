@@ -173,7 +173,10 @@ const WorkshopDashboard = ({
                     path={path}
                     element={
                       noRouter ? (
-                        <Component {...props} />
+                        <Component
+                          {...props}
+                          regionalPartnerData={regionalPartners}
+                        />
                       ) : (
                         <WithRouterProps component={Component} {...props} />
                       )
