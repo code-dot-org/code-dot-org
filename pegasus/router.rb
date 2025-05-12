@@ -35,6 +35,10 @@ require 'honeybadger'
 require src_dir 'database'
 require src_dir 'social_metadata'
 require src_dir 'forms'
+if CDO.pegasus_content_enabled
+  require src_dir 'curriculum_router'
+  require src_dir 'homepage'
+end
 require 'cdo/hamburger'
 
 require pegasus_dir 'helper_modules/multiple_extname_file_utils'
@@ -639,5 +643,9 @@ class Documents < Sinatra::Base
 
     # Load helpers
     load pegasus_dir('helpers.rb')
+  end
+
+  if CDO.pegasus_content_enabled
+    use CurriculumRouter
   end
 end
