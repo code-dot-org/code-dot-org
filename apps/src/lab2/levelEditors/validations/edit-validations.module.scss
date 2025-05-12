@@ -33,8 +33,8 @@
       width: 100%;
 
       &First {
-        width: 80px;
-        min-width: 80px;
+        width: 50px;
+        min-width: 50px;
         background-color: var(--background-neutral-quaternary);
         padding: 5px;
       }
@@ -66,13 +66,13 @@
 }
 
 .message {
-  width: 380px;
+  width: 400px;
   min-height: 50px;
   resize: vertical;
 }
 
 .callout {
-  width: 180px;
+  width: 190px;
 }
 
 .addValidationButton {
