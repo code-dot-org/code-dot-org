@@ -48,6 +48,12 @@ describe('ActionBlock', () => {
     expect(screen.getByText('Overline Text')).toBeInTheDocument();
   });
 
+  it('renders a tag', () => {
+    render(<ActionBlock {...defaultProps} tag="New" />);
+
+    expect(screen.getByText('New')).toBeInTheDocument();
+  });
+
   it('renders detail', () => {
     render(
       <ActionBlock

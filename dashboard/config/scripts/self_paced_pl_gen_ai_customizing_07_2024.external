@@ -5,8 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # System Prompting
 
-#### There are lots of new key concepts introduced around system prompting that students will engage with during these lessons. We’ve summarized them below.
+#### There are many ways to write a system prompt, but including four key components **role, goal, tone, and restriction** can help yield better responses from the chatbot. You might recognize each of these components from the prompt on the previous level.
 
+<p align="center">
+<img src="https://images.code.org/29c99d9ec0c5c98502e79a8cbdb6e57f-Screenshot 2024-08-30 at 2.37.31 PM.png" alt="lesson plan diagram" width="90%" style="border-radius:10px; border: 5px solid black;">
+</p>
+
+<br>
+
+#### Learn more about each one by expanding the boxes below.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Role
@@ -68,6 +75,14 @@ markdown <<MARKDOWN
 
 </p></div>
 </details>
+
+<br>
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> As students struggle getting the chatbot to respond in a particular way, they may want to know the “trick” or “secret” to getting the chatbot to respond how they want. You can assure students that there is no trick, just a set of strategies that tend to work more often than others but are still unreliable.  
+</p>
+</div>
 
 
 ## Up Next!

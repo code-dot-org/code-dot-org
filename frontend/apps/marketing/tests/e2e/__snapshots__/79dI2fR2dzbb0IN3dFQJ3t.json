@@ -1,0 +1,19 @@
+{
+  "entryContent": {
+    "fields": {
+      "linkName": {
+        "en-US": "⛔️ [ENGINEERING ONLY] Primary button test"
+      },
+      "label": {
+        "en-US": "Primary button test"
+      },
+      "primaryTarget": {
+        "en-US": "/ping"
+      },
+      "isThisAnExternalLink": {
+        "en-US": false
+      }
+    }
+  },
+  "contentType": "link"
+}

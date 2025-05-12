@@ -21,19 +21,23 @@ describe('WorkshopFormTemplate', () => {
     config,
   ]);
   let user;
+
+  const renderDefault = (props = {}) =>
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <Routes>
+          <Route path="/" element={<WorkshopFormTemplate {...props} />} />
+        </Routes>
+      </MemoryRouter>
+    );
+
   beforeEach(() => {
     user = userEvent.setup();
     mockedUseFetch.mockReturnValue({data: null, loading: false, error: null});
   });
 
   it.each(testConfigs)('renders the form for %s', (_, config) => {
-    render(
-      <MemoryRouter initialEntries={['/']}>
-        <Routes>
-          <Route path="/" element={<WorkshopFormTemplate config={config} />} />
-        </Routes>
-      </MemoryRouter>
-    );
+    renderDefault({config});
 
     expect(
       screen.getByText(workshopLabel(`New ${config.label}`))
@@ -48,16 +52,7 @@ describe('WorkshopFormTemplate', () => {
   it.each(testConfigs)(
     'renders field labels and helper messages for %s',
     async (_, config) => {
-      render(
-        <MemoryRouter initialEntries={['/']}>
-          <Routes>
-            <Route
-              path="/"
-              element={<WorkshopFormTemplate config={config} />}
-            />
-          </Routes>
-        </MemoryRouter>
-      );
+      renderDefault({config});
 
       await user.selectOptions(
         screen.getByRole('combobox', {
@@ -76,18 +71,44 @@ describe('WorkshopFormTemplate', () => {
   );
 
   it.each(testConfigs)(
+    'pre-fills regional partner if there is one option for %s',
+    async (_, config) => {
+      renderDefault({
+        config,
+        regionalPartnerData: [{id: 1, name: 'Regional Partner 1'}],
+      });
+
+      const input = screen.getByLabelText(
+        config.fields.regional_partner_id.label
+      );
+      // SimpleDropdown values can only be strings
+      expect(input.value).toBe('1');
+    }
+  );
+
+  it.each(testConfigs)(
+    'does not pre-fill regional partner if there is more than one option for %s',
+    async (_, config) => {
+      renderDefault({
+        config,
+        regionalPartnerData: [
+          {id: 1, name: 'Regional Partner 1'},
+          {id: 2, name: 'Regional Partner 2'},
+        ],
+      });
+
+      const input = screen.getByLabelText(
+        config.fields.regional_partner_id.label
+      );
+      // SimpleDropdown values can only be strings
+      expect(input.value).toBe('');
+    }
+  );
+
+  it.each(testConfigs)(
     'displays required validation errors for %s',
     async (_, config) => {
-      render(
-        <MemoryRouter initialEntries={['/']}>
-          <Routes>
-            <Route
-              path="/"
-              element={<WorkshopFormTemplate config={config} />}
-            />
-          </Routes>
-        </MemoryRouter>
-      );
+      renderDefault({config});
 
       const publishButton = screen.getByRole('button', {name: 'Publish'});
       await user.click(publishButton);

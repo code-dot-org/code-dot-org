@@ -1,0 +1,28 @@
+{
+  "entryContent": {
+    "fields": {
+      "videoTitle": {
+        "en-US": "Introducing How AI Works"
+      },
+      "youTubeId": {
+        "en-US": "Ok-xpKjKp2g"
+      },
+      "videoFallbackFile": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "1jVlIMJ2yBmzqD1H5hHDNj"
+          }
+        }
+      },
+      "videoFallbackUrl": {
+        "en-US": "https://videos.ctfassets.net/90t6bu6vlf76/1jVlIMJ2yBmzqD1H5hHDNj/9fe6b733248373a6546b44d1bad1baf6/ai-01-intro-to-ai.mp4"
+      },
+      "publishedDate": {
+        "en-US": "2020-12-01T00:00-04:00"
+      }
+    }
+  },
+  "contentType": "video"
+}

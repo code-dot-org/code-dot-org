@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-06 21:21:16 UTC",
+    "serialized_at": "2025-05-07 18:20:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3590,7 +3590,7 @@
       "key": "327e4c4e-df45-4286-8b7c-771a3ed70c19",
       "position": 4,
       "properties": {
-        "description": "For example, do you need to clean it? Do you need to combine any attributes to summarize your data? Do you need to create new attributes and use the `count()` function we learned about? You may not even realize you need to do some of that until you get in and start making visualizations to try to answer your data question.",
+        "description": "For example, do you need to clean it? Do you need to sort or filter your data? Do you need to use the SUM(), COUNTIF(), or AVERAGE() functions we learned about? You may not even realize you need to do some of that until you get in and start making visualizations to try to answer your data question.\n",
         "remarks": true
       },
       "seeding_key": {
@@ -3602,7 +3602,7 @@
       "key": "ab2083b7-d090-409c-923c-c3e4599153bd",
       "position": 5,
       "properties": {
-        "description": "Something else you might notice as that as you create your visualizations, you spark new questions – that’s fine! Ask those questions and make more visualizations; your data stories should be made up of more than one visualization. If your data question end up changing, that is also fine. Use the visualizations to help you form questions. This is an iterative process!",
+        "description": "Something else you might notice as that as you create your visualizations, you spark new questions – that’s fine! Ask those questions and make more visualizations; your data stories should be made up of more than one visualization. If your data question ends up changing, that is also fine. Use the visualizations to help you form questions. This is an iterative process!",
         "remarks": true
       },
       "seeding_key": {
@@ -3665,7 +3665,7 @@
       "key": "16cb59b2-d861-408a-8477-aa785f0e7a1f",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 5 to interpret your graph or make your question more specific."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 5 to use AI Chat to interpret their graph or make their data question more specific."
       },
       "seeding_key": {
         "activity_section.key": "16cb59b2-d861-408a-8477-aa785f0e7a1f",
@@ -3744,7 +3744,7 @@
       "key": "79893b34-4db1-4095-b826-37d37abf0784",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 5 to interpret your graph or make a question more specific."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 5 to use AI Chat to interpret their graph or make their data question more specific."
       },
       "seeding_key": {
         "activity_section.key": "79893b34-4db1-4095-b826-37d37abf0784",
@@ -6467,6 +6467,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] Data Visualizations",
+      "url": "https://docs.google.com/spreadsheets/d/1VgO-xv8i5cutT6ucZ8gLSTxsR-v8avZ0bhoiD4yrV_4/edit?usp=sharing",
+      "key": "data_visualizations",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "data_visualizations"
+      }
+    },
+    {
       "name": "[Dataset] Domestic House Cats",
       "url": "https://docs.google.com/spreadsheets/d/1psomJCWm4YG1O-YAX31aD9nvY5h7ousCgTHQfLK1Z4A/edit?usp=drive_link",
       "key": "domestic_house_cats_dataset",
@@ -6900,6 +6912,12 @@
       "seeding_key": {
         "lesson.key": "Crafting Stories with Data Project",
         "resource.key": "data_science_salaries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "data_visualizations"
       }
     },
     {

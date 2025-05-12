@@ -29,6 +29,7 @@ export async function logStudentWorkEvaluations(
         const ulse = await logStudentWorkEvaluation({
           type: 'UserLevelSkillEvaluation',
           studentId: studentWorkSample.studentId,
+          codeVersion: studentWorkSample.codeVersion,
           levelId: levelId,
           unitId: unitId,
           evaluator: 'AI',
