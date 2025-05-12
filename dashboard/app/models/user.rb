@@ -563,10 +563,6 @@ class User < ApplicationRecord
     sections_instructed
   end
 
-  def parent_email_update_only?
-    parent_email_update_only == '1' && user_type == 'student'
-  end
-
   def memoized_teachers
     @memoized_teachers ||= teachers.to_a
   end
