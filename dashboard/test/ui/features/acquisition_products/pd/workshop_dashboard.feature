@@ -2,7 +2,6 @@
 @eyes
 Feature: Workshop Dashboard
 
-@skip
 Scenario: New workshop: BYOW
   Given I am a program manager named "Test BYO PM" for regional partner "Test Partner"
   Given there is a facilitator named "Test BYO Facilitator 1" for course "Build Your Own Workshop"
@@ -20,8 +19,8 @@ Scenario: New workshop: BYOW
   And I press keys "123" for element "input[name='capacity']"
   And I press keys "This is a great workshop" for element "textarea[name='description']"
   And I click selector "#courseOfferings-dropdown-button"
-  And I wait until element "label:contains('Self Paced PL Course')" is visible
-  And I click selector "label:contains('Self Paced PL Course')"
+  And I wait until element "label:contains('ui-test-self-paced-pl')" is visible
+  And I click selector "label:contains('ui-test-self-paced-pl')"
   And I press keys "01012025" for element "input[name='date']"
   And I select the "9:00am" option in dropdown named "start"
   And I select the "2:00pm" option in dropdown named "end"

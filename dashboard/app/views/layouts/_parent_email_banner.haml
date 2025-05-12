@@ -22,6 +22,7 @@
         %button#link_your_email= I18n.t('parent_email_banner.link_your_email')
         %button#not_now= I18n.t('parent_email_banner.not_now')
   = form_for(current_user,
+      as: :user,
       url: '/users/parent_email',
       remote: true,
       html: { id: 'parent-email-banner-modal-form' },

@@ -20,7 +20,6 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "virtual-pl-csp-summer",
-    "has_numbered_units": true,
     "version_year": "2025"
   },
   "resources": [

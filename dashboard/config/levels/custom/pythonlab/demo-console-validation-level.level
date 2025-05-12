@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-05-11T22:14:12.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Some instructions here",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# This function generates a motivational message\ndef generate_message():\n  print(\"Believe in your goal to achieve success!\")\n\ngenerate_message()\n",
+          "folderId": "0",
+          "active": true,
+          "open": true,
+          "type": "locked_starter"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "language": "py",
+      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\nimport importlib\n\nclass TestGenerateMessageFunction(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Get printed output log and attempt to import the module\"\"\"\n        cls.log = ValidationProtocol().get_stdout_logs()\n\n        try:\n            # Dynamically import the entire main module\n            cls.main = importlib.import_module(\"main\")\n            # Check if the function exists in the module\n            cls.function_exists = hasattr(cls.main, \"generate_message\")\n        except Exception:\n            # If anything goes wrong (missing module, NameError, syntax error, etc.),\n            # treat it as if the function doesn't exist\n            cls.main = None\n            cls.function_exists = False\n\n    def setUp(self):\n        \"\"\"Skip tests if the function does not exist\"\"\"\n        if not self.function_exists:\n            self.skipTest(\"Make sure you define a function called generate_message().\")\n\n    def test_generate_message_function_exists(self):\n        \"\"\"generate_message() should exist and be callable\"\"\"\n        self.assertTrue(\n            hasattr(self.main, \"generate_message\"),\n            \"The function generate_message() should be defined.\"\n        )\n\n    def test_generate_message_output(self):\n        \"\"\"generate_message() should print a motivational message\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        self.assertGreaterEqual(\n            len(printed_messages),\n            1,\n            \"Make sure your generate_message() function prints at least one line.\"\n        )\n\n        motivational_keywords = [\"success\", \"believe\", \"achieve\", \"goal\"]\n        contains_keyword = any(\n            keyword in line.lower() \n            for line in printed_messages \n            for keyword in motivational_keywords\n        )\n\n        self.assertTrue(\n            contains_keyword,\n            \"Your message should include at least one of the following words: success, believe, achieve, goal.\"\n        )\n\n    def test_message_is_not_empty(self):\n        \"\"\"Printed message should not be empty\"\"\"\n        printed_messages = [line.strip() for line in self.log if line.strip()]\n\n        # Check if the list is empty before accessing the first element\n        if not printed_messages:\n            self.fail(\"The generate_message() function did not print any message.\")\n\n        self.assertGreater(\n            len(printed_messages[0]),\n            0,\n            \"The printed message should not be empty. Make sure your generate_message() function prints something.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-11 22:16:44 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-11 22:26:37 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-11 22:29:31 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-11 22:31:35 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-11 22:47:10 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Pythonlab>
