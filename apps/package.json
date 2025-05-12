@@ -288,6 +288,7 @@
     "object-fit-images": "^3.2.3",
     "papaparse": "^5.4.1",
     "path-browserify": "^1.0.1",
+    "pdf-lib": "^1.17.1",
     "pepjs": "^0.4.3",
     "pixelmatch": "^5.2.0",
     "playground-io": "code-dot-org/playground-io#v0.6.0-cdo.2",
