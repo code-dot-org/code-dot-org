@@ -51,12 +51,12 @@ it('can hide the tooltip imperatively using the hideTooltip method', async () =>
         tooltipProps={{
           tooltipId: 'tooltip1',
           text: 'tooltipText',
-          direction: 'top',
+          direction: 'onTop',
           size: 'm',
         }}
       >
         <button type="button" onClick={() => tooltipRef.current?.hideTooltip()}>
-          hover me
+          hover me then click me
         </button>
       </WithTooltip>
     );
@@ -64,13 +64,13 @@ it('can hide the tooltip imperatively using the hideTooltip method', async () =>
 
   render(<TestComponent />);
 
-  const tooltipTrigger = screen.getByText('hover me');
+  const tooltipTrigger = screen.getByText('hover me then click me');
 
   // Hover to show the tooltip
   await user.hover(tooltipTrigger);
   expect(await screen.findByText('tooltipText')).toBeInTheDocument();
 
-  // Click to hide tooltip via imperative ref
+  // Click to hide tooltip via imperative ref.
   await user.click(tooltipTrigger);
 
   // Tooltip should be removed

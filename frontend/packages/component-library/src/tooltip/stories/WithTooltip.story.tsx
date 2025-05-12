@@ -232,7 +232,7 @@ export const ImperativeHideTooltip: StoryFn = () => {
 
   const tooltipProps: TooltipProps = {
     text: 'This tooltip can be hidden imperatively',
-    direction: 'onBottom',
+    direction: 'onRight',
     tooltipId: 'imperative-hide-tooltip',
     size: 'xs',
   };
@@ -247,15 +247,13 @@ export const ImperativeHideTooltip: StoryFn = () => {
       }}
     >
       <WithTooltip tooltipProps={tooltipProps} ref={tooltipRef}>
-        <Button text="Hover or focus me" onClick={() => {}} />
+        <Button
+          text="Hover or focus me"
+          onClick={() => {
+            tooltipRef.current?.hideTooltip();
+          }}
+        />
       </WithTooltip>
-
-      <Button
-        text="Hide Tooltip"
-        onClick={() => {
-          tooltipRef.current?.hideTooltip();
-        }}
-      />
     </div>
   );
 };
