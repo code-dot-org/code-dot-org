@@ -156,6 +156,8 @@
 
 .create_menu {
   .create_options {
+    inset-inline-end: unset;
+    inset-inline-start: 0px;
     a {
       @include main-font-semi-bold;
       font-size: 14px;
