@@ -1059,6 +1059,7 @@ FactoryBot.define do
   end
 
   factory :skill do
+    key {"variables_names"}
     description {"Declares variables with conventional names"}
     concept {"Variables"}
     evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}

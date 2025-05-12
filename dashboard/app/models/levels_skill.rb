@@ -22,4 +22,22 @@ class LevelsSkill < ApplicationRecord
       'skill.key' => my_skill.key
     }.stringify_keys
   end
+
+  def hardcoded_levels_skills
+    {
+      #CSP 2024, Unit 4, Lesson 3, Level 2
+      49911 => {
+        programming_concept_skills: [
+          Skill.find_by_key("variables_declare"),
+          Skill.find_by_key("variables_name"),
+        ],
+      },
+       #CSP 2024, Unit 4, Lesson 3, Level 6
+       49916 => {
+         programming_concept_skills: [
+           Skill.find_by_key("variables_increment"),
+         ],
+       },
+    }
+  end
 end
