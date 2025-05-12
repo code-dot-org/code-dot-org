@@ -22,6 +22,7 @@ import {
 import _ from 'lodash';
 import React, {useState} from 'react';
 
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {
   removeSectionOrThrow,
   setSectionOrder,
@@ -34,6 +35,7 @@ import {
   getFilteredSectionOrderIds,
   saveSectionOrder,
 } from '../../teacherDashboard/sectionOrderUtils';
+import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {SectionCard} from './SectionCard';
 import {SectionDeleteModal} from './SectionDeleteModal';
@@ -73,6 +75,12 @@ export const SectionList: React.FC<SectionListProps> = ({
     state => state.teacherSections.sectionOrder
   );
 
+  const asyncLoadComplete = useAppSelector(
+    state => state.teacherSections.asyncLoadComplete
+  );
+
+  const [sectionsLoading, setSectionsLoading] = useState(!asyncLoadComplete);
+
   const [sortableSectionIds, setSortableSectionIds] =
     useState<number[]>(reduxSectionOrder);
 
@@ -85,6 +93,20 @@ export const SectionList: React.FC<SectionListProps> = ({
         .map(([id, _section]) => Number(id)),
     [sections]
   );
+
+  // Update sectionsLoading state when asyncLoadComplete changes
+  React.useEffect(() => {
+    if (!_.isEqual(asyncLoadComplete, !sectionsLoading)) {
+      setSortableSectionIds(reduxSectionOrder);
+      setSectionsLoading(!asyncLoadComplete);
+    }
+  }, [
+    asyncLoadComplete,
+    sectionsLoading,
+    reduxSectionOrder,
+    dispatch,
+    sections,
+  ]);
 
   // Update sortableSectionIds when sections change
   React.useEffect(() => {
@@ -156,31 +178,38 @@ export const SectionList: React.FC<SectionListProps> = ({
 
   return (
     <div id="ui-test-section-list">
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCenter}
-        onDragEnd={handleDragEnd}
-        modifiers={[restrictToVerticalAxis, restrictToParentElement]}
-      >
-        <SortableContext
-          items={sortableSectionIds}
-          strategy={verticalListSortingStrategy}
-        >
-          <ol className={styles.sectionList}>
-            {sectionIdsToShow.map(id =>
-              sections[id] ? (
-                <SectionCard
-                  id={id}
-                  key={id}
-                  section={sections[id]}
-                  onDeleteClickCallback={onDeleteClickCallback}
-                  studioUrlPrefix={studioUrlPrefix}
-                />
-              ) : null
-            )}
-          </ol>
-        </SortableContext>
-      </DndContext>
+      {!sectionsLoading ? (
+        <>
+          <CoteacherInviteNotification isForPl={false} />
+          <DndContext
+            sensors={sensors}
+            collisionDetection={closestCenter}
+            onDragEnd={handleDragEnd}
+            modifiers={[restrictToVerticalAxis, restrictToParentElement]}
+          >
+            <SortableContext
+              items={sortableSectionIds}
+              strategy={verticalListSortingStrategy}
+            >
+              <ol className={styles.sectionList}>
+                {sectionIdsToShow.map(id =>
+                  sections[id] ? (
+                    <SectionCard
+                      id={id}
+                      key={id}
+                      section={sections[id]}
+                      onDeleteClickCallback={onDeleteClickCallback}
+                      studioUrlPrefix={studioUrlPrefix}
+                    />
+                  ) : null
+                )}
+              </ol>
+            </SortableContext>
+          </DndContext>
+        </>
+      ) : (
+        <Spinner size="large" />
+      )}
       {sectionToDelete > NO_SECTION_ID && (
         <SectionDeleteModal
           onCloseCallback={onCloseDeleteDialog}
