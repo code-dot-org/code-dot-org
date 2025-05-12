@@ -19,6 +19,15 @@ require 'cdo/developers_topic'
 require "open3"
 
 FOLDERS = {
+  "code.org" => "sites.v3/code.org",
+  "curriculum-6-8" => "sites/virtual/curriculum-6-8",
+  "curriculum-course1" => "sites/virtual/curriculum-course1",
+  "curriculum-course2" => "sites/virtual/curriculum-course2",
+  "curriculum-course3" => "sites/virtual/curriculum-course3",
+  "curriculum-course4" => "sites/virtual/curriculum-course4",
+  "curriculum-csp" => "sites/virtual/curriculum-csp",
+  "curriculum-docs" => "sites/virtual/curriculum-docs",
+  "curriculum-misc" => "sites/virtual/curriculum-misc",
   "emails" => "emails",
 }.freeze
 
