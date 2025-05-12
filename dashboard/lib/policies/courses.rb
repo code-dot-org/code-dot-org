@@ -12,6 +12,6 @@ class Policies::Courses
       user_enabled = Experiment.enabled?(user: user, experiment_name: MODULARITY_PILOT)
       return user_enabled if user_enabled
     end
-    DCDO.get(MODULARITY_PILOT, false)
+    DCDO.get(MODULARITY_PILOT, true)
   end
 end

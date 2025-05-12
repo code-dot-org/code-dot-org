@@ -64,7 +64,7 @@ class DCDOBase < DynamicConfigBase
       'ai-tutor-teacher-nav-v2': DCDO.get('ai-tutor-teacher-nav-v2', true),
       'music-lab-banner': DCDO.get('music-lab-banner', false),
       'show-download-progress-csv': DCDO.get('show-download-progress-csv', false),
-      "#{Policies::Courses::MODULARITY_PILOT}": DCDO.get(Policies::Courses::MODULARITY_PILOT, false),
+      "#{Policies::Courses::MODULARITY_PILOT}": DCDO.get(Policies::Courses::MODULARITY_PILOT, true),
     }
   end
 end
