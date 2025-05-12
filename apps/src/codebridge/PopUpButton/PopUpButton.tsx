@@ -1,5 +1,6 @@
 import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import React, {useState, useCallback, useRef, useEffect} from 'react';
 import {createPortal} from 'react-dom';
@@ -93,7 +94,7 @@ export const PopUpButton = ({
             left,
           });
           setUpdatedStyles(true);
-          setComputedButtonStyles(`${className} ${moduleStyles.active}`);
+          setComputedButtonStyles(classNames(className, moduleStyles.active));
         }
       }
     };

@@ -24,6 +24,8 @@
   }
 }
 
+// We need !important because of css specificity- this would be overriden
+// by display: none otherwise.
 button.active {
   display: inherit !important;
 }
