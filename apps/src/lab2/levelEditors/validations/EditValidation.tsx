@@ -85,13 +85,7 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
         <div
           className={classNames(moduleStyles.column, moduleStyles.columnFirst)}
         >
-          <Typography
-            semanticTag="h4"
-            visualAppearance="body-two"
-            className={moduleStyles.validationTitle}
-          >
-            {'When'}
-          </Typography>
+          {'When'}
         </div>
         <div className={moduleStyles.column}>
           {validation.conditions.map((condition, index) => {
@@ -138,13 +132,7 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
         <div
           className={classNames(moduleStyles.column, moduleStyles.columnFirst)}
         >
-          <Typography
-            semanticTag="h4"
-            visualAppearance="body-two"
-            className={moduleStyles.validationTitle}
-          >
-            {'Then'}
-          </Typography>
+          {'Then'}
         </div>
         <div className={moduleStyles.column}>
           <div className={moduleStyles.row}>
