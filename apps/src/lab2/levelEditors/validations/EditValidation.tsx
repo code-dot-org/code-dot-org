@@ -1,8 +1,11 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import Tooltip from '@cdo/apps/templates/Tooltip';
 
 import {ConditionType, Validation, Condition} from '../../types';
 
@@ -51,35 +54,44 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
 
   return (
     <div className={moduleStyles.validation}>
-      <div className={moduleStyles.row}>
-        <button
-          type="button"
-          onClick={() => moveValidation(validation.key, 'up')}
-          className={moduleStyles.moveValidationButton}
+      <div className={moduleStyles.simpleRow}>
+        <Typography
+          semanticTag="h3"
+          visualAppearance="heading-xs"
+          className={moduleStyles.validationTitle}
         >
-          <FontAwesome icon="arrow-up" title={undefined} className="icon" />
-        </button>
-        <button
-          type="button"
-          onClick={() => moveValidation(validation.key, 'down')}
-          className={moduleStyles.moveValidationButton}
-        >
-          <FontAwesome icon="arrow-down" title={undefined} className="icon" />
-        </button>
-        <button
-          type="button"
-          onClick={() => duplicateValidation(validation)}
-          className={moduleStyles.duplicateValidationButton}
-        >
-          <FontAwesome icon="copy" title={undefined} className="icon" />
-        </button>
-        <button
-          type="button"
-          onClick={() => deleteValidation(validation.key)}
-          className={moduleStyles.deleteValidationButton}
-        >
-          <FontAwesome icon="trash" title={undefined} className="icon" />
-        </button>
+          <div>{'Validation Set ' + (index + 1)}</div>
+        </Typography>
+        <div>
+          <button
+            type="button"
+            onClick={() => moveValidation(validation.key, 'up')}
+            className={moduleStyles.moveValidationButton}
+          >
+            <FontAwesome icon="arrow-up" title={undefined} className="icon" />
+          </button>
+          <button
+            type="button"
+            onClick={() => moveValidation(validation.key, 'down')}
+            className={moduleStyles.moveValidationButton}
+          >
+            <FontAwesome icon="arrow-down" title={undefined} className="icon" />
+          </button>
+          <button
+            type="button"
+            onClick={() => duplicateValidation(validation)}
+            className={moduleStyles.duplicateValidationButton}
+          >
+            <FontAwesome icon="copy" title={undefined} className="icon" />
+          </button>
+          <button
+            type="button"
+            onClick={() => deleteValidation(validation.key)}
+            className={moduleStyles.deleteValidationButton}
+          >
+            <FontAwesome icon="trash" title={undefined} className="icon" />
+          </button>
+        </div>
       </div>
       <div className={moduleStyles.section}>
         <div
@@ -145,7 +157,7 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
               <textarea
                 id="message"
                 name="message"
-                rows={3}
+                rows={4}
                 className={moduleStyles.message}
                 value={validation.message}
                 onChange={e => {
@@ -156,8 +168,16 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
             </div>
             <div className={moduleStyles.column}>
               <div className={moduleStyles.row}>
+                <Tooltip
+                  text={<SafeMarkdown markdown={validation.message} />}
+                  place="right"
+                >
+                  <FontAwesomeV6Icon iconName="eye" iconStyle="regular" />
+                </Tooltip>
+              </div>
+              <div className={moduleStyles.row}>
                 <label htmlFor="callout" className={moduleStyles.label}>
-                  Callout (optional):
+                  Callout:
                 </label>
                 <input
                   type="text"
@@ -173,7 +193,7 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
               </div>
               <div className={moduleStyles.row}>
                 <label htmlFor="next" className={moduleStyles.label}>
-                  Passes Level?
+                  Passes level:
                 </label>
                 <input
                   type="checkbox"

@@ -9,9 +9,16 @@
   margin: 10px 0;
   gap: 5px;
   padding: 5px;
+  width: 760px;
 
   select, input, textarea, label {
     margin-bottom: 0;
+  }
+
+  .simpleRow {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
   }
 
   .section {
@@ -29,7 +36,7 @@
       &First {
         width: 80px;
         min-width: 80px;
-        background-color: lightgrey;
+        background-color: var(--background-neutral-quaternary);
         padding: 5px;
       }
 
@@ -37,7 +44,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 5px;
+        gap: 10px;
         justify-content: space-between;
       }
     }
@@ -56,6 +63,7 @@
   padding: 0 10px;
   background-color: var(--background-brand-teal-primary);
   color: var(--text-neutral-white-fixed);
+  border: none;
 }
 
 .message {
@@ -65,7 +73,7 @@
 }
 
 .callout {
-  width: 140px;
+  width: 180px;
 }
 
 /*

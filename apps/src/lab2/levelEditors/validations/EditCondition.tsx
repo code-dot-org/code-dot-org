@@ -122,7 +122,6 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
       </Tooltip>
       {hasValueType && (
         <>
-          <label className={moduleStyles.label}>Value:</label>
           <div className={moduleStyles.valueInputsWrapper}>
             {valueTypes.map((type, i) => {
               const currentConditionValue = condition.value!;
