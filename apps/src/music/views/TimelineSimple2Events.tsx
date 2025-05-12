@@ -1,6 +1,8 @@
 import React, {useCallback, useMemo, memo} from 'react';
 
 import AppConfig from '../appConfig';
+import {BlockTypes} from '../blockly/blockTypes';
+import {collectBlockIdsRecursively} from '../blockly/blockUtils';
 import {MAX_FUNCTION_BOUNDS_RENDER_DEPTH} from '../constants';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
@@ -8,8 +10,7 @@ import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import TimelineElement from './TimelineElement';
 import {useMusicSelector} from './types';
 
-const useOriginalTimelineLayout =
-  AppConfig.getValue('timeline-original-layout') === 'true';
+const timelineLayoutParam = AppConfig.getValue('timeline-layout');
 
 /**
  * Compute the extents for the given function, given the list of unique sounds and all functions.
@@ -129,25 +130,53 @@ const FunctionExtentsSimple2: React.FunctionComponent<
 const getOrderedByWhenSoundEvents = (soundEvents: PlaybackEvent[]) => {
   // This sort arranges all of the sounds played under "when run" in order of when
   // played.  Triggered sounds come after them.
-  return [...soundEvents].sort((soundEvent1, soundEvent2) => {
-    if (soundEvent1.triggered && soundEvent2.triggered) {
-      const soundEvent1Name = soundEvent1.functionContext?.name || '';
-      const soundEvent2Name = soundEvent2.functionContext?.name || '';
-      if (soundEvent1Name < soundEvent2Name) {
-        return -1;
-      } else if (soundEvent1 > soundEvent2) {
-        return 1;
-      } else {
-        return 0;
-      }
-    } else if (soundEvent1.triggered && !soundEvent2.triggered) {
-      return 1;
-    } else if (!soundEvent1.triggered && soundEvent2.triggered) {
-      return -1;
-    } else {
-      return soundEvent1.when - soundEvent2.when;
-    }
+  return [...soundEvents].sort((a, b) =>
+    sortByTriggered(a, b, (x, y) => x.when - y.when)
+  );
+};
+
+/**
+ * Given an array of playback events, returns a copy of the array that is sorted
+ * primarily by block order.
+ */
+const getOrderedByBlockSoundEvents = (soundEvents: PlaybackEvent[]) => {
+  // This sort arranges all of the sounds played under "when run" in block
+  // order.  Triggered sounds come after them.
+  const whenRunBlock =
+    Blockly.getMainWorkspace()?.getBlocksByType(
+      BlockTypes.WHEN_RUN_SIMPLE2
+    )[0] || null;
+  const blockIdList = collectBlockIdsRecursively(whenRunBlock);
+
+  const blockIdToOrder = new Map<string, number>();
+  blockIdList.forEach((id, index) => {
+    blockIdToOrder.set(id, index);
   });
+  return [...soundEvents].sort((a, b) =>
+    sortByTriggered(a, b, (x, y) => {
+      const order1 = blockIdToOrder.get(x.blockId || '') ?? Infinity;
+      const order2 = blockIdToOrder.get(y.blockId || '') ?? Infinity;
+      return order1 - order2;
+    })
+  );
+};
+
+const sortByTriggered = function (
+  a: PlaybackEvent,
+  b: PlaybackEvent,
+  sortFunction: (a: PlaybackEvent, b: PlaybackEvent) => number
+): number {
+  if (a.triggered && b.triggered) {
+    const aName = a.functionContext?.name || '';
+    const bName = b.functionContext?.name || '';
+    return aName.localeCompare(bName);
+  } else if (a.triggered && !b.triggered) {
+    return 1;
+  } else if (!a.triggered && b.triggered) {
+    return -1;
+  } else {
+    return sortFunction(a, b);
+  }
 };
 
 /**
@@ -168,12 +197,17 @@ const TimelineSimple2Events: React.FunctionComponent<
   );
 
   // soundEventsOriginal has sounds sorted primarily by the immediate function
-  // that generates them, and next by when they are played.  Unless useOriginalTimelineLayout
-  // is true, then they are resorted so that all sounds played somewhere under
-  // "when run" are sorted by when they are played.
-  const soundEvents = useOriginalTimelineLayout
-    ? soundEventsOriginal
-    : getOrderedByWhenSoundEvents(soundEventsOriginal);
+  // that generates them, and next by when they are played.
+  // If timelineLayoutParam is 'blocks', the events are reordered to follow the block layout.
+  // If it's 'default' (or any invalid value) the events are resorted so that all sounds
+  // played under "when run" are ordered chronologically by when they play.
+  // If it's 'old', the original ordering is preserved.
+  let soundEvents = soundEventsOriginal;
+  if (timelineLayoutParam === 'blocks') {
+    soundEvents = getOrderedByBlockSoundEvents(soundEventsOriginal);
+  } else if (timelineLayoutParam !== 'old') {
+    soundEvents = getOrderedByWhenSoundEvents(soundEventsOriginal);
+  }
 
   const orderedFunctions = useMusicSelector(
     state => state.music.orderedFunctions

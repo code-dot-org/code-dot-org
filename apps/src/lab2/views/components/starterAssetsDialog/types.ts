@@ -20,6 +20,6 @@ export interface DialogProps {
   addAsset: (asset: AssetData) => void;
   removeAsset: (filename: string) => void;
   loading: boolean;
-  showError: boolean;
-  setError: (error: Error) => void;
+  handleError: (error: Error, userErrorMessage?: string) => void;
+  errorMessage?: string;
 }

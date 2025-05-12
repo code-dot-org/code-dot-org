@@ -1,6 +1,7 @@
-@import '@code-dot-org/component-library-styles/primitiveColors';
 @import '@code-dot-org/component-library-styles/colors';
-
+@import '@code-dot-org/component-library-styles/primitiveColors';
+@import '@code-dot-org/component-library-styles/variables.scss';
+@import 'breakpoints';
 
 .workshopCatalog {
   background-color: var(--background-neutral-secondary);
@@ -39,7 +40,7 @@
       justify-content: flex-end;
       background-color: var(--neutral-base-white);
       border: 1px solid var(--neutral-gray-20);
-      border-radius: 0.25rem;
+      border-radius: $regular-border-radius;
   
       .zipSearchInput {
         display: flex;
@@ -104,6 +105,28 @@
       margin: 0 auto;
       align-items: flex-start;
       gap: 1.875rem;
+
+      .linkText {
+        cursor: pointer;
+        color: var(--brand-purple-50);
+      }
+
+      .wsCardContainer {
+        width: 100%;
+        justify-content: center;
+
+        @media screen and (min-width: $width-sm) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 1.5rem;
+        }
+
+        @media screen and (max-width: $width-sm) {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+      }
     }
 
     .noCardsContainer {
@@ -116,7 +139,7 @@
       background-color: var(--background-neutral-secondary);
       padding: 2.5rem;
       border: 1px solid var(--neutral-gray-20);
-      border-radius: 0.25rem;
+      border-radius: $regular-border-radius;
 
       .noCardsTextContainer {
         display: flex;
@@ -144,5 +167,132 @@
         max-width: 215px;
       }
     }
+  }
+}
+
+.workshopCatalogCard {
+  height: 485px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--neutral-gray-20);
+  border-radius: $regular-border-radius;
+
+  .titleBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem;
+    background-color: var(--neutral-gray-5);
+    border-bottom: 1px solid var(--neutral-gray-20);
+
+    .capacityTag {
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .spotsOpenCapacityTag {
+      i {
+        color: var(--brand-teal-50);
+      }
+    }
+
+    .fullCapacityTag {
+      div:first-child {
+        background-color: var(--neutral-gray-10);
+      }
+
+      i {
+        color: var(--neutral-base-black);
+      }
+    }
+
+    .wsTitle {
+      font-weight: 600;
+    }
+
+    .gradeContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+
+      .gradeNote {
+        font-size: 0.75rem;
+        color: var(--neutral-gray-70);
+      }
+    }
+  }
+
+  .infoBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem;
+
+    .infoLine {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+
+      .infoLineIconContainer {
+        display: flex;
+        justify-content: center;
+        width: 1.25rem;
+      }
+    }
+  }
+
+  .buttonContainer {
+    padding: 1.25rem;
+    background-color: var(--neutral-gray-5);
+    border-top: 1px solid var(--neutral-gray-20);
+
+    .wsCardButton {
+      width: 100%;
+    }
+  }
+}
+
+.gradeBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  border: 1px solid var(--neutral-gray-20);
+  border-radius: 100px;
+
+  .gradeBox {
+    flex-grow: 1;
+    text-align: center;
+    line-height: 1.25rem;
+    font-weight: 600;
+    font-size: 0.75rem;
+  }
+
+  .gradeBox:first-of-type {
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  .gradeBox:last-of-type {
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+
+  .gradeLevelDivider {
+    border-left: 1px solid var(--neutral-gray-20);
+  }
+
+  .supportedGradeBox {
+    background-color: var(--brand-teal-50);
+    
+    p {
+      color: var(--neutral-base-white);
+    }
+  }
+
+  .unsupportedGradeBox p {
+    color: var(--neutral-gray-70);
   }
 }

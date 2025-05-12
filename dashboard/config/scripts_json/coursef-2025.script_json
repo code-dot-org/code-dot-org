@@ -15,11 +15,12 @@
         "artist"
       ],
       "show_calendar": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-14 15:50:30 UTC",
+    "serialized_at": "2025-05-02 01:07:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -150,12 +151,28 @@
       }
     },
     {
-      "key": "Sprites in Action",
-      "name": "Sprites in Action",
+      "key": "Mini-Project: Career Journeys ",
+      "name": "Mini-Project: Career Journeys ",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
+      "properties": {
+        "overview": "This lesson introduces students to the wide range of careers that involve computer science and artificial intelligence. Through interactive videos and guided exploration, students learn about real-world jobs that use CS. They are then guided step by step to build their own coding projects using Sprite Lab to present an interactive scene that relates to a career or subject they may be interested in. The lesson wraps up with students reflecting on what they’ve learned and how it connects to their future goals."
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025"
+      }
+    },
+    {
+      "key": "Sprites in Action",
+      "name": "Sprites in Action",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
       "properties": {
         "overview": "In this **skill-building** lesson, students will work through a series of programming levels on the computer, finishing with an open-ended “free play” task where they can build whatever they like. Students will write programs that respond to timed events and user input. ",
         "preparation": "Play through the levels and review the lesson slides.",
@@ -171,10 +188,10 @@
     {
       "key": "Mini-Project: Virtual Pet",
       "name": "Mini-Project: Virtual Pet",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will create an interactive Virtual Pet that looks and behaves how they wish in this **mini-project** lesson. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to bring their project to life.",
@@ -191,10 +208,10 @@
     {
       "key": "Blank Space Stories",
       "name": "Blank Space Stories",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "overview": "In this **context-setting** lesson, students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs. ",
         "preparation": "Obtain 6 envelopes (also suitable: paper or index cards, folded in half). \n\n- Label the front of each envelope with large letters: object, liquid, number, adjective, body part, number\n-  Print copies of the student ***worksheet** (or post the digital version to your LMS).\n",
@@ -211,10 +228,10 @@
     {
       "key": "Text and Prompts",
       "name": "Text and Prompts",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "overview": "In this **skill-building** lesson, students will get practice with variables in Sprite Lab. ",
         "preparation": "Play through the levels and review the lesson slides.",
@@ -230,10 +247,10 @@
     {
       "key": "Mini-Project: User Input Programs",
       "name": "Mini-Project: User Input Programs",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "overview": "Students will apply their new skills with variables to one of three open-ended **mini-projects**. Students will explore sample programs, create a plan for their own project, and program it from scratch.",
         "preparation": "- Print the planning guide or distribute a digital copy to each student. Review it ahead of time in case you would like to make any modifications to fit your class.\n\n- Review the options in level 3 ahead of time to get familiar with the flow students will need to follow.\n\n- This lesson has the potential to stretch to multiple class periods. Consider scheduling implications ahead of time.\n",
@@ -249,10 +266,10 @@
     {
       "key": "Lots of Sprites",
       "name": "Lots of Sprites",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "overview": "In this **context-setting**/**skill-building** lesson, students will go deeper into Sprite Lab's capabilities and learn how to manage groups of sprites with the same costume. ",
         "preparation": "Play through the levels and review the **lesson slides**.",
@@ -268,10 +285,10 @@
     {
       "key": "Counting with Variables",
       "name": "Counting with Variables",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "overview": "In this **skill-building** lesson, students will use variables to track a value that changes over time, like a counter. This lesson also includes a short **mini-project** in which students create a simple game.",
         "preparation": "Play through the levels and review the **lesson slides**.\n",
@@ -287,10 +304,10 @@
     {
       "key": "Mini-Project: Collector Game",
       "name": "Mini-Project: Collector Game",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "overview": "In this **mini-project** lesson, students will create a customized \"collector game\", in which the user moves a sprite around to collect objects.",
         "preparation": "Play through the levels and review the **lesson slides**.\n\n",
@@ -306,10 +323,10 @@
     {
       "key": "Simulating Experiments",
       "name": "Simulating Experiments",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting** lesson, students will run and collect data from a simple simulation in Sprite Lab. After running the simulation multiple times, students will have an opportunity to predict how changing a variable in the simulation might impact the outcome and test that hypothesis.",
@@ -326,10 +343,10 @@
     {
       "key": "Outbreak",
       "name": "Outbreak",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "overview": "This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. ",
         "preparation": "- Play through the puzzles to find any potential problem areas for your class.\n- Make sure every student has a reflection journal.\n",
@@ -345,10 +362,10 @@
     {
       "key": "AI For Oceans",
       "name": "AI For Oceans",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **exploratory** lesson, students will train a machine learning model by classifying fish and other objects.",
@@ -364,10 +381,10 @@
     {
       "key": "The Internet",
       "name": "The Internet",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students will pretend to flow through the internet while learning about connections, URLs, IP Addresses, and DNS in this **exploratory** lesson.",
@@ -385,10 +402,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing new projects!",
@@ -553,6 +570,48 @@
       "seeding_key": {
         "lesson_activity.key": "246d9eca-0d62-4791-ac32-554a9688f193",
         "lesson.key": "Making Sprites",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025"
+      }
+    },
+    {
+      "key": "11f100f4-99e9-4110-83d8-9811e8a96780",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "11f100f4-99e9-4110-83d8-9811e8a96780",
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025"
+      }
+    },
+    {
+      "key": "a4e615f8-db6a-4286-aea7-ea782a33165e",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a4e615f8-db6a-4286-aea7-ea782a33165e",
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025"
+      }
+    },
+    {
+      "key": "f695b168-29ba-4d71-b978-61fab18af47f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f695b168-29ba-4d71-b978-61fab18af47f",
+        "lesson.key": "Mini-Project: Career Journeys ",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "coursef-2025"
       }
@@ -1712,6 +1771,104 @@
       "seeding_key": {
         "activity_section.key": "d2db6782-7c26-4e94-9afc-497f236e8532",
         "lesson_activity.key": "246d9eca-0d62-4791-ac32-554a9688f193"
+      }
+    },
+    {
+      "key": "db70ed4d-5387-47db-abe5-c05589e1b1ab",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-video\"></i> **Video:** Show the short video, CS is Everything\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say**: Think about careers that work on ideas and things in the video.",
+        "progression_name": "Intro Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "db70ed4d-5387-47db-abe5-c05589e1b1ab",
+        "lesson_activity.key": "11f100f4-99e9-4110-83d8-9811e8a96780"
+      }
+    },
+    {
+      "key": "8f14a087-ca3c-4324-a95f-b8c6ef8b896c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** Now, let’s discuss! Think silently for a moment, then turn to a partner and answer one of the questions on the slide:\n- What did you like about this video?\n- What are some examples of careers that use CS? \n\n\n<i class=\"fa-solid fa-rotate\"></i> **Circulate:**  Listen to student discussions and encourage deeper thinking.\n\n<i class=\"fa-solid fa-lightbulb\"></i> **Discussion Goal:** Help students connect coding to real-world careers and reflect on their own interests."
+      },
+      "seeding_key": {
+        "activity_section.key": "8f14a087-ca3c-4324-a95f-b8c6ef8b896c",
+        "lesson_activity.key": "11f100f4-99e9-4110-83d8-9811e8a96780"
+      }
+    },
+    {
+      "key": "a0171bc7-3a17-4d02-bada-79448eb42f75",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-laptop-binary\"></i> **Transition:** Transition to exploring more computer science career options.\n\n<i class=\"fa-solid fa-square-check\"></i> **Do This:** Set the timer for four minutes so students know when to move to the next level\n\n<i class=\"fa-solid fa-microphone-stand\"></i> **Say:** You are exploring some ideas of careers! Keep in mind what you’re interested in and will want to make your project about! ",
+        "duration": "15",
+        "name": "Career Exploration",
+        "progression_name": "Career Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guiding questions to promote deeper thinking and prepare students to code a small project representing a career they’re interested in.**\n- What would be the most fun part of that job for you? What might be hard?\n- Do you think someone like you could do this job? Why or why not?\n- Is there a job or interest you’d like to show in your project?\nWhat could your project include to tell others about this interest or career?\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a0171bc7-3a17-4d02-bada-79448eb42f75",
+        "lesson_activity.key": "a4e615f8-db6a-4286-aea7-ea782a33165e"
+      }
+    },
+    {
+      "key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-square-check\"></i> **Do This:** To transition into using Sprite Lab. Introduce sprite and event as the two key computer science concepts they will use in their project. \n\n**Show slide:** Tips for using Sprite Lab\n",
+        "duration": "15",
+        "name": "Code your Project ",
+        "progression_name": "Build Your Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Differentiation:** Level 10 has choices for students to expand their Sprite Lab skills.\n\nStudents do not need any of the skills in level 10 to finish their project but they are great extension ideas for those who are ready for a challenge and more coding!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2",
+        "lesson_activity.key": "a4e615f8-db6a-4286-aea7-ea782a33165e"
+      }
+    },
+    {
+      "key": "a89d270d-8d4c-4d4f-9f67-00bff052a933",
+      "position": 1,
+      "properties": {
+        "duration": "5",
+        "name": "Share your project",
+        "progression_name": "Share out"
+      },
+      "seeding_key": {
+        "activity_section.key": "a89d270d-8d4c-4d4f-9f67-00bff052a933",
+        "lesson_activity.key": "f695b168-29ba-4d71-b978-61fab18af47f"
+      }
+    },
+    {
+      "key": "85e3dc99-1253-4ce8-aec8-98c05857c37e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-rotate\"></i> **Circulate:** Use the guiding questions in the notes of slide 16 to support students as you move around the room."
+      },
+      "seeding_key": {
+        "activity_section.key": "85e3dc99-1253-4ce8-aec8-98c05857c37e",
+        "lesson_activity.key": "f695b168-29ba-4d71-b978-61fab18af47f"
+      }
+    },
+    {
+      "key": "8b947872-6380-45c7-8ce4-1e2bb00dd90d",
+      "position": 3,
+      "properties": {
+        "progression_name": "Share Out"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b947872-6380-45c7-8ce4-1e2bb00dd90d",
+        "lesson_activity.key": "f695b168-29ba-4d71-b978-61fab18af47f"
       }
     },
     {
@@ -4233,6 +4390,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "The Power of Words - Unplugged Activity"
       },
       "bonus": false,
@@ -4255,6 +4415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_video_introSpriteLab_2025"
+        ],
         "progression": "Video: Introducing Sprite Lab"
       },
       "bonus": false,
@@ -4277,6 +4440,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_intro_apps2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Exploration: Sample Apps"
       },
       "bonus": false,
@@ -4299,6 +4465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_predict_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4321,6 +4490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_2021-2_2025"
+        ],
         "progression": "Video: How to Make a Sprite"
       },
       "bonus": false,
@@ -4343,6 +4515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_make_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4365,6 +4540,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_positioning_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4387,6 +4565,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_moreSprites_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4409,6 +4590,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_properties_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4431,6 +4615,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_behaviors_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4453,6 +4640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_practice2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4475,6 +4665,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_freeplay2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Free Play: Make a Scene"
       },
       "bonus": false,
@@ -4497,6 +4690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_predict_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4519,6 +4715,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_events_2025"
+        ],
         "progression": "Video: Sprites in Action"
       },
       "bonus": false,
@@ -4541,6 +4740,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_review_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4563,6 +4765,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_time_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4585,6 +4790,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_key_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4607,6 +4815,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_stops_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4629,6 +4840,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_conflict_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4651,6 +4865,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_practice2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4673,6 +4890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_freeplay2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Free Play: Make an Interactive Scene"
       },
       "bonus": false,
@@ -4695,6 +4915,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 1_2025"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -4717,6 +4940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 2_2025"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -4739,6 +4965,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 3_2025"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -4761,6 +4990,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 5_2025"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -4783,6 +5015,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 6_2025"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -4805,6 +5040,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 7_2025"
+        ],
         "progression": "Mini-Project: Create a Virtual Pet"
       },
       "bonus": false,
@@ -4827,6 +5065,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 8_2025"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -4849,6 +5090,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Video: Unplugged Variables in Envelopes"
       },
       "bonus": false,
@@ -4871,6 +5115,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_blank space stories_markdown_2025"
+        ],
         "progression": "Blank Space Stories - Student Resources"
       },
       "bonus": false,
@@ -4893,6 +5140,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_predict_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4915,6 +5165,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_prompts_2025"
+        ],
         "progression": "Video: Text and Prompts"
       },
       "bonus": false,
@@ -4937,6 +5190,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_review_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4959,6 +5215,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_print_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4981,6 +5240,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_events_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5003,6 +5265,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_prompts_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5025,6 +5290,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_answer_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5047,6 +5315,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_concat_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5069,6 +5340,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_practice2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5091,6 +5365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_label_predict_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -5113,6 +5390,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_samples2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Exploration: Sample Programs"
       },
       "bonus": false,
@@ -5135,6 +5415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_stop2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Planning"
       },
       "bonus": false,
@@ -5157,6 +5440,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_projects2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Mini-Project: User Input Programs"
       },
       "bonus": false,
@@ -5179,6 +5465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_predict_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -5201,6 +5490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_video_2025"
+        ],
         "progression": "Video: Lots of Sprites"
       },
       "bonus": false,
@@ -5223,6 +5515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_make_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5245,6 +5540,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_size_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5267,6 +5565,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_say_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5289,6 +5590,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_costume_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5311,6 +5615,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_behaviors_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5333,6 +5640,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_touch_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5355,6 +5665,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_practice_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5377,6 +5690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_groups_freeplay_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -5399,6 +5715,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -5421,6 +5740,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict2_2025"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -5443,6 +5765,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5465,6 +5790,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5487,6 +5815,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_click_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5509,6 +5840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_explore_2025"
+        ],
         "progression": "Exploration: Clicker Game"
       },
       "bonus": false,
@@ -5531,6 +5865,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites_2025"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5553,6 +5890,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_remove_2025"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5575,6 +5915,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_variable_2025"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5597,6 +5940,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_score_2025"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5619,6 +5965,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish_2025"
+        ],
         "progression": "Mini-Project: Clicker Game"
       },
       "bonus": false,
@@ -5641,6 +5990,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_samples_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Exploration: Sample Programs"
       },
       "bonus": false,
@@ -5663,6 +6015,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_player_move_2025"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5685,6 +6040,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_items_2025"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5707,6 +6065,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_score_variable_2025"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5729,6 +6090,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_remove_2025"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5751,6 +6115,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_more_sprites_2025"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5773,6 +6140,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_score_2025"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5795,6 +6165,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_collector_freeplay_2025"
+        ],
         "progression": "Mini-Project: Collector Game"
       },
       "bonus": false,
@@ -5817,6 +6190,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "simstarter_2025"
+        ],
         "progression": "Run a simulation"
       },
       "bonus": false,
@@ -5839,6 +6215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "simconfig_2025"
+        ],
         "progression": "Modify simulation variables"
       },
       "bonus": false,
@@ -5861,6 +6240,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "simcustom_2025"
+        ],
         "progression": "Customize"
       },
       "bonus": false,
@@ -5883,6 +6265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Welcome to Monster Town"
       },
       "bonus": false,
@@ -5905,6 +6290,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_intro_video_2025"
+        ],
         "progression": "Video: Outbreak Simulator: Introduction"
       },
       "bonus": false,
@@ -5927,6 +6315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak1_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5949,6 +6340,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_events_video_2025"
+        ],
         "progression": "Video: Outbreak Simulator: Events"
       },
       "bonus": false,
@@ -5971,6 +6365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak2_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -5993,6 +6390,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak3_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6015,6 +6415,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak4_2025"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6037,6 +6440,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_scientist_video_2025"
+        ],
         "progression": "Video: Outbreak Simulator: Thinking Like a Scientist"
       },
       "bonus": false,
@@ -6059,6 +6465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak_story22022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Learning from Simulations"
       },
       "bonus": false,
@@ -6081,6 +6490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak5_2025"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -6103,6 +6515,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak6_2025"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -6125,6 +6540,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak7_2025"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -6147,6 +6565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_outbreak_outro_video_2025"
+        ],
         "progression": "Video: Outbreak Simulator: Free Play"
       },
       "bonus": false,
@@ -6169,6 +6590,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_outbreak8_2025"
+        ],
         "progression": "Mini-Project: Outbreak Simulator"
       },
       "bonus": false,
@@ -6191,6 +6615,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Machine_Learning_2025"
+        ],
         "progression": "Video: AI: What is Machine Learning?"
       },
       "bonus": false,
@@ -6213,6 +6640,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_FishVTrash_2025"
+        ],
         "progression": "Train AI to Clean the Ocean"
       },
       "bonus": false,
@@ -6235,6 +6665,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_CreaturesVTrashDemo_2025"
+        ],
         "progression": "Train AI to Clean the Ocean"
       },
       "bonus": false,
@@ -6257,6 +6690,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_CreaturesVTrash_2025"
+        ],
         "progression": "Train AI to Clean the Ocean"
       },
       "bonus": false,
@@ -6279,6 +6715,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Training_Data_2025"
+        ],
         "progression": "Video: Training Data & Bias"
       },
       "bonus": false,
@@ -6301,6 +6740,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Short_2025"
+        ],
         "progression": "Using Training Data"
       },
       "bonus": false,
@@ -6323,6 +6765,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Societal_Implications_2025"
+        ],
         "progression": "Video: Impacts on Society"
       },
       "bonus": false,
@@ -6345,6 +6790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Long_2025"
+        ],
         "progression": "Teach A.I. a new word"
       },
       "bonus": false,
@@ -6367,6 +6815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet-Unplugged2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "The Internet - Unplugged Activity"
       },
       "bonus": false,
@@ -6389,6 +6840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_the internet_markdown_2025"
+        ],
         "progression": "The Internet - Student Resources"
       },
       "bonus": false,
@@ -6411,6 +6865,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_EOC_examples2022_2022_pilot_-2022-2_2025"
+        ],
         "progression": "Example projects"
       },
       "bonus": false,
@@ -6433,6 +6890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Project_SpriteLab_2025"
+        ],
         "progression": "Create your project"
       },
       "bonus": false,
@@ -6447,6 +6907,204 @@
       },
       "level_keys": [
         "CourseF_Project_SpriteLab_2025"
+      ]
+    },
+    {
+      "chapter": 102,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-video_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "db70ed4d-5387-47db-abe5-c05589e1b1ab"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-video_b_csf-e_csf-f"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "a0171bc7-3a17-4d02-bada-79448eb42f75"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f"
+      ]
+    },
+    {
+      "chapter": 104,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f"
+      ]
+    },
+    {
+      "chapter": 105,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-plan_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-plan_b_csf-e_csf-f"
+      ]
+    },
+    {
+      "chapter": 106,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f"
+      ]
+    },
+    {
+      "chapter": 107,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f"
+      ]
+    },
+    {
+      "chapter": 108,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-event-say_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-event-say_b_csf-e_csf-f"
+      ]
+    },
+    {
+      "chapter": 109,
+      "position": 8,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f"
+      ]
+    },
+    {
+      "chapter": 110,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Share Out"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-share_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "8b947872-6380-45c7-8ce4-1e2bb00dd90d"
+      },
+      "level_keys": [
+        "testB-elem-career-journeys-share_b_csf-e_csf-f"
       ]
     }
   ],
@@ -7662,6 +8320,114 @@
         "script.name": "coursef-2025",
         "activity_section.key": "e0225a96-74a2-4d25-ab2d-54ff842aedfa"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-video_b_csf-e_csf-f",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-video_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "db70ed4d-5387-47db-abe5-c05589e1b1ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-videos_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "a0171bc7-3a17-4d02-bada-79448eb42f75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-explore-projects_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-plan_b_csf-e_csf-f",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-plan_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-sprite-location_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-backgrounds_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-event-say_b_csf-e_csf-f",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-event-say_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-extra-skills_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "44e8b3a3-07f0-4d60-b644-a0c385d059d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "testB-elem-career-journeys-share_b_csf-e_csf-f",
+        "script_level.level_keys": [
+          "testB-elem-career-journeys-share_b_csf-e_csf-f"
+        ],
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "coursef-2025",
+        "activity_section.key": "8b947872-6380-45c7-8ce4-1e2bb00dd90d"
+      }
     }
   ],
   "resources": [
@@ -7909,6 +8675,19 @@
       },
       "seeding_key": {
         "resource.key": "get-site-ip-com"
+      }
+    },
+    {
+      "name": "Helpful Hints in Sprite Lab",
+      "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/edit#slide=id.g1b38224bb2a_0_20",
+      "key": "helpful_hints_in_sprite_lab",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "helpful_hints_in_sprite_lab"
       }
     },
     {
@@ -8291,6 +9070,12 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "resource.key": "helpful_hints_in_sprite_lab"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: Collector Game",
         "resource.key": "csf_-_course_f_-_slides"
       }
@@ -8560,6 +9345,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "behavior"
+      }
+    },
+    {
+      "key": "career",
+      "word": "Career",
+      "definition": "A job you work toward by building skills and learning new things.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "career"
+      }
+    },
+    {
+      "key": "computer_science",
+      "word": "Computer Science",
+      "definition": "Using computers to solve problems and create things.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "computer_science"
       }
     },
     {
@@ -8858,6 +9663,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "career"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "computer_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "vocabulary.key": "sprite"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Mini-Project: User Input Programs",
         "vocabulary.key": "input"
       }
@@ -9028,6 +9857,16 @@
       }
     },
     {
+      "key": "2481278e-6847-4827-9715-fd3c864f205f",
+      "properties": {
+        "description": "Design and build an interactive project"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "2481278e-6847-4827-9715-fd3c864f205f"
+      }
+    },
+    {
       "key": "279b89da-4e87-439a-944d-c8842573ba82",
       "properties": {
         "description": "Use variables in conjunction with prompts."
@@ -9115,6 +9954,16 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: User Input Programs",
         "objective.key": "6672fa1e-518d-409d-bc39-fc415ca0bb53"
+      }
+    },
+    {
+      "key": "6799dabe-b733-4946-ac5f-411f1058b4d7",
+      "properties": {
+        "description": "Practice basic coding skills"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "6799dabe-b733-4946-ac5f-411f1058b4d7"
       }
     },
     {
@@ -9258,6 +10107,16 @@
       }
     },
     {
+      "key": "cbcbc258-4868-419a-8cac-71519045302a",
+      "properties": {
+        "description": "Present a project and explain the coding skills used"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "cbcbc258-4868-419a-8cac-71519045302a"
+      }
+    },
+    {
       "key": "cc3e6fac-4611-4ee3-8d77-b656eb69124a",
       "properties": {
         "description": "Create a variable that stores information and changes over time"
@@ -9315,6 +10174,16 @@
       "seeding_key": {
         "lesson.key": "Making Sprites",
         "objective.key": "df3224cc-0a11-44f4-af29-fc0d73eb9d81"
+      }
+    },
+    {
+      "key": "e25496a1-e508-496c-a6dd-cd51a5330bee",
+      "properties": {
+        "description": "Explore and describe careers that use computer science"
+      },
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Career Journeys ",
+        "objective.key": "e25496a1-e508-496c-a6dd-cd51a5330bee"
       }
     },
     {

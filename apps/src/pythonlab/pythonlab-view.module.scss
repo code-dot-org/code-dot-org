@@ -1,10 +1,10 @@
-@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 $default-spacing: 2px;
 
 .pythonlab {
   position: relative;
-  background-color: $dark_black;
+  background-color: var(--background-neutral-primary);
   width: 100%;
   height: 100%;
   box-sizing: border-box;

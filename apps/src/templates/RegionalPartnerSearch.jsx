@@ -86,7 +86,7 @@ class RegionalPartnerSearch extends Component {
     // (versus the regional partner's own application close date)
     $.ajax({
       method: 'GET',
-      url: `/dashboardapi/v1/pd/application/applications_closed`,
+      url: 'professional-learning/application/applications_closed',
       dataType: 'json',
     }).done(data => {
       this.setState({
@@ -398,7 +398,11 @@ class RegionalPartnerSearch extends Component {
                                     <div>
                                       {workshop.workshop_date_range_string}
                                     </div>
-                                    <div>{workshop.location_name}</div>
+                                    <div>
+                                      {workshop.location_name === 'Virtual'
+                                        ? workshop.format
+                                        : workshop.location_name}
+                                    </div>
                                     <div>{workshop.location_address}</div>
                                   </div>
                                 )

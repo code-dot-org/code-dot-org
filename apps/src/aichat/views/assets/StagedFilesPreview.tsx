@@ -1,11 +1,16 @@
 import Alert, {type AlertProps} from '@code-dot-org/component-library/alert';
 import React from 'react';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {MAX_FILE_SIZE_MB, MAX_NUM_FILES} from '../../constants';
 import aichatI18n from '../../locale';
-import {clearStagedFilesAlert, removeStagedFile} from '../../redux';
+import {
+  clearStagedFilesAlert,
+  removeStagedFile,
+  stagedFileUploadFinished,
+} from '../../redux';
 import {getAssetUrl} from '../../utils';
 
 import FilePreview from './FilePreview';
@@ -51,10 +56,24 @@ const StagedFilesPreview: React.FC = () => {
             <FilePreview
               key={key}
               type={filename.endsWith('.pdf') ? 'pdf' : 'image'}
-              url={getAssetUrl(asset, currentChannelId, levelName)}
+              url={`${getAssetUrl(
+                asset,
+                currentChannelId,
+                levelName
+              )}?t=${key}`}
               filename={filename}
               isUploading={status === 'uploading'}
               onRemove={() => dispatch(removeStagedFile(key))}
+              onLoadError={() => {
+                dispatch(
+                  stagedFileUploadFinished({key, status: 'uploadFailed'})
+                );
+                Lab2Registry.getInstance()
+                  .getMetricsReporter()
+                  .logError('Error loading staged file', undefined, {
+                    asset,
+                  });
+              }}
             />
           );
         })}

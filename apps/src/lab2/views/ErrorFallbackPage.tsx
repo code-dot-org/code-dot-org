@@ -13,7 +13,7 @@ export interface ErrorUIProps {
 
 export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
   <div id="page-error-container" className={moduleStyles.pageErrorContainer}>
-    <div id="page-error" className={moduleStyles.pageError}>
+    <div data-theme="Light" id="page-error" className={moduleStyles.pageError}>
       <img
         className={moduleStyles.pageErrorImage}
         src="/shared/images/sad-bee-avatar.png"

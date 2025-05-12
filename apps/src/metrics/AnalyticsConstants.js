@@ -210,6 +210,8 @@ const EVENTS = {
     'Section New Progress One Student Row Collapsed',
   PROGRESS_V2_ALL_ROWS_COLLAPSED:
     'Section New Progress All Student Rows Collapsed',
+  PROGRESS_V2_DOWNLOAD_LEVEL_CSV: 'Section New Progress Download Level CSV',
+  PROGRESS_V2_DOWNLOAD_LESSON_CSV: 'Section New Progress Download Lesson CSV',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
@@ -232,6 +234,10 @@ const EVENTS = {
   CFU_RESPONSE_UNPINNED: 'Summary Page Response Unpinned',
   CFU_RESPONSE_ALL_UNHID: 'Summary Page Response Hidden Responses Unhidden',
   CFU_RESPONSE_ALL_UNPINNED: 'Summary Page Response All Unpinned',
+  CFU_SHOW_AI_INSIGHTS_TOGGLED_OFF: 'Summary Page AI Insights Toggled Off',
+  CFU_SHOW_AI_INSIGHTS_TOGGLED_ON: 'Summary Page AI Insights Toggled On',
+  CFU_AI_ANALYSIS_BUTTON_CLICKED: 'Summary Page AI Analysis Button Clicked',
+  CFU_AI_ANALYSIS_VIEW_DETAILS: 'Summary Page AI Analysis View Details',
 
   // Maker setup
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
@@ -296,6 +302,12 @@ const EVENTS = {
   AI_DIFF_CHAT_EVENT: 'AI Differentiation Message Event',
   AI_DIFF_FEEDBACK_EVENT: 'AI Differentiation Feedback Event',
   AI_DIFF_CHAT_TOGGLED: 'AI Differentiation Chat Toggled on/off',
+  AI_DIFF_GET_STARTED: 'AI Teaching Assistant Get Started',
+  AI_DIFF_CHOOSE_FLOW: 'AI Teaching Assistant Choose Flow',
+  AI_DIFF_FINISH_FIRST: 'AI Teaching Assistant Finish First Chat',
+  AI_DIFF_CELEBRATION: 'AI Teaching Assistant Celebration screen',
+  AI_DIFF_101: 'AI Teaching Assistant AI 101 CTA',
+  AI_DIFF_SKIP_WELCOME: 'AI Teaching Assistant Skip Welcome',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',

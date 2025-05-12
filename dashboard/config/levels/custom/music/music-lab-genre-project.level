@@ -11,7 +11,7 @@
     "hint_prompt_attempts_threshold": "1",
     "offer_browser_tts": "true",
     "use_secondary_finish_button": "false",
-    "hide_share_and_remix": "true",
+    "hide_share_and_remix": "false",
     "level_data": {
       "library": "launch2024",
       "toolbox": {
@@ -69,7 +69,7 @@
     "long_instructions": "#### Genre Mashup\r\n\r\nCreate your Genre Mashup song in this level!",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-02T16:50:45.474+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-template\\\"\"],\"cloned_from\":\"music-lab-functions-template\"},{\"changed_at\":\"2025-04-02 16:51:57 +0000\",\"changed\":[\"level_data\",\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-02T16:50:45.474+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-template\\\"\"],\"cloned_from\":\"music-lab-functions-template\"},{\"changed_at\":\"2025-04-02 16:51:57 +0000\",\"changed\":[\"level_data\",\"exemplar_settings\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-04-25 15:48:14 +0000\",\"changed\":[\"hide_share_and_remix\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

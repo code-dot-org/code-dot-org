@@ -15,7 +15,7 @@ markdown <<MARKDOWN
       Congratulations!
     </div>
     <div style="font-size: 20px; color: #333;">
-      You have completed the Teaching Introduction to Data Science Module!
+      You have completed the Teaching Insights from Data and AI Module!
     </div>
   </div>
   <div style="flex-shrink: 0;">
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
 
 # Next Steps
 
-#### Now that you've learned about teaching Data Science, check out our curriculum and professional learning offerings to continue your journey.
+#### Now that you've learned about teaching Insights from Data and AI, check out our curriculum and professional learning offerings to continue your journey.
 
 ## Help us make this module better!
 
@@ -34,32 +34,32 @@ markdown <<MARKDOWN
 <a class="btn btn-large btn-primary" href="LINK" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 
-## Teach Data Science in your class
-#### Explore these curriculum unit options to get started teaching Data Science and other **AI Foundations** unit topics in your class right away. 
+## Teach Insights from Data and AI in your class
+#### Explore these curriculum unit options to get started teaching Insights from Data and AI and other **AI Foundations** unit topics in your class right away. 
 
 
 <table width="1000px">
 	<tr> 
-    	<th style="font-size: 16px;"> <b>Data Science</b> <br><i>(9th-12th grade)</i></th>
+    	<th style="font-size: 16px;"> <b>Insights from Data & AI</b> <br><i>(9th-12th grade)</i></th>
         <th style="font-size: 16px;"> <b>Problem Solving with AI</b> <br> <i>(9th-12th grade)</i></th>
-        <th style="font-size: 16px;"> <b>Programming Fundamentals</b> <br> <i>(9th - 12th grade)</i></th>
-        <th style="font-size: 16px;"> <b>Computer Systems and Devices</b> <br><i>(9th-12th grade)</i></th>
+        <th style="font-size: 16px;"> <b>AI and the Systems that Power It</b> <br> <i>(9th - 12th grade)</i></th>
+        <th style="font-size: 16px;"> <b>Programming Fundamentals </b> <br><i>(9th-12th grade)</i></th>
     </tr>
     <tr>
     	<td>
-         <a href="https://studio.code.org/s/aif6-2025" target="blank" rel="noopener noreferrer">Data Science</a> 
+         <a href="studio.code.org/s/aif2-2025" target="blank" rel="noopener noreferrer">Insights from Data & AI</a> 
         	
         </td>
     	<td>
-         <a href="https://studio.code.org/s/aif1-2025" target="blank" rel="noopener noreferrer">Problem Solving with AI</a> 
+         <a href="studio.code.org/s/aif1-2025" target="blank" rel="noopener noreferrer">Problem Solving with AI</a> 
         	
         </td>
         <td>
-         <a href="https://studio.code.org/s/aif2-2025" target="blank" rel="noopener noreferrer">Programming Fundamentals </a> 
+         <a href="studio.code.org/s/aif3-2025" target="blank" rel="noopener noreferrer">AI and the Systems that Power It</a> 
         	
         </td>
         <td>
-         <a href="https://studio.code.org/s/aif3-2025" target="blank" rel="noopener noreferrer">Computer Systems and Devices</a>  
+         <a href="studio.code.org/s/aif2-2025" target="blank" rel="noopener noreferrer">Programming Fundamentals</a>  
         	
         </td>
       </tr>
@@ -79,19 +79,21 @@ markdown <<MARKDOWN
 	<tr> 
     	<th width="33.3%"style="font-size: 14px; padding-right: 10px;"> <b>Teaching Problem Solving with AI </b> </th>
         <th width="33.3%" style="font-size: 14px; padding-right: 10px;"> <b>Teaching Programming Fundamentals </b>  </th>
-        <th width="33.3%" style="font-size: 14px; padding-right: 10px;"> <b>Teaching Computer Systems and Devices</b> </th>
+        <th width="33.3%" style="font-size: 14px; padding-right: 10px;"> <b>Teaching The Fabric of the Internet and AI</b> </th>
         
     </tr>
     <tr>
     	<td style = "padding-right: 20px;">
-         <p> This module covers the basics of generative AI and prepares teachers to teach the <b>AI Foundations </b>unit Problem Solving with AI.</p>
+         <p> This professional learning prepares teachers for the first unit in the <b>AI Foundations</b> course.</p>
         </td>
     	<td style = "padding-right: 20px;">
-        <p> This module covers the Python basics and prepares teachers to teach the <b>AI Foundations </b>unit Programming Foundations.</p>
+        <p>
+        This module covers beginning concepts of programming in Python.
+        </p>
         </td>
         <td style = "padding-right: 20px;">
 			<p>
-            <p> This module covers the basics of hardware and software and prepares teachers to teach the <b>AI Foundations </b>unit Computer Systems and Devices.</p>
+            This course provides a foundation for networks and the Internet in today's AI driven world. 
             </p>
         </td>
         
@@ -99,16 +101,16 @@ markdown <<MARKDOWN
      <tr>
     	<td> <img src= "https://images.code.org/6b3fa240c139dd6e10b453c67f17fc58-image-1716322075536.png" alt="thumbnail for the AI 101 self-paced professional learniing module" width="315" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
         
-    	<td><img src="https://images.code.org/f65ed33537cc1319f101902479a21f50-image-1712950126755.png" alt="thumbnail for AI 101" width="325" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
+    	<td><img src="https://images.code.org/cbabd8c974627058ab2158d3a96d3bfa-image-1745509380736.png" alt="thumbnail for AI 101" width="290" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
         
         <td><img src="https://images.code.org/874607855273e71341babc00d4dbc8df-image-1712949845614.png" alt="thumbnail for teaching AI and Machine learning" width="290" style="border-radius:10px;  margin: 0px 0px 10px 0px;"></td>
       </tr>
       
       
       <tr>
-      		<td><a href="https://studio.code.org/courses/self-paced-pl-ai-101-2024" target="blank" rel="noopener noreferrer">Teaching Problem Solving with AI</a></td>
-        	<td><a href="https://code.org/ai/pl/101" target="blank" rel="noopener noreferrer">Teaching Programming Fundamentals</a></td>
-         	 <td><a href="https://studio.code.org/courses/self-paced-pl-aiml-2023" target="blank" rel="noopener noreferrer">Teaching Computer Systems and Devices</a></td>
+      		<td><a href="https://self-paced-pl-aif1-2025" target="blank" rel="noopener noreferrer">Teaching Problem Solving with AI </a></td>
+        	<td><a href="https://self-paced-pl-aif2-2025" target="blank" rel="noopener noreferrer">Teaching Programming Fundamentals </a></td>
+         	 <td><a href="https://self-paced-pl-aif4-2025" target="blank" rel="noopener noreferrer">Teaching The Fabric of the Internet and AI</a></td>
       </tr>
   </table>
 

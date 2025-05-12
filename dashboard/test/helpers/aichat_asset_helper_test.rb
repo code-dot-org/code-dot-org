@@ -55,15 +55,20 @@ class AichatAssetHelperTest < ActionView::TestCase
       end
     end
 
-    context 'when fetch_asset returns nil' do
+    context 'when fetch_asset returns NOT_FOUND' do
       let(:asset) {missing_asset}
 
       before do
-        AichatAssetHelper.stubs(:fetch_asset).with("missing.png", "level", channel_id, level_name).returns(nil)
+        AichatAssetHelper.stubs(:fetch_asset).with("missing.png", "level", channel_id, level_name).returns({status: 'NOT_FOUND'})
       end
 
       it 'raises an error' do
-        -> {subject}.must_raise(StandardError)
+        err = -> {subject}.must_raise(StandardError)
+        err.message.must_include "Error fetching asset"
+        err.message.must_include "missing.png"
+        err.message.must_include channel_id
+        err.message.must_include level_name
+        err.message.must_include "NOT_FOUND"
       end
     end
   end
@@ -91,8 +96,8 @@ class AichatAssetHelperTest < ActionView::TestCase
         )
       end
 
-      it 'returns nil' do
-        subject.must_be_nil
+      it 'returns NOT_FOUND' do
+        subject[:status].must_equal 'NOT_FOUND'
       end
     end
 

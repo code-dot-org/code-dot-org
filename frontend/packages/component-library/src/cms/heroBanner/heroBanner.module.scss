@@ -1,6 +1,6 @@
 @use '@code-dot-org/component-library-styles/colors.scss';
 @use '@code-dot-org/component-library-styles/variables' as variables;
-@use '@code-dot-org/component-library-styles/typography.module' as typography;
+@use '@code-dot-org/component-library-styles/cms/cmsMixins' as cmsMixins;
 
 $mobileBreakpoint: 970px;
 
@@ -16,12 +16,6 @@ $mobileBreakpoint: 970px;
 
     .heroBannerMediaContainer {
       flex: 1;
-    }
-  }
-
-  .heroBannerTextContainer {
-    a {
-      margin: 1.875rem 0 0;
     }
   }
 }
@@ -51,7 +45,7 @@ div.heroBannerAnnouncementBanner {
   margin: 0 auto;
   align-items: center;
   gap: 4.375rem;
-  padding: 4rem 2rem;
+  padding: 4rem 0;
 
   @media (max-width: $mobileBreakpoint) {
     flex-direction: column;
@@ -70,9 +64,14 @@ div.heroBannerAnnouncementBanner {
   align-items: flex-start;
   flex: 1;
   width: 100%;
+  gap: 1.875rem;
 
   p {
     margin-top: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   h1 {
@@ -81,31 +80,7 @@ div.heroBannerAnnouncementBanner {
 }
 
 .heroBannerPartnerContainer {
-  @include typography.body-three;
-  @include typography.strong;
-  display: inline-flex;
-  flex: 1;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0;
-  width: 100%;
-
-  figure {
-    width: 10rem;
-    height: 3rem;
-    display: flex;
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      display: block;
-      align-self: center;
-    }
-  }
+  @include cmsMixins.in-partnership-with-section;
 }
 
 .heroBannerMediaContainer {
@@ -119,9 +94,9 @@ div.heroBannerAnnouncementBanner {
     max-height: 28.125rem;
     flex: 1;
     border-radius: variables.$regular-border-radius;
+  }
 
-    img {
-      background: var(--background-neutral-primary);
-    }
+  .heroBannerMediaImage img {
+    object-fit: contain;
   }
 }

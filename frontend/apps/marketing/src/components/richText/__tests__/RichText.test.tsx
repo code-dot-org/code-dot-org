@@ -1,11 +1,11 @@
 import {
   BLOCKS,
   INLINES,
+  MARKS,
   Document,
   TopLevelBlock,
 } from '@contentful/rich-text-types';
 import {render, screen} from '@testing-library/react';
-import '@testing-library/jest-dom';
 
 import RichText, {RichTextProps} from '@/components/richText/RichText';
 
@@ -68,7 +68,7 @@ describe('RichText component', () => {
             {
               nodeType: 'text',
               value: paragraphText,
-              marks: [{type: 'bold'}],
+              marks: [{type: MARKS.BOLD}],
               data: {},
             },
           ],
@@ -79,6 +79,32 @@ describe('RichText component', () => {
     const paragraph = screen.getByText(paragraphText);
     expect(paragraph).toBeVisible();
     expect(paragraph.tagName).toBe('STRONG');
+    expect(paragraph.parentElement).toHaveRole('paragraph');
+  });
+
+  it('renders paragraph with italic text', () => {
+    const paragraphText = 'Test Paragraph';
+
+    renderComponent({
+      content: buildRichTextDocument([
+        {
+          nodeType: BLOCKS.PARAGRAPH,
+          data: {},
+          content: [
+            {
+              nodeType: 'text',
+              value: paragraphText,
+              marks: [{type: MARKS.ITALIC}],
+              data: {},
+            },
+          ],
+        },
+      ]),
+    });
+
+    const paragraph = screen.getByText(paragraphText);
+    expect(paragraph).toBeVisible();
+    expect(paragraph.tagName).toBe('EM');
     expect(paragraph.parentElement).toHaveRole('paragraph');
   });
 

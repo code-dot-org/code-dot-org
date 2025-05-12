@@ -2,12 +2,14 @@
 
 // This variable is injected via CloudFormation string substitution. This file must be used
 // in conjunction with the CloudFormation Sub function to set the value of MarketingDomainName.
-const marketingDomain = '${MarketingDomainName}'
+const marketingDomain = '${InternalMarketingDomainName}'
 
 const marketingPaths = {
   // Add key-value pairs for each path that should be served by the CMS
   // e.g. '/videos': true,
 }
+
+const nextJsAssetsPath = '/_next/static/';
 
 module.exports.handler = (event, context, callback) => {
   try {
@@ -15,7 +17,7 @@ module.exports.handler = (event, context, callback) => {
     const uri = request?.uri;
   
     // Set CMS origin if the requested path matches
-    if (marketingPaths[uri]) {
+    if (marketingPaths[uri] || (uri && uri.startsWith(nextJsAssetsPath))) {
       request.origin = {
         custom: {
           domainName: marketingDomain,

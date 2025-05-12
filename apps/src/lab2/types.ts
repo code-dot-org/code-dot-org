@@ -216,6 +216,7 @@ export interface LevelProperties {
   isAssessment?: boolean;
   progressionType?: string;
   type?: string;
+  starterAssets?: {[key: string]: string};
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -243,6 +244,7 @@ export interface BubbleChoiceLevelData {
 // Bubble Choice specific property
 export interface BubbleChoiceSublevel {
   display_name: string;
+  description?: string;
   level_id: string;
   thumbnail_url: string;
   url: string;

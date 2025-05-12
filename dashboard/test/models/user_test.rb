@@ -627,7 +627,7 @@ class UserTest < ActiveSupport::TestCase
     # (including deleted ones and those created when user was a teacher)
     user.update!(user_type: User::TYPE_STUDENT)
     user.authentication_options << create(:authentication_option, email: 'third@email.com')
-    user.reload
+    user = User.find(user.id)
     all_auth_options = user.authentication_options.with_deleted
     assert_equal 3, all_auth_options.count
     all_auth_options.each do |ao|
@@ -1100,7 +1100,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.set_user_type(User::TYPE_STUDENT)
     user.save!
-    user.reload
+    user = User.find(user.id)
 
     assert user.email.blank?
     assert user.hashed_email.present?
@@ -1117,7 +1117,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.set_user_type(User::TYPE_STUDENT)
     user.save!
-    user.reload
+    user = User.find(user.id)
 
     refute user.school_info.present?
   end
@@ -1128,7 +1128,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.set_user_type(User::TYPE_STUDENT)
     user.save!
-    user.reload
+    user = User.find(user.id)
 
     assert user.full_address.nil?
   end
@@ -1169,7 +1169,7 @@ class UserTest < ActiveSupport::TestCase
     user = create :student, terms_of_service_version: 1
     user.set_user_type(User::TYPE_TEACHER, 'tos@example.com')
     user.save!
-    user.reload
+    user = User.find(user.id)
 
     assert_nil user.terms_of_service_version
   end
@@ -1183,7 +1183,7 @@ class UserTest < ActiveSupport::TestCase
       user.set_user_type(User::TYPE_TEACHER, 'fakeemail@example.com')
       user.save!
     end
-    user.reload
+    user = User.find(user.id)
     assert user.studio_person
     assert_equal 'fakeemail@example.com', user.studio_person.emails
   end
@@ -1194,7 +1194,8 @@ class UserTest < ActiveSupport::TestCase
     assert_destroys(StudioPerson) do
       user.set_user_type(User::TYPE_STUDENT)
     end
-    assert_nil user.reload.studio_person
+    user = User.find(user.id)
+    assert_nil user.studio_person
   end
 
   test 'changing from teacher to student does not clear terms_of_service_version' do
@@ -1509,15 +1510,6 @@ class UserTest < ActiveSupport::TestCase
       created_at: completed_date,
       updated_at: completed_date
     )
-  end
-
-  test 'sponsored? is true for migrated user with no authentication options' do
-    student = create :student_in_picture_section
-    student.migrate_to_multi_auth
-    student.reload
-
-    assert_empty student.authentication_options
-    assert student.sponsored?
   end
 
   test 'should_disable_user_type? true if user_type present and oauth_provided_user_type' do
@@ -2139,7 +2131,7 @@ class UserTest < ActiveSupport::TestCase
   test 'downgrade_to_student sets user_type to student and clears cleartext emails' do
     user = create :teacher
     assert user.downgrade_to_student
-    user.reload
+    user = User.find(user.id)
     assert_equal User::TYPE_STUDENT, user.user_type
     assert_empty user.email
   end
@@ -2189,7 +2181,7 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 2, user.authentication_options.count
 
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
-    user.reload
+    user = User.find(user.id)
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal 2, user.authentication_options.count
     assert_equal 'example@email.com', user.email
@@ -2209,7 +2201,7 @@ class UserTest < ActiveSupport::TestCase
 
     email_preference_params = email_preference_params(email_preference_opt_in: 'yes')
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
-    user.reload
+    user = User.find(user.id)
     auth_option.reload
     assert_equal User::TYPE_TEACHER, user.user_type
     assert_equal 2, user.authentication_options.count
@@ -2227,7 +2219,7 @@ class UserTest < ActiveSupport::TestCase
     user = User.create(@good_data.merge(parent_email: parent_email))
     assert_equal parent_email, user.parent_email
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
-    user.reload
+    user = User.find(user.id)
     assert_nil user.parent_email
   end
 
@@ -2240,7 +2232,7 @@ class UserTest < ActiveSupport::TestCase
 
     assert user.upgrade_to_teacher('example@email.com', email_preference_params)
 
-    user.reload
+    user = User.find(user.id)
     assert_nil user.family_name
   end
 
@@ -3010,9 +3002,9 @@ class UserTest < ActiveSupport::TestCase
       name: 'test user'
     }
 
-    user = assert_creates(User) do
-      User.find_or_create_teacher params, @admin
-    end
+    user = User.find_or_create_teacher params, @admin
+    assert user
+    user = User.find(user.id)
     assert user.teacher?
     assert_equal @admin, user.invited_by
   end

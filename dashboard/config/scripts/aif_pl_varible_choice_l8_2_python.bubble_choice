@@ -1,6 +1,6 @@
 name 'aif-PL-varible-choice-L8-2-Python'
 display_name 'Time for a Change - Update a Variable'
-description '#### This is an example of a **Choice Level**. Choose **ONE** of the four scenarios where something in the program needs to change — like a snack, a mood, or a class period. Update the value stored in a variable and print both the original and updated versions to see how variables can change over time.'
+description '#### This is an example of a **Choice Level**. Students will have choice levels throughout the course. Choose **ONE** of the four scenarios where something in the program needs to change — like a snack, a mood, or a class period. Update the value stored in a variable and print both the original and updated versions to see how variables can change over time.'
 
 sublevels
 level 'aif-PL-variable-choice-snack1-Python'

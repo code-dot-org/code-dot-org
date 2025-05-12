@@ -1,4 +1,3 @@
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import TextField from '@code-dot-org/component-library/textField';
 import {BodyTwoText} from '@code-dot-org/component-library/typography';
 import debounce from 'lodash/debounce';
@@ -44,8 +43,6 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
   handleInputChange,
   errorMessage,
 }) => {
-  const {theme} = useTheme();
-
   return (
     <>
       {message && <BodyTwoText>{message}</BodyTwoText>}
@@ -55,7 +52,6 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
         value={prompt}
         onChange={e => handleInputChange(e.target.value)}
         errorMessage={errorMessage}
-        color={theme === 'Dark' ? 'white' : undefined}
         id="uitest-prompt-field"
       />
     </>

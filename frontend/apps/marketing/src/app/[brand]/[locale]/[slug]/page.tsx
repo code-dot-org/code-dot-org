@@ -5,8 +5,8 @@ import {detachExperienceStyles} from '@contentful/experiences-sdk-react';
 import {Metadata} from 'next';
 import {draftMode} from 'next/headers';
 
-import FontLoader from '@code-dot-org/fonts/FontLoader';
-
+import Bootstrap from '@/bootstrap';
+import ContentEditorHelper from '@/components/contentEditorHelper';
 import {Brand} from '@/config/brand';
 import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 import {getExperience} from '@/contentful/get-experience';
@@ -14,7 +14,7 @@ import {getSeoMetadata} from '@/metadata/seo';
 import {getPageHeading} from '@/selectors/contentful/getExperienceEntryFields';
 
 export const dynamic = 'force-static'; // Ensure ISR is enabled
-export const revalidate = 600; // Cache for five minutes until on-demand revalidation works
+export const revalidate = 3600; // Cache for one hour
 
 type ExperiencePageProps = {
   params: Promise<{locale?: string; slug?: string; brand?: Brand}>;
@@ -59,6 +59,7 @@ export default async function ExperiencePage({
   params,
   searchParams,
 }: ExperiencePageProps) {
+  const isDraftModeEnabled = (await draftMode()).isEnabled;
   const pageProps = await getPageProps({
     params,
     searchParams,
@@ -78,7 +79,8 @@ export default async function ExperiencePage({
 
   return (
     <main style={{width: '100%'}}>
-      <FontLoader locale={pageProps.locale} />
+      <Bootstrap locale={pageProps.locale} />
+      <ContentEditorHelper isDraftModeEnabled={isDraftModeEnabled} />
       {stylesheet && <style>{stylesheet}</style>}
       <ExperiencePageLoader
         experienceJSON={experienceJSON}

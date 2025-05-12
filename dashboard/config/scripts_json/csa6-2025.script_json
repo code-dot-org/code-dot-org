@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 17:11:25 UTC",
+    "serialized_at": "2025-05-11 07:05:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6121,6 +6121,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -7127,7 +7130,7 @@
     },
     {
       "name": "[EXEMPLAR] Natural Language Processing Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1CcujljxlnBSwryQIENx5p5LNQzxvk4_5I6rAutUWcXY/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1206ZjvMZkvz236jV3lGaZhoby-CXmBY2XdKb4F272vQ/edit?usp=sharing",
       "key": "_exemplar_natural_language_processing_project_planning_guide",
       "properties": {
         "audience": "Verified Teacher",

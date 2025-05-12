@@ -13,11 +13,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-12 21:02:19 UTC",
+    "serialized_at": "2025-05-10 01:08:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -48,6 +49,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd4-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd4-2025"
       }
     }
@@ -475,6 +488,21 @@
       "seeding_key": {
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd4-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd4-2025"
       }
     }
@@ -1465,6 +1493,18 @@
         "lesson_activity.key": "6c66ae3a-4aa9-4ae1-bdc6-ea0202619dac",
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd4-2025"
+      }
+    },
+    {
+      "key": "69dc5e07-cef0-4ee0-b3da-43cd198465de",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69dc5e07-cef0-4ee0-b3da-43cd198465de",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd4-2025"
       }
     }
@@ -5806,6 +5846,28 @@
         "activity_section.key": "209ccbf3-8f68-4aae-8651-408a6753a85d",
         "lesson_activity.key": "6c66ae3a-4aa9-4ae1-bdc6-ea0202619dac"
       }
+    },
+    {
+      "key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8",
+        "lesson_activity.key": "69dc5e07-cef0-4ee0-b3da-43cd198465de"
+      }
+    },
+    {
+      "key": "b590d822-9c38-4390-a222-734b4df0b1e4",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "b590d822-9c38-4390-a222-734b4df0b1e4",
+        "lesson_activity.key": "69dc5e07-cef0-4ee0-b3da-43cd198465de"
+      }
     }
   ],
   "script_levels": [
@@ -5815,6 +5877,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd4_2025"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -5837,6 +5902,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U4Ch1_2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -5859,6 +5927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-1_2025"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5881,6 +5952,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-2_2025"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5903,6 +5977,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-apps for good-3_2025"
+        ],
         "progression": "Sample Apps for Good"
       },
       "bonus": false,
@@ -5925,6 +6002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-1_2025"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -5947,6 +6027,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-2_2025"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -5969,6 +6052,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-3_2025"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -5991,6 +6077,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-4_2025"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6013,6 +6102,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-5_2025"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6035,6 +6127,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-explore ui-6_2025"
+        ],
         "progression": "Example Apps"
       },
       "bonus": false,
@@ -6057,6 +6152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 1_2025"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6079,6 +6177,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 2_2025"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6101,6 +6202,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 3_2025"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6123,6 +6227,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 4_2025"
+        ],
         "progression": "Build a Screen"
       },
       "bonus": false,
@@ -6145,6 +6252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 5_2025"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6167,6 +6277,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 6_2025"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6189,6 +6302,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Design 7_2025"
+        ],
         "progression": "Finish a Screen"
       },
       "bonus": false,
@@ -6211,6 +6327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Design a Screen for your App_2025"
+        ],
         "progression": "Design a Screen for your App"
       },
       "bonus": false,
@@ -6233,6 +6352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Project_2025"
+        ],
         "progression": "App Project: Screen Design"
       },
       "bonus": false,
@@ -6255,6 +6377,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1_2025"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6277,6 +6402,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 1.5_2025"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6299,6 +6427,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2_2025"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6321,6 +6452,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 2.5_2025"
+        ],
         "progression": "Adding Screens"
       },
       "bonus": false,
@@ -6343,6 +6477,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 3_2025"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6365,6 +6502,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 4_2025"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6387,6 +6527,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 Model Program 5_2025"
+        ],
         "progression": "Events and Linking Screens"
       },
       "bonus": false,
@@ -6409,6 +6552,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Import_2025"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6431,6 +6577,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Events_2025"
+        ],
         "progression": "Combining Projects"
       },
       "bonus": false,
@@ -6453,6 +6602,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Project Bug Feature_2025"
+        ],
         "progression": "Updating Your Prototype"
       },
       "bonus": false,
@@ -6475,6 +6627,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd4_2025"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -6497,6 +6652,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD User Centered Design Post-Project Test_2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6510,6 +6668,28 @@
       },
       "level_keys": [
         "CSD User Centered Design Post-Project Test_2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csd4survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd4-2025",
+        "activity_section.key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8"
+      },
+      "level_keys": [
+        "student-eou-survey_csd4survey-2025"
       ]
     }
   ],
@@ -6896,6 +7076,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd4-2025",
         "activity_section.key": "209ccbf3-8f68-4aae-8651-408a6753a85d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csd4survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csd4survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd4-2025",
+        "activity_section.key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8"
       }
     }
   ],

@@ -15,12 +15,21 @@ import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
 } from '@/components/carousels/actionBlockCarousel';
+import ImageCarousel, {
+  ImageCarouselContentfulComponentDefinition,
+} from '@/components/carousels/imageCarousel';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
 import HeroBanner, {
   HeroBannerContentfulComponentDefinition,
 } from '@/components/contentful/heroBanner';
+import SkinnyBanner, {
+  SkinnyBannerContentfulComponentDefinition,
+} from '@/components/contentful/skinnyBanner';
+import TabGroup, {
+  TabGroupContentfulComponentDefinition,
+} from '@/components/contentful/tabGroup';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
@@ -61,9 +70,6 @@ import LabSnapshot, {
   LabSnapshotContentfulComponentDefinition,
 } from '@/components/snapshots/labSnapshot';
 import Spacer, {SpacerContentfulComponentDefinition} from '@/components/spacer';
-import TabGroup, {
-  TabGroupContentfulComponentDefinition,
-} from '@/components/tabGroup';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 defineComponents(
@@ -133,6 +139,10 @@ defineComponents(
       definition: ImageContentfulComponentDefinition,
     },
     {
+      component: ImageCarousel,
+      definition: ImageCarouselContentfulComponentDefinition,
+    },
+    {
       component: LabSnapshot,
       definition: LabSnapshotContentfulComponentDefinition,
     },
@@ -159,6 +169,13 @@ defineComponents(
     {
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
+    },
+    {
+      component: SkinnyBanner,
+      definition: SkinnyBannerContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: Spacer,

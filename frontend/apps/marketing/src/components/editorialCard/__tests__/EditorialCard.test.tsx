@@ -11,7 +11,7 @@ describe('EditorialCard component', () => {
   const text = 'Icon Highlight Text';
   const iconName = 'smile';
   const image =
-    'https://images.ctfassets.net/90t6bu6vlf76/1SptVYIyW5meSA34NcP99o/499a67854db82f98ee7717dbc9b95c6e/component_editorial_card_thumbnail.png';
+    'https://contentful-images.code.org/90t6bu6vlf76/1SptVYIyW5meSA34NcP99o/499a67854db82f98ee7717dbc9b95c6e/component_editorial_card_thumbnail.png';
   const linkEntry = {
     fields: {
       label: 'Link',

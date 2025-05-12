@@ -1,6 +1,10 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {getOpenFiles} from '@codebridge/utils';
 import {
+  dragAndDropKeyboardCodes,
+  sortableKeyboardCoordinatesWithTab,
+} from '@codebridge/utils/dragAndDropUtils';
+import {
   DndContext,
   DragEndEvent,
   DragOverlay,
@@ -19,9 +23,10 @@ import {
   arrayMove,
   horizontalListSortingStrategy,
   SortableContext,
-  sortableKeyboardCoordinates,
 } from '@dnd-kit/sortable';
 import React, {useState} from 'react';
+
+import i18n from '@cdo/apps/codebridge/locale';
 
 import FileTab from './FileTab';
 import Sortable from './Sortable';
@@ -29,7 +34,8 @@ import Sortable from './Sortable';
 import moduleStyles from './styles/fileTabs.module.scss';
 
 export const FileTabs = React.memo(() => {
-  const {source, rearrangeFiles, setActiveFile} = useCodebridgeContext();
+  const {source, rearrangeFiles, setActiveFile, closeFile} =
+    useCodebridgeContext();
 
   const files = getOpenFiles(source);
 
@@ -40,7 +46,8 @@ export const FileTabs = React.memo(() => {
       },
     }),
     useSensor(KeyboardSensor, {
-      coordinateGetter: sortableKeyboardCoordinates,
+      coordinateGetter: sortableKeyboardCoordinatesWithTab,
+      keyboardCodes: dragAndDropKeyboardCodes,
     })
   );
   const [draggingFileId, setDraggingFileId] = useState<string | null>(null);
@@ -56,6 +63,11 @@ export const FileTabs = React.memo(() => {
       rearrangeFiles(arrayMove(files, oldIndex, newIndex).map(file => file.id));
     }
   }
+
+  function handleDragCancel() {
+    setDraggingFileId(null);
+  }
+
   function handleDragStart(event: DragStartEvent) {
     // Handle drag start only if the file is in the list of open files.
     // This can get called when the close button is clicked, and we want to ignore
@@ -66,18 +78,39 @@ export const FileTabs = React.memo(() => {
     }
   }
 
+  function handleTabActivation(event: React.KeyboardEvent, fileId: string) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      // We don't stop event propagation here because we want the close button to work.
+      setActiveFile(fileId);
+    }
+    if (event.key === 'Backspace' || event.key === 'Delete') {
+      closeFile(fileId);
+    }
+  }
+
   return (
     <div className={moduleStyles.fileTabs}>
       <DndContext
         onDragEnd={handleDragEnd}
         onDragStart={handleDragStart}
+        onDragCancel={handleDragCancel}
         sensors={sensors}
         collisionDetection={closestCenter}
         modifiers={[restrictToParentElement, restrictToHorizontalAxis]}
+        accessibility={{
+          screenReaderInstructions: {
+            draggable: i18n.dragAndDropInstructionsTabs(),
+          },
+        }}
       >
         <SortableContext items={files} strategy={horizontalListSortingStrategy}>
           {files.map(f => (
-            <Sortable id={f.id} key={f.id} isDragging={f.id === draggingFileId}>
+            <Sortable
+              id={f.id}
+              key={f.id}
+              isDragging={f.id === draggingFileId}
+              onKeyDown={event => handleTabActivation(event, f.id)}
+            >
               <FileTab file={f} />
             </Sortable>
           ))}

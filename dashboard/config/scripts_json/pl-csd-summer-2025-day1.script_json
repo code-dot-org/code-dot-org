@@ -6,14 +6,16 @@
     "properties": {
       "content_area": "pl_workshop_activities",
       "curriculum_umbrella": "PD Workshop Activity CSD",
+      "has_unnumbered_lessons": true,
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 15:27:57 UTC",
+    "serialized_at": "2025-05-05 21:46:04 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2071,19 +2073,6 @@
       }
     },
     {
-      "name": "Resource Packet",
-      "url": "https://docs.google.com/document/d/15ho43-c0njEcIEIr-RmHcUjZfIJPFdVZvQdpH6GC4B4/edit?usp=sharing",
-      "key": "resource_packet",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "resource_packet"
-      }
-    },
-    {
       "name": "Style Sheets",
       "url": "https://drive.google.com/file/d/1Tm6ZJ6lM_XmmgRn_e6HeVVyh4ukqkBiA/view",
       "key": "style_sheets",
@@ -2134,12 +2123,6 @@
     }
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "Journaling and Discussion ",
-        "resource.key": "resource_packet"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "Model Lesson 1 - U2L2 Intro to HTML",
@@ -2204,12 +2187,6 @@
       "seeding_key": {
         "lesson.key": "Model Lesson 2 - Styling Text with CSS",
         "resource.key": "text_properties"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Pair Programming and Debugging",
-        "resource.key": "resource_packet"
       }
     }
   ],
