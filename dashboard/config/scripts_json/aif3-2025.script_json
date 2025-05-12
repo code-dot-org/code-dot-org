@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-05 22:16:50 UTC",
+    "serialized_at": "2025-05-10 02:09:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -305,7 +305,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "**What are the decisions made for us without us?**\n\nIn this activity, students will engage with several different scenarios in which different ethical approaches to AI and computing systems might exist. Students will examine these scenarios from the perspective different stakeholders, ultimately using this experience in empathy to craft ethical guidelines for AI and emerging technologies.",
-        "preparation": "- Prepare several half-sheets of paper\n- Make an editable class copy of the [AI and Emerging Technology Slide template](https://docs.google.com/presentation/d/1Akl28SCAO4jirah8PNAh_CpiHVemESY5UBbhFLN_KLc/edit?usp=sharing)",
+        "preparation": "- Make an editable copy of the [AI and Emerging Technology Slide template](https://docs.google.com/presentation/d/1Akl28SCAO4jirah8PNAh_CpiHVemESY5UBbhFLN_KLc/edit?usp=sharing) for each group of 3-4 students\n- Preview the scenarios and decide if you will assign groups to scenarios or let groups self-select which scenario to work on\n- Print (or digitally distribute) a copy of the Ethical Guideline Activity Guide for each student",
         "student_overview": "**What are the decisions made for us without us?**\n\nYou will take be asked to role play several different personas throughout today’s activity, trying to create a set of ethical guidelines for AI and emerging technologies. By examining how these technologies manifest in real-world scenarios, you will be asked to construct your own personal guidelines and expectations."
       },
       "seeding_key": {
@@ -1003,8 +1003,20 @@
       }
     },
     {
-      "key": "b56c8fb1-1d10-4e14-a44a-82736fcefaa0",
+      "key": "3b94f2dd-e618-4b29-a4b6-ee20ab901354",
       "position": 3,
+      "properties": {
+        "description": "Before you start exploring, let’s make sure we’re clear on two words you’ll see a lot:\n* An **industry** is a field of work, like healthcare, education, or agriculture.\n* An **innovation** is a new idea or technology that improves how that work is done.\n\nFor example, in the healthcare *industry*, smart prosthetics are an *innovation* that helps people regain mobility.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3b94f2dd-e618-4b29-a4b6-ee20ab901354",
+        "lesson_activity.key": "375686fa-f92a-4baa-ab17-f1859f500380"
+      }
+    },
+    {
+      "key": "b56c8fb1-1d10-4e14-a44a-82736fcefaa0",
+      "position": 4,
       "properties": {
         "description": "Let’s explore how computing drives computing innovation in different industries worldwide. In groups, you'll examine the computing innovation map and choose an innovation to investigate. Be prepared to share your findings!",
         "remarks": true
@@ -1016,7 +1028,7 @@
     },
     {
       "key": "e9341318-94a6-4648-a6ca-d55e5f4ff3a2",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. Students should open the Computer Innovation Map, and click on the markers to explore innovations in medicine, agriculture, education, and fashion. The markers have videos and descriptions to learn about each innovation. Students should select one innovation to investigate, then complete the first page of their activity guide.",
         "progression_name": "Pick an Innovation",
@@ -1034,7 +1046,7 @@
     },
     {
       "key": "fba7ebf6-b92a-4997-80a3-59321ea4d068",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
       },
@@ -1262,7 +1274,7 @@
       "key": "8c929def-5fad-4302-8c08-97230f952ca7",
       "position": 3,
       "properties": {
-        "description": "Computers rely on both memory and storage to manage data efficiently. While they might seem similar, they have very different roles in how a computer operates.",
+        "description": "Computers rely on storage to manage data efficiently.",
         "remarks": true
       },
       "seeding_key": {
@@ -1274,7 +1286,7 @@
       "key": "68357f72-f130-4c37-94fb-702fee4cd616",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *memory* and *storage*."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *storage*."
       },
       "seeding_key": {
         "activity_section.key": "68357f72-f130-4c37-94fb-702fee4cd616",
@@ -1285,7 +1297,7 @@
       "key": "9d5e2970-c062-4734-b8d2-2d48b6c1f221",
       "position": 5,
       "properties": {
-        "description": "Let’s take a look at actual storage and memory components. These components play a crucial role in how a computer accesses and saves information. Everything from opening a file to loading a game depends on memory and storage working together. In this activity, you'll explore these components and complete the analogy to explain their roles.",
+        "description": "Let’s take a look at actual storage components. These components play a crucial role in how a computer accesses and saves information. Everything from opening a file to loading a game depends on memory and storage working together. In this activity, you'll explore these components and complete the analogy to explain their roles.",
         "remarks": true
       },
       "seeding_key": {
@@ -1297,7 +1309,7 @@
       "key": "5a12b4dd-171b-4f70-be8d-e97c60514e7c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 1. Each student will read about storage and memory components and take notes by by matching the phrase in the word bank to the correct analogy for each in the Storage & Memory section of their activity guide. Have students complete the Storage and Memory rows in their Unit Guide by providing at least one example of each.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 1. Each student will read about storage components and take notes by by matching the phrase in the word bank to the correct analogy for each in the Storage section of their activity guide. Have students complete the Storage rows in their Unit Guide by providing at least one example of each.",
         "progression_name": "Storage Components"
       },
       "seeding_key": {
@@ -1309,7 +1321,7 @@
       "key": "37425845-648d-4415-8aba-580740674c93",
       "position": 7,
       "properties": {
-        "description": "Now that we've talked about storage and memory, let's move on to another critical part of a computer—processing components.",
+        "description": "Now that we've talked about storage, let's move on to another critical part of a computer—processing components.",
         "remarks": true
       },
       "seeding_key": {
@@ -1362,7 +1374,7 @@
       "key": "637f8aaa-cdaa-41ac-b5df-f55f718080a9",
       "position": 11,
       "properties": {
-        "description": "Now that we’ve explored individual computer components, let’s see how they all come together to make a functioning system. In this activity, you’ll be using the PC Builder web app to assemble a computer by dragging and placing each component where it belongs. As you do this, think about how these components interact and depend on one another.",
+        "description": "Now that we’ve explored individual computer components, let’s see how they all come together to make a functioning system. In this activity, you’ll be matching the descriptions of each component to the names and pictures by dragging and dropping. As you do this, think about how these components interact and depend on one another.",
         "remarks": true
       },
       "seeding_key": {
@@ -1374,7 +1386,7 @@
       "key": "f0c5ce3b-9f1e-4c46-9357-625f8e83ae8a",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 3. Each student will open the PC Builder web app and drag and drop components from the left panel into the diagram, placing them in their correct locations. They will then select a highlight color to categorize each component based on its role in the computer system.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 3. Each student will open the PC Builder and drag and drop component descriptions from the left panel into the diagram, placing them in their correct locations. They will then select a highlight color to categorize each component based on its role in the computer system.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have had some time to complete their work, have them compare their work with others to answer any questions they might have or to discuss any differences in how they labeled their diagram.\n",
         "progression_name": "Connecting Components"
       },
       "seeding_key": {
@@ -1383,8 +1395,25 @@
       }
     },
     {
-      "key": "3f2f25bf-3fa1-4a78-ac5b-a90638f099cc",
+      "key": "4c49a3cc-f005-4e48-a0fe-f4c4cd85092b",
       "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Use the “Self Check” slide to have students check their work against the key. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Adding to the Unit Guide -** You may choose to have students take a screenshot of their PC Builder slide and add it to their Unit Guides as a reference for them to use throughout the rest of the unit."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4c49a3cc-f005-4e48-a0fe-f4c4cd85092b",
+        "lesson_activity.key": "e1af4c89-00db-4ecd-b097-ad8071b8c254"
+      }
+    },
+    {
+      "key": "3f2f25bf-3fa1-4a78-ac5b-a90638f099cc",
+      "position": 14,
       "properties": {
         "description": "Now that you’ve built a computer, let’s explore how different professionals rely on specific components for their work. Whether it's gaming, music production, content creation, or graphic design, each of these fields depends on certain hardware components to get the best performance. In this next activity, you'll choose a career perspective, watch a video from an expert in that field, and reflect on the role of a key component like the GPU, CPU, SSD, or RAM.",
         "duration": "10",
@@ -1398,7 +1427,7 @@
     },
     {
       "key": "4596b5a4-39a9-4eb5-a278-5616a202724c",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 2, Level 4 to complete Levels 4 and 5. Each student will select a career option—gamer, music producer, content creator, or graphic designer. They will watch a short video where the professional explains how a specific hardware component (GPU, CPU, SSD, or RAM) impacts their work.",
         "progression_name": "Career Hardware Needs",
@@ -2200,7 +2229,7 @@
       "key": "6d221319-0695-4424-873e-867ea4a4d07e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video  \"Intro to Sensors\" (0:17 - 1:22)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Question to Consider While Watching:** *What might be an example of a sensor in an everyday object that you are familiar with? What data might it collect?*\n* **Think, Pair, Share:** Prompt students with a thought-provoking question and give them time to think independently. Have them discuss with a partner, then call on pairs to share key takeaways with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that sensors detect or measure physical properties. Student examples will vary, but some sample responses include the auto-dimming feature of their cell phone screen (light sensor), the way that lights are turned on when you walk into a room (motion sensor), or even when your car tells you that you are almost out of gas (fuel sensor)."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give each group a copy of the Data in Computer Systems activity guide.  \n\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video  \"Intro to Sensors\" (0:17 - 1:22)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Question to Consider While Watching:** *What might be an example of a sensor in an everyday object that you are familiar with? What data might it collect?*\n* **Think, Pair, Share:** Prompt students with a thought-provoking question and give them time to think independently. Have them discuss with a partner, then call on pairs to share key takeaways with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that sensors detect or measure physical properties. Student examples will vary, but some sample responses include the auto-dimming feature of their cell phone screen (light sensor), the way that lights are turned on when you walk into a room (motion sensor), or even when your car tells you that you are almost out of gas (fuel sensor).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point students to the first page in their activity guides. They will use the AI Chat in order to explore several sensors. For each, they should put the sensor name, the data type, a description of what the sensor does, and where it might be used in a computer system or device.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "6d221319-0695-4424-873e-867ea4a4d07e",
@@ -2211,14 +2240,8 @@
       "key": "d428d9d0-3529-41cb-9998-9e8774ee08c9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers. Students should complete the **Empathize with the User** section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should complete the Define the Data and Ideate a Solution sections of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system. They should research sensors that came up as part of their solution to their scenarios that they explored in the station activity.\n",
-        "progression_name": "Sensors and AI Chatbot",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Data in Computer Systems Activity Guide can be collected and used to formatively assess the lesson objectives.\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system.",
+        "progression_name": "Sensors and AI Chatbot"
       },
       "seeding_key": {
         "activity_section.key": "d428d9d0-3529-41cb-9998-9e8774ee08c9",
@@ -2226,13 +2249,30 @@
       }
     },
     {
-      "key": "0afdf28e-d9d0-4d0a-bc42-ac1065918387",
+      "key": "602cb504-a598-43db-8c16-b7dc22f71d0e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students rotate around the room for 4 minutes, sharing information about one of the sensors that they encountered with a classmate, and getting information about a different sensor back in return. Note: students should not feel obligated to complete the entire chart. It should be used as a way to document their learning experience based on the sensors that were applicable to their station."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their AI and the Systems That Power It Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students lay out the first page of their activity guides on their desks or tables.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students rotate around the room for 5 minutes, gathering information about sensors that their classmates explored. They should record their findings in the Unit Guide. Note: students should not feel obligated to complete the entire chart; they can always revisit and fill in additional information later. \n\n\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The Unit Guide can be collected and used to formatively assess the lesson objectives:\n- Describe various types of data \n- Describe how to collect different types of data\n- Determine what types of data are needed to solve a problem\n"
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "0afdf28e-d9d0-4d0a-bc42-ac1065918387",
+        "activity_section.key": "602cb504-a598-43db-8c16-b7dc22f71d0e",
+        "lesson_activity.key": "6295e538-22f8-4cb5-8df2-3c9a12babe7d"
+      }
+    },
+    {
+      "key": "1e316c71-5847-4054-9222-998afa22043a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers that might be solved through the use of sensors and data. Students should complete the *Empathize with the User* section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students complete the *Define the Data* and *Ideate a Solution* sections of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** On the sticky notes at each station, students write 1 - 2 examples of data that might be collected to aid in solving the challenge or problem outlined in their scenario. They can use the sentence stems available here to help draft their response.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e316c71-5847-4054-9222-998afa22043a",
         "lesson_activity.key": "6295e538-22f8-4cb5-8df2-3c9a12babe7d"
       }
     },
@@ -2366,7 +2406,7 @@
       "key": "8e9a9913-00d9-4b84-aa97-f4973d1e70d5",
       "position": 2,
       "properties": {
-        "description": "Imagine you’re a librarian who needs to make decisions quickly, like recommending books to visitors or identifying which books are rarely checked out. You can’t rely on manual sorting all the time, especially when dealing with thousands of records. That’s where computer systems and computational tasks come in. Today, we’ll work with a dataset about a library’s book collection and use computational processes to uncover patterns and make data-driven decisions, just like a computer system would. In this activity, you’ll analyze a dataset step by step, just like a computer system processes data. We’ll use a flowchart to break the problem into clear steps. Let’s walk through an example together to get started.",
+        "description": "Imagine you’re a librarian who needs to make decisions quickly, like recommending books to visitors or identifying which books are rarely checked out. You can’t rely on manual sorting all the time, especially when dealing with thousands of records. That’s where computer systems and computational tasks come in. Today, we’ll work with a dataset about a library’s book collection and use computational processes to uncover patterns and make data-driven decisions, just like a computer system would. In this activity, you’ll analyze a dataset step by step, just like a computer system processes data. We’ll use a template to break the problem into clear steps. Let’s walk through an example together to get started.",
         "remarks": true
       },
       "seeding_key": {
@@ -2378,7 +2418,7 @@
       "key": "410aad14-76b1-453d-96b2-720a65af15d7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to open Lesson 8, Level 1. Walk students through solving the first choice level using the following steps:\n- **Define the goal:** A new visitor wants to know the hottest books to start reading.\n- **Identify the relevant data:** Popularity Score column.\n- **Choose the action (verb):** Sort.\n- **Apply the action:** Use the spreadsheet to **sort** by descending order of Popularity Score.\n- **Describe the output:** Sort by descending order of Popularity Score.\n- **Describe the output:** The books are now listed from most popular to least popular.\n- **Reflect on insights**: This helps the library highlight the most popular books to new visitors.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to open Lesson 8, Level 1. Walk students through solving the first choice level using the following steps ([here is a demo](https://drive.google.com/file/d/1tkR53BYic9eqtBFS5-Y9AAktrc_2ey-v/view) of how to do this):\n- **Define the goal:** A new visitor wants to know the hottest books to start reading.\n- **Identify the relevant data:** Popularity Score column.\n- **Choose the action (reference the action bank at the top of their activity guides):** Sort.\n- **Apply the action:** Use the spreadsheet to **sort by descending order (Z-A) of Popularity Score**.\n- **Describe the output:** The books are now listed from most popular to least popular.\n- **Reflect on insights**: This helps the library highlight the most popular books to new visitors.",
         "progression_name": "Processing Library Data"
       },
       "seeding_key": {
@@ -2390,7 +2430,7 @@
       "key": "4d4b9317-65df-42f7-9dc3-0ae832bc5ffa",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Model filling out the Madlib template on chart paper or the board for the first scenario: “The system needs to [show the hottest books to visitors]. To do this, it will [Sort] the [Popularity Score column] by [descending order]. The system will then produce [a list of books ranked by popularity] so that [visitors know the best books to start with].”"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**:  Model filling out the Madlib template on chart paper or the board for the first scenario: “The goal is to [show the hottest books to visitors]. The system will [Sort] the [Popularity Score column] by [descending order]. The output is [a list of books ranked by popularity] so that [visitors know the best books to start with].”"
       },
       "seeding_key": {
         "activity_section.key": "4d4b9317-65df-42f7-9dc3-0ae832bc5ffa",
@@ -2401,7 +2441,7 @@
       "key": "78efbb39-7b3c-4b4c-b553-3bec2b9827fb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *sort, filter, aggregate* and *validate*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**:  Define *match, compare, summarize* and *group*.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *sort*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *filter*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Define *aggregate*\n"
       },
       "seeding_key": {
         "activity_section.key": "78efbb39-7b3c-4b4c-b553-3bec2b9827fb",
@@ -2412,7 +2452,7 @@
       "key": "7e1efef2-1c1c-4973-957f-dd5b8ee54433",
       "position": 6,
       "properties": {
-        "description": "Now it’s your turn! Work with your partner to complete three library data choice levels. For each scenario, follow the steps we just practiced: define the goal, choose the action, identify the relevant data, apply the action, describe the output, and reflect on the insights. Don’t forget to complete the flowchart and Madlib template for each level!",
+        "description": "Now it’s your turn! Work with your partner to complete two additional library data choice levels. For each scenario, follow the steps we just practiced: define the goal, choose the action, identify the relevant data, apply the action, describe the output, and reflect on the insights.",
         "remarks": true
       },
       "seeding_key": {
@@ -2424,7 +2464,7 @@
       "key": "e69be1ab-684a-4167-9d10-f3e93c90eb98",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students complete the remaining library data choice levels in Lesson 8, Level 1. They use their activity guide to write down the steps for three of the choice levels, and fill out the Madlib template to summarize their process and results for three of the choice levels level."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students complete two more library data choice levels in Lesson 8, Level 1. They use their activity guide to write down the steps for two of the choice levels, and fill out the template to summarize their process and results each.\n"
       },
       "seeding_key": {
         "activity_section.key": "e69be1ab-684a-4167-9d10-f3e93c90eb98",
@@ -2435,7 +2475,7 @@
       "key": "bf4229d0-88c3-485d-b8cf-8099f76a8291",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**:\n- Observe students as they work through the scenarios.\n- Check that students are filling out their flowchart worksheets and Madlib templates correctly.\n- Provide guidance or clarification if students are stuck on any step.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**:\n- Observe students as they work through the scenarios.\n- Check that students are filling out their templates correctly.\n- Provide guidance or clarification if students are stuck on any step.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2462,7 +2502,7 @@
       "key": "e7b24817-35d8-4903-adb6-0ffafa7c48bc",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have completed their scenarios, lead a review as a class. Ask student pairs to share their answers, focusing on the flowchart steps and the Madlib templates. Highlight and clarify any differences or commonalities in their findings."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have completed their scenarios, lead a review as a class. \n- Ask student pairs to share their answers.\n- Highlight and clarify any differences or commonalities in their findings."
       },
       "seeding_key": {
         "activity_section.key": "e7b24817-35d8-4903-adb6-0ffafa7c48bc",
@@ -2917,7 +2957,7 @@
       "key": "b34e517c-ce8c-46a8-9fe1-5b725e3cc316",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  What should the next steps be for Alice?\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no definitive right answer here, as long as students can explain and justify their thoughts. Some students may choose option A, given that the device works as intended for the specific target user – gamers with mobility issues. Other students may gravitate towards options B or C - either fixing it after launch, or delaying in order to fix - because it doesn’t work as well as it should for all users and it should be made more equitable before launching.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *Who should Alice prioritize in her design decisions, and how might her choice affect the product’s purpose and impact?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no definitive right answer here, as long as students can explain and justify their thoughts. Some students may choose option A, given that the device works as intended for the specific target user – gamers with mobility issues. Other students may gravitate towards options B or C - either fixing it after launch, or delaying in order to fix - because it doesn’t work as well as it should for all users and it should be made more equitable before launching.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2967,7 +3007,7 @@
       "key": "d9bc133d-d590-40f3-a581-a3971463d6ed",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What should Josh do about his device?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This answer tends to have a more moral or ethical component, since the technology shows a clear gender bias against women, who are more likely to have higher pitched voices and therefore not be able to use the technology. Students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are the risks of releasing a product that works better for some groups than others, and how could Josh design more fairly for all users?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This answer tends to have a more moral or ethical component, since the technology shows a clear gender bias against women, who are more likely to have higher pitched voices and therefore not be able to use the technology. Students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3017,7 +3057,7 @@
       "key": "55109ed7-85bc-47d7-862d-a7a67539256e",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What should the next steps be for Lydia?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Similar to the previous scenario, students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released. Because this device excludes a group of users who are color blind, launching it as is means that the device is inequitable and not accessible for all users. Students should consider how Lydia can improve her design by considering all intended users.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Give one example of something you heard a classmate share that made you think about one of the scenarios differently.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noting when someone shared something from a different perspective. You may need to push students to explore this part a bit more, but the goal here is for them to understand the collaborative decision making with a group of people who bring different perspectives leads to better outcomes.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How can Lydia redesign her product so that all users, including those who are color blind, can understand its signals clearly?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students understand that people experience technology differently, and that good design includes options that work for everyone—not just most people.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Give one example of something you heard a classmate share that made you think about one of the scenarios differently.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noting when someone shared something from a different perspective. You may need to push students to explore this part a bit more, but the goal here is for them to understand the collaborative decision making with a group of people who bring different perspectives leads to better outcomes.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3111,7 +3151,7 @@
       "key": "46b63d3c-2c51-4fcf-943a-8b5e966a405e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group several blank half-sheets of paper and access to the shared slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Student should access a class-editable version of the Slide template. Each member of the group should pick a distinct stakeholder– there are four stakeholder per scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the slide that corresponds to the scenario and stakeholder that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group access to their own copy of the slide template.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Student should access a class-editable version of the Slide template. Each member of the group should pick a distinct stakeholder– there are four stakeholder per scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the slide that corresponds to the scenario and stakeholder that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
         "duration": "20",
         "name": "Exploration",
         "tips": [
@@ -3143,8 +3183,8 @@
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Remind students that their proposal should reflect a compromise between stakeholders, not just one perspective. Encourage students to justify their ideas and challenge each other’s assumptions respectfully.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups present their proposals and discuss differences in approaches.",
         "tips": [
           {
-            "type": "assessmentOpportunity",
-            "markdown": "The slides can be collected and used to formatively assess the lesson objectives:\n- Evaluate the ethical implications of real-world examples of emerging technologies, including those that incorporate AI.\n- Develop ethical guidelines for the responsible design and development of AI and emerging technologies.\n"
+            "type": "teachingTip",
+            "markdown": "**Push for Consensus:** If groups struggle to agree, prompt them to identify common ground or adjust their proposal to better address concerns. Ask groups to consider whose interests are best served by their proposal and who might still have concerns."
           }
         ]
       },
@@ -3157,6 +3197,17 @@
       "key": "454852dc-e9b7-4ab8-bc34-1307d3680cec",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students repeat this process for one of the remaining scenarios. They can refer to the slide to remind them of the high level steps they need to go through.\n",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The slides can be collected and used to formatively assess the lesson objectives:\n- Evaluate the ethical implications of real-world examples of emerging technologies, including those that incorporate AI.\n- Develop ethical guidelines for the responsible design and development of AI and emerging technologies.\n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "There are two additional scenarios is the template. You may choose to assign groups to scenarios or let them self-select, based on what best matches with your classroom culture. If time allows, you may choose to have groups pair up and share their proposals once they are done with the second scenario."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "454852dc-e9b7-4ab8-bc34-1307d3680cec",
@@ -3188,6 +3239,9 @@
       "key": "893b2ee4-ed6d-496e-98fe-b80dac3bd441",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Ethical Guideline Activity Guide.",
+        "duration": "15",
+        "name": "AI Guidelines"
       },
       "seeding_key": {
         "activity_section.key": "893b2ee4-ed6d-496e-98fe-b80dac3bd441",
@@ -3198,9 +3252,7 @@
       "key": "4f14273b-130f-4732-823b-673551cee7a0",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Based on your discussion, students should identify a key ethical value or rule that should guide the responsible use of technology. They should write this on a half-sheet of paper.",
-        "duration": "15",
-        "name": "AI Guidelines"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Based on your discussion, students should identify a key ethical value or rule that should guide the responsible use of technology. They should write this on a half-sheet of paper."
       },
       "seeding_key": {
         "activity_section.key": "4f14273b-130f-4732-823b-673551cee7a0",
@@ -3211,7 +3263,7 @@
       "key": "2bb27f30-ec95-47e6-8160-b78883c92adc",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students hang up the ethical guidelines that they have developed around the classroom or in the hallway. They should wander around and read what other classmates have written as a result of their learning and conversations.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fold their activity guides in half along the dotted line and hang up the ethical guidelines that they have developed around the classroom or in the hallway. They should wander around and read what other classmates have written as a result of their learning and conversations.\n",
         "progression_name": "Student Survey",
         "tips": [
           {
@@ -3352,10 +3404,27 @@
       }
     },
     {
-      "key": "f6d26389-0641-4a2e-95a5-575ee1323180",
+      "key": "197de49a-b494-427f-9529-659aeaa51b26",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should wrote a description of the system in the Project Description section of their project guide.\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them empathize with users.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should wrote a description of the system in the Project Description section of their project guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discussing project ideas with the group is part of the **Understand** step of the **UMPIRE** strategy. It helps students ensure they have a strong foundation from which to make their plan."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "197de49a-b494-427f-9529-659aeaa51b26",
+        "lesson_activity.key": "21f7128f-7daf-48ae-9f71-d3cab0a551af"
+      }
+    },
+    {
+      "key": "f6d26389-0641-4a2e-95a5-575ee1323180",
+      "position": 8,
+      "properties": {
+        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them empathize with users.",
         "progression_name": "Understanding Your Users",
         "tips": [
           {
@@ -3370,20 +3439,16 @@
       }
     },
     {
-      "key": "197de49a-b494-427f-9529-659aeaa51b26",
-      "position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "197de49a-b494-427f-9529-659aeaa51b26",
-        "lesson_activity.key": "21f7128f-7daf-48ae-9f71-d3cab0a551af"
-      }
-    },
-    {
       "key": "b5c35341-0ba4-43a3-bea6-053512672522",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Rapid Prototype section in their Project Guides which includes defining the data that might be needed and sketching a rapid prototype.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Rapid Prototype section in their Project Guides which includes defining the data that might be needed and sketching a rapid prototype.\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Creating this diagram is part of the **Produce** step of the **UMPIRE** strategy. Help students to see this process as something cyclical where they may repeat steps over the course of a project. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "b5c35341-0ba4-43a3-bea6-053512672522",
@@ -3394,10 +3459,16 @@
       "key": "4d4c0d66-70e5-4303-8611-64cc028acc1f",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the components section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n\n**Teaching Tip**If time permits, have students share their thoughts and ideas with a neighbor and with the class.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the components section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
         "duration": "5",
         "name": "Wrap Up",
-        "progression_name": "Survey"
+        "progression_name": "Survey",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor and with the class. This sharing is part of the **Inspect** step of the **UMPIRE** strategy. By sharing and hearing from others, students will be set up to iterate on their project the following day. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4d4c0d66-70e5-4303-8611-64cc028acc1f",
@@ -3409,7 +3480,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete Step 3 Data Flow in their project guide with the help of their group.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing ideas with their group members. If groups come up with more than one answer for these, remind them that their system can use multiple types of data to help solve the problem.",
-        "name": "Warm Up"
+        "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Working through the Data Flow is part of the **Make a Plan** step of the **UMPIRE** strategy. Hopefully students took some ideas away from the first day of their work on this project they can incorporate into this planning stage."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8aaeae24-4145-4a86-8200-0a4bcd5a240c",
@@ -3422,7 +3499,13 @@
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students a copy of the System Diagram slides template and a System Diagram Checklist.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write a problem statement in the Problem Statement section of their project guide. Students should add this to their system diagram.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work collaboratively on the System Diagram, starting with the system description and then moving on to building the diagram from the library of components provided and the template items provided.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure that groups are dividing up work and collaborating on the different parts of building this diagram, discussing issues and questions as they arise.",
         "duration": "35",
-        "name": "Activity"
+        "name": "Activity",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Creating the diagram is part of the **Produce** step of the **UMPIRE** strategy. Help students remember that a project that meets the guidelines should be the priority over making the “perfect” project."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "af92c8ef-dca2-4e20-81c4-9c5837b8ad65",
@@ -3512,7 +3595,17 @@
       "key": "a893abef-705a-482f-94e1-10abe78718e9",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the remaining time in class to complete the reflection section of their diagram and to make any improvements or revisions to their project they think will help them align better with the criteria on the rubric."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the remaining time in class to complete the reflection section of their diagram and to make any improvements or revisions to their project they think will help them align better with the criteria on the rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students submit their projects before the end of class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Reflecting at the end of the project is part of the **Explain** step of the **UMPIRE** strategy. It helps students synthesize the experience and walk away with lessons learned. "
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use the Sustainable Systems Project Rubric to assess students."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a893abef-705a-482f-94e1-10abe78718e9",
@@ -3523,15 +3616,9 @@
       "key": "34effca7-c27e-4e5b-a1ba-1cb8a9bb8b22",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students submit their projects before the end of class.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Click the animated slide to display the discussion prompts.*\n- *What did you learn about yourself as a designer or problem solver during this project?* \n- *What did you learn about designing ethical and sustainable systems?* \n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This wrap-up gives students a chance to reflect on their learning journey — not just their final product. It helps them connect their work to their growth as a designer, thinker, or team member, and reflect on how their understanding of ethical and sustainable design evolved throughout the project.",
         "duration": "5",
-        "name": "Wrap Up",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use the Sustainable Systems Project Rubric to assess students."
-          }
-        ]
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "activity_section.key": "34effca7-c27e-4e5b-a1ba-1cb8a9bb8b22",
@@ -6144,6 +6231,18 @@
       }
     },
     {
+      "name": "Ethical Guideline",
+      "url": "https://docs.google.com/document/d/1IULMkna5N-bqDlZ6A-E1qflg2QiOMie6So6olIY5HJA/edit?usp=sharing",
+      "key": "ethical_guideline",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ethical_guideline"
+      }
+    },
+    {
       "name": "Guess Who? Device Edition",
       "url": "https://docs.google.com/document/d/1WHQ70QDVp4FG2TJEN7GRA3nRfmb2WWuyIW3zRBFFR3k/edit?usp=sharing",
       "key": "guess_who_device_edition",
@@ -6747,6 +6846,12 @@
       "seeding_key": {
         "lesson.key": "Just Because We Can, Should We?",
         "resource.key": "computer_systems_and_devices_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Just Because We Can, Should We?",
+        "resource.key": "ethical_guideline"
       }
     },
     {

@@ -54,12 +54,12 @@ experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
 // Allows user to view the new version of the teacher navigation
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
-// Shows an AI Analysis section on the free response level summary page
-experiments.FREE_RESPONSE_AI_ANALYSIS = 'free_response_ai_analysis';
 // Allows users to view the new version of the teacher homepage
 experiments.TEACHER_HOMEPAGE_V2 = 'teacher-homepage-v2';
 // Use glow effect for Blockly block highlighting
 experiments.BLOCKLY_GLOW_HIGHLIGHT = 'blockly-glow-highlight';
+// Allows users to view the download progress CSV button on the section progress page
+experiments.DOWNLOAD_PROGRESS_CSV = 'download-progress-csv';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

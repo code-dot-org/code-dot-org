@@ -1,0 +1,451 @@
+{
+  "script": {
+    "name": "tandl-ai",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-05-08 16:14:30 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "tandl-ai"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "tandl-ai"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Codechella 2025 AI Lesson",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "879801e4-7cf3-4c74-a38c-6efe87ec88e1",
+      "position": 1,
+      "properties": {
+        "description": "PL Content"
+      },
+      "seeding_key": {
+        "activity_section.key": "879801e4-7cf3-4c74-a38c-6efe87ec88e1",
+        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
+      }
+    },
+    {
+      "key": "776753c2-fc14-41d3-9a37-091c498bd45b",
+      "position": 2,
+      "properties": {
+        "description": "Get a quick tutorial on how to write a successful prompt.",
+        "progression_name": "TaCoFoRT Panel"
+      },
+      "seeding_key": {
+        "activity_section.key": "776753c2-fc14-41d3-9a37-091c498bd45b",
+        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
+      }
+    },
+    {
+      "key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee",
+      "position": 3,
+      "properties": {
+        "description": "Generate a product idea!",
+        "progression_name": "Generate a Product!"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee",
+        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
+      }
+    },
+    {
+      "key": "b1c897da-8eff-4872-9fb2-e630e366bf21",
+      "position": 4,
+      "properties": {
+        "description": "It's time to design your product. Choose your role:\n- **Copywriter** (Text): Product name + slogan\n- **Graphic Designer** (Visual): Logo description + branding\n- **Video Producer** (Video or Text): Commercial script\n- **Sound Designer** (Audio or Text): Song or jingle\n\nThen go through each phase of product launch:\n1. Market research\n2. Brainstorming initial ideas\n3. Generating content\n4. Refining and editing\n",
+        "progression_name": "Collaborate on a Product Launch"
+      },
+      "seeding_key": {
+        "activity_section.key": "b1c897da-8eff-4872-9fb2-e630e366bf21",
+        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
+      }
+    },
+    {
+      "key": "17f65781-5ed9-4385-981a-b1fa2750a5f7",
+      "position": 5,
+      "properties": {
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "17f65781-5ed9-4385-981a-b1fa2750a5f7",
+        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
+      }
+    },
+    {
+      "key": "f88e5f8d-d964-4c1b-ac95-2934186665a2",
+      "position": 6,
+      "properties": {
+        "progression_name": "Celebration!"
+      },
+      "seeding_key": {
+        "activity_section.key": "f88e5f8d-d964-4c1b-ac95-2934186665a2",
+        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "TaCoFoRT Panel"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-2025-tacofort-panel"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "776753c2-fc14-41d3-9a37-091c498bd45b"
+      },
+      "level_keys": [
+        "codechella-2025-tacofort-panel"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Generate a Product!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-2025-product-generator"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee"
+      },
+      "level_keys": [
+        "codechella-2025-product-generator"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Collaborate on a Product Launch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-2025-product-launch-1-market-research"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "b1c897da-8eff-4872-9fb2-e630e366bf21"
+      },
+      "level_keys": [
+        "codechella-2025-product-launch-1-market-research"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Collaborate on a Product Launch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-2025-product-launch-2-brainstorming"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "b1c897da-8eff-4872-9fb2-e630e366bf21"
+      },
+      "level_keys": [
+        "codechella-2025-product-launch-2-brainstorming"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Collaborate on a Product Launch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-2025-product-launch-3-generating-content"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "b1c897da-8eff-4872-9fb2-e630e366bf21"
+      },
+      "level_keys": [
+        "codechella-2025-product-launch-3-generating-content"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Collaborate on a Product Launch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-2025-product-launch-4-refining-editing"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "b1c897da-8eff-4872-9fb2-e630e366bf21"
+      },
+      "level_keys": [
+        "codechella-2025-product-launch-4-refining-editing"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-2025-reflection"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "17f65781-5ed9-4385-981a-b1fa2750a5f7"
+      },
+      "level_keys": [
+        "codechella-2025-reflection"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Celebration!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-2025-celebration"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "f88e5f8d-d964-4c1b-ac95-2934186665a2"
+      },
+      "level_keys": [
+        "codechella-2025-celebration"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "codechella-2025-tacofort-panel",
+        "script_level.level_keys": [
+          "codechella-2025-tacofort-panel"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "776753c2-fc14-41d3-9a37-091c498bd45b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "codechella-2025-product-generator",
+        "script_level.level_keys": [
+          "codechella-2025-product-generator"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "codechella-2025-product-launch-1-market-research",
+        "script_level.level_keys": [
+          "codechella-2025-product-launch-1-market-research"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "b1c897da-8eff-4872-9fb2-e630e366bf21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "codechella-2025-product-launch-2-brainstorming",
+        "script_level.level_keys": [
+          "codechella-2025-product-launch-2-brainstorming"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "b1c897da-8eff-4872-9fb2-e630e366bf21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "codechella-2025-product-launch-3-generating-content",
+        "script_level.level_keys": [
+          "codechella-2025-product-launch-3-generating-content"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "b1c897da-8eff-4872-9fb2-e630e366bf21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "codechella-2025-product-launch-4-refining-editing",
+        "script_level.level_keys": [
+          "codechella-2025-product-launch-4-refining-editing"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "b1c897da-8eff-4872-9fb2-e630e366bf21"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "codechella-2025-reflection",
+        "script_level.level_keys": [
+          "codechella-2025-reflection"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "17f65781-5ed9-4385-981a-b1fa2750a5f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "codechella-2025-celebration",
+        "script_level.level_keys": [
+          "codechella-2025-celebration"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "f88e5f8d-d964-4c1b-ac95-2934186665a2"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

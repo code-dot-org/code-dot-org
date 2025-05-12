@@ -7,6 +7,7 @@ import {
   BodyThreeText,
   OverlineTwoText,
   StrongText,
+  BodyFourText,
 } from '@/typography';
 
 import {ActionBlockProps} from './types';
@@ -61,6 +62,12 @@ export const getButtons = (
   );
 };
 
+export const getTag = (tag: string) => {
+  return (
+    <BodyFourText className={classNames(moduleStyles.tag)}>{tag}</BodyFourText>
+  );
+};
+
 export const ActionBlockWrapper: React.FC<ActionBlockProps> = ({
   background = 'primary',
   className,
@@ -98,6 +105,7 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
   description,
   image,
   overline,
+  tag,
   details,
   primaryButton,
   secondaryButton,
@@ -112,6 +120,7 @@ export const ActionBlock: React.FC<ActionBlockProps> = ({
       {...HTMLAttributes}
     >
       <div>
+        {tag && getTag(tag)}
         {overline && (
           <OverlineTwoText className={classNames(moduleStyles.overline)}>
             {overline}

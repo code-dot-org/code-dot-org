@@ -4,7 +4,7 @@ import FocusTrap from 'focus-trap-react';
 import React, {useState, useCallback, useRef, useEffect} from 'react';
 import {createPortal} from 'react-dom';
 
-import moduleStyles from './PopUpButton.module.scss';
+import moduleStyles from './pop-up-button.module.scss';
 
 type PopUpButtonProps = {
   iconName: string;
@@ -14,6 +14,7 @@ type PopUpButtonProps = {
   id?: string;
   disabled?: boolean;
   ariaLabel?: string;
+  initialFocusId?: string;
 };
 
 const TOP_PADDING = 5;
@@ -26,12 +27,15 @@ export const PopUpButton = ({
   id,
   disabled,
   ariaLabel,
+  initialFocusId,
 }: PopUpButtonProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [buttonRef, setButtonRef] = useState<HTMLElement | null>(null);
   const [dropdownStyles, setDropdownStyles] = useState<React.CSSProperties>({});
   const dropdownRef = useRef<HTMLDivElement | null>(null);
   const [updatedStyles, setUpdatedStyles] = useState(false);
+  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
+  // main lab container.
   const {theme} = useTheme();
 
   const setIsOpenFalse = useCallback(() => {
@@ -126,8 +130,26 @@ export const PopUpButton = ({
         createPortal(
           <FocusTrap
             focusTrapOptions={{
+              isKeyForward: event => {
+                if (event.key === 'ArrowDown') {
+                  event.stopPropagation();
+                  return true;
+                }
+                // If we remove this line, tab will move focus but focus will
+                // not be trapped. Same with shift+tab below.
+                return event.key === 'Tab';
+              },
+              isKeyBackward: event => {
+                if (event.key === 'ArrowUp') {
+                  event.stopPropagation();
+                  return true;
+                }
+                return event.key === 'Tab' && event.shiftKey;
+              },
               clickOutsideDeactivates: true,
-              fallbackFocus: '#fallback-element',
+              fallbackFocus: initialFocusId
+                ? `#${initialFocusId}`
+                : '#fallback-element',
             }}
           >
             <div

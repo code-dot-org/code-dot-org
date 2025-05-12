@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-05 22:39:39 UTC",
+    "serialized_at": "2025-05-09 17:26:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -880,6 +880,18 @@
       "seeding_key": {
         "lesson_activity.key": "3a11c3ce-e63e-4b61-a38c-0b0c1f0dc3ed",
         "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "781a7a9f-145d-4669-a6be-c11922c8845c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
@@ -2295,8 +2307,19 @@
       }
     },
     {
-      "key": "305ef97f-ae88-4d13-b79a-9beedbbdac24",
+      "key": "72f4a850-b0c9-42ba-92fe-0e98d7923768",
       "position": 2,
+      "properties": {
+        "progression_name": "Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "72f4a850-b0c9-42ba-92fe-0e98d7923768",
+        "lesson_activity.key": "c6d011d8-2e92-419d-8104-52fc7f2d879d"
+      }
+    },
+    {
+      "key": "305ef97f-ae88-4d13-b79a-9beedbbdac24",
+      "position": 3,
       "properties": {
         "progression_name": "Wrap Up"
       },
@@ -2421,6 +2444,39 @@
       "seeding_key": {
         "activity_section.key": "af42d55e-7b62-4d72-9dd6-9144c3a57921",
         "lesson_activity.key": "3a11c3ce-e63e-4b61-a38c-0b0c1f0dc3ed"
+      }
+    },
+    {
+      "key": "fa447aeb-24a4-4bb1-907f-f9536384dd34",
+      "position": 1,
+      "properties": {
+        "progression_name": "Prompt Comparison"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa447aeb-24a4-4bb1-907f-f9536384dd34",
+        "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c"
+      }
+    },
+    {
+      "key": "226c5195-37c8-4985-b749-46085379aa66",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prompt Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "226c5195-37c8-4985-b749-46085379aa66",
+        "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c"
+      }
+    },
+    {
+      "key": "722592d3-fb7f-49a1-84de-1cc17c4bf6c7",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "722592d3-fb7f-49a1-84de-1cc17c4bf6c7",
+        "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c"
       }
     },
     {
@@ -2610,8 +2666,30 @@
       }
     },
     {
-      "key": "457f2b6f-8dfa-41f4-ba8b-8acb40e5bc1a",
+      "key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d",
       "position": 2,
+      "properties": {
+        "progression_name": "Scenario 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d",
+        "lesson_activity.key": "b8039792-b2f5-4728-8704-0e4194b2a333"
+      }
+    },
+    {
+      "key": "b4cf8127-03e2-446d-853a-16c6dc2e4115",
+      "position": 3,
+      "properties": {
+        "progression_name": "Scenario 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115",
+        "lesson_activity.key": "b8039792-b2f5-4728-8704-0e4194b2a333"
+      }
+    },
+    {
+      "key": "457f2b6f-8dfa-41f4-ba8b-8acb40e5bc1a",
+      "position": 4,
       "properties": {
         "progression_name": "Wrap Up"
       },
@@ -3403,6 +3481,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup_2025"
+        ],
         "progression": "RecipeBot Data Curation"
       },
       "bonus": false,
@@ -3425,6 +3506,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lv5_2025"
+        ],
         "progression": "RecipeBot Data Curation"
       },
       "bonus": false,
@@ -3447,6 +3531,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup2_2025"
+        ],
         "progression": "Identifying Bias"
       },
       "bonus": false,
@@ -3469,6 +3556,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup3_2025"
+        ],
         "progression": "Identifying Bias"
       },
       "bonus": false,
@@ -3491,6 +3581,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup4_2025"
+        ],
         "progression": "Identifying Bias"
       },
       "bonus": false,
@@ -3513,6 +3606,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-activity-lvlgroup5_2025"
+        ],
         "progression": "Identifying Bias"
       },
       "bonus": false,
@@ -3660,6 +3756,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-embeddings-widget_2025"
+        ],
         "progression": "Embeddings Activity"
       },
       "bonus": false,
@@ -3783,6 +3882,31 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "genai-attention-test-v1"
+        ],
+        "progression": "Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-attention-test-v1"
+        ],
+        "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "72f4a850-b0c9-42ba-92fe-0e98d7923768"
+      },
+      "level_keys": [
+        "genai-attention-test-v1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "genai-lesson8-wrapup-level1_2025"
         ],
         "progression": "Wrap Up"
@@ -3802,7 +3926,76 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-choices-comparison"
+        ],
+        "progression": "Prompt Comparison"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-choices-comparison"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "fa447aeb-24a4-4bb1-907f-f9536384dd34"
+      },
+      "level_keys": [
+        "genai-choices-comparison"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompt Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-choices-comparison-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "226c5195-37c8-4985-b749-46085379aa66"
+      },
+      "level_keys": [
+        "genai-choices-comparison-2"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-choices-cfu"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "722592d3-fb7f-49a1-84de-1cc17c4bf6c7"
+      },
+      "level_keys": [
+        "genai-choices-cfu"
+      ]
+    },
+    {
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3827,7 +4020,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3852,7 +4045,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3877,8 +4070,108 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 32,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-hallucinations-activity-lvl1_2025"
+        ],
+        "progression": "Scenario 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl1_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl1_2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-hallucinations-activity-lvl2a_2025"
+        ],
+        "progression": "Scenario 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl2a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl2a_2025"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-hallucinations-activity-lvl3_2025"
+        ],
+        "progression": "Scenario 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl3_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl3_2025"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-hallucinations-activity-lvl4a_2025"
+        ],
+        "progression": "Scenario 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl4a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
+      },
+      "level_keys": [
+        "genai-hallucinations-activity-lvl4a_2025"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3902,7 +4195,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -3927,7 +4220,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3952,7 +4245,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3977,7 +4270,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4281,6 +4574,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "genai-attention-test-v1",
+        "script_level.level_keys": [
+          "genai-attention-test-v1"
+        ],
+        "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "72f4a850-b0c9-42ba-92fe-0e98d7923768"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "genai-lesson8-wrapup-level1_2025",
         "script_level.level_keys": [
           "genai-lesson8-wrapup-level1_2025"
@@ -4289,6 +4594,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "305ef97f-ae88-4d13-b79a-9beedbbdac24"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-choices-comparison",
+        "script_level.level_keys": [
+          "genai-choices-comparison"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "fa447aeb-24a4-4bb1-907f-f9536384dd34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-choices-comparison-2",
+        "script_level.level_keys": [
+          "genai-choices-comparison-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "226c5195-37c8-4985-b749-46085379aa66"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-choices-cfu",
+        "script_level.level_keys": [
+          "genai-choices-cfu"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "722592d3-fb7f-49a1-84de-1cc17c4bf6c7"
       }
     },
     {
@@ -4325,6 +4666,54 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "0f7faecc-20cb-481c-a578-373694398b93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl1_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl1_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl2a_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl2a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "f5057f1b-8eb3-423e-9d1b-3d5bd347fe0d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl3_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl3_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-hallucinations-activity-lvl4a_2025",
+        "script_level.level_keys": [
+          "genai-hallucinations-activity-lvl4a_2025"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b4cf8127-03e2-446d-853a-16c6dc2e4115"
       }
     },
     {
@@ -5166,6 +5555,19 @@
       }
     },
     {
+      "name": "Prompt Comparisons",
+      "url": "https://docs.google.com/document/d/1B5gl9KOOadsiHj0y6IsswjtEkohPxJ1lrbCbuXcm8zg/view",
+      "key": "prompt_comparisons",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "prompt_comparisons"
+      }
+    },
+    {
       "name": "RecipeBot Data Curation",
       "url": "https://docs.google.com/document/d/1HmdwAW236aJgN8xu3ezGHultrkwZSgKKpgySHLX_4ms/edit",
       "key": "recipebot_data_curation",
@@ -5263,6 +5665,18 @@
       },
       "seeding_key": {
         "resource.key": "what_makes_a_computer_a_computer_"
+      }
+    },
+    {
+      "name": "Who's Making the Choices?",
+      "url": "https://docs.google.com/presentation/d/1fb3bhBM-LyvkPV9PoAzp0YnQb12SUrLCotOJQRSQi54/edit",
+      "key": "who_s_making_the_choices_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "who_s_making_the_choices_"
       }
     }
   ],
@@ -5692,6 +6106,18 @@
         "lesson.key": "lesson-2",
         "resource.key": "is_it_biased_"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "prompt_comparisons"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "who_s_making_the_choices_"
+      }
     }
   ],
   "scripts_resources": [
@@ -6052,7 +6478,7 @@
     {
       "key": "99ba38a6-262f-4917-aabb-5fff08c1c515",
       "properties": {
-        "description": "Explain how language models use embeddings to store the meaning of wordss"
+        "description": "Explain how language models use embeddings to store the meaning of words"
       },
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",

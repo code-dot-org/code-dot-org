@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-29 20:42:15 UTC",
+    "serialized_at": "2025-05-10 01:09:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -49,6 +49,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd5-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd5-2025"
       }
     }
@@ -381,6 +393,21 @@
       "seeding_key": {
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd5-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd5-2025"
       }
     }
@@ -1107,6 +1134,18 @@
         "lesson_activity.key": "68683f37-a496-4852-8336-3c30e0ef41e3",
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd5-2025"
+      }
+    },
+    {
+      "key": "12bd62e6-3fbf-488f-a926-1ad31abecca9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12bd62e6-3fbf-488f-a926-1ad31abecca9",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd5-2025"
       }
     }
@@ -4656,6 +4695,28 @@
         "activity_section.key": "b9352faa-0d71-4501-af61-37acd0f2e4ac",
         "lesson_activity.key": "68683f37-a496-4852-8336-3c30e0ef41e3"
       }
+    },
+    {
+      "key": "1b9c53b3-6dc2-4770-a7e8-f8d35ae7e466",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b9c53b3-6dc2-4770-a7e8-f8d35ae7e466",
+        "lesson_activity.key": "12bd62e6-3fbf-488f-a926-1ad31abecca9"
+      }
+    },
+    {
+      "key": "8fcd3d5f-b17e-44d7-9354-296f1d6c9762",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "8fcd3d5f-b17e-44d7-9354-296f1d6c9762",
+        "lesson_activity.key": "12bd62e6-3fbf-488f-a926-1ad31abecca9"
+      }
     }
   ],
   "script_levels": [
@@ -5107,6 +5168,28 @@
       "level_keys": [
         "CSD U5 test_2025"
       ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csd5survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd5-2025",
+        "activity_section.key": "1b9c53b3-6dc2-4770-a7e8-f8d35ae7e466"
+      },
+      "level_keys": [
+        "student-eou-survey_csd5survey-2025"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -5324,6 +5407,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd5-2025",
         "activity_section.key": "b9352faa-0d71-4501-af61-37acd0f2e4ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csd5survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csd5survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd5-2025",
+        "activity_section.key": "1b9c53b3-6dc2-4770-a7e8-f8d35ae7e466"
       }
     }
   ],

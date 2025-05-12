@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 17:11:13 UTC",
+    "serialized_at": "2025-05-10 01:54:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2007,7 +2007,7 @@
       "key": "ed69a799-1e52-4e5e-aafb-3c73f5221f55",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the values stored in the instance variables for each object are modified in the enhanced `for` loop. Students may wonder why objects can be modified in an enhanced `for` loop when primitive values cannot be modified."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students recognize that primitive values (like int) are not modified by changes inside an enhanced for loop because the loop variable holds a copy of the value. "
       },
       "seeding_key": {
         "activity_section.key": "ed69a799-1e52-4e5e-aafb-3c73f5221f55",
@@ -2018,13 +2018,13 @@
       "key": "d9b365fc-b8e5-45cb-b009-5245f643755b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think the changes made to the loop variable affected the original object reference?*\n\n**Discussion Goal:** Students recall that the enhanced `for` loop variable stores a copy of the value stored in the array. Students realize that the enhanced `for` loop variable is storing a copy of the object reference, which makes it an alias of the object reference stored in the array. Since the enhanced `for` loop variable is an alias, both variables reference the same object.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why didn't the changes to the loop variable affect the original array? What does this tell you about how Java handles primitive types in enhanced for loops?*\n\n**Discussion Goal:** Students should realize that:\n- In enhanced for loops, primitive values are copied, not referenced.\n- Modifying the loop variable `(value *= 2)` does not affect the original array.\n- This behavior is different for objects, where the reference is copied",
         "duration": "15",
         "name": "Enhanced For Loops and 2D Arrays",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Ask additional guiding questions to help students recall aliases and identify the relationship between the enhanced `for` loop variable and the object reference stored in the array. For example,\n* *The enhanced `for` loop makes a copy of the value stored in the array. If the value is an object reference, what is the enhanced `for` loop making a copy of?*\n* *What is it called when a reference variable points to the same object as another reference variable?*\n* *When two reference variables are aliases, do changes made using one variable impact the other variable?*"
+            "markdown": "Ask additional guiding questions to help students understand why modifying a loop variable in an enhanced `for` loop doesn’t change the original array. For example:\n- What does the loop variable `value` represent in `for (int value : row)`?\n- When we write `value *= 2`, are we changing the array, or just the copy stored in `value`?\n- Why might the array look unchanged after running `changeValues()`?\n- What would we need to do differently if we actually wanted to modify the array values?"
           }
         ]
       },
@@ -5720,6 +5720,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,

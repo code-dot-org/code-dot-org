@@ -566,7 +566,7 @@ en:
           description_teacher: ''
           version_title: '2023'
         virtual-pl-csa-summer-2024:
-          title: CSA Virtual Summer Professional Learning '24-'25
+          title: 'CSA Virtual Summer Professional Learning '
           description_short: ''
           description_student: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           description_teacher: "**Participants will:**\n\n* Prepare to teach CSA.\n* Practice key concepts in the CSA curriculum.\n* Grow in their understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
@@ -5419,47 +5419,47 @@ en:
           description_teacher: ''
           version_title: ''
         coursea-2025:
-          title: coursea-2025
+          title: Course A
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2025'
         courseb-2025:
-          title: courseb-2025
+          title: Course B
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2025'
         coursec-2025:
-          title: coursec-2025
+          title: Course C
           description_short: ''
           description_student: ''
           description_teacher: ''
           version_title: '2025'
         coursed-2025:
-          title: coursed-2025
+          title: Course D
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2025'
         coursee-2025:
-          title: coursee-2025
+          title: Course E
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2025'
         coursef-2025:
-          title: coursef-2025
+          title: Course F
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2025'
         express-2025:
-          title: express-2025
+          title: Express
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2025'
         pre-express-2025:
           title: pre-express-2025
           description_short: ''
@@ -5516,3 +5516,102 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: 25 - 26
+        codechella2025:
+          title: Codechella 2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        virtual-pl-csa-summer-2025:
+          title: CSA Virtual Summer Professional Learning
+          description_short: ''
+          description_student: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          description_teacher: "**You will:**\n\n* Prepare to teach CS A.\n* Practice key concepts in the CS A curriculum.\n* Grow in your understanding of  CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
+          version_title: 25-26
+        testing-modular-2025:
+          title: Testing Modular AIF Unit 1 and 2
+          description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
+          description_student: In AI Foundations, you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.
+          description_teacher: |-
+            AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+
+            AIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](http://studio.code.org/courses/self-paced-pl-ai-foundations-2025) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'25-'26"
+        python-madlibs:
+          title: python-madlibs
+          description_short: 'Madlibs progression in Python Lab '
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        aif-testing-modularity-2025:
+          title: aif-testing-modularity-2025
+          description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
+          description_student: In AI Foundations, you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.
+          description_teacher: |-
+            AI Foundations introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+
+            AIF is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching AI Foundations. [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](http://studio.code.org/courses/self-paced-pl-ai-foundations-2025) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**AIF Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: ''
+        teaching-csd-unit1-2025:
+          title: teaching-csd-unit1-2025
+          description_short: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
+          version_title: 25-26
+        tess-testing-coding-with-music-2025:
+          title: tess-testing-coding-with-music-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        computing-foundations-for-a-digital-age-2025:
+          title: 'Computing Foundations for a Digital Age: Indiana (AI Foundations)'
+          description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
+          description_student: 'In Computing Foundations for a Digital Age: Indiana (AI Foundations), you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.'
+          description_teacher: |-
+            Computing Foundations for a Digital Age: Indiana (AI Foundations) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+
+            Computing Foundations for a Digital Age: Indiana (AI Foundations) is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching Computing Foundations for a Digital Age: Indiana (AI Foundations). [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](http://studio.code.org/courses/self-paced-pl-ai-foundations-2025) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'25-'26"
