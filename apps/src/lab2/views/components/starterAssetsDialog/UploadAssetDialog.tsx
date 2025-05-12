@@ -61,7 +61,7 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
       const pageCount = (await getPageCount(file)) || 0;
       if (pageCount > PDF_PAGE_LIMIT) {
         updateAlert(
-          `PDFs must be less than ${PDF_PAGE_LIMIT} pages. Please try a smaller file.`,
+          `${file.name} is ${pageCount} pages long. PDFs must be less than ${PDF_PAGE_LIMIT} pages. Please try a smaller file.`,
           'danger'
         );
         return;
@@ -159,6 +159,7 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
                   key={asset.filename}
                   levelName={levelName}
                   onDelete={onDelete}
+                  showWarnings={true}
                 />
               ))}
             </div>

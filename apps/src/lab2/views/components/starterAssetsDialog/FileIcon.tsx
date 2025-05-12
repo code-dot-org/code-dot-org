@@ -13,12 +13,12 @@ import {getPageCount} from './utils';
 import styles from './starter-assets-dialog.module.scss';
 
 interface FileIconProps extends AssetData {
-  //asset: AssetData;
   levelName: string;
   onSelect?: (selected: boolean) => void;
   selected?: boolean;
   canSelect?: boolean;
   onDelete?: (filename: string) => void;
+  showWarnings?: boolean;
 }
 
 const FileIcon: React.FC<FileIconProps> = ({
@@ -31,6 +31,7 @@ const FileIcon: React.FC<FileIconProps> = ({
   canSelect = true,
   selected,
   onDelete,
+  showWarnings = false,
 }) => {
   const url = `${getFileUrl(filename, levelName)}?${timestamp}`;
   const [pageCount, setPageCount] = useState<number>();
@@ -107,7 +108,7 @@ const FileIcon: React.FC<FileIconProps> = ({
               <BodyThreeText className={styles.fileDetail}>
                 {pageCount} Pages
               </BodyThreeText>
-              {pageCount > PDF_PAGE_WARNING && (
+              {showWarnings && pageCount > PDF_PAGE_WARNING && (
                 <WarningIcon text="This PDF has many pages and may result in degraded performance." />
               )}
             </div>
@@ -117,10 +118,11 @@ const FileIcon: React.FC<FileIconProps> = ({
               <BodyThreeText className={styles.fileDetail}>
                 {width} x {height}
               </BodyThreeText>
-              {(width > IMAGE_DIMENSION_WARNING ||
-                height > IMAGE_DIMENSION_WARNING) && (
-                <WarningIcon text="This image is large and may result in degraded performance." />
-              )}
+              {showWarnings &&
+                (width > IMAGE_DIMENSION_WARNING ||
+                  height > IMAGE_DIMENSION_WARNING) && (
+                  <WarningIcon text="This image is large and may result in degraded performance." />
+                )}
             </div>
           )}
         </div>
