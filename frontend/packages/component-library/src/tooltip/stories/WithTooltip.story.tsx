@@ -1,8 +1,9 @@
 import {Meta, StoryFn} from '@storybook/react';
+import {useRef} from 'react';
 
 import {Button} from '@/button';
 
-import Tooltip, {TooltipProps, WithTooltip} from '../index';
+import Tooltip, {TooltipProps, WithTooltip, WithTooltipHandle} from '../index';
 
 export default {
   title: 'DesignSystem/Tooltip',
@@ -224,4 +225,37 @@ TooltipsFullGroup.args = {
       size: 'xs',
     },
   ],
+};
+
+export const ImperativeHideTooltip: StoryFn = () => {
+  const tooltipRef = useRef<WithTooltipHandle>(null);
+
+  const tooltipProps: TooltipProps = {
+    text: 'This tooltip can be hidden imperatively',
+    direction: 'onBottom',
+    tooltipId: 'imperative-hide-tooltip',
+    size: 'xs',
+  };
+
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '1rem',
+        alignItems: 'flex-start',
+      }}
+    >
+      <WithTooltip tooltipProps={tooltipProps} ref={tooltipRef}>
+        <Button text="Hover or focus me" onClick={() => {}} />
+      </WithTooltip>
+
+      <Button
+        text="Hide Tooltip"
+        onClick={() => {
+          tooltipRef.current?.hideTooltip();
+        }}
+      />
+    </div>
+  );
 };
