@@ -906,6 +906,15 @@ roles.each do |name, config| %>
                 Action:
                   - iam:PassRole
                 Resource: !GetAtt CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role.Arn
+            # GitHub Actions needs to flush the content distribution network cache after invoking a successful Stack update.
+            - Sid: AllowCloudfrontInvalidation
+              Effect: Allow
+              Action:
+                - cloudfront:CreateInvalidation
+              Resource: '*'
+              Condition:
+                StringEquals:
+                  aws:ResourceTag/environment-type: <%=environment_type%>
 
   # Enforce least privilege on Roles created/passed/attached by the Role that provisions marketing site Stacks.
   MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy:
