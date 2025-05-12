@@ -9,7 +9,6 @@ import Tooltip from '@cdo/apps/templates/Tooltip';
 
 import {ConditionType, Validation, Condition} from '../../types';
 
-import ConditionDescription from './ConditionDescription';
 import EditCondition from './EditCondition';
 
 import moduleStyles from './edit-validations.module.scss';
@@ -110,12 +109,10 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
                   onConditionChange={onConditionChange}
                   deleteCondition={deleteCondition}
                 />
-                <div className={moduleStyles.row} key={`${index}-description`}>
-                  {/*<ConditionDescription
-                    condition={condition}
-                    conditionTypes={conditionTypes}
-                  />*/}
-                </div>
+                <div
+                  className={moduleStyles.row}
+                  key={`${index}-description`}
+                />
                 {index === validation.conditions.length - 1 && (
                   <button
                     type="button"
@@ -149,11 +146,6 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
         <div className={moduleStyles.column}>
           <div className={moduleStyles.row}>
             <div className={moduleStyles.column}>
-              {/*}
-              <label htmlFor="message" className={moduleStyles.label}>
-                Message:
-              </label>
-              */}
               <textarea
                 id="message"
                 name="message"

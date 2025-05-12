@@ -1,6 +1,5 @@
 @import '../../../mixins.scss';
 
-
 .validation {
   display: flex;
   flex-direction: column;
@@ -76,49 +75,6 @@
   width: 180px;
 }
 
-/*
-.row {
-  display: flex;
-  align-items: baseline;
-  padding-bottom: 10px;
-}
-
-.validation {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
-  border-radius: 4px;
-  //margin: 20px 0;
-  //padding: 20px 10px;
-
-  .validationTitle {
-    //padding-bottom: 10px;
-    //padding-right: 10px;
-  }
-}
-
-.message {
-  width: 90%;
-}
-
-.callout {
-  width: 70%;
-}
-
-.label {
-  padding-right: 10px;
-}
-
-.conditionNameDropdown {
-  margin-right: 10px;
-}
-
-.addConditionButton {
-  font-size: 14px;
-  background-color: var(--background-brand-teal-primary);
-  color: var(--text-neutral-white-fixed);
-}
-*/
 .addValidationButton {
   font-size: 14px;
   background-color: var(--background-brand-purple-primary);
