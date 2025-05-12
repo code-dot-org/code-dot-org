@@ -1,26 +1,27 @@
-# Marketing App Resources
-# This template is manually deployed to create/update the Marketing App's AWS resources.
-
 AWSTemplateFormatVersion: 2010-09-09
 
-Description: Marketing App AWS resources
+Description: Provision a marketing website powered by our Next.js web application server and the Contentful cloud service.
 
 Parameters:
   CloudFrontTLSCertificateArn:
     Type: String
-    Description: The ARN of the TLS certificate for marketing app's cloudfront distribution. (e.g. the ARN of the ACM cert for 'test.marketing.code.org')
+    Description: The ARN of the TLS certificate for this marketing site's CloudFront Distribution.
   BaseHostedZoneId:
     Type: String
-    Description: The ID of the Route53 hosted zone for the marketing app. (e.g. the hosted zone id for 'marketingsites.code.org')
+    Description: The ID of the Route53 hosted zone for this marketing site. (e.g. the hosted zone id for 'marketing-sites.code.org')
   BaseDomainName:
     Type: String
-    Description: The base domain name (e.g. 'marketing-sites.code.org' in 'hoc.marketing-sites.code.org').
+    Description: The base domain name (e.g. 'marketing-sites.code.org' in 'hourofcode.marketing-sites.code.org').
   SubdomainName:
     Type: String
-    Description: Subdomain name for marketing (e.g. 'hoc' in 'hoc.marketing-sites.code.org').
+    Description: Subdomain name for marketing (e.g. 'hourofcode' in 'hourofcode.marketing-sites.code.org').
+  EnvironmentType:
+    Type: String
+    Default: development
+    Description: Is this a 'development', 'test', or 'production' system?
   ContainerImageHashDigest:
     Type: String
-    Description: "The sha256sum of the marketing container image."
+    Description: "The sha256sum of the marketing sites Next.js container image."
 
 Mappings:
   # Cloudfront Mappings
@@ -204,9 +205,7 @@ Resources:
           Value: "false"
       Scheme: internet-facing
       SecurityGroups:
-        - Fn::GetAtt:
-            - FargateServiceLBSecurityGroup
-            - GroupId
+        - !GetAtt FargateServiceLBSecurityGroup.GroupId
       Subnets:
 <% Config::REGIONS[aws_region.to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
         - Ref: VpcPublicSubnet<%= index %>
@@ -350,19 +349,19 @@ Resources:
               ReadOnly: false
           Secrets:
             - Name: CONTENTFUL_DELIVERY_TOKEN
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_DELIVERY_TOKEN::'
+              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${Subdomain}:CONTENTFUL_DELIVERY_TOKEN::"
             - Name: CONTENTFUL_PREVIEW_TOKEN
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_PREVIEW_TOKEN::'
+              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${Subdomain}:CONTENTFUL_PREVIEW_TOKEN::"
             - Name: CONTENTFUL_REVALIDATE_TOKEN
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:CONTENTFUL_REVALIDATE_TOKEN::'
+              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${Subdomain}:CONTENTFUL_REVALIDATE_TOKEN::"
             - Name: DRAFT_MODE_TOKEN
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:DRAFT_MODE_TOKEN::'
+              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${Subdomain}:DRAFT_MODE_TOKEN::"
             - Name: STATSIG_CLIENT_KEY
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:STATSIG_CLIENT_KEY::'
+              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${Subdomain}:STATSIG_CLIENT_KEY::"
             - Name: STATSIG_SERVER_KEY
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:STATSIG_SERVER_KEY::'
+              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${Subdomain}:STATSIG_SERVER_KEY::"
             - Name: OTEL_EXPORTER_OTLP_HEADERS
-              ValueFrom: 'arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371:OTEL_EXPORTER_OTLP_HEADERS::'
+              ValueFrom: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${Subdomain}:OTEL_EXPORTER_OTLP_HEADERS::"
           LogConfiguration:
             LogDriver: awslogs
             Options:
@@ -431,7 +430,7 @@ Resources:
               - secretsmanager:DescribeSecret
               - secretsmanager:GetSecretValue
             Effect: Allow
-            Resource: arn:aws:secretsmanager:us-west-2:165336972514:secret:development/marketing/90t6bu6vlf76/contentful-fOz371
+            Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:marketing-sites/${EnvironmentType}/${BaseDomainName}/${Subdomain}"
         Version: "2012-10-17"
       PolicyName: FargateServiceTaskDefExecutionRoleDefaultPolicy
       Roles:
@@ -446,6 +445,7 @@ Resources:
         MaximumPercent: 200
         MinimumHealthyPercent: 50
       EnableECSManagedTags: false
+      HealthCheckGracePeriodSeconds: 60
       LaunchType: FARGATE
       DesiredCount: 3
       AvailabilityZoneRebalancing: ENABLED
