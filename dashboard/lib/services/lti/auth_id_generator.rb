@@ -1,5 +1,4 @@
-require 'cdo/honeybadger'
-require 'cdo/aws/cloudwatch_logs'
+require "clients/lti_cloudwatch_logger"
 
 module Services
   module Lti
@@ -29,12 +28,13 @@ module Services
           # Only ONE client_id identifies an LTI Tool and is sent in the JWK audience claim.
           if id_token[:aud].length > 1
             event = {
+              event_name: 'GenerateAuthenticationIDError',
               message: 'Too many client_ids in the audience claim',
               audience: id_token[:aud],
               aud_count: id_token[:aud].length,
-            }.to_json
+            }
 
-            Cdo::CloudWatchLogs.put_log_event(LOG_GROUP_NAME, 'GenerateAuthenticationIDError', {timestamp: (Time.now.to_f * 1000).to_i, message: event})
+            LtiCloudWatchLogger.put_log_event(event)
             raise ArgumentError, "Invalid Audience Claim: #{id_token[:aud]}, with more than 1 client_id. #{id_token[:aud].length} client_ids given."
           else
             id_token[:aud].first
