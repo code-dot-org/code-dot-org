@@ -384,7 +384,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -422,7 +422,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -457,7 +457,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -568,7 +568,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -647,7 +647,7 @@ describe('UnitEditor', () => {
         .true;
       saveAndKeepEditingButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -722,7 +722,7 @@ describe('UnitEditor', () => {
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
@@ -753,7 +753,7 @@ describe('UnitEditor', () => {
       expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
-      // check the the spinner is showing
+      // check that the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
       expect(unitEditor.state().isSaving).to.equal(true);
 
