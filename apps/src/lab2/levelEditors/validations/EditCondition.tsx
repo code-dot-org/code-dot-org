@@ -86,9 +86,9 @@ const EditCondition: React.FunctionComponent<EditConditionProps> = ({
 
   return (
     <div className={moduleStyles.row}>
-      <label htmlFor="conditionName" className={moduleStyles.label}>
+      {/*<label htmlFor="conditionName" className={moduleStyles.label}>
         {'Condition ' + (index + 1) + ':'}
-      </label>
+      </label>*/}
       <select
         className={moduleStyles.conditionNameDropdown}
         name="conditionName"

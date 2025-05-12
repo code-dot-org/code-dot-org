@@ -1,5 +1,74 @@
 @import '../../../mixins.scss';
 
+
+.validation {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 4px;
+  margin: 10px 0;
+  gap: 5px;
+  padding: 5px;
+
+  select, input, textarea, label {
+    margin-bottom: 0;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: space-between;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      justify-content: space-around;
+      width: 100%;
+
+      &First {
+        width: 80px;
+        min-width: 80px;
+        padding-left: 10px;
+        background-color: lightgrey;
+      }
+
+      .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.label {
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.addConditionButton {
+  font-size: 12px;
+  height: 24px;
+  max-width: 200px;
+  padding: 0 10px;
+  background-color: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+}
+
+.message {
+  width: 380px;
+  resize: vertical;
+}
+
+.callout {
+  width: 140px;
+}
+
+/*
 .row {
   display: flex;
   align-items: baseline;
@@ -11,12 +80,12 @@
   flex-direction: column;
   border: 1px solid black;
   border-radius: 4px;
-  margin: 20px 0;
-  padding: 20px 10px;
+  //margin: 20px 0;
+  //padding: 20px 10px;
 
   .validationTitle {
-    padding-bottom: 10px;
-    padding-right: 10px;
+    //padding-bottom: 10px;
+    //padding-right: 10px;
   }
 }
 
@@ -41,7 +110,7 @@
   background-color: var(--background-brand-teal-primary);
   color: var(--text-neutral-white-fixed);
 }
-
+*/
 .addValidationButton {
   font-size: 14px;
   background-color: var(--background-brand-purple-primary);
@@ -65,7 +134,6 @@
 
 .deleteConditionButton {
   @extend %delete-button;
-  margin: 0 10px;
 }
 
 .deleteValidationButton {

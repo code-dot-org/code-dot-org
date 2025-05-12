@@ -1,4 +1,5 @@
 import Typography from '@code-dot-org/component-library/typography';
+import classNames from 'classnames';
 import React from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
@@ -51,13 +52,6 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
   return (
     <div className={moduleStyles.validation}>
       <div className={moduleStyles.row}>
-        <Typography
-          semanticTag="h3"
-          visualAppearance="heading-xs"
-          className={moduleStyles.validationTitle}
-        >
-          {'Validation Set ' + (index + 1)}
-        </Typography>
         <button
           type="button"
           onClick={() => moveValidation(validation.key, 'up')}
@@ -87,89 +81,126 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
           <FontAwesome icon="trash" title={undefined} className="icon" />
         </button>
       </div>
-      <div className={moduleStyles.row}>
-        <label htmlFor="message" className={moduleStyles.label}>
-          Message:
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows={1}
-          className={moduleStyles.message}
-          value={validation.message}
-          onChange={e => {
-            validation.message = e.target.value;
-            onValidationChange(validation);
-          }}
-        />
-      </div>
-      <div className={moduleStyles.row}>
-        <label htmlFor="callout" className={moduleStyles.label}>
-          Callout (optional):
-        </label>
-        <input
-          type="text"
-          id="edit-validation-callout"
-          name="callout"
-          className={moduleStyles.callout}
-          value={validation.callout}
-          onChange={e => {
-            validation.callout = e.target.value;
-            onValidationChange(validation);
-          }}
-        />
-      </div>
-      <div className={moduleStyles.row}>
-        <label htmlFor="next" className={moduleStyles.label}>
-          Passes Level?
-        </label>
-        <input
-          type="checkbox"
-          id="next"
-          name="next"
-          checked={validation.next}
-          onChange={e => {
-            validation.next = e.target.checked;
-            onValidationChange(validation);
-          }}
-        />
-      </div>
-      <Typography
-        semanticTag="h4"
-        visualAppearance="body-two"
-        className={moduleStyles.validationTitle}
-      >
-        {'Conditions'}
-      </Typography>
-      {validation.conditions.map((condition, index) => {
-        return (
-          <>
-            <div className={moduleStyles.row} key={`${index}-condition`}>
-              <EditCondition
-                condition={condition}
-                conditionTypes={conditionTypes}
-                index={index}
-                onConditionChange={onConditionChange}
-                deleteCondition={deleteCondition}
-              />
-            </div>
-            <div className={moduleStyles.row} key={`${index}-description`}>
-              <ConditionDescription
-                condition={condition}
-                conditionTypes={conditionTypes}
-              />
-            </div>
-          </>
-        );
-      })}
-      <div className={moduleStyles.row}>
-        <button
-          type="button"
-          onClick={addCondition}
-          className={moduleStyles.addConditionButton}
+      <div className={moduleStyles.section}>
+        <div
+          className={classNames(moduleStyles.column, moduleStyles.columnFirst)}
         >
-          + Add New Condition
-        </button>
+          <Typography
+            semanticTag="h4"
+            visualAppearance="body-two"
+            className={moduleStyles.validationTitle}
+          >
+            {'When'}
+          </Typography>
+        </div>
+        <div className={moduleStyles.column}>
+          {validation.conditions.map((condition, index) => {
+            return (
+              <div className={moduleStyles.row} key={`${index}-condition`}>
+                <EditCondition
+                  condition={condition}
+                  conditionTypes={conditionTypes}
+                  index={index}
+                  onConditionChange={onConditionChange}
+                  deleteCondition={deleteCondition}
+                />
+                <div className={moduleStyles.row} key={`${index}-description`}>
+                  {/*<ConditionDescription
+                    condition={condition}
+                    conditionTypes={conditionTypes}
+                  />*/}
+                </div>
+                {index === validation.conditions.length - 1 && (
+                  <button
+                    type="button"
+                    onClick={addCondition}
+                    className={moduleStyles.addConditionButton}
+                  >
+                    Add
+                  </button>
+                )}
+              </div>
+            );
+          })}
+          {validation.conditions.length === 0 && (
+            <button
+              type="button"
+              onClick={addCondition}
+              className={moduleStyles.addConditionButton}
+            >
+              Add new condition
+            </button>
+          )}
+        </div>
+      </div>
+
+      <div className={moduleStyles.section}>
+        <div
+          className={classNames(moduleStyles.column, moduleStyles.columnFirst)}
+        >
+          <Typography
+            semanticTag="h4"
+            visualAppearance="body-two"
+            className={moduleStyles.validationTitle}
+          >
+            {'Then'}
+          </Typography>
+        </div>
+        <div className={moduleStyles.column}>
+          <div className={moduleStyles.row}>
+            <div className={moduleStyles.column}>
+              {/*}
+              <label htmlFor="message" className={moduleStyles.label}>
+                Message:
+              </label>
+              */}
+              <textarea
+                id="message"
+                name="message"
+                rows={3}
+                className={moduleStyles.message}
+                value={validation.message}
+                onChange={e => {
+                  validation.message = e.target.value;
+                  onValidationChange(validation);
+                }}
+              />
+            </div>
+            <div className={moduleStyles.column}>
+              <div className={moduleStyles.row}>
+                <label htmlFor="callout" className={moduleStyles.label}>
+                  Callout (optional):
+                </label>
+                <input
+                  type="text"
+                  id="edit-validation-callout"
+                  name="callout"
+                  className={moduleStyles.callout}
+                  value={validation.callout}
+                  onChange={e => {
+                    validation.callout = e.target.value;
+                    onValidationChange(validation);
+                  }}
+                />
+              </div>
+              <div className={moduleStyles.row}>
+                <label htmlFor="next" className={moduleStyles.label}>
+                  Passes Level?
+                </label>
+                <input
+                  type="checkbox"
+                  id="next"
+                  name="next"
+                  checked={validation.next}
+                  onChange={e => {
+                    validation.next = e.target.checked;
+                    onValidationChange(validation);
+                  }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
