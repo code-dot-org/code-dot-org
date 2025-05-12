@@ -1161,3 +1161,9 @@ Outputs:
     Description: Execution Role for GenAI Sagemaker Models
     Value: !GetAtt SagemakerModelExecutionRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-SagemakerExecutionRoleARN"}
+<% marketing_sites_environment_type_configuration.each do |environment_type, _| %>
+  MarketingSitesPermissionsBoundary<%=environment_type.capitalize%>:
+    Description: Permissions Boundary for any Role provisioned by marketing sites deployer.
+    Value: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
+    Export: {Name: !Sub "${AWS::StackName}-MarketingSitesPermissionsBoundary<%=environment_type.capitalize%>"}
+<% end %>
