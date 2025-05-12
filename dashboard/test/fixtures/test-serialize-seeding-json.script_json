@@ -1158,7 +1158,7 @@
       "evaluation_criteria": "Does the student's work on this level demonstrate the skill?",
       "concept": "Variables",
       "seeding_key": {
-        "skill.key": "test-serialize-seeding-json-skill-1"
+        "skill.key": "variables_name"
       }
     }
   ],
