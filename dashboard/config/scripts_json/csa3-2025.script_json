@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-21 23:55:23 UTC",
+    "serialized_at": "2025-05-10 01:54:21 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7361,6 +7361,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,

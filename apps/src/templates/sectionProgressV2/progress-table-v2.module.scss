@@ -1,3 +1,5 @@
+@use '@code-dot-org/component-library-styles/typography.module.scss' as
+  typography;
 @import 'color.scss';
 
 .progressV2Page {
@@ -167,11 +169,12 @@ $level-cell-width: 52;
     }
   }
 
-  .downloadCsv {
+  // CSV download button
+  .downloadCsvDropdown {
     display: flex;
     margin-inline-start: 5px;
-    height: 32px;
     width: 32px;
+    height: 32px;
   }
 }
 

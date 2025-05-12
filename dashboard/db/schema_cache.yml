@@ -6671,6 +6671,7 @@ columns:
     comment: 
   - *14
   - *15
+  - *23
   stages:
   - *5
   - *54
@@ -13514,7 +13515,20 @@ indexes:
     type: 
     using: :btree
     comment: 
-  skills: []
+  skills:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: skills
+    name: index_skills_on_key
+    unique: true
+    columns:
+    - key
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    comment: 
   stages:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: stages
@@ -14427,7 +14441,7 @@ indexes:
     type: :fulltext
     using: 
     comment: 
-version: 20250505164605
+version: 20250509130059
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
