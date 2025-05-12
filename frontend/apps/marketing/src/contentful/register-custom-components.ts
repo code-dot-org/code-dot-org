@@ -15,6 +15,9 @@ import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
 } from '@/components/carousels/actionBlockCarousel';
+import ImageCarousel, {
+  ImageCarouselContentfulComponentDefinition,
+} from '@/components/carousels/imageCarousel';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
@@ -134,6 +137,10 @@ defineComponents(
     {
       component: Image,
       definition: ImageContentfulComponentDefinition,
+    },
+    {
+      component: ImageCarousel,
+      definition: ImageCarouselContentfulComponentDefinition,
     },
     {
       component: LabSnapshot,

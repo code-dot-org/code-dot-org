@@ -6,6 +6,7 @@ import {Theme} from '@code-dot-org/component-library/common/contexts';
 import {externalLinkIconProps} from '@/components/common/constants';
 import Video from '@/components/video';
 import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 type HeroBannerProps = {
   /** HeroBanner content mode (theme) value */
@@ -22,8 +23,9 @@ type HeroBannerProps = {
   subHeading?: string;
   /** HeroBanner description */
   description?: string;
-  /** Section Image URL */
-  sectionImage?: string;
+  /** Section Images, Array of Experience entries.
+   * We always render the first image from the array */
+  sectionImages?: ExperienceAsset[];
   /** Section Video URL */
   sectionVideoTitle?: string;
   /** Section Video Youtube ID */
@@ -32,8 +34,9 @@ type HeroBannerProps = {
   sectionVideoFallback?: string;
   /** Whether to show the section video captions */
   sectionVideoShowCaption?: boolean;
-  /** Hero Banner Button Link Entry **/
-  buttonLink?: LinkEntry;
+  /** HeroBanner Button Links, Array of Link Entries.
+   *  We always render the first link from the array. **/
+  buttonLinks?: LinkEntry[];
   /** HeroBanner partner image URL */
   partnerLogo?: string;
   /** HeroBanner partner callout (title) */
@@ -59,18 +62,21 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
   description,
   announcementBannerText = '',
   announcementBannerLink,
-  sectionImage,
+  sectionImages,
   sectionVideoTitle,
   sectionVideoYouTubeId,
   sectionVideoFallback,
   sectionVideoShowCaption,
-  buttonLink,
+  buttonLinks,
   partnerLogo,
   partnerCallout,
   backgroundImage,
   removeBackground = false,
   className,
 }) => {
+  const firstSectionImage = sectionImages?.[0];
+  const firstButtonLink = buttonLinks?.[0];
+
   return (
     <DSCOHeroBanner
       data-theme={contentMode}
@@ -98,22 +104,32 @@ const HeroBanner: React.FunctionComponent<HeroBannerProps> = ({
             }
           : undefined
       }
-      imageProps={sectionImage ? {src: sectionImage} : undefined}
-      buttonProps={
-        buttonLink
+      imageProps={
+        firstSectionImage?.fields?.file?.url
           ? {
-              text: buttonLink.fields.label,
-              href: buttonLink.fields.primaryTarget,
-              ariaLabel: buttonLink.fields.ariaLabel,
-              iconRight: buttonLink.fields.isThisAnExternalLink
+              src: firstSectionImage.fields.file.url,
+              altText: firstSectionImage.fields.description || '',
+            }
+          : undefined
+      }
+      buttonProps={
+        firstButtonLink
+          ? {
+              text: firstButtonLink.fields.label,
+              href: firstButtonLink.fields.primaryTarget,
+              ariaLabel: firstButtonLink.fields.ariaLabel,
+              iconRight: firstButtonLink.fields.isThisAnExternalLink
                 ? externalLinkIconProps
                 : undefined,
             }
           : undefined
       }
       partner={
-        partnerLogo && partnerCallout
-          ? {title: partnerCallout, logo: {src: partnerLogo}}
+        partnerLogo
+          ? {
+              title: partnerCallout || 'In partnership with:',
+              logo: {src: partnerLogo},
+            }
           : undefined
       }
       backgroundImageUrl={backgroundImage}

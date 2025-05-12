@@ -29,7 +29,6 @@ import {
   Errors,
   FieldConfig,
   Facilitator,
-  RegionalPartner,
   SessionErrors,
   SessionFormState,
   Workshop,
@@ -53,6 +52,7 @@ export const VALIDATION_ERROR =
 
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,
+  regionalPartnerData,
 }) => {
   const navigate = useNavigate();
   const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -62,10 +62,6 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
 
   const {data: workshop} = useFetch<Workshop>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
-  );
-
-  const {data: regionalPartnerData} = useFetch<RegionalPartner[]>(
-    '/api/v1/regional_partners'
   );
 
   const {data: facilitatorData} = useFetch<Facilitator[]>(
@@ -89,7 +85,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     organizerId: null,
     prereq: '',
     hasPrereq: false,
-    regionalPartnerId: null,
+    regionalPartnerId:
+      regionalPartnerData?.length === 1 ? regionalPartnerData[0].id : null,
     registrationLink: '',
     subject: '',
     suppressEmail: false,
@@ -286,7 +283,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         facilitators={workshopFormState.facilitators}
         regionalPartnerId={workshopFormState.regionalPartnerId}
         errors={workshopErrors}
-        regionalPartnerData={regionalPartnerData}
+        regionalPartnerData={regionalPartnerData ?? []}
         facilitatorData={facilitatorData}
         dispatchWorkshop={dispatchWorkshop}
         config={workshopConfig}

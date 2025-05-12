@@ -7,7 +7,7 @@
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Scenario C\r\n\r\nThe librarian is planning themed displays for different reading interests.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n* Use the library books dataset linked below.\r\n* Complete the flowchart and Madlib template in your Processing Library Data activity guide.",
+    "long_instructions": "## Scenario C\r\n\r\nThe librarian is planning themed displays for different reading interests.\r\n\r\n---\r\n\r\n### Do This:\r\n\r\n* Use the library books dataset linked below.\r\n* Work with the data to help achieve the goal.\r\n* Complete template in your Processing Library Data activity guide.",
     "link_title": "Library Books Dataset",
     "url": "https://docs.google.com/spreadsheets/d/1PTUtOodDTW-5tsD2-rGgKBvY0OWvq9SwBxyJoTjbrhU/edit?usp=sharing",
     "display_name": "Scenario C",
@@ -15,6 +15,6 @@
     "thumbnail_url": "https://images.code.org/2aa25f3b4abc94ae2882effb4d67ba03-Pasted Graphic 50.png",
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-03-22T01:24:23.179+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson8-level1c-2024\\\"\"],\"cloned_from\":\"computer-systems-lesson8-level1c-2024\"},{\"changed_at\":\"2025-04-25 17:11:38 +0000\",\"changed\":[\"url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-22T01:24:23.179+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson8-level1c-2024\\\"\"],\"cloned_from\":\"computer-systems-lesson8-level1c-2024\"},{\"changed_at\":\"2025-04-25 17:11:38 +0000\",\"changed\":[\"url\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 17:53:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
 </ExternalLink>
