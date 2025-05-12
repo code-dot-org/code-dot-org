@@ -85,10 +85,10 @@ button.button-kebab {
   }
 }
 
-div.row:hover .button-kebab,
-div.notDraggable:focus-within .button-kebab,
-div.draggable:hover .button-kebab,
-div.draggable:focus-within .button-kebab {
+.row:hover > .button-kebab,
+.notDraggable:focus-within > .row > .button-kebab,
+.draggable:hover > .button-kebab,
+.draggable:focus-within > .row > .button-kebab {
   display: inherit;
   height: 20px;
   width: 20px;
