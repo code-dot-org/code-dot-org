@@ -243,6 +243,22 @@ class Documents < Sinatra::Base
     if @header['content-type']
       response.headers['Content-Type'] = @header['content-type']
     end
+
+    if CDO.pegasus_content_enabled
+      layout = @header['layout'] || 'default'
+      unless ['', 'none'].include?(layout)
+        template = resolve_template('layouts', settings.template_extnames, layout)
+        raise Exception, "'#{layout}' layout not found." unless template
+        body render_template(template, {body: body.join.html_safe})
+      end
+
+      theme = @header['theme'] || 'default'
+      unless ['', 'none'].include?(theme)
+        template = resolve_template('themes', settings.template_extnames, theme)
+        raise Exception, "'#{theme}' theme not found." unless template
+        body render_template(template, {body: body.join.html_safe})
+      end
+    end
   end
 
   not_found do
