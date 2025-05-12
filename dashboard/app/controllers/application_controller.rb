@@ -28,8 +28,7 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
-  helper_method :statsig_stable_id
-  before_action :statsig_stable_id
+  before_action :initialize_statsig_stable_id
 
   around_action :with_global_current_user
 
@@ -406,8 +405,9 @@ class ApplicationController < ActionController::Base
   end
 
   # Creates a statsig stable id for use of signed-out user tracking.
-  protected def statsig_stable_id
-    session[:statsig_stable_id] ||= SecureRandom.uuid
+  # This cookie is used by the Statsig SDK for both JS and Ruby.
+  protected def initialize_statsig_stable_id
+    cookies[:statsig_stable_id] ||= {value: SecureRandom.uuid, domain: :all, path: '/'}
   end
 
   private def pairing_still_enabled
