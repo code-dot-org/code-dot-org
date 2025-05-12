@@ -63,11 +63,10 @@ module AichatOpenaiHelper
   end
 
   def self.request_chat_completion(messages, temperature)
-    # raise OpenaiUserInputResponseTimeout.new("OpenAI request timed out.")
     begin
       http_response = client.request_chat_completion(messages, temperature)
     rescue Net::ReadTimeout
-      throw OpenaiUserInputResponseTimeout.new("OpenAI request timed out.")
+      raise OpenaiUserInputResponseTimeout.new("Timeout waiting for OpenAI to provide response to user input.")
     end
 
     body = JSON.parse(http_response.body)

@@ -318,7 +318,6 @@ function getUpdatedMessages(
           status: AiInteractionStatus.USER_INPUT_TOO_LARGE,
         },
       ];
-    // make sure these messages are being filtered when sent back to the model
     case AiRequestExecutionStatus.MODEL_TIMEOUT:
       return [
         {
@@ -326,7 +325,7 @@ function getUpdatedMessages(
           status: AiInteractionStatus.MODEL_TIMEOUT,
         },
         {
-          chatMessageText: modelResponse, // update
+          chatMessageText: modelResponse, // Note that this message (and the ones above) are overwritten in the ChatMessageView component.
           role: Role.ASSISTANT,
           timestamp: Date.now(),
           status: AiInteractionStatus.MODEL_TIMEOUT,
