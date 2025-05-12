@@ -121,24 +121,6 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
     [clearAlert, levelName, removeAsset, updateAlert]
   );
 
-  const ModalBody = () => {
-    return (
-      <>
-        <FileInput />
-        <div className={styles.modalBody} id="dsco-dialog-description">
-          {assets.map(asset => (
-            <FileIcon
-              {...asset}
-              key={asset.filename}
-              levelName={levelName}
-              onDelete={onDelete}
-            />
-          ))}
-        </div>
-      </>
-    );
-  };
-
   const buttonText =
     requestInProgress === 'upload'
       ? 'Uploading...'
@@ -164,7 +146,25 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
         disabled: loading || !!requestInProgress,
       }}
       secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
-      customContent={loading ? <Loading /> : <ModalBody />}
+      customContent={
+        loading ? (
+          <Loading />
+        ) : (
+          <>
+            <FileInput />
+            <div className={styles.modalBody} id="dsco-dialog-description">
+              {assets.map(asset => (
+                <FileIcon
+                  {...asset}
+                  key={asset.filename}
+                  levelName={levelName}
+                  onDelete={onDelete}
+                />
+              ))}
+            </div>
+          </>
+        )
+      }
       customBottomContent={alert && <DialogAlert {...alert} />}
     />
   );

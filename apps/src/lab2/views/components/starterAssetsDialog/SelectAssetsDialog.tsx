@@ -32,21 +32,6 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
     }
   };
 
-  const ModalBody = () => (
-    <div className={styles.modalBody} id="dsco-dialog-description">
-      {assets.map(asset => (
-        <FileIcon
-          {...asset}
-          key={asset.filename}
-          levelName={levelName}
-          selected={selectedFiles.includes(asset)}
-          onSelect={selected => onSelectAsset(selected, asset)}
-          canSelect={!limit || selectedFiles.length < limit}
-        />
-      ))}
-    </div>
-  );
-
   const primaryOnClick = () => {
     onSelect(selectedFiles);
     onClose();
@@ -63,7 +48,24 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
         disabled: selectedFiles.length === 0,
       }}
       secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
-      customContent={loading ? <Loading /> : <ModalBody />}
+      customContent={
+        loading ? (
+          <Loading />
+        ) : (
+          <div className={styles.modalBody} id="dsco-dialog-description">
+            {assets.map(asset => (
+              <FileIcon
+                {...asset}
+                key={asset.filename}
+                levelName={levelName}
+                selected={selectedFiles.includes(asset)}
+                onSelect={selected => onSelectAsset(selected, asset)}
+                canSelect={!limit || selectedFiles.length < limit}
+              />
+            ))}
+          </div>
+        )
+      }
       customBottomContent={alert && <DialogAlert {...alert} />}
     />
   );
