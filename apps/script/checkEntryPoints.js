@@ -94,7 +94,9 @@ const SILENCED = [
   'googleblockly',
   'brambleHost',
   'levelbuilder',
-].concat(Object.keys(PEGASUS_ENTRIES));
+].concat(
+  process.env.DISABLE_PEGASUS_CONTENT ? Object.keys(PEGASUS_ENTRIES) : []
+);
 const SITES_CONFIG = {
   studio: {
     entryPrefix: '',

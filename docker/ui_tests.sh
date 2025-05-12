@@ -18,6 +18,9 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
+# TODO: Remove this line before merging
+export DISABLE_PEGASUS_CONTENT=1
+
 # set up locals.yml
 echo "
 animations_s3_directory: animations_circle/$CI_BUILD_NUMBER
