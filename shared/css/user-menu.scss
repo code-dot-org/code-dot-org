@@ -35,19 +35,22 @@
   }
 
   .user_options, .create_options, .help_contents {
+    z-index: 100001;
     position: absolute;
-    inset-inline-start: 0px;
+    inset-inline-end: 0px;
     background-color: $white;
-    border: 1px solid $charcoal;
+    border: 1px solid $light_gray_200;
+    border-radius: 0.25rem;
+    text-align: initial;
+    padding: 0;
+    min-width: 228px;
+    max-width: 300px;
+    padding: 0.375rem;
+    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 
     a {
       color: $light_black !important;
-
-      $transition: background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out;
-      transition: $transition;
-      -moz-transition: $transition;
-      -webkit-transition: $transition;
-      -o-transition: $transition;
+      transition: background-color 0.2s ease-in-out;
     }
 
     a:hover {
@@ -62,10 +65,7 @@
   padding: 7px 14px;
 
   .user_options {
-    z-index: 100001;
-    text-align: left;
-    white-space: nowrap;
-    padding: 0;
+
     &[dir = 'rtl']  a {
       text-align: right;
     }
@@ -82,10 +82,7 @@
       display: block;
       padding: 10px;
       @include main-font-semi-bold;
-    }
-
-    a + a {
-      border-top: 1px solid $charcoal;
+      font-weight: 500;
     }
 
     &.hide-responsive-menu {
@@ -128,17 +125,6 @@
   }
 
   .help_contents {
-    z-index: 100001;
-    text-align: initial;
-    padding: 0;
-    inset-inline-start: unset;
-    inset-inline-end: 0;
-    min-width: 228px;
-    max-width: 300px;
-    border: 1px solid $light_gray_200;
-    border-radius: 0.25rem;
-    padding: 0.375rem;
-    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 
     &[dir = 'rtl']  a {
       text-align: right;
@@ -170,16 +156,6 @@
 
 .create_menu {
   .create_options {
-    min-width: 228px;
-    max-width: 300px;
-    z-index: 10000;
-    border: 1px solid $light_gray_200;
-    border-radius: 0.25rem;
-    padding: 0.375rem;
-    box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
-    display: flex;
-    flex-direction: column;
-    text-align: initial;
     a {
       @include main-font-semi-bold;
       font-size: 14px;

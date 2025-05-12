@@ -1,7 +1,7 @@
 @import 'color.scss';
 @import 'font';
 
-$arrow-size: 1.5rem;
+$arrow-size: 0.875rem;
 
 #pageheader-wrapper {
   z-index: 99;
@@ -74,13 +74,15 @@ $arrow-size: 1.5rem;
     z-index: 1022;
 
     .item {
-
+      box-sizing: border-box;
+      width: 100%;
       line-height: 1.5;
       text-indent: 0;
       list-style-type: none;
       padding: 0.5rem;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       overflow: hidden;
       transition: background 0.2s ease-in-out;
 
@@ -122,6 +124,7 @@ $arrow-size: 1.5rem;
       cursor: pointer;
       .text {
         font-size: 0.875rem;
+        font-weight: 500;
         float: left;
         max-width: 210px;
         text-overflow: ellipsis;
@@ -136,8 +139,6 @@ $arrow-size: 1.5rem;
       .arrow-down,
       .arrow-up {
         font-size: $arrow-size;
-        float: right;
-        margin-block-start: -4px;
         color: $light_black;
 
         html[dir=rtl], .rtl & {
