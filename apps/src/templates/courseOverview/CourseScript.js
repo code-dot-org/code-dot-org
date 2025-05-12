@@ -119,7 +119,7 @@ class CourseScript extends Component {
 
     let unitPath = location.pathname.includes('/teacher_dashboard')
       ? `/teacher_dashboard/sections/${selectedSectionId}${path}`
-      : path;
+      : `${path}${location.search}`;
     return (
       <div
         style={{
