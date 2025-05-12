@@ -302,7 +302,9 @@ Resources:
             Principal:
               Service: ecs-tasks.amazonaws.com
         Version: "2012-10-17"
-
+      PermissionsBoundary:
+        !ImportValue
+          !Sub "IAM-MarketingSitesPermissionsBoundary${EnvironmentType}"
   FargateServiceTaskDef:
     Type: AWS::ECS::TaskDefinition
     Properties:
@@ -392,7 +394,6 @@ Resources:
               AccessPointId: !Ref CacheAccessPoint
               IAM: ENABLED
             TransitEncryption: ENABLED
-
   FargateServiceTaskDefExecutionRole:
     Type: AWS::IAM::Role
     Properties:
@@ -403,6 +404,7 @@ Resources:
             Principal:
               Service: ecs-tasks.amazonaws.com
         Version: "2012-10-17"
+<<<<<<< HEAD
       Policies:
       - PolicyName: Logging
         PolicyDocument:
@@ -421,6 +423,11 @@ Resources:
               - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/${AWS::StackName}-FargateServiceTaskDef"
               - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/${AWS::StackName}-FargateServiceTaskDef:log-stream:*"
 
+=======
+      PermissionsBoundary:
+        !ImportValue
+          !Sub "IAM-MarketingSitesPermissionsBoundary${EnvironmentType}"
+>>>>>>> df01085a129 (Apply Permissions Boundary (imported from IAM Stack) to Roles created by marketing sites deployer.)
   FargateServiceTaskDefExecutionRoleDefaultPolicy:
     Type: AWS::IAM::Policy
     Properties:
@@ -539,6 +546,9 @@ Resources:
       Path: /
       ManagedPolicyArns:
         - arn:aws:iam::aws:policy/service-role/AmazonEC2ContainerServiceAutoscaleRole
+      PermissionsBoundary:
+        !ImportValue
+          !Sub "IAM-MarketingSitesPermissionsBoundary${EnvironmentType}"
 
   StaticAssetsBucket:
     Type: AWS::S3::Bucket
