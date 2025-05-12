@@ -52,16 +52,27 @@ class OpenaiEvaluateController < ApplicationController
     elsif ProfanityFilter.find_potential_profanity(student_work, "en", {})
       json_response = {"content" => profanity_detected_response.to_json}
       return render(status: :ok, json: json_response)
-    else
-      system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(level, unit, evaluation_type)
-      student_work_message = [{role: "user", content: student_work}]
-      messages = prepend_system_prompt(system_prompt, student_work_message)
-      response = client.request_evaluation(messages)
-      response_body = JSON.parse(response.body)
-      response_body = response_body['choices'][0]['message'] if response.code == 200
-      evaluation =  {status: response.code, json: response_body}
-      return render(status: evaluation[:status], json: evaluation[:json])
     end
+
+    if Rails.env.test?
+      # Return dummy data in the test environment
+      dummy_response = {
+        aiEvaluation: "Ok",
+        evaluationCriteria: "This is a test environment, so no real AI call was made.",
+        aiReasoning: "Dummy data returned for testing purposes."
+      }
+      json_response = {"content" => dummy_response.to_json}
+      return render(status: :ok, json: json_response)
+    end
+
+    system_prompt = AiSystemPrompts::EvaluateSystemPromptHelper.get_system_prompt(level, unit, evaluation_type)
+    student_work_message = [{role: "user", content: student_work}]
+    messages = prepend_system_prompt(system_prompt, student_work_message)
+    response = client.request_evaluation(messages)
+    response_body = JSON.parse(response.body)
+    response_body = response_body['choices'][0]['message'] if response.code == 200
+    evaluation =  {status: response.code, json: response_body}
+    return render(status: evaluation[:status], json: evaluation[:json])
   end
 
   private def evaluate_params

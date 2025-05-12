@@ -113,17 +113,19 @@ Scenario: Check free response AI
   And I press ".submitButton" using jQuery to load a new page
 
   When I sign in as "Teacher_Sally" and go home
-  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary?enableExperiments=free_response_ai_analysis"
+  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary"
 
   And I wait until element "#summary-container" is visible
   And I dismiss the teacher panel
 
   And I click selector "label:contains('Show AI Insights')" once I see it
   And I click selector "button:contains('Evaluate student responses')" once I see it
+  And I wait until element "p:contains('Proficient: 1')" is visible
 
   And I click selector "a:contains('View detailed analysis')" once I see it
 
-  And I wait until element "p:contains('Sally')" is visible
+  And I wait until element "p:contains('Ok. Dummy data returned for testing purposes.')" is visible
+  
 
 @eyes
 Scenario: Check for Understanding summaries eyes
