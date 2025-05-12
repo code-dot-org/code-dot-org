@@ -248,7 +248,7 @@ export const ImperativeHideTooltip: StoryFn = () => {
     >
       <WithTooltip tooltipProps={tooltipProps} ref={tooltipRef}>
         <Button
-          text="Hover or focus me"
+          text="Hover then click me"
           onClick={() => {
             tooltipRef.current?.hideTooltip();
           }}
