@@ -35,7 +35,7 @@ module User::PasswordValidations
   end
 
   def password_min_length
-    @password_min_length ||= self.class.password_min_length(user_type, country_code)
+    self.class.password_min_length(user_type, country_code)
   end
 
   def password_max_length
