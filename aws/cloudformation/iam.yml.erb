@@ -906,15 +906,16 @@ roles.each do |name, config| %>
                 Action:
                   - iam:PassRole
                 Resource: !GetAtt CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role.Arn
-            # GitHub Actions needs to flush the content distribution network cache after invoking a successful Stack update.
-            - Sid: AllowCloudfrontInvalidation
-              Effect: Allow
-              Action:
-                - cloudfront:CreateInvalidation
-              Resource: '*'
-              Condition:
-                StringEquals:
-                  aws:ResourceTag/environment-type: <%=environment_type%>
+              # GitHub Actions needs to flush the content distribution network cache after invoking a successful Stack update.
+              - Sid: AllowCloudfrontInvalidation
+                Effect: Allow
+                Action:
+                  - cloudfront:CreateInvalidation
+                Resource: '*'
+                Condition:
+                  StringEquals:
+                    'aws:ResourceTag/environment-type': <%=environment_type%>
+
 
   # Enforce least privilege on Roles created/passed/attached by the Role that provisions marketing site Stacks.
   MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy:
@@ -1114,11 +1115,13 @@ roles.each do |name, config| %>
                   - s3:ListBucket
                   - s3:PutBucketTagging
                 Resource:
-                  # For the marketing site `my-feature-branch-code.marketing-sites.dev-code.org` the NextJS assets Bucket
-                  # will be named `org.dev-code.marketing-sites.my-feature-branch.static-assets` so the `development`
-                  # Deployer should have permission to all Buckets with the naming pattern `org.dev-code*static-assets`
-                  - "<%=configuration[:base_domain_name].split('.').tap(&:reverse!).join('.')%>*static-assets"
-                  - "<%=configuration[:base_domain_name].split('.').tap(&:reverse!).join('.')%>*static-assets/*"
+                  # The Next.js S3 bucket For the marketing site `my-feature-branch-code.marketing-sites.dev-code.org` is
+                  # named `my-feature-branch-code.marketing-sites.dev-code.org-static-assets` so grant the deployer
+                  # permission to provision any marketing sites S3 bucket for the same environment type (`*[base domain name]*static-assets`):
+                  # development deployer --> `*dev-code.org*static-assets`
+                  # test deployer --> `*test-code.org*static-assets`
+                  - "*<%=configuration[:base_domain_name]%>*static-assets"
+                  - "*<%=configuration[:base_domain_name]%>*static-assets/*"
               # Secrets Manager for ECS environment variables
               - Effect: Allow
                 Action:
