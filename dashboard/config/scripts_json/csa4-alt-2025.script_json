@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-09 06:39:53 UTC",
+    "serialized_at": "2025-05-11 07:10:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,9 +65,21 @@
       }
     },
     {
-      "key": "lessonGroup-5",
+      "key": "lessonGroup-7",
       "user_facing": true,
       "position": 4,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 5,
       "properties": {
         "display_name": "Alternate Lessons"
       },
@@ -79,7 +91,7 @@
     {
       "key": "lessonGroup-6",
       "user_facing": true,
-      "position": 5,
+      "position": 6,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -842,12 +854,27 @@
       }
     },
     {
-      "key": "Data for Social Good Project [1-Day Version]",
-      "name": "Data for Social Good Project [1-Day Version]",
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 41,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 41,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "Data for Social Good Project [1-Day Version]",
+      "name": "Data for Social Good Project [1-Day Version]",
+      "absolute_position": 42,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 42,
       "properties": {
         "assessment": true,
         "overview": "**What questions do I want to answer using data?**\n\nFor this project, students use the skills they have developed throughout this unit to store and analyze data from text file for a topic that they are interested in or that is meaningful to them. Students choose a user scenario and data they want to analyze to identify a solution to address a user's needs. After brainstorming and planning, students develop their programs.",
@@ -863,10 +890,10 @@
     {
       "key": "Abstract Data Art Project [1-Day Version]",
       "name": "Abstract Data Art Project [1-Day Version]",
-      "absolute_position": 42,
+      "absolute_position": 43,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 42,
+      "relative_position": 43,
       "properties": {
         "assessment": true,
         "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file and create a visual representation for a topic they are interested in or meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
@@ -882,10 +909,10 @@
     {
       "key": "Personal Narrative Project [1-Day Version]",
       "name": "Personal Narrative Project [1-Day Version]",
-      "absolute_position": 43,
+      "absolute_position": 44,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 43,
+      "relative_position": 44,
       "properties": {
         "assessment": true,
         "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
@@ -901,10 +928,10 @@
     {
       "key": "Natural Language Processing Project [1-Day Version]",
       "name": "Natural Language Processing Project [1-Day Version]",
-      "absolute_position": 44,
+      "absolute_position": 45,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 44,
+      "relative_position": 45,
       "properties": {
         "assessment": true,
         "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. Students choose how they will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, students develop their programs.",
@@ -920,10 +947,10 @@
     {
       "key": "lesson-1",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 45,
+      "absolute_position": 46,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 45,
+      "relative_position": 46,
       "properties": {
       },
       "seeding_key": {
@@ -935,10 +962,10 @@
     {
       "key": "lesson-2",
       "name": "Sandbox: Console",
-      "absolute_position": 46,
+      "absolute_position": 47,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 46,
+      "relative_position": 47,
       "properties": {
       },
       "seeding_key": {
@@ -950,10 +977,10 @@
     {
       "key": "lesson-3",
       "name": "Sandbox: The Theater",
-      "absolute_position": 47,
+      "absolute_position": 48,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 47,
+      "relative_position": 48,
       "properties": {
       },
       "seeding_key": {
@@ -2693,6 +2720,18 @@
         "lesson_activity.key": "15d9df20-7669-4f18-a31c-804d9646a2a8",
         "lesson.key": "SeatingChart FRQ",
         "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "5bdfef75-6ba5-49d5-bf04-61ece605492a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5bdfef75-6ba5-49d5-bf04-61ece605492a",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "csa4-alt-2025"
       }
     },
@@ -13590,6 +13629,28 @@
       }
     },
     {
+      "key": "785c0f4b-4746-4c06-b192-7e84e5a2220d",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "785c0f4b-4746-4c06-b192-7e84e5a2220d",
+        "lesson_activity.key": "5bdfef75-6ba5-49d5-bf04-61ece605492a"
+      }
+    },
+    {
+      "key": "44646e19-a437-4a1d-bd32-0be59641f465",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "44646e19-a437-4a1d-bd32-0be59641f465",
+        "lesson_activity.key": "5bdfef75-6ba5-49d5-bf04-61ece605492a"
+      }
+    },
+    {
       "key": "32089f03-2987-43db-ac84-e6ef62c5ca9b",
       "position": 1,
       "properties": {
@@ -18831,15 +18892,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa3_pilot_oo2025_2025-cb-alt"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa3_pilot_oo2025_2025-cb-alt"
+          "student-eou-survey_linked_page_csa4-project1-2025"
         ],
         "lesson.key": "Data for Social Good Project",
         "lesson_group.key": "lessonGroup-2",
@@ -18847,7 +18905,7 @@
         "activity_section.key": "c4a02f33-dbfa-477d-bdc0-a710d8e016d8"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa3_pilot_oo2025_2025-cb-alt"
+        "student-eou-survey_linked_page_csa4-project1-2025"
       ]
     },
     {
@@ -18881,15 +18939,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa4_2025-cb-alt"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa4_2025-cb-alt"
+          "student-eou-survey_linked_page_csa4-project2-2025"
         ],
         "lesson.key": "Abstract Data Art Project",
         "lesson_group.key": "lessonGroup-2",
@@ -18897,7 +18952,7 @@
         "activity_section.key": "2305a5af-4598-4ef4-8108-dc35ddec1f62"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa4_2025-cb-alt"
+        "student-eou-survey_linked_page_csa4-project2-2025"
       ]
     },
     {
@@ -18931,15 +18986,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa5_2025-cb-alt"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa5_2025-cb-alt"
+          "student-eou-survey_linked_page_csa4-project3-2025"
         ],
         "lesson.key": "Personal Narrative Project",
         "lesson_group.key": "lessonGroup-2",
@@ -18947,7 +18999,7 @@
         "activity_section.key": "e16eed3a-1a01-4bbb-a57f-83e130f2d929"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa5_2025-cb-alt"
+        "student-eou-survey_linked_page_csa4-project3-2025"
       ]
     },
     {
@@ -18981,15 +19033,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa6_2025-cb-alt"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa6_2025-cb-alt"
+          "student-eou-survey_linked_page_csa4-project4-2025"
         ],
         "lesson.key": "Natural Language Processing Project",
         "lesson_group.key": "lessonGroup-2",
@@ -18997,11 +19046,33 @@
         "activity_section.key": "9ec1a468-043e-405d-a557-0a947d0125d3"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa6_2025-cb-alt"
+        "student-eou-survey_linked_page_csa4-project4-2025"
       ]
     },
     {
       "chapter": 194,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csa4-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "785c0f4b-4746-4c06-b192-7e84e5a2220d"
+      },
+      "level_keys": [
+        "student-eou-survey_csa4-alt-survey-2025"
+      ]
+    },
+    {
+      "chapter": 195,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -19026,7 +19097,7 @@
       ]
     },
     {
-      "chapter": 195,
+      "chapter": 196,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -19051,7 +19122,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 197,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -19076,7 +19147,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 198,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -19101,7 +19172,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 199,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -19126,7 +19197,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 200,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -19151,7 +19222,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 201,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -19175,7 +19246,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 202,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -21434,9 +21505,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa3_pilot_oo2025_2025-cb-alt",
+        "level.key": "student-eou-survey_linked_page_csa4-project1-2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa3_pilot_oo2025_2025-cb-alt"
+          "student-eou-survey_linked_page_csa4-project1-2025"
         ],
         "lesson.key": "Data for Social Good Project",
         "lesson_group.key": "lessonGroup-2",
@@ -21458,9 +21529,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa4_2025-cb-alt",
+        "level.key": "student-eou-survey_linked_page_csa4-project2-2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa4_2025-cb-alt"
+          "student-eou-survey_linked_page_csa4-project2-2025"
         ],
         "lesson.key": "Abstract Data Art Project",
         "lesson_group.key": "lessonGroup-2",
@@ -21482,9 +21553,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa5_2025-cb-alt",
+        "level.key": "student-eou-survey_linked_page_csa4-project3-2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa5_2025-cb-alt"
+          "student-eou-survey_linked_page_csa4-project3-2025"
         ],
         "lesson.key": "Personal Narrative Project",
         "lesson_group.key": "lessonGroup-2",
@@ -21506,14 +21577,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa6_2025-cb-alt",
+        "level.key": "student-eou-survey_linked_page_csa4-project4-2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa6_2025-cb-alt"
+          "student-eou-survey_linked_page_csa4-project4-2025"
         ],
         "lesson.key": "Natural Language Processing Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-alt-2025",
         "activity_section.key": "9ec1a468-043e-405d-a557-0a947d0125d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csa4-alt-survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csa4-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "785c0f4b-4746-4c06-b192-7e84e5a2220d"
       }
     },
     {
@@ -21736,7 +21819,7 @@
     },
     {
       "name": "[EXEMPLAR] Natural Language Processing Project Planning Guide",
-      "url": "https://docs.google.com/document/d/1CcujljxlnBSwryQIENx5p5LNQzxvk4_5I6rAutUWcXY/edit?usp=share_link",
+      "url": "https://docs.google.com/document/d/1206ZjvMZkvz236jV3lGaZhoby-CXmBY2XdKb4F272vQ/edit?usp=sharing",
       "key": "_exemplar_natural_language_processing_project_planning_guide",
       "properties": {
         "audience": "Verified Teacher",

@@ -5455,11 +5455,11 @@ en:
           description_teacher: ''
           version_title: '2025'
         express-2025:
-          title: express-2025
+          title: Express
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2025'
         pre-express-2025:
           title: pre-express-2025
           description_short: ''
@@ -5580,3 +5580,114 @@ en:
 
             * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: ''
+        teaching-csd-unit1-2025:
+          title: Teaching Problem Solving and Computing
+          description_short: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 1 - Problem Solving and Computing** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and CSD Unit 1 - Problem Solving and Computing. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
+          version_title: 25-26
+        tess-testing-coding-with-music-2025:
+          title: tess-testing-coding-with-music-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        computing-foundations-for-a-digital-age-2025:
+          title: 'Computing Foundations for a Digital Age: Indiana (AI Foundations)'
+          description_short: Learn how to code, think critically about AI, and use technology to solve real-world problems.
+          description_student: 'In Computing Foundations for a Digital Age: Indiana (AI Foundations), you explore how computers and artificial intelligence help people solve problems, make decisions, and create new things. You write your own programs in Python, figure out how devices and the Internet actually work, and dive into data to find patterns and tell stories. Along the way, you use AI tools, think through tough questions about privacy and fairness, and build the skills you need to create technology—not just use it.'
+          description_teacher: |-
+            Computing Foundations for a Digital Age: Indiana (AI Foundations) introduces students to the core principles of computer science and the growing role of artificial intelligence in everyday life. Through hands-on programming, visual problem solving, and critical analysis, students explore how computing systems work, how data powers AI, and how intelligent tools make decisions. They learn to write Python programs, analyze the structure of the Internet, investigate cybersecurity risks, and interpret data through visualizations and models. Throughout the course, students examine how AI systems impact individuals and communities, and build the skills to use computing and AI to solve meaningful problems in their world.
+
+            ## Prerequisites
+
+            Computing Foundations for a Digital Age: Indiana (AI Foundations) is designed for high school students at any level of computer science experience. It is accessible to beginners with no prior programming knowledge, and it also provides opportunities for students with some background in computing to deepen their understanding of key topics.
+
+            This curriculum can serve as an introductory course or as a bridge to more advanced studies, such as AP Computer Science A (CSA).
+
+            No specific prior coursework is required, and all necessary concepts are introduced and reinforced through guided activities, collaborative learning, and hands-on projects.
+
+            ## Did you know?
+
+            * Professional development is available to help you get started teaching Computing Foundations for a Digital Age: Indiana (AI Foundations). [**Click here**](https://code.org/educate/professional-learning/middle-high) to learn more about professional learning opportunities in your region or [**click here**](http://studio.code.org/courses/self-paced-pl-ai-foundations-2025) for our self-paced online option.
+
+            * This curriculum has a flexible implementation and can be taught in different configurations based on the needs of each classroom. Check out the [**Implementation Guide**](https://docs.google.com/document/d/10OHyNUPyT2HBINQpqJEKagimXXQDMdA9K0m44A3vOU4/edit?usp=sharing) for more information.
+
+            * You can find the *Syllabus* and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'25-'26"
+        teaching-csd-unit2-2025:
+          title: Teaching Web Development
+          description_short: ''
+          description_student: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 2- Teaching Web Development** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content is organized in to introduce all teachers CSD Unit 2 - Teaching Web Development. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.**
+          description_teacher: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 2 - Teaching Web Development** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content is organized in to introduce all teachers CSD Unit 2 - Teaching Web Development. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.**
+          version_title: ''
+        teaching-csd-unit3-2025:
+          title: Preparing to teach Interactive Animations and Games
+          description_short: ''
+          description_student: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          description_teacher: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+          version_title: 25-26
+        teaching-csd-unit4-2025:
+          title: Teaching the Design Process
+          description_short: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 4 - Teaching the Design Process** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 4 - Teaching the Design Process. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 4 - Teaching the Design Process** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 4 - Teaching the Design Process. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
+          version_title: 25-26
+        teaching-csd-unit5-2025:
+          title: Teaching Data and Society
+          description_short: ''
+          description_student: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 5 - Teaching Data and Society** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content is organized in to introduce all teachers CSD Unit 5 - Teaching Data and Society. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.**
+          description_teacher: |-
+            ## Welcome
+            Welcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 5 - Teaching Data and Society** with your students.
+
+            ### Find the learning that works for you
+            * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
+
+            * **Pick your content:** The content is organized in to introduce all teachers CSD Unit 5 - Teaching Data and Society. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.**
+          version_title: 25-26
+        teaching-csd-physical-computing-2025:
+          title: Teaching Creating Apps with Devices (Circuit Playground)
+          description_short: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Creating Apps with Devices (Circuit Playground)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Unit 6 - Creating Apps with Devices (Circuit Playground). However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Creating Apps with Devices (Circuit Playground)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Unit 6 - Creating Apps with Devices (Circuit Playground). However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Problem Solving and Computing. "
+          version_title: ''
+        sandbox-java-pl:
+          title: sandbox-java-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        teaching-csd-microbit-2025:
+          title: Preparing to Teach Creating Apps for Devices (micro:bit)
+          description_short: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 6 - Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 6 - Teaching Creating Apps with Devices (micro:bit)** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 6 - Teaching Creating Apps with Devices. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
+          version_title: 25-26
+        teaching-csd-aiml-2025:
+          title: Teaching AI and Machine Learning
+          description_short: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 7 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 7 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
+          description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get started teaching with Code.org! After completing this professional learning experience, **you'll be ready to get started teaching Code.org’s CSD Unit 7 - Teaching AI and Machine Learning** with your students.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in to introduce all teachers CSD Unit 7 - Teaching AI and Machine Learning. However, if you need additional guidance on using the Code.org platform, please access the Code.org Self-Paced Professional Learning module found in the Code.org Professional Learning catalog. **Don't hesitate to engage with the content in the order that best meets your needs.** "
+          version_title: 25-26

@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-09 06:01:47 UTC",
+    "serialized_at": "2025-05-10 01:51:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,9 +53,21 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-6",
       "user_facing": true,
       "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
       "properties": {
         "display_name": "Alternate Lessons"
       },
@@ -67,7 +79,7 @@
     {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 4,
+      "position": 5,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -335,12 +347,27 @@
       }
     },
     {
-      "key": "Creative Coding with the Console Project [1-Day Version]",
-      "name": "Creative Coding with the Console Project [1-Day Version]",
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 15,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "Creative Coding with the Console Project [1-Day Version]",
+      "name": "Creative Coding with the Console Project [1-Day Version]",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the Console. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
@@ -355,10 +382,10 @@
     {
       "key": "Creative Coding with The Theater Project [1-Day Version]",
       "name": "Creative Coding with The Theater Project [1-Day Version]",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
@@ -373,10 +400,10 @@
     {
       "key": "lesson-1",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -388,10 +415,10 @@
     {
       "key": "lesson-2",
       "name": "Sandbox: Console",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -403,10 +430,10 @@
     {
       "key": "lesson-3",
       "name": "Sandbox: The Theater",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -1028,6 +1055,18 @@
         "lesson_activity.key": "1270720e-3c59-4cd0-87e7-0ed8993220ac",
         "lesson.key": "Creative Coding with The Theater Project",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-alt-2025"
       }
     },
@@ -4573,8 +4612,21 @@
       }
     },
     {
-      "key": "dc274385-2634-45b6-8fdc-d4339f9620d7",
+      "key": "7996e4df-4676-486a-9412-c222d09b492a",
       "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "End of Unit Survey",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7996e4df-4676-486a-9412-c222d09b492a",
+        "lesson_activity.key": "fbc57a5a-3425-4ec9-b340-17c9469a2e1a"
+      }
+    },
+    {
+      "key": "dc274385-2634-45b6-8fdc-d4339f9620d7",
+      "position": 9,
       "properties": {
         "description": "---"
       },
@@ -4585,7 +4637,7 @@
     },
     {
       "key": "793743dc-9791-40e9-9170-7fe8be1d7d20",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "**Creative Coding with the Console Project Planning Guide:** Use the rubric in the Creative Coding with the Console Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -5062,6 +5114,28 @@
       "seeding_key": {
         "activity_section.key": "fa46243b-438b-4ec8-ae81-4f79344dbaf3",
         "lesson_activity.key": "1270720e-3c59-4cd0-87e7-0ed8993220ac"
+      }
+    },
+    {
+      "key": "2065f2d5-56df-4854-a8cb-961885c01ded",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2065f2d5-56df-4854-a8cb-961885c01ded",
+        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb"
+      }
+    },
+    {
+      "key": "f1dcc30d-8fe3-4e32-ac62-5bea6ca2c270",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1dcc30d-8fe3-4e32-ac62-5bea6ca2c270",
+        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb"
       }
     },
     {
@@ -7119,6 +7193,28 @@
     },
     {
       "chapter": 70,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa2-project1-2025"
+        ],
+        "lesson.key": "Creative Coding with the Console Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "7996e4df-4676-486a-9412-c222d09b492a"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_csa2-project1-2025"
+      ]
+    },
+    {
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7143,20 +7239,17 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa7_2025-cb-alt"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa7_2025-cb-alt"
+          "student-eou-survey_linked_page_csa2-project2-2025"
         ],
         "lesson.key": "Creative Coding with The Theater Project",
         "lesson_group.key": "lessonGroup-2",
@@ -7164,11 +7257,33 @@
         "activity_section.key": "fc41f330-0024-4acf-9ce7-883900d14c9b"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa7_2025-cb-alt"
+        "student-eou-survey_linked_page_csa2-project2-2025"
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csa2-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "2065f2d5-56df-4854-a8cb-961885c01ded"
+      },
+      "level_keys": [
+        "student-eou-survey_csa2-alt-survey-2025"
+      ]
+    },
+    {
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7193,7 +7308,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7218,7 +7333,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7243,7 +7358,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7268,7 +7383,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7292,7 +7407,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8147,6 +8262,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_csa2-project1-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_csa2-project1-2025"
+        ],
+        "lesson.key": "Creative Coding with the Console Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "7996e4df-4676-486a-9412-c222d09b492a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U7 Creative Coding with The Theater Project_pilot_oo20_2025-cb-alt",
         "script_level.level_keys": [
           "CSA U7 Creative Coding with The Theater Project_pilot_oo20_2025-cb-alt"
@@ -8159,14 +8286,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa7_2025-cb-alt",
+        "level.key": "student-eou-survey_linked_page_csa2-project2-2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa7_2025-cb-alt"
+          "student-eou-survey_linked_page_csa2-project2-2025"
         ],
         "lesson.key": "Creative Coding with The Theater Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-alt-2025",
         "activity_section.key": "fc41f330-0024-4acf-9ce7-883900d14c9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csa2-alt-survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csa2-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "2065f2d5-56df-4854-a8cb-961885c01ded"
       }
     },
     {

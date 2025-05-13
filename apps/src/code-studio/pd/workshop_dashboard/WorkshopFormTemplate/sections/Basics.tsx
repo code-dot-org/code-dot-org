@@ -16,6 +16,10 @@ import {BasicsProps, CourseOffering} from '../types';
 
 import commonStyles from '../styles.module.scss';
 
+const GRADE_LEVEL_OPTIONS = StudentGradeLevels.filter(
+  grade => grade !== 'Other'
+);
+
 export const Basics: FC<BasicsProps> = ({
   config: {fields},
   name,
@@ -158,7 +162,7 @@ export const Basics: FC<BasicsProps> = ({
               styleAsFormField={true}
               hideControls
               checkedOptions={grades}
-              allOptions={StudentGradeLevels.map(value => ({
+              allOptions={GRADE_LEVEL_OPTIONS.map(value => ({
                 value,
                 label: value,
               }))}

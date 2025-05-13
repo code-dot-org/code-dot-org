@@ -1,6 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import {Provider} from 'react-redux';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
 import {
@@ -15,6 +16,10 @@ jest.mock('@cdo/apps/util/useFetch');
 
 const mockedUseFetch = useFetch;
 
+// mock redux store
+const initialState = {mapbox: {mapboxAccessToken: 'test-token'}};
+const store = {getState: () => initialState, subscribe: () => {}};
+
 describe('WorkshopFormTemplate', () => {
   const testConfigs = WorkshopCourseConfigs.map(config => [
     config.label,
@@ -24,11 +29,13 @@ describe('WorkshopFormTemplate', () => {
 
   const renderDefault = (props = {}) =>
     render(
-      <MemoryRouter initialEntries={['/']}>
-        <Routes>
-          <Route path="/" element={<WorkshopFormTemplate {...props} />} />
-        </Routes>
-      </MemoryRouter>
+      <Provider store={store}>
+        <MemoryRouter initialEntries={['/']}>
+          <Routes>
+            <Route path="/" element={<WorkshopFormTemplate {...props} />} />
+          </Routes>
+        </MemoryRouter>
+      </Provider>
     );
 
   beforeEach(() => {

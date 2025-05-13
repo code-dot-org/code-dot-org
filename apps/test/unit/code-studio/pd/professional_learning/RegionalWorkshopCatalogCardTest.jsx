@@ -29,6 +29,7 @@ const DEFAULT_PROPS = {
   name: 'National Test Workshop',
   capacity: 10,
   numEnrollments: 2,
+  supportedGradeLevels: null,
   sessions: [TEST_SESSION_1],
   format: 'In-Person',
   locationName: 'Test University',
@@ -72,6 +73,30 @@ describe('RegionalWorkshopCatalog', () => {
     renderDefault({name: ''});
 
     screen.getByText(`${DEFAULT_PROPS.course}: ${DEFAULT_PROPS.subject}`);
+  });
+
+  it('card does not list grade levels if workshop has null list of which grades it supports', () => {
+    renderDefault();
+
+    expect(screen.queryByText('FOR TEACHERS OF GRADES:')).toBe(null);
+    expect(screen.queryByText('K')).toBe(null);
+    expect(screen.queryByText('12')).toBe(null);
+  });
+
+  it('card does not list grade levels if workshop has empty list of which grades it supports', () => {
+    renderDefault({supportedGradeLevels: []});
+
+    expect(screen.queryByText('FOR TEACHERS OF GRADES:')).toBe(null);
+    expect(screen.queryByText('K')).toBe(null);
+    expect(screen.queryByText('12')).toBe(null);
+  });
+
+  it('card lists grade levels if workshop lists which grades it supports', () => {
+    renderDefault({supportedGradeLevels: ['1', '2', '3']});
+
+    screen.getByText('FOR TEACHERS OF GRADES:');
+    screen.getByText('K');
+    screen.getByText('12');
   });
 
   it('card lists start datetime of first session for workshop with one session', () => {
