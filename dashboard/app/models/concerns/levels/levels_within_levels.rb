@@ -81,7 +81,7 @@ module Levels
         outdated_levels_child_level_ids = []
         new_levels_child_levels = []
 
-        levels.eager_load(:child_levels).each do |level|
+        levels.each do |level|
           # Determine which level names to use based on child_level_kind
           child_level_names = child_level_kind == ParentLevelsChildLevel::CONTAINED ? level.contained_level_names : [level.project_template_level_name]
           # Skip if the current level's child levels already match the names

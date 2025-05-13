@@ -47,6 +47,7 @@ module Services
         nil
       else
         level = Level.find_by_name(name) || Level.new(name: name)
+        # level = Level.includes(:child_levels).find_by_name(name) || Level.new(name: name)
         level.md5 = md5
         level = Services::LevelFiles.load_custom_level_xml(level_data, level)
         level
