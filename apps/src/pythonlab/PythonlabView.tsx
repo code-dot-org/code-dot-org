@@ -41,6 +41,7 @@ import {
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
+import WidgetView from './layout/WidgetView';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
@@ -66,6 +67,7 @@ const defaultConfig: ConfigType = {
     horizontal: HorizontalLayout,
     vertical: VerticalLayout,
     share: ShareView,
+    widget: WidgetView,
   },
   showFileBrowser: true,
 };
@@ -86,8 +88,6 @@ const PythonlabView: React.FunctionComponent<
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const [showProjectPicker, setShowProjectPicker] = useState(false);
-  const widgetView = levelProperties.widgetView;
-  console.log('widgetView', widgetView);
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
   const lastSavedLabConfig = useAppSelector(

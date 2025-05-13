@@ -44,6 +44,7 @@ export type ConfigType = {
     horizontal: React.FunctionComponent<LayoutProps>;
     vertical: React.FunctionComponent<LayoutProps>;
     share?: React.FunctionComponent<LayoutProps>;
+    widget?: React.FunctionComponent<LayoutProps>;
   };
 };
 

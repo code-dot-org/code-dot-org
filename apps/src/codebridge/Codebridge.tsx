@@ -62,6 +62,8 @@ export const Codebridge = React.memo(
     );
     const [internalSource, dispatch] = useReducer(reducerWithCallback, source);
     const isShareView = useAppSelector(state => state.lab.isShareView);
+    const isWidgetView = !!levelProperties.widgetView;
+    console.log('isWidgetView', isWidgetView);
 
     const sourceUtilities = useSourceUtilities(dispatch);
 
@@ -77,12 +79,20 @@ export const Codebridge = React.memo(
       if (isShareView && config.layoutComponents.share) {
         return config.layoutComponents.share;
       }
+      if (isWidgetView && config.layoutComponents.widget) {
+        return config.layoutComponents.widget;
+      }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
         currentLayout = 'horizontal';
       }
       return config.layoutComponents[currentLayout];
-    }, [config.activeLayout, config.layoutComponents, isShareView]);
+    }, [
+      config.activeLayout,
+      config.layoutComponents,
+      isShareView,
+      isWidgetView,
+    ]);
 
     const appName = levelProperties.appName;
 
