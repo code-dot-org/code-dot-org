@@ -44,6 +44,20 @@ echo "Wrote secrets from env vars into locals.yml."
 
 set -x
 
+bundle exec rake ci:sparse_checkout
+
+# Example file which will not be present if pegasus content is omitted
+# via sparse checkout.
+EXAMPLE_FILE="pegasus/sites.v3/code.org/homepage.json"
+
+# Disable Pegasus content if the example file is not present.
+if [ -f "$EXAMPLE_FILE" ]; then
+  echo "Pegasus homepage.json present"
+else
+  export DISABLE_PEGASUS_CONTENT=true
+  echo "Pegasus homepage.json missing – DISABLE_PEGASUS_CONTENT set"
+fi
+
 bundle install --quiet
 bundle exec rake install
 bundle exec rake build
