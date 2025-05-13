@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -e
+
+MODE="$1"
+PATTERNS_DIR="sparse-patterns"
+
+if [[ "$MODE" == "default" ]]; then
+  git sparse-checkout disable
+elif [[ "$MODE" == "no-pegasus-content" ]]; then
+  git sparse-checkout init --cone > /dev/null 2>&1 || true
+  git sparse-checkout set --no-cone --stdin < "$PATTERNS_DIR/no-pegasus-content"
+else
+  echo "Usage: $0 [default|no-pegasus-content]"
+  exit 1
+fi
