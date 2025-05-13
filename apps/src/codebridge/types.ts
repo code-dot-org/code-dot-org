@@ -71,6 +71,7 @@ export interface CodebridgeLevelProperties extends LevelProperties {
   miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
+  widgetView?: boolean;
 }
 
 // Python Lab specific property

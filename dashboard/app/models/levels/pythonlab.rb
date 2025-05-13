@@ -37,7 +37,7 @@ class Pythonlab < Level
     enable_micro_bit
     mini_app
     serialized_maze
-    widget_mode
+    widget_view
   )
 
   validate :has_correct_multiple_choice_answer?

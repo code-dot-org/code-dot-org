@@ -86,6 +86,8 @@ const PythonlabView: React.FunctionComponent<
   const progressManager = useContext(ProgressManagerContext);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const [showProjectPicker, setShowProjectPicker] = useState(false);
+  const widgetView = levelProperties.widgetView;
+  console.log('widgetView', widgetView);
 
   const currentLevel = useAppSelector(state => getCurrentLevel(state));
   const lastSavedLabConfig = useAppSelector(
