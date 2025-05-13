@@ -5,12 +5,6 @@
  */
 import {defineComponents} from '@contentful/experiences-sdk-react';
 
-import ActionBlock, {
-  ActionBlockContentfulComponentDefinition,
-} from '@/components/actionBlocks/defaultActionBlock';
-import FullWidthActionBlock, {
-  FullWidthActionBlockContentfulComponentDefinition,
-} from '@/components/actionBlocks/fullWidthActionBlock';
 import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
@@ -21,6 +15,12 @@ import ImageCarousel, {
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
+import ActionBlock, {
+  ActionBlockContentfulComponentDefinition,
+} from '@/components/contentful/actionBlocks/defaultActionBlock';
+import FullWidthActionBlock, {
+  FullWidthActionBlockContentfulComponentDefinition,
+} from '@/components/contentful/actionBlocks/fullWidthActionBlock';
 import HeroBanner, {
   HeroBannerContentfulComponentDefinition,
 } from '@/components/contentful/heroBanner';
