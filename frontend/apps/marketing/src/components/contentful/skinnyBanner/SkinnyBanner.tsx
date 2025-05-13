@@ -5,6 +5,7 @@ import {Theme} from '@code-dot-org/component-library/common/contexts';
 
 import {externalLinkIconProps} from '@/components/common/constants';
 import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 type SkinnyBannerProps = {
   /** SkinnyBanner content mode (theme) value */
@@ -15,10 +16,12 @@ type SkinnyBannerProps = {
   heading: string;
   /** SkinnyBanner description */
   description?: string;
-  /** Section Image URL */
-  sectionImage?: string;
-  /** SkinnyBanner Button Link Entry **/
-  buttonLink?: LinkEntry;
+  /** Section Images, Array of Experience entries.
+   * We always render the first image from the array */
+  sectionImages?: ExperienceAsset[];
+  /** SkinnyBanner Button Links, Array of Link Entries.
+   *  We always render the first link from the array. **/
+  buttonLinks?: LinkEntry[];
   /** SkinnyBanner partner image URL */
   partnerLogo?: string;
   /** SkinnyBanner partner callout (title) */
@@ -34,40 +37,52 @@ const SkinnyBanner: React.FunctionComponent<SkinnyBannerProps> = ({
   // Content Props
   heading,
   description,
-  sectionImage,
-  buttonLink,
+  sectionImages,
+  buttonLinks,
   partnerLogo,
   partnerCallout,
   backgroundImage,
-}) => (
-  <DSCOSkinnyBanner
-    data-theme={contentMode}
-    className={className}
-    heading={heading}
-    description={description}
-    imageProps={sectionImage ? {src: sectionImage} : undefined}
-    buttonProps={
-      buttonLink
-        ? {
-            text: buttonLink.fields.label,
-            href: buttonLink.fields.primaryTarget,
-            ariaLabel: buttonLink.fields.ariaLabel,
-            iconRight: buttonLink.fields.isThisAnExternalLink
-              ? externalLinkIconProps
-              : undefined,
-          }
-        : undefined
-    }
-    partner={
-      partnerLogo
-        ? {
-            title: partnerCallout || 'In partnership with:',
-            logo: {src: partnerLogo},
-          }
-        : undefined
-    }
-    backgroundImageUrl={backgroundImage}
-  />
-);
+}) => {
+  const firstSectionImage = sectionImages?.[0];
+  const firstButtonLink = buttonLinks?.[0];
+
+  return (
+    <DSCOSkinnyBanner
+      data-theme={contentMode}
+      className={className}
+      heading={heading}
+      description={description}
+      imageProps={
+        firstSectionImage?.fields?.file?.url
+          ? {
+              src: firstSectionImage.fields.file.url,
+              altText: firstSectionImage.fields.description || '',
+            }
+          : undefined
+      }
+      buttonProps={
+        firstButtonLink
+          ? {
+              text: firstButtonLink.fields.label,
+              href: firstButtonLink.fields.primaryTarget,
+              ariaLabel: firstButtonLink.fields.ariaLabel,
+              iconRight: firstButtonLink.fields.isThisAnExternalLink
+                ? externalLinkIconProps
+                : undefined,
+            }
+          : undefined
+      }
+      partner={
+        partnerLogo
+          ? {
+              title: partnerCallout || 'In partnership with:',
+              logo: {src: partnerLogo},
+            }
+          : undefined
+      }
+      backgroundImageUrl={backgroundImage}
+    />
+  );
+};
 
 export default SkinnyBanner;

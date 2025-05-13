@@ -4,6 +4,7 @@ import '@testing-library/jest-dom';
 import IconHighlight, {
   IconHighlightContentfulProps,
 } from '@/components/iconHighlight/IconHighlight';
+import {LinkEntry} from '@/types/contentful/entries/Link';
 
 describe('IconHighlight component', () => {
   const heading = 'Icon Highlight Heading';
@@ -52,39 +53,6 @@ describe('IconHighlight component', () => {
     expect(screen.queryByRole('list')).not.toBeInTheDocument();
   });
 
-  it('renders card link list with provided link entry', () => {
-    const linkEntry = {
-      sys: {
-        id: 'link',
-      },
-      fields: {
-        label: 'Link',
-        primaryTarget: 'https://code.org/link',
-        ariaLabel: 'Link aria label',
-        isThisAnExternalLink: false,
-      },
-    };
-
-    renderCardContainer({linkEntry: linkEntry});
-
-    const linkList = screen.getByRole('list');
-    expect(linkList).toBeVisible();
-
-    const internalLink = within(linkList).getByRole('link', {
-      name: linkEntry.fields.ariaLabel,
-    });
-    expect(internalLink).toBeVisible();
-    expect(internalLink).toHaveTextContent(linkEntry.fields.label);
-    expect(internalLink).toHaveAttribute(
-      'href',
-      linkEntry.fields.primaryTarget,
-    );
-    expect(internalLink).not.toHaveAttribute('target');
-    expect(
-      within(internalLink).queryByRole('img', {name: 'external link'}),
-    ).not.toBeInTheDocument();
-  });
-
   it('renders card link list with only provided link entries', () => {
     const linkEntry = {
       sys: {
@@ -107,7 +75,7 @@ describe('IconHighlight component', () => {
         ariaLabel: 'Internal Link aria label',
         isThisAnExternalLink: false,
       },
-    };
+    } as LinkEntry;
     const externalLinkEntry = {
       sys: {
         id: 'external-link',
@@ -118,10 +86,9 @@ describe('IconHighlight component', () => {
         ariaLabel: 'External Link aria label',
         isThisAnExternalLink: true,
       },
-    };
+    } as LinkEntry;
 
     renderCardContainer({
-      linkEntry: linkEntry,
       linkEntries: [internalLinkEntry, externalLinkEntry],
     });
 

@@ -12,6 +12,8 @@ import React from 'react';
 
 import {getSessionDate, getSessionTimes} from '../sessionDateUtils';
 
+import GradeLevelsBarDisplay from './GradeLevelsBarDisplay';
+
 import style from './regionalWorkshopCatalog.module.scss';
 
 const buildWorkshopStartText = sessions => {
@@ -39,6 +41,7 @@ const RegionalWorkshopCatalogCard = ({
   name,
   capacity,
   numEnrollments,
+  supportedGradeLevels,
   sessions,
   format,
   locationName,
@@ -120,10 +123,16 @@ const RegionalWorkshopCatalogCard = ({
           <BodyOneText className={style.wsTitle}>
             {name ? name : `${course}: ${subject}`}
           </BodyOneText>
-          <OverlineTwoText className={style.gradeNote}>
-            FOR TEACHERS OF GRADES:
-          </OverlineTwoText>
-          <p>1, 2, 3, 4, 5</p>
+          {supportedGradeLevels?.length > 0 && (
+            <div className={style.gradeContainer}>
+              <OverlineTwoText className={style.gradeNote}>
+                FOR TEACHERS OF GRADES:
+              </OverlineTwoText>
+              <GradeLevelsBarDisplay
+                supportedGradeLevels={supportedGradeLevels}
+              />
+            </div>
+          )}
         </div>
         <div className={style.infoBlock}>
           <span className={style.infoLine}>
@@ -174,6 +183,7 @@ RegionalWorkshopCatalogCard.propTypes = {
   name: PropTypes.string,
   capacity: PropTypes.number.isRequired,
   numEnrollments: PropTypes.number.isRequired,
+  supportedGradeLevels: PropTypes.arrayOf(PropTypes.string),
   sessions: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,

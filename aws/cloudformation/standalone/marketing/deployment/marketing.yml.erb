@@ -282,6 +282,10 @@ Resources:
     Properties:
       Port: 80
       Protocol: HTTP
+      HealthCheckPath: /api/health_check
+      # Only HTTP Status 200 is considered healthy
+      Matcher:
+        HttpCode: 200
       TargetGroupAttributes:
         - Key: stickiness.enabled
           Value: "false"
@@ -402,7 +406,6 @@ Resources:
         MaximumPercent: 200
         MinimumHealthyPercent: 50
       EnableECSManagedTags: false
-      HealthCheckGracePeriodSeconds: 60
       LaunchType: FARGATE
       DesiredCount: 3
       AvailabilityZoneRebalancing: ENABLED
@@ -613,7 +616,7 @@ Resources:
     Type: AWS::CloudFront::CachePolicy
     Properties:
       CachePolicyConfig:
-        Name: MarketingAppCachePolicy
+        Name: !Sub '${AWS::StackName}-MarketingAppCachePolicy'
         DefaultTTL: 86400
         MaxTTL: 31536000
         MinTTL: 1
@@ -641,7 +644,7 @@ Resources:
   ViewerResponseCloudFrontFunction:
     Type: AWS::CloudFront::Function
     Properties:
-      Name: MarketingAppViewerResponseFunction
+      Name: !Sub '${AWS::StackName}-ViewerResponse'
       AutoPublish: true
       FunctionCode: |
         function handler(event) {
@@ -794,3 +797,9 @@ Outputs:
       Fn::GetAtt:
         - FargateServiceLB
         - DNSName
+  CloudFrontDistributionId:
+    Value:
+      Ref: CloudFrontDistribution
+    Export:
+      Name:
+        'Fn::Sub': '${AWS::StackName}-CloudFrontDistributionId'
