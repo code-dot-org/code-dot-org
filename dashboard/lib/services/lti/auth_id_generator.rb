@@ -3,8 +3,6 @@ require "clients/lti_cloudwatch_logger"
 module Services
   module Lti
     class AuthIdGenerator
-      LOG_GROUP_NAME = 'LTI'.freeze
-
       def initialize(id_token)
         @id_token = id_token
       end
@@ -28,7 +26,6 @@ module Services
           # Only ONE client_id identifies an LTI Tool and is sent in the JWK audience claim.
           if id_token[:aud].length > 1
             event = {
-              event_name: 'GenerateAuthenticationIDError',
               message: 'Too many client_ids in the audience claim',
               audience: id_token[:aud],
               aud_count: id_token[:aud].length,
