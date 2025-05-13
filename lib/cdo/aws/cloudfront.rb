@@ -358,7 +358,7 @@ module AWS
     # Don't include the Host and CloudFront-Forwarded-Proto headers in the cache key for
     # S3 origins or the NextJS-based marketing origin. For the marketing site switchover, we
     # manually override the Host header in the marketing-router lambda function.
-    private def exclude_default_headers?(origin_proxy_name)
+    private_class_method def self.exclude_default_headers?(origin_proxy_name)
       ['cdo-assets', 'cdo-restricted', 'marketing'].include?(origin_proxy_name)
     end
   end
