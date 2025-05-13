@@ -4,6 +4,7 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import SwapLayoutDropdown from '@codebridge/components/SwapLayoutDropdown';
+import SettingsButton from '@codebridge/Settings/SettingsButton';
 import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -71,6 +72,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
         />
       </WithTooltip>
       {!isShareView && !isWidgetView && <SwapLayoutDropdown />}
+      {isWidgetView && <SettingsButton />}
     </div>
   );
 };
