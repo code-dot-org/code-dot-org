@@ -945,7 +945,7 @@ roles.each do |name, config| %>
   CloudFormationServiceMarketingSites<%=environment_type.capitalize%>Role:
     Type: AWS::IAM::Role
     Properties:
-      RoleName: cloudformation-marketing-sites-<%=environment_type%>
+      RoleName: CloudFormationMarketingSites<%=environment_type.capitalize%>Role
       Path: /cloudformation/marketingsites/<%=environment_type%>/
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
