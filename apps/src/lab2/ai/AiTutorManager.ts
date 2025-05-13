@@ -28,7 +28,7 @@ export default class AiTutorManager {
     const aichatContext: AichatContext = {
       currentLevelId: state.progress.currentLevelId || '',
       scriptId: state.progress.scriptId,
-      channelId: state.lab.channel?.id,
+      channelId: 'TrRJNM1ukgjJBK8DzcDWXg', // state.lab.channel?.id,
     };
 
     const aiCustomizations = {
