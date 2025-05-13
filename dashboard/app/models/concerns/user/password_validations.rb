@@ -5,7 +5,7 @@
 module User::PasswordValidations
   extend ActiveSupport::Concern
 
-  include ProviderFlags
+  include User::ProviderFlags
 
   # Password Constants
   PASSWORD_MAX_LENGTH = 128
