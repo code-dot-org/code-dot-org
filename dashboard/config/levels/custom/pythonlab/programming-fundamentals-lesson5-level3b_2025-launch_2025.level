@@ -1,12 +1,13 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2025-04-14T23:13:20.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Do This:\r\n\r\nFinish the program so the `Painter` reaches the traffic cone.\r\n\r\n![](https://images.code.org/a7898c01158c6420d908dd2d352499b2-choiceB.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nTo create a `Painter` and move forward one space, use\r\n\r\n   ```\r\n   painter_name = Painter()\r\n   painter_name.move()\r\n   ```\r\n\r\nFor example:\r\n\r\n   ```\r\n   1  alicia = Painter()\r\n   2  alicia.move()\r\n   ```\r\n\r\nIn this example, `alicia = Painter()` creates the `Painter`, and `alicia.move()` moves the `Painter` forward one space.",
+    "long_instructions": "## Do This:\r\n\r\nFinish the program so the `Painter` reaches the traffic cone.\r\n\r\n![](https://images.code.org/a7898c01158c6420d908dd2d352499b2-choiceB.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nTo create a `Painter` and move forward one space, use\r\n\r\n   ```\r\n   painter_name = Painter()\r\n   painter_name.move()\r\n   ```\r\n\r\nFor example:\r\n\r\n   ```\r\n   1  alicia = Painter()\r\n   2  alicia.move()\r\n   ```\r\n\r\nIn this example, `alicia = Painter()` creates the `Painter`, and `alicia.move()` moves the `Painter` forward one space.\r\n\r\n\r\n<br/>\r\n\r\n<i class=\"fa-solid fa-hand-back-point-right\"></i> **By the way!** Click the book icon above the workspace to learn more about the `Painter` object and `move()` method in the Python documentation.",
     "ai_tutor_available": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -388,7 +389,6 @@
       "type": "validation"
     }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:20.553+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level3b_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level3b_2025-launch\"},{\"changed_at\":\"2025-04-26 18:31:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-14T23:13:20.553+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson5-level3b_2025-launch\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson5-level3b_2025-launch\"},{\"changed_at\":\"2025-04-26 18:31:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-04-30 17:49:26 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Pythonlab>

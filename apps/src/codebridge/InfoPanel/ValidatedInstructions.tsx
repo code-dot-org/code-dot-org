@@ -1,5 +1,4 @@
 import {Button} from '@code-dot-org/component-library/button';
-import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
@@ -42,7 +41,6 @@ import commonI18n from '@cdo/locale';
 import MainInstructionsContent from './MainInstructionsContent';
 import ValidationResults from './ValidationResults';
 
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
 interface InstructionsProps {
@@ -125,8 +123,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     currentLevel && passedStatuses.includes(currentLevel.status);
 
   const dispatch = useAppDispatch();
-
-  const {theme} = useTheme();
 
   const vertical = layout === 'vertical';
 
@@ -300,7 +296,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         disabled={shouldValidateBeDisabled}
         iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
         className={classNames(
-          darkModeStyles.secondaryButton,
           moduleStyles.buttonInstruction,
           moduleStyles.validationButton
         )}
@@ -336,7 +331,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     <div
       id="instructions"
       className={classNames(
-        moduleStyles['instructions-' + theme],
+        moduleStyles.instructions,
         vertical && moduleStyles.vertical,
         'instructions',
         className
@@ -354,7 +349,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             <div
               key={instructionsText}
               id="instructions-text"
-              className={classNames(moduleStyles['bubble-' + theme])}
+              className={moduleStyles.bubble}
             >
               <MainInstructionsContent
                 instructionsText={instructionsText}
@@ -377,14 +372,14 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           {validationResults && (
             <>
               <div ref={validationScrollRef} />
-              <div className={classNames(moduleStyles['bubble-' + theme])}>
+              <div className={moduleStyles.bubble}>
                 <ValidationResults />
               </div>
             </>
           )}
           {predictSettings?.isPredictLevel && (
             <InstructorsOnly>
-              <div className={moduleStyles['bubble-' + theme]}>
+              <div className={moduleStyles.bubble}>
                 <PredictSummary />
               </div>
             </InstructorsOnly>
@@ -393,10 +388,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         {showNavigation && (
           <div
             id="instructions-navigation"
-            className={classNames(
-              moduleStyles['bubble-' + theme],
-              moduleStyles.button
-            )}
+            className={classNames(moduleStyles.bubble, moduleStyles.button)}
           >
             <Button
               text={navigationText}

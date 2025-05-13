@@ -36,7 +36,7 @@ class UnitGroup < ApplicationRecord
   # Default units are units that are currently in this unit group
   has_many :default_units, through: :default_unit_group_units, source: :script
   # Original units are those which are owned by this unit group
-  # A unit cannot be removed from its original unit group. All original units will be in a unit group's default units, but not all default units are original units.
+  # A unit cannot be removed from its original unit group if it has resources/vocab. All original units will be in a unit group's default units, but not all default units are original units.
   # For more information, see the 'Modular Curriculum design doc' at https://docs.google.com/document/d/1e8Xs_azDTJRyJoGLSk7G2v23rpyA-ZQzgSVnle6exvg/edit?usp=sharing.
   has_many :original_units, class_name: 'Unit', foreign_key: 'original_unit_group_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
@@ -190,7 +190,7 @@ class UnitGroup < ApplicationRecord
   # @param units [Array<String>] - Updated list of names of units in this course
   # @param course_strings[Hash{String => String}]
   def persist_strings_and_units_changes(units, course_strings)
-    UnitGroup.update_strings(name, course_strings)
+    UnitGroup.update_strings(name, course_strings) if Rails.application.config.levelbuilder_mode
     update_scripts(units) if units
     save!
   end
@@ -228,18 +228,8 @@ class UnitGroup < ApplicationRecord
     # we want to delete existing unit group units that aren't in our new list
     units_to_remove = default_unit_group_units.map(&:script) - new_units_objects
 
-    unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
-    raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
-
-    unremovable_unit_names = units_to_remove.select {|unit| unit.original_unit_group == self}.map(&:name)
-    raise "Cannot remove units from their original course: #{unremovable_unit_names}" if unremovable_unit_names.any?
-
-    unless ENV.fetch('MIGRATE_STANDALONE_UNITS', nil)
-      unaddable_unit_names = new_units_objects.select do |s|
-        s.unit_group != self && s.prevent_course_version_change?
-      end.map(&:name)
-      raise "Cannot add units that have resources or vocabulary: #{unaddable_unit_names}" if unaddable_unit_names.any?
-    end
+    unremovable_unit_names = units_to_remove.select {|unit| unit.original_unit_group == self && unit.prevent_course_version_change?}.map(&:name)
+    raise "Cannot remove units from their original course if they have resources or vocab: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
@@ -255,15 +245,23 @@ class UnitGroup < ApplicationRecord
     end
 
     units_to_remove.each do |unit|
-      # Units that are not in a unit group need to have these fields set in order to determine course type and visibility of course
-      unit.update!(
-        published_state: (unit.published_state ? unit.published_state : published_state),
-        instruction_type: instruction_type,
-        participant_audience: participant_audience,
-        instructor_audience: instructor_audience
-      )
-
+      if unit.unit_group_units.count == 1
+        # Units that are not in a unit group need to have these fields set in order to determine course type and visibility of course
+        # If this is the last unit group unit, then we need to set those fields and set the original_unit_group_id to nil
+        unit.update!(
+          published_state: (unit.published_state ? unit.published_state : published_state),
+          instruction_type: instruction_type,
+          participant_audience: participant_audience,
+          instructor_audience: instructor_audience
+        )
+        unit.update!(original_unit_group_id: nil, skip_name_format_validation: true)
+      end
       UnitGroupUnit.where(unit_group: self, script: unit).destroy_all
+
+      # If this is not the last unit group unit and this unit group was the original, then we should move the original unit group to the next unit group
+      if unit.original_unit_group == self && !unit.unit_group_units.nil_or_empty?
+        unit.update!(original_unit_group_id: unit.unit_group_units.first.course_id, skip_name_format_validation: true)
+      end
     end
     # Reload model so that default_unit_group_units is up to date
     transaction {reload}

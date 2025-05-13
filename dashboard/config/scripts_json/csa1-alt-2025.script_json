@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 05:10:19 UTC",
+    "serialized_at": "2025-05-10 01:52:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,9 +65,21 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-6",
       "user_facing": true,
       "position": 4,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 5,
       "properties": {
         "display_name": "Alternate Lessons"
       },
@@ -79,7 +91,7 @@
     {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 5,
+      "position": 6,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -552,12 +564,27 @@
       }
     },
     {
-      "key": "Asphalt Art Project [1-Day Version]",
-      "name": "Asphalt Art Project [1-Day Version]",
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 26,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 26,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "Asphalt Art Project [1-Day Version]",
+      "name": "Asphalt Art Project [1-Day Version]",
+      "absolute_position": 27,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 27,
       "properties": {
         "assessment": true,
         "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
@@ -572,10 +599,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 27,
+      "absolute_position": 28,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 27,
+      "relative_position": 28,
       "properties": {
       },
       "seeding_key": {
@@ -587,10 +614,10 @@
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 28,
+      "absolute_position": 29,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 28,
+      "relative_position": 29,
       "properties": {
       },
       "seeding_key": {
@@ -602,10 +629,10 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 29,
+      "absolute_position": 30,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 29,
+      "relative_position": 30,
       "properties": {
       },
       "seeding_key": {
@@ -1676,6 +1703,18 @@
         "lesson_activity.key": "cd90ff7d-e0b6-48f9-a3e4-3e443a83c271",
         "lesson.key": "SpiralPainter FRQ",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "2f43564a-1230-463c-848c-c83b500c92c2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2f43564a-1230-463c-848c-c83b500c92c2",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa1-alt-2025"
       }
     },
@@ -8646,6 +8685,28 @@
       }
     },
     {
+      "key": "1af821dd-ed84-402d-9564-459f804af9f0",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "1af821dd-ed84-402d-9564-459f804af9f0",
+        "lesson_activity.key": "2f43564a-1230-463c-848c-c83b500c92c2"
+      }
+    },
+    {
+      "key": "e66fe051-41a8-4f07-b08a-52efac6f9396",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "e66fe051-41a8-4f07-b08a-52efac6f9396",
+        "lesson_activity.key": "2f43564a-1230-463c-848c-c83b500c92c2"
+      }
+    },
+    {
       "key": "e8dcc45d-7644-415e-b0f7-35d453811ef5",
       "position": 1,
       "properties": {
@@ -10509,6 +10570,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-UserInput-L5_alt-revised-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -12081,15 +12145,12 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa1_2025-cb-alt"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa1_2025-cb-alt"
+          "student-eou-survey_linked_page_csa1-project2-2025"
         ],
         "lesson.key": "Asphalt Art Project",
         "lesson_group.key": "lessonGroup-2",
@@ -12097,11 +12158,33 @@
         "activity_section.key": "ecfd1fdc-18fd-47f3-a5c5-84a68f60f45a"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa1_2025-cb-alt"
+        "student-eou-survey_linked_page_csa1-project2-2025"
       ]
     },
     {
       "chapter": 132,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csa1-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "1af821dd-ed84-402d-9564-459f804af9f0"
+      },
+      "level_keys": [
+        "student-eou-survey_csa1-alt-survey-2025"
+      ]
+    },
+    {
+      "chapter": 133,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -12126,7 +12209,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12151,7 +12234,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -12176,7 +12259,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -12200,7 +12283,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -13787,14 +13870,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa1_2025-cb-alt",
+        "level.key": "student-eou-survey_linked_page_csa1-project2-2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa1_2025-cb-alt"
+          "student-eou-survey_linked_page_csa1-project2-2025"
         ],
         "lesson.key": "Asphalt Art Project",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-alt-2025",
         "activity_section.key": "ecfd1fdc-18fd-47f3-a5c5-84a68f60f45a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csa1-alt-survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csa1-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "1af821dd-ed84-402d-9564-459f804af9f0"
       }
     },
     {

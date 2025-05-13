@@ -1,0 +1,99 @@
+name 'self-paced-CSDMusicLab-L1-lesson1resources'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# About the Curriculum
+
+## Lessons
+#### The lessons are designed for **45-minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.
+
+### **Lesson Components**
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🙋‍♀️ Warm Up</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Each lesson starts with a brief warm-up, offering a shared experience to highlight the need for the lesson's skills and concepts. 
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💃 Activity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Students spend most of their time on lesson activities, exploring new computing concepts. These activities are scaffolded to provide just-in-time support, helping students build the knowledge and skills needed for computing.
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🏁 Wrap Up</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+
+
+#### Every lesson ends with a wrap-up, allowing students to reflect on key skills and concepts. 
+</p></div>
+</details>
+
+
+## Lesson Resources 
+
+<img src="https://images.code.org/cfa7d5b4aff0752e9f4937c98fca6da5-image-1734018244275.png" alt="A lesson plan diagram uses arrows to show where objectives, teaching guides, slides, and student handouts are" width="40%" style="border-radius:5px; float:right; margin-left: 40px; border: 1px solid black;">
+
+#### Everything you need to deliver engaging and effective classes is included with each **lesson plan** to help make your teaching experience as seamless as possible.
+
+### Each lesson includes: 
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 45%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 16pt; font-weight: bold;"><b>1.</b> Clear Objectives</summary>
+<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
+       	<p style= "font-size: 14pt">
+         Statements outline the specific knowledge and skills students will gain by the end of each lesson.
+        </p>
+   </div>
+</details>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 45%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 16pt; font-weight: bold;"><b>2. </b>Detailed teaching guides</summary>
+<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
+       	<p style= "font-size: 14pt">
+         Step-by-step guides walks you through each lesson, including teacher tips to ensure smooth delivery and maximize student learning.
+        </p>
+   </div>
+</details>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 45%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 16pt; font-weight: bold;"> <b>3. </b>Engaging slides</summary>
+<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
+       	<p style= "font-size: 14pt">
+         Visually appealing presentations keep students focused and provide a clear structure for the lesson.
+        </p>
+   </div>
+</details>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 45%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 16pt; font-weight: bold;"><b>4. </b>Interactive student handouts</summary>
+<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
+       	<p style= "font-size: 14pt">
+         Handouts offer activities, practice problems, and note-taking guides to reinforce key concepts. In Programming with Music Lab, <b>only select lessons have associated handout</b>.
+        </p>
+   </div>
+</details>
+</details>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; margin-right: 45%; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 16pt; font-weight: bold;"><b>5. </b>Quick Reference Sheets</summary>
+<div style="margin-top: 10px; margin-left: 10px; margin-right: 10px; padding-bottom:0px;">
+       	<p style= "font-size: 14pt">
+       Each lesson has a corresponding Quick Reference Sheet. These can serve as a "cheatsheet" for you as you teach to reference main ideas, vocabulary, and lesson tips. </b>.
+        </p>
+   </div>
+</details>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+MARKDOWN

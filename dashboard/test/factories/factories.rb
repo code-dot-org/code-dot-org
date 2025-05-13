@@ -63,6 +63,9 @@ FactoryBot.define do
   end
 
   factory :unit_group_unit do
+    after(:create) do |unit_group_unit|
+      unit_group_unit.script.update!(original_unit_group: unit_group_unit.unit_group) if unit_group_unit.script.original_unit_group_id.nil?
+    end
   end
 
   factory :unit_group do
@@ -79,7 +82,7 @@ FactoryBot.define do
         unit {nil}
       end
       after(:create) do |unit_group, evaluator|
-        create :unit_group_unit, unit_group: unit_group, script: (evaluator.unit || create(:unit)), position: 1
+        create :unit_group_unit, unit_group: unit_group, script: (evaluator.unit || create(:unit, original_unit_group: unit_group)), position: 1
       end
     end
   end
@@ -128,7 +131,7 @@ FactoryBot.define do
   factory :studio_person do
   end
 
-  factory :user do
+  factory :user, class: Student do
     birthday {Time.zone.today - 21.years}
     email {"#{user_type}_#{SecureRandom.uuid}@code.org"}
     password {"00secret"}
@@ -144,7 +147,7 @@ FactoryBot.define do
       after(:create, &:demigrate_from_multi_auth)
     end
 
-    factory :teacher do
+    factory :teacher, class: Teacher do
       user_type {User::TYPE_TEACHER}
       birthday {Date.new(1980, 3, 14)}
       factory :admin do
@@ -318,7 +321,7 @@ FactoryBot.define do
       end
     end
 
-    factory :student do
+    factory :student, class: Student do
       user_type {User::TYPE_STUDENT}
       birthday {Time.zone.today - 17.years}
 
@@ -2128,6 +2131,32 @@ FactoryBot.define do
     vague {false}
     feedback_other {true}
     other_content {'other'}
+  end
+
+  factory :student_work_evaluation_summary do
+    student_work_evaluation_id {1}
+    student_work_evaluation_summary_id {1}
+  end
+
+  factory :user_level_skill_evaluation do
+    association :student, factory: :student
+    association :level
+    association :unit
+    evaluator {"AI"}
+    evaluation {"Great"}
+    evaluation_criteria {"Does the student's work on this level demonstrate the skill?"}
+    reasoning {"The student's work demonstrated the skill."}
+  end
+
+  factory :user_level_evaluation do
+    association :student, factory: :student
+    association :level
+    association :unit
+    code_version {"4s&7ya"}
+    evaluator {"AI"}
+    evaluation {"Ok"}
+    evaluation_criteria {"Does the student's work on this level meet the requirements?"}
+    reasoning {"The student's did some of what they were supposed to."}
   end
 
   factory :potential_teacher do

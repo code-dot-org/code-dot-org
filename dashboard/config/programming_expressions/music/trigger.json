@@ -3,12 +3,19 @@
   "name": "Trigger",
   "category": "Control",
   "category_key": "control",
+  "block_name": "triggered_at_simple2",
   "content": "\nCode connected to this block will play at the next measure when the associated button is pressed on the beat pad. This lets you play parts live as the track is playing. You can also press the \"1\" through \"6\" keys on your keyboard to trigger these buttons.",
   "palette_params": [
     {
-      "name": "button",
+      "name": "trigger",
+      "type": "Dropdown",
       "required": true,
-      "description": "The number of the button that, when pressed, will run this code"
+      "description": "The number of the trigger button that, when pressed, will run this code"
+    },
+    {
+      "name": "trigger start",
+      "type": "Dropdown",
+      "description": "When to start the triggered code"
     }
   ],
   "short_description": "Play sounds when a button on the beat pad is pressed."

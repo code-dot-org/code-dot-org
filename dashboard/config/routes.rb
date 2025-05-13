@@ -51,6 +51,7 @@ Dashboard::Application.routes.draw do
     resource :user_preference, only: [:update] do
       get '/font_size/console', to: 'user_preferences#console_font_size'
       get '/font_size/editor', to: 'user_preferences#editor_font_size'
+      get '/theme', to: 'user_preferences#theme'
     end
 
     resources :survey_results, only: [:create], defaults: {format: 'json'}
@@ -472,6 +473,9 @@ Dashboard::Application.routes.draw do
     end
 
     resources :courses, param: 'course_name' do
+      collection do
+        get 'all'
+      end
       member do
         get 'vocab'
         get 'resources'
@@ -656,11 +660,7 @@ Dashboard::Application.routes.draw do
       resource :dynamic_config, only: [:show], controller: :dynamic_config
       resource :gatekeeper, only: [:show, :update, :destroy], controller: :gatekeeper
       resource :dcdo, only: [:show, :update], controller: :dcdo
-
-      controller :feature_mode do
-        get :feature_mode, action: :show
-        post :feature_mode, action: :update, as: 'feature_mode_update'
-      end
+      resource :feature_mode, only: [:show, :update], controller: :feature_mode
 
       # internal support tools
       controller :admin_users do
@@ -728,8 +728,22 @@ Dashboard::Application.routes.draw do
 
     resources :zendesk_session, only: [:index]
 
-    post '/report_abuse', to: 'report_abuse#report_abuse'
-    get '/report_abuse', to: 'report_abuse#report_abuse_form'
+    # Public abuse report form
+    controller :report_abuse do
+      get  '/report_abuse', action: :report_abuse_form
+      post '/report_abuse', action: :report_abuse
+    end
+
+    # partial ports of legacy v3 APIs
+    scope path: '/v3' do
+      controller :report_abuse do
+        get    'channels/:channel_id/abuse', action: :show_abuse
+        delete 'channels/:channel_id/abuse', action: :reset_abuse
+        post   'channels/:channel_id/abuse/delete', action: :reset_abuse
+        patch  '(:endpoint)/:encrypted_channel_id', action: :update_file_abuse,
+               constraints: {endpoint: /(animations|assets|sources|files|libraries)/}
+      end
+    end
 
     get '/too_young', to: 'too_young#index'
 
@@ -867,12 +881,17 @@ Dashboard::Application.routes.draw do
 
     get 'my-professional-learning', to: 'pd/professional_learning#index', as: 'professional_learning'
     get 'professional-learning/workshops', to: 'pd/professional_learning#workshops'
+    get 'professional-learning/contact-regional-partner', to: 'pd/professional_learning#contact_regional_partner'
     get 'professional-learning/facilitator/computer-science-a', to: 'pd/professional_learning#csa'
     get 'professional-learning/facilitator/computer-science-discoveries', to: 'pd/professional_learning#csd'
     get 'professional-learning/facilitator/computer-science-fundamentals', to: 'pd/professional_learning#csf'
     get 'professional-learning/facilitator/computer-science-principles', to: 'pd/professional_learning#csp'
     get 'professional-learning/facilitator/ai-fundamentals', to: 'pd/professional_learning#aif'
     get 'professional-learning/regional-partner/playbook', to: 'pd/professional_learning#rp_playbook'
+    get 'professional-learning/application/applications_closed', to: 'pd/professional_learning#applications_closed'
+    get 'professional-learning/workshops_as_facilitator_for_pl_page', to: 'pd/professional_learning#workshops_as_facilitator_for_pl_page'
+    get 'professional-learning/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
+    get 'professional-learning/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
     get 'professional-learning/regional_workshop_data/:zip_code', to: 'pd/professional_learning#regional_workshop_data'
 
     namespace :pd do
@@ -1250,12 +1269,6 @@ Dashboard::Application.routes.draw do
     resources :project_commits, only: [:create]
     get 'project_commits/get_token', to: 'project_commits#get_token'
     get 'project_commits/:channel_id', to: 'project_commits#project_commits'
-
-    # partial ports of legacy v3 APIs
-    get '/v3/channels/:channel_id/abuse', to: 'report_abuse#show_abuse'
-    delete '/v3/channels/:channel_id/abuse', to: 'report_abuse#reset_abuse'
-    post '/v3/channels/:channel_id/abuse/delete', to: 'report_abuse#reset_abuse'
-    patch '/v3/(:endpoint)/:encrypted_channel_id', constraints: {endpoint: /(animations|assets|sources|files|libraries)/}, to: 'report_abuse#update_file_abuse'
 
     post '/browser_events/put_logs', to: 'browser_events#put_logs'
     post '/browser_events/put_metric_data', to: 'browser_events#put_metric_data'

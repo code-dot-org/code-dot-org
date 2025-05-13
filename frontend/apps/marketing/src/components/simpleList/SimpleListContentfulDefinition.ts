@@ -10,12 +10,12 @@ export const SimpleListContentfulComponentDefinition: ComponentDefinition = {
   name: 'Simple List',
   category: '03: Basic',
   thumbnailUrl:
-    'https://images.ctfassets.net/90t6bu6vlf76/bkW5Mm9owpcZWnexKTRCq/0554f4990e4165ff8907f425bb501eee/component_list_thumbnail.png',
+    'https://contentful-images.code.org/90t6bu6vlf76/bkW5Mm9owpcZWnexKTRCq/0554f4990e4165ff8907f425bb501eee/component_list_thumbnail.png',
   tooltip: {
     description:
       'A structured collection of list items in bullet-point format. Supports a custom icon.',
     imageUrl:
-      'https://images.ctfassets.net/90t6bu6vlf76/5DICYZJBAh8MrBQQhkP5AO/836b3e29d0a036c3af7115c097b3c62f/component_list_tooltip.png',
+      'https://contentful-images.code.org/90t6bu6vlf76/5DICYZJBAh8MrBQQhkP5AO/836b3e29d0a036c3af7115c097b3c62f/component_list_tooltip.png',
   },
   // Adding an empty array here so no default style options show in the Design tab.
   builtInStyles: [],

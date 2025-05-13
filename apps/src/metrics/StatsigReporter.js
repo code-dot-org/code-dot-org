@@ -14,7 +14,7 @@ import {
 import {
   getUserID,
   getUserType,
-  findOrCreateStableId,
+  getStableId,
   formatUserId,
 } from './statsigHelpers';
 
@@ -27,7 +27,7 @@ class StatsigReporter {
     // stable_id is set as a cookie in application_controller.rb. However in a
     // the rare case we are running outside of the application layout,
     // set stable_id as a cookie here if it doesn't exist.
-    this.stable_id = findOrCreateStableId();
+    this.stable_id = getStableId();
     this.log(`Statsig Stable ID: ${this.stable_id}`);
     let user = {
       custom: {

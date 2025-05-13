@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "AIF",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -22,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-24 19:46:32 UTC",
+    "serialized_at": "2025-05-10 02:09:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -61,7 +62,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "End Project"
+        "display_name": "End of Unit Project"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
@@ -101,7 +102,7 @@
     },
     {
       "key": "Introduction to Data Science",
-      "name": "Introduction to Data Science",
+      "name": "Lesson 1: Introduction to Data Science",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -119,7 +120,7 @@
     },
     {
       "key": "Making Sense of Data",
-      "name": "Making Sense of Data",
+      "name": "Lesson 2: Making Sense of Data",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -137,7 +138,7 @@
     },
     {
       "key": "Ethical Data Collection",
-      "name": "Ethical Data Collection",
+      "name": "Lesson 3: Ethical Data Collection",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -155,7 +156,7 @@
     },
     {
       "key": "Data Rights",
-      "name": "Data Rights",
+      "name": "Lesson 4: Data Rights",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -173,7 +174,7 @@
     },
     {
       "key": "Effective Data Questions",
-      "name": "Effective Data Questions",
+      "name": "Lesson 5: Effective Data Questions",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -191,7 +192,7 @@
     },
     {
       "key": "Data Storytelling",
-      "name": "Data Storytelling",
+      "name": "Lesson 6: Data Storytelling",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -209,7 +210,7 @@
     },
     {
       "key": "Introduction to Data Visualization",
-      "name": "Introduction to Data Visualization",
+      "name": "Lesson 7: Introduction to Data Visualization",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -226,7 +227,7 @@
     },
     {
       "key": "Data Cleaning and Analysis Techniques",
-      "name": "Data Cleaning and Analysis Techniques",
+      "name": "Lesson 8: Data Cleaning and Analysis Techniques",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -244,7 +245,7 @@
     },
     {
       "key": "Data Interpretation",
-      "name": "Data Interpretation",
+      "name": "Lesson 9: Data Interpretation",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -262,7 +263,7 @@
     },
     {
       "key": "More Visualization Techniques",
-      "name": "More Visualization Techniques",
+      "name": "Lesson 10: More Visualization Techniques",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -279,12 +280,13 @@
     },
     {
       "key": "Crafting Stories with Data Project",
-      "name": "Crafting Stories with Data Project",
+      "name": "Lesson 11: Crafting Stories with Data Project",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "assessment": true,
         "overview": "**What is the process of choosing a data set and forming a question to investigate?**\n\nOn Day 1, students will choose a dataset to investigate and generate RSAIR questions. They will familiarize themselves with their dataset through a Three Reads of Data, select a data question to investigate, and start discussing potential barriers to success.",
         "preparation": "* Provide a copy of the project guide for each student\n* **(Optional)** Print out a copy of the Data Question Peer Review for each student",
         "student_overview": "**What is the process of choosing a data set and forming a question to investigate?**\n\nToday, you will choose a dataset, go through a Three Reads of Data, and form your RSAIR data question. You will also discuss any potential barriers to completing the project."
@@ -313,7 +315,7 @@
     },
     {
       "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
@@ -829,6 +831,19 @@
       }
     },
     {
+      "key": "7099cfe9-39ba-432a-8fe5-b26c86bbd656",
+      "position": 6,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7099cfe9-39ba-432a-8fe5-b26c86bbd656",
+        "lesson.key": "Crafting Stories with Data Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif6-2025"
+      }
+    },
+    {
       "key": "d635eb2d-92e0-45fd-bb68-d70650982240",
       "position": 1,
       "properties": {
@@ -869,7 +884,7 @@
       "key": "35eada27-229c-43c2-ab50-a88ae0de8fd8",
       "position": 1,
       "properties": {
-        "description": "Record some data that you can collect from this image. There are no wrong answers here! We're going to use this activity to help us understand what data can be. I don’t expect you to already know! Answer to the best of your ability.",
+        "description": "You’re planning a class pizza party that has music and activities! Take a look at this picture—there’s pizza, soda, napkins… all kinds of things to think about. Go to Level 1 and answer the question: What data would you want to collect to plan a party like this?",
         "remarks": true
       },
       "seeding_key": {
@@ -881,8 +896,18 @@
       "key": "4b7c50f7-708d-4fb4-a8e2-0286dc1f9df8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1.",
-        "progression_name": "Check for Understanding"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to record the information (data) they would want to collect to help plan a pizza party.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** This activity introduces students to the idea that data is any information that can help solve a problem or answer a question. In this case, students are imagining they are planning a class pizza party and identifying what information (data) they might need to collect to make the event fun and successful.\n",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Looking at what data the students would want to collect here can help you understand what previous understanding they have of data and the role of data in solving real-world problems.\n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "This is an intentional pre-assessment — students haven’t formally learned what data is yet, so their responses will give insight into how they naturally think about information and decision-making. Remind students that there are no wrong answers. If they’re stuck, you can prompt them with questions like: “What would you want to know before the party?” or “What kind of things would you need to plan for food, drinks, or activities?” Encourage a range of responses: number of people attending, pizza preferences, drink options, dietary needs, supplies, or even music or activity ideas\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "4b7c50f7-708d-4fb4-a8e2-0286dc1f9df8",
@@ -893,13 +918,6 @@
       "key": "2b4a7953-f9cf-48e2-ab97-e2b9ce4ce987",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down things they notice in this picture as recorded data.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** This activity asks students to do something they might not have all the information for yet (they have not defined “data”) – this is intentional; it allows you to pre-assess what students know about data. Remind them that there are no wrong answers. If students are stuck, you can prompt them by asking them what they notice is in the picture, and have them write that down. Some possible examples of data include: number of pizzas ordered, number of slices on each plate, number of people eating, type of pizza ordered, location. Anything they can take from this picture is data. This may even include data that seems useless to act on, like the colors people are wearing. What makes it data is organizing and labeling it.",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Looking at what data the students collect here can help you understand what previous understanding they have of data, labeling, and the usefulness of which questions to ask and what data to collect."
-          }
-        ]
       },
       "seeding_key": {
         "activity_section.key": "2b4a7953-f9cf-48e2-ab97-e2b9ce4ce987",
@@ -907,24 +925,14 @@
       }
     },
     {
-      "key": "7ca39379-9ce9-44e5-9c1a-146e8f22b2ba",
+      "key": "00d38fa8-024e-4192-90f5-509c576a5bce",
       "position": 4,
       "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7ca39379-9ce9-44e5-9c1a-146e8f22b2ba",
-        "lesson_activity.key": "0cc63c06-187f-4cc0-b77e-f80beb09cdaf"
-      }
-    },
-    {
-      "key": "00d38fa8-024e-4192-90f5-509c576a5bce",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have pairs engage in the Compare and Connect protocol by sharing their data and discussing the questions.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have pairs engage in the Compare and Connect protocol by sharing the types of information they listed. Encourage them to compare what was the same or different and discuss why they chose those data points.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "A key idea of data science is that information can be represented in a variety of ways. Data scientists have to make choices, and these choices have trade-offs. When students compare their work, they have an opportunity to both communicate the choices they made and to see the choices made by another student. When they connect back to the source of information - whether it be a primary source or a data set - students are pushed to consider what information is represented in their work, and what information is not."
+            "markdown": "Students may focus on obvious details (like pizza types or number of people). Push their thinking by prompting them to consider why they chose certain information—what decision would it help them make when planning the party?\n"
           }
         ]
       },
@@ -934,12 +942,25 @@
       }
     },
     {
-      "key": "36bb2619-796e-43c3-8993-cf86bc8ffdb6",
-      "position": 6,
+      "key": "7ca39379-9ce9-44e5-9c1a-146e8f22b2ba",
+      "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What information did you and your partner want to collect for the party?*\n\n* Call on a few students to share what they found in their Compare and Connect.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a quick share-out to help surface patterns in student thinking. Snapping encourages students to actively listen and participate while showing how common certain ideas are. Highlight both common responses (like pizza types or number of guests) and unique ones (like music preferences or cleanup plans) to show how diverse data needs can be.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Insights from Data and AI Unit Guide."
       },
       "seeding_key": {
-        "activity_section.key": "36bb2619-796e-43c3-8993-cf86bc8ffdb6",
+        "activity_section.key": "7ca39379-9ce9-44e5-9c1a-146e8f22b2ba",
+        "lesson_activity.key": "0cc63c06-187f-4cc0-b77e-f80beb09cdaf"
+      }
+    },
+    {
+      "key": "445a4748-3552-4281-ae38-c0bf2e668495",
+      "position": 6,
+      "properties": {
+        "description": "All that information you came up with to plan the party—like how many people are coming, what kind of pizza to order, or what music people like—that’s called data. Data is just organized information we can use to help us make decisions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "445a4748-3552-4281-ae38-c0bf2e668495",
         "lesson_activity.key": "0cc63c06-187f-4cc0-b77e-f80beb09cdaf"
       }
     },
@@ -947,10 +968,20 @@
       "key": "33929bec-26a4-47d5-8673-a65a1730829b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What kind of data did you and your partner collect?*\n\n* Call on a few students to share what they found in their Compare and Connect.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a fairly quick share out that allows students to compare their responses and wrap up the activity. Snapping encourages students to be actively listening to each other and participating as other students talk, as well as giving a group understanding of how common a given observation was.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data science**.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Word Wall, and have students add ***data*** and ***data science*** to the wall.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data*** and have students record the definition in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data science*** and have students record the definition in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Word Wall, and have students add ***data*** and ***data science*** to the wall.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "33929bec-26a4-47d5-8673-a65a1730829b",
+        "lesson_activity.key": "0cc63c06-187f-4cc0-b77e-f80beb09cdaf"
+      }
+    },
+    {
+      "key": "36bb2619-796e-43c3-8993-cf86bc8ffdb6",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "36bb2619-796e-43c3-8993-cf86bc8ffdb6",
         "lesson_activity.key": "0cc63c06-187f-4cc0-b77e-f80beb09cdaf"
       }
     },
@@ -1062,6 +1093,35 @@
       },
       "seeding_key": {
         "activity_section.key": "cbd747bd-27bb-4d67-adc9-6bb3965fc8c2",
+        "lesson_activity.key": "706b910b-784c-4e73-a99a-fa8f56b48cef"
+      }
+    },
+    {
+      "key": "362fdcfd-bd41-4fac-b119-9e53f212e219",
+      "position": 9,
+      "properties": {
+        "description": "Let’s pause to think about ethics. Every data scientist works with people’s information in some way—and that brings up important questions about privacy, fairness, and impact. Talk with your last partner about the ethical concerns your data scientist might face. What kind of data are they working with? Could it be misused? Who benefits from their work—and who might be left out or hurt by it?\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "362fdcfd-bd41-4fac-b119-9e53f212e219",
+        "lesson_activity.key": "706b910b-784c-4e73-a99a-fa8f56b48cef"
+      }
+    },
+    {
+      "key": "dd7e6b16-4d1b-4c80-9ba9-f6dc3e00c4b2",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss the potential ethical concerns related to each of their data scientists with their last partner. If time allows, invite a few students to share one ethical concern they discussed.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are considering the context of their specific data scientist’s work when identifying ethical concerns. Look and listen for responses related to data access, privacy, or potential impact.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students struggle to name an ethical concern, encourage them to think about what would happen if the data was misused or if the data was about them personally.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dd7e6b16-4d1b-4c80-9ba9-f6dc3e00c4b2",
         "lesson_activity.key": "706b910b-784c-4e73-a99a-fa8f56b48cef"
       }
     },
@@ -1238,10 +1298,27 @@
       }
     },
     {
-      "key": "ef63745c-1132-4496-9284-1617e9b8f3fb",
+      "key": "e57ed15f-4d20-455c-a889-496a33640d61",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Answering a Data Question activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students that now that they’re done with the Three Reads, they’re ready to explore the full data set. Tell students that their job is to see if they can answer the data question: How much pizza should we order for a school party? Let students know that the full data set includes survey responses from hundreds of students. Prepare students by telling them that while more data can be necessary to answer a question, it can also be more challenging to work with, which is why data scientists use computers to work with large sets of data.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to access the Pizza Slice data set.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Answering a Data Question activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": " Students may notice that this activity guide uses parts of the UMPIRE strategy they’ve learned in a previous unit. If helpful, briefly remind them that they're using steps like **Understand** (interpreting the data), **Produce** (making a recommendation), and **Explain** (justifying their reasoning). You don’t need to reteach the whole strategy—just connect it as a familiar thinking routine to structure their approach.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e57ed15f-4d20-455c-a889-496a33640d61",
+        "lesson_activity.key": "be284518-d6a2-48ac-8da8-0686e1879134"
+      }
+    },
+    {
+      "key": "ef63745c-1132-4496-9284-1617e9b8f3fb",
+      "position": 13,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students that now that they’re done with the Three Reads, they’re ready to explore the full data set. Tell students that their job is to see if they can answer the data question: How much pizza should we order for a school party? Let students know that the full data set includes survey responses from hundreds of students. Prepare students by telling them that while more data can be necessary to answer a question, it can also be more challenging to work with, which is why data scientists use computers to work with large sets of data.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to access the Pizza Slice data set.",
         "progression_name": "Pizza Slice Data Set",
         "tips": [
           {
@@ -1257,7 +1334,7 @@
     },
     {
       "key": "8e8af76a-ffc9-40dd-8791-6aafff608e5c",
-      "position": 13,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -1267,7 +1344,7 @@
     },
     {
       "key": "01bf8fe3-ae25-4073-9823-d2fe02f018c5",
-      "position": 14,
+      "position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -1277,7 +1354,7 @@
     },
     {
       "key": "5730a0aa-dcbb-4fe6-a7bc-7bf7e738eb0f",
-      "position": 15,
+      "position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -1287,9 +1364,9 @@
     },
     {
       "key": "f11a7ad9-84b0-400a-a072-01c7f450dd78",
-      "position": 16,
+      "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How much pizza should we order for a school party?*\n\n* Use a Think, Pair, Share to close out this activity with this question from the activity guide.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to see where your students are at when it comes to using data to answer questions like this one. Remind them that their goal today isn’t really to figure out how much pizza to order--but to be able to understand how to read information in a spreadsheet, because spreadsheets are how data scientists organize large amounts of data using computers."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How much pizza should we order for a school party?*\n\n* Use a Think, Pair, Share to close out this activity with this question from the activity guide.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to see how students interpret the data and make decisions using spreadsheet information. Students may come up with different recommendations depending on how many slices they think students should get, how many students they assume will attend, and how they apply the budget. The goal isn’t to agree on one answer, but to justify their reasoning using the data—just like a data scientist would."
       },
       "seeding_key": {
         "activity_section.key": "f11a7ad9-84b0-400a-a072-01c7f450dd78",
@@ -1328,8 +1405,14 @@
       "key": "fc4f98c8-1cef-47ad-b90d-7a1e81df44ff",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data collection***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data ethics***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete Levels 1, 2, and 3. On each level, students should examine each of the scenarios and write a statement that provides guidance about ethical data collection.",
-        "progression_name": "Party Planning"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data collection***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data ethics***.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1-3. On each level, they'll read a scenario, choose the person they agree with most, and explain why in the free response box. These scenarios will help them prepare for a whole-class 4 Corners discussion about each scenario on ethical decision-making in data collection.\n* **Level 1:** Students read the scenario and decide which person they agree with regarding collecting data about food allergies. \n* **Level 2:** Students read the scenario and decide which person they agree with regarding collecting data about getting sponsorships.\n* **Level 3:** Students read the scenario and decide which person they agree with regarding collecting data about music choices. ",
+        "progression_name": "Party Planning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students are unsure which person to agree with, encourage them to ask themselves:\n* What type of data is being collected?\n* Could it be risky or make someone uncomfortable?\n* Who benefits — and who might be impacted?\n\nThese questions can help students evaluate each person's approach based on privacy, consent, and fairness—not just personal preference.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fc4f98c8-1cef-47ad-b90d-7a1e81df44ff",
@@ -1337,10 +1420,27 @@
       }
     },
     {
-      "key": "cec6239f-cfc7-4d75-a4d1-09b4def7d4cd",
+      "key": "75ee3dbd-5c46-4eb9-8715-b193de7928e7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the activity, encourage them to write statements that reflect three different aspects of data ethics.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to Level 4 to respond to the discussion question. Show the students' responses and discuss the common themes that arose as a class.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, check responses or prompt with light questions to encourage deeper thinking. Focus on how they’re weighing trade-offs around privacy, consent, fairness, or inclusion.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After students finish all three levels, facilitate a 4 Corners discussion about each scenario. Ask students to pick the person they most agreed with from each scenario and stand in that corner. If they didn’t agree with anyone fully, they can choose \"Other.\" \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After each corner shares, ask the class any of the follow-up questions listed below that would help push their thinking about ethical data collection based on what was shared by each corner: \n* What value did that person prioritize (e.g., privacy, consent, fairness)?\n* Could their choice unintentionally harm someone or leave someone out?\n* Was there a better way to collect or protect the data?\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": " Encourage students to build off each other’s reasoning. There’s no single right answer—what matters is how they justify the ethical implications of data collection choices.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "75ee3dbd-5c46-4eb9-8715-b193de7928e7",
+        "lesson_activity.key": "790e5a2f-80f5-46b4-9fbc-ac5974c30311"
+      }
+    },
+    {
+      "key": "cec6239f-cfc7-4d75-a4d1-09b4def7d4cd",
+      "position": 3,
+      "properties": {
+        "description": "\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 and write a statement that provides ethical guidance for collecting data about people. Remind them to think about what they learned from the three scenarios and discussions — especially around issues like privacy, consent, accuracy, and fairness.\n\n\n\n",
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
@@ -1349,8 +1449,19 @@
       }
     },
     {
+      "key": "67192120-e60d-4839-ac9b-c6430f177ec8",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After students submit, display a few responses using the “Show Responses” feature. Highlight strong ethical principles or creative ways students expressed the values they discussed."
+      },
+      "seeding_key": {
+        "activity_section.key": "67192120-e60d-4839-ac9b-c6430f177ec8",
+        "lesson_activity.key": "790e5a2f-80f5-46b4-9fbc-ac5974c30311"
+      }
+    },
+    {
       "key": "4ed33845-7fed-456d-92a2-609d6760fc15",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "This visual represents some of the important themes regarding data ethics that arose from the party planning scenarios that you all explored. When you think about how you are collecting and using data, these three categories should be used to help assess the ethics of what you are proposing. An important concept that came up in the final scenario was the idea of bias.",
         "remarks": true
@@ -1362,13 +1473,13 @@
     },
     {
       "key": "096fea02-18d4-4307-b97d-31fed5a19f0d",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the three components of data ethics.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How might AI tools be used to collect this kind of data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify ways AI can collect data automatically—through apps, sensors, social media, or surveillance—and describe how that might look in real-world contexts.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What ethical concerns come up when AI is involved in data collection?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should raise ethical concerns such as lack of consent, invasion of privacy, potential bias in how AI collects or interprets data, and misuse of sensitive information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***bias***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair several sticky notes and a pair of scissors.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students group the datasets and discuss how they might group them based on how the data might have been collected. They should use sticky notes to label their classifications.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Challenge students to come up with thorough descriptions of the collection methods that they are grouping together on their sticky notes. Remind them that it is alright to change their minds and to reorganize as new realizations and discoveries come to light. ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students might be tempted to try to group the datasets by topic and similarity in theme, rather than in the method that they might have been collected. Remind students of this as they work, if necessary."
+            "markdown": "Students might be tempted to try to group the datasets by topic and similarity in theme, rather than in the method that they might have been collected. Remind students of this as they work, if necessary. If it is helpful for your students, show the Possible Data Collection Methods slide to give them a starting point.\n"
           }
         ]
       },
@@ -1379,7 +1490,7 @@
     },
     {
       "key": "212fbd11-114d-4f7a-b5cb-fdfe952cf036",
-      "position": 5,
+      "position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -1389,9 +1500,9 @@
     },
     {
       "key": "e123030e-4c31-4792-a1b6-e92d8901350c",
-      "position": 6,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways your group grouped the different collection methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Three of the main methods for collecting data that might emerge from the activity include:\n* Website, app, or automated data collection. Usually this data is collected automatically based on a program or script that might be running.\n* Survey data. This involves composing qualitative and quantitative questions that are then distributed to an audience to answer.\n* Measurements (sensors or other measurement devices). This includes data that is collected from instrumentation of some type. The recording of it can be automated or manual.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the example methods for collecting data that emerged from the previous activity.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What method of data collection might the AI in YouTube recommendations use, and what ethical concerns are raised?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are a variety of different ways in which the AI recommendation engine in YouTube might collect data. Some of it is voluntary– thumbs up or down, subscribing to content creators– and some of it is hidden from the user– watch history, clicks, and time spent on videos. This might raise a variety of different ethical concerns such as a lack of transparency for how the algorithm decides what to offer. It might profile users based on their interactions and the data that is collected without the user being able to see how they are being represented in the system. Also, there exists the possibility that a user might be shown videos with the intent to influence or affect their opinions and behavior without consent."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways your group grouped the different collection methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Three of the main methods for collecting data that might emerge from the activity include:\n* Website, app, or automated data collection. Usually this data is collected automatically based on a program or script that might be running.\n* Survey data. This involves composing qualitative and quantitative questions that are then distributed to an audience to answer.\n* Measurements (sensors or other measurement devices). This includes data that is collected from instrumentation of some type. The recording of it can be automated or manual.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the example methods for collecting data that emerged from the previous activity. Ask students to come up with additional examples of data that could be collected using each of these methods to reinforce their understanding of how each collection method works.\n\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What method of data collection might the AI in YouTube recommendations use, and what ethical concerns are raised?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are a variety of different ways in which the AI recommendation engine in YouTube might collect data. Some of it is voluntary– thumbs up or down, subscribing to content creators– and some of it is hidden from the user– watch history, clicks, and time spent on videos. This might raise a variety of different ethical concerns such as a lack of transparency for how the algorithm decides what to offer. It might profile users based on their interactions and the data that is collected without the user being able to see how they are being represented in the system. Also, there exists the possibility that a user might be shown videos with the intent to influence or affect their opinions and behavior without consent."
       },
       "seeding_key": {
         "activity_section.key": "e123030e-4c31-4792-a1b6-e92d8901350c",
@@ -1558,7 +1669,7 @@
       "key": "b6b74783-4be4-4415-a575-a9b509f5c2a4",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students begin to draft their data rights statements for the various stakeholders, encourage them to explain how the background or key experiences helped to shape the statements that they are drafting.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data Rights Exploration activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students jigsaw into mixed groups that represent all six of the different stakeholders. They will answer the questions on the activity guide from the stance of their stakeholder to the best of their ability. As the group shares, they will record the main points and concerns that they hear about the other stakeholders' points of view on their activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to the conversations that are occurring in the classroom and choose several interesting or thoughtful responses to highlight for the class."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students begin to draft their data rights statements for the various stakeholders, encourage them to explain how the background or key experiences helped to shape the statements that they are drafting.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data Rights Exploration activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students jigsaw into mixed groups that represent all six of the different stakeholders. They will share key information about their personas and discuss whether or not they agree with the data rights statements. After all members of the group share, have students record in their activity guide the main points and concerns that they have discussed.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to the conversations that are occurring in the classroom and choose several interesting or thoughtful responses to highlight for the class."
       },
       "seeding_key": {
         "activity_section.key": "b6b74783-4be4-4415-a575-a9b509f5c2a4",
@@ -1586,12 +1697,12 @@
       "key": "65f31ae4-b10a-4ce7-b668-01e97db84541",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to prepare to participate in a Three Reads of Data with their partner on the Pizza Slice dataset.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to prepare to participate in a Three Reads of Data with their partner on the School Party dataset.",
         "progression_name": "Read 1: Context",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "While the activity is completed online in a lesson level, it is very important that you use the subsequent slides to lead each reading. Displaying each \"read\" slide helps ensure students progress at the right pace, preventing them from spending excessive time on any single data read. Additionally, these slides serve as useful prompts, reminding students of the specific questions they should consider about the data during each reading."
+            "markdown": "To make the Three Reads more interactive and collaborative, consider printing out the School Party dataset and having students do Read 1 and Read 2 in small groups using sticky notes instead of online. Each group can:\n* Annotate the dataset directly (e.g., highlight patterns or unfamiliar terms).\n* Use sticky notes to write their answers to prompts like “This data is from…” or “The sample size is...”\n* Share out one insight from each group before moving on to Read 3 online.\n\nThis option may increase student engagement and reduce screen fatigue at the start of the lesson.\n"
           }
         ]
       },
@@ -1604,6 +1715,13 @@
       "key": "e31b9883-3e5c-4004-9e10-a39ca287cb4e",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Present the following scenario: Their school’s leadership class/principal is wants to have an end of the year party and decided to survey students. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a Three Reads of Data about this data set. During Read 1, give students a moment of individual time to think and record their own ideas in the level and a few minutes to share their ideas with their partner.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While the activity is completed online in a lesson level, it is very important that you use the subsequent slides to lead each reading. Displaying each \"read\" slide helps ensure students progress at the right pace, preventing them from spending excessive time on any single data read. Additionally, these slides serve as useful prompts, reminding students of the specific questions they should consider about the data during each reading."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e31b9883-3e5c-4004-9e10-a39ca287cb4e",
@@ -1614,7 +1732,7 @@
       "key": "1544957a-4c7d-405a-b103-9a4a34979e21",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Present the following scenario: Their school’s leadership class/principal is wants to have an end of the year party and decided to survey students. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a Three Reads of Data about this data set. During Read 1, give students a moment of individual time to think and record their own ideas in the level and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 1 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 2 to work on Read 2: Quantities. ",
+        "description": "\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 1 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 2 to work on Read 2: Quantities. ",
         "progression_name": "Read 2: Quantities"
       },
       "seeding_key": {
@@ -1637,7 +1755,7 @@
       "key": "11550f41-5142-41f5-ab03-22b381180908",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some characteristics you and your partner noticed that might make a question a good question to ask about a dataset?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share their characteristic ideas. As they share, ask follow up questions or ask students to use one of the sentences as an example. Try to lead students towards the following criteria:\n* Relevant \n* Specific\n* Actionable\n* Investigative\n* Respectful\n\nAs students come up with characteristics that match, or closely match this criteria, write them down on the board or on a poster for everyone to see.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Do AI systems always ask ethical questions?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. Students might say that AI can ask questions that feel off, unfair, or too personal because it doesn’t understand context or emotions.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s missing when AI writes questions from data without context?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. Students might say AI doesn’t know the purpose of the data, what’s sensitive, or what’s actually important to ask. This builds the case for human involvement in crafting clear, relevant, and respectful questions.\n\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Criteria for Creating Effective Questions guided notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the \"Relevant\" criteria and have students complete the guided notes. Make reference back to anything the students pointed out during the share out of what made a question a \"good\" question. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions would be \"Good\", \"Okay\", or \"Bad\" based on being relevant for a dataset containing information about students’ sports activities and students’ grades?*\n\n* Use Think-Pair-Share to allow students to individually reflect, discuss with a partner, and then share their thoughts as a class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n1. This is a bad question. It is not relevant since it is not covered by the dataset. Follow up question: *Can this question be tweaked to be relevant?* Since the dataset does not include sports brand preferences, there is not way to tweak this question.\n2. This is a good question. It is relevant to the data provided because it includes attributes that are found in the dataset.\n3. This is a bad or possible okay question. It is not relevant due to “study time” not being covered by the dataset Follow up question: *Can this question be tweaked to be relevant?* This question can be tweaked by modifying it to “Which sports are associated with the highest and lowest grades?” This modified question uses existing data to infer about the academic demands of different sports without needing specific study time data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Modifications\" column on their guided notes with how the \"Okay\" or \"Bad\" questions could be modified to be Relevant.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some characteristics you and your partner noticed that might make a question a good question to ask about a dataset?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share their characteristic ideas. As they share, ask follow up questions or ask students to use one of the sentences as an example. Try to lead students towards the following criteria:\n* Relevant \n* Specific\n* Actionable\n* Investigative\n* Respectful\n\nAs students come up with characteristics that match, or closely match this criteria, write them down on the board or on a poster for everyone to see.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Do AI systems always ask ethical questions?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. Students might say that AI can ask questions that feel off, unfair, or too personal because it doesn’t understand context or emotions.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s missing when AI writes questions from data without context?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student answers will vary. Students might say AI doesn’t know the purpose of the data, what’s sensitive, or what’s actually important to ask. This builds the case for human involvement in crafting clear, relevant, and respectful questions.\n\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Criteria for Creating Effective Questions guided notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the \"Relevant\" criteria and have students complete the guided notes. Make reference back to anything the students pointed out during the share out of what made a question a \"good\" question. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions would be \"Good\", \"Okay\", or \"Bad\" based on being relevant for a dataset containing information about students’ sports activities and students’ grades?*\n\n* Use Think-Pair-Share to allow students to individually reflect, discuss with a partner, and then share their thoughts as a class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n1. This is a bad question. It is not relevant since it is not covered by the dataset. Follow up question: *Can this question be tweaked to be relevant?* Since the dataset does not include sports brand preferences, there is not way to tweak this question.\n2. This is a good question. It is relevant to the data provided because it includes attributes that are found in the dataset.\n3. This is a bad or possible okay question. It is not relevant due to “study time” not being covered by the dataset Follow up question: *Can this question be tweaked to be relevant?* This question can be tweaked by modifying it to “Which sports are associated with the highest and lowest grades?” This modified question uses existing data to infer about the academic demands of different sports without needing specific study time data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fill in the blanks in the “Examples: Good, Bad, or Okay Questions” column to indicate which Relevant examples are “good”, “bad”, or “okay”.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1664,7 +1782,7 @@
       "key": "5da3bd9c-d73c-480c-ad71-dea9eceda4c5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the \"Specific\" criteria and have students complete the guided notes. Make reference back to anything the students pointed out during the share out of what made a question a \"good\" question. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions would be \"Good\", \"Okay\", or \"Bad\" based on being relevant for a dataset containing daily records of students' self-reported moods and activities at school?*\n\n* Use Think-Pair-Share to allow students to individually reflect, discuss with a partner, and then share their thoughts as a class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n1. This is an okay question. The term \"enjoy\" is broad and could encompass many different aspects of the school day. Follow up question: *Can this question be tweaked to be specific?* Modify the question to: “What percentage of students report a positive mood during major school activities such as classes, lunch and recess?” This question narrows down “enjoyment” to specific times and types of activities, making is more specific.\n2. This is an okay question. The question is unclear because it does not specify which activities or how the effect on mood is measured. Follow up question: *Can this question be tweaked to be specific?* Modify the question to: “How do specific school activities (like assemblies or sports) correlate with changes in students' mood ratings on the same day?” This question clarifies which aspects of school activities are being considered and connects them directly to mood changes.\n3. This is a good question. It pinpoints exactly what you want to find out and is specific about days of the week and “happy” as the specific mood. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Modifications\" column on their guided notes with how the \"Okay\" or \"Bad\" questions could be modified to be Specific.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the \"Specific\" criteria and have students complete the guided notes. Make reference back to anything the students pointed out during the share out of what made a question a \"good\" question. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions would be \"Good\", \"Okay\", or \"Bad\" based on being relevant for a dataset containing daily records of students' self-reported moods and activities at school?*\n\n* Use Think-Pair-Share to allow students to individually reflect, discuss with a partner, and then share their thoughts as a class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n1. This is an okay question. The term \"enjoy\" is broad and could encompass many different aspects of the school day. Follow up question: *Can this question be tweaked to be specific?* Modify the question to: “What percentage of students report a positive mood during major school activities such as classes, lunch and recess?” This question narrows down “enjoyment” to specific times and types of activities, making is more specific.\n2. This is an okay question. The question is unclear because it does not specify which activities or how the effect on mood is measured. Follow up question: *Can this question be tweaked to be specific?* Modify the question to: “How do specific school activities (like assemblies or sports) correlate with changes in students' mood ratings on the same day?” This question clarifies which aspects of school activities are being considered and connects them directly to mood changes.\n3. This is a good question. It pinpoints exactly what you want to find out and is specific about days of the week and “happy” as the specific mood. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fill in the blanks in the “Examples: Good, Bad, or Okay Questions” column to indicate which Specific examples are “good”, “bad”, or “okay”.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1691,7 +1809,7 @@
       "key": "ce1e4986-bda4-4f3a-9967-f834ebdf34c8",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the \"Actionable\" criteria and have students complete the guided notes. Make reference back to anything the students pointed out during the share out of what made a question a \"good\" question. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions would be \"Good\", \"Okay\", or \"Bad\" based on being relevant for a dataset containing survey results from students about their cafeteria food preferences?*\n\n* Use Think-Pair-Share to allow students to individually reflect, discuss with a partner, and then share their thoughts as a class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question is useful for deciding whether to introduce more diverse cuisines that reflect the cultural backgrounds of the student body\n1. This is a good question. This is an okay question. The question is too vague; \"like\" is not specific enough for actionable feedback. Follow up question: *Can this question be tweaked to be clear and specific?* Modify the question to: “What specific improvements would students recommend for the dishes currently served in the cafeteria?” This revised question solicits specific feedback that can be acted upon rather than a general sentiment.\n2. This is an bad question. \"Enjoy\" is subjective and does not directly lead to a clear action. Follow up question: *Can this question be tweaked to be clear and specific?* Modify the question to: “Would extending the lunch period by 10 minutes lead to a higher rate of meal consumption among students?” This revised question focuses on a specific, measurable outcome (meal consumption) related to a potential actionable change (extending the lunch period).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Modifications\" column on their guided notes with how the \"Okay\" or \"Bad\" questions could be modified to be Actionable.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the \"Actionable\" criteria and have students complete the guided notes. Make reference back to anything the students pointed out during the share out of what made a question a \"good\" question. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions would be \"Good\", \"Okay\", or \"Bad\" based on being relevant for a dataset containing survey results from students about their cafeteria food preferences?*\n\n* Use Think-Pair-Share to allow students to individually reflect, discuss with a partner, and then share their thoughts as a class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question is useful for deciding whether to introduce more diverse cuisines that reflect the cultural backgrounds of the student body\n1. This is a good question. This is an okay question. The question is too vague; \"like\" is not specific enough for actionable feedback. Follow up question: *Can this question be tweaked to be clear and specific?* Modify the question to: “What specific improvements would students recommend for the dishes currently served in the cafeteria?” This revised question solicits specific feedback that can be acted upon rather than a general sentiment.\n2. This is an bad question. \"Enjoy\" is subjective and does not directly lead to a clear action. Follow up question: *Can this question be tweaked to be clear and specific?* Modify the question to: “Would extending the lunch period by 10 minutes lead to a higher rate of meal consumption among students?” This revised question focuses on a specific, measurable outcome (meal consumption) related to a potential actionable change (extending the lunch period).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fill in the blanks in the “Examples: Good, Bad, or Okay Questions” column to indicate which Actionable examples are “good”, “bad”, or “okay”.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1718,7 +1836,7 @@
       "key": "262e04ff-d853-410f-b534-f1b116d8d031",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the \"Investigative\" criteria and have students complete the guided notes. Make reference back to anything the students pointed out during the share out of what made a question a \"good\" question. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions would be \"Good\", \"Okay\", or \"Bad\" based on being relevant for a dataset that shows how much time students spend on homework daily and their average test scores?*\n\n* Use Think-Pair-Share to allow students to individually reflect, discuss with a partner, and then share their thoughts as a class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n1. This is a good question. The question contains quantifiable data points - “more than 30 minutes” - and relates it directly to another quantifiable outcome - “average test scores”. This makes it possible to perform analysis to see if there is a correlation or causation between the time spent on homework and test scores.\n2. This is a bad question. The question doesn’t contain any data points that can be analyzed or investigated. Follow up question: *Can this question be tweaked to be investigative?* Modify the question to: “Is there a correlation between the amount of time spent on homework and improvements in test scores?” This question focuses on measurable changes in test scores, which can be analyzed and investigated statistically.\n3. This is an okay question. While it does have one data point that can be investigated, number of days a week, “happiness” is subjective and can not be analyzed. Follow up question: *Can this question be tweaked to be investigative?* Modify the question to: “Does the amount of time spent on homework correlate with students' academic performance, and can this be an indicator of academic stress?” While this question doesn't directly measure happiness, it can indirectly explore whether high volumes of homework might be associated with lower performance, which could be a stress indicator.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Modifications\" column on their guided notes with how the \"Okay\" or \"Bad\" questions could be modified to be Investigative.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the \"Investigative\" criteria and have students complete the guided notes. Make reference back to anything the students pointed out during the share out of what made a question a \"good\" question. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions would be \"Good\", \"Okay\", or \"Bad\" based on being relevant for a dataset that shows how much time students spend on homework daily and their average test scores?*\n\n* Use Think-Pair-Share to allow students to individually reflect, discuss with a partner, and then share their thoughts as a class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n1. This is a good question. The question contains quantifiable data points - “more than 30 minutes” - and relates it directly to another quantifiable outcome - “average test scores”. This makes it possible to perform analysis to see if there is a correlation or causation between the time spent on homework and test scores.\n2. This is a bad question. The question doesn’t contain any data points that can be analyzed or investigated. Follow up question: *Can this question be tweaked to be investigative?* Modify the question to: “Is there a correlation between the amount of time spent on homework and improvements in test scores?” This question focuses on measurable changes in test scores, which can be analyzed and investigated statistically.\n3. This is an okay question. While it does have one data point that can be investigated, number of days a week, “happiness” is subjective and can not be analyzed. Follow up question: *Can this question be tweaked to be investigative?* Modify the question to: “Does the amount of time spent on homework correlate with students' academic performance, and can this be an indicator of academic stress?” While this question doesn't directly measure happiness, it can indirectly explore whether high volumes of homework might be associated with lower performance, which could be a stress indicator.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fill in the blanks in the “Examples: Good, Bad, or Okay Questions” column to indicate which Investigative examples are “good”, “bad”, or “okay”.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1745,7 +1863,7 @@
       "key": "962700b1-a2c0-4747-b3c5-413eb66ab446",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the slide to explain what the “Respectful” criteria means. Instruct students to fill out their guided notes with the information on the slide. Make reference back to anything the students pointed out during the share out of what made a question a “good” question. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions would be \"Good\", \"Okay\", or \"Bad\" based on being relevant for a dataset that contains survey results from students about their music preferences?*\n\n* Use Think-Pair-Share to allow students to individually reflect, discuss with a partner, and then share their thoughts as a class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n1. This is a bad question. This question makes a prejudicial assumption that certain music preferences are linked to negative behaviors. It risks stigmatizing students based on their musical tastes and can lead to discrimination or unfair treatment. Follow up question: *Can this question be tweaked to be more ethical and respectful?* Modified question: “How does students' preference in music genres correlate with their participation in school activities?” Rather than attempting to link music preferences to behaviors, refocus the question on understanding the broader influence of music. This question remains within the scope of music preferences and school engagement without making judgments about behavior.\n2. This is a good question. The question is a straightforward, ethical question. It is respectful as it simply seeks to understand general trends in music preferences among students without delving into personal or sensitive areas.\n3. This is a bad question. This question is problematic both ethically and in terms of respectfulness. It attempts to link music preferences—an aspect of personal entertainment and expression—to mental health status, which is a sensitive and private matter. Such an inquiry can lead to stigmatization and misinterpretation, and it's based on an unfounded assumption that one's taste in music can accurately indicate mental health conditions. Follow up question: *Can this question be tweaked to be more ethical and respectful?* Modified question: “Does listening to certain genres of music influence students' reported mood during school hours?” The only way to modify this question is to shift the focus from “mental health” to “reported mood” which can be more safely and ethically explored within the scope of a basic survey about music preferences.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Modifications\" column on their guided notes with how the \"Okay\" or \"Bad\" questions could be modified to be Respectful.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the slide to explain what the “Respectful” criteria means. Instruct students to fill out their guided notes with the information on the slide. Make reference back to anything the students pointed out during the share out of what made a question a “good” question. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions would be \"Good\", \"Okay\", or \"Bad\" based on being relevant for a dataset that contains survey results from students about their music preferences?*\n\n* Use Think-Pair-Share to allow students to individually reflect, discuss with a partner, and then share their thoughts as a class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** \n1. This is a bad question. This question makes a prejudicial assumption that certain music preferences are linked to negative behaviors. It risks stigmatizing students based on their musical tastes and can lead to discrimination or unfair treatment. Follow up question: *Can this question be tweaked to be more ethical and respectful?* Modified question: “How does students' preference in music genres correlate with their participation in school activities?” Rather than attempting to link music preferences to behaviors, refocus the question on understanding the broader influence of music. This question remains within the scope of music preferences and school engagement without making judgments about behavior.\n2. This is a good question. The question is a straightforward, ethical question. It is respectful as it simply seeks to understand general trends in music preferences among students without delving into personal or sensitive areas.\n3. This is a bad question. This question is problematic both ethically and in terms of respectfulness. It attempts to link music preferences—an aspect of personal entertainment and expression—to mental health status, which is a sensitive and private matter. Such an inquiry can lead to stigmatization and misinterpretation, and it's based on an unfounded assumption that one's taste in music can accurately indicate mental health conditions. Follow up question: *Can this question be tweaked to be more ethical and respectful?* Modified question: “Does listening to certain genres of music influence students' reported mood during school hours?” The only way to modify this question is to shift the focus from “mental health” to “reported mood” which can be more safely and ethically explored within the scope of a basic survey about music preferences.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fill in the blanks in the “Examples: Good, Bad, or Okay Questions” column to indicate which Respectful examples are “good”, “bad”, or “okay”.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1772,7 +1890,7 @@
       "key": "e3c8e9d4-08fe-47a4-8a4e-db3100973d10",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How and why would you use the RSAIR criteria?*\n\n* Allow students to reflect on their own and share with a partner if time allows before sharing ideas with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Goals for this question include:\n* The criteria should help you think about the kinds of questions a dataset can answer based on what information is there\n* Use the criteria to shape the questions you ask about a dataset so they are clear, directly linked to the data, possible to answer and respectful\n* The criteria will help you end up with a solid data-question that leads to meaningful and responsible insights from your data\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display potential responses to the question.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to participate in Read 3 of the School Party dataset with their partner.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How and why would you use the RSAIR criteria?*\n\n* Allow students to reflect on their own and share with a partner if time allows before sharing ideas with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Goals for this question include:\n* The criteria should help you think about the kinds of questions a dataset can answer based on what information is there\n* Use the criteria to shape the questions you ask about a dataset so they are clear, directly linked to the data, possible to answer and respectful\n* The criteria will help you end up with a solid data-question that leads to meaningful and responsible insights from your data\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display potential responses to the question.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students return to the Possible Questions Activity Guide and complete Part 2. They should now be ready to write a new question they think meets all the RSAIR criteria and practice revising the vague question, “What do students like?”, until it’s strong enough to pass the RSAIR test. Remind students they can look back at their notes, previous examples, or class discussion to help.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to participate in Read 3 of the School Party dataset with their partner.",
         "progression_name": "Read 3: Questions",
         "tips": [
           {
@@ -2293,7 +2411,13 @@
       "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 5 - 6.\n* **Level 5:** Students review the basics of applying filters. \n* **Level 6:** Students use Google Sheets to apply filters and to make visualizations using the school pizza party dataset.\n",
-        "progression_name": "Applying Filters"
+        "progression_name": "Applying Filters",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students who finish early, to use their filtering and data visualization skills to create a new chart in the Google Sheet. Direct them to the tab called Optional Extension to answer a question of their choice or one of the questions listed."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "2f9d2aa7-0270-4bdb-a938-1e504d3c8b7f",
@@ -2613,6 +2737,7 @@
       "key": "7d76bcc8-39f6-4556-986d-088a41753f17",
       "position": 15,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that there are real world implications of data cleaning. In the 2000 US Presidential election, the margin of votes between Al Gore and George W. Bush in Florida was less than half a percent, which triggered a manual recount of votes. During the manual recount, several inconsistencies were noted. Ballots in Duval County had more \"overvotes\" than usual, likely due to instructions that stated “Vote every page\". As a result, 21,000 ballots had multiple markings, such as two or more choices for president. In Palm Beach County, Pat Buchanan had four times as many votes from people who voted in person using the Butterfly ballot (pictured above) as people in the county who voted absentee using non-butterfly ballots. In Duval County, data cleaning meant throwing out overvoted ballots. In Palm Beach County, data cleaning meant recording all votes cast for Pat Buchanan (even if they were cast incorrectly).\n"
       },
       "seeding_key": {
         "activity_section.key": "7d76bcc8-39f6-4556-986d-088a41753f17",
@@ -2620,8 +2745,18 @@
       }
     },
     {
-      "key": "f21197fe-5d6a-469a-b964-dad7b19bc686",
+      "key": "a6f71697-531a-487e-ac9f-9c66112bd030",
       "position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a6f71697-531a-487e-ac9f-9c66112bd030",
+        "lesson_activity.key": "9229c353-aa0a-4575-9fbd-0aa87f40c371"
+      }
+    },
+    {
+      "key": "f21197fe-5d6a-469a-b964-dad7b19bc686",
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Synthesize the discussion by having students help you summarize ideas about the following on an anchor chart:\n* How data scientists clean data\n* Important considerations for cleaning data",
         "tips": [
@@ -2637,8 +2772,19 @@
       }
     },
     {
+      "key": "8f9d7b33-d748-447b-a2df-3f7306ce28c1",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What are the advantages and disadvantages of each question type?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain that free response questions allow surveyed users to express a wider variety of choices but may require more data cleaning on the part of the data scientist. Closed questions, e.g. radio selection or dropdowns, provide data that doesn’t need to be cleaned but they also don’t provide users with as much choice. In the next part of the lesson, students will look at data visualizations that result from the closed question “What score did each student receive?”"
+      },
+      "seeding_key": {
+        "activity_section.key": "8f9d7b33-d748-447b-a2df-3f7306ce28c1",
+        "lesson_activity.key": "9229c353-aa0a-4575-9fbd-0aa87f40c371"
+      }
+    },
+    {
       "key": "f6347606-2fd2-4b3c-8828-2839cf9ccdf2",
-      "position": 17,
+      "position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -2648,7 +2794,7 @@
     },
     {
       "key": "5850407f-44c1-4c7d-bff2-f3d0a8c3e58c",
-      "position": 18,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce shape of distribution.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce bell curve.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce skewed distribution.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce skewed distribution.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the shape of distribution sentence starters.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which sentence starter would you use to describe the shape of distribution for this chart?*\n\n* Give students a moment to think about their response before they share with a partner and then with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** For the provided dot plot, most of the sentence starters in the word bank will work. Guide students to effectively use the sentence starters to describe and discuss the shape of a data distribution. The goal is to help them learn how to accurately apply these phrases when analyzing and communicating about the distribution patterns observed in charts, enhancing their ability to articulate data insights clearly and correctly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce measures of center.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the measures of center sentence starters.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which sentence starter would you use to describe the measures of center for this chart?*\n\n* Give students a moment to think about their response before they share with a partner and then with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to accurately utilize the provided sentence starters to identify and discuss measures of center such as the mean, median, and mode, based on the data distribution shown in the chart."
       },
@@ -2809,7 +2955,7 @@
       "key": "8783d942-3169-4095-a73c-3106cdcec33c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a group, have students discuss their data interpretations and observations from the activity.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share and discuss in their groups, circulate to ensure they are engaging in meaningful discussions and staying on task. Prompt students to delve deeper during both analysis and group discussions, ensuring they explore beyond surface level observations. For those groups who might need the additional assistance, guide them to consider the implications of their findings not just on Micah’s habits but as a reflection of broader data analysis challenges\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 3.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students to work together to create an Expository Data Story that explains Micah’s cleaning habits over time. Students should keep it short and to the point, ensuring that their decisions are based on their datasets. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, ensure students integrate their insights from all four datasets to form a coherent story. Encourage them to go beyond surface-level descriptions by having them consider underlying causes and broader implications. .",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a group, have students discuss their data interpretations and observations from the activity.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share and discuss in their groups, circulate to ensure they are engaging in meaningful discussions and staying on task. Prompt students to delve deeper during both analysis and group discussions, ensuring they explore beyond surface level observations. For those groups who might need the additional assistance, guide them to consider the implications of their findings not just on Micah’s habits but as a reflection of broader data analysis challenges\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 3.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students to work together to create an Expository Data Story that explains Micah’s cleaning habits over time. Students should keep it short and to the point, ensuring that their decisions are based on their datasets. Give students the option to write their data story in the free response box in Level 3 or use a different medium and upload a picture of it.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As you move around the room, ensure students integrate their insights from all four datasets to form a coherent story. Encourage them to go beyond surface-level descriptions by having them consider underlying causes and broader implications. .",
         "progression_name": "Expository Data Story",
         "tips": [
           {
@@ -2961,8 +3107,18 @@
       }
     },
     {
-      "key": "eef2efc4-24cd-4772-ad91-4b2af6bce955",
+      "key": "2b52b9e9-813f-458e-9c4c-d78332cad5f7",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2b52b9e9-813f-458e-9c4c-d78332cad5f7",
+        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
+      }
+    },
+    {
+      "key": "eef2efc4-24cd-4772-ad91-4b2af6bce955",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students understand how to select the correct column for charting. Ask, “What question are you trying to answer with this chart?” Listen for students identifying unexpected findings.",
         "tips": [
@@ -2978,8 +3134,25 @@
       }
     },
     {
+      "key": "58a4d4ed-86c7-444d-86ac-389b7ce793d5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How could changing the bin size of a histogram change someone’s interpretation of the data?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to describe and discuss the different shapes of distribution. The goal is for them to understand that different bin sizes can lead people to different conclusions. Larger bin sizes might obscure information such as a bimodal distribution, whereas smaller bin sizes might make it harder to draw conclusions about the data.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Click to show the illustration if students are stuck. If students struggle to come up with a response, ask them what assumptions they might make if they only saw the histogram on the left. Then ask how making more bins of smaller size added additional information."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "58a4d4ed-86c7-444d-86ac-389b7ce793d5",
+        "lesson_activity.key": "2dcca4c1-e438-4d3e-8a62-ba7ff9932741"
+      }
+    },
+    {
       "key": "276b9349-c490-4d59-a6a4-1f958a2af7d0",
-      "position": 3,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce **scatter plot**. Explain that scatter plots are data visualizations that use dots to represent the values of two different variables, whose values are plotted along the X and Y axis.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to watch for the steps they’ll use to create their own scatter plots\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"*How to Make a Scatter Plot in Google Sheets*\"\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 7-8. \n* **Level 7:** Students review the basics of scatter plot creation.\n* **Level 8:** Students use Google Sheets to create scatter plots which answer several data questions.",
         "progression_name": "Creating Scatterplots"
@@ -2991,7 +3164,7 @@
     },
     {
       "key": "bc79212b-674b-4c94-ac00-73990a0375f3",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students understand how to select the correct columns for charting. Ask, “What two variables are you trying to compare?” Listen for students identifying unexpected findings. Make sure that the students are using numerical values for the best outcome in Sheets\n"
       },
@@ -3002,7 +3175,7 @@
     },
     {
       "key": "f2f5e2aa-3387-4f38-a5fc-8c33e62b02b1",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the concept of **spreadsheet formulas**. Explain that spreadsheets often have functions that you can use in order to quickly summarize and analyze data attributes and cases.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 9-10. \n* **Level 9:** Students review how to use formulas in a spreadsheet.\n* **Level 10:** Students utilize formulas to summarize data statistics.",
         "progression_name": "Using Formulas with Datasets"
@@ -3014,7 +3187,7 @@
     },
     {
       "key": "4b9bfccc-4bea-452a-84bf-0758779c67ff",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students understand how to use formulas within cells. Make sure that they understand how to select a range of data. Check if students understand how to apply the new techniques in Google Sheets. Ensure they are not just following steps mechanically but are grasping why they are using specific features for their visualizations."
       },
@@ -3025,7 +3198,7 @@
     },
     {
       "key": "8ed2a578-eb19-489c-aca5-e3cca9eae312",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete at least two of the choices on Level 11. Students may complete more than two if they have time.",
         "progression_name": "Independent Practice"
@@ -3037,7 +3210,7 @@
     },
     {
       "key": "05eecaa6-1719-488c-bda6-d32e3f28b563",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check if students understand how to apply the new techniques in Google Sheets. Ensure they are not just following steps mechanically but are grasping why they are using specific features for their visualizations.\n"
       },
@@ -3048,7 +3221,7 @@
     },
     {
       "key": "f092ea5d-252f-4cc0-a9e6-2b6f0f643a28",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the ethical framework introduced in Lesson 3.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some additional ethical concerns we should keep in mind when using the visualization tools and techniques we learned today?*\n\n* Use a Think/Pair/Share and call on students to provide their responses.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to identify and articulate potential ethical issues arising from the use of data visualization tools, such as bias and misinformation. They should also be able to suggest responsible practices that mitigate these risks, demonstrating a thoughtful approach to ethical considerations in data science. If students are struggling to think of additional concerns, here are some example responses you could use with students to help them get started:\n* In today's lesson, when we created histograms, I realized how choosing different bin sizes could change how the data looked. This made me think about accuracy and how important it is to represent data truthfully without manipulating the viewer’s perception.\n* You mentioned privacy concerns with mapping data. In our exercise, we didn't use personal data, but it made me think about how companies might use similar techniques with personal data. We should always ensure data anonymization before creating such visualizations to protect individual identities.\n* You mentioned misuse of data. When we use powerful tools like Google Sheets to analyze data, it's crucial to think about the consequences of our analysis. For instance, if we're identifying trends that might influence decision-making in businesses or government, we need to be extra cautious about confirming our findings."
       },
@@ -3150,6 +3323,13 @@
       "key": "d7bd404e-ad05-494b-a1b6-aedcf897ad91",
       "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the project requirements.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discussing the Project Requirements is part of the **Understand** step of the UMPIRE strategy. It helps students ensure they have a strong foundation from which to make their plan.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "d7bd404e-ad05-494b-a1b6-aedcf897ad91",
@@ -3157,10 +3337,27 @@
       }
     },
     {
-      "key": "4ad7b3fb-7a40-4af3-be3f-2170854b6a75",
+      "key": "f1381db5-d2da-4fc9-a780-64068f307dac",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the project requirements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the project rubric?*\n* *What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Days 2 and 3.",
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the project rubric?*\n* *What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to refer back to UMPIRE as they work through the project. Remind students that the AI chatbot can be used to help them **Make a plan** (brainstorming, exploring their dataset, creating visualizations, etc) as well as the **Inspect** step to get feedback and the **Refine** step to iterate and improve their visualizations or data story.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f1381db5-d2da-4fc9-a780-64068f307dac",
+        "lesson_activity.key": "a9aa95db-e7c0-4815-90e3-7e2ade957648"
+      }
+    },
+    {
+      "key": "4ad7b3fb-7a40-4af3-be3f-2170854b6a75",
+      "position": 8,
+      "properties": {
+        "description": "\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Days 2 and 3.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3175,7 +3372,7 @@
     },
     {
       "key": "fe3cd755-30b9-4b8a-8102-465e2d573674",
-      "position": 8,
+      "position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -3185,7 +3382,7 @@
     },
     {
       "key": "c360d8c2-72b4-4931-8ab0-f64fc4f8533f",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 4.",
         "tips": [
@@ -3202,7 +3399,7 @@
     },
     {
       "key": "013e1261-cb64-40e4-b132-a13185c37a76",
-      "position": 10,
+      "position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -3212,7 +3409,7 @@
     },
     {
       "key": "49183afa-ffc4-4d93-ae56-4b5ae37faaf1",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs. Each student will complete the project and all of its levels individually, but they should work with a thought partner to help them talk about the data. Make sure students are clear that while their partner should act as a thought partner, they should complete the project individually.",
         "tips": [
@@ -3229,7 +3426,7 @@
     },
     {
       "key": "09e8e959-66ff-42f3-b9da-2a1ab80e3492",
-      "position": 12,
+      "position": 13,
       "properties": {
       },
       "seeding_key": {
@@ -3239,7 +3436,7 @@
     },
     {
       "key": "10a11d81-3367-444e-ad96-4e2af200bf41",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 to choose a data set. Instruct them to do a Three Reads on their chosen data set in their project planning guide.",
         "progression_name": "Data Set Choices",
@@ -3257,7 +3454,7 @@
     },
     {
       "key": "d548c190-5e66-41ae-828f-65dbefc02ecf",
-      "position": 14,
+      "position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -3267,7 +3464,7 @@
     },
     {
       "key": "7c31bf08-c871-49e3-9fe3-0ad5a6080e6d",
-      "position": 15,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a Three Reads about the students’ chosen data sets. Unlike previous three reads, there does not need to be a share out. Students will go through their three reads at different rates, but these slides still exist to encourage students to not spend too much time picking a data set or on any particular read.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Help students who are having trouble picking a dataset make a decision.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate Read 2 for data set. It is ok if not all students have reached Read 2 yet – students may take differing amounts of time choosing a data set in the first place – but you should remind students to keep moving forward.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Help students who have not yet reached Read 2 answer the questions from Read 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate Read 3 for students’ data set. Remind students to consider the RSAIR criteria when forming data questions about their data set. Unlike previous Three Reads, students will not do an informal sharing of their ideas with a partner. ",
         "tips": [
@@ -3284,7 +3481,7 @@
     },
     {
       "key": "08436bb5-5c42-4cae-98d8-536674460c13",
-      "position": 16,
+      "position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -3294,7 +3491,7 @@
     },
     {
       "key": "082505b6-99fa-4431-8a28-f160b7d36d5a",
-      "position": 17,
+      "position": 18,
       "properties": {
         "description": "Let’s see how AI can help you sharpen your question and push it further using the RSAIR criteria.Think of AI as your revision partner. Ask it for feedback, take what’s useful, and use it to make your question stronger.",
         "remarks": true
@@ -3306,7 +3503,7 @@
     },
     {
       "key": "8072e2c6-56e4-48ca-9e59-3cbb90148319",
-      "position": 18,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 5 and open AI Chat to begin evaluating their question.",
         "progression_name": "AI Data Coach",
@@ -3324,7 +3521,7 @@
     },
     {
       "key": "ff2b8586-2c47-4218-9521-c3edd8a28ac8",
-      "position": 19,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 1 Reflection questions in their project planning guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing these reflection questions with their thought partner and going through the RSAIR criteria for the data question they are thinking about investigating. This is an opportunity for students to refine their data questions if needed based on their discussions.",
         "duration": "5",
@@ -3393,7 +3590,7 @@
       "key": "327e4c4e-df45-4286-8b7c-771a3ed70c19",
       "position": 4,
       "properties": {
-        "description": "For example, do you need to clean it? Do you need to combine any attributes to summarize your data? Do you need to create new attributes and use the `count()` function we learned about? You may not even realize you need to do some of that until you get in and start making visualizations to try to answer your data question.",
+        "description": "For example, do you need to clean it? Do you need to sort or filter your data? Do you need to use the SUM(), COUNTIF(), or AVERAGE() functions we learned about? You may not even realize you need to do some of that until you get in and start making visualizations to try to answer your data question.\n",
         "remarks": true
       },
       "seeding_key": {
@@ -3405,7 +3602,7 @@
       "key": "ab2083b7-d090-409c-923c-c3e4599153bd",
       "position": 5,
       "properties": {
-        "description": "Something else you might notice as that as you create your visualizations, you spark new questions – that’s fine! Ask those questions and make more visualizations; your data stories should be made up of more than one visualization. If your data question end up changing, that is also fine. Use the visualizations to help you form questions. This is an iterative process!",
+        "description": "Something else you might notice as that as you create your visualizations, you spark new questions – that’s fine! Ask those questions and make more visualizations; your data stories should be made up of more than one visualization. If your data question ends up changing, that is also fine. Use the visualizations to help you form questions. This is an iterative process!",
         "remarks": true
       },
       "seeding_key": {
@@ -3418,7 +3615,13 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to work with their data and create visualizations.",
-        "progression_name": "Data Decisions and Visualizations"
+        "progression_name": "Data Decisions and Visualizations",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Creating visualizations is reflective of the **Produce** step of the UMPIRE strategy."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "924ae3bd-d016-4d3a-861c-286b5a255254",
@@ -3462,7 +3665,7 @@
       "key": "16cb59b2-d861-408a-8477-aa785f0e7a1f",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 5 to interpret your graph or make your question more specific."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 5 to use AI Chat to interpret their graph or make their data question more specific."
       },
       "seeding_key": {
         "activity_section.key": "16cb59b2-d861-408a-8477-aa785f0e7a1f",
@@ -3541,7 +3744,7 @@
       "key": "79893b34-4db1-4095-b826-37d37abf0784",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 5 to interpret your graph or make a question more specific."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 5 to use AI Chat to interpret their graph or make their data question more specific."
       },
       "seeding_key": {
         "activity_section.key": "79893b34-4db1-4095-b826-37d37abf0784",
@@ -3552,7 +3755,7 @@
       "key": "f2454ab4-0687-4fe0-92a1-a8779db0b01a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 3 Reflection questions in their project planning guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 2-3 Reflection questions in their project planning guide.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3645,7 +3848,13 @@
       "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to record their final response and upload their visualization(s). Remind students to describe their data using the sentence starters, answer their data question, and add evidence.",
-        "progression_name": "Your Data Story"
+        "progression_name": "Your Data Story",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Creating a data story is reflective of the **Produce** step of the UMPIRE strategy.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "dbd3e5e8-0bf2-4953-8b6a-47b163f49d06",
@@ -3658,10 +3867,6 @@
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and are using data science terms from the sentence starters to answer their data question and tell their data story.",
         "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students might need to go back to Level 2 to download images of the visualizations they will upload to support their answer to their data question, if they didn’t complete this during the previous lesson. Support students as needed by providing instructions on where in the “local file” to save their images."
-          },
           {
             "type": "assessmentOpportunity",
             "markdown": "Student’s final responses can be used as an assessment of their knowledge and skills for this chapter. You can use the provided rubric to guide your assessment."
@@ -3692,7 +3897,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Student’s final responses can be used as an assessment of their knowledge and skills for this chapter. You can use the provided rubric to guide your assessment. "
+            "markdown": "Student’s final responses can be used as an assessment of their knowledge and skills for this chapter. You can use the provided rubric to guide your assessment. Student’s project guides can also be collected and used as part of the assessment. There may be some reflection questions that could be taken into account when assessing their project according to the rubric.\n"
           }
         ]
       },
@@ -3705,10 +3910,14 @@
       "key": "192052c5-63ef-40c2-911f-2e6c759cea12",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the End of Project Reflection in their project planning guide.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to display the discussion prompts:*\n* _What are two things about your project that you are proud of?_\n* _If you had to tell a different data story with your same dataset, what might it be?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on their work throughout this unit and what they were able to accomplish in their final project. They should also be able to articulate that a single dataset can lead to different data stories and interpretations. ",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider having students present their work to each other. You might want to group students by dataset so they can see the different data questions and data stories their classmates came up with for the same data.\n"
+          },
           {
             "type": "assessmentOpportunity",
             "markdown": "Once students have completed this last reflection, their project guide can be collected and used as part of the assessment. There may be some reflection questions that could be taken into account when assessing their project according to the rubric."
@@ -3729,6 +3938,18 @@
       "seeding_key": {
         "activity_section.key": "62d1d87d-1fae-48a6-a3aa-903561ff77ae",
         "lesson_activity.key": "1c836a6f-8b38-424b-be36-9d9ee8cf875d"
+      }
+    },
+    {
+      "key": "46fb427d-8e29-4c5d-9e29-508a13ce3e73",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "46fb427d-8e29-4c5d-9e29-508a13ce3e73",
+        "lesson_activity.key": "7099cfe9-39ba-432a-8fe5-b26c86bbd656"
       }
     },
     {
@@ -5157,6 +5378,31 @@
     },
     {
       "chapter": 57,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_datascience-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_datascience-2025"
+        ],
+        "lesson.key": "Crafting Stories with Data Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif6-2025",
+        "activity_section.key": "46fb427d-8e29-4c5d-9e29-508a13ce3e73"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page_datascience-2025"
+      ]
+    },
+    {
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5181,7 +5427,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5881,6 +6127,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page_datascience-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page_datascience-2025"
+        ],
+        "lesson.key": "Crafting Stories with Data Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif6-2025",
+        "activity_section.key": "46fb427d-8e29-4c5d-9e29-508a13ce3e73"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data-science-ch1-postassessment_2025",
         "script_level.level_keys": [
           "data-science-ch1-postassessment_2025"
@@ -5905,6 +6163,18 @@
     }
   ],
   "resources": [
+    {
+      "name": "[EXEMPLAR] Crafting Stories with Data Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1FLI5T-NfXBatMNe5XE-ystfEG0HNM5aEoU_AuAxJzc4/edit?usp=sharing",
+      "key": "_exemplar_crafting_stories_with_data_project_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_crafting_stories_with_data_project_planning_guide"
+      }
+    },
     {
       "name": "[KEY] Activity Guide - Data Interpretation",
       "url": "https://docs.google.com/document/d/1xF87sS2PXuUoACQS13EXSe6x_ZDiNePrAa7huHNr788/",
@@ -5939,6 +6209,19 @@
       },
       "seeding_key": {
         "resource.key": "_key_data_scientist_tents"
+      }
+    },
+    {
+      "name": "[Optional] School Party Dataset",
+      "url": "https://docs.google.com/document/d/1nZypXZhpikdOsNHW7_i0hwvOC76EHd--PSOhV5xF4S0/edit?usp=sharing",
+      "key": "_optional_school_party_dataset",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_school_party_dataset"
       }
     },
     {
@@ -6084,7 +6367,7 @@
       }
     },
     {
-      "name": "Data Question Peer Review",
+      "name": "[Optional] Data Question Peer Review",
       "url": "https://docs.google.com/document/d/1A6tPg-WhJPmjYJMqKjUh3toQexGdsS0wjbQ52Otj430/view",
       "key": "data_question_peer_review",
       "properties": {
@@ -6181,6 +6464,18 @@
       },
       "seeding_key": {
         "resource.key": "data_storytelling_1"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Data Visualizations",
+      "url": "https://docs.google.com/spreadsheets/d/1VgO-xv8i5cutT6ucZ8gLSTxsR-v8avZ0bhoiD4yrV_4/edit?usp=sharing",
+      "key": "data_visualizations",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "data_visualizations"
       }
     },
     {
@@ -6546,7 +6841,8 @@
       "url": "https://docs.google.com/document/d/1XH9U-frBYMWbf_bSHtci02TuIPb-YmVhqXoQJYW7aVE/edit?usp=sharing",
       "key": "unit_guide",
       "properties": {
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "unit_guide"
@@ -6591,6 +6887,12 @@
     {
       "seeding_key": {
         "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "_exemplar_crafting_stories_with_data_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
         "resource.key": "crafting_stories_with_data_project"
       }
     },
@@ -6610,6 +6912,12 @@
       "seeding_key": {
         "lesson.key": "Crafting Stories with Data Project",
         "resource.key": "data_science_salaries"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Crafting Stories with Data Project",
+        "resource.key": "data_visualizations"
       }
     },
     {
@@ -6778,6 +7086,12 @@
       "seeding_key": {
         "lesson.key": "Data Storytelling",
         "resource.key": "unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Effective Data Questions",
+        "resource.key": "_optional_school_party_dataset"
       }
     },
     {

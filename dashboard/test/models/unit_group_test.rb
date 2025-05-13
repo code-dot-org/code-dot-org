@@ -115,6 +115,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3", published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable))
 
     serialization = unit_group.serialize
+    unit_group.original_units.each {|u| u.update!(original_unit_group: nil)}
     unit_group.destroy
 
     seeded_unit_group = UnitGroup.seed_from_hash(JSON.parse(serialization))
@@ -501,13 +502,13 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit2.instruction_type
     end
 
-    test "cannot remove UnitGroupUnits that cannot change course version" do
+    test "cannot remove UnitGroupUnits from their original course that cannot change course version" do
       course_version = create :course_version
       unit_group = create :unit_group, course_version: course_version
 
       unit1 = create :script, name: 'unit1'
-      create(:unit_group_unit, unit_group: unit_group, position: 0, script: unit1)
-      create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: 'unit2'))
+      create :script, name: 'unit2'
+      unit_group.update_scripts(['unit1', 'unit2'])
 
       lesson = create :lesson
       resource = create :resource, course_version: course_version
@@ -515,61 +516,18 @@ class UnitGroupTest < ActiveSupport::TestCase
       lesson_group = create :lesson_group, lessons: [lesson]
       unit1.lesson_groups = [lesson_group]
 
-      error = assert_raises RuntimeError do
-        unit_group.update_scripts(['unit2'])
-      end
-      assert_includes error.message, 'Cannot remove units that have resources or vocabulary'
-
-      unit_group.reload
-      assert_equal 2, unit_group.default_unit_group_units.length
-    end
-
-    test "cannot remove UnitGroupUnits from their original course" do
-      course_version = create :course_version
-      unit_group = create :unit_group, course_version: course_version
-
-      create :script, name: 'unit1'
-      create :script, name: 'unit2'
-      unit_group.update_scripts(['unit1', 'unit2'])
-
       unit_group.reload
       error = assert_raises RuntimeError do
         unit_group.update_scripts(['unit2'])
       end
-      assert_includes error.message, 'Cannot remove units from their original course'
+      assert_includes error.message, 'Cannot remove units from their original course if they have resources or vocab'
 
       unit_group.reload
       assert_equal 2, unit_group.default_unit_group_units.length
-    end
-
-    test "cannot add UnitGroupUnits that cannot change course version" do
-      course_version1 = create :course_version
-      unit_group1 = create :unit_group, course_version: course_version1
-      course_version2 = create :course_version
-      unit_group2 = create :unit_group, course_version: course_version2
-
-      unit1 = create :script, name: 'unit1'
-      unit2 = create :script, name: 'unit2'
-      create(:unit_group_unit, unit_group: unit_group1, position: 0, script: unit1)
-      create(:unit_group_unit, unit_group: unit_group2, position: 0, script: unit2)
-
-      lesson = create :lesson
-      resource = create :resource, course_version: course_version2
-      lesson.resources = [resource]
-      lesson_group = create :lesson_group, lessons: [lesson]
-      unit2.lesson_groups = [lesson_group]
-
-      error = assert_raises RuntimeError do
-        unit_group1.update_scripts(['unit1', 'unit2'])
-      end
-      assert_includes error.message, 'Cannot add units that have resources or vocabulary: ["unit2"]'
-
-      unit_group1.reload
-      assert_equal 1, unit_group1.default_unit_group_units.length
     end
 
     test "remove UnitGroupUnits" do
-      original_unit_group = create(
+      unit_group = create(
         :unit_group,
         published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
         instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
@@ -589,16 +547,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       )
       create(:script, name: 'unit2')
 
-      new_unit_group = create(
-        :unit_group,
-        published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development,
-        instruction_type: Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led,
-        instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher,
-        participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
-      )
-
-      original_unit_group.update_scripts(['unit1'])
-      new_unit_group.update_scripts(['unit1', 'unit2'])
+      unit_group.update_scripts(['unit1', 'unit2'])
 
       unit1.reload
 
@@ -610,21 +559,21 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit1.is_course
       assert_equal unit1.version_year, '1991'
 
-      new_unit_group.update_scripts(['unit2'])
+      unit_group.update_scripts(['unit2'])
 
-      new_unit_group.reload
+      unit_group.reload
       unit1.reload
 
-      assert_equal 1, new_unit_group.default_unit_group_units.length
-      assert_equal 1, new_unit_group.default_unit_group_units[0].position
-      assert_equal 'unit2', new_unit_group.default_unit_group_units[0].script.name
+      assert_equal 1, unit_group.default_unit_group_units.length
+      assert_equal 1, unit_group.default_unit_group_units[0].position
+      assert_equal 'unit2', unit_group.default_unit_group_units[0].script.name
       assert_equal unit1.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
       assert_equal unit1.instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
       assert_equal unit1.instructor_audience, Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
       assert_equal unit1.participant_audience, Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
     end
 
-    test "removed units have their published state instruction type participant audience and instructor audience reset" do
+    test "remove UnitGroupUnits from original unit group" do
       original_unit_group = create :unit_group
       new_unit_group = create :unit_group
       unit1 = create(:script, name: 'unit1')
@@ -638,6 +587,60 @@ class UnitGroupTest < ActiveSupport::TestCase
       unit1.reload
       unit2.reload
 
+      assert_equal 1, original_unit_group.original_units.length
+      assert_equal 1, new_unit_group.original_units.length
+
+      original_unit_group.update_scripts([])
+      original_unit_group.reload
+      new_unit_group.reload
+      unit1.reload
+      # unit1's original unit group moved to new_unit_group
+      assert_equal 0, original_unit_group.original_units.length
+      assert_equal new_unit_group, unit1.original_unit_group
+      assert_equal 2, new_unit_group.original_units.length
+
+      new_unit_group.update_scripts(['unit1'])
+      new_unit_group.reload
+      unit2.reload
+      # unit2's original unit group removed
+      assert_equal 1, new_unit_group.original_units.length
+      assert_equal nil, unit2.original_unit_group
+    end
+
+    test "remove UnitGroupUnits that cannot change course version from secondary unit groups" do
+      course_version = create :course_version
+      original_unit_group = create :unit_group, course_version: course_version
+      new_unit_group = create :unit_group
+
+      unit1 = create :script, name: 'unit1'
+      original_unit_group.update_scripts(['unit1'])
+      new_unit_group.update_scripts(['unit1'])
+
+      lesson = create :lesson
+      resource = create :resource, course_version: course_version
+      lesson.resources = [resource]
+      lesson_group = create :lesson_group, lessons: [lesson]
+      unit1.lesson_groups = [lesson_group]
+
+      original_unit_group.reload
+      new_unit_group.reload
+      unit1.reload
+
+      new_unit_group.update_scripts([])
+      assert_equal 0, new_unit_group.default_unit_group_units.length
+    end
+
+    test "removed units have their published state instruction type participant audience and instructor audience reset" do
+      unit_group = create :unit_group
+      unit1 = create(:script, name: 'unit1')
+      unit2 = create(:script, name: 'unit2')
+
+      unit_group.update_scripts(['unit1', 'unit2'])
+
+      unit_group.reload
+      unit1.reload
+      unit2.reload
+
       assert_nil unit1.published_state
       assert_nil unit1.instruction_type
       assert_nil unit1.instructor_audience
@@ -648,19 +651,19 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_nil unit2.instructor_audience
       assert_nil unit2.participant_audience
 
-      new_unit_group.update_scripts(['unit2'])
+      unit_group.update_scripts(['unit2'])
 
-      new_unit_group.reload
+      unit_group.reload
       unit1.reload
       unit2.reload
 
-      assert_equal new_unit_group.published_state, unit1.published_state
+      assert_equal unit_group.published_state, unit1.published_state
       refute_nil unit1.published_state
-      assert_equal new_unit_group.instruction_type, unit1.instruction_type
+      assert_equal unit_group.instruction_type, unit1.instruction_type
       refute_nil unit1.instruction_type
-      assert_equal new_unit_group.instructor_audience, unit1.instructor_audience
+      assert_equal unit_group.instructor_audience, unit1.instructor_audience
       refute_nil unit1.instructor_audience
-      assert_equal new_unit_group.participant_audience, unit1.participant_audience
+      assert_equal unit_group.participant_audience, unit1.participant_audience
       refute_nil unit1.participant_audience
 
       assert_nil unit2.published_state
@@ -670,16 +673,13 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test "units with published state set independent of the unit group maintain that published state when removed" do
-      original_unit_group = create :unit_group
-      new_unit_group = create :unit_group
+      unit_group = create :unit_group
       unit1 = create(:script, name: 'unit1')
       unit2 = create(:script, name: 'unit2')
 
-      original_unit_group.update_scripts(['unit2'])
-      new_unit_group.update_scripts(['unit1', 'unit2'])
+      unit_group.update_scripts(['unit1', 'unit2'])
 
-      original_unit_group.reload
-      new_unit_group.reload
+      unit_group.reload
       unit1.reload
       unit2.reload
 
@@ -698,18 +698,18 @@ class UnitGroupTest < ActiveSupport::TestCase
 
       assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
 
-      new_unit_group.update_scripts(['unit1'])
+      unit_group.update_scripts(['unit1'])
 
-      new_unit_group.reload
+      unit_group.reload
       unit2.reload
 
-      refute_equal new_unit_group.published_state, unit2.published_state
+      refute_equal unit_group.published_state, unit2.published_state
       assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit2.published_state
-      assert_equal new_unit_group.instruction_type, unit2.instruction_type
+      assert_equal unit_group.instruction_type, unit2.instruction_type
       refute_nil unit2.instruction_type
-      assert_equal new_unit_group.instructor_audience, unit2.instructor_audience
+      assert_equal unit_group.instructor_audience, unit2.instructor_audience
       refute_nil unit2.instructor_audience
-      assert_equal new_unit_group.participant_audience, unit2.participant_audience
+      assert_equal unit_group.participant_audience, unit2.participant_audience
       refute_nil unit2.participant_audience
     end
   end

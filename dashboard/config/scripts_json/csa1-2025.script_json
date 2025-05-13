@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-22 06:58:35 UTC",
+    "serialized_at": "2025-05-12 20:19:59 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -29,21 +29,9 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
-      "user_facing": true,
-      "position": 1,
-      "properties": {
-        "display_name": "Survey"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
       "key": "lessonGroup-8",
       "user_facing": true,
-      "position": 2,
+      "position": 1,
       "properties": {
         "display_name": "Content"
       },
@@ -55,7 +43,7 @@
     {
       "key": "lessonGroup-9",
       "user_facing": true,
-      "position": 3,
+      "position": 2,
       "properties": {
         "display_name": "Show What You Know"
       },
@@ -67,7 +55,7 @@
     {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Alternate and Optional Lessons",
         "description": "This section contains the one-day version of the Asphalt Art Project and optional lessons."
@@ -80,7 +68,7 @@
     {
       "key": "lessonGroup-7",
       "user_facing": true,
-      "position": 5,
+      "position": 4,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -92,24 +80,9 @@
   ],
   "lessons": [
     {
-      "key": "CSA Pre-Survey",
-      "name": "CSA Pre-Survey",
-      "absolute_position": 1,
-      "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "CSA Pre-Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
       "key": "Welcome to CSA",
       "name": "Welcome to CSA",
-      "absolute_position": 2,
+      "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
@@ -127,7 +100,7 @@
     {
       "key": "Java Lab",
       "name": "Java Lab",
-      "absolute_position": 3,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -145,7 +118,7 @@
     {
       "key": "Classes and Objects",
       "name": "Classes and Objects",
-      "absolute_position": 4,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -163,7 +136,7 @@
     {
       "key": "Instantiating Objects",
       "name": "Instantiating Objects",
-      "absolute_position": 5,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -181,7 +154,7 @@
     {
       "key": "Methods",
       "name": "Methods",
-      "absolute_position": 6,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -199,7 +172,7 @@
     {
       "key": "Methods with Parameters",
       "name": "Methods with Parameters",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -217,7 +190,7 @@
     {
       "key": "Loops",
       "name": "Loops",
-      "absolute_position": 8,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
@@ -235,7 +208,7 @@
     {
       "key": "AI-Generated Code (non-AI Tutor)",
       "name": "AI-Generated Code",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -253,7 +226,7 @@
     {
       "key": "Inheritance",
       "name": "Inheritance",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
@@ -271,7 +244,7 @@
     {
       "key": "Writing Methods",
       "name": "Writing Methods",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
@@ -289,7 +262,7 @@
     {
       "key": "Programming Style and Feedback",
       "name": "Programming Style and Feedback",
-      "absolute_position": 12,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
@@ -307,7 +280,7 @@
     {
       "key": "Selection Statements",
       "name": "Selection Statements",
-      "absolute_position": 13,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
@@ -325,7 +298,7 @@
     {
       "key": "Debugging Strategies",
       "name": "Debugging Strategies",
-      "absolute_position": 14,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
@@ -343,7 +316,7 @@
     {
       "key": "Two-Way Selection Statements",
       "name": "Two-Way Selection Statements",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
@@ -361,7 +334,7 @@
     {
       "key": "Asphalt Art Project",
       "name": "Asphalt Art Project",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 15,
@@ -380,7 +353,7 @@
     {
       "key": "SpiralPainter FRQ",
       "name": "SpiralPainter FRQ",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
@@ -398,7 +371,7 @@
     {
       "key": "Unit 1 Assessment",
       "name": "Unit 1 Assessment",
-      "absolute_position": 18,
+      "absolute_position": 17,
       "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 17,
@@ -417,7 +390,7 @@
     {
       "key": "Asphalt Art Project [1-Day Version]",
       "name": "Asphalt Art Project [1-Day Version]",
-      "absolute_position": 19,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 18,
@@ -435,7 +408,7 @@
     {
       "key": "(Optional) Decomposition and Design",
       "name": "Decomposition and Design",
-      "absolute_position": 20,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 19,
@@ -453,7 +426,7 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 21,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 20,
@@ -468,7 +441,7 @@
     {
       "key": "Student End of Unit Survey",
       "name": "Student End of Unit Survey",
-      "absolute_position": 22,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 21,
@@ -482,18 +455,6 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "347e0cc7-841b-446e-ab35-1fe8ed1b693c",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "347e0cc7-841b-446e-ab35-1fe8ed1b693c",
-        "lesson.key": "CSA Pre-Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-2025"
-      }
-    },
     {
       "key": "66fcf4cd-8b1e-40d6-a1a3-86acb193e86b",
       "position": 1,
@@ -1329,16 +1290,6 @@
     }
   ],
   "activity_sections": [
-    {
-      "key": "47c11e61-2295-4587-aadd-7941a379679c",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "47c11e61-2295-4587-aadd-7941a379679c",
-        "lesson_activity.key": "347e0cc7-841b-446e-ab35-1fe8ed1b693c"
-      }
-    },
     {
       "key": "a869e965-d3b2-46a7-a5d4-8c5909fef182",
       "position": 1,
@@ -6536,30 +6487,6 @@
   ],
   "script_levels": [
     {
-      "chapter": 1,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "csp-pre-survey-levelgroup_21_222022_csa_2025"
-        ]
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_21_222022_csa_2025"
-        ],
-        "lesson.key": "CSA Pre-Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-2025",
-        "activity_section.key": "47c11e61-2295-4587-aadd-7941a379679c"
-      },
-      "level_keys": [
-        "csp-pre-survey-levelgroup_21_222022_csa_2025"
-      ]
-    },
-    {
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
@@ -7315,6 +7242,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-4_revised2025"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -8637,6 +8567,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -8655,18 +8588,6 @@
     }
   ],
   "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "csp-pre-survey-levelgroup_21_222022_csa_2025",
-        "script_level.level_keys": [
-          "csp-pre-survey-levelgroup_21_222022_csa_2025"
-        ],
-        "lesson.key": "CSA Pre-Survey",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa1-2025",
-        "activity_section.key": "47c11e61-2295-4587-aadd-7941a379679c"
-      }
-    },
     {
       "seeding_key": {
         "level.key": "CSA U1L2-L1_pilot_oo2025",

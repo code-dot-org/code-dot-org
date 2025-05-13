@@ -72,10 +72,12 @@ namespace :seed do
     ui-test-script-in-course-2019
     ui-test-script-2-in-course-2017
     ui-test-script-2-in-course-2019
+    ui-test-shared-unit
     ui-test-versioned-script-2017
     ui-test-versioned-script-2019
     ui-test-csa-family-script
     ui-test-teacher-pl-course
+    ui-test-self-paced-pl
     ui-test-facilitator-pl-course
     ui-test-single-unit-2025
     ui-test-single-unit-2026
@@ -285,7 +287,11 @@ namespace :seed do
     update_scripts(incremental: true)
   end
 
-  timed_task_with_logging scripts_ui_tests: SCRIPTS_DEPENDENCIES do
+  # Moved course offerings ui test seed after regular course offerings are seeded
+  # because the regular course offerings seed task removes any course_offerings records
+  # left in the database that do not have a corresponding json file in config/course_offerings.
+  # The ui test course offerings must be seeded after so they are not accidentally removed.
+  timed_task_with_logging scripts_ui_tests: SCRIPTS_DEPENDENCIES + [:course_offerings_ui_tests] do
     update_scripts(script_files: UI_TEST_SCRIPTS)
   end
 
@@ -364,6 +370,7 @@ namespace :seed do
       ui-test-csa-family-script
       ui-test-facilitator-pl-course
       ui-test-teacher-pl-course
+      ui-test-self-paced-pl
       ui-test-versioned-script-2017
       ui-test-versioned-script-2019
       ui-test-unnumbered-lessons
@@ -481,6 +488,7 @@ namespace :seed do
       ui-test-course
       ui-test-csa-family-script
       ui-test-teacher-pl-course
+      ui-test-self-paced-pl
       ui-test-facilitator-pl-course
       ui-test-single-unit-course
       ui-test-versioned-course
@@ -650,7 +658,7 @@ namespace :seed do
   end
 
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :import_pegasus_data, :datablock_storage].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :import_pegasus_data, :datablock_storage].freeze
   DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
 

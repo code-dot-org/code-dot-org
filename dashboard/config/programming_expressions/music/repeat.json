@@ -3,14 +3,16 @@
   "name": "Repeat",
   "category": "Control",
   "category_key": "control",
+  "block_name": "repeat_simple2",
   "content": "Repeat the sounds inside the block for the number of times specified",
   "palette_params": [
     {
       "name": "count",
+      "type": "Number",
       "required": true,
       "description": "The number of times to repeat."
     }
   ],
   "short_description": "Plays a sound multiple times",
-  "tips": "If this block is used inside a [`play together`(#94E4FF)](/docs/ide/projectbeats/expressions/play_together) block, the sounds will still be played sequentially."
+  "tips": "If this block is used inside a [`play together`(#94E4FF)](/docs/ide/music/expressions/play_together) block, the sounds will still be played sequentially."
 }

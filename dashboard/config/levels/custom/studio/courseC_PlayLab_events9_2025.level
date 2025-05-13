@@ -55,7 +55,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-04-14T15:38:10.589+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events9_2024\\\"\"],\"cloned_from\":\"courseC_PlayLab_events9_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-04-14T15:38:10.589+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events9_2024\\\"\"],\"cloned_from\":\"courseC_PlayLab_events9_2024\"},{\"changed_at\":\"2025-04-28 16:11:35 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1
@@ -63,8 +63,9 @@
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml>
-        <block type="studio_whenUp" deletable="false">
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" movable="false" x="16" y="16"/>
+        <block type="studio_whenUp" deletable="false" x="16" y="120">
           <next>
             <block type="studio_move">
               <field name="SPRITE">0</field>
@@ -72,15 +73,7 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenDown" deletable="false">
-          <next>
-            <block type="studio_move">
-              <field name="SPRITE">0</field>
-              <field name="DIR">4</field>
-            </block>
-          </next>
-        </block>
-        <block type="studio_whenLeft" deletable="false">
+        <block type="studio_whenLeft" deletable="false" x="240" y="120">
           <next>
             <block type="studio_move">
               <field name="SPRITE">0</field>
@@ -88,7 +81,15 @@
             </block>
           </next>
         </block>
-        <block type="studio_whenRight" deletable="false">
+        <block type="studio_whenDown" deletable="false" x="16" y="200">
+          <next>
+            <block type="studio_move">
+              <field name="SPRITE">0</field>
+              <field name="DIR">4</field>
+            </block>
+          </next>
+        </block>
+        <block type="studio_whenRight" deletable="false" x="240" y="200">
           <next>
             <block type="studio_move">
               <field name="SPRITE">0</field>
@@ -96,7 +97,7 @@
             </block>
           </next>
         </block>
-        <block type="studio_repeatForever">
+        <block type="studio_repeatForever" x="16" y="296">
           <statement name="DO">
             <block type="studio_moveDistance">
               <field name="SPRITE">1</field>
@@ -112,24 +113,20 @@
             </block>
           </statement>
         </block>
-        <block type="studio_whenSpriteCollided">
+        <block type="studio_whenSpriteCollided" x="16" y="420">
           <field name="SPRITE1">0</field>
           <field name="SPRITE2">1</field>
           <next>
-            <block type="studio_playSound">
-              <field name="SOUND">random</field>
+            <block type="studio_saySpriteChoices">
+              <field name="SPRITE">0</field>
+              <field name="VALUE">Ouch!</field>
               <next>
-                <block type="studio_saySpriteChoices">
-                  <field name="SPRITE">0</field>
-                  <field name="VALUE">Ouch!</field>
+                <block type="studio_playSound">
+                  <field name="SOUND">hit</field>
                 </block>
               </next>
             </block>
           </next>
-        </block>
-        <block type="studio_whenSpriteCollided">
-          <field name="SPRITE1">0</field>
-          <field name="SPRITE2">2</field>
         </block>
       </xml>
     </start_blocks>

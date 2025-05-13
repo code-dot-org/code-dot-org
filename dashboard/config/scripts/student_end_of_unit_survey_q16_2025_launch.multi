@@ -1,14 +1,10 @@
 name 'student-end-of-unit-survey-q16_2025-launch'
 
-question 'Sometimes I feel unsure whether I belong in this class.'
+question 'Which option best reflects your classroom experience most often?'
 
-right 'Strongly agree'
-right 'Agree'
-right 'Slightly agree'
-right 'Neither'
-right 'Slightly disagree'
-right 'Disagree'
-right 'Strongly disagree'
+right 'My teacher teaches the entire lesson.'
+right 'My teacher introduces the activities and then I progress on my own, reaching out to my teacher when I want their feedback.'
+right 'I go through the activities on my own.'
 
 allow_multiple_attempts true
 

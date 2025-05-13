@@ -1,5 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
 import CloseButton from '@code-dot-org/component-library/closeButton';
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import SimpleDropdown, {
   SimpleDropdownProps,
 } from '@code-dot-org/component-library/dropdown/simpleDropdown';
@@ -72,6 +72,10 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const {levelProperties} = useCodebridgeContext();
   const appName = levelProperties.appName;
 
+  // We need to set the theme here becausse the dropdown is rendered in a portal, outside of the
+  // main lab container.
+  const {theme} = useTheme();
+
   const dispatch = useAppDispatch();
   const [selectedEditorFontSizeValue, setSelectedEditorFontSizeValue] =
     useState(currentEditorFontSizeKey);
@@ -83,10 +87,25 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
   const dropdownStyles = useDropdownPosition(buttonRef, dropdownRef);
 
   const onTextEditorDropdownChange = (value: string) => {
-    setSelectedEditorFontSizeValue(getSelectedKey(value));
+    const selectedEditorKey = getSelectedKey(value);
+    setSelectedEditorFontSizeValue(selectedEditorKey);
+    handleFontSizeChange(
+      'CodeEditor',
+      selectedEditorKey,
+      currentEditorFontSizeKey,
+      EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE
+    );
   };
+
   const onConsoleDropdownChange = (value: string) => {
-    setSelectedConsoleFontSizeValue(getSelectedKey(value));
+    const selectedConsoleKey = getSelectedKey(value);
+    setSelectedConsoleFontSizeValue(selectedConsoleKey);
+    handleFontSizeChange(
+      'Console',
+      selectedConsoleKey,
+      currentConsoleFontSizeKey,
+      EVENTS.CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE
+    );
   };
 
   const handleFontSizeChange = (
@@ -96,6 +115,8 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
     event: string
   ) => {
     if (selectedKey !== currentKey && FontSize[selectedKey]) {
+      // We want the user preference for selected font size to persist for signed-in users
+      // per app type so we save on backend.
       if (signInState === SignInState.SignedIn) {
         const field = type === 'Console' ? 'consoleFontSize' : 'editorFontSize';
         new UserPreferences().setFontSize(selectedKey, appName, field);
@@ -108,28 +129,6 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         fontSize: selectedKey,
       });
     }
-  };
-
-  const onSave = () => {
-    const selectedEditorKey = getSelectedKey(selectedEditorFontSizeValue);
-    const selectedConsoleKey = getSelectedKey(selectedConsoleFontSizeValue);
-
-    // We want the user preference for selected font size to persist for signed-in users
-    // per app type so we save on backend.
-    handleFontSizeChange(
-      'CodeEditor',
-      selectedEditorKey,
-      currentEditorFontSizeKey,
-      EVENTS.CODEBRIDGE_EDITOR_FONT_SIZE_CHANGE
-    );
-    handleFontSizeChange(
-      'Console',
-      selectedConsoleKey,
-      currentConsoleFontSizeKey,
-      EVENTS.CODEBRIDGE_CONSOLE_FONT_SIZE_CHANGE
-    );
-
-    closeDropdown();
   };
 
   const hasConsole = codebridgeLabsWithConsole.includes(appName);
@@ -148,7 +147,7 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
         style={dropdownStyles}
         aria-modal="true"
         aria-label={commonI18n.settings()}
-        data-theme="Dark"
+        data-theme={theme}
       >
         <div className={moduleStyles.header}>
           <Heading6 className={moduleStyles.heading}>
@@ -198,23 +197,6 @@ const SettingsDropdown: React.FunctionComponent<SettingsDropdownProps> = ({
             />
           </div>
         )}
-        <div className={moduleStyles.footer}>
-          <Button
-            text={commonI18n.cancel()}
-            type="secondary"
-            size="s"
-            onClick={closeDropdown}
-            color="black"
-            className={moduleStyles.footerButton}
-          />
-          <Button
-            text={commonI18n.save()}
-            type="primary"
-            size="s"
-            onClick={onSave}
-            className={moduleStyles.footerButton}
-          />
-        </div>
       </div>
     </FocusTrap>,
     document.body

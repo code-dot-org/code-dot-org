@@ -121,6 +121,44 @@ export const DefaultActionBlocks: Story = {
   },
 };
 
+export const WithTag: Story = {
+  args: {
+    ...defaultArgs,
+    tag: 'New',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Shows a "New" tag.',
+      },
+    },
+  },
+  render: args => {
+    return (
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: '1.5rem',
+        }}
+      >
+        <ActionBlock {...args} />
+        <ActionBlock {...args} image={{src: image2}} />
+      </div>
+    );
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    const newTags = await canvas.findAllByText('New');
+
+    // check if New tag is visible
+    await expect(newTags).toHaveLength(2);
+    for (const tag of newTags) {
+      await expect(tag).toBeVisible();
+    }
+  },
+};
+
 export const WithDetail: Story = {
   args: {
     ...defaultArgs,

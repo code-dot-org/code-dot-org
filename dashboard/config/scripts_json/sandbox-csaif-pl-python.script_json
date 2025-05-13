@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-24 19:19:43 UTC",
+    "serialized_at": "2025-04-30 15:04:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1297,6 +1297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif_pl_function-intro-L20_Python"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1319,6 +1322,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif_pl_function-intro2-L21_Python"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1491,6 +1497,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-custommodule-L27-python"
+        ],
         "progression": "Functions and Parameters"
       },
       "bonus": false,
@@ -1788,6 +1797,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-while1-L3-Python"
+        ],
         "progression": "While Loops"
       },
       "bonus": false,
@@ -1810,6 +1822,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-while2-L4-python"
+        ],
         "progression": "While Loops"
       },
       "bonus": false,
@@ -1832,6 +1847,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-whileloops3-L5-python"
+        ],
         "progression": "While Loops"
       },
       "bonus": false,
@@ -1954,6 +1972,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-conditional1-L10-python"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -1976,6 +1997,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-conditionals2-L11-python"
+        ],
         "progression": "Conditionals "
       },
       "bonus": false,
@@ -2098,6 +2122,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-pl-two-waySelection-L16-python"
+        ],
         "progression": "Two-way and Nested Selection"
       },
       "bonus": false,

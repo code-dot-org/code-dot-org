@@ -80,6 +80,7 @@
         }
 
         .sublevelTextContainer {
+          width: 100%;
           display: flex;
           flex-direction: column;
           flex: 1;
@@ -96,7 +97,7 @@
 
           .sublevelDescriptionMarkdown{
             text-align: initial;
-            overflow-y: scroll;
+            overflow-y: auto;
 
             p {
               margin-bottom: 1cqw;

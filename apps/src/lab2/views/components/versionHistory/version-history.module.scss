@@ -1,4 +1,4 @@
-@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 $space-xs: 2px;
 $space-s: 4px;
@@ -9,10 +9,10 @@ $space-xl: 10px;
 .versionHistoryDropdown {
   position: absolute;
   cursor: pointer;
-  border: 1px solid #54595E;
-  background-color: $light_gray_950;
-  scrollbar-color: $light_gray_200 $light_gray_950;
-  color: $white;
+  border: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-secondary);
+  scrollbar-color: var(--text-neutral-tertiary) var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
   width: 400px;
   text-align: left;
   vertical-align: top;
@@ -22,7 +22,7 @@ $space-xl: 10px;
 
 .header {
   padding: $space-m $space-l;
-  border-bottom: 1px solid #54595E;
+  border-bottom: 1px solid var(--borders-neutral-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,11 +49,11 @@ $space-xl: 10px;
 }
 
 .row:has(input[type="radio"]:checked) {
-  background-color: $neutral_dark90;
+  background-color: var(--background-neutral-tertiary);
 }
 
 .row:hover {
-  background-color: $neutral_dark90;
+  background-color: var(--background-neutral-tertiary);
 }
 
 .footer {

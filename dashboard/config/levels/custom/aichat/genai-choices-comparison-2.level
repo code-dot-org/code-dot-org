@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-05-09T17:12:35.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Prompt Exploration\r\n\r\n<i>You should be using <a href=\"https://docs.google.com/document/d/1B5gl9KOOadsiHj0y6IsswjtEkohPxJ1lrbCbuXcm8zg/view\" target=\"_blank\"><i>this activity guide</i></a> with this level</i>\r\n\r\nNow it's your turn! In this activity, you get to choose prompts that might influence how a chatbot responds. This activity is all about _experimentation_ and _investigation_, trying to figure out how small changes in prompts create big differences in responses.\r\n\r\n**Task:** Choose 1 prompt to create variations of to see how it impacts the chatbot's responses. Focus on varying the word choice (ie: \"encourages\", \"harms\", \"effective\", \"useless\") and sentence structure (\"Tell me about..\", \"What's the deal with...\", \"... answer me RIGHT NOW\") to see what changes.\r\n\r\nYou can choose from a prompt below, or make your own neutral starting prompt:\r\n\r\n- Tell me about video games.\r\n- What is social media?\r\n- Describe school spirit.\r\n- Tell me about pets.\r\n- What's the best way to study?\r\n- What should students know about the news?\r\n\r\nAs you iterate on your prompts: fill out your activity guide. Notice what changes in the chatbots response, and identify the words or phrases that likely influenced it.",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-09T17:12:35.098+00:00\",\"changed\":[\"cloned from \\\"genai-choices-comparison\\\"\"],\"cloned_from\":\"genai-choices-comparison\"},{\"changed_at\":\"2025-05-09 17:17:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-09 20:43:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-09 21:35:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

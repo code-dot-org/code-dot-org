@@ -1,8 +1,7 @@
 /**
- * Workshop view / edit. Displays and optionally edits details for a workshop.
+ * Workshop view. Displays details for a workshop.
  * Routes:
  *   /workshops/:workshopId
- *   /Workshops/:workshopId/edit
  */
 import $ from 'jquery';
 import _ from 'lodash';
@@ -12,7 +11,6 @@ import {Grid, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restri
 import {connect} from 'react-redux';
 
 import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
-import experiments from '@cdo/apps/util/experiments';
 
 import Spinner from '../../../sharedComponents/Spinner';
 
@@ -24,10 +22,6 @@ import IntroPanel from './IntroPanel';
 import {PermissionPropType, WorkshopAdmin} from './permission';
 import SignUpPanel from './SignUpPanel';
 
-const newWorkshopFormEnabled = experiments.isEnabled(
-  experiments.NEW_WORKSHOP_FORM
-);
-
 export class Workshop extends React.Component {
   static contextType = RouterContext;
 
@@ -35,7 +29,6 @@ export class Workshop extends React.Component {
     params: PropTypes.shape({
       workshopId: PropTypes.string.isRequired,
     }).isRequired,
-    view: PropTypes.string,
     permission: PermissionPropType.isRequired,
   };
 
@@ -63,11 +56,7 @@ export class Workshop extends React.Component {
     }
 
     // Don't allow editing a workshop that has been started.
-    if (
-      this.props.view === 'edit' &&
-      this.state.workshop &&
-      this.state.workshop.state !== 'Not Started'
-    ) {
+    if (this.state.workshop && this.state.workshop.state !== 'Not Started') {
       this.context.router.replace(`/workshops/${this.props.params.workshopId}`);
       return false;
     }
@@ -126,11 +115,6 @@ export class Workshop extends React.Component {
     }
   }
 
-  handleWorkshopSaved = workshop => {
-    this.setState({workshop: workshop});
-    this.context.router.replace(`/workshops/${this.props.params.workshopId}`);
-  };
-
   render() {
     if (this.state.loadingWorkshop) {
       return <Spinner />;
@@ -138,7 +122,7 @@ export class Workshop extends React.Component {
       return <p>No workshop found</p>;
     }
 
-    const {params, permission, view} = this.props;
+    const {params, permission} = this.props;
     const {workshopId} = params;
     const isWorkshopAdmin = permission.has(WorkshopAdmin);
     const {workshop, enrollments, loadingEnrollments} = this.state;
@@ -146,14 +130,12 @@ export class Workshop extends React.Component {
 
     return (
       <Grid>
-        {newWorkshopFormEnabled && (
-          <DetailsPanel
-            workshopId={workshopId}
-            workshop={workshop}
-            workshopState={workshopState}
-            isWorkshopAdmin={isWorkshopAdmin}
-          />
-        )}
+        <DetailsPanel
+          workshopId={workshopId}
+          workshop={workshop}
+          workshopState={workshopState}
+          isWorkshopAdmin={isWorkshopAdmin}
+        />
         {workshopState === 'Not Started' && (
           <SignUpPanel workshopId={workshopId} />
         )}
@@ -186,16 +168,6 @@ export class Workshop extends React.Component {
           isWorkshopAdmin={isWorkshopAdmin}
           loadEnrollments={this.loadEnrollments}
         />
-        {!newWorkshopFormEnabled && (
-          <DetailsPanel
-            view={view}
-            workshopId={workshopId}
-            workshop={workshop}
-            workshopState={workshopState}
-            isWorkshopAdmin={isWorkshopAdmin}
-            onWorkshopSaved={this.handleWorkshopSaved}
-          />
-        )}
 
         <MetadataFooter createdAt={created_at} />
       </Grid>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2025_04_24_231217) do
+ActiveRecord::Schema.define(version: 2025_05_09_130059) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -2166,6 +2166,8 @@ ActiveRecord::Schema.define(version: 2025_04_24_231217) do
     t.string "concept"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "key", null: false
+    t.index ["key"], name: "index_skills_on_key", unique: true
   end
 
   create_table "stages", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2420,6 +2422,7 @@ ActiveRecord::Schema.define(version: 2025_04_24_231217) do
     t.datetime "updated_at", precision: 6, null: false
     t.json "editor_font_size"
     t.json "console_font_size"
+    t.json "theme"
     t.index ["user_id"], name: "index_user_preferences_on_user_id"
   end
 
