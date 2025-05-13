@@ -1120,8 +1120,8 @@ roles.each do |name, config| %>
                   # permission to provision any marketing sites S3 bucket for the same environment type (`*[base domain name]*static-assets`):
                   # development deployer --> `*dev-code.org*static-assets`
                   # test deployer --> `*test-code.org*static-assets`
-                  - "*<%=configuration[:base_domain_name]%>*static-assets"
-                  - "*<%=configuration[:base_domain_name]%>*static-assets/*"
+                  - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets"
+                  - "arn:aws:s3:::*<%=configuration[:base_domain_name]%>*static-assets/*"
               # Secrets Manager for ECS environment variables
               - Effect: Allow
                 Action:
