@@ -25,8 +25,8 @@ Feature: Global Edition - Farsi MVP - Sign In page
     Given I wait until element "#code_without_signing_in" contains text "می‌خواهید برنامه‌نویسی را بدون ثبت نام امتحان کنید؟"
     And the href of selector "#code_without_signing_in + .row a:contains(مهمانی رقص)" contains "/dance"
     And the href of selector "#code_without_signing_in + .row a:contains(ماین‌کرفت)" contains "/api/hour/begin/mc"
-    And the href of selector "#code_without_signing_in + .row a:contains(فروزن)" contains "/courses/frozen/units/1/reset"
-    And the href of selector "#code_without_signing_in + .row a:contains(ماز معروف و قدیمی)" contains "/courses/hourofcode/units/1/reset"
+    And the href of selector "#code_without_signing_in + .row a:contains(فروزن)" contains "/s/frozen/reset"
+    And the href of selector "#code_without_signing_in + .row a:contains(ماز معروف و قدیمی)" contains "/s/hourofcode/reset"
 
     When I see no difference for "Main content" within "#main_content"
     Then I close my eyes

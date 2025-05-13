@@ -19,4 +19,4 @@ Feature: Looking at a few things with Applitools Eyes - Part 1
       | http://studio.code.org/courses/allthethingscourse/units/1/lessons/24/levels/1?noautoplay=true | star wars                 |
       | http://studio.code.org/courses/allthethingscourse/units/1/lessons/24/levels/2?noautoplay=true | star wars blocks          |
       | http://studio.code.org/courses/allthethingscourse/units/1/lessons/25/levels/1?noautoplay=true | minecraft                 |
-      | http://studio.code.org/courses/mc/unit/1/lessons/1/levels/6                            | minecraft house dialog    |
+      | http://studio.code.org/courses/mc/units/1/lessons/1/levels/6                            | minecraft house dialog    |

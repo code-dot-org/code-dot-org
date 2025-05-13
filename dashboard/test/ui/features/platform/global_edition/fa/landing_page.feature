@@ -17,7 +17,7 @@ Feature: Global Edition - Farsi MVP - Landing page
     # Section 2: Curriculum offerings students love
     Given I wait until element "section:nth-of-type(2) h2" contains text "پیشنهادات برنامه درسی موردعلاقه دانش‌آموزان"
     And the link reading "ساعت کد را کاوش کنید" within element "section:nth-of-type(2)" goes to "http://code.org/global/fa/hourofcode"
-    And the link reading "درس‌های بدون کامپیوتر را کاوش کنید" within element "section:nth-of-type(2)" goes to "https://studio.code.org/courses/k5-unplugged/units/1"
+    And the link reading "درس‌های بدون کامپیوتر را کاوش کنید" within element "section:nth-of-type(2)" goes to "https://studio.code.org/s/k5-unplugged"
     And the link reading "بررسی مبانی علوم کامپیوتر" within element "section:nth-of-type(2)" goes to "http://code.org/global/fa/csf"
     And the link reading "مشاهده کل کاتالوگ برنامه درسی" within element "section:nth-of-type(2)" goes to "http://studio.code.org/catalog"
 
