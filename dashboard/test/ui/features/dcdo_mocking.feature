@@ -1,3 +1,4 @@
+@pegasus_content
 Feature: DCDO mocking
   Scenario: Using a cookie to mock DCDO
     Given I am on "http://code.org/test_dcdo"

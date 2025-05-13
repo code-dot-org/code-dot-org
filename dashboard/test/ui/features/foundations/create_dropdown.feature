@@ -12,6 +12,7 @@ Scenario: Create Dropdown does NOT show on level pages
   And I wait until element ".create_menu" is not visible
   Then I sign out
 
+@pegasus_content
 Scenario: Signed Out - Correct Create Links
   Given I am on "http://code.org"
   And I wait until element ".create_menu" is visible

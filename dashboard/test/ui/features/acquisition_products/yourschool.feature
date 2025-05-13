@@ -1,6 +1,6 @@
 @no_ci
 @no_mobile
-
+@pegasus_content
 Feature: Using the YourSchool census page
 
   Scenario: Loading yourschool and fill out form

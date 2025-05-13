@@ -51,6 +51,7 @@ Feature: Policy Compliance and Parental Permission
     When I press "lockout-submit"
     Then I wait until element "#permission-status" contains text "Pending"
 
+  @pegasus_content
   Scenario: New under 13 account should be able to elect to sign out at the lockout.
     Given I am on "http://studio.code.org"
     Given CPA all user lockout phase
