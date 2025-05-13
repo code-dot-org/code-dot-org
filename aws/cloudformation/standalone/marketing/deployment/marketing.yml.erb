@@ -794,3 +794,9 @@ Outputs:
       Fn::GetAtt:
         - FargateServiceLB
         - DNSName
+  CloudFrontDistributionId:
+    Value:
+      Ref: CloudFrontDistribution
+    Export:
+      Name:
+        'Fn::Sub': '${AWS::StackName}-CloudFrontDistributionId'

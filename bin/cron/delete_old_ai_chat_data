@@ -16,17 +16,11 @@ def main
   # Pilot data collected before September 30th, 2024 is being retained for analysis.
   pilot_end_date = DateTime.new(2024, 10, 1, 0, 0, 0)
 
-  events_deleted = 0
-  AichatEvent.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).in_batches do |events|
-    events_deleted += events.delete_all
-  end
-  ChatClient.message('cron-daily', "Deleted #{events_deleted} AichatEvent records")
+  destroyed_event_count = AichatEvent.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).delete_all
+  ChatClient.message('cron-daily', "Deleted #{destroyed_event_count} AichatEvent records")
 
-  requests_deleted = 0
-  AichatRequest.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).in_batches do |requests|
-    requests_deleted += requests.delete_all
-  end
-  ChatClient.message('cron-daily', "Deleted #{requests_deleted} AichatRequest records")
+  destroyed_request_count = AichatRequest.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).delete_all
+  ChatClient.message('cron-daily', "Deleted #{destroyed_request_count} AichatRequest records")
 end
 
 main

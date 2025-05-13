@@ -93,7 +93,13 @@ class Pd::Session < ApplicationRecord
       id: id,
       start: start_time.utc.iso8601,
       end: end_time.utc.iso8601,
-      is_local: local?
+      is_local: local?,
+      location_name: location_name,
+      location_address: location_address,
+      meeting_link: meeting_link,
+      session_format: session_format,
+      description: workshop.description,
+      notes: workshop.notes,
     }
   end
 

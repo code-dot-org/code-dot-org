@@ -814,6 +814,8 @@ en:
             csp1_2:
               display_name: 'Chapter 2: Inventing the Internet'
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers and transfer it between people and computational devices. The unit then explores the structure and design of the internet and the implications of those design decisions.
+          lessons: {}
+          name: csp1-2017
         csp2-2017:
           title: CSP Unit 2 - Digital Information ('17-'18)
           description: This unit further explores the ways that digital information is encoded, represented and manipulated. Being able to digitally manipulate data, visualize it, and identify patterns, trends and possible meanings are important practical skills that computer scientists do every day. Understanding where data comes from, having intuitions about what could be learned or extracted from it, and being able to use computational tools to manipulate data and communicate about it are the primary skills addressed in the unit.
@@ -23973,6 +23975,8 @@ en:
           lessons:
             lesson-1:
               name: Codechella 2025 AI Lesson
+            lesson-2:
+              name: AI Judge
           lesson_groups: {}
           name: tandl-ai
           title: Codechella 2025
@@ -24175,3 +24179,229 @@ en:
           description_short: ''
           description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
           student_description: "This professional learning module is designed to help you prepare to teach Code.org's Interactive Animations and Games unit. \n\n**In this professional learning module, you will:**\n* Get an introduction to Interactive Animations and Games.\n* Practice key concepts included in the unit.\n* Engage with Game Lab.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 120 minutes"
+        self-paced-pl-teaching-csd-unit4-0-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+          name: self-paced-pl-teaching-csd-unit4-0-2025
+          title: Welcome
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **You will:**
+            * Get an introduction to Code.org and CS Discoveries.
+            * Learn how to engage in this professional learning course.
+
+            **Suggested Time:** 10 minutes
+          student_description: |-
+            **You will:**
+            * Get an introduction to Code.org and CS Discoveries.
+            * Learn how to engage in this professional learning course.
+
+            **Suggested Time:** 10 minutes
+        self-paced-pl-teaching-csd-unit4-1-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit4-1-2025
+          title: Preparing to Teach the Design Process
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to The Design Process.
+            * Practice key concepts included in the unit.
+            * Engage with App Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
+          student_description: |-
+            This professional learning module is designed to help you prepare to teach Code.org's Design Process unit.
+
+            **In this professional learning module, you will:**
+
+            * Get an introduction to The Design Process.
+            * Practice key concepts included in the unit.
+            * Engage with App Lab.
+            * Explore end-of-chapter projects.
+
+            **Suggested time:** 120 minutes
+        self-paced-pl-teaching-csd-unit5-0-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+          name: self-paced-pl-teaching-csd-unit5-0-2025
+          title: Welcome
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **You will:**
+            * Get an introduction to Code.org and CS Discoveries.
+            * Learn how to engage in this professional learning course.
+
+            **Suggested Time:** 10 minutes
+          student_description: |-
+            **You will:**
+            * Get an introduction to Code.org and CS Discoveries.
+            * Learn how to engage in this professional learning course.
+
+            **Suggested Time:** 10 minutes
+        self-paced-pl-teaching-csd-unit5-1-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-csd-unit5-1-2025
+          title: Preparing to Teach Data and Society
+          description_audience: ''
+          description_short: ''
+          description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+          student_description: "This professional learning module is designed to help you prepare to teach Code.org's Data and Society unit. \n\n**In this professional learning module, you will:**\n\n* Get an introduction to Data and Society.\n* Practice key concepts included in the unit.\n* Explore end-of-chapter projects.\n\n**Suggested time:** 70 minutes"
+        self-paced-pl-teaching-physical-computing-0-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+          name: self-paced-pl-teaching-physical-computing-0-2025
+          title: Welcome
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **You will:**
+            * Get an introduction to Code.org and CS Discoveries.
+            * Learn how to engage in this professional learning course.
+
+            **Suggested Time:** 10 minutes
+          student_description: |-
+            **You will:**
+            * Get an introduction to Code.org and CS Discoveries.
+            * Learn how to engage in this professional learning course.
+
+            **Suggested Time:** 10 minutes
+        self-paced-pl-teaching-physical-computing-1-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-physical-computing-1-2025
+          title: Preparing to Teach Creating Apps for Devices (Circuit Playground)
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+        self-paced-pl-teaching-microbit-0-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+          name: self-paced-pl-teaching-microbit-0-2025
+          title: Welcome
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **You will:**
+            * Get an introduction to Code.org and CS Discoveries.
+            * Learn how to engage in this professional learning course.
+
+            **Suggested Time:** 10 minutes
+          student_description: |-
+            **You will:**
+            * Get an introduction to Code.org and CS Discoveries.
+            * Learn how to engage in this professional learning course.
+
+            **Suggested Time:** 10 minutes
+        sandbox-java-basics-pl:
+          lessons:
+            lesson-1:
+              name: Introduction to Java Lab
+            lesson-2:
+              name: Variables in Java
+            lesson-3:
+              name: If Statements in Java
+            lesson-4:
+              name: Loops in Java
+            lesson-5:
+              name: 'Arrays in Java '
+          lesson_groups: {}
+          name: sandbox-java-basics-pl
+          title: 'Java Basics '
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-java-oop-pl:
+          lessons:
+            lesson-1:
+              name: Getting to Know the Painter Class
+            lesson-2:
+              name: Exploring the Painter Class
+            lesson-3:
+              name: Attributes
+            lesson-4:
+              name: Constructors and Inheritance
+            lesson-5:
+              name: Methods
+          lesson_groups: {}
+          name: sandbox-java-oop-pl
+          title: Object-Oriented Programming with Java
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-teaching-microbit-1-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-microbit-1-2025
+          title: Preparing to Teach Creating Apps for Devices (micro:bit)
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+          student_description: "**You will:**\n* Get an introduction to Creating Apps for Devices.\n* Set up your micro:bit. \n* Practice key concepts included in the unit.\n* Preview end of chapter projects.\n* Consider the role of the teacher in a computer science classroom.\n\n**Suggested time:** 100 minutes"
+        self-paced-pl-teaching-aiml-0-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Welcome
+          name: self-paced-pl-teaching-aiml-0-2025
+          title: Welcome
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **You will:**
+            * Get an introduction to Code.org and CS Discoveries.
+            * Learn how to engage in this professional learning course.
+
+            **Suggested Time:** 10 minutes
+          student_description: |-
+            **You will:**
+            * Get an introduction to Code.org and CS Discoveries.
+            * Learn how to engage in this professional learning course.
+
+            **Suggested Time:** 10 minutes
+        self-paced-pl-teaching-aiml-1-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-teaching-aiml-1-2025
+          title: Teaching AI and Machine Learning
+          description_audience: ''
+          description_short: ''
+          description: |-
+            **In this professional learning module, you will:**
+
+            * Get an introduction to artificial intelligence and machine learning.
+            * Practice key concepts included in the unit.
+            * Engage with AI Lab and App Lab.
+            * Explore end of chapter projects.
+            * Make a plan for implementing the unit with your students.
+
+            **Suggested Time:** 100 minutes
+          student_description: |-
+            **In this professional learning module, you will:**
+
+            * Get an introduction to artificial intelligence and machine learning.
+            * Practice key concepts included in the unit.
+            * Engage with AI Lab and App Lab.
+            * Explore end of chapter projects.
+            * Make a plan for implementing the unit with your students.
+
+            **Suggested Time:** 100 minutes

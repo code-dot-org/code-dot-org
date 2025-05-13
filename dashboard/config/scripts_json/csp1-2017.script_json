@@ -11,11 +11,12 @@
       "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "2017"
     },
     "new_name": "csp1-2017",
     "family_name": "csp1",
-    "serialized_at": "2025-01-22 18:59:08 UTC",
+    "serialized_at": "2025-05-12 18:26:46 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
