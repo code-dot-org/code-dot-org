@@ -10,7 +10,7 @@ import {
   convertRelativeToAbsolutePitch,
   Key,
 } from '../utils/Notes';
-import {getNoteAvailableInScaleMode} from '../utils/Tunes';
+import {isNoteAvailableInScaleMode} from '../utils/Tunes';
 
 import {
   ChordEvent,
@@ -475,9 +475,7 @@ export default class MusicPlayer {
             ? convertRelativeToAbsolutePitch(key, event.note)
             : event.note,
         }))
-        .filter(event =>
-          getNoteAvailableInScaleMode(key, event.note, scaleMode)
-        )
+        .filter(event => isNoteAvailableInScaleMode(key, event.note, scaleMode))
         .map(event => {
           return {
             notes: [getPitchName(event.note)],

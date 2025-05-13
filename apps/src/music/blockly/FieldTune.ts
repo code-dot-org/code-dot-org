@@ -10,7 +10,7 @@ import {
 import {getNoteName, convertRelativeToAbsolutePitch} from '../utils/Notes';
 import {
   generateGraphDataFromTune,
-  getNoteAvailableInScaleMode,
+  isNoteAvailableInScaleMode,
   TuneGraphEvent,
 } from '../utils/Tunes';
 import InstrumentGrid from '../views/InstrumentGrid';
@@ -129,7 +129,7 @@ export default class FieldTune extends GoogleBlockly.Field {
     const notes = events
       .map(mapFn)
       .filter((event: InstrumentTickEvent) =>
-        getNoteAvailableInScaleMode(key, event.note, scaleMode)
+        isNoteAvailableInScaleMode(key, event.note, scaleMode)
       );
 
     const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({
