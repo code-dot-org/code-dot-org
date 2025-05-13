@@ -1,7 +1,12 @@
-import * as BlocklyLibrary from 'blockly/core';
+import * as Blockly from 'blockly/core';
+
+import type {Theme} from '../../types';
 
 import BlockLimitIndicator from './BlockLimitIndicator';
-import type {Theme} from './types';
+
+interface ExtendedBlockInfo extends Blockly.utils.toolbox.BlockInfo {
+  limit: string;
+}
 
 /**
  * This maintains the block limits for levels that want you to only use a
@@ -19,7 +24,10 @@ class BlockLimitMap {
   /**
    * Constructs the initial block limit map from the toolbox blocks definition.
    */
-  constructor(toolboxBlocks: string, theme: Theme) {
+  constructor(
+    toolboxBlocks: Blockly.utils.toolbox.ToolboxItemInfo[],
+    theme: Theme,
+  ) {
     // Define the blockLimitMap and blockCountMap and map to track the
     // indicator elements on the toolboxes.
     this.blockLimitMap = new Map<string, number>();
@@ -27,22 +35,18 @@ class BlockLimitMap {
     this.blockIndicatorMap = new Map<string, BlockLimitIndicator>();
     this.theme = theme;
 
-    // Parse the toolbox blocks
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(toolboxBlocks, 'application/xml');
+    // Iterate over each block element
+    toolboxBlocks.forEach(blockElement => {
+      if ((blockElement as ExtendedBlockInfo).limit) {
+        const extendedInfo = blockElement as ExtendedBlockInfo;
+        const limit = parseInt(extendedInfo.limit ?? '');
 
-    // Select all block elements and convert NodeList to array
-    const toolboxBlockElements = Array.from(xmlDoc.querySelectorAll('block'));
-
-    // Iterate over each block element using forEach
-    toolboxBlockElements.forEach(blockElement => {
-      const limit = parseInt(blockElement.getAttribute('limit') ?? '');
-
-      if (!isNaN(limit)) {
-        // Extract type and add to blockLimitMap
-        const type = blockElement.getAttribute('type');
-        if (type !== null) {
-          this.blockLimitMap.set(type, limit);
+        if (!isNaN(limit)) {
+          // Extract type and add to blockLimitMap
+          const type = extendedInfo.type;
+          if (type) {
+            this.blockLimitMap.set(type, limit);
+          }
         }
       }
     });
@@ -98,9 +102,10 @@ class BlockLimitMap {
    */
   indicatorFor(
     blockType: string,
-    block: BlocklyLibrary.BlockSvg,
+    block: Blockly.BlockSvg,
   ): BlockLimitIndicator {
-    const ret = this.blockIndicatorMap.get(blockType);
+    const key = `${blockType}-${block.id}`;
+    const ret = this.blockIndicatorMap.get(key);
 
     if (!ret) {
       const newIndicator = new BlockLimitIndicator(
@@ -108,7 +113,7 @@ class BlockLimitMap {
         this.limitFor(blockType),
         this.theme,
       );
-      this.blockIndicatorMap.set(blockType, newIndicator);
+      this.blockIndicatorMap.set(key, newIndicator);
       return newIndicator;
     }
 

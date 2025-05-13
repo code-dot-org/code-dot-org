@@ -1,6 +1,6 @@
-import * as BlocklyLibrary from 'blockly/core';
+import * as Blockly from 'blockly/core';
 
-import type {Theme} from './types';
+import type {Theme} from '../../types';
 
 const BUBBLE_SIZE = 18;
 const HALF_BUBBLE_SIZE = BUBBLE_SIZE / 2;
@@ -10,7 +10,7 @@ const HALF_BUBBLE_SIZE = BUBBLE_SIZE / 2;
  * based on a limit initially stated in the toolbox XML.
  */
 class BlockLimitIndicator {
-  private readonly blockSvg: BlocklyLibrary.BlockSvg;
+  private readonly blockSvg: Blockly.BlockSvg;
   private count: number;
   private readonly limitGroup: SVGElement;
   private readonly limitRect: SVGElement;
@@ -22,19 +22,19 @@ class BlockLimitIndicator {
    * @param {BlockSvg} element - The block associated with the limit.
    * @param {number} count - The initial count to display.
    */
-  constructor(element: BlocklyLibrary.BlockSvg, count: number, theme: Theme) {
+  constructor(element: Blockly.BlockSvg, count: number, theme: Theme) {
     this.blockSvg = element;
     this.count = count;
     this.theme = theme;
 
     // Initialize the SVG elements within the constructor
-    this.limitGroup = BlocklyLibrary.utils.dom.createSvgElement(
+    this.limitGroup = Blockly.utils.dom.createSvgElement(
       'g',
       {},
       this.blockSvg.getSvgRoot(),
     );
 
-    this.limitRect = BlocklyLibrary.utils.dom.createSvgElement(
+    this.limitRect = Blockly.utils.dom.createSvgElement(
       'rect',
       {
         height: BUBBLE_SIZE,
@@ -47,7 +47,7 @@ class BlockLimitIndicator {
       this.limitGroup,
     );
 
-    this.limitText = BlocklyLibrary.utils.dom.createSvgElement(
+    this.limitText = Blockly.utils.dom.createSvgElement(
       'text',
       {
         class: 'blocklyText',

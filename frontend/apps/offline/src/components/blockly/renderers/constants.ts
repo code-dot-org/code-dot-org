@@ -1,13 +1,10 @@
-import * as BlocklyLibrary from 'blockly/core';
+import * as Blockly from 'blockly/core';
 
-type PuzzleTab = BlocklyLibrary.blockRendering.PuzzleTab;
+import {isDarkTheme} from '../themes';
 
-export const DARK_THEME_SUFFIX = 'dark';
-export function isDarkTheme(theme: BlocklyLibrary.Theme | undefined): boolean {
-  return !!theme?.name.includes(DARK_THEME_SUFFIX);
-}
+type PuzzleTab = Blockly.blockRendering.PuzzleTab;
 
-export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
+export default class CdoConstantsProvider extends Blockly.blockRendering
   .ConstantProvider {
   private RECT_INPUT_OUTPUT: PuzzleTab | undefined;
   private TRI_INPUT_OUTPUT: PuzzleTab | undefined;
@@ -23,7 +20,7 @@ export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
     ROUND: 5,
   };
 
-  setTheme(theme: BlocklyLibrary.Theme) {
+  setTheme(theme: Blockly.Theme) {
     super.setTheme(theme);
     this.isDarkTheme = isDarkTheme(theme);
   }
@@ -36,7 +33,7 @@ export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
    * @returns The shape object for the connection.
    * @override
    */
-  shapeFor(connection: BlocklyLibrary.Connection) {
+  shapeFor(connection: Blockly.Connection) {
     const blockTypeShapeMap: {
       [key: string]: PuzzleTab;
     } = {
@@ -50,15 +47,15 @@ export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
     const connectionCheck = connection.getCheck();
     const connectorType = connectionCheck ? connectionCheck[0] : null;
     switch (connection.type) {
-      case BlocklyLibrary.ConnectionType.INPUT_VALUE:
-      case BlocklyLibrary.ConnectionType.OUTPUT_VALUE:
+      case Blockly.ConnectionType.INPUT_VALUE:
+      case Blockly.ConnectionType.OUTPUT_VALUE:
         // PUZZLE_TAB is the default shape for the connector if the value type is not
         // included in `blockTypeShapeMap`
         return (
           (connectorType && blockTypeShapeMap[connectorType]) || this.PUZZLE_TAB
         );
-      case BlocklyLibrary.ConnectionType.PREVIOUS_STATEMENT:
-      case BlocklyLibrary.ConnectionType.NEXT_STATEMENT:
+      case Blockly.ConnectionType.PREVIOUS_STATEMENT:
+      case Blockly.ConnectionType.NEXT_STATEMENT:
         return this.NOTCH;
       default:
         throw Error('Unknown connection type');
@@ -74,9 +71,9 @@ export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
      * define a function to generate the path for both.
      */
     function makeMainPath(up: number) {
-      return BlocklyLibrary.utils.svgPaths.line([
-        BlocklyLibrary.utils.svgPaths.point(-width, (-1 * up * height) / 2),
-        BlocklyLibrary.utils.svgPaths.point(width, (-1 * up * height) / 2),
+      return Blockly.utils.svgPaths.line([
+        Blockly.utils.svgPaths.point(-width, (-1 * up * height) / 2),
+        Blockly.utils.svgPaths.point(width, (-1 * up * height) / 2),
       ]);
     }
 
@@ -101,10 +98,10 @@ export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
      * define a function to generate the path for both.
      */
     function makeMainPath(up: number) {
-      return BlocklyLibrary.utils.svgPaths.line([
-        BlocklyLibrary.utils.svgPaths.point(-width, 0),
-        BlocklyLibrary.utils.svgPaths.point(0, -1 * up * height),
-        BlocklyLibrary.utils.svgPaths.point(width, 0),
+      return Blockly.utils.svgPaths.line([
+        Blockly.utils.svgPaths.point(-width, 0),
+        Blockly.utils.svgPaths.point(0, -1 * up * height),
+        Blockly.utils.svgPaths.point(width, 0),
       ]);
     }
 
@@ -125,7 +122,7 @@ export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
     const height = this.TAB_HEIGHT;
     function makeMainPath(up: number) {
       // Definition of curve function at https://github.com/google/blockly/blob/2bbb3aa1fcc1cc2df1a75bfbdefa42ab56182872/core/utils/svg_paths.ts#L26-L40
-      const path = BlocklyLibrary.utils.svgPaths.curve('c', [
+      const path = Blockly.utils.svgPaths.curve('c', [
         -width * 1.5 + ', 0 ',
         -width * 1.5 + ', ' + -1 * up * height + ' ',
         '0, ' + -1 * up * height + ' ',
@@ -155,8 +152,7 @@ export default class CdoConstantsProvider extends BlocklyLibrary.blockRendering
   protected generateSecondaryColour_(inputColour: string): string {
     if (this.isDarkTheme) {
       return (
-        BlocklyLibrary.utils.colour.blend('#000', inputColour, 0.4) ||
-        inputColour
+        Blockly.utils.colour.blend('#000', inputColour, 0.4) || inputColour
       );
     }
     return super.generateSecondaryColour_(inputColour);

@@ -1,17 +1,17 @@
-import * as BlocklyLibrary from 'blockly/core';
+import * as Blockly from 'blockly/core';
 
 import type {Renderer} from '../../types';
 import CdoConstantsProvider from '../constants';
 
 import CdoPathObject from './CdoPathObject';
 
-export class CdoRendererThrasosBase extends BlocklyLibrary.thrasos.Renderer {
+export class CdoRendererThrasosBase extends Blockly.thrasos.Renderer {
   /**
    * @override
    * Use our PathObject class instead of the default. Our PathObject has
    * different styles for highlighted and disabled blocks than the geras default.
    */
-  makePathObject(root: SVGElement, style: BlocklyLibrary.Theme.BlockStyle) {
+  makePathObject(root: SVGElement, style: Blockly.Theme.BlockStyle) {
     return new CdoPathObject(root, style, this.getConstants());
   }
 

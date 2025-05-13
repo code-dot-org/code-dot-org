@@ -94,6 +94,13 @@ export interface Collider {
   width: number;
 }
 
+export interface ThemeBlockStyle {
+  colourPrimary: string;
+  colourSecondary?: string;
+  colourTertiary?: string;
+  hat?: string;
+}
+
 /**
  * Our custom theme interface.
  */
@@ -109,6 +116,31 @@ export interface Theme {
         text: string;
       };
     };
+    trashcan: {
+      fill: string;
+    };
+    blockStyles: {
+      default: ThemeBlockStyle;
+      setup_blocks: ThemeBlockStyle;
+      event_blocks: ThemeBlockStyle;
+      loop_blocks: ThemeBlockStyle;
+      logic_blocks: ThemeBlockStyle;
+      procedure_blocks: ThemeBlockStyle;
+      variable_blocks: ThemeBlockStyle;
+      math_blocks: ThemeBlockStyle;
+      text_blocks: ThemeBlockStyle;
+      colour_blocks: ThemeBlockStyle;
+      // Used in Sprite Lab, Dance, Poetry
+      sprite_blocks: ThemeBlockStyle;
+      // Used in Sprite Lab, Dance, Poetry
+      world_blocks: ThemeBlockStyle;
+      // Used in Sprite Lab, Dance
+      behavior_blocks: ThemeBlockStyle;
+      // Used in Sprite Lab only
+      location_blocks: ThemeBlockStyle;
+      // Formerly called dance_blocks, music_blocks
+      lab_blocks: ThemeBlockStyle;
+    };
   } & Omit<
     InstanceType<typeof Blockly.Theme>,
     | 'getClassName'
@@ -118,6 +150,7 @@ export interface Theme {
     | 'setComponentStyle'
     | 'setFontStyle'
     | 'setStartHats'
+    | 'blockStyles'
   >;
   instance: Blockly.Theme;
 }

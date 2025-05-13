@@ -37,6 +37,7 @@ export function evalWith(
       console.log('evalWith: exceeded step count.');
     }
   } else {
+    console.log(interpreter);
     interpreter.run();
   }
 

@@ -9,10 +9,10 @@ import type {BlockDefinition} from '@/components/blockly/types';
 const blocks: BlockDefinition[] = [
   {
     type: 'when_run',
-    title: 'when run',
     style: 'setup_blocks',
     tooltip: '',
     helpUrl: '',
+    message0: 'when run',
     generator: () => '\n',
     nextStatement: true,
   },
@@ -30,17 +30,20 @@ const blocks: BlockDefinition[] = [
     type: 'maze_move',
     helpUrl: 'http://code.google.com/p/blockly/wiki/Move',
     tooltip: 'Move me forward/backward one space',
+    style: 'default',
     previousStatement: true,
     nextStatement: true,
-    init: (block: Blockly.Block) => {
-      block.appendDummyInput().appendField(
-        new Blockly.FieldDropdown([
-          ['move forward', 'moveForward'],
-          ['move backward', 'moveBackward'],
-        ]),
-        'DIR',
-      );
-    },
+    message0: 'move %1',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'DIR',
+        options: [
+          ['forward', 'moveForward'],
+          ['backward', 'moveBackward'],
+        ],
+      },
+    ],
     generator: (block: Blockly.Block) => {
       // Generate JavaScript for moving forward/backward
       const dir = block.getFieldValue('DIR');
@@ -51,17 +54,20 @@ const blocks: BlockDefinition[] = [
     type: 'maze_turn',
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     tooltip: 'Turns me left or right by 90 degrees.',
+    style: 'default',
     previousStatement: true,
     nextStatement: true,
-    init: (block: Blockly.Block) => {
-      block.appendDummyInput().appendField(
-        new Blockly.FieldDropdown([
-          ['turn left \u21BA', 'turnLeft'],
-          ['turn right \u21BB', 'turnRight'],
-        ]),
-        'DIR',
-      );
-    },
+    message0: 'turn %1',
+    args0: [
+      {
+        type: 'field_dropdown',
+        name: 'DIR',
+        options: [
+          ['left \u21BA', 'turnLeft'],
+          ['right \u21BB', 'turnRight'],
+        ],
+      },
+    ],
     generator: (block: Blockly.Block) => {
       const dir = block.getFieldValue('DIR');
       return `Maze.${dir}('block_id_${block.id}');\n`;

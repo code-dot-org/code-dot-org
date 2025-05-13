@@ -1,14 +1,12 @@
 // This contains our custom Blockly events that we can elect to use to respond to
 // different situations.
 
-import * as BlocklyLibrary from 'blockly/core';
+import * as Blockly from 'blockly/core';
 
-import BlockLimitIndicator from './BlockLimitIndicator';
-import BlockLimitMap from './BlockLimitMap';
 import {BLOCK_TYPES} from './constants';
 import {updateBlockEnabled, disableOrphanBlocks} from './utils';
 
-type State = BlocklyLibrary.serialization.blocks.State;
+type State = Blockly.serialization.blocks.State;
 
 /**
  * A custom version of Blockly's Events.disableOrphans. This makes a couple
@@ -32,45 +30,43 @@ type State = BlocklyLibrary.serialization.blocks.State;
  * This bug is tracked by the Blockly team and is currently merged.
  * https://github.com/google/blockly-samples/issues/2035
  */
-export function disableOrphans(event: BlocklyLibrary.Events.Abstract) {
+export function disableOrphans(event: Blockly.Events.Abstract) {
   // This check is for when a block goes from disabled to enabled (value false is enabled).
   // We need to run the check on this event due to the Blockly bug described above.
   if (
-    event.type !== BlocklyLibrary.Events.BLOCK_CHANGE &&
-    event.type !== BlocklyLibrary.Events.BLOCK_MOVE &&
-    event.type !== BlocklyLibrary.Events.BLOCK_DRAG &&
-    event.type !== BlocklyLibrary.Events.BLOCK_CREATE
+    event.type !== Blockly.Events.BLOCK_CHANGE &&
+    event.type !== Blockly.Events.BLOCK_MOVE &&
+    event.type !== Blockly.Events.BLOCK_DRAG &&
+    event.type !== Blockly.Events.BLOCK_CREATE
   ) {
     return;
   }
   const blockEvent = event as
-    | BlocklyLibrary.Events.BlockChange
-    | BlocklyLibrary.Events.BlockMove
-    | BlocklyLibrary.Events.BlockCreate;
+    | Blockly.Events.BlockChange
+    | Blockly.Events.BlockMove
+    | Blockly.Events.BlockCreate;
   const isEnabledEvent =
-    blockEvent.type === BlocklyLibrary.Events.BLOCK_CHANGE &&
-    (blockEvent as BlocklyLibrary.Events.BlockChange).element === 'disabled' &&
-    !(blockEvent as BlocklyLibrary.Events.BlockChange).newValue &&
-    (blockEvent as BlocklyLibrary.Events.BlockChange).oldValue;
+    blockEvent.type === Blockly.Events.BLOCK_CHANGE &&
+    (blockEvent as Blockly.Events.BlockChange).element === 'disabled' &&
+    !(blockEvent as Blockly.Events.BlockChange).newValue &&
+    (blockEvent as Blockly.Events.BlockChange).oldValue;
 
   if (!blockEvent.blockId || !blockEvent.workspaceId) {
     return;
   }
 
-  const eventWorkspace = BlocklyLibrary.Workspace.getById(
-    blockEvent.workspaceId,
-  );
+  const eventWorkspace = Blockly.Workspace.getById(blockEvent.workspaceId);
   const block = eventWorkspace?.getBlockById(blockEvent.blockId);
   if (
-    blockEvent.type === BlocklyLibrary.Events.BLOCK_MOVE ||
-    blockEvent.type === BlocklyLibrary.Events.BLOCK_CREATE ||
+    blockEvent.type === Blockly.Events.BLOCK_MOVE ||
+    blockEvent.type === Blockly.Events.BLOCK_CREATE ||
     isEnabledEvent
   ) {
     if (block) {
       updateBlockEnabled(block);
     }
   } else if (
-    blockEvent.type === BlocklyLibrary.Events.BLOCK_DRAG &&
+    blockEvent.type === Blockly.Events.BLOCK_DRAG &&
     block?.type === BLOCK_TYPES.procedureDefinition &&
     eventWorkspace
   ) {
@@ -79,78 +75,12 @@ export function disableOrphans(event: BlocklyLibrary.Events.Abstract) {
 }
 
 /**
- * An event for when blocks on the main workspace are changed will update the
- * block limits indicators.
- */
-export function updateBlockLimits(
-  blockLimitMap: BlockLimitMap,
-  event: BlocklyLibrary.Events.Abstract,
-) {
-  const expectedEventTypes: string[] = [
-    BlocklyLibrary.Events.BLOCK_CHANGE,
-    BlocklyLibrary.Events.BLOCK_MOVE,
-    BlocklyLibrary.Events.BLOCK_CREATE,
-    // High Contrast theme has a different font size, so we update the indicators.
-    BlocklyLibrary.Events.THEME_CHANGE,
-  ];
-
-  // Mask out only certain event types
-  if (!expectedEventTypes.includes(event.type)) {
-    return;
-  }
-
-  // And only if there is a referenced workspace and block limits specified
-  if (!event.workspaceId || blockLimitMap.size === 0) {
-    return;
-  }
-
-  const eventWorkspace = BlocklyLibrary.Workspace.getById(event.workspaceId);
-  if (!eventWorkspace) {
-    return;
-  }
-
-  // Clear the block counts back to 0
-  blockLimitMap.clear();
-
-  // Count the enabled blocks of each type
-  eventWorkspace.getAllBlocks().forEach(block => {
-    if (blockLimitMap.has(block.type) && block.isEnabled()) {
-      blockLimitMap.increment(block.type);
-    }
-  });
-
-  if ((eventWorkspace as BlocklyLibrary.WorkspaceSvg).getFlyout) {
-    const eventWorkspaceSvg: BlocklyLibrary.WorkspaceSvg =
-      eventWorkspace as BlocklyLibrary.WorkspaceSvg;
-    const flyout = eventWorkspaceSvg.getFlyout();
-    if (flyout) {
-      // Get all blocks from the flyout
-      const flyoutBlocks = flyout.getWorkspace().getTopBlocks();
-
-      // Create limit indicators on flyout blocks
-      flyoutBlocks.forEach(flyoutBlock => {
-        if (blockLimitMap.has(flyoutBlock.type)) {
-          const remainingCount = blockLimitMap.remainingFor(flyoutBlock.type);
-          const indicator: BlockLimitIndicator = blockLimitMap.indicatorFor(
-            flyoutBlock.type,
-            flyoutBlock,
-          );
-          indicator.updateCount(remainingCount);
-        }
-      });
-    }
-  }
-}
-
-/**
  * Grays out undeletable blocks.
  */
-export function grayOutUndeletableBlocks(
-  event: BlocklyLibrary.Events.Abstract,
-) {
+export function grayOutUndeletableBlocks(event: Blockly.Events.Abstract) {
   const expectedEventTypes: string[] = [
-    BlocklyLibrary.Events.BLOCK_CHANGE,
-    BlocklyLibrary.Events.BLOCK_CREATE,
+    Blockly.Events.BLOCK_CHANGE,
+    Blockly.Events.BLOCK_CREATE,
   ];
 
   // Mask out only certain event types
@@ -159,17 +89,14 @@ export function grayOutUndeletableBlocks(
   }
 
   const blockEvent = event as
-    | BlocklyLibrary.Events.BlockCreate
-    | BlocklyLibrary.Events.BlockChange;
+    | Blockly.Events.BlockCreate
+    | Blockly.Events.BlockChange;
 
-  console.log('EVENT', blockEvent);
   if (!blockEvent.blockId || !blockEvent.workspaceId) {
     return;
   }
 
-  const eventWorkspace = BlocklyLibrary.Workspace.getById(
-    blockEvent.workspaceId,
-  );
+  const eventWorkspace = Blockly.Workspace.getById(blockEvent.workspaceId);
 
   const grayOut: (state: State) => void = state => {
     if (!state.id) {
@@ -200,9 +127,8 @@ export function grayOutUndeletableBlocks(
     }
   };
 
-  const blockState: State = (blockEvent.type ===
-    BlocklyLibrary.Events.BLOCK_CREATE &&
-    (blockEvent as BlocklyLibrary.Events.BlockCreate).json) || {
+  const blockState: State = (blockEvent.type === Blockly.Events.BLOCK_CREATE &&
+    (blockEvent as Blockly.Events.BlockCreate).json) || {
     id: blockEvent.blockId,
     type: '',
   };

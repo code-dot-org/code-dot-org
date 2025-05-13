@@ -1,7 +1,7 @@
-import * as BlocklyLibrary from 'blockly/core';
+import * as Blockly from 'blockly/core';
 import {javascriptGenerator} from 'blockly/javascript';
 
-import {BLOCK_TYPES} from './constants';
+import {BLOCK_TYPES, ToolboxType} from './constants';
 
 /**
  * Options for the `getAllGeneratedCode` method.
@@ -21,7 +21,7 @@ export function getAllGeneratedCode(options?: GetAllGeneratedCodeOptions) {
   // The students blocks are considered to be any on the main or hidden workspaces.
   let code = options?.extraCode || '';
 
-  [BlocklyLibrary.getMainWorkspace()].forEach(workspace => {
+  [Blockly.getMainWorkspace()].forEach(workspace => {
     if (workspace) {
       javascriptGenerator.init(workspace);
       const blocks = workspace.getTopBlocks(true);
@@ -42,11 +42,11 @@ export function getAllGeneratedCode(options?: GetAllGeneratedCodeOptions) {
   return code;
 }
 
-export function updateBlockEnabled(block: BlocklyLibrary.Block) {
+export function updateBlockEnabled(block: Blockly.Block) {
   // Changing blocks as part of this event shouldn't be undoable.
-  const initialUndoFlag = BlocklyLibrary.Events.getRecordUndo();
+  const initialUndoFlag = Blockly.Events.getRecordUndo();
   try {
-    BlocklyLibrary.Events.setRecordUndo(false);
+    Blockly.Events.setRecordUndo(false);
     const parent = block.getParent();
     if (parent && parent.isEnabled()) {
       const children = block.getDescendants(false);
@@ -54,21 +54,21 @@ export function updateBlockEnabled(block: BlocklyLibrary.Block) {
         child.setEnabled(true);
       }
     } else if (block.outputConnection || block.previousConnection) {
-      let currentBlock: BlocklyLibrary.Block | null = block;
+      let currentBlock: Blockly.Block | null = block;
       do {
         currentBlock.setEnabled(false);
         currentBlock = currentBlock.getNextBlock();
       } while (currentBlock);
     }
   } finally {
-    BlocklyLibrary.Events.setRecordUndo(initialUndoFlag);
+    Blockly.Events.setRecordUndo(initialUndoFlag);
   }
 }
 
 /**
  * Disables all blocks that are not attached to a top block.
  */
-export function disableOrphanBlocks(eventWorkspace: BlocklyLibrary.Workspace) {
+export function disableOrphanBlocks(eventWorkspace: Blockly.Workspace) {
   // When a function definition is moved, we should not suddenly enable
   // its call blocks.
   eventWorkspace.getTopBlocks().forEach(block => {
@@ -77,4 +77,39 @@ export function disableOrphanBlocks(eventWorkspace: BlocklyLibrary.Workspace) {
     }
     updateBlockEnabled(block);
   });
+}
+
+export function getToolboxType(workspaceOverride?: Blockly.WorkspaceSvg) {
+  const workspace: Blockly.WorkspaceSvg =
+    workspaceOverride || (Blockly.getMainWorkspace() as Blockly.WorkspaceSvg);
+  if (!workspace) {
+    return;
+  }
+  // True is passed so we only get the flyout directly owned by the workspace.
+  // Otherwise getFlyout will return the flyout for the toolbox if it has categories.
+  if (workspace.getFlyout(true)) {
+    return ToolboxType.UNCATEGORIZED;
+  } else if (workspace.getToolbox()) {
+    return ToolboxType.CATEGORIZED;
+  } else {
+    return ToolboxType.NONE;
+  }
+}
+
+export function getToolboxWidth(
+  workspaceOverride?: Blockly.WorkspaceSvg,
+): number {
+  const workspace: Blockly.WorkspaceSvg =
+    workspaceOverride || (Blockly.getMainWorkspace() as Blockly.WorkspaceSvg);
+  const metrics = workspace.getMetrics();
+  switch (getToolboxType(workspace)) {
+    case ToolboxType.CATEGORIZED:
+      return metrics.toolboxWidth;
+    case ToolboxType.UNCATEGORIZED:
+      return metrics.flyoutWidth;
+    case ToolboxType.NONE:
+      break;
+  }
+
+  return 0;
 }

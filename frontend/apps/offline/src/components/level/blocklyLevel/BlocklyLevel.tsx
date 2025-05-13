@@ -2,6 +2,7 @@ import React, {ReactNode} from 'react';
 
 import type {LevelData} from '@/app/models/level';
 import Blockly, {BlockDefinition, BlocklyOptions} from '@/components/blockly';
+import type {Plugin} from '@/components/blockly/plugins';
 import type {Theme, Renderer} from '@/components/blockly/types';
 import Workspace from '@/components/workspace';
 import Instructions from '@/components/workspace/information/instructions';
@@ -18,6 +19,8 @@ export interface BlocklyLevelProps {
   renderer?: Renderer;
   onInject?: () => void;
   avatar?: string;
+  /** A set of plugins to install to this workspace */
+  plugins?: Plugin[];
 }
 
 const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
@@ -30,6 +33,7 @@ const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
   avatar,
   theme,
   renderer,
+  plugins,
 }) => {
   return (
     <BlocklyProvider
@@ -62,10 +66,16 @@ const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
       >
         <Blockly
           data={data}
-          options={options}
+          options={{
+            readOnly: levelData.multipleChoice ? true : undefined,
+            ...options,
+          }}
           startBlocks={levelData.blocklyData?.startBlocks}
-          toolboxBlocks={levelData.blocklyData?.toolboxBlocks}
+          toolboxBlocks={
+            levelData.multipleChoice ? '' : levelData.blocklyData?.toolboxBlocks
+          }
           onInject={onInject}
+          plugins={plugins}
         />
       </Workspace>
     </BlocklyProvider>

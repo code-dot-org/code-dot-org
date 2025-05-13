@@ -7,13 +7,10 @@ import React, {createElement, useEffect, useRef, useContext} from 'react';
 
 import BlocklyContext from '@/contexts/BlocklyContext';
 
-import BlockLimitMap from './BlockLimitMap';
-import {
-  disableOrphans,
-  updateBlockLimits,
-  grayOutUndeletableBlocks,
-} from './events';
+import {disableOrphans, grayOutUndeletableBlocks} from './events';
 import FunctionBlockMixin from './mixins/functionBlockMixin';
+import {PluginType} from './plugins';
+import type {Plugin, InjectPlugin} from './plugins';
 import {
   forciblyInsertTopBlock,
   positionBlocksOnWorkspace,
@@ -29,7 +26,7 @@ import type {
 
 import moduleStyles from './blockly.module.scss';
 
-export interface BlocklyOptions {
+export interface BlocklyOptions extends BlocklyLibrary.BlocklyOptions {
   /** When specified, this ensures that the given block exists and is the top block. */
   forceInsertTopBlock?: string;
   /** When specified, undeletable blocks are grayed out. */
@@ -55,6 +52,8 @@ export interface BlocklyProps {
   inline?: boolean;
   /** A callback when the Blockly environment is loaded into the container */
   onInject?: () => void;
+  /** A set of plugins to install to this workspace */
+  plugins?: Plugin[];
 }
 
 const _ = libraryBlocks;
@@ -73,6 +72,7 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
   theme,
   inline,
   onInject,
+  plugins,
 }) => {
   const anchor = useRef<HTMLDivElement | HTMLSpanElement | null>(null);
   const workspace = useRef<BlocklyLibrary.WorkspaceSvg | null>(null);
@@ -86,7 +86,7 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
   } = useContext(BlocklyContext);
   customBlocks ||= storedCustomBlocks;
   renderer ||= storedRenderer;
-  theme ||= storedTheme;
+  theme ||= storedTheme || DefaultTheme;
   console.log('BLOCKLY_INIT', customBlocks, startBlocks, renderer, theme);
 
   // Register renderer, if needed
@@ -192,17 +192,27 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
     }
 
     // Add mixins
-    BlocklyLibrary.Extensions.registerMixin(
-      'function_block_mixin',
-      FunctionBlockMixin,
-    );
+    try {
+      BlocklyLibrary.Extensions.registerMixin(
+        'function_block_mixin',
+        FunctionBlockMixin,
+      );
+    } catch (err) {
+      if (err instanceof Error) {
+        if (!err.toString().includes('already registered')) {
+          throw err;
+        }
+      }
+    }
 
     // Create the workspace within the container
     workspace.current = BlocklyLibrary.inject(container, {
       renderer: renderer?.name || 'geras',
       theme: theme?.instance || 'classic',
       toolbox: toolboxBlocks,
+      trashcan: false,
       media: '/blockly/media/',
+      ...options,
       ...(inline
         ? {
             readOnly: true,
@@ -211,6 +221,14 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
           }
         : {}),
     });
+
+    // Add injection plugins
+    for (const plugin of (plugins || []).filter(
+      plugin => plugin.type === PluginType.Inject,
+    )) {
+      const injectPlugin = plugin as InjectPlugin;
+      injectPlugin.instantiate(workspace.current, theme);
+    }
 
     // Apply the custom styles to our custom elements
     console.log('THEME', theme, BlocklyLibrary.Theme);
@@ -294,18 +312,6 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
     // Add the orphan disabler which disables blocks that aren't connected to top
     // blocks or procedures, etc.
     workspace.current.addChangeListener(disableOrphans);
-
-    // Create a block limit map for the toolbox options, if they exist
-    if (typeof toolboxBlocks === 'string') {
-      // TODO have an event for theme changes
-      const blockLimitMap = new BlockLimitMap(
-        toolboxBlocks,
-        theme || DefaultTheme,
-      );
-      workspace.current.addChangeListener(
-        updateBlockLimits.bind(null, blockLimitMap),
-      );
-    }
 
     // Level implementation callback for custom behaviors per-level type
     if (onInject) {

@@ -11,6 +11,8 @@ import type {MazeController} from '@code-dot-org/maze';
 
 import type {LevelData} from '@/app/models/level';
 import type {BlockDefinition} from '@/components/blockly';
+import BlockLimitsPlugin from '@/components/blockly/plugins/blockLimits';
+import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
 import DefaultTheme from '@/components/blockly/themes/default';
 import {getAllGeneratedCode} from '@/components/blockly/utils';
@@ -411,6 +413,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
     ) {
       setCurrentAvatar(skinConfig.smallStaticAvatar);
 
+      console.log('LEVEL DATA', levelData);
       controller.current = new Maze.current.default.MazeController(
         levelData.mazeData,
         skinConfig,
@@ -488,6 +491,7 @@ const MazeLevel: React.FunctionComponent<MazeLevelProps> = ({
         ...(options || {}),
       }}
       onInject={onInject}
+      plugins={[ToolboxTrashcanPlugin, BlockLimitsPlugin]}
       {...rest}
     />
   );

@@ -20,6 +20,7 @@ export const API_FUNCTION = function (
   ...rest: any[]
 ) {
   if (!this.executionInfo.isTerminated()) {
+    console.log(fn, this, rest);
     fn.apply(this, rest);
   }
 };

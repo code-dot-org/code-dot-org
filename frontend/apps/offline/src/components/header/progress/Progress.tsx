@@ -69,40 +69,38 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
               className: moduleStyles.tooltip,
             }}
           >
-            <>
-              {onNavigate ? (
-                <Button
-                  className={moduleStyles.progressButton}
-                  title="Go back to previous level"
-                  size="xs"
-                  color="gray"
-                  onClick={() => {
-                    onNavigate(levelIndex - 1);
-                  }}
-                  type="secondary"
-                  icon={{
-                    iconName: 'left',
-                    iconStyle: 'solid',
-                  }}
-                  isIconOnly
-                />
-              ) : (
-                <LinkButton
-                  className={moduleStyles.progressButton}
-                  title="Go back to previous level"
-                  size="xs"
-                  useAsLink
-                  color="gray"
-                  type="secondary"
-                  icon={{
-                    iconName: 'left',
-                    iconStyle: 'solid',
-                  }}
-                  isIconOnly
-                  href={`/units/${unit.key}/lessons/${lessonIndex + 1}/levels/${levelIndex}`}
-                />
-              )}
-            </>
+            {onNavigate ? (
+              <Button
+                className={moduleStyles.progressButton}
+                title="Go back to previous level"
+                size="xs"
+                color="gray"
+                onClick={() => {
+                  onNavigate(levelIndex - 1);
+                }}
+                type="secondary"
+                icon={{
+                  iconName: 'left',
+                  iconStyle: 'solid',
+                }}
+                isIconOnly
+              />
+            ) : (
+              <LinkButton
+                className={moduleStyles.progressButton}
+                title="Go back to previous level"
+                size="xs"
+                useAsLink
+                color="gray"
+                type="secondary"
+                icon={{
+                  iconName: 'left',
+                  iconStyle: 'solid',
+                }}
+                isIconOnly
+                href={`/units/${unit.key}/lessons/${lessonIndex + 1}/levels/${levelIndex}`}
+              />
+            )}
           </WithTooltip>
         )}
         {unit.lessons[lessonIndex].levels.map((level, i) => (
@@ -122,39 +120,45 @@ const Progress: React.FunctionComponent<ProgressProps> = ({
               className: moduleStyles.tooltip,
             }}
           >
-            <>
-              {onNavigate ? (
-                <Button
-                  className={classNames(
-                    i === levelIndex ? moduleStyles.currentLevel : undefined,
-                    moduleStyles.progressBubble,
-                    level.data?.isConcept ? moduleStyles.diamond : undefined,
-                  )}
-                  type="secondary"
-                  color="gray"
-                  onClick={() => {
-                    onNavigate(i);
-                  }}
-                  size="s"
-                  title={'level ' + (i + 1).toString()}
-                  text={i === levelIndex ? (i + 1).toString() : ''}
-                />
-              ) : (
-                <LinkButton
-                  className={classNames(
-                    i === levelIndex ? moduleStyles.currentLevel : undefined,
-                    moduleStyles.progressBubble,
-                    level.data?.isConcept ? moduleStyles.diamond : undefined,
-                  )}
-                  type="secondary"
-                  color="gray"
-                  size="s"
-                  title={'level ' + (i + 1).toString()}
-                  text={i === levelIndex ? (i + 1).toString() : ''}
-                  href={`/units/${unit.key}/lessons/${lessonIndex + 1}/levels/${i + 1}`}
-                />
-              )}
-            </>
+            {onNavigate ? (
+              <Button
+                className={classNames(
+                  i === levelIndex ? moduleStyles.currentLevel : undefined,
+                  moduleStyles.progressBubble,
+                  level.data?.isConcept ? moduleStyles.diamond : undefined,
+                )}
+                type="secondary"
+                color="gray"
+                onClick={() => {
+                  onNavigate(i);
+                }}
+                size="s"
+                title={'level ' + (i + 1).toString()}
+                isIconOnly={i !== levelIndex}
+                icon={
+                  i !== levelIndex
+                    ? {
+                        iconName: '',
+                      }
+                    : undefined
+                }
+                text={i === levelIndex ? (i + 1).toString() : ''}
+              />
+            ) : (
+              <LinkButton
+                className={classNames(
+                  i === levelIndex ? moduleStyles.currentLevel : undefined,
+                  moduleStyles.progressBubble,
+                  level.data?.isConcept ? moduleStyles.diamond : undefined,
+                )}
+                type="secondary"
+                color="gray"
+                size="s"
+                title={'level ' + (i + 1).toString()}
+                text={i === levelIndex ? (i + 1).toString() : ''}
+                href={`/units/${unit.key}/lessons/${lessonIndex + 1}/levels/${i + 1}`}
+              />
+            )}
           </WithTooltip>
         ))}
         {levelIndex === unit.lessons[lessonIndex].levels.length - 1 && (

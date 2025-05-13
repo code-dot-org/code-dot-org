@@ -41,3 +41,9 @@ export enum BLOCK_TYPES {
   variableGet = 'variables_get',
   variableSet = 'variables_set',
 }
+
+export const ToolboxType = {
+  CATEGORIZED: 'CATEGORIZED',
+  UNCATEGORIZED: 'UNCATEGORIZED',
+  NONE: 'NONE',
+};
