@@ -29,8 +29,8 @@ const WidgetView: React.FunctionComponent<LayoutProps> = () => {
       name: 'instructions',
     },
     rightTopPanel: {
-      minHeight: 0,
-      name: 'editor',
+      minHeight: 0, // In widget view, the code editor panel is hidden.
+      name: 'hiddenEditor',
     },
     rightBottomPanel: {
       initialHeight: INITIAL_OUTPUT_HEIGHT,
