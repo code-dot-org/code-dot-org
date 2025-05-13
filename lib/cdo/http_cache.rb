@@ -50,6 +50,11 @@ class HttpCache
   # Header which lets a client request a response format.
   ACCEPT_HEADER = %w(Accept).freeze
   ALLOWLISTED_HEADERS = LANGUAGE_HEADER + COUNTRY_HEADER + ACCEPT_HEADER
+  S3_FORWARD_HEADERS = %w(
+      Access-Control-Request-Headers
+      Access-Control-Request-Method
+      Origin
+    ).freeze
 
   DEFAULT_COOKIES = [
     # Language drop-down selection.
@@ -185,7 +190,7 @@ class HttpCache
             #
             path: '/assets/*',
             proxy: 'cdo-assets',
-            headers: [],
+            headers: S3_FORWARD_HEADERS,
             cookies: 'none'
           },
           {
@@ -254,13 +259,13 @@ class HttpCache
             #
             path: '/assets/*',
             proxy: 'cdo-assets',
-            headers: [],
+            headers: S3_FORWARD_HEADERS,
             cookies: 'none'
           },
           {
             path: '/restricted/*',
             proxy: 'cdo-restricted',
-            headers: [],
+            headers: S3_FORWARD_HEADERS,
             cookies: 'none',
             trusted_signer: true,
           },
