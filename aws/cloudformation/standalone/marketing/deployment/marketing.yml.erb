@@ -346,7 +346,7 @@ Resources:
       LogConfiguration:
         LogDriver: awslogs
         Options:
-          awslogs-group: !Sub "/ecs/awslogs-${AWS::StackName}"
+          awslogs-group: !Sub "/ecs/${AWS::StackName}-FargateServiceTaskDef"
           awslogs-create-group: true
           awslogs-region: !Ref 'AWS::Region'
           awslogs-stream-prefix: marketing-ecs
@@ -389,12 +389,17 @@ Resources:
         PolicyDocument:
           Version: "2012-10-17"
           Statement:
-            - Effect: Allow
-              Action:
-                - logs:CreateLogGroup
-                - logs:CreateLogStream
-                - logs:PutLogEvents
-              Resource: "arn:aws:logs:*:*:*"
+          - Effect: Allow
+            Action:
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+            Resource: 
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/${AWS::StackName}-FargateServiceTaskDef:log-stream:marketing-ecs/*"
+          - Effect: Allow
+            Action:
+              - logs:CreateLogGroup
+            Resource:
+              - !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/ecs/${AWS::StackName}-FargateServiceTaskDef"
 
   FargateServiceTaskDefExecutionRoleDefaultPolicy:
     Type: AWS::IAM::Policy
