@@ -15,6 +15,10 @@ class PegasusTest < Minitest::Test
   include Rack::Test::Methods
   include CaptureQueries
 
+  def setup
+    skip unless CDO.pegasus_content_enabled
+  end
+
   def app
     @app ||= Documents.new
   end
