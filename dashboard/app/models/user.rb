@@ -440,6 +440,7 @@ class User < ApplicationRecord
   # modules, since it's trying to extend some methods added by those modules
   # that would be overridden by them if we included it before.
   include Devise::Models::ManualSessionExpiration
+  include Updateable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
