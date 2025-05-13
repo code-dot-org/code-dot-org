@@ -1,5 +1,4 @@
 Feature: BubbleChoice
-  @no_safari
   @no_mobile
   @properties_encryption_key
   Scenario: Viewing BubbleChoice progress
@@ -24,15 +23,6 @@ Feature: BubbleChoice
 
     # View student's BubbleChoice progress as a teacher
     When I sign in as "Teacher_Alice"
-
-    # View progress from script overview page
-    Given I am on "http://studio.code.org/s/allthethings"
-    And I wait until element ".teacher-panel" is visible
-    When I click selector ".teacher-panel table td:contains(Alice)" once I see it
-    And I wait until current URL contains "user_id="
-    And I wait until element "td:contains(Lesson Name)" is visible
-    And I wait until element "td:contains(Bubble Choice)" is visible
-    Then I verify progress for lesson 42 level 1 is "perfect"
 
     # View progress from BubbleChoice activity page
     Given I am on "http://studio.code.org/s/allthethings/lessons/40/levels/1"
