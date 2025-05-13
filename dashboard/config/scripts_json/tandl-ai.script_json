@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-08 16:14:30 UTC",
+    "serialized_at": "2025-05-12 19:55:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,6 +46,21 @@
         "lesson_group.key": "",
         "script.name": "tandl-ai"
       }
+    },
+    {
+      "key": "lesson-2",
+      "name": "AI Judge",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai"
+      }
     }
   ],
   "lesson_activities": [
@@ -57,6 +72,18 @@
       "seeding_key": {
         "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai"
+      }
+    },
+    {
+      "key": "027c2a4c-1beb-48d2-bc93-8a736b54ccf5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "027c2a4c-1beb-48d2-bc93-8a736b54ccf5",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "",
         "script.name": "tandl-ai"
       }
@@ -75,26 +102,26 @@
       }
     },
     {
-      "key": "776753c2-fc14-41d3-9a37-091c498bd45b",
-      "position": 2,
-      "properties": {
-        "description": "Get a quick tutorial on how to write a successful prompt.",
-        "progression_name": "TaCoFoRT Panel"
-      },
-      "seeding_key": {
-        "activity_section.key": "776753c2-fc14-41d3-9a37-091c498bd45b",
-        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
-      }
-    },
-    {
       "key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Generate a product idea!",
         "progression_name": "Generate a Product!"
       },
       "seeding_key": {
         "activity_section.key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee",
+        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
+      }
+    },
+    {
+      "key": "776753c2-fc14-41d3-9a37-091c498bd45b",
+      "position": 3,
+      "properties": {
+        "description": "Get a quick tutorial on how to write a successful prompt.",
+        "progression_name": "TaCoFoRT Panel"
+      },
+      "seeding_key": {
+        "activity_section.key": "776753c2-fc14-41d3-9a37-091c498bd45b",
         "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
       }
     },
@@ -111,25 +138,25 @@
       }
     },
     {
-      "key": "17f65781-5ed9-4385-981a-b1fa2750a5f7",
-      "position": 5,
-      "properties": {
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "17f65781-5ed9-4385-981a-b1fa2750a5f7",
-        "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
-      }
-    },
-    {
       "key": "f88e5f8d-d964-4c1b-ac95-2934186665a2",
-      "position": 6,
+      "position": 5,
       "properties": {
         "progression_name": "Celebration!"
       },
       "seeding_key": {
         "activity_section.key": "f88e5f8d-d964-4c1b-ac95-2934186665a2",
         "lesson_activity.key": "2c3cc739-ed4b-4bc6-b2d3-6c1c00e740da"
+      }
+    },
+    {
+      "key": "873243a8-4db9-47db-9cf4-ab88a37e5b12",
+      "position": 1,
+      "properties": {
+        "progression_name": "AI Chat Judge"
+      },
+      "seeding_key": {
+        "activity_section.key": "873243a8-4db9-47db-9cf4-ab88a37e5b12",
+        "lesson_activity.key": "027c2a4c-1beb-48d2-bc93-8a736b54ccf5"
       }
     }
   ],
@@ -140,28 +167,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "TaCoFoRT Panel"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "codechella-2025-tacofort-panel"
+        "level_keys": [
+          "codechella-2025-product-generator"
         ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "tandl-ai",
-        "activity_section.key": "776753c2-fc14-41d3-9a37-091c498bd45b"
-      },
-      "level_keys": [
-        "codechella-2025-tacofort-panel"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Generate a Product!"
       },
       "bonus": false,
@@ -179,11 +187,39 @@
       ]
     },
     {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "codechella-2025-tacofort-panel"
+        ],
+        "progression": "TaCoFoRT Panel"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-2025-tacofort-panel"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "776753c2-fc14-41d3-9a37-091c498bd45b"
+      },
+      "level_keys": [
+        "codechella-2025-tacofort-panel"
+      ]
+    },
+    {
       "chapter": 3,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "codechella-2025-product-launch-1-market-research"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -206,6 +242,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "codechella-2025-product-launch-2-brainstorming"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -228,6 +267,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "codechella-2025-product-launch-3-generating-content"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -250,6 +292,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "codechella-2025-product-launch-4-refining-editing"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -272,28 +317,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Reflection"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "codechella-2025-reflection"
+        "level_keys": [
+          "codechella-2025-celebration"
         ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "tandl-ai",
-        "activity_section.key": "17f65781-5ed9-4385-981a-b1fa2750a5f7"
-      },
-      "level_keys": [
-        "codechella-2025-reflection"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Celebration!"
       },
       "bonus": false,
@@ -309,21 +335,31 @@
       "level_keys": [
         "codechella-2025-celebration"
       ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Chat Judge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "codechella-2025-product-launch-ai-chat-judge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "873243a8-4db9-47db-9cf4-ab88a37e5b12"
+      },
+      "level_keys": [
+        "codechella-2025-product-launch-ai-chat-judge"
+      ]
     }
   ],
   "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "codechella-2025-tacofort-panel",
-        "script_level.level_keys": [
-          "codechella-2025-tacofort-panel"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "tandl-ai",
-        "activity_section.key": "776753c2-fc14-41d3-9a37-091c498bd45b"
-      }
-    },
     {
       "seeding_key": {
         "level.key": "codechella-2025-product-generator",
@@ -334,6 +370,18 @@
         "lesson_group.key": "",
         "script.name": "tandl-ai",
         "activity_section.key": "2e7b1b90-19b2-4869-9545-b22d655cf5ee"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "codechella-2025-tacofort-panel",
+        "script_level.level_keys": [
+          "codechella-2025-tacofort-panel"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "776753c2-fc14-41d3-9a37-091c498bd45b"
       }
     },
     {
@@ -386,18 +434,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "codechella-2025-reflection",
-        "script_level.level_keys": [
-          "codechella-2025-reflection"
-        ],
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "",
-        "script.name": "tandl-ai",
-        "activity_section.key": "17f65781-5ed9-4385-981a-b1fa2750a5f7"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "codechella-2025-celebration",
         "script_level.level_keys": [
           "codechella-2025-celebration"
@@ -406,6 +442,18 @@
         "lesson_group.key": "",
         "script.name": "tandl-ai",
         "activity_section.key": "f88e5f8d-d964-4c1b-ac95-2934186665a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "codechella-2025-product-launch-ai-chat-judge",
+        "script_level.level_keys": [
+          "codechella-2025-product-launch-ai-chat-judge"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "tandl-ai",
+        "activity_section.key": "873243a8-4db9-47db-9cf4-ab88a37e5b12"
       }
     }
   ],
