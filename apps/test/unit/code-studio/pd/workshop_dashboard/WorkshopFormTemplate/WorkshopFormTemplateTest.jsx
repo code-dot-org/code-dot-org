@@ -1,6 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import {Provider} from 'react-redux';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
 import {
@@ -15,25 +16,35 @@ jest.mock('@cdo/apps/util/useFetch');
 
 const mockedUseFetch = useFetch;
 
+// mock redux store
+const initialState = {mapbox: {mapboxAccessToken: 'test-token'}};
+const store = {getState: () => initialState, subscribe: () => {}};
+
 describe('WorkshopFormTemplate', () => {
   const testConfigs = WorkshopCourseConfigs.map(config => [
     config.label,
     config,
   ]);
   let user;
+
+  const renderDefault = (props = {}) =>
+    render(
+      <Provider store={store}>
+        <MemoryRouter initialEntries={['/']}>
+          <Routes>
+            <Route path="/" element={<WorkshopFormTemplate {...props} />} />
+          </Routes>
+        </MemoryRouter>
+      </Provider>
+    );
+
   beforeEach(() => {
     user = userEvent.setup();
     mockedUseFetch.mockReturnValue({data: null, loading: false, error: null});
   });
 
   it.each(testConfigs)('renders the form for %s', (_, config) => {
-    render(
-      <MemoryRouter initialEntries={['/']}>
-        <Routes>
-          <Route path="/" element={<WorkshopFormTemplate config={config} />} />
-        </Routes>
-      </MemoryRouter>
-    );
+    renderDefault({config});
 
     expect(
       screen.getByText(workshopLabel(`New ${config.label}`))
@@ -48,16 +59,7 @@ describe('WorkshopFormTemplate', () => {
   it.each(testConfigs)(
     'renders field labels and helper messages for %s',
     async (_, config) => {
-      render(
-        <MemoryRouter initialEntries={['/']}>
-          <Routes>
-            <Route
-              path="/"
-              element={<WorkshopFormTemplate config={config} />}
-            />
-          </Routes>
-        </MemoryRouter>
-      );
+      renderDefault({config});
 
       await user.selectOptions(
         screen.getByRole('combobox', {
@@ -76,18 +78,44 @@ describe('WorkshopFormTemplate', () => {
   );
 
   it.each(testConfigs)(
+    'pre-fills regional partner if there is one option for %s',
+    async (_, config) => {
+      renderDefault({
+        config,
+        regionalPartnerData: [{id: 1, name: 'Regional Partner 1'}],
+      });
+
+      const input = screen.getByLabelText(
+        config.fields.regional_partner_id.label
+      );
+      // SimpleDropdown values can only be strings
+      expect(input.value).toBe('1');
+    }
+  );
+
+  it.each(testConfigs)(
+    'does not pre-fill regional partner if there is more than one option for %s',
+    async (_, config) => {
+      renderDefault({
+        config,
+        regionalPartnerData: [
+          {id: 1, name: 'Regional Partner 1'},
+          {id: 2, name: 'Regional Partner 2'},
+        ],
+      });
+
+      const input = screen.getByLabelText(
+        config.fields.regional_partner_id.label
+      );
+      // SimpleDropdown values can only be strings
+      expect(input.value).toBe('');
+    }
+  );
+
+  it.each(testConfigs)(
     'displays required validation errors for %s',
     async (_, config) => {
-      render(
-        <MemoryRouter initialEntries={['/']}>
-          <Routes>
-            <Route
-              path="/"
-              element={<WorkshopFormTemplate config={config} />}
-            />
-          </Routes>
-        </MemoryRouter>
-      );
+      renderDefault({config});
 
       const publishButton = screen.getByRole('button', {name: 'Publish'});
       await user.click(publishButton);

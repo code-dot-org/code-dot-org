@@ -227,11 +227,15 @@ const optionsList = [
     ],
   },
   {
-    name: 'timeline-original-layout',
+    name: 'timeline-layout',
     type: 'radio',
     values: [
-      {value: 'false', description: 'New timeline (default).'},
-      {value: 'true', description: 'Original timeline.'},
+      {value: 'default', description: 'New timeline (default).'},
+      {value: 'old', description: 'Original timeline.'},
+      {
+        value: 'blocks',
+        description: 'Sort timeline event based on block order (experimental).',
+      },
     ],
   },
   {

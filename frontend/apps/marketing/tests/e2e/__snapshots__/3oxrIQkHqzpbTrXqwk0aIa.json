@@ -1,0 +1,25 @@
+{
+  "entryContent": {
+    "fields": {
+      "videoTitle": {
+        "en-US": "Computer Science is Changing Everything"
+      },
+      "youTubeId": {
+        "en-US": "QvyTEx1wyOY"
+      },
+      "videoFallbackFile": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "L5PVu2K4eN5rocJTApuC5"
+          }
+        }
+      },
+      "videoFallbackUrl": {
+        "en-US": "https://videos.ctfassets.net/90t6bu6vlf76/L5PVu2K4eN5rocJTApuC5/fb69b3b7d0a0e95989feec6165725a22/cs-is-everything.mp4"
+      }
+    }
+  },
+  "contentType": "video"
+}

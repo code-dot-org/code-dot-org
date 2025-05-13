@@ -8,6 +8,11 @@
 #  concept             :string(255)
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  key                 :string(255)      not null
+#
+# Indexes
+#
+#  index_skills_on_key  (key) UNIQUE
 #
 class Skill < ApplicationRecord
   validates :description, presence: true

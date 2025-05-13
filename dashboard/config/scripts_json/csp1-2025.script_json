@@ -14,11 +14,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-11 18:19:31 UTC",
+    "serialized_at": "2025-05-10 01:22:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -49,6 +50,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csp1-2025"
       }
     }
@@ -323,6 +336,21 @@
       "seeding_key": {
         "lesson.key": "Assessment Day",
         "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csp1-2025"
       }
     }
@@ -882,6 +910,18 @@
         "lesson_activity.key": "b9f60a19-b791-4033-b8a3-9d6c8a14909b",
         "lesson.key": "Assessment Day",
         "lesson_group.key": "csp_unit1_2020",
+        "script.name": "csp1-2025"
+      }
+    },
+    {
+      "key": "75ca4873-5915-4af2-a6d1-76290d2f83b3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "75ca4873-5915-4af2-a6d1-76290d2f83b3",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csp1-2025"
       }
     }
@@ -3944,6 +3984,28 @@
         "activity_section.key": "2a316006-98d6-4318-b337-69df87f779dd",
         "lesson_activity.key": "b9f60a19-b791-4033-b8a3-9d6c8a14909b"
       }
+    },
+    {
+      "key": "60f09b4d-fa39-4a26-a97f-80fdfa228756",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "60f09b4d-fa39-4a26-a97f-80fdfa228756",
+        "lesson_activity.key": "75ca4873-5915-4af2-a6d1-76290d2f83b3"
+      }
+    },
+    {
+      "key": "b7309296-6795-4bf6-b6e1-f51bd2b9c98a",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7309296-6795-4bf6-b6e1-f51bd2b9c98a",
+        "lesson_activity.key": "75ca4873-5915-4af2-a6d1-76290d2f83b3"
+      }
     }
   ],
   "script_levels": [
@@ -3953,6 +4015,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3974,6 +4039,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_socialBelonging_control_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3996,6 +4064,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 CFU Sending Complex Messages_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4018,6 +4089,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U1L4 CYU3_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4040,6 +4114,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Binary 4bit to 8bit CFU 2023_2025"
+        ],
         "progression": "Check for Understanding - Flippy Do"
       },
       "bonus": false,
@@ -4062,6 +4139,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU adding bits_2025"
+        ],
         "progression": "Check for Understanding - Flippy Do"
       },
       "bonus": false,
@@ -4084,6 +4164,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU how many bits_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4106,6 +4189,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 CFU bin dec similarities_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4128,6 +4214,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Binary Odometer_2025"
+        ],
         "progression": "Widget: Binary Odometer"
       },
       "bonus": false,
@@ -4150,6 +4239,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU beyond odometer_2025"
+        ],
         "progression": "Check For Understanding - Overflow"
       },
       "bonus": false,
@@ -4172,6 +4264,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 CFU representing fractions_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4194,6 +4289,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L8 Reflection Multiple Representations CSP_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4216,6 +4314,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation - Make the Letter A_2025"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4238,6 +4339,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget Fix bit offset_2025"
+        ],
         "progression": "Pixelation Widget: B&W"
       },
       "bonus": false,
@@ -4260,6 +4364,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge a_2025"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -4282,6 +4389,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge B_2025"
+        ],
         "progression": "Sampling an Analog Image: Challenges A&B"
       },
       "bonus": false,
@@ -4304,6 +4414,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Multiple Choice Digital Analog2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4326,6 +4439,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Pixelation Widget challenge C_2025"
+        ],
         "progression": "Sampling an Analog Image: Challenge C"
       },
       "bonus": false,
@@ -4348,6 +4464,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU pixel data2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4370,6 +4489,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 CFU Sampling_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4392,6 +4514,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 RGB2022_2025"
+        ],
         "progression": "RGB Color"
       },
       "bonus": false,
@@ -4414,6 +4539,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 1_2025"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4436,6 +4564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 More Shades of Color2022_2025"
+        ],
         "progression": "More Shades of Color"
       },
       "bonus": false,
@@ -4458,6 +4589,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 2_2025"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4480,6 +4614,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 3_2025"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4502,6 +4639,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Sampling Widget_2025"
+        ],
         "progression": "Color Sampling Widget"
       },
       "bonus": false,
@@ -4524,6 +4664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U1L10 Color Pixelation Widget 4_2025"
+        ],
         "progression": "Pixelation Widget: Color"
       },
       "bonus": false,
@@ -4546,6 +4689,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Multiple Choice analog vs digital2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4568,6 +4714,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 CFU Sampling_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4590,6 +4739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L11 Widget: Text Compression_2025"
+        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -4612,6 +4764,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice lossless compression2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4634,6 +4789,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CFU Compression for Email_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4656,6 +4814,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v1_2025"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4678,6 +4839,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1 Lossy Compression Widget v2_2025"
+        ],
         "progression": "Lossy Compression Widget"
       },
       "bonus": false,
@@ -4700,6 +4864,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 CPS CFU Cell Phone_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4722,6 +4889,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Multiple Choice Creative Commons2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4744,6 +4914,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 CFU Copyright_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4766,6 +4939,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 CFU Digital Representation_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4788,6 +4964,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 CSP CFU digital information_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4810,6 +4989,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp1_2025"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -4832,6 +5014,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 1 AP-Style Assessment 2022_2025"
+        ],
         "progression": "Unit 1 Exam"
       },
       "bonus": false,
@@ -4846,6 +5031,28 @@
       },
       "level_keys": [
         "CSP Unit 1 AP-Style Assessment 2022_2025"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csp1survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp1-2025",
+        "activity_section.key": "60f09b4d-fa39-4a26-a97f-80fdfa228756"
+      },
+      "level_keys": [
+        "student-eou-survey_csp1survey-2025"
       ]
     }
   ],
@@ -5340,6 +5547,18 @@
         "lesson_group.key": "csp_unit1_2020",
         "script.name": "csp1-2025",
         "activity_section.key": "bb224a88-73ad-4afc-9858-cfdaae63f7ee"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csp1survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csp1survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csp1-2025",
+        "activity_section.key": "60f09b4d-fa39-4a26-a97f-80fdfa228756"
       }
     }
   ],

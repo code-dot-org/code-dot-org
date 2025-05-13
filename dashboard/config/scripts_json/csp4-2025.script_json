@@ -14,11 +14,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-11 21:33:16 UTC",
+    "serialized_at": "2025-05-10 01:24:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -85,6 +86,18 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp4-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 6,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csp4-2025"
       }
     }
@@ -360,6 +373,21 @@
       "seeding_key": {
         "lesson.key": "Conditionals Practice (Alternative)",
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp4-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csp4-2025"
       }
     }
@@ -1062,6 +1090,18 @@
         "lesson_activity.key": "97f47e14-5ee7-4f18-92d5-dafd85bc1dc4",
         "lesson.key": "Conditionals Practice (Alternative)",
         "lesson_group.key": "lessonGroup-5",
+        "script.name": "csp4-2025"
+      }
+    },
+    {
+      "key": "b88f0e2e-bd93-4492-be29-fbe3acf41dbe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b88f0e2e-bd93-4492-be29-fbe3acf41dbe",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csp4-2025"
       }
     }
@@ -3868,6 +3908,28 @@
         "activity_section.key": "cf8c4b78-885c-4aa4-9a62-adbbb46b0a93",
         "lesson_activity.key": "97f47e14-5ee7-4f18-92d5-dafd85bc1dc4"
       }
+    },
+    {
+      "key": "e41f6975-7fdb-4979-ba7b-8e786f617b1a",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "e41f6975-7fdb-4979-ba7b-8e786f617b1a",
+        "lesson_activity.key": "b88f0e2e-bd93-4492-be29-fbe3acf41dbe"
+      }
+    },
+    {
+      "key": "738b0f55-a94c-4bb9-b7ba-e275139bc6d1",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "738b0f55-a94c-4bb9-b7ba-e275139bc6d1",
+        "lesson_activity.key": "b88f0e2e-bd93-4492-be29-fbe3acf41dbe"
+      }
     }
   ],
   "script_levels": [
@@ -3877,6 +3939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4 Pre-Unit Pulse Q1_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -3899,6 +3964,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4 Pre-Unit Pulse Q2_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -3921,6 +3989,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4 My Pet Rock Example App_2025"
+        ],
         "progression": "Explore Sample Apps"
       },
       "bonus": false,
@@ -3943,6 +4014,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L01 Poetry App_2025"
+        ],
         "progression": "Explore Sample Apps"
       },
       "bonus": false,
@@ -3965,6 +4039,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L01 Thermostat App_2025"
+        ],
         "progression": "Explore Sample Apps"
       },
       "bonus": false,
@@ -3987,6 +4064,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1 L02 CYU MC2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -4009,6 +4089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v1_2025"
+        ],
         "progression": "Investigation #1: Thermostat App v.1 "
       },
       "bonus": false,
@@ -4031,6 +4114,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v1 Code_2025"
+        ],
         "progression": "Investigation #1: Thermostat App v.1 "
       },
       "bonus": false,
@@ -4053,6 +4139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L2 Predict Embed_2025"
+        ],
         "progression": "Investigation #2: Thermostat App v.2"
       },
       "bonus": false,
@@ -4075,6 +4164,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v2_2025"
+        ],
         "progression": "Investigation #2: Thermostat App v.2"
       },
       "bonus": false,
@@ -4097,6 +4189,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v3_2025"
+        ],
         "progression": "Investigation #3: Thermostat App v.3"
       },
       "bonus": false,
@@ -4119,6 +4214,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L02 Thermostat App v3 pt2_2025"
+        ],
         "progression": "Investigation #3: Thermostat App v.3"
       },
       "bonus": false,
@@ -4141,6 +4239,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L02 CYU Exit Ticket_2025"
+        ],
         "progression": "Assessment: Check For Understanding\r"
       },
       "bonus": false,
@@ -4163,6 +4264,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables numbers practice 1_2025"
+        ],
         "progression": "Assigning Numbers and Strings"
       },
       "bonus": false,
@@ -4185,6 +4289,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables numbers practice 4_2025"
+        ],
         "progression": "Assigning Numbers and Strings"
       },
       "bonus": false,
@@ -4207,6 +4314,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 1_2025"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -4229,6 +4339,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 3_2025"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -4251,6 +4364,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 2_2025"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -4273,6 +4389,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 5_2025"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -4295,6 +4414,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variables operator practice 6_2025"
+        ],
         "progression": "Variables and Operators"
       },
       "bonus": false,
@@ -4317,6 +4439,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Variable Scope: Local vs. Global2022_new2023_2025"
+        ],
         "progression": "Debugging Scope Issues"
       },
       "bonus": false,
@@ -4339,6 +4464,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L03 Scope Issue_2025"
+        ],
         "progression": "Debugging Scope Issues"
       },
       "bonus": false,
@@ -4361,6 +4489,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L3 Choice_new2023_2025"
+        ],
         "progression": "Putting it Together"
       },
       "bonus": false,
@@ -4383,6 +4514,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L3 CFU Variables Psuedocode2022_new2023_2025"
+        ],
         "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "bonus": false,
@@ -4405,6 +4539,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L3 CFU Variables Randomness Psuedocode2022_new2023_2025"
+        ],
         "progression": "Assessment: Check For Understanding: AP Practice\r"
       },
       "bonus": false,
@@ -4427,6 +4564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L04 Variables Make Project_2025"
+        ],
         "progression": "Try the Photo Liker app"
       },
       "bonus": false,
@@ -4449,6 +4589,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L04 Variables Make Project Submit_2025"
+        ],
         "progression": "Make the Photo Liker app"
       },
       "bonus": false,
@@ -4471,6 +4614,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L5 CSP CFU terms2022_2025"
+        ],
         "progression": "Assessment: Check For Understanding\r"
       },
       "bonus": false,
@@ -4493,6 +4639,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L05 CYU Exit Ticket_2025"
+        ],
         "progression": "Assessment: Check For Understanding\r"
       },
       "bonus": false,
@@ -4515,6 +4664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L6 Predict_2025"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4537,6 +4689,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v1 Code_2025"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -4559,6 +4714,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v1.5 Code_2025"
+        ],
         "progression": "If-Else Statements"
       },
       "bonus": false,
@@ -4581,6 +4739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v2 Code_2025"
+        ],
         "progression": "If-Else-If Statements"
       },
       "bonus": false,
@@ -4603,6 +4764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L06 Lemon Hunter App v3 Code_2025"
+        ],
         "progression": "Logical Operators: AND OR"
       },
       "bonus": false,
@@ -4625,6 +4789,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Checking Multiple Conditions with If-elseif_2025"
+        ],
         "progression": "Patterns: If-else-if"
       },
       "bonus": false,
@@ -4647,6 +4814,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L06 CYU Exit Ticket_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -4669,6 +4839,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4_L07_Conditionals Practice_Level 1_2025"
+        ],
         "progression": "Conditional Statements with App Development"
       },
       "bonus": false,
@@ -4691,6 +4864,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4_L07_Conditionals Practice_Level 2_2025"
+        ],
         "progression": "Conditional Statements with App Development"
       },
       "bonus": false,
@@ -4713,6 +4889,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4_L07_Conditionals Practice_Level 3_2025"
+        ],
         "progression": "Conditional Statements with App Development"
       },
       "bonus": false,
@@ -4735,6 +4914,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4_L07_Conditionals Practice_Level 4_2025"
+        ],
         "progression": "Conditional Statements with App Development"
       },
       "bonus": false,
@@ -4757,6 +4939,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4_L07_Conditionals Practice_Level 5_2025"
+        ],
         "progression": "Conditional Statements with App Development"
       },
       "bonus": false,
@@ -4779,6 +4964,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4_L07_Conditionals Practice_Level 6_2025"
+        ],
         "progression": "Conditional Statements with App Development"
       },
       "bonus": false,
@@ -4801,6 +4989,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4_L07_Conditionals Practice_Level 7_2025"
+        ],
         "progression": "Conditional Statements with App Development"
       },
       "bonus": false,
@@ -4823,6 +5014,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 CFU Conditionals Psuedocode2022_2025"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -4845,6 +5039,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 CFU Conditionals Psuedocode 22022_2025"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -4867,6 +5064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L08 Conditionals Make Project Sample_2025"
+        ],
         "progression": "Try to the Museum Ticket Generator App"
       },
       "bonus": false,
@@ -4889,6 +5089,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L08 Museum Ticket Generator_2025"
+        ],
         "progression": "Make the Museum Ticket Generator App"
       },
       "bonus": false,
@@ -4911,6 +5114,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L9 ExplorePredict_2025"
+        ],
         "progression": "Explore Functions"
       },
       "bonus": false,
@@ -4933,6 +5139,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L09 Functions Song_2025"
+        ],
         "progression": "Explore Functions"
       },
       "bonus": false,
@@ -4955,6 +5164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L9 Predict_2025"
+        ],
         "progression": "Declaring and Calling Functions"
       },
       "bonus": false,
@@ -4977,6 +5189,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L9 Predict 2_2025"
+        ],
         "progression": "Declaring and Calling Functions"
       },
       "bonus": false,
@@ -4999,6 +5214,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L09 Score Clicker Investigate_2025"
+        ],
         "progression": "Declaring and Calling Functions"
       },
       "bonus": false,
@@ -5021,6 +5239,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L09 Thermostat App v7_2025"
+        ],
         "progression": "Declaring and Calling Functions"
       },
       "bonus": false,
@@ -5043,6 +5264,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "updateScreen Pattern_2025"
+        ],
         "progression": "Update Screen Pattern"
       },
       "bonus": false,
@@ -5065,6 +5289,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U4 L09 CFU Exit Ticket_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -5087,6 +5314,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Practice Calling Functions 1_2025"
+        ],
         "progression": "Declare and Call Functions"
       },
       "bonus": false,
@@ -5109,6 +5339,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Practice 1_2025"
+        ],
         "progression": "Declare and Call Functions"
       },
       "bonus": false,
@@ -5131,6 +5364,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Practice 2_2025"
+        ],
         "progression": "Declare and Call Functions"
       },
       "bonus": false,
@@ -5153,6 +5389,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Practice 3_2025"
+        ],
         "progression": "Declare and Call Functions"
       },
       "bonus": false,
@@ -5175,6 +5414,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Build Practice 2_2025"
+        ],
         "progression": "Declare and Call Functions"
       },
       "bonus": false,
@@ -5197,6 +5439,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Debugging Variable Scope and Functions_2025"
+        ],
         "progression": "Function Scope"
       },
       "bonus": false,
@@ -5219,6 +5464,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L10 Functions Scope Practice 1 v2_2025"
+        ],
         "progression": "Function Scope"
       },
       "bonus": false,
@@ -5241,6 +5489,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L10 Choice_2025"
+        ],
         "progression": "Putting It Together"
       },
       "bonus": false,
@@ -5263,6 +5514,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "When to Make Functions Map_2025"
+        ],
         "progression": "When to Declare Functions"
       },
       "bonus": false,
@@ -5285,6 +5539,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 CFU Functions Psuedocode2022_2025"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -5307,6 +5564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L11 Functions Make 1 2020_2025"
+        ],
         "progression": "Quote Maker App"
       },
       "bonus": false,
@@ -5329,6 +5589,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L11 Functions Make 2020_2025"
+        ],
         "progression": "Make the Quote Maker App"
       },
       "bonus": false,
@@ -5351,6 +5614,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L12 Practice PT 1_2025"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -5373,6 +5639,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L12 Practice PT 2_2025"
+        ],
         "progression": "Sample Apps"
       },
       "bonus": false,
@@ -5395,6 +5664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 1_2025"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -5417,6 +5689,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 2_2025"
+        ],
         "progression": "Create the Variables"
       },
       "bonus": false,
@@ -5439,6 +5714,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 3_2025"
+        ],
         "progression": "Create the Function"
       },
       "bonus": false,
@@ -5461,6 +5739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L13 Practice PT 4_2025"
+        ],
         "progression": "Add onEvents"
       },
       "bonus": false,
@@ -5483,6 +5764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L14 Practice PT 1_2025"
+        ],
         "progression": "Test the Decision Maker App"
       },
       "bonus": false,
@@ -5505,6 +5789,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4 L14 Practice PT 2_2025"
+        ],
         "progression": "Submit Your Decision Maker App"
       },
       "bonus": false,
@@ -5527,6 +5814,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp4_2025"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -5549,6 +5839,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Unit 4 Assessment2022_2025"
+        ],
         "progression": "Unit 4 Exam"
       },
       "bonus": false,
@@ -5571,6 +5864,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 1_2025"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -5593,6 +5889,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 2_2025"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -5615,6 +5914,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 3_2025"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -5637,6 +5939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 10_2025"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -5659,6 +5964,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 4_2025"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -5681,6 +5989,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 5_2025"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -5703,6 +6014,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 6_2025"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -5725,6 +6039,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice equivalent expressions_2025"
+        ],
         "progression": "If-Statements"
       },
       "bonus": false,
@@ -5747,6 +6064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 7_2025"
+        ],
         "progression": "Logical Operators"
       },
       "bonus": false,
@@ -5769,6 +6089,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 L07 Conditionals Practice 8_2025"
+        ],
         "progression": "Logical Operators"
       },
       "bonus": false,
@@ -5791,6 +6114,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Conditionals Practice MOD_2025"
+        ],
         "progression": "MOD Practice"
       },
       "bonus": false,
@@ -5813,6 +6139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L7 Choice_2025"
+        ],
         "progression": "Putting It Together"
       },
       "bonus": false,
@@ -5835,6 +6164,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 CFU Conditionals Psuedocode2022_2025"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -5857,6 +6189,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 CFU Conditionals Psuedocode 22022_2025"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -5871,6 +6206,28 @@
       },
       "level_keys": [
         "U4L10 CFU Conditionals Psuedocode 22022_2025"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csp4survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp4-2025",
+        "activity_section.key": "e41f6975-7fdb-4979-ba7b-8e786f617b1a"
+      },
+      "level_keys": [
+        "student-eou-survey_csp4survey-2025"
       ]
     }
   ],
@@ -6965,6 +7322,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csp4-2025",
         "activity_section.key": "cf8c4b78-885c-4aa4-9a62-adbbb46b0a93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csp4survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csp4survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csp4-2025",
+        "activity_section.key": "e41f6975-7fdb-4979-ba7b-8e786f617b1a"
       }
     }
   ],

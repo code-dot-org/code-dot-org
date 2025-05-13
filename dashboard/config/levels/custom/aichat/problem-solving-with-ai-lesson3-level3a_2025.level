@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-05-08T14:34:06.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Sports Journalist - Providing Multiple Examples\r\n\r\nPractice prompting through the career of a sports journalist by giving the AI more structure and detailed expectations to guide a stronger response.\r\n\r\n### Do This:\r\n\r\n1. Prompt AI for a news summary by including **several examples** to help the AI understand what you're looking for. \r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how adding structure and specific details improved the AI’s summary.\r\n\r\n::: details [**Not sure where to start?**]\r\nHere's an example prompt:\r\n> Summarize the latest sports news as a series of 1-sentence summaries. For example:\r\n>\r\n> \"Alabama wins over Texas Tech in nailbiter game.\" \r\n> \"Caitlin Clark autograph card sells for a record $84,000.\"\r\n> \"Stefon Diggs could transform the Patriots offense from the slot position.\"\r\n:::",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "\n\n",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    },
+    "display_name": "Sports Journalist",
+    "bubble_choice_description": "Practice prompting through the career of a sports journalist by giving the AI more structure and detailed expectations to guide a stronger response.",
+    "thumbnail_url": "https://images.code.org/8a44f2a2a82e9107be8105d9de2139fa-writing.png",
+    "name_suffix": "_2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:06.824+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level3a_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level3a_2024\"}]"
+}]]></config>
+</Aichat>

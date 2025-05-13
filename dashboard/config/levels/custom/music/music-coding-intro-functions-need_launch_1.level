@@ -210,7 +210,7 @@
         ]
       }
     },
-    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:** \r\n#####  Promote classroom discussions using <a href=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit#slide=id.g317fe39f44b_0_382\" target=\"_blank\">lesson slide deck.</a>\r\n___\r\n\r\n\r\n###<i class=\"fa-regular fa-face-thinking\"></i> What do you notice? \r\n\r\nLook for patterns in the code to answer the question below then, press Run.\r\n\r\n**How many times will this chunk of code play?**\r\n \r\n\r\n<img src=\"https://images.code.org/f62969a9d32e938feb8d7f61cd1021b8-image-1744652698788.png\"> \r\n\r\n",
+    "long_instructions": "#### <i class=\"fa-solid fa-person-chalkboard\"></i> **Teacher Tip:** \r\n#####  Promote classroom discussions using <a href=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/edit#slide=id.g317fe39f44b_0_382\" target=\"_blank\">lesson slide deck.</a>\r\n\r\n##### **Teacher Note**: This is Lesson 2, Level 2 from the curriculum.\r\n___\r\n\r\n\r\n###<i class=\"fa-regular fa-face-thinking\"></i> What do you notice? \r\n\r\nLook for patterns in the code to answer the question below then, press Run.\r\n\r\n**How many times will this chunk of code play?**\r\n \r\n\r\n",
     "validations": [
       {
         "key": "music-coding-intro-functions-need_0494dc13-1782-465b-91a8-0ed486477a1b",
@@ -266,7 +266,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:00.763+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need_launch\"},{\"changed_at\":\"2025-04-28 22:30:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-04-28T18:19:00.763+00:00\",\"changed\":[\"cloned from \\\"music-coding-intro-functions-need_launch\\\"\"],\"cloned_from\":\"music-coding-intro-functions-need_launch\"},{\"changed_at\":\"2025-04-28 22:30:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2025-05-05 19:40:38 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
