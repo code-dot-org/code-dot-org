@@ -83,6 +83,14 @@ $default-spacing: 2px;
     height: 100%;
     background-color: $neutral_dark;
     padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+.documentationTooltip {
+  background-color: $white;
+  span {
+    color: $black !important;
   }
 }
 

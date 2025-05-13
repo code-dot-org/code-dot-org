@@ -1,3 +1,4 @@
+import Tabs from '@code-dot-org/component-library/tabs';
 import {javascript} from '@codemirror/lang-javascript';
 import classNames from 'classnames';
 import React, {useCallback, useContext, useEffect} from 'react';
@@ -23,6 +24,7 @@ import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AnalyticsReporter from '../analytics/AnalyticsReporter';
@@ -109,6 +111,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+  const teacherMarkdown = useAppSelector(
+    state => state.lab.levelProperties?.teacherMarkdown
+  );
 
   const levelData = useAppSelector(
     state => state.lab.levelProperties?.levelData
@@ -502,11 +507,102 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         <div className={moduleStyles.documentationPanel}>
           <PanelContainer
             id="documentation-panel"
-            headerContent="Documentation"
+            hideHeaders={true}
+            headerContent=""
           >
-            <div className={moduleStyles.documentationArea}>
-              <Documentation expressionKey="play_sample" />
-            </div>
+            <Tabs
+              type="secondary"
+              tabs={[
+                {
+                  value: 'Documentation',
+                  text: 'Documentation',
+                  isIconOnly: true,
+                  icon: {iconName: 'book'},
+                  tooltip: {
+                    tooltipId: 'Documentation',
+                    text: 'Documentation',
+                    direction: 'onBottom',
+                    className: moduleStyles.documentationTooltip,
+                  },
+                  tabContent: (
+                    <div className={moduleStyles.documentationArea}>
+                      <Documentation expressionKey="play_sample" />
+                    </div>
+                  ),
+                },
+                {
+                  value: 'For teachers only',
+                  text: 'For teachers only',
+                  isIconOnly: true,
+                  icon: {iconName: 'graduation-cap'},
+                  tooltip: {
+                    tooltipId: 'For teachers only',
+                    text: 'For teachers only',
+                    direction: 'onBottom',
+                    className: moduleStyles.documentationTooltip,
+                  },
+                  tabContent: (
+                    <div className={moduleStyles.documentationArea}>
+                      <SafeMarkdown markdown={teacherMarkdown} />
+                    </div>
+                  ),
+                },
+                {
+                  value: 'AI Tutor',
+                  text: 'AI Tutor',
+                  isIconOnly: true,
+                  icon: {iconName: 'robot'},
+                  tooltip: {
+                    tooltipId: 'AI Tutor',
+                    text: 'AI Tutor',
+                    direction: 'onBottom',
+                    className: moduleStyles.documentationTooltip,
+                  },
+                  tabContent: (
+                    <div className={moduleStyles.documentationArea}>
+                      Here is your AI tutor.
+                    </div>
+                  ),
+                },
+                {
+                  value: 'Rubric',
+                  text: 'Rubric',
+                  isIconOnly: true,
+                  tooltip: {
+                    tooltipId: 'Rubric',
+                    text: 'Rubric',
+                    direction: 'onBottom',
+                    className: moduleStyles.documentationTooltip,
+                  },
+                  icon: {iconName: 'oil-temperature'},
+                  tabContent: (
+                    <div className={moduleStyles.documentationArea}>Rubric</div>
+                  ),
+                },
+                {
+                  value: 'TA',
+                  text: 'TA',
+                  isIconOnly: false,
+                  iconRight: {
+                    iconName: 'bell',
+                    style: {color: '#fedb03'},
+                  },
+                  tooltip: {
+                    tooltipId: 'TA',
+                    text: 'TA',
+                    direction: 'onBottom',
+                    className: moduleStyles.documentationTooltip,
+                  },
+                  icon: {iconName: 'user-robot'},
+                  tabContent: (
+                    <div className={moduleStyles.documentationArea}>TA</div>
+                  ),
+                },
+              ]}
+              defaultSelectedTabValue="Documentation"
+              name="tabs"
+              onChange={() => {}}
+            />
           </PanelContainer>
         </div>
 
