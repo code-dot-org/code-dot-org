@@ -174,7 +174,10 @@ const PythonlabView: React.FunctionComponent<
   if (aiTutorManager.current === null) {
     aiTutorManager.current = new AiTutorManager();
   }
-  const askAiTutor = async (question: string) => {
+  const askAiTutor = async (
+    question: string,
+    questionType: 'hint' | 'user'
+  ) => {
     const fullQuestion = [
       question,
       'Here is my code:',
@@ -192,7 +195,10 @@ const PythonlabView: React.FunctionComponent<
       levelProperties.longInstructions,
     ].join('\n\n');
 
-    const messages = await aiTutorManager.current?.askAiTutor(fullQuestion);
+    const messages = await aiTutorManager.current?.askAiTutor(
+      fullQuestion,
+      questionType
+    );
     if (messages && messages.length > 1) {
       setAiTutorResponse(messages[1].chatMessageText);
     }
@@ -234,7 +240,7 @@ const PythonlabView: React.FunctionComponent<
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
 
-    askAiTutor("What's wrong with my code, if anything?");
+    askAiTutor("What's wrong with my code, if anything?", 'hint');
   };
 
   return (

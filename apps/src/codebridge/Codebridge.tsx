@@ -38,7 +38,7 @@ type CodebridgeProps = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  askAiTutor?: (question: string) => void;
+  askAiTutor?: (question: string, questionType: 'user' | 'hint') => void;
   aiTutorResponse?: string;
 };
 

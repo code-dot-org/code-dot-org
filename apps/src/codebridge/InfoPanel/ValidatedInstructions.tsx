@@ -75,7 +75,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
 }) => {
-  const {onRun, onStop, levelProperties, aiTutorResponse} =
+  const {onRun, onStop, levelProperties, askAiTutor, aiTutorResponse} =
     useCodebridgeContext();
   const dialogControl = useDialogControl();
 
@@ -371,8 +371,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             </div>
           )}
 
-          <AiTutorUI response={aiTutorResponse} />
-
           {validationResults && (
             <>
               <div ref={validationScrollRef} />
@@ -381,6 +379,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               </div>
             </>
           )}
+
+          <AiTutorUI askAiTutor={askAiTutor} response={aiTutorResponse} />
+
           {predictSettings?.isPredictLevel && (
             <InstructorsOnly>
               <div className={moduleStyles.bubble}>

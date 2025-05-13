@@ -8,8 +8,13 @@ import {
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
 
+const systemPrompts = {
+  hint: "You are responding to a query about programming.  Target the reading age of an American 7th grader.  Use the Socratic method to guide the student to the answer, but do not give them the answer directly.  Just focus on the biggest single issue you find.  Use plain English in the answer.  I don't want multiple steps, points, or questions.  Just one question that helps the student to make progress.",
+  user: 'You are responding to a query about programming.  Target the reading age of an American 7th grader.  Use plain English in the answer.  Keep the answer relatively short, say three or fewer paragraphs, with each paragraph three sentences or less.',
+};
+
 export default class AiTutorManager {
-  async askAiTutor(message: string) {
+  async askAiTutor(message: string, type: 'hint' | 'user') {
     const state = getStore().getState();
 
     const newUserMessage: PendingChatMessage = {
@@ -29,8 +34,7 @@ export default class AiTutorManager {
     const aiCustomizations = {
       ...EMPTY_AI_CUSTOMIZATIONS,
       selectedModelId: AiChatModelIds.CHATGPT,
-      systemPrompt:
-        "You are responding to a query about programming.  Target the reading age of an American 7th grader.  Use the Socratic method to guide the student to the answer, but do not give them the answer directly.  Just focus on the biggest single issue you find.  Use plain English in the answer.  I don't want multiple steps, points, or questions.  Just one question that helps the student to make progress.  Feel free to look back at earlier attempts to determine whether the user needs extra hints, especially if they seem to be stuck.  If you notice the same code being tried more than three times in a row, telling the user the actual answer.",
+      systemPrompt: systemPrompts[type],
     };
 
     const messages = await postAichatCompletionMessage(
