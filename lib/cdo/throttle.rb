@@ -52,6 +52,10 @@ module Cdo
 
     # Normalize old data format where we only stored request timestamps
     # to the new format where we store request entries with timestamps and counts.
+    #
+    # NOTE: this should be removable a day after the new format is deployed,
+    # as current usages of this module have very short throttle periods and entries expire after a day,
+    # per the expiration_time below.
     def self.normalize_value(raw_value)
       if raw_value.key?(:request_entries)
         raw_value
