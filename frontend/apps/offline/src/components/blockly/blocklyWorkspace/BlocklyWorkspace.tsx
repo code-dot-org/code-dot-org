@@ -1,39 +1,39 @@
 import useResizeObserver from '@react-hook/resize-observer';
 import * as libraryBlocks from 'blockly/blocks';
-import * as BlocklyLibrary from 'blockly/core';
+import * as Blockly from 'blockly/core';
 import {javascriptGenerator, JavascriptGenerator} from 'blockly/javascript';
 import * as En from 'blockly/msg/en';
 import React, {createElement, useEffect, useRef, useContext} from 'react';
 
 import BlocklyContext from '@/contexts/BlocklyContext';
 
-import {disableOrphans, grayOutUndeletableBlocks} from './events';
-import FunctionBlockMixin from './mixins/functionBlockMixin';
-import {PluginType} from './plugins';
-import type {Plugin, InjectPlugin} from './plugins';
+import {disableOrphans, grayOutUndeletableBlocks} from '../events';
+import FunctionBlockMixin from '../mixins/functionBlockMixin';
+import {PluginType} from '../plugins';
+import type {Plugin, InjectPlugin} from '../plugins';
 import {
   forciblyInsertTopBlock,
   positionBlocksOnWorkspace,
-} from './serialization';
-import DefaultTheme from './themes/default';
+} from '../serialization';
+import DefaultTheme from '../themes/default';
 import type {
   BlockDefinition,
   Theme,
   Renderer,
   SimpleBlockDefinition,
   ComplexBlockDefinition,
-} from './types';
+} from '../types';
 
 import moduleStyles from './blockly.module.scss';
 
-export interface BlocklyOptions extends BlocklyLibrary.BlocklyOptions {
+export interface BlocklyOptions extends Blockly.BlocklyOptions {
   /** When specified, this ensures that the given block exists and is the top block. */
   forceInsertTopBlock?: string;
   /** When specified, undeletable blocks are grayed out. */
   grayOutUndeletableBlocks?: boolean;
 }
 
-export interface BlocklyProps {
+export interface BlocklyWorkspaceProps {
   /** A set of custom blocks to load within the Blockly instance. */
   customBlocks?: BlockDefinition[];
   /** A set of specialized options that is passed to block creators. */
@@ -56,13 +56,14 @@ export interface BlocklyProps {
   plugins?: Plugin[];
 }
 
+// Ensure these are still compiled into module initialization.
 const _ = libraryBlocks;
 const __ = En;
 
 /**
  * Represents a Blockly workspace.
  */
-const Blockly: React.FunctionComponent<BlocklyProps> = ({
+const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
   customBlocks,
   data,
   options,
@@ -75,7 +76,7 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
   plugins,
 }) => {
   const anchor = useRef<HTMLDivElement | HTMLSpanElement | null>(null);
-  const workspace = useRef<BlocklyLibrary.WorkspaceSvg | null>(null);
+  const workspace = useRef<Blockly.WorkspaceSvg | null>(null);
 
   // Pull from the provider, if it exists there and we haven't specified it
   // ourselves.
@@ -97,8 +98,8 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
           "Renderer needs to have a string for a 'name' field that uniquely identifies the renderer",
         );
       } else {
-        BlocklyLibrary.registry.register(
-          BlocklyLibrary.registry.Type.RENDERER,
+        Blockly.registry.register(
+          Blockly.registry.Type.RENDERER,
           renderer.name,
           renderer.class,
           true,
@@ -109,21 +110,19 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
 
   // Register any new custom blocks
   useEffect(() => {
-    BlocklyLibrary.setLocale(En as unknown as {[key: string]: string});
+    Blockly.setLocale(En as unknown as {[key: string]: string});
 
     // Make sure we have the default blocks
-    console.log('BLOCKS', BlocklyLibrary, BlocklyLibrary.Blocks);
+    console.log('BLOCKS', Blockly, Blockly.Blocks);
 
     (customBlocks || []).forEach(blockDefinition => {
       if ((blockDefinition as ComplexBlockDefinition).message0) {
         const complexBlockDefinition =
           blockDefinition as ComplexBlockDefinition;
-        BlocklyLibrary.common.defineBlocksWithJsonArray([
-          complexBlockDefinition,
-        ]);
+        Blockly.common.defineBlocksWithJsonArray([complexBlockDefinition]);
 
         javascriptGenerator.forBlock[complexBlockDefinition.type] = function (
-          _block: BlocklyLibrary.Block,
+          _block: Blockly.Block,
           _generator: JavascriptGenerator,
         ) {
           if (complexBlockDefinition.generator) {
@@ -138,7 +137,7 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
         };
       } else {
         const simpleBlockDefinition = blockDefinition as SimpleBlockDefinition;
-        BlocklyLibrary.Blocks[blockDefinition.type] ||= {
+        Blockly.Blocks[blockDefinition.type] ||= {
           helpUrl: simpleBlockDefinition.helpUrl,
           init: function () {
             this.setStyle(simpleBlockDefinition.style || 'default');
@@ -148,7 +147,7 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
             } else if (simpleBlockDefinition.titleImage) {
               const input = this.appendEndRowInput();
               input.appendField(
-                new BlocklyLibrary.FieldImage(
+                new Blockly.FieldImage(
                   simpleBlockDefinition.titleImage,
                   32,
                   32,
@@ -171,7 +170,7 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
         };
 
         javascriptGenerator.forBlock[simpleBlockDefinition.type] = function (
-          _block: BlocklyLibrary.Block,
+          _block: Blockly.Block,
           _generator: JavascriptGenerator,
         ) {
           return `${simpleBlockDefinition.functionName}('block_id_${this.id}');\n`;
@@ -193,7 +192,7 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
 
     // Add mixins
     try {
-      BlocklyLibrary.Extensions.registerMixin(
+      Blockly.Extensions.registerMixin(
         'function_block_mixin',
         FunctionBlockMixin,
       );
@@ -206,7 +205,7 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
     }
 
     // Create the workspace within the container
-    workspace.current = BlocklyLibrary.inject(container, {
+    workspace.current = Blockly.inject(container, {
       renderer: renderer?.name || 'geras',
       theme: theme?.instance || 'classic',
       toolbox: toolboxBlocks,
@@ -231,7 +230,7 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
     }
 
     // Apply the custom styles to our custom elements
-    console.log('THEME', theme, BlocklyLibrary.Theme);
+    console.log('THEME', theme, Blockly.Theme);
 
     // Massage start blocks to at least a valid empty document
     if (startBlocks === undefined || startBlocks.trim() === '') {
@@ -254,10 +253,7 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
           forciblyInsertTopBlock(xmlDoc, options.forceInsertTopBlock);
         }
 
-        BlocklyLibrary.Xml.clearWorkspaceAndLoadFromXml(
-          xmlDoc,
-          workspace.current,
-        );
+        Blockly.Xml.clearWorkspaceAndLoadFromXml(xmlDoc, workspace.current);
       }
 
       // Reposition blocks if this is a full workspace
@@ -269,13 +265,13 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
     if (inline) {
       // Move top block to corner (hopefully there is only one)
       for (const block of workspace.current.getTopBlocks()) {
-        block.moveTo(new BlocklyLibrary.utils.Coordinate(0, 0));
+        block.moveTo(new Blockly.utils.Coordinate(0, 0));
       }
 
       // Copy over SVG rendered blocks to the span in our anchor
       document.body.appendChild(container);
       if (workspace.current) {
-        BlocklyLibrary.svgResize(workspace.current);
+        Blockly.svgResize(workspace.current);
       }
       const svg = container.querySelector('svg')?.cloneNode(true) as SVGElement;
       if (svg && anchor.current) {
@@ -328,7 +324,7 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
   if (!inline) {
     useResizeObserver(anchor, () => {
       if (workspace.current) {
-        BlocklyLibrary.svgResize(workspace.current);
+        Blockly.svgResize(workspace.current);
       }
     });
   }
@@ -339,4 +335,4 @@ const Blockly: React.FunctionComponent<BlocklyProps> = ({
   });
 };
 
-export default Blockly;
+export default BlocklyWorkspace;

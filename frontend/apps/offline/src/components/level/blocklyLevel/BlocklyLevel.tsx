@@ -1,7 +1,11 @@
 import React, {ReactNode} from 'react';
 
 import type {LevelData} from '@/app/models/level';
-import Blockly, {BlockDefinition, BlocklyOptions} from '@/components/blockly';
+import {
+  BlocklyWorkspace,
+  BlockDefinition,
+  BlocklyOptions,
+} from '@/components/blockly';
 import type {Plugin} from '@/components/blockly/plugins';
 import type {Theme, Renderer} from '@/components/blockly/types';
 import Workspace from '@/components/workspace';
@@ -64,7 +68,7 @@ const BlocklyLevel: React.FunctionComponent<BlocklyLevelProps> = ({
           },
         ]}
       >
-        <Blockly
+        <BlocklyWorkspace
           data={data}
           options={{
             readOnly: levelData.multipleChoice ? true : undefined,

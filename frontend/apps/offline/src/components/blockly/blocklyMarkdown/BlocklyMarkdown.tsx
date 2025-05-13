@@ -2,8 +2,12 @@ import type {MarkdownToJSX} from 'markdown-to-jsx';
 import {RuleType} from 'markdown-to-jsx';
 import React from 'react';
 
-import Blockly, {BlockDefinition} from '@/components/blockly';
-import {Theme, Renderer} from '@/components/blockly/types';
+import BlocklyWorkspace from '@/components/blockly/blocklyWorkspace';
+import type {
+  Theme,
+  Renderer,
+  BlockDefinition,
+} from '@/components/blockly/types';
 import Markdown, {MarkdownProps} from '@/components/markdown';
 
 export interface BlocklyMarkdownProps extends MarkdownProps {
@@ -76,7 +80,7 @@ const BlocklyMarkdown: React.FunctionComponent<BlocklyMarkdownProps> = ({
             fragment.appendChild(root);
             const key = xmlRenderer(root, node);
             return (
-              <Blockly
+              <BlocklyWorkspace
                 customBlocks={customBlocks}
                 renderer={renderer}
                 theme={theme}
