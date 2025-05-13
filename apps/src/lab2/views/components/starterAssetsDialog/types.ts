@@ -21,13 +21,15 @@ export interface DialogProps {
   alert?: {message: string; type: 'danger' | 'warning'};
 }
 
+export type UpdateAlertCallback = <T extends 'danger' | 'warning'>(
+  message: string,
+  type: T,
+  error?: T extends 'danger' ? Error : never
+) => void;
+
 export interface UploadDialogProps extends DialogProps {
   addAsset: (asset: AssetData) => void;
   removeAsset: (filename: string) => void;
-  updateAlert: (
-    message: string,
-    type: 'danger' | 'warning',
-    error?: Error
-  ) => void;
+  updateAlert: UpdateAlertCallback;
   clearAlert: () => void;
 }

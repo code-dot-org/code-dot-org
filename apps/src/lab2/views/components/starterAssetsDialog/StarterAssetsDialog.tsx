@@ -2,7 +2,7 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {fetchLevelAssets} from './api';
 import SelectAssetsDialog, {SelectProps} from './SelectAssetsDialog';
-import {AssetData} from './types';
+import {AssetData, UpdateAlertCallback} from './types';
 import UploadAssetDialog, {UploadProps} from './UploadAssetDialog';
 
 /**
@@ -46,8 +46,8 @@ const StarterAssetsDialog: React.FC<SelectProps | UploadProps> = props => {
 
   const clearAlert = useCallback(() => setAlert(undefined), []);
 
-  const updateAlert = useCallback(
-    (message: string, type: 'danger' | 'warning', error?: Error) => {
+  const updateAlert: UpdateAlertCallback = useCallback(
+    (message, type, error) => {
       setAlert({message, type});
       if (type === 'danger') {
         onError?.(message, error);
