@@ -263,17 +263,6 @@
   }
 }
 
-.courseContentDropdown {
-  div {
-    height: 40px;
-    width: 100%;
-
-    select {
-      border-color: var(--neutral-gray-40);
-    }
-  }
-}
-
 // Empty state button
 .emptyStateButton {
   display: flex;
