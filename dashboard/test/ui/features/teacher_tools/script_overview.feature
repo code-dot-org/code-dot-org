@@ -99,7 +99,7 @@ Feature: Unit overview page
     And I am on "http://studio.code.org/courses/allthemigratedthings/units/1?no_redirect=true"
     And I click selector ".ui-test-lesson-resources" once I see it
     When I switch tabs
-    And I wait until current URL contains "courses/allthemigratedthings/units/1/allthemigratedthings/lessons/1/student"
+    And I wait until current URL contains "courses/allthemigratedthings/units/1/lessons/1/student"
 
   Scenario: Unit overview for unit in single-unit course
     Given I create an authorized teacher-associated student named "Blake"

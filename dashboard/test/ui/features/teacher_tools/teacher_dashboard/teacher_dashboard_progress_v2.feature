@@ -105,7 +105,7 @@ Scenario: Teacher can navigate to student work by clicking level cell.
   And I click selector "#ui-test-lesson-header-2"
   And I click selector "#ui-test-courses-allthethingscourse-units-1-lessons-2-levels-1-cell-data" once I see it to load a new tab
   And check that the URL contains "&user_id="
-  And check that the URL contains "allthethings/lessons/2/levels/1"
+  And check that the URL contains "courses/allthethingscourse/units/1/lessons/2/levels/1"
 
 @skip
 Scenario: Teacher can open lesson data, refresh the page, and lesson data will still be shown
