@@ -78,7 +78,7 @@ export const Codebridge = React.memo(
             '#uitest-codebridge-run'
           );
           if (editorElement) {
-            // Click will move focus to console
+            // Click will run code and then move focus to console
             (editorElement as HTMLElement).click();
           }
           event.preventDefault();
