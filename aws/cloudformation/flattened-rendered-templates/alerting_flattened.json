@@ -1,0 +1,132 @@
+{
+  "Description": "Resources used for monitoring and alerting on infrastructure issues.",
+  "Parameters": {
+    "HoneybadgerApiKey": {
+      "NoEcho": true,
+      "Type": "String"
+    },
+    "OffsiteAwsAccountID": {
+      "NoEcho": true,
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "BasicLambdaRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "sts:AssumeRole"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "lambda.amazonaws.com"
+                ]
+              }
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+        ],
+        "Path": "/"
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "HoneybadgerLambda": {
+      "Properties": {
+        "Code": {
+          "S3Bucket": "cdo-dist",
+          "S3Key": "lambdajs-d59d8e02e69089a969e87f715cf3195e.zip"
+        },
+        "Description": "Publish an SNS notification to Honeybadger.",
+        "Environment": {
+          "Variables": {
+            "HONEYBADGER_API_KEY": "HoneybadgerApiKey"
+          }
+        },
+        "FunctionName": "HoneybadgerNotify",
+        "Handler": "honeybadgerNotify.handler",
+        "Role": "BasicLambdaRole.Arn",
+        "Runtime": "nodejs10.x",
+        "Timeout": 30
+      },
+      "Type": "AWS::Lambda::Function"
+    },
+    "HoneybadgerSNSTopic": {
+      "Properties": {
+        "Subscription": [
+          {
+            "Endpoint": "HoneybadgerLambda.Arn",
+            "Protocol": "lambda"
+          }
+        ],
+        "TopicName": "HoneybadgerNotify"
+      },
+      "Type": "AWS::SNS::Topic"
+    },
+    "HoneybadgerSNSTopicPolicy": {
+      "Properties": {
+        "PolicyDocument": {
+          "Id": "HoneybadgerSNSTopicPolicy",
+          "Statement": [
+            {
+              "Action": "sns:Publish",
+              "Condition": {
+                "StringEquals": {
+                  "AWS:SourceOwner": "OffsiteAwsAccountID"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": "*"
+              },
+              "Resource": "HoneybadgerSNSTopic",
+              "Sid": "AllowOffsiteAccountToPublish"
+            },
+            {
+              "Action": [
+                "sns:AddPermission",
+                "sns:DeleteTopic",
+                "sns:GetTopicAttributes",
+                "sns:ListSubscriptionsByTopic",
+                "sns:Publish",
+                "sns:Receive",
+                "sns:RemovePermission",
+                "sns:SetTopicAttributes",
+                "sns:Subscribe"
+              ],
+              "Condition": {
+                "StringEquals": {
+                  "AWS:SourceOwner": "AWS::AccountId"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": "*"
+              },
+              "Resource": "HoneybadgerSNSTopic",
+              "Sid": "__default_statement_ID"
+            }
+          ],
+          "Version": "2012-10-17"
+        },
+        "Topics": [
+          "HoneybadgerSNSTopic"
+        ]
+      },
+      "Type": "AWS::SNS::TopicPolicy"
+    },
+    "SNSInvokeLambdaPermission": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": "HoneybadgerLambda.Arn",
+        "Principal": "sns.amazonaws.com",
+        "SourceArn": "HoneybadgerSNSTopic"
+      },
+      "Type": "AWS::Lambda::Permission"
+    }
+  }
+}

@@ -1,0 +1,1596 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "Data layer including RedShift cluster configuration and synchronization with RDS instance.",
+  "Parameters": {
+    "LogsBucket": {
+      "Type": "String"
+    },
+    "RDSBackupAccount": {
+      "NoEcho": true,
+      "Type": "String"
+    },
+    "RDSClusterEndpointRootDomain": {
+      "Type": "String"
+    },
+    "RDSHost": {
+      "Description": "Production MySQL database servername to use for exporting data to Redshift.",
+      "Type": "String"
+    },
+    "RDSIdentifier": {
+      "Type": "String"
+    },
+    "RDSPassword": {
+      "NoEcho": true,
+      "Type": "String"
+    },
+    "RDSUsername": {
+      "Type": "String"
+    },
+    "RedshiftAdminPassword": {
+      "NoEcho": true,
+      "Type": "String"
+    },
+    "RedshiftAdminUsername": {
+      "Type": "String"
+    },
+    "RedshiftDatabase": {
+      "Default": "dashboard",
+      "Type": "String"
+    },
+    "RedshiftEtlClientPassword": {
+      "Description": "Redshift SQL user to execute Extract Transform Load (ETL) processes.",
+      "NoEcho": true,
+      "Type": "String"
+    },
+    "RedshiftEtlClientUsername": {
+      "Description": "Redshift SQL user to execute Extract Transform Load (ETL) processes.",
+      "Type": "String"
+    },
+    "ReportingCluster": {
+      "Type": "String"
+    }
+  },
+  "Resources": {
+    "AuditLogs": {
+      "Properties": {
+        "LogGroupName": "/admin/auditlogs"
+      },
+      "Type": "AWS::Logs::LogGroup"
+    },
+    "AuditLogsKey": {
+      "Properties": {
+        "Description": "Used for encrypting audit logs.",
+        "EnableKeyRotation": true,
+        "KeyPolicy": {
+          "Id": "key-policy-1",
+          "Statement": [
+            {
+              "Action": "kms:*",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": [
+                  "arn:aws:iam::${AWS::AccountId}:root"
+                ]
+              },
+              "Resource": "*",
+              "Sid": "Enable IAM policies in source account for managing key access."
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:GenerateDataKey*",
+                "kms:ReEncrypt*"
+              ],
+              "Condition": {
+                "ArnEquals": {
+                  "kms:EncryptionContext:aws:logs:arn": "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:${AuditLogs}"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "logs.${AWS::Region}.amazonaws.com",
+                  "ssm.amazonaws.com"
+                ]
+              },
+              "Resource": "*",
+              "Sid": "Restrict use of key to specific log groups."
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::KMS::Key"
+    },
+    "AuditLogsKeyAlias": {
+      "Properties": {
+        "AliasName": "alias/auditlogs",
+        "TargetKeyId": "AuditLogsKey"
+      },
+      "Type": "AWS::KMS::Alias"
+    },
+    "AuroraS3Role": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "rds.amazonaws.com"
+                ]
+              }
+            }
+          ]
+        },
+        "PermissionsBoundary": "IAM-DevPermissions",
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": [
+                    "s3:AbortMultipartUpload",
+                    "s3:DeleteObject",
+                    "s3:GetObject",
+                    "s3:ListMultipartUploadParts",
+                    "s3:PutObject"
+                  ],
+                  "Effect": "Allow",
+                  "Resource": "arn:aws:s3:::cdo-activities-archive/*"
+                },
+                {
+                  "Action": [
+                    "s3:ListBucket"
+                  ],
+                  "Effect": "Allow",
+                  "Resource": "arn:aws:s3:::cdo-activities-archive"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "SelectIntoOutfileS3"
+          }
+        ],
+        "RoleName": "AuroraS3Role"
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "CdoLogsBucketConfiguration": {
+      "DependsOn": [
+        "CdoLogsBucketPolicy",
+        "S3PartitionCloudFrontLogPermission"
+      ],
+      "Properties": {
+        "Bucket": "LogsBucket",
+        "NotificationConfiguration": {
+          "LambdaFunctionConfigurations": [
+            {
+              "Events": [
+                "s3:ObjectCreated:*"
+              ],
+              "Filter": {
+                "Key": {
+                  "FilterRules": [
+                    {
+                      "Name": "prefix",
+                      "Value": "development-dashboard-cdn/"
+                    },
+                    {
+                      "Name": "suffix",
+                      "Value": ".gz"
+                    }
+                  ]
+                }
+              },
+              "LambdaFunctionArn": "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:S3PartitionCloudFrontLog"
+            }
+          ]
+        },
+        "ServiceToken": "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:function:S3BucketConfiguration"
+      },
+      "Type": "Custom::S3BucketConfiguration"
+    },
+    "CdoLogsBucketPolicy": {
+      "Properties": {
+        "Bucket": "LogsBucket",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:GetBucketAcl",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "cloudtrail.amazonaws.com"
+              },
+              "Resource": "arn:aws:s3:::${LogsBucket}",
+              "Sid": "AWSCloudTrailAclCheck"
+            },
+            {
+              "Action": "s3:PutBucketNotification",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": "S3LogsRole"
+              },
+              "Resource": "arn:aws:s3:::${LogsBucket}",
+              "Sid": "LogsBucketNotification"
+            },
+            {
+              "Action": "s3:PutObject",
+              "Condition": {
+                "StringEquals": {
+                  "s3:x-amz-acl": "bucket-owner-full-control"
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "Service": "cloudtrail.amazonaws.com"
+              },
+              "Resource": "arn:aws:s3:::${LogsBucket}/AWSLogs/${AWS::AccountId}/*",
+              "Sid": "AWSCloudTrailWrite"
+            },
+            {
+              "Action": "s3:PutObject",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": "arn:aws:iam::127311923021:root"
+              },
+              "Resource": "arn:aws:s3:::${LogsBucket}/AWSLogs/${AWS::AccountId}/*",
+              "Sid": "ELBAccessLogsWrite"
+            }
+          ]
+        }
+      },
+      "Type": "AWS::S3::BucketPolicy"
+    },
+    "CloudFrontLogsTable": {
+      "Properties": {
+        "CatalogId": "AWS::AccountId",
+        "DatabaseName": "ELBLogsDatabase",
+        "TableInput": {
+          "Name": "cloudfront_logs",
+          "Parameters": {
+            "classification": "csv",
+            "compressionType": "gzip",
+            "skip.header.line.count": "2"
+          },
+          "PartitionKeys": [
+            {
+              "Name": "day",
+              "Type": "bigint"
+            },
+            {
+              "Name": "hour",
+              "Type": "bigint"
+            },
+            {
+              "Name": "month",
+              "Type": "bigint"
+            },
+            {
+              "Name": "year",
+              "Type": "bigint"
+            }
+          ],
+          "StorageDescriptor": {
+            "Columns": [
+              {
+                "Name": "bytes",
+                "Type": "bigint"
+              },
+              {
+                "Name": "cookie",
+                "Type": "string"
+              },
+              {
+                "Name": "date",
+                "Type": "date"
+              },
+              {
+                "Name": "encryptedfields",
+                "Type": "int"
+              },
+              {
+                "Name": "filestatus",
+                "Type": "string"
+              },
+              {
+                "Name": "host",
+                "Type": "string"
+              },
+              {
+                "Name": "hostheader",
+                "Type": "string"
+              },
+              {
+                "Name": "httpversion",
+                "Type": "string"
+              },
+              {
+                "Name": "location",
+                "Type": "string"
+              },
+              {
+                "Name": "method",
+                "Type": "string"
+              },
+              {
+                "Name": "querystring",
+                "Type": "string"
+              },
+              {
+                "Name": "referrer",
+                "Type": "string"
+              },
+              {
+                "Name": "requestbytes",
+                "Type": "bigint"
+              },
+              {
+                "Name": "requestid",
+                "Type": "string"
+              },
+              {
+                "Name": "requestip",
+                "Type": "string"
+              },
+              {
+                "Name": "requestprotocol",
+                "Type": "string"
+              },
+              {
+                "Name": "responseresulttype",
+                "Type": "string"
+              },
+              {
+                "Name": "resulttype",
+                "Type": "string"
+              },
+              {
+                "Name": "sslcipher",
+                "Type": "string"
+              },
+              {
+                "Name": "sslprotocol",
+                "Type": "string"
+              },
+              {
+                "Name": "status",
+                "Type": "int"
+              },
+              {
+                "Name": "time",
+                "Type": "string"
+              },
+              {
+                "Name": "timetaken",
+                "Type": "float"
+              },
+              {
+                "Name": "uri",
+                "Type": "string"
+              },
+              {
+                "Name": "useragent",
+                "Type": "string"
+              },
+              {
+                "Name": "xforwardedfor",
+                "Type": "string"
+              }
+            ],
+            "InputFormat": "org.apache.hadoop.mapred.TextInputFormat",
+            "Location": "s3://${LogsBucket}/cloudfront/development-dashboard-cdn/",
+            "OutputFormat": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+            "SerdeInfo": {
+              "Parameters": {
+                "field.delim": "\t",
+                "serialization.format": "\t"
+              },
+              "SerializationLibrary": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe"
+            }
+          },
+          "TableType": "EXTERNAL_TABLE"
+        }
+      },
+      "Type": "AWS::Glue::Table"
+    },
+    "CloudTrailLogsCrawler": {
+      "Properties": {
+        "Configuration": "{\"Version\":1.0,\"CrawlerOutput\":{\"Partitions\":{\"AddOrUpdateBehavior\":\"InheritFromTable\"}}}",
+        "DatabaseName": "ELBLogsDatabase",
+        "Description": "Update daily partitions generated by CloudTrail Logs.",
+        "Name": "cloudtrail_logs",
+        "Role": "GlueRole.Arn",
+        "Schedule": {
+          "ScheduleExpression": "cron(0 7 * * ? *)"
+        },
+        "SchemaChangePolicy": {
+          "DeleteBehavior": "LOG",
+          "UpdateBehavior": "LOG"
+        },
+        "TablePrefix": "cloudtrail_logs_",
+        "Targets": {
+          "S3Targets": [
+            {
+              "Path": "s3://${LogsBucket}/AWSLogs/${AWS::AccountId}/CloudTrail/"
+            }
+          ]
+        }
+      },
+      "Type": "AWS::Glue::Crawler"
+    },
+    "CloudTrailLogsTable": {
+      "Properties": {
+        "CatalogId": "AWS::AccountId",
+        "DatabaseName": "ELBLogsDatabase",
+        "TableInput": {
+          "Name": "cloudtrail",
+          "Parameters": {
+            "classification": "cloudtrail"
+          },
+          "PartitionKeys": [
+            {
+              "Name": "day",
+              "Type": "bigint"
+            },
+            {
+              "Name": "month",
+              "Type": "bigint"
+            },
+            {
+              "Name": "year",
+              "Type": "bigint"
+            }
+          ],
+          "StorageDescriptor": {
+            "Columns": [
+              {
+                "Name": "additionaleventdata",
+                "Type": "string"
+              },
+              {
+                "Name": "apiversion",
+                "Type": "string"
+              },
+              {
+                "Name": "awsregion",
+                "Type": "string"
+              },
+              {
+                "Name": "errorcode",
+                "Type": "string"
+              },
+              {
+                "Name": "errormessage",
+                "Type": "string"
+              },
+              {
+                "Name": "eventid",
+                "Type": "string"
+              },
+              {
+                "Name": "eventname",
+                "Type": "string"
+              },
+              {
+                "Name": "eventsource",
+                "Type": "string"
+              },
+              {
+                "Name": "eventtime",
+                "Type": "string"
+              },
+              {
+                "Name": "eventtype",
+                "Type": "string"
+              },
+              {
+                "Name": "eventversion",
+                "Type": "string"
+              },
+              {
+                "Name": "readonly",
+                "Type": "string"
+              },
+              {
+                "Name": "recipientaccountid",
+                "Type": "string"
+              },
+              {
+                "Name": "requestid",
+                "Type": "string"
+              },
+              {
+                "Name": "requestparameters",
+                "Type": "string"
+              },
+              {
+                "Name": "resources",
+                "Type": "array<struct<arn:string,accountid:string,type:string>>"
+              },
+              {
+                "Name": "responseelements",
+                "Type": "string"
+              },
+              {
+                "Name": "serviceeventdetails",
+                "Type": "string"
+              },
+              {
+                "Name": "sharedeventid",
+                "Type": "string"
+              },
+              {
+                "Name": "sourceipaddress",
+                "Type": "string"
+              },
+              {
+                "Name": "useragent",
+                "Type": "string"
+              },
+              {
+                "Name": "useridentity",
+                "Type": "struct<type:string,principalid:string,arn:string,accountid:string,invokedby:string,accesskeyid:string,username:string,sessioncontext:struct<attributes:struct<mfaauthenticated:string,creationdate:string>,sessionissuer:struct<type:string,principalid:string,arn:string,accountid:string,username:string>>>"
+              },
+              {
+                "Name": "vpcendpointid",
+                "Type": "string"
+              }
+            ],
+            "InputFormat": "com.amazon.emr.cloudtrail.CloudTrailInputFormat",
+            "Location": "s3://${LogsBucket}/AWSLogs/${AWS::AccountId}/CloudTrail/",
+            "OutputFormat": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+            "SerdeInfo": {
+              "Parameters": {
+                "serialization.format": "1"
+              },
+              "SerializationLibrary": "com.amazon.emr.hive.serde.CloudTrailSerde"
+            }
+          },
+          "TableType": "EXTERNAL_TABLE"
+        }
+      },
+      "Type": "AWS::Glue::Table"
+    },
+    "CpuUtilizationGuest": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Cpuutilization.guest",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.cpuUtilization.guest"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "CpuUtilizationIdle": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Cpuutilization.idle",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.cpuUtilization.idle"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "CpuUtilizationIrq": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Cpuutilization.irq",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.cpuUtilization.irq"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "CpuUtilizationNice": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Cpuutilization.nice",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.cpuUtilization.nice"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "CpuUtilizationSteal": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Cpuutilization.steal",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.cpuUtilization.steal"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "CpuUtilizationSystem": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Cpuutilization.system",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.cpuUtilization.system"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "CpuUtilizationTotal": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Cpuutilization.total",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.cpuUtilization.total"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "CpuUtilizationUser": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Cpuutilization.user",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.cpuUtilization.user"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "CpuUtilizationWait": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Cpuutilization.wait",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.cpuUtilization.wait"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DBSnapshotKey": {
+      "Properties": {
+        "Description": "Encrypts cross-account DB snapshots for ${AWS::StackName}.",
+        "EnableKeyRotation": true,
+        "KeyPolicy": {
+          "Id": "key-policy-1",
+          "Statement": [
+            {
+              "Action": "kms:*",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": [
+                  "arn:aws:iam::${AWS::AccountId}:root"
+                ]
+              },
+              "Resource": "*",
+              "Sid": "Enable IAM policies in source account for managing key access."
+            },
+            {
+              "Action": [
+                "kms:CreateGrant",
+                "kms:ListGrants",
+                "kms:RevokeGrant"
+              ],
+              "Condition": {
+                "Bool": {
+                  "kms:GrantIsForAWSResource": true
+                }
+              },
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": "arn:aws:iam::${RDSBackupAccount}:root"
+              },
+              "Resource": "*",
+              "Sid": "Allow attachment of persistent resources in backup account."
+            },
+            {
+              "Action": [
+                "kms:Decrypt",
+                "kms:DescribeKey",
+                "kms:Encrypt",
+                "kms:GenerateDataKey*",
+                "kms:ReEncrypt*"
+              ],
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": [
+                  "arn:aws:iam::${RDSBackupAccount}:root"
+                ]
+              },
+              "Resource": "*",
+              "Sid": "Allow use of the key in backup account."
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::KMS::Key"
+    },
+    "DBSnapshotKeyAlias": {
+      "Properties": {
+        "AliasName": "alias/snapshot-${AWS::StackName}",
+        "TargetKeyId": "DBSnapshotKey"
+      },
+      "Type": "AWS::KMS::Alias"
+    },
+    "DMSCron": {
+      "Properties": {
+        "MigrationType": "full-load",
+        "ReplicationInstanceArn": "DMSReplicationInstance",
+        "ReplicationTaskIdentifier": "task-cron",
+        "ReplicationTaskSettings": "{\"ErrorBehavior\":{\"FullLoadIgnoreConflicts\":true,\"RecoverableErrorCount\":-1,\"RecoverableErrorInterval\":5,\"RecoverableErrorThrottling\":true,\"RecoverableErrorThrottlingMax\":1800,\"TableErrorEscalationCount\":50,\"TableErrorEscalationPolicy\":\"STOP_TASK\",\"TableErrorPolicy\":\"SUSPEND_TABLE\",\"DataErrorEscalationCount\":50,\"DataErrorEscalationPolicy\":\"SUSPEND_TABLE\",\"DataErrorPolicy\":\"LOG_ERROR\",\"DataTruncationErrorPolicy\":\"LOG_ERROR\",\"ApplyErrorDeletePolicy\":\"IGNORE_RECORD\",\"ApplyErrorInsertPolicy\":\"LOG_ERROR\",\"ApplyErrorUpdatePolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationPolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationCount\":0,\"ApplyErrorFailOnTruncationDdl\":false,\"FailOnTransactionConsistencyBreached\":false,\"FailOnNoTablesCaptured\":false},\"ChangeProcessingDdlHandlingPolicy\":{\"HandleSourceTableAltered\":true,\"HandleSourceTableTruncated\":true,\"HandleSourceTableDropped\":true},\"ChangeProcessingTuning\":{\"BatchApplyPreserveTransaction\":true,\"BatchApplyTimeoutMin\":3600,\"BatchApplyTimeoutMax\":3600,\"BatchApplyMemoryLimit\":500,\"BatchSplitSize\":0,\"MinTransactionSize\":1000,\"CommitTimeout\":1,\"MemoryLimitTotal\":1024,\"MemoryKeepTime\":600,\"StatementCacheSize\":50},\"StreamBufferSettings\":{\"CtrlStreamBufferSizeInMB\":5,\"StreamBufferSizeInMB\":8,\"StreamBufferCount\":3},\"ControlTablesSettings\":{\"StatusTableEnabled\":true,\"SuspendedTablesTableEnabled\":true,\"HistoryTableEnabled\":true,\"ControlSchema\":\"\",\"HistoryTimeslotInMinutes\":5,\"historyTimeslotInMinutes\":5},\"Logging\":{\"EnableLogging\":true,\"LogComponents\":[{\"Id\":\"SOURCE_UNLOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"SOURCE_CAPTURE\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_LOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_APPLY\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TASK_MANAGER\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"}]},\"FullLoadSettings\":{\"TargetTablePrepMode\":\"DROP_AND_CREATE\",\"CreatePkAfterFullLoad\":false,\"StopTaskCachedChangesApplied\":false,\"StopTaskCachedChangesNotApplied\":false,\"MaxFullLoadSubTasks\":20,\"TransactionConsistencyTimeout\":600,\"CommitRate\":10000},\"TargetMetadata\":{\"BatchApplyEnabled\":true,\"LoadMaxFileSize\":0,\"SupportLobs\":true,\"LimitedSizeLobMode\":true,\"LobMaxSize\":32,\"FullLobMode\":false,\"LobChunkSize\":0,\"TargetSchema\":\"\",\"ParallelLoadThreads\":0,\"ParallelLoadBufferSize\":0}}\n",
+        "SourceEndpointArn": "MySQLDatabaseSourceEndpoint",
+        "TableMappings": "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_tutor_interactions\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"2\",\"rule-name\":\"2\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_tutor_interactions\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"3\",\"rule-name\":\"3\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"experiments\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"4\",\"rule-name\":\"4\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"experiments\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"5\",\"rule-name\":\"5\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"authored_hint_view_requests\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"6\",\"rule-name\":\"6\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"authored_hint_view_requests\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"7\",\"rule-name\":\"7\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"hint_view_requests\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"8\",\"rule-name\":\"8\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"hint_view_requests\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"9\",\"rule-name\":\"9\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"puzzle_ratings\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"10\",\"rule-name\":\"10\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"puzzle_ratings\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"11\",\"rule-name\":\"11\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"metrics\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"12\",\"rule-name\":\"12\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"metrics\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"13\",\"rule-name\":\"13\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"contained_level_answers\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"14\",\"rule-name\":\"14\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"contained_level_answers\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"15\",\"rule-name\":\"15\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"contained_levels\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"16\",\"rule-name\":\"16\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"contained_levels\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"17\",\"rule-name\":\"17\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_ai_evaluations\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"18\",\"rule-name\":\"18\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_ai_evaluations\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"19\",\"rule-name\":\"19\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_teacher_evaluations\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"20\",\"rule-name\":\"20\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_teacher_evaluations\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"21\",\"rule-name\":\"21\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_ai_evaluation_feedbacks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"22\",\"rule-name\":\"22\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_ai_evaluation_feedbacks\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"23\",\"rule-name\":\"23\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"rubrics\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"24\",\"rule-name\":\"24\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"rubrics\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"25\",\"rule-name\":\"25\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"rubric_ai_evaluations\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"26\",\"rule-name\":\"26\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"rubric_ai_evaluations\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"27\",\"rule-name\":\"27\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goals\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"28\",\"rule-name\":\"28\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goals\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"29\",\"rule-name\":\"29\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_evidence_levels\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"30\",\"rule-name\":\"30\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_evidence_levels\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"31\",\"rule-name\":\"31\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"level_sources_multi_types\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"32\",\"rule-name\":\"32\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"level_sources_multi_types\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"33\",\"rule-name\":\"33\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"paired_user_levels\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"34\",\"rule-name\":\"34\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"paired_user_levels\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"35\",\"rule-name\":\"35\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"parental_permission_requests\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"36\",\"rule-name\":\"36\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"parental_permission_requests\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"37\",\"rule-name\":\"37\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_course_units\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"38\",\"rule-name\":\"38\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_course_units\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"39\",\"rule-name\":\"39\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_courses\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"40\",\"rule-name\":\"40\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_courses\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"41\",\"rule-name\":\"41\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_enrollment_module_assignments\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"42\",\"rule-name\":\"42\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_enrollment_module_assignments\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"43\",\"rule-name\":\"43\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_enrollment_unit_assignments\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"44\",\"rule-name\":\"44\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_enrollment_unit_assignments\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"45\",\"rule-name\":\"45\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_learning_modules\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"46\",\"rule-name\":\"46\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_learning_modules\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"47\",\"rule-name\":\"47\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_learning_module_tasks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"48\",\"rule-name\":\"48\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_learning_module_tasks\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"49\",\"rule-name\":\"49\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_tasks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"50\",\"rule-name\":\"50\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_tasks\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"51\",\"rule-name\":\"51\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_user_course_enrollments\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"52\",\"rule-name\":\"52\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"plc_user_course_enrollments\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"53\",\"rule-name\":\"53\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"channel_tokens\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"54\",\"rule-name\":\"54\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"channel_tokens\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"55\",\"rule-name\":\"55\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"schools\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"56\",\"rule-name\":\"56\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"schools\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"57\",\"rule-name\":\"57\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"school_infos\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"58\",\"rule-name\":\"58\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"school_infos\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"59\",\"rule-name\":\"59\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"school_districts\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"60\",\"rule-name\":\"60\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"school_districts\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"61\",\"rule-name\":\"61\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"school_stats_by_years\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"62\",\"rule-name\":\"62\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"school_stats_by_years\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"63\",\"rule-name\":\"63\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"scripts\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"64\",\"rule-name\":\"64\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"scripts\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"65\",\"rule-name\":\"65\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"stages\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"66\",\"rule-name\":\"66\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"stages\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"67\",\"rule-name\":\"67\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"levels\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"68\",\"rule-name\":\"68\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"levels\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"69\",\"rule-name\":\"69\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"script_levels\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"70\",\"rule-name\":\"70\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"script_levels\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"71\",\"rule-name\":\"71\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"levels_script_levels\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"72\",\"rule-name\":\"72\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"levels_script_levels\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"73\",\"rule-name\":\"73\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"parent_levels_child_levels\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"74\",\"rule-name\":\"74\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"parent_levels_child_levels\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"75\",\"rule-name\":\"75\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"courses\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"76\",\"rule-name\":\"76\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"courses\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"77\",\"rule-name\":\"77\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"course_offerings\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"78\",\"rule-name\":\"78\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"course_offerings\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"79\",\"rule-name\":\"79\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"course_scripts\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"80\",\"rule-name\":\"80\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"course_scripts\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"81\",\"rule-name\":\"81\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"unit_groups\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"82\",\"rule-name\":\"82\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"unit_groups\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"83\",\"rule-name\":\"83\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"survey_results\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"84\",\"rule-name\":\"84\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"survey_results\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"85\",\"rule-name\":\"85\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"sections\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"86\",\"rule-name\":\"86\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"sections\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"87\",\"rule-name\":\"87\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"section_instructors\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"88\",\"rule-name\":\"88\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"section_instructors\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"89\",\"rule-name\":\"89\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"followers\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"90\",\"rule-name\":\"90\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"followers\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"91\",\"rule-name\":\"91\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"section_hidden_stages\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"92\",\"rule-name\":\"92\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"section_hidden_stages\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"93\",\"rule-name\":\"93\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_proficiencies\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"94\",\"rule-name\":\"94\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_proficiencies\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"95\",\"rule-name\":\"95\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_permissions\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"96\",\"rule-name\":\"96\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_permissions\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"97\",\"rule-name\":\"97\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_level_interactions\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"98\",\"rule-name\":\"98\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_level_interactions\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"99\",\"rule-name\":\"99\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"level_concept_difficulties\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"100\",\"rule-name\":\"100\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"level_concept_difficulties\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"101\",\"rule-name\":\"101\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_scripts\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"102\",\"rule-name\":\"102\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_scripts\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"103\",\"rule-name\":\"103\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_submissions\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"104\",\"rule-name\":\"104\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_submissions\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"105\",\"rule-name\":\"105\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_submissions_school_infos\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"106\",\"rule-name\":\"106\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_submissions_school_infos\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"107\",\"rule-name\":\"107\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_summaries\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"108\",\"rule-name\":\"108\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_summaries\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"109\",\"rule-name\":\"109\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"standards\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"110\",\"rule-name\":\"110\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"standards\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"111\",\"rule-name\":\"111\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"stages_standards\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"112\",\"rule-name\":\"112\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"stages_standards\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"113\",\"rule-name\":\"113\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"standard_categories\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"114\",\"rule-name\":\"114\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"standard_categories\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"115\",\"rule-name\":\"115\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"frameworks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"116\",\"rule-name\":\"116\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"frameworks\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"117\",\"rule-name\":\"117\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_project_storage_ids\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"118\",\"rule-name\":\"118\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_project_storage_ids\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"119\",\"rule-name\":\"119\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_integrations\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"120\",\"rule-name\":\"120\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_integrations\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"121\",\"rule-name\":\"121\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_deployments\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"122\",\"rule-name\":\"122\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_deployments\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"123\",\"rule-name\":\"123\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_courses\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"124\",\"rule-name\":\"124\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_courses\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"125\",\"rule-name\":\"125\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_feedbacks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"126\",\"rule-name\":\"126\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_feedbacks\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"127\",\"rule-name\":\"127\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_sections\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"128\",\"rule-name\":\"128\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_sections\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"129\",\"rule-name\":\"129\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_user_identities\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"130\",\"rule-name\":\"130\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_user_identities\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"131\",\"rule-name\":\"131\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_deployments_user_identities\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"132\",\"rule-name\":\"132\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_deployments_user_identities\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"133\",\"rule-name\":\"133\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"new_feature_feedbacks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"134\",\"rule-name\":\"134\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"new_feature_feedbacks\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"135\",\"rule-name\":\"135\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"cap_user_events\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"136\",\"rule-name\":\"136\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"cap_user_events\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"137\",\"rule-name\":\"137\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_tutor_interaction_feedbacks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"138\",\"rule-name\":\"138\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_tutor_interaction_feedbacks\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"139\",\"rule-name\":\"139\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aichat_sessions\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"140\",\"rule-name\":\"140\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aichat_sessions\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"141\",\"rule-name\":\"141\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aidiff_message_feedbacks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"142\",\"rule-name\":\"142\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aidiff_message_feedbacks\"},\"value\":\"_import_\"},{\"rule-type\":\"transformation\",\"rule-id\":\"143\",\"rule-name\":\"143\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_tutor_interactions\",\"column-name\":\"prompt\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"144\",\"rule-name\":\"144\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_tutor_interactions\",\"column-name\":\"ai_response\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"145\",\"rule-name\":\"145\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_ai_evaluations\",\"column-name\":\"observations\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"146\",\"rule-name\":\"146\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_ai_evaluations\",\"column-name\":\"evidence\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"147\",\"rule-name\":\"147\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_teacher_evaluations\",\"column-name\":\"feedback\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"148\",\"rule-name\":\"148\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_ai_evaluation_feedbacks\",\"column-name\":\"other_content\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"149\",\"rule-name\":\"149\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"parental_permission_requests\",\"column-name\":\"parent_email\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"150\",\"rule-name\":\"150\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_submissions\",\"column-name\":\"submitter_email_address\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"151\",\"rule-name\":\"151\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_submissions\",\"column-name\":\"submitter_name\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"152\",\"rule-name\":\"152\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_submissions\",\"column-name\":\"tell_us_more\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"153\",\"rule-name\":\"153\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_submissions\",\"column-name\":\"inaccuracy_comment\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"154\",\"rule-name\":\"154\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_integrations\",\"column-name\":\"admin_email\"}}]}\n",
+        "Tags": [
+          {
+            "Key": "schedule",
+            "Value": "daily"
+          }
+        ],
+        "TargetEndpointArn": "RedshiftEndpoint"
+      },
+      "Type": "AWS::DMS::ReplicationTask"
+    },
+    "DMSCronLevelSourcesPii": {
+      "Properties": {
+        "MigrationType": "full-load",
+        "ReplicationInstanceArn": "DMSReplicationInstance",
+        "ReplicationTaskIdentifier": "task-cron-level-sources-pii",
+        "ReplicationTaskSettings": "{\"ErrorBehavior\":{\"FullLoadIgnoreConflicts\":true,\"RecoverableErrorCount\":-1,\"RecoverableErrorInterval\":5,\"RecoverableErrorThrottling\":true,\"RecoverableErrorThrottlingMax\":1800,\"TableErrorEscalationCount\":50,\"TableErrorEscalationPolicy\":\"STOP_TASK\",\"TableErrorPolicy\":\"SUSPEND_TABLE\",\"DataErrorEscalationCount\":50,\"DataErrorEscalationPolicy\":\"SUSPEND_TABLE\",\"DataErrorPolicy\":\"LOG_ERROR\",\"DataTruncationErrorPolicy\":\"LOG_ERROR\",\"ApplyErrorDeletePolicy\":\"IGNORE_RECORD\",\"ApplyErrorInsertPolicy\":\"LOG_ERROR\",\"ApplyErrorUpdatePolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationPolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationCount\":0,\"ApplyErrorFailOnTruncationDdl\":false,\"FailOnTransactionConsistencyBreached\":false,\"FailOnNoTablesCaptured\":false},\"ChangeProcessingDdlHandlingPolicy\":{\"HandleSourceTableAltered\":true,\"HandleSourceTableTruncated\":true,\"HandleSourceTableDropped\":true},\"ChangeProcessingTuning\":{\"BatchApplyPreserveTransaction\":true,\"BatchApplyTimeoutMin\":3600,\"BatchApplyTimeoutMax\":3600,\"BatchApplyMemoryLimit\":500,\"BatchSplitSize\":0,\"MinTransactionSize\":1000,\"CommitTimeout\":1,\"MemoryLimitTotal\":1024,\"MemoryKeepTime\":600,\"StatementCacheSize\":50},\"StreamBufferSettings\":{\"CtrlStreamBufferSizeInMB\":5,\"StreamBufferSizeInMB\":8,\"StreamBufferCount\":3},\"ControlTablesSettings\":{\"StatusTableEnabled\":true,\"SuspendedTablesTableEnabled\":true,\"HistoryTableEnabled\":true,\"ControlSchema\":\"\",\"HistoryTimeslotInMinutes\":5,\"historyTimeslotInMinutes\":5},\"Logging\":{\"EnableLogging\":true,\"LogComponents\":[{\"Id\":\"SOURCE_UNLOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"SOURCE_CAPTURE\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_LOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_APPLY\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TASK_MANAGER\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"}]},\"FullLoadSettings\":{\"TargetTablePrepMode\":\"DROP_AND_CREATE\",\"CreatePkAfterFullLoad\":false,\"StopTaskCachedChangesApplied\":false,\"StopTaskCachedChangesNotApplied\":false,\"MaxFullLoadSubTasks\":20,\"TransactionConsistencyTimeout\":600,\"CommitRate\":10000},\"TargetMetadata\":{\"BatchApplyEnabled\":true,\"LoadMaxFileSize\":0,\"SupportLobs\":true,\"LimitedSizeLobMode\":true,\"LobMaxSize\":32,\"FullLobMode\":false,\"LobChunkSize\":0,\"TargetSchema\":\"\",\"ParallelLoadThreads\":0,\"ParallelLoadBufferSize\":0}}\n",
+        "SourceEndpointArn": "MySQLDatabaseSourceEndpoint",
+        "TableMappings": "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"level_sources\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"2\",\"rule-name\":\"2\",\"rule-action\":\"add-suffix\",\"rule-target\":\"schema\",\"object-locator\":{\"schema-name\":\"%\"},\"value\":\"_pii\"}]}\n",
+        "Tags": [
+          {
+            "Key": "schedule",
+            "Value": "weekly"
+          }
+        ],
+        "TargetEndpointArn": "RedshiftEndpoint"
+      },
+      "Type": "AWS::DMS::ReplicationTask"
+    },
+    "DMSCronPii": {
+      "Properties": {
+        "MigrationType": "full-load",
+        "ReplicationInstanceArn": "DMSReplicationInstance",
+        "ReplicationTaskIdentifier": "task-cron-pii",
+        "ReplicationTaskSettings": "{\"ErrorBehavior\":{\"FullLoadIgnoreConflicts\":true,\"RecoverableErrorCount\":-1,\"RecoverableErrorInterval\":5,\"RecoverableErrorThrottling\":true,\"RecoverableErrorThrottlingMax\":1800,\"TableErrorEscalationCount\":50,\"TableErrorEscalationPolicy\":\"STOP_TASK\",\"TableErrorPolicy\":\"SUSPEND_TABLE\",\"DataErrorEscalationCount\":50,\"DataErrorEscalationPolicy\":\"SUSPEND_TABLE\",\"DataErrorPolicy\":\"LOG_ERROR\",\"DataTruncationErrorPolicy\":\"LOG_ERROR\",\"ApplyErrorDeletePolicy\":\"IGNORE_RECORD\",\"ApplyErrorInsertPolicy\":\"LOG_ERROR\",\"ApplyErrorUpdatePolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationPolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationCount\":0,\"ApplyErrorFailOnTruncationDdl\":false,\"FailOnTransactionConsistencyBreached\":false,\"FailOnNoTablesCaptured\":false},\"ChangeProcessingDdlHandlingPolicy\":{\"HandleSourceTableAltered\":true,\"HandleSourceTableTruncated\":true,\"HandleSourceTableDropped\":true},\"ChangeProcessingTuning\":{\"BatchApplyPreserveTransaction\":true,\"BatchApplyTimeoutMin\":3600,\"BatchApplyTimeoutMax\":3600,\"BatchApplyMemoryLimit\":500,\"BatchSplitSize\":0,\"MinTransactionSize\":1000,\"CommitTimeout\":1,\"MemoryLimitTotal\":1024,\"MemoryKeepTime\":600,\"StatementCacheSize\":50},\"StreamBufferSettings\":{\"CtrlStreamBufferSizeInMB\":5,\"StreamBufferSizeInMB\":8,\"StreamBufferCount\":3},\"ControlTablesSettings\":{\"StatusTableEnabled\":true,\"SuspendedTablesTableEnabled\":true,\"HistoryTableEnabled\":true,\"ControlSchema\":\"\",\"HistoryTimeslotInMinutes\":5,\"historyTimeslotInMinutes\":5},\"Logging\":{\"EnableLogging\":true,\"LogComponents\":[{\"Id\":\"SOURCE_UNLOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"SOURCE_CAPTURE\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_LOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_APPLY\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TASK_MANAGER\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"}]},\"FullLoadSettings\":{\"TargetTablePrepMode\":\"DROP_AND_CREATE\",\"CreatePkAfterFullLoad\":false,\"StopTaskCachedChangesApplied\":false,\"StopTaskCachedChangesNotApplied\":false,\"MaxFullLoadSubTasks\":20,\"TransactionConsistencyTimeout\":600,\"CommitRate\":10000},\"TargetMetadata\":{\"BatchApplyEnabled\":true,\"LoadMaxFileSize\":0,\"SupportLobs\":true,\"LimitedSizeLobMode\":true,\"LobMaxSize\":32,\"FullLobMode\":false,\"LobChunkSize\":0,\"TargetSchema\":\"\",\"ParallelLoadThreads\":0,\"ParallelLoadBufferSize\":0}}\n",
+        "SourceEndpointArn": "MySQLDatabaseSourceEndpoint",
+        "TableMappings": "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_submissions\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"2\",\"rule-name\":\"2\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"census_submissions\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"3\",\"rule-name\":\"3\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"contacts\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"4\",\"rule-name\":\"4\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"contacts\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"5\",\"rule-name\":\"5\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"forms\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"6\",\"rule-name\":\"6\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"forms\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"7\",\"rule-name\":\"7\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"form_geos\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"8\",\"rule-name\":\"8\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"form_geos\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"9\",\"rule-name\":\"9\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"hoc_activity\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"10\",\"rule-name\":\"10\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"hoc_activity\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"11\",\"rule-name\":\"11\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"poste_deliveries\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"12\",\"rule-name\":\"12\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"poste_deliveries\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"13\",\"rule-name\":\"13\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"regional_partners\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"14\",\"rule-name\":\"14\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"regional_partners\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"15\",\"rule-name\":\"15\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"regional_partners_school_districts\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"16\",\"rule-name\":\"16\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"regional_partners_school_districts\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"17\",\"rule-name\":\"17\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"pd_%\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"18\",\"rule-name\":\"18\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"pd_%\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"19\",\"rule-name\":\"19\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"course_offerings_pd_workshops\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"20\",\"rule-name\":\"20\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"course_offerings_pd_workshops\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"21\",\"rule-name\":\"21\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"email_preferences\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"22\",\"rule-name\":\"22\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"email_preferences\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"23\",\"rule-name\":\"23\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"teacher_feedbacks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"24\",\"rule-name\":\"24\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"teacher_feedbacks\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"25\",\"rule-name\":\"25\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"authentication_options\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"26\",\"rule-name\":\"26\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"authentication_options\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"27\",\"rule-name\":\"27\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"peer_reviews\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"28\",\"rule-name\":\"28\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"peer_reviews\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"29\",\"rule-name\":\"29\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"projects\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"30\",\"rule-name\":\"30\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"projects\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"31\",\"rule-name\":\"31\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"foorm_%\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"32\",\"rule-name\":\"32\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"foorm_%\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"33\",\"rule-name\":\"33\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"potential_teachers\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"34\",\"rule-name\":\"34\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"potential_teachers\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"35\",\"rule-name\":\"35\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_ai_evaluations\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"36\",\"rule-name\":\"36\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_ai_evaluations\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"37\",\"rule-name\":\"37\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_teacher_evaluations\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"38\",\"rule-name\":\"38\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_teacher_evaluations\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"39\",\"rule-name\":\"39\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_ai_evaluation_feedbacks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"40\",\"rule-name\":\"40\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"learning_goal_ai_evaluation_feedbacks\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"41\",\"rule-name\":\"41\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_tutor_interactions\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"42\",\"rule-name\":\"42\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_tutor_interactions\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"43\",\"rule-name\":\"43\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_tutor_interaction_feedbacks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"44\",\"rule-name\":\"44\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_tutor_interaction_feedbacks\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"45\",\"rule-name\":\"45\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aichat_requests\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"46\",\"rule-name\":\"46\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aichat_requests\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"47\",\"rule-name\":\"47\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aichat_events\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"48\",\"rule-name\":\"48\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aichat_events\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"49\",\"rule-name\":\"49\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aidiff_messages\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"50\",\"rule-name\":\"50\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aidiff_messages\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"51\",\"rule-name\":\"51\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aidiff_threads\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"52\",\"rule-name\":\"52\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"aidiff_threads\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"53\",\"rule-name\":\"53\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_deployments_user_identities\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"54\",\"rule-name\":\"54\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"lti_deployments_user_identities\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"55\",\"rule-name\":\"55\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"student_work_evaluations\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"56\",\"rule-name\":\"56\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"student_work_evaluations\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"57\",\"rule-name\":\"57\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_interaction_feedbacks\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"58\",\"rule-name\":\"58\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"ai_interaction_feedbacks\"},\"value\":\"_import_\"},{\"rule-type\":\"transformation\",\"rule-id\":\"59\",\"rule-name\":\"59\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"hoc_activity\",\"column-name\":\"started_ip\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"60\",\"rule-name\":\"60\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"hoc_activity\",\"column-name\":\"pixel_finished_ip\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"61\",\"rule-name\":\"61\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"hoc_activity\",\"column-name\":\"pixel_started_ip\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"62\",\"rule-name\":\"62\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"hoc_activity\",\"column-name\":\"finished_ip\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"63\",\"rule-name\":\"63\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"hoc_activity\",\"column-name\":\"name\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"64\",\"rule-name\":\"64\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"pegasus_development\",\"table-name\":\"hoc_activity\",\"column-name\":\"session\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"65\",\"rule-name\":\"65\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"authentication_options\",\"column-name\":\"data\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"66\",\"rule-name\":\"66\",\"rule-action\":\"add-suffix\",\"rule-target\":\"schema\",\"object-locator\":{\"schema-name\":\"%\"},\"value\":\"_pii\"}]}\n",
+        "Tags": [
+          {
+            "Key": "schedule",
+            "Value": "daily"
+          }
+        ],
+        "TargetEndpointArn": "RedshiftEndpoint"
+      },
+      "Type": "AWS::DMS::ReplicationTask"
+    },
+    "DMSCronUserHierarchy": {
+      "Properties": {
+        "MigrationType": "full-load",
+        "ReplicationInstanceArn": "DMSReplicationInstance",
+        "ReplicationTaskIdentifier": "task-cron-user-hierarchy",
+        "ReplicationTaskSettings": "{\"ErrorBehavior\":{\"FullLoadIgnoreConflicts\":true,\"RecoverableErrorCount\":-1,\"RecoverableErrorInterval\":5,\"RecoverableErrorThrottling\":true,\"RecoverableErrorThrottlingMax\":1800,\"TableErrorEscalationCount\":50,\"TableErrorEscalationPolicy\":\"STOP_TASK\",\"TableErrorPolicy\":\"SUSPEND_TABLE\",\"DataErrorEscalationCount\":50,\"DataErrorEscalationPolicy\":\"SUSPEND_TABLE\",\"DataErrorPolicy\":\"LOG_ERROR\",\"DataTruncationErrorPolicy\":\"LOG_ERROR\",\"ApplyErrorDeletePolicy\":\"IGNORE_RECORD\",\"ApplyErrorInsertPolicy\":\"LOG_ERROR\",\"ApplyErrorUpdatePolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationPolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationCount\":0,\"ApplyErrorFailOnTruncationDdl\":false,\"FailOnTransactionConsistencyBreached\":false,\"FailOnNoTablesCaptured\":false},\"ChangeProcessingDdlHandlingPolicy\":{\"HandleSourceTableAltered\":true,\"HandleSourceTableTruncated\":true,\"HandleSourceTableDropped\":true},\"ChangeProcessingTuning\":{\"BatchApplyPreserveTransaction\":true,\"BatchApplyTimeoutMin\":3600,\"BatchApplyTimeoutMax\":3600,\"BatchApplyMemoryLimit\":500,\"BatchSplitSize\":0,\"MinTransactionSize\":1000,\"CommitTimeout\":1,\"MemoryLimitTotal\":1024,\"MemoryKeepTime\":600,\"StatementCacheSize\":50},\"StreamBufferSettings\":{\"CtrlStreamBufferSizeInMB\":5,\"StreamBufferSizeInMB\":8,\"StreamBufferCount\":3},\"ControlTablesSettings\":{\"StatusTableEnabled\":true,\"SuspendedTablesTableEnabled\":true,\"HistoryTableEnabled\":true,\"ControlSchema\":\"\",\"HistoryTimeslotInMinutes\":5,\"historyTimeslotInMinutes\":5},\"Logging\":{\"EnableLogging\":true,\"LogComponents\":[{\"Id\":\"SOURCE_UNLOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"SOURCE_CAPTURE\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_LOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_APPLY\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TASK_MANAGER\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"}]},\"FullLoadSettings\":{\"TargetTablePrepMode\":\"DROP_AND_CREATE\",\"CreatePkAfterFullLoad\":false,\"StopTaskCachedChangesApplied\":false,\"StopTaskCachedChangesNotApplied\":false,\"MaxFullLoadSubTasks\":20,\"TransactionConsistencyTimeout\":600,\"CommitRate\":10000},\"TargetMetadata\":{\"BatchApplyEnabled\":true,\"LoadMaxFileSize\":0,\"SupportLobs\":true,\"LimitedSizeLobMode\":true,\"LobMaxSize\":32,\"FullLobMode\":false,\"LobChunkSize\":0,\"TargetSchema\":\"\",\"ParallelLoadThreads\":0,\"ParallelLoadBufferSize\":0}}\n",
+        "SourceEndpointArn": "MySQLDatabaseSourceEndpoint",
+        "TableMappings": "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"2\",\"rule-name\":\"2\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"3\",\"rule-name\":\"3\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_geos\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"4\",\"rule-name\":\"4\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_geos\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"5\",\"rule-name\":\"5\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"teacher_profiles\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"6\",\"rule-name\":\"6\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"teacher_profiles\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"7\",\"rule-name\":\"7\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"studio_people\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"8\",\"rule-name\":\"8\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"studio_people\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"9\",\"rule-name\":\"9\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"sign_ins\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"10\",\"rule-name\":\"10\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"sign_ins\"},\"value\":\"_import_\"},{\"rule-type\":\"transformation\",\"rule-id\":\"11\",\"rule-name\":\"11\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"email\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"12\",\"rule-name\":\"12\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"encrypted_password\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"13\",\"rule-name\":\"13\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"reset_password_token\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"14\",\"rule-name\":\"14\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"reset_password_sent_at\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"15\",\"rule-name\":\"15\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"remember_created_at\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"16\",\"rule-name\":\"16\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"current_sign_in_ip\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"17\",\"rule-name\":\"17\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"last_sign_in_ip\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"18\",\"rule-name\":\"18\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"username\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"19\",\"rule-name\":\"19\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"uid\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"20\",\"rule-name\":\"20\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"name\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"21\",\"rule-name\":\"21\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"school\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"22\",\"rule-name\":\"22\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"full_address\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"23\",\"rule-name\":\"23\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"confirmation_token\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"24\",\"rule-name\":\"24\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"confirmed_at\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"25\",\"rule-name\":\"25\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"confirmation_sent_at\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"26\",\"rule-name\":\"26\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"unconfirmed_email\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"27\",\"rule-name\":\"27\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"secret_picture_id\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"28\",\"rule-name\":\"28\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"hashed_email\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"29\",\"rule-name\":\"29\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"secret_words\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"30\",\"rule-name\":\"30\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"properties\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"31\",\"rule-name\":\"31\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"invitation_token\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"32\",\"rule-name\":\"32\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"invitation_created_at\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"33\",\"rule-name\":\"33\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"invitation_sent_at\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"34\",\"rule-name\":\"34\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"invitation_accepted_at\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"35\",\"rule-name\":\"35\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"invitation_limit\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"36\",\"rule-name\":\"36\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"invitation_by_id\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"37\",\"rule-name\":\"37\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"invitations_count\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"38\",\"rule-name\":\"38\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"parent_email\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"39\",\"rule-name\":\"39\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"unlock_token\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"40\",\"rule-name\":\"40\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_geos\",\"column-name\":\"ip_address\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"41\",\"rule-name\":\"41\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_geos\",\"column-name\":\"latitude\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"42\",\"rule-name\":\"42\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_geos\",\"column-name\":\"longitude\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"43\",\"rule-name\":\"43\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"studio_people\",\"column-name\":\"emails\"}}]}\n",
+        "Tags": [
+          {
+            "Key": "schedule",
+            "Value": "daily"
+          }
+        ],
+        "TargetEndpointArn": "RedshiftEndpoint"
+      },
+      "Type": "AWS::DMS::ReplicationTask"
+    },
+    "DMSCronUserHierarchyPii": {
+      "Properties": {
+        "MigrationType": "full-load",
+        "ReplicationInstanceArn": "DMSReplicationInstance",
+        "ReplicationTaskIdentifier": "task-cron-user-hierarchy-pii",
+        "ReplicationTaskSettings": "{\"ErrorBehavior\":{\"FullLoadIgnoreConflicts\":true,\"RecoverableErrorCount\":-1,\"RecoverableErrorInterval\":5,\"RecoverableErrorThrottling\":true,\"RecoverableErrorThrottlingMax\":1800,\"TableErrorEscalationCount\":50,\"TableErrorEscalationPolicy\":\"STOP_TASK\",\"TableErrorPolicy\":\"SUSPEND_TABLE\",\"DataErrorEscalationCount\":50,\"DataErrorEscalationPolicy\":\"SUSPEND_TABLE\",\"DataErrorPolicy\":\"LOG_ERROR\",\"DataTruncationErrorPolicy\":\"LOG_ERROR\",\"ApplyErrorDeletePolicy\":\"IGNORE_RECORD\",\"ApplyErrorInsertPolicy\":\"LOG_ERROR\",\"ApplyErrorUpdatePolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationPolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationCount\":0,\"ApplyErrorFailOnTruncationDdl\":false,\"FailOnTransactionConsistencyBreached\":false,\"FailOnNoTablesCaptured\":false},\"ChangeProcessingDdlHandlingPolicy\":{\"HandleSourceTableAltered\":true,\"HandleSourceTableTruncated\":true,\"HandleSourceTableDropped\":true},\"ChangeProcessingTuning\":{\"BatchApplyPreserveTransaction\":true,\"BatchApplyTimeoutMin\":3600,\"BatchApplyTimeoutMax\":3600,\"BatchApplyMemoryLimit\":500,\"BatchSplitSize\":0,\"MinTransactionSize\":1000,\"CommitTimeout\":1,\"MemoryLimitTotal\":1024,\"MemoryKeepTime\":600,\"StatementCacheSize\":50},\"StreamBufferSettings\":{\"CtrlStreamBufferSizeInMB\":5,\"StreamBufferSizeInMB\":8,\"StreamBufferCount\":3},\"ControlTablesSettings\":{\"StatusTableEnabled\":true,\"SuspendedTablesTableEnabled\":true,\"HistoryTableEnabled\":true,\"ControlSchema\":\"\",\"HistoryTimeslotInMinutes\":5,\"historyTimeslotInMinutes\":5},\"Logging\":{\"EnableLogging\":true,\"LogComponents\":[{\"Id\":\"SOURCE_UNLOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"SOURCE_CAPTURE\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_LOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_APPLY\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TASK_MANAGER\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"}]},\"FullLoadSettings\":{\"TargetTablePrepMode\":\"DROP_AND_CREATE\",\"CreatePkAfterFullLoad\":false,\"StopTaskCachedChangesApplied\":false,\"StopTaskCachedChangesNotApplied\":false,\"MaxFullLoadSubTasks\":20,\"TransactionConsistencyTimeout\":600,\"CommitRate\":10000},\"TargetMetadata\":{\"BatchApplyEnabled\":true,\"LoadMaxFileSize\":0,\"SupportLobs\":true,\"LimitedSizeLobMode\":true,\"LobMaxSize\":32,\"FullLobMode\":false,\"LobChunkSize\":0,\"TargetSchema\":\"\",\"ParallelLoadThreads\":0,\"ParallelLoadBufferSize\":0}}\n",
+        "SourceEndpointArn": "MySQLDatabaseSourceEndpoint",
+        "TableMappings": "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"studio_people\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"2\",\"rule-name\":\"2\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"studio_people\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"3\",\"rule-name\":\"3\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"teacher_profiles\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"4\",\"rule-name\":\"4\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"teacher_profiles\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"5\",\"rule-name\":\"5\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"6\",\"rule-name\":\"6\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"7\",\"rule-name\":\"7\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_geos\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"8\",\"rule-name\":\"8\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_geos\"},\"value\":\"_import_\"},{\"rule-type\":\"selection\",\"rule-id\":\"9\",\"rule-name\":\"9\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_school_infos\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"10\",\"rule-name\":\"10\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_school_infos\"},\"value\":\"_import_\"},{\"rule-type\":\"transformation\",\"rule-id\":\"11\",\"rule-name\":\"11\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"encrypted_password\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"12\",\"rule-name\":\"12\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"reset_password_token\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"13\",\"rule-name\":\"13\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"secret_picture_id\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"14\",\"rule-name\":\"14\",\"rule-action\":\"remove-column\",\"rule-target\":\"column\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"users\",\"column-name\":\"secret_words\"}},{\"rule-type\":\"transformation\",\"rule-id\":\"15\",\"rule-name\":\"15\",\"rule-action\":\"add-suffix\",\"rule-target\":\"schema\",\"object-locator\":{\"schema-name\":\"%\"},\"value\":\"_pii\"}]}\n",
+        "Tags": [
+          {
+            "Key": "schedule",
+            "Value": "daily"
+          }
+        ],
+        "TargetEndpointArn": "RedshiftEndpoint"
+      },
+      "Type": "AWS::DMS::ReplicationTask"
+    },
+    "DMSCronUserLevels": {
+      "Properties": {
+        "MigrationType": "full-load",
+        "ReplicationInstanceArn": "DMSReplicationInstance",
+        "ReplicationTaskIdentifier": "task-cron-user-levels",
+        "ReplicationTaskSettings": "{\"ErrorBehavior\":{\"FullLoadIgnoreConflicts\":true,\"RecoverableErrorCount\":-1,\"RecoverableErrorInterval\":5,\"RecoverableErrorThrottling\":true,\"RecoverableErrorThrottlingMax\":1800,\"TableErrorEscalationCount\":50,\"TableErrorEscalationPolicy\":\"STOP_TASK\",\"TableErrorPolicy\":\"SUSPEND_TABLE\",\"DataErrorEscalationCount\":50,\"DataErrorEscalationPolicy\":\"SUSPEND_TABLE\",\"DataErrorPolicy\":\"LOG_ERROR\",\"DataTruncationErrorPolicy\":\"LOG_ERROR\",\"ApplyErrorDeletePolicy\":\"IGNORE_RECORD\",\"ApplyErrorInsertPolicy\":\"LOG_ERROR\",\"ApplyErrorUpdatePolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationPolicy\":\"LOG_ERROR\",\"ApplyErrorEscalationCount\":0,\"ApplyErrorFailOnTruncationDdl\":false,\"FailOnTransactionConsistencyBreached\":false,\"FailOnNoTablesCaptured\":false},\"ChangeProcessingDdlHandlingPolicy\":{\"HandleSourceTableAltered\":true,\"HandleSourceTableTruncated\":true,\"HandleSourceTableDropped\":true},\"ChangeProcessingTuning\":{\"BatchApplyPreserveTransaction\":true,\"BatchApplyTimeoutMin\":3600,\"BatchApplyTimeoutMax\":3600,\"BatchApplyMemoryLimit\":500,\"BatchSplitSize\":0,\"MinTransactionSize\":1000,\"CommitTimeout\":1,\"MemoryLimitTotal\":1024,\"MemoryKeepTime\":600,\"StatementCacheSize\":50},\"StreamBufferSettings\":{\"CtrlStreamBufferSizeInMB\":5,\"StreamBufferSizeInMB\":8,\"StreamBufferCount\":3},\"ControlTablesSettings\":{\"StatusTableEnabled\":true,\"SuspendedTablesTableEnabled\":true,\"HistoryTableEnabled\":true,\"ControlSchema\":\"\",\"HistoryTimeslotInMinutes\":5,\"historyTimeslotInMinutes\":5},\"Logging\":{\"EnableLogging\":true,\"LogComponents\":[{\"Id\":\"SOURCE_UNLOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"SOURCE_CAPTURE\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_LOAD\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TARGET_APPLY\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"},{\"Id\":\"TASK_MANAGER\",\"Severity\":\"LOGGER_SEVERITY_WARNING\"}]},\"FullLoadSettings\":{\"TargetTablePrepMode\":\"DROP_AND_CREATE\",\"CreatePkAfterFullLoad\":false,\"StopTaskCachedChangesApplied\":false,\"StopTaskCachedChangesNotApplied\":false,\"MaxFullLoadSubTasks\":20,\"TransactionConsistencyTimeout\":600,\"CommitRate\":10000},\"TargetMetadata\":{\"BatchApplyEnabled\":true,\"LoadMaxFileSize\":0,\"SupportLobs\":true,\"LimitedSizeLobMode\":true,\"LobMaxSize\":32,\"FullLobMode\":false,\"LobChunkSize\":0,\"TargetSchema\":\"\",\"ParallelLoadThreads\":0,\"ParallelLoadBufferSize\":0}}\n",
+        "SourceEndpointArn": "MySQLDatabaseSourceEndpoint",
+        "TableMappings": "{\"rules\":[{\"rule-type\":\"selection\",\"rule-id\":\"1\",\"rule-name\":\"1\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_levels\"},\"rule-action\":\"include\"},{\"rule-type\":\"transformation\",\"rule-id\":\"2\",\"rule-name\":\"2\",\"rule-action\":\"add-prefix\",\"rule-target\":\"table\",\"object-locator\":{\"schema-name\":\"dashboard_development\",\"table-name\":\"user_levels\"},\"value\":\"_import_\"}]}\n",
+        "Tags": [
+          {
+            "Key": "schedule",
+            "Value": "daily"
+          }
+        ],
+        "TargetEndpointArn": "RedshiftEndpoint"
+      },
+      "Type": "AWS::DMS::ReplicationTask"
+    },
+    "DMSReplicationInstance": {
+      "Properties": {
+        "AllocatedStorage": 250,
+        "AllowMajorVersionUpgrade": true,
+        "EngineVersion": "3.5.1",
+        "MultiAZ": true,
+        "PreferredMaintenanceWindow": "Tue:01:00-Tue:01:30",
+        "PubliclyAccessible": false,
+        "ReplicationInstanceClass": "dms.r4.4xlarge",
+        "ReplicationInstanceIdentifier": "export-mysql-to-redshift",
+        "ReplicationSubnetGroupIdentifier": "VPC-DMSSubnetGroup",
+        "VpcSecurityGroupIds": [
+          "VPC-DMSSecurityGroup"
+        ]
+      },
+      "Type": "AWS::DMS::ReplicationInstance"
+    },
+    "DMSS3Role": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "dms.amazonaws.com"
+                ]
+              }
+            }
+          ]
+        },
+        "PermissionsBoundary": "IAM-DevPermissions",
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": [
+                    "s3:DeleteObject",
+                    "s3:ListBucket",
+                    "s3:PutObject",
+                    "s3:PutObjectTagging"
+                  ],
+                  "Effect": "Allow",
+                  "Resource": "arn:aws:s3:::cdo-activities-archive*"
+                }
+              ],
+              "Version": "2012-10-17"
+            },
+            "PolicyName": "DMSRolePolicy"
+          }
+        ],
+        "RoleName": "DMSS3Role"
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "DiskIoAvgQueueLen": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.avgqueuelen",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].avgQueueLen"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoAvgReqSz": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.avgreqsz",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].avgReqSz"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoAwait": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.await",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].await"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoReadIOsPs": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.readiosps",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].readIOsPS"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoReadKb": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.readkb",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].readKb"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoReadKbPs": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.readkbps",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].readKbPS"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoRrqmPs": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.rrqmps",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].rrqmPS"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoTps": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.tps",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].tps"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoUtil": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.util",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].util"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoWriteIOsPs": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.writeiosps",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].writeIOsPS"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoWriteKb": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.writekb",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].writeKb"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoWriteKbPs": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.writekbps",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].writeKbPS"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "DiskIoWrqmPs": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Diskio.wrqmps",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.diskIO[0].wrqmPS"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "ELBLogsCrawler": {
+      "Properties": {
+        "Configuration": "{\"Version\":1.0,\"CrawlerOutput\":{\"Partitions\":{\"AddOrUpdateBehavior\":\"InheritFromTable\"}}}",
+        "DatabaseName": "ELBLogsDatabase",
+        "Description": "Update daily partitions generated by ELB Access Logs.",
+        "Name": "elb_logs",
+        "Role": "GlueRole.Arn",
+        "Schedule": {
+          "ScheduleExpression": "cron(0 7 * * ? *)"
+        },
+        "SchemaChangePolicy": {
+          "DeleteBehavior": "LOG",
+          "UpdateBehavior": "LOG"
+        },
+        "TablePrefix": "elb_logs_",
+        "Targets": {
+          "S3Targets": [
+            {
+              "Path": "s3://${LogsBucket}/production-codeorg/AWSLogs/${AWS::AccountId}/elasticloadbalancing/${AWS::Region}/"
+            }
+          ]
+        }
+      },
+      "Type": "AWS::Glue::Crawler"
+    },
+    "ELBLogsDatabase": {
+      "Properties": {
+        "CatalogId": "AWS::AccountId",
+        "DatabaseInput": {
+          "Name": "elb_logs"
+        }
+      },
+      "Type": "AWS::Glue::Database"
+    },
+    "ELBLogsTable": {
+      "Properties": {
+        "CatalogId": "AWS::AccountId",
+        "DatabaseName": "ELBLogsDatabase",
+        "TableInput": {
+          "Name": "elb_logs_us_east_1",
+          "Parameters": {
+            "classification": "csv"
+          },
+          "PartitionKeys": [
+            {
+              "Name": "day",
+              "Type": "bigint"
+            },
+            {
+              "Name": "month",
+              "Type": "bigint"
+            },
+            {
+              "Name": "year",
+              "Type": "bigint"
+            }
+          ],
+          "StorageDescriptor": {
+            "Columns": [
+              {
+                "Name": "backend_ip",
+                "Type": "string"
+              },
+              {
+                "Name": "backend_port",
+                "Type": "int"
+              },
+              {
+                "Name": "backend_processing_time",
+                "Type": "double"
+              },
+              {
+                "Name": "backend_response_code",
+                "Type": "string"
+              },
+              {
+                "Name": "client_response_time",
+                "Type": "double"
+              },
+              {
+                "Name": "elb_name",
+                "Type": "string"
+              },
+              {
+                "Name": "elb_response_code",
+                "Type": "string"
+              },
+              {
+                "Name": "protocol",
+                "Type": "string"
+              },
+              {
+                "Name": "received_bytes",
+                "Type": "bigint"
+              },
+              {
+                "Name": "request_ip",
+                "Type": "string"
+              },
+              {
+                "Name": "request_port",
+                "Type": "int"
+              },
+              {
+                "Name": "request_processing_time",
+                "Type": "double"
+              },
+              {
+                "Name": "request_timestamp",
+                "Type": "string"
+              },
+              {
+                "Name": "request_verb",
+                "Type": "string"
+              },
+              {
+                "Name": "sent_bytes",
+                "Type": "bigint"
+              },
+              {
+                "Name": "ssl_cipher",
+                "Type": "string"
+              },
+              {
+                "Name": "ssl_protocol",
+                "Type": "string"
+              },
+              {
+                "Name": "url",
+                "Type": "string"
+              },
+              {
+                "Name": "user_agent",
+                "Type": "string"
+              }
+            ],
+            "InputFormat": "org.apache.hadoop.mapred.TextInputFormat",
+            "Location": "s3://${LogsBucket}/production-codeorg/AWSLogs/${AWS::AccountId}/elasticloadbalancing/${AWS::Region}/",
+            "OutputFormat": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+            "SerdeInfo": {
+              "Parameters": {
+                "input.regex": "([^ ]*) ([^ ]*) ([^ ]*):([0-9]*) ([^ ]*)[:-]([0-9]*) ([-.0-9]*) ([-.0-9]*) ([-.0-9]*) (|[-0-9]*) (-|[-0-9]*) ([-0-9]*) ([-0-9]*) \\\"([^ ]*) ([^ ]*) (- |[^ ]*)\\\" (\"[^\"]*\") ([A-Z0-9-]+) ([A-Za-z0-9.-]*)$",
+                "serialization.format": "1"
+              },
+              "SerializationLibrary": "org.apache.hadoop.hive.serde2.RegexSerDe"
+            }
+          },
+          "TableType": "EXTERNAL_TABLE"
+        }
+      },
+      "Type": "AWS::Glue::Table"
+    },
+    "GlobalWebACLLogsTable": {
+      "Properties": {
+        "CatalogId": "AWS::AccountId",
+        "DatabaseName": "WAFLogsDatabase",
+        "TableInput": {
+          "Description": "WAF WebACL logs table for code-dot-org Global WebACL",
+          "Name": "waf_logs_code_dot_org",
+          "Parameters": {
+            "classification": "json",
+            "projection.enabled": "true",
+            "projection.timestamp_folder.format": "yyyy/MM/dd/HH/mm",
+            "projection.timestamp_folder.interval": "1",
+            "projection.timestamp_folder.interval.unit": "MINUTES",
+            "projection.timestamp_folder.range": "2024/01/01/00/00,NOW",
+            "projection.timestamp_folder.type": "date",
+            "storage.location.template": "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org/${!timestamp_folder}",
+            "transient_lastDdlTime": "1733787890"
+          },
+          "PartitionKeys": [
+            {
+              "Name": "timestamp_folder",
+              "Type": "string"
+            }
+          ],
+          "StorageDescriptor": {
+            "Columns": [
+              {
+                "Name": "action",
+                "Type": "string"
+              },
+              {
+                "Name": "formatversion",
+                "Type": "int"
+              },
+              {
+                "Name": "httprequest",
+                "Type": "struct<clientip:string,country:string,headers:array<struct<name:string,value:string>>,uri:string,args:string,httpmethod:string,requestid:string>"
+              },
+              {
+                "Name": "httpsourceid",
+                "Type": "string"
+              },
+              {
+                "Name": "httpsourcename",
+                "Type": "string"
+              },
+              {
+                "Name": "ja3fingerprint",
+                "Type": "string"
+              },
+              {
+                "Name": "responsecodesent",
+                "Type": "string"
+              },
+              {
+                "Name": "terminatingruleid",
+                "Type": "string"
+              },
+              {
+                "Name": "terminatingruletype",
+                "Type": "string"
+              },
+              {
+                "Name": "timestamp",
+                "Type": "bigint"
+              },
+              {
+                "Name": "webaclid",
+                "Type": "string"
+              }
+            ],
+            "InputFormat": "org.apache.hadoop.mapred.TextInputFormat",
+            "Location": "s3://${WebApplicationFirewallAccessControlListLogsBucket}/AWSLogs/${AWS::AccountId}/WAFLogs/cloudfront/code-dot-org",
+            "OutputFormat": "org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat",
+            "SerdeInfo": {
+              "SerializationLibrary": "org.openx.data.jsonserde.JsonSerDe"
+            }
+          },
+          "TableType": "EXTERNAL_TABLE"
+        }
+      },
+      "Type": "AWS::Glue::Table"
+    },
+    "GlueRole": {
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Statement": [
+            {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "glue.amazonaws.com"
+                ]
+              }
+            }
+          ]
+        },
+        "ManagedPolicyArns": [
+          "arn:aws:iam::aws:policy/service-role/AWSGlueServiceRole"
+        ],
+        "PermissionsBoundary": "IAM-DevPermissions",
+        "Policies": [
+          {
+            "PolicyDocument": {
+              "Statement": [
+                {
+                  "Action": "s3:GetObject",
+                  "Effect": "Allow",
+                  "Resource": [
+                    "arn:aws:s3:::${LogsBucket}/*"
+                  ]
+                }
+              ]
+            },
+            "PolicyName": "ReadLogs"
+          }
+        ]
+      },
+      "Type": "AWS::IAM::Role"
+    },
+    "MySQLDatabaseSourceEndpoint": {
+      "Properties": {
+        "EndpointIdentifier": "MySQL-${AWS::StackName}",
+        "EndpointType": "source",
+        "EngineName": "aurora",
+        "ExtraConnectionAttributes": "ResumeFetchForXRows=0;UnloadTimeout=86400",
+        "MySqlSettings": {
+          "AfterConnectScript": "SET SESSION aurora_read_replica_read_committed=ON; SET SESSION transaction_isolation=\"READ-COMMITTED\"; SET SESSION max_execution_time = 0; SET SESSION net_read_timeout=300; SET SESSION net_write_timeout=300; SET SESSION wait_timeout = 300; SET SESSION interactive_timeout = 300;"
+        },
+        "Password": "RDSPassword",
+        "Port": 3306,
+        "ServerName": "RDSHost",
+        "Username": "RDSUsername"
+      },
+      "Type": "AWS::DMS::Endpoint"
+    },
+    "RedshiftEndpoint": {
+      "Properties": {
+        "DatabaseName": "RedshiftDatabase",
+        "EndpointIdentifier": "Redshift-${AWS::StackName}",
+        "EndpointType": "target",
+        "EngineName": "redshift",
+        "ExtraConnectionAttributes": "maxFileSize=5242880;fileTransferUploadStreams=20;writeBufferSize=8192",
+        "Password": "RedshiftEtlClientPassword",
+        "Port": "Tableau.Endpoint.Port",
+        "ServerName": "Tableau.Endpoint.Address",
+        "Username": "RedshiftEtlClientUsername"
+      },
+      "Type": "AWS::DMS::Endpoint"
+    },
+    "RedshiftS3Policy": {
+      "Properties": {
+        "ManagedPolicyName": "RedshiftS3Policy",
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": [
+                "s3:*"
+              ],
+              "Effect": "Allow",
+              "Resource": [
+                "arn:aws:s3:::cdo-data-sharing-internal",
+                "arn:aws:s3:::cdo-data-sharing-internal/*"
+              ],
+              "Sid": "RedshiftS3ImportExportBucket"
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Type": "AWS::IAM::ManagedPolicy"
+    },
+    "S3PartitionCloudFrontLogPermission": {
+      "Properties": {
+        "Action": "lambda:InvokeFunction",
+        "FunctionName": "S3PartitionCloudFrontLog",
+        "Principal": "s3.amazonaws.com",
+        "SourceAccount": "AWS::AccountId",
+        "SourceArn": "arn:aws:s3:::${LogsBucket}"
+      },
+      "Type": "AWS::Lambda::Permission"
+    },
+    "StudentProjectsStorageLensDashboard": {
+      "Properties": {
+        "StorageLensConfiguration": {
+          "AccountLevel": {
+            "ActivityMetrics": {
+              "IsEnabled": true
+            },
+            "AdvancedCostOptimizationMetrics": {
+              "IsEnabled": true
+            },
+            "BucketLevel": {
+              "ActivityMetrics": {
+                "IsEnabled": true
+              },
+              "AdvancedCostOptimizationMetrics": {
+                "IsEnabled": true
+              }
+            }
+          },
+          "DataExport": {
+            "CloudWatchMetrics": {
+              "IsEnabled": true
+            },
+            "S3BucketDestination": {
+              "AccountId": "AWS::AccountId",
+              "Arn": "arn:aws:s3:::cdo-logs",
+              "Format": "CSV",
+              "OutputSchemaVersion": "V_1",
+              "Prefix": "S3StorageLens/student-projects-metrics-export"
+            }
+          },
+          "Id": "student-projects-dashboard",
+          "Include": {
+            "Buckets": [
+              "arn:aws:s3:::cdo-art",
+              "arn:aws:s3:::cdo-v3-animations",
+              "arn:aws:s3:::cdo-v3-assets",
+              "arn:aws:s3:::cdo-v3-files",
+              "arn:aws:s3:::cdo-v3-libraries",
+              "arn:aws:s3:::cdo-v3-sources",
+              "arn:aws:s3:::cdo-v3-trained-ml-models"
+            ]
+          },
+          "IsEnabled": true
+        }
+      },
+      "Type": "AWS::S3::StorageLens"
+    },
+    "Tableau": {
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "AllowVersionUpgrade": true,
+        "AutomatedSnapshotRetentionPeriod": 5,
+        "ClusterParameterGroupName": "default.redshift-1.0",
+        "ClusterSubnetGroupName": "VPC-RedshiftSubnetGroup",
+        "ClusterType": "single-node",
+        "ClusterVersion": 1.0,
+        "DBName": {
+          "Ref": "RedshiftDatabase"
+        },
+        "Encrypted": true,
+        "KmsKeyId": "alias/aws/redshift",
+        "MasterUserPassword": {
+          "Ref": "RedshiftAdminPassword"
+        },
+        "MasterUsername": {
+          "Ref": "RedshiftAdminUsername"
+        },
+        "NodeType": "dc1.large",
+        "PreferredMaintenanceWindow": "Tue:01:00-Tue:01:30",
+        "PubliclyAccessible": true,
+        "VpcSecurityGroupIds": [
+          "VPC-RedshiftSecurityGroup"
+        ]
+      },
+      "Type": "AWS::Redshift::Cluster"
+    },
+    "TasksBlocked": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Tasks.blocked",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.tasks.blocked"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "TasksRunning": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Tasks.running",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.tasks.running"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "TasksTotal": {
+      "Properties": {
+        "FilterPattern": "{ $.instanceID = production }",
+        "LogGroupName": "RDSOSMetrics",
+        "MetricTransformations": [
+          {
+            "MetricName": "Tasks.total",
+            "MetricNamespace": "MySQL",
+            "MetricValue": "$.tasks.total"
+          }
+        ]
+      },
+      "Type": "AWS::Logs::MetricFilter"
+    },
+    "WAFLogsDatabase": {
+      "Properties": {
+        "CatalogId": "AWS::AccountId",
+        "DatabaseInput": {
+          "Description": "Database for WAF WebACL logs",
+          "Name": "waf_logs_db"
+        }
+      },
+      "Type": "AWS::Glue::Database"
+    },
+    "WebApplicationFirewallAccessControlListLogsBucket": {
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "BucketEncryption": {
+          "ServerSideEncryptionConfiguration": [
+            {
+              "ServerSideEncryptionByDefault": {
+                "SSEAlgorithm": "AES256"
+              }
+            }
+          ]
+        },
+        "BucketName": "aws-waf-logs-cdo",
+        "LifecycleConfiguration": {
+          "Rules": [
+            {
+              "Id": "Expire old Versions after 15 months",
+              "NoncurrentVersionExpirationInDays": 455,
+              "Status": "Enabled"
+            }
+          ]
+        },
+        "PublicAccessBlockConfiguration": {
+          "BlockPublicAcls": true,
+          "BlockPublicPolicy": true,
+          "IgnorePublicAcls": true,
+          "RestrictPublicBuckets": true
+        },
+        "VersioningConfiguration": {
+          "Status": "Enabled"
+        }
+      },
+      "Type": "AWS::S3::Bucket"
+    }
+  }
+}
