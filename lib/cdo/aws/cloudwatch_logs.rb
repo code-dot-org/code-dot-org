@@ -7,8 +7,12 @@ module Cdo
   module CloudWatchLogs
     class << self
       # @return [Aws::CloudWatchLogs::Client]
-      attr_accessor :client
+      attr_accessor :client, :created_log_groups, :created_log_streams, :creation_mutex
     end
+
+    self.created_log_groups = Set.new
+    self.created_log_streams = Set.new
+    self.creation_mutex = Mutex.new
 
     BUFFERS = Hash.new {|h, key| h[key] = Buffer.new(key.split("/").first, key.split("/").last)}
 
@@ -19,8 +23,34 @@ module Cdo
     # Service Quota: https://us-east-1.console.aws.amazon.com/servicequotas/home/services/logs/quotas/L-7E1FAE88
     MAX_TRANSACTIONS_PER_SECOND = 5000 / 25 / 48 # 25 instances with 48 vCPUs each
 
+    def self.ensure_log_group_and_stream(log_group_name, log_stream_name)
+      client ||= self.client ||= ::Aws::CloudWatchLogs::Client.new
+
+      creation_mutex.synchronize do
+        unless created_log_groups.include?(log_group_name)
+          begin
+            client.create_log_group(log_group_name: log_group_name)
+          rescue Aws::CloudWatchLogs::Errors::ResourceAlreadyExistsException
+            # OK. The log group already exists.
+          end
+          created_log_groups << log_group_name
+        end
+
+        stream_key = "#{log_group_name}/#{log_stream_name}"
+        unless created_log_streams.include?(stream_key)
+          begin
+            client.create_log_stream(log_group_name: log_group_name, log_stream_name: log_stream_name)
+          rescue Aws::CloudWatchLogs::Errors::ResourceAlreadyExistsException
+            # OK. The log stream already exists.
+          end
+          created_log_streams << stream_key
+        end
+      end
+    end
+
     class Buffer < Cdo::Buffer
       def initialize(log_group_name, log_stream_name)
+        Cdo::CloudWatchLogs.ensure_log_group_and_stream(log_group_name, log_stream_name)
         super(
           batch_count: MAXIMUM_BATCH_COUNT,
           batch_size: MAXIMUM_BATCH_SIZE,

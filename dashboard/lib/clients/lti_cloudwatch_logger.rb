@@ -1,9 +1,9 @@
 require 'cdo/aws/cloudwatch_logs'
 
 class LtiCloudWatchLogger
-  ENV_PREFIX = rack_env?(:adhoc) ? CDO.stack_name : rack_env
-  LOG_GROUP_NAME = "#{ENV_PREFIX}-LTI".freeze
-  LOG_STREAM_NAME = ENV_PREFIX
+  ENV_SUFFIX = rack_env?(:adhoc) ? CDO.stack_name : rack_env
+  LOG_GROUP_NAME = "LTI-#{ENV_SUFFIX}".freeze
+  LOG_STREAM_NAME = ENV_SUFFIX
 
   def self.put_log_event(event)
     event_payload = {
