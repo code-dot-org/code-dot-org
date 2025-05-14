@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-10 01:06:44 UTC",
+    "serialized_at": "2025-05-13 15:30:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -68,7 +69,7 @@
   "lessons": [
     {
       "key": "Exploring Web Pages",
-      "name": "Exploring Web Pages",
+      "name": "Lesson 1: Exploring Web Pages",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -87,7 +88,7 @@
     },
     {
       "key": "Intro to HTML",
-      "name": "Intro to HTML",
+      "name": "Lesson 2: Intro to HTML",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -106,7 +107,7 @@
     },
     {
       "key": "Headings and Lists",
-      "name": "Headings and Lists",
+      "name": "Lesson 3: Headings and Lists",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -125,7 +126,7 @@
     },
     {
       "key": "Digital Footprint",
-      "name": "Digital Footprint",
+      "name": "Lesson 4: Digital Footprint",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -144,7 +145,7 @@
     },
     {
       "key": "Mini-Project: HTML Web Page",
-      "name": "Mini-Project: HTML Web Page",
+      "name": "Lesson 5: Mini-Project - HTML Web Page",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -163,7 +164,7 @@
     },
     {
       "key": "Styling Text with CSS",
-      "name": "Styling Text with CSS",
+      "name": "Lesson 6: Styling Text with CSS",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -182,7 +183,7 @@
     },
     {
       "key": "Intellectual Property",
-      "name": "Intellectual Property",
+      "name": "Lesson 7: Intellectual Property",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -201,7 +202,7 @@
     },
     {
       "key": "Using Images",
-      "name": "Using Images",
+      "name": "Lesson 8: Using Images",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -220,7 +221,7 @@
     },
     {
       "key": "Styling Elements with CSS",
-      "name": "Styling Elements with CSS",
+      "name": "Lesson 9: Styling Elements with CSS",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -239,7 +240,7 @@
     },
     {
       "key": "Mini-Project: Adding Style to a Web Page",
-      "name": "Mini-Project: Adding Style to a Web Page",
+      "name": "Lesson 10: Mini-Project - Adding Style to a Web Page",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -258,7 +259,7 @@
     },
     {
       "key": "CSS Classes",
-      "name": "CSS Classes",
+      "name": "Lesson 11: CSS Classes",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -277,7 +278,7 @@
     },
     {
       "key": "Organizing Content with Flexbox",
-      "name": "Organizing Content with Flexbox",
+      "name": "Lesson 12: Organizing Content with Flexbox",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -296,7 +297,7 @@
     },
     {
       "key": "Flexbox Children for More Control",
-      "name": "Flexbox Children for More Control",
+      "name": "Lesson 13: Flexbox Children for More Control",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -315,34 +316,12 @@
     },
     {
       "key": "Chapter 1 Project",
-      "name": "Chapter 1 Project",
+      "name": "Lesson 14: Chapter 1 Project",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "announcements": [
-          {
-            "key": "699e4f96-ff75-4a93-afea-89f9f883b2e5",
-            "notice": "Let us know how it went!",
-            "details": "We'd love to hear your thoughts about this chapter! Your feedback will help us understand the effectiveness of these changes and guide future improvements. Click the Feedback form button to let us know your thoughts and suggestions.",
-            "link": "https://forms.gle/Do9kWWHNsGw2M1bv9",
-            "type": "feedback",
-            "visibility": "Teacher-only",
-            "dismissible": false,
-            "buttonText": "Feedback Form"
-          },
-          {
-            "key": "d55dbe13-403b-4cd1-8271-3c85dae18757",
-            "notice": "What did you think?",
-            "details": "We'd love to hear your thoughts about this chapter! Your feedback will help us understand the effectiveness of these changes and guide future improvements. Click the Feedback form button to let us know your thoughts and suggestions.",
-            "link": "https://forms.gle/FgFHYqsC9VrBtmvj7",
-            "type": "information",
-            "visibility": "Student-only",
-            "dismissible": true,
-            "buttonText": "Feedback Form"
-          }
-        ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this chapter project, students use what they have learned to style and organize a web page for a user. Students begin their project by using the Problem Solving Process to help them determine how they will organize the content of a user’s web page. Students then use CSS classes and flexbox to organize their user’s web page in Web Lab. Optionally, after engaging in a formal feedback process, they may change their web pages based on feedback before reflecting on their process.\n\n**Question of the Day:** How can I use CSS classes and Flexbox to organize webpage content for a user?\n",
         "preparation": "* Determine which project option your students will complete.\n* Print copies of the project guide and any accompanying handouts for your students\n* Print copies of the reflection and peer feedback documents.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
@@ -356,7 +335,7 @@
     },
     {
       "key": "Team Problem Solving",
-      "name": "Team Problem Solving",
+      "name": "Lesson 15: Team Problem Solving",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -375,7 +354,7 @@
     },
     {
       "key": "Sources and Research",
-      "name": "Sources and Research",
+      "name": "Lesson 16: Sources and Research",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -394,7 +373,7 @@
     },
     {
       "key": "Linking Pages",
-      "name": "Linking Pages",
+      "name": "Lesson 17: Linking Pages",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
@@ -413,7 +392,7 @@
     },
     {
       "key": "CSS Pseudo-classes",
-      "name": "CSS Pseudo-classes",
+      "name": "Lesson 18: CSS Pseudo-classes",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
@@ -432,7 +411,7 @@
     },
     {
       "key": "Planning a Multi-Page Site",
-      "name": "Planning a Multi-Page Site",
+      "name": "Lesson 19: Planning a Multi-Page Site",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
@@ -451,7 +430,7 @@
     },
     {
       "key": "Project - Website for a Purpose",
-      "name": "Project - Website for a Purpose",
+      "name": "Lesson 20: Project - Website for a Purpose",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
@@ -470,7 +449,7 @@
     },
     {
       "key": "Peer Review and Final Touches",
-      "name": "Peer Review and Final Touches",
+      "name": "Lesson 21: Peer Review and Final Touches",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
@@ -6253,7 +6232,7 @@
       "properties": {
         "description": "**Distribute:** Hand out one copy of the project reflection **to each student**.\n\n\n\n\nIn the reflection, students will reflect on both the process and the product. They should identify aspects of the page itself that they are proud of, as well as how the group worked together.  They also describe what they have learned in the course of the project.\n\n\nSend students to Code Studio to complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n\n",
         "name": "Reflect: Final Reflection\r",
-        "progression_name": "End-Of-Unit Survey"
+        "progression_name": "End Of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "b486461b-aa3e-4d86-88ae-129668753303",
@@ -9305,17 +9284,14 @@
       "chapter": 119,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csd2_2025"
-        ],
-        "progression": "End-Of-Unit Survey"
+        "progression": "End Of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd2_2025"
+          "student-eou-survey_linked_page-csd2_2025"
         ],
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "lessonGroup-3",
@@ -9323,7 +9299,7 @@
         "activity_section.key": "b486461b-aa3e-4d86-88ae-129668753303"
       },
       "level_keys": [
-        "Student End of Unit Survey_csd2_2025"
+        "student-eou-survey_linked_page-csd2_2025"
       ]
     },
     {
@@ -9356,6 +9332,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_csd2survey-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -10792,9 +10771,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csd2_2025",
+        "level.key": "student-eou-survey_linked_page-csd2_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd2_2025"
+          "student-eou-survey_linked_page-csd2_2025"
         ],
         "lesson.key": "Peer Review and Final Touches",
         "lesson_group.key": "lessonGroup-3",

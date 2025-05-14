@@ -6,8 +6,10 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
+      "include_student_lesson_plans": true,
       "is_migrated": true,
       "lesson_extras_available": true,
       "project_sharing": true,
@@ -18,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-28 20:26:21 UTC",
+    "serialized_at": "2025-05-13 21:18:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,9 +55,21 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-5",
       "user_facing": true,
       "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa9-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -68,7 +82,7 @@
   "lessons": [
     {
       "key": "The AP CSA Exam",
-      "name": "The AP CSA Exam",
+      "name": "Lesson 1: The AP CSA Exam",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -86,7 +100,7 @@
     },
     {
       "key": "MCQ Pre-Assessment",
-      "name": "MCQ Pre-Assessment",
+      "name": "Lesson 2: MCQ Pre-Assessment",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -104,7 +118,7 @@
     },
     {
       "key": "MCQ Study Plan",
-      "name": "MCQ Study Plan",
+      "name": "Lesson 3: MCQ Study Plan",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -122,7 +136,7 @@
     },
     {
       "key": "MCQ Practice – Day 1",
-      "name": "MCQ Practice – Day 1",
+      "name": "Lesson 4: MCQ Practice – Day 1",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -140,7 +154,7 @@
     },
     {
       "key": "MCQ Practice – Day 2",
-      "name": "MCQ Practice – Day 2",
+      "name": "Lesson 5: MCQ Practice – Day 2",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -158,7 +172,7 @@
     },
     {
       "key": "FRQ Pre-Assessment",
-      "name": "FRQ Pre-Assessment",
+      "name": "Lesson 6: FRQ Pre-Assessment",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -176,7 +190,7 @@
     },
     {
       "key": "FRQ Study Plan",
-      "name": "FRQ Study Plan",
+      "name": "Lesson 7: FRQ Study Plan",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -194,7 +208,7 @@
     },
     {
       "key": "FRQ Practice – Day 1",
-      "name": "FRQ Practice – Day 1",
+      "name": "Lesson 8: FRQ Practice – Day 1",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -212,7 +226,7 @@
     },
     {
       "key": "FRQ Practice – Day 2",
-      "name": "FRQ Practice – Day 2",
+      "name": "Lesson 9: FRQ Practice – Day 2",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -230,7 +244,7 @@
     },
     {
       "key": "Mock MCQ Exam – Day 1",
-      "name": "Mock MCQ Exam – Day 1",
+      "name": "Lesson 10: Mock MCQ Exam – Day 1",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -248,7 +262,7 @@
     },
     {
       "key": "Mock MCQ Exam – Day 2",
-      "name": "Mock MCQ Exam – Day 2",
+      "name": "Lesson 11: Mock MCQ Exam – Day 2",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -266,7 +280,7 @@
     },
     {
       "key": "Mock MCQ Exam – Day 3",
-      "name": "Mock MCQ Exam – Day 3",
+      "name": "Lesson 12: Mock MCQ Exam – Day 3",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -284,7 +298,7 @@
     },
     {
       "key": "Mock FRQ Exam – Day 1",
-      "name": "Mock FRQ Exam – Day 1",
+      "name": "Lesson 13: Mock FRQ Exam – Day 1",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -302,7 +316,7 @@
     },
     {
       "key": "Mock FRQ Exam – Day 2",
-      "name": "Mock FRQ Exam – Day 2",
+      "name": "Lesson 14: Mock FRQ Exam – Day 2",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -320,7 +334,7 @@
     },
     {
       "key": "Mock FRQ Exam – Day 3",
-      "name": "Mock FRQ Exam – Day 3",
+      "name": "Lesson 15: Mock FRQ Exam – Day 3",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -337,12 +351,27 @@
       }
     },
     {
-      "key": "Sandbox: Console",
-      "name": "Sandbox: Console",
+      "key": "Student End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa9-2025"
+      }
+    },
+    {
+      "key": "Sandbox: Console",
+      "name": "Sandbox: Console",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -354,10 +383,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -369,21 +398,6 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 18,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 18,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa9-2025"
-      }
-    },
-    {
-      "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
@@ -391,7 +405,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Student End of Unit Survey",
+        "lesson.key": "Sandbox: The Theater",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa9-2025"
       }
@@ -897,6 +911,18 @@
       }
     },
     {
+      "key": "deabebcf-c6aa-46ab-8973-da82465a4bb9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "deabebcf-c6aa-46ab-8973-da82465a4bb9",
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa9-2025"
+      }
+    },
+    {
       "key": "b7326ff9-0c19-42d9-b077-e69ab37fa831",
       "position": 1,
       "properties": {
@@ -928,18 +954,6 @@
       "seeding_key": {
         "lesson_activity.key": "0b814f28-97c7-4b2f-bf2d-b4b0f6f80920",
         "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa9-2025"
-      }
-    },
-    {
-      "key": "deabebcf-c6aa-46ab-8973-da82465a4bb9",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "deabebcf-c6aa-46ab-8973-da82465a4bb9",
-        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa9-2025"
       }
@@ -2798,6 +2812,17 @@
       }
     },
     {
+      "key": "934a0a3e-d890-4709-bab4-9bd792aa3f54",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "934a0a3e-d890-4709-bab4-9bd792aa3f54",
+        "lesson_activity.key": "deabebcf-c6aa-46ab-8973-da82465a4bb9"
+      }
+    },
+    {
       "key": "c43be716-3a2c-45de-9eb7-c19dd0ec3584",
       "position": 1,
       "properties": {
@@ -2838,17 +2863,6 @@
         "activity_section.key": "7f3e4879-dcff-4310-a3ff-090784560c33",
         "lesson_activity.key": "0b814f28-97c7-4b2f-bf2d-b4b0f6f80920"
       }
-    },
-    {
-      "key": "934a0a3e-d890-4709-bab4-9bd792aa3f54",
-      "position": 1,
-      "properties": {
-        "progression_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "934a0a3e-d890-4709-bab4-9bd792aa3f54",
-        "lesson_activity.key": "deabebcf-c6aa-46ab-8973-da82465a4bb9"
-      }
     }
   ],
   "script_levels": [
@@ -2881,6 +2895,31 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa9-2025",
+        "activity_section.key": "934a0a3e-d890-4709-bab4-9bd792aa3f54"
+      },
+      "level_keys": [
+        "student-eou-survey_-csa_2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2902,7 +2941,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2927,7 +2966,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2952,7 +2991,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2974,31 +3013,6 @@
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
       ]
-    },
-    {
-      "chapter": 6,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa9-2025",
-        "activity_section.key": "934a0a3e-d890-4709-bab4-9bd792aa3f54"
-      },
-      "level_keys": [
-        "student-eou-survey_-csa_2025"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -3012,6 +3026,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa9-2025",
         "activity_section.key": "f10f8a48-11d5-4020-96c7-8a696bcf1992"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_-csa_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_-csa_2025"
+        ],
+        "lesson.key": "Student End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa9-2025",
+        "activity_section.key": "934a0a3e-d890-4709-bab4-9bd792aa3f54"
       }
     },
     {
@@ -3061,18 +3087,6 @@
         "script.name": "csa9-2025",
         "activity_section.key": "7f3e4879-dcff-4310-a3ff-090784560c33"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_-csa_2025",
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa9-2025",
-        "activity_section.key": "934a0a3e-d890-4709-bab4-9bd792aa3f54"
-      }
     }
   ],
   "resources": [
@@ -3114,13 +3128,13 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csa9-2023/resources",
-      "key": "all_resources_8",
+      "url": "/s/csa9-2025/resources",
+      "key": "all_resources_18",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_8"
+        "resource.key": "all_resources_18"
       }
     },
     {
@@ -3927,7 +3941,7 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_8",
+        "resource.key": "all_resources_18",
         "script.name": "csa9-2025"
       }
     },
