@@ -41,7 +41,6 @@ import {
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
-import WidgetView from './layout/WidgetView';
 import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
@@ -67,7 +66,7 @@ const defaultConfig: ConfigType = {
     horizontal: HorizontalLayout,
     vertical: VerticalLayout,
     share: ShareView,
-    widget: WidgetView,
+    widget: HorizontalLayout,
   },
   showFileBrowser: true,
 };
