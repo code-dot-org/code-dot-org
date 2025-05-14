@@ -14,6 +14,14 @@ This directory contains CloudFormation stack templates, associated Custom Resour
 - [`Cdo::CloudFormation::StackTemplate`](../../lib/cdo/cloud_formation/stack_template.rb) - Controller class providing the ERB binding context for CloudFormation stack templates.
 - [`Cdo::CloudFormation::CdoApp`](../../lib/cdo/cloud_formation/cdo_app.rb) - Stack-template controller specific to the monolithic Code.org application stack.
 
+## Flattened Rendered Templates
+
+We now support generating a consistent, diff-friendly JSON snapshot of any CloudFormation ERB template via a Rake task:  
+- Usage: `bundle exec rake "cfn:flatten[aws/cloudformation/iam.yml.erb]"`  
+- Outputs to `aws/cloudformation/flattened-rendered-templates/<basename>_flattened.json`  
+  
+This tool renders each template with the standard ERB helpers (`service_role`, `component`, etc.), recursively sorts all maps and lists, and writes a stable JSON file. Use these snapshots as a baseline when refactoring or auditing large templates to ensure no functional changes are introduced.
+
 ## Testing Out CloudFormation Templates Old and New
 
 So you've changed a cloudformation template, call it 'template.yml', or created a new one. How do you test your changes without affecting production services?
