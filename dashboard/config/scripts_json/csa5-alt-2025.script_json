@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-10 01:39:19 UTC",
+    "serialized_at": "2025-05-13 19:48:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -80,7 +81,7 @@
   "lessons": [
     {
       "key": "The AP CSA Exam",
-      "name": "The AP CSA Exam",
+      "name": "Lesson 1: The AP CSA Exam",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -98,7 +99,7 @@
     },
     {
       "key": "MCQ Pre-Assessment",
-      "name": "MCQ Pre-Assessment",
+      "name": "Lesson 2: MCQ Pre-Assessment",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -116,7 +117,7 @@
     },
     {
       "key": "MCQ Study Plan",
-      "name": "MCQ Study Plan",
+      "name": "Lesson 3: MCQ Study Plan",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -134,7 +135,7 @@
     },
     {
       "key": "MCQ Practice – Day 1",
-      "name": "MCQ Practice – Day 1",
+      "name": "Lesson 4: MCQ Practice – Day 1",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -152,7 +153,7 @@
     },
     {
       "key": "MCQ Practice – Day 2",
-      "name": "MCQ Practice – Day 2",
+      "name": "Lesson 5: MCQ Practice – Day 2",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -170,7 +171,7 @@
     },
     {
       "key": "FRQ Pre-Assessment",
-      "name": "FRQ Pre-Assessment",
+      "name": "Lesson 6: FRQ Pre-Assessment",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -188,7 +189,7 @@
     },
     {
       "key": "FRQ Study Plan",
-      "name": "FRQ Study Plan",
+      "name": "Lesson 7: FRQ Study Plan",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -206,7 +207,7 @@
     },
     {
       "key": "FRQ Practice – Day 1",
-      "name": "FRQ Practice – Day 1",
+      "name": "Lesson 8: FRQ Practice – Day 1",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -224,7 +225,7 @@
     },
     {
       "key": "FRQ Practice – Day 2",
-      "name": "FRQ Practice – Day 2",
+      "name": "Lesson 9: FRQ Practice – Day 2",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -242,7 +243,7 @@
     },
     {
       "key": "Mock MCQ Exam – Day 1",
-      "name": "Mock MCQ Exam – Day 1",
+      "name": "Lesson 10: Mock MCQ Exam – Day 1",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -260,7 +261,7 @@
     },
     {
       "key": "Mock MCQ Exam – Day 2",
-      "name": "Mock MCQ Exam – Day 2",
+      "name": "Lesson 11: Mock MCQ Exam – Day 2",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -278,7 +279,7 @@
     },
     {
       "key": "Mock MCQ Exam – Day 3",
-      "name": "Mock MCQ Exam – Day 3",
+      "name": "Lesson 12: Mock MCQ Exam – Day 3",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -296,7 +297,7 @@
     },
     {
       "key": "Mock FRQ Exam – Day 1",
-      "name": "Mock FRQ Exam – Day 1",
+      "name": "Lesson 13: Mock FRQ Exam – Day 1",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -314,7 +315,7 @@
     },
     {
       "key": "Mock FRQ Exam – Day 2",
-      "name": "Mock FRQ Exam – Day 2",
+      "name": "Lesson 14: Mock FRQ Exam – Day 2",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -332,7 +333,7 @@
     },
     {
       "key": "Mock FRQ Exam – Day 3",
-      "name": "Mock FRQ Exam – Day 3",
+      "name": "Lesson 15: Mock FRQ Exam – Day 3",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -2904,6 +2905,31 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csa5-alt-survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csa5-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "ef8a6598-f172-43a9-be01-12e7f894c9a5"
+      },
+      "level_keys": [
+        "student-eou-survey_csa5-alt-survey-2025"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2926,7 +2952,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2951,7 +2977,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2975,7 +3001,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2997,28 +3023,6 @@
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025-cb-alt"
       ]
-    },
-    {
-      "chapter": 6,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_csa5-alt-survey-2025"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa5-alt-2025",
-        "activity_section.key": "ef8a6598-f172-43a9-be01-12e7f894c9a5"
-      },
-      "level_keys": [
-        "student-eou-survey_csa5-alt-survey-2025"
-      ]
     }
   ],
   "levels_script_levels": [
@@ -3032,6 +3036,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa5-alt-2025",
         "activity_section.key": "158a9443-f4cc-49f0-a0f5-4b991d4ed5ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csa5-alt-survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csa5-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa5-alt-2025",
+        "activity_section.key": "ef8a6598-f172-43a9-be01-12e7f894c9a5"
       }
     },
     {
@@ -3080,18 +3096,6 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-alt-2025",
         "activity_section.key": "b8010de6-3b92-404b-a31b-3e9f323ec37f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_csa5-alt-survey-2025",
-        "script_level.level_keys": [
-          "student-eou-survey_csa5-alt-survey-2025"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa5-alt-2025",
-        "activity_section.key": "ef8a6598-f172-43a9-be01-12e7f894c9a5"
       }
     }
   ],

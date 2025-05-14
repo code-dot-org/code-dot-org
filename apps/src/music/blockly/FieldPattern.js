@@ -115,7 +115,7 @@ class FieldPattern extends GoogleBlockly.Field {
       return;
     }
 
-    if (appConfig.getValue('play-tune-block') === 'true') {
+    if (appConfig.getValue('play-tune-block-drums') === 'true') {
       ReactDOM.render(
         <InstrumentGrid
           editorType="drums"

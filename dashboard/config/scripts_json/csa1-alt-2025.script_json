@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-10 01:52:22 UTC",
+    "serialized_at": "2025-05-13 19:54:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -77,21 +78,9 @@
       }
     },
     {
-      "key": "lessonGroup-4",
-      "user_facing": true,
-      "position": 5,
-      "properties": {
-        "display_name": "Alternate Lessons"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-alt-2025"
-      }
-    },
-    {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 6,
+      "position": 5,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -104,7 +93,7 @@
   "lessons": [
     {
       "key": "Welcome to CSA",
-      "name": "Welcome to CSA",
+      "name": "Lesson 1: Welcome to CSA",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -122,7 +111,7 @@
     },
     {
       "key": "lesson-25",
-      "name": "Introduction to Algorithms",
+      "name": "Lesson 2: Introduction to Algorithms",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -140,7 +129,7 @@
     },
     {
       "key": "Java Lab",
-      "name": "Java Lab",
+      "name": "Lesson 3: Java Lab",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -158,7 +147,7 @@
     },
     {
       "key": "Classes and Objects",
-      "name": "Classes and Objects",
+      "name": "Lesson 4: Classes and Objects",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -176,7 +165,7 @@
     },
     {
       "key": "Instantiating Objects",
-      "name": "Instantiating Objects",
+      "name": "Lesson 5: Instantiating Objects",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -194,7 +183,7 @@
     },
     {
       "key": "Methods",
-      "name": "Methods",
+      "name": "Lesson 6: Methods",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -212,7 +201,7 @@
     },
     {
       "key": "Methods with Parameters",
-      "name": "Methods with Parameters",
+      "name": "Lesson 7: Methods with Parameters",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -230,7 +219,7 @@
     },
     {
       "key": "Inheritance",
-      "name": "Inheritance",
+      "name": "Lesson 8: Inheritance",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -248,7 +237,7 @@
     },
     {
       "key": "Writing Methods",
-      "name": "Writing Methods",
+      "name": "Lesson 9: Writing Methods",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -266,7 +255,7 @@
     },
     {
       "key": "lesson-27",
-      "name": "Programming Style and Feedback",
+      "name": "Lesson 10: Programming Style and Feedback",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -284,7 +273,7 @@
     },
     {
       "key": "Debugging Strategies",
-      "name": "Debugging Strategies",
+      "name": "Lesson 11: Debugging Strategies",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -302,7 +291,7 @@
     },
     {
       "key": "Variables",
-      "name": "Variables",
+      "name": "Lesson 12: Variables",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -321,7 +310,7 @@
     },
     {
       "key": "Operators and Expressions",
-      "name": "Operators and Expressions",
+      "name": "Lesson 13: Operators and Expressions",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -340,7 +329,7 @@
     },
     {
       "key": "Parameterized Constructors",
-      "name": "Parameterized Constructors",
+      "name": "Lesson 14: Parameterized Constructors",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -359,7 +348,7 @@
     },
     {
       "key": "User Input",
-      "name": "User Input",
+      "name": "Lesson 15: User Input",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -377,7 +366,7 @@
     },
     {
       "key": "Printing Objects",
-      "name": "Printing Objects",
+      "name": "Lesson 16: Printing Objects",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -396,7 +385,7 @@
     },
     {
       "key": "lesson-26",
-      "name": "Casting and Range of Variables",
+      "name": "Lesson 17: Casting and Range of Variables",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
@@ -414,7 +403,7 @@
     },
     {
       "key": "Overloaded Methods",
-      "name": "Overloaded Methods",
+      "name": "Lesson 18: Overloaded Methods",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
@@ -433,7 +422,7 @@
     },
     {
       "key": "The Math Class",
-      "name": "The Math Class",
+      "name": "Lesson 19: The Math Class",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
@@ -452,7 +441,7 @@
     },
     {
       "key": "Random",
-      "name": "Random",
+      "name": "Lesson 20: Random",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
@@ -471,7 +460,7 @@
     },
     {
       "key": "Constructors and Inheritance",
-      "name": "Constructors and Inheritance",
+      "name": "Lesson 21: Constructors and Inheritance",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
@@ -490,7 +479,7 @@
     },
     {
       "key": "Substrings",
-      "name": "Substrings",
+      "name": "Lesson 22: Substrings",
       "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
@@ -509,7 +498,7 @@
     },
     {
       "key": "Comparing Strings",
-      "name": "Comparing Strings",
+      "name": "Lesson 23: Comparing Strings",
       "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": true,
@@ -528,7 +517,7 @@
     },
     {
       "key": "Asphalt Art Project",
-      "name": "Asphalt Art Project",
+      "name": "Project 1a: Asphalt Art Project",
       "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
@@ -546,12 +535,30 @@
       }
     },
     {
-      "key": "SpiralPainter FRQ",
-      "name": "SpiralPainter FRQ",
+      "key": "Asphalt Art Project [1-Day Version]",
+      "name": "Project 1b: Asphalt Art Project [1-Day Version]",
       "absolute_position": 25,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 25,
+      "properties": {
+        "assessment": true,
+        "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
+        "preparation": "* Review project requirements and rubric\n* Print copies of the Asphalt Art Project Planning Guide handout (one for each student)"
+      },
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "SpiralPainter FRQ",
+      "name": "FRQ 1: SpiralPainter FRQ",
+      "absolute_position": 26,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 26,
       "properties": {
         "overview": "**How will I use what I know about classes, objects, and methods to answer a Free Response Question?**\n\nStudents are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print the SpiralPainter FRQ Stations resource\n* Cut out the manipulatives in the SpiralPainter FRQ Stations resource *or* have students make a copy of the SpiralPainter FRQ Digital Manipulatives\n* Create stations around the classroom as indicated on the SpiralPainter FRQ Stations resource\n* (Optional) Gather a blue, orange, and pink colored pencil or marker for each student",
@@ -566,33 +573,15 @@
     {
       "key": "End of Unit Survey",
       "name": "End of Unit Survey",
-      "absolute_position": 26,
+      "absolute_position": 27,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 26,
+      "relative_position": 27,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa1-alt-2025"
-      }
-    },
-    {
-      "key": "Asphalt Art Project [1-Day Version]",
-      "name": "Asphalt Art Project [1-Day Version]",
-      "absolute_position": 27,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 27,
-      "properties": {
-        "assessment": true,
-        "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
-        "preparation": "* Review project requirements and rubric\n* Print copies of the Asphalt Art Project Planning Guide handout (one for each student)"
-      },
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-alt-2025"
       }
     },
@@ -1665,6 +1654,48 @@
       }
     },
     {
+      "key": "87feb1b7-f538-41be-9c36-3b03ea0580da",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "87feb1b7-f538-41be-9c36-3b03ea0580da",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "7d06505a-31d9-4f59-8b1f-5db1316530b4",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "59bace8a-792a-410b-b0ff-01bb3efa4c44",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59bace8a-792a-410b-b0ff-01bb3efa4c44",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
       "key": "7cbe8c50-cb5c-493f-9ebf-d3cfe151cabc",
       "position": 1,
       "properties": {
@@ -1715,48 +1746,6 @@
         "lesson_activity.key": "2f43564a-1230-463c-848c-c83b500c92c2",
         "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa1-alt-2025"
-      }
-    },
-    {
-      "key": "87feb1b7-f538-41be-9c36-3b03ea0580da",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "87feb1b7-f538-41be-9c36-3b03ea0580da",
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-alt-2025"
-      }
-    },
-    {
-      "key": "7d06505a-31d9-4f59-8b1f-5db1316530b4",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4",
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-alt-2025"
-      }
-    },
-    {
-      "key": "59bace8a-792a-410b-b0ff-01bb3efa4c44",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "59bace8a-792a-410b-b0ff-01bb3efa4c44",
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-alt-2025"
       }
     },
@@ -8553,6 +8542,145 @@
       }
     },
     {
+      "key": "e8dcc45d-7644-415e-b0f7-35d453811ef5",
+      "position": 1,
+      "properties": {
+        "description": "Asphalt art brightens communities, improves public safety, and inspires residents and visitors. Each project has a unique approach to revitalizing streets and parks and bringing communities together.",
+        "name": "Asphalt Art Projects",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e8dcc45d-7644-415e-b0f7-35d453811ef5",
+        "lesson_activity.key": "87feb1b7-f538-41be-9c36-3b03ea0580da"
+      }
+    },
+    {
+      "key": "3ddcd62e-19a8-4395-93db-1e1544511f07",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Unity and Safety Through Street Art in Norfolk, VA*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of asphalt art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3ddcd62e-19a8-4395-93db-1e1544511f07",
+        "lesson_activity.key": "87feb1b7-f538-41be-9c36-3b03ea0580da"
+      }
+    },
+    {
+      "key": "16252e58-c4f9-46dc-b119-7a6dbc51b873",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to sketch their asphalt art design and write pseudocode for a new method to plan their project on the Asphalt Art Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that the asphalt art design should be simple enough to create in the given timeframe while being complex enough to utilize the classes students have developed and highlight the need for a new method."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "16252e58-c4f9-46dc-b119-7a6dbc51b873",
+        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4"
+      }
+    },
+    {
+      "key": "7faaa623-07ab-433d-b1b7-a52f481487c6",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Asphalt Art Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can refer students back to the [**Decomposition and Design**](https://studio.code.org/s/csa1-2023/lessons/13) lesson to recall how they broke down the murals to create the designs. Students may also want to save the `MuralPainter` to their Backpacks or copy some of its methods to use in the Asphalt Art Project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7faaa623-07ab-433d-b1b7-a52f481487c6",
+        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4"
+      }
+    },
+    {
+      "key": "9b1807fc-0330-4181-b099-0c407fda1b7e",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our updated subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9b1807fc-0330-4181-b099-0c407fda1b7e",
+        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4"
+      }
+    },
+    {
+      "key": "59528f8a-1b20-458a-ba85-75d5401faaab",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their updated subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "59528f8a-1b20-458a-ba85-75d5401faaab",
+        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4"
+      }
+    },
+    {
+      "key": "68a914b6-72db-43c3-8e90-c3105e714f1e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Asphalt Art Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "68a914b6-72db-43c3-8e90-c3105e714f1e",
+        "lesson_activity.key": "59bace8a-792a-410b-b0ff-01bb3efa4c44"
+      }
+    },
+    {
+      "key": "2bc68277-1f89-40de-bc8a-ec42cc48e249",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "2bc68277-1f89-40de-bc8a-ec42cc48e249",
+        "lesson_activity.key": "59bace8a-792a-410b-b0ff-01bb3efa4c44"
+      }
+    },
+    {
+      "key": "dfaa5a2a-c4a7-4932-a408-62101d7f0fac",
+      "position": 3,
+      "properties": {
+        "description": "**Asphalt Art Project:** Use the rubric in the Asphalt Art Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "dfaa5a2a-c4a7-4932-a408-62101d7f0fac",
+        "lesson_activity.key": "59bace8a-792a-410b-b0ff-01bb3efa4c44"
+      }
+    },
+    {
       "key": "855e955f-200c-40d8-9d3c-107794fe79d9",
       "position": 1,
       "properties": {
@@ -8704,145 +8832,6 @@
       "seeding_key": {
         "activity_section.key": "e66fe051-41a8-4f07-b08a-52efac6f9396",
         "lesson_activity.key": "2f43564a-1230-463c-848c-c83b500c92c2"
-      }
-    },
-    {
-      "key": "e8dcc45d-7644-415e-b0f7-35d453811ef5",
-      "position": 1,
-      "properties": {
-        "description": "Asphalt art brightens communities, improves public safety, and inspires residents and visitors. Each project has a unique approach to revitalizing streets and parks and bringing communities together.",
-        "name": "Asphalt Art Projects",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "e8dcc45d-7644-415e-b0f7-35d453811ef5",
-        "lesson_activity.key": "87feb1b7-f538-41be-9c36-3b03ea0580da"
-      }
-    },
-    {
-      "key": "3ddcd62e-19a8-4395-93db-1e1544511f07",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Unity and Safety Through Street Art in Norfolk, VA*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of asphalt art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3ddcd62e-19a8-4395-93db-1e1544511f07",
-        "lesson_activity.key": "87feb1b7-f538-41be-9c36-3b03ea0580da"
-      }
-    },
-    {
-      "key": "16252e58-c4f9-46dc-b119-7a6dbc51b873",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to sketch their asphalt art design and write pseudocode for a new method to plan their project on the Asphalt Art Project Planning Guide.",
-        "duration": "10",
-        "name": "Brainstorming and Planning",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Emphasize that the asphalt art design should be simple enough to create in the given timeframe while being complex enough to utilize the classes students have developed and highlight the need for a new method."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "16252e58-c4f9-46dc-b119-7a6dbc51b873",
-        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4"
-      }
-    },
-    {
-      "key": "7faaa623-07ab-433d-b1b7-a52f481487c6",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Asphalt Art Project",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "You can refer students back to the [**Decomposition and Design**](https://studio.code.org/s/csa1-2023/lessons/13) lesson to recall how they broke down the murals to create the designs. Students may also want to save the `MuralPainter` to their Backpacks or copy some of its methods to use in the Asphalt Art Project."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7faaa623-07ab-433d-b1b7-a52f481487c6",
-        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4"
-      }
-    },
-    {
-      "key": "9b1807fc-0330-4181-b099-0c407fda1b7e",
-      "position": 3,
-      "properties": {
-        "description": "This is a good time to commit our code and save our updated subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "9b1807fc-0330-4181-b099-0c407fda1b7e",
-        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4"
-      }
-    },
-    {
-      "key": "59528f8a-1b20-458a-ba85-75d5401faaab",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their updated subclass to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "59528f8a-1b20-458a-ba85-75d5401faaab",
-        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4"
-      }
-    },
-    {
-      "key": "68a914b6-72db-43c3-8e90-c3105e714f1e",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Asphalt Art Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "68a914b6-72db-43c3-8e90-c3105e714f1e",
-        "lesson_activity.key": "59bace8a-792a-410b-b0ff-01bb3efa4c44"
-      }
-    },
-    {
-      "key": "2bc68277-1f89-40de-bc8a-ec42cc48e249",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "2bc68277-1f89-40de-bc8a-ec42cc48e249",
-        "lesson_activity.key": "59bace8a-792a-410b-b0ff-01bb3efa4c44"
-      }
-    },
-    {
-      "key": "dfaa5a2a-c4a7-4932-a408-62101d7f0fac",
-      "position": 3,
-      "properties": {
-        "description": "**Asphalt Art Project:** Use the rubric in the Asphalt Art Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "dfaa5a2a-c4a7-4932-a408-62101d7f0fac",
-        "lesson_activity.key": "59bace8a-792a-410b-b0ff-01bb3efa4c44"
       }
     },
     {
@@ -12145,6 +12134,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa1-project2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -12167,6 +12159,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_csa1-alt-survey-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -12200,7 +12195,7 @@
           "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025_2025-cb-alt"
         ],
         "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-alt-2025",
         "activity_section.key": "7faaa623-07ab-433d-b1b7-a52f481487c6"
       },
@@ -13899,7 +13894,7 @@
           "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025_2025-cb-alt"
         ],
         "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-alt-2025",
         "activity_section.key": "7faaa623-07ab-433d-b1b7-a52f481487c6"
       }

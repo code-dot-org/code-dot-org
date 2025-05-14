@@ -1,0 +1,591 @@
+name 'gen-ai-student-level-testing2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# ✅ Recap: Introduction to Generative AI
+
+#### After this lesson, you can 
+
+* #### Identify and explain the four key components that make up a computer system.
+* #### Evaluate the potential impact of generative AI on society and discuss its capabilities and limitations.
+* #### Distinguish between different types of AI, including machine learning, deep learning, and generative AI.
+
+## **Key Terms**
+
+* #### **Artificial Intelligence** - A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions
+* #### **Large Language Model** - A computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks
+* #### **Model** - A computer program designed to make a decision
+
+## Resources
+
+### **Video**
+
+<!-- Video for https://youtu.be/6NDEoJ4gWtM -->
+<!-- Youtube code 6NDEoJ4gWtM --->
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 5px 0;">
+  <img src="https://i.ytimg.com/vi/6NDEoJ4gWtM/1.jpg" alt="" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://youtu.be/6NDEoJ4gWtM" target="_blank">Introduction to Large Language Models</a></b><br>
+    
+  </div>
+</div>
+
+<!-- Video for https://www.youtube.com/watch?v=KHbwOetbmbs -->
+<!-- Youtube code KHbwOetbmbs --->
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 5px 0;">
+  <img src="https://i.ytimg.com/vi/KHbwOetbmbs/1.jpg" alt="" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=KHbwOetbmbs" target="_blank">What Is Machine Learning?</a></b><br>
+    
+  </div>
+</div>
+
+<!-- Video for https://www.youtube.com/watch?v=sLIJNEIE0Rs -->
+<!-- Youtube code sLIJNEIE0Rs --->
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 5px 0;">
+  <img src="https://i.ytimg.com/vi/sLIJNEIE0Rs/1.jpg" alt="" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=sLIJNEIE0Rs" target="_blank">What Makes a Computer a Computer?</a></b><br>
+    
+  </div>
+</div>
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1iKiiURXTDQktgr9_r_B8-9_XBW-YrCp8ueQGVtqrJIc" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/presentation/d/1iKiiURXTDQktgr9_r_B8-9_XBW-YrCp8ueQGVtqrJIc/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Foundations of Generative AI Graphic Organizer</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: 1.2 How Smart Is It, Really?
+
+#### After this lesson, you can 
+
+* #### Interact with a chatbot to evaluate how it responds to different types of prompts.
+* #### Reflect on how AI can impact a real-world industry.
+* #### Identify strengths and limitations in how the chatbot generates responses.
+
+## **Key Terms**
+
+* _(none listed)_
+
+## Resources
+
+### **Video**
+
+_(no student‑facing videos)_
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1qRZGlkO7EJZakLC08-WTPoVsn4yTwhU-hvBeHzzxX10" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1qRZGlkO7EJZakLC08-WTPoVsn4yTwhU-hvBeHzzxX10/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">AI Newsroom Playground</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: Input & Training Data
+
+#### After this lesson, you can 
+
+* #### Explain how a language model uses data to recognize words as input
+* #### Identify potential data sources relevant to a task being performed by a language model
+
+## **Key Terms**
+
+* _(none listed)_
+
+## Resources
+
+### **Video**
+
+<!-- Video for https://www.youtube.com/watch?v=JO9MgO1Zp3E -->
+<!-- Youtube code JO9MgO1Zp3E --->
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 5px 0;">
+  <img src="https://i.ytimg.com/vi/JO9MgO1Zp3E/1.jpg" alt="" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=JO9MgO1Zp3E" target="_blank">Generative AI: Input & Pre-training</a></b><br>
+    
+  </div>
+</div>
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1uvwIQtXpXQ3v8S_MYLzlMH8KlSY8aZ6VI20dUbu-kyY" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1uvwIQtXpXQ3v8S_MYLzlMH8KlSY8aZ6VI20dUbu-kyY/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Training Data</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: Bias in the Machine
+
+#### After this lesson, you can 
+
+* #### Describe patterns in collections of data sources that contribute to bias
+
+## **Key Terms**
+
+* #### **Bias** - When a model favors certain information over others
+
+## Resources
+
+### **Video**
+
+<!-- Video for https://www.youtube.com/watch?v=fzn-6jftYNw -->
+<!-- Youtube code fzn-6jftYNw --->
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 5px 0;">
+  <img src="https://i.ytimg.com/vi/fzn-6jftYNw/1.jpg" alt="" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=fzn-6jftYNw" target="_blank">Algorithmic Bias with Dr Deborah Raji</a></b><br>
+    
+  </div>
+</div>
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1HmdwAW236aJgN8xu3ezGHultrkwZSgKKpgySHLX_4ms" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1HmdwAW236aJgN8xu3ezGHultrkwZSgKKpgySHLX_4ms/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">RecipeBot Data Curation</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: 3.2 Is It Biased?
+
+#### After this lesson, you can 
+
+* #### Examine how identity-based prompts influence chatbot responses.
+* #### Reflect on the potential impact of biased AI outputs in the real world.
+* #### Explain how training data shapes the patterns and representations in generative AI.
+* #### Analyze AI-generated responses for signs of bias, stereotypes, or assumptions.
+
+## **Key Terms**
+
+* _(none listed)_
+
+## Resources
+
+### **Video**
+
+_(no student‑facing videos)_
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=10aMGBAlFvCso_39a_dGwWKKFY9nR_AV928HH0Nts3y8" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/10aMGBAlFvCso_39a_dGwWKKFY9nR_AV928HH0Nts3y8/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Bias in AI Outputs</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: Understanding Embeddings
+
+#### After this lesson, you can 
+
+* #### Explain how language models use embeddings to store the meaning of words
+* #### Describe how embeddings show the similarity or difference between two items
+
+## **Key Terms**
+
+* #### **Embedding** - A set of numbers used to represent a word in a language model. They are used to represent the discrete meaning of words.
+
+## Resources
+
+### **Video**
+
+<!-- Video for https://www.youtube.com/watch?v=s1fhxAVpYx8 -->
+<!-- Youtube code s1fhxAVpYx8 --->
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 5px 0;">
+  <img src="https://i.ytimg.com/vi/s1fhxAVpYx8/1.jpg" alt="" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=s1fhxAVpYx8" target="_blank">Generative AI: Storage & Embeddings</a></b><br>
+    
+  </div>
+</div>
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1Ewl1eYGCYx8pHLPBJ2NK7DOH5aRuYN6QhsZvC9QBB8Y" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1Ewl1eYGCYx8pHLPBJ2NK7DOH5aRuYN6QhsZvC9QBB8Y/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Character Quiz</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: Understanding Neural Networks
+
+#### After this lesson, you can 
+
+* #### Construct a neural network to represent a situation and make decisions based on inputs
+
+## **Key Terms**
+
+* #### **Neural Network** - An interconnected network that makes decisions using weights and hidden layers. They are used to represent the relationship between words
+
+## Resources
+
+### **Video**
+
+<!-- Video for https://www.youtube.com/watch?v=Z7Mes_Ej69Y -->
+<!-- Youtube code Z7Mes_Ej69Y --->
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 5px 0;">
+  <img src="https://i.ytimg.com/vi/Z7Mes_Ej69Y/1.jpg" alt="" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=Z7Mes_Ej69Y" target="_blank">Generative AI: Processing & Neural Networks</a></b><br>
+    
+  </div>
+</div>
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1Ta-zCBCP_qus_WPlyhtmqb0tg0OCG5caIPI-WvtTEqs" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1Ta-zCBCP_qus_WPlyhtmqb0tg0OCG5caIPI-WvtTEqs/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Neural Networks</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: Attention Is All You Need
+
+#### After this lesson, you can 
+
+* #### Explain how embeddings and neural networks are used in the attention process
+* #### Construct examples of words and sentences that require context clues to understand fully
+
+## **Key Terms**
+
+* #### **Attention** - A process that updates the meaning of each word by using the context from the other words in the input
+
+## Resources
+
+### **Video**
+
+<!-- Video for https://www.youtube.com/watch?v=2RdK6k45koY -->
+<!-- Youtube code 2RdK6k45koY --->
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 5px 0;">
+  <img src="https://i.ytimg.com/vi/2RdK6k45koY/1.jpg" alt="" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=2RdK6k45koY" target="_blank">Generative AI: Attention</a></b><br>
+    
+  </div>
+</div>
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1YXLtaVWarfWdKeNzW0k_mERvtI4fPQwW1dPs9xe_IUE" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1YXLtaVWarfWdKeNzW0k_mERvtI4fPQwW1dPs9xe_IUE/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Meaning from Context</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: 6.2 Who's Making the Choices?
+
+#### After this lesson, you can 
+
+* _(none listed)_
+
+## **Key Terms**
+
+* _(none listed)_
+
+## Resources
+
+### **Video**
+
+_(no student‑facing videos)_
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1B5gl9KOOadsiHj0y6IsswjtEkohPxJ1lrbCbuXcm8zg" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1B5gl9KOOadsiHj0y6IsswjtEkohPxJ1lrbCbuXcm8zg/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Prompt Comparisons</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: Outputs & Probabilities
+
+#### After this lesson, you can 
+
+* #### Explain how a language model uses probabilities to generate words as ouput
+
+## **Key Terms**
+
+* _(none listed)_
+
+## Resources
+
+### **Video**
+
+<!-- Video for https://www.youtube.com/watch?v=gGK7b7j4BiQ -->
+<!-- Youtube code gGK7b7j4BiQ --->
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 5px 0;">
+  <img src="https://i.ytimg.com/vi/gGK7b7j4BiQ/1.jpg" alt="" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=gGK7b7j4BiQ" target="_blank">Generative AI: Output & Probabilities</a></b><br>
+    
+  </div>
+</div>
+
+### **Activity Guides**
+
+_(no student‑facing docs)_
+
+
+---
+
+# ✅ Recap: Hallucinations and Fabrications
+
+#### After this lesson, you can 
+
+* #### Make recommendations regarding the input and output of a language model to avoid bias and harm
+
+## **Key Terms**
+
+* #### **Hallucinations** - Inaccuracies in a language model's response. These occur when the most probable response isn't accurate or factual
+
+## Resources
+
+### **Video**
+
+<!-- Video for https://youtu.be/fmmboPQAQeY -->
+<!-- Youtube code fmmboPQAQeY --->
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 5px 0;">
+  <img src="https://i.ytimg.com/vi/fmmboPQAQeY/1.jpg" alt="" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://youtu.be/fmmboPQAQeY" target="_blank">AI Auditing with Dr Deborah Raji</a></b><br>
+    
+  </div>
+</div>
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1Gxnivw4GVgPYpaeZYHtEhd8YkjlL8YdAs3nADr5MUv4" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1Gxnivw4GVgPYpaeZYHtEhd8YkjlL8YdAs3nADr5MUv4/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">AI Auditors</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: 9.2 Can You Trust the Bot?
+
+#### After this lesson, you can 
+
+* _(none listed)_
+
+## **Key Terms**
+
+* _(none listed)_
+
+## Resources
+
+### **Video**
+
+_(no student‑facing videos)_
+
+### **Activity Guides**
+
+_(no student‑facing docs)_
+
+
+---
+
+# ✅ Recap: Project: Demystifying Generative AI
+
+#### After this lesson, you can 
+
+* #### Identify and address misconceptions about generative AI
+* #### Create artifacts that explain generative AI concepts in a clear and engaging manner
+
+## **Key Terms**
+
+* _(none listed)_
+
+## Resources
+
+### **Video**
+
+_(no student‑facing videos)_
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1FIZimuU8V2PcfDur9nVmpCRTqPIHZg47oyxYM1RZGu4" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1FIZimuU8V2PcfDur9nVmpCRTqPIHZg47oyxYM1RZGu4/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 1</a><br>
+    
+  </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1VwMG12vIehflz8t___XTTB2QvQYIsRmeuPXNiPQ7TWU" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1VwMG12vIehflz8t___XTTB2QvQYIsRmeuPXNiPQ7TWU/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 2</a><br>
+    
+  </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1FmgWivspL9ZwHACa7D9UcLEUUMgKSwMZaPrSl7OeFcs" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1FmgWivspL9ZwHACa7D9UcLEUUMgKSwMZaPrSl7OeFcs/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 3</a><br>
+    
+  </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1ky3Wz5sqZQwDfoHRxl-gUWC6qVElR7lQVnp4w8NQp_I" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1ky3Wz5sqZQwDfoHRxl-gUWC6qVElR7lQVnp4w8NQp_I/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Generative AI Opinion 4</a><br>
+    
+  </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1jp7Fs7A-vsOtlxuZfOFNNWNKNA3TCTGRwd8M10YLIfo" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1jp7Fs7A-vsOtlxuZfOFNNWNKNA3TCTGRwd8M10YLIfo/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Project - Demystifying AI</a><br>
+    
+  </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=17KY7ewQfVZY9qApboAJpxzi9QRpVs6TOSas-MzMRGGU" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/17KY7ewQfVZY9qApboAJpxzi9QRpVs6TOSas-MzMRGGU/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Project Guide - Demystifying AI</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: Embeddings: How They're Created
+
+#### After this lesson, you can 
+
+* #### Explain how different passages can create different embeddings
+* #### Construct an embedding for a text passage
+
+## **Key Terms**
+
+* _(none listed)_
+
+## Resources
+
+### **Video**
+
+_(no student‑facing videos)_
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1XNK_WlSXUPocJYTUYwg7IjqiZ3JlXDzkVRR_2TTuyRw" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1XNK_WlSXUPocJYTUYwg7IjqiZ3JlXDzkVRR_2TTuyRw/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">How Embeddings are Made (Version A)</a><br>
+    
+  </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1bFsdsJdjLfqjPIyVS6g2pSF0lz_TOyIjPGvu9Le_zh0" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1bFsdsJdjLfqjPIyVS6g2pSF0lz_TOyIjPGvu9Le_zh0/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">How Embeddings are Made (Version B)</a><br>
+    
+  </div>
+</div>
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=11ef6pISlj5ov3ZmKO7Pbqd1wiRcK7FHzk7A3zetqBMw" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/11ef6pISlj5ov3ZmKO7Pbqd1wiRcK7FHzk7A3zetqBMw/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Warm Up Cutouts</a><br>
+    
+  </div>
+</div>
+
+
+---
+
+# ✅ Recap: Neural Networks: How They're Trained
+
+#### After this lesson, you can 
+
+* #### Use trial-and-error and past data to increase their accuracy in a supervised learning process
+
+## **Key Terms**
+
+* #### **Supervised Learning** - A process that uses examples that are already labeled to find patterns and make decisions
+
+## Resources
+
+### **Video**
+
+<!-- Video for https://www.youtube.com/watch?v=JrXazCEACVo -->
+<!-- Youtube code JrXazCEACVo --->
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 5px 0;">
+  <img src="https://i.ytimg.com/vi/JrXazCEACVo/1.jpg" alt="" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://www.youtube.com/watch?v=JrXazCEACVo" target="_blank">How AI Works: Neural Networks</a></b><br>
+    
+  </div>
+</div>
+
+### **Activity Guides**
+
+<div style="display: flex; align-items: flex-start; background-color: #F5F7F8; border-radius: 5px; padding: 15px; margin: 20px 0;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1uHOI2WO5f2W51DLLXv4Xf9xflx38BeChbnZ2uFSEc5w" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <div style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1uHOI2WO5f2W51DLLXv4Xf9xflx38BeChbnZ2uFSEc5w/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">Learning a Language</a><br>
+    
+  </div>
+</div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

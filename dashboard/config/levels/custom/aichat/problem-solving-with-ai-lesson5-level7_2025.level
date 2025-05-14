@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:34:38.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Try Your Own\r\n\r\nPractice asking the same question in different ways.\r\n\r\n### Do This:\r\n1. Reflect on these two questions.\r\n\t* How does the way we phrase a prompt influence AI contradictions?\r\n    * Why does AI provide inconsistent responses even when asked the same question differently?\r\n2. Now **try out your own example of a question**. Frame it in as many ways possible to see if you can produce contradictions in the AI responses.",
+    "long_instructions": "## Try Your Own\r\n\r\nPractice asking AI about the same topic in different ways.\r\n\r\n### Do This:\r\n1. Reflect on these two questions.\r\n\t* How does the way we phrase a prompt influence AI contradictions?\r\n    * Why does AI provide inconsistent responses even when asked about the same topic?\r\n2. Now **try out your own example of a question**. Choose a topic, and frame your question in as many ways as possible to see if you can produce contradictions in the AI responses.\r\n\r\n---\r\n\r\n:::details [**Not sure where to start?**]\r\nHere are some topics to consider:\r\n- Mandatory physical education in school\r\n- Free higher education\r\n- Use of AI in school assignments\r\n- The current US voting age\r\n:::",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -45,7 +46,6 @@
     "thumbnail_url": "https://images.code.org/27c36efae3ae585fc84645fc408704b0-Community Program Icon.png",
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:38.720+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson5-level7_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson5-level7_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:38.720+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson5-level7_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson5-level7_2024\"},{\"changed_at\":\"2025-05-13 21:56:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-13 21:58:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>
