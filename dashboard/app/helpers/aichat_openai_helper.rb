@@ -30,7 +30,7 @@ module AichatOpenaiHelper
     )
     response_time = Time.now - start_time
 
-    report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, response_time)
+    report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, aichat_model_customizations['selectedModelId'], response_time)
     response
   end
 
@@ -84,14 +84,14 @@ module AichatOpenaiHelper
   end
 
   # Reports and logs usage metrics to Cloudwatch and our throttling system.
-  def self.report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, response_time)
+  def self.report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, model_id, response_time)
     unless usage
       Honeybadger.notify("OpenAI response detected without usage statistics, which are required for throttling.")
       return
     end
 
     limit = DCDO.get('aichat_token_limit_per_day', DEFAULT_TOKEN_LIMIT_PER_DAY)
-    Cdo::Throttle.throttle(AichatRequestsController::AICHAT_TOKEN_COUNT_PREFIX + user_id.to_s,
+    Cdo::Throttle.throttle(token_throttling_key(model_id, user_id),
       limit,
       ONE_DAY_S,
       throttle_for: ONE_DAY_S,
@@ -161,6 +161,10 @@ module AichatOpenaiHelper
       }
     end
     Cdo::Metrics.push(SharedConstants::AICHAT_METRICS_NAMESPACE, metrics)
+  end
+
+  def self.token_throttling_key(model_id, user_id)
+    'aichat/tokens/' + model_id + '/' + user_id.to_s
   end
 
   def self.client
