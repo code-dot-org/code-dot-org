@@ -10,6 +10,7 @@ import ContentEditorHelper from '@/components/contentEditorHelper';
 import {Brand} from '@/config/brand';
 import ExperiencePageLoader from '@/contentful/components/ExperiencePageLoader';
 import {getExperience} from '@/contentful/get-experience';
+import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
 import {getSeoMetadata} from '@/metadata/seo';
 import {getPageHeading} from '@/selectors/contentful/getExperienceEntryFields';
 
@@ -17,13 +18,15 @@ export const dynamic = 'force-static'; // Ensure ISR is enabled
 export const revalidate = 3600; // Cache for one hour
 
 type ExperiencePageProps = {
-  params: Promise<{locale?: string; slug?: string; brand?: Brand}>;
+  params: Promise<{locale?: string; paths?: string; brand?: Brand}>;
   searchParams: Promise<{[key: string]: string | string[] | undefined}>;
 };
 
 async function getPageProps({params, searchParams}: ExperiencePageProps) {
-  const {locale = 'en-US', slug = 'home-page'} = (await params) || {};
+  const {locale = 'en-US', paths = ['home']} = (await params) || {};
   const isDraftModeEnabled = (await draftMode()).isEnabled;
+
+  const slug = getContentfulSlug(paths);
 
   return {
     experienceResult: await getExperience(
