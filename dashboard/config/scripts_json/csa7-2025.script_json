@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-12 05:18:37 UTC",
+    "serialized_at": "2025-05-13 21:48:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,15 +54,14 @@
       }
     },
     {
-      "key": "lessonGroup-5",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Alternate Lessons",
-        "description": "This section contains the one-day version of the Creative Coding with The Theater Project."
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa7-2025"
       }
     },
@@ -81,7 +81,7 @@
   "lessons": [
     {
       "key": "Project Planning",
-      "name": "Project Planning",
+      "name": "Lesson 1: Project Planning",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -99,7 +99,7 @@
     },
     {
       "key": "Object References as Parameters",
-      "name": "Object References as Parameters",
+      "name": "Lesson 2: Object References as Parameters",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -118,7 +118,7 @@
     },
     {
       "key": "Overloaded Methods",
-      "name": "Overloaded Methods",
+      "name": "Lesson 3: Overloaded Methods",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -137,7 +137,7 @@
     },
     {
       "key": "Private Methods",
-      "name": "Private Methods",
+      "name": "Lesson 4: Private Methods",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -156,7 +156,7 @@
     },
     {
       "key": "Intellectual Property",
-      "name": "Intellectual Property",
+      "name": "Lesson 5: Intellectual Property",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -175,7 +175,7 @@
     },
     {
       "key": "Recursion",
-      "name": "Recursion",
+      "name": "Lesson 6: Recursion",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -194,7 +194,7 @@
     },
     {
       "key": "Project Development",
-      "name": "Project Development",
+      "name": "Lesson 7: Project Development",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -212,7 +212,7 @@
     },
     {
       "key": "System Reliability",
-      "name": "System Reliability",
+      "name": "Lesson 8: System Reliability",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -230,7 +230,7 @@
     },
     {
       "key": "Creative Coding with The Theater Project",
-      "name": "Creative Coding with The Theater Project",
+      "name": "Lesson 9a: Creative Coding with The Theater Project",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -248,12 +248,30 @@
       }
     },
     {
-      "key": "MusicQueue FRQ",
-      "name": "MusicQueue FRQ",
+      "key": "Creative Coding with The Theater Project [1-Day Version]",
+      "name": "Lesson 9b: Creative Coding with The Theater Project [1-Day Version]",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
+      "properties": {
+        "assessment": true,
+        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
+        "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. You first self-assess your work to evaluate your progress in completing project requirements, then finish developing your project. "
+      },
+      "seeding_key": {
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025"
+      }
+    },
+    {
+      "key": "MusicQueue FRQ",
+      "name": "Lesson 10: MusicQueue FRQ",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
       "properties": {
         "overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the MusicQueue FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the MusicQueue FRQ Scoring Guidelines (one for each student)\n* Gather several sharpened pencils and scratch paper",
@@ -267,11 +285,11 @@
     },
     {
       "key": "Unit 7 Assessment",
-      "name": "Unit 7 Assessment",
-      "absolute_position": 11,
+      "name": "Lesson 11: Unit 7 Assessment",
+      "absolute_position": 12,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
@@ -285,30 +303,27 @@
       }
     },
     {
-      "key": "Creative Coding with The Theater Project [1-Day Version]",
-      "name": "Creative Coding with The Theater Project [1-Day Version]",
-      "absolute_position": 12,
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 13,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 12,
+      "has_lesson_plan": false,
+      "relative_position": 13,
       "properties": {
-        "assessment": true,
-        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
-        "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. You first self-assess your work to evaluate your progress in completing project requirements, then finish developing your project. "
       },
       "seeding_key": {
-        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa7-2025"
       }
     },
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -320,10 +335,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -335,21 +350,6 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 15,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 15,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa7-2025"
-      }
-    },
-    {
-      "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
@@ -357,7 +357,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Student End of Unit Survey",
+        "lesson.key": "Sandbox: The Theater",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa7-2025"
       }
@@ -769,6 +769,61 @@
       }
     },
     {
+      "key": "31615c2d-1953-498d-a7f2-5664b5a42240",
+      "position": 5,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "31615c2d-1953-498d-a7f2-5664b5a42240",
+        "lesson.key": "Creative Coding with The Theater Project",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025"
+      }
+    },
+    {
+      "key": "d673a1d7-b295-4cff-a392-f5ebcf67d7e9",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d673a1d7-b295-4cff-a392-f5ebcf67d7e9",
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025"
+      }
+    },
+    {
+      "key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119",
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025"
+      }
+    },
+    {
+      "key": "1f7b408a-e004-4ca5-92e2-90ef4d604360",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1f7b408a-e004-4ca5-92e2-90ef4d604360",
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025"
+      }
+    },
+    {
       "key": "7dc34417-e470-4c54-aee1-97bca4ab123e",
       "position": 1,
       "properties": {
@@ -838,44 +893,14 @@
       }
     },
     {
-      "key": "d673a1d7-b295-4cff-a392-f5ebcf67d7e9",
+      "key": "72961470-87a9-438c-96ac-3253cbd21b3a",
       "position": 1,
       "properties": {
-        "duration": 10,
-        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "d673a1d7-b295-4cff-a392-f5ebcf67d7e9",
-        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa7-2025"
-      }
-    },
-    {
-      "key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119",
-        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa7-2025"
-      }
-    },
-    {
-      "key": "1f7b408a-e004-4ca5-92e2-90ef4d604360",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1f7b408a-e004-4ca5-92e2-90ef4d604360",
-        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_activity.key": "72961470-87a9-438c-96ac-3253cbd21b3a",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa7-2025"
       }
     },
@@ -911,18 +936,6 @@
       "seeding_key": {
         "lesson_activity.key": "b4d3f98c-26f0-4f06-aba5-5ff0a7edfb57",
         "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa7-2025"
-      }
-    },
-    {
-      "key": "741134c3-14cf-46cf-864e-e94b2c62fded",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "741134c3-14cf-46cf-864e-e94b2c62fded",
-        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa7-2025"
       }
@@ -3128,27 +3141,8 @@
       }
     },
     {
-      "key": "0ee49cea-86d1-40ec-86bc-8d2a0fc86999",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "End of Unit Survey",
-        "progression_name": "End of Unit Survey",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, please complete [**this end of unit survey for teachers**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) as well. Your feedback is valued and appreciated!"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0ee49cea-86d1-40ec-86bc-8d2a0fc86999",
-        "lesson_activity.key": "c662b6a3-f41f-49dc-ae8f-c29812bda139"
-      }
-    },
-    {
       "key": "1f8b6467-80d2-4bf0-a3b3-6e12ce7485f7",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "---"
       },
@@ -3159,7 +3153,7 @@
     },
     {
       "key": "ca5ee9df-080a-491b-a40d-00a8f5becb97",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "**Creative Coding with The Theater Project Planning Guide:** Use the rubric in the Creative Coding with The Theater Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -3167,6 +3161,160 @@
       "seeding_key": {
         "activity_section.key": "ca5ee9df-080a-491b-a40d-00a8f5becb97",
         "lesson_activity.key": "c662b6a3-f41f-49dc-ae8f-c29812bda139"
+      }
+    },
+    {
+      "key": "a4d78b06-33d4-4054-a0c7-327997d37bb0",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4d78b06-33d4-4054-a0c7-327997d37bb0",
+        "lesson_activity.key": "31615c2d-1953-498d-a7f2-5664b5a42240"
+      }
+    },
+    {
+      "key": "bd4d17df-4164-4f7d-93bf-7ecd74f18ad6",
+      "position": 1,
+      "properties": {
+        "description": "Before working towards your final benchmark, review the project requirements and rubric and evaluate your progress. Self-assessing your progress will help you identify which tasks to focus on during your project workdays.",
+        "name": "Project Self-Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bd4d17df-4164-4f7d-93bf-7ecd74f18ad6",
+        "lesson_activity.key": "d673a1d7-b295-4cff-a392-f5ebcf67d7e9"
+      }
+    },
+    {
+      "key": "90fb7e7a-0d7c-4917-b723-fcfb0cf5a897",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nStudents may have questions that are unrelated or beyond the scope of the project. Encourage students to research these questions as extension activities. Focus this discussion on answering questions specific to the content covered in this unit and for the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "90fb7e7a-0d7c-4917-b723-fcfb0cf5a897",
+        "lesson_activity.key": "d673a1d7-b295-4cff-a392-f5ebcf67d7e9"
+      }
+    },
+    {
+      "key": "bceb6d56-b2be-4f85-acf0-74eb1cd3e3a2",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+      },
+      "seeding_key": {
+        "activity_section.key": "bceb6d56-b2be-4f85-acf0-74eb1cd3e3a2",
+        "lesson_activity.key": "d673a1d7-b295-4cff-a392-f5ebcf67d7e9"
+      }
+    },
+    {
+      "key": "9862921b-fa7c-4e0d-a649-9939c7bfa288",
+      "position": 1,
+      "properties": {
+        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9862921b-fa7c-4e0d-a649-9939c7bfa288",
+        "lesson_activity.key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119"
+      }
+    },
+    {
+      "key": "a14daaa0-a963-44b9-93e9-626aa094b6bb",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
+        "progression_name": "Creative Coding with The Theater Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time. You can also encourage students to request a code review from their peers as they work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a14daaa0-a963-44b9-93e9-626aa094b6bb",
+        "lesson_activity.key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119"
+      }
+    },
+    {
+      "key": "7fdcad7d-8694-430a-a2cb-78eac70bf1d0",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7fdcad7d-8694-430a-a2cb-78eac70bf1d0",
+        "lesson_activity.key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119"
+      }
+    },
+    {
+      "key": "6c296656-96bd-4075-ab28-7d63ac7d97a7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6c296656-96bd-4075-ab28-7d63ac7d97a7",
+        "lesson_activity.key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119"
+      }
+    },
+    {
+      "key": "5c65eac8-7788-4924-866e-389320c4bbfc",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5c65eac8-7788-4924-866e-389320c4bbfc",
+        "lesson_activity.key": "1f7b408a-e004-4ca5-92e2-90ef4d604360"
+      }
+    },
+    {
+      "key": "ad9dd1ca-256e-4b45-9cd3-96a70f2179a6",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad9dd1ca-256e-4b45-9cd3-96a70f2179a6",
+        "lesson_activity.key": "1f7b408a-e004-4ca5-92e2-90ef4d604360"
+      }
+    },
+    {
+      "key": "036eb1f0-8cf8-43d7-9c76-e001807efcef",
+      "position": 3,
+      "properties": {
+        "description": "**Creative Coding with The Theater Project:** Use the rubric in the Creative Coding with The Theater Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "036eb1f0-8cf8-43d7-9c76-e001807efcef",
+        "lesson_activity.key": "1f7b408a-e004-4ca5-92e2-90ef4d604360"
       }
     },
     {
@@ -3409,145 +3557,25 @@
       }
     },
     {
-      "key": "bd4d17df-4164-4f7d-93bf-7ecd74f18ad6",
+      "key": "dec266b0-3c45-442e-be97-65dfacd6f79a",
       "position": 1,
       "properties": {
-        "description": "Before working towards your final benchmark, review the project requirements and rubric and evaluate your progress. Self-assessing your progress will help you identify which tasks to focus on during your project workdays.",
-        "name": "Project Self-Assessment",
-        "remarks": true
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "bd4d17df-4164-4f7d-93bf-7ecd74f18ad6",
-        "lesson_activity.key": "d673a1d7-b295-4cff-a392-f5ebcf67d7e9"
+        "activity_section.key": "dec266b0-3c45-442e-be97-65dfacd6f79a",
+        "lesson_activity.key": "72961470-87a9-438c-96ac-3253cbd21b3a"
       }
     },
     {
-      "key": "90fb7e7a-0d7c-4917-b723-fcfb0cf5a897",
+      "key": "d2af7724-babf-4425-8d28-c58dc7298490",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nStudents may have questions that are unrelated or beyond the scope of the project. Encourage students to research these questions as extension activities. Focus this discussion on answering questions specific to the content covered in this unit and for the project."
-          }
-        ]
+        "progression_name": "End of Unit Survey Page"
       },
       "seeding_key": {
-        "activity_section.key": "90fb7e7a-0d7c-4917-b723-fcfb0cf5a897",
-        "lesson_activity.key": "d673a1d7-b295-4cff-a392-f5ebcf67d7e9"
-      }
-    },
-    {
-      "key": "bceb6d56-b2be-4f85-acf0-74eb1cd3e3a2",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
-      },
-      "seeding_key": {
-        "activity_section.key": "bceb6d56-b2be-4f85-acf0-74eb1cd3e3a2",
-        "lesson_activity.key": "d673a1d7-b295-4cff-a392-f5ebcf67d7e9"
-      }
-    },
-    {
-      "key": "9862921b-fa7c-4e0d-a649-9939c7bfa288",
-      "position": 1,
-      "properties": {
-        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
-        "name": "Development",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "9862921b-fa7c-4e0d-a649-9939c7bfa288",
-        "lesson_activity.key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119"
-      }
-    },
-    {
-      "key": "a14daaa0-a963-44b9-93e9-626aa094b6bb",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
-        "progression_name": "Creative Coding with The Theater Project",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time. You can also encourage students to request a code review from their peers as they work."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a14daaa0-a963-44b9-93e9-626aa094b6bb",
-        "lesson_activity.key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119"
-      }
-    },
-    {
-      "key": "7fdcad7d-8694-430a-a2cb-78eac70bf1d0",
-      "position": 3,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "7fdcad7d-8694-430a-a2cb-78eac70bf1d0",
-        "lesson_activity.key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119"
-      }
-    },
-    {
-      "key": "6c296656-96bd-4075-ab28-7d63ac7d97a7",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "6c296656-96bd-4075-ab28-7d63ac7d97a7",
-        "lesson_activity.key": "8c0076ce-15a6-4eff-b9c4-b4c16e293119"
-      }
-    },
-    {
-      "key": "5c65eac8-7788-4924-866e-389320c4bbfc",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5c65eac8-7788-4924-866e-389320c4bbfc",
-        "lesson_activity.key": "1f7b408a-e004-4ca5-92e2-90ef4d604360"
-      }
-    },
-    {
-      "key": "ad9dd1ca-256e-4b45-9cd3-96a70f2179a6",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "ad9dd1ca-256e-4b45-9cd3-96a70f2179a6",
-        "lesson_activity.key": "1f7b408a-e004-4ca5-92e2-90ef4d604360"
-      }
-    },
-    {
-      "key": "036eb1f0-8cf8-43d7-9c76-e001807efcef",
-      "position": 3,
-      "properties": {
-        "description": "**Creative Coding with The Theater Project:** Use the rubric in the Creative Coding with The Theater Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "036eb1f0-8cf8-43d7-9c76-e001807efcef",
-        "lesson_activity.key": "1f7b408a-e004-4ca5-92e2-90ef4d604360"
+        "activity_section.key": "d2af7724-babf-4425-8d28-c58dc7298490",
+        "lesson_activity.key": "72961470-87a9-438c-96ac-3253cbd21b3a"
       }
     },
     {
@@ -3590,17 +3618,6 @@
       "seeding_key": {
         "activity_section.key": "4ceaf51d-ef02-4d53-8c87-f559876dca75",
         "lesson_activity.key": "b4d3f98c-26f0-4f06-aba5-5ff0a7edfb57"
-      }
-    },
-    {
-      "key": "b5366b06-5afc-437d-9d38-f7da014c9bd6",
-      "position": 1,
-      "properties": {
-        "progression_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "b5366b06-5afc-437d-9d38-f7da014c9bd6",
-        "lesson_activity.key": "741134c3-14cf-46cf-864e-e94b2c62fded"
       }
     }
   ],
@@ -4386,27 +4403,49 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa7_2025"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa7_2025"
+          "student-eou-survey_linked_page-csa7_2025"
         ],
         "lesson.key": "Creative Coding with The Theater Project",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa7-2025",
-        "activity_section.key": "0ee49cea-86d1-40ec-86bc-8d2a0fc86999"
+        "activity_section.key": "a4d78b06-33d4-4054-a0c7-327997d37bb0"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa7_2025"
+        "student-eou-survey_linked_page-csa7_2025"
       ]
     },
     {
       "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
+        ],
+        "progression": "Creative Coding with The Theater Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025",
+        "activity_section.key": "a14daaa0-a963-44b9-93e9-626aa094b6bb"
+      },
+      "level_keys": [
+        "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4431,32 +4470,29 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
-        ],
-        "progression": "Creative Coding with The Theater Project"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa7"
         ],
-        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa7-2025",
-        "activity_section.key": "a14daaa0-a963-44b9-93e9-626aa094b6bb"
+        "activity_section.key": "dec266b0-3c45-442e-be97-65dfacd6f79a"
       },
       "level_keys": [
-        "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
+        "student-eou-survey_2025-csa7"
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4480,7 +4516,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4505,7 +4541,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4530,7 +4566,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4551,31 +4587,6 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 39,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa7-2025",
-        "activity_section.key": "b5366b06-5afc-437d-9d38-f7da014c9bd6"
-      },
-      "level_keys": [
-        "student-eou-survey_-csa_2025"
       ]
     }
   ],
@@ -4954,14 +4965,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa7_2025",
+        "level.key": "student-eou-survey_linked_page-csa7_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa7_2025"
+          "student-eou-survey_linked_page-csa7_2025"
         ],
         "lesson.key": "Creative Coding with The Theater Project",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa7-2025",
-        "activity_section.key": "0ee49cea-86d1-40ec-86bc-8d2a0fc86999"
+        "activity_section.key": "a4d78b06-33d4-4054-a0c7-327997d37bb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa7-2025",
+        "activity_section.key": "a14daaa0-a963-44b9-93e9-626aa094b6bb"
       }
     },
     {
@@ -4978,14 +5001,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025",
+        "level.key": "student-eou-survey_2025-csa7",
         "script_level.level_keys": [
-          "CSA U7 Creative Coding with The Theater Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa7"
         ],
-        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa7-2025",
-        "activity_section.key": "a14daaa0-a963-44b9-93e9-626aa094b6bb"
+        "activity_section.key": "dec266b0-3c45-442e-be97-65dfacd6f79a"
       }
     },
     {
@@ -5034,18 +5057,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa7-2025",
         "activity_section.key": "4ceaf51d-ef02-4d53-8c87-f559876dca75"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_-csa_2025",
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa7-2025",
-        "activity_section.key": "b5366b06-5afc-437d-9d38-f7da014c9bd6"
       }
     }
   ],

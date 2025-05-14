@@ -356,7 +356,7 @@ class ScriptsController < ApplicationController
 
   private def general_params
     h = params.permit(
-      :published_state,
+      :hide_within_course,
       :instruction_type,
       :instructor_audience,
       :participant_audience,

@@ -5,7 +5,12 @@ import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {DEFAULT_CHORD_LENGTH, MIN_BPM, MAX_BPM} from '../constants';
 import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
 import {generateNotesFromChord, ChordNote} from '../utils/Chords';
-import {getPitchName, getTranposedNote, Key} from '../utils/Notes';
+import {
+  getPitchName,
+  convertRelativeToAbsolutePitch,
+  Key,
+} from '../utils/Notes';
+import {isNoteAvailableInScaleMode} from '../utils/Tunes';
 
 import {
   ChordEvent,
@@ -410,8 +415,11 @@ export default class MusicPlayer {
     const samples: SampleEvent[] = [];
 
     events.forEach(event => {
-      const tranposedNote = getTranposedNote(this.key, event.noteOffset);
-      const sampleUrl = this.getSampleForNote(tranposedNote, instrument);
+      const transposedNote = convertRelativeToAbsolutePitch(
+        this.key,
+        event.noteOffset
+      );
+      const sampleUrl = this.getSampleForNote(transposedNote, instrument);
       if (sampleUrl !== null) {
         const eventWhen = eventStart + (event.position - 1) / 16;
         samples.push({
@@ -454,16 +462,26 @@ export default class MusicPlayer {
     instrumentEvent: InstrumentEvent
   ): SamplerSequence | null {
     const {value, effects, when} = instrumentEvent;
-    const {instrument, events} = value;
+    const {instrument, events, relative, scaleMode} = value;
+    const key = this.key;
+
     return {
       instrument,
       effects,
-      events: events.map(event => {
-        return {
-          notes: [getPitchName(event.note)],
-          playbackPosition: when + (event.tick - 1) / 16,
-        };
-      }),
+      events: events
+        .map(event => ({
+          ...event,
+          note: relative
+            ? convertRelativeToAbsolutePitch(key, event.note)
+            : event.note,
+        }))
+        .filter(event => isNoteAvailableInScaleMode(key, event.note, scaleMode))
+        .map(event => {
+          return {
+            notes: [getPitchName(event.note)],
+            playbackPosition: when + (event.tick - 1) / 16,
+          };
+        }),
     };
   }
 

@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-12 05:17:07 UTC",
+    "serialized_at": "2025-05-13 20:04:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -77,21 +78,9 @@
       }
     },
     {
-      "key": "lessonGroup-5",
-      "user_facing": true,
-      "position": 5,
-      "properties": {
-        "display_name": "Alternate Lessons"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-alt-2025"
-      }
-    },
-    {
       "key": "lessonGroup-6",
       "user_facing": true,
-      "position": 6,
+      "position": 5,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -104,7 +93,7 @@
   "lessons": [
     {
       "key": "Program Design",
-      "name": "Program Design",
+      "name": "Lesson 1: Program Design",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -122,7 +111,7 @@
     },
     {
       "key": "Attributes",
-      "name": "Attributes",
+      "name": "Lesson 2: Attributes",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -141,7 +130,7 @@
     },
     {
       "key": "System Reliability",
-      "name": "System Reliability",
+      "name": "Lesson 3: System Reliability",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -159,7 +148,7 @@
     },
     {
       "key": "Privacy and Security",
-      "name": "Privacy and Security",
+      "name": "Lesson 4: Privacy and Security",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -178,7 +167,7 @@
     },
     {
       "key": "Impacts of Programs",
-      "name": "Impacts of Programs",
+      "name": "Lesson 5: Impacts of Programs",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -197,7 +186,7 @@
     },
     {
       "key": "Intellectual Property",
-      "name": "Intellectual Property",
+      "name": "Lesson 6: Intellectual Property",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -216,7 +205,7 @@
     },
     {
       "key": "AI-Generated Code (non-AI Tutor)",
-      "name": "AI-Generated Code",
+      "name": "Lesson 7: AI-Generated Code",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -234,7 +223,7 @@
     },
     {
       "key": "No-Argument Constructors",
-      "name": "No-Argument Constructors",
+      "name": "Lesson 8: No-Argument Constructors",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -253,7 +242,7 @@
     },
     {
       "key": "Private Methods",
-      "name": "Private Methods",
+      "name": "Lesson 9: Private Methods",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -272,7 +261,7 @@
     },
     {
       "key": "Accessor Methods",
-      "name": "Accessor Methods",
+      "name": "Lesson 10: Accessor Methods",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -291,7 +280,7 @@
     },
     {
       "key": "Mutator Methods",
-      "name": "Mutator Methods",
+      "name": "Lesson 11: Mutator Methods",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -310,7 +299,7 @@
     },
     {
       "key": "Object References as Parameters",
-      "name": "Object References as Parameters",
+      "name": "Lesson 12: Object References as Parameters",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -329,7 +318,7 @@
     },
     {
       "key": "Static Variables and Methods",
-      "name": "Static Variables and Methods",
+      "name": "Lesson 13: Static Variables and Methods",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -348,7 +337,7 @@
     },
     {
       "key": "The this Keyword",
-      "name": "The this Keyword",
+      "name": "Lesson 14: The this Keyword",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -367,7 +356,7 @@
     },
     {
       "key": "Store Management Project",
-      "name": "Store Management Project",
+      "name": "Project 1a: Store Management Project",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -385,12 +374,31 @@
       }
     },
     {
-      "key": "Burger Class FRQ",
-      "name": "Burger Class FRQ",
+      "key": "Store Management Project [1-Day Version]",
+      "name": "Project 1b: Store Management Project [1-Day Version]",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
+      "properties": {
+        "assessment": true,
+        "overview": "**What business or service do I want to manage using a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.",
+        "preparation": "* Review project requirements and rubric\n* Print copies of the Store Management Project Planning Guide handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-11-store-management-project/37882) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What business or service do I want to manage using a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a store management system for a business or service. You choose the objects for your business that represent something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your store management system."
+      },
+      "seeding_key": {
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "Burger Class FRQ",
+      "name": "FRQ 1: Burger Class FRQ",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
       "properties": {
         "overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Classes and Objects FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print the Burger Class FRQ Stations resource\n* Create stations around the classroom as indicated on the Burger Class FRQ Stations resource\n* Print copies of the Burger Class FRQ Graphic Organizer (one for each student)\n* Print copies of the Burger Class FRQ handout (one for each student)\n* Print copies of the Burger Class FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-12-burger-class-frq/37883) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
@@ -405,34 +413,15 @@
     {
       "key": "End of Unit Survey",
       "name": "End of Unit Survey",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa3-alt-2025"
-      }
-    },
-    {
-      "key": "Store Management Project [1-Day Version]",
-      "name": "Store Management Project [1-Day Version]",
-      "absolute_position": 18,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 18,
-      "properties": {
-        "assessment": true,
-        "overview": "**What business or service do I want to manage using a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.",
-        "preparation": "* Review project requirements and rubric\n* Print copies of the Store Management Project Planning Guide handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-11-store-management-project/37882) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**What business or service do I want to manage using a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a store management system for a business or service. You choose the objects for your business that represent something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your store management system."
-      },
-      "seeding_key": {
-        "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa3-alt-2025"
       }
     },
@@ -1127,6 +1116,48 @@
       }
     },
     {
+      "key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef",
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85",
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "04352e56-682f-46fb-ad92-b56a2b2a57cf",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04352e56-682f-46fb-ad92-b56a2b2a57cf",
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
       "key": "b2b82705-bd4c-4b28-ad03-d7070cb53aa8",
       "position": 1,
       "properties": {
@@ -1177,48 +1208,6 @@
         "lesson_activity.key": "ff1d7168-8577-472c-b8a2-37db4c0152b1",
         "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa3-alt-2025"
-      }
-    },
-    {
-      "key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef",
-        "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-alt-2025"
-      }
-    },
-    {
-      "key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85",
-        "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-alt-2025"
-      }
-    },
-    {
-      "key": "04352e56-682f-46fb-ad92-b56a2b2a57cf",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "04352e56-682f-46fb-ad92-b56a2b2a57cf",
-        "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa3-alt-2025"
       }
     },
@@ -5454,6 +5443,133 @@
       }
     },
     {
+      "key": "e9a52cad-6495-4b9c-b9af-168fb1fb6710",
+      "position": 1,
+      "properties": {
+        "description": "Many businesses rely on software to manage their inventory and customers. Each business has different needs based on the products or services they offer and how they interact with customers.",
+        "name": "Business Management Projects",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e9a52cad-6495-4b9c-b9af-168fb1fb6710",
+        "lesson_activity.key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef"
+      }
+    },
+    {
+      "key": "e62967e4-a8f7-4997-b727-213fc550688c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of management systems in business.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a management system for a business?*\n\n**Discussion Goal:** Students talk about creating classes to represent products and services a business might offer. Students present ideas of superclasses and subclasses they could create and how users would interact with the program to choose products or update inventory.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Store Management Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e62967e4-a8f7-4997-b727-213fc550688c",
+        "lesson_activity.key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef"
+      }
+    },
+    {
+      "key": "bbe669d6-e0d1-4d49-8111-106303893295",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to brainstorm their business, create UML diagrams for their classes, and decide how they will incorporate user input on the Store Management Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning"
+      },
+      "seeding_key": {
+        "activity_section.key": "bbe669d6-e0d1-4d49-8111-106303893295",
+        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85"
+      }
+    },
+    {
+      "key": "74946286-cfc2-4891-a041-7207524dcbfc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Store Management Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Store Management Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "74946286-cfc2-4891-a041-7207524dcbfc",
+        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85"
+      }
+    },
+    {
+      "key": "09c6b287-c141-417a-a8ae-b42c8d5f7b24",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "09c6b287-c141-417a-a8ae-b42c8d5f7b24",
+        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85"
+      }
+    },
+    {
+      "key": "79efc12f-0946-4c7f-8912-4c1049613eb0",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "79efc12f-0946-4c7f-8912-4c1049613eb0",
+        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85"
+      }
+    },
+    {
+      "key": "3c4f860a-3739-4176-8c46-964637cd52bc",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Store Management Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3c4f860a-3739-4176-8c46-964637cd52bc",
+        "lesson_activity.key": "04352e56-682f-46fb-ad92-b56a2b2a57cf"
+      }
+    },
+    {
+      "key": "d9eef515-8f7a-4857-956c-116acd2b06d3",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9eef515-8f7a-4857-956c-116acd2b06d3",
+        "lesson_activity.key": "04352e56-682f-46fb-ad92-b56a2b2a57cf"
+      }
+    },
+    {
+      "key": "b39b9d9c-9a42-451f-be87-eba083a707a3",
+      "position": 3,
+      "properties": {
+        "description": "**Store Management Project:** Use the rubric in the Store Management Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "b39b9d9c-9a42-451f-be87-eba083a707a3",
+        "lesson_activity.key": "04352e56-682f-46fb-ad92-b56a2b2a57cf"
+      }
+    },
+    {
       "key": "3a6d063b-2ea0-4fcb-b3ad-3ba6adea4bb3",
       "position": 1,
       "properties": {
@@ -5593,133 +5709,6 @@
       "seeding_key": {
         "activity_section.key": "1ef5c40f-0428-43f9-99f7-8d308105f5a8",
         "lesson_activity.key": "ff1d7168-8577-472c-b8a2-37db4c0152b1"
-      }
-    },
-    {
-      "key": "e9a52cad-6495-4b9c-b9af-168fb1fb6710",
-      "position": 1,
-      "properties": {
-        "description": "Many businesses rely on software to manage their inventory and customers. Each business has different needs based on the products or services they offer and how they interact with customers.",
-        "name": "Business Management Projects",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "e9a52cad-6495-4b9c-b9af-168fb1fb6710",
-        "lesson_activity.key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef"
-      }
-    },
-    {
-      "key": "e62967e4-a8f7-4997-b727-213fc550688c",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of management systems in business.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a management system for a business?*\n\n**Discussion Goal:** Students talk about creating classes to represent products and services a business might offer. Students present ideas of superclasses and subclasses they could create and how users would interact with the program to choose products or update inventory.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Store Management Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e62967e4-a8f7-4997-b727-213fc550688c",
-        "lesson_activity.key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef"
-      }
-    },
-    {
-      "key": "bbe669d6-e0d1-4d49-8111-106303893295",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to brainstorm their business, create UML diagrams for their classes, and decide how they will incorporate user input on the Store Management Project Planning Guide.",
-        "duration": "10",
-        "name": "Brainstorming and Planning"
-      },
-      "seeding_key": {
-        "activity_section.key": "bbe669d6-e0d1-4d49-8111-106303893295",
-        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85"
-      }
-    },
-    {
-      "key": "74946286-cfc2-4891-a041-7207524dcbfc",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Store Management Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Store Management Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "74946286-cfc2-4891-a041-7207524dcbfc",
-        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85"
-      }
-    },
-    {
-      "key": "09c6b287-c141-417a-a8ae-b42c8d5f7b24",
-      "position": 3,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "09c6b287-c141-417a-a8ae-b42c8d5f7b24",
-        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85"
-      }
-    },
-    {
-      "key": "79efc12f-0946-4c7f-8912-4c1049613eb0",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "79efc12f-0946-4c7f-8912-4c1049613eb0",
-        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85"
-      }
-    },
-    {
-      "key": "3c4f860a-3739-4176-8c46-964637cd52bc",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Store Management Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3c4f860a-3739-4176-8c46-964637cd52bc",
-        "lesson_activity.key": "04352e56-682f-46fb-ad92-b56a2b2a57cf"
-      }
-    },
-    {
-      "key": "d9eef515-8f7a-4857-956c-116acd2b06d3",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "d9eef515-8f7a-4857-956c-116acd2b06d3",
-        "lesson_activity.key": "04352e56-682f-46fb-ad92-b56a2b2a57cf"
-      }
-    },
-    {
-      "key": "b39b9d9c-9a42-451f-be87-eba083a707a3",
-      "position": 3,
-      "properties": {
-        "description": "**Store Management Project:** Use the rubric in the Store Management Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "b39b9d9c-9a42-451f-be87-eba083a707a3",
-        "lesson_activity.key": "04352e56-682f-46fb-ad92-b56a2b2a57cf"
       }
     },
     {
@@ -7747,6 +7736,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa3-project-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -7769,6 +7761,34 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "progression": "Store Management Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "74946286-cfc2-4891-a041-7207524dcbfc"
+      },
+      "level_keys": [
+        "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csa3-alt-survey-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -7783,31 +7803,6 @@
       },
       "level_keys": [
         "student-eou-survey_csa3-alt-survey-2025"
-      ]
-    },
-    {
-      "chapter": 82,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "progression": "Store Management Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-alt-2025",
-        "activity_section.key": "74946286-cfc2-4891-a041-7207524dcbfc"
-      },
-      "level_keys": [
-        "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt"
       ]
     },
     {
@@ -8872,6 +8867,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "74946286-cfc2-4891-a041-7207524dcbfc"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "student-eou-survey_csa3-alt-survey-2025",
         "script_level.level_keys": [
           "student-eou-survey_csa3-alt-survey-2025"
@@ -8880,18 +8887,6 @@
         "lesson_group.key": "lessonGroup-7",
         "script.name": "csa3-alt-2025",
         "activity_section.key": "bd1fcb02-ffe8-4d86-ba29-14efedf55336"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt",
-        "script_level.level_keys": [
-          "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-alt-2025",
-        "activity_section.key": "74946286-cfc2-4891-a041-7207524dcbfc"
       }
     },
     {

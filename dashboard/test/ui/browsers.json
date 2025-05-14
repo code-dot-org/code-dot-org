@@ -4,7 +4,7 @@
   {
     "name": "Chrome",
     "browserName": "chrome",
-    "browserVersion": "105",
+    "browserVersion": "109",
     "platformName": "Windows 10",
     "sauce:options": {
       "screenResolution": "1280x1024",
@@ -12,21 +12,27 @@
     }
   },
   {
+    "name": "Edge",
+    "browserName": "edge",
+    "browserVersion": "128",
+    "platformName": "Windows 11"
+  },
+  {
     "name": "Safari",
     "browserName": "Safari",
-    "browserVersion": "14",
+    "browserVersion": "16",
     "platformName": "macOS 11.00"
   },
   {
     "name": "Firefox",
     "browserName": "firefox",
-    "browserVersion": "112",
+    "browserVersion": "115",
     "platformName": "Windows 11"
   },
   {
     "name": "iPhone",
     "platformName": "iOS",
-    "appium:platformVersion": "16.2",
+    "appium:platformVersion": "17",
     "browserName": "safari",
     "appium:deviceName": "iPhone Simulator",
     "appium:automationName": "XCUITest",
@@ -38,7 +44,7 @@
   {
     "name": "iPad",
     "platformName": "iOS",
-    "appium:platformVersion": "14.5",
+    "appium:platformVersion": "16.2",
     "browserName": "safari",
     "appium:deviceName": "iPad Simulator",
     "appium:mobile": true,
@@ -46,5 +52,16 @@
     "sauce:options": {
       "deviceOrientation": "LANDSCAPE"
     }
-  }
+  },
+  {
+    "name": "Android",
+    "platformName": "Android",
+    "browserName": "Chrome",
+    "appium:deviceName": "Android GoogleAPI Emulator",
+    "appium:platformVersion": "13.0",
+    "appium:automationName": "UiAutomator2",
+    "sauce:options": {
+       "deviceOrientation": "LANDSCAPE"
+     }
+   }
 ]

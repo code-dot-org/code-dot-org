@@ -1,0 +1,25 @@
+{
+  "name": "foundations-of-ai-programming-2025",
+  "script_names": [
+    "aif2-2025"
+  ],
+  "original_script_names": [
+
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "foundations-of-ai-programming",
+    "has_numbered_units": true,
+    "has_verified_resources": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}
