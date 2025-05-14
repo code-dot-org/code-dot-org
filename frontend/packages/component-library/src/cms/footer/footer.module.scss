@@ -98,6 +98,10 @@
 
         .footerImageLinkListImg {
           display: contents;
+
+          img {
+            object-fit: contain;
+          }
         }
       }
     }
