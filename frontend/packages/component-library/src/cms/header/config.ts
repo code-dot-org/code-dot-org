@@ -124,18 +124,18 @@ export function getDefaultHeaderProps({
         description: 'Create music with code',
       },
       {
-        key: 'danceParty',
-        label: 'Dance Party',
-        href: `${studioUrl}/projects/dance/new`,
-        image: dancePartyImage,
-        description: 'Make a dance party with AI',
-      },
-      {
         key: 'pythonLab',
         label: 'Python Lab',
         href: `${studioUrl}/projects/pythonlab/new`,
         image: pythonLabImage,
         description: 'Code using Python',
+      },
+      {
+        key: 'danceParty',
+        label: 'Dance Party',
+        href: `${studioUrl}/projects/dance/new`,
+        image: dancePartyImage,
+        description: 'Make a dance party with AI',
       },
       {
         key: 'viewAllProjects',

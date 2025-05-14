@@ -24,11 +24,11 @@ export class AllTheThingsPage extends MarketingPage {
   }
 
   async enableDraftMode(token: string = 'ci-draft-mode') {
-    return await super.enableDraftMode(token, 'all-the-things');
+    return await super.enableDraftMode(token, 'engineering/all-the-things');
   }
 
   async goto() {
-    return await super.goto('/all-the-things');
+    return await super.goto('/engineering/all-the-things');
   }
 
   getSectionLocator(heading: Section): Locator {

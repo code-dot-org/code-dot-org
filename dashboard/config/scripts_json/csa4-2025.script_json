@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-10 01:56:46 UTC",
+    "serialized_at": "2025-05-14 00:36:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -57,8 +58,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Alternate Lessons",
-        "description": "This section contains the one-day version of the Abstract Data Art Project."
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-4",
@@ -81,7 +81,7 @@
   "lessons": [
     {
       "key": "The Theater",
-      "name": "The Theater",
+      "name": "Lesson 1: The Theater",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -99,7 +99,7 @@
     },
     {
       "key": "Static Variables and Methods",
-      "name": "Static Variables and Methods",
+      "name": "Lesson 2: Static Variables and Methods",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -118,7 +118,7 @@
     },
     {
       "key": "The Math Class",
-      "name": "The Math Class",
+      "name": "Lesson 3: The Math Class",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -137,7 +137,7 @@
     },
     {
       "key": "Casting and Rounding",
-      "name": "Casting and Rounding",
+      "name": "Lesson 4: Casting and Rounding",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -156,7 +156,7 @@
     },
     {
       "key": "Random",
-      "name": "Random",
+      "name": "Lesson 5: Random",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -175,7 +175,7 @@
     },
     {
       "key": "Object Aliases and Equality",
-      "name": "Object Aliases and Equality",
+      "name": "Lesson 6: Object Aliases and Equality",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -194,7 +194,7 @@
     },
     {
       "key": "Nested If Statements",
-      "name": "Nested If Statements",
+      "name": "Lesson 7: Nested If Statements",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -213,7 +213,7 @@
     },
     {
       "key": "Logical Operators",
-      "name": "Logical Operators",
+      "name": "Lesson 8: Logical Operators",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -232,7 +232,7 @@
     },
     {
       "key": "De Morgan's Laws",
-      "name": "De Morgan's Laws",
+      "name": "Lesson 9: De Morgan's Laws",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -251,7 +251,7 @@
     },
     {
       "key": "Multi-Selection Statements",
-      "name": "Multi-Selection Statements",
+      "name": "Lesson 10: Multi-Selection Statements",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -270,7 +270,7 @@
     },
     {
       "key": "Abstract Data Art Project",
-      "name": "Abstract Data Art Project",
+      "name": "Lesson 11a: Abstract Data Art Project",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -288,12 +288,31 @@
       }
     },
     {
-      "key": "BingoCaller FRQ",
-      "name": "BingoCaller FRQ",
+      "key": "Abstract Data Art Project [1-Day Version]",
+      "name": "Lesson 11b: Abstract Data Art Project [1-Day Version]",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
+      "properties": {
+        "assessment": true,
+        "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file and create a visual representation for a topic they are interested in or meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
+        "preparation": "* Print copies of the Abstract Data Art Project Planning Guide (one for each student)",
+        "student_overview": "**What story or message do I want to convey about my data?**\n\nFor this project, you use the skills you have developed throughout this unit to analyze data from a text file and create a visual representation for a topic you are interested in or that is meaningful to you. You use the data you chose in a previous lesson to identify the patterns and message you want to convey visually using The Theater. After brainstorming and planning, you develop your program."
+      },
+      "seeding_key": {
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025"
+      }
+    },
+    {
+      "key": "BingoCaller FRQ",
+      "name": "Lesson 12: BingoCaller FRQ",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
       "properties": {
         "overview": "**How will I use what I know about 1D arrays and conditionals to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the BingoCaller FRQ handout (one for each student)\n* Print copies of the BingoCaller FRQ Scoring Guidelines (one for each student)\n* Gather sticky notes or scrap pieces of paper (one for each student)",
@@ -307,11 +326,11 @@
     },
     {
       "key": "Unit 4 Assessment",
-      "name": "Unit 4 Assessment",
-      "absolute_position": 13,
+      "name": "Lesson 13: Unit 4 Assessment",
+      "absolute_position": 14,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
@@ -325,20 +344,16 @@
       }
     },
     {
-      "key": "Abstract Data Art Project [1-Day Version]",
-      "name": "Abstract Data Art Project [1-Day Version]",
-      "absolute_position": 14,
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 15,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 14,
+      "has_lesson_plan": false,
+      "relative_position": 15,
       "properties": {
-        "assessment": true,
-        "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file and create a visual representation for a topic they are interested in or meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Print copies of the Abstract Data Art Project Planning Guide (one for each student)",
-        "student_overview": "**What story or message do I want to convey about my data?**\n\nFor this project, you use the skills you have developed throughout this unit to analyze data from a text file and create a visual representation for a topic you are interested in or that is meaningful to you. You use the data you chose in a previous lesson to identify the patterns and message you want to convey visually using The Theater. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-2025"
       }
@@ -346,10 +361,10 @@
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
       },
       "seeding_key": {
@@ -361,10 +376,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -376,21 +391,6 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 17,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 17,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa4-2025"
-      }
-    },
-    {
-      "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
@@ -398,7 +398,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Student End of Unit Survey",
+        "lesson.key": "Sandbox: The Theater",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa4-2025"
       }
@@ -881,6 +881,61 @@
       }
     },
     {
+      "key": "0bae55d6-8dd4-4bd4-9980-682a1da31076",
+      "position": 5,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0bae55d6-8dd4-4bd4-9980-682a1da31076",
+        "lesson.key": "Abstract Data Art Project",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025"
+      }
+    },
+    {
+      "key": "9e5c34d2-5d23-4593-a012-b4bc45aa74e7",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9e5c34d2-5d23-4593-a012-b4bc45aa74e7",
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025"
+      }
+    },
+    {
+      "key": "bac66b1b-007f-4344-a1eb-121577dbeff1",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bac66b1b-007f-4344-a1eb-121577dbeff1",
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025"
+      }
+    },
+    {
+      "key": "231a20b7-24c1-4832-9276-eaad171215c8",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "231a20b7-24c1-4832-9276-eaad171215c8",
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025"
+      }
+    },
+    {
       "key": "4b421526-b41e-4ab4-95ba-c82977e04527",
       "position": 1,
       "properties": {
@@ -950,43 +1005,13 @@
       }
     },
     {
-      "key": "9e5c34d2-5d23-4593-a012-b4bc45aa74e7",
+      "key": "04a2bf0d-9085-4e03-af36-99b37e2c33bf",
       "position": 1,
       "properties": {
-        "duration": 10,
-        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "9e5c34d2-5d23-4593-a012-b4bc45aa74e7",
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa4-2025"
-      }
-    },
-    {
-      "key": "bac66b1b-007f-4344-a1eb-121577dbeff1",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bac66b1b-007f-4344-a1eb-121577dbeff1",
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa4-2025"
-      }
-    },
-    {
-      "key": "231a20b7-24c1-4832-9276-eaad171215c8",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "231a20b7-24c1-4832-9276-eaad171215c8",
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_activity.key": "04a2bf0d-9085-4e03-af36-99b37e2c33bf",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-2025"
       }
@@ -1023,18 +1048,6 @@
       "seeding_key": {
         "lesson_activity.key": "fb9e07e8-7f97-4086-9d66-7d5c3e527188",
         "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa4-2025"
-      }
-    },
-    {
-      "key": "579baf67-6c5e-4d14-85d4-ab4ef9fc31e2",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "579baf67-6c5e-4d14-85d4-ab4ef9fc31e2",
-        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa4-2025"
       }
@@ -4324,27 +4337,8 @@
       }
     },
     {
-      "key": "a98ae55a-e902-4358-85c4-2b18a4485b3f",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "End of Unit Survey",
-        "progression_name": "End of Unit Survey",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, please complete [**this end of unit survey for teachers**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=4) as well. Your feedback is valued and appreciated!"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a98ae55a-e902-4358-85c4-2b18a4485b3f",
-        "lesson_activity.key": "c59aeb68-fb38-4d8e-a104-ce50da3530a5"
-      }
-    },
-    {
       "key": "d8af53e7-0bc3-4d49-b299-32a2811687fb",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "---"
       },
@@ -4355,7 +4349,7 @@
     },
     {
       "key": "242989da-6b2e-4b18-bacc-dd30538a736b",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "**Abstract Data Art Project:** Use the rubric in the Abstract Data Art Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -4363,6 +4357,145 @@
       "seeding_key": {
         "activity_section.key": "242989da-6b2e-4b18-bacc-dd30538a736b",
         "lesson_activity.key": "c59aeb68-fb38-4d8e-a104-ce50da3530a5"
+      }
+    },
+    {
+      "key": "e9d3b4c0-2fe5-45e7-b1e1-8a727e4359da",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9d3b4c0-2fe5-45e7-b1e1-8a727e4359da",
+        "lesson_activity.key": "0bae55d6-8dd4-4bd4-9980-682a1da31076"
+      }
+    },
+    {
+      "key": "73f9fda3-3110-40c2-b90a-10d4e2b3db98",
+      "position": 1,
+      "properties": {
+        "description": "We have seen some examples of data visualizations throughout the unit. Some visuals are a simple image, while others are more abstract or may include animations or interactivity.",
+        "name": "Data Visualizations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "73f9fda3-3110-40c2-b90a-10d4e2b3db98",
+        "lesson_activity.key": "9e5c34d2-5d23-4593-a012-b4bc45aa74e7"
+      }
+    },
+    {
+      "key": "d22080d9-6b45-4ab5-a0fe-6e4036d7f892",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Abstract Data Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d22080d9-6b45-4ab5-a0fe-6e4036d7f892",
+        "lesson_activity.key": "9e5c34d2-5d23-4593-a012-b4bc45aa74e7"
+      }
+    },
+    {
+      "key": "aa332625-52a0-4498-8d5b-451685f3fce9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their visuals, create UML diagrams for their classes, and identify the algorithms they need to develop on the Abstract Data Art Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa332625-52a0-4498-8d5b-451685f3fce9",
+        "lesson_activity.key": "bac66b1b-007f-4344-a1eb-121577dbeff1"
+      }
+    },
+    {
+      "key": "e608699b-d895-4d97-ad7a-a4974f7b283a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Abstract Data Art Good Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Abstract Data Art Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "e608699b-d895-4d97-ad7a-a4974f7b283a",
+        "lesson_activity.key": "bac66b1b-007f-4344-a1eb-121577dbeff1"
+      }
+    },
+    {
+      "key": "30a7038a-21b4-4e36-9c9c-993e27adbdb3",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "30a7038a-21b4-4e36-9c9c-993e27adbdb3",
+        "lesson_activity.key": "bac66b1b-007f-4344-a1eb-121577dbeff1"
+      }
+    },
+    {
+      "key": "1474b48a-ed1a-4ae1-a2b6-93956ded5b51",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1474b48a-ed1a-4ae1-a2b6-93956ded5b51",
+        "lesson_activity.key": "bac66b1b-007f-4344-a1eb-121577dbeff1"
+      }
+    },
+    {
+      "key": "410ab7e5-ff2b-4a5a-b5b1-0f9699c442a6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Data for Social Good Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "410ab7e5-ff2b-4a5a-b5b1-0f9699c442a6",
+        "lesson_activity.key": "231a20b7-24c1-4832-9276-eaad171215c8"
+      }
+    },
+    {
+      "key": "24a63dc1-f8c3-48cb-9ec0-c753fbbe85b1",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "24a63dc1-f8c3-48cb-9ec0-c753fbbe85b1",
+        "lesson_activity.key": "231a20b7-24c1-4832-9276-eaad171215c8"
+      }
+    },
+    {
+      "key": "7191260d-5f63-4e2e-afcb-640fa29d1dea",
+      "position": 3,
+      "properties": {
+        "description": "**Abstract Data Art Project:** Use the rubric in the Abstract Data Art Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "7191260d-5f63-4e2e-afcb-640fa29d1dea",
+        "lesson_activity.key": "231a20b7-24c1-4832-9276-eaad171215c8"
       }
     },
     {
@@ -4571,130 +4704,25 @@
       }
     },
     {
-      "key": "73f9fda3-3110-40c2-b90a-10d4e2b3db98",
+      "key": "b072cdee-0263-4b68-abf4-a4a90d54a127",
       "position": 1,
       "properties": {
-        "description": "We have seen some examples of data visualizations throughout the unit. Some visuals are a simple image, while others are more abstract or may include animations or interactivity.",
-        "name": "Data Visualizations",
-        "remarks": true
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "73f9fda3-3110-40c2-b90a-10d4e2b3db98",
-        "lesson_activity.key": "9e5c34d2-5d23-4593-a012-b4bc45aa74e7"
+        "activity_section.key": "b072cdee-0263-4b68-abf4-a4a90d54a127",
+        "lesson_activity.key": "04a2bf0d-9085-4e03-af36-99b37e2c33bf"
       }
     },
     {
-      "key": "d22080d9-6b45-4ab5-a0fe-6e4036d7f892",
+      "key": "cf4b6dcd-60d0-4d5c-99d5-617eaa850626",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Abstract Data Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
+        "progression_name": "End of Unit Survey Page"
       },
       "seeding_key": {
-        "activity_section.key": "d22080d9-6b45-4ab5-a0fe-6e4036d7f892",
-        "lesson_activity.key": "9e5c34d2-5d23-4593-a012-b4bc45aa74e7"
-      }
-    },
-    {
-      "key": "aa332625-52a0-4498-8d5b-451685f3fce9",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their visuals, create UML diagrams for their classes, and identify the algorithms they need to develop on the Abstract Data Art Project Planning Guide.",
-        "duration": "10",
-        "name": "Brainstorming and Planning"
-      },
-      "seeding_key": {
-        "activity_section.key": "aa332625-52a0-4498-8d5b-451685f3fce9",
-        "lesson_activity.key": "bac66b1b-007f-4344-a1eb-121577dbeff1"
-      }
-    },
-    {
-      "key": "e608699b-d895-4d97-ad7a-a4974f7b283a",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Abstract Data Art Good Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Abstract Data Art Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "e608699b-d895-4d97-ad7a-a4974f7b283a",
-        "lesson_activity.key": "bac66b1b-007f-4344-a1eb-121577dbeff1"
-      }
-    },
-    {
-      "key": "30a7038a-21b4-4e36-9c9c-993e27adbdb3",
-      "position": 3,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "30a7038a-21b4-4e36-9c9c-993e27adbdb3",
-        "lesson_activity.key": "bac66b1b-007f-4344-a1eb-121577dbeff1"
-      }
-    },
-    {
-      "key": "1474b48a-ed1a-4ae1-a2b6-93956ded5b51",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "1474b48a-ed1a-4ae1-a2b6-93956ded5b51",
-        "lesson_activity.key": "bac66b1b-007f-4344-a1eb-121577dbeff1"
-      }
-    },
-    {
-      "key": "410ab7e5-ff2b-4a5a-b5b1-0f9699c442a6",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Data for Social Good Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "410ab7e5-ff2b-4a5a-b5b1-0f9699c442a6",
-        "lesson_activity.key": "231a20b7-24c1-4832-9276-eaad171215c8"
-      }
-    },
-    {
-      "key": "24a63dc1-f8c3-48cb-9ec0-c753fbbe85b1",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "24a63dc1-f8c3-48cb-9ec0-c753fbbe85b1",
-        "lesson_activity.key": "231a20b7-24c1-4832-9276-eaad171215c8"
-      }
-    },
-    {
-      "key": "7191260d-5f63-4e2e-afcb-640fa29d1dea",
-      "position": 3,
-      "properties": {
-        "description": "**Abstract Data Art Project:** Use the rubric in the Abstract Data Art Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "7191260d-5f63-4e2e-afcb-640fa29d1dea",
-        "lesson_activity.key": "231a20b7-24c1-4832-9276-eaad171215c8"
+        "activity_section.key": "cf4b6dcd-60d0-4d5c-99d5-617eaa850626",
+        "lesson_activity.key": "04a2bf0d-9085-4e03-af36-99b37e2c33bf"
       }
     },
     {
@@ -4737,17 +4765,6 @@
       "seeding_key": {
         "activity_section.key": "a7c51331-a554-409d-b11b-b67aabbb507f",
         "lesson_activity.key": "fb9e07e8-7f97-4086-9d66-7d5c3e527188"
-      }
-    },
-    {
-      "key": "33376ffb-a668-4a20-b455-1292e7631eec",
-      "position": 1,
-      "properties": {
-        "progression_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "33376ffb-a668-4a20-b455-1292e7631eec",
-        "lesson_activity.key": "579baf67-6c5e-4d14-85d4-ab4ef9fc31e2"
       }
     }
   ],
@@ -6406,29 +6423,51 @@
       "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa4_2025"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa4_2025"
+          "student-eou-survey_linked_page-csa4_2025"
         ],
         "lesson.key": "Abstract Data Art Project",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa4-2025",
-        "activity_section.key": "a98ae55a-e902-4358-85c4-2b18a4485b3f"
+        "activity_section.key": "e9d3b4c0-2fe5-45e7-b1e1-8a727e4359da"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa4_2025"
+        "student-eou-survey_linked_page-csa4_2025"
       ]
     },
     {
       "chapter": 68,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
+        ],
+        "progression": "Abstract Data Art Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025",
+        "activity_section.key": "e608699b-d895-4d97-ad7a-a4974f7b283a"
+      },
+      "level_keys": [
+        "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 69,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6450,31 +6489,6 @@
       },
       "level_keys": [
         "CSA Unit 4 Assessment_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 69,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
-        ],
-        "progression": "Abstract Data Art Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa4-2025",
-        "activity_section.key": "e608699b-d895-4d97-ad7a-a4974f7b283a"
-      },
-      "level_keys": [
-        "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
       ]
     },
     {
@@ -6581,23 +6595,20 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
+          "student-eou-survey_2025-csa4"
         ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-2025",
-        "activity_section.key": "33376ffb-a668-4a20-b455-1292e7631eec"
+        "activity_section.key": "b072cdee-0263-4b68-abf4-a4a90d54a127"
       },
       "level_keys": [
-        "student-eou-survey_-csa_2025"
+        "student-eou-survey_2025-csa4"
       ]
     }
   ],
@@ -7396,14 +7407,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa4_2025",
+        "level.key": "student-eou-survey_linked_page-csa4_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa4_2025"
+          "student-eou-survey_linked_page-csa4_2025"
         ],
         "lesson.key": "Abstract Data Art Project",
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa4-2025",
-        "activity_section.key": "a98ae55a-e902-4358-85c4-2b18a4485b3f"
+        "activity_section.key": "e9d3b4c0-2fe5-45e7-b1e1-8a727e4359da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "csa4-2025",
+        "activity_section.key": "e608699b-d895-4d97-ad7a-a4974f7b283a"
       }
     },
     {
@@ -7416,18 +7439,6 @@
         "lesson_group.key": "lessonGroup-8",
         "script.name": "csa4-2025",
         "activity_section.key": "acf04902-5d1b-4199-88a5-febe90e22a97"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025"
-        ],
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa4-2025",
-        "activity_section.key": "e608699b-d895-4d97-ad7a-a4974f7b283a"
       }
     },
     {
@@ -7480,14 +7491,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "student-eou-survey_-csa_2025",
+        "level.key": "student-eou-survey_2025-csa4",
         "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
+          "student-eou-survey_2025-csa4"
         ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa4-2025",
-        "activity_section.key": "33376ffb-a668-4a20-b455-1292e7631eec"
+        "activity_section.key": "b072cdee-0263-4b68-abf4-a4a90d54a127"
       }
     }
   ],

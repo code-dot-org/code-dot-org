@@ -12,7 +12,7 @@ export async function fork(createOrUpdateEntry: CreateOrUpdateEntryType) {
   // Change the slug and title for clarity
   const username = os.userInfo().username;
   const title = `[${username}] All The Things - ${new Date().toISOString()}`;
-  const slug = `all-the-things-${username}-${Date.now()}`;
+  const slug = `engineering/all-the-things-${username}-${Date.now()}`;
 
   snapshotData.fields.slug['en-US'] = slug;
   snapshotData.fields.title['en-US'] = title;

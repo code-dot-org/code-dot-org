@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-09 17:26:15 UTC",
+    "serialized_at": "2025-05-13 21:10:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3956,6 +3956,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-choices-comparison-2"
+        ],
         "progression": "Prompt Exploration"
       },
       "bonus": false,
@@ -3978,6 +3981,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-choices-cfu"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6353,16 +6359,6 @@
       "seeding_key": {
         "lesson.key": "Outputs & Probabilities",
         "objective.key": "09b83e64-dd75-422a-9db5-cd7632159b66"
-      }
-    },
-    {
-      "key": "1155018b-cb2a-4684-b240-9d03fbd344fc",
-      "properties": {
-        "description": "Interact with a chatbot to evaluate how it responds to different types of prompts."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-10",
-        "objective.key": "1155018b-cb2a-4684-b240-9d03fbd344fc"
       }
     },
     {

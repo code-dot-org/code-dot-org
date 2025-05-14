@@ -7,6 +7,7 @@
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -19,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-10 01:22:53 UTC",
+    "serialized_at": "2025-05-13 16:59:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +35,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 2: The Internet"
+        "display_name": "Content"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit2_2020",
@@ -57,7 +58,7 @@
   "lessons": [
     {
       "key": "Welcome to the Internet",
-      "name": "Welcome to the Internet",
+      "name": "Lesson 1: Welcome to the Internet",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -76,7 +77,7 @@
     },
     {
       "key": "Building a Network",
-      "name": "Building a Network",
+      "name": "Lesson 2: Building a Network",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -96,7 +97,7 @@
     },
     {
       "key": "The Need for Addressing",
-      "name": "The Need for Addressing",
+      "name": "Lesson 3: The Need for Addressing",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -115,7 +116,7 @@
     },
     {
       "key": "Routers and Redundancy",
-      "name": "Routers and Redundancy",
+      "name": "Lesson 4: Routers and Redundancy",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -134,7 +135,7 @@
     },
     {
       "key": "Packets",
-      "name": "Packets",
+      "name": "Lesson 5: Packets",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -153,7 +154,7 @@
     },
     {
       "key": "HTTP and DNS",
-      "name": "HTTP and DNS",
+      "name": "Lesson 6: HTTP and DNS",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -172,7 +173,7 @@
     },
     {
       "key": "Project - Internet Dilemmas",
-      "name": "Project - Internet Dilemmas",
+      "name": "Lesson 7: Project - Internet Dilemmas",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -192,7 +193,7 @@
     },
     {
       "key": "Assessment Day",
-      "name": "Assessment Day",
+      "name": "Lesson 8: Assessment Day",
       "absolute_position": 8,
       "lockable": true,
       "has_lesson_plan": true,
@@ -2302,7 +2303,7 @@
       "key": "f8e9bba0-0d8c-44aa-8c5a-ee81cb4fdaa3",
       "position": 10,
       "properties": {
-        "progression_name": "End-of-Unit Survey"
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "f8e9bba0-0d8c-44aa-8c5a-ee81cb4fdaa3",
@@ -2827,17 +2828,14 @@
       "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csp2_2025"
-        ],
-        "progression": "End-of-Unit Survey"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp2_2025"
+          "student-eou-survey_linked_page-csp2_2025"
         ],
         "lesson.key": "Project - Internet Dilemmas",
         "lesson_group.key": "csp_unit2_2020",
@@ -2845,7 +2843,7 @@
         "activity_section.key": "f8e9bba0-0d8c-44aa-8c5a-ee81cb4fdaa3"
       },
       "level_keys": [
-        "Student End of Unit Survey_csp2_2025"
+        "student-eou-survey_linked_page-csp2_2025"
       ]
     },
     {
@@ -2879,6 +2877,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_csp2survey-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -3115,9 +3116,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csp2_2025",
+        "level.key": "student-eou-survey_linked_page-csp2_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp2_2025"
+          "student-eou-survey_linked_page-csp2_2025"
         ],
         "lesson.key": "Project - Internet Dilemmas",
         "lesson_group.key": "csp_unit2_2020",
