@@ -1,556 +1,556 @@
-lesson_group_55:
-  id: 55
+lesson_group_6765:
+  id: 6765
   key: ''
-  script_id: 41
+  script_id: 2161
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:22.000000000 Z
+    utc: 2024-04-22 22:49:42.000000000 Z
     zone: &1 !ruby/object:ActiveSupport::TimeZone
       name: Etc/UTC
-    time: 2025-05-14 19:08:22.000000000 Z
+    time: 2024-04-22 22:49:42.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:22.000000000 Z
+    utc: 2024-04-22 22:49:42.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:22.000000000 Z
+    time: 2024-04-22 22:49:42.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_1713:
-  id: 1713
+lesson_group_7612:
+  id: 7612
   key: ''
-  script_id: 715
+  script_id: 2520
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:34.000000000 Z
+    utc: 2024-04-22 22:55:41.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:34.000000000 Z
+    time: 2024-04-22 22:55:41.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:34.000000000 Z
+    utc: 2024-04-22 22:55:41.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:34.000000000 Z
+    time: 2024-04-22 22:55:41.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_2061:
-  id: 2061
+lesson_group_7684:
+  id: 7684
   key: ''
-  script_id: 894
+  script_id: 2561
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:12:47.000000000 Z
+    utc: 2024-04-22 22:57:10.000000000 Z
     zone: *1
-    time: 2025-05-14 19:12:47.000000000 Z
+    time: 2024-04-22 22:57:10.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:12:47.000000000 Z
+    utc: 2024-04-22 22:57:10.000000000 Z
     zone: *1
-    time: 2025-05-14 19:12:47.000000000 Z
+    time: 2024-04-22 22:57:10.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_2034:
-  id: 2034
+lesson_group_7679:
+  id: 7679
   key: ''
-  script_id: 878
+  script_id: 2557
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:12:37.000000000 Z
+    utc: 2024-04-22 22:57:02.000000000 Z
     zone: *1
-    time: 2025-05-14 19:12:37.000000000 Z
+    time: 2024-04-22 22:57:02.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:12:37.000000000 Z
+    utc: 2024-04-22 22:57:02.000000000 Z
     zone: *1
-    time: 2025-05-14 19:12:37.000000000 Z
+    time: 2024-04-22 22:57:02.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_2569:
-  id: 2569
+lesson_group_7795:
+  id: 7795
   key: ''
-  script_id: 1301
+  script_id: 2657
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:13:38.000000000 Z
+    utc: 2024-04-22 22:58:28.000000000 Z
     zone: *1
-    time: 2025-05-14 19:13:38.000000000 Z
+    time: 2024-04-22 22:58:28.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:13:38.000000000 Z
+    utc: 2024-04-22 22:58:28.000000000 Z
     zone: *1
-    time: 2025-05-14 19:13:38.000000000 Z
+    time: 2024-04-22 22:58:28.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_1974:
-  id: 1974
+lesson_group_7661:
+  id: 7661
   key: ''
-  script_id: 829
+  script_id: 2538
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:12:32.000000000 Z
+    utc: 2024-04-22 22:56:57.000000000 Z
     zone: *1
-    time: 2025-05-14 19:12:32.000000000 Z
+    time: 2024-04-22 22:56:57.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:12:32.000000000 Z
+    utc: 2024-04-22 22:56:57.000000000 Z
     zone: *1
-    time: 2025-05-14 19:12:32.000000000 Z
+    time: 2024-04-22 22:56:57.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_2269:
-  id: 2269
+lesson_group_7733:
+  id: 7733
   key: ''
-  script_id: 1026
+  script_id: 2593
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:13:10.000000000 Z
+    utc: 2024-04-22 22:57:51.000000000 Z
     zone: *1
-    time: 2025-05-14 19:13:10.000000000 Z
+    time: 2024-04-22 22:57:51.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:13:10.000000000 Z
+    utc: 2024-04-22 22:57:51.000000000 Z
     zone: *1
-    time: 2025-05-14 19:13:10.000000000 Z
+    time: 2024-04-22 22:57:51.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_155:
-  id: 155
+lesson_group_6819:
+  id: 6819
   key: ''
-  script_id: 103
+  script_id: 2206
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:35.000000000 Z
+    utc: 2024-04-22 22:50:02.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:35.000000000 Z
+    time: 2024-04-22 22:50:02.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:35.000000000 Z
+    utc: 2024-04-22 22:50:02.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:35.000000000 Z
+    time: 2024-04-22 22:50:02.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_110:
-  id: 110
+lesson_group_6784:
+  id: 6784
   key: ''
-  script_id: 69
+  script_id: 2177
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:29.000000000 Z
+    utc: 2024-04-22 22:49:51.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:29.000000000 Z
+    time: 2024-04-22 22:49:51.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:29.000000000 Z
+    utc: 2024-04-22 22:49:51.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:29.000000000 Z
+    time: 2024-04-22 22:49:51.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_1819:
-  id: 1819
+lesson_group_7655:
+  id: 7655
   key: ''
-  script_id: 754
+  script_id: 2532
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:52.000000000 Z
+    utc: 2024-04-22 22:56:16.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:52.000000000 Z
+    time: 2024-04-22 22:56:16.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:52.000000000 Z
+    utc: 2024-04-22 22:56:16.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:52.000000000 Z
+    time: 2024-04-22 22:56:16.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_1:
-  id: 1
+lesson_group_6721:
+  id: 6721
   key: ''
   script_id: 1
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:16.000000000 Z
+    utc: 2024-04-22 22:49:31.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:16.000000000 Z
+    time: 2024-04-22 22:49:31.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:16.000000000 Z
+    utc: 2024-04-22 22:49:31.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:16.000000000 Z
+    time: 2024-04-22 22:49:31.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_191:
-  id: 191
+lesson_group_6844:
+  id: 6844
   key: ''
-  script_id: 131
+  script_id: 2222
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:39.000000000 Z
+    utc: 2024-04-22 22:50:10.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:39.000000000 Z
+    time: 2024-04-22 22:50:10.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:39.000000000 Z
+    utc: 2024-04-22 22:50:10.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:39.000000000 Z
+    time: 2024-04-22 22:50:10.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_192:
-  id: 192
+lesson_group_6846:
+  id: 6846
   key: ''
-  script_id: 132
+  script_id: 2223
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:40.000000000 Z
+    utc: 2024-04-22 22:50:11.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:40.000000000 Z
+    time: 2024-04-22 22:50:11.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:40.000000000 Z
+    utc: 2024-04-22 22:50:11.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:40.000000000 Z
+    time: 2024-04-22 22:50:11.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_193:
-  id: 193
+lesson_group_6848:
+  id: 6848
   key: ''
-  script_id: 133
+  script_id: 2224
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:40.000000000 Z
+    utc: 2024-04-22 22:50:12.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:40.000000000 Z
+    time: 2024-04-22 22:50:12.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:40.000000000 Z
+    utc: 2024-04-22 22:50:12.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:40.000000000 Z
+    time: 2024-04-22 22:50:12.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_194:
-  id: 194
+lesson_group_6850:
+  id: 6850
   key: ''
-  script_id: 134
+  script_id: 2225
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:41.000000000 Z
+    utc: 2024-04-22 22:50:13.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:41.000000000 Z
+    time: 2024-04-22 22:50:13.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:41.000000000 Z
+    utc: 2024-04-22 22:50:13.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:41.000000000 Z
+    time: 2024-04-22 22:50:13.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_1578:
-  id: 1578
+lesson_group_7538:
+  id: 7538
   key: ''
-  script_id: 624
+  script_id: 2465
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:20.000000000 Z
+    utc: 2024-04-22 22:55:18.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:20.000000000 Z
+    time: 2024-04-22 22:55:18.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:20.000000000 Z
+    utc: 2024-04-22 22:55:18.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:20.000000000 Z
+    time: 2024-04-22 22:55:18.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_1579:
-  id: 1579
+lesson_group_7539:
+  id: 7539
   key: ''
-  script_id: 625
+  script_id: 2466
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:21.000000000 Z
+    utc: 2024-04-22 22:55:18.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:21.000000000 Z
+    time: 2024-04-22 22:55:18.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:21.000000000 Z
+    utc: 2024-04-22 22:55:18.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:21.000000000 Z
+    time: 2024-04-22 22:55:18.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_1580:
-  id: 1580
+lesson_group_7540:
+  id: 7540
   key: ''
-  script_id: 626
+  script_id: 2467
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:21.000000000 Z
+    utc: 2024-04-22 22:55:19.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:21.000000000 Z
+    time: 2024-04-22 22:55:19.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:21.000000000 Z
+    utc: 2024-04-22 22:55:19.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:21.000000000 Z
+    time: 2024-04-22 22:55:19.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_1582:
-  id: 1582
+lesson_group_7542:
+  id: 7542
   key: ''
-  script_id: 628
+  script_id: 2469
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:22.000000000 Z
+    utc: 2024-04-22 22:55:22.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:22.000000000 Z
+    time: 2024-04-22 22:55:22.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:22.000000000 Z
+    utc: 2024-04-22 22:55:22.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:22.000000000 Z
+    time: 2024-04-22 22:55:22.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_1584:
-  id: 1584
+lesson_group_7544:
+  id: 7544
   key: ''
-  script_id: 630
+  script_id: 2471
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:23.000000000 Z
+    utc: 2024-04-22 22:55:23.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:23.000000000 Z
+    time: 2024-04-22 22:55:23.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:23.000000000 Z
+    utc: 2024-04-22 22:55:23.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:23.000000000 Z
+    time: 2024-04-22 22:55:23.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_1585:
-  id: 1585
+lesson_group_7545:
+  id: 7545
   key: ''
-  script_id: 631
+  script_id: 2472
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:23.000000000 Z
+    utc: 2024-04-22 22:55:23.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:23.000000000 Z
+    time: 2024-04-22 22:55:23.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:23.000000000 Z
+    utc: 2024-04-22 22:55:23.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:23.000000000 Z
+    time: 2024-04-22 22:55:23.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_44:
-  id: 44
+lesson_group_6754:
+  id: 6754
   key: ''
-  script_id: 30
+  script_id: 2150
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:20.000000000 Z
+    utc: 2024-04-22 22:49:39.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:20.000000000 Z
+    time: 2024-04-22 22:49:39.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:20.000000000 Z
+    utc: 2024-04-22 22:49:39.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:20.000000000 Z
+    time: 2024-04-22 22:49:39.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_136:
-  id: 136
+lesson_group_6807:
+  id: 6807
   key: ''
-  script_id: 90
+  script_id: 2196
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:32.000000000 Z
+    utc: 2024-04-22 22:49:57.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:32.000000000 Z
+    time: 2024-04-22 22:49:57.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:32.000000000 Z
+    utc: 2024-04-22 22:49:57.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:32.000000000 Z
+    time: 2024-04-22 22:49:57.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_195:
-  id: 195
+lesson_group_6852:
+  id: 6852
   key: ''
-  script_id: 135
+  script_id: 2226
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:41.000000000 Z
+    utc: 2024-04-22 22:50:14.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:41.000000000 Z
+    time: 2024-04-22 22:50:14.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:41.000000000 Z
+    utc: 2024-04-22 22:50:14.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:41.000000000 Z
+    time: 2024-04-22 22:50:14.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_231:
-  id: 231
+lesson_group_6872:
+  id: 6872
   key: ''
-  script_id: 145
+  script_id: 2232
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:45.000000000 Z
+    utc: 2024-04-22 22:50:21.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:45.000000000 Z
+    time: 2024-04-22 22:50:21.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:45.000000000 Z
+    utc: 2024-04-22 22:50:21.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:45.000000000 Z
+    time: 2024-04-22 22:50:21.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_274:
-  id: 274
+lesson_group_6895:
+  id: 6895
   key: ''
-  script_id: 155
+  script_id: 2238
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:49.000000000 Z
+    utc: 2024-04-22 22:50:27.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:49.000000000 Z
+    time: 2024-04-22 22:50:27.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:49.000000000 Z
+    utc: 2024-04-22 22:50:27.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:49.000000000 Z
+    time: 2024-04-22 22:50:27.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_324:
-  id: 324
+lesson_group_6922:
+  id: 6922
   key: ''
-  script_id: 166
+  script_id: 2244
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:54.000000000 Z
+    utc: 2024-04-22 22:50:41.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:54.000000000 Z
+    time: 2024-04-22 22:50:41.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:54.000000000 Z
+    utc: 2024-04-22 22:50:41.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:54.000000000 Z
+    time: 2024-04-22 22:50:41.000000000 Z
   position: 1
   properties: "{}"
-lesson_group_377:
-  id: 377
+lesson_group_6950:
+  id: 6950
   key: csf_e_1
-  script_id: 178
+  script_id: 2251
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:01.000000000 Z
+    utc: 2024-04-22 22:50:54.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:01.000000000 Z
+    time: 2024-04-22 22:50:54.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:01.000000000 Z
+    utc: 2024-04-22 22:50:54.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:01.000000000 Z
+    time: 2024-04-22 22:50:54.000000000 Z
   position: 1
   properties: '{"display_name":"Ramp Up to Course E (Optional)"}'
-lesson_group_378:
-  id: 378
+lesson_group_6951:
+  id: 6951
   key: csf_e_2
-  script_id: 178
+  script_id: 2251
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:01.000000000 Z
+    utc: 2024-04-22 22:50:54.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:01.000000000 Z
+    time: 2024-04-22 22:50:54.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:01.000000000 Z
+    utc: 2024-04-22 22:50:54.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:01.000000000 Z
+    time: 2024-04-22 22:50:54.000000000 Z
   position: 2
   properties: '{"display_name":"Course E Content"}'
-lesson_group_379:
-  id: 379
+lesson_group_6952:
+  id: 6952
   key: end_of_course_project
-  script_id: 178
+  script_id: 2251
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:01.000000000 Z
+    utc: 2024-04-22 22:50:54.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:01.000000000 Z
+    time: 2024-04-22 22:50:54.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:01.000000000 Z
+    utc: 2024-04-22 22:50:54.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:01.000000000 Z
+    time: 2024-04-22 22:50:54.000000000 Z
   position: 3
   properties: '{"display_name":"End of Course Project"}'
-lesson_group_380:
-  id: 380
+lesson_group_6953:
+  id: 6953
   key: extra_course_content
-  script_id: 178
+  script_id: 2251
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:01.000000000 Z
+    utc: 2024-04-22 22:50:54.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:01.000000000 Z
+    time: 2024-04-22 22:50:54.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:01.000000000 Z
+    utc: 2024-04-22 22:50:54.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:01.000000000 Z
+    time: 2024-04-22 22:50:54.000000000 Z
   position: 4
   properties: '{"display_name":"Extra Course Content"}'
-lesson_group_441:
-  id: 441
+lesson_group_6987:
+  id: 6987
   key: csf_f_1
-  script_id: 190
+  script_id: 2258
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:08.000000000 Z
+    utc: 2024-04-22 22:51:07.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:08.000000000 Z
+    time: 2024-04-22 22:51:07.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:08.000000000 Z
+    utc: 2024-04-22 22:51:07.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:08.000000000 Z
+    time: 2024-04-22 22:51:07.000000000 Z
   position: 1
   properties: '{"display_name":"Ramp Up to Course F (Optional)"}'
-lesson_group_442:
-  id: 442
+lesson_group_6988:
+  id: 6988
   key: csf_f_2
-  script_id: 190
+  script_id: 2258
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:08.000000000 Z
+    utc: 2024-04-22 22:51:07.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:08.000000000 Z
+    time: 2024-04-22 22:51:07.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:08.000000000 Z
+    utc: 2024-04-22 22:51:07.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:08.000000000 Z
+    time: 2024-04-22 22:51:07.000000000 Z
   position: 2
   properties: '{"display_name":"Course F Content"}'
-lesson_group_443:
-  id: 443
+lesson_group_6989:
+  id: 6989
   key: end_of_course_project
-  script_id: 190
+  script_id: 2258
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:08.000000000 Z
+    utc: 2024-04-22 22:51:07.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:08.000000000 Z
+    time: 2024-04-22 22:51:07.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:09:08.000000000 Z
+    utc: 2024-04-22 22:51:07.000000000 Z
     zone: *1
-    time: 2025-05-14 19:09:08.000000000 Z
+    time: 2024-04-22 22:51:07.000000000 Z
   position: 3
   properties: '{"display_name":"End of Course Project"}'
-lesson_group_1727:
-  id: 1727
+lesson_group_7615:
+  id: 7615
   key: content
-  script_id: 723
+  script_id: 2522
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:36.000000000 Z
+    utc: 2024-04-22 22:55:41.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:36.000000000 Z
+    time: 2024-04-22 22:55:41.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:36.000000000 Z
+    utc: 2024-04-22 22:55:41.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:36.000000000 Z
+    time: 2024-04-22 22:55:41.000000000 Z
   position: 1
   properties: '{"display_name":"Content"}'
-lesson_group_1728:
-  id: 1728
+lesson_group_7616:
+  id: 7616
   key: end_of_course_project
-  script_id: 723
+  script_id: 2522
   user_facing: true
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:36.000000000 Z
+    utc: 2024-04-22 22:55:41.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:36.000000000 Z
+    time: 2024-04-22 22:55:41.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:11:36.000000000 Z
+    utc: 2024-04-22 22:55:41.000000000 Z
     zone: *1
-    time: 2025-05-14 19:11:36.000000000 Z
+    time: 2024-04-22 22:55:41.000000000 Z
   position: 2
   properties: '{"display_name":"End of Course Project"}'
-lesson_group_2284:
-  id: 2284
+lesson_group_7746:
+  id: 7746
   key: ''
-  script_id: 1042
+  script_id: 2605
   user_facing: false
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:13:11.000000000 Z
+    utc: 2024-04-22 22:57:54.000000000 Z
     zone: *1
-    time: 2025-05-14 19:13:11.000000000 Z
+    time: 2024-04-22 22:57:54.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:13:11.000000000 Z
+    utc: 2024-04-22 22:57:54.000000000 Z
     zone: *1
-    time: 2025-05-14 19:13:11.000000000 Z
+    time: 2024-04-22 22:57:54.000000000 Z
   position: 1
   properties: "{}"
