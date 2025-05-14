@@ -26,9 +26,9 @@ ActiveRecord::Base.transaction do
     if AYW_COURSES.include?(ws.course)
       if ws.subject == Pd::Workshop::SUBJECT_SUMMER_WORKSHOP
         begin
-          ws.update!(registration_link: regional_partner&.link_to_partner_application.presence || "/pd/application/teacher")
+          ws.update!(registration_link: ws.regional_partner&.link_to_partner_application.presence || "/pd/application/teacher")
           total_updated += 1
-        rescue exception
+        rescue => exception
           puts "Error updating workshop #{ws.id}: #{exception.message}"
           total_errors += 1
         end
@@ -36,9 +36,9 @@ ActiveRecord::Base.transaction do
     else
       if VALID_PARTICIPANT_GROUP_TYPES.include?(ws.participant_group_type)
         begin
-          ws.update!(registration_link: registration_link.presence || "/pd/workshops/#{id}/enroll")
+          ws.update!(registration_link: "/pd/workshops/#{ws.id}/enroll")
           total_updated += 1
-        rescue exception
+        rescue => exception
           puts "Error updating workshop #{ws.id}: #{exception.message}"
           total_errors += 1
         end
