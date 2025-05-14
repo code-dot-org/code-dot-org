@@ -6,22 +6,22 @@ Parameters:
   CloudFrontTLSCertificateArn:
     Type: String
     Description: The ARN of the TLS certificate for this marketing site's CloudFront Distribution.
-  BaseHostedZoneId:
+  HostedZoneId:
     Type: String
-    Description: The ID of the Route53 hosted zone for this marketing site. (e.g. the hosted zone id for 'marketing-sites.code.org')
+    Description: AWS Route 53 Hosted Zone ID to provision this marketing site's domain name. (e.g. the Hosted Zone ID for 'marketing-sites.dev-code.org').
   BaseDomainName:
     Type: String
-    Description: The base domain name (e.g. 'marketing-sites.code.org' in 'hourofcode.marketing-sites.code.org').
+    Description: The base domain name of this marketing site (e.g. 'marketing-sites.test-code.org' in 'hourofcode.marketing-sites.test-code.org').
   SubdomainName:
     Type: String
-    Description: Subdomain name for marketing (e.g. 'hourofcode' in 'hourofcode.marketing-sites.code.org').
+    Description: Subdomain name for this marketing site (e.g. 'hourofcode' in 'hourofcode.marketing-sites.test-code.org').
   EnvironmentType:
     Type: String
     Default: development
     Description: Is this a 'development', 'test', or 'production' system?
   ContainerImageHashDigest:
     Type: String
-    Description: "The sha256sum of the marketing sites Next.js container image."
+    Description: The sha256sum of the marketing sites Next.js container image.
 
 Mappings:
   # Cloudfront Mappings
@@ -190,7 +190,7 @@ Resources:
       DomainValidationOptions:
         - DomainName: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
           HostedZoneId:
-            Ref: BaseHostedZoneId
+            Ref: HostedZoneId
       ValidationMethod: DNS
 
   EcsCluster:
@@ -272,7 +272,7 @@ Resources:
             - FargateServiceLB
             - CanonicalHostedZoneID
       HostedZoneId:
-        Ref: BaseHostedZoneId
+        Ref: HostedZoneId
       Name: !Sub "${SubdomainName}-loadbalancer.${BaseDomainName}"
       Type: A
 
@@ -796,7 +796,7 @@ Resources:
         DNSName: !GetAtt CloudFrontDistribution.DomainName
         HostedZoneId: Z2FDTNDATAQYW2 # Cloudfront Hosted Zone ID, see: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-aliastarget.html
       HostedZoneId:
-        Ref: BaseHostedZoneId
+        Ref: HostedZoneId
       Name: !Sub "${SubdomainName}.${BaseDomainName}"
       Type: A
   ################################
