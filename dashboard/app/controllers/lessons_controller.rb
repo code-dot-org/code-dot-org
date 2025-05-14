@@ -19,7 +19,8 @@ class LessonsController < ApplicationController
     return render :forbidden
   end
 
-  # GET /s/script-name/lessons/1
+  # GET /s/:script_name_or_id/lessons/:position
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:position
   def show
     unit_context = get_unit_context(params)
     script = unit_context[:unit]
@@ -44,13 +45,14 @@ class LessonsController < ApplicationController
     @lesson_data = lesson_data
   end
 
-  # GET /lessons/2345
+  # GET /lessons/:id
   def show_by_id
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user, Policies::InlineAnswer.visible_for_unit?(@current_user, @script))
     render :show
   end
 
-  # GET /s/script-name/lessons/1/student
+  # GET /s/:script_name_or_id/lessons/:lesson_position/student
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/student
   def student_lesson_plan
     unit_context = get_unit_context(params)
     script = unit_context[:unit]
@@ -67,7 +69,8 @@ class LessonsController < ApplicationController
     @script_name = script.name
   end
 
-  # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
+  # GET /s/:script_name_or_id/lessons/:lesson_position/edit
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/edit
   def edit_with_lesson_position
     unit_context = get_unit_context(params)
     script = unit_context[:unit]
@@ -80,12 +83,12 @@ class LessonsController < ApplicationController
     render :edit
   end
 
-  # GET /lessons/1/edit where 1 is the ID of the lesson
+  # GET /lessons/:id/edit
   def edit
     setup_edit
   end
 
-  # PATCH/PUT /lessons/1
+  # PATCH/PUT /lessons/:id
   def update
     if params[:originalLessonData]
       current_lesson_data = @lesson.summarize_for_lesson_edit
@@ -159,6 +162,7 @@ class LessonsController < ApplicationController
     render(status: :not_acceptable, plain: exception.message)
   end
 
+  # POST /lessons/:id/clone
   def clone
     destination_script = Unit.find_by_name(params[:destinationUnitName])
     raise "Cannot find script #{params[:destinationUnitName]}" unless destination_script
