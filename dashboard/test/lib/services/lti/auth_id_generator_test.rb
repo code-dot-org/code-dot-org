@@ -7,6 +7,7 @@ class Services::Lti::AuthIdGeneratorTest < ActiveSupport::TestCase
       aud: 'some_audience',
       sub: 'some_subject'
     }
+    LtiCloudWatchLogger.stubs(:put_log_event)
   end
 
   test 'when aud is a String call should return an auth id string' do
