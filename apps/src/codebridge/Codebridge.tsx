@@ -66,38 +66,38 @@ export const Codebridge = React.memo(
     const sourceUtilities = useSourceUtilities(dispatch);
 
     const currentProjectVersion = useRef(projectVersion);
+
+    // Adds keyboard shortcuts for Run (r), Console (o) and Editor (e),
+    // which are preceded by Control (Windows/Linux) or Command (macOS).
     useEffect(() => {
       const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.key === 'r') {
-          // R: Run the code
+        // Check if Control (Windows/Linux) or Command (macOS) is pressed
+        const isControlOrCommand = event.ctrlKey || event.metaKey;
+        if (isControlOrCommand && event.key === 'r') {
           const editorElement = document.querySelector(
             '#uitest-codebridge-run'
           );
           if (editorElement) {
-            (editorElement as HTMLElement).focus();
+            // Click will move focus to console
             (editorElement as HTMLElement).click();
           }
           event.preventDefault();
-        } else if (event.key === 'e') {
-          // E: Navigate to the editor
+        } else if (isControlOrCommand && event.key === 'e') {
           const editorElement = document.querySelector(
             '#uitest-codebridge-editor'
           );
           if (editorElement) {
             (editorElement as HTMLElement).focus();
-            // Simulate pressing the Enter key
+            // Also simulate 'Enter' to actually enter the editor
             const enterKeyEvent = new KeyboardEvent('keydown', {
               key: 'Enter',
-              code: 'Enter',
-              keyCode: 13, // Key code for Enter
-              which: 13, // Which code for Enter
-              bubbles: true, // Ensures the event bubbles up the DOM
+              keyCode: 13,
+              bubbles: true,
             });
             editorElement.dispatchEvent(enterKeyEvent);
           }
           event.preventDefault();
-        } else if (event.key === 'o') {
-          // O: Navigate to the console output
+        } else if (isControlOrCommand && event.key === 'o') {
           const consoleElement = document.querySelector(
             '.xterm-helper-textarea'
           );
