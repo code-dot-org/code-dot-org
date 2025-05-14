@@ -3,26 +3,35 @@ require "ostruct"
 module Config
   REGIONS = {
     'us-east-2': {
-      availability_zones: %w[us-east-2a us-east-2b],
+      availability_zones: %w[us-east-2a us-east-2b us-east-2c],
       vpc: {
         public_subnets: [
           {
             availability_zone: 'us-east-2a',
-            cidr_block: '10.0.0.0/18'
+            cidr_block: '10.0.0.0/21'
           },
           {
             availability_zone: 'us-east-2b',
-            cidr_block: '10.0.64.0/18'
-          }
+            cidr_block: '10.0.8.0/21'
+          },
+          {
+            availability_zone: 'us-east-2c',
+            cidr_block: '10.0.16.0/21'
+          },
+
         ],
         private_subnets: [
           {
             availability_zone: 'us-east-2a',
-            cidr_block: '10.0.128.0/18'
+            cidr_block: '10.0.128.0/21'
           },
           {
             availability_zone: 'us-east-2b',
-            cidr_block: '10.0.192.0/18'
+            cidr_block: '10.0.136.0/21'
+          },
+          {
+            availability_zone: 'us-east-2c',
+            cidr_block: '10.0.144.0/21'
           }
         ]
       }

@@ -108,6 +108,7 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
               )}
             >
               <MultiSelectInput
+                name={fields.facilitators.stateKey}
                 label={fields.facilitators.label}
                 options={facilitatorOptions}
                 selectedOptions={facilitators}

@@ -49,7 +49,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
 }) => {
   const instruments = getInstruments(editorType);
   const [currentValue, setCurrentValue] = useState(() => {
-    // Convert to absolute before saving.
+    // Convert to absolute when loading.
     const convertedValue = {
       ...initialValue,
       events: initialValue.events.map(event => ({

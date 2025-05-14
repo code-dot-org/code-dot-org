@@ -1,0 +1,47 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-05-08T21:33:26.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Prompt Comparisons\r\n\r\n**Task:** Explore how word choice and question phrasing can impact how a chatbot responds:\r\n1) Choose one of the topics below, which has a neutral **base** prompt and a second **framed** prompt which includes a specific perspective or framing.\r\n2) Send the first prompt to the chatbot, then send the second prompt to the chatbot. Take notes on how the response changes based on content, tone, or focus.\r\n3) Clear the chat and repeat with at least 3 different sets of prompts.\r\n\r\n<table><tr style=\"border: solid 1px black\"><td><strong>Base Prompt</strong></td><td><strong>Framed Prompt</strong></td></tr><tr style=\"border: solid 1px black\"><td>Tell me about video games.</td><td>How can video games be beneficial?</td></tr><tr style=\"border: solid 1px black\"><td>What is social media?</td><td>How is social media helpful for students?</td></tr><tr style=\"border: solid 1px black\"><td>Describe school spirit.</td><td>What encourages school spirit?</td></tr><tr style=\"border: solid 1px black\"><td>Tell me about pets.</td><td>Why do people care so much about their pets?</td></tr><tr style=\"border: solid 1px black\"><td>What's the best way to study?</td><td>What makes studying more effective?</td></tr><tr style=\"border: solid 1px black\"><td>What should students know about the news?</td><td>How can students stay informed about the news?</td></tr></table>",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-08T21:33:26.563+00:00\",\"changed\":[\"cloned from \\\"exploring_generative_ai_newsroom_choice_a\\\"\"],\"cloned_from\":\"exploring_generative_ai_newsroom_choice_a\"},{\"changed_at\":\"2025-05-08 21:41:15 +0000\",\"changed\":[\"display_name\",\"long_instructions\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-08 21:42:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-08 21:46:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-08 21:47:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-08 21:48:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-08 21:59:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-08 22:00:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-05-08 22:30:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

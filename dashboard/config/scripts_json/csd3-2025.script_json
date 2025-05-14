@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-29 20:41:55 UTC",
+    "serialized_at": "2025-05-13 15:30:09 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -51,12 +52,24 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2025"
       }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd3-2025"
+      }
     }
   ],
   "lessons": [
     {
       "key": "Programming for a Purpose",
-      "name": "Programming for a Purpose",
+      "name": "Lesson 1: Programming for a Purpose",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -75,7 +88,7 @@
     },
     {
       "key": "Plotting Shapes",
-      "name": "Plotting Shapes",
+      "name": "Lesson 2: Plotting Shapes",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -94,7 +107,7 @@
     },
     {
       "key": "Drawing in Game Lab",
-      "name": "Drawing in Game Lab",
+      "name": "Lesson 3: Drawing in Game Lab",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -113,7 +126,7 @@
     },
     {
       "key": "Shapes and Parameters",
-      "name": "Shapes and Parameters",
+      "name": "Lesson 4: Shapes and Parameters",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -132,7 +145,7 @@
     },
     {
       "key": "Variables",
-      "name": "Variables",
+      "name": "Lesson 5: Variables",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -151,7 +164,7 @@
     },
     {
       "key": "Random Numbers",
-      "name": "Random Numbers",
+      "name": "Lesson 6: Random Numbers",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -170,7 +183,7 @@
     },
     {
       "key": "Mini-Project - Robot Faces",
-      "name": "Mini-Project - Robot Faces",
+      "name": "Lesson 7: Mini-Project - Robot Faces",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -187,7 +200,7 @@
     },
     {
       "key": "Sprites",
-      "name": "Sprites",
+      "name": "Lesson 8: Sprites",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -206,7 +219,7 @@
     },
     {
       "key": "Sprite Properties",
-      "name": "Sprite Properties",
+      "name": "Lesson 9: Sprite Properties",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -225,7 +238,7 @@
     },
     {
       "key": "Text",
-      "name": "Text",
+      "name": "Lesson 10: Text",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -244,7 +257,7 @@
     },
     {
       "key": "Mini-Project - Captioned Scenes",
-      "name": "Mini-Project - Captioned Scenes",
+      "name": "Lesson 11: Mini-Project - Captioned Scenes",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -263,7 +276,7 @@
     },
     {
       "key": "The Draw Loop",
-      "name": "The Draw Loop",
+      "name": "Lesson 12: The Draw Loop",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -282,7 +295,7 @@
     },
     {
       "key": "Sprite Movement",
-      "name": "Sprite Movement",
+      "name": "Lesson 13: Sprite Movement",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -301,7 +314,7 @@
     },
     {
       "key": "Mini-Project - Animation",
-      "name": "Mini-Project - Animation",
+      "name": "Lesson 14: Mini-Project - Animation",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -320,7 +333,7 @@
     },
     {
       "key": "Conditionals",
-      "name": "Conditionals",
+      "name": "Lesson 15: Conditionals",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -339,7 +352,7 @@
     },
     {
       "key": "Keyboard Input",
-      "name": "Keyboard Input",
+      "name": "Lesson 16: Keyboard Input",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -358,7 +371,7 @@
     },
     {
       "key": "Mouse Input",
-      "name": "Mouse Input",
+      "name": "Lesson 17: Mouse Input",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
@@ -377,7 +390,7 @@
     },
     {
       "key": "Project - Interactive Card",
-      "name": "Project - Interactive Card",
+      "name": "Lesson 18: Project - Interactive Card",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
@@ -396,7 +409,7 @@
     },
     {
       "key": "Velocity",
-      "name": "Velocity",
+      "name": "Lesson 19: Velocity",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
@@ -415,7 +428,7 @@
     },
     {
       "key": "Collision Detection",
-      "name": "Collision Detection",
+      "name": "Lesson 20: Collision Detection",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
@@ -434,7 +447,7 @@
     },
     {
       "key": "Mini-Project - Side Scroller",
-      "name": "Mini-Project - Side Scroller",
+      "name": "Lesson 21: Mini-Project - Side Scroller",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
@@ -453,7 +466,7 @@
     },
     {
       "key": "Complex Sprite Movement",
-      "name": "Complex Sprite Movement",
+      "name": "Lesson 22: Complex Sprite Movement",
       "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
@@ -472,7 +485,7 @@
     },
     {
       "key": "Collisions",
-      "name": "Collisions",
+      "name": "Lesson 23: Collisions",
       "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": true,
@@ -491,7 +504,7 @@
     },
     {
       "key": "Mini-Project - Flyer Game",
-      "name": "Mini-Project - Flyer Game",
+      "name": "Lesson 24: Mini-Project - Flyer Game",
       "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
@@ -510,7 +523,7 @@
     },
     {
       "key": "Functions",
-      "name": "Functions",
+      "name": "Lesson 25: Functions",
       "absolute_position": 25,
       "lockable": false,
       "has_lesson_plan": true,
@@ -529,7 +542,7 @@
     },
     {
       "key": "The Game Design Process",
-      "name": "The Game Design Process",
+      "name": "Lesson 26: The Game Design Process",
       "absolute_position": 26,
       "lockable": false,
       "has_lesson_plan": true,
@@ -548,7 +561,7 @@
     },
     {
       "key": "Using the Game Design Process",
-      "name": "Using the Game Design Process",
+      "name": "Lesson 27: Using the Game Design Process",
       "absolute_position": 27,
       "lockable": false,
       "has_lesson_plan": true,
@@ -567,7 +580,7 @@
     },
     {
       "key": "Project - Design a Game",
-      "name": "Project - Design a Game",
+      "name": "Lesson 28: Project - Design a Game",
       "absolute_position": 28,
       "lockable": false,
       "has_lesson_plan": true,
@@ -607,6 +620,21 @@
       "seeding_key": {
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 30,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 29,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd3-2025"
       }
     }
@@ -1837,6 +1865,18 @@
         "lesson_activity.key": "a23175be-f948-416d-a9ac-fd0c225c2cbe",
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd3-2025"
+      }
+    },
+    {
+      "key": "40b053af-8093-4605-916d-8377028e247a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40b053af-8093-4605-916d-8377028e247a",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd3-2025"
       }
     }
@@ -7768,7 +7808,7 @@
       "properties": {
         "description": "Send students to Code Studio to complete a quick end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflect\r",
-        "progression_name": "End-Of-Unit Survey"
+        "progression_name": "End Of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "5c984fde-ff70-4cb8-a443-6b38fcf2c98d",
@@ -7819,6 +7859,28 @@
       "seeding_key": {
         "activity_section.key": "1fcad17a-d56b-4215-bca1-54d2b03bf9cc",
         "lesson_activity.key": "a23175be-f948-416d-a9ac-fd0c225c2cbe"
+      }
+    },
+    {
+      "key": "cf22df7f-8275-4003-b638-8d7a28f100cb",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf22df7f-8275-4003-b638-8d7a28f100cb",
+        "lesson_activity.key": "40b053af-8093-4605-916d-8377028e247a"
+      }
+    },
+    {
+      "key": "fa8f03d4-4699-4ae4-bd2a-5d2e82e6bd38",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa8f03d4-4699-4ae4-bd2a-5d2e82e6bd38",
+        "lesson_activity.key": "40b053af-8093-4605-916d-8377028e247a"
       }
     }
   ],
@@ -13352,17 +13414,14 @@
       "chapter": 222,
       "position": 12,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csd3_2025"
-        ],
-        "progression": "End-Of-Unit Survey"
+        "progression": "End Of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd3_2025"
+          "student-eou-survey_linked_page-csd3_2025"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "lessonGroup-3",
@@ -13370,7 +13429,7 @@
         "activity_section.key": "5c984fde-ff70-4cb8-a443-6b38fcf2c98d"
       },
       "level_keys": [
-        "Student End of Unit Survey_csd3_2025"
+        "student-eou-survey_linked_page-csd3_2025"
       ]
     },
     {
@@ -13395,6 +13454,31 @@
       },
       "level_keys": [
         "CSD Interactive Animations and Games Post-Project Test_pilot_2025"
+      ]
+    },
+    {
+      "chapter": 224,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csd3survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csd3survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd3-2025",
+        "activity_section.key": "cf22df7f-8275-4003-b638-8d7a28f100cb"
+      },
+      "level_keys": [
+        "student-eou-survey_csd3survey-2025"
       ]
     }
   ],
@@ -16053,9 +16137,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csd3_2025",
+        "level.key": "student-eou-survey_linked_page-csd3_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd3_2025"
+          "student-eou-survey_linked_page-csd3_2025"
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "lessonGroup-3",
@@ -16073,6 +16157,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd3-2025",
         "activity_section.key": "1fcad17a-d56b-4215-bca1-54d2b03bf9cc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csd3survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csd3survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd3-2025",
+        "activity_section.key": "cf22df7f-8275-4003-b638-8d7a28f100cb"
       }
     }
   ],

@@ -138,8 +138,6 @@ function LandingPage({
   // - In the case of any other type of workshop, it will state the workshop's course.
   const [enrollSuccessWorkshopTitle, setEnrollSuccessWorkshopTitle] =
     useState('');
-  const [enrollSuccessWorkshopLocation, setEnrollSuccessWorkshopLocation] =
-    useState('');
   const [
     enrollSuccessWorkshopSessionInfo,
     setEnrollSuccessWorkshopSessionInfo,
@@ -302,9 +300,6 @@ function LandingPage({
     }
 
     const workshopName = sessionStorage.getItem('workshopName', null);
-    setEnrollSuccessWorkshopLocation(
-      sessionStorage.getItem('workshopLocation', null)
-    );
     setEnrollSuccessWorkshopSessionInfo(
       JSON.parse(sessionStorage.getItem('sessionTimeInfo', null)) ?? []
     );
@@ -589,7 +584,6 @@ function LandingPage({
           enrollSuccessWorkshopTitle && (
             <WorkshopEnrollmentCelebrationDialog
               workshopTitle={enrollSuccessWorkshopTitle}
-              workshopLocation={enrollSuccessWorkshopLocation}
               workshopSessionInfo={enrollSuccessWorkshopSessionInfo}
               onClose={() => setEnrollSuccessWorkshopTitle('')}
             />

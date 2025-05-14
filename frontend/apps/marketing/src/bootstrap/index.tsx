@@ -1,5 +1,3 @@
-import {PublicEnvScript} from 'next-runtime-env';
-
 import FontLoader from '@code-dot-org/fonts/FontLoader';
 
 interface BootstrapProps {
@@ -8,7 +6,6 @@ interface BootstrapProps {
 const Bootstrap = ({locale}: BootstrapProps) => {
   return (
     <>
-      <PublicEnvScript disableNextScript={true} />
       <FontLoader locale={locale} />
     </>
   );

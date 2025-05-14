@@ -7,6 +7,7 @@
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -14,11 +15,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-11 18:25:34 UTC",
+    "serialized_at": "2025-05-13 18:59:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,7 +35,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 8: Cybersecurity and Global Impacts"
+        "display_name": "Content"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -45,7 +47,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Post-Course Survey"
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -56,7 +58,7 @@
   "lessons": [
     {
       "key": "Project - Innovation Simulation Part 1",
-      "name": "Project - Innovation Simulation Part 1",
+      "name": "Lesson 1: Project - Innovation Simulation Part 1",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -77,7 +79,7 @@
     },
     {
       "key": "Data Policies and Privacy",
-      "name": "Data Policies and Privacy",
+      "name": "Lesson 2: Data Policies and Privacy",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -96,7 +98,7 @@
     },
     {
       "key": "The Value of Privacy",
-      "name": "The Value of Privacy",
+      "name": "Lesson 3: The Value of Privacy",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -116,7 +118,7 @@
     },
     {
       "key": "Project - Innovation Simulation Part 2",
-      "name": "Project - Innovation Simulation Part 2",
+      "name": "Lesson 4: Project - Innovation Simulation Part 2",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -136,7 +138,7 @@
     },
     {
       "key": "Security Risks Part 1",
-      "name": "Security Risks Part 1",
+      "name": "Lesson 5: Security Risks Part 1",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -155,7 +157,7 @@
     },
     {
       "key": "Security Risks Part 2",
-      "name": "Security Risks Part 2",
+      "name": "Lesson 6: Security Risks Part 2",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -175,7 +177,7 @@
     },
     {
       "key": "Project - Innovation Simulation Part 3",
-      "name": "Project - Innovation Simulation Part 3",
+      "name": "Lesson 7: Project - Innovation Simulation Part 3",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -195,7 +197,7 @@
     },
     {
       "key": "Protecting Data Part 1",
-      "name": "Protecting Data Part 1",
+      "name": "Lesson 8: Protecting Data Part 1",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -214,7 +216,7 @@
     },
     {
       "key": "Protecting Data Part 2",
-      "name": "Protecting Data Part 2",
+      "name": "Lesson 9: Protecting Data Part 2",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -234,7 +236,7 @@
     },
     {
       "key": "Project - Innovation Simulation Part 4",
-      "name": "Project - Innovation Simulation Part 4",
+      "name": "Lesson 10: Project - Innovation Simulation Part 4",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -254,7 +256,7 @@
     },
     {
       "key": "Assessment Day",
-      "name": "Assessment Day",
+      "name": "Lesson 11: Assessment Day",
       "absolute_position": 11,
       "lockable": true,
       "has_lesson_plan": true,
@@ -273,16 +275,16 @@
       }
     },
     {
-      "key": "CS Principles Post-Course Survey",
-      "name": "CS Principles Post-Course Survey",
+      "key": "lesson-1",
+      "name": "End of Unit Survey",
       "absolute_position": 12,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csp8-2025"
       }
@@ -784,13 +786,13 @@
       }
     },
     {
-      "key": "46ba0c71-2c33-418c-8181-220b29204077",
+      "key": "4bfb0a09-e5c3-4649-b5ca-99841488257a",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "46ba0c71-2c33-418c-8181-220b29204077",
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_activity.key": "4bfb0a09-e5c3-4649-b5ca-99841488257a",
+        "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csp8-2025"
       }
@@ -2511,7 +2513,7 @@
       "key": "90488ac6-d2f4-4592-a8ad-24fa8f59de83",
       "position": 9,
       "properties": {
-        "progression_name": "End-of-Unit Survey"
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "90488ac6-d2f4-4592-a8ad-24fa8f59de83",
@@ -2583,20 +2585,14 @@
       }
     },
     {
-      "key": "fa6b4097-b97f-4630-9db8-36fae7e1aa5a",
+      "key": "e0c725a2-de01-4607-b75b-676da02b9a9b",
       "position": 1,
       "properties": {
-        "progression_name": "Post-Course Survey Instructions",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/view)] [[pdf](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
-          }
-        ]
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "fa6b4097-b97f-4630-9db8-36fae7e1aa5a",
-        "lesson_activity.key": "46ba0c71-2c33-418c-8181-220b29204077"
+        "activity_section.key": "e0c725a2-de01-4607-b75b-676da02b9a9b",
+        "lesson_activity.key": "4bfb0a09-e5c3-4649-b5ca-99841488257a"
       }
     }
   ],
@@ -2607,6 +2603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q1_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2629,6 +2628,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q2_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2651,6 +2653,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Cybersecurity and Global Impact Q3_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2673,6 +2678,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L01 CFU innovations_2025"
+        ],
         "progression": "Check For Understanding - Day 1"
       },
       "bonus": false,
@@ -2695,6 +2703,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L02 CFU innovations part 2_2025"
+        ],
         "progression": "Check For Understanding - Day 2"
       },
       "bonus": false,
@@ -2717,6 +2728,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L3 CFU Why Collect PII2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2739,6 +2753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Keylogging2022_2025"
+        ],
         "progression": "Keylogging"
       },
       "bonus": false,
@@ -2761,6 +2778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Phishing2022_2025"
+        ],
         "progression": "Phishing"
       },
       "bonus": false,
@@ -2783,6 +2803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Rogue Access Points2022_2025"
+        ],
         "progression": "Malware"
       },
       "bonus": false,
@@ -2805,6 +2828,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L07 CFU security risks_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2827,6 +2853,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10 L08 CFU security risks_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2849,6 +2878,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher_2025"
+        ],
         "progression": "Encryption Widgets"
       },
       "bonus": false,
@@ -2871,6 +2903,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack Random Substitution_2025"
+        ],
         "progression": "Encryption Widgets"
       },
       "bonus": false,
@@ -2893,6 +2928,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L9 CFU public key_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2915,6 +2953,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U10L10 CFU MFA_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2935,14 +2976,14 @@
       "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "progression": "End-of-Unit Survey"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp10_2025"
+          "student-eou-survey_linked_page-csp8_2025"
         ],
         "lesson.key": "Project - Innovation Simulation Part 4",
         "lesson_group.key": "lessonGroup-2",
@@ -2950,7 +2991,7 @@
         "activity_section.key": "90488ac6-d2f4-4592-a8ad-24fa8f59de83"
       },
       "level_keys": [
-        "Student End of Unit Survey_csp10_2025"
+        "student-eou-survey_linked_page-csp8_2025"
       ]
     },
     {
@@ -2959,6 +3000,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP 20-21 Unit 10 Assessment2022_2025"
+        ],
         "progression": "Unit Exam - Cybersecurity and Global Impacts"
       },
       "bonus": false,
@@ -2979,22 +3023,22 @@
       "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "progression": "Post-Course Survey Instructions"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp8_2025"
+          "student-eou-survey_csp8_2025"
         ],
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csp8-2025",
-        "activity_section.key": "fa6b4097-b97f-4630-9db8-36fae7e1aa5a"
+        "activity_section.key": "e0c725a2-de01-4607-b75b-676da02b9a9b"
       },
       "level_keys": [
-        "csp-post-survey-2021-markdown-with-link-to-survey_csp8_2025"
+        "student-eou-survey_csp8_2025"
       ]
     }
   ],
@@ -3181,9 +3225,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csp10_2025",
+        "level.key": "student-eou-survey_linked_page-csp8_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp10_2025"
+          "student-eou-survey_linked_page-csp8_2025"
         ],
         "lesson.key": "Project - Innovation Simulation Part 4",
         "lesson_group.key": "lessonGroup-2",
@@ -3205,14 +3249,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp8_2025",
+        "level.key": "student-eou-survey_csp8_2025",
         "script_level.level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp8_2025"
+          "student-eou-survey_csp8_2025"
         ],
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csp8-2025",
-        "activity_section.key": "fa6b4097-b97f-4630-9db8-36fae7e1aa5a"
+        "activity_section.key": "e0c725a2-de01-4607-b75b-676da02b9a9b"
       }
     }
   ],

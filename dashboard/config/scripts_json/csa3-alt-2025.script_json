@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-23 05:07:04 UTC",
+    "serialized_at": "2025-05-13 20:04:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,14 +66,14 @@
       }
     },
     {
-      "key": "lessonGroup-5",
+      "key": "lessonGroup-7",
       "user_facing": true,
       "position": 4,
       "properties": {
-        "display_name": "Alternate Lessons"
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "csa3-alt-2025"
       }
     },
@@ -92,7 +93,7 @@
   "lessons": [
     {
       "key": "Program Design",
-      "name": "Program Design",
+      "name": "Lesson 1: Program Design",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -110,7 +111,7 @@
     },
     {
       "key": "Attributes",
-      "name": "Attributes",
+      "name": "Lesson 2: Attributes",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -129,7 +130,7 @@
     },
     {
       "key": "System Reliability",
-      "name": "System Reliability",
+      "name": "Lesson 3: System Reliability",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -147,7 +148,7 @@
     },
     {
       "key": "Privacy and Security",
-      "name": "Privacy and Security",
+      "name": "Lesson 4: Privacy and Security",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -166,7 +167,7 @@
     },
     {
       "key": "Impacts of Programs",
-      "name": "Impacts of Programs",
+      "name": "Lesson 5: Impacts of Programs",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -185,7 +186,7 @@
     },
     {
       "key": "Intellectual Property",
-      "name": "Intellectual Property",
+      "name": "Lesson 6: Intellectual Property",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -204,7 +205,7 @@
     },
     {
       "key": "AI-Generated Code (non-AI Tutor)",
-      "name": "AI-Generated Code",
+      "name": "Lesson 7: AI-Generated Code",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -222,7 +223,7 @@
     },
     {
       "key": "No-Argument Constructors",
-      "name": "No-Argument Constructors",
+      "name": "Lesson 8: No-Argument Constructors",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -241,7 +242,7 @@
     },
     {
       "key": "Private Methods",
-      "name": "Private Methods",
+      "name": "Lesson 9: Private Methods",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -260,7 +261,7 @@
     },
     {
       "key": "Accessor Methods",
-      "name": "Accessor Methods",
+      "name": "Lesson 10: Accessor Methods",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -279,7 +280,7 @@
     },
     {
       "key": "Mutator Methods",
-      "name": "Mutator Methods",
+      "name": "Lesson 11: Mutator Methods",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -298,7 +299,7 @@
     },
     {
       "key": "Object References as Parameters",
-      "name": "Object References as Parameters",
+      "name": "Lesson 12: Object References as Parameters",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -317,7 +318,7 @@
     },
     {
       "key": "Static Variables and Methods",
-      "name": "Static Variables and Methods",
+      "name": "Lesson 13: Static Variables and Methods",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -336,7 +337,7 @@
     },
     {
       "key": "The this Keyword",
-      "name": "The this Keyword",
+      "name": "Lesson 14: The this Keyword",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -355,7 +356,7 @@
     },
     {
       "key": "Store Management Project",
-      "name": "Store Management Project",
+      "name": "Project 1a: Store Management Project",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -373,12 +374,31 @@
       }
     },
     {
-      "key": "Burger Class FRQ",
-      "name": "Burger Class FRQ",
+      "key": "Store Management Project [1-Day Version]",
+      "name": "Project 1b: Store Management Project [1-Day Version]",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
+      "properties": {
+        "assessment": true,
+        "overview": "**What business or service do I want to manage using a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.",
+        "preparation": "* Review project requirements and rubric\n* Print copies of the Store Management Project Planning Guide handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-11-store-management-project/37882) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What business or service do I want to manage using a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a store management system for a business or service. You choose the objects for your business that represent something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your store management system."
+      },
+      "seeding_key": {
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "Burger Class FRQ",
+      "name": "FRQ 1: Burger Class FRQ",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
       "properties": {
         "overview": "**How will I use what I know about classes and objects to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Classes and Objects FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print the Burger Class FRQ Stations resource\n* Create stations around the classroom as indicated on the Burger Class FRQ Stations resource\n* Print copies of the Burger Class FRQ Graphic Organizer (one for each student)\n* Print copies of the Burger Class FRQ handout (one for each student)\n* Print copies of the Burger Class FRQ Scoring Guidelines (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-12-burger-class-frq/37883) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
@@ -391,31 +411,27 @@
       }
     },
     {
-      "key": "Store Management Project [1-Day Version]",
-      "name": "Store Management Project [1-Day Version]",
-      "absolute_position": 17,
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 18,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 17,
+      "has_lesson_plan": false,
+      "relative_position": 18,
       "properties": {
-        "assessment": true,
-        "overview": "**What business or service do I want to manage using a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.",
-        "preparation": "* Review project requirements and rubric\n* Print copies of the Store Management Project Planning Guide handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-11-store-management-project/37882) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**What business or service do I want to manage using a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a store management system for a business or service. You choose the objects for your business that represent something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your store management system."
       },
       "seeding_key": {
-        "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "csa3-alt-2025"
       }
     },
     {
       "key": "lesson-1",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -427,10 +443,10 @@
     {
       "key": "lesson-2",
       "name": "Sandbox: Console",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -442,10 +458,10 @@
     {
       "key": "lesson-3",
       "name": "Sandbox: The Theater",
-      "absolute_position": 20,
+      "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 20,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -1100,6 +1116,48 @@
       }
     },
     {
+      "key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef",
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85",
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
+      "key": "04352e56-682f-46fb-ad92-b56a2b2a57cf",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "04352e56-682f-46fb-ad92-b56a2b2a57cf",
+        "lesson.key": "Store Management Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa3-alt-2025"
+      }
+    },
+    {
       "key": "b2b82705-bd4c-4b28-ad03-d7070cb53aa8",
       "position": 1,
       "properties": {
@@ -1142,44 +1200,14 @@
       }
     },
     {
-      "key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef",
+      "key": "ff1d7168-8577-472c-b8a2-37db4c0152b1",
       "position": 1,
       "properties": {
-        "duration": 10,
-        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "c85fcbc6-dbba-406a-bc8d-c1ddbf6109ef",
-        "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-alt-2025"
-      }
-    },
-    {
-      "key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ea4c4ff0-6bec-45f6-a1ed-12f0eaadea85",
-        "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-alt-2025"
-      }
-    },
-    {
-      "key": "04352e56-682f-46fb-ad92-b56a2b2a57cf",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "04352e56-682f-46fb-ad92-b56a2b2a57cf",
-        "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_activity.key": "ff1d7168-8577-472c-b8a2-37db4c0152b1",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "csa3-alt-2025"
       }
     },
@@ -4004,7 +4032,7 @@
       "key": "f05e1182-de2a-4501-9108-c0f511843f80",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to write pseudocode to outline their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have pairs with the primitives as parameters compare their solutions with pairs with objects as parameters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about each solution?*\n* *What do you wonder about each solution?*\n\n**Discussion Goal:** Students identify similarities and differences between passing primitives and passing object references as parameters. Students may wonder about the impact on original variables and objects when passed as parameters.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to write pseudocode to outline their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to display a possible solution for primitives as parameters and for objects as parameters. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have pairs with the primitives as parameters compare their solutions with pairs with objects as parameters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about each solution?*\n* *What do you wonder about each solution?*\n\n**Discussion Goal:** Students identify similarities and differences between passing primitives and passing object references as parameters. Students may wonder about the impact on original variables and objects when passed as parameters.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5415,126 +5443,6 @@
       }
     },
     {
-      "key": "3a6d063b-2ea0-4fcb-b3ad-3ba6adea4bb3",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What strategies did you use while working with the SpiralPainter FRQ in the previous unit?*\n\n**Discussion Goal:** Students recall using annotation strategies to identify keywords and using manipulatives to plan their solutions before writing code.",
-        "name": "Revisiting the SpiralPainter FRQ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3a6d063b-2ea0-4fcb-b3ad-3ba6adea4bb3",
-        "lesson_activity.key": "b2b82705-bd4c-4b28-ad03-d7070cb53aa8"
-      }
-    },
-    {
-      "key": "f6e9d63c-ed53-4b5d-896c-4771b59477d5",
-      "position": 1,
-      "properties": {
-        "description": "**Do This:** Explain the steps for the Burger Class FRQ activity:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> FRQ Social\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> FRQ Writing\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> FRQ Scoring\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ Graphic Organizer.",
-        "duration": "10",
-        "name": "FRQ Social",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "There are three different handouts for this lesson. To prevent confusion, distribute each handout when indicated.\n\nDuring the FRQ Social, make sure students focus on keywords in the FRQ or develop possible solutions. You may choose to use a timer to help students pace themselves."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f6e9d63c-ed53-4b5d-896c-4771b59477d5",
-        "lesson_activity.key": "3eec1736-6867-4e2a-913d-539941927857"
-      }
-    },
-    {
-      "key": "1cb12bd5-7ec6-4506-b63c-75f8bbcf64db",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to participate in the FRQ Social and complete the Burger Class FRQ Graphic Organizer."
-      },
-      "seeding_key": {
-        "activity_section.key": "1cb12bd5-7ec6-4506-b63c-75f8bbcf64db",
-        "lesson_activity.key": "3eec1736-6867-4e2a-913d-539941927857"
-      }
-    },
-    {
-      "key": "14d189e3-2d64-41c9-bb51-0343dc7dae81",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students return to their seats and complete the Burger Class FRQ handout.",
-        "duration": "10",
-        "name": "FRQ Writing",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "As students work, you may use a timer to help students pace themselves. If students finish early, you can suggest that they:\n\n* Trace their code to ensure it's correct.\n* Check their graphic organizer to ensure they used all notes to write their solution.\n\nDifferentiation Suggestions:\n\n* Students who need more time should complete the constructor and choose one of the methods to write.\n* Students who are unsure of where to start should begin writing pseudocode for their solution."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "14d189e3-2d64-41c9-bb51-0343dc7dae81",
-        "lesson_activity.key": "3eec1736-6867-4e2a-913d-539941927857"
-      }
-    },
-    {
-      "key": "4d0b9cee-b302-4dce-bfff-9e1e51cc5aff",
-      "position": 4,
-      "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ Scoring Guidelines handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students assess their solution using the Burger Class FRQ Scoring Guidelines with their partners and complete the reflection on the last page.\n\n**Do This:** Explain the potential solution and scoring guidelines:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Burger` class header\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Burger` constructor signature\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the superclass constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initializing subclass instance variables\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Method signature for the `getCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return appropriate instance variable from `getCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Method signature for the `setCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Update appropriate instance variable in the `setCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `toString()` method",
-        "name": "FRQ Scoring",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Have students share their implementations for each component before showing the possible solution."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "4d0b9cee-b302-4dce-bfff-9e1e51cc5aff",
-        "lesson_activity.key": "3eec1736-6867-4e2a-913d-539941927857"
-      }
-    },
-    {
-      "key": "03221f8d-2163-49ed-b482-57e90f20ec07",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your impression of this FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their impressions of this FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
-        "name": "Closing the Loop"
-      },
-      "seeding_key": {
-        "activity_section.key": "03221f8d-2163-49ed-b482-57e90f20ec07",
-        "lesson_activity.key": "557bcfcb-adb2-4640-9b15-463b05944479"
-      }
-    },
-    {
-      "key": "cf03df45-a903-4219-9bba-cacc0985ea5a",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "cf03df45-a903-4219-9bba-cacc0985ea5a",
-        "lesson_activity.key": "557bcfcb-adb2-4640-9b15-463b05944479"
-      }
-    },
-    {
-      "key": "589bb4e8-d9fe-408e-a5f6-77c36fd06ad5",
-      "position": 3,
-      "properties": {
-        "description": "**Burger Class FRQ:** The Burger Class FRQ handout can be used as an optional formative assessment.",
-        "name": "Assessment (Optional)"
-      },
-      "seeding_key": {
-        "activity_section.key": "589bb4e8-d9fe-408e-a5f6-77c36fd06ad5",
-        "lesson_activity.key": "557bcfcb-adb2-4640-9b15-463b05944479"
-      }
-    },
-    {
       "key": "e9a52cad-6495-4b9c-b9af-168fb1fb6710",
       "position": 1,
       "properties": {
@@ -5659,6 +5567,148 @@
       "seeding_key": {
         "activity_section.key": "b39b9d9c-9a42-451f-be87-eba083a707a3",
         "lesson_activity.key": "04352e56-682f-46fb-ad92-b56a2b2a57cf"
+      }
+    },
+    {
+      "key": "3a6d063b-2ea0-4fcb-b3ad-3ba6adea4bb3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What strategies did you use while working with the SpiralPainter FRQ in the previous unit?*\n\n**Discussion Goal:** Students recall using annotation strategies to identify keywords and using manipulatives to plan their solutions before writing code.",
+        "name": "Revisiting the SpiralPainter FRQ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3a6d063b-2ea0-4fcb-b3ad-3ba6adea4bb3",
+        "lesson_activity.key": "b2b82705-bd4c-4b28-ad03-d7070cb53aa8"
+      }
+    },
+    {
+      "key": "f6e9d63c-ed53-4b5d-896c-4771b59477d5",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Explain the steps for the Burger Class FRQ activity:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> FRQ Social\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> FRQ Writing\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> FRQ Scoring\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ Graphic Organizer.",
+        "duration": "10",
+        "name": "FRQ Social",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There are three different handouts for this lesson. To prevent confusion, distribute each handout when indicated.\n\nDuring the FRQ Social, make sure students focus on keywords in the FRQ or develop possible solutions. You may choose to use a timer to help students pace themselves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f6e9d63c-ed53-4b5d-896c-4771b59477d5",
+        "lesson_activity.key": "3eec1736-6867-4e2a-913d-539941927857"
+      }
+    },
+    {
+      "key": "1cb12bd5-7ec6-4506-b63c-75f8bbcf64db",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to participate in the FRQ Social and complete the Burger Class FRQ Graphic Organizer."
+      },
+      "seeding_key": {
+        "activity_section.key": "1cb12bd5-7ec6-4506-b63c-75f8bbcf64db",
+        "lesson_activity.key": "3eec1736-6867-4e2a-913d-539941927857"
+      }
+    },
+    {
+      "key": "14d189e3-2d64-41c9-bb51-0343dc7dae81",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students return to their seats and complete the Burger Class FRQ handout.",
+        "duration": "10",
+        "name": "FRQ Writing",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As students work, you may use a timer to help students pace themselves. If students finish early, you can suggest that they:\n\n* Trace their code to ensure it's correct.\n* Check their graphic organizer to ensure they used all notes to write their solution.\n\nDifferentiation Suggestions:\n\n* Students who need more time should complete the constructor and choose one of the methods to write.\n* Students who are unsure of where to start should begin writing pseudocode for their solution."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "14d189e3-2d64-41c9-bb51-0343dc7dae81",
+        "lesson_activity.key": "3eec1736-6867-4e2a-913d-539941927857"
+      }
+    },
+    {
+      "key": "4d0b9cee-b302-4dce-bfff-9e1e51cc5aff",
+      "position": 4,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Burger Class FRQ Scoring Guidelines handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students assess their solution using the Burger Class FRQ Scoring Guidelines with their partners and complete the reflection on the last page.\n\n**Do This:** Explain the potential solution and scoring guidelines:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Burger` class header\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Burger` constructor signature\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Calling the superclass constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initializing subclass instance variables\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Method signature for the `getCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Return appropriate instance variable from `getCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Method signature for the `setCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Update appropriate instance variable in the `setCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `toString()` method",
+        "name": "FRQ Scoring",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students share their implementations for each component before showing the possible solution."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d0b9cee-b302-4dce-bfff-9e1e51cc5aff",
+        "lesson_activity.key": "3eec1736-6867-4e2a-913d-539941927857"
+      }
+    },
+    {
+      "key": "03221f8d-2163-49ed-b482-57e90f20ec07",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your impression of this FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their impressions of this FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.",
+        "name": "Closing the Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "03221f8d-2163-49ed-b482-57e90f20ec07",
+        "lesson_activity.key": "557bcfcb-adb2-4640-9b15-463b05944479"
+      }
+    },
+    {
+      "key": "cf03df45-a903-4219-9bba-cacc0985ea5a",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf03df45-a903-4219-9bba-cacc0985ea5a",
+        "lesson_activity.key": "557bcfcb-adb2-4640-9b15-463b05944479"
+      }
+    },
+    {
+      "key": "589bb4e8-d9fe-408e-a5f6-77c36fd06ad5",
+      "position": 3,
+      "properties": {
+        "description": "**Burger Class FRQ:** The Burger Class FRQ handout can be used as an optional formative assessment.",
+        "name": "Assessment (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "589bb4e8-d9fe-408e-a5f6-77c36fd06ad5",
+        "lesson_activity.key": "557bcfcb-adb2-4640-9b15-463b05944479"
+      }
+    },
+    {
+      "key": "bd1fcb02-ffe8-4d86-ba29-14efedf55336",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd1fcb02-ffe8-4d86-ba29-14efedf55336",
+        "lesson_activity.key": "ff1d7168-8577-472c-b8a2-37db4c0152b1"
+      }
+    },
+    {
+      "key": "1ef5c40f-0428-43f9-99f7-8d308105f5a8",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ef5c40f-0428-43f9-99f7-8d308105f5a8",
+        "lesson_activity.key": "ff1d7168-8577-472c-b8a2-37db4c0152b1"
       }
     },
     {
@@ -6886,6 +6936,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L3_alt-revised-2025"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -7684,14 +7737,14 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "Student End of Unit Survey_csa2_2025-cb-alt"
+          "student-eou-survey_linked_page_csa3-project-2025"
         ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa2_2025-cb-alt"
+          "student-eou-survey_linked_page_csa3-project-2025"
         ],
         "lesson.key": "Store Management Project",
         "lesson_group.key": "lessonGroup-2",
@@ -7699,7 +7752,7 @@
         "activity_section.key": "8d60c585-6159-4c6a-88be-668a47c6bf17"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa2_2025-cb-alt"
+        "student-eou-survey_linked_page_csa3-project-2025"
       ]
     },
     {
@@ -7719,7 +7772,7 @@
           "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt"
         ],
         "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025",
         "activity_section.key": "74946286-cfc2-4891-a041-7207524dcbfc"
       },
@@ -7729,6 +7782,31 @@
     },
     {
       "chapter": 82,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csa3-alt-survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csa3-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "bd1fcb02-ffe8-4d86-ba29-14efedf55336"
+      },
+      "level_keys": [
+        "student-eou-survey_csa3-alt-survey-2025"
+      ]
+    },
+    {
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7753,7 +7831,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7778,7 +7856,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7802,7 +7880,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8777,9 +8855,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa2_2025-cb-alt",
+        "level.key": "student-eou-survey_linked_page_csa3-project-2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa2_2025-cb-alt"
+          "student-eou-survey_linked_page_csa3-project-2025"
         ],
         "lesson.key": "Store Management Project",
         "lesson_group.key": "lessonGroup-2",
@@ -8794,9 +8872,21 @@
           "CSA U2 Store Management Project 1-Day_pilot_oo2025_2025-cb-alt"
         ],
         "lesson.key": "Store Management Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa3-alt-2025",
         "activity_section.key": "74946286-cfc2-4891-a041-7207524dcbfc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csa3-alt-survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csa3-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa3-alt-2025",
+        "activity_section.key": "bd1fcb02-ffe8-4d86-ba29-14efedf55336"
       }
     },
     {

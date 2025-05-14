@@ -6,25 +6,25 @@ markdown <<MARKDOWN
 
 ## Course Lesson Objective
 
-##### After completing Lesson 5 you will be able to:
+#### After completing Lesson 5 you will be able to:
 
-* ##### define sprite and sprite behavior.
-* ##### add a sprite to the screen.
-* ##### change a sprite's behavior.
+* #### define sprite and sprite behavior.
+* #### add a sprite to the screen.
+* #### change a sprite's behavior.
 
 ## CS Concepts
 
-##### A **sprite** is a graphic character on the screen with properties that describe its location, movement, and look.
+#### A **sprite** is a graphic character on the screen with properties that describe its location, movement, and look.
 
-##### A **behavior** is an action that a sprite performs continuously until it's told to stop.
+#### A **behavior** is an action that a sprite performs continuously until it's told to stop.
 
 ***
 
 ### **Task:  Read a lesson plan**
 
-* ##### Read the **skill building** lesson plan, <a href="https://studio.code.org/s/coursee-2023/lessons/3" target="blank">Course E - Lesson 3:  Swimming Fish with Sprite Lab</a> from Course E that first introduces students to sprites.
+* #### Read the **skill building** lesson plan, <a href="https://studio.code.org/s/coursee-2025/lessons/3" target="blank">Course E - Lesson 3:  Swimming Fish with Sprite Lab</a> from Course E that first introduces students to sprites.
 
-	* ##### Also, preview the <a href="https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview" target="blank">teacher slides</a> that accompany Course E - Lesson 3:  Swimming Fish with Sprite Lab.
+	* #### Also, preview the <a href="https://docs.google.com/presentation/d/1Zt7oK0fuOR8XyKsCjWos3jfifO1uD0KFZfK8cbJulH8/template/preview" target="blank">teacher slides</a> that accompany Course E - Lesson 3:  Swimming Fish with Sprite Lab.
 
 
 

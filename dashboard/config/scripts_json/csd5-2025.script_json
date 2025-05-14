@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-29 20:42:15 UTC",
+    "serialized_at": "2025-05-13 15:29:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -51,12 +52,24 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd5-2025"
       }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd5-2025"
+      }
     }
   ],
   "lessons": [
     {
       "key": "Representation Matters",
-      "name": "Representation Matters",
+      "name": "Lesson 1: Representation Matters",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -75,7 +88,7 @@
     },
     {
       "key": "Patterns and Representation",
-      "name": "Patterns and Representation",
+      "name": "Lesson 2: Patterns and Representation",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -94,7 +107,7 @@
     },
     {
       "key": "ASCII and Binary Representation",
-      "name": "ASCII and Binary Representation",
+      "name": "Lesson 3: ASCII and Binary Representation",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -113,7 +126,7 @@
     },
     {
       "key": "Representing Images",
-      "name": "Representing Images",
+      "name": "Lesson 4: Representing Images",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -132,7 +145,7 @@
     },
     {
       "key": "Representing Numbers",
-      "name": "Representing Numbers",
+      "name": "Lesson 5: Representing Numbers",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -151,7 +164,7 @@
     },
     {
       "key": "Combining Representations",
-      "name": "Combining Representations",
+      "name": "Lesson 6: Combining Representations",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -170,7 +183,7 @@
     },
     {
       "key": "Keeping Data Secret",
-      "name": "Keeping Data Secret",
+      "name": "Lesson 7: Keeping Data Secret",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -189,7 +202,7 @@
     },
     {
       "key": "Project - Create a Representation",
-      "name": "Project - Create a Representation",
+      "name": "Lesson 8: Project - Create a Representation",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -208,7 +221,7 @@
     },
     {
       "key": "Problem Solving With Data",
-      "name": "Problem Solving With Data",
+      "name": "Lesson 9: Problem Solving With Data",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -227,7 +240,7 @@
     },
     {
       "key": "Structuring Data",
-      "name": "Structuring Data",
+      "name": "Lesson 10: Structuring Data",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -246,7 +259,7 @@
     },
     {
       "key": "Interpreting Data",
-      "name": "Interpreting Data",
+      "name": "Lesson 11: Interpreting Data",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -265,7 +278,7 @@
     },
     {
       "key": "Making Decisions with Data",
-      "name": "Making Decisions with Data",
+      "name": "Lesson 12: Making Decisions with Data",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -284,7 +297,7 @@
     },
     {
       "key": "Automating Data Decisions",
-      "name": "Automating Data Decisions",
+      "name": "Lesson 13: Automating Data Decisions",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -303,7 +316,7 @@
     },
     {
       "key": "Problem Solving with Big Data",
-      "name": "Problem Solving with Big Data",
+      "name": "Lesson 14: Problem Solving with Big Data",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -322,7 +335,7 @@
     },
     {
       "key": "Data and Machine Learning",
-      "name": "Data and Machine Learning",
+      "name": "Lesson 15: Data and Machine Learning",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -341,7 +354,7 @@
     },
     {
       "key": "Project - Make a Recommendation",
-      "name": "Project - Make a Recommendation",
+      "name": "Lesson 16: Project - Make a Recommendation",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -381,6 +394,21 @@
       "seeding_key": {
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd5-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd5-2025"
       }
     }
@@ -1107,6 +1135,18 @@
         "lesson_activity.key": "68683f37-a496-4852-8336-3c30e0ef41e3",
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd5-2025"
+      }
+    },
+    {
+      "key": "12bd62e6-3fbf-488f-a926-1ad31abecca9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12bd62e6-3fbf-488f-a926-1ad31abecca9",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd5-2025"
       }
     }
@@ -4604,7 +4644,7 @@
       "position": 1,
       "properties": {
         "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "progression_name": "End-Of-Unit Survey"
+        "progression_name": "End Of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "cf8e51a5-cf01-4dd2-afc3-1c1dc1300eb8",
@@ -4655,6 +4695,28 @@
       "seeding_key": {
         "activity_section.key": "b9352faa-0d71-4501-af61-37acd0f2e4ac",
         "lesson_activity.key": "68683f37-a496-4852-8336-3c30e0ef41e3"
+      }
+    },
+    {
+      "key": "1b9c53b3-6dc2-4770-a7e8-f8d35ae7e466",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b9c53b3-6dc2-4770-a7e8-f8d35ae7e466",
+        "lesson_activity.key": "12bd62e6-3fbf-488f-a926-1ad31abecca9"
+      }
+    },
+    {
+      "key": "8fcd3d5f-b17e-44d7-9354-296f1d6c9762",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "8fcd3d5f-b17e-44d7-9354-296f1d6c9762",
+        "lesson_activity.key": "12bd62e6-3fbf-488f-a926-1ad31abecca9"
       }
     }
   ],
@@ -5063,17 +5125,14 @@
       "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csd5_2025"
-        ],
-        "progression": "End-Of-Unit Survey"
+        "progression": "End Of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd5_2025"
+          "student-eou-survey_linked_page-csd5_2025"
         ],
         "lesson.key": "Project - Make a Recommendation",
         "lesson_group.key": "lessonGroup-3",
@@ -5081,7 +5140,7 @@
         "activity_section.key": "cf8e51a5-cf01-4dd2-afc3-1c1dc1300eb8"
       },
       "level_keys": [
-        "Student End of Unit Survey_csd5_2025"
+        "student-eou-survey_linked_page-csd5_2025"
       ]
     },
     {
@@ -5106,6 +5165,31 @@
       },
       "level_keys": [
         "CSD U5 test_2025"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csd5survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csd5survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd5-2025",
+        "activity_section.key": "1b9c53b3-6dc2-4770-a7e8-f8d35ae7e466"
+      },
+      "level_keys": [
+        "student-eou-survey_csd5survey-2025"
       ]
     }
   ],
@@ -5304,9 +5388,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csd5_2025",
+        "level.key": "student-eou-survey_linked_page-csd5_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd5_2025"
+          "student-eou-survey_linked_page-csd5_2025"
         ],
         "lesson.key": "Project - Make a Recommendation",
         "lesson_group.key": "lessonGroup-3",
@@ -5324,6 +5408,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd5-2025",
         "activity_section.key": "b9352faa-0d71-4501-af61-37acd0f2e4ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csd5survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csd5survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd5-2025",
+        "activity_section.key": "1b9c53b3-6dc2-4770-a7e8-f8d35ae7e466"
       }
     }
   ],

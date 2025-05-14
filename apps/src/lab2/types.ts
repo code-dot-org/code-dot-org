@@ -216,6 +216,7 @@ export interface LevelProperties {
   isAssessment?: boolean;
   progressionType?: string;
   type?: string;
+  starterAssets?: {[key: string]: string};
 }
 
 // Level configuration data used by project-backed labs that don't require

@@ -14,5 +14,5 @@
     }
   ],
   "short_description": "Plays a sound multiple times",
-  "tips": "If this block is used inside a [`play together`(#94E4FF)](/docs/ide/projectbeats/expressions/play_together) block, the sounds will still be played sequentially."
+  "tips": "If this block is used inside a [`play together`(#94E4FF)](/docs/ide/music/expressions/play_together) block, the sounds will still be played sequentially."
 }

@@ -8,7 +8,7 @@ import {getNotesInKey} from './Notes';
 export const START_OCTAVE = 4;
 export const DISPLAY_OCTAVES = 3;
 
-export const getNoteAvailableInScaleMode = (
+export const isNoteAvailableInScaleMode = (
   key: number,
   note: number,
   scaleMode?: ScaleMode

@@ -38,16 +38,6 @@
       }
     },
     {
-      "name": "AI Guidance for Schools Toolkit",
-      "url": " AI Guidance For Schools Toolkit",
-      "key": "ai_guidance_for_schools_toolkit",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "ai_guidance_for_schools_toolkit"
-      }
-    },
-    {
       "name": "AIF and CSD: What's the Difference?",
       "url": "https://docs.google.com/document/d/1QyiVt5G6riTcO82XkcM3uJF4cvyvCuDzCYDNnvXHOiQ/edit?usp=sharing",
       "key": "aif_and_csd_what_s_the_difference_",
@@ -65,6 +55,17 @@
       },
       "seeding_key": {
         "resource.key": "aif_and_csp_what_s_the_difference_"
+      }
+    },
+    {
+      "name": "AIF Teacher Forum",
+      "url": "https://forum.code.org/c/aif/487",
+      "key": "aif_teacher_forum",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "aif_teacher_forum"
       }
     },
     {

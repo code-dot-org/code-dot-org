@@ -82,7 +82,7 @@ function initializeCodeMirror(target, mode, options = {}) {
           ReactDOM.render(
             React.createElement(MainInstructionsPreview, {
               instructionsText: editor.getValue(),
-              theme: 'dark',
+              theme: 'Dark',
               hasPassed: false,
             }),
             previewElement

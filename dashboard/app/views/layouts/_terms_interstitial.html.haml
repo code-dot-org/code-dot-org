@@ -25,7 +25,7 @@
 
       %br
       .left
-        = form_for(current_user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
+        = form_for(current_user, as: :user, url: registration_url('user'), html: {id: 'edit_user'}) do |f|
           .form-group
             = f.label :terms_of_service_version, {class: 'terms'} do
               = f.check_box :terms_of_service_version, {class: 'terms-checkbox'}, current_user.latest_terms_version
