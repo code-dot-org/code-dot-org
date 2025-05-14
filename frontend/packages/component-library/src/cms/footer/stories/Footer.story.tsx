@@ -137,16 +137,16 @@ export const MobileFooter: Story = {
   play: async ({canvasElement}) => {
     const canvas = within(canvasElement);
 
-    // check that the Hamburger button is visible
+    // check that the Code.org links button is visible
     const mobileLinksButton = await canvas.findByLabelText(
       'Click to expand or collapse Site links',
     );
     await expect(mobileLinksButton).toBeVisible();
 
-    // click the Hamburger button to open the menu
+    // click the button to open the menu
     await userEvent.click(mobileLinksButton);
 
-    // check that Hamburger menu is visible
+    // check that Code.org links menu is visible
     const mobileLinksMenu = await canvas.findByLabelText('Site links');
     const mobileLinks = await canvas.findAllByRole('link', {
       name: /privacy policy|manage cookies|about|partners|blog|donate|store|support|terms/i,
