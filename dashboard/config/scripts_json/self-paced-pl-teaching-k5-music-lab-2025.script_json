@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-05 21:01:05 UTC",
+    "serialized_at": "2025-05-13 19:11:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -200,7 +200,7 @@
       "position": 1,
       "properties": {
         "name": "Programming Levels:",
-        "progression_name": "Intro Video"
+        "progression_name": "Introduction"
       },
       "seeding_key": {
         "activity_section.key": "6fd7eef6-fb19-4f15-8725-33262ccf47eb",
@@ -541,7 +541,7 @@
         "level_keys": [
           "songwriterstoolbox-pl_1"
         ],
-        "progression": "Intro Video"
+        "progression": "Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -566,7 +566,7 @@
         "level_keys": [
           "music-coding-intro-video_1"
         ],
-        "progression": "Intro Video"
+        "progression": "Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -1513,6 +1513,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MLCSC-SelfPaced-debugging2_2023_K5CSConcepts_1_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -17,7 +17,13 @@
         }
       },
       "videoFallbackUrl": {
-        "en-US": "https://videos.ctfassets.net/90t6bu6vlf76/2lkClZGdouHPDUTRZu8LxZ/271ce1df5c6909836589a34212476757/01_howcomputerswork_sm-mp4.mp4"
+        "en-US": "https://contentful-videos.code.org/90t6bu6vlf76/2lkClZGdouHPDUTRZu8LxZ/271ce1df5c6909836589a34212476757/01_howcomputerswork_sm-mp4.mp4"
+      },
+      "publishedDate": {
+        "en-US": "2018-01-30T00:00-04:00"
+      },
+      "description": {
+        "en-US": "Bill Gates kicks off an introduction to the series How Computers Work."
       }
     }
   },

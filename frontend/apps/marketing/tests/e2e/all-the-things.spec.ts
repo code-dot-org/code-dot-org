@@ -33,9 +33,9 @@ test.describe('All the things UI e2e test', () => {
       page,
     }) => {
       const allTheThingsPage = new MarketingPage(page);
-      await allTheThingsPage.goto('/all-the-things');
+      await allTheThingsPage.goto('/engineering/all-the-things');
 
-      await page.waitForURL('**/en-US/all-the-things');
+      await page.waitForURL('**/en-US/engineering/all-the-things');
     });
 
     test('should redirect from localeless paths to localized paths using the language cookie', async ({
@@ -58,9 +58,9 @@ test.describe('All the things UI e2e test', () => {
         },
       ]);
 
-      await allTheThingsPage.goto('/all-the-things');
+      await allTheThingsPage.goto('/engineering/all-the-things');
 
-      await page.waitForURL('**/zh-CN/all-the-things');
+      await page.waitForURL('**/zh-CN/engineering/all-the-things');
     });
 
     test('should redirect from localeless paths to localized english when language cookie is invalid', async ({
@@ -83,9 +83,9 @@ test.describe('All the things UI e2e test', () => {
         },
       ]);
 
-      await allTheThingsPage.goto('/all-the-things');
+      await allTheThingsPage.goto('/engineering/all-the-things');
 
-      await page.waitForURL('**/en-US/all-the-things');
+      await page.waitForURL('**/en-US/engineering/all-the-things');
     });
   });
 

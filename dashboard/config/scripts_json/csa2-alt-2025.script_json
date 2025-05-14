@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-10 01:51:03 UTC",
+    "serialized_at": "2025-05-13 19:59:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,21 +66,9 @@
       }
     },
     {
-      "key": "lessonGroup-4",
-      "user_facing": true,
-      "position": 4,
-      "properties": {
-        "display_name": "Alternate Lessons"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-alt-2025"
-      }
-    },
-    {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 5,
+      "position": 4,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -92,7 +81,7 @@
   "lessons": [
     {
       "key": "Loops",
-      "name": "Loops",
+      "name": "Lesson 1: Loops",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -110,7 +99,7 @@
     },
     {
       "key": "Selection Statements",
-      "name": "Selection Statements",
+      "name": "Lesson 2: Selection Statements",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -128,7 +117,7 @@
     },
     {
       "key": "Two-Way Selection Statements",
-      "name": "Two-Way Selection Statements",
+      "name": "Lesson 3: Two-Way Selection Statements",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -146,7 +135,7 @@
     },
     {
       "key": "Nested If Statements",
-      "name": "Nested If Statements",
+      "name": "Lesson 4: Nested If Statements",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -165,7 +154,7 @@
     },
     {
       "key": "Multi-Selection Statements",
-      "name": "Multi-Selection Statements",
+      "name": "Lesson 5: Multi-Selection Statements",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -184,7 +173,7 @@
     },
     {
       "key": "Logical Operators",
-      "name": "Logical Operators",
+      "name": "Lesson 6: Logical Operators",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -203,7 +192,7 @@
     },
     {
       "key": "De Morgan's Laws",
-      "name": "De Morgan's Laws",
+      "name": "Lesson 7: De Morgan's Laws",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -222,7 +211,7 @@
     },
     {
       "key": "Object Aliases and Equality",
-      "name": "Object Aliases and Equality",
+      "name": "Lesson 8: Object Aliases and Equality",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -241,7 +230,7 @@
     },
     {
       "key": "For Loops",
-      "name": "For Loops",
+      "name": "Lesson 9: For Loops",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -260,7 +249,7 @@
     },
     {
       "key": "Implementing String Algorithms",
-      "name": "Implementing String Algorithms",
+      "name": "Lesson 10: Implementing String Algorithms",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -278,7 +267,7 @@
     },
     {
       "key": "Nested Iteration",
-      "name": "Nested Iteration",
+      "name": "Lesson 11: Nested Iteration",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -296,7 +285,7 @@
     },
     {
       "key": "lesson-12",
-      "name": "Informal Run-Time Analysis",
+      "name": "Lesson 12: Informal Run-Time Analysis",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -311,7 +300,7 @@
     },
     {
       "key": "Creative Coding with the Console Project",
-      "name": "Creative Coding with the Console Project",
+      "name": "Project 1a: Creative Coding with the Console Project",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -328,12 +317,30 @@
       }
     },
     {
-      "key": "Creative Coding with The Theater Project",
-      "name": "Creative Coding with The Theater Project",
+      "key": "Creative Coding with the Console Project [1-Day Version]",
+      "name": "Project 1b: Creative Coding with the Console Project [1-Day Version]",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
+      "properties": {
+        "assessment": true,
+        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the Console. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
+        "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the Console. You first self-assess your work to evaluate your progress in completing project requirements, then finish developing your project. "
+      },
+      "seeding_key": {
+        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "Creative Coding with The Theater Project",
+      "name": "Project 2a: Creative Coding with The Theater Project",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then continue development of your program. They conduct acceptance testing to determine which of their user stories are complete and use the self-assessment and peer feedback to prioritize their remaining tasks. Students use this feedback to finalize development before sharing their projects with their peers to celebrate their successes.",
@@ -347,45 +354,12 @@
       }
     },
     {
-      "key": "End of Unit Survey",
-      "name": "End of Unit Survey",
-      "absolute_position": 15,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 15,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-alt-2025"
-      }
-    },
-    {
-      "key": "Creative Coding with the Console Project [1-Day Version]",
-      "name": "Creative Coding with the Console Project [1-Day Version]",
+      "key": "Creative Coding with The Theater Project [1-Day Version]",
+      "name": "Project 2b: Creative Coding with The Theater Project [1-Day Version]",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
-      "properties": {
-        "assessment": true,
-        "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the Console. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
-        "student_overview": "**How is my growth as a software engineer reflected in my project?**\n\nYou continue to develop your Creative Coding with the Console Project to create a program that portrays a personal interest or solves a problem using the Console. You first self-assess your work to evaluate your progress in completing project requirements, then finish developing your project. "
-      },
-      "seeding_key": {
-        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-alt-2025"
-      }
-    },
-    {
-      "key": "Creative Coding with The Theater Project [1-Day Version]",
-      "name": "Creative Coding with The Theater Project [1-Day Version]",
-      "absolute_position": 17,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 17,
       "properties": {
         "assessment": true,
         "overview": "**How is my growth as a software engineer reflected in my project?**\n\nStudents continue to develop their Creative Coding with The Theater Project to create a program that portrays a personal interest or solves a problem using The Theater. Students first self-assess their work to evaluate their progress in completing project requirements, then finish developing their projects. ",
@@ -393,7 +367,22 @@
       },
       "seeding_key": {
         "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-alt-2025"
       }
     },
@@ -1004,6 +993,48 @@
       }
     },
     {
+      "key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4",
+        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "d64bc551-be07-45ce-87ac-cddd0430f237",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d64bc551-be07-45ce-87ac-cddd0430f237",
+        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "0f521947-046e-4465-b9c9-c1028d3bc9ea",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0f521947-046e-4465-b9c9-c1028d3bc9ea",
+        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
       "key": "b8f737e3-9423-4c2a-a9ef-f59e7e63b786",
       "position": 1,
       "properties": {
@@ -1059,60 +1090,6 @@
       }
     },
     {
-      "key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb",
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-alt-2025"
-      }
-    },
-    {
-      "key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4",
-        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-alt-2025"
-      }
-    },
-    {
-      "key": "d64bc551-be07-45ce-87ac-cddd0430f237",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d64bc551-be07-45ce-87ac-cddd0430f237",
-        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-alt-2025"
-      }
-    },
-    {
-      "key": "0f521947-046e-4465-b9c9-c1028d3bc9ea",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0f521947-046e-4465-b9c9-c1028d3bc9ea",
-        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-alt-2025"
-      }
-    },
-    {
       "key": "06dd29ff-18bd-4563-989d-f9ab134d387d",
       "position": 1,
       "properties": {
@@ -1122,7 +1099,7 @@
       "seeding_key": {
         "lesson_activity.key": "06dd29ff-18bd-4563-989d-f9ab134d387d",
         "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-alt-2025"
       }
     },
@@ -1136,7 +1113,7 @@
       "seeding_key": {
         "lesson_activity.key": "e2a688bb-1dd5-48fe-824e-bb47c8a193be",
         "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-alt-2025"
       }
     },
@@ -1150,7 +1127,19 @@
       "seeding_key": {
         "lesson_activity.key": "a1d128e5-9641-49a6-8513-83b164859f42",
         "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025"
+      }
+    },
+    {
+      "key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-alt-2025"
       }
     },
@@ -4648,6 +4637,148 @@
       }
     },
     {
+      "key": "5cd6163c-e2fc-4d1c-afb8-856da290b3d8",
+      "position": 1,
+      "properties": {
+        "description": "Before working towards your final benchmark, review the project requirements and rubric and evaluate your progress. Self-assessing your progress will help you identify which tasks to focus on during your project workdays.",
+        "name": "Project Self-Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5cd6163c-e2fc-4d1c-afb8-856da290b3d8",
+        "lesson_activity.key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4"
+      }
+    },
+    {
+      "key": "3602357c-1a8a-44c2-aee0-f9c2883b3362",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nStudents may have questions that are unrelated or beyond the scope of the project. Encourage students to research these questions as extension activities. Focus this discussion on answering questions specific to the content covered in this unit and for the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3602357c-1a8a-44c2-aee0-f9c2883b3362",
+        "lesson_activity.key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4"
+      }
+    },
+    {
+      "key": "f77b11ed-6467-4a22-8d49-c89c106c36be",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+      },
+      "seeding_key": {
+        "activity_section.key": "f77b11ed-6467-4a22-8d49-c89c106c36be",
+        "lesson_activity.key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4"
+      }
+    },
+    {
+      "key": "610554ea-375a-4d85-9340-080410ea3f81",
+      "position": 1,
+      "properties": {
+        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "name": "Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "610554ea-375a-4d85-9340-080410ea3f81",
+        "lesson_activity.key": "d64bc551-be07-45ce-87ac-cddd0430f237"
+      }
+    },
+    {
+      "key": "d5f43205-8967-4b72-be16-e54e2d2c82d6",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
+        "progression_name": "Creative Coding with the Console Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time. You can also encourage students to request a code review from their peers as they work."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d5f43205-8967-4b72-be16-e54e2d2c82d6",
+        "lesson_activity.key": "d64bc551-be07-45ce-87ac-cddd0430f237"
+      }
+    },
+    {
+      "key": "02b0a422-0577-4de2-ab89-58ff80f8b905",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "02b0a422-0577-4de2-ab89-58ff80f8b905",
+        "lesson_activity.key": "d64bc551-be07-45ce-87ac-cddd0430f237"
+      }
+    },
+    {
+      "key": "b427e52c-0bd3-4108-bb1d-72799f1208af",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b427e52c-0bd3-4108-bb1d-72799f1208af",
+        "lesson_activity.key": "d64bc551-be07-45ce-87ac-cddd0430f237"
+      }
+    },
+    {
+      "key": "5ae79900-3bb9-46c2-b730-19bad176f41d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5ae79900-3bb9-46c2-b730-19bad176f41d",
+        "lesson_activity.key": "0f521947-046e-4465-b9c9-c1028d3bc9ea"
+      }
+    },
+    {
+      "key": "c2d4adda-ba66-4244-b2d1-743a6abf552b",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "c2d4adda-ba66-4244-b2d1-743a6abf552b",
+        "lesson_activity.key": "0f521947-046e-4465-b9c9-c1028d3bc9ea"
+      }
+    },
+    {
+      "key": "1b067cf5-aab3-4d3c-a06c-0353114a2cdc",
+      "position": 3,
+      "properties": {
+        "description": "**Creative Coding with the Console Project:** Use the rubric in the Creative Coding with the Console Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b067cf5-aab3-4d3c-a06c-0353114a2cdc",
+        "lesson_activity.key": "0f521947-046e-4465-b9c9-c1028d3bc9ea"
+      }
+    },
+    {
       "key": "9072ca71-d16a-49ff-985f-186c278ffb9f",
       "position": 1,
       "properties": {
@@ -5117,170 +5248,6 @@
       }
     },
     {
-      "key": "2065f2d5-56df-4854-a8cb-961885c01ded",
-      "position": 1,
-      "properties": {
-        "progression_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "2065f2d5-56df-4854-a8cb-961885c01ded",
-        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb"
-      }
-    },
-    {
-      "key": "f1dcc30d-8fe3-4e32-ac62-5bea6ca2c270",
-      "position": 2,
-      "properties": {
-        "progression_name": "End of Unit Survey Page"
-      },
-      "seeding_key": {
-        "activity_section.key": "f1dcc30d-8fe3-4e32-ac62-5bea6ca2c270",
-        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb"
-      }
-    },
-    {
-      "key": "5cd6163c-e2fc-4d1c-afb8-856da290b3d8",
-      "position": 1,
-      "properties": {
-        "description": "Before working towards your final benchmark, review the project requirements and rubric and evaluate your progress. Self-assessing your progress will help you identify which tasks to focus on during your project workdays.",
-        "name": "Project Self-Assessment",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "5cd6163c-e2fc-4d1c-afb8-856da290b3d8",
-        "lesson_activity.key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4"
-      }
-    },
-    {
-      "key": "3602357c-1a8a-44c2-aee0-f9c2883b3362",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nStudents may have questions that are unrelated or beyond the scope of the project. Encourage students to research these questions as extension activities. Focus this discussion on answering questions specific to the content covered in this unit and for the project."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3602357c-1a8a-44c2-aee0-f9c2883b3362",
-        "lesson_activity.key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4"
-      }
-    },
-    {
-      "key": "f77b11ed-6467-4a22-8d49-c89c106c36be",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
-      },
-      "seeding_key": {
-        "activity_section.key": "f77b11ed-6467-4a22-8d49-c89c106c36be",
-        "lesson_activity.key": "39b9cd61-dada-4fdb-b64f-1a4db820a0e4"
-      }
-    },
-    {
-      "key": "610554ea-375a-4d85-9340-080410ea3f81",
-      "position": 1,
-      "properties": {
-        "description": "Using the remaining items on your Project Planning Board and the feedback from your peers, continue to develop your Creative Coding Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
-        "name": "Development",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "610554ea-375a-4d85-9340-080410ea3f81",
-        "lesson_activity.key": "d64bc551-be07-45ce-87ac-cddd0430f237"
-      }
-    },
-    {
-      "key": "d5f43205-8967-4b72-be16-e54e2d2c82d6",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
-        "progression_name": "Creative Coding with the Console Project",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time. You can also encourage students to request a code review from their peers as they work."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "d5f43205-8967-4b72-be16-e54e2d2c82d6",
-        "lesson_activity.key": "d64bc551-be07-45ce-87ac-cddd0430f237"
-      }
-    },
-    {
-      "key": "02b0a422-0577-4de2-ab89-58ff80f8b905",
-      "position": 3,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "02b0a422-0577-4de2-ab89-58ff80f8b905",
-        "lesson_activity.key": "d64bc551-be07-45ce-87ac-cddd0430f237"
-      }
-    },
-    {
-      "key": "b427e52c-0bd3-4108-bb1d-72799f1208af",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b427e52c-0bd3-4108-bb1d-72799f1208af",
-        "lesson_activity.key": "d64bc551-be07-45ce-87ac-cddd0430f237"
-      }
-    },
-    {
-      "key": "5ae79900-3bb9-46c2-b730-19bad176f41d",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5ae79900-3bb9-46c2-b730-19bad176f41d",
-        "lesson_activity.key": "0f521947-046e-4465-b9c9-c1028d3bc9ea"
-      }
-    },
-    {
-      "key": "c2d4adda-ba66-4244-b2d1-743a6abf552b",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "c2d4adda-ba66-4244-b2d1-743a6abf552b",
-        "lesson_activity.key": "0f521947-046e-4465-b9c9-c1028d3bc9ea"
-      }
-    },
-    {
-      "key": "1b067cf5-aab3-4d3c-a06c-0353114a2cdc",
-      "position": 3,
-      "properties": {
-        "description": "**Creative Coding with the Console Project:** Use the rubric in the Creative Coding with the Console Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "1b067cf5-aab3-4d3c-a06c-0353114a2cdc",
-        "lesson_activity.key": "0f521947-046e-4465-b9c9-c1028d3bc9ea"
-      }
-    },
-    {
       "key": "1cfe517f-cffc-48f5-8d81-0db1063da74a",
       "position": 1,
       "properties": {
@@ -5420,6 +5387,28 @@
       "seeding_key": {
         "activity_section.key": "687269f1-dc51-497e-be4f-c717341dcc59",
         "lesson_activity.key": "a1d128e5-9641-49a6-8513-83b164859f42"
+      }
+    },
+    {
+      "key": "2065f2d5-56df-4854-a8cb-961885c01ded",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "2065f2d5-56df-4854-a8cb-961885c01ded",
+        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb"
+      }
+    },
+    {
+      "key": "f1dcc30d-8fe3-4e32-ac62-5bea6ca2c270",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1dcc30d-8fe3-4e32-ac62-5bea6ca2c270",
+        "lesson_activity.key": "fe55a0de-9621-4ded-b0d5-c2c52720b7cb"
       }
     },
     {
@@ -7197,6 +7186,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa2-project1-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -7215,6 +7207,31 @@
     },
     {
       "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U8 Creative Coding with the Console Project 1-Day_pilo_2025-cb-alt"
+        ],
+        "progression": "Creative Coding with the Console Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U8 Creative Coding with the Console Project 1-Day_pilo_2025-cb-alt"
+        ],
+        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "d5f43205-8967-4b72-be16-e54e2d2c82d6"
+      },
+      "level_keys": [
+        "CSA U8 Creative Coding with the Console Project 1-Day_pilo_2025-cb-alt"
+      ]
+    },
+    {
+      "chapter": 72,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7239,11 +7256,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa2-project2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -7261,54 +7281,7 @@
       ]
     },
     {
-      "chapter": 73,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_csa2-alt-survey-2025"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "2065f2d5-56df-4854-a8cb-961885c01ded"
-      },
-      "level_keys": [
-        "student-eou-survey_csa2-alt-survey-2025"
-      ]
-    },
-    {
       "chapter": 74,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U8 Creative Coding with the Console Project 1-Day_pilo_2025-cb-alt"
-        ],
-        "progression": "Creative Coding with the Console Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U8 Creative Coding with the Console Project 1-Day_pilo_2025-cb-alt"
-        ],
-        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "d5f43205-8967-4b72-be16-e54e2d2c82d6"
-      },
-      "level_keys": [
-        "CSA U8 Creative Coding with the Console Project 1-Day_pilo_2025-cb-alt"
-      ]
-    },
-    {
-      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7324,12 +7297,37 @@
           "CSA U7 Creative Coding with The Theater Project 1-Day_pilo_2025-cb-alt"
         ],
         "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa2-alt-2025",
         "activity_section.key": "c09ce4a2-7cde-4ef7-839b-9f6d160481a7"
       },
       "level_keys": [
         "CSA U7 Creative Coding with The Theater Project 1-Day_pilo_2025-cb-alt"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csa2-alt-survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csa2-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "2065f2d5-56df-4854-a8cb-961885c01ded"
+      },
+      "level_keys": [
+        "student-eou-survey_csa2-alt-survey-2025"
       ]
     },
     {
@@ -8274,6 +8272,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U8 Creative Coding with the Console Project 1-Day_pilo_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA U8 Creative Coding with the Console Project 1-Day_pilo_2025-cb-alt"
+        ],
+        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "d5f43205-8967-4b72-be16-e54e2d2c82d6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U7 Creative Coding with The Theater Project_pilot_oo20_2025-cb-alt",
         "script_level.level_keys": [
           "CSA U7 Creative Coding with The Theater Project_pilot_oo20_2025-cb-alt"
@@ -8298,6 +8308,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U7 Creative Coding with The Theater Project 1-Day_pilo_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA U7 Creative Coding with The Theater Project 1-Day_pilo_2025-cb-alt"
+        ],
+        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa2-alt-2025",
+        "activity_section.key": "c09ce4a2-7cde-4ef7-839b-9f6d160481a7"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "student-eou-survey_csa2-alt-survey-2025",
         "script_level.level_keys": [
           "student-eou-survey_csa2-alt-survey-2025"
@@ -8306,30 +8328,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa2-alt-2025",
         "activity_section.key": "2065f2d5-56df-4854-a8cb-961885c01ded"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U8 Creative Coding with the Console Project 1-Day_pilo_2025-cb-alt",
-        "script_level.level_keys": [
-          "CSA U8 Creative Coding with the Console Project 1-Day_pilo_2025-cb-alt"
-        ],
-        "lesson.key": "Creative Coding with the Console Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "d5f43205-8967-4b72-be16-e54e2d2c82d6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U7 Creative Coding with The Theater Project 1-Day_pilo_2025-cb-alt",
-        "script_level.level_keys": [
-          "CSA U7 Creative Coding with The Theater Project 1-Day_pilo_2025-cb-alt"
-        ],
-        "lesson.key": "Creative Coding with The Theater Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa2-alt-2025",
-        "activity_section.key": "c09ce4a2-7cde-4ef7-839b-9f6d160481a7"
       }
     },
     {

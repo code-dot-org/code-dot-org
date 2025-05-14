@@ -6,18 +6,22 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "9-12 Special topics",
+      "has_unnumbered_lessons": true,
+      "has_verified_resources": true,
       "hideable_lessons": true,
+      "include_student_lesson_plans": true,
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
       "topic_tags": [
         "ai"
       ],
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2025-01-22 19:00:06 UTC",
+    "serialized_at": "2025-05-13 21:13:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -56,7 +60,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Post-Survey"
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
@@ -69,7 +73,7 @@
       "key": "Setup",
       "name": "Setup",
       "absolute_position": 1,
-      "lockable": true,
+      "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
@@ -97,7 +101,7 @@
     },
     {
       "key": "Intro to GitHub",
-      "name": "Intro to GitHub",
+      "name": "Lesson 1: Intro to GitHub",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -115,7 +119,7 @@
     },
     {
       "key": "Intro to Copilot",
-      "name": "Intro to Copilot",
+      "name": "Lesson 2: Intro to Copilot",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -133,7 +137,7 @@
     },
     {
       "key": "Build with Copilot",
-      "name": "Build with Copilot",
+      "name": "Lesson 3: Build with Copilot",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -151,7 +155,7 @@
     },
     {
       "key": "Intro to AI Models",
-      "name": "Intro to AI Models",
+      "name": "Lesson 4: Intro to AI Models",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -169,7 +173,7 @@
     },
     {
       "key": "Training Your Model",
-      "name": "Training Your Model",
+      "name": "Lesson 5: Training Your Model",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -187,7 +191,7 @@
     },
     {
       "key": "Using Your Model",
-      "name": "Using Your Model",
+      "name": "Lesson 6: Using Your Model",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -204,17 +208,16 @@
       }
     },
     {
-      "key": "Software Engineering and Computer Vision Post-Survey",
-      "name": "Software Engineering and Computer Vision Post-Survey",
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 8,
-      "lockable": true,
+      "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 1,
+      "relative_position": 8,
       "properties": {
-        "assessment": true
       },
       "seeding_key": {
-        "lesson.key": "Software Engineering and Computer Vision Post-Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa-postap-se-and-computer-vision-2025"
       }
@@ -271,20 +274,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "a7c2d179-01c2-4d46-8d3c-fdcbc31cf6e2",
-        "lesson.key": "Setup",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-postap-se-and-computer-vision-2025"
-      }
-    },
-    {
-      "key": "d14e57bb-552f-4dda-9890-de6379970223",
-      "position": 5,
-      "properties": {
-        "duration": 10,
-        "name": "Pre-Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d14e57bb-552f-4dda-9890-de6379970223",
         "lesson.key": "Setup",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-postap-se-and-computer-vision-2025"
@@ -621,13 +610,13 @@
       }
     },
     {
-      "key": "bb5ea114-a034-4ebe-831a-0136eb1cfdde",
+      "key": "54d07721-b1ff-4f9a-b01e-710843d7d1e8",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "bb5ea114-a034-4ebe-831a-0136eb1cfdde",
-        "lesson.key": "Software Engineering and Computer Vision Post-Survey",
+        "lesson_activity.key": "54d07721-b1ff-4f9a-b01e-710843d7d1e8",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa-postap-se-and-computer-vision-2025"
       }
@@ -680,18 +669,6 @@
       "seeding_key": {
         "activity_section.key": "8e7df059-f198-44fa-a1de-fa9958b8becf",
         "lesson_activity.key": "a7c2d179-01c2-4d46-8d3c-fdcbc31cf6e2"
-      }
-    },
-    {
-      "key": "a1c08e75-4dbe-4c14-9c0c-6c8184551974",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Pre-Survey and Assessment.",
-        "progression_name": "Pre-Survey and Assessment: Software Engineering and Computer Vision"
-      },
-      "seeding_key": {
-        "activity_section.key": "a1c08e75-4dbe-4c14-9c0c-6c8184551974",
-        "lesson_activity.key": "d14e57bb-552f-4dda-9890-de6379970223"
       }
     },
     {
@@ -946,19 +923,6 @@
       },
       "seeding_key": {
         "activity_section.key": "307e43e7-b79e-434d-b6b4-f0f808a90f64",
-        "lesson_activity.key": "c3054e70-7ac7-46a3-b6d0-4a44fed2e4e6"
-      }
-    },
-    {
-      "key": "8de1c503-0a97-4408-965d-6f3d22272c76",
-      "position": 7,
-      "properties": {
-        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "8de1c503-0a97-4408-965d-6f3d22272c76",
         "lesson_activity.key": "c3054e70-7ac7-46a3-b6d0-4a44fed2e4e6"
       }
     },
@@ -1241,19 +1205,6 @@
       }
     },
     {
-      "key": "776f1840-fe24-4696-a29a-be7c407c5562",
-      "position": 5,
-      "properties": {
-        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "776f1840-fe24-4696-a29a-be7c407c5562",
-        "lesson_activity.key": "99788002-2ef1-46fb-adfb-15e1adc70ede"
-      }
-    },
-    {
       "key": "5490048e-b8c8-42c6-bf78-cd2feac7ec47",
       "position": 1,
       "properties": {
@@ -1460,19 +1411,6 @@
       },
       "seeding_key": {
         "activity_section.key": "bd58fe7a-3ff9-4a14-af13-6920989ba710",
-        "lesson_activity.key": "b7977709-6870-47ff-b5a9-832d0f728f58"
-      }
-    },
-    {
-      "key": "74d776b4-4330-4b81-83e5-a5a93a02c1b1",
-      "position": 5,
-      "properties": {
-        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "74d776b4-4330-4b81-83e5-a5a93a02c1b1",
         "lesson_activity.key": "b7977709-6870-47ff-b5a9-832d0f728f58"
       }
     },
@@ -1878,19 +1816,6 @@
       }
     },
     {
-      "key": "d8cdd5bb-75ae-4dcc-ab68-2bdfbb03720e",
-      "position": 6,
-      "properties": {
-        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "d8cdd5bb-75ae-4dcc-ab68-2bdfbb03720e",
-        "lesson_activity.key": "0ed444fd-793b-4763-87fd-6d1a2afa4f17"
-      }
-    },
-    {
       "key": "b2fb4f8a-caa2-4ca1-9ea7-84a599fff512",
       "position": 1,
       "properties": {
@@ -2054,19 +1979,6 @@
       },
       "seeding_key": {
         "activity_section.key": "019918fc-b7b0-4a47-976d-6c8cbb609e00",
-        "lesson_activity.key": "f6c71a68-8f41-4c12-9110-5385208010c1"
-      }
-    },
-    {
-      "key": "904f9f34-06b9-4618-b8fa-a853df8f67b3",
-      "position": 5,
-      "properties": {
-        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "904f9f34-06b9-4618-b8fa-a853df8f67b3",
         "lesson_activity.key": "f6c71a68-8f41-4c12-9110-5385208010c1"
       }
     },
@@ -2318,19 +2230,6 @@
       }
     },
     {
-      "key": "4bd04b84-2d81-488b-8593-a2050c590771",
-      "position": 6,
-      "properties": {
-        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "4bd04b84-2d81-488b-8593-a2050c590771",
-        "lesson_activity.key": "b94bb056-4be6-43fa-a71f-b3d493e39fc2"
-      }
-    },
-    {
       "key": "2a0b5779-bc85-4edd-9398-3f8325774c1e",
       "position": 1,
       "properties": {
@@ -2378,14 +2277,25 @@
       }
     },
     {
-      "key": "55c85ac5-4e19-4aa2-a54c-a4786e8c70cf",
+      "key": "79a4999f-041a-432e-b403-2c950689086d",
       "position": 1,
       "properties": {
-        "progression_name": "Post-Survey and Assessment: Software Engineering and Computer Vision"
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "55c85ac5-4e19-4aa2-a54c-a4786e8c70cf",
-        "lesson_activity.key": "bb5ea114-a034-4ebe-831a-0136eb1cfdde"
+        "activity_section.key": "79a4999f-041a-432e-b403-2c950689086d",
+        "lesson_activity.key": "54d07721-b1ff-4f9a-b01e-710843d7d1e8"
+      }
+    },
+    {
+      "key": "3318f5a1-8fe0-4963-be0b-f2cf309d7c69",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "3318f5a1-8fe0-4963-be0b-f2cf309d7c69",
+        "lesson_activity.key": "54d07721-b1ff-4f9a-b01e-710843d7d1e8"
       }
     }
   ],
@@ -2567,31 +2477,6 @@
     },
     {
       "chapter": 8,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA-SE-CV-PreSurvey-and-Assessment_2025"
-        ],
-        "progression": "Pre-Survey and Assessment: Software Engineering and Computer Vision"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA-SE-CV-PreSurvey-and-Assessment_2025"
-        ],
-        "lesson.key": "Setup",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "a1c08e75-4dbe-4c14-9c0c-6c8184551974"
-      },
-      "level_keys": [
-        "CSA-SE-CV-PreSurvey-and-Assessment_2025"
-      ]
-    },
-    {
-      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2616,7 +2501,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2641,32 +2526,7 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA-SE-L1-Survey_2025"
-        ],
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA-SE-L1-Survey_2025"
-        ],
-        "lesson.key": "Intro to GitHub",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "8de1c503-0a97-4408-965d-6f3d22272c76"
-      },
-      "level_keys": [
-        "CSA-SE-L1-Survey_2025"
-      ]
-    },
-    {
-      "chapter": 12,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2691,7 +2551,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2716,7 +2576,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -2741,32 +2601,7 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA-SE-L2-Survey_2025"
-        ],
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA-SE-L2-Survey_2025"
-        ],
-        "lesson.key": "Intro to Copilot",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "776f1840-fe24-4696-a29a-be7c407c5562"
-      },
-      "level_keys": [
-        "CSA-SE-L2-Survey_2025"
-      ]
-    },
-    {
-      "chapter": 16,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2791,7 +2626,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -2816,32 +2651,7 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA-SE-L3-Survey_2025"
-        ],
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA-SE-L3-Survey_2025"
-        ],
-        "lesson.key": "Build with Copilot",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "74d776b4-4330-4b81-83e5-a5a93a02c1b1"
-      },
-      "level_keys": [
-        "CSA-SE-L3-Survey_2025"
-      ]
-    },
-    {
-      "chapter": 19,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2866,7 +2676,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -2891,7 +2701,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -2916,7 +2726,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -2941,32 +2751,7 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA-CV-L1-Survey_2025"
-        ],
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA-CV-L1-Survey_2025"
-        ],
-        "lesson.key": "Intro to AI Models",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "d8cdd5bb-75ae-4dcc-ab68-2bdfbb03720e"
-      },
-      "level_keys": [
-        "CSA-CV-L1-Survey_2025"
-      ]
-    },
-    {
-      "chapter": 24,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2991,7 +2776,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3016,7 +2801,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -3041,32 +2826,7 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA-CV-L2-Survey_2025"
-        ],
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA-CV-L2-Survey_2025"
-        ],
-        "lesson.key": "Training Your Model",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "904f9f34-06b9-4618-b8fa-a853df8f67b3"
-      },
-      "level_keys": [
-        "CSA-CV-L2-Survey_2025"
-      ]
-    },
-    {
-      "chapter": 28,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3091,7 +2851,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -3116,53 +2876,25 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA-CV-L3-Survey_2025"
-        ],
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA-CV-L3-Survey_2025"
-        ],
-        "lesson.key": "Using Your Model",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "4bd04b84-2d81-488b-8593-a2050c590771"
-      },
-      "level_keys": [
-        "CSA-CV-L3-Survey_2025"
-      ]
-    },
-    {
-      "chapter": 31,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA-SE-CV-PostSurvey-and-Assessment_2025"
-        ],
-        "progression": "Post-Survey and Assessment: Software Engineering and Computer Vision"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA-SE-CV-PostSurvey-and-Assessment_2025"
+          "student-eou-survey_csa10_2025"
         ],
-        "lesson.key": "Software Engineering and Computer Vision Post-Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "55c85ac5-4e19-4aa2-a54c-a4786e8c70cf"
+        "activity_section.key": "79a4999f-041a-432e-b403-2c950689086d"
       },
       "level_keys": [
-        "CSA-SE-CV-PostSurvey-and-Assessment_2025"
+        "student-eou-survey_csa10_2025"
       ]
     }
   ],
@@ -3253,18 +2985,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA-SE-CV-PreSurvey-and-Assessment_2025",
-        "script_level.level_keys": [
-          "CSA-SE-CV-PreSurvey-and-Assessment_2025"
-        ],
-        "lesson.key": "Setup",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "a1c08e75-4dbe-4c14-9c0c-6c8184551974"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA-SE-L1-Repo_2025",
         "script_level.level_keys": [
           "CSA-SE-L1-Repo_2025"
@@ -3285,18 +3005,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-postap-se-and-computer-vision-2025",
         "activity_section.key": "307e43e7-b79e-434d-b6b4-f0f808a90f64"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA-SE-L1-Survey_2025",
-        "script_level.level_keys": [
-          "CSA-SE-L1-Survey_2025"
-        ],
-        "lesson.key": "Intro to GitHub",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "8de1c503-0a97-4408-965d-6f3d22272c76"
       }
     },
     {
@@ -3337,18 +3045,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA-SE-L2-Survey_2025",
-        "script_level.level_keys": [
-          "CSA-SE-L2-Survey_2025"
-        ],
-        "lesson.key": "Intro to Copilot",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "776f1840-fe24-4696-a29a-be7c407c5562"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA-SE-L3-L1_2025",
         "script_level.level_keys": [
           "CSA-SE-L3-L1_2025"
@@ -3369,18 +3065,6 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-postap-se-and-computer-vision-2025",
         "activity_section.key": "bd58fe7a-3ff9-4a14-af13-6920989ba710"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA-SE-L3-Survey_2025",
-        "script_level.level_keys": [
-          "CSA-SE-L3-Survey_2025"
-        ],
-        "lesson.key": "Build with Copilot",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "74d776b4-4330-4b81-83e5-a5a93a02c1b1"
       }
     },
     {
@@ -3433,18 +3117,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA-CV-L1-Survey_2025",
-        "script_level.level_keys": [
-          "CSA-CV-L1-Survey_2025"
-        ],
-        "lesson.key": "Intro to AI Models",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "d8cdd5bb-75ae-4dcc-ab68-2bdfbb03720e"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA-CV-L2-L1_2025",
         "script_level.level_keys": [
           "CSA-CV-L2-L1_2025"
@@ -3481,18 +3153,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA-CV-L2-Survey_2025",
-        "script_level.level_keys": [
-          "CSA-CV-L2-Survey_2025"
-        ],
-        "lesson.key": "Training Your Model",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "904f9f34-06b9-4618-b8fa-a853df8f67b3"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "CSA-CV-L3-L1_2025",
         "script_level.level_keys": [
           "CSA-CV-L3-L1_2025"
@@ -3517,26 +3177,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA-CV-L3-Survey_2025",
+        "level.key": "student-eou-survey_csa10_2025",
         "script_level.level_keys": [
-          "CSA-CV-L3-Survey_2025"
+          "student-eou-survey_csa10_2025"
         ],
-        "lesson.key": "Using Your Model",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "4bd04b84-2d81-488b-8593-a2050c590771"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA-SE-CV-PostSurvey-and-Assessment_2025",
-        "script_level.level_keys": [
-          "CSA-SE-CV-PostSurvey-and-Assessment_2025"
-        ],
-        "lesson.key": "Software Engineering and Computer Vision Post-Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csa-postap-se-and-computer-vision-2025",
-        "activity_section.key": "55c85ac5-4e19-4aa2-a54c-a4786e8c70cf"
+        "activity_section.key": "79a4999f-041a-432e-b403-2c950689086d"
       }
     }
   ],
@@ -3587,6 +3235,39 @@
       },
       "seeding_key": {
         "resource.key": "_key_use_your_model"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/csa-postap-se-and-computer-vision-2025/resources",
+      "key": "all_resources_19",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_19"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa-postap-se-and-computer-vision-2025/standards",
+      "key": "all_standards_17",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_17"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa-postap-se-and-computer-vision-2025/vocab",
+      "key": "all_vocabulary_17",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_17"
       }
     },
     {
@@ -4536,6 +4217,24 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_19",
+        "script.name": "csa-postap-se-and-computer-vision-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_17",
+        "script.name": "csa-postap-se-and-computer-vision-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_17",
+        "script.name": "csa-postap-se-and-computer-vision-2025"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "alternatives_to_vs_code_and_github_copilot",

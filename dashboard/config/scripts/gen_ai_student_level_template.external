@@ -7,15 +7,60 @@ markdown <<MARKDOWN
 
 <!--- #### You finished a lesson! Here's What Your Accomplished: --->
 
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+    <!-- Card 1 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: left; grid-column: 1 / span 2">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">In this lesson, you were able to:</p>
+        <ul>
+          <li style="font-size: 12pt; line-height: 1.2; margin-top: 10px;">
+			[Objective 1]
+          </li>
+        </ul>
+    </div>
+    <!-- Card 2 -->
+    <div style="background-color: #B7E0E5; color: #000000; padding: 20px; border-radius: 10px; 
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: left; grid-row: 1 / span 2; grid-column: 3 / span 1">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">Resources:</p>
+        <ul>
+          <li style="font-size: 12pt; line-height: 1.2; margin-top: 10px;">
+			[Resource 1]
+          </li>
+        </ul>
+    </div>
+    <!-- Card 3 -->
+    <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; 
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: left; grid-column: 1 / span 2">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">These were key terms:</p>
+        <ul>
+          <li style="font-size: 12pt; line-height: 1.2; margin-top: 10px;">
+			[Vocab 1]
+          </li>
+        </ul>
+    </div>
+    <!-- Card 4 -->
+    <div style="background-color: #DECEEA; color: #000000; padding: 20px; border-radius: 10px; 
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: left; grid-column: 1 / span 3">
+        <p style="font-size: 14pt; font-weight: bold; margin: 0;">These were videos you watched:</p>
+        <ul>
+          <li style="font-size: 12pt; line-height: 1.2; margin-top: 10px;">
+			Video 1
+          </li>
+        </ul>
+    </div>
+</div>
+
+
+<!--
+
 <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 90%; margin: 10px auto;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">In this lesson, you accomplished:</p>
-    <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">[Objective 1]</p>
+    
 </div>
 
 <hr />
 
 <div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); width: 90%; margin: 10px auto;">
-    <p style="font-size: 14pt; font-weight: bold; margin: 0;">And you learned:</p>
+    <p style="font-size: 14pt; font-weight: bold; margin: 0;">These were key terms:</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">[vocab]</p>
 </div>
 
@@ -32,6 +77,8 @@ markdown <<MARKDOWN
     <p style="font-size: 14pt; font-weight: bold; margin: 0;">These were the videos you watched:</p>
     <p style="font-size: 14pt; line-height: 1.2; margin-top: 10px;">[videos]</p>
 </div>
+
+--->
 
 <!---
 
