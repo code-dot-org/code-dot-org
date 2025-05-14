@@ -9,6 +9,9 @@ module AichatOpenaiHelper
   API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
 
+  DEFAULT_TOKEN_LIMIT_PER_DAY = 200_000
+  ONE_DAY_S = 60 * 60 * 24
+
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
     encrypted_channel_id = storage_encrypt_channel_id(storage_id_for_user_id(user_id), project_id)
     messages = format_messages(
@@ -26,7 +29,8 @@ module AichatOpenaiHelper
       aichat_model_customizations['temperature'].to_f * 2
     )
     response_time = Time.now - start_time
-    report_usage_metrics(usage, messages, level_id, project_id, user_id, response_time)
+
+    report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, response_time)
     response
   end
 
@@ -79,14 +83,15 @@ module AichatOpenaiHelper
     instructions
   end
 
-  # Reports and logs usage metrics to Cloudwatch
-  def self.report_usage_metrics(usage, messages, level_id, project_id, user_id, response_time)
-    return unless usage
+  # Reports and logs usage metrics to Cloudwatch and our throttling system.
+  def self.report_usage_and_throttling_metrics(usage, messages, level_id, project_id, user_id, response_time)
+    unless usage
+      Honeybadger.notify("OpenAI response detected without usage statistics, which are required for throttling.")
+      return
+    end
 
-    # Tell honeybadger if we're not getting usage data. that is now a problem.
-    # Move constants.
     limit = DCDO.get('aichat_token_limit_per_day', DEFAULT_TOKEN_LIMIT_PER_DAY)
-    Cdo::Throttle.throttle(AICHAT_TOKEN_COUNT_PREFIX + id.to_s,
+    Cdo::Throttle.throttle(AichatRequestsController::AICHAT_TOKEN_COUNT_PREFIX + user_id.to_s,
       limit,
       ONE_DAY_S,
       throttle_for: ONE_DAY_S,

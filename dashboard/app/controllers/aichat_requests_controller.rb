@@ -1,18 +1,16 @@
 require 'cdo/throttle'
 
-AICHAT_REQUEST_COUNT_PREFIX = "aichat/requests/".freeze
-DEFAULT_REQUEST_LIMIT_PER_MIN = 50
-
-AICHAT_TOKEN_COUNT_PREFIX = "aichat/tokens/".freeze
-DEFAULT_TOKEN_LIMIT_PER_DAY = 10_000_000
-ONE_DAY_S = 60 * 60 * 24
-
-DEFAULT_POLLING_INTERVAL_MS = 1000
-DEFAULT_POLLING_BACKOFF_RATE = 1.2
-
 class AichatRequestsController < ApplicationController
   include AichatSagemakerHelper
   authorize_resource class: false
+
+  AICHAT_REQUEST_COUNT_PREFIX = "aichat/requests/".freeze
+  DEFAULT_REQUEST_LIMIT_PER_MIN = 50
+
+  AICHAT_TOKEN_COUNT_PREFIX = "aichat/tokens/".freeze
+
+  DEFAULT_POLLING_INTERVAL_MS = 1000
+  DEFAULT_POLLING_BACKOFF_RATE = 1.2
 
   rescue_from CanCan::AccessDenied do
     render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
@@ -85,14 +83,16 @@ class AichatRequestsController < ApplicationController
   end
 
   private def should_throttle_request_count?
-    id = current_user&.id || session.id
+    id = current_user.id
     limit = DCDO.get('aichat_request_limit_per_min', DEFAULT_REQUEST_LIMIT_PER_MIN)
     Cdo::Throttle.throttle(AICHAT_REQUEST_COUNT_PREFIX + id.to_s, limit, 60)
   end
 
+  # Since we don't know the token count of the current request at the outset,
+  # we check whether the user's most recent request exceeded the daily token limit.
   private def should_throttle_token_count?
-    id = current_user&.id || session.id
-    Cdo::Throttle.throttled?(id)
+    id = current_user.id
+    Cdo::Throttle.throttled?(AICHAT_TOKEN_COUNT_PREFIX + id.to_s)
   end
 
   private def chat_completion_has_required_params?
