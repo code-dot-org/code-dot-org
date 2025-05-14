@@ -57,6 +57,7 @@
   "importFromBackpackDuplicateSupportMessage": "This file already exists in the level's support code. Would you like to import it as {newFileName}?",
   "importToProject": "Import to project",
   "instructionsHeader": "Instructions",
+  "invalidFileType": "Cannot support files of type {fileType}",
   "invalidFileUpload": "Cannot upload files of type {fileType}",
   "invalidNameError": "Names must be only letters, numbers, or underscores",
   "loadingEnvironmentTooltip": "Your environment is loading. Please wait.",

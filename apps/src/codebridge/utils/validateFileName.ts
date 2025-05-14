@@ -45,7 +45,7 @@ export const validateFileName = ({
     return codebridgeI18n.noFileExtensionError();
   }
   if (validFileTypes && !validFileTypes.includes(extension)) {
-    return 'not a valid file type';
+    return codebridgeI18n.invalidFileType({fileType: extension});
   }
 
   if (!isValidFileName(fileName)) {
