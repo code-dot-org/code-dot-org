@@ -102,7 +102,7 @@ export const useFileUploader = ({
         });
         const [, fileType] = file.name.split('.');
         errorCallback(
-          codebridgeI18n.invalidFileUpload({fileType: file.type || fileType}),
+          codebridgeI18n.invalidFileType({fileType: file.type || fileType}),
           callbackArgs.current
         );
         return;
