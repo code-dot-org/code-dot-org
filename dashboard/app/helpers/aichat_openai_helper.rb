@@ -83,6 +83,16 @@ module AichatOpenaiHelper
   def self.report_usage_metrics(usage, messages, level_id, project_id, user_id, response_time)
     return unless usage
 
+    # Tell honeybadger if we're not getting usage data. that is now a problem.
+    # Move constants.
+    limit = DCDO.get('aichat_token_limit_per_day', DEFAULT_TOKEN_LIMIT_PER_DAY)
+    Cdo::Throttle.throttle(AICHAT_TOKEN_COUNT_PREFIX + id.to_s,
+      limit,
+      ONE_DAY_S,
+      throttle_for: ONE_DAY_S,
+      count: usage['prompt_tokens']
+    )
+
     messages_with_assets_count = messages.count do |message|
       message[:content].any? {|c| c[:type] != 'text'}
     end

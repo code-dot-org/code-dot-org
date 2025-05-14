@@ -1,7 +1,12 @@
 require 'cdo/throttle'
 
-AICHAT_PREFIX = "aichat/".freeze
+AICHAT_REQUEST_COUNT_PREFIX = "aichat/requests/".freeze
 DEFAULT_REQUEST_LIMIT_PER_MIN = 50
+
+AICHAT_TOKEN_COUNT_PREFIX = "aichat/tokens/".freeze
+DEFAULT_TOKEN_LIMIT_PER_DAY = 10_000_000
+ONE_DAY_S = 60 * 60 * 24
+
 DEFAULT_POLLING_INTERVAL_MS = 1000
 DEFAULT_POLLING_BACKOFF_RATE = 1.2
 
@@ -22,7 +27,7 @@ class AichatRequestsController < ApplicationController
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   def start_chat_completion
-    return head :too_many_requests if should_throttle?
+    return head :too_many_requests if should_throttle_request_count? || should_throttle_token_count?
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
@@ -79,10 +84,15 @@ class AichatRequestsController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  private def should_throttle?
+  private def should_throttle_request_count?
     id = current_user&.id || session.id
     limit = DCDO.get('aichat_request_limit_per_min', DEFAULT_REQUEST_LIMIT_PER_MIN)
-    Cdo::Throttle.throttle(AICHAT_PREFIX + id.to_s, limit, 60)
+    Cdo::Throttle.throttle(AICHAT_REQUEST_COUNT_PREFIX + id.to_s, limit, 60)
+  end
+
+  private def should_throttle_token_count?
+    id = current_user&.id || session.id
+    Cdo::Throttle.throttled?(id)
   end
 
   private def chat_completion_has_required_params?
