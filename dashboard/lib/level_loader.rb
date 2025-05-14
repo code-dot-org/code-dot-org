@@ -99,8 +99,7 @@ class LevelLoader
       # which modifies the DB and which they expect to get run only on
       # levelbuilder. so, just run the callbacks we're sure we need instead.
       Unit.first
-      Level.setup_child_levels_for(changed_levels, ParentLevelsChildLevel::CONTAINED)
-      Level.setup_child_levels_for(changed_levels, ParentLevelsChildLevel::PROJECT_TEMPLATE)
+      Level.setup_child_levels_for(changed_levels)
     end
   end
 
