@@ -85,10 +85,12 @@ module Levels
           # Determine which level names to use based on child_level_kind
           child_level_names = child_level_kind == ParentLevelsChildLevel::CONTAINED ? level.contained_level_names : [level.project_template_level_name]
           # Skip if the current level's child levels already match the names
-          next if level.child_levels.send(child_level_kind).map(&:name) == child_level_names
+          # Go through `levels_child_levels` since it is preloaded
+          next if level.levels_child_levels.map {|levels_child_level| levels_child_level.child_level.name} == child_level_names
 
           # Collect outdated child levels' ids
-          outdated_levels_child_level_ids += level.levels_child_levels.send(child_level_kind).ids
+          # Don't use `level.levels_child_levels.<kind>` here, because it will go to the database which is slow
+          outdated_levels_child_level_ids += level.levels_child_levels.filter {|parent_levels_child_level| parent_levels_child_level.kind == child_level_kind}.map(&:id)
 
           next if child_level_names.blank?
 
