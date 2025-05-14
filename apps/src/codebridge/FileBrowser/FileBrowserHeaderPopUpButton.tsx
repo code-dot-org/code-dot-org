@@ -39,6 +39,7 @@ export const FileBrowserHeaderPopUpButton = () => {
       callback: handleFileUpload,
       errorCallback: uploadErrorCallback,
       validMimeTypes,
+      validFileTypes: PYTHONLAB_VALID_FILE_TYPES,
     },
     DEFAULT_FOLDER_ID
   );
