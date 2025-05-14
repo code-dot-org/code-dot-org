@@ -77,11 +77,9 @@ module Levels
       # Create ParentLevelsChildLevel many-to-many relationships based on the
       # contents of the specified levels' `contained_level_names` or `project_template_level_name` properties.
       # Differentiated by child_level_kind (either ParentLevelsChildLevel::CONTAINED or ParentLevelsChildLevel::PROJECT_TEMPLATE)
-      def setup_child_levels_for(levels)
+      def setup_child_levels_for(levels, child_level_kinds)
         outdated_levels_child_level_ids = []
         new_levels_child_levels = []
-
-        child_level_kinds = [ParentLevelsChildLevel::CONTAINED, ParentLevelsChildLevel::PROJECT_TEMPLATE]
 
         child_level_kinds.each do |child_level_kind|
           levels.each do |level|
@@ -193,11 +191,11 @@ module Levels
     end
 
     def setup_contained_levels
-      self.class.setup_child_levels_for([self], ParentLevelsChildLevel::CONTAINED)
+      self.class.setup_child_levels_for([self], [ParentLevelsChildLevel::CONTAINED])
     end
 
     def setup_project_template_level
-      self.class.setup_child_levels_for([self], ParentLevelsChildLevel::PROJECT_TEMPLATE)
+      self.class.setup_child_levels_for([self], [ParentLevelsChildLevel::PROJECT_TEMPLATE])
     end
   end
 end
