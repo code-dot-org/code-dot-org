@@ -126,7 +126,10 @@ export const Codebridge = React.memo(
       >
         <BackpackAPIContext.Provider value={backpackApi}>
           <div className={classNames(moduleStyles.codebridgeContainer)}>
-            <InnerLayout isProjectLevel={levelProperties.isProjectLevel} />
+            <InnerLayout
+              isProjectLevel={levelProperties.isProjectLevel}
+              isWidgetView={levelProperties.widgetView}
+            />
           </div>
         </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>

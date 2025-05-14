@@ -84,6 +84,7 @@ export interface MazeCell {
 
 export interface LayoutProps {
   isProjectLevel?: boolean;
+  isWidgetView?: boolean;
 }
 
 export interface ProjectPickerSettings {

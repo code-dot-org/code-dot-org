@@ -34,7 +34,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
 }) => {
   const {levelProperties} = useCodebridgeContext();
   const isShareView = useAppSelector(state => state.lab.isShareView);
-  const isWidgetView = !!levelProperties.widgetView;
+  const isWidgetView = levelProperties.widgetView;
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const [hasConsoleOutput, setHasConsoleOutput] = useState(false);
   const isClearButtonDisabled = isRunning || !hasConsoleOutput;

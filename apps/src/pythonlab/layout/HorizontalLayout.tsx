@@ -1,4 +1,3 @@
-import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
@@ -21,9 +20,8 @@ const PROJECT_FOOTER_HEIGHT = 56;
 
 const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   isProjectLevel,
+  isWidgetView,
 }) => {
-  const {levelProperties} = useCodebridgeContext();
-  const isWidgetView = !!levelProperties.widgetView;
   const {
     leftPanelWidth,
     rightPanelWidth,
