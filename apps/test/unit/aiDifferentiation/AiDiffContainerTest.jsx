@@ -22,8 +22,10 @@ jest.mock('@react-pdf/renderer', () => {
 const DEFAULT_PROPS = {
   closeTutor: () => {},
   open: true,
-  scriptId: 2,
-  context: AiDiffContext.LESSON,
+  context: {
+    type: AiDiffContext.LESSON,
+    lessonId: 2,
+  },
   scriptName: 'test_lesson',
   unitDisplayName: 'test unit name',
 };
