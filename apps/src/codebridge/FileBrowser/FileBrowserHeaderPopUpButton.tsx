@@ -5,7 +5,7 @@ import {PopUpButtonOption} from '@codebridge/PopUpButton/PopUpButtonOption';
 import React from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {PYTHONLAB_EDITABLE_FILE_TYPES} from '@cdo/apps/pythonlab/constants';
+import {PYTHONLAB_VALID_FILE_TYPES} from '@cdo/apps/pythonlab/constants';
 import {useBackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 
 import {
@@ -27,7 +27,7 @@ export const FileBrowserHeaderPopUpButton = () => {
   const openNewFilePromptArgs = {
     folderId: DEFAULT_FOLDER_ID,
     ...(appName === 'pythonlab' && {
-      validFileTypes: PYTHONLAB_EDITABLE_FILE_TYPES,
+      validFileTypes: PYTHONLAB_VALID_FILE_TYPES,
     }),
   };
 
