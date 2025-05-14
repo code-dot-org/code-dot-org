@@ -26,6 +26,7 @@ Feature: BubbleChoice
     When I sign in as "Teacher_Alice"
 
     # View progress from script overview page
+    Given I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
     Given I am on "http://studio.code.org/s/allthethings"
     And I wait until element "#uitest-view-as-student-selector" is visible
     Then I select the "Alice" option in dropdown "uitest-view-as-student-selector"
