@@ -7,6 +7,7 @@
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -14,11 +15,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-11 18:20:18 UTC",
+    "serialized_at": "2025-05-13 16:59:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,10 +35,22 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 2: The Internet"
+        "display_name": "Content"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp2-2025"
       }
     }
@@ -44,7 +58,7 @@
   "lessons": [
     {
       "key": "Welcome to the Internet",
-      "name": "Welcome to the Internet",
+      "name": "Lesson 1: Welcome to the Internet",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -63,7 +77,7 @@
     },
     {
       "key": "Building a Network",
-      "name": "Building a Network",
+      "name": "Lesson 2: Building a Network",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -83,7 +97,7 @@
     },
     {
       "key": "The Need for Addressing",
-      "name": "The Need for Addressing",
+      "name": "Lesson 3: The Need for Addressing",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -102,7 +116,7 @@
     },
     {
       "key": "Routers and Redundancy",
-      "name": "Routers and Redundancy",
+      "name": "Lesson 4: Routers and Redundancy",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -121,7 +135,7 @@
     },
     {
       "key": "Packets",
-      "name": "Packets",
+      "name": "Lesson 5: Packets",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -140,7 +154,7 @@
     },
     {
       "key": "HTTP and DNS",
-      "name": "HTTP and DNS",
+      "name": "Lesson 6: HTTP and DNS",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -159,7 +173,7 @@
     },
     {
       "key": "Project - Internet Dilemmas",
-      "name": "Project - Internet Dilemmas",
+      "name": "Lesson 7: Project - Internet Dilemmas",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -179,7 +193,7 @@
     },
     {
       "key": "Assessment Day",
-      "name": "Assessment Day",
+      "name": "Lesson 8: Assessment Day",
       "absolute_position": 8,
       "lockable": true,
       "has_lesson_plan": true,
@@ -194,6 +208,21 @@
       "seeding_key": {
         "lesson.key": "Assessment Day",
         "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp2-2025"
       }
     }
@@ -530,6 +559,18 @@
         "lesson_activity.key": "d6f9ad2f-6116-461b-a17d-48a5bd36e0e2",
         "lesson.key": "Assessment Day",
         "lesson_group.key": "csp_unit2_2020",
+        "script.name": "csp2-2025"
+      }
+    },
+    {
+      "key": "cd0c35fd-ffab-4be4-90cb-5ccea49ef08a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cd0c35fd-ffab-4be4-90cb-5ccea49ef08a",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csp2-2025"
       }
     }
@@ -2262,7 +2303,7 @@
       "key": "f8e9bba0-0d8c-44aa-8c5a-ee81cb4fdaa3",
       "position": 10,
       "properties": {
-        "progression_name": "End-of-Unit Survey"
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "f8e9bba0-0d8c-44aa-8c5a-ee81cb4fdaa3",
@@ -2308,6 +2349,28 @@
         "activity_section.key": "1cb32f0a-2b4f-4233-9501-48dfacd12ced",
         "lesson_activity.key": "d6f9ad2f-6116-461b-a17d-48a5bd36e0e2"
       }
+    },
+    {
+      "key": "7892499d-d080-4bb7-a343-1725980995ae",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7892499d-d080-4bb7-a343-1725980995ae",
+        "lesson_activity.key": "cd0c35fd-ffab-4be4-90cb-5ccea49ef08a"
+      }
+    },
+    {
+      "key": "3d859e0e-bf65-4106-a393-3be082dfacbd",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d859e0e-bf65-4106-a393-3be082dfacbd",
+        "lesson_activity.key": "cd0c35fd-ffab-4be4-90cb-5ccea49ef08a"
+      }
     }
   ],
   "script_levels": [
@@ -2317,6 +2380,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2InterestInventoryQ1_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2339,6 +2405,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2InterestInventoryQ3_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2361,6 +2430,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2InterestInventoryQ2_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2383,6 +2455,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L1 Internet Simulator: Sending Text_2025"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2405,6 +2480,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU how use internet_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2427,6 +2505,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU paths_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2449,6 +2530,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP Internet Simulator Broadcast_2025"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2471,6 +2555,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2493,6 +2580,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP works_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2515,6 +2605,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L3 CSP Internet Simulator Routers_2025"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2537,6 +2630,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Routers2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2559,6 +2655,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Redundancy_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2581,6 +2680,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L4 CSP Internet Simulator Packets 2_2025"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2603,6 +2705,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2025"
+        ],
         "progression": "Check for Understanding - Packets"
       },
       "bonus": false,
@@ -2625,6 +2730,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU terms2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2647,6 +2755,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L5 CSP Internet Simulator DNS_2025"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2669,6 +2780,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 CSP CFU subgroups_2025"
+        ],
         "progression": "Check For Understanding - DNS"
       },
       "bonus": false,
@@ -2691,6 +2805,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU scale2022_2025"
+        ],
         "progression": "Check For Understanding - HTTP"
       },
       "bonus": false,
@@ -2711,14 +2828,14 @@
       "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "progression": "End-of-Unit Survey"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp2_2025"
+          "student-eou-survey_linked_page-csp2_2025"
         ],
         "lesson.key": "Project - Internet Dilemmas",
         "lesson_group.key": "csp_unit2_2020",
@@ -2726,7 +2843,7 @@
         "activity_section.key": "f8e9bba0-0d8c-44aa-8c5a-ee81cb4fdaa3"
       },
       "level_keys": [
-        "Student End of Unit Survey_csp2_2025"
+        "student-eou-survey_linked_page-csp2_2025"
       ]
     },
     {
@@ -2735,6 +2852,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 MC Assessment 2022_2025"
+        ],
         "progression": "Unit 2 Exam"
       },
       "bonus": false,
@@ -2749,6 +2869,31 @@
       },
       "level_keys": [
         "CSP Unit 2 MC Assessment 2022_2025"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csp2survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csp2survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp2-2025",
+        "activity_section.key": "7892499d-d080-4bb7-a343-1725980995ae"
+      },
+      "level_keys": [
+        "student-eou-survey_csp2survey-2025"
       ]
     }
   ],
@@ -2971,9 +3116,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csp2_2025",
+        "level.key": "student-eou-survey_linked_page-csp2_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp2_2025"
+          "student-eou-survey_linked_page-csp2_2025"
         ],
         "lesson.key": "Project - Internet Dilemmas",
         "lesson_group.key": "csp_unit2_2020",
@@ -2991,6 +3136,18 @@
         "lesson_group.key": "csp_unit2_2020",
         "script.name": "csp2-2025",
         "activity_section.key": "a5995707-ff21-421e-860e-76c1a46421f8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csp2survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csp2survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csp2-2025",
+        "activity_section.key": "7892499d-d080-4bb7-a343-1725980995ae"
       }
     }
   ],

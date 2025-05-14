@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-29 20:42:05 UTC",
+    "serialized_at": "2025-05-13 15:29:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -51,12 +52,24 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd4-2025"
       }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd4-2025"
+      }
     }
   ],
   "lessons": [
     {
       "key": "Designing With Empathy",
-      "name": "Designing With Empathy",
+      "name": "Lesson 1: Designing With Empathy",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -75,7 +88,7 @@
     },
     {
       "key": "Understanding Your User",
-      "name": "Understanding Your User",
+      "name": "Lesson 2: Understanding Your User",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -94,7 +107,7 @@
     },
     {
       "key": "User Centered Design - Define and Prepare",
-      "name": "User Centered Design - Define and Prepare",
+      "name": "Lesson 3: User Centered Design - Define and Prepare",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -113,7 +126,7 @@
     },
     {
       "key": "User Centered Design - Try and Reflect",
-      "name": "User Centered Design - Try and Reflect",
+      "name": "Lesson 4: User Centered Design - Try and Reflect",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -132,7 +145,7 @@
     },
     {
       "key": "User Interfaces",
-      "name": "User Interfaces",
+      "name": "Lesson 5: User Interfaces",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -151,7 +164,7 @@
     },
     {
       "key": "Feedback and Testing",
-      "name": "Feedback and Testing",
+      "name": "Lesson 6: Feedback and Testing",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -170,7 +183,7 @@
     },
     {
       "key": "Identifying User Needs",
-      "name": "Identifying User Needs",
+      "name": "Lesson 7: Identifying User Needs",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -189,7 +202,7 @@
     },
     {
       "key": "Project - Paper Prototype",
-      "name": "Project - Paper Prototype",
+      "name": "Lesson 8: Project - Paper Prototype",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -208,7 +221,7 @@
     },
     {
       "key": "Designing Apps for Good",
-      "name": "Designing Apps for Good",
+      "name": "Lesson 9: Designing Apps for Good",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -227,7 +240,7 @@
     },
     {
       "key": "Market Research",
-      "name": "Market Research",
+      "name": "Lesson 10: Market Research",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -246,7 +259,7 @@
     },
     {
       "key": "Exploring UI Elements",
-      "name": "Exploring UI Elements",
+      "name": "Lesson 11: Exploring UI Elements",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -265,7 +278,7 @@
     },
     {
       "key": "Build a Paper Prototype",
-      "name": "Build a Paper Prototype",
+      "name": "Lesson 12: Build a Paper Prototype",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -284,7 +297,7 @@
     },
     {
       "key": "Prototype Testing",
-      "name": "Prototype Testing",
+      "name": "Lesson 13: Prototype Testing",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -303,7 +316,7 @@
     },
     {
       "key": "Design Mode in App Lab",
-      "name": "Design Mode in App Lab",
+      "name": "Lesson 14: Design Mode in App Lab",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -322,7 +335,7 @@
     },
     {
       "key": "Build a Digital Prototype",
-      "name": "Build a Digital Prototype",
+      "name": "Lesson 15: Build a Digital Prototype",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -341,7 +354,7 @@
     },
     {
       "key": "Events in App Lab",
-      "name": "Events in App Lab",
+      "name": "Lesson 16: Events in App Lab",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -360,7 +373,7 @@
     },
     {
       "key": "Linking Prototype Screens",
-      "name": "Linking Prototype Screens",
+      "name": "Lesson 17: Linking Prototype Screens",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
@@ -379,7 +392,7 @@
     },
     {
       "key": "Testing the App",
-      "name": "Testing the App",
+      "name": "Lesson 18: Testing the App",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
@@ -398,7 +411,7 @@
     },
     {
       "key": "Bugs and Features",
-      "name": "Bugs and Features",
+      "name": "Lesson 19: Bugs and Features",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
@@ -417,7 +430,7 @@
     },
     {
       "key": "Updating Your Prototype",
-      "name": "Updating Your Prototype",
+      "name": "Lesson 20: Updating Your Prototype",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
@@ -436,7 +449,7 @@
     },
     {
       "key": "Project - App Presentation",
-      "name": "Project - App Presentation",
+      "name": "Lesson 21: Project - App Presentation",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
@@ -476,6 +489,21 @@
       "seeding_key": {
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd4-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 22,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd4-2025"
       }
     }
@@ -1466,6 +1494,18 @@
         "lesson_activity.key": "6c66ae3a-4aa9-4ae1-bdc6-ea0202619dac",
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd4-2025"
+      }
+    },
+    {
+      "key": "69dc5e07-cef0-4ee0-b3da-43cd198465de",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "69dc5e07-cef0-4ee0-b3da-43cd198465de",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csd4-2025"
       }
     }
@@ -5720,7 +5760,7 @@
       "position": 1,
       "properties": {
         "description": "**Code Studio:** Have students log into Code Studio and complete a short survey about the unit.  Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n\n",
-        "progression_name": "End-Of-Unit Survey"
+        "progression_name": "End Of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "23c67905-850f-4ad7-8a56-2b428213122f",
@@ -5806,6 +5846,28 @@
       "seeding_key": {
         "activity_section.key": "209ccbf3-8f68-4aae-8651-408a6753a85d",
         "lesson_activity.key": "6c66ae3a-4aa9-4ae1-bdc6-ea0202619dac"
+      }
+    },
+    {
+      "key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8",
+        "lesson_activity.key": "69dc5e07-cef0-4ee0-b3da-43cd198465de"
+      }
+    },
+    {
+      "key": "b590d822-9c38-4390-a222-734b4df0b1e4",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "b590d822-9c38-4390-a222-734b4df0b1e4",
+        "lesson_activity.key": "69dc5e07-cef0-4ee0-b3da-43cd198465de"
       }
     }
   ],
@@ -6564,17 +6626,14 @@
       "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csd4_2025"
-        ],
-        "progression": "End-Of-Unit Survey"
+        "progression": "End Of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd4_2025"
+          "student-eou-survey_linked_page-csd4_2025"
         ],
         "lesson.key": "Project - App Presentation",
         "lesson_group.key": "lessonGroup-3",
@@ -6582,7 +6641,7 @@
         "activity_section.key": "23c67905-850f-4ad7-8a56-2b428213122f"
       },
       "level_keys": [
-        "Student End of Unit Survey_csd4_2025"
+        "student-eou-survey_linked_page-csd4_2025"
       ]
     },
     {
@@ -6607,6 +6666,31 @@
       },
       "level_keys": [
         "CSD User Centered Design Post-Project Test_2025"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csd4survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csd4survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd4-2025",
+        "activity_section.key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8"
+      },
+      "level_keys": [
+        "student-eou-survey_csd4survey-2025"
       ]
     }
   ],
@@ -6973,9 +7057,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csd4_2025",
+        "level.key": "student-eou-survey_linked_page-csd4_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd4_2025"
+          "student-eou-survey_linked_page-csd4_2025"
         ],
         "lesson.key": "Project - App Presentation",
         "lesson_group.key": "lessonGroup-3",
@@ -6993,6 +7077,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd4-2025",
         "activity_section.key": "209ccbf3-8f68-4aae-8651-408a6753a85d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csd4survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csd4survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csd4-2025",
+        "activity_section.key": "7a5e1a4f-14b0-4283-9ea2-56d7e0147fc8"
       }
     }
   ],

@@ -876,6 +876,15 @@ class Level < ApplicationRecord
     }
   end
 
+  def summarize_for_sublevel_edit
+    {
+      name: name,
+      id: id,
+      properties: properties,
+      isDslDefined: is_a?(DSLDefined)
+    }
+  end
+
   # Summarize the properties for a lab2 level.
   # Called by ScriptLevelsController.level_properties.
   # These properties are usually just the serialized properties for

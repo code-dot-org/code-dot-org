@@ -44,9 +44,19 @@ class AichatSafetyHelperTest < ActionView::TestCase
         }
       ]
     }
+    openai_response_structured_hash = {
+      choices: [
+        {
+          message: {
+            content: {classification: "OK"}.to_json
+          }
+        }
+      ]
+    }
     @openai_response_profanity_json = openai_response_profanity_hash.to_json
     @openai_response_safe_json = openai_response_safe_hash.to_json
     @openai_response_invalid_json = openai_response_invalid_hash.to_json
+    @openai_response_structured_json = openai_response_structured_hash.to_json
     @profane_message = "profanity hello #{@blocklist_blocked_word}"
     @openai_response = {
       evaluation: "INAPPROPRIATE"
@@ -106,14 +116,13 @@ class AichatSafetyHelperTest < ActionView::TestCase
     AichatSafetyHelper.find_toxicity('user', 'clean message', 'en', nil)
   end
 
-  test "retries if request_safety_check returns a response.body other than INAPPROPRIATE or OK" do
+  test "retries with structured response if request_safety_check fails first check" do
     stub_safety_services('openai', 'user')
     mock_response_invalid = create_stubbed_response(@openai_response_invalid_json)
-    mock_response_safe = create_stubbed_response(@openai_response_safe_json)
+    mock_structured_response = create_stubbed_response(@openai_response_structured_json)
     OpenaiChatHelper::Client.any_instance.stubs(:request_chat_completion).
       returns(mock_response_invalid).
-      returns(mock_response_safe).
-      twice
+      returns(mock_structured_response)
 
     AichatSafetyHelper.find_toxicity('user', 'clean message', 'en', nil)
   end

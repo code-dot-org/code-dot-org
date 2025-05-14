@@ -45,18 +45,26 @@ export const SkinnyBannerContentfulComponentDefinition: ComponentDefinition = {
         bindingSourceType: ['entry', 'manual'],
       },
     },
-    sectionImage: {
+    sectionImages: {
       displayName: 'Section Image',
-      type: 'Media',
+      type: 'Array',
       group: 'content',
       validations: {
-        bindingSourceType: ['entry', 'asset'],
+        bindingSourceType: ['entry'],
         required: true,
       },
     },
-    buttonLink: {
-      displayName: 'Button Link',
-      type: 'Link',
+    backgroundImage: {
+      displayName: 'Section Background Image',
+      type: 'Media',
+      group: 'content',
+      validations: {
+        bindingSourceType: ['asset'],
+      },
+    },
+    buttonLinks: {
+      displayName: 'Primary Button',
+      type: 'Array',
       group: 'content',
       description:
         'This is the link that will be used in the button. This should be a link entry.',
@@ -64,24 +72,16 @@ export const SkinnyBannerContentfulComponentDefinition: ComponentDefinition = {
         bindingSourceType: ['entry'],
       },
     },
-    partnerLogo: {
-      displayName: 'Partner Logo',
-      type: 'Media',
-      group: 'content',
-      validations: {
-        bindingSourceType: ['asset'],
-      },
-    },
     partnerCallout: {
-      displayName: 'Partner Callout',
+      displayName: 'Partner Callout Text',
       type: 'Text',
       group: 'content',
       validations: {
         bindingSourceType: ['entry', 'manual'],
       },
     },
-    backgroundImage: {
-      displayName: 'Background Image',
+    partnerLogo: {
+      displayName: 'Partner Logo',
       type: 'Media',
       group: 'content',
       validations: {

@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2025-04-29 20:42:26 UTC",
+    "serialized_at": "2025-05-13 15:25:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -71,12 +72,24 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6a-2025"
       }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd6a-2025"
+      }
     }
   ],
   "lessons": [
     {
       "key": "Intro to App Lab",
-      "name": "Intro to App Lab",
+      "name": "Lesson 0: Intro to App Lab",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -95,7 +108,7 @@
     },
     {
       "key": "Physical Designs",
-      "name": "Physical Designs",
+      "name": "Lesson 1: Physical Designs",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -114,7 +127,7 @@
     },
     {
       "key": "The Circuit Playground",
-      "name": "The Circuit Playground",
+      "name": "Lesson 2: The Circuit Playground",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -133,7 +146,7 @@
     },
     {
       "key": "Updating Screen Elements",
-      "name": "Updating Screen Elements",
+      "name": "Lesson 3: Updating Screen Elements",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -152,7 +165,7 @@
     },
     {
       "key": "Board Events",
-      "name": "Board Events",
+      "name": "Lesson 4: Board Events",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -171,7 +184,7 @@
     },
     {
       "key": "Variables and If Statements",
-      "name": "Variables and If Statements",
+      "name": "Lesson 5: Variables and If Statements",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -189,7 +202,7 @@
     },
     {
       "key": "Mini-Project: Field Collector App",
-      "name": "Mini-Project: Field Collector App",
+      "name": "Lesson 6: Mini-Project - Field Collector App",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -207,7 +220,7 @@
     },
     {
       "key": "Color LEDs",
-      "name": "Color LEDs",
+      "name": "Lesson 7: Color LEDs",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -226,7 +239,7 @@
     },
     {
       "key": "Getting Screen Inputs",
-      "name": "Getting Screen Inputs",
+      "name": "Lesson 8: Getting Screen Inputs",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -245,7 +258,7 @@
     },
     {
       "key": "Combining Inputs and Outputs",
-      "name": "Combining Inputs and Outputs",
+      "name": "Lesson 9: Combining Inputs and Outputs",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -263,7 +276,7 @@
     },
     {
       "key": "Project: Human Device Interaction",
-      "name": "Project: Human Device Interaction",
+      "name": "Lesson 10: Project - Human Device Interaction",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -280,7 +293,7 @@
     },
     {
       "key": "Board Sensors",
-      "name": "Board Sensors",
+      "name": "Lesson 12: Board Sensors",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -299,7 +312,7 @@
     },
     {
       "key": "Accelerometer",
-      "name": "Accelerometer",
+      "name": "Lesson 13: Accelerometer",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -318,7 +331,7 @@
     },
     {
       "key": "Making Music",
-      "name": "Making Music",
+      "name": "Lesson 14: Making Music",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -337,7 +350,7 @@
     },
     {
       "key": "Functions",
-      "name": "Functions",
+      "name": "Lesson 15: Functions",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -356,7 +369,7 @@
     },
     {
       "key": "Mini-Project: Interactive Art",
-      "name": "Mini-Project: Interactive Art",
+      "name": "Lesson 16: Mini-Project: Interactive Art",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -374,7 +387,7 @@
     },
     {
       "key": "Physical Outputs and LEDs",
-      "name": "Physical Outputs and LEDs",
+      "name": "Lesson 17: Physical Outputs and LEDs",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
@@ -393,7 +406,7 @@
     },
     {
       "key": "Physical Inputs and Buttons",
-      "name": "Physical Inputs and Buttons",
+      "name": "Lesson 18: Physical Inputs and Buttons",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
@@ -412,7 +425,7 @@
     },
     {
       "key": "Project - Prototype an Innovation",
-      "name": "Project - Prototype an Innovation",
+      "name": "Lesson 19: Project - Prototype an Innovation",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
@@ -453,6 +466,21 @@
       "seeding_key": {
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6a-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csd6a-2025"
       }
     }
@@ -1359,6 +1387,18 @@
         "lesson_activity.key": "b0fac600-6a0d-42cc-88ff-50f381fbb947",
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd6a-2025"
+      }
+    },
+    {
+      "key": "c69d1b79-30b0-45dc-9c17-53a24257b3e4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c69d1b79-30b0-45dc-9c17-53a24257b3e4",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csd6a-2025"
       }
     }
@@ -4972,7 +5012,7 @@
       "position": 2,
       "properties": {
         "description": "* The original innovation they set out to build\n* A description of the programming process including at least one challenge they faced and one new feature they decided to add\n* A description of the most interesting or complex piece of code they wrote\n* A live demonstration of the actual innovation\n\nSend students to Code Studio to complete an end of unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "progression_name": "End-Of-Unit Survey"
+        "progression_name": "End Of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "ed52791c-66a8-425d-82bb-95ea63bc580f",
@@ -5059,6 +5099,28 @@
       "seeding_key": {
         "activity_section.key": "95de769c-877e-45ce-9d0e-8772344fa3a6",
         "lesson_activity.key": "b0fac600-6a0d-42cc-88ff-50f381fbb947"
+      }
+    },
+    {
+      "key": "3d2d6df1-5616-477a-b905-b94ad095da90",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d2d6df1-5616-477a-b905-b94ad095da90",
+        "lesson_activity.key": "c69d1b79-30b0-45dc-9c17-53a24257b3e4"
+      }
+    },
+    {
+      "key": "1f3f123b-4b59-4c11-a4d0-f51b09e59afc",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f3f123b-4b59-4c11-a4d0-f51b09e59afc",
+        "lesson_activity.key": "c69d1b79-30b0-45dc-9c17-53a24257b3e4"
       }
     }
   ],
@@ -8967,17 +9029,14 @@
       "chapter": 157,
       "position": 5,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csd6_2025"
-        ],
-        "progression": "End-Of-Unit Survey"
+        "progression": "End Of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd6_2025"
+          "student-eou-survey_linked_page-csd6a_2025"
         ],
         "lesson.key": "Project - Prototype an Innovation",
         "lesson_group.key": "lessonGroup-3",
@@ -8985,7 +9044,7 @@
         "activity_section.key": "ed52791c-66a8-425d-82bb-95ea63bc580f"
       },
       "level_keys": [
-        "Student End of Unit Survey_csd6_2025"
+        "student-eou-survey_linked_page-csd6a_2025"
       ]
     },
     {
@@ -9010,6 +9069,31 @@
       },
       "level_keys": [
         "CSD Physical Computing Post-Project Test_2025"
+      ]
+    },
+    {
+      "chapter": 159,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csd6asurvey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csd6asurvey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd6a-2025",
+        "activity_section.key": "3d2d6df1-5616-477a-b905-b94ad095da90"
+      },
+      "level_keys": [
+        "student-eou-survey_csd6asurvey-2025"
       ]
     }
   ],
@@ -10888,9 +10972,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csd6_2025",
+        "level.key": "student-eou-survey_linked_page-csd6a_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd6_2025"
+          "student-eou-survey_linked_page-csd6a_2025"
         ],
         "lesson.key": "Project - Prototype an Innovation",
         "lesson_group.key": "lessonGroup-3",
@@ -10908,6 +10992,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd6a-2025",
         "activity_section.key": "95de769c-877e-45ce-9d0e-8772344fa3a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csd6asurvey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csd6asurvey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd6a-2025",
+        "activity_section.key": "3d2d6df1-5616-477a-b905-b94ad095da90"
       }
     }
   ],

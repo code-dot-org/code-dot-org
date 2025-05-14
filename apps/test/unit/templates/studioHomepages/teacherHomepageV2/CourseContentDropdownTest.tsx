@@ -173,10 +173,8 @@ describe('CourseContentDropdown', () => {
     renderComponent(unitSection);
     await act(async () => await new Promise(process.nextTick));
     expect(fetchSpy).toHaveBeenCalled();
-    const lessonDropdown = screen.getByLabelText(i18n.jumpTo());
-    fireEvent.change(lessonDropdown, {
-      target: {value: '/s/csd3-2024/lessons/4/levels/1'},
-    });
+    const lesson = screen.getByText('4: Shapes and Parameters');
+    fireEvent.click(lesson);
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_JUMP_TO_LESSON_CLICKED,
       {
@@ -184,9 +182,11 @@ describe('CourseContentDropdown', () => {
       },
       PLATFORMS.BOTH
     );
-    fireEvent.change(lessonDropdown, {
-      target: {value: '/unit/csd3-2024'},
-    });
+    const unit = screen.getByText(
+      "Unit 3 - Interactive Animations and Games ('24-'25)"
+    );
+    fireEvent.click(unit);
+
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_JUMP_TO_UNIT_OVERVIEW_CLICKED,
       {
