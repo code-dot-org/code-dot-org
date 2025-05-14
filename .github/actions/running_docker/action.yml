@@ -37,4 +37,4 @@ jobs:
 
       - name: Run UI Tests
         run: |
-          docker run my-ci-image /bin/bash -c "source docker/ui_tests.sh"
+          docker run my-ci-image /bin/bash -c "source docker/ci/scripts/ui_tests.sh"

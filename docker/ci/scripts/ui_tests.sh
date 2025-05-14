@@ -5,6 +5,6 @@
 # docker-compose to run using the ui-tests-compose.yml file in this directory.
 # See instructions in that file.
 
-source docker/prepare_ui_tests.sh
+source docker/ci/scripts/prepare_ui_tests.sh
 
 bundle exec rake ci:run_ui_tests

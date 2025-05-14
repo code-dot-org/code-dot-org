@@ -2,7 +2,7 @@
 
 # Script for preparing ui tests within a docker container. Used by ui_tests.sh.
 
-source docker/prepare_tests_common.sh
+source docker/ci/scripts/prepare_tests_common.sh
 
 ulimit -n 4096
 

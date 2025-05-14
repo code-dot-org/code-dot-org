@@ -5,7 +5,7 @@
 # docker-compose to run using the unit-tests-compose.yml file in this
 # directory. See instructions in that file.
 
-source docker/prepare_unit_tests.sh
+source docker/ci/scripts/prepare_unit_tests.sh
 
 bundle exec ruby tools/hooks/lint.rb origin/$CI_BASE_BRANCH $CI_HEAD_BRANCH
 bundle exec rake ci:run_tests
