@@ -258,7 +258,7 @@ def create_certificate_stack(options)
     certificate_arn = nil
 
     cert_stack.outputs.each do |output|
-      if output.output_key == 'CertificateArn'
+      if output.output_key == 'TLSCertificateArn'
         certificate_arn = output.output_value
         break
       end
