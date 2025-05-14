@@ -79,7 +79,7 @@ export const SectionList: React.FC<SectionListProps> = ({
     state => state.teacherSections.asyncLoadComplete
   );
 
-  const [sectionsLoading, setSectionsLoading] = useState(!asyncLoadComplete);
+  const [sectionsAreLoaded, setSectionsAreLoaded] = useState(asyncLoadComplete);
 
   const [sortableSectionIds, setSortableSectionIds] =
     useState<number[]>(reduxSectionOrder);
@@ -96,17 +96,10 @@ export const SectionList: React.FC<SectionListProps> = ({
 
   // Update sectionsLoading state when asyncLoadComplete changes
   React.useEffect(() => {
-    if (!_.isEqual(asyncLoadComplete, !sectionsLoading)) {
-      setSortableSectionIds(reduxSectionOrder);
-      setSectionsLoading(!asyncLoadComplete);
+    if (!_.isEqual(asyncLoadComplete, sectionsAreLoaded)) {
+      setSectionsAreLoaded(asyncLoadComplete);
     }
-  }, [
-    asyncLoadComplete,
-    sectionsLoading,
-    reduxSectionOrder,
-    dispatch,
-    sections,
-  ]);
+  }, [asyncLoadComplete, sectionsAreLoaded]);
 
   // Update sortableSectionIds when sections change
   React.useEffect(() => {
@@ -178,7 +171,7 @@ export const SectionList: React.FC<SectionListProps> = ({
 
   return (
     <div id="ui-test-section-list">
-      {!sectionsLoading ? (
+      {sectionsAreLoaded ? (
         <>
           <CoteacherInviteNotification isForPl={false} />
           <DndContext

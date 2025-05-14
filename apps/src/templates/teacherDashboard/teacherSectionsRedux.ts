@@ -259,7 +259,8 @@ const sectionSlice = createSlice({
             Object.keys(section).forEach(key => {
               if (
                 section[key as keyof Section] === undefined &&
-                prevSection[key as keyof Section] !== undefined
+                prevSection[key as keyof Section] !== undefined &&
+                !window.location.pathname.includes('/teacher_dashboard/home')
               ) {
                 throw new Error(
                   'SET_SECTIONS called multiple times in a way that would remove data'
