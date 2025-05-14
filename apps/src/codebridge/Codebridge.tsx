@@ -67,6 +67,57 @@ export const Codebridge = React.memo(
 
     const currentProjectVersion = useRef(projectVersion);
     useEffect(() => {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'r') {
+          // R: Run the code
+          const editorElement = document.querySelector(
+            '#uitest-codebridge-run'
+          );
+          if (editorElement) {
+            (editorElement as HTMLElement).focus();
+            (editorElement as HTMLElement).click();
+          }
+          event.preventDefault();
+        } else if (event.key === 'e') {
+          // E: Navigate to the editor
+          const editorElement = document.querySelector(
+            '#uitest-codebridge-editor'
+          );
+          if (editorElement) {
+            (editorElement as HTMLElement).focus();
+            // Simulate pressing the Enter key
+            const enterKeyEvent = new KeyboardEvent('keydown', {
+              key: 'Enter',
+              code: 'Enter',
+              keyCode: 13, // Key code for Enter
+              which: 13, // Which code for Enter
+              bubbles: true, // Ensures the event bubbles up the DOM
+            });
+            editorElement.dispatchEvent(enterKeyEvent);
+          }
+          event.preventDefault();
+        } else if (event.key === 'o') {
+          // O: Navigate to the console output
+          const consoleElement = document.querySelector(
+            '.xterm-helper-textarea'
+          );
+          if (consoleElement) {
+            (consoleElement as HTMLElement).focus();
+          }
+          event.preventDefault();
+        }
+      };
+
+      // Attach the event listener
+      document.addEventListener('keydown', handleKeyDown);
+      console.log('added keydown listener');
+
+      // Cleanup the event listener on unmount
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+      };
+    }, []);
+    useEffect(() => {
       if (projectVersion !== currentProjectVersion.current) {
         sourceUtilities.replaceSource(source);
         currentProjectVersion.current = projectVersion;
