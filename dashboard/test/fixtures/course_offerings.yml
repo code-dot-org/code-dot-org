@@ -1,16 +1,16 @@
 hour-of-code:
-  id: 397
+  id: 353
   key: hour-of-code
   display_name: hour-of-code
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2022-04-13 23:51:28.000000000 Z
     zone: &1 !ruby/object:ActiveSupport::TimeZone
       name: Etc/UTC
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2022-04-13 23:51:28.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2022-04-13 23:51:28.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2022-04-13 23:51:28.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -26,19 +26,18 @@ hour-of-code:
   video:
   published_date:
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 events:
-  id: 320
+  id: 319
   key: events
   display_name: events
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2022-04-13 23:51:27.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2022-04-13 23:51:27.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2022-04-13 23:51:27.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2022-04-13 23:51:27.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -54,19 +53,18 @@ events:
   video:
   published_date:
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 jigsaw:
-  id: 410
+  id: 202
   key: jigsaw
   display_name: Jigsaw
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2021-11-11 11:54:58.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2021-11-11 11:54:58.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:15.000000000 Z
+    utc: 2024-04-22 22:49:31.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:15.000000000 Z
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -82,23 +80,22 @@ jigsaw:
   professional_learning_program:
   video:
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2015-01-01 11:00:00.000000000 Z
+    utc: 2015-01-01 19:00:00.000000000 Z
     zone: *1
-    time: 2015-01-01 11:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 560
-  ai_teaching_assistant_available: false
+    time: 2015-01-01 19:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 648
 hourofcode:
-  id: 398
+  id: 199
   key: hourofcode
   display_name: Classic Maze
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2021-11-11 11:54:52.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2021-11-11 11:54:52.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:15.000000000 Z
+    utc: 2024-04-22 22:49:31.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:15.000000000 Z
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -114,23 +111,22 @@ hourofcode:
   professional_learning_program:
   video: https://www.youtube-nocookie.com/embed/bQilo5ecSX4/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=bQilo5ecSX4&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2013-12-01 11:00:00.000000000 Z
+    utc: 2013-12-01 19:00:00.000000000 Z
     zone: *1
-    time: 2013-12-01 11:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 560
-  ai_teaching_assistant_available: false
+    time: 2013-12-01 19:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 648
 starwars:
-  id: 573
+  id: 219
   key: starwars
   display_name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2021-11-11 11:55:55.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2021-11-11 11:55:55.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2024-04-22 22:49:31.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -146,23 +142,22 @@ starwars:
   professional_learning_program:
   video: https://www.youtube-nocookie.com/embed/vNjiHkQQl6A/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=vNjiHkQQl6A&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2015-12-01 11:00:00.000000000 Z
+    utc: 2015-12-01 19:00:00.000000000 Z
     zone: *1
-    time: 2015-12-01 11:00:00.000000000 Z
+    time: 2015-12-01 19:00:00.000000000 Z
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 frozen:
-  id: 351
+  id: 191
   key: frozen
   display_name: Code with Anna and Elsa
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2021-11-11 11:54:48.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2021-11-11 11:54:48.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2024-04-22 22:49:31.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -178,23 +173,22 @@ frozen:
   professional_learning_program:
   video: https://www.youtube-nocookie.com/embed/H1-paxNG4kw/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=H1-paxNG4kw&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2014-12-01 11:00:00.000000000 Z
+    utc: 2014-12-01 19:00:00.000000000 Z
     zone: *1
-    time: 2014-12-01 11:00:00.000000000 Z
+    time: 2014-12-01 19:00:00.000000000 Z
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 playlab:
-  id: 498
+  id: 209
   key: playlab
   display_name: Play Lab
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2021-11-11 11:55:35.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2021-11-11 11:55:35.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:15.000000000 Z
+    utc: 2024-04-22 22:49:31.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:15.000000000 Z
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -210,23 +204,22 @@ playlab:
   professional_learning_program:
   video: https://www.youtube-nocookie.com/embed/nVsZyQIZyPc/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=nVsZyQIZyPc&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2021-05-27 09:00:00.000000000 Z
+    utc: 2021-05-27 16:00:00.000000000 Z
     zone: *1
-    time: 2021-05-27 09:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 560
-  ai_teaching_assistant_available: false
+    time: 2021-05-27 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 648
 artist:
-  id: 44
+  id: 160
   key: artist
   display_name: Artist
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:46:18.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:46:18.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -242,23 +235,22 @@ artist:
   professional_learning_program:
   video: https://www.youtube-nocookie.com/embed/ws8rmHcqXeM/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=ws8rmHcqXeM&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2015-01-01 11:00:00.000000000 Z
+    utc: 2015-01-01 19:00:00.000000000 Z
     zone: *1
-    time: 2015-01-01 11:00:00.000000000 Z
+    time: 2015-01-01 19:00:00.000000000 Z
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 algebra:
-  id: 19
+  id: 156
   key: algebra
   display_name: Computer Science in Algebra
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:45:59.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:45:59.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2023-07-28 03:13:45.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2023-07-28 03:13:45.000000000 Z
   is_featured: false
   assignable: false
   curriculum_type:
@@ -274,19 +266,18 @@ algebra:
   video:
   published_date:
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 flappy:
-  id: 335
+  id: 190
   key: flappy
   display_name: Flappy Code
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2021-11-11 11:54:47.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2021-11-11 11:54:47.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:15.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:15.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -302,23 +293,22 @@ flappy:
   professional_learning_program:
   video: https://www.youtube-nocookie.com/embed/VQ4lo6Huylc/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=VQ4lo6Huylc&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2014-02-26 11:00:00.000000000 Z
+    utc: 2014-02-26 19:00:00.000000000 Z
     zone: *1
-    time: 2014-02-26 11:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 560
-  ai_teaching_assistant_available: false
+    time: 2014-02-26 19:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 648
 20-hour:
-  id: 1
+  id: 151
   key: 20-hour
   display_name: Accelerated Intro to CS Course
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:45:24.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:45:24.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2024-04-22 22:49:29.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2024-04-22 22:49:29.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type: Course
@@ -334,23 +324,22 @@ flappy:
   professional_learning_program:
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2013-12-01 11:00:00.000000000 Z
+    utc: 2013-12-01 19:00:00.000000000 Z
     zone: *1
-    time: 2013-12-01 11:00:00.000000000 Z
+    time: 2013-12-01 19:00:00.000000000 Z
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 course1:
-  id: 80
+  id: 165
   key: course1
   display_name: Course 1
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:46:41.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:46:41.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -366,23 +355,22 @@ course1:
   professional_learning_program:
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2014-08-01 09:00:00.000000000 Z
+    utc: 2014-08-01 16:00:00.000000000 Z
     zone: *1
-    time: 2014-08-01 09:00:00.000000000 Z
+    time: 2014-08-01 16:00:00.000000000 Z
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 course2:
-  id: 81
+  id: 166
   key: course2
   display_name: Course 2
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:46:46.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:46:46.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -398,23 +386,22 @@ course2:
   professional_learning_program:
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2014-08-01 09:00:00.000000000 Z
+    utc: 2014-08-01 16:00:00.000000000 Z
     zone: *1
-    time: 2014-08-01 09:00:00.000000000 Z
+    time: 2014-08-01 16:00:00.000000000 Z
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 course3:
-  id: 82
+  id: 167
   key: course3
   display_name: Course 3
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:46:51.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:46:51.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -430,23 +417,22 @@ course3:
   professional_learning_program:
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2014-08-01 09:00:00.000000000 Z
+    utc: 2014-08-01 16:00:00.000000000 Z
     zone: *1
-    time: 2014-08-01 09:00:00.000000000 Z
+    time: 2014-08-01 16:00:00.000000000 Z
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 course4:
-  id: 83
+  id: 168
   key: course4
   display_name: Course 4
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:46:55.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:46:55.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -462,23 +448,22 @@ course4:
   professional_learning_program:
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2016-05-06 09:00:00.000000000 Z
+    utc: 2016-05-06 16:00:00.000000000 Z
     zone: *1
-    time: 2016-05-06 09:00:00.000000000 Z
+    time: 2016-05-06 16:00:00.000000000 Z
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 cspunit1:
-  id: 263
+  id: 374
   key: cspunit1
   display_name: cspunit1
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:28.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:28.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:28.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:28.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -494,19 +479,18 @@ cspunit1:
   video:
   published_date:
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 cspunit2:
-  id: 264
+  id: 392
   key: cspunit2
   display_name: cspunit2
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:28.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:28.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:28.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:28.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -522,19 +506,18 @@ cspunit2:
   video:
   published_date:
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 cspunit3:
-  id: 265
+  id: 454
   key: cspunit3
   display_name: cspunit3
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:28.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:28.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:28.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:28.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -550,19 +533,18 @@ cspunit3:
   video:
   published_date:
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 cspunit4:
-  id: 267
+  id: 484
   key: cspunit4
   display_name: cspunit4
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:29.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:29.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:29.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:29.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -578,19 +560,18 @@ cspunit4:
   video:
   published_date:
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 cspunit5:
-  id: 269
+  id: 502
   key: cspunit5
   display_name: cspunit5
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:29.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:29.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:29.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:29.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -606,19 +587,18 @@ cspunit5:
   video:
   published_date:
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 cspunit6:
-  id: 270
+  id: 292
   key: cspunit6
   display_name: cspunit6
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:27.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:27.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:27.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:27.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -634,19 +614,18 @@ cspunit6:
   video:
   published_date:
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 allthethingscourse:
-  id: 28
+  id: 394
   key: allthethingscourse
   display_name: allthethingscourse
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:28.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:28.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2022-04-13 23:51:28.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2022-04-13 23:51:28.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type:
@@ -662,19 +641,18 @@ allthethingscourse:
   video:
   published_date:
   self_paced_pl_course_offering_id:
-  ai_teaching_assistant_available: false
 coursea:
-  id: 86
+  id: 169
   key: coursea
   display_name: 'CS Fundamentals: Course A'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:46:58.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:46:58.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:15.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:15.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type: Course
@@ -690,23 +668,22 @@ coursea:
   professional_learning_program: https://code.org/professional-development-workshops
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2023-07-10 09:00:00.000000000 Z
+    utc: 2023-07-10 16:00:00.000000000 Z
     zone: *1
-    time: 2023-07-10 09:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 415
-  ai_teaching_assistant_available: false
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 courseb:
-  id: 88
+  id: 170
   key: courseb
   display_name: 'CS Fundamentals: Course B'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:47:17.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:47:17.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:15.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:15.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type: Course
@@ -723,23 +700,22 @@ courseb:
   professional_learning_program: https://code.org/professional-development-workshops
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2023-07-10 09:00:00.000000000 Z
+    utc: 2023-07-10 16:00:00.000000000 Z
     zone: *1
-    time: 2023-07-10 09:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 415
-  ai_teaching_assistant_available: false
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 coursec:
-  id: 93
+  id: 171
   key: coursec
   display_name: 'CS Fundamentals: Course C'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:47:31.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:47:31.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:15.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:15.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type: Course
@@ -756,23 +732,22 @@ coursec:
   professional_learning_program: https://code.org/professional-development-workshops
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2023-07-10 09:00:00.000000000 Z
+    utc: 2023-07-10 16:00:00.000000000 Z
     zone: *1
-    time: 2023-07-10 09:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 415
-  ai_teaching_assistant_available: false
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 coursed:
-  id: 99
+  id: 172
   key: coursed
   display_name: 'CS Fundamentals: Course D'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:47:51.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:47:51.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:15.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:15.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type: Course
@@ -788,23 +763,22 @@ coursed:
   professional_learning_program: https://code.org/professional-development-workshops
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2023-07-10 09:00:00.000000000 Z
+    utc: 2023-07-10 16:00:00.000000000 Z
     zone: *1
-    time: 2023-07-10 09:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 415
-  ai_teaching_assistant_available: false
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 coursee:
-  id: 103
+  id: 173
   key: coursee
   display_name: 'CS Fundamentals: Course E'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:48:16.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:48:16.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:15.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:15.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type: Course
@@ -820,23 +794,22 @@ coursee:
   professional_learning_program: https://code.org/professional-development-workshops
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2023-07-10 09:00:00.000000000 Z
+    utc: 2023-07-10 16:00:00.000000000 Z
     zone: *1
-    time: 2023-07-10 09:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 415
-  ai_teaching_assistant_available: false
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 coursef:
-  id: 108
+  id: 174
   key: coursef
   display_name: 'CS Fundamentals: Course F'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:18.000000000 Z
+    utc: 2021-11-11 11:48:45.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:18.000000000 Z
+    time: 2021-11-11 11:48:45.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:15.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:15.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type: Course
@@ -852,23 +825,22 @@ coursef:
   professional_learning_program: https://code.org/professional-development-workshops
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2023-07-10 09:00:00.000000000 Z
+    utc: 2023-07-10 16:00:00.000000000 Z
     zone: *1
-    time: 2023-07-10 09:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 415
-  ai_teaching_assistant_available: false
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 express:
-  id: 323
+  id: 188
   key: express
   display_name: 'CS Fundamentals: Express Course'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2021-11-11 11:54:15.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2021-11-11 11:54:15.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 19:08:15.000000000 Z
+    utc: 2024-04-22 22:49:30.000000000 Z
     zone: *1
-    time: 2025-05-14 19:08:15.000000000 Z
+    time: 2024-04-22 22:49:30.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type: Course
@@ -885,23 +857,22 @@ express:
   professional_learning_program: https://code.org/professional-development-workshops
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2023-07-10 09:00:00.000000000 Z
+    utc: 2023-07-10 16:00:00.000000000 Z
     zone: *1
-    time: 2023-07-10 09:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 415
-  ai_teaching_assistant_available: false
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
 pre-express:
-  id: 512
+  id: 214
   key: pre-express
   display_name: 'CS Fundamentals: Pre-reader Express'
   created_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2021-11-11 11:55:40.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2021-11-11 11:55:40.000000000 Z
   updated_at: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2025-05-14 18:58:19.000000000 Z
+    utc: 2024-04-22 22:49:31.000000000 Z
     zone: *1
-    time: 2025-05-14 18:58:19.000000000 Z
+    time: 2024-04-22 22:49:31.000000000 Z
   is_featured: false
   assignable: true
   curriculum_type: Course
@@ -917,8 +888,7 @@ pre-express:
   professional_learning_program: https://code.org/professional-development-workshops
   video: https://www.youtube-nocookie.com/embed/rNIM1fzJ8u0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=rNIM1fzJ8u0&wmode=transparent
   published_date: !ruby/object:ActiveSupport::TimeWithZone
-    utc: 2023-07-10 09:00:00.000000000 Z
+    utc: 2023-07-10 16:00:00.000000000 Z
     zone: *1
-    time: 2023-07-10 09:00:00.000000000 Z
-  self_paced_pl_course_offering_id: 415
-  ai_teaching_assistant_available: false
+    time: 2023-07-10 16:00:00.000000000 Z
+  self_paced_pl_course_offering_id: 251
