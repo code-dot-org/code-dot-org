@@ -12,6 +12,7 @@ type ValidateFileNameArgs = {
   projectFiles: MultiFileSource['files'];
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
+  validFileTypes?: string[];
 };
 
 /**
@@ -33,6 +34,7 @@ export const validateFileName = ({
   projectFiles,
   isStartMode,
   validationFile,
+  validFileTypes,
 }: ValidateFileNameArgs) => {
   if (!fileName.length) {
     return;
@@ -41,6 +43,9 @@ export const validateFileName = ({
   const [, extension] = fileName.split('.');
   if (!extension) {
     return codebridgeI18n.noFileExtensionError();
+  }
+  if (validFileTypes && !validFileTypes.includes(extension)) {
+    return 'not a valid file type';
   }
 
   if (!isValidFileName(fileName)) {
