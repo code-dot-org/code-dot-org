@@ -2,10 +2,7 @@
   "entryContent": {
     "fields": {
       "title": {
-        "en-US": "⛔️ [ENGINEERING ONLY] UI Integration Testing"
-      },
-      "directory": {
-        "en-US": "None"
+        "en-US": "❌ [ENGINEERING ONLY] UI Integration Testing"
       },
       "slug": {
         "en-US": "/engineering/all-the-things"
