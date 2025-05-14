@@ -76,7 +76,6 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Subheading',
       type: 'Text',
       group: 'content',
-      defaultValue: 'Hero Banner subheading goes here.',
       validations: {
         bindingSourceType: ['entry', 'manual'],
       },
