@@ -168,6 +168,7 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     editorType === 'drums' ? 'drums' : scaleMode || 'simple';
 
   const colorsSimple = styles.colorsSimple.split(',');
+  const colorsSimpleDarker = styles.colorsSimpleDarker.split(',');
 
   const getRowInfo = (name: string, note: number) => {
     if (interfaceMode === 'drums') {
@@ -184,9 +185,12 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
       );
       if (displayNoteIndex !== -1) {
         color = 'white';
-        backgroundColor =
+        selectedBackgroundColor =
           colorsSimple[(21 - displayNoteIndex) % colorsSimple.length];
-        selectedBackgroundColor = backgroundColor;
+        backgroundColor =
+          colorsSimpleDarker[
+            (21 - displayNoteIndex) % colorsSimpleDarker.length
+          ];
       }
     }
 

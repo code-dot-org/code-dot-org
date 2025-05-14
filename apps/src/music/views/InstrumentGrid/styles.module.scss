@@ -1,9 +1,9 @@
 @import '../../../mixins.scss';
 @import 'color.scss';
 
-$colors-simple: #2980b9, #16a085, #2ecc71, #f1c40f, #f39c12, #d35400, #e74c3c;
-$colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec,
-  #55efc4;
+$colors-simple: #ee0916, #ff7b00, #ff0, #0f0, #0ff, #1a9cff, #c88eee;
+$colors-simple-darker: #EC0914, #BD5B00, #7A7A00, #008A00, #008080, #0076D1, #A446E2;
+$colors-drums: #6c5ce7, #0984e3, #00cec9, #00b894, #a29bfe, #74b9ff, #81ecec, #55efc4;
 $cell-width: 25px;
 $cell-height: 18px;
 $row-gap: 4px;
@@ -17,9 +17,10 @@ $peek-height: 5px;
   displayRows: $display-rows;
   peekHeight: $peek-height;
   colorsSimple: $colors-simple;
+  colorsSimpleDarker: $colors-simple-darker;
   black: $black;
   white: $white;
-  selectedColor: $brand_primary_default;
+  selectedColor: var(--brand-aqua-50);
 }
 
 .container {
