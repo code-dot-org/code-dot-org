@@ -69,6 +69,7 @@ export const Codebridge = React.memo(
 
     // Adds keyboard shortcuts for Run (r), Console (o) and Editor (e),
     // which are preceded by Control (Windows/Linux) or Command (macOS).
+    // Runs on mount (see empty dependency list).
     useEffect(() => {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Check if Control (Windows/Linux) or Command (macOS) is pressed
@@ -110,13 +111,13 @@ export const Codebridge = React.memo(
 
       // Attach the event listener
       document.addEventListener('keydown', handleKeyDown);
-      console.log('added keydown listener');
 
       // Cleanup the event listener on unmount
       return () => {
         document.removeEventListener('keydown', handleKeyDown);
       };
     }, []);
+
     useEffect(() => {
       if (projectVersion !== currentProjectVersion.current) {
         sourceUtilities.replaceSource(source);
