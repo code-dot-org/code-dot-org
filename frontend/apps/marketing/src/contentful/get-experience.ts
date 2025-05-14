@@ -10,17 +10,23 @@ const logger = getLogger('contentful');
 
 export const getExperience = cache(
   async (slug: string, localeCode: string, isEditorMode = false) => {
+    // To make it easier for content editors, all slugs begin with `/` for experiences
+    const contentfulSlug = `/${slug}`;
     const startTime = Date.now();
 
-    return await getExperienceFromContentful(slug, localeCode, isEditorMode)
+    return await getExperienceFromContentful(
+      contentfulSlug,
+      localeCode,
+      isEditorMode,
+    )
       .then(({experience, error}) => {
         const duration = Date.now() - startTime;
 
         logger.info(
-          `Successfully fetched SLUG=${slug}, LOCALE=${localeCode}, IS_EDITOR_MODE=${isEditorMode} in ${duration}ms`,
+          `Successfully fetched SLUG=${contentfulSlug}, LOCALE=${localeCode}, IS_EDITOR_MODE=${isEditorMode} in ${duration}ms`,
           {
             operation: 'getExperience',
-            slug,
+            slug: contentfulSlug,
             localeCode,
             duration,
           },
