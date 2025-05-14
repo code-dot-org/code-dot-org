@@ -39,6 +39,7 @@ scripts_map = {
 @course_offerings = {}
 @course_versions = {}
 @unit_groups = {}
+@unit_group_units = {}
 @plc_courses = {}
 @scripts = {}
 @plc_course_units = {}
@@ -54,6 +55,10 @@ scripts_map.each do |_script_id, name|
 
   script.unit_groups&.each do |unit_group|
     @unit_groups[unit_group.name] = unit_group.attributes
+  end
+
+  script.unit_group_units&.each do |ugu|
+    @unit_group_units["ugu-#{script.name}-#{ugu.course_id}"] = ugu.attributes
   end
 
   course_version = script.get_course_version
@@ -106,6 +111,7 @@ prefix = Rails.root.join('test/fixtures/')
 File.new("#{prefix}course_offerings.yml", 'w').write(yamlize(@course_offerings))
 File.new("#{prefix}course_versions.yml", 'w').write(yamlize(@course_versions))
 File.new("#{prefix}unit_groups.yml", 'w').write(yamlize(@unit_groups))
+File.new("#{prefix}unit_group_units.yml", 'w').write(yamlize(@unit_group_units))
 File.new("#{prefix}plc_courses.yml", 'w').write(yamlize(@plc_courses))
 File.new("#{prefix}unit.yml", 'w').write(yamlize(@scripts))
 File.new("#{prefix}plc_course_units.yml", 'w').write(yamlize(@plc_course_units))
