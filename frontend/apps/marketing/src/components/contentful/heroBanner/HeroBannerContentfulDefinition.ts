@@ -66,6 +66,7 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Heading',
       type: 'Text',
       group: 'content',
+      defaultValue: 'Hero Banner heading goes here.',
       validations: {
         required: true,
         bindingSourceType: ['entry', 'manual'],
@@ -75,6 +76,7 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Subheading',
       type: 'Text',
       group: 'content',
+      defaultValue: 'Hero Banner subheading goes here.',
       validations: {
         bindingSourceType: ['entry', 'manual'],
       },
