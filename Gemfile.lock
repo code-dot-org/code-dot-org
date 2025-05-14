@@ -348,7 +348,7 @@ GEM
       activerecord (>= 5.a)
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
-    date (3.3.3)
+    date (3.4.1)
     declarative (0.0.20)
     delayed_job (4.1.11)
       activesupport (>= 3.0, < 8.0)
@@ -604,12 +604,12 @@ GEM
     naturally (2.1.0)
     net-http-persistent (4.0.2)
       connection_pool (~> 2.2)
-    net-imap (0.3.4)
+    net-imap (0.3.8)
       date
       net-protocol
     net-pop (0.1.2)
       net-protocol
-    net-protocol (0.2.1)
+    net-protocol (0.2.2)
       timeout
     net-scp (2.0.0)
       net-ssh (>= 2.6.5, < 6.0.0)
@@ -913,7 +913,7 @@ GEM
     time (0.4.1)
       date
     timecop (0.8.1)
-    timeout (0.3.2)
+    timeout (0.4.3)
     timers (4.3.5)
     trailblazer-option (0.1.2)
     ttfunk (1.7.0)
