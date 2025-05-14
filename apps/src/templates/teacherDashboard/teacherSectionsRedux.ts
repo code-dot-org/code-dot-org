@@ -685,6 +685,16 @@ const sectionSlice = createSlice({
         state.sections[id].hidden = true;
       });
     },
+    // This is used to set the asyncLoadComplete state in unit tests
+    // and is not used in production code.
+    setAsyncLoad: {
+      reducer(state, action: PayloadAction<boolean>) {
+        state.asyncLoadComplete = action.payload;
+      },
+      prepare(asyncLoadComplete: boolean) {
+        return {payload: asyncLoadComplete};
+      },
+    },
     setSectionOrder: {
       reducer(
         state,
@@ -1226,6 +1236,7 @@ export const {
   sectionDoesNotHaveNewData,
   archiveAllSections,
   setSectionOrder,
+  setAsyncLoad,
 } = sectionSlice.actions;
 
 export default sectionSlice.reducer;

@@ -15,6 +15,7 @@ import {SectionList} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2
 import teacherSections, {
   setSectionOrder,
   setSections,
+  setAsyncLoad,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {serverSectionFromSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {TEACHER_NAVIGATION_PATHS} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
@@ -86,7 +87,11 @@ describe('SectionList', () => {
     store.dispatch(setSectionOrder([11, 12, 13, 14]));
   });
 
-  function renderComponent(initialRoute = '/teacher_dashboard/home') {
+  function renderComponent(
+    initialRoute = '/teacher_dashboard/home',
+    asyncLoadComplete = true
+  ) {
+    store.dispatch(setAsyncLoad(asyncLoadComplete));
     return render(
       <Provider store={store}>
         <RouterProvider
