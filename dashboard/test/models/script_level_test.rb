@@ -795,7 +795,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     student = create :student
 
-    assert_equal "/courses/#{unit_group.name}/units/2", script_level.next_level_or_redirect_path_for_user(student)
+    assert_equal "/courses/#{unit_group.name}/units/2", script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: unit1.unit_group_units.first)
   end
 
   test 'end of lesson' do
