@@ -25,6 +25,10 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import moduleStyles from './styles/codebridgeContainer.module.scss';
 import './styles/codebridge.scss';
 
+const RUN_BUTTON_ID = '#uitest-codebridge-run';
+const EDITOR_ID = '#uitest-codebridge-editor';
+const CONSOLE_CLASS = '.xterm-helper-textarea';
+
 type CodebridgeProps = {
   source: MultiFileSource;
   config: ConfigType;
@@ -67,45 +71,46 @@ export const Codebridge = React.memo(
 
     const currentProjectVersion = useRef(projectVersion);
 
-    // Adds keyboard shortcuts for Run (r), Console (o) and Editor (e),
+    // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
     // Runs on mount (see empty dependency list).
     useEffect(() => {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Check if Control (Windows/Linux) or Command (macOS) is pressed
         const isControlOrCommand = event.ctrlKey || event.metaKey;
-        if (isControlOrCommand && event.key === 'r') {
-          const editorElement = document.querySelector(
-            '#uitest-codebridge-run'
-          );
-          if (editorElement) {
-            // Click will run code and then move focus to console
-            (editorElement as HTMLElement).click();
+        const editorElement = document.querySelector(EDITOR_ID);
+        const runButton = document.querySelector(RUN_BUTTON_ID);
+        const consoleElement = document.querySelector(CONSOLE_CLASS);
+        if (isControlOrCommand) {
+          switch (event.key) {
+            case '1':
+              if (editorElement) {
+                (editorElement as HTMLElement).focus();
+                // Also simulate 'Enter' to actually enter the editor
+                const enterKeyEvent = new KeyboardEvent('keydown', {
+                  key: 'Enter',
+                  keyCode: 13,
+                  bubbles: true,
+                });
+                editorElement.dispatchEvent(enterKeyEvent);
+              }
+              event.preventDefault();
+              break;
+            case '2':
+              if (runButton) {
+                (runButton as HTMLElement).click();
+              }
+              event.preventDefault();
+              break;
+            case '3':
+              if (consoleElement) {
+                (consoleElement as HTMLElement).focus();
+              }
+              event.preventDefault();
+              break;
+            default:
+              break;
           }
-          event.preventDefault();
-        } else if (isControlOrCommand && event.key === 'e') {
-          const editorElement = document.querySelector(
-            '#uitest-codebridge-editor'
-          );
-          if (editorElement) {
-            (editorElement as HTMLElement).focus();
-            // Also simulate 'Enter' to actually enter the editor
-            const enterKeyEvent = new KeyboardEvent('keydown', {
-              key: 'Enter',
-              keyCode: 13,
-              bubbles: true,
-            });
-            editorElement.dispatchEvent(enterKeyEvent);
-          }
-          event.preventDefault();
-        } else if (isControlOrCommand && event.key === 'o') {
-          const consoleElement = document.querySelector(
-            '.xterm-helper-textarea'
-          );
-          if (consoleElement) {
-            (consoleElement as HTMLElement).focus();
-          }
-          event.preventDefault();
         }
       };
 
