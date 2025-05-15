@@ -76,7 +76,7 @@ button.button-kebab {
   opacity: 0;
   height: 20px;
   width: 20px;
-  min-width: 20px !important;
+  min-width: 20px !important; // !important to override the default button min-width
   margin: 2px;
   transition: none;
 
@@ -98,7 +98,6 @@ button.button-kebab {
 .draggable:focus > .row > .button-kebab,
 button.button-kebab:focus {
   opacity: 1;
-  min-width: 1.25rem;
 }
 
 .nameContainer {
