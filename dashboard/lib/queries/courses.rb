@@ -38,7 +38,7 @@ class Queries::Courses
     {unit_group: unit_group, unit_group_unit: ugu, unit: unit}
   end
 
-  def self.unit_group_unit(unit, unit_group)
+  def self.unit_group_unit(unit, unit_group = nil)
     if unit
       unit_group ||= unit.original_unit_group
       unit.unit_group_units.find {|ugu| ugu.unit_group == unit_group}
