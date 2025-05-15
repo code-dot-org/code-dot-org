@@ -73,6 +73,27 @@ $default-spacing: 2px;
   }
 }
 
+.documentationPanel {
+  flex-direction: column;
+  height: 100%;
+  width: 20%;
+
+  .documentationArea {
+    width: 100%;
+    height: 100%;
+    background-color: $neutral_dark;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+}
+
+.documentationTooltip {
+  background-color: $white;
+  span {
+    color: $black !important;
+  }
+}
+
 .shareArea {
   &.shareTop {
     margin-left: $default-spacing * 2;

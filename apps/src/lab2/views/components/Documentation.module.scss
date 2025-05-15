@@ -1,0 +1,42 @@
+@import 'color.scss';
+@import 'font.scss';
+
+.markdownText {
+  line-height: 0;
+  overflow-y: auto;
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin: 0 0 10px 0;
+    font-family: $barlowSemiCondensed-semibold;
+    font-size: 1.75em;
+    line-height: 1.2em;
+  }
+
+  ol, ul {
+    font-size: 14px;
+    line-height: 0;
+    margin: 0 0 10px 20px;
+  }
+
+  li {
+    margin-bottom: 10px;
+    line-height: 1.4em;
+  }
+
+  code {
+    color: $light_primary_700;
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.4em;
+  }
+
+  details {
+    line-height: 1.2;
+  }
+}
