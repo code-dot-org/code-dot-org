@@ -42,7 +42,7 @@ module Cdo
 
     def self.throttled?(id)
       value = get_value(id)
-      value[:throttled_until]&.future?
+      !!value[:throttled_until]&.future?
     end
 
     def self.get_value(id)

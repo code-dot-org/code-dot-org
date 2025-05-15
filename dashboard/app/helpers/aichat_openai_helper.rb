@@ -173,7 +173,7 @@ module AichatOpenaiHelper
   def self.token_throttling_key(model_id, user_id)
     # "/user/" included to leave space for potential throttling at the classroom/teacher level.
     # Token throttling also only currently in place for gpt-4o-mini, but inclusion of model ID leaves space for other models.
-    TOKEN_THROTTLING_PREFIX + model_id + '/user/' + user_id.to_s
+    TOKEN_THROTTLING_PREFIX + 'model/' + model_id + '/user/' + user_id.to_s
   end
 
   def self.client
