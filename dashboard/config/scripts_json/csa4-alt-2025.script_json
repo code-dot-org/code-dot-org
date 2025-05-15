@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-11 07:10:50 UTC",
+    "serialized_at": "2025-05-13 21:01:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -77,21 +78,9 @@
       }
     },
     {
-      "key": "lessonGroup-5",
-      "user_facing": true,
-      "position": 5,
-      "properties": {
-        "display_name": "Alternate Lessons"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
       "key": "lessonGroup-6",
       "user_facing": true,
-      "position": 6,
+      "position": 5,
       "properties": {
         "display_name": "Sandboxes"
       },
@@ -104,7 +93,7 @@
   "lessons": [
     {
       "key": "Ethics in Data",
-      "name": "Ethics in Data",
+      "name": "Lesson 1: Ethics in Data",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -122,7 +111,7 @@
     },
     {
       "key": "Data Sets",
-      "name": "Data Sets",
+      "name": "Lesson 2: Data Sets",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -140,7 +129,7 @@
     },
     {
       "key": "One-Dimensional (1D) Arrays",
-      "name": "One-Dimensional (1D) Arrays",
+      "name": "Lesson 3: One-Dimensional (1D) Arrays",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -159,7 +148,7 @@
     },
     {
       "key": "Modifying Elements",
-      "name": "Modifying Elements",
+      "name": "Lesson 4: Modifying Elements",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -178,7 +167,7 @@
     },
     {
       "key": "Traversing 1D Arrays",
-      "name": "Traversing 1D Arrays",
+      "name": "Lesson 5: Traversing 1D Arrays",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -197,7 +186,7 @@
     },
     {
       "key": "Polymorphism",
-      "name": "Polymorphism",
+      "name": "Lesson 6: Polymorphism",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -216,7 +205,7 @@
     },
     {
       "key": "Enhanced For Loops",
-      "name": "Enhanced For Loops (1D)",
+      "name": "Lesson 7: Enhanced For Loops (1D)",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -235,7 +224,7 @@
     },
     {
       "key": "Finding Duplicates",
-      "name": "Finding Duplicates",
+      "name": "Lesson 8: Finding Duplicates",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -254,7 +243,7 @@
     },
     {
       "key": "Array Algorithms",
-      "name": "Array Algorithms",
+      "name": "Lesson 9: Array Algorithms",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -273,7 +262,7 @@
     },
     {
       "key": "Text Files",
-      "name": "Text Files",
+      "name": "Lesson 10: Text Files",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -291,7 +280,7 @@
     },
     {
       "key": "Integer and Double Objects",
-      "name": "Integer and Double Objects",
+      "name": "Lesson 11: Integer and Double Objects",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -310,7 +299,7 @@
     },
     {
       "key": "ArrayLists",
-      "name": "ArrayLists",
+      "name": "Lesson 12: ArrayLists",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -329,7 +318,7 @@
     },
     {
       "key": "Manipulating Elements",
-      "name": "Manipulating Elements",
+      "name": "Lesson 13: Manipulating Elements",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -348,7 +337,7 @@
     },
     {
       "key": "Removing Elements",
-      "name": "Removing Elements",
+      "name": "Lesson 14: Removing Elements",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -367,7 +356,7 @@
     },
     {
       "key": "Lists of Objects",
-      "name": "Lists of Objects",
+      "name": "Lesson 15: Lists of Objects",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -386,7 +375,7 @@
     },
     {
       "key": "ArrayList and String Algorithms",
-      "name": "ArrayList and String Algorithms",
+      "name": "Lesson 16: ArrayList and String Algorithms",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -405,7 +394,7 @@
     },
     {
       "key": "Images in The Theater",
-      "name": "Images in The Theater",
+      "name": "Lesson 17: Images in The Theater",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
@@ -424,7 +413,7 @@
     },
     {
       "key": "Two-Dimensional (2D) Arrays",
-      "name": "Two-Dimensional (2D) Arrays",
+      "name": "Lesson 18: Two-Dimensional (2D) Arrays",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
@@ -443,7 +432,7 @@
     },
     {
       "key": "2D Array Elements",
-      "name": "2D Array Elements",
+      "name": "Lesson 19: 2D Array Elements",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
@@ -462,7 +451,7 @@
     },
     {
       "key": "Row-Major Traversal",
-      "name": "Row-Major Traversal",
+      "name": "Lesson 20: Row-Major Traversal",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
@@ -481,7 +470,7 @@
     },
     {
       "key": "Column-Major Traversal",
-      "name": "Column-Major Traversal",
+      "name": "Lesson 21: Column-Major Traversal",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
@@ -500,7 +489,7 @@
     },
     {
       "key": "Enhanced For Loops (2D Arrays)",
-      "name": "Enhanced For Loops (2D Arrays)",
+      "name": "Lesson 22: Enhanced For Loops (2D Arrays)",
       "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
@@ -519,7 +508,7 @@
     },
     {
       "key": "2D Array Algorithms",
-      "name": "2D Array Algorithms",
+      "name": "Lesson 23: 2D Array Algorithms",
       "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": true,
@@ -538,7 +527,7 @@
     },
     {
       "key": "Modifying Images",
-      "name": "Modifying Images",
+      "name": "Lesson 24: Modifying Images",
       "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
@@ -557,7 +546,7 @@
     },
     {
       "key": "Searching",
-      "name": "Searching",
+      "name": "Lesson 25: Searching",
       "absolute_position": 25,
       "lockable": false,
       "has_lesson_plan": true,
@@ -576,7 +565,7 @@
     },
     {
       "key": "Selection Sort",
-      "name": "Selection Sort",
+      "name": "Lesson 26: Selection Sort",
       "absolute_position": 26,
       "lockable": false,
       "has_lesson_plan": true,
@@ -595,7 +584,7 @@
     },
     {
       "key": "Insertion Sort",
-      "name": "Insertion Sort",
+      "name": "Lesson 27: Insertion Sort",
       "absolute_position": 27,
       "lockable": false,
       "has_lesson_plan": true,
@@ -614,7 +603,7 @@
     },
     {
       "key": "Recursion",
-      "name": "Recursion",
+      "name": "Lesson 28: Recursion",
       "absolute_position": 28,
       "lockable": false,
       "has_lesson_plan": true,
@@ -633,7 +622,7 @@
     },
     {
       "key": "Binary Search",
-      "name": "Binary Search",
+      "name": "Lesson 29: Binary Search",
       "absolute_position": 29,
       "lockable": false,
       "has_lesson_plan": true,
@@ -652,7 +641,7 @@
     },
     {
       "key": "Merge Sort",
-      "name": "Merge Sort",
+      "name": "Lesson 30: Merge Sort",
       "absolute_position": 30,
       "lockable": false,
       "has_lesson_plan": true,
@@ -671,7 +660,7 @@
     },
     {
       "key": "Data for Social Good Project",
-      "name": "Data for Social Good Project",
+      "name": "Project 1a: Data for Social Good Project",
       "absolute_position": 31,
       "lockable": false,
       "has_lesson_plan": true,
@@ -689,12 +678,31 @@
       }
     },
     {
-      "key": "Abstract Data Art Project",
-      "name": "Abstract Data Art Project",
+      "key": "Data for Social Good Project [1-Day Version]",
+      "name": "Project 1b: Data for Social Good Project [1-Day Version]",
       "absolute_position": 32,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 32,
+      "properties": {
+        "assessment": true,
+        "overview": "**What questions do I want to answer using data?**\n\nFor this project, students use the skills they have developed throughout this unit to store and analyze data from text file for a topic that they are interested in or that is meaningful to them. Students choose a user scenario and data they want to analyze to identify a solution to address a user's needs. After brainstorming and planning, students develop their programs.",
+        "preparation": "* Review project requirements and rubric\n* Print copies of the Data for Social Good Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-10-data-for-social-good-project/37894) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What questions do I want to answer using data?**\n\nFor this project, you use the skills you have developed throughout this unit to store and analyze data from text files for a topic that you are interested in or that is meaningful to you. You choose a user scenario and data you want to analyze to identify a solution to address a user's needs. After brainstorming and planning, you develop your program."
+      },
+      "seeding_key": {
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "Abstract Data Art Project",
+      "name": "Project 2a: Abstract Data Art Project",
+      "absolute_position": 33,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 33,
       "properties": {
         "assessment": true,
         "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file and create a visual representation for a topic they are interested in or meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
@@ -708,12 +716,31 @@
       }
     },
     {
-      "key": "Personal Narrative Project",
-      "name": "Personal Narrative Project",
-      "absolute_position": 33,
+      "key": "Abstract Data Art Project [1-Day Version]",
+      "name": "Project 2b: Abstract Data Art Project [1-Day Version]",
+      "absolute_position": 34,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 33,
+      "relative_position": 34,
+      "properties": {
+        "assessment": true,
+        "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file and create a visual representation for a topic they are interested in or meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
+        "preparation": "* Print copies of the Abstract Data Art Project Planning Guide (one for each student)",
+        "student_overview": "**What story or message do I want to convey about my data?**\n\nFor this project, you use the skills you have developed throughout this unit to analyze data from a text file and create a visual representation for a topic you are interested in or that is meaningful to you. You use the data you chose in a previous lesson to identify the patterns and message you want to convey visually using The Theater. After brainstorming and planning, you develop your program."
+      },
+      "seeding_key": {
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "Personal Narrative Project",
+      "name": "Project 3a: Personal Narrative Project",
+      "absolute_position": 35,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 35,
       "properties": {
         "assessment": true,
         "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
@@ -727,12 +754,31 @@
       }
     },
     {
-      "key": "Natural Language Processing Project",
-      "name": "Natural Language Processing Project",
-      "absolute_position": 34,
+      "key": "Personal Narrative Project [1-Day Version]",
+      "name": "Project 3b: Personal Narrative Project [1-Day Version]",
+      "absolute_position": 36,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 34,
+      "relative_position": 36,
+      "properties": {
+        "assessment": true,
+        "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
+        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)",
+        "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
+      },
+      "seeding_key": {
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "Natural Language Processing Project",
+      "name": "Project 4a: Natural Language Processing Project",
+      "absolute_position": 37,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 37,
       "properties": {
         "assessment": true,
         "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. Students choose how they will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, students develop their programs.",
@@ -746,12 +792,31 @@
       }
     },
     {
-      "key": "TicketTracker FRQ",
-      "name": "TicketTracker FRQ",
-      "absolute_position": 35,
+      "key": "Natural Language Processing Project [1-Day Version]",
+      "name": "Project 4b: Natural Language Processing Project [1-Day Version]",
+      "absolute_position": 38,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 35,
+      "relative_position": 38,
+      "properties": {
+        "assessment": true,
+        "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. Students choose how they will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, students develop their programs.",
+        "preparation": "* Print copies of the Natural Language Processing Project Planning Guide (one for each student)",
+        "student_overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. You choose how you will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, you develop your program."
+      },
+      "seeding_key": {
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "TicketTracker FRQ",
+      "name": "FRQ 1: TicketTracker FRQ",
+      "absolute_position": 39,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 39,
       "properties": {
         "overview": "**How will I use what I know about 1D arrays to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the TicketTracker FRQ Graphic Organizer (one for each student)\n* Print copies of the TicketTracker FRQ handout (one for each student)\n* Print copies of the TicketTracker FRQ Scoring Guidelines (one for each student)\n* (Optional) Gather blue, orange, and pink colored pencils or markers for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-11-tickettracker-frq/37895) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
@@ -765,11 +830,11 @@
     },
     {
       "key": "BingoCaller FRQ",
-      "name": "BingoCaller FRQ",
-      "absolute_position": 36,
+      "name": "FRQ 2: BingoCaller FRQ",
+      "absolute_position": 40,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 36,
+      "relative_position": 40,
       "properties": {
         "overview": "**How will I use what I know about 1D arrays and conditionals to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the BingoCaller FRQ handout (one for each student)\n* Print copies of the BingoCaller FRQ Scoring Guidelines (one for each student)\n* Gather sticky notes or scrap pieces of paper (one for each student)",
@@ -783,11 +848,11 @@
     },
     {
       "key": "GrayscaleImage FRQ",
-      "name": "GrayscaleImage FRQ",
-      "absolute_position": 37,
+      "name": "FRQ 3: GrayscaleImage FRQ",
+      "absolute_position": 41,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 37,
+      "relative_position": 41,
       "properties": {
         "overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the GrayscaleImage FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the GrayscaleImage FRQ Scoring Guidelines (one for each student)",
@@ -801,11 +866,11 @@
     },
     {
       "key": "TemperatureAction FRQ",
-      "name": "TemperatureAction FRQ",
-      "absolute_position": 38,
+      "name": "FRQ 4: TemperatureAction FRQ",
+      "absolute_position": 42,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 38,
+      "relative_position": 42,
       "properties": {
         "overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the TemperatureAction FRQ handout (one for each student)\n* Print copies of the Java Quick Reference resource (one for each student)\n* Print copies of the TemperatureAction FRQ Scoring Guidelines (one for each student)",
@@ -819,11 +884,11 @@
     },
     {
       "key": "MusicQueue FRQ",
-      "name": "MusicQueue FRQ",
-      "absolute_position": 39,
+      "name": "FRQ 5: MusicQueue FRQ",
+      "absolute_position": 43,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 39,
+      "relative_position": 43,
       "properties": {
         "overview": "**How will I use what I know about `ArrayList`s and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the MusicQueue FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the MusicQueue FRQ Scoring Guidelines (one for each student)\n* Gather several sharpened pencils and scratch paper",
@@ -837,11 +902,11 @@
     },
     {
       "key": "SeatingChart FRQ",
-      "name": "SeatingChart FRQ",
-      "absolute_position": 40,
+      "name": "FRQ 6: SeatingChart FRQ",
+      "absolute_position": 44,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 40,
+      "relative_position": 44,
       "properties": {
         "overview": "**How will I use what I know about 2D arrays and standard algorithms to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock 2D Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the SeatingChart FRQ handout (one for each student)\n* Print copies of the Java Quick Reference (one for each student)\n* Print copies of the SeatingChart FRQ Scoring Guidelines (one for each student)",
@@ -856,91 +921,15 @@
     {
       "key": "End of Unit Survey",
       "name": "End of Unit Survey",
-      "absolute_position": 41,
+      "absolute_position": 45,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 41,
+      "relative_position": 45,
       "properties": {
       },
       "seeding_key": {
         "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "Data for Social Good Project [1-Day Version]",
-      "name": "Data for Social Good Project [1-Day Version]",
-      "absolute_position": 42,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 42,
-      "properties": {
-        "assessment": true,
-        "overview": "**What questions do I want to answer using data?**\n\nFor this project, students use the skills they have developed throughout this unit to store and analyze data from text file for a topic that they are interested in or that is meaningful to them. Students choose a user scenario and data they want to analyze to identify a solution to address a user's needs. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Review project requirements and rubric\n* Print copies of the Data for Social Good Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-10-data-for-social-good-project/37894) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**What questions do I want to answer using data?**\n\nFor this project, you use the skills you have developed throughout this unit to store and analyze data from text files for a topic that you are interested in or that is meaningful to you. You choose a user scenario and data you want to analyze to identify a solution to address a user's needs. After brainstorming and planning, you develop your program."
-      },
-      "seeding_key": {
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "Abstract Data Art Project [1-Day Version]",
-      "name": "Abstract Data Art Project [1-Day Version]",
-      "absolute_position": 43,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 43,
-      "properties": {
-        "assessment": true,
-        "overview": "**What story or message do I want to convey about my data?**\n\nFor this project, students use the skills they have developed throughout this unit to analyze data from a text file and create a visual representation for a topic they are interested in or meaningful to them. Students use the data they chose in a previous lesson to identify the patterns and message they want to convey visually using The Theater. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Print copies of the Abstract Data Art Project Planning Guide (one for each student)",
-        "student_overview": "**What story or message do I want to convey about my data?**\n\nFor this project, you use the skills you have developed throughout this unit to analyze data from a text file and create a visual representation for a topic you are interested in or that is meaningful to you. You use the data you chose in a previous lesson to identify the patterns and message you want to convey visually using The Theater. After brainstorming and planning, you develop your program."
-      },
-      "seeding_key": {
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "Personal Narrative Project [1-Day Version]",
-      "name": "Personal Narrative Project [1-Day Version]",
-      "absolute_position": 44,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 44,
-      "properties": {
-        "assessment": true,
-        "overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, students use the skills they have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. Students choose the topic for their personal narrative and the image filters or manipulation techniques they want to use. After brainstorming and planning, students develop their programs to create their personal narrative collage or animation.",
-        "preparation": "* Print copies of the Personal Narrative Project Planning Guide (one for each student)",
-        "student_overview": "**What personal experiences or interests do I want to portray in a collage or animation using images and filters?**\n\nFor this project, you use the skills you have developed throughout this unit to create new image filters or develop image manipulation algorithms to use in a collage or animation that portrays personal experiences and/or interests using The Theater. You choose the topic for your personal narrative and the image filters or manipulation techniques you want to use. After brainstorming and planning, you develop your program to create your personal narrative collage or animation."
-      },
-      "seeding_key": {
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "Natural Language Processing Project [1-Day Version]",
-      "name": "Natural Language Processing Project [1-Day Version]",
-      "absolute_position": 45,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 45,
-      "properties": {
-        "assessment": true,
-        "overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. Students choose how they will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Print copies of the Natural Language Processing Project Planning Guide (one for each student)",
-        "student_overview": "**How will I use natural language processing techniques to analyze, manipulate, or generate text in a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a program that uses natural language processing techniques to analyze, manipulate, and/or generate text. You choose how you will implement basic natural language processing techniques to understand text and respond accordingly. After brainstorming and planning, you develop your program."
-      },
-      "seeding_key": {
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa4-alt-2025"
       }
     },
@@ -2307,6 +2296,48 @@
       }
     },
     {
+      "key": "0bc29a21-91ad-4edb-822c-1cb5e0e70024",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0bc29a21-91ad-4edb-822c-1cb5e0e70024",
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b",
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "620c266b-b30f-4348-a25a-46929c99386b",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "620c266b-b30f-4348-a25a-46929c99386b",
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
       "key": "048baa11-2432-4789-8b8b-23b3b3c50bc2",
       "position": 1,
       "properties": {
@@ -2357,6 +2388,48 @@
       "seeding_key": {
         "lesson_activity.key": "50fa8bd3-726f-440f-96d0-df180d424aae",
         "lesson.key": "Abstract Data Art Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "47ee382e-b7b0-4deb-8966-5691de25145c",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "47ee382e-b7b0-4deb-8966-5691de25145c",
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13",
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "94b46371-4c7f-4b5f-8e58-a47929c65c21",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "94b46371-4c7f-4b5f-8e58-a47929c65c21",
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-alt-2025"
       }
@@ -2417,6 +2490,48 @@
       }
     },
     {
+      "key": "91f41f2b-1a9c-48c8-bfc3-ce4674912ebc",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "91f41f2b-1a9c-48c8-bfc3-ce4674912ebc",
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "eae5e0f0-db21-4e37-aae6-f62b41756fec",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eae5e0f0-db21-4e37-aae6-f62b41756fec",
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "b8910688-f186-4f64-ac57-660b6c538a50",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b8910688-f186-4f64-ac57-660b6c538a50",
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
       "key": "f8ec16ba-5f20-446a-b3c4-b6ab142f02f7",
       "position": 1,
       "properties": {
@@ -2467,6 +2582,48 @@
       "seeding_key": {
         "lesson_activity.key": "fc58372b-e306-4a0a-ae9f-2fc46d8a9a96",
         "lesson.key": "Natural Language Processing Project",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "b8d60920-0812-42ba-8baa-cfe310b14cf2",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b8d60920-0812-42ba-8baa-cfe310b14cf2",
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd",
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025"
+      }
+    },
+    {
+      "key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe",
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-alt-2025"
       }
@@ -2732,174 +2889,6 @@
         "lesson_activity.key": "5bdfef75-6ba5-49d5-bf04-61ece605492a",
         "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "0bc29a21-91ad-4edb-822c-1cb5e0e70024",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0bc29a21-91ad-4edb-822c-1cb5e0e70024",
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b",
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "620c266b-b30f-4348-a25a-46929c99386b",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "620c266b-b30f-4348-a25a-46929c99386b",
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "47ee382e-b7b0-4deb-8966-5691de25145c",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "47ee382e-b7b0-4deb-8966-5691de25145c",
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13",
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "94b46371-4c7f-4b5f-8e58-a47929c65c21",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "94b46371-4c7f-4b5f-8e58-a47929c65c21",
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "91f41f2b-1a9c-48c8-bfc3-ce4674912ebc",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "91f41f2b-1a9c-48c8-bfc3-ce4674912ebc",
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "eae5e0f0-db21-4e37-aae6-f62b41756fec",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "eae5e0f0-db21-4e37-aae6-f62b41756fec",
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "b8910688-f186-4f64-ac57-660b6c538a50",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b8910688-f186-4f64-ac57-660b6c538a50",
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "b8d60920-0812-42ba-8baa-cfe310b14cf2",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b8d60920-0812-42ba-8baa-cfe310b14cf2",
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd",
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025"
-      }
-    },
-    {
-      "key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe",
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
         "script.name": "csa4-alt-2025"
       }
     },
@@ -11035,6 +11024,167 @@
       }
     },
     {
+      "key": "32089f03-2987-43db-ac84-e6ef62c5ca9b",
+      "position": 1,
+      "properties": {
+        "description": "Many industries rely on data to identify solutions to problems and make decisions. Each user has different needs based on the information they need and the questions they need to answer.",
+        "name": "Users and Data",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "32089f03-2987-43db-ac84-e6ef62c5ca9b",
+        "lesson_activity.key": "0bc29a21-91ad-4edb-822c-1cb5e0e70024"
+      }
+    },
+    {
+      "key": "5370ba5b-f1b8-4ccf-ade7-38d935f3784a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of different types of users and their data needs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a data analysis program for a user?*\n\n**Discussion Goal:** Students talk about obtaining data related to a user's needs and reading the data into a program. Students present ideas of questions the user might have and algorithms that can find the answers to these questions and how users would interact with the program to choose the information they need."
+      },
+      "seeding_key": {
+        "activity_section.key": "5370ba5b-f1b8-4ccf-ade7-38d935f3784a",
+        "lesson_activity.key": "0bc29a21-91ad-4edb-822c-1cb5e0e70024"
+      }
+    },
+    {
+      "key": "5f87cf3b-e497-41c6-875a-355881a7654f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data for Social Good Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5f87cf3b-e497-41c6-875a-355881a7654f",
+        "lesson_activity.key": "0bc29a21-91ad-4edb-822c-1cb5e0e70024"
+      }
+    },
+    {
+      "key": "8ea09ab1-de9c-4d51-b3f7-19481f47a0cf",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Introduce the user scenarios for the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Streaming music customer, avian veterinary student, technology non-profit manager\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Community activist, advertising specialist, choose your own",
+        "duration": "10",
+        "name": "Brainstorming and Planning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students can also create their own rather than using one of the provided scenarios."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8ea09ab1-de9c-4d51-b3f7-19481f47a0cf",
+        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b"
+      }
+    },
+    {
+      "key": "b05867b4-32b3-480a-92e4-8cdda8e3e47d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to identify their topic of interest, create UML diagrams for their classes, and identify the questions they want to answer on the Data for Social Good Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The classes for each user scenario are created on the corresponding choice level. Have students look at the data sets and files for their selected user stories as they plan their program."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b05867b4-32b3-480a-92e4-8cdda8e3e47d",
+        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b"
+      }
+    },
+    {
+      "key": "89da1f22-3694-4279-9d72-af3ebeadf62d",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Data for Social Good Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Data for Social Good Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "89da1f22-3694-4279-9d72-af3ebeadf62d",
+        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b"
+      }
+    },
+    {
+      "key": "ef52bfdb-282a-46e6-94c8-49e2c21db48d",
+      "position": 4,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ef52bfdb-282a-46e6-94c8-49e2c21db48d",
+        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b"
+      }
+    },
+    {
+      "key": "91fa9717-4258-413d-9b4a-6a5e63332f3a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "91fa9717-4258-413d-9b4a-6a5e63332f3a",
+        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b"
+      }
+    },
+    {
+      "key": "7ba45df4-f633-4e2f-b7b0-89c733146bb3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Data for Social Good Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7ba45df4-f633-4e2f-b7b0-89c733146bb3",
+        "lesson_activity.key": "620c266b-b30f-4348-a25a-46929c99386b"
+      }
+    },
+    {
+      "key": "cbc7c02f-c4dd-4c13-97d3-d674338b1b01",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "cbc7c02f-c4dd-4c13-97d3-d674338b1b01",
+        "lesson_activity.key": "620c266b-b30f-4348-a25a-46929c99386b"
+      }
+    },
+    {
+      "key": "2c4a6733-518a-4ef8-bf16-2d6457c675c1",
+      "position": 3,
+      "properties": {
+        "description": "**Data for Social Good Project:** Use the rubric in the Data for Social Good Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c4a6733-518a-4ef8-bf16-2d6457c675c1",
+        "lesson_activity.key": "620c266b-b30f-4348-a25a-46929c99386b"
+      }
+    },
+    {
       "key": "818b880f-1a82-4bc4-86af-5818722804a7",
       "position": 1,
       "properties": {
@@ -11563,6 +11713,133 @@
       "seeding_key": {
         "activity_section.key": "8c921c1c-cba7-409c-a936-eb6585f42928",
         "lesson_activity.key": "50fa8bd3-726f-440f-96d0-df180d424aae"
+      }
+    },
+    {
+      "key": "d550f2bc-d61c-4b2c-91af-a46ba22620d2",
+      "position": 1,
+      "properties": {
+        "description": "We have seen some examples of data visualizations throughout the unit. Some visuals are a simple image, while others are more abstract or may include animations or interactivity.",
+        "name": "Data Visualizations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d550f2bc-d61c-4b2c-91af-a46ba22620d2",
+        "lesson_activity.key": "47ee382e-b7b0-4deb-8966-5691de25145c"
+      }
+    },
+    {
+      "key": "563f290e-358f-401a-b86d-967a53289844",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Abstract Data Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "563f290e-358f-401a-b86d-967a53289844",
+        "lesson_activity.key": "47ee382e-b7b0-4deb-8966-5691de25145c"
+      }
+    },
+    {
+      "key": "612a14dc-2a70-4828-86b3-5f75c6d6171c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their visuals, create UML diagrams for their classes, and identify the algorithms they need to develop on the Abstract Data Art Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning"
+      },
+      "seeding_key": {
+        "activity_section.key": "612a14dc-2a70-4828-86b3-5f75c6d6171c",
+        "lesson_activity.key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13"
+      }
+    },
+    {
+      "key": "f04d2716-afe1-4ba8-bed6-a4a2e37ca839",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Abstract Data Art Good Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Abstract Data Art Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "f04d2716-afe1-4ba8-bed6-a4a2e37ca839",
+        "lesson_activity.key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13"
+      }
+    },
+    {
+      "key": "d4207b34-641a-4676-af18-4b382dbe34fa",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d4207b34-641a-4676-af18-4b382dbe34fa",
+        "lesson_activity.key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13"
+      }
+    },
+    {
+      "key": "797d4308-1caf-49b4-8595-b94d5b6ca66e",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "797d4308-1caf-49b4-8595-b94d5b6ca66e",
+        "lesson_activity.key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13"
+      }
+    },
+    {
+      "key": "f53b6922-1c4e-4d6c-bd8f-e4472f040342",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Data for Social Good Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f53b6922-1c4e-4d6c-bd8f-e4472f040342",
+        "lesson_activity.key": "94b46371-4c7f-4b5f-8e58-a47929c65c21"
+      }
+    },
+    {
+      "key": "d89eefe3-50bd-44f0-ba8b-991fbd15a8bb",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "d89eefe3-50bd-44f0-ba8b-991fbd15a8bb",
+        "lesson_activity.key": "94b46371-4c7f-4b5f-8e58-a47929c65c21"
+      }
+    },
+    {
+      "key": "750de740-1f20-478a-8117-a0474fabd228",
+      "position": 3,
+      "properties": {
+        "description": "**Abstract Data Art Project:** Use the rubric in the Abstract Data Art Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "750de740-1f20-478a-8117-a0474fabd228",
+        "lesson_activity.key": "94b46371-4c7f-4b5f-8e58-a47929c65c21"
       }
     },
     {
@@ -12097,6 +12374,133 @@
       }
     },
     {
+      "key": "46853181-9cfe-4b0f-9dcf-df75a503dbe1",
+      "position": 1,
+      "properties": {
+        "description": "We have seen some examples of image filters, collages, and animations throughout the unit. People often use images and image filters are often used in collages and animations to portray a story about personal experiences or interests.",
+        "name": "Personal Narratives",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "46853181-9cfe-4b0f-9dcf-df75a503dbe1",
+        "lesson_activity.key": "91f41f2b-1a9c-48c8-bfc3-ce4674912ebc"
+      }
+    },
+    {
+      "key": "e5f5bbe6-bc62-44ba-8069-80a708b7f957",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of personal narratives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a collage or animation about your personal experiences or interests?*\n\n**Discussion Goal:** Students share ideas about collages or animations they might make to portray their personal experiences or interests. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Personal Narrative Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e5f5bbe6-bc62-44ba-8069-80a708b7f957",
+        "lesson_activity.key": "91f41f2b-1a9c-48c8-bfc3-ce4674912ebc"
+      }
+    },
+    {
+      "key": "f2c55cff-6541-4ee5-8513-eaa5611b116b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their collage or animation, create UML diagrams for their classes, and identify the algorithms they need to develop on the Personal Narrative Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2c55cff-6541-4ee5-8513-eaa5611b116b",
+        "lesson_activity.key": "eae5e0f0-db21-4e37-aae6-f62b41756fec"
+      }
+    },
+    {
+      "key": "dbbaf2cd-1d58-4d97-bfb0-6d4a15627a00",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Personal Narrative Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "dbbaf2cd-1d58-4d97-bfb0-6d4a15627a00",
+        "lesson_activity.key": "eae5e0f0-db21-4e37-aae6-f62b41756fec"
+      }
+    },
+    {
+      "key": "be8aecb9-3edd-467f-b1da-a6740c8598ad",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "be8aecb9-3edd-467f-b1da-a6740c8598ad",
+        "lesson_activity.key": "eae5e0f0-db21-4e37-aae6-f62b41756fec"
+      }
+    },
+    {
+      "key": "8ec9b0c5-c012-4b30-a200-d1e613d60895",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8ec9b0c5-c012-4b30-a200-d1e613d60895",
+        "lesson_activity.key": "eae5e0f0-db21-4e37-aae6-f62b41756fec"
+      }
+    },
+    {
+      "key": "7f798db1-108d-4bc4-92d7-843435c9f687",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Personal Narrative Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7f798db1-108d-4bc4-92d7-843435c9f687",
+        "lesson_activity.key": "b8910688-f186-4f64-ac57-660b6c538a50"
+      }
+    },
+    {
+      "key": "258d5d03-6c56-4e43-ae7e-00780bc63e7f",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "258d5d03-6c56-4e43-ae7e-00780bc63e7f",
+        "lesson_activity.key": "b8910688-f186-4f64-ac57-660b6c538a50"
+      }
+    },
+    {
+      "key": "4acbb284-5179-49c9-b17c-808ed4022690",
+      "position": 3,
+      "properties": {
+        "description": "**Personal Narrative Project:** Use the rubric in the Personal Narrative Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "4acbb284-5179-49c9-b17c-808ed4022690",
+        "lesson_activity.key": "b8910688-f186-4f64-ac57-660b6c538a50"
+      }
+    },
+    {
       "key": "eeb06f43-27bc-44b4-ab7a-2887c782da93",
       "position": 1,
       "properties": {
@@ -12625,6 +13029,133 @@
       "seeding_key": {
         "activity_section.key": "2936ba55-0881-495e-af01-5ecb7538fe49",
         "lesson_activity.key": "fc58372b-e306-4a0a-ae9f-2fc46d8a9a96"
+      }
+    },
+    {
+      "key": "a973f2c0-ea08-45fe-8b83-206b04f62ec8",
+      "position": 1,
+      "properties": {
+        "description": "We have seen some examples of programs that use natural language processing techniques throughout the unit. Programs and devices often use natural language processing to interact with a user to answer questions, find information, or execute commands.",
+        "name": "Natural Language Processing",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a973f2c0-ea08-45fe-8b83-206b04f62ec8",
+        "lesson_activity.key": "b8d60920-0812-42ba-8baa-cfe310b14cf2"
+      }
+    },
+    {
+      "key": "e51a1b3c-b9ff-4bf2-a244-df2307f0e3a4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of programs and devices that use natural language processing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a program that uses natural language processing to analyze, manipulate, or generate text?*\n\n**Discussion Goal:** Students share ideas about programs they might make using natural language processing, such as chatbots, story generators, or social media analyzers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Natural Language Processing Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e51a1b3c-b9ff-4bf2-a244-df2307f0e3a4",
+        "lesson_activity.key": "b8d60920-0812-42ba-8baa-cfe310b14cf2"
+      }
+    },
+    {
+      "key": "668c516c-8f45-4d2f-8837-2193af82b89c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their visuals, create UML diagrams for their classes, and identify the algorithms they need to develop on the Natural Language Processing Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning"
+      },
+      "seeding_key": {
+        "activity_section.key": "668c516c-8f45-4d2f-8837-2193af82b89c",
+        "lesson_activity.key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd"
+      }
+    },
+    {
+      "key": "e85ba2eb-8473-475e-bc0f-8e21706f257c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Natural Language Processing Good Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Natural Language Processing Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "e85ba2eb-8473-475e-bc0f-8e21706f257c",
+        "lesson_activity.key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd"
+      }
+    },
+    {
+      "key": "d9e74b41-7f37-4485-95db-c105af593fa0",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d9e74b41-7f37-4485-95db-c105af593fa0",
+        "lesson_activity.key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd"
+      }
+    },
+    {
+      "key": "2284237f-8494-4df8-beb0-f9bfcda7ec9c",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2284237f-8494-4df8-beb0-f9bfcda7ec9c",
+        "lesson_activity.key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd"
+      }
+    },
+    {
+      "key": "f98c9436-7a9c-4973-9765-771f9387f543",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Natural Language Processing Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f98c9436-7a9c-4973-9765-771f9387f543",
+        "lesson_activity.key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe"
+      }
+    },
+    {
+      "key": "4247b592-1fd2-472a-bf85-bb0aae4baece",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "4247b592-1fd2-472a-bf85-bb0aae4baece",
+        "lesson_activity.key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe"
+      }
+    },
+    {
+      "key": "5c6c649b-455d-4ed1-95be-a55dbf6b5a23",
+      "position": 3,
+      "properties": {
+        "description": "**Natural Language Processing Project Planning Guide:** Use the rubric in the Natural Language Processing Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c6c649b-455d-4ed1-95be-a55dbf6b5a23",
+        "lesson_activity.key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe"
       }
     },
     {
@@ -13648,548 +14179,6 @@
       "seeding_key": {
         "activity_section.key": "44646e19-a437-4a1d-bd32-0be59641f465",
         "lesson_activity.key": "5bdfef75-6ba5-49d5-bf04-61ece605492a"
-      }
-    },
-    {
-      "key": "32089f03-2987-43db-ac84-e6ef62c5ca9b",
-      "position": 1,
-      "properties": {
-        "description": "Many industries rely on data to identify solutions to problems and make decisions. Each user has different needs based on the information they need and the questions they need to answer.",
-        "name": "Users and Data",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "32089f03-2987-43db-ac84-e6ef62c5ca9b",
-        "lesson_activity.key": "0bc29a21-91ad-4edb-822c-1cb5e0e70024"
-      }
-    },
-    {
-      "key": "5370ba5b-f1b8-4ccf-ade7-38d935f3784a",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of different types of users and their data needs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a data analysis program for a user?*\n\n**Discussion Goal:** Students talk about obtaining data related to a user's needs and reading the data into a program. Students present ideas of questions the user might have and algorithms that can find the answers to these questions and how users would interact with the program to choose the information they need."
-      },
-      "seeding_key": {
-        "activity_section.key": "5370ba5b-f1b8-4ccf-ade7-38d935f3784a",
-        "lesson_activity.key": "0bc29a21-91ad-4edb-822c-1cb5e0e70024"
-      }
-    },
-    {
-      "key": "5f87cf3b-e497-41c6-875a-355881a7654f",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data for Social Good Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5f87cf3b-e497-41c6-875a-355881a7654f",
-        "lesson_activity.key": "0bc29a21-91ad-4edb-822c-1cb5e0e70024"
-      }
-    },
-    {
-      "key": "8ea09ab1-de9c-4d51-b3f7-19481f47a0cf",
-      "position": 1,
-      "properties": {
-        "description": "**Do This:** Introduce the user scenarios for the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Streaming music customer, avian veterinary student, technology non-profit manager\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Community activist, advertising specialist, choose your own",
-        "duration": "10",
-        "name": "Brainstorming and Planning",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students can also create their own rather than using one of the provided scenarios."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8ea09ab1-de9c-4d51-b3f7-19481f47a0cf",
-        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b"
-      }
-    },
-    {
-      "key": "b05867b4-32b3-480a-92e4-8cdda8e3e47d",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to identify their topic of interest, create UML diagrams for their classes, and identify the questions they want to answer on the Data for Social Good Project Planning Guide.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The classes for each user scenario are created on the corresponding choice level. Have students look at the data sets and files for their selected user stories as they plan their program."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b05867b4-32b3-480a-92e4-8cdda8e3e47d",
-        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b"
-      }
-    },
-    {
-      "key": "89da1f22-3694-4279-9d72-af3ebeadf62d",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Data for Social Good Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Data for Social Good Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "89da1f22-3694-4279-9d72-af3ebeadf62d",
-        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b"
-      }
-    },
-    {
-      "key": "ef52bfdb-282a-46e6-94c8-49e2c21db48d",
-      "position": 4,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "ef52bfdb-282a-46e6-94c8-49e2c21db48d",
-        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b"
-      }
-    },
-    {
-      "key": "91fa9717-4258-413d-9b4a-6a5e63332f3a",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "91fa9717-4258-413d-9b4a-6a5e63332f3a",
-        "lesson_activity.key": "b5b11725-fa20-4dc5-b3fb-94d2b851049b"
-      }
-    },
-    {
-      "key": "7ba45df4-f633-4e2f-b7b0-89c733146bb3",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Data for Social Good Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7ba45df4-f633-4e2f-b7b0-89c733146bb3",
-        "lesson_activity.key": "620c266b-b30f-4348-a25a-46929c99386b"
-      }
-    },
-    {
-      "key": "cbc7c02f-c4dd-4c13-97d3-d674338b1b01",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "cbc7c02f-c4dd-4c13-97d3-d674338b1b01",
-        "lesson_activity.key": "620c266b-b30f-4348-a25a-46929c99386b"
-      }
-    },
-    {
-      "key": "2c4a6733-518a-4ef8-bf16-2d6457c675c1",
-      "position": 3,
-      "properties": {
-        "description": "**Data for Social Good Project:** Use the rubric in the Data for Social Good Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "2c4a6733-518a-4ef8-bf16-2d6457c675c1",
-        "lesson_activity.key": "620c266b-b30f-4348-a25a-46929c99386b"
-      }
-    },
-    {
-      "key": "d550f2bc-d61c-4b2c-91af-a46ba22620d2",
-      "position": 1,
-      "properties": {
-        "description": "We have seen some examples of data visualizations throughout the unit. Some visuals are a simple image, while others are more abstract or may include animations or interactivity.",
-        "name": "Data Visualizations",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "d550f2bc-d61c-4b2c-91af-a46ba22620d2",
-        "lesson_activity.key": "47ee382e-b7b0-4deb-8966-5691de25145c"
-      }
-    },
-    {
-      "key": "563f290e-358f-401a-b86d-967a53289844",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Abstract Data Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "563f290e-358f-401a-b86d-967a53289844",
-        "lesson_activity.key": "47ee382e-b7b0-4deb-8966-5691de25145c"
-      }
-    },
-    {
-      "key": "612a14dc-2a70-4828-86b3-5f75c6d6171c",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their visuals, create UML diagrams for their classes, and identify the algorithms they need to develop on the Abstract Data Art Project Planning Guide.",
-        "duration": "10",
-        "name": "Brainstorming and Planning"
-      },
-      "seeding_key": {
-        "activity_section.key": "612a14dc-2a70-4828-86b3-5f75c6d6171c",
-        "lesson_activity.key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13"
-      }
-    },
-    {
-      "key": "f04d2716-afe1-4ba8-bed6-a4a2e37ca839",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Abstract Data Art Good Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Abstract Data Art Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "f04d2716-afe1-4ba8-bed6-a4a2e37ca839",
-        "lesson_activity.key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13"
-      }
-    },
-    {
-      "key": "d4207b34-641a-4676-af18-4b382dbe34fa",
-      "position": 3,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "d4207b34-641a-4676-af18-4b382dbe34fa",
-        "lesson_activity.key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13"
-      }
-    },
-    {
-      "key": "797d4308-1caf-49b4-8595-b94d5b6ca66e",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "797d4308-1caf-49b4-8595-b94d5b6ca66e",
-        "lesson_activity.key": "41adf231-d9af-41e8-b4ed-0fe8075bbe13"
-      }
-    },
-    {
-      "key": "f53b6922-1c4e-4d6c-bd8f-e4472f040342",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Data for Social Good Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f53b6922-1c4e-4d6c-bd8f-e4472f040342",
-        "lesson_activity.key": "94b46371-4c7f-4b5f-8e58-a47929c65c21"
-      }
-    },
-    {
-      "key": "d89eefe3-50bd-44f0-ba8b-991fbd15a8bb",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "d89eefe3-50bd-44f0-ba8b-991fbd15a8bb",
-        "lesson_activity.key": "94b46371-4c7f-4b5f-8e58-a47929c65c21"
-      }
-    },
-    {
-      "key": "750de740-1f20-478a-8117-a0474fabd228",
-      "position": 3,
-      "properties": {
-        "description": "**Abstract Data Art Project:** Use the rubric in the Abstract Data Art Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "750de740-1f20-478a-8117-a0474fabd228",
-        "lesson_activity.key": "94b46371-4c7f-4b5f-8e58-a47929c65c21"
-      }
-    },
-    {
-      "key": "46853181-9cfe-4b0f-9dcf-df75a503dbe1",
-      "position": 1,
-      "properties": {
-        "description": "We have seen some examples of image filters, collages, and animations throughout the unit. People often use images and image filters are often used in collages and animations to portray a story about personal experiences or interests.",
-        "name": "Personal Narratives",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "46853181-9cfe-4b0f-9dcf-df75a503dbe1",
-        "lesson_activity.key": "91f41f2b-1a9c-48c8-bfc3-ce4674912ebc"
-      }
-    },
-    {
-      "key": "e5f5bbe6-bc62-44ba-8069-80a708b7f957",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of personal narratives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a collage or animation about your personal experiences or interests?*\n\n**Discussion Goal:** Students share ideas about collages or animations they might make to portray their personal experiences or interests. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Personal Narrative Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e5f5bbe6-bc62-44ba-8069-80a708b7f957",
-        "lesson_activity.key": "91f41f2b-1a9c-48c8-bfc3-ce4674912ebc"
-      }
-    },
-    {
-      "key": "f2c55cff-6541-4ee5-8513-eaa5611b116b",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their collage or animation, create UML diagrams for their classes, and identify the algorithms they need to develop on the Personal Narrative Project Planning Guide.",
-        "duration": "10",
-        "name": "Brainstorming and Planning"
-      },
-      "seeding_key": {
-        "activity_section.key": "f2c55cff-6541-4ee5-8513-eaa5611b116b",
-        "lesson_activity.key": "eae5e0f0-db21-4e37-aae6-f62b41756fec"
-      }
-    },
-    {
-      "key": "dbbaf2cd-1d58-4d97-bfb0-6d4a15627a00",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Personal Narrative Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "dbbaf2cd-1d58-4d97-bfb0-6d4a15627a00",
-        "lesson_activity.key": "eae5e0f0-db21-4e37-aae6-f62b41756fec"
-      }
-    },
-    {
-      "key": "be8aecb9-3edd-467f-b1da-a6740c8598ad",
-      "position": 3,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "be8aecb9-3edd-467f-b1da-a6740c8598ad",
-        "lesson_activity.key": "eae5e0f0-db21-4e37-aae6-f62b41756fec"
-      }
-    },
-    {
-      "key": "8ec9b0c5-c012-4b30-a200-d1e613d60895",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8ec9b0c5-c012-4b30-a200-d1e613d60895",
-        "lesson_activity.key": "eae5e0f0-db21-4e37-aae6-f62b41756fec"
-      }
-    },
-    {
-      "key": "7f798db1-108d-4bc4-92d7-843435c9f687",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Personal Narrative Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7f798db1-108d-4bc4-92d7-843435c9f687",
-        "lesson_activity.key": "b8910688-f186-4f64-ac57-660b6c538a50"
-      }
-    },
-    {
-      "key": "258d5d03-6c56-4e43-ae7e-00780bc63e7f",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "258d5d03-6c56-4e43-ae7e-00780bc63e7f",
-        "lesson_activity.key": "b8910688-f186-4f64-ac57-660b6c538a50"
-      }
-    },
-    {
-      "key": "4acbb284-5179-49c9-b17c-808ed4022690",
-      "position": 3,
-      "properties": {
-        "description": "**Personal Narrative Project:** Use the rubric in the Personal Narrative Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "4acbb284-5179-49c9-b17c-808ed4022690",
-        "lesson_activity.key": "b8910688-f186-4f64-ac57-660b6c538a50"
-      }
-    },
-    {
-      "key": "a973f2c0-ea08-45fe-8b83-206b04f62ec8",
-      "position": 1,
-      "properties": {
-        "description": "We have seen some examples of programs that use natural language processing techniques throughout the unit. Programs and devices often use natural language processing to interact with a user to answer questions, find information, or execute commands.",
-        "name": "Natural Language Processing",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "a973f2c0-ea08-45fe-8b83-206b04f62ec8",
-        "lesson_activity.key": "b8d60920-0812-42ba-8baa-cfe310b14cf2"
-      }
-    },
-    {
-      "key": "e51a1b3c-b9ff-4bf2-a244-df2307f0e3a4",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of programs and devices that use natural language processing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a program that uses natural language processing to analyze, manipulate, or generate text?*\n\n**Discussion Goal:** Students share ideas about programs they might make using natural language processing, such as chatbots, story generators, or social media analyzers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Natural Language Processing Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e51a1b3c-b9ff-4bf2-a244-df2307f0e3a4",
-        "lesson_activity.key": "b8d60920-0812-42ba-8baa-cfe310b14cf2"
-      }
-    },
-    {
-      "key": "668c516c-8f45-4d2f-8837-2193af82b89c",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their visuals, create UML diagrams for their classes, and identify the algorithms they need to develop on the Natural Language Processing Project Planning Guide.",
-        "duration": "10",
-        "name": "Brainstorming and Planning"
-      },
-      "seeding_key": {
-        "activity_section.key": "668c516c-8f45-4d2f-8837-2193af82b89c",
-        "lesson_activity.key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd"
-      }
-    },
-    {
-      "key": "e85ba2eb-8473-475e-bc0f-8e21706f257c",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Natural Language Processing Good Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Natural Language Processing Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "e85ba2eb-8473-475e-bc0f-8e21706f257c",
-        "lesson_activity.key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd"
-      }
-    },
-    {
-      "key": "d9e74b41-7f37-4485-95db-c105af593fa0",
-      "position": 3,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "d9e74b41-7f37-4485-95db-c105af593fa0",
-        "lesson_activity.key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd"
-      }
-    },
-    {
-      "key": "2284237f-8494-4df8-beb0-f9bfcda7ec9c",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2284237f-8494-4df8-beb0-f9bfcda7ec9c",
-        "lesson_activity.key": "7c8e8e42-42ae-47f2-ac8f-8244f2f8e1bd"
-      }
-    },
-    {
-      "key": "f98c9436-7a9c-4973-9765-771f9387f543",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Natural Language Processing Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f98c9436-7a9c-4973-9765-771f9387f543",
-        "lesson_activity.key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe"
-      }
-    },
-    {
-      "key": "4247b592-1fd2-472a-bf85-bb0aae4baece",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "4247b592-1fd2-472a-bf85-bb0aae4baece",
-        "lesson_activity.key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe"
-      }
-    },
-    {
-      "key": "5c6c649b-455d-4ed1-95be-a55dbf6b5a23",
-      "position": 3,
-      "properties": {
-        "description": "**Natural Language Processing Project Planning Guide:** Use the rubric in the Natural Language Processing Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "5c6c649b-455d-4ed1-95be-a55dbf6b5a23",
-        "lesson_activity.key": "3696d0db-23b1-47b5-ae94-fdae783fa8fe"
       }
     },
     {
@@ -18892,6 +18881,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa4-project1-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -18910,6 +18902,31 @@
     },
     {
       "chapter": 188,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "progression": "Data for Social Good Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "89da1f22-3694-4279-9d72-af3ebeadf62d"
+      },
+      "level_keys": [
+        "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025_2025-cb-alt"
+      ]
+    },
+    {
+      "chapter": 189,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -18934,11 +18951,14 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 190,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa4-project2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -18956,7 +18976,32 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 191,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "progression": "Abstract Data Art Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "f04d2716-afe1-4ba8-bed6-a4a2e37ca839"
+      },
+      "level_keys": [
+        "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025_2025-cb-alt"
+      ]
+    },
+    {
+      "chapter": 192,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -18981,11 +19026,14 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 193,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa4-project3-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -19003,7 +19051,32 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 194,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "progression": "Personal Narrative Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "dbbaf2cd-1d58-4d97-bfb0-6d4a15627a00"
+      },
+      "level_keys": [
+        "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025_2025-cb-alt"
+      ]
+    },
+    {
+      "chapter": 195,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -19028,11 +19101,14 @@
       ]
     },
     {
-      "chapter": 193,
+      "chapter": 196,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa4-project4-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
@@ -19050,104 +19126,7 @@
       ]
     },
     {
-      "chapter": 194,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_csa4-alt-survey-2025"
-        ],
-        "lesson.key": "End of Unit Survey",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa4-alt-2025",
-        "activity_section.key": "785c0f4b-4746-4c06-b192-7e84e5a2220d"
-      },
-      "level_keys": [
-        "student-eou-survey_csa4-alt-survey-2025"
-      ]
-    },
-    {
-      "chapter": 195,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "progression": "Data for Social Good Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025",
-        "activity_section.key": "89da1f22-3694-4279-9d72-af3ebeadf62d"
-      },
-      "level_keys": [
-        "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025_2025-cb-alt"
-      ]
-    },
-    {
-      "chapter": 196,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "progression": "Abstract Data Art Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025",
-        "activity_section.key": "f04d2716-afe1-4ba8-bed6-a4a2e37ca839"
-      },
-      "level_keys": [
-        "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025_2025-cb-alt"
-      ]
-    },
-    {
       "chapter": 197,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "progression": "Personal Narrative Project"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025",
-        "activity_section.key": "dbbaf2cd-1d58-4d97-bfb0-6d4a15627a00"
-      },
-      "level_keys": [
-        "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025_2025-cb-alt"
-      ]
-    },
-    {
-      "chapter": 198,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -19163,12 +19142,37 @@
           "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2_2025-cb-alt"
         ],
         "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-alt-2025",
         "activity_section.key": "e85ba2eb-8473-475e-bc0f-8e21706f257c"
       },
       "level_keys": [
         "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2_2025-cb-alt"
+      ]
+    },
+    {
+      "chapter": 198,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csa4-alt-survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csa4-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "785c0f4b-4746-4c06-b192-7e84e5a2220d"
+      },
+      "level_keys": [
+        "student-eou-survey_csa4-alt-survey-2025"
       ]
     },
     {
@@ -21517,6 +21521,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "89da1f22-3694-4279-9d72-af3ebeadf62d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U4 Abstract Data Art Project_pilot_oo2025_2025-cb-alt",
         "script_level.level_keys": [
           "CSA U4 Abstract Data Art Project_pilot_oo2025_2025-cb-alt"
@@ -21537,6 +21553,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa4-alt-2025",
         "activity_section.key": "2305a5af-4598-4ef4-8108-dc35ddec1f62"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "lesson.key": "Abstract Data Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "f04d2716-afe1-4ba8-bed6-a4a2e37ca839"
       }
     },
     {
@@ -21565,6 +21593,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "dbbaf2cd-1d58-4d97-bfb0-6d4a15627a00"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U6 Natural Language Processing Project_pilot_oo2025_2025-cb-alt",
         "script_level.level_keys": [
           "CSA U6 Natural Language Processing Project_pilot_oo2025_2025-cb-alt"
@@ -21589,6 +21629,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2_2025-cb-alt",
+        "script_level.level_keys": [
+          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2_2025-cb-alt"
+        ],
+        "lesson.key": "Natural Language Processing Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa4-alt-2025",
+        "activity_section.key": "e85ba2eb-8473-475e-bc0f-8e21706f257c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "student-eou-survey_csa4-alt-survey-2025",
         "script_level.level_keys": [
           "student-eou-survey_csa4-alt-survey-2025"
@@ -21597,54 +21649,6 @@
         "lesson_group.key": "lessonGroup-7",
         "script.name": "csa4-alt-2025",
         "activity_section.key": "785c0f4b-4746-4c06-b192-7e84e5a2220d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025_2025-cb-alt",
-        "script_level.level_keys": [
-          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025",
-        "activity_section.key": "89da1f22-3694-4279-9d72-af3ebeadf62d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025_2025-cb-alt",
-        "script_level.level_keys": [
-          "CSA U4 Abstract Data Art Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "lesson.key": "Abstract Data Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025",
-        "activity_section.key": "f04d2716-afe1-4ba8-bed6-a4a2e37ca839"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025_2025-cb-alt",
-        "script_level.level_keys": [
-          "CSA U5 Personal Narrative Project 1-Day_pilot_oo2025_2025-cb-alt"
-        ],
-        "lesson.key": "Personal Narrative Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025",
-        "activity_section.key": "dbbaf2cd-1d58-4d97-bfb0-6d4a15627a00"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2_2025-cb-alt",
-        "script_level.level_keys": [
-          "CSA U6 Natural Language Processing Project 1-Day_pilot_oo2_2025-cb-alt"
-        ],
-        "lesson.key": "Natural Language Processing Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa4-alt-2025",
-        "activity_section.key": "e85ba2eb-8473-475e-bc0f-8e21706f257c"
       }
     },
     {

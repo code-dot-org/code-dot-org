@@ -129,9 +129,13 @@
 
     small_text = false
 
+    script_name_data_href = script_path(@script, section_id: section_id, user_id: user_id)
+    if Policies::Courses.modularity_enabled? && @unit_group_unit
+      script_name_data_href = course_unit_path(@unit_group_unit.unit_group, @unit_group_unit.position, section_id: section_id, user_id: user_id)
+    end
     script_name_data = {
       name: text,
-      href: script_path(@script, section_id: section_id, user_id: user_id),
+      href: script_name_data_href,
       smallText: small_text
     }
   elsif @is_code_reviewing

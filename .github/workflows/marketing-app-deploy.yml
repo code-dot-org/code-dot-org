@@ -159,6 +159,14 @@ jobs:
         parameter-overrides: "ContainerImageHashDigest=${{ needs.build-and-push-image.outputs.digest }},BaseHostedZoneId=${{ vars.MARKETING_BASE_HOSTED_ZONE_ID }},BaseDomainName=${{ vars.MARKETING_BASE_DOMAIN }},SubdomainName=${{ vars.MARKETING_SUBDOMAIN_NAME }},CloudFrontTLSCertificateArn=${{ vars.MARKETING_CLOUDFRONT_TLS_CERTIFICATE_ARN }}"
         capabilities: CAPABILITY_IAM, CAPABILITY_NAMED_IAM
 
+    - name: "[Test] Invalidate CloudFront Cache"
+      env:
+        CLOUDFRONT_DISTRIBUTION_ID: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+      run: |
+        aws cloudfront create-invalidation \
+          --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
+          --paths "/*"
+
   ui-tests:
     runs-on: ubuntu-24.04
     environment: marketing-test

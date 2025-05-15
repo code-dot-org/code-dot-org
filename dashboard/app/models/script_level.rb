@@ -188,7 +188,7 @@ class ScriptLevel < ApplicationRecord
       return build_script_level_path(level_to_follow, unit_group_unit: unit_group_unit) if level_to_follow
       next_unit = script.next_unit(user)
       if next_unit
-        next_ugu = next_unit.unit_group_units.select {|ugu| ugu.script == next_unit}.first
+        next_ugu = next_unit.unit_group_units.find {|ugu| ugu.unit_group == unit_group_unit&.unit_group}
         if Policies::Courses.modularity_enabled? && next_ugu
           course_unit_path(next_ugu.unit_group, next_ugu.position)
         else

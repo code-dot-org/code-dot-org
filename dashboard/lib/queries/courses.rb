@@ -24,25 +24,24 @@ class Queries::Courses
   # Returns `nil` if the script name does not correspond to a valid Unit,
   # UnitGroupUnit, or UnitGroup/Course.
   #
-  # @param unit_name [String] The name of the Unit used to fetch the course context.
+  # @param unit_name_or_id [String] The name of the Unit used to fetch the course context.
   # @return [Hash, nil] A hash containing the course and unit group unit,
   #   or `nil` if no valid course context is found.
   #   The hash has the following structure:
   #     - `:course` - The retrieved UnitGroup/Course
   #     - `:unit_group_unit` - The associated UnitGroupUnit information
-  #     - `:unit` - The Unit for the given `unit_name`
-  def self.get_course_context(unit_name)
-    unit = Unit.get_from_cache(unit_name, raise_exceptions: false)
+  #     - `:unit` - The Unit for the given `unit_name_or_id`
+  def self.get_course_context(unit_name_or_id)
+    unit = Unit.get_from_cache(unit_name_or_id, raise_exceptions: false)
     unit_group = unit&.original_unit_group
     ugu = unit_group_unit(unit, unit_group)
     {unit_group: unit_group, unit_group_unit: ugu, unit: unit}
   end
 
-  def self.unit_group_unit(unit, unit_group)
-    if unit_group && unit
+  def self.unit_group_unit(unit, unit_group = nil)
+    if unit
+      unit_group ||= unit.original_unit_group
       unit.unit_group_units.find {|ugu| ugu.unit_group == unit_group}
-    elsif unit
-      unit.unit_group_units.first
     end
   end
 end

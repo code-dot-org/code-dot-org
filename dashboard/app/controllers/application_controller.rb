@@ -28,7 +28,8 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
-  before_action :initialize_statsig_stable_id
+  helper_method :statsig_stable_id
+  before_action :statsig_stable_id
 
   around_action :with_global_current_user
 
@@ -65,12 +66,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  rescue_from CanCan::AccessDenied do
+  rescue_from CanCan::AccessDenied do |exception|
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
     elsif rack_env?(:development, :adhoc)
-      raise
+      # log the error and its full stack trace
+      message = "CanCan::AccessDenied: #{exception.message}"
+      stack = exception.backtrace.join("\n")
+      error_with_stack = "#{message}\n#{stack}"
+      Rails.logger.error(error_with_stack)
+      render plain: error_with_stack, status: :forbidden
     else
       # we know who you are, you shouldn't be here
       head :forbidden
@@ -210,8 +216,11 @@ class ApplicationController < ActionController::Base
       # if they solved it, figure out next level
       if options[:solved?]
         response[:new_level_completed] = options[:new_level_completed]
-        response[:level_path] = build_script_level_path(script_level)
-        script_level_solved_response(response, script_level)
+        # TODO: TEACH-1899 Get current UnitGroup/Course from the params and pass
+        # it to Queries::Courses.unit_group_unit
+        unit_group_unit = Queries::Courses.unit_group_unit(script_level.script)
+        response[:level_path] = build_script_level_path(script_level, unit_group_unit: unit_group_unit)
+        script_level_solved_response(response, script_level, unit_group_unit: unit_group_unit)
       else # not solved
         response[:message] = 'try again'
       end
@@ -405,9 +414,8 @@ class ApplicationController < ActionController::Base
   end
 
   # Creates a statsig stable id for use of signed-out user tracking.
-  # This cookie is used by the Statsig SDK for both JS and Ruby.
-  protected def initialize_statsig_stable_id
-    cookies[:statsig_stable_id] ||= {value: SecureRandom.uuid, domain: :all, path: '/'}
+  protected def statsig_stable_id
+    session[:statsig_stable_id] ||= SecureRandom.uuid
   end
 
   private def pairing_still_enabled

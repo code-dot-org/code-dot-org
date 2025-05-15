@@ -354,6 +354,11 @@ class Lesson < ApplicationRecord
       end
 
       lesson_data[:lesson_extras_level_url] = script_lesson_extras_url(script.name, lesson_position: relative_position) unless unplugged_lesson?
+      if Policies::Courses.modularity_enabled? && unit_group_unit && !unplugged_lesson?
+        course = unit_group_unit.unit_group
+        unit_position = unit_group_unit.position
+        lesson_data[:lesson_extras_level_url] = course_unit_lesson_extras_url(course, unit_position, relative_position)
+      end
 
       lesson_data
     end
