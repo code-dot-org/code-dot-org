@@ -1028,6 +1028,7 @@ class Pd::Workshop < ApplicationRecord
       name: name,
       capacity: capacity,
       num_enrollments: enrollments ? enrollments.count : 0,
+      grade_levels: grades,
       sessions: sessions&.map(&:session_info_for_calendar),
       format: format,
       location_name: location_name,

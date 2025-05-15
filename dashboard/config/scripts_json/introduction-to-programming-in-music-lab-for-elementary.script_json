@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-02 03:50:53 UTC",
+    "serialized_at": "2025-05-09 15:33:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -42,7 +42,7 @@
   "lessons": [
     {
       "key": "Songwriter's Toolbox",
-      "name": "✨FOR LAUNCH!!!! ✨ Songwriter's Toolbox",
+      "name": "Songwriter's Toolbox",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -59,7 +59,7 @@
     },
     {
       "key": "Producer Power",
-      "name": "✨FOR LAUNCH!!!!✨Producer Power",
+      "name": "Producer Power",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -76,7 +76,7 @@
     },
     {
       "key": "Sound Designer's Studio",
-      "name": "✨FOR LAUNCH!!!!✨ Sound Designer's Studio",
+      "name": "Sound Designer's Studio",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -236,7 +236,6 @@
       "key": "515176f6-a6e7-4043-9202-1a15e06bb279",
       "position": 1,
       "properties": {
-        "name": "Programming Levels:",
         "progression_name": "Intro Video"
       },
       "seeding_key": {
@@ -314,8 +313,7 @@
       "key": "abdfff4e-50aa-4eb9-8aa7-09e1b538d1ac",
       "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_38\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_46\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Mystery Melody activity. First, press the speaker icon on the slide to play the melody out of sequence.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What did you notice when the notes were out of order?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This helps students articulate why sequencing matters and reinforces how things feel “off” without the right order.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Thent, press the second speaker icon on the slide to reveal the melody with the notes in the correct order.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31437c77914_0_71\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students set up for a quick Turn & Talk to reexamine the Question of the Day. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Take turns listening and answering the Question of the Day. Give me a thumbs up after you both have shared your answers.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g350eaf66457_0_236\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> This is an optional activity to encourage your students to share the creative music they’ve built with code. Consider adding an opportunity for students to share ‘glows and grows’ after they share their projects with each other.\n    </td>\n  </tr>\n\n</table>    \n    ",
-        "name": "Wrap Up Activity"
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_38\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the objectives of the lesson. Have students show a thumbs up/down/sideways to reflect on whether they reached each objective.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g310cce97867_0_46\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the Mystery Melody activity. First, press the speaker icon on the slide to play the melody out of sequence.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What did you notice when the notes were out of order?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This helps students articulate why sequencing matters and reinforces how things feel “off” without the right order.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Thent, press the second speaker icon on the slide to reveal the melody with the notes in the correct order.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g31437c77914_0_71\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students set up for a quick Turn & Talk to reexamine the Question of the Day. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Take turns listening and answering the Question of the Day. Give me a thumbs up after you both have shared your answers.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g350eaf66457_0_236\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> This is an optional activity to encourage your students to share the creative music they’ve built with code. Consider adding an opportunity for students to share ‘glows and grows’ after they share their projects with each other.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "abdfff4e-50aa-4eb9-8aa7-09e1b538d1ac",
@@ -443,8 +441,19 @@
       }
     },
     {
-      "key": "0353181f-6c32-40a0-95dc-930ee1578205",
+      "key": "c6030011-6ab9-4a0b-99c2-10861820467d",
       "position": 4,
+      "properties": {
+        "progression_name": "Bonus Blocks"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6030011-6ab9-4a0b-99c2-10861820467d",
+        "lesson_activity.key": "e1fc288f-d1f3-4c80-8fce-5dadd77adbc7"
+      }
+    },
+    {
+      "key": "0353181f-6c32-40a0-95dc-930ee1578205",
+      "position": 5,
       "properties": {
         "progression_name": "Freeplay"
       },
@@ -455,7 +464,7 @@
     },
     {
       "key": "1e206d9c-d63e-418d-a857-46d9d7016ee1",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a7af70e4_0_60\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on level 1 together as a class. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Discuss other creative jobs that connect music and technology\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students might think of how a sound designer uses technology to create sound effects for movies and video games. They use special software to mix sounds and make everything sound realistic. Another example is a music producer, who uses digital tools to edit and improve songs before they are released.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a7af70e4_0_76\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the instructions for level 2 together as a class. Important tips to point out:\n\t\t<br />Guide students to notice the green event triggers. \n\t\t<br />Events stand alone and do not connect to the main program. \n\t\t<br />The sounds connected to events only play when the button (on the keyboard or on screen left of Run) is pressed. \n\t\t<br />Make a connection to the Simon Says activity in the warm up and encourage students to consider the use of a event to make the program interactive and fun.\n\t\t<br />\n\t\t<br /><strong>Transition:</strong> Have students transition to continuing the lesson on their own devices. They will work on levels 3-10 independently.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g328a7af70e4_0_92\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Read the instructions for each level and try to complete the code. Press the Run button to try it out. If something is not quite right you will get a hint under the instructions. When you’ve successfully completed the challenge, a new message and a Continue button will appear. Click Continue to move to the next level and move at your speed. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Encourage students to read the instructions and hints on each level as you circulate. Ask guiding questions to support students if they get stuck.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g350eaf66457_0_168\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Level 8 is an opportunity to check for understanding in the class. It may be helpful to bring the class together to discuss misconceptions.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw/export/png?id=19-FrZQ7OwIOjHc_63UrEa46u1_PiETcR4QYwAi0CIRw&pageid=g350eaf66457_0_205\"></td>\n    <td style=\"width: 75%\">\n      <strong>Transition:</strong> Have students spend the remainder of the class time using what they’ve learned to create their own music. The instructions include some suggestions for what their project should include.\n    </td>\n  </tr>\n\n</table>    \n    "
       },
@@ -1133,9 +1142,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-event-try_launch"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1145,7 +1152,7 @@
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "2154567b-18d8-407a-8257-8ec95edf0c15"
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
       },
       "level_keys": [
         "music-coding-intro-event-try_launch"
@@ -1154,7 +1161,7 @@
     {
       "chapter": 28,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1179,7 +1186,7 @@
     {
       "chapter": 29,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1204,7 +1211,7 @@
     {
       "chapter": 30,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1229,7 +1236,7 @@
     {
       "chapter": 31,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1254,7 +1261,7 @@
     {
       "chapter": 32,
       "position": 7,
-      "activity_section_position": 5,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1279,7 +1286,7 @@
     {
       "chapter": 33,
       "position": 8,
-      "activity_section_position": 6,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1304,13 +1311,10 @@
     {
       "chapter": 34,
       "position": 9,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-effects-panel_launch"
-        ],
-        "progression": "Skill Building"
+        "progression": "Bonus Blocks"
       },
       "bonus": false,
       "seeding_key": {
@@ -1320,7 +1324,7 @@
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+        "activity_section.key": "c6030011-6ab9-4a0b-99c2-10861820467d"
       },
       "level_keys": [
         "music-coding-intro-effects-panel_launch"
@@ -1329,13 +1333,10 @@
     {
       "chapter": 35,
       "position": 10,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "music-coding-intro-effects_launch"
-        ],
-        "progression": "Skill Building"
+        "progression": "Bonus Blocks"
       },
       "bonus": false,
       "seeding_key": {
@@ -1345,7 +1346,7 @@
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+        "activity_section.key": "c6030011-6ab9-4a0b-99c2-10861820467d"
       },
       "level_keys": [
         "music-coding-intro-effects_launch"
@@ -1724,7 +1725,7 @@
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "2154567b-18d8-407a-8257-8ec95edf0c15"
+        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
       }
     },
     {
@@ -1808,7 +1809,7 @@
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+        "activity_section.key": "c6030011-6ab9-4a0b-99c2-10861820467d"
       }
     },
     {
@@ -1820,7 +1821,7 @@
         "lesson.key": "Sound Designer's Studio",
         "lesson_group.key": "",
         "script.name": "introduction-to-programming-in-music-lab-for-elementary",
-        "activity_section.key": "d6a8aaea-c7a2-45db-a951-80dc471387a0"
+        "activity_section.key": "c6030011-6ab9-4a0b-99c2-10861820467d"
       }
     },
     {
@@ -1949,6 +1950,16 @@
       }
     },
     {
+      "key": "measure",
+      "word": "Measure",
+      "definition": "Used to divide and organize music.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "measure"
+      }
+    },
+    {
       "key": "program",
       "word": "Program",
       "definition": "A set of instructions that tells a computer what to do.",
@@ -1956,6 +1967,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "rest",
+      "word": "Rest",
+      "definition": "A silent space in music  where no sound is played.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "rest"
       }
     },
     {
@@ -1991,7 +2012,19 @@
     {
       "seeding_key": {
         "lesson.key": "Songwriter's Toolbox",
+        "vocabulary.key": "measure"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
         "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Songwriter's Toolbox",
+        "vocabulary.key": "rest"
       }
     },
     {
@@ -2014,7 +2047,7 @@
     {
       "key": "4914c48e-3dc3-495e-bbe6-a66c86d1080a",
       "properties": {
-        "description": "**Order matters** - Write steps in a clear order to make your program do what you want."
+        "description": "Write a sequence of steps in a program in the correct order "
       },
       "seeding_key": {
         "lesson.key": "Songwriter's Toolbox",
@@ -2024,7 +2057,7 @@
     {
       "key": "53289561-15f8-449c-8670-8b77e99b1ac1",
       "properties": {
-        "description": "**Find patterns**- Use loops to repeat parts of your code."
+        "description": "Use loops to repeat parts of code "
       },
       "seeding_key": {
         "lesson.key": "Songwriter's Toolbox",
@@ -2044,7 +2077,7 @@
     {
       "key": "7d1c2165-3c39-46f1-92ee-9016c413d8c9",
       "properties": {
-        "description": "Customize and call functions that organize and simplify your code "
+        "description": "Define and call functions that organize and simplify code "
       },
       "seeding_key": {
         "lesson.key": "Producer Power",
@@ -2064,7 +2097,7 @@
     {
       "key": "d9a430f1-8252-4e7d-8f80-74b09024f9ac",
       "properties": {
-        "description": "**Break it down** - Learn how to solve big problems by breaking them into smaller, easier steps."
+        "description": "Decompose problems by breaking them down into smaller steps "
       },
       "seeding_key": {
         "lesson.key": "Songwriter's Toolbox",

@@ -71,7 +71,7 @@ yarn test:ui:update-snapshot --environment <development|test|production>
 If working on a fork and you want to update the version control version, specify the source entry id:
 
 ```bash
-yarn test:ui:update-snapshot --enviornment development --source-entry-id <fork experience entry id>
+yarn test:ui:update-snapshot --environment development --source-entry-id <fork experience entry id>
 ```
 
 ### Updating "All The Things" on Contentful from source control

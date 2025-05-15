@@ -15,9 +15,15 @@ import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
 } from '@/components/carousels/actionBlockCarousel';
+import ImageCarousel, {
+  ImageCarouselContentfulComponentDefinition,
+} from '@/components/carousels/imageCarousel';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
+import Heading, {
+  HeadingContentfulComponentDefinition,
+} from '@/components/contentful/heading';
 import HeroBanner, {
   HeroBannerContentfulComponentDefinition,
 } from '@/components/contentful/heroBanner';
@@ -36,9 +42,6 @@ import EditorialCard, {
 import FAQAccordion, {
   FAQAccordionContentfulComponentDefinition,
 } from '@/components/faqAccordion';
-import Heading, {
-  HeadingContentfulComponentDefinition,
-} from '@/components/heading';
 import IconHighlight, {
   IconHighlightContentfulComponentDefinition,
 } from '@/components/iconHighlight';
@@ -134,6 +137,10 @@ defineComponents(
     {
       component: Image,
       definition: ImageContentfulComponentDefinition,
+    },
+    {
+      component: ImageCarousel,
+      definition: ImageCarouselContentfulComponentDefinition,
     },
     {
       component: LabSnapshot,

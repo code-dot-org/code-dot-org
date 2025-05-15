@@ -4586,6 +4586,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^0.7.3":
+  version: 0.7.3
+  resolution: "@floating-ui/core@npm:0.7.3"
+  checksum: 10/c1c615ffd4ef67fff1ba0103466c73a1d505462b017b0c1dfc7f81c31348221a903311a613efc253781586ce635aa499b83985704af271a29b9d782419ae60e4
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:^0.5.2":
+  version: 0.5.4
+  resolution: "@floating-ui/dom@npm:0.5.4"
+  dependencies:
+    "@floating-ui/core": "npm:^0.7.3"
+  checksum: 10/7a102c097c41980184b12e62d282c0e5ef2ea0ff1012328acab68dfae5aa65cd2e2fe6304248bfdcf4479c0d74545965565be7023cc83bb178c979ab8a9af52a
+  languageName: node
+  linkType: hard
+
 "@fortawesome/fontawesome-common-types@npm:^0.2.25":
   version: 0.2.25
   resolution: "@fortawesome/fontawesome-common-types@npm:0.2.25"
@@ -5146,6 +5162,58 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mapbox/search-js-core@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@mapbox/search-js-core@npm:1.0.0"
+  dependencies:
+    "@types/geojson": "npm:^7946.0.8"
+  checksum: 10/5a062392f45f80559eb92e6870a13cede7bcf06b4a5f27e2b3fcf6354029fc4b3e829727f5a6c9452d92fd30a4b94c2c190add87c969aeb0d58284e39629b440
+  languageName: node
+  linkType: hard
+
+"@mapbox/search-js-react@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@mapbox/search-js-react@npm:1.0.0"
+  dependencies:
+    "@mapbox/search-js-core": "npm:^1.0.0"
+    "@mapbox/search-js-web": "npm:^1.0.0"
+    "@types/geojson": "npm:^7946.0.8"
+    "@types/react": "npm:^17.0.43"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 10/93d609605769bf44c76699e25ce50b00186e3c78d665e590a2efa83fd329e5eec1c7cac41289c4fab8daa41983acb8d963dc71302b74ed8733f07b7fd673ddbc
+  languageName: node
+  linkType: hard
+
+"@mapbox/search-js-web@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@mapbox/search-js-web@npm:1.0.0"
+  dependencies:
+    "@floating-ui/dom": "npm:^0.5.2"
+    "@mapbox/search-js-core": "npm:^1.0.0"
+    "@mapbox/sphericalmercator": "npm:^1.2.0"
+    focus-trap: "npm:^6.7.3"
+    no-scroll: "npm:^2.1.1"
+    subtag: "npm:^0.5.0"
+  peerDependencies:
+    mapbox-gl: ">=2.7.0"
+  checksum: 10/59828638d9cf30edc3eb472fcd148d2953d92dcb0fc68bdf5a65f92e894d6187f057c3a4cbe3f0fdb29d875a7996894bdc876c26840dfba4342994376cc901d4
+  languageName: node
+  linkType: hard
+
+"@mapbox/sphericalmercator@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@mapbox/sphericalmercator@npm:1.2.0"
+  bin:
+    bbox: bin/bbox.js
+    to4326: bin/to4326.js
+    to900913: bin/to900913.js
+    xyz: bin/xyz.js
+  checksum: 10/d5c5fdcc2311a7c49da98dbf487f09e4987448ccad53addd5db2651f53d30948a7064bcd46c6e654d939498e5826d3831635414cf90c7c4fd2b9975529f3fbea
+  languageName: node
+  linkType: hard
+
 "@marijn/find-cluster-break@npm:^1.0.0":
   version: 1.0.2
   resolution: "@marijn/find-cluster-break@npm:1.0.2"
@@ -5256,6 +5324,24 @@ __metadata:
   dependencies:
     semver: "npm:^7.3.5"
   checksum: 10/f3a7ab3a31de65e42aeb6ed03ed035ef123d2de7af4deb9d4a003d27acc8618b57d9fb9d259fe6c28ca538032a028f37337264388ba27d26d37fff7dde22476e
+  languageName: node
+  linkType: hard
+
+"@pdf-lib/standard-fonts@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@pdf-lib/standard-fonts@npm:1.0.0"
+  dependencies:
+    pako: "npm:^1.0.6"
+  checksum: 10/0dfcedbd16e3f48afcac321f153d81f49ea6030030fa1e05a07bde359629949e27b3d77b39a5c7b0b0ff8af09912765f62a911cd67d488d4dc0b3c1c5ca106f0
+  languageName: node
+  linkType: hard
+
+"@pdf-lib/upng@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@pdf-lib/upng@npm:1.0.1"
+  dependencies:
+    pako: "npm:^1.0.10"
+  checksum: 10/eecac72f36d51b67acb09f61a7bbb55577ceb6232aa0c1a827aea003126787cede07ad391c0c789ab36164a9a86d1634768c2cf941148743e155de7ed6c34fc3
   languageName: node
   linkType: hard
 
@@ -7441,6 +7527,13 @@ __metadata:
     "@types/qs": "npm:*"
     "@types/serve-static": "npm:*"
   checksum: 10/7a6d26cf6f43d3151caf4fec66ea11c9d23166e4f3102edfe45a94170654a54ea08cf3103d26b3928d7ebcc24162c90488e33986b7e3a5f8941225edd5eb18c7
+  languageName: node
+  linkType: hard
+
+"@types/geojson@npm:^7946.0.8":
+  version: 7946.0.16
+  resolution: "@types/geojson@npm:7946.0.16"
+  checksum: 10/34d07421bdd60e7b99fa265441d17ac6e9aef48e3ce22d04324127d0de1daf7fbaa0bd3be1cece2092eb6995f21da84afa5231e24621a2910ff7340bc98f496f
   languageName: node
   linkType: hard
 
@@ -10177,6 +10270,7 @@ __metadata:
     "@dsco_/link": "npm:^1.1.2"
     "@lezer/highlight": "npm:^1.2.0"
     "@magenta/music": "npm:^1.23.1"
+    "@mapbox/search-js-react": "npm:^1.0.0"
     "@microbit/microbit-fs": "npm:^0.9.2"
     "@microsoft/immersive-reader-sdk": "npm:^1.1.0"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.11"
@@ -10333,6 +10427,7 @@ __metadata:
     object-fit-images: "npm:^3.2.3"
     papaparse: "npm:^5.4.1"
     path-browserify: "npm:^1.0.1"
+    pdf-lib: "npm:^1.17.1"
     pepjs: "npm:^0.4.3"
     pixelmatch: "npm:^5.2.0"
     playground-io: "code-dot-org/playground-io#v0.6.0-cdo.2"
@@ -15315,6 +15410,15 @@ canvg@gabelerner/canvg:
     react: ">=16.3.0"
     react-dom: ">=16.3.0"
   checksum: 10/c7dcae701d12694735bffefefa32e6a6090412a134e70b13ce546e955890c71af42e716784123ec8e22fcc3608dbd1de54466aeb9251b39dfb03c9f3c7ffb707
+  languageName: node
+  linkType: hard
+
+"focus-trap@npm:^6.7.3":
+  version: 6.9.4
+  resolution: "focus-trap@npm:6.9.4"
+  dependencies:
+    tabbable: "npm:^5.3.3"
+  checksum: 10/dd64b4522a72836f617a26208cf1f558e0887689f9547b188015079e0f983ca69c29aea70b3ae2a596bc8485643b4c0b35adc653998b8e74af0d0ec6aa004727
   languageName: node
   linkType: hard
 
@@ -21215,6 +21319,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"no-scroll@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "no-scroll@npm:2.1.1"
+  checksum: 10/b6adeb51aae8d1947e249b688f9d34bd7458431900ff924e55626928c8d02165b3c02754dce4048a250de374795afb531dafb2bc6c63bc74b0101b29dc140000
+  languageName: node
+  linkType: hard
+
 "node-abi@npm:^2.7.0":
   version: 2.30.1
   resolution: "node-abi@npm:2.30.1"
@@ -22179,7 +22290,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"pako@npm:~1.0.2, pako@npm:~1.0.5":
+"pako@npm:^1.0.10, pako@npm:^1.0.11, pako@npm:^1.0.6, pako@npm:~1.0.2, pako@npm:~1.0.5":
   version: 1.0.11
   resolution: "pako@npm:1.0.11"
   checksum: 10/1ad07210e894472685564c4d39a08717e84c2a68a70d3c1d9e657d32394ef1670e22972a433cbfe48976cb98b154ba06855dcd3fcfba77f60f1777634bec48c0
@@ -22495,6 +22606,18 @@ canvg@gabelerner/canvg:
   version: 1.1.2
   resolution: "pathe@npm:1.1.2"
   checksum: 10/f201d796351bf7433d147b92c20eb154a4e0ea83512017bf4ec4e492a5d6e738fb45798be4259a61aa81270179fce11026f6ff0d3fa04173041de044defe9d80
+  languageName: node
+  linkType: hard
+
+"pdf-lib@npm:^1.17.1":
+  version: 1.17.1
+  resolution: "pdf-lib@npm:1.17.1"
+  dependencies:
+    "@pdf-lib/standard-fonts": "npm:^1.0.0"
+    "@pdf-lib/upng": "npm:^1.0.1"
+    pako: "npm:^1.0.11"
+    tslib: "npm:^1.11.1"
+  checksum: 10/ea8c2c0c813d89ca359a0c831cb2e8a581c569ed44b074316f917942b5baa101f878ce922f1cb87e6f41a035008ba75b52267480aee5d65a5e68c445ee83bc37
   languageName: node
   linkType: hard
 
@@ -27480,6 +27603,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"subtag@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "subtag@npm:0.5.0"
+  checksum: 10/449d8a19a06e491bb1cbc250288bdb8f394f33030f425790e322e4b4631f61b6c15fc530ea5e85b7f9db11f384c32756b192b7fde615f575d1e35a4a9e9727bf
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^2.0.0":
   version: 2.0.0
   resolution: "supports-color@npm:2.0.0"
@@ -27575,6 +27705,13 @@ canvg@gabelerner/canvg:
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
   checksum: 10/c09a00aadf279d47d0c5c46ca3b6b2fbaeb45f0a184976d599637d412d3a70bbdc043ff33effe1206dea0e36e0ad226cb957112e7ce9a4bf2daedf7fa4f85c53
+  languageName: node
+  linkType: hard
+
+"tabbable@npm:^5.3.3":
+  version: 5.3.3
+  resolution: "tabbable@npm:5.3.3"
+  checksum: 10/5da150c9ac7aaed95f901623214794ffac9472a86009a1762c7b436249d33b157b7d86d93610986090d0fb1ef152f5dec2c201552e0b67ca895ba00c145a51c5
   languageName: node
   linkType: hard
 
@@ -28240,7 +28377,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.13.0, tslib@npm:^1.8.1":
+"tslib@npm:^1.11.1, tslib@npm:^1.13.0, tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 10/7dbf34e6f55c6492637adb81b555af5e3b4f9cc6b998fb440dac82d3b42bdc91560a35a5fb75e20e24a076c651438234da6743d139e4feabf0783f3cdfe1dddb

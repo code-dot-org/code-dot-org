@@ -211,11 +211,13 @@ export interface LevelProperties {
   miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
+  widgetView?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
   progressionType?: string;
   type?: string;
+  starterAssets?: {[key: string]: string};
 }
 
 // Level configuration data used by project-backed labs that don't require

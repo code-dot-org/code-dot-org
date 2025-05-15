@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-29 20:42:46 UTC",
+    "serialized_at": "2025-05-13 16:33:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -67,12 +68,24 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd7-2025"
       }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd7-2025"
+      }
     }
   ],
   "lessons": [
     {
       "key": "Intro to App Lab",
-      "name": "Intro to App Lab",
+      "name": "Lesson 0: Intro to App Lab",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -91,7 +104,7 @@
     },
     {
       "key": "Introduction to Machine Learning",
-      "name": "Introduction to Machine Learning",
+      "name": "Lesson 1: Introduction to Machine Learning",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -119,7 +132,7 @@
     },
     {
       "key": "Types of Machine Learning",
-      "name": "Types of Machine Learning",
+      "name": "Lesson 2: Types of Machine Learning",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -148,7 +161,7 @@
     },
     {
       "key": "Innovations in AI",
-      "name": "Innovations in AI",
+      "name": "Lesson 3: Innovations in AI",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -176,7 +189,7 @@
     },
     {
       "key": "Patterns in Data",
-      "name": "Patterns in Data",
+      "name": "Lesson 4: Patterns in Data",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -195,7 +208,7 @@
     },
     {
       "key": "Classification Models",
-      "name": "Classification Models",
+      "name": "Lesson 5: Classification Models",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -214,7 +227,7 @@
     },
     {
       "key": "Introduction to AI Lab",
-      "name": "Introduction to AI Lab",
+      "name": "Lesson 6: Introduction to AI Lab",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -233,7 +246,7 @@
     },
     {
       "key": "Importing Models in App Lab",
-      "name": "Importing Models in App Lab",
+      "name": "Lesson 7: Importing Models in App Lab",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -252,7 +265,7 @@
     },
     {
       "key": "Model Cards",
-      "name": "Model Cards",
+      "name": "Lesson 8: Model Cards",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -271,7 +284,7 @@
     },
     {
       "key": "Saving Models in AI Lab",
-      "name": "Saving Models in AI Lab",
+      "name": "Lesson 9: Saving Models in AI Lab",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -290,7 +303,7 @@
     },
     {
       "key": "Model Cards in App Lab",
-      "name": "Model Cards in App Lab",
+      "name": "Lesson 10: Model Cards in App Lab",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -309,7 +322,7 @@
     },
     {
       "key": "Numerical Models",
-      "name": "Numerical Models",
+      "name": "Lesson 11: Numerical Models",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -328,7 +341,7 @@
     },
     {
       "key": "Numerical Data in AI Lab",
-      "name": "Numerical Data in AI Lab",
+      "name": "Lesson 12: Numerical Data in AI Lab",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -347,7 +360,7 @@
     },
     {
       "key": "Customizing Apps",
-      "name": "Customizing Apps",
+      "name": "Lesson 13: Customizing Apps",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -366,7 +379,7 @@
     },
     {
       "key": "AI Code of Ethics",
-      "name": "AI Code of Ethics",
+      "name": "Lesson 14: AI Code of Ethics",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -385,7 +398,7 @@
     },
     {
       "key": "Project: Make a Machine Learning App",
-      "name": "Project: Make a Machine Learning App",
+      "name": "Lesson 15: Project - Make a Machine Learning App",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -403,7 +416,7 @@
     },
     {
       "key": "Issue Statements",
-      "name": "Issue Statements",
+      "name": "Lesson 16: Issue Statements",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
@@ -421,7 +434,7 @@
     },
     {
       "key": "Survey Planning",
-      "name": "Survey Planning",
+      "name": "Lesson 17: Survey Planning",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
@@ -439,7 +452,7 @@
     },
     {
       "key": "Survey Data in AI Lab",
-      "name": "Survey Data in AI Lab",
+      "name": "Lesson 18: Survey Data in AI Lab",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
@@ -457,7 +470,7 @@
     },
     {
       "key": "Troubleshooting Models",
-      "name": "Troubleshooting Models",
+      "name": "Lesson 19: Troubleshooting Models",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
@@ -475,7 +488,7 @@
     },
     {
       "key": "Creating an App",
-      "name": "Creating an App",
+      "name": "Lesson 20: Creating an App",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
@@ -493,7 +506,7 @@
     },
     {
       "key": "Project - Design an AI App",
-      "name": "Project - Design an AI App",
+      "name": "Lesson 21: Project - Design an AI App",
       "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
@@ -518,6 +531,21 @@
       "seeding_key": {
         "lesson.key": "Project - Design an AI App",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd7-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 23,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csd7-2025"
       }
     }
@@ -1549,6 +1577,18 @@
         "lesson_activity.key": "4820a443-21a7-466a-9ab6-e38d42ba0b6c",
         "lesson.key": "Project - Design an AI App",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd7-2025"
+      }
+    },
+    {
+      "key": "4dde2b4b-d524-4dde-a331-3b776614d768",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4dde2b4b-d524-4dde-a331-3b776614d768",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csd7-2025"
       }
     }
@@ -8069,7 +8109,7 @@
       "properties": {
         "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflection",
-        "progression_name": "End-Of-Unit Survey"
+        "progression_name": "End Of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "51a02cf0-645a-4dbc-a546-acee72322716",
@@ -8098,6 +8138,28 @@
       "seeding_key": {
         "activity_section.key": "f386c1c5-3ece-472c-9f05-b4cf8f9bdeeb",
         "lesson_activity.key": "4820a443-21a7-466a-9ab6-e38d42ba0b6c"
+      }
+    },
+    {
+      "key": "99f1e2de-4c87-4e88-88ec-b47cc86b2564",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "99f1e2de-4c87-4e88-88ec-b47cc86b2564",
+        "lesson_activity.key": "4dde2b4b-d524-4dde-a331-3b776614d768"
+      }
+    },
+    {
+      "key": "f9e04baa-295f-4043-b20e-2cff8da586e1",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "f9e04baa-295f-4043-b20e-2cff8da586e1",
+        "lesson_activity.key": "4dde2b4b-d524-4dde-a331-3b776614d768"
       }
     }
   ],
@@ -10281,17 +10343,14 @@
       "chapter": 88,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csd7_2025"
-        ],
-        "progression": "End-Of-Unit Survey"
+        "progression": "End Of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd7_2025"
+          "student-eou-survey_linked_page-csd7_2025"
         ],
         "lesson.key": "Project - Design an AI App",
         "lesson_group.key": "lessonGroup-3",
@@ -10299,7 +10358,32 @@
         "activity_section.key": "51a02cf0-645a-4dbc-a546-acee72322716"
       },
       "level_keys": [
-        "Student End of Unit Survey_csd7_2025"
+        "student-eou-survey_linked_page-csd7_2025"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csd7survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csd7survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd7-2025",
+        "activity_section.key": "99f1e2de-4c87-4e88-88ec-b47cc86b2564"
+      },
+      "level_keys": [
+        "student-eou-survey_csd7survey-2025"
       ]
     }
   ],
@@ -11350,14 +11434,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csd7_2025",
+        "level.key": "student-eou-survey_linked_page-csd7_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd7_2025"
+          "student-eou-survey_linked_page-csd7_2025"
         ],
         "lesson.key": "Project - Design an AI App",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd7-2025",
         "activity_section.key": "51a02cf0-645a-4dbc-a546-acee72322716"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csd7survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csd7survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd7-2025",
+        "activity_section.key": "99f1e2de-4c87-4e88-88ec-b47cc86b2564"
       }
     }
   ],

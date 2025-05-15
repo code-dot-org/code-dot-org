@@ -7,6 +7,7 @@
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -14,11 +15,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-11 18:23:11 UTC",
+    "serialized_at": "2025-05-13 18:42:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -45,7 +47,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Post-Course Survey"
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-5",
@@ -56,7 +58,7 @@
   "lessons": [
     {
       "key": "Learning from Data",
-      "name": "Learning from Data",
+      "name": "Lesson 1: Learning from Data",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -75,7 +77,7 @@
     },
     {
       "key": "Exploring One Column",
-      "name": "Exploring One Column",
+      "name": "Lesson 2: Exploring One Column",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -94,7 +96,7 @@
     },
     {
       "key": "Filtering and Cleaning Data",
-      "name": "Filtering and Cleaning Data",
+      "name": "Lesson 3: Filtering and Cleaning Data",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -114,7 +116,7 @@
     },
     {
       "key": "Exploring Two Columns",
-      "name": "Exploring Two Columns",
+      "name": "Lesson 4: Exploring Two Columns",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -133,7 +135,7 @@
     },
     {
       "key": "Big, Open, and Crowdsourced Data",
-      "name": "Big, Open, and Crowdsourced Data",
+      "name": "Lesson 5: Big, Open, and Crowdsourced Data",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -153,7 +155,7 @@
     },
     {
       "key": "Machine Learning",
-      "name": "Machine Learning",
+      "name": "Lesson 6: Machine Learning",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -172,7 +174,7 @@
     },
     {
       "key": "Algorithmic Bias",
-      "name": "Algorithmic Bias",
+      "name": "Lesson 7: Algorithmic Bias",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -190,7 +192,7 @@
     },
     {
       "key": "Project - Tell a Data Story",
-      "name": "Project - Tell a Data Story",
+      "name": "Lesson 8: Project - Tell a Data Story",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -210,7 +212,7 @@
     },
     {
       "key": "Assessment Day",
-      "name": "Assessment Day",
+      "name": "Lesson 9: Assessment Day",
       "absolute_position": 9,
       "lockable": true,
       "has_lesson_plan": true,
@@ -229,16 +231,16 @@
       }
     },
     {
-      "key": "CS Principles Post-Course Survey",
-      "name": "CS Principles Post-Course Survey",
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 10,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 10,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2025"
       }
@@ -633,13 +635,13 @@
       }
     },
     {
-      "key": "284251c9-3225-43db-9ed5-01ffa23790ff",
+      "key": "00f1df1e-9d25-4d77-9852-19781fc71dc4",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "284251c9-3225-43db-9ed5-01ffa23790ff",
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_activity.key": "00f1df1e-9d25-4d77-9852-19781fc71dc4",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2025"
       }
@@ -2124,6 +2126,17 @@
       }
     },
     {
+      "key": "088bef83-3dae-46b8-a7ec-4e3c6dcdfead",
+      "position": 6,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "088bef83-3dae-46b8-a7ec-4e3c6dcdfead",
+        "lesson_activity.key": "06e16d72-ca87-47b9-98e1-a03cdbdf6d5e"
+      }
+    },
+    {
       "key": "5f7bc044-f2c6-40f0-9faa-bd717806e8e6",
       "position": 1,
       "properties": {
@@ -2153,20 +2166,25 @@
       }
     },
     {
-      "key": "592c397b-9539-44b1-b6f9-4adfaae946d2",
+      "key": "5bb6d5d0-1ee1-40fb-9915-822dd72d3a0a",
       "position": 1,
       "properties": {
-        "progression_name": "Post-Course Survey Instructions",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/view)] [[pdf](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
-          }
-        ]
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "592c397b-9539-44b1-b6f9-4adfaae946d2",
-        "lesson_activity.key": "284251c9-3225-43db-9ed5-01ffa23790ff"
+        "activity_section.key": "5bb6d5d0-1ee1-40fb-9915-822dd72d3a0a",
+        "lesson_activity.key": "00f1df1e-9d25-4d77-9852-19781fc71dc4"
+      }
+    },
+    {
+      "key": "0cadffdf-2942-465d-92f1-358b2ebfc046",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "0cadffdf-2942-465d-92f1-358b2ebfc046",
+        "lesson_activity.key": "00f1df1e-9d25-4d77-9852-19781fc71dc4"
       }
     }
   ],
@@ -2177,6 +2195,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Data Q1_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2199,6 +2220,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Data Q2_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2221,6 +2245,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Data Q3_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2243,6 +2270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9L1 Metadata_2025"
+        ],
         "progression": "Exploring Metadata"
       },
       "bonus": false,
@@ -2265,6 +2295,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L1 google trends CFU_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2287,6 +2320,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9L2 Making Bar Charts and Histograms_2025"
+        ],
         "progression": "Making Bar Charts and Histograms"
       },
       "bonus": false,
@@ -2309,6 +2345,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L2 CFU Histogram vs Bar Chart_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2331,6 +2370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9L3 Data Cleaning_2025"
+        ],
         "progression": "Cleaning Data"
       },
       "bonus": false,
@@ -2353,6 +2395,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9L3 Data Filtering_2025"
+        ],
         "progression": "Filtering Data"
       },
       "bonus": false,
@@ -2375,6 +2420,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L3 CFU manually cleaning data_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2397,6 +2445,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9L4 Making Crosstabs and Scatter Plots_2025"
+        ],
         "progression": "Crosstab and Scatter Charts"
       },
       "bonus": false,
@@ -2419,6 +2470,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Which Type of Chart_2025"
+        ],
         "progression": "Which Type of Chart?"
       },
       "bonus": false,
@@ -2441,6 +2495,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L4 CFU Two Column vs One_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2463,6 +2520,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U9L5 CSP CFU Terms2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2485,6 +2545,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Machine_Learning_2025"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2507,6 +2570,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_2025"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2529,6 +2595,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo_2025"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2551,6 +2620,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrash_2025"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2573,6 +2645,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Video_Training_Data_2025"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2595,6 +2670,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_2025"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2617,6 +2695,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_2025"
+        ],
         "progression": "AI for Oceans - Machine Learning"
       },
       "bonus": false,
@@ -2639,6 +2720,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L6 CFU ML Bias_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2661,6 +2745,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U9L5 Cropping Widget_2025"
+        ],
         "progression": "Cropping Widget"
       },
       "bonus": false,
@@ -2683,6 +2770,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U9L7_CFU12022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2705,6 +2795,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U9L7 Free Response_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2727,6 +2820,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U9 Data Story Day 1_2025"
+        ],
         "progression": "Data Story Workspace"
       },
       "bonus": false,
@@ -2749,6 +2845,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U9 Data Story Day 2_2025"
+        ],
         "progression": "Data Story Workspace"
       },
       "bonus": false,
@@ -2767,10 +2866,35 @@
     },
     {
       "chapter": 28,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csp5_2025"
+        ],
+        "lesson.key": "Project - Tell a Data Story",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2025",
+        "activity_section.key": "088bef83-3dae-46b8-a7ec-4e3c6dcdfead"
+      },
+      "level_keys": [
+        "student-eou-survey_linked_page-csp5_2025"
+      ]
+    },
+    {
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 9 AP-Style Assessment 2022_2025"
+        ],
         "progression": "Unit Assessment - Data"
       },
       "bonus": false,
@@ -2788,25 +2912,25 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "progression": "Post-Course Survey Instructions"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp5_2025"
+          "student-eou-survey_2025-csp5"
         ],
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2025",
-        "activity_section.key": "592c397b-9539-44b1-b6f9-4adfaae946d2"
+        "activity_section.key": "5bb6d5d0-1ee1-40fb-9915-822dd72d3a0a"
       },
       "level_keys": [
-        "csp-post-survey-2021-markdown-with-link-to-survey_csp5_2025"
+        "student-eou-survey_2025-csp5"
       ]
     }
   ],
@@ -3137,6 +3261,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_linked_page-csp5_2025",
+        "script_level.level_keys": [
+          "student-eou-survey_linked_page-csp5_2025"
+        ],
+        "lesson.key": "Project - Tell a Data Story",
+        "lesson_group.key": "csp_lists",
+        "script.name": "csp5-2025",
+        "activity_section.key": "088bef83-3dae-46b8-a7ec-4e3c6dcdfead"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSP Unit 9 AP-Style Assessment 2022_2025",
         "script_level.level_keys": [
           "CSP Unit 9 AP-Style Assessment 2022_2025"
@@ -3149,14 +3285,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_csp5_2025",
+        "level.key": "student-eou-survey_2025-csp5",
         "script_level.level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_csp5_2025"
+          "student-eou-survey_2025-csp5"
         ],
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csp5-2025",
-        "activity_section.key": "592c397b-9539-44b1-b6f9-4adfaae946d2"
+        "activity_section.key": "5bb6d5d0-1ee1-40fb-9915-822dd72d3a0a"
       }
     }
   ],

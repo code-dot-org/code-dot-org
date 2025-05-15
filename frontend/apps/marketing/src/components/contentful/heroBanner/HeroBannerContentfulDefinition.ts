@@ -66,6 +66,7 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Heading',
       type: 'Text',
       group: 'content',
+      defaultValue: 'Hero Banner heading goes here',
       validations: {
         required: true,
         bindingSourceType: ['entry', 'manual'],
@@ -87,13 +88,21 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
         bindingSourceType: ['entry', 'manual'],
       },
     },
-    sectionImage: {
+    sectionImages: {
       displayName: 'Section Image',
+      type: 'Array',
+      group: 'content',
+      validations: {
+        bindingSourceType: ['entry'],
+        required: true,
+      },
+    },
+    backgroundImage: {
+      displayName: 'Section Background Image',
       type: 'Media',
       group: 'content',
       validations: {
-        bindingSourceType: ['entry', 'asset'],
-        required: true,
+        bindingSourceType: ['asset'],
       },
     },
     sectionVideoTitle: {
@@ -126,9 +135,9 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
         bindingSourceType: ['entry', 'manual'],
       },
     },
-    buttonLink: {
-      displayName: 'Button Link',
-      type: 'Link',
+    buttonLinks: {
+      displayName: 'Primary Button',
+      type: 'Array',
       group: 'content',
       description:
         'This is the link that will be used in the button. This should be a link entry.',
@@ -136,24 +145,16 @@ export const HeroBannerContentfulComponentDefinition: ComponentDefinition = {
         bindingSourceType: ['entry'],
       },
     },
-    partnerLogo: {
-      displayName: 'Partner Logo',
-      type: 'Media',
-      group: 'content',
-      validations: {
-        bindingSourceType: ['asset'],
-      },
-    },
     partnerCallout: {
-      displayName: 'Partner Callout',
+      displayName: 'Partner Callout Text',
       type: 'Text',
       group: 'content',
       validations: {
         bindingSourceType: ['entry', 'manual'],
       },
     },
-    backgroundImage: {
-      displayName: 'Background Image',
+    partnerLogo: {
+      displayName: 'Partner Logo',
       type: 'Media',
       group: 'content',
       validations: {
