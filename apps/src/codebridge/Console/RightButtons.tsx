@@ -69,7 +69,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
 
   return (
     <div className={moduleStyles.buttonContainer}>
-      {isWidgetView && (
+      {isWidgetView && widgetViewShowCode && (
         <Button
           text={
             widgetViewShowCode ? commonI18n.hideCode() : commonI18n.viewCode()
