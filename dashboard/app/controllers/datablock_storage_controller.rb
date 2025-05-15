@@ -347,7 +347,7 @@ class DatablockStorageController < ApplicationController
   private def throttle!
     id = @project_id
     limit = DCDO.get('datablock_storage_request_limit_per_ten_seconds', 30) # default is 30 requests per 10 seconds
-    should_throttle = Cdo::Throttle.throttle("datablock_storage/#{id}", limit, DATABLOCK_STORAGE_THROTTLE_PERIOD_S, DATABLOCK_STORAGE_THROTTLE_PERIOD_S)
+    should_throttle = Cdo::Throttle.throttle("datablock_storage/#{id}", limit, DATABLOCK_STORAGE_THROTTLE_PERIOD_S, throttle_for: DATABLOCK_STORAGE_THROTTLE_PERIOD_S)
 
     if should_throttle
       raise StudentFacingError.new(:THROTTLED), "Data access rate limit exceeded; Please wait #{DATABLOCK_STORAGE_THROTTLE_PERIOD_S} seconds before retrying. The app is reading/writing data too many times per second. If you were trying to write data, it wasn't written."

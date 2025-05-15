@@ -4,9 +4,6 @@
       "title": {
         "en-US": "TEST - Self-Paced PL"
       },
-      "actionBlockOverline": {
-        "en-US": "K-12 Teachers"
-      },
       "shortDescription": {
         "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
       },
@@ -45,6 +42,9 @@
             "id": "5CznPyR4ZsbIkhpwSaUxoe"
           }
         }
+      },
+      "actionBlockOverline": {
+        "en-US": "K-12 Teachers"
       },
       "experienceLevel": {
         "en-US": [

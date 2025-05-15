@@ -71,17 +71,17 @@
             {
               "value": "more_prepared",
               "text": "I feel more prepared to teach the material covered in this workshop than before I came.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
               "value": "plan_to_teach",
               "text": "I am planning to teach this curriculum.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
               "value": "know_where_to_get_help",
               "text": "I know where to go if I need help preparing to teach this material.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
               "value": "intention_to_apply_in_classroom",
@@ -102,7 +102,7 @@
         {
           "type": "checkbox",
           "name": "barriers_implementation_curriculum",
-          "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'",
+          "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']",
           "title": "Please share the main reasons you might not teach this workshop's content in your classroom this year.",
           "description": "(Select all that apply)",
           "choices": [
@@ -195,17 +195,17 @@
             {
               "value": "someone_to_turn_to",
               "text": "When I need help teaching computer science, I have someone to turn to.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
               "value": "rp_as_resource",
               "text": "I see my Regional Partner as a resource and support for computer science education in my community.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             },
             {
               "value": "workshop_helped_create_community",
               "text": "This workshop has allowed me to meet CS teachers in my community to collaborate with.",
-              "visibleIf": "{pl_topics} <> 'getting-started' and {pl_topics} <> 'self-paced-pl-ai-101' and {pl_topics} <> 'self-paced-pl-k5'"
+              "visibleIf": "{pl_topics} <> ['getting-started', 'self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started', 'self-paced-pl-ai-101'] and {pl_topics} <> ['getting-started', 'self-paced-pl-k5'] and {pl_topics} <> ['self-paced-pl-ai-101', 'self-paced-pl-k5'] and {pl_topics} <> ['getting-started'] and {pl_topics} <> ['self-paced-pl-ai-101'] and {pl_topics} <> ['self-paced-pl-k5']"
             }
           ]
         }
@@ -400,5 +400,5 @@
       ]
     }
   ],
-  "published": false
+  "published": true
 }

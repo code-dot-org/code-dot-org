@@ -762,6 +762,7 @@ module Services
         :new_name,
         :family_name,
         :serialized_at,
+        :hide_within_course,
         :published_state,
         :instruction_type,
         :instructor_audience,
