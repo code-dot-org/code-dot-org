@@ -2,6 +2,9 @@
 // even when we are transpiling within node_modules.
 {
   "presets": ["@babel/preset-env", "@babel/preset-react" ],
+  "assumptions": {
+    "constantSuper": false
+  },
   "plugins": [
     "add-module-exports",
     "syntax-async-functions",
