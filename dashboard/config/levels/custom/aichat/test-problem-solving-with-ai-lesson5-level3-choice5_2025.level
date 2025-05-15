@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:34:34.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Social Media\r\n\r\nPractice asking the same question in different ways about social media.\r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the following prompt:\r\n\r\n>Why is social media an important tool for communication?\r\n2. Press **Send**.\r\n3. Read the response you get.",
+    "long_instructions": "## Social Media\r\n\r\n### Positive Framing\r\n\r\nPractice asking AI Chat a question about social media using positive framing.\r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the following prompt:\r\n\r\n>Why is social media an important tool for communication?\r\n2. Press **Send**.\r\n3. Read the response you get.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -45,7 +46,6 @@
     "thumbnail_url": "https://images.code.org/e466c8c6c6ba30cf0a43e1ca535e2b53-Social Media Icon.png",
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:34.293+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level3-choice5\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level3-choice5\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:34.293+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level3-choice5\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level3-choice5\"},{\"changed_at\":\"2025-05-14 18:56:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

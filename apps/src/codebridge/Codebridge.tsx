@@ -17,6 +17,8 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useReducer, useRef} from 'react';
 
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {LabConfig, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
@@ -62,6 +64,8 @@ export const Codebridge = React.memo(
     );
     const [internalSource, dispatch] = useReducer(reducerWithCallback, source);
     const isShareView = useAppSelector(state => state.lab.isShareView);
+    const isWidgetView = !!levelProperties.widgetView;
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
     const sourceUtilities = useSourceUtilities(dispatch);
 
@@ -77,12 +81,21 @@ export const Codebridge = React.memo(
       if (isShareView && config.layoutComponents.share) {
         return config.layoutComponents.share;
       }
+      if (isWidgetView && config.layoutComponents.widget && !isStartMode) {
+        return config.layoutComponents.widget;
+      }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
         currentLayout = 'horizontal';
       }
       return config.layoutComponents[currentLayout];
-    }, [config.activeLayout, config.layoutComponents, isShareView]);
+    }, [
+      config.activeLayout,
+      config.layoutComponents,
+      isShareView,
+      isStartMode,
+      isWidgetView,
+    ]);
 
     const appName = levelProperties.appName;
 
@@ -113,7 +126,10 @@ export const Codebridge = React.memo(
       >
         <BackpackAPIContext.Provider value={backpackApi}>
           <div className={classNames(moduleStyles.codebridgeContainer)}>
-            <InnerLayout isProjectLevel={levelProperties.isProjectLevel} />
+            <InnerLayout
+              isProjectLevel={levelProperties.isProjectLevel}
+              isWidgetView={levelProperties.widgetView}
+            />
           </div>
         </BackpackAPIContext.Provider>
       </CodebridgeContextProvider>

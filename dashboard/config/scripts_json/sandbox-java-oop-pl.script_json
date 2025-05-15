@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 17:30:37 UTC",
+    "serialized_at": "2025-05-14 19:17:18 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -70,10 +70,10 @@
     },
     {
       "key": "lesson-3",
-      "name": "Attributes",
+      "name": "Class Structure and Design",
       "absolute_position": 3,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 3,
       "properties": {
       },
@@ -137,6 +137,18 @@
       "seeding_key": {
         "lesson_activity.key": "f0949441-9572-47dc-a0da-d38ace9286f2",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl"
+      }
+    },
+    {
+      "key": "00bdc6f6-15e0-4093-ba9e-40a33e654f84",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "00bdc6f6-15e0-4093-ba9e-40a33e654f84",
+        "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "sandbox-java-oop-pl"
       }
@@ -230,6 +242,16 @@
         "activity_section.key": "2626a079-8cef-4029-9406-cd1a208ca77e",
         "lesson_activity.key": "f0949441-9572-47dc-a0da-d38ace9286f2"
       }
+    },
+    {
+      "key": "6ae93e1f-f46d-4409-82f3-8736a799f43e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6ae93e1f-f46d-4409-82f3-8736a799f43e",
+        "lesson_activity.key": "00bdc6f6-15e0-4093-ba9e-40a33e654f84"
+      }
     }
   ],
   "script_levels": [
@@ -239,6 +261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-overview-1"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -261,6 +286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-intro-video-2"
+        ],
         "progression": "Object-oriented programming"
       },
       "bonus": false,
@@ -283,6 +311,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-predict-3"
+        ],
         "progression": "Object-oriented programming"
       },
       "bonus": false,
@@ -305,6 +336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-practice-modify-4"
+        ],
         "progression": "Introducing the Neighborhood"
       },
       "bonus": false,
@@ -327,6 +361,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-neighborhood-5"
+        ],
         "progression": "Introducing the Neighborhood"
       },
       "bonus": false,
@@ -349,6 +386,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-practice-paint-6"
+        ],
         "progression": "Introducing the Neighborhood"
       },
       "bonus": false,
@@ -371,6 +411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-classes-objects-7"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -393,6 +436,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-calling-methods-8"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -415,6 +461,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-creating-objects-video-9"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -437,6 +486,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-debug-practice-10"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -459,6 +511,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-painter-practice-11"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -481,6 +536,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-chk-und-vocab-12"
+        ],
         "progression": "Vocabulary wrap-up"
       },
       "bonus": false,
@@ -503,6 +561,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-summary-13"
+        ],
         "progression": "Vocabulary wrap-up"
       },
       "bonus": false,
@@ -525,6 +586,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-overview-1"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -547,6 +611,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-uml-2"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -569,6 +636,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-documentation-video-3"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -591,6 +661,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-practice-4"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -613,6 +686,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-return-methods-5"
+        ],
         "progression": "Using methods that return informaiton"
       },
       "bonus": false,
@@ -635,6 +711,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-predict-6"
+        ],
         "progression": "Using methods that return informaiton"
       },
       "bonus": false,
@@ -657,6 +736,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-practice-methods-7"
+        ],
         "progression": "Using methods that return informaiton"
       },
       "bonus": false,
@@ -679,6 +761,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-code-solution-video-8"
+        ],
         "progression": "Using methods that return informaiton"
       },
       "bonus": false,
@@ -701,6 +786,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-choice-practice-9"
+        ],
         "progression": "Using methods that return informaiton"
       },
       "bonus": false,
@@ -723,6 +811,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-conclude-10"
+        ],
         "progression": "Wrap-up"
       },
       "bonus": false,
