@@ -625,25 +625,25 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      login_required: true
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
     unit.reload
-    refute unit.login_required
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
   end
 
   test "can update on levelbuilder" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
 
-    unit = create :script
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
     File.stubs(:write).with do |filename, contents|
       filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
@@ -653,11 +653,11 @@ class ScriptsControllerTest < ActionController::TestCase
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      login_required: true
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     unit.reload
-    assert unit.login_required
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
   test "update instruction_type" do
@@ -681,23 +681,129 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit.get_instruction_type, Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.self_paced
   end
 
+  test "update published state to in_development" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+  end
+
+  test "update published state to pilot" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot,
+      pilot_experiment: 'my-pilot'
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
+  end
+
+  test "update published state to beta" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+  end
+
+  test "update published state to preview" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+  end
+
+  test "update published state to stable" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts/en.yml'}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
+  end
+
   test "can update on test without modifying filesystem" do
     CDO.stubs(:rack_env).returns(:test)
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      login_required: true
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
     unit.reload
-    assert unit.login_required
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
   test "cannot update on staging" do
@@ -705,18 +811,18 @@ class ScriptsControllerTest < ActionController::TestCase
     Rails.application.config.stubs(:levelbuilder_mode).returns false
     sign_in create(:levelbuilder)
 
-    unit = create :script
+    unit = create :script, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     File.stubs(:write).raises('must not modify filesystem')
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
       is_migrated: true,
       lesson_groups: '[]',
-      login_required: true
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
     unit.reload
-    refute unit.login_required
+    assert_equal unit.get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
   end
 
   test 'cannot update unmigrated unit' do
@@ -917,6 +1023,29 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal Unit.find_by_name(unit.name).get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
   end
 
+  test 'does not hide unit with blank pilot_experiment' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create :script
+    stub_file_writes(unit.name)
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      is_migrated: true,
+      lesson_groups: '[]',
+      pilot_experiment: '',
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+    }
+
+    assert_response :success
+
+    assert_nil Unit.find_by_name(unit.name).pilot_experiment
+    # blank pilot_experiment does not cause unit to have published_state of pilot
+    assert_equal Unit.find_by_name(unit.name).get_published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.preview
+  end
+
   test 'update: can update general_params' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
@@ -1075,6 +1204,51 @@ class ScriptsControllerTest < ActionController::TestCase
     unit.reload
 
     assert_nil unit.tts
+  end
+
+  test 'published_state is set to nil for script within course' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: nil
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
+    stub_file_writes(unit.name)
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      lesson_groups: '[]',
+      is_migrated: true,
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    }
+    assert_response :success
+    unit.reload
+
+    assert_nil unit.published_state
+  end
+
+  test 'published_state is set for script within course when different' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    course = create :unit_group, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
+    unit = create :script, published_state: nil
+    create :unit_group_unit, unit_group: course, script: unit, position: 1
+    stub_file_writes(unit.name)
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      lesson_groups: '[]',
+      is_migrated: true,
+      published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+    }
+    assert_response :success
+    unit.reload
+
+    refute_nil unit.published_state
+    assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development, unit.published_state
   end
 
   test 'add lesson to migrated unit' do

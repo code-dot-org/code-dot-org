@@ -371,7 +371,7 @@ class UnitGroup < ApplicationRecord
       Unit.get_from_cache(ugu.script_id)
     end
     units.compact.reject do |unit|
-      unit.hide_within_course && !user&.permission?(UserPermission::LEVELBUILDER)
+      unit.in_development? && !user&.permission?(UserPermission::LEVELBUILDER)
     end
   end
 
