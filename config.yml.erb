@@ -443,7 +443,10 @@ sinatra_session_secret:
 # pegasus content will be disabled. A small subset of pegasus content will still
 # be available to support certain features used by dashboard, such as
 # certificates, dcdo flags, and image optimization.
-pegasus_content_enabled: <%= !ENV['DISABLE_PEGASUS_CONTENT'] %>
+#
+# It is recommended to control this flag via the `HAS_PEGASUS_CONTENT`
+# environment variable, since that will also be picked up by the apps build.
+has_pegasus_content: <%= ENV['HAS_PEGASUS_CONTENT'] != 'false' %>
 
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
 read_only: false

@@ -56,8 +56,8 @@ SKIP_EYES = 'skip eyes'.freeze
 # Runs without pegasus content:
 # 1. omits most pegasus content from the git client via git sparse-checkout
 # 2. runs all test suites
-# 3. skips any tests tagged with @pegasus_content or CDO.pegasus_content_enabled
-NO_PEGASUS_CONTENT = 'no pegasus content'.freeze
+# 3. skips any tests tagged with @pegasus_content or CDO.has_pegasus_content
+SKIP_PEGASUS_CONTENT = 'skip pegasus content'.freeze
 
 namespace :ci do
   desc 'Runs tests for changed sub-folders, or all tests if the tag specified is present in the most recent commit message.'
@@ -70,8 +70,8 @@ namespace :ci do
     if CI::Utils.tagged?(RUN_ALL_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_ALL_TESTS_TAG}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
-    elsif CI::Utils.tagged?(NO_PEGASUS_CONTENT)
-      ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{NO_PEGASUS_CONTENT}], force-running all tests."
+    elsif CI::Utils.tagged?(SKIP_PEGASUS_CONTENT)
+      ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_PEGASUS_CONTENT}], force-running all tests."
       RakeUtils.rake_stream_output 'test:all'
     elsif CI::Utils.tagged?(RUN_APPS_TESTS_TAG)
       ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{RUN_APPS_TESTS_TAG}], force-running apps tests."
@@ -187,9 +187,9 @@ namespace :ci do
   end
 
   timed_task_with_logging :sparse_checkout do
-    if CI::Utils.tagged?(NO_PEGASUS_CONTENT)
+    if CI::Utils.tagged?(SKIP_PEGASUS_CONTENT)
       cmd = 'bin/sparse-checkout no-pegasus-content'
-      ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{NO_PEGASUS_CONTENT}], running `#{cmd}`."
+      ChatClient.log "Commit message: '#{CI::Utils.git_commit_message}' contains [#{SKIP_PEGASUS_CONTENT}], running `#{cmd}`."
       RakeUtils.system_stream_output "git status --porcelain"
       RakeUtils.system_stream_output cmd
 

@@ -16,7 +16,7 @@ class PegasusTest < Minitest::Test
   include CaptureQueries
 
   def setup
-    skip unless CDO.pegasus_content_enabled
+    skip unless CDO.has_pegasus_content
   end
 
   def app

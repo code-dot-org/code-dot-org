@@ -68,8 +68,8 @@ EXAMPLE_FILE="pegasus/sites.v3/code.org/homepage.json"
 if [ -f "$EXAMPLE_FILE" ]; then
   echo "Pegasus homepage.json present"
 else
-  export DISABLE_PEGASUS_CONTENT=true
-  echo "Pegasus homepage.json missing – DISABLE_PEGASUS_CONTENT set"
+  export HAS_PEGASUS_CONTENT=false
+  echo "Pegasus homepage.json missing – HAS_PEGASUS_CONTENT set to false"
 fi
 
 bundle install --quiet

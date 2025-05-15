@@ -35,7 +35,7 @@ require 'honeybadger'
 require src_dir 'database'
 require src_dir 'social_metadata'
 require src_dir 'forms'
-if CDO.pegasus_content_enabled
+if CDO.has_pegasus_content
   require src_dir 'curriculum_router'
   require src_dir 'homepage'
 end
@@ -244,7 +244,7 @@ class Documents < Sinatra::Base
       response.headers['Content-Type'] = @header['content-type']
     end
 
-    if CDO.pegasus_content_enabled
+    if CDO.has_pegasus_content
       layout = @header['layout'] || 'default'
       unless ['', 'none'].include?(layout)
         template = resolve_template('layouts', settings.template_extnames, layout)
@@ -661,7 +661,7 @@ class Documents < Sinatra::Base
     load pegasus_dir('helpers.rb')
   end
 
-  if CDO.pegasus_content_enabled
+  if CDO.has_pegasus_content
     use CurriculumRouter
   end
 end

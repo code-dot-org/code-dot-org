@@ -5,7 +5,7 @@ require src_dir 'curriculum_course'
 class CurriculumCourseTest < Minitest::Test
   describe CurriculumCourse do
     before do
-      skip unless CDO.pegasus_content_enabled
+      skip unless CDO.has_pegasus_content
       @course = CurriculumCourse.new('course1')
     end
 
