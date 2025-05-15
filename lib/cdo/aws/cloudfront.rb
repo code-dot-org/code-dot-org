@@ -261,7 +261,7 @@ module AWS
     # Returns a CloudFront CacheBehavior Hash compatible with AWS CloudFormation.
     def self.cache_behavior(behavior_config, path = nil)
       headers = behavior_config[:headers]
-      headers.concat(DEFAULT_HEADERS) unless exclude_default_headers?(behavior_config[:proxy])
+      headers += DEFAULT_HEADERS unless exclude_default_headers?(behavior_config[:proxy])
 
       cookie_config = behavior_config[:cookies].is_a?(Array) ?
         {
