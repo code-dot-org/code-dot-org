@@ -74,7 +74,7 @@ Resources:
       EnableDnsSupport: true
       InstanceTenancy: default
 
-<% Config::REGIONS[aws_region.to_sym][:vpc][:public_subnets].each_with_index do |subnet, index| %>
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:public_subnets].each_with_index do |subnet, index| %>
   VpcPublicSubnet<%= index %>:
     Type: AWS::EC2::Subnet
     Properties:
@@ -152,7 +152,7 @@ Resources:
         Ref: VpcPrivateSubnet<%= index %>RouteTable
 <% end %>
 
-<% Config::REGIONS[aws_region.to_sym][:vpc][:private_subnets].each_with_index do |subnet, index| %>
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |subnet, index| %>
   VpcPrivateSubnet<%= index %>:
     Type: AWS::EC2::Subnet
     Properties:
@@ -207,7 +207,7 @@ Resources:
       SecurityGroups:
         - !GetAtt FargateServiceLBSecurityGroup.GroupId
       Subnets:
-<% Config::REGIONS[aws_region.to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
         - Ref: VpcPublicSubnet<%= index %>
 <% end %>
       Type: application
@@ -303,8 +303,9 @@ Resources:
               Service: ecs-tasks.amazonaws.com
         Version: "2012-10-17"
       PermissionsBoundary:
-        !ImportValue
-          !Sub "IAM-MarketingSitesPermissionsBoundary${EnvironmentType}"
+        Fn::ImportValue:
+          Fn::Sub: "IAM-MarketingSitesPermissionsBoundary${EnvironmentType}"
+
   FargateServiceTaskDef:
     Type: AWS::ECS::TaskDefinition
     Properties:
@@ -469,7 +470,7 @@ Resources:
                 - FargateServiceSecurityGroup
                 - GroupId
           Subnets:
-<% Config::REGIONS[aws_region.to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
             - Ref: VpcPrivateSubnet<%= index %>
 <% end %>
       TaskDefinition:
@@ -592,7 +593,7 @@ Resources:
         - Key: Name
           Value: Marketing-EFS-Cache
 
-<% Config::REGIONS[aws_region.to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
+<% MarketingSites::Configuration::REGIONS[options[:region].to_sym][:vpc][:private_subnets].each_with_index do |_, index| %>
   CacheMountTarget<%= index %>:
     Type: AWS::EFS::MountTarget
     Properties:

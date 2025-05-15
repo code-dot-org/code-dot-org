@@ -4,6 +4,7 @@ require 'aws-sdk-cloudformation'
 require 'json'
 require 'time'
 require 'erb'
+require_relative './config'
 
 # Hard-coded template paths
 MARKETING_SITE_TEMPLATE_FILE = '3-app/template.yml.erb'
@@ -113,7 +114,7 @@ def deploy_cloudformation_stack(client, stack_name, template_body, parameters, w
   # Check if stack exists
   stack_exists = false
   begin
-    client.describe_stacks(stack_name: stack_name)
+    stack_info = client.describe_stacks(stack_name: stack_name)
     stack_exists = true
     puts "Stack '#{stack_name}' exists. Updating..."
   rescue Aws::CloudFormation::Errors::ValidationError
@@ -123,13 +124,24 @@ def deploy_cloudformation_stack(client, stack_name, template_body, parameters, w
   # Create or update stack
   begin
     if stack_exists
-      response = client.update_stack(
-        stack_name: stack_name,
-        template_body: template_body,
-        parameters: parameters,
-        capabilities: %w[CAPABILITY_IAM CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND]
-      )
-      puts "Stack update initiated. StackId: #{response.stack_id}"
+      begin
+        response = client.update_stack(
+          stack_name: stack_name,
+          template_body: template_body,
+          parameters: parameters,
+          capabilities: %w[CAPABILITY_IAM CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND]
+        )
+        puts "Stack update initiated. StackId: #{response.stack_id}"
+      rescue Aws::CloudFormation::Errors::ServiceError => exception
+        if exception.message.include?('No updates are to be performed')
+          puts "No updates are needed for stack '#{stack_name}'. Stack is already up-to-date."
+          # Return the existing stack ID since we're not getting a response from update_stack
+          return stack_info.stacks.first.stack_id
+        else
+          # Re-raise if it's not the "no updates" error
+          raise
+        end
+      end
     else
       response = client.create_stack(
         stack_name: stack_name,
@@ -142,11 +154,12 @@ def deploy_cloudformation_stack(client, stack_name, template_body, parameters, w
     end
 
     # Wait for stack to complete if requested
-    if wait
+    if wait && (stack_exists ? response : true)
       wait_for_stack_operation(client, stack_name, stack_exists ? 'update' : 'create')
     end
 
-    return response.stack_id
+    # Return the stack ID from the response if we have one, otherwise we already returned above
+    return response.stack_id if defined?(response)
   rescue Aws::CloudFormation::Errors::ServiceError => exception
     puts "Error deploying CloudFormation stack: #{exception.message}"
     exit 1
