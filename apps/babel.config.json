@@ -9,8 +9,7 @@
     "@babel/plugin-proposal-object-rest-spread",
     "@babel/plugin-transform-class-properties",
     ["@babel/plugin-transform-regenerator", {"async": true, "asyncGenerators": true}],
-    // needed for IE 9/10 support
-    ["@babel/plugin-transform-classes", {"loose": true}],
+    "@babel/plugin-transform-classes",
     "@babel/plugin-transform-modules-commonjs",
     "@babel/plugin-proposal-optional-chaining"
   ],
