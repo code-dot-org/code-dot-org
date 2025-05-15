@@ -52,6 +52,12 @@ class Queries::CoursesTest < ActiveSupport::TestCase
             end
           end
         end
+
+        context 'unit_id is used instead of unit_name' do
+          it 'returns course context' do
+            _(described_class.get_course_context(unit.id)).must_equal course_context
+          end
+        end
       end
     end
   end
