@@ -2,13 +2,13 @@
   "entryContent": {
     "fields": {
       "internalName": {
-        "en-US": "Video Carousel"
+        "en-US": "Curriculum Carousel "
       },
       "carouselName": {
-        "en-US": "Video Carousel"
+        "en-US": "Curriculum Carousel "
       },
       "carouselType": {
-        "en-US": "Video"
+        "en-US": "Curriculum"
       },
       "slides": {
         "en-US": [
@@ -16,28 +16,28 @@
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "53hnyQQVUfylnTa7f24dDJ"
+              "id": "3CqSD4orrZzEoAvyXEFS7x"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "3BLuF3jm0oTV17RPwLOgC6"
+              "id": "1HWV07i9omvarlmtVr4orB"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "3oxrIQkHqzpbTrXqwk0aIa"
+              "id": "6Jgr1x1twPWiSMQpCUmrUt"
             }
           },
           {
             "sys": {
               "type": "Link",
               "linkType": "Entry",
-              "id": "4xyTmh7jAVCC3glKeke0cP"
+              "id": "1HIaZBetOiLXTpTaomepyu"
             }
           }
         ]

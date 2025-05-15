@@ -2,22 +2,13 @@
   "entryContent": {
     "fields": {
       "title": {
-        "en-US": "TEST - Self-Paced PL"
+        "en-US": "Curriculum 2"
       },
       "actionBlockOverline": {
-        "en-US": "K-12 Teachers"
+        "en-US": "Grades 6-8"
       },
       "shortDescription": {
         "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
-      },
-      "image": {
-        "en-US": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Asset",
-            "id": "6fdNRFZbNXpiXQd6v7fHen"
-          }
-        }
       },
       "primaryLinkRef": {
         "en-US": {
@@ -37,12 +28,12 @@
           }
         }
       },
-      "marketingLink": {
+      "image": {
         "en-US": {
           "sys": {
             "type": "Link",
-            "linkType": "Entry",
-            "id": "5CznPyR4ZsbIkhpwSaUxoe"
+            "linkType": "Asset",
+            "id": "46WnKBOGVA8e4bFtBSRPuE"
           }
         }
       },
@@ -52,9 +43,16 @@
         ]
       },
       "duration": {
-        "en-US": 1
+        "en-US": [
+          "School Year"
+        ]
+      },
+      "devices": {
+        "en-US": [
+          "Computer"
+        ]
       }
     }
   },
-  "contentType": "selfPacedPl"
+  "contentType": "curriculum"
 }

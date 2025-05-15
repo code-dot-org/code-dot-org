@@ -2,13 +2,13 @@
   "entryContent": {
     "fields": {
       "title": {
-        "en-US": "TEST - Self-Paced PL"
+        "en-US": "Self-Paced PL 1"
       },
       "actionBlockOverline": {
-        "en-US": "K-12 Teachers"
+        "en-US": "K-5 Teachers"
       },
       "shortDescription": {
-        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam."
+        "en-US": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. "
       },
       "image": {
         "en-US": {
@@ -37,22 +37,13 @@
           }
         }
       },
-      "marketingLink": {
-        "en-US": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Entry",
-            "id": "5CznPyR4ZsbIkhpwSaUxoe"
-          }
-        }
-      },
       "experienceLevel": {
         "en-US": [
           "Beginner"
         ]
       },
       "duration": {
-        "en-US": 1
+        "en-US": 2
       }
     }
   },
