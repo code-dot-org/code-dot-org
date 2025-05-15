@@ -21,5 +21,16 @@
         "dynamic-import-node"
       ]
     }
-  }
+  },
+  "overrides": [
+    {
+      "test": [
+        "apps/src/lib/tools/jsinterpreter/**",
+        "apps/src/maker/**"
+      ],
+      "plugins": [
+        ["@babel/plugin-transform-classes", {"loose": true}]
+      ]
+    }
+  ]
 }
