@@ -32,6 +32,8 @@ class AichatRequestsController < ApplicationController
 
     model_id = params[:aichatModelCustomizations][:selectedModelId]
     if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] && should_throttle_token_count?(model_id, current_user.id)
+      log_token_throttling(current_user.id)
+
       return head :too_many_requests
     end
 
@@ -97,6 +99,14 @@ class AichatRequestsController < ApplicationController
   private def should_throttle_token_count?(model_id, user_id)
     throttle_key = AichatOpenaiHelper.token_throttling_key(model_id, user_id)
     Cdo::Throttle.throttled?(throttle_key)
+  end
+
+  private def log_token_throttling(user_id)
+    log_payload = {
+      event: 'aichat_openai_token_limit_exceeded',
+      userId: current_user.id
+    }
+    CDO.log.info log_payload.to_json.to_s
   end
 
   private def chat_completion_has_required_params?
