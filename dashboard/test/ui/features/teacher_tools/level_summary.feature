@@ -104,6 +104,28 @@ Scenario: Check for Understanding summaries
   And element "p:contains('Sally')" does not exist
   And I wait until element "a:contains('Show hidden responses')" is visible
 
+Scenario: Check free response AI
+  Given I am on "http://studio.code.org"
+
+  Given I create an authorized teacher-associated student named "Sally"
+  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/"
+  And I type "sample response" into ".free-response > textarea"
+  And I press ".submitButton" using jQuery to load a new page
+
+  When I sign in as "Teacher_Sally"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary"
+
+  And I wait until element "#summary-container" is visible
+  And I dismiss the teacher panel
+
+  And I click selector "label:contains('Show AI Insights')" once I see it
+  And I click selector "button:contains('Evaluate student responses')" once I see it
+  And I wait until element "p:contains('Proficient: 1')" is visible
+
+  And I click selector "a:contains('View detailed analysis')" once I see it
+
+  And I wait until element "p:contains('Ok. Dummy data returned for testing purposes.')" is visible
+
 @eyes
 Scenario: Check for Understanding summaries eyes
   Given I am on "http://studio.code.org"

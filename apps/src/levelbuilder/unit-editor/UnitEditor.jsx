@@ -46,7 +46,9 @@ class UnitEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
       .isRequired,
-    initialHideWithinCourse: PropTypes.bool,
+    //Published state of units in a course can be set to be different than the course overall.
+    //We only use this field for units in a course
+    initialUnitPublishedState: PropTypes.oneOf(Object.values(PublishedState)),
     initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
       .isRequired,
     initialInstructorAudience: PropTypes.oneOf(
@@ -162,7 +164,8 @@ class UnitEditor extends React.Component {
       descriptionShort: this.props.i18nData.descriptionShort || '',
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
-      hideWithinCourse: !!this.props.initialHideWithinCourse,
+      publishedState: this.props.initialPublishedState,
+      unitPublishedState: this.props.initialUnitPublishedState,
       instructionType: this.props.initialInstructionType,
       instructorAudience: this.props.initialInstructorAudience,
       participantAudience: this.props.initialParticipantAudience,
@@ -220,6 +223,16 @@ class UnitEditor extends React.Component {
       });
       return;
     } else if (
+      this.state.publishedState === PublishedState.pilot &&
+      this.state.pilotExperiment === ''
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please provide a pilot experiment in order to save with published state as pilot.',
+      });
+      return;
+    } else if (
       this.state.isCourse &&
       ((this.state.versionYear !== '' && this.state.familyName === '') ||
         (this.state.versionYear === '' && this.state.familyName !== ''))
@@ -229,16 +242,60 @@ class UnitEditor extends React.Component {
         error: 'Please set both version year and family name.',
       });
       return;
+    } else if (
+      [PublishedState.preview, PublishedState.stable].includes(
+        this.state.publishedState
+      ) &&
+      this.props.isMissingRequiredDeviceCompatibilities
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please set all device compatibilities in order to save with published state as preview or stable.',
+      });
+      return;
+    }
+
+    if (this.state.publishedState !== this.props.initialPublishedState) {
+      const msg =
+        'It looks like you are updating the published state. ' +
+        'Are you sure you want to update the published state? ' +
+        'Once you update the published state you can not go back to this published state. ' +
+        'For example once you set the published state to beta you can not go back to in development. ' +
+        'Also once a course as a published state of pilot it can not be fully launched (marked as preview or stable).';
+      if (!window.confirm(msg)) {
+        this.setState({
+          isSaving: false,
+          error: 'Saving cancelled.',
+        });
+        return;
+      }
     }
 
     if (
-      this.state.hideWithinCourse &&
-      this.state.hideWithinCourse !== this.props.initialHideWithinCourse
+      this.state.unitPublishedState !== this.props.initialUnitPublishedState
     ) {
       const msg =
-        'Hiding this unit means it will not be visible on the Course Overview ' +
-        'page, Section Dialog, or Teacher Dashboard. It will still visible to ' +
-        'Levelbuilders. Would you like to continue with saving?';
+        'It looks like you are hiding this unit. ' +
+        'Are you sure you want to hide this unit? ';
+      if (!window.confirm(msg)) {
+        this.setState({
+          isSaving: false,
+          error: 'Saving cancelled.',
+        });
+        return;
+      }
+    }
+
+    if (
+      this.state.unitPublishedState === PublishedState.in_development &&
+      this.state.unitPublishedState === this.props.initialUnitPublishedState
+    ) {
+      const msg =
+        'This unit is hidden within the course, meaning it is not ' +
+        'visible on the Course Overview page, Section Dialog, or Teacher ' +
+        'Dashboard. It is still visible to Levelbuilders. Would you ' +
+        'like to continue with saving?';
       if (!window.confirm(msg)) {
         this.setState({
           isSaving: false,
@@ -259,7 +316,9 @@ class UnitEditor extends React.Component {
       description: this.state.description,
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
-      hide_within_course: this.state.hideWithinCourse,
+      published_state: this.props.hasCourse
+        ? this.state.unitPublishedState
+        : this.state.publishedState,
       instruction_type: this.state.instructionType,
       instructor_audience: this.state.instructorAudience,
       participant_audience: this.state.participantAudience,
@@ -338,13 +397,16 @@ class UnitEditor extends React.Component {
   };
 
   toggleHiddenCourseUnit = () => {
-    const hideWithinCourse = !this.state.hideWithinCourse;
-    this.setState({hideWithinCourse});
+    const unitPublishedState =
+      this.state.unitPublishedState === PublishedState.in_development
+        ? null
+        : PublishedState.in_development;
+    this.setState({unitPublishedState});
   };
 
   render() {
     const allowMajorCurriculumChanges =
-      this.props.initialHideWithinCourse ||
+      this.props.initialUnitPublishedState === PublishedState.in_development ||
       this.props.initialPublishedState === PublishedState.in_development ||
       this.props.initialPublishedState === PublishedState.pilot;
 
@@ -648,8 +710,7 @@ class UnitEditor extends React.Component {
                 />
               </label>
               {this.props.hasCourse &&
-                this.props.initialPublishedState !==
-                  PublishedState.in_development && (
+                this.state.publishedState !== PublishedState.in_development && (
                   <div>
                     <p>
                       Settings in this section change depending on whether this
@@ -657,12 +718,25 @@ class UnitEditor extends React.Component {
                       not look as expected, please add or remove this unit from
                       a course.
                     </p>
+                    {/*
+                   Just use a checkbox instead of a dropdown to set the
+                   published state for now, because (1) units in unit groups
+                   really only need 2 of the 6 possible states at the moment,
+                   but (2) we haven't nailed down how many of these states we
+                   will need in the long term, and (3) we need these 2 states
+                   working now in order to launch the AP CSA pilot. The work to
+                   clean this up is tracked in:
+                   https://codedotorg.atlassian.net/browse/PLAT-1170
+                   */}
                     <label>
                       Hide this unit within this course
                       <input
                         className="unit-test-hide-unit-in-course"
                         type="checkbox"
-                        checked={this.state.hideWithinCourse}
+                        checked={
+                          this.state.unitPublishedState ===
+                          PublishedState.in_development
+                        }
                         style={styles.checkbox}
                         onChange={this.toggleHiddenCourseUnit}
                       />
