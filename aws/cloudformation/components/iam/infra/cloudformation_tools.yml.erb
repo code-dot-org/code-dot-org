@@ -1,0 +1,80 @@
+  # CloudFormation Tools IAM Roles
+  #
+  # Human-Readable Intent:
+  #  - Role grants near-full administrator privileges to CloudFormationAdmin for foundational infra stacks.
+  #  - Role grants broad IAM and secrets access to CloudFormationService for CI/CD and core environment stacks,
+  #    relying on naming-based exceptions as a pseudo-boundary.
+  #
+  # Reality vs. Intent:
+  #  - iam:PassRole on "*" allows passing any role to any service, enabling full privilege escalation.
+  #  - secretsmanager:* on "*" grants unrestricted read/write to all secrets.
+  #  - NotResource clauses based on resource name patterns are brittle and not true security boundaries.
+  #  - DevPermissions NotAction allow-all approach contradicts least-privilege principles.
+  #  - Net effect: both roles behave almost equivalent to full AdministratorAccess.
+  #
+  # Audit (2025-05-14):
+  #  - CloudFormationAdmin: foundational infra stacks (IAM, VPC, Lambda, Alerting, JavaBuilder IAM).
+  #  - CloudFormationService: adhoc/CI stacks and core env stacks (test, staging, autoscale-prod, levelbuilder, etc.).
+  # ====================================================================
+  
+  # Admin Service Role for managing all resources in CloudFormation stacks.
+  # Only admins can update stacks using this service role.
+  CloudFormationAdmin:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: CloudFormationAdmin
+      <%=service_role 'cloudformation'%>
+      Path: /admin/
+      ManagedPolicyArns: ['arn:aws:iam::aws:policy/AdministratorAccess']
+  # Shared CloudFormation Service Role used by all stacks.
+  CloudFormationService:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: CloudFormationService
+      <%=service_role 'cloudformation'%>
+      Path: /admin/
+      Policies:
+        # Grant permissions for managing specific non-admin AWS::IAM resources.
+        - PolicyName: RolePermissionsBoundary
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action:
+                  - iam:CreatePolicy
+                  - iam:CreatePolicyVersion
+                  - iam:DeletePolicy
+                  - iam:DeletePolicyVersion
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+              - Effect: Allow
+                Action:
+                  - iam:CreateInstanceProfile
+                  - iam:AddRoleToInstanceProfile
+                  - iam:RemoveRoleFromInstanceProfile
+                  - iam:DeleteInstanceProfile
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:instance-profile/admin/*"
+              - Effect: Allow
+                Action:
+                  - iam:DeleteRole
+                  - iam:UpdateAssumeRolePolicy
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+              - Effect: Allow
+                Action:
+                  - iam:CreateRole
+                  - iam:PutRolePermissionsBoundary
+                  - iam:AttachRolePolicy
+                  - iam:DetachRolePolicy
+                  - iam:PutRolePolicy
+                  - iam:DeleteRolePolicy
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+                Condition:
+                  StringEquals:
+                    iam:PermissionsBoundary: !Ref DevPermissions
+        - PolicyName: SecretPermissions
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: secretsmanager:*
+                Resource: '*'
+      ManagedPolicyArns: [!Ref DevPermissions]

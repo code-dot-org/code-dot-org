@@ -18,75 +18,7 @@ Parameters:
     Default: /IAM/GoogleBillingIDs
     Description: SSM Parameter with a list of Google ID's for users granted Billing access.
 Resources:
-  # Admin Service Role for managing all resources in CloudFormation stacks.
-  # Only admins can update stacks using this service role.
-  CloudFormationAdmin:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: CloudFormationAdmin
-      <%=service_role 'cloudformation'%>
-      Path: /admin/
-      ManagedPolicyArns: ['arn:aws:iam::aws:policy/AdministratorAccess']
-  # Shared CloudFormation Service Role used by all stacks.
-  CloudFormationService:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: CloudFormationService
-      <%=service_role 'cloudformation'%>
-      Path: /admin/
-      Policies:
-        # Grant permissions for managing specific non-admin AWS::IAM resources.
-        - PolicyName: RolePermissionsBoundary
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Effect: Allow
-                Action:
-                  # AWS::IAM::ManagedPolicy
-                  - iam:CreatePolicy
-                  - iam:CreatePolicyVersion
-                  - iam:DeletePolicy
-                  - iam:DeletePolicyVersion
-                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
-              - Effect: Allow
-                Action:
-                  # AWS::IAM::InstanceProfile
-                  - iam:CreateInstanceProfile
-                  - iam:AddRoleToInstanceProfile
-                  - iam:RemoveRoleFromInstanceProfile
-                  - iam:DeleteInstanceProfile
-                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:instance-profile/admin/*"
-              - Effect: Allow
-                Action:
-                  - iam:DeleteRole
-                  - iam:UpdateAssumeRolePolicy
-                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
-              - Effect: Allow
-                Action:
-                  # AWS::IAM::Role
-                  - iam:CreateRole
-                  - iam:PutRolePermissionsBoundary
-                  # Managed policies attached to a Role
-                  - iam:AttachRolePolicy
-                  - iam:DetachRolePolicy
-                  # Inline policies embedded in a Role
-                  - iam:PutRolePolicy
-                  - iam:DeleteRolePolicy
-                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
-                # Require DevPermissions boundary on all Roles, e.g.:
-                # PermissionsBoundary: !ImportValue IAM-DevPermissions
-                Condition:
-                  StringEquals:
-                    iam:PermissionsBoundary: !Ref DevPermissions
-        # Permissions for managing AWS::SecretsManager::Secret resources.
-        - PolicyName: SecretPermissions
-          PolicyDocument:
-            Version: 2012-10-17
-            Statement:
-              - Effect: Allow
-                Action: secretsmanager:*
-                Resource: '*'
-      ManagedPolicyArns: [!Ref DevPermissions]
+  <%=component 'iam/infra/cloudformation_tools' %>
   # Shared 'Developer' permissions.
   # Used as default permissions for all developer Roles,
   # and as a required permissions boundary for CloudFormation-managed resources.
