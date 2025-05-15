@@ -186,7 +186,7 @@ describe('SectionList', () => {
   it('renders spinner while sections are loading', async () => {
     store.dispatch(setAsyncLoad(false));
     renderComponent();
-    screen.debug();
+    screen.getByTitle(i18n.loading());
   });
 
   it('renders sections in the same order as specified in Redux', async () => {
