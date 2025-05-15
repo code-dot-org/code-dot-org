@@ -29,7 +29,7 @@
         }
       },
       "visibilities": {
-        "selectedModelId": "hidden",
+        "selectedModelId": "readonly",
         "temperature": "editable",
         "systemPrompt": "editable",
         "retrievalContexts": "editable",
@@ -43,6 +43,6 @@
       "multimodalEnabled": true
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-09T16:26:24.750+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-open-prompt-chatbot-4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-open-prompt-chatbot-4\"},{\"changed_at\":\"2025-05-09 16:26:26 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-09 16:26:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-09T16:26:24.750+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-open-prompt-chatbot-4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-open-prompt-chatbot-4\"},{\"changed_at\":\"2025-05-09 16:26:26 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-09 16:26:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 15:40:56 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

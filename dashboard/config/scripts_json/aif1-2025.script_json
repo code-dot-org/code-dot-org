@@ -22,7 +22,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-14 23:56:41 UTC",
+    "serialized_at": "2025-05-15 17:11:36 UTC",
+    "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1032,11 +1033,24 @@
       }
     },
     {
-      "key": "2beddaee-b761-42d7-9c41-5079ce915af8",
+      "key": "90a46793-bf47-4dff-9d1c-a6d729cd5a0b",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show Problem Solving with AI video. ",
+        "duration": "3",
+        "name": "Problem Solving with AI Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "90a46793-bf47-4dff-9d1c-a6d729cd5a0b",
+        "lesson_activity.key": "62c0671d-b9f1-49dd-9a9c-dced3af4a106"
+      }
+    },
+    {
+      "key": "2beddaee-b761-42d7-9c41-5079ce915af8",
+      "position": 2,
+      "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *artificial intelligence*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Predict the word that you think will probably come next in the following sentence: The dog barked at the...*\n- Ask students to predict the word that they think will probably come next (i.e. the most common word) and provide a reason for why they chose that word. Have all students raise their hand when they think of an answer. Start calling on students and have other students put down their hand if someone is called on who has the same answer.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will see that there are several common possibilities that are chosen. Common words might include squirrel, mailman, stranger, etc. However, there will also be outliers that might not be as common (e.g. my aunt Lucy). Having students recognize that there are more and less common responses is a first step towards understanding how probability works while making this sort of prediction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model the AI Chat in Lesson 1, Level 1 for students.",
-        "duration": "10",
+        "duration": "7",
         "name": "AI Predictions",
         "progression_name": "AI Predictions"
       },
@@ -1047,7 +1061,7 @@
     },
     {
       "key": "de0e9583-0586-43fb-b465-506699fa60f7",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students experiment with using the AI Chat to complete the sentence.",
         "tips": [
@@ -1064,7 +1078,7 @@
     },
     {
       "key": "63bf5224-75bb-4ffa-9816-ba039d78890d",
-      "position": 3,
+      "position": 4,
       "properties": {
       },
       "seeding_key": {
@@ -1074,7 +1088,7 @@
     },
     {
       "key": "d229e863-6e8e-4d65-9096-385f963c3148",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does AI's output compare to the word you predicted?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should start to see how AI selects words based on probability. It tends to choose the most likely next word, which often mirrors our own prediction of the most-likely next word.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *probability*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read through this scenario of probability-driven predictions that make sense and are successful. Make sure students understand that the grey box represents the user input, and the blue box below represents the AI Chat response.\n"
       },
@@ -1085,7 +1099,7 @@
     },
     {
       "key": "00b8eca6-b843-42f5-a8d5-9e3c30cb7bf4",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "AI uses the computational skill of pattern recognition to generate its most likely response. For example, it reads over thousands of sentences that contain the different phrases above (e.g. \"heard the knock at the…\") and starts to recognize a pattern.",
         "remarks": true
@@ -1097,7 +1111,7 @@
     },
     {
       "key": "955b59e1-6ad5-4907-a409-b6544e5f883d",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Examine this scenario where probability-driven predictions fail because they don't rely on meaning.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain that AI focused on the words \"key\", \"on\", and \"table\" and abstracted away unnecessary details of the prompt.\n"
       },
@@ -1108,7 +1122,7 @@
     },
     {
       "key": "a8313079-e4cf-4472-bb6a-76669ef20125",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "Since AI doesn't understand meaning, it drew a single key resting on the table in an unrealistic way. It prioritized the literal meaning of the essential details of the sentence rather than considering the sentence as a whole.",
         "remarks": true
@@ -1120,7 +1134,7 @@
     },
     {
       "key": "5a9612a9-09ba-4c6b-9292-09738d5a8050",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *abstraction*."
       },
@@ -1131,7 +1145,7 @@
     },
     {
       "key": "5abf99cb-dfab-4dfb-bae4-91c0d1c09598",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prompt*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to complete Levels 2 through 4.\n- **Level 2:** Students input \"Give me 3 gift ideas\" into AI Chat.\n- **Level 3:** Students input a more specific prompt that defines the person who is getting the gift.\n- **Level 4:** Students upload an image to accompany the specific prompt that they reuse from Level 3.",
         "duration": "20",
@@ -1145,7 +1159,7 @@
     },
     {
       "key": "eac0f10f-3be3-487a-9739-8cb30d04747f",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Plan a Perfect Trip with ChatGPT\" video.\n\n**Questions to consider with the video:**\nWhat tips might you give to someone else who is looking to improve their prompts?\n- What tips might you give to someone else who is looking to improve their prompts?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might point out that they should include both information that they are interested in getting, but also information that they are not. They might also mention that including demographic information and specific numbers are helpful for more useful responses.\n",
         "tips": [
@@ -1162,7 +1176,7 @@
     },
     {
       "key": "0a83772d-6241-4ade-bc98-64531c3698f0",
-      "position": 11,
+      "position": 12,
       "properties": {
       },
       "seeding_key": {
@@ -1172,7 +1186,7 @@
     },
     {
       "key": "a81c747b-bccf-4aa1-b716-f06a26510dab",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5. Students choose one of the AI Chat levels that is configured for a specific task. They start by giving the AI Chat a generic prompt first (such as \"Help me plan a trip to Disney World\"), then make it more specific, then make it more specific and add an image. Students should update their prompt or interact with the AI Chat in at least three back and forth interactions.",
         "progression_name": "Prompting Practice",
@@ -1190,7 +1204,7 @@
     },
     {
       "key": "f10ab973-9054-4c5e-8d48-347481244d50",
-      "position": 13,
+      "position": 14,
       "properties": {
       },
       "seeding_key": {
@@ -1200,7 +1214,7 @@
     },
     {
       "key": "f814d79a-8a21-4fdf-9c8b-8b5135e6c565",
-      "position": 14,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 1, Level 6 to complete the formative assessment. Display students' anonymous responses.",
         "progression_name": "Check Your Understanding",
@@ -1248,7 +1262,7 @@
       "key": "abeefdee-c769-422b-92fe-6d898202422f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 7 to complete the End of Lesson Survey."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "abeefdee-c769-422b-92fe-6d898202422f",
@@ -1263,6 +1277,16 @@
       },
       "seeding_key": {
         "activity_section.key": "efef9e12-6103-4648-ad34-b58fb2eea639",
+        "lesson_activity.key": "49f4c758-476b-48ef-a67c-ccc91464c0ec"
+      }
+    },
+    {
+      "key": "fe3c9071-cfe9-4a8e-9395-61c6d5471e10",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fe3c9071-cfe9-4a8e-9395-61c6d5471e10",
         "lesson_activity.key": "49f4c758-476b-48ef-a67c-ccc91464c0ec"
       }
     },
@@ -1604,7 +1628,7 @@
       "key": "5d79c49a-7632-4e99-923c-40d357d2459b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 6 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "5d79c49a-7632-4e99-923c-40d357d2459b",
@@ -1818,7 +1842,7 @@
       "key": "6bad1e3d-efe0-49e2-99f9-e03eb5317b7a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to just think about what they learned today. Let students know that they will be answering the question a little differently today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to create a short comic strip in their Unit Guide that illustrates something they learned about how AI learns, predicts, or responds to prompts, encouraging humor or creativity. Let students know that this is a creative way to synthesize the lesson. They can be funny, serious, or weird—as long as it's related to how AI works.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who incorporate ideas like limited context, prediction, pattern recognition, or prompting. If students are stuck, suggest they focus on one concept (e.g., how AI uses training data, how it predicts the next word, or how adding more context makes its output better).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 5 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to just think about what they learned today. Let students know that they will be answering the question a little differently today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to create a short comic strip in their Unit Guide that illustrates something they learned about how AI learns, predicts, or responds to prompts, encouraging humor or creativity. Let students know that this is a creative way to synthesize the lesson. They can be funny, serious, or weird—as long as it's related to how AI works.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who incorporate ideas like limited context, prediction, pattern recognition, or prompting. If students are stuck, suggest they focus on one concept (e.g., how AI uses training data, how it predicts the next word, or how adding more context makes its output better).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n",
         "name": "Question of the Day Comic Strip"
       },
       "seeding_key": {
@@ -2302,7 +2326,7 @@
       "key": "6abd34e0-6409-45a8-9f8e-01a3343f0b9d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 6 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "6abd34e0-6409-45a8-9f8e-01a3343f0b9d",
@@ -2837,7 +2861,7 @@
       "key": "bed93ef8-45d3-440d-998b-632211c25008",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 6 to complete the End of Lesson Survey.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n\n",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -3118,7 +3142,6 @@
       "key": "3a12d99f-1c1b-49ee-8f8b-bc2dc7374285",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 3 to complete the End of Lesson Survey.\n"
       },
       "seeding_key": {
         "activity_section.key": "3a12d99f-1c1b-49ee-8f8b-bc2dc7374285",
@@ -3268,7 +3291,6 @@
       "key": "fb2d9bfc-0849-47e2-a47d-c96990ccea79",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 10 to complete the End of Lesson Survey.",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -3454,7 +3476,7 @@
       "key": "6bb54dd6-763e-48f6-a7d7-3ad7154511c4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To encourage students to reflect on how AI enhanced the creativity of their group's product launch project and express their thoughts through discussion.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to \"Stand and Swap.\" First, students stand and discuss the Question of the Day within their original project group. Then, each group \"swaps\" by joining with another group nearby to share insights. Groups compare experiences and reflect on how AI helped shape or improve their creative process.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 4 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To encourage students to reflect on how AI enhanced the creativity of their group's product launch project and express their thoughts through discussion.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to \"Stand and Swap.\" First, students stand and discuss the Question of the Day within their original project group. Then, each group \"swaps\" by joining with another group nearby to share insights. Groups compare experiences and reflect on how AI helped shape or improve their creative process.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -4336,13 +4358,30 @@
       }
     },
     {
-      "key": "30f805c3-26bd-4c95-aa86-79013551a71d",
+      "key": "fb4b9ac1-2ab3-4824-8c8c-515baf707820",
       "position": 7,
       "properties": {
-        "description": "You've identified some powerful takeaways and questions about AI. Next, we'll watch a short video where an activist shares how they use their voice to advocate for change. As you watch, consider what makes their message effective—and how you might apply that to your own message about AI.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students to turn to Part 2 of their activity guide. Explain that this is their chance to reflect on everything they’ve learned so far and come up with one change or improvement that could make AI more fair, more effective, or less harmful — especially for people in their community. Emphasize that it can be a small, practical idea or a bigger, more visionary one. If students are stuck, encourage them to think about who benefits or is left out in their topic, and what could be done differently to improve that.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students brainstorm an idea, encourage them to focus on the core problem or concern they uncovered in their research. Ask questions like: What’s something you think should be done differently with this technology?, Who is being left out or harmed in the way this AI is currently used?, or What would make this system more fair or useful for your school or neighborhood? Support students in thinking practically and specifically — their ideas don’t need to be perfect or large-scale, just thoughtful and connected to what they learned.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "fb4b9ac1-2ab3-4824-8c8c-515baf707820",
+        "lesson_activity.key": "3c304d38-0370-41d2-b8db-0005ec709a85"
+      }
+    },
+    {
+      "key": "30f805c3-26bd-4c95-aa86-79013551a71d",
+      "position": 8,
+      "properties": {
+        "description": "We’ve spent time learning about how AI affects different parts of our community — and you’ve started thinking about a change you’d like to see. Now we’re going to watch a short video from a youth advocate who shares their message about an issue that matters to them. As you watch, see if you can identify the parts of their message that make it powerful — especially the hook, the main idea, and the call to action. These are the same pieces you’ll use in your own elevator pitch.",
         "duration": "15",
         "name": "Share Your Voice",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Let students know this example is a little longer and more reflective than a typical elevator pitch. For their own pitch, they should aim to keep it short, clear, and direct — something they could realistically say in 30 seconds or less.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "30f805c3-26bd-4c95-aa86-79013551a71d",
@@ -4351,10 +4390,16 @@
     },
     {
       "key": "aa9d47de-d86b-4de0-a12b-737160c21686",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"UNICEF Youth Advocate Ayshka on Mental Health\" video.\n\n**Questions to consider with the video:**\n- How does the speaker use emotion, personal experience, and a clear message to connect with the audience?\n\n**Discussion Goal:** Students understand that getting straight to the point and outlining clear, easy-to-follow, steps can be effective steps for straightforward communication in a short video.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 4. Students will use the AI Chat to draft a script for a short video proposing how AI could be made more beneficial for all members of their community.\n",
-        "progression_name": "Collaborate with AI"
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"UNICEF Youth Advocate Ayshka on Mental Health\" video.\n\n**Questions to consider with the video:**\n- Can you identify the different parts of the pitch — like the hook, the main idea, and the call to action?\n- What makes the message feel personal and effective?\n\n**Discussion Goal:** Students begin to recognize the key elements of an effective elevator pitch — including a strong hook, a clear main message, and a compelling call to action. They also notice how personal experience, emotion, and audience awareness can make a short message more powerful and memorable.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students are now moving on to Part 3 of their activity guide, where they’ll turn their ideas into a clear message they can share with others. First, they’ll choose an audience that would benefit from or care about what they’ve learned. Then, they’ll write a short elevator pitch using the guide on page 3. Students can collaborate with AI — by revising their own draft with AI’s help or improving a draft written by AI. Encourage students to think about what kind of message would connect with their audience — should it sound formal or casual? Informative or persuasive?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for them making connections between their pitch and what they learned in Part 1. If they’re unsure how to start, remind them they can begin with the hook and write one sentence at a time. Prompt them to use vocabulary like “equity,” “access,” “impact,” or “responsibility” if relevant.\n\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Let students know that if they want help drafting or refining their elevator pitch, they can go to Level 4 to use AI Chat. They can choose to be the pilot (write it themselves and ask AI to revise) or the co-pilot (ask AI to draft and then improve it). Using AI is optional — students can also write and revise on their own if they prefer.\n\n",
+        "progression_name": "Optional: Collaborate with AI",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": " Some students might benefit from using AI to help them with tone or structure, especially if they’re stuck. Others may prefer to write on their own. Either approach is okay — the goal is to clearly communicate their idea to the audience they chose."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "aa9d47de-d86b-4de0-a12b-737160c21686",
@@ -4363,9 +4408,15 @@
     },
     {
       "key": "8e1a80fc-278b-4d19-8f46-f7f663cec477",
-      "position": 9,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to begin drafting their video scripts using what they've learned about AI's impact, fairness, and sustainability.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students making connections to their earlier research on AI's impact—especially examples that include both benefits and harms for different groups.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students partner with someone new and exchange scripts. They should give feedback based on fairness and use of specific examples.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students identifying areas where a script lacks detail or overlooks certain community groups. Encourage partners to ask clarifying questions if something is unclear. Here are some possible questions to help get students talking if you notice they've finished early:\n- What kinds of changes did your partner suggest?\n- How might you revise your script to make it stronger?\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will participate in a “Give One, Get One” elevator pitch exchange. They will find a partner and take turns sharing their elevator pitches — one person gives their pitch, the other listens and gives quick feedback or asks a question. Then they switch roles. After both students have shared, they’ll find a new partner and repeat. Encourage students to share with multiple classmates to hear a variety of perspectives and practice tailoring their pitch to different audiences.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to signal the start of the activity. Use the same music cue consistently so students recognize when it's time to begin “Give One, Get One.”\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share their elevator pitches, listen for how clearly they’re communicating their main idea and call to action. Offer support to students who may be stuck or rushing through their pitch. Prompt partners with questions like:\n- “What did you find most interesting about your partner’s idea?”\n- “Was anything unclear or missing?”\n- “Did their pitch include a strong hook and a clear call to action?”\n\n\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Give One, Get One encourages students to seek and share ideas and information. When prompted by the teacher, students circulate the classroom and pair up with a partner. Each student \"gives\" or shares one of their ideas as the other student \"gets\" or listens and writes it down. The teacher then prompts students to find new partners and repeat the process.\n\nUsing music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means and be consistent with using the music clip to cue the activity. **Click the blue play icon on the slide to play the music cue.**\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8e1a80fc-278b-4d19-8f46-f7f663cec477",
@@ -5817,6 +5868,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson7-level2_2025"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -6289,6 +6343,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level4_2024-pilot_2025"
+        ],
         "progression": "Students as the Co-Pilot"
       },
       "bonus": false,
@@ -6436,7 +6493,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Collaborate with AI"
+        "level_keys": [
+          "problem-solving-with-ai-lesson12-level4_2025"
+        ],
+        "progression": "Optional: Collaborate with AI"
       },
       "bonus": false,
       "seeding_key": {
@@ -7776,6 +7836,19 @@
       }
     },
     {
+      "name": "Problem Solving with AI",
+      "url": "https://www.youtube.com/watch?v=O_VjO1cx-No",
+      "key": "problem_solving_with_ai",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/ai2025problemsolving_2_compressed-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "problem_solving_with_ai"
+      }
+    },
+    {
       "name": "Remixing, Creativity, and Originality",
       "url": "https://docs.google.com/presentation/d/1M15Gq8VaZXJaf_R4otrXZkVgzDMlHFzhEwQFMwHAdFo/view",
       "key": "remixing_creativity_and_originality",
@@ -8148,6 +8221,12 @@
       "seeding_key": {
         "lesson.key": "Talking to Machines",
         "resource.key": "plan_a_perfect_trip_with_chatgpt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Talking to Machines",
+        "resource.key": "problem_solving_with_ai"
       }
     },
     {

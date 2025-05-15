@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "\n\n",
+      "levelSystemPrompt": "Respond concisely and clearly. Prioritize brevity, relevance, and directness. Avoid unnecessary elaboration or repetition. Limit your response to under 75 words unless the user asks for more detail.\n\n",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -46,6 +46,6 @@
     "thumbnail_url": "https://images.code.org/5ffb3a00a9f0fa819efc4f336c9b4f10-Critical Thinking Icon.png",
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:34.124+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level3-choice4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level3-choice4\"},{\"changed_at\":\"2025-05-14 18:55:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:34.124+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level3-choice4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level3-choice4\"},{\"changed_at\":\"2025-05-14 18:55:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 12:07:26 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>
