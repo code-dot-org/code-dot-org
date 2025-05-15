@@ -98,4 +98,54 @@ class Queries::CoursesTest < ActiveSupport::TestCase
       end
     end
   end
+
+  describe '.get_unit_context' do
+    let(:course_name) {nil}
+    let(:unit_position) {nil}
+    let(:subject) {described_class.get_unit_context(course_name, unit_position)}
+
+    context 'course_name is nil' do
+      it 'returns nil' do
+        _(subject).must_be_nil
+      end
+    end
+
+    context 'course_name is defined' do
+      let(:unit_group) {create :unit_group}
+      let(:course_name) {unit_group.name}
+
+      context 'unit_position is nil' do
+        it 'returns nil' do
+          _(subject).must_be_nil
+        end
+      end
+
+      context 'unit_position is defined' do
+        let(:unit) {create :unit, original_unit_group: unit_group}
+        let(:unit_position) {1}
+        let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: unit_position}
+        let(:unit_context) do
+          {
+            unit_group: unit_group,
+            unit_group_unit: unit_group_unit,
+            unit: unit,
+          }
+        end
+
+        before do
+          unit.reload
+        end
+
+        it 'returns unit_context' do
+          _(subject).must_equal unit_context
+        end
+
+        context 'unknown unit_position' do
+          it 'returns nil' do
+            _(described_class.get_unit_context(course_name, 999)).must_be_nil
+          end
+        end
+      end
+    end
+  end
 end
