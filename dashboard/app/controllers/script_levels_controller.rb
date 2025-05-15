@@ -402,6 +402,7 @@ class ScriptLevelsController < ApplicationController
     unit_position = params[:unit_position]
     if course_name
       unit_context = Queries::Courses.get_unit_context(course_name, unit_position)
+      raise ActiveRecord::RecordNotFound unless unit_context
       return unit_context
     end
     raise ActiveRecord::RecordNotFound

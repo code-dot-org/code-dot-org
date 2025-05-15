@@ -413,6 +413,7 @@ class ApiController < ApplicationController
       unit_position = params[:unit_position]
       context = Queries::Courses.get_unit_context(course_name, unit_position)
     end
+    return render json: {error: 'Unit not found'}, status: :bad_request unless context
     unit = context[:unit]
     unit_group = context[:unit_group]
     ugu = context[:unit_group_unit]
@@ -480,6 +481,7 @@ class ApiController < ApplicationController
       course_name = params[:course_name]
       unit_position = params[:unit_position]&.to_i
       context = Queries::Courses.get_unit_context(course_name, unit_position)
+      return render json: {error: "Can't find Unit params=#{params}"}, status: :bad_request unless context
       unit = context[:unit]
       unit_group = context[:unit_group]
       unit_group_unit = context[:unit_group_unit]

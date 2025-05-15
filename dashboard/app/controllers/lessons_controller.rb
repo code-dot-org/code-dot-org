@@ -258,7 +258,7 @@ class LessonsController < ApplicationController
     unit_position = params[:unit_position]
     if course_name && unit_position
       context = Queries::Courses.get_unit_context(course_name, unit_position)
-      raise ActiveRecord::RecordNotFound unless context[:unit]
+      raise ActiveRecord::RecordNotFound unless context && context[:unit]
       return context
     end
     raise ActiveRecord::RecordNotFound

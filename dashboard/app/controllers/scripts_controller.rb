@@ -353,9 +353,11 @@ class ScriptsController < ApplicationController
     @unit_position = params[:position]
     if course_name && @unit_position
       context = Queries::Courses.get_unit_context(course_name, @unit_position)
-      @course = context[:unit_group]
-      @unit_group_unit = context[:unit_group_unit]
-      @script = context[:unit]
+      if context
+        @course = context[:unit_group]
+        @unit_group_unit = context[:unit_group_unit]
+        @script = context[:unit]
+      end
     else
       @script = get_unit_by_name
       raise ActiveRecord::RecordNotFound unless @script
