@@ -13,7 +13,7 @@
   },
   {
     "name": "Edge",
-    "browserName": "edge",
+    "browserName": "MicrosoftEdge",
     "browserVersion": "128",
     "platformName": "Windows 11"
   },
@@ -60,6 +60,7 @@
     "appium:deviceName": "Android GoogleAPI Emulator",
     "appium:platformVersion": "13.0",
     "appium:automationName": "UiAutomator2",
+    "appium:mobile": true,
     "sauce:options": {
        "deviceOrientation": "LANDSCAPE"
      }
