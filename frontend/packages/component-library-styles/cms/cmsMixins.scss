@@ -12,7 +12,8 @@
   width: 100%;
 
   figure {
-    width: 10rem;
+    max-width: 10rem;
+    width: auto;
     height: 2rem;
     display: flex;
 

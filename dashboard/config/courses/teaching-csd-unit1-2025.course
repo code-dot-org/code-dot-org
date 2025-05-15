@@ -1,12 +1,10 @@
 {
   "name": "teaching-csd-unit1-2025",
   "script_names": [
-    "self-paced-pl-teaching-csd-unit0-2025",
     "self-paced-pl-teaching-csd-unit1-2025"
   ],
   "original_script_names": [
-    "self-paced-pl-teaching-csd-unit1-2025",
-    "self-paced-pl-teaching-csd-unit0-2025"
+    "self-paced-pl-teaching-csd-unit1-2025"
   ],
   "published_state": "in_development",
   "instruction_type": "self_paced",

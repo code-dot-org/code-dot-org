@@ -6,13 +6,15 @@
     "properties": {
       "content_area": "self_paced_pl_6_8",
       "curriculum_umbrella": "Self-paced PL - CSD",
+      "has_unnumbered_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-12 14:30:48 UTC",
+    "serialized_at": "2025-05-14 21:42:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -134,7 +136,7 @@
       "key": "077b14bb-0f01-4ec0-b98e-1cfc7a1423f1",
       "position": 1,
       "properties": {
-        "progression_name": "Introduction to This Module"
+        "progression_name": "Introduction to Professional Learning"
       },
       "seeding_key": {
         "activity_section.key": "077b14bb-0f01-4ec0-b98e-1cfc7a1423f1",
@@ -237,7 +239,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to This Module"
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U1_-self-paced-unit1_25_may2025"
+        ],
+        "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
       "seeding_key": {
@@ -259,7 +264,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Introduction to This Module"
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_25_may2025"
+        ],
+        "progression": "Introduction to Professional Learning"
       },
       "bonus": false,
       "seeding_key": {
@@ -278,9 +286,56 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_25_certificate"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit1-2025",
+        "activity_section.key": "077b14bb-0f01-4ec0-b98e-1cfc7a1423f1"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit1_25_certificate"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Introduction to Professional Learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit1-2025",
+        "activity_section.key": "077b14bb-0f01-4ec0-b98e-1cfc7a1423f1"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3_-self-paced-unit1_25_may2025"
+        ],
         "progression": "Unit 1 - Problem Solving and Computing Overview"
       },
       "bonus": false,
@@ -298,11 +353,14 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
+      "chapter": 6,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CI-LessonTypes-U1_-self-paced-unit1_25_may2025"
+        ],
         "progression": "Unit 1 - Problem Solving and Computing Overview"
       },
       "bonus": false,
@@ -320,11 +378,14 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U1L2_-self-paced-unit1_25_may2025"
+        ],
         "progression": "Unit 1 - Problem Solving and Computing Overview"
       },
       "bonus": false,
@@ -342,11 +403,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-alternate lessons_-self-pac_may2025"
+        ],
         "progression": "Chapter 1 Overview"
       },
       "bonus": false,
@@ -364,11 +428,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD Problem Solving Process Vid_25_may2025"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -386,11 +453,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP_-self-paced-uni_may2025"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -408,11 +478,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 11,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod1-lesson3-animals_-self-paced-unit1_25_may2025"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -430,11 +503,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U1L3-Chapter1PSP-pract_-self-pac_may2025"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -452,11 +528,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 6,
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-PSP-C4U_-self-paced-unit1_25_may2025"
+        ],
         "progression": "The Problem Solving Process"
       },
       "bonus": false,
@@ -474,11 +553,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U1L5_-self-paced-unit1_25_may2025"
+        ],
         "progression": "Chapter 2 Overview"
       },
       "bonus": false,
@@ -496,11 +578,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Com_25_may2025"
+        ],
         "progression": "Introduction to Computing"
       },
       "bonus": false,
@@ -518,11 +603,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-mod1-IOSP-Overview_-self-paced-unit1_25_may2025"
+        ],
         "progression": "Introduction to Computing"
       },
       "bonus": false,
@@ -540,11 +628,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 processing bday_25_may2025"
+        ],
         "progression": "Explore Processing and Storage"
       },
       "bonus": false,
@@ -562,11 +653,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage outfit_25_may2025"
+        ],
         "progression": "Explore Processing and Storage"
       },
       "bonus": false,
@@ -584,11 +678,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 storage video_25_may2025"
+        ],
         "progression": "Explore Processing and Storage"
       },
       "bonus": false,
@@ -606,11 +703,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 7,
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U1 IOSP match_-self-paced-unit1_25_may2025"
+        ],
         "progression": "Explore Processing and Storage"
       },
       "bonus": false,
@@ -628,11 +728,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Cahpter2-ProjectOverview-mod1_-self-paced_may2025"
+        ],
         "progression": "Sample projects"
       },
       "bonus": false,
@@ -650,11 +753,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "-VPL-CSD-PILOT-summer22-navigation_-self-paced-unit1_25_may2025"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -690,6 +796,30 @@
         "level.key": "VPL-CSD-PL Overview-self-paced-unit1_25_may2025",
         "script_level.level_keys": [
           "VPL-CSD-PL Overview-self-paced-unit1_25_may2025"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit1-2025",
+        "activity_section.key": "077b14bb-0f01-4ec0-b98e-1cfc7a1423f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit1_25_certificate",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_25_certificate"
+        ],
+        "lesson.key": "Introduction to Problem Solving and Computing",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-teaching-csd-unit1-2025",
+        "activity_section.key": "077b14bb-0f01-4ec0-b98e-1cfc7a1423f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit1_gettingstarted"
         ],
         "lesson.key": "Introduction to Problem Solving and Computing",
         "lesson_group.key": "",
