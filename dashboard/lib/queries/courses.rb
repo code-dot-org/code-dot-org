@@ -39,10 +39,9 @@ class Queries::Courses
   end
 
   def self.unit_group_unit(unit, unit_group)
-    if unit_group && unit
+    if unit
+      unit_group ||= unit.original_unit_group
       unit.unit_group_units.find {|ugu| ugu.unit_group == unit_group}
-    elsif unit
-      unit.unit_group_units.first
     end
   end
 end

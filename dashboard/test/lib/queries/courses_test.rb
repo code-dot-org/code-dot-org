@@ -55,4 +55,47 @@ class Queries::CoursesTest < ActiveSupport::TestCase
       end
     end
   end
+
+  describe '.unit_group_unit' do
+    let(:unit) {nil}
+    let(:unit_group) {nil}
+    let(:unit_group_unit) {nil}
+    let(:subject) {described_class.unit_group_unit(unit, unit_group)}
+
+    before do
+      unit&.reload
+    end
+
+    context 'unit and unit_group are nil' do
+      it 'returns nil' do
+        _(subject).must_be_nil
+      end
+    end
+
+    context 'unit defined' do
+      let(:original_unit_group) {create :unit_group}
+      let(:unit) {create :unit, original_unit_group: original_unit_group}
+      let!(:unit_group_unit) {create :unit_group_unit, course_id: original_unit_group.id, script_id: unit.id, position: 1}
+
+      it 'returns unit_group_unit' do
+        _(subject).must_equal unit_group_unit
+      end
+
+      context 'unit_group is defined' do
+        let!(:original_unit_group_unit) {create :unit_group_unit, course_id: original_unit_group.id, script_id: unit.id, position: 1}
+        let(:unit_group) {create :unit_group}
+        let!(:unit_group_unit) {create :unit_group_unit, course_id: unit_group.id, script_id: unit.id, position: 1}
+
+        it 'returns unit_group_unit' do
+          _(subject).must_equal unit_group_unit
+        end
+
+        context 'given original_unit_group' do
+          it 'return original_unit_group_unit' do
+            _(described_class.unit_group_unit(unit, original_unit_group)).must_equal original_unit_group_unit
+          end
+        end
+      end
+    end
+  end
 end
