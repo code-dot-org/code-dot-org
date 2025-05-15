@@ -9,7 +9,8 @@ module AichatOpenaiHelper
   API_KEY = CDO.openai_student_learning_api_key
   MODEL = SharedConstants::AICHAT_MODEL_VERSION
 
-  DEFAULT_TOKEN_LIMIT_PER_DAY = 200_000
+  TOKEN_THROTTLING_PREFIX = "aichat/tokens/".freeze
+  DEFAULT_TOKEN_LIMIT_PER_DAY = 10_000_000
   ONE_DAY_S = 60 * 60 * 24
 
   def self.get_openai_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id, project_id, user_id)
@@ -90,6 +91,12 @@ module AichatOpenaiHelper
       return
     end
 
+    # Typical usage of our throttling module calls throttle at the point where it's deciding whether to throttle or not.
+    # In this case, we are just reporting token usage,
+    # and subsequent calls to our aichat_request endpoint check whether the user has been throttled.
+    #
+    # Prompt tokens are by far and away our largest cost driver (and the piece that users actually control),
+    # so we throttle on that.
     limit = DCDO.get('aichat_token_limit_per_day', DEFAULT_TOKEN_LIMIT_PER_DAY)
     Cdo::Throttle.throttle(token_throttling_key(model_id, user_id),
       limit,
@@ -164,7 +171,9 @@ module AichatOpenaiHelper
   end
 
   def self.token_throttling_key(model_id, user_id)
-    'aichat/tokens/' + model_id + '/' + user_id.to_s
+    # "/user/" included to leave space for potential throttling at the classroom/teacher level.
+    # Token throttling also only currently in place for gpt-4o-mini, but inclusion of model ID leaves space for other models.
+    TOKEN_THROTTLING_PREFIX + model_id + '/user/' + user_id.to_s
   end
 
   def self.client

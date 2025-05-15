@@ -95,7 +95,8 @@ class AichatRequestsController < ApplicationController
   # Since we don't know the token count of the current request at the outset,
   # we check whether the user's most recent request exceeded the daily token limit.
   private def should_throttle_token_count?(model_id, user_id)
-    Cdo::Throttle.throttled?(AichatOpenaiHelper.token_throttling_key(model_id, user_id))
+    throttle_key = AichatOpenaiHelper.token_throttling_key(model_id, user_id)
+    Cdo::Throttle.throttled?(throttle_key)
   end
 
   private def chat_completion_has_required_params?
