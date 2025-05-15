@@ -1,0 +1,113 @@
+  # ------------------------------------------------------------
+  # CloudFormation Tools IAM Roles
+  #
+  # Core IAM roles for CloudFormation stack operations.
+  #
+  # Roles included:
+  #   - CloudFormationAdmin
+  #   - CloudFormationService
+  #   - DevPermissions
+  # ------------------------------------------------------------
+
+  # CloudFormationAdmin Role
+  # ----------------------------
+  # Intent:
+  #  - Grant complete full access for foundational infrastructure stacks.
+  #
+  # Audit (2025-05-14):
+  #  - Foundational infra stacks (IAM, VPC, lambda, alerting, javabuilder-cicd-deps, javabuilder-iam, DATA-production).
+  #
+  # Security Review:
+  #  - No automated software (even CloudFormation) should use this level of access.  Any bypass to add a new ChangeSet to one of these stacks would grant Full admin to create anything.
+  #  - Violates least-privilege; prefer scoped policies per stack.
+  CloudFormationAdmin:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: CloudFormationAdmin
+      <%=service_role 'cloudformation'%> # %>
+      Path: /admin/
+      ManagedPolicyArns: ['arn:aws:iam::aws:policy/AdministratorAccess']
+      
+
+  # CloudFormationService Role
+  # ----------------------------
+  # Intent:
+  #  - Grant the same access Developers have to CI/CD and common environment stacks.
+  #  - Further grant added perms for managing secrets, and creating IAM roles with limited permissions.
+  #  - Restrict the IAM grant permissions to non-admin resources, and our main permissions boundary.
+  #
+  # Intent vs. Reality:
+  #  - Reality: granting DevPermissions (iam:PassRole on "*") allows bypass of any of the above restrictions.
+  #  - Reality: using "NotResource" does not "restrict ... to non-admin resources".  It is a naming restriction, and the only effectively stops the alteration of existing roles with the name "admin/*".  Other "admin-level" resources can still be created with a different name. It is only enforcing a naming convention.  If it is only for naming convention, please add a comment to that effect.
+  #
+  # Audit (2025-05-14):
+  #  - Production Stacks: autoscale-prod, levelbuilder, aiproxy, javabuilder, gen-ai-curriculum-production
+  #  - CI Stacks: test, staging, javabuilder-cicd, javabuilder-test, aiproxy-test, gen-ai-curriculum-test
+  #  - Misc stacks: javabuilder-demo, javabuilder-high-load, javabuilder-load-test, javabuilderbeta, aiproxy-dev-claude-response-and-error-handling
+  #  - Unknown: AccessLogs, cwagent-wip, geocoder, hoc-2021-i18n-adhoc, recaptchadatafix, s3-backed-subdomain-lesson-plans, s3-buckets, streetaddressgem
+  #  - Adhoc Stacks: 110 of them
+  #
+  # Security Review:
+  #  - Overly broad; violates least-privilege principles.  Its access is set to a human-access role, plus unlimited secrets access.
+  CloudFormationService:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: CloudFormationService
+      <%=service_role 'cloudformation'%> # %>
+      Path: /admin/
+      Policies:
+        # Grant permissions for managing specific non-admin AWS::IAM resources.
+        # The name is misleading as this is not a permissions boundary, but a policy granting access
+        - PolicyName: RolePermissionsBoundary
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              # Allow creation of most IAM resources, outside the namespace of "admin/*"
+              - Effect: Allow
+                Action:
+                  - iam:CreatePolicy
+                  - iam:CreatePolicyVersion
+                  - iam:DeletePolicy
+                  - iam:DeletePolicyVersion
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+              - Effect: Allow
+                Action:
+                  - iam:CreateInstanceProfile
+                  - iam:AddRoleToInstanceProfile
+                  - iam:RemoveRoleFromInstanceProfile
+                  - iam:DeleteInstanceProfile
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:instance-profile/admin/*"
+              - Effect: Allow
+                Action:
+                  - iam:DeleteRole
+                  - iam:UpdateAssumeRolePolicy
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+              # Require any roles you create have the permissions boundary of DevPermissions
+              #   NOTE: it appears that this does't work to actually allow some actions here because
+              #   those actions don't even include a permissions boundary argument.  These actions
+              #   are: AttachRolePolicy, DetachRolePolicy, PutRolePolicy, DeleteRolePolicy
+              - Effect: Allow
+                Action:
+                  - iam:CreateRole
+                  - iam:PutRolePermissionsBoundary
+                  - iam:AttachRolePolicy # always denied by permissions boundary check
+                  - iam:DetachRolePolicy # always denied by permissions boundary check
+                  - iam:PutRolePolicy    # always denied by permissions boundary check
+                  - iam:DeleteRolePolicy # always denied by permissions boundary check
+                NotResource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/*"
+                Condition:
+                  StringEquals:
+                    iam:PermissionsBoundary: !Ref DevPermissions
+
+        # Grant read/write access to _all_ of secretsmanager (there is no permissions boundary on this)
+        - PolicyName: SecretPermissions
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+              - Effect: Allow
+                Action: secretsmanager:*
+                Resource: '*'
+                
+      # Attach the DevPermissions policy to this role:
+      #   PassRole *, access to _everything_ except Organizations, IAM (overridden above) and SecretsManager (overriden above)
+      ManagedPolicyArns: [!Ref DevPermissions]
