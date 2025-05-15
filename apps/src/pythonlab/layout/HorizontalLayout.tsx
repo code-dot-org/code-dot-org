@@ -15,10 +15,12 @@ const MIN_OUTPUT_HEIGHT = 120;
 const MIN_EDITOR_HEIGHT = 200;
 const INITIAL_INFO_PANEL_WIDTH = 300;
 const INITIAL_OUTPUT_HEIGHT = 300;
+const INITIAL_OUTPUT_HEIGHT_WIDGET = 800;
 const PROJECT_FOOTER_HEIGHT = 56;
 
 const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   isProjectLevel,
+  isWidgetView,
 }) => {
   const {
     leftPanelWidth,
@@ -37,11 +39,13 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
       name: 'instructions',
     },
     rightTopPanel: {
-      minHeight: MIN_EDITOR_HEIGHT,
+      minHeight: isWidgetView ? 0 : MIN_EDITOR_HEIGHT,
       name: 'editor',
     },
     rightBottomPanel: {
-      initialHeight: INITIAL_OUTPUT_HEIGHT,
+      initialHeight: isWidgetView
+        ? INITIAL_OUTPUT_HEIGHT_WIDGET
+        : INITIAL_OUTPUT_HEIGHT,
       minHeight: MIN_OUTPUT_HEIGHT,
       name: 'output',
     },
@@ -76,12 +80,16 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
           className={moduleStyles.flexColumn}
           style={{width: rightPanelWidth}}
         >
-          <Workspace style={{height: rightTopPanelHeight}} />
-          <ResizeBar
-            isVertical={false}
-            separatorProps={rightBottomPanelSeparatorProps}
-            isDragging={rightBottomPanelDragging}
-          />
+          {!isWidgetView && (
+            <>
+              <Workspace style={{height: rightTopPanelHeight}} />
+              <ResizeBar
+                isVertical={false}
+                separatorProps={rightBottomPanelSeparatorProps}
+                isDragging={rightBottomPanelDragging}
+              />
+            </>
+          )}
           <HorizontalOutput
             height={rightBottomPanelHeight || INITIAL_OUTPUT_HEIGHT}
             width={rightPanelWidth}

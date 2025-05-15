@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 21:10:37 UTC",
+    "serialized_at": "2025-05-14 17:58:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -885,12 +885,39 @@
       }
     },
     {
-      "key": "781a7a9f-145d-4669-a6be-c11922c8845c",
+      "key": "53fcdf2a-79f0-4333-8e7f-94df308071d5",
       "position": 1,
       "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53fcdf2a-79f0-4333-8e7f-94df308071d5",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "781a7a9f-145d-4669-a6be-c11922c8845c",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "781a7a9f-145d-4669-a6be-c11922c8845c",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "11e401e4-9adb-41cc-aab3-4f6f4a124275",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "11e401e4-9adb-41cc-aab3-4f6f4a124275",
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
@@ -1015,6 +1042,45 @@
       "seeding_key": {
         "lesson_activity.key": "2f652c60-5741-4af2-865b-d0b5f1af108a",
         "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "945e4ebc-57de-49e8-bdee-28b33165730a",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "945e4ebc-57de-49e8-bdee-28b33165730a",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "3d044815-143d-4cdc-af53-cfd101fc3b8e",
+      "position": 2,
+      "properties": {
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d044815-143d-4cdc-af53-cfd101fc3b8e",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025"
+      }
+    },
+    {
+      "key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0",
+      "position": 3,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0",
+        "lesson.key": "lesson-4",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025"
       }
@@ -1295,6 +1361,17 @@
       }
     },
     {
+      "key": "735b8c19-bdd5-44b6-b6bc-c6b84614c1af",
+      "position": 4,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "735b8c19-bdd5-44b6-b6bc-c6b84614c1af",
+        "lesson_activity.key": "aed7b349-2e3b-4cd8-9b26-6a9a7cff637f"
+      }
+    },
+    {
       "key": "af367dd2-4821-47e3-92b1-54ce62c7b217",
       "position": 1,
       "properties": {
@@ -1439,6 +1516,17 @@
       }
     },
     {
+      "key": "39705368-cf3f-45bf-b6a7-e92a2985cd6c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "39705368-cf3f-45bf-b6a7-e92a2985cd6c",
+        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e"
+      }
+    },
+    {
       "key": "28004903-bf4e-4458-b8c0-f371c73d508b",
       "position": 1,
       "properties": {
@@ -1469,6 +1557,17 @@
       },
       "seeding_key": {
         "activity_section.key": "464c9990-12a4-44c5-919d-0be3c3fab689",
+        "lesson_activity.key": "c4ba0def-0b95-4a80-94d6-27524470fc4c"
+      }
+    },
+    {
+      "key": "3b93820f-b6e3-4029-90ce-a738e30abfa8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b93820f-b6e3-4029-90ce-a738e30abfa8",
         "lesson_activity.key": "c4ba0def-0b95-4a80-94d6-27524470fc4c"
       }
     },
@@ -1676,6 +1775,17 @@
       }
     },
     {
+      "key": "67a55ec0-555a-4ded-91c6-48a5818cdb66",
+      "position": 5,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "67a55ec0-555a-4ded-91c6-48a5818cdb66",
+        "lesson_activity.key": "f7829a86-379e-46c4-83ef-d14b89f758cb"
+      }
+    },
+    {
       "key": "a74d5dda-d8bf-4978-8a8f-ce2daeeff912",
       "position": 1,
       "properties": {
@@ -1838,6 +1948,17 @@
       },
       "seeding_key": {
         "activity_section.key": "2b85ad2b-b0fe-41e9-9f89-cde1ffcfc2ba",
+        "lesson_activity.key": "2d3036a3-09c1-4dad-8499-2287364f9208"
+      }
+    },
+    {
+      "key": "6fc8a483-32cb-453e-89ba-a920eccda865",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "6fc8a483-32cb-453e-89ba-a920eccda865",
         "lesson_activity.key": "2d3036a3-09c1-4dad-8499-2287364f9208"
       }
     },
@@ -2075,6 +2196,17 @@
       }
     },
     {
+      "key": "18014aa7-81b3-49b7-aca4-a0ad02446cf2",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "18014aa7-81b3-49b7-aca4-a0ad02446cf2",
+        "lesson_activity.key": "6cec371b-59e8-4af3-9cb7-debbe26ed74d"
+      }
+    },
+    {
       "key": "1bb10be9-f630-4ebf-9ab4-a35288277564",
       "position": 1,
       "properties": {
@@ -2117,6 +2249,17 @@
       },
       "seeding_key": {
         "activity_section.key": "9291d3be-f82f-4657-818f-062ff81ae592",
+        "lesson_activity.key": "f683139d-1c33-47f3-9c0c-fd75ee5265df"
+      }
+    },
+    {
+      "key": "84d34b8b-d911-41d6-a292-8041bac84497",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "84d34b8b-d911-41d6-a292-8041bac84497",
         "lesson_activity.key": "f683139d-1c33-47f3-9c0c-fd75ee5265df"
       }
     },
@@ -2329,6 +2472,17 @@
       }
     },
     {
+      "key": "366b2913-ceb8-43ea-9f2b-9038fdc964f6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "366b2913-ceb8-43ea-9f2b-9038fdc964f6",
+        "lesson_activity.key": "c6d011d8-2e92-419d-8104-52fc7f2d879d"
+      }
+    },
+    {
       "key": "96dd57b1-da43-43c9-91c2-eaf6b93142e8",
       "position": 1,
       "properties": {
@@ -2447,6 +2601,16 @@
       }
     },
     {
+      "key": "56b4bda8-89e6-415d-b41e-8cc8f6142c1d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "56b4bda8-89e6-415d-b41e-8cc8f6142c1d",
+        "lesson_activity.key": "53fcdf2a-79f0-4333-8e7f-94df308071d5"
+      }
+    },
+    {
       "key": "fa447aeb-24a4-4bb1-907f-f9536384dd34",
       "position": 1,
       "properties": {
@@ -2480,6 +2644,17 @@
       }
     },
     {
+      "key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742",
+        "lesson_activity.key": "11e401e4-9adb-41cc-aab3-4f6f4a124275"
+      }
+    },
+    {
       "key": "f833f6bb-c840-4a1d-a480-3f7528cee38f",
       "position": 1,
       "properties": {
@@ -2510,6 +2685,17 @@
       },
       "seeding_key": {
         "activity_section.key": "771d9e97-7b7d-4d77-b037-20564c324bdf",
+        "lesson_activity.key": "17ac9589-0600-4f95-9dde-06cec8c36c0a"
+      }
+    },
+    {
+      "key": "fc5b8d6f-8e71-4e7e-af45-e21fd106db39",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc5b8d6f-8e71-4e7e-af45-e21fd106db39",
         "lesson_activity.key": "17ac9589-0600-4f95-9dde-06cec8c36c0a"
       }
     },
@@ -2699,6 +2885,17 @@
       }
     },
     {
+      "key": "4fd44a06-fca4-48e2-abf7-b54db510e67c",
+      "position": 5,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "4fd44a06-fca4-48e2-abf7-b54db510e67c",
+        "lesson_activity.key": "b8039792-b2f5-4728-8704-0e4194b2a333"
+      }
+    },
+    {
       "key": "13ec55e1-7a1e-48c8-8cad-480f6f31b5ce",
       "position": 1,
       "properties": {
@@ -2763,6 +2960,37 @@
       "seeding_key": {
         "activity_section.key": "c8dea658-841b-468e-a80b-cf182ecd936b",
         "lesson_activity.key": "2f652c60-5741-4af2-865b-d0b5f1af108a"
+      }
+    },
+    {
+      "key": "34571909-9dbd-492f-8ea2-017fb7bc7a01",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "34571909-9dbd-492f-8ea2-017fb7bc7a01",
+        "lesson_activity.key": "945e4ebc-57de-49e8-bdee-28b33165730a"
+      }
+    },
+    {
+      "key": "bfb79562-c48f-4573-b873-546a9594d3af",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bfb79562-c48f-4573-b873-546a9594d3af",
+        "lesson_activity.key": "3d044815-143d-4cdc-af53-cfd101fc3b8e"
+      }
+    },
+    {
+      "key": "673edd09-89ba-4f27-b1c1-4342c1612c31",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "673edd09-89ba-4f27-b1c1-4342c1612c31",
+        "lesson_activity.key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0"
       }
     },
     {
@@ -2867,6 +3095,17 @@
       }
     },
     {
+      "key": "d439f224-612c-4687-be0d-9afd62e669b0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "d439f224-612c-4687-be0d-9afd62e669b0",
+        "lesson_activity.key": "21de5dae-a57e-4d0f-9001-a1d42bd45ea4"
+      }
+    },
+    {
       "key": "b06ea1f8-9a30-449f-a4b7-569c6e7ea8d2",
       "position": 1,
       "properties": {
@@ -2922,6 +3161,17 @@
       },
       "seeding_key": {
         "activity_section.key": "5c96eb9c-b276-45a0-bfcb-c0bda66edba0",
+        "lesson_activity.key": "20cfa961-8592-4a65-a932-5aa61eff659b"
+      }
+    },
+    {
+      "key": "ff97ff1f-815c-403b-9adc-b7dc432c402c",
+      "position": 3,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff97ff1f-815c-403b-9adc-b7dc432c402c",
         "lesson_activity.key": "20cfa961-8592-4a65-a932-5aa61eff659b"
       }
     },
@@ -3297,6 +3547,17 @@
         "activity_section.key": "4f9fd910-c2d9-4c13-af73-9ee22d5dc719",
         "lesson_activity.key": "7d18c648-acbb-4461-b438-231ea9ca943c"
       }
+    },
+    {
+      "key": "b956ec47-f85c-4f62-9607-86eb8169d4a6",
+      "position": 6,
+      "properties": {
+        "progression_name": "Lesson Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "b956ec47-f85c-4f62-9607-86eb8169d4a6",
+        "lesson_activity.key": "7d18c648-acbb-4461-b438-231ea9ca943c"
+      }
     }
   ],
   "script_levels": [
@@ -3377,6 +3638,28 @@
     },
     {
       "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L1"
+        ],
+        "lesson.key": "Introduction to Generative AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "735b8c19-bdd5-44b6-b6bc-c6b84614c1af"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L1"
+      ]
+    },
+    {
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3401,7 +3684,29 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "39705368-cf3f-45bf-b6a7-e92a2985cd6c"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L2"
+      ]
+    },
+    {
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3426,7 +3731,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3451,7 +3756,29 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L3"
+        ],
+        "lesson.key": "Input & Training Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "3b93820f-b6e3-4029-90ce-a738e30abfa8"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L3"
+      ]
+    },
+    {
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3476,7 +3803,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3501,7 +3828,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3526,7 +3853,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3551,7 +3878,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 14,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -3576,7 +3903,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 15,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -3601,7 +3928,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 16,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -3626,7 +3953,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 17,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3651,7 +3978,29 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 18,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L4"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "67a55ec0-555a-4ded-91c6-48a5818cdb66"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L4"
+      ]
+    },
+    {
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3676,7 +4025,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3701,7 +4050,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3726,7 +4075,29 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "6fc8a483-32cb-453e-89ba-a920eccda865"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L5"
+      ]
+    },
+    {
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3751,7 +4122,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3776,7 +4147,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3801,7 +4172,29 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 26,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L6"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "18014aa7-81b3-49b7-aca4-a0ad02446cf2"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L6"
+      ]
+    },
+    {
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3826,7 +4219,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3851,7 +4244,29 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L7"
+        ],
+        "lesson.key": "Understanding Neural Networks",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "84d34b8b-d911-41d6-a292-8041bac84497"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L7"
+      ]
+    },
+    {
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3876,7 +4291,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3901,7 +4316,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3926,7 +4341,29 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 33,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L8"
+        ],
+        "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "366b2913-ceb8-43ea-9f2b-9038fdc964f6"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L8"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3951,7 +4388,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3976,7 +4413,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4001,7 +4438,29 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L9"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L9"
+      ]
+    },
+    {
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4026,8 +4485,30 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 39,
       "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L10"
+        ],
+        "lesson.key": "Outputs & Probabilities",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "fc5b8d6f-8e71-4e7e-af45-e21fd106db39"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L10"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4051,7 +4532,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4076,7 +4557,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 42,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4101,7 +4582,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 43,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4126,7 +4607,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 44,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4151,7 +4632,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 45,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4176,7 +4657,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 46,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4201,8 +4682,74 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 47,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L11"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "4fd44a06-fca4-48e2-abf7-b54db510e67c"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L11"
+      ]
+    },
+    {
+      "chapter": 48,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L12"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "673edd09-89ba-4f27-b1c1-4342c1612c31"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L12"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L13"
+        ],
+        "lesson.key": "Project: Demystifying Generative AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "d439f224-612c-4687-be0d-9afd62e669b0"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L13"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4226,7 +4773,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4251,7 +4798,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4276,7 +4823,29 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 53,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L14"
+        ],
+        "lesson.key": "Embeddings: How They're Created",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "ff97ff1f-815c-403b-9adc-b7dc432c402c"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L14"
+      ]
+    },
+    {
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4298,6 +4867,28 @@
       },
       "level_keys": [
         "genai-lesson7-warmup-lv2_2025"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Recap"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-student-level-L15"
+        ],
+        "lesson.key": "Neural Networks: How They're Trained",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b956ec47-f85c-4f62-9607-86eb8169d4a6"
+      },
+      "level_keys": [
+        "gen-ai-student-level-L15"
       ]
     }
   ],
@@ -4340,6 +4931,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-student-level-L1",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L1"
+        ],
+        "lesson.key": "Introduction to Generative AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "735b8c19-bdd5-44b6-b6bc-c6b84614c1af"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "exploring_generative_ai_lesson1_2_level1",
         "script_level.level_keys": [
           "exploring_generative_ai_lesson1_2_level1"
@@ -4348,6 +4951,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-student-level-L2",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "39705368-cf3f-45bf-b6a7-e92a2985cd6c"
       }
     },
     {
@@ -4372,6 +4987,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "464c9990-12a4-44c5-919d-0be3c3fab689"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-student-level-L3",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L3"
+        ],
+        "lesson.key": "Input & Training Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "3b93820f-b6e3-4029-90ce-a738e30abfa8"
       }
     },
     {
@@ -4472,6 +5099,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-student-level-L4",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L4"
+        ],
+        "lesson.key": "Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "67a55ec0-555a-4ded-91c6-48a5818cdb66"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "exploring_generative_ai_l32_l1",
         "script_level.level_keys": [
           "exploring_generative_ai_l32_l1"
@@ -4504,6 +5143,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "2b85ad2b-b0fe-41e9-9f89-cde1ffcfc2ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-student-level-L5",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L5"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "6fc8a483-32cb-453e-89ba-a920eccda865"
       }
     },
     {
@@ -4544,6 +5195,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-student-level-L6",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L6"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "18014aa7-81b3-49b7-aca4-a0ad02446cf2"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "genai-lesson6-warmup-lv1_2025",
         "script_level.level_keys": [
           "genai-lesson6-warmup-lv1_2025"
@@ -4564,6 +5227,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "9291d3be-f82f-4657-818f-062ff81ae592"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-student-level-L7",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L7"
+        ],
+        "lesson.key": "Understanding Neural Networks",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "84d34b8b-d911-41d6-a292-8041bac84497"
       }
     },
     {
@@ -4604,6 +5279,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-student-level-L8",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L8"
+        ],
+        "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "366b2913-ceb8-43ea-9f2b-9038fdc964f6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "genai-choices-comparison",
         "script_level.level_keys": [
           "genai-choices-comparison"
@@ -4640,6 +5327,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-student-level-L9",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L9"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "genai-lesson9-wrapup_2025",
         "script_level.level_keys": [
           "genai-lesson9-wrapup_2025"
@@ -4648,6 +5347,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "771d9e97-7b7d-4d77-b037-20564c324bdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-student-level-L10",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L10"
+        ],
+        "lesson.key": "Outputs & Probabilities",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "fc5b8d6f-8e71-4e7e-af45-e21fd106db39"
       }
     },
     {
@@ -4736,6 +5447,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-student-level-L11",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L11"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "4fd44a06-fca4-48e2-abf7-b54db510e67c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-student-level-L12",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L12"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "673edd09-89ba-4f27-b1c1-4342c1612c31"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-student-level-L13",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L13"
+        ],
+        "lesson.key": "Project: Demystifying Generative AI",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "d439f224-612c-4687-be0d-9afd62e669b0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "gen-ai-foundations-studentsurvey-postmodule_2025",
         "script_level.level_keys": [
           "gen-ai-foundations-studentsurvey-postmodule_2025"
@@ -4772,6 +5519,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-student-level-L14",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L14"
+        ],
+        "lesson.key": "Embeddings: How They're Created",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "ff97ff1f-815c-403b-9adc-b7dc432c402c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "genai-lesson7-warmup-lv2_2025",
         "script_level.level_keys": [
           "genai-lesson7-warmup-lv2_2025"
@@ -4780,6 +5539,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "200aae2d-f3f5-4527-8339-2950213c97e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-student-level-L15",
+        "script_level.level_keys": [
+          "gen-ai-student-level-L15"
+        ],
+        "lesson.key": "Neural Networks: How They're Trained",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "b956ec47-f85c-4f62-9607-86eb8169d4a6"
       }
     }
   ],

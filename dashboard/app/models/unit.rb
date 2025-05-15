@@ -1371,7 +1371,7 @@ class Unit < ApplicationRecord
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-          published_state: (unit_group.present? && general_params[:published_state] == unit_group.published_state) ? nil : general_params[:published_state],
+          hide_within_course: general_params[:hide_within_course].nil? ? false : general_params[:hide_within_course], # default false
           instruction_type: unit_group.present? ? nil : general_params[:instruction_type],
           participant_audience: unit_group.present? ? nil : general_params[:participant_audience],
           instructor_audience: unit_group.present? ? nil : general_params[:instructor_audience],
@@ -1554,6 +1554,7 @@ class Unit < ApplicationRecord
         description: Services::MarkdownPreprocessor.process(localized_description),
         studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
         course_id: unit_group.try(:id),
+        hide_within_course: hide_within_course,
         publishedState: get_published_state,
         instructionType: get_instruction_type,
         instructorAudience: get_instructor_audience,

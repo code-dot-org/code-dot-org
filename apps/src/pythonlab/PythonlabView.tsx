@@ -66,6 +66,7 @@ const defaultConfig: ConfigType = {
     horizontal: HorizontalLayout,
     vertical: VerticalLayout,
     share: ShareView,
+    widget: HorizontalLayout,
   },
   showFileBrowser: true,
 };

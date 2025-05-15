@@ -1,0 +1,6 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#widget_view"}}
+  Widget View
+#widget_view.in.collapse
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_view, description: "Enable Widget View"}
+  %p
+    If checked, the pythonlab level will be in widget view, i.e., the code editor workspace is hidden.
