@@ -91,6 +91,7 @@ button.button-kebab {
   }
 }
 
+// This allows the ellipsis to display when its parent is hovered on or has focus
 .row:hover > .button-kebab,
 .notDraggable:focus-within > .row > .button-kebab,
 .draggable:hover > .button-kebab,
