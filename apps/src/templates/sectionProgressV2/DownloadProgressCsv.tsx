@@ -1,4 +1,4 @@
-import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
 import _ from 'lodash';
 import React from 'react';
 
@@ -219,27 +219,21 @@ interface DownloadProgressCsvProps {
 export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = ({
   isLoading,
 }) => {
+  const handleDownloadOption = (option: string) => {
+    if (option === 'lesson') {
+      downloadLessonProgressCSV();
+    } else if (option === 'level') {
+      downloadLevelProgressCSV();
+    }
+  };
+
   return (
-    <ActionDropdown
+    <CustomDropdown
       name="download-progress-csv"
       labelText={i18n.downloadProgressCsv()}
       size="s"
       disabled={isLoading}
-      options={[
-        {
-          label: i18n.downloadLessonProgressCSV(),
-          icon: {iconName: 'download', iconStyle: 'solid'},
-          value: 'lesson',
-          onClick: downloadLessonProgressCSV,
-        },
-        {
-          label: i18n.downloadLevelProgressCSV(),
-          icon: {iconName: 'download', iconStyle: 'solid'},
-          value: 'level',
-          onClick: downloadLevelProgressCSV,
-        },
-      ]}
-      menuPlacement="right"
+      useDSCOButtonAsTrigger
       triggerButtonProps={{
         isIconOnly: true,
         icon: {
@@ -249,11 +243,33 @@ export const DownloadProgressCsv: React.FC<DownloadProgressCsvProps> = ({
         color: 'gray',
         type: 'secondary',
         size: 's',
-        ariaLabel: i18n.sectionOptionsDropdown(),
+        ariaLabel: i18n.downloadProgressCsv(),
         className: styles.downloadCsvDropdown,
         isPending: isLoading,
       }}
-    />
+      menuPlacement="right"
+    >
+      <ul>
+        <li>
+          <button
+            className={styles.dropdownOption}
+            onClick={() => handleDownloadOption('lesson')}
+            type="button"
+          >
+            <span>{i18n.downloadLessonProgressCSV()}</span>
+          </button>
+        </li>
+        <li>
+          <button
+            className={styles.dropdownOption}
+            onClick={() => handleDownloadOption('level')}
+            type="button"
+          >
+            <span>{i18n.downloadLevelProgressCSV()}</span>
+          </button>
+        </li>
+      </ul>
+    </CustomDropdown>
   );
 };
 
