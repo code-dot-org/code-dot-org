@@ -102,13 +102,12 @@ class Pd::Workshop < ApplicationRecord
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
     absence: {unless: :funded_csf?}
 
+  before_create :set_registration_link
+
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
 
   before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
-
-  after_create :set_registration_link
-
   def assign_regional_partner
     self.regional_partner = organizer.try {|o| o.regional_partners.first}
   end
@@ -189,13 +188,9 @@ class Pd::Workshop < ApplicationRecord
   end
 
   def set_registration_link
-    reg_link = if [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(course) && local_summer?
-                 regional_partner&.link_to_partner_application.presence || "/pd/application/teacher"
-               else
-                 registration_link.presence || "/pd/workshops/#{id}/enroll"
-               end
-    self.registration_link = reg_link
-    save(validate: false)
+    if [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(course) && local_summer?
+      self.registration_link = "/pd/application/teacher"
+    end
   end
 
   # Whether enrollment in this workshop requires an application
@@ -1047,9 +1042,7 @@ class Pd::Workshop < ApplicationRecord
       location_name: location_name,
       fee: fee,
       has_prereq: prereq.present?,
-      description: description,
-      is_third_party_registration_link: !registration_link&.end_with?("/pd/application/teacher") && !registration_link&.end_with?("/pd/workshops/#{id}/enroll"),
-      registration_link: registration_link,
+      custom_registration_link: registration_link,
       regional_partner_name: regional_partner&.name,
     }
   end

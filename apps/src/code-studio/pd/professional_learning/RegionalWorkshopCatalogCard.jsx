@@ -49,13 +49,12 @@ const RegionalWorkshopCatalogCard = ({
   fee,
   hasPrereq,
   description,
-  isThirdPartyRegistrationLink,
-  registrationLink,
+  customRegistrationLink,
 }) => {
   const [showLearnMoreDialog, setShowLearnMoreDialog] = useState(false);
   const seatsRemaining = capacity - numEnrollments;
   const isFull = seatsRemaining <= 0;
-  const enrollButtonIconRight = isThirdPartyRegistrationLink
+  const enrollButtonIconRight = customRegistrationLink
     ? {iconName: 'up-right-from-square'}
     : null;
 
@@ -71,7 +70,7 @@ const RegionalWorkshopCatalogCard = ({
             useAsLink: true,
             target: '_blank',
             iconRight: enrollButtonIconRight,
-            href: registrationLink,
+            href: customRegistrationLink,
             disabled: isFull,
           }}
           secondaryButtonProps={{
@@ -167,7 +166,7 @@ const RegionalWorkshopCatalogCard = ({
             target="_blank"
             color="purple"
             iconRight={enrollButtonIconRight}
-            href={registrationLink}
+            href={customRegistrationLink || `/pd/workshops/${id}/enroll`}
             className={style.wsCardButton}
             disabled={isFull}
           />
@@ -198,8 +197,7 @@ RegionalWorkshopCatalogCard.propTypes = {
   fee: PropTypes.string,
   hasPrereq: PropTypes.bool.isRequired,
   description: PropTypes.string,
-  isThirdPartyRegistrationLink: PropTypes.bool.isRequired,
-  registrationLink: PropTypes.string.isRequired,
+  customRegistrationLink: PropTypes.string,
 };
 
 export default RegionalWorkshopCatalogCard;

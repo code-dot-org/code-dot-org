@@ -1677,37 +1677,16 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_includes workshop.errors.full_messages, 'Description is required'
   end
 
-  test 'registration_link defaults to regional partner custom app link if present and applications are required' do
-    custom_app_link = 'test_application.com'
-    rp = create :regional_partner
-    rp.update!(link_to_partner_application: custom_app_link)
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP, regional_partner_id: rp.id, registration_link: 'test_registration.com'
-
-    assert_equal custom_app_link, workshop.registration_link
-  end
-
-  test 'registration_link defaults to teacher app link if not present and applications are required' do
-    rp = create :regional_partner
-    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP, regional_partner_id: rp.id, registration_link: 'test_registration.com'
+  test 'registration_link defaults to teacher app link if applications are required' do
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP
 
     assert_equal "/pd/application/teacher", workshop.registration_link
   end
 
-  test 'registration_link defaults to custom registration link if present and applications are not required' do
-    custom_reg_link = 'test_registration.com'
-    rp = create :regional_partner
-    rp.update!(link_to_partner_application: 'test_application.com')
-    workshop = create :workshop, course: Pd::Workshop::COURSE_BUILD_YOUR_OWN, subject: nil, course_offerings: [] << (create :course_offering), regional_partner_id: rp.id, registration_link: custom_reg_link
+  test 'registration_link does not default to anything if applications are not required' do
+    workshop = create :workshop, course: Pd::Workshop::COURSE_BUILD_YOUR_OWN, subject: nil, course_offerings: [] << (create :course_offering)
 
-    assert_equal custom_reg_link, workshop.registration_link
-  end
-
-  test 'registration_link defaults to regular enroll link if no custom link is present and applications are not required' do
-    rp = create :regional_partner
-    rp.update!(link_to_partner_application: 'test_application.com')
-    workshop = create :workshop, course: Pd::Workshop::COURSE_BUILD_YOUR_OWN, subject: nil, course_offerings: [] << (create :course_offering), regional_partner_id: rp.id
-
-    assert_equal "/pd/workshops/#{workshop.id}/enroll", workshop.registration_link
+    assert_nil workshop.registration_link
   end
 
   private def session_on_day(day_offset)
