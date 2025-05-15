@@ -203,26 +203,27 @@ steps:
       - git config user.email "drone-fake-user@code.org"
       - git merge origin/$DRONE_TARGET_BRANCH
 
+  - name: restore-cache
+    image: plugins/s3-cache
+    settings:
+      endpoint: s3://cdo-drone
+      debug: true
+      pull: true
+      restore: true
+      filename: ui-tests-cache-ubuntu-20.tar
+
   # We cache staging's rbenv and database in the `cache-staging-build-artifacts` pipeline
   - name: get-cached-staging-rbenv
     image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
     settings:
       filename: cache-staging-rbenv.tar
       endpoint: s3://cdo-drone
       restore: true
       debug: true
       pull: true
-      mount:
-        - /home/ci/.rbenv
 
   - name: get-cached-staging-database
     image: plugins/s3-cache
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     settings:
       filename: cache-staging-database.tar
       endpoint: s3://cdo-drone
@@ -230,7 +231,7 @@ steps:
       debug: true
       pull: true
       mount:
-        - /var/lib/mysql
+        - dashboard/db/dashboard_test.sql
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
@@ -250,13 +251,10 @@ steps:
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
+      # cache is restored to source directory, so we need to copy it into the right place
+      - cp -rn .rbenv /home/ci || true
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -266,12 +264,6 @@ steps:
       - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
-
-volumes:
-  - name: rbenv
-    temp: {}
-  - name: mysql
-    temp: {}
 
 trigger:
   branch:
@@ -315,20 +307,14 @@ steps:
   - name: prepare-ui-tests
     image: codedotorg/code-dot-org:1.15
     pull: always
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
+      - cp -r /home/ci/.rbenv .rbenv
+      - mysqldump -u root -B dashboard_test > dashboard/db/dashboard_test.sql
 
   - name: cache-staging-rbenv
     image: plugins/s3-cache
-    volumes:
-      - name: rbenv
-        path: /home/ci/.rbenv
     settings:
       filename: cache-staging-rbenv.tar
       endpoint: s3://cdo-drone
@@ -336,13 +322,10 @@ steps:
       debug: true
       pull: true
       mount:
-        - /home/ci/.rbenv
+        - .rbenv
 
   - name: cache-staging-database
     image: plugins/s3-cache
-    volumes:
-      - name: mysql
-        path: /var/lib/mysql
     settings:
       filename: cache-staging-database.tar
       endpoint: s3://cdo-drone
@@ -350,13 +333,7 @@ steps:
       debug: true
       pull: true
       mount:
-        - /var/lib/mysql
-
-volumes:
-  - name: rbenv
-    temp: {}
-  - name: mysql
-    temp: {}
+        - dashboard/db/dashboard_test.sql
 
 trigger:
   # branch:
