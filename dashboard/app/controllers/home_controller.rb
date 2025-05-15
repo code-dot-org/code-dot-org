@@ -183,7 +183,7 @@ class HomeController < ApplicationController
       @homepage_data[:topPlCourse] = nil
       if pl_unit && pl_script_level
         link_to_overview = script_path(pl_unit)
-        link_to_lesson = script_path_next(pl_unit)
+        link_to_lesson = script_next_path(pl_unit)
         if Policies::Courses.modularity_enabled? && pl_unit_group_unit
           link_to_overview = course_unit_path(pl_unit_group_unit.unit_group, pl_unit_group_unit.position)
           link_to_lesson = course_unit_next_path(pl_unit_group_unit.unit_group, pl_unit_group_unit.position)
