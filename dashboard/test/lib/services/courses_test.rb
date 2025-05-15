@@ -85,4 +85,48 @@ class Services::CoursesTest < ActiveSupport::TestCase
       end
     end
   end
+
+  describe '.canonical_url' do
+    let(:unit) {create :unit}
+    let(:unit_group) {create :unit_group}
+    let!(:unit_group_unit) {create :unit_group_unit, script_id: unit.id, course_id: unit_group.id, position: 1}
+    let(:url) {'youtube.com/watch?v=dQw4w9WgXcQ'}
+    let(:subject) {described_class.canonical_url(url, unit_group_unit: unit_group_unit)}
+    let(:modularity_enabled) {true}
+
+    before do
+      allow(Policies::Courses).to receive(:modularity_enabled?).with(any_args).and_return(modularity_enabled)
+      unit.reload
+    end
+
+    context 'url is external to code.org' do
+      it 'returns url' do
+        _(subject).must_equal url
+      end
+    end
+
+    context 'url is for a resource in a different Unit' do
+      let(:url) {'/s/some-other-unit/vocab'}
+
+      it 'returns url' do
+        _(subject).must_equal url
+      end
+    end
+
+    context 'url is for a resource in the same Unit' do
+      let(:url) {"/s/#{unit.name}/vocab"}
+
+      it 'returns a nested url' do
+        _(subject).must_equal "/courses/#{unit_group.name}/units/1/vocab"
+      end
+
+      context 'modularity experiment is disabled' do
+        let(:modularity_enabled) {false}
+
+        it 'returns url' do
+          _(subject).must_equal url
+        end
+      end
+    end
+  end
 end
