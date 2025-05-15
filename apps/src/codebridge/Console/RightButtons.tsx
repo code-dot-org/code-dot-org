@@ -37,6 +37,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   const {levelProperties} = useCodebridgeContext();
   const isShareView = useAppSelector(state => state.lab.isShareView);
   const isWidgetView = levelProperties.widgetView;
+  const widgetViewAllowShowCode = levelProperties.widgetViewAllowShowCode;
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const [hasConsoleOutput, setHasConsoleOutput] = useState(false);
   const isClearButtonDisabled = isRunning || !hasConsoleOutput;
@@ -69,7 +70,7 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
 
   return (
     <div className={moduleStyles.buttonContainer}>
-      {isWidgetView && widgetViewShowCode && (
+      {isWidgetView && widgetViewAllowShowCode && (
         <Button
           text={
             widgetViewShowCode ? commonI18n.hideCode() : commonI18n.viewCode()
