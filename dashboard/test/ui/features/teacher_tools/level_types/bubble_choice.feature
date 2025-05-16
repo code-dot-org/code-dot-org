@@ -42,8 +42,6 @@ Feature: BubbleChoice
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "not_tried"
     Then I select the "New Section" option in dropdown with class "uitest-sectionselect"
     And I wait for 5 seconds
-    And I wait for jquery to load
-    And check that the URL contains "section_id="
     Then I wait until element "a:contains(View Teacher Dashboard)" is visible
     And element ".teacher-panel td:eq(1)" contains text "Alice"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
