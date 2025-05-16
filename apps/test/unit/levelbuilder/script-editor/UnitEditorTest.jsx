@@ -276,7 +276,7 @@ describe('UnitEditor', () => {
 
     it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {
       const wrapper = createWrapper({
-        initialPublishedState: 'stable',
+        allowMajorCurriculumChanges: false,
         isMigrated: true,
         initialUseLegacyLessonPlans: false,
       });
@@ -291,8 +291,7 @@ describe('UnitEditor', () => {
 
     it('allows changing student facing lesson plan checkbox when allowed to make major curriculum changes to hidden unit', () => {
       const wrapper = createWrapper({
-        initialPublishedState: 'stable',
-        initialHideWithinCourse: true,
+        allowMajorCurriculumChanges: true,
         isMigrated: true,
         initialUseLegacyLessonPlans: false,
       });
