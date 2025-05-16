@@ -1,6 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
 import {Heading1} from '@code-dot-org/component-library/typography';
-import {isEmpty} from 'lodash';
 import React, {
   FC,
   useCallback,
@@ -28,7 +27,6 @@ import Schedule from './sections/Schedule';
 import {
   Errors,
   FieldConfig,
-  Facilitator,
   SessionErrors,
   SessionFormState,
   Workshop,
@@ -42,6 +40,7 @@ import {
   workshopLabel,
   sessionStateToApi,
   workshopStateToApi,
+  emptyValue,
 } from './utils';
 
 import styles from './styles.module.scss';
@@ -52,7 +51,6 @@ export const VALIDATION_ERROR =
 
 export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
   config,
-  regionalPartnerData,
 }) => {
   const navigate = useNavigate();
   const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -62,14 +60,6 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
 
   const {data: workshop} = useFetch<Workshop>(
     workshopId ? `/api/v1/pd/workshops/${workshopId}` : ''
-  );
-
-  const {data: facilitatorData} = useFetch<Facilitator[]>(
-    workshopConfig?.label
-      ? `/api/v1/pd/course_facilitators?course=${encodeURIComponent(
-          workshopConfig.label
-        )}`
-      : ''
   );
 
   const [workshopFormState, dispatchWorkshop] = useReducer(workshopReducer, {
@@ -85,8 +75,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
     organizerId: null,
     prereq: '',
     hasPrereq: false,
-    regionalPartnerId:
-      regionalPartnerData?.length === 1 ? regionalPartnerData[0].id : null,
+    regionalPartnerId: null,
     registrationLink: '',
     subject: '',
     suppressEmail: false,
@@ -137,10 +126,13 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
           field: FieldConfig<WorkshopFormState>
         ) => {
           const {stateKey} = field;
-          const required =
-            field.required ||
-            (stateKey === 'prereq' && workshopFormState.hasPrereq);
-          if (required && isEmpty(workshopFormState[stateKey])) {
+          let {required} = field;
+          // prereq is not configured to be required
+          // only if user indicates prereq is required
+          if (stateKey === 'prereq' && workshopFormState.hasPrereq) {
+            required = true;
+          }
+          if (required && emptyValue(workshopFormState[stateKey])) {
             acc[stateKey] = REQUIRED_ERROR;
           }
           return acc;
@@ -156,7 +148,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
         (acc: SessionErrors, field: FieldConfig<SessionFormState>) => {
           const {stateKey, required} = field;
           sessionFormState.forEach(session => {
-            if (required && isEmpty(session[stateKey])) {
+            if (required && emptyValue(session[stateKey])) {
               acc[session.id] = {
                 ...(acc[session.id] ?? {}),
                 [stateKey]: REQUIRED_ERROR,
@@ -247,7 +239,7 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
 
   const allErrors = useMemo(
     () =>
-      isEmpty({...workshopErrors, ...sessionErrors})
+      emptyValue({...workshopErrors, ...sessionErrors})
         ? responseErrors
         : [VALIDATION_ERROR, ...responseErrors],
     [workshopErrors, sessionErrors, responseErrors]
@@ -282,9 +274,8 @@ export const WorkshopFormTemplate: FC<WorkshopFormTemplateProps> = ({
       <PartnerFacilitator
         facilitators={workshopFormState.facilitators}
         regionalPartnerId={workshopFormState.regionalPartnerId}
+        organizerId={workshopFormState.organizerId}
         errors={workshopErrors}
-        regionalPartnerData={regionalPartnerData ?? []}
-        facilitatorData={facilitatorData}
         dispatchWorkshop={dispatchWorkshop}
         config={workshopConfig}
       />

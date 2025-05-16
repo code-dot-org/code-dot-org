@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "\n\n",
+      "levelSystemPrompt": "Respond concisely and clearly. Prioritize brevity, relevance, and directness. Avoid unnecessary elaboration or repetition. Limit your response to under 75 words unless the user asks for more detail.\n",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -50,6 +50,6 @@
       "National Education Association.pdf": "24f9b51d-442b-4da7-a226-bb42c7c71dc8.pdf"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:35.457+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level4-choice4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level4-choice4\"},{\"changed_at\":\"2025-05-14 19:09:10 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 20:35:11 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:35.457+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level4-choice4\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level4-choice4\"},{\"changed_at\":\"2025-05-14 19:09:10 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 20:35:11 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 12:08:40 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -12,11 +12,13 @@ type ValidateFileNameArgs = {
   projectFiles: MultiFileSource['files'];
   isStartMode: boolean;
   validationFile: ProjectFile | undefined;
+  validFileTypes?: string[];
 };
 
 /**
  * Validates a file name. Internally, this checks to confirm that the file has an extension, the file name does not already exist
    in the parent folder, and that the file name is valid. Be aware that an empty string is considered a valid name.
+   If the optional validFileTypes list is passed, this checks whether file extension is included in the list.
  *
  * @param args An object containing the following properties:
  *   - **fileName:** The name of the file to validate.
@@ -24,7 +26,7 @@ type ValidateFileNameArgs = {
  *   - **projectFiles:** An array of project files.
  *   - **isStartMode:** Indicates if the application is in start mode.
  *   - **validationFile:** The validation file.
- *
+ *   - **validFileTypes: ** List of valid file types (optional)
  * @returns A string error message if the file name is invalid, or undefined if the file name is valid.
  */
 export const validateFileName = ({
@@ -33,6 +35,7 @@ export const validateFileName = ({
   projectFiles,
   isStartMode,
   validationFile,
+  validFileTypes,
 }: ValidateFileNameArgs) => {
   if (!fileName.length) {
     return;
@@ -41,6 +44,14 @@ export const validateFileName = ({
   const [, extension] = fileName.split('.');
   if (!extension) {
     return codebridgeI18n.noFileExtensionError();
+  }
+
+  if (validFileTypes && !validFileTypes.includes(extension)) {
+    return `${codebridgeI18n.invalidFileType({
+      fileType: extension,
+    })} ${codebridgeI18n.validFileTypesInfo({
+      validFileTypes: validFileTypes.toString(),
+    })}`;
   }
 
   if (!isValidFileName(fileName)) {
