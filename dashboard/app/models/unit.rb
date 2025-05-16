@@ -17,6 +17,7 @@
 #  instructor_audience    :string(255)
 #  participant_audience   :string(255)
 #  original_unit_group_id :integer
+#  hide_within_course     :boolean          default(FALSE)
 #
 # Indexes
 #

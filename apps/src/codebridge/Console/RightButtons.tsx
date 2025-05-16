@@ -4,10 +4,13 @@ import {
   WithTooltip,
 } from '@code-dot-org/component-library/tooltip';
 import SwapLayoutDropdown from '@codebridge/components/SwapLayoutDropdown';
+import SettingsButton from '@codebridge/Settings/SettingsButton';
 import React, {useEffect, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {useCodebridgeContext} from '../codebridgeContext';
 
 import ConsoleManager from './ConsoleManager';
 
@@ -29,7 +32,9 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
   clearOutput,
   consoleManager,
 }) => {
+  const {levelProperties} = useCodebridgeContext();
   const isShareView = useAppSelector(state => state.lab.isShareView);
+  const isWidgetView = levelProperties.widgetView;
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
   const [hasConsoleOutput, setHasConsoleOutput] = useState(false);
   const isClearButtonDisabled = isRunning || !hasConsoleOutput;
@@ -66,7 +71,8 @@ const RightButtons: React.FunctionComponent<RightButtonsProps> = ({
           color={'black'}
         />
       </WithTooltip>
-      {!isShareView && <SwapLayoutDropdown />}
+      {!isShareView && !isWidgetView && <SwapLayoutDropdown />}
+      {isWidgetView && <SettingsButton />}
     </div>
   );
 };

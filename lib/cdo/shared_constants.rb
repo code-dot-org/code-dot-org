@@ -752,6 +752,7 @@ module SharedConstants
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
     USER_INPUT_TOO_LARGE: 'user_input_too_large',
+    MODEL_TIMEOUT: 'model_timeout',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
@@ -797,7 +798,9 @@ module SharedConstants
     # PII detected in the model's output.
     MODEL_PII: 1004,
     # The user input request exceeded the maximum token size allowed.
-    USER_INPUT_TOO_LARGE: 1005
+    USER_INPUT_TOO_LARGE: 1005,
+    # The model took too long to respond.
+    MODEL_TIMEOUT: 1006,
   }
 
   AI_CHAT_MODEL_IDS = {

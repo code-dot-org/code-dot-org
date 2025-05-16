@@ -2,7 +2,7 @@ import Modal from '@code-dot-org/component-library/modal';
 import React, {useState} from 'react';
 
 import FileIcon from './FileIcon';
-import {ErrorAlert, Loading} from './shared';
+import {DialogAlert, Loading} from './shared';
 import {AssetData, CommonProps, DialogProps} from './types';
 
 import styles from './starter-assets-dialog.module.scss';
@@ -20,7 +20,7 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
   levelName,
   onSelect,
   limit,
-  errorMessage,
+  alert,
 }) => {
   const [selectedFiles, setSelectedFiles] = useState<AssetData[]>([]);
 
@@ -31,21 +31,6 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
       setSelectedFiles(selectedFiles.filter(file => file !== asset));
     }
   };
-
-  const ModalBody = () => (
-    <div className={styles.modalBody} id="dsco-dialog-description">
-      {assets.map(asset => (
-        <FileIcon
-          key={asset.filename}
-          asset={asset}
-          levelName={levelName}
-          selected={selectedFiles.includes(asset)}
-          onSelect={selected => onSelectAsset(selected, asset)}
-          canSelect={!limit || selectedFiles.length < limit}
-        />
-      ))}
-    </div>
-  );
 
   const primaryOnClick = () => {
     onSelect(selectedFiles);
@@ -63,10 +48,25 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
         disabled: selectedFiles.length === 0,
       }}
       secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
-      customContent={loading ? <Loading /> : <ModalBody />}
-      customBottomContent={
-        errorMessage && <ErrorAlert message={errorMessage} />
+      customContent={
+        loading ? (
+          <Loading />
+        ) : (
+          <div className={styles.modalBody} id="dsco-dialog-description">
+            {assets.map(asset => (
+              <FileIcon
+                {...asset}
+                key={asset.filename}
+                levelName={levelName}
+                selected={selectedFiles.includes(asset)}
+                onSelect={selected => onSelectAsset(selected, asset)}
+                canSelect={!limit || selectedFiles.length < limit}
+              />
+            ))}
+          </div>
+        )
       }
+      customBottomContent={alert && <DialogAlert {...alert} />}
     />
   );
 };

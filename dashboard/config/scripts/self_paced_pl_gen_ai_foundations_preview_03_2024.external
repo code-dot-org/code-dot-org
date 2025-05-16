@@ -5,11 +5,22 @@ description 'description here'
 markdown <<MARKDOWN
 # Embeddings
 
+<div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Embedding:</strong>  A set of numbers used to represent a word in a language model. They are used to represent the discrete meaning of words.
+</p>
+</div>
+
+#### Language models use **embeddings** to represent the meaning of words. Words with similar meanings have embeddings that are “close” to each other numerically even though they don’t look similar in language. This lets models figure out how words are related by using math.
+
+#### Embeddings don't need to be identical to be useful. Similarity in position across these numeric representations signals that two words or ideas share related meanings. 
+
+#### Embeddings allow language models to do more than just store meanings. They use them for tasks like finding related ideas, making predictions, or understanding user intent. 
+
 ## Lesson Highlight: Character Quiz Activity
 
 <img src="https://images.code.org/9a52d33d49d488c302d04354a96a3d2d-bed5925cbfe2b9a80368293aa21cf84b-Slide19.PNG" alt="character repersentations by Kim and Hawa  representations" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
 
-#### During **Lesson 4: Understanding Embeddings**, students investigate how characters from stories or movies can be similar as a way to understand how words can be similar.
+#### During <a href='https://studio.code.org' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson 4: Understanding Embeddings</a>, students investigate how characters from stories or movies can be similar as a way to understand how words can be similar.
 
 #### Students do the following...
 * #### Create a representation of chosen characters based on their different traits.
@@ -22,47 +33,8 @@ markdown <<MARKDOWN
 
 #### These key concepts helps us generalize the idea of “character traits” to **embeddings** which are the set of numbers used to represent a word in a large-language model.
 
-## Lesson Previews
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: Understanding Embeddings</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-<img src="https://images.code.org/f8f255ae13beed4bb8255ee46c235786-170a15084c6c3ae34f619c8d0ff22954-Slide27.PNG" alt="embeddings definition" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
-
-#### **Question of the Day:** How do computers represent the meanings of words?
-
-#### **Lesson Overview:**
-
-#### In this lesson, students explore how language models understand and represent word meanings. Beginning with a game, they investigate the concept of words being "close" in meaning. This leads to an activity where students assume the roles of fictional characters, using a sequence of numbers to represent their "character traits" and comparing these numerical representations to others. The lesson demonstrates that language models use a similar method, known as embeddings, to represent words as sequences of numbers, with similar words being numerically close to each other. The lesson concludes with students updating the storage section of their graphic organizer to encapsulate the idea of word embeddings.
-
-#### **Students will be able to:**
-* #### Describe how embeddings show the similarity or difference between two items
-* #### Explain how language models use embeddings to store the meaning of wordss
-
-### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/4" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Embeddings: How They're Created</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-<img src="https://images.code.org/088a71b0747a8b137cd39ac44767ce18-c25ee550d58ce9ea5e005f9a5bb11a4d-Slide19.PNG" alt="completed tabel from lesson activity" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
-
-#### **Question of the Day:** How do language models learn the embeddings they use to represent words?
-
-#### **Lesson Overview:**
-
-#### In this lesson, students delve into the creation of word embeddings. They start by interpreting a passage in a made-up language, using context clues to understand word meanings based on their relationships with other words. Following this, they engage in an activity to construct embeddings from sentences by noting word proximity. The climax reveals that students worked with two distinct passages, illustrating how the same word can have different representations based on its usage context. This insight sets the stage for upcoming lessons on how language models use sentence structure and context to determine word meanings accurately.
-
-#### **Students will be able to:**
-* #### Construct an embedding for a text passage
-* #### Explain how different passages can create different embeddings
-
-### <a href="https://levelbuilder-studio.code.org/s/gen-ai-staging/lessons/5" target="blank" rel="noopener noreferrer">Full Lesson Plan</a>
-</p></div>
-</details>
-
+<p style="font-size: 18px; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    🚀 <b>Take it Futher:</b> There's an additional <i>optional</i> lesson on embeddings. Check out the <a href='https://studio.code.org' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a> to determine whether or not you want to teach it.
+</p>
 
 MARKDOWN
