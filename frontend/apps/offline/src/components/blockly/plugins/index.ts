@@ -6,8 +6,12 @@ import type {Theme} from '../types';
  * Determines the plugin type.
  */
 export const PluginType = {
+  /** This is a registry plugin. */
   Registry: 0,
+  /** This plugin is instantiated after injection. */
   Inject: 1,
+  /** This plugin is instantiated before injection. */
+  Global: 2,
 };
 
 /**
@@ -33,12 +37,20 @@ export interface InjectPlugin {
 }
 
 /**
+ * Registers a global plugin which instantiates once before Blockly is injected.
+ */
+export interface GlobalPlugin {
+  type: typeof PluginType.Global;
+  initialize: () => void;
+}
+
+/**
  * Represents a generic plugin for Blockly.
  *
  * This is our own interface for extending Blockly. The registry system is
  * represented by PluginType.Registry.
  */
-export type Plugin = RegistryPlugin | InjectPlugin;
+export type Plugin = RegistryPlugin | InjectPlugin | GlobalPlugin;
 
 export function WrapPlugin(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

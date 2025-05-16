@@ -34,7 +34,7 @@ const SpeechBubble: React.FunctionComponent<SpeechBubbleProps> = ({
         {avatar && (
           <>
             <Image src={avatar} className={moduleStyles.avatarImage} />
-            {hintCount && hintCount > 0 && (
+            {!!hintCount && hintCount > 0 && (
               <>
                 <Button
                   className={moduleStyles.hintButton}

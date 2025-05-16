@@ -5,6 +5,8 @@ export interface BlockArgDefinition {
   type: string;
   name: string;
   options?: [string, string][];
+  check?: string;
+  value?: string | number;
 }
 
 /**

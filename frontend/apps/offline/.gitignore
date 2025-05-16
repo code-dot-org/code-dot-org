@@ -54,3 +54,4 @@ test-results
 # Blockly media found elsewhere
 /public/blockly
 /public/skins
+/public/common_images

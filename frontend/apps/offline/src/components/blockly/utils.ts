@@ -113,3 +113,77 @@ export function getToolboxWidth(
 
   return 0;
 }
+
+/**
+ * Extracts block elements from the provided XML and returns them partitioned based on their types.
+ * If no block elements are found in the XML, an empty array is returned.
+ *
+ * @param {Element} xml - The XML element containing block elements.
+ * @returns {Element[]} An array of block elements or an empty array if no blocks are present.
+ */
+export function getBlockElements(xml: Element): Element[] {
+  // Convert XML to an array of block elements
+  return Array.from(xml.querySelectorAll('xml > block'));
+}
+
+export interface XmlBlockConfig {
+  blocklyBlock: Blockly.Block;
+  x: number;
+  y: number;
+}
+
+/**
+ * Decode an XML DOM and create blocks on the workspace while preserving the original order of blocks.
+ *
+ * @param xml - The XML DOM containing block elements to be created on the workspace.
+ * @param workspace - The Blockly workspace where blocks will be created.
+ * @returns An array of objects containing the created blocks and their positions.
+ */
+export function domToBlockSpace(
+  xml: Element,
+  workspace: Blockly.Workspace,
+): Blockly.Block[] {
+  const blockElements = getBlockElements(xml);
+  const blocks: Blockly.Block[] = [];
+
+  // To position the blocks, we first render them all to the Block Space
+  //  and parse any X or Y coordinates set in the XML. Then, we store
+  //  the rendered blocks and the coordinates in an array so that we can
+  //  position them.
+  blockElements.forEach(xmlChild => {
+    // Check xmlChild and its children for XML attributes that need to be manipulated.
+    //processBlockAndChildren(xmlChild);
+
+    // Further manipulate the XML for specific top block types.
+    //addNameToBlockFunctionDefinitionBlock(xmlChild);
+    //addMutationToProcedureDefBlocks(xmlChild);
+    //addMutationToMiniToolboxBlocks(xmlChild);
+    //lockWhenRunBlock(xmlChild);
+
+    const blockly_block = Blockly.Xml.domToBlock(xmlChild, workspace);
+    //const x = parseInt(xmlChild.getAttribute('x') || '0', 10);
+    //const y = parseInt(xmlChild.getAttribute('y') || '0', 10);
+    blocks.push(blockly_block);
+  });
+
+  return blocks;
+}
+
+// Returns the student's executable code based on blockXml. Blocks are loaded onto
+// a single unrendered workspace. Used for Artist solution blocks in the student view
+// and Artist level predraw blocks.
+export function getCodeFromBlockXmlSource(blockXmlString: string): string {
+  const workspace = new Blockly.Workspace();
+  const domBlocks = Blockly.utils.xml.textToDom(blockXmlString);
+
+  // Go through each block and plop it in
+  domToBlockSpace(domBlocks, workspace);
+  javascriptGenerator.init(workspace);
+
+  const blocks = workspace.getTopBlocks(true);
+  const code: (string | [string, number])[] = [];
+  blocks.forEach(block => code.push(javascriptGenerator.blockToCode(block)));
+  const result = javascriptGenerator.finish(code.join('\n'));
+  workspace.dispose();
+  return result;
+}

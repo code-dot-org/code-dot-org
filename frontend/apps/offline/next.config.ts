@@ -48,6 +48,29 @@ const copySkinAssets = async () => {
 };
 copySkinAssets(); // This runs when Next.js starts (dev or build)
 
+// Copy over common images
+const copyCommonImageAssets = async () => {
+  const source = path.resolve(__dirname, '../../../apps/static/common_images');
+  const target = path.resolve(__dirname, 'public/blockly/media/common_images');
+
+  // Cancel it if there is already the target path
+  try {
+    await fs.access(target);
+    return;
+  } catch (_) {
+    // If this fails, then the directory doesn't exist.
+    // Continue to copy it.
+  }
+
+  try {
+    await fs.cp(source, target, {recursive: true, force: true});
+    console.log('[next.config.js] Copied lab common image assets.');
+  } catch (err) {
+    console.warn('Failed to copy lab common image assets:', err);
+  }
+};
+copyCommonImageAssets(); // This runs when Next.js starts (dev or build)
+
 const nextConfig: NextConfig = {
   reactStrictMode: false,
   output: 'standalone',

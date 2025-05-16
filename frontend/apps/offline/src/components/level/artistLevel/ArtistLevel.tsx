@@ -1,0 +1,151 @@
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  useCallback,
+  ReactNode,
+} from 'react';
+
+import type {LevelData} from '@/app/models/level';
+import type {BlockDefinition} from '@/components/blockly';
+import BlockLimitsPlugin from '@/components/blockly/plugins/blockLimits';
+import FieldColour from '@/components/blockly/plugins/fieldColour';
+import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
+import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
+import DefaultTheme from '@/components/blockly/themes/default';
+import {getCodeFromBlockXmlSource} from '@/components/blockly/utils';
+import BlocklyLevel, {BlocklyLevelProps} from '@/components/level/blocklyLevel';
+
+import * as defaultAPI from './api';
+import Artist from './Artist';
+import blocks from './blocks';
+import {skinFor} from './skins';
+import Visualization from './Visualization';
+
+export interface ArtistLevelProps extends BlocklyLevelProps {
+  levelData: LevelData;
+  api?: object;
+  customBlocks?: BlockDefinition[];
+  visualization?: ReactNode;
+  visualizationClassName?: string;
+}
+
+const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
+  levelData,
+  customBlocks,
+  theme,
+  renderer,
+  avatar,
+  visualization,
+  visualizationClassName,
+  api,
+  options,
+  ...rest
+}) => {
+  const controller = useRef<Artist | null>(null);
+  const container = useRef<HTMLDivElement | null>(null);
+
+  const currentAvatar = avatar || '/skins/artist/small_static_avatar.png';
+
+  const [running, setRunning] = useState<boolean>(false);
+  const [stepping, setStepping] = useState<boolean>(false);
+
+  const onReset = useCallback(() => {
+    console.log('onstep resetting');
+    controller.current?.reset();
+    setRunning(false);
+    setStepping(false);
+  }, [controller]);
+
+  const onStep = useCallback(() => {
+    console.log('onstep', stepping);
+    if (!stepping) {
+      controller.current?.evaluate('');
+      controller.current?.step();
+    } else {
+      setRunning(true);
+    }
+  }, [controller, stepping]);
+
+  const onRun = useCallback(() => {
+    if (!stepping) {
+      controller.current?.evaluate('');
+    }
+    setRunning(true);
+    controller.current?.run();
+  }, [controller, stepping]);
+
+  const onInject = useCallback(() => {
+    if (container.current) {
+      const predrawCode = levelData.artistData?.predrawBlocks
+        ? getCodeFromBlockXmlSource(levelData.artistData.predrawBlocks)
+        : undefined;
+
+      const solutionCode = levelData.blocklyData?.solutionBlocks
+        ? getCodeFromBlockXmlSource(levelData.blocklyData.solutionBlocks)
+        : undefined;
+
+      console.log(
+        'LEVEL',
+        levelData,
+        levelData.artistData?.predrawBlocks,
+        predrawCode,
+      );
+      controller.current = new Artist({
+        api: {...defaultAPI, ...(api || {})},
+        level: levelData.artistData || {
+          images: [],
+        },
+        instant: false,
+        isK1: false,
+        skin: skinFor(levelData.artistData?.skinId || 'artist'),
+        container: container.current,
+        predrawCode,
+        solutionCode,
+      });
+    }
+  }, [controller, container]);
+
+  useEffect(() => {
+    return () => {
+      console.log('UNINIT THE ARTIST LEVEL');
+    };
+  }, [controller, levelData]);
+
+  return (
+    <BlocklyLevel
+      levelData={levelData}
+      data={{}}
+      theme={theme || DefaultTheme}
+      renderer={renderer || ThrasosRenderer}
+      avatar={currentAvatar}
+      visualization={
+        visualization || (
+          <Visualization
+            ref={container}
+            running={running}
+            stepping={stepping}
+            finishButton={false}
+            stepButton
+            onRun={onRun}
+            onReset={onReset}
+            onStep={onStep}
+            onFinish={() => {}}
+            className={visualizationClassName}
+          />
+        )
+      }
+      customBlocks={[...blocks, ...(customBlocks || [])]}
+      options={{
+        forceInsertTopBlock: 'when_run',
+        grayOutUndeletableBlocks: true,
+        ...(options || {}),
+      }}
+      onInject={onInject}
+      plugins={[ToolboxTrashcanPlugin, BlockLimitsPlugin, FieldColour]}
+      {...rest}
+    />
+  );
+};
+
+export default ArtistLevel;

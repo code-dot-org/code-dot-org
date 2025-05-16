@@ -10,7 +10,7 @@ import BlocklyContext from '@/contexts/BlocklyContext';
 import {disableOrphans, grayOutUndeletableBlocks} from '../events';
 import FunctionBlockMixin from '../mixins/functionBlockMixin';
 import {PluginType} from '../plugins';
-import type {Plugin, InjectPlugin} from '../plugins';
+import type {Plugin, GlobalPlugin, InjectPlugin} from '../plugins';
 import {
   forciblyInsertTopBlock,
   positionBlocksOnWorkspace,
@@ -202,6 +202,14 @@ const BlocklyWorkspace: React.FunctionComponent<BlocklyWorkspaceProps> = ({
           throw err;
         }
       }
+    }
+
+    // Add global plugins
+    for (const plugin of (plugins || []).filter(
+      plugin => plugin.type === PluginType.Global,
+    )) {
+      const globalPlugin = plugin as unknown as GlobalPlugin;
+      globalPlugin.initialize();
     }
 
     // Create the workspace within the container

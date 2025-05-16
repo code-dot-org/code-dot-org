@@ -59,6 +59,20 @@ export interface PanelData {
   fadeInOverPrevious?: boolean;
 }
 
+/** Data for artist levels. */
+export interface ArtistData {
+  skinId?: string;
+  initialX?: number;
+  initialY?: number;
+  startDirection?: number;
+  predrawBlocks?: string;
+  images: {
+    filename: string;
+    position: [number, number];
+    scale?: number;
+  }[];
+}
+
 /** Generic description for Blockly data. */
 export interface BlocklyData {
   startBlocks?: string;
@@ -94,6 +108,8 @@ export interface LevelData {
   containedLevelNames?: string[];
   /** Maze level data. */
   mazeData?: MazeData;
+  /** Artist level data. */
+  artistData?: ArtistData;
   /** Blockly level data. */
   blocklyData?: BlocklyData;
   /** Multiple choice question data. */
@@ -111,8 +127,11 @@ export interface LevelConfiguration {
     serialized_maze?: string;
     maze?: string;
     skin?: string;
-    start_direction?: string;
     panels?: PanelData[];
+    start_direction?: string;
+    x?: string;
+    y?: string;
+    images?: string;
   };
 }
 
@@ -384,6 +403,43 @@ export const parseLevelData: (
       startDirection: config.properties?.start_direction
         ? parseInt(config.properties?.start_direction)
         : undefined,
+    };
+  }
+
+  if (ret.type === 'Artist') {
+    isBlockly = true;
+    let x = 200;
+    try {
+      x = parseInt(config.properties?.x || '200');
+    } catch (_) {
+      // Just ignore failures to parse this value
+    }
+
+    let y = 200;
+    try {
+      y = parseInt(config.properties?.y || '200');
+    } catch (_) {
+      // Just ignore failures to parse this value
+    }
+
+    let startDirection = 0;
+    try {
+      startDirection = parseInt(config.properties?.start_direction || '0');
+    } catch (_) {
+      // Just ignore failures to parse this value
+    }
+
+    ret.artistData = {
+      skinId: config.properties?.skin || 'artist',
+      initialX: x,
+      initialY: y,
+      startDirection,
+      predrawBlocks: (
+        xml.querySelector('blocks > predraw_blocks > xml')?.parentNode as
+          | HTMLElement
+          | undefined
+      )?.innerHTML?.trim(),
+      images: JSON.parse(config.properties?.images || '[]'),
     };
   }
 

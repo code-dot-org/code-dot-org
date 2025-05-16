@@ -8,6 +8,7 @@ import FontAwesomeV6Icon, {
 
 import type {LevelData} from '@/app/models/level';
 
+import ArtistLevel from './artistLevel';
 import KarelLevel from './karelLevel';
 import MazeLevel from './mazeLevel';
 import PanelsLevel from './panelsLevel';
@@ -41,6 +42,7 @@ const Level: React.FunctionComponent<LevelProps> = ({levelData}) => (
     )}
     {levelData?.type === 'Maze' && <MazeLevel levelData={levelData} />}
     {levelData?.type === 'Karel' && <KarelLevel levelData={levelData} />}
+    {levelData?.type === 'Artist' && <ArtistLevel levelData={levelData} />}
     {levelData?.type === 'StarWarsGrid' && (
       <StarWarsLevel levelData={levelData} />
     )}
