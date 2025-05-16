@@ -11,3 +11,14 @@ require_relative '../../../dashboard/config/environment'
 Pd::Workshop.where(started_at: nil, registration_link: nil, course: [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP, Pd::Workshop::COURSE_CSA], subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP).and(Pd::Workshop.where(hidden: false).or(Pd::Workshop.where(hidden: nil))).each do |ws|
   ws.update!(registration_link: ws.regional_partner&.link_to_partner_application.presence || "/pd/application/teacher")
 end
+
+# With registration link
+# Started
+# Hidden
+# BYO
+# CSD AYW (non-summer)
+
+# CSD summer
+# CSP summer
+# CSA summer
+# CSD summer with regional partner custom app link
