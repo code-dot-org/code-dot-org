@@ -11,7 +11,7 @@ class ScriptsController < ApplicationController
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  before_action :redirect_to_canonical_path, only: [:show]
+  before_action :redirect_to_canonical_path, only: [:show, :vocab, :resources, :code, :standards]
   authorize_resource class: 'Unit', except: [:update]
   load_and_authorize_resource class: 'Unit', only: [:update]
 
@@ -40,11 +40,14 @@ class ScriptsController < ApplicationController
       end
       if current_user&.user_type == "teacher" && current_user.sections_instructed.any? {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}
         most_recent_section = current_user.sections_instructed.select {|s| s.script_id == @script.id || s.unit_group&.default_units&.any? {|u| u.id == @script.id}}.last
-        if !params[:section_id]
-          redirect_to "/teacher_dashboard/sections/#{most_recent_section.id}/unit/#{@script.name}"
-          return
-        elsif params[:section_id]
-          redirect_to "/teacher_dashboard/sections/#{params[:section_id]}/unit/#{@script.name}"
+        section_id = params[:section_id]
+        section_id ||= most_recent_section&.id
+        if section_id
+          teacher_dashboard_section_path = "/teacher_dashboard/sections/#{section_id}/unit/#{@script.name}"
+          if Policies::Courses.modularity_enabled? && @course && @unit_position
+            teacher_dashboard_section_path = "/teacher_dashboard/sections/#{section_id}/courses/#{@course.name}/units/#{@unit_position}"
+          end
+          redirect_to teacher_dashboard_section_path
           return
         end
       end
