@@ -1,9 +1,17 @@
+import newRelicExternals from 'newrelic/load-externals';
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   output: 'standalone',
   serverExternalPackages: ['@statsig/statsig-node-core'],
   cacheMaxMemorySize: 0, // disable default in-memory caching
+  webpack: config => {
+    // In order for newrelic to effectively instrument a Next.js application,
+    // the modules that newrelic supports should not be mangled by webpack. Thus,
+    // we need to "externalize" all of the modules that newrelic supports.
+    newRelicExternals(config);
+    return config;
+  },
   redirects: async function () {
     return [
       {
