@@ -87,7 +87,10 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
         >
           {(!isWidgetView || widgetViewShowCode) && (
             <>
-              <Workspace style={{height: rightTopPanelHeight}} />
+              <Workspace
+                style={{height: rightTopPanelHeight}}
+                isWidgetView={isWidgetView}
+              />
               <ResizeBar
                 isVertical={false}
                 separatorProps={rightBottomPanelSeparatorProps}
