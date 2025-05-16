@@ -24,14 +24,4 @@ class Services::Courses
     # Replace /s/.../ with /courses/.../units/.../
     path.sub(/\/s\/#{script_name}/, "/courses/#{course_name}/units/#{unit_position}")
   end
-
-  # Replaces /s/.../ url's with a nested url '/courses/.../units/.../
-  # @param url [String] The url to get the nested version of
-  # @param unit_group_unit [UnitGroupUnit] The UnitGroupUnit context for the URL.
-  def self.canonical_url(url, unit_group_unit: nil)
-    return url unless url && Policies::Courses.modularity_enabled? && unit_group_unit
-    unit_group = unit_group_unit.unit_group
-    unit = unit_group_unit.script
-    url.sub(/\/s\/#{unit.name}/, "/courses/#{unit_group.name}/units/#{unit_group_unit.position}")
-  end
 end
