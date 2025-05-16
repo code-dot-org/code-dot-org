@@ -673,7 +673,7 @@ class Section < ApplicationRecord
   end
 
   def assigned_ai_chat?
-    # Our generative AI courses had scripts that could be assigned individually.
+    # Our older generative AI course had scripts that could be assigned individually.
     # As of May 2025, this is no longer possible.
     gen_ai_scripts = %w[
       exploring-gen-ai1-2024
@@ -707,6 +707,7 @@ class Section < ApplicationRecord
       insights-from-data-and-ai-2025
     ]
 
+    # In order to support an organizational event.
     other_courses = %w[
       codechella2025
     ]
