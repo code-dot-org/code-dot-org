@@ -1,0 +1,5 @@
+  # Exported so that other stacks can use it
+  DevPermissions:
+    Description: Developer Permissions
+    Value: !Ref DevPermissions
+    Export: {Name: !Sub "${AWS::StackName}-DevPermissions"}

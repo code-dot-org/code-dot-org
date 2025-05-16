@@ -729,10 +729,9 @@ roles.each do |name, config| %>
     Properties: 
       AWSServiceName: logger.cloudfront.amazonaws.com
 Outputs:
-  DevPermissions:
-    Description: Developer Permissions
-    Value: !Ref DevPermissions
-    Export: {Name: !Sub "${AWS::StackName}-DevPermissions"}
+  # Imported in many other stacks as a permissions boundary
+  <%=component 'iam/mixed/devpermissions_output' %>
+
   FirehoseLambdaRoleARN:
     Description: Firehose Lambda Role ARN
     Value: !GetAtt FirehoseLambdaRole.Arn
