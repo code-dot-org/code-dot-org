@@ -20,6 +20,8 @@ LocalhostCodeprojectsRecord:
       - 127.0.0.1
 <%- end -%>
 
+<% !rack_env?(:production) -%>
+# Cert was deployed to production, but apparently manually deleted. Removing from production stack until resolved.
 CodeprojectsCertificate:
   Type: AWS::CertificateManager::Certificate
   Properties:
@@ -38,8 +40,10 @@ CodeprojectsCertificate:
       - DomainName: static.<%= CDO.codeprojects_hostname %>
         HostedZoneId: <%= CDO.codeprojects_hostedzone_id %>
       <%- end -%>
+<% end -%>
 
 # Import/Recreate Additional Resources - TODO
+#   - Certificates (production)
 #   - Route53 DNS RecordSets
 #   - S3-Backed Cloudfront Distributions
 #   - Classic Load Balancers
