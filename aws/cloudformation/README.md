@@ -20,7 +20,7 @@ We now support generating a consistent, diff-friendly JSON snapshot of any Cloud
 - Usage: `bundle exec rake "cfn:flatten[aws/cloudformation/iam.yml.erb]"`  
 - Outputs to `aws/cloudformation/flattened-rendered-templates/<basename>_flattened.json`  
   
-This tool renders each template with the standard ERB helpers (`service_role`, `component`, etc.), recursively sorts all maps and lists, and writes a stable JSON file. Use these snapshots as a baseline when refactoring or auditing large templates to ensure no functional changes are introduced.
+This tool renders each template with the standard ERB helpers (`service_role`, `component`, etc.), recursively sorts all maps and lists, and writes a stable JSON file. Use these snapshots as a baseline when refactoring or auditing large templates to ensure no functional changes are introduced.  It also reports if the re-generated template is different from the previous version.
 
 ## Testing Out CloudFormation Templates Old and New
 
