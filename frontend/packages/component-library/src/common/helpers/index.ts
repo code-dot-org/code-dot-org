@@ -45,7 +45,7 @@ export const calculatePositionedElementStyles = ({
 }: {
   nodePosition: HTMLElement | null;
   positionedElementRef: React.RefObject<HTMLDivElement | null>;
-  direction?: ComponentPlacementDirection | 'none';
+  direction?: ComponentPlacementDirection;
   tailOffset: number;
   tailLength: number;
   isPositionFixed?: boolean;
@@ -140,7 +140,7 @@ export const updatePositionedElementStyles = ({
 }: {
   nodePosition: HTMLElement | null;
   positionedElementRef: React.RefObject<HTMLDivElement | null>;
-  direction?: ComponentPlacementDirection | 'none';
+  direction?: ComponentPlacementDirection;
   setPositionedElementStyles: React.Dispatch<
     React.SetStateAction<React.CSSProperties>
   >;
