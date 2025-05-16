@@ -690,6 +690,8 @@ class Section < ApplicationRecord
     gen_ai_courses = %w[
       exploring-gen-ai-2024
       exploring-gen-ai-2025
+      foundations-gen-ai-2025
+      customizing-llms-2025
     ]
 
     csaif_courses = %w[
