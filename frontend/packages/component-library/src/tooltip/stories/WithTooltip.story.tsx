@@ -88,6 +88,18 @@ IconsTooltipGroup.args = {
   ],
 };
 
+export const NoneDirectionTooltip = SingleTemplate.bind({});
+NoneDirectionTooltip.args = {
+  text: 'Tooltip with direction: none',
+  tooltipId: 'tooltipNone',
+  direction: 'none',
+  style: {
+    position: 'absolute',
+    right: '50px',
+    top: '50px',
+  },
+};
+
 export const DirectionOfTooltipGroup = MultipleTemplate.bind({});
 DirectionOfTooltipGroup.args = {
   components: [

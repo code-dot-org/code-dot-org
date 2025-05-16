@@ -131,6 +131,7 @@ const WithTooltip: React.FunctionComponent<WithTooltipProps> = ({
   const tooltipStyleProps: React.CSSProperties = {
     visibility: showTooltip ? 'visible' : 'hidden',
     ...tooltipStyles,
+    ...tooltipProps.style,
   };
 
   // Check if children prop is a valid React element and clone it with ariaDescribedBy attribute
