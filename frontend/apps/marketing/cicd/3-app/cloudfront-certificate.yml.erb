@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 
-Description: Provision CloudFront certificate for a marketing site in us-east-1 (Cloudfront is a global service; its TLS certificates must be in us-east-1).
+Description: Provision CloudFront certificate for a marketing site (<%="https://${options[:subdomain_name]}.${options[:base_domain_name]}"%>) in us-east-1 (Cloudfront is a global service; its TLS certificates must be in us-east-1).
 
 # Market site domain names use this naming convention:
 # https://docs.google.com/spreadsheets/d/1abCYr1tFEs-Ag5lyq5m0r5zQi_ioGgr-Th3NAdocQPQ/edit?pli=1&gid=0#gid=0
