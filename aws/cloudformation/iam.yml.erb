@@ -135,6 +135,7 @@ Resources:
                 cloudformation:RoleARN:
                   - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
                   - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationMarketingSitesDevelopmentRole"
+                  - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationMarketingSitesTestRole"
           # Read-only access to secrets.
           - Effect: Allow
             Action: secretsmanager:GetSecretValue
