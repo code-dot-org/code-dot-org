@@ -122,7 +122,7 @@ Resources:
           - Effect: Allow
             Action: iam:PassRole
             Resource: '*'
-          # Require CloudFormation Service Role on all stack operations.
+          # Require a CloudFormation Service Role on all stack operations.
           - Effect: Deny
             Action:
               - cloudformation:CreateStack
@@ -132,7 +132,9 @@ Resources:
             NotResource: "arn:aws:cloudformation:*:aws:transform/Serverless-2016-10-31"
             Condition:
               StringNotEquals:
-                cloudformation:RoleARN: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+                cloudformation:RoleARN:
+                  - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
+                  - !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationMarketingSitesDevelopmentRole"
           # Read-only access to secrets.
           - Effect: Allow
             Action: secretsmanager:GetSecretValue
@@ -946,7 +948,7 @@ roles.each do |name, config| %>
     Type: AWS::IAM::Role
     Properties:
       RoleName: CloudFormationMarketingSites<%=environment_type.capitalize%>Role
-      Path: /cloudformation/marketingsites/<%=environment_type%>/
+      Path: /admin/
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -1099,7 +1101,6 @@ roles.each do |name, config| %>
                   - acm:DescribeCertificate
                   - acm:AddTagsToCertificate
                 Resource: '*'
-
               # S3 resource management
               - Effect: Allow
                 Action:
