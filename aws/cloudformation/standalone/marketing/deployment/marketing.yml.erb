@@ -282,6 +282,10 @@ Resources:
     Properties:
       Port: 80
       Protocol: HTTP
+      HealthCheckPath: /api/health_check
+      # Only HTTP Status 200 is considered healthy
+      Matcher:
+        HttpCode: 200
       TargetGroupAttributes:
         - Key: stickiness.enabled
           Value: "false"
@@ -402,7 +406,6 @@ Resources:
         MaximumPercent: 200
         MinimumHealthyPercent: 50
       EnableECSManagedTags: false
-      HealthCheckGracePeriodSeconds: 60
       LaunchType: FARGATE
       DesiredCount: 3
       AvailabilityZoneRebalancing: ENABLED
@@ -794,3 +797,9 @@ Outputs:
       Fn::GetAtt:
         - FargateServiceLB
         - DNSName
+  CloudFrontDistributionId:
+    Value:
+      Ref: CloudFrontDistribution
+    Export:
+      Name:
+        'Fn::Sub': '${AWS::StackName}-CloudFrontDistributionId'

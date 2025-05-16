@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-12 20:19:59 UTC",
+    "serialized_at": "2025-05-14 00:03:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,15 +54,14 @@
       }
     },
     {
-      "key": "lessonGroup-5",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Alternate and Optional Lessons",
-        "description": "This section contains the one-day version of the Asphalt Art Project and optional lessons."
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2025"
       }
     },
@@ -81,7 +81,7 @@
   "lessons": [
     {
       "key": "Welcome to CSA",
-      "name": "Welcome to CSA",
+      "name": "Lesson 1: Welcome to CSA",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -99,7 +99,7 @@
     },
     {
       "key": "Java Lab",
-      "name": "Java Lab",
+      "name": "Lesson 2: Java Lab",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -117,7 +117,7 @@
     },
     {
       "key": "Classes and Objects",
-      "name": "Classes and Objects",
+      "name": "Lesson 3: Classes and Objects",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -135,7 +135,7 @@
     },
     {
       "key": "Instantiating Objects",
-      "name": "Instantiating Objects",
+      "name": "Lesson 4: Instantiating Objects",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -153,7 +153,7 @@
     },
     {
       "key": "Methods",
-      "name": "Methods",
+      "name": "Lesson 5: Methods",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -171,7 +171,7 @@
     },
     {
       "key": "Methods with Parameters",
-      "name": "Methods with Parameters",
+      "name": "Lesson 6: Methods with Parameters",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -189,7 +189,7 @@
     },
     {
       "key": "Loops",
-      "name": "Loops",
+      "name": "Lesson 7: Loops",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -207,7 +207,7 @@
     },
     {
       "key": "AI-Generated Code (non-AI Tutor)",
-      "name": "AI-Generated Code",
+      "name": "Lesson 8: AI-Generated Code",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -225,7 +225,7 @@
     },
     {
       "key": "Inheritance",
-      "name": "Inheritance",
+      "name": "Lesson 9: Inheritance",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -243,7 +243,7 @@
     },
     {
       "key": "Writing Methods",
-      "name": "Writing Methods",
+      "name": "Lesson 10: Writing Methods",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -261,7 +261,7 @@
     },
     {
       "key": "Programming Style and Feedback",
-      "name": "Programming Style and Feedback",
+      "name": "Lesson 11: Programming Style and Feedback",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -279,7 +279,7 @@
     },
     {
       "key": "Selection Statements",
-      "name": "Selection Statements",
+      "name": "Lesson 12: Selection Statements",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -297,7 +297,7 @@
     },
     {
       "key": "Debugging Strategies",
-      "name": "Debugging Strategies",
+      "name": "Lesson 13: Debugging Strategies",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -315,7 +315,7 @@
     },
     {
       "key": "Two-Way Selection Statements",
-      "name": "Two-Way Selection Statements",
+      "name": "Lesson 14: Two-Way Selection Statements",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -333,7 +333,7 @@
     },
     {
       "key": "Asphalt Art Project",
-      "name": "Asphalt Art Project",
+      "name": "Lesson 15a: Asphalt Art Project",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -351,12 +351,30 @@
       }
     },
     {
-      "key": "SpiralPainter FRQ",
-      "name": "SpiralPainter FRQ",
+      "key": "Asphalt Art Project [1-Day Version]",
+      "name": "Lesson 15b: Asphalt Art Project [1-Day Version]",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 16,
+      "properties": {
+        "assessment": true,
+        "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
+        "preparation": "* Review project requirements and rubric\n* Print copies of the Asphalt Art Project Planning Guide handout (one for each student)"
+      },
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "SpiralPainter FRQ",
+      "name": "Lesson 16: SpiralPainter FRQ",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 17,
       "properties": {
         "overview": "**How will I use what I know about classes, objects, and methods to answer a Free Response Question?**\n\nStudents are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print the SpiralPainter FRQ Stations resource\n* Cut out the manipulatives in the SpiralPainter FRQ Stations resource *or* have students make a copy of the SpiralPainter FRQ Digital Manipulatives\n* Create stations around the classroom as indicated on the SpiralPainter FRQ Stations resource\n* (Optional) Gather a blue, orange, and pink colored pencil or marker for each student",
@@ -370,11 +388,11 @@
     },
     {
       "key": "Unit 1 Assessment",
-      "name": "Unit 1 Assessment",
-      "absolute_position": 17,
+      "name": "Lesson 17: Unit 1 Assessment",
+      "absolute_position": 18,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
@@ -388,38 +406,17 @@
       }
     },
     {
-      "key": "Asphalt Art Project [1-Day Version]",
-      "name": "Asphalt Art Project [1-Day Version]",
-      "absolute_position": 18,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 18,
-      "properties": {
-        "assessment": true,
-        "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
-        "preparation": "* Review project requirements and rubric\n* Print copies of the Asphalt Art Project Planning Guide handout (one for each student)"
-      },
-      "seeding_key": {
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "(Optional) Decomposition and Design",
-      "name": "Decomposition and Design",
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 19,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 19,
       "properties": {
-        "overview": "**How can I write efficient code?**\n\nStudents build on their knowledge of the problem solving process and writing algorithms to learn how to write efficient programs and minimize redundant code. Students are introduced to decomposition to deconstruct problems into smaller tasks and develop algorithms for these tasks and consider how they can plan and organize their solutions to be more efficient. Students then practice using the problem solving process and decomposition strategies to create a new `PainterPlus` subclass.",
-        "preparation": "* **(Optional)** Print copies of the Decomposition and Design Guided Notes (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Print copies of the Decomposition handout (one for each student)",
-        "student_overview": "**How can I write efficient code?**\n\nIn this lesson, you build on your knowledge of the problem solving process and writing algorithms to learn how to write efficient programs and minimize redundant code. You are introduced to decomposition to deconstruct problems into smaller tasks and develop algorithms for these tasks and develop algorithms for these tasks and consider how you can plan and organize their solutions to be more efficient. You then practice using the problem solving process and decomposition strategies to create a new `PainterPlus` subclass."
       },
       "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2025"
       }
     },
@@ -434,21 +431,6 @@
       },
       "seeding_key": {
         "lesson.key": "Sandbox: The Neighborhood",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
-      "absolute_position": 21,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 21,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2025"
       }
@@ -1112,6 +1094,61 @@
       }
     },
     {
+      "key": "a663850a-dcc2-433c-876d-a48e12017543",
+      "position": 5,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a663850a-dcc2-433c-876d-a48e12017543",
+        "lesson.key": "Asphalt Art Project",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "a024bbbe-0d34-45da-8efa-7003e7f995dd",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a024bbbe-0d34-45da-8efa-7003e7f995dd",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "030de192-44f7-47be-86f9-353558e8bafe",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "030de192-44f7-47be-86f9-353558e8bafe",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
+      "key": "2f69ee0a-04f4-46bc-8902-29a2696c31a6",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2f69ee0a-04f4-46bc-8902-29a2696c31a6",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025"
+      }
+    },
+    {
       "key": "c5101444-525b-4682-b7c8-64feaf9702d0",
       "position": 1,
       "properties": {
@@ -1181,86 +1218,14 @@
       }
     },
     {
-      "key": "a024bbbe-0d34-45da-8efa-7003e7f995dd",
+      "key": "27ce5b67-17b2-4ac5-92b8-be0c9c5ea8dd",
       "position": 1,
       "properties": {
-        "duration": 10,
-        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "a024bbbe-0d34-45da-8efa-7003e7f995dd",
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "030de192-44f7-47be-86f9-353558e8bafe",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "030de192-44f7-47be-86f9-353558e8bafe",
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "2f69ee0a-04f4-46bc-8902-29a2696c31a6",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2f69ee0a-04f4-46bc-8902-29a2696c31a6",
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a",
-      "position": 1,
-      "properties": {
-        "duration": 10,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a",
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "1becc2f6-f135-46d6-96f8-3374eefc615c",
-      "position": 2,
-      "properties": {
-        "duration": 75,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c",
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff",
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_activity.key": "27ce5b67-17b2-4ac5-92b8-be0c9c5ea8dd",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2025"
       }
     },
@@ -1272,18 +1237,6 @@
       "seeding_key": {
         "lesson_activity.key": "8da246ec-fa5b-4329-af9c-ef9daa8d8509",
         "lesson.key": "Sandbox: The Neighborhood",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa1-2025"
-      }
-    },
-    {
-      "key": "acfbe2d5-0e1e-4207-9915-f32a845ca58b",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "acfbe2d5-0e1e-4207-9915-f32a845ca58b",
-        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2025"
       }
@@ -5706,27 +5659,8 @@
       }
     },
     {
-      "key": "3ecc7ff0-40db-4299-8461-ea35babfff7d",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "End of Unit Survey",
-        "progression_name": "End of Unit Survey",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, please complete [**this end of unit survey for teachers**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1) as well. Your feedback is valued and appreciated!"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3ecc7ff0-40db-4299-8461-ea35babfff7d",
-        "lesson_activity.key": "4433734c-b7a5-410b-8e4b-6e423dbe4ba8"
-      }
-    },
-    {
       "key": "00f83a6e-0c7f-4e65-9d60-093021934fcd",
-      "position": 12,
+      "position": 11,
       "properties": {
       },
       "seeding_key": {
@@ -5736,7 +5670,7 @@
     },
     {
       "key": "c3aa8d58-7d50-42ec-833d-9cd723c48a66",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "---"
       },
@@ -5747,7 +5681,7 @@
     },
     {
       "key": "96beeaca-d777-4828-8a65-54e9e45f0abf",
-      "position": 14,
+      "position": 13,
       "properties": {
         "description": "**Asphalt Art Project:** Use the rubric in the Asphalt Art Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -5755,6 +5689,157 @@
       "seeding_key": {
         "activity_section.key": "96beeaca-d777-4828-8a65-54e9e45f0abf",
         "lesson_activity.key": "4433734c-b7a5-410b-8e4b-6e423dbe4ba8"
+      }
+    },
+    {
+      "key": "8850cb15-00cc-4b91-b48a-9cddcbb79976",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "8850cb15-00cc-4b91-b48a-9cddcbb79976",
+        "lesson_activity.key": "a663850a-dcc2-433c-876d-a48e12017543"
+      }
+    },
+    {
+      "key": "548942e1-4d54-49df-a3b6-d89791861a03",
+      "position": 1,
+      "properties": {
+        "description": "Asphalt art brightens communities, improves public safety, and inspires residents and visitors. Each project has a unique approach to revitalizing streets and parks and bringing communities together.",
+        "name": "Asphalt Art Projects",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "548942e1-4d54-49df-a3b6-d89791861a03",
+        "lesson_activity.key": "a024bbbe-0d34-45da-8efa-7003e7f995dd"
+      }
+    },
+    {
+      "key": "d2caed5b-4f12-4ad7-8187-60043f5f45ca",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Unity and Safety Through Street Art in Norfolk, VA*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of asphalt art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d2caed5b-4f12-4ad7-8187-60043f5f45ca",
+        "lesson_activity.key": "a024bbbe-0d34-45da-8efa-7003e7f995dd"
+      }
+    },
+    {
+      "key": "4a645a80-d332-444b-b3f5-3e90883a15c1",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to sketch their asphalt art design and write pseudocode for a new method to plan their project on the Asphalt Art Project Planning Guide.",
+        "duration": "10",
+        "name": "Brainstorming and Planning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize that the asphalt art design should be simple enough to create in the given timeframe while being complex enough to utilize the classes students have developed and highlight the need for a new method."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4a645a80-d332-444b-b3f5-3e90883a15c1",
+        "lesson_activity.key": "030de192-44f7-47be-86f9-353558e8bafe"
+      }
+    },
+    {
+      "key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Asphalt Art Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can refer students back to the [**Decomposition and Design**](https://studio.code.org/s/csa1-2023/lessons/13) lesson to recall how they broke down the murals to create the designs. Students may also want to save the `MuralPainter` to their Backpacks or copy some of its methods to use in the Asphalt Art Project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c",
+        "lesson_activity.key": "030de192-44f7-47be-86f9-353558e8bafe"
+      }
+    },
+    {
+      "key": "3fc2008b-dd3d-4d36-ad14-02c454210d96",
+      "position": 3,
+      "properties": {
+        "description": "This is a good time to commit our code and save our updated subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3fc2008b-dd3d-4d36-ad14-02c454210d96",
+        "lesson_activity.key": "030de192-44f7-47be-86f9-353558e8bafe"
+      }
+    },
+    {
+      "key": "2746b45b-b8e0-47a3-82d0-0934ca5945a5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their updated subclass to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2746b45b-b8e0-47a3-82d0-0934ca5945a5",
+        "lesson_activity.key": "030de192-44f7-47be-86f9-353558e8bafe"
+      }
+    },
+    {
+      "key": "7604b797-29aa-4256-9f67-1bc4144030aa",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Asphalt Art Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7604b797-29aa-4256-9f67-1bc4144030aa",
+        "lesson_activity.key": "2f69ee0a-04f4-46bc-8902-29a2696c31a6"
+      }
+    },
+    {
+      "key": "9f4df1e8-7320-4fb3-a3ec-6322b6906af6",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f4df1e8-7320-4fb3-a3ec-6322b6906af6",
+        "lesson_activity.key": "2f69ee0a-04f4-46bc-8902-29a2696c31a6"
+      }
+    },
+    {
+      "key": "7e094aa3-6f27-4961-b7af-ac5eea1d7a3c",
+      "position": 3,
+      "properties": {
+        "description": "**Asphalt Art Project:** Use the rubric in the Asphalt Art Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e094aa3-6f27-4961-b7af-ac5eea1d7a3c",
+        "lesson_activity.key": "2f69ee0a-04f4-46bc-8902-29a2696c31a6"
       }
     },
     {
@@ -5933,522 +6018,25 @@
       }
     },
     {
-      "key": "548942e1-4d54-49df-a3b6-d89791861a03",
+      "key": "e4f73331-e569-4afe-9b76-d659c378f342",
       "position": 1,
       "properties": {
-        "description": "Asphalt art brightens communities, improves public safety, and inspires residents and visitors. Each project has a unique approach to revitalizing streets and parks and bringing communities together.",
-        "name": "Asphalt Art Projects",
-        "remarks": true
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "548942e1-4d54-49df-a3b6-d89791861a03",
-        "lesson_activity.key": "a024bbbe-0d34-45da-8efa-7003e7f995dd"
+        "activity_section.key": "e4f73331-e569-4afe-9b76-d659c378f342",
+        "lesson_activity.key": "27ce5b67-17b2-4ac5-92b8-be0c9c5ea8dd"
       }
     },
     {
-      "key": "d2caed5b-4f12-4ad7-8187-60043f5f45ca",
+      "key": "fad34833-1132-4606-b548-8770f676e964",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Unity and Safety Through Street Art in Norfolk, VA*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of asphalt art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
+        "progression_name": "End of Unit Survey Page"
       },
       "seeding_key": {
-        "activity_section.key": "d2caed5b-4f12-4ad7-8187-60043f5f45ca",
-        "lesson_activity.key": "a024bbbe-0d34-45da-8efa-7003e7f995dd"
-      }
-    },
-    {
-      "key": "4a645a80-d332-444b-b3f5-3e90883a15c1",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to sketch their asphalt art design and write pseudocode for a new method to plan their project on the Asphalt Art Project Planning Guide.",
-        "duration": "10",
-        "name": "Brainstorming and Planning",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Emphasize that the asphalt art design should be simple enough to create in the given timeframe while being complex enough to utilize the classes students have developed and highlight the need for a new method."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "4a645a80-d332-444b-b3f5-3e90883a15c1",
-        "lesson_activity.key": "030de192-44f7-47be-86f9-353558e8bafe"
-      }
-    },
-    {
-      "key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Asphalt Art Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Asphalt Art Project",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "You can refer students back to the [**Decomposition and Design**](https://studio.code.org/s/csa1-2023/lessons/13) lesson to recall how they broke down the murals to create the designs. Students may also want to save the `MuralPainter` to their Backpacks or copy some of its methods to use in the Asphalt Art Project."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c",
-        "lesson_activity.key": "030de192-44f7-47be-86f9-353558e8bafe"
-      }
-    },
-    {
-      "key": "3fc2008b-dd3d-4d36-ad14-02c454210d96",
-      "position": 3,
-      "properties": {
-        "description": "This is a good time to commit our code and save our updated subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "3fc2008b-dd3d-4d36-ad14-02c454210d96",
-        "lesson_activity.key": "030de192-44f7-47be-86f9-353558e8bafe"
-      }
-    },
-    {
-      "key": "2746b45b-b8e0-47a3-82d0-0934ca5945a5",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their updated subclass to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2746b45b-b8e0-47a3-82d0-0934ca5945a5",
-        "lesson_activity.key": "030de192-44f7-47be-86f9-353558e8bafe"
-      }
-    },
-    {
-      "key": "7604b797-29aa-4256-9f67-1bc4144030aa",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Asphalt Art Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "7604b797-29aa-4256-9f67-1bc4144030aa",
-        "lesson_activity.key": "2f69ee0a-04f4-46bc-8902-29a2696c31a6"
-      }
-    },
-    {
-      "key": "9f4df1e8-7320-4fb3-a3ec-6322b6906af6",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "9f4df1e8-7320-4fb3-a3ec-6322b6906af6",
-        "lesson_activity.key": "2f69ee0a-04f4-46bc-8902-29a2696c31a6"
-      }
-    },
-    {
-      "key": "7e094aa3-6f27-4961-b7af-ac5eea1d7a3c",
-      "position": 3,
-      "properties": {
-        "description": "**Asphalt Art Project:** Use the rubric in the Asphalt Art Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "7e094aa3-6f27-4961-b7af-ac5eea1d7a3c",
-        "lesson_activity.key": "2f69ee0a-04f4-46bc-8902-29a2696c31a6"
-      }
-    },
-    {
-      "key": "1933d277-024f-411f-bde3-c8f412632656",
-      "position": 1,
-      "properties": {
-        "description": "Computer science is all about problem-solving. Solving problems is a core component of a software engineer's work, and we have learned about ways to create and improve solutions in The Neighborhood. Let's consider how we solve problems in our daily lives.",
-        "name": "Solving Problems",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "1933d277-024f-411f-bde3-c8f412632656",
-        "lesson_activity.key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a"
-      }
-    },
-    {
-      "key": "310f030d-e35a-49aa-a844-5222b1662a17",
-      "position": 2,
-      "properties": {
-        "description": "**Group:** Place students in groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their groups to write an algorithm for the scenario.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What process did you take to decide on your algorithm?*\n\n**Discussion Goal:** Students share the approaches they took to develop their algorithm. Students discuss how they broke the problem down into smaller tasks, such as sorting the colors into piles and then counting the number of M&M's in each pile.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Prompt students to identify the steps they took to solve the problem and consider how these steps are related to smaller chunks of the larger problem."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "310f030d-e35a-49aa-a844-5222b1662a17",
-        "lesson_activity.key": "8ac2e6a3-3a5f-4108-99a8-ac6cf5ad069a"
-      }
-    },
-    {
-      "key": "9e42971d-d7bf-4dc4-8b23-35d46874b1be",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
-        "duration": "10",
-        "name": "Decomposition"
-      },
-      "seeding_key": {
-        "activity_section.key": "9e42971d-d7bf-4dc4-8b23-35d46874b1be",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "7a75b539-78f7-43fb-9e1e-ad055bc4190f",
-      "position": 2,
-      "properties": {
-        "description": "Sometimes, problems are so big that we need to break them down into manageable tasks first. This process is called decomposition, and we will learn how to use this approach to break down problems.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "7a75b539-78f7-43fb-9e1e-ad055bc4190f",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "3fa223d5-025b-49eb-b76e-fc4cdf35fd1f",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***decomposition***.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Revisit the scenario from the warm up or an example of a personal interest or daily activity. Briefly discuss how the scenario would be broken down into specific tasks or steps."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3fa223d5-025b-49eb-b76e-fc4cdf35fd1f",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4",
-      "position": 4,
-      "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1 through 4. Students investigate the program by making modifications to the program as prompted and observing the results.",
-        "progression_name": "Investigate and Modify: Decomposition"
-      },
-      "seeding_key": {
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "e5c5dcf8-723d-4d1b-a1a6-e14c27d48939",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Prompt students to share what the `setPaint()` method does and how they might use this method in their programs. You could also ask students to identify how the `setPaint()` method is similar and different from the `getMyPaint()` method.\n\nYou do not need to discuss accessor or mutator methods here, as these topics are discussed in an upcoming lesson."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e5c5dcf8-723d-4d1b-a1a6-e14c27d48939",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "dd5425f2-b491-4da3-9094-7928a4e5af8b",
-      "position": 6,
-      "properties": {
-        "description": "When software engineers develop solutions, they try to account for potential errors and different ways a user might use the program. However, they have to be careful about being redundant to keep their programs efficient.",
-        "duration": "10",
-        "name": "Developing Efficient Solutions",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "dd5425f2-b491-4da3-9094-7928a4e5af8b",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "a85390be-07bd-49b4-8ee9-b5cd1aa4895e",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does it mean to you for something to be efficient?*\n\n**Discussion Goal:** Students suggest definitions and examples, such as being fast or organized. Students might share examples from their personal lives, such as something being energy-efficient or having tools and resources to make chores or work more efficient.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas on the Unit 1 Guide first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nPrompt students to consider examples where the lack of organization or resources cause a task to be inefficient. For example, you could ask students to compare washing dishes by hand and using a dishwasher. Have students share reasons why one approach to completing the task is more efficient than the other, such as the amount of time and energy it takes to complete the task."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a85390be-07bd-49b4-8ee9-b5cd1aa4895e",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "0b7e67ca-451a-481e-9c99-a06dadf161f3",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***redundant code*** and ***efficient***.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Prompt students to make connections between efficiency in daily tasks and efficiency in writing code. Have students consider why efficiency in programs would be important and guide them to realize how this helps with development, maintainability, and the overall speed of the program."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "0b7e67ca-451a-481e-9c99-a06dadf161f3",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "a6aa7344-9335-499f-97bc-cdf6a10bc3a6",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we make sure we are writing efficient code?*\n\n**Discussion Goal:** Students suggest eliminating redundant code by writing methods for repetitive tasks. They may also suggest writing methods that perform only one task and calling these from other methods that represent larger tasks.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class.\n\nPrompt students to consider the code they saw in the Investigate level and what structures were implemented to make writing and editing the code more efficient."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a6aa7344-9335-499f-97bc-cdf6a10bc3a6",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "005b223f-cb94-4d58-99a9-be0cc8db1105",
-      "position": 10,
-      "properties": {
-        "description": "You have used the problem solving process to break down problems and plan your algorithms. When we do this, it can help us identify any repetitive tasks that we can write methods for. These methods then represent a smaller task as part of the larger solution and consist of their own algorithms. To plan algorithms for a problem or a method, you have actually been using a tool that software engineers often use to plan their own algorithms.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "005b223f-cb94-4d58-99a9-be0cc8db1105",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "86e9a638-fed2-42e3-a499-517d0aa6f326",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***pseudocode***."
-      },
-      "seeding_key": {
-        "activity_section.key": "86e9a638-fed2-42e3-a499-517d0aa6f326",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "532a1d91-2ddc-4a58-8074-51aa11575456",
-      "position": 12,
-      "properties": {
-        "description": "As you work through these problems, use the problem solving process and decomposition strategies to break them down into manageable tasks. Write your algorithms in pseudocode so you can easily implement and refine them in Java.",
-        "duration": "30",
-        "name": "Creating Murals",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "532a1d91-2ddc-4a58-8074-51aa11575456",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "723646c0-47d1-44ba-9be6-a23b98beadc1",
-      "position": 13,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Decomposition handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem solving process to plan their solution and write pseudocode for their algorithms.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Emphasize the use of natural language when writing pseudocode. Allow students to write their pseudocode in whichever language they are most comfortable to support the focus on planning their algorithms rather than focusing on specific structures or languages."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "723646c0-47d1-44ba-9be6-a23b98beadc1",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "e15deba9-5eac-42f7-84b1-67549b7f543e",
-      "position": 14,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio complete Levels 5 and 6. Students complete a Check for Understanding on Level 6, then continue to Level 6 to create a subclass of the `PainterPlus` class and implement their algorithm for their chosen problem.",
-        "progression_name": "Practice: Decomposing a Problem",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The Check for Understanding and practice levels can be used as formative assessments to gauge understanding of planning and using decomposition, the problem solving process, and pseudocode to plan and implement algorithms."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "d80f8226-d677-4d12-b4bc-f26af00ee7f0",
-      "position": 15,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new `PainterPlus` subclass to the Backpack. Anytime we make changes to our programs, it is helpful to commit our work in case we need to go back to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "d80f8226-d677-4d12-b4bc-f26af00ee7f0",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "2b3069d3-8c42-4d35-aadd-b023bbad56a6",
-      "position": 16,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new `PainterPlus` subclass to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2b3069d3-8c42-4d35-aadd-b023bbad56a6",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "2287f274-2bea-4e2e-b022-99e70b1827de",
-      "position": 17,
-      "properties": {
-        "description": "When we write new code, getting feedback from our peers is helpful to make sure we have met the requirements of the problem efficiently.",
-        "duration": "25",
-        "name": "Code Review",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "2287f274-2bea-4e2e-b022-99e70b1827de",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "2aae0de1-b4ff-48f1-bba4-db52821167c5",
-      "position": 18,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their chosen problem.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students may be at different points when it is time for the code review. Emphasize to students that their work does not need to be completed to get feedback. Remind students that the problem-solving and development process is iterative and that receiving feedback from peers while they are working can help give them additional insights, perspectives, and guidance.\n\nConducting code reviews on choice levels is slightly different than on single levels. To conduct a code review on a choice level:\n1. Students select the level they completed to request a code review on their work.\n2. Students return to the options by clicking the bubble at the top of the page.\n3. Students select the level their peers completed to give feedback on their work.\n\nTo review the feedback given on their work, students return to the options by clicking the bubble at the top of the page, then select the level they completed. Students should then review the feedback and make improvements to their code and repeat the process as needed until they are satisfied with their solution."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2aae0de1-b4ff-48f1-bba4-db52821167c5",
-        "lesson_activity.key": "1becc2f6-f135-46d6-96f8-3374eefc615c"
-      }
-    },
-    {
-      "key": "61aae0ae-e665-428a-852f-a8f11c1d303c",
-      "position": 1,
-      "properties": {
-        "description": "You have made a lot of progress developing your software engineering skills. Let's take a moment to reflect on our progress and growth.",
-        "name": "Software Engineering Skills",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "61aae0ae-e665-428a-852f-a8f11c1d303c",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
-      }
-    },
-    {
-      "key": "404ec1f4-c0bc-47bf-bcae-2c541e8cadbd",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How have you grown as a software engineer so far?*\n\n**Discussion Goal:** Students share the growth and progress they have made and identify specific characteristics where they feel they have improved.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 1 Guide includes the Question of the Day and an end-of-lesson reflection prompt for students to summarize what they have learned and reflect on their progress. Have students respond to these prompts after reviewing the concepts covered in this lesson to help them process and make meaningful connections with the new content."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "404ec1f4-c0bc-47bf-bcae-2c541e8cadbd",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
-      }
-    },
-    {
-      "key": "649e4ce3-2255-49dd-8637-263e4ed37d20",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 1 Guide includes an end-of-lesson reflection prompt for students to reflect on the lesson and the progress they made in developing their software engineering skills and characteristics. Have students respond to the reflection prompt after reviewing the concepts covered in this lesson to help them process and reflect on their personal growth."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "649e4ce3-2255-49dd-8637-263e4ed37d20",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
-      }
-    },
-    {
-      "key": "4f47e933-7216-445b-aa30-796866506aac",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "4f47e933-7216-445b-aa30-796866506aac",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
-      }
-    },
-    {
-      "key": "d40151fe-459a-41c3-a3b2-2e36a2529f02",
-      "position": 5,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "d40151fe-459a-41c3-a3b2-2e36a2529f02",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
-      }
-    },
-    {
-      "key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf",
-      "position": 6,
-      "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
-        "name": "Assessment: Check for Understanding",
-        "progression_name": "Check for Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf",
-        "lesson_activity.key": "0ed28e98-e15a-4316-8a88-e81a6e5d14ff"
+        "activity_section.key": "fad34833-1132-4606-b548-8770f676e964",
+        "lesson_activity.key": "27ce5b67-17b2-4ac5-92b8-be0c9c5ea8dd"
       }
     },
     {
@@ -6472,22 +6060,11 @@
         "activity_section.key": "82b12e33-6eea-4f1a-a197-e8180b2ef351",
         "lesson_activity.key": "8da246ec-fa5b-4329-af9c-ef9daa8d8509"
       }
-    },
-    {
-      "key": "38f41b23-6697-4edd-9bd0-3d5b3232bbba",
-      "position": 1,
-      "properties": {
-        "progression_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "38f41b23-6697-4edd-9bd0-3d5b3232bbba",
-        "lesson_activity.key": "acfbe2d5-0e1e-4207-9915-f32a845ca58b"
-      }
     }
   ],
   "script_levels": [
     {
-      "chapter": 2,
+      "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6512,7 +6089,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 2,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6537,7 +6114,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 3,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6562,7 +6139,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 4,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6587,7 +6164,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 5,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6612,7 +6189,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6637,7 +6214,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6662,7 +6239,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6687,7 +6264,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6712,7 +6289,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -6737,7 +6314,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6762,7 +6339,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6787,7 +6364,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6812,7 +6389,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6837,7 +6414,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6862,7 +6439,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6887,7 +6464,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -6912,7 +6489,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6937,7 +6514,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -6962,7 +6539,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6987,7 +6564,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7012,7 +6589,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7037,7 +6614,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7062,7 +6639,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7087,7 +6664,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7112,7 +6689,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -7137,7 +6714,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7162,7 +6739,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7187,7 +6764,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7212,7 +6789,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7237,7 +6814,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7262,7 +6839,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -7287,7 +6864,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7312,7 +6889,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7337,7 +6914,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7362,7 +6939,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7387,7 +6964,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -7412,7 +6989,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7437,7 +7014,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7462,7 +7039,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7487,7 +7064,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -7512,7 +7089,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7537,7 +7114,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7562,7 +7139,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7587,7 +7164,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7612,7 +7189,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7637,7 +7214,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7662,7 +7239,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7687,7 +7264,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7712,7 +7289,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7737,7 +7314,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7762,7 +7339,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7787,7 +7364,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7812,7 +7389,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7837,7 +7414,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -7862,7 +7439,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7887,7 +7464,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7912,7 +7489,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -7937,7 +7514,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7962,7 +7539,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7987,7 +7564,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8012,7 +7589,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8037,7 +7614,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -8062,7 +7639,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8087,7 +7664,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8112,7 +7689,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8137,7 +7714,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8162,7 +7739,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -8187,7 +7764,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8212,7 +7789,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8237,7 +7814,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8262,28 +7839,50 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa1_2025"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa1_2025"
+          "student-eou-survey_linked_page-csa1_2025"
         ],
         "lesson.key": "Asphalt Art Project",
         "lesson_group.key": "lessonGroup-9",
         "script.name": "csa1-2025",
-        "activity_section.key": "3ecc7ff0-40db-4299-8461-ea35babfff7d"
+        "activity_section.key": "8850cb15-00cc-4b91-b48a-9cddcbb79976"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa1_2025"
+        "student-eou-survey_linked_page-csa1_2025"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
+        ],
+        "progression": "Asphalt Art Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025",
+        "activity_section.key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c"
+      },
+      "level_keys": [
+        "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
       ]
     },
     {
@@ -8317,202 +7916,24 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
-        ],
-        "progression": "Asphalt Art Project"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa1"
         ],
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2025",
-        "activity_section.key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c"
+        "activity_section.key": "e4f73331-e569-4afe-9b76-d659c378f342"
       },
       "level_keys": [
-        "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
+        "student-eou-survey_2025-csa1"
       ]
     },
     {
       "chapter": 76,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U1L11-L1_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Decomposition"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L1_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      },
-      "level_keys": [
-        "CSA U1L11-L1_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 77,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U1L11-L1-2_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Decomposition"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L1-2_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      },
-      "level_keys": [
-        "CSA U1L11-L1-2_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 78,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U1L11-L1-3_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Decomposition"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L1-3_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      },
-      "level_keys": [
-        "CSA U1L11-L1-3_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 79,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U1L11-L1-4_pilot_oo2025"
-        ],
-        "progression": "Investigate and Modify: Decomposition"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L1-4_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      },
-      "level_keys": [
-        "CSA U1L11-L1-4_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 80,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U1L11-L2_pilot_oo2025"
-        ],
-        "progression": "Practice: Decomposing a Problem"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L2_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
-      },
-      "level_keys": [
-        "CSA U1L11-L2_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 81,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSA U1L11-L3_pilot_oo2025"
-        ],
-        "progression": "Practice: Decomposing a Problem"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L3_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
-      },
-      "level_keys": [
-        "CSA U1L11-L3_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 82,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "CSA U1L11-L4_pilot_oo2025"
-        ],
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSA U1L11-L4_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf"
-      },
-      "level_keys": [
-        "CSA U1L11-L4_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8537,7 +7958,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8559,31 +7980,6 @@
       },
       "level_keys": [
         "CSA 2023 Neighborhood - No Bucket Sandbox_2025"
-      ]
-    },
-    {
-      "chapter": 85,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa1-2025",
-        "activity_section.key": "38f41b23-6697-4edd-9bd0-3d5b3232bbba"
-      },
-      "level_keys": [
-        "student-eou-survey_-csa_2025"
       ]
     }
   ],
@@ -9442,14 +8838,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa1_2025",
+        "level.key": "student-eou-survey_linked_page-csa1_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa1_2025"
+          "student-eou-survey_linked_page-csa1_2025"
         ],
         "lesson.key": "Asphalt Art Project",
         "lesson_group.key": "lessonGroup-9",
         "script.name": "csa1-2025",
-        "activity_section.key": "3ecc7ff0-40db-4299-8461-ea35babfff7d"
+        "activity_section.key": "8850cb15-00cc-4b91-b48a-9cddcbb79976"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "csa1-2025",
+        "activity_section.key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c"
       }
     },
     {
@@ -9466,98 +8874,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025",
+        "level.key": "student-eou-survey_2025-csa1",
         "script_level.level_keys": [
-          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa1"
         ],
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa1-2025",
-        "activity_section.key": "ed82a911-ff0d-4b14-8d95-c3408e72a17c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L1_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L1_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L1-2_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L1-2_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L1-3_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L1-3_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L1-4_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L1-4_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "70fed77c-6f02-4fd7-a4eb-068fd34ad7c4"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L2_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L2_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L3_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L3_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "e15deba9-5eac-42f7-84b1-67549b7f543e"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSA U1L11-L4_pilot_oo2025",
-        "script_level.level_keys": [
-          "CSA U1L11-L4_pilot_oo2025"
-        ],
-        "lesson.key": "(Optional) Decomposition and Design",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa1-2025",
-        "activity_section.key": "fd67e53b-9b45-4d3c-9008-23dbb10910bf"
+        "activity_section.key": "e4f73331-e569-4afe-9b76-d659c378f342"
       }
     },
     {
@@ -9582,18 +8906,6 @@
         "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2025",
         "activity_section.key": "82b12e33-6eea-4f1a-a197-e8180b2ef351"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_-csa_2025",
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "csa1-2025",
-        "activity_section.key": "38f41b23-6697-4edd-9bd0-3d5b3232bbba"
       }
     }
   ],
@@ -9824,30 +9136,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_debugging_strategies_extra_practice"
-      }
-    },
-    {
-      "name": "[KEY] Decomposition",
-      "url": "https://docs.google.com/document/d/17OcAlFLz9NkfAs9N-kK6qZhZygkP1n1vC49A5-JWwlY/edit?usp=drive_link",
-      "key": "_key_decomposition_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_decomposition_1"
-      }
-    },
-    {
-      "name": "[KEY] Decomposition and Design Extra Practice",
-      "url": "https://docs.google.com/document/d/1-7PGAMLiFh5PTim1xBImHUkHQmrVuzzakze3xyH0NVA/edit?usp=drive_link",
-      "key": "_key_decomposition_and_design_extra_practice",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_decomposition_and_design_extra_practice"
       }
     },
     {
@@ -10341,69 +9629,6 @@
       },
       "seeding_key": {
         "resource.key": "debugging_strategies_guided_notes"
-      }
-    },
-    {
-      "name": "Decomposition",
-      "url": "https://docs.google.com/document/d/1zVS09pOnRXe6emw1NiYc4N7YxbBEJVDCvAkwqUbCaLo/edit?usp=drive_link",
-      "key": "decomposition_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "decomposition_1"
-      }
-    },
-    {
-      "name": "Decomposition and Design",
-      "url": "https://docs.google.com/presentation/d/1g6Ir4-wVxyJyefSHRpbyMF4N0Kiury0D-j5mk97Alx8/edit?usp=drive_link",
-      "key": "decomposition_and_design_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "decomposition_and_design_1"
-      }
-    },
-    {
-      "name": "Decomposition and Design Extra Practice",
-      "url": "https://docs.google.com/document/d/1U8_2MZaZf6vmjBANxvy0mV8Xo6eTedFlJZ0-Tz9MSjI/edit?usp=drive_link",
-      "key": "decomposition_and_design_extra_practice",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "decomposition_and_design_extra_practice"
-      }
-    },
-    {
-      "name": "Decomposition and Design Guided Notes",
-      "url": "https://docs.google.com/document/d/1VWaCuGzhWdJJoSnZ-99St9GEa6Xp0bG0brQg576saBE/edit?usp=drive_link",
-      "key": "decomposition_and_design_guided_notes",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "decomposition_and_design_guided_notes"
-      }
-    },
-    {
-      "name": "Decomposition and Design Guided Notes",
-      "url": "https://docs.google.com/document/d/1wh_ymfKPuR0eSeeQSCDfoqRhzxclcMSfWcCAJB3oD5g/edit?usp=drive_link",
-      "key": "decomposition_and_design_guided_notes_1",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "decomposition_and_design_guided_notes_1"
       }
     },
     {
@@ -11221,54 +10446,6 @@
     }
   ],
   "lessons_resources": [
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "resource.key": "_key_decomposition_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "resource.key": "_key_decomposition_and_design_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "resource.key": "decomposition_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "resource.key": "decomposition_and_design_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "resource.key": "decomposition_and_design_extra_practice"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "resource.key": "decomposition_and_design_guided_notes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "resource.key": "decomposition_and_design_guided_notes_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "resource.key": "guide_to_programming_levels_in_csa"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "AI-Generated Code (non-AI Tutor)",
@@ -12255,16 +11432,6 @@
       }
     },
     {
-      "key": "decomposition",
-      "word": "decomposition",
-      "definition": "the process of breaking a problem down into smaller parts to write methods for each part",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "decomposition"
-      }
-    },
-    {
       "key": "documentation",
       "word": "documentation",
       "definition": "written descriptions of the purpose and functionality of code",
@@ -12282,16 +11449,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "dot_operator"
-      }
-    },
-    {
-      "key": "efficient",
-      "word": "efficient",
-      "definition": "getting the best outcome with the least amount of waste",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "efficient"
       }
     },
     {
@@ -12442,26 +11599,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "programming_style"
-      }
-    },
-    {
-      "key": "pseudocode",
-      "word": "pseudocode",
-      "definition": "a plain language description of the steps in an algorithm",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "pseudocode"
-      }
-    },
-    {
-      "key": "redundant",
-      "word": "redundant",
-      "definition": "code that is unnecessary",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "redundant"
       }
     },
     {
@@ -12616,30 +11753,6 @@
     }
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "vocabulary.key": "decomposition"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "vocabulary.key": "efficient"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "vocabulary.key": "pseudocode"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "vocabulary.key": "redundant"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "AI-Generated Code (non-AI Tutor)",
@@ -13088,16 +12201,6 @@
       }
     },
     {
-      "key": "6ad1dc6f-a2f2-4c7d-ba50-a17b5e3bcf4b",
-      "properties": {
-        "description": "Write pseudocode to plan an algorithm"
-      },
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "objective.key": "6ad1dc6f-a2f2-4c7d-ba50-a17b5e3bcf4b"
-      }
-    },
-    {
       "key": "6f197d59-991a-4450-a03f-e39ab4b67549",
       "properties": {
         "description": "Plan a project to meet specifications"
@@ -13208,16 +12311,6 @@
       }
     },
     {
-      "key": "9f1437c5-5379-4792-86d2-3f3f38dc8e4e",
-      "properties": {
-        "description": "Identify strategies for writing efficient code"
-      },
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "objective.key": "9f1437c5-5379-4792-86d2-3f3f38dc8e4e"
-      }
-    },
-    {
       "key": "a48ce4d4-e377-4aa1-a35a-b86718d96096",
       "properties": {
         "description": "Differentiate between selection and iteration statements"
@@ -13225,16 +12318,6 @@
       "seeding_key": {
         "lesson.key": "Selection Statements",
         "objective.key": "a48ce4d4-e377-4aa1-a35a-b86718d96096"
-      }
-    },
-    {
-      "key": "acbb8e9b-aaaf-4468-8c7d-c64ce4d4a73c",
-      "properties": {
-        "description": "Apply the problem solving process and decomposition strategies to plan solutions"
-      },
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "objective.key": "acbb8e9b-aaaf-4468-8c7d-c64ce4d4a73c"
       }
     },
     {
@@ -13389,34 +12472,6 @@
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-17"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-22"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "(Optional) Decomposition and Design",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3B-AP-23"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "AI-Generated Code (non-AI Tutor)",

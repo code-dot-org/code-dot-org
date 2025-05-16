@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-10 01:54:21 UTC",
+    "serialized_at": "2025-05-14 00:22:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -53,15 +54,14 @@
       }
     },
     {
-      "key": "lessonGroup-5",
+      "key": "lessonGroup-4",
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Alternate Lessons",
-        "description": "This section contains the one-day version of the Data for Social Good Project."
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2025"
       }
     },
@@ -81,7 +81,7 @@
   "lessons": [
     {
       "key": "Data Sets",
-      "name": "Data Sets",
+      "name": "Lesson 1: Data Sets",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -99,7 +99,7 @@
     },
     {
       "key": "One-Dimensional (1D) Arrays",
-      "name": "One-Dimensional (1D) Arrays",
+      "name": "Lesson 2: One-Dimensional (1D) Arrays",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -118,7 +118,7 @@
     },
     {
       "key": "Modifying Elements",
-      "name": "Modifying Elements",
+      "name": "Lesson 3: Modifying Elements",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -137,7 +137,7 @@
     },
     {
       "key": "Traversing 1D Arrays",
-      "name": "Traversing 1D Arrays",
+      "name": "Lesson 4: Traversing 1D Arrays",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -156,7 +156,7 @@
     },
     {
       "key": "For Loops",
-      "name": "For Loops",
+      "name": "Lesson 5: For Loops",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -175,7 +175,7 @@
     },
     {
       "key": "Text Files",
-      "name": "Text Files",
+      "name": "Lesson 6: Text Files",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -193,7 +193,7 @@
     },
     {
       "key": "Preconditions and Postconditions",
-      "name": "Preconditions and Postconditions",
+      "name": "Lesson 7: Preconditions and Postconditions",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -212,7 +212,7 @@
     },
     {
       "key": "Ethics in Data",
-      "name": "Ethics in Data",
+      "name": "Lesson 8: Ethics in Data",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -230,7 +230,7 @@
     },
     {
       "key": "(Optional) Polymorphism",
-      "name": "Polymorphism",
+      "name": "Lesson 9: Polymorphism",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -249,7 +249,7 @@
     },
     {
       "key": "Enhanced For Loops",
-      "name": "Enhanced For Loops",
+      "name": "Lesson 10: Enhanced For Loops",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -268,7 +268,7 @@
     },
     {
       "key": "Array Algorithms",
-      "name": "Array Algorithms",
+      "name": "Lesson 11: Array Algorithms",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -287,7 +287,7 @@
     },
     {
       "key": "Finding Duplicates",
-      "name": "Finding Duplicates",
+      "name": "Lesson 12: Finding Duplicates",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -306,7 +306,7 @@
     },
     {
       "key": "Data for Social Good Project",
-      "name": "Data for Social Good Project",
+      "name": "Lesson 13a: Data for Social Good Project",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -324,12 +324,31 @@
       }
     },
     {
-      "key": "TicketTracker FRQ",
-      "name": "TicketTracker FRQ",
+      "key": "Data for Social Good Project [1-Day Version]",
+      "name": "Lesson 13b: Data for Social Good Project [1-Day Version]",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
+      "properties": {
+        "assessment": true,
+        "overview": "**What questions do I want to answer using data?**\n\nFor this project, students use the skills they have developed throughout this unit to store and analyze data from text file for a topic that they are interested in or that is meaningful to them. Students choose a user scenario and data they want to analyze to identify a solution to address a user's needs. After brainstorming and planning, students develop their programs.",
+        "preparation": "* Review project requirements and rubric\n* Print copies of the Data for Social Good Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-10-data-for-social-good-project/37894) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "**What questions do I want to answer using data?**\n\nFor this project, you use the skills you have developed throughout this unit to store and analyze data from text files for a topic that you are interested in or that is meaningful to you. You choose a user scenario and data you want to analyze to identify a solution to address a user's needs. After brainstorming and planning, you develop your program."
+      },
+      "seeding_key": {
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
+      "key": "TicketTracker FRQ",
+      "name": "Lesson 14: TicketTracker FRQ",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
       "properties": {
         "overview": "**How will I use what I know about 1D arrays to answer a Free Response Question?**\n\nStudents practice developing solutions to AP CSA FRQs on a mock Arrays FRQ. Students apply decomposition and annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print copies of the TicketTracker FRQ Graphic Organizer (one for each student)\n* Print copies of the TicketTracker FRQ handout (one for each student)\n* Print copies of the TicketTracker FRQ Scoring Guidelines (one for each student)\n* (Optional) Gather blue, orange, and pink colored pencils or markers for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-11-tickettracker-frq/37895) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
@@ -343,11 +362,11 @@
     },
     {
       "key": "Unit 3 Assessment",
-      "name": "Unit 3 Assessment",
-      "absolute_position": 15,
+      "name": "Lesson 15: Unit 3 Assessment",
+      "absolute_position": 16,
       "lockable": true,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
@@ -361,31 +380,27 @@
       }
     },
     {
-      "key": "Data for Social Good Project [1-Day Version]",
-      "name": "Data for Social Good Project [1-Day Version]",
-      "absolute_position": 16,
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 17,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 16,
+      "has_lesson_plan": false,
+      "relative_position": 17,
       "properties": {
-        "assessment": true,
-        "overview": "**What questions do I want to answer using data?**\n\nFor this project, students use the skills they have developed throughout this unit to store and analyze data from text file for a topic that they are interested in or that is meaningful to them. Students choose a user scenario and data they want to analyze to identify a solution to address a user's needs. After brainstorming and planning, students develop their programs.",
-        "preparation": "* Review project requirements and rubric\n* Print copies of the Data for Social Good Project Planning Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-10-data-for-social-good-project/37894) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**What questions do I want to answer using data?**\n\nFor this project, you use the skills you have developed throughout this unit to store and analyze data from text files for a topic that you are interested in or that is meaningful to you. You choose a user scenario and data you want to analyze to identify a solution to address a user's needs. After brainstorming and planning, you develop your program."
       },
       "seeding_key": {
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2025"
       }
     },
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
       },
       "seeding_key": {
@@ -397,10 +412,10 @@
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
       },
       "seeding_key": {
@@ -412,21 +427,6 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 19,
-      "lockable": false,
-      "has_lesson_plan": false,
-      "relative_position": 19,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa3-2025"
-      }
-    },
-    {
-      "key": "Student End of Unit Survey",
-      "name": "Student End of Unit Survey",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": false,
@@ -434,7 +434,7 @@
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "Student End of Unit Survey",
+        "lesson.key": "Sandbox: The Theater",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa3-2025"
       }
@@ -1001,6 +1001,61 @@
       }
     },
     {
+      "key": "e7ee953f-8d8e-4f38-aaab-3ed4bf66eeef",
+      "position": 5,
+      "properties": {
+        "name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e7ee953f-8d8e-4f38-aaab-3ed4bf66eeef",
+        "lesson.key": "Data for Social Good Project",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
+      "key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166",
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
+      "key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1",
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
+      "key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af",
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025"
+      }
+    },
+    {
       "key": "5285436b-07b1-46a7-bf0d-50fa52b73822",
       "position": 1,
       "properties": {
@@ -1070,44 +1125,14 @@
       }
     },
     {
-      "key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166",
+      "key": "d7e3a43b-e82b-443e-8a3d-cc9bb4edbc9a",
       "position": 1,
       "properties": {
-        "duration": 10,
-        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166",
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-2025"
-      }
-    },
-    {
-      "key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1",
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csa3-2025"
-      }
-    },
-    {
-      "key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af",
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_activity.key": "d7e3a43b-e82b-443e-8a3d-cc9bb4edbc9a",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2025"
       }
     },
@@ -1143,18 +1168,6 @@
       "seeding_key": {
         "lesson_activity.key": "d64301e9-795f-425d-b8a6-0f2bf23f71ba",
         "lesson.key": "Sandbox: The Theater",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa3-2025"
-      }
-    },
-    {
-      "key": "541b7a34-1b5d-48a9-a8a5-b1a5f5ed63f3",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "541b7a34-1b5d-48a9-a8a5-b1a5f5ed63f3",
-        "lesson.key": "Student End of Unit Survey",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa3-2025"
       }
@@ -4855,27 +4868,8 @@
       }
     },
     {
-      "key": "fa87469f-b583-4bf9-8a21-ef3c8a4333b1",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
-        "name": "End of Unit Survey",
-        "progression_name": "End of Unit Survey",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "We also have a teacher end-of-unit survey to learn more about how the unit went for you and your students. While students take their survey, please complete [**this end of unit survey for teachers**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=3) as well. Your feedback is valued and appreciated!"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "fa87469f-b583-4bf9-8a21-ef3c8a4333b1",
-        "lesson_activity.key": "9b2706b0-eb40-4279-9e02-1b6a07b6a930"
-      }
-    },
-    {
       "key": "462ae7df-9059-43f9-8a39-b7505d71d76e",
-      "position": 12,
+      "position": 11,
       "properties": {
         "description": "---"
       },
@@ -4886,7 +4880,7 @@
     },
     {
       "key": "e4978f26-6261-4a01-82a8-686e0dc5e66c",
-      "position": 13,
+      "position": 12,
       "properties": {
         "description": "**Data for Social Good Project:** Use the rubric in the Data for Social Good Project Planning Guide to assess the projects.",
         "name": "Assessment: Grading the Project"
@@ -4894,6 +4888,179 @@
       "seeding_key": {
         "activity_section.key": "e4978f26-6261-4a01-82a8-686e0dc5e66c",
         "lesson_activity.key": "9b2706b0-eb40-4279-9e02-1b6a07b6a930"
+      }
+    },
+    {
+      "key": "ddb81df1-93ef-42a5-8525-82f0f9f171f0",
+      "position": 1,
+      "properties": {
+        "description": "After completing this project, students should complete the End of Unit Survey linked in the final level. Their responses help us understand their experiences and improve future versions of this unit.",
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "ddb81df1-93ef-42a5-8525-82f0f9f171f0",
+        "lesson_activity.key": "e7ee953f-8d8e-4f38-aaab-3ed4bf66eeef"
+      }
+    },
+    {
+      "key": "2642f319-71d4-4887-933e-cb838add0b0a",
+      "position": 1,
+      "properties": {
+        "description": "Many industries rely on data to identify solutions to problems and make decisions. Each user has different needs based on the information they need and the questions they need to answer.",
+        "name": "Users and Data",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2642f319-71d4-4887-933e-cb838add0b0a",
+        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
+      }
+    },
+    {
+      "key": "98ce4513-cb8d-42e0-9d8c-eee610e73301",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of different types of users and their data needs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a data analysis program for a user?*\n\n**Discussion Goal:** Students talk about obtaining data related to a user's needs and reading the data into a program. Students present ideas of questions the user might have and algorithms that can find the answers to these questions and how users would interact with the program to choose the information they need."
+      },
+      "seeding_key": {
+        "activity_section.key": "98ce4513-cb8d-42e0-9d8c-eee610e73301",
+        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
+      }
+    },
+    {
+      "key": "cb3c4111-9435-496b-91ae-bb7b0268158f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data for Social Good Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cb3c4111-9435-496b-91ae-bb7b0268158f",
+        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
+      }
+    },
+    {
+      "key": "22c98abd-6dab-4966-a579-dd63b7af0c38",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** Introduce the user scenarios for the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Streaming music customer, avian veterinary student, technology non-profit manager\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Community activist, advertising specialist, choose your own",
+        "duration": "10",
+        "name": "Brainstorming and Planning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students can also create their own rather than using one of the provided scenarios."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "22c98abd-6dab-4966-a579-dd63b7af0c38",
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
+      }
+    },
+    {
+      "key": "600c7075-6901-40b9-849c-4d76da1d36e0",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to identify their topic of interest, create UML diagrams for their classes, and identify the questions they want to answer on the Data for Social Good Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The classes for each user scenario are created on the corresponding choice level. Have students look at the data sets and files for their selected user stories as they plan their program."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "600c7075-6901-40b9-849c-4d76da1d36e0",
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
+      }
+    },
+    {
+      "key": "3126c745-8ca9-425e-8c95-2e31da1683dc",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Data for Social Good Project.",
+        "duration": "20",
+        "name": "Development",
+        "progression_name": "Data for Social Good Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc",
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
+      }
+    },
+    {
+      "key": "26246201-646e-4ed6-b59a-8a7c5a63e9ba",
+      "position": 4,
+      "properties": {
+        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "26246201-646e-4ed6-b59a-8a7c5a63e9ba",
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
+      }
+    },
+    {
+      "key": "be974241-de45-4bfd-8010-01d10e9acf6a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be974241-de45-4bfd-8010-01d10e9acf6a",
+        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
+      }
+    },
+    {
+      "key": "252bee43-ec91-423f-be85-56a7bdfb64fe",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Data for Social Good Project Planning Guide.",
+        "name": "End of Project Reflection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "252bee43-ec91-423f-be85-56a7bdfb64fe",
+        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
+      }
+    },
+    {
+      "key": "0d00c29a-199b-4f0e-840f-9049d03e53ff",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d00c29a-199b-4f0e-840f-9049d03e53ff",
+        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
+      }
+    },
+    {
+      "key": "d3bea19d-4297-4752-9d0b-846fdec1e482",
+      "position": 3,
+      "properties": {
+        "description": "**Data for Social Good Project:** Use the rubric in the Data for Social Good Project Planning Guide to assess the projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3bea19d-4297-4752-9d0b-846fdec1e482",
+        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
       }
     },
     {
@@ -5067,164 +5234,25 @@
       }
     },
     {
-      "key": "2642f319-71d4-4887-933e-cb838add0b0a",
+      "key": "9bc3c6f4-c3a4-4f49-8741-0f0e68f18299",
       "position": 1,
       "properties": {
-        "description": "Many industries rely on data to identify solutions to problems and make decisions. Each user has different needs based on the information they need and the questions they need to answer.",
-        "name": "Users and Data",
-        "remarks": true
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "2642f319-71d4-4887-933e-cb838add0b0a",
-        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
+        "activity_section.key": "9bc3c6f4-c3a4-4f49-8741-0f0e68f18299",
+        "lesson_activity.key": "d7e3a43b-e82b-443e-8a3d-cc9bb4edbc9a"
       }
     },
     {
-      "key": "98ce4513-cb8d-42e0-9d8c-eee610e73301",
+      "key": "5ceec379-6691-4f1f-bbc3-535262d49e4f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the examples of different types of users and their data needs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a data analysis program for a user?*\n\n**Discussion Goal:** Students talk about obtaining data related to a user's needs and reading the data into a program. Students present ideas of questions the user might have and algorithms that can find the answers to these questions and how users would interact with the program to choose the information they need."
+        "progression_name": "End of Unit Survey Page"
       },
       "seeding_key": {
-        "activity_section.key": "98ce4513-cb8d-42e0-9d8c-eee610e73301",
-        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
-      }
-    },
-    {
-      "key": "cb3c4111-9435-496b-91ae-bb7b0268158f",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data for Social Good Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "cb3c4111-9435-496b-91ae-bb7b0268158f",
-        "lesson_activity.key": "a59da2a2-1dbb-403c-9131-c6dfb2f2b166"
-      }
-    },
-    {
-      "key": "22c98abd-6dab-4966-a579-dd63b7af0c38",
-      "position": 1,
-      "properties": {
-        "description": "**Do This:** Introduce the user scenarios for the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Streaming music customer, avian veterinary student, technology non-profit manager\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Community activist, advertising specialist, choose your own",
-        "duration": "10",
-        "name": "Brainstorming and Planning",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Students can also create their own rather than using one of the provided scenarios."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "22c98abd-6dab-4966-a579-dd63b7af0c38",
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
-      }
-    },
-    {
-      "key": "600c7075-6901-40b9-849c-4d76da1d36e0",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to identify their topic of interest, create UML diagrams for their classes, and identify the questions they want to answer on the Data for Social Good Project Planning Guide.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The classes for each user scenario are created on the corresponding choice level. Have students look at the data sets and files for their selected user stories as they plan their program."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "600c7075-6901-40b9-849c-4d76da1d36e0",
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
-      }
-    },
-    {
-      "key": "3126c745-8ca9-425e-8c95-2e31da1683dc",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Data for Social Good Project.",
-        "duration": "20",
-        "name": "Development",
-        "progression_name": "Data for Social Good Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc",
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
-      }
-    },
-    {
-      "key": "26246201-646e-4ed6-b59a-8a7c5a63e9ba",
-      "position": 4,
-      "properties": {
-        "description": "This is a good time to commit our code and save our new superclass and subclasses to the Backpack. Anytime we make changes to our programs, it is helpful to commit, or save, our work as a new version in case we need to revert to a previous version.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "26246201-646e-4ed6-b59a-8a7c5a63e9ba",
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
-      }
-    },
-    {
-      "key": "be974241-de45-4bfd-8010-01d10e9acf6a",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Using music to cue transitions helps create routines in the classroom. When students hear cues, they know it is time to transition to a specific activity. Emphasize to students what the music clip means, and be consistent with the use of the music clip to cue the activity.\n\nClick the blue play icon on the slide to play the music cue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "be974241-de45-4bfd-8010-01d10e9acf6a",
-        "lesson_activity.key": "2bcbb86d-69f1-4621-ada7-4ac4d75b62b1"
-      }
-    },
-    {
-      "key": "252bee43-ec91-423f-be85-56a7bdfb64fe",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Data for Social Good Project Planning Guide.",
-        "name": "End of Project Reflection",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time permits, have students share their thoughts and ideas with a neighbor."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "252bee43-ec91-423f-be85-56a7bdfb64fe",
-        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
-      }
-    },
-    {
-      "key": "0d00c29a-199b-4f0e-840f-9049d03e53ff",
-      "position": 2,
-      "properties": {
-        "description": "---"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d00c29a-199b-4f0e-840f-9049d03e53ff",
-        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
-      }
-    },
-    {
-      "key": "d3bea19d-4297-4752-9d0b-846fdec1e482",
-      "position": 3,
-      "properties": {
-        "description": "**Data for Social Good Project:** Use the rubric in the Data for Social Good Project Planning Guide to assess the projects.",
-        "name": "Assessment: Grading the Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "d3bea19d-4297-4752-9d0b-846fdec1e482",
-        "lesson_activity.key": "714b6fd4-a72d-46c2-b5ce-73bb5c2979af"
+        "activity_section.key": "5ceec379-6691-4f1f-bbc3-535262d49e4f",
+        "lesson_activity.key": "d7e3a43b-e82b-443e-8a3d-cc9bb4edbc9a"
       }
     },
     {
@@ -5267,17 +5295,6 @@
       "seeding_key": {
         "activity_section.key": "0ef4f8a4-5ba2-4950-9c4a-258c02906cfa",
         "lesson_activity.key": "d64301e9-795f-425d-b8a6-0f2bf23f71ba"
-      }
-    },
-    {
-      "key": "d544b5cc-9abd-4410-8344-de83c4cd11e0",
-      "position": 1,
-      "properties": {
-        "progression_name": "End of Unit Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "d544b5cc-9abd-4410-8344-de83c4cd11e0",
-        "lesson_activity.key": "541b7a34-1b5d-48a9-a8a5-b1a5f5ed63f3"
       }
     }
   ],
@@ -7186,29 +7203,51 @@
       "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csa3_pilot_oo2025"
-        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa3_pilot_oo2025"
+          "student-eou-survey_linked_page-csa3_2025"
         ],
         "lesson.key": "Data for Social Good Project",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa3-2025",
-        "activity_section.key": "fa87469f-b583-4bf9-8a21-ef3c8a4333b1"
+        "activity_section.key": "ddb81df1-93ef-42a5-8525-82f0f9f171f0"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa3_pilot_oo2025"
+        "student-eou-survey_linked_page-csa3_2025"
       ]
     },
     {
       "chapter": 78,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+        ],
+        "progression": "Data for Social Good Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025",
+        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc"
+      },
+      "level_keys": [
+        "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+      ]
+    },
+    {
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7233,32 +7272,29 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
-        ],
-        "progression": "Data for Social Good Project"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa3"
         ],
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2025",
-        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc"
+        "activity_section.key": "9bc3c6f4-c3a4-4f49-8741-0f0e68f18299"
       },
       "level_keys": [
-        "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+        "student-eou-survey_2025-csa3"
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7282,7 +7318,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7307,7 +7343,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7332,7 +7368,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7353,31 +7389,6 @@
       },
       "level_keys": [
         "CSA 2023 Theater Sandbox_pilot_oo2025"
-      ]
-    },
-    {
-      "chapter": 84,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "progression": "End of Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa3-2025",
-        "activity_section.key": "d544b5cc-9abd-4410-8344-de83c4cd11e0"
-      },
-      "level_keys": [
-        "student-eou-survey_-csa_2025"
       ]
     }
   ],
@@ -8296,14 +8307,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa3_pilot_oo2025",
+        "level.key": "student-eou-survey_linked_page-csa3_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa3_pilot_oo2025"
+          "student-eou-survey_linked_page-csa3_2025"
         ],
         "lesson.key": "Data for Social Good Project",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa3-2025",
-        "activity_section.key": "fa87469f-b583-4bf9-8a21-ef3c8a4333b1"
+        "activity_section.key": "ddb81df1-93ef-42a5-8525-82f0f9f171f0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025",
+        "script_level.level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+        ],
+        "lesson.key": "Data for Social Good Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa3-2025",
+        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc"
       }
     },
     {
@@ -8320,14 +8343,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025",
+        "level.key": "student-eou-survey_2025-csa3",
         "script_level.level_keys": [
-          "CSA U3 Data for Social Good Project 1-Day_pilot_oo2025"
+          "student-eou-survey_2025-csa3"
         ],
-        "lesson.key": "Data for Social Good Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa3-2025",
-        "activity_section.key": "3126c745-8ca9-425e-8c95-2e31da1683dc"
+        "activity_section.key": "9bc3c6f4-c3a4-4f49-8741-0f0e68f18299"
       }
     },
     {
@@ -8376,18 +8399,6 @@
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa3-2025",
         "activity_section.key": "0ef4f8a4-5ba2-4950-9c4a-258c02906cfa"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "student-eou-survey_-csa_2025",
-        "script_level.level_keys": [
-          "student-eou-survey_-csa_2025"
-        ],
-        "lesson.key": "Student End of Unit Survey",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "csa3-2025",
-        "activity_section.key": "d544b5cc-9abd-4410-8344-de83c4cd11e0"
       }
     }
   ],
