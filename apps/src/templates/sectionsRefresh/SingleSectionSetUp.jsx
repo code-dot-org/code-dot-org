@@ -1,6 +1,5 @@
-import Chips from '@code-dot-org/component-library/chips';
 import Button from '@code-dot-org/component-library/button';
-import SectionAvatarEditDialog from '../studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatarEditDialog';
+import Chips from '@code-dot-org/component-library/chips';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -13,6 +12,8 @@ import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2
 import experiments from '@cdo/apps/util/experiments';
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import SectionAvatarEditDialog from '../studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatarEditDialog';
 
 import moduleStyles from './sections-refresh.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
