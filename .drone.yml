@@ -314,11 +314,6 @@ trigger:
     - "elijah/gzip-drone-artifacts"
   event:
     - pull_request
-  branch:
-    - "staging"
-    - "staging-next"
-  event:
-    - push
 ---
 kind: signature
 hmac: c32532882fe8b8b8c24853dece9734ee85fc53fbb7fa866056d4eb2a055c9d87
