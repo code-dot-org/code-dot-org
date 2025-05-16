@@ -2,6 +2,8 @@
 require 'optparse'
 require 'fileutils'
 require 'open3'
+require 'erb'
+require 'json'
 require_relative './config'
 
 # Hard-coded template paths
@@ -130,41 +132,52 @@ def process_template(template_file, output_file, binding_object)
   # Generate temp file path
   output_path = File.join(temp_dir, output_file)
 
-  # Process the ERB template using erb command
-  # Use short form -T instead of --trim-mode which is not universally supported
-  erb_command = <<~CMD
-    erb -T '-' \\
-        -r ./config.rb \\
-        #{template_file} > #{output_path}
-  CMD
+  # Read the template file
+  template_content = File.read(template_file)
 
-  # Execute erb in the context of the current process to access binding variables
+  # Process the ERB template using Ruby's ERB library
+  # This allows us to use the current binding to access local variables
   begin
-    if system(erb_command)
-      puts "Template processed successfully: #{output_path}"
-      return output_path
-    else
-      puts "Error processing template"
-      exit 1
-    end
+    renderer = ERB.new(template_content, trim_mode: '-')
+    result = renderer.result(binding_object)
+
+    # Write the processed template to the output file
+    File.write(output_path, result)
+
+    puts "Template processed successfully: #{output_path}"
+    return output_path
   rescue => exception
     puts "Exception processing template: #{exception.message}"
     exit 1
   end
 end
 
-def deploy_stack(stack_name, template_file, parameters, region, role_arn)
-  command = <<~CMD
-    aws cloudformation deploy \\
-        --stack-name #{stack_name} \\
-        --template-file #{template_file} \\
-        --parameter-overrides #{parameters.map {|k, v| "ParameterKey=#{k},ParameterValue=#{v}"}.join(" ")} \\
-        --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND \\
-        --region #{region} \\
-        --role-arn #{role_arn}
-  CMD
+def deploy_stack(stack_name, template_file, parameters, region, role_arn, environment_type)
+  temp_dir = File.join(Dir.pwd, 'tmp')
+  FileUtils.mkdir_p(temp_dir)
 
-  execute_command(command, "Deploying stack '#{stack_name}' in region '#{region}'")
+  param_file = "parameters_#{stack_name}_#{Time.now.to_i}.json"
+  parameter_path = File.join(temp_dir, param_file)
+  parameter_content = parameters.map {|k, v| {"ParameterKey" => k, "ParameterValue" => v.to_s}}
+  File.write(parameter_path, JSON.pretty_generate(parameter_content))
+
+  begin
+    command = <<~CMD
+      aws cloudformation deploy \\
+          --stack-name #{stack_name} \\
+          --template-file #{template_file} \\
+          --parameter-overrides file://#{parameter_path} \\
+          --capabilities CAPABILITY_IAM CAPABILITY_NAMED_IAM CAPABILITY_AUTO_EXPAND \\
+          --region #{region} \\
+          --role-arn #{role_arn} \\
+          --tags environment-type=#{environment_type}
+    CMD
+
+    execute_command(command, "Deploying stack '#{stack_name}' in region '#{region}'")
+  ensure
+    # Clean up the parameter file regardless of success or failure.
+    FileUtils.rm_f(parameter_path)
+  end
 end
 
 def get_stack_output(stack_name, output_key, region)
@@ -232,9 +245,15 @@ begin
       "SubdomainName" => options[:subdomain_name]
     }
 
-    deploy_stack(cert_stack_name, cert_template_path, cert_parameters, "us-east-1", options[:role_arn])
+    deploy_stack(
+      cert_stack_name,
+      cert_template_path,
+      cert_parameters,
+      "us-east-1",
+      options[:role_arn],
+      options[:environment_type]
+    )
 
-    # TODO: Update the marketing sites Stack to import the Certificate ARN from the
     # Step 3: Get certificate ARN from stack output.
     puts "\n=== Step 3: Getting Certificate ARN ==="
     certificate_arn = get_stack_output(cert_stack_name, "TLSCertificateArn", "us-east-1")
@@ -256,10 +275,17 @@ begin
       "SubdomainName" => options[:subdomain_name],
       "EnvironmentType" => options[:environment_type],
       "ContainerImageHashDigest" => options[:container_image_hash],
-      "CertificateArn" => certificate_arn
+      "CloudFrontTLSCertificateArn" => certificate_arn
     }
 
-    deploy_stack(options[:stack_name], marketing_site_template_path, marketing_site_stack_parameters, options[:region], options[:role_arn])
+    deploy_stack(
+      options[:stack_name],
+      marketing_site_template_path,
+      marketing_site_stack_parameters,
+      options[:region],
+      options[:role_arn],
+      options[:environment_type]
+    )
 
     puts "\nDeployment process completed successfully!"
   else
