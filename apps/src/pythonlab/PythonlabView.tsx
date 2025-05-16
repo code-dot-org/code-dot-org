@@ -185,7 +185,6 @@ const PythonlabView: React.FunctionComponent<
       'Here is the validation code:',
       validationFile?.contents,
       'Here are the validation test names along with their result, in JSON:',
-      //JSON.stringify(validationResults),
       JSON.stringify(
         PythonValidationTracker.getInstance().getValidationResults()
       ),

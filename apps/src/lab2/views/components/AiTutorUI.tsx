@@ -1,10 +1,10 @@
-//import TextField from '@code-dot-org/component-library/textField';
 import React, {useCallback, useEffect, useRef} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import AiTutorManager from '@cdo/apps/lab2/ai/AiTutorManager';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './AiTutorUI.module.scss';
 
@@ -24,6 +24,10 @@ const AiTutorUI: React.FunctionComponent<AiTutorUIProps> = ({
   question,
   getFullQuestionFromQuestion,
 }) => {
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const scriptId = useAppSelector(state => state.lab.scriptId);
+  const channelId = useAppSelector(state => state.lab.channel?.id);
+
   // Remember the last question asked to avoid asking it multiple times, especially
   // as UI is re-rendered.
   const lastQuestion = useRef<string | undefined>(undefined);
@@ -31,7 +35,11 @@ const AiTutorUI: React.FunctionComponent<AiTutorUIProps> = ({
   // This UI component will instantiate and use a AITutorManager.
   const aiTutorManager = useRef<AiTutorManager | null>(null);
   if (aiTutorManager.current === null) {
-    aiTutorManager.current = new AiTutorManager();
+    aiTutorManager.current = new AiTutorManager(
+      currentLevelId,
+      scriptId,
+      channelId
+    );
   }
 
   // Store the most recent response.  Later we might store a longer history.
