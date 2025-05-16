@@ -30,7 +30,10 @@ module Cdo
       http_idle_timeout: 2
     }.freeze
 
+    SHOULD_LOG_TO_STDOUT = false # Set to true to log to stdout instead of CloudWatch
+
     def self.ensure_log_group_and_stream(log_group_name, log_stream_name)
+      puts "Creating log group/stream #{log_group_name}/#{log_stream_name}" if rack_env?(:development)
       client ||= self.client ||= ::Aws::CloudWatchLogs::Client.new(CLIENT_OPTIONS)
 
       creation_mutex.synchronize do
@@ -70,6 +73,11 @@ module Cdo
       end
 
       def flush(events)
+        if rack_env?(:development) && SHOULD_LOG_TO_STDOUT
+          puts "Flushing #{events.length} log events to group/stream #{@log_group_name}/#{@log_stream_name}"
+          puts events.map {|event| event[:message]}.join("\n")
+          return
+        end
         client = Cdo::CloudWatchLogs.client ||= ::Aws::CloudWatchLogs::Client.new(CLIENT_OPTIONS)
         # CloudWatch requires event batches to be sorted by timestamp
         events.sort_by! {|event| event[:timestamp]}
