@@ -14,7 +14,7 @@ export RACK_ENV=test
 export DISABLE_SPRING=1
 export LD_LIBRARY_PATH=/usr/local/lib
 
-# set up locals.yml
+# Set up locals.yml with common values shared between all test environments.
 echo "
 # Shared settings and secrets
 build_apps: true

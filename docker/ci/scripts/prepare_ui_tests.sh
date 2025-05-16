@@ -8,7 +8,8 @@ ulimit -n 4096
 
 export CI_JOB=ui_tests
 
-# set up locals.yml
+# Update the locals.yml which was initialized by prepare_tests_common.sh with
+# job-specific values
 echo "
 # UI test settings and secrets
 override_dashboard: \"localhost-studio.code.org\"
