@@ -51,10 +51,10 @@ class HttpCache
   ACCEPT_HEADER = %w(Accept).freeze
   ALLOWLISTED_HEADERS = LANGUAGE_HEADER + COUNTRY_HEADER + ACCEPT_HEADER
   S3_FORWARD_HEADERS = %w(
-      Access-Control-Request-Headers
-      Access-Control-Request-Method
-      Origin
-    ).freeze
+    Access-Control-Request-Headers
+    Access-Control-Request-Method
+    Origin
+  ).freeze
 
   DEFAULT_COOKIES = [
     # Language drop-down selection.
