@@ -622,32 +622,10 @@ namespace :seed do
   end
 
   timed_task_with_logging :cached_ui_test do
-    HASH_FILE = 'db/ui_test_data.hash'
-
-    # patterns are relative to dashboard directory
-    watched_files = FileList[
-      'app/dsl/**/*',
-      'config/**/*',
-      'db/**/*',
-      'lib/tasks/**/*',
-      'test/ui/config/**/*',
-    ].exclude('db/ui_test_data.*')
-    current_hash = HashUtils.file_contents_hash(watched_files)
-
-    if File.exist?(HASH_FILE)
-      dump_hash = File.read(HASH_FILE)
-
-      if current_hash == dump_hash
-        puts 'Cache hit! Loading from db dump'
-        sh('mysql -u root < db/ui_test_data.sql')
-        next
-      end
-    end
-
-    puts 'Cache mismatch, running full ui test seed'
-    RakeUtils.rake_stream_output 'seed:ui_test'
-    File.write(HASH_FILE, current_hash)
-    sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
+    puts "Seeding for UI tests from cache"
+    puts "#{Time.now.inspect} Total levels in DB before the seed: #{Level.all.count}"
+    RakeUtils.rake_stream_output 'seed:incremental'
+    puts "#{Time.now.inspect} Total levels in DB after the seed: #{Level.all.count}"
   end
 
   timed_task_with_logging :import_pegasus_data do
