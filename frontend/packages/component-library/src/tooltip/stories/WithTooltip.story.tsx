@@ -90,13 +90,13 @@ IconsTooltipGroup.args = {
 
 export const NoneDirectionTooltip = SingleTemplate.bind({});
 NoneDirectionTooltip.args = {
-  text: 'Tooltip with direction: none',
+  text: 'Tooltip with direction: none and custom position',
   tooltipId: 'tooltipNone',
   direction: 'none',
   style: {
     position: 'absolute',
-    right: '50px',
-    top: '50px',
+    left: '50px',
+    top: '100px',
   },
 };
 
