@@ -15,7 +15,7 @@ options = {
   base_domain_name: 'marketing-sites.dev-code.org',
   subdomain_name: 'code',
   # TODO: populate Account ID dynamically.
-  # role_arn: "arn:aws:iam::${AccountID}:role/cloudformation/marketingsites/development/CloudFormationMarketingSitesDevelopmentRole"
+  # role_arn: "arn:aws:iam::${account_id}:role/admin/CloudFormationMarketingSitesDevelopmentRole"
   role_arn: nil
 }
 
