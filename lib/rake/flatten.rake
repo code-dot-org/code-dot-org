@@ -3,6 +3,7 @@ require 'yaml'
 require 'json'
 require 'date'
 require 'fileutils'
+require 'digest'
 require_relative '../../lib/cdo/cloud_formation/stack_template'
 
 namespace :cfn do
@@ -39,8 +40,27 @@ namespace :cfn do
 
     flat = flatten(data)
 
+    # Compute old fingerprint and line count if file exists
+    old_md5   = File.exist?(output_path) ? Digest::MD5.file(output_path).hexdigest : nil
+    old_lines = File.exist?(output_path) ? File.read(output_path).lines.count : nil
+
     FileUtils.mkdir_p(output_dir)
     File.write(output_path, JSON.pretty_generate(flat))
     puts "Flattened output written to #{output_path}"
+
+    # Compute new fingerprint and line count
+    new_md5   = Digest::MD5.file(output_path).hexdigest
+    new_lines = File.read(output_path).lines.count
+
+    if old_md5
+      if new_md5 == old_md5
+        puts "No changes detected: MD5 and line count unchanged (#{new_md5}, #{new_lines} lines)"
+      else
+        puts "Flattened file changed: MD5 #{old_md5} → #{new_md5}, lines #{old_lines} → #{new_lines}"
+        puts "Run: git diff -- #{output_path}"
+      end
+    else
+      puts "Created flattened file #{output_path} with MD5 #{new_md5}, #{new_lines} lines"
+    end
   end
 end
