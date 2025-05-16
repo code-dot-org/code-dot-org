@@ -621,13 +621,6 @@ namespace :seed do
     end
   end
 
-  timed_task_with_logging :cached_ui_test do
-    puts "Seeding for UI tests from cache"
-    puts "#{Time.now.inspect} Total levels in DB before the seed: #{Level.all.count}"
-    RakeUtils.rake_stream_output 'seed:ui_test'
-    puts "#{Time.now.inspect} Total levels in DB after the seed: #{Level.all.count}"
-  end
-
   timed_task_with_logging :import_pegasus_data do
     db = DASHBOARD_DB
     table_prefix = "google_sheets_shared_"
