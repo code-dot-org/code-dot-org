@@ -311,7 +311,10 @@ steps:
 
 trigger:
   branch:
-    - "elijah/gzip-drone-artifacts"
+    exclude:
+      - "production"
+      - "test"
+      - "levelbuilder"
   event:
     - pull_request
 ---
