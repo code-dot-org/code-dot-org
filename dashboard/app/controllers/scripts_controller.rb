@@ -11,7 +11,7 @@ class ScriptsController < ApplicationController
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :get_rollup_resources, :standards, :edit, :destroy]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  before_action :redirect_to_canonical_path, only: [:show]
+  before_action :redirect_to_canonical_path, only: [:show, :vocab, :resources, :code, :standards]
   authorize_resource class: 'Unit', except: [:update]
   load_and_authorize_resource class: 'Unit', only: [:update]
 
