@@ -3532,26 +3532,6 @@ class UserTest < ActiveSupport::TestCase
     assert_equal 'fake refresh token', google_auth_option.data_hash[:oauth_refresh_token]
   end
 
-  test 'managing_own_credentials? is true for users with email logins' do
-    user = create :user
-    assert user.managing_own_credentials?
-  end
-
-  test 'managing_own_credentials? is true for students with email logins' do
-    user = create :student
-    assert user.managing_own_credentials?
-  end
-
-  test 'managing_own_credentials? is false for users with oauth logins' do
-    user = create :user, :sso_provider
-    refute user.managing_own_credentials?
-  end
-
-  test 'managing_own_credentials? is false for students with sponsored logins' do
-    user = create :student_in_picture_section
-    refute user.managing_own_credentials?
-  end
-
   test 'summarize' do
     latest_permission_request_sent_at = 1.month.ago.change(usec: 0)
     create(:parental_permission_request, user: @student, updated_at: latest_permission_request_sent_at)

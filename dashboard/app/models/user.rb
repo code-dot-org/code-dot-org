@@ -760,20 +760,6 @@ class User < ApplicationRecord
     end
   end
 
-  def managing_own_credentials?
-    if provider.blank?
-      true
-    elsif manual?
-      true
-    elsif migrated?
-      authentication_options.any? do |ao|
-        ao.credential_type == AuthenticationOption::EMAIL
-      end
-    else
-      false
-    end
-  end
-
   def username_required?
     manual? || username_changed?
   end

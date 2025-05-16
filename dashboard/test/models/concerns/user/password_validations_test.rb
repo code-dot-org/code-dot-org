@@ -136,4 +136,32 @@ class User::PasswordValidationsTest < ActiveSupport::TestCase
       it {_password_required?.must_equal true}
     end
   end
+
+  describe '#managing_own_credentials?' do
+    subject(:managing_own_credentials?) {user.send(:managing_own_credentials?)}
+
+    context 'when the user has an email login' do
+      let(:user) {create :user}
+
+      it {_managing_own_credentials?.must_equal true}
+    end
+
+    context 'when the student has an email login' do
+      let(:user) {create :student}
+
+      it {_managing_own_credentials?.must_equal true}
+    end
+
+    context 'when the user has an OAuth login' do
+      let(:user) {create :user, :sso_provider}
+
+      it {_managing_own_credentials?.must_equal false}
+    end
+
+    context 'when the student has a sponsored login' do
+      let(:user) {create :student_in_picture_section}
+
+      it {_managing_own_credentials?.must_equal false}
+    end
+  end
 end

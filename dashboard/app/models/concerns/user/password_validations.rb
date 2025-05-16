@@ -63,4 +63,18 @@ module User::PasswordValidations
   private def new_user_without_password?
     !persisted? && encrypted_password.blank?
   end
+
+  private def managing_own_credentials?
+    if provider.blank?
+      true
+    elsif manual?
+      true
+    elsif migrated?
+      authentication_options.any? do |ao|
+        ao.credential_type == AuthenticationOption::EMAIL
+      end
+    else
+      false
+    end
+  end
 end
