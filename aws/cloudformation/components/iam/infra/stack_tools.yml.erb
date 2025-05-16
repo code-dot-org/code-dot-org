@@ -6,7 +6,6 @@
   # Roles included:
   #   - CloudFormationAdmin
   #   - CloudFormationService
-  #   - DevPermissions
   # ------------------------------------------------------------
 
   # CloudFormationAdmin Role
@@ -15,7 +14,7 @@
   #  - Grant complete full access for foundational infrastructure stacks.
   #
   # Audit (2025-05-14):
-  #  - Foundational infra stacks (IAM, VPC, lambda, alerting, javabuilder-cicd-deps, javabuilder-iam, DATA-production).
+  #  - Current stacks (IAM, VPC, lambda, alerting, javabuilder-cicd-deps, javabuilder-iam, DATA-production).
   #
   # Security Review:
   #  - No automated software (even CloudFormation) should use this level of access.  Any bypass to add a new ChangeSet to one of these stacks would grant Full admin to create anything.
@@ -48,7 +47,8 @@
   #  - Adhoc Stacks: 110 of them
   #
   # Security Review:
-  #  - Overly broad; violates least-privilege principles.  Its access is set to a human-access role, plus unlimited secrets access.
+  #  - Overly broad; violates least-privilege principles.
+  #  - Its access is set to a human-access role, plus unlimited secrets access.
   CloudFormationService:
     Type: AWS::IAM::Role
     Properties:
@@ -107,7 +107,7 @@
               - Effect: Allow
                 Action: secretsmanager:*
                 Resource: '*'
-                
+
       # Attach the DevPermissions policy to this role:
       #   PassRole *, access to _everything_ except Organizations, IAM (overridden above) and SecretsManager (overriden above)
       ManagedPolicyArns: [!Ref DevPermissions]
