@@ -1,13 +1,15 @@
 import Chips from '@code-dot-org/component-library/chips';
+import Button from '@code-dot-org/component-library/button';
+import SectionAvatarEditDialog from '../studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatarEditDialog';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionAvatar';
+import SectionAvatar from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/SectionAvatar';
 import experiments from '@cdo/apps/util/experiments';
 import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -22,12 +24,17 @@ export default function SingleSectionSetUp({
   isNewSection,
   isLoading = false,
 }) {
+  const [showAvatarDialog, setShowAvatarDialog] = useState(false);
   const gradeOptions = StudentGradeLevels.map(g => ({label: g, value: g}));
   const participantType = isNewSection
     ? queryParams('participantType')
     : section.participantType;
 
   console.log('lfm', {section});
+
+  const closeCallback = () => {
+    setShowAvatarDialog(false);
+  };
 
   return (
     <div>
@@ -57,20 +64,25 @@ export default function SingleSectionSetUp({
         </label>
       </div>
       {(experiments.isEnabled('teacher-homepage-v2') ||
-        DCDO.get('teacher-homepage-v2', false)) &&
-        !isNewSection &&
-        section.avatar_color && (
+        DCDO.get('teacher-homepage-v2', false)) && (
+        <label className={moduleStyles.typographyLabelTwo}>
+          {i18n.sectionAvatar()}
           <div className={moduleStyles.avatarContainer}>
-            <label className={moduleStyles.typographyLabelTwo}>
-              {i18n.sectionAvatar()}
-              <SectionAvatar
-                color={section.avatar_color}
-                emoji={section.avatar_emoji}
-              />
-            </label>
-            {i18n.sectionAvatarNotice()}
+            <SectionAvatar
+              color={section.avatar_color || 0}
+              emoji={section.avatar_emoji || 0}
+            />
+            <Button
+              className={moduleStyles.avatarButton}
+              text={i18n.editAvatar()}
+              type={'secondary'}
+              color={'gray'}
+              size={'s'}
+              onClick={() => setShowAvatarDialog(true)}
+            />
           </div>
-        )}
+        </label>
+      )}
       {participantType === ParticipantAudience.student && (
         <div className={moduleStyles.containerWithMarginTop}>
           <Chips
@@ -84,6 +96,9 @@ export default function SingleSectionSetUp({
             disabled={isLoading}
           />
         </div>
+      )}
+      {showAvatarDialog && (
+        <SectionAvatarEditDialog closeCallback={closeCallback} />
       )}
     </div>
   );
