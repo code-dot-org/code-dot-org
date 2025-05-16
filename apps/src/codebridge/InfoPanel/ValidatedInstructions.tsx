@@ -75,8 +75,13 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   handleInstructionsTextClick,
   className,
 }) => {
-  const {onRun, onStop, levelProperties, askAiTutor, aiTutorResponse} =
-    useCodebridgeContext();
+  const {
+    onRun,
+    onStop,
+    levelProperties,
+    getAiTutorFullQuestionFromQuestion,
+    aiTutorHintQuestion,
+  } = useCodebridgeContext();
   const dialogControl = useDialogControl();
 
   const {
@@ -380,7 +385,12 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             </>
           )}
 
-          <AiTutorUI askAiTutor={askAiTutor} response={aiTutorResponse} />
+          <AiTutorUI
+            allowChat={false}
+            type={'hint'}
+            question={aiTutorHintQuestion}
+            getFullQuestionFromQuestion={getAiTutorFullQuestionFromQuestion}
+          />
 
           {predictSettings?.isPredictLevel && (
             <InstructorsOnly>

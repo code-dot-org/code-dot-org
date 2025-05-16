@@ -4,12 +4,11 @@ import {useSource} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
-import React, {useContext, useEffect, useMemo, useState, useRef} from 'react';
+import React, {useContext, useEffect, useMemo, useState} from 'react';
 
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {TestResults} from '@cdo/apps/constants';
-import AiTutorManager from '@cdo/apps/lab2/ai/AiTutorManager';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -76,9 +75,9 @@ const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const [aiTutorResponse, setAiTutorResponse] = useState<string | undefined>(
-    undefined
-  );
+  const [aiTutorHintQuestion, setAiTutorHintQuestion] = useState<
+    string | undefined
+  >(undefined);
   const {
     source,
     setProject,
@@ -171,11 +170,9 @@ const PythonlabView: React.FunctionComponent<
     restartPyodideIfProgramIsRunning
   );
 
-  const aiTutorManager = useRef<AiTutorManager | null>(null);
-  if (aiTutorManager.current === null) {
-    aiTutorManager.current = new AiTutorManager();
-  }
-  const askAiTutor = async (
+  // Given a question for the AI Tutor, return the full question to ask, which means
+  // appending all the relevant context.
+  const getAiTutorFullQuestionFromQuestion = (
     question: string,
     questionType: 'hint' | 'user'
   ) => {
@@ -196,13 +193,7 @@ const PythonlabView: React.FunctionComponent<
       levelProperties.longInstructions,
     ].join('\n\n');
 
-    const messages = await aiTutorManager.current?.askAiTutor(
-      fullQuestion,
-      questionType
-    );
-    if (messages && messages.length > 1) {
-      setAiTutorResponse(messages[1].chatMessageText);
-    }
+    return fullQuestion;
   };
 
   const onRun = async (
@@ -210,7 +201,7 @@ const PythonlabView: React.FunctionComponent<
     dispatch: AppDispatch,
     source: MultiFileSource | undefined
   ) => {
-    setAiTutorResponse(undefined);
+    setAiTutorHintQuestion(undefined);
 
     // Flush any pending saves if we have a project manager on run. The user will likely
     // run their code before navigating away from the page, so switching pages
@@ -241,7 +232,9 @@ const PythonlabView: React.FunctionComponent<
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
 
-    askAiTutor("What's wrong with my code, if anything?", 'hint');
+    // Set a question for the hint AI Tutor in ValidatedInstructions to ask.
+    // It will be passed down via the CodebridgeContext.
+    setAiTutorHintQuestion("What's wrong with my code, if anything?");
   };
 
   return (
@@ -260,8 +253,10 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
-          aiTutorResponse={aiTutorResponse}
-          askAiTutor={askAiTutor}
+          aiTutorHintQuestion={aiTutorHintQuestion}
+          getAiTutorFullQuestionFromQuestion={
+            getAiTutorFullQuestionFromQuestion
+          }
         />
       )}
       {showProjectPickerModal && (

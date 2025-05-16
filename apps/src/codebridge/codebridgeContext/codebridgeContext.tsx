@@ -58,8 +58,11 @@ export type CodebridgeContextType = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  askAiTutor?: (question: string, questionType: 'user' | 'hint') => void;
-  aiTutorResponse?: string;
+  aiTutorHintQuestion?: string;
+  getAiTutorFullQuestionFromQuestion?: (
+    question: string,
+    questionType: 'user' | 'hint'
+  ) => string;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

@@ -1,3 +1,4 @@
+import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import Workspace from '@codebridge/Workspace/Workspace';
@@ -5,7 +6,9 @@ import React from 'react';
 
 import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
+import AiTutorUI from '@cdo/apps/lab2/views/components/AiTutorUI';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
@@ -32,6 +35,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     rightBottomPanelSeparatorProps,
     rightBottomPanelDragging,
     setRightBottomPanelSize,
+    rightmostPanelWidth,
   } = useHorizontalLayout({
     leftPanel: {
       initialWidth: isProjectLevel ? 0 : INITIAL_INFO_PANEL_WIDTH,
@@ -52,7 +56,10 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
     appName: 'pythonlab',
     heightOffset: isProjectLevel ? PROJECT_FOOTER_HEIGHT : 0,
+    showingRightmostPanel: true,
   });
+
+  const {getAiTutorFullQuestionFromQuestion} = useCodebridgeContext();
 
   return (
     <div
@@ -95,6 +102,21 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             width={rightPanelWidth}
             setOutputHeight={setRightBottomPanelSize}
           />
+        </div>
+        <div style={{width: rightmostPanelWidth}}>
+          <PanelContainer
+            id="aitutor"
+            headerContent="AI Tutor"
+            className={moduleStyles.rightestColumn}
+          >
+            <div className={moduleStyles.inside}>
+              <AiTutorUI
+                allowChat={true}
+                type="user"
+                getFullQuestionFromQuestion={getAiTutorFullQuestionFromQuestion}
+              />
+            </div>
+          </PanelContainer>
         </div>
       </div>
       {isProjectLevel && <div className={moduleStyles.footerArea} />}

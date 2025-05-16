@@ -46,3 +46,13 @@
   height: 100%;
   width: 100%;
 }
+
+.rightestColumn {
+  background-color: var(--neutral-base-black);
+  border-left: solid 1px var(--neutral-gray-80);
+
+  .inside {
+    padding: 10px;
+    height: 100%;
+  }
+}
