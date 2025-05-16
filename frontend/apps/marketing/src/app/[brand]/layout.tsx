@@ -7,6 +7,7 @@ import {getGoogleAnalyticsMeasurementId} from '@/config/ga4';
 import OrganizationJsonLd from '@/config/jsonLd/OrganizationJsonLd';
 import {getStage} from '@/config/stage';
 import EnvironmentLoader from '@/providers/environment';
+import LocalizeLoader from '@/providers/localize/LocalizeLoader';
 import OneTrustLoader from '@/providers/onetrust/OneTrustLoader';
 import OneTrustProvider from '@/providers/onetrust/OneTrustProvider';
 import {generateBootstrapValues} from '@/providers/statsig/statsig-backend';
@@ -34,6 +35,7 @@ export default async function Layout({
   return (
     <>
       <EnvironmentLoader />
+      <LocalizeLoader brand={brand} />
       <OneTrustLoader brand={brand} />
 
       <OneTrustProvider>
