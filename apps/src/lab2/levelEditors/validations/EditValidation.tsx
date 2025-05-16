@@ -151,6 +151,7 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
                 name="message"
                 rows={4}
                 className={moduleStyles.message}
+                placeholder="Feedback message..."
                 value={validation.message}
                 onChange={e => {
                   validation.message = e.target.value;
