@@ -14,13 +14,20 @@ import {getContentfulSlug} from '@/contentful/slug/getContentfulSlug';
 import {getSeoMetadata} from '@/metadata/seo';
 import {getPageHeading} from '@/selectors/contentful/getExperienceEntryFields';
 
-export const dynamic = 'force-static'; // Ensure ISR is enabled
 export const revalidate = 3600; // Cache for one hour
 
 type ExperiencePageProps = {
   params: Promise<{locale?: string; paths?: string; brand?: Brand}>;
   searchParams: Promise<{[key: string]: string | string[] | undefined}>;
 };
+
+/**
+ * Activates incremental static regeneration (ISR) for this page.
+ * Currently, no pages are generated at build time. Pages are rather generated using on-demand ISR.
+ */
+export async function generateStaticParams() {
+  return [];
+}
 
 async function getPageProps({params, searchParams}: ExperiencePageProps) {
   const {locale = 'en-US', paths = ['home']} = (await params) || {};

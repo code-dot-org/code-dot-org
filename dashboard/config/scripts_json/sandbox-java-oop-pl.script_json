@@ -11,7 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-14 19:17:18 UTC",
+    "serialized_at": "2025-05-15 14:33:20 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -79,36 +80,6 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-java-oop-pl"
-      }
-    },
-    {
-      "key": "lesson-4",
-      "name": "Constructors and Inheritance",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "",
-        "script.name": "sandbox-java-oop-pl"
-      }
-    },
-    {
-      "key": "lesson-5",
-      "name": "Methods",
-      "absolute_position": 5,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "sandbox-java-oop-pl"
       }

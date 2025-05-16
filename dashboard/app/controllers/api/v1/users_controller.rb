@@ -110,7 +110,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     render json: {
       user_name: current_user&.name,
       email: current_user&.email,
-      zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip,
+      zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip&.to_s&.rjust(5, '0'),
     }
   end
 

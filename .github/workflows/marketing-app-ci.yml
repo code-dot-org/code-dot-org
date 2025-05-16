@@ -83,6 +83,7 @@ jobs:
           CONTENTFUL_REVALIDATE_TOKEN=ci-revalidate-test
           DRAFT_MODE_TOKEN=ci-draft-mode
           HOSTNAME=0.0.0.0
+          NEXT_PUBLIC_STAGE=development
           " > .env
 
       - name: Run Docker Container
