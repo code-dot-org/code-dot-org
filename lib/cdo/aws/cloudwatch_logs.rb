@@ -23,8 +23,15 @@ module Cdo
     # Service Quota: https://us-east-1.console.aws.amazon.com/servicequotas/home/services/logs/quotas/L-7E1FAE88
     MAX_TRANSACTIONS_PER_SECOND = 5000 / 25 / 48 # 25 instances with 48 vCPUs each
 
+    # Wait less than the defaults (see https://docs.aws.amazon.com/sdk-for-ruby/v3/api/Aws/CloudWatchLogs/Client.html#initialize-instance_method)
+    CLIENT_OPTIONS = {
+      http_open_timeout: 5,
+      http_read_timeout: 5,
+      http_idle_timeout: 2
+    }.freeze
+
     def self.ensure_log_group_and_stream(log_group_name, log_stream_name)
-      client ||= self.client ||= ::Aws::CloudWatchLogs::Client.new
+      client ||= self.client ||= ::Aws::CloudWatchLogs::Client.new(CLIENT_OPTIONS)
 
       creation_mutex.synchronize do
         unless created_log_groups.include?(log_group_name)
@@ -63,12 +70,7 @@ module Cdo
       end
 
       def flush(events)
-        client = Cdo::CloudWatchLogs.client ||= ::Aws::CloudWatchLogs::Client.new(
-          # Wait less than the defaults (see https://docs.aws.amazon.com/sdk-for-ruby/v3/api/Aws/CloudWatchLogs/Client.html#initialize-instance_method)
-          http_open_timeout: 5,
-          http_read_timeout: 5,
-          http_idle_timeout: 2
-        )
+        client = Cdo::CloudWatchLogs.client ||= ::Aws::CloudWatchLogs::Client.new(CLIENT_OPTIONS)
         # CloudWatch requires event batches to be sorted by timestamp
         events.sort_by! {|event| event[:timestamp]}
         resp = client.put_log_events(
