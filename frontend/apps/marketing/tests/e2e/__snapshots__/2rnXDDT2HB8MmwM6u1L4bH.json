@@ -4,6 +4,9 @@
       "title": {
         "en-US": "❌ [ENGINEERING ONLY] UI Integration Testing"
       },
+      "directory": {
+        "en-US": "None"
+      },
       "slug": {
         "en-US": "/engineering/all-the-things"
       },
@@ -2697,6 +2700,269 @@
               ]
             },
             {
+              "id": "zC8t7qbw",
+              "displayName": "Action Block Carousel",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "start"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "1194px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "key": "pLRLaUbo",
+                  "type": "UnboundValue"
+                },
+                "cfOpenInNewTab": {
+                  "key": "xauf2a1R",
+                  "type": "UnboundValue"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "key": "AYGGhSH9",
+                  "type": "UnboundValue"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "xxFZByXS",
+                  "definitionId": "section",
+                  "patternProperties": {},
+                  "variables": {
+                    "background": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "primary"
+                      }
+                    },
+                    "padding": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "l"
+                      }
+                    },
+                    "divider": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "none"
+                      }
+                    },
+                    "id": {
+                      "key": "f0smL8E1",
+                      "type": "UnboundValue"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "SG3kkKac",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xxl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "W6IG1y86",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "zaDFSR3J",
+                      "definitionId": "carousel-action-block",
+                      "patternProperties": {},
+                      "variables": {
+                        "slides": {
+                          "path": "/JZkN7NP/fields/slides/~locale",
+                          "type": "BoundValue"
+                        },
+                        "background": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "ubwdePdg",
+                      "definitionId": "spacer",
+                      "patternProperties": {},
+                      "variables": {
+                        "size": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "m"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "MLwaI0Sb",
+                      "definitionId": "carousel-action-block",
+                      "patternProperties": {},
+                      "variables": {
+                        "slides": {
+                          "path": "/jCkSbED3/fields/slides/~locale",
+                          "type": "BoundValue"
+                        },
+                        "background": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "primary"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "id": "pD8UQKqT",
               "displayName": "Full Width Action Block",
               "definitionId": "contentful-section",
@@ -3874,594 +4140,6 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": "right"
-                          }
-                        }
-                      },
-                      "children": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "id": "zC8t7qbw",
-              "displayName": "Carousels",
-              "definitionId": "contentful-section",
-              "patternProperties": {},
-              "variables": {
-                "cfVerticalAlignment": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "center"
-                  }
-                },
-                "cfHorizontalAlignment": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "center"
-                  }
-                },
-                "cfVisibility": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": true
-                  }
-                },
-                "cfMargin": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "0 0 0 0"
-                  }
-                },
-                "cfPadding": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "0 0 0 0"
-                  }
-                },
-                "cfBackgroundColor": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "rgba(0, 0, 0, 0)"
-                  }
-                },
-                "cfWidth": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "100%"
-                  }
-                },
-                "cfHeight": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "fit-content"
-                  }
-                },
-                "cfMaxWidth": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "none"
-                  }
-                },
-                "cfFlexDirection": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "column"
-                  }
-                },
-                "cfFlexReverse": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": false
-                  }
-                },
-                "cfFlexWrap": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "nowrap"
-                  }
-                },
-                "cfBorder": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "0px solid rgba(0, 0, 0, 0)"
-                  }
-                },
-                "cfGap": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "0px"
-                  }
-                },
-                "cfHyperlink": {
-                  "key": "pLRLaUbo",
-                  "type": "UnboundValue"
-                },
-                "cfOpenInNewTab": {
-                  "key": "xauf2a1R",
-                  "type": "UnboundValue"
-                },
-                "cfBorderRadius": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": "0px"
-                  }
-                },
-                "cfBackgroundImageUrl": {
-                  "key": "AYGGhSH9",
-                  "type": "UnboundValue"
-                },
-                "cfBackgroundImageOptions": {
-                  "type": "DesignValue",
-                  "valuesByBreakpoint": {
-                    "desktop": {
-                      "scaling": "fill",
-                      "alignment": "left top",
-                      "targetSize": "2000px"
-                    }
-                  }
-                }
-              },
-              "children": [
-                {
-                  "id": "xxFZByXS",
-                  "definitionId": "section",
-                  "patternProperties": {},
-                  "variables": {
-                    "background": {
-                      "type": "DesignValue",
-                      "valuesByBreakpoint": {
-                        "desktop": "primary"
-                      }
-                    },
-                    "padding": {
-                      "type": "DesignValue",
-                      "valuesByBreakpoint": {
-                        "desktop": "l"
-                      }
-                    },
-                    "divider": {
-                      "type": "DesignValue",
-                      "valuesByBreakpoint": {
-                        "desktop": "none"
-                      }
-                    },
-                    "id": {
-                      "key": "f0smL8E1",
-                      "type": "UnboundValue"
-                    },
-                    "cfVisibility": {
-                      "type": "DesignValue",
-                      "valuesByBreakpoint": {
-                        "desktop": true
-                      }
-                    }
-                  },
-                  "children": [
-                    {
-                      "id": "SG3kkKac",
-                      "definitionId": "heading",
-                      "patternProperties": {},
-                      "variables": {
-                        "visualAppearance": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "heading-xxl"
-                          }
-                        },
-                        "removeMarginBottom": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": false
-                          }
-                        },
-                        "children": {
-                          "key": "W6IG1y86",
-                          "type": "UnboundValue"
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        },
-                        "cfTextAlign": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "left"
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "g24Y8ZXg",
-                      "displayName": "Heading",
-                      "definitionId": "heading",
-                      "patternProperties": {},
-                      "variables": {
-                        "visualAppearance": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "heading-xl"
-                          }
-                        },
-                        "removeMarginBottom": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": false
-                          }
-                        },
-                        "children": {
-                          "key": "ywmkAQXg",
-                          "type": "UnboundValue"
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        },
-                        "cfTextAlign": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "left"
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "zaDFSR3J",
-                      "definitionId": "carousel-action-block",
-                      "patternProperties": {},
-                      "variables": {
-                        "slides": {
-                          "path": "/JZkN7NP/fields/slides/~locale",
-                          "type": "BoundValue"
-                        },
-                        "background": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "primary"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "ubwdePdg",
-                      "definitionId": "spacer",
-                      "patternProperties": {},
-                      "variables": {
-                        "size": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "m"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "MLwaI0Sb",
-                      "definitionId": "carousel-action-block",
-                      "patternProperties": {},
-                      "variables": {
-                        "slides": {
-                          "path": "/jCkSbED3/fields/slides/~locale",
-                          "type": "BoundValue"
-                        },
-                        "background": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "primary"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "068qJODU",
-                      "definitionId": "spacer",
-                      "patternProperties": {},
-                      "variables": {
-                        "size": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "m"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "vxvNXiBg",
-                      "displayName": "Heading",
-                      "definitionId": "heading",
-                      "patternProperties": {},
-                      "variables": {
-                        "visualAppearance": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "heading-xl"
-                          }
-                        },
-                        "removeMarginBottom": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": false
-                          }
-                        },
-                        "children": {
-                          "key": "93BsbPz6",
-                          "type": "UnboundValue"
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        },
-                        "cfTextAlign": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "left"
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "u0EWqasb",
-                      "definitionId": "carousel-image",
-                      "patternProperties": {},
-                      "variables": {
-                        "slides": {
-                          "path": "/Uzc6FQP/fields/imageSlides/~locale",
-                          "type": "BoundValue"
-                        },
-                        "slidesPerView": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "1"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "nCGVtkox",
-                      "definitionId": "spacer",
-                      "patternProperties": {},
-                      "variables": {
-                        "size": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "m"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "fPEysWis",
-                      "definitionId": "carousel-image",
-                      "patternProperties": {},
-                      "variables": {
-                        "slides": {
-                          "path": "/DsX1MPtQ/fields/imageSlides/~locale",
-                          "type": "BoundValue"
-                        },
-                        "slidesPerView": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "2"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "Ersu2P1U",
-                      "definitionId": "spacer",
-                      "patternProperties": {},
-                      "variables": {
-                        "size": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "m"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "sFqKYPPq",
-                      "definitionId": "carousel-image",
-                      "patternProperties": {},
-                      "variables": {
-                        "slides": {
-                          "path": "/ubziaBYn/fields/imageSlides/~locale",
-                          "type": "BoundValue"
-                        },
-                        "slidesPerView": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "3"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "9hJsDsOb",
-                      "definitionId": "spacer",
-                      "patternProperties": {},
-                      "variables": {
-                        "size": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "m"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "gJSl3QMj",
-                      "definitionId": "carousel-image",
-                      "patternProperties": {},
-                      "variables": {
-                        "slides": {
-                          "path": "/VTZgp9YI/fields/imageSlides/~locale",
-                          "type": "BoundValue"
-                        },
-                        "slidesPerView": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "4"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "5TCNErV6",
-                      "definitionId": "spacer",
-                      "patternProperties": {},
-                      "variables": {
-                        "size": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "m"
-                          }
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "C1TcON0M",
-                      "displayName": "Heading",
-                      "definitionId": "heading",
-                      "patternProperties": {},
-                      "variables": {
-                        "visualAppearance": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "heading-xl"
-                          }
-                        },
-                        "removeMarginBottom": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": false
-                          }
-                        },
-                        "children": {
-                          "key": "i28p2boi",
-                          "type": "UnboundValue"
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
-                          }
-                        },
-                        "cfTextAlign": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": "left"
-                          }
-                        }
-                      },
-                      "children": []
-                    },
-                    {
-                      "id": "CzL11C45",
-                      "definitionId": "carousel-video",
-                      "patternProperties": {},
-                      "variables": {
-                        "slides": {
-                          "path": "/9g-7kZ472XQBkhnml-mZ-/fields/slides/~locale",
-                          "type": "BoundValue"
-                        },
-                        "cfVisibility": {
-                          "type": "DesignValue",
-                          "valuesByBreakpoint": {
-                            "desktop": true
                           }
                         }
                       },
@@ -7982,6 +7660,299 @@
               ]
             },
             {
+              "id": "6Cg8BXM0",
+              "displayName": "Image Carousel",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "1720px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "key": "q5IUWqtG",
+                  "type": "UnboundValue"
+                },
+                "cfOpenInNewTab": {
+                  "key": "yMDRjVcG",
+                  "type": "UnboundValue"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "key": "WelvRTbQ",
+                  "type": "UnboundValue"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "bQ4LdirF",
+                  "displayName": "Section",
+                  "definitionId": "section",
+                  "patternProperties": {},
+                  "variables": {
+                    "background": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "primary"
+                      }
+                    },
+                    "padding": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "l"
+                      }
+                    },
+                    "divider": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "none"
+                      }
+                    },
+                    "id": {
+                      "key": "X9xn8eNy",
+                      "type": "UnboundValue"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "vxvNXiBg",
+                      "displayName": "Heading",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xxl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "93BsbPz6",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "u0EWqasb",
+                      "definitionId": "carousel-image",
+                      "patternProperties": {},
+                      "variables": {
+                        "slides": {
+                          "path": "/Uzc6FQP/fields/imageSlides/~locale",
+                          "type": "BoundValue"
+                        },
+                        "slidesPerView": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "1"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "fPEysWis",
+                      "definitionId": "carousel-image",
+                      "patternProperties": {},
+                      "variables": {
+                        "slides": {
+                          "path": "/DsX1MPtQ/fields/imageSlides/~locale",
+                          "type": "BoundValue"
+                        },
+                        "slidesPerView": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "2"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "sFqKYPPq",
+                      "definitionId": "carousel-image",
+                      "patternProperties": {},
+                      "variables": {
+                        "slides": {
+                          "path": "/ubziaBYn/fields/imageSlides/~locale",
+                          "type": "BoundValue"
+                        },
+                        "slidesPerView": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "3"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "gJSl3QMj",
+                      "definitionId": "carousel-image",
+                      "patternProperties": {},
+                      "variables": {
+                        "slides": {
+                          "path": "/VTZgp9YI/fields/imageSlides/~locale",
+                          "type": "BoundValue"
+                        },
+                        "slidesPerView": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "4"
+                          }
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "id": "xHJlZCCH",
               "displayName": "Overline",
               "definitionId": "contentful-section",
@@ -9980,12 +9951,248 @@
                   ]
                 }
               ]
+            },
+            {
+              "id": "bjFoamKh",
+              "displayName": "Video Carousel",
+              "definitionId": "contentful-section",
+              "patternProperties": {},
+              "variables": {
+                "cfVerticalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfHorizontalAlignment": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "center"
+                  }
+                },
+                "cfVisibility": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": true
+                  }
+                },
+                "cfMargin": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfPadding": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0 0 0 0"
+                  }
+                },
+                "cfBackgroundColor": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "100%"
+                  }
+                },
+                "cfHeight": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "547px"
+                  }
+                },
+                "cfMaxWidth": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "none"
+                  }
+                },
+                "cfFlexDirection": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "column"
+                  }
+                },
+                "cfFlexReverse": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": false
+                  }
+                },
+                "cfFlexWrap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "nowrap"
+                  }
+                },
+                "cfBorder": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px solid rgba(0, 0, 0, 0)"
+                  }
+                },
+                "cfGap": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfHyperlink": {
+                  "key": "7WPQbEGK",
+                  "type": "UnboundValue"
+                },
+                "cfOpenInNewTab": {
+                  "key": "YZg578lR",
+                  "type": "UnboundValue"
+                },
+                "cfBorderRadius": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": "0px"
+                  }
+                },
+                "cfBackgroundImageUrl": {
+                  "key": "bqv4sKJA",
+                  "type": "UnboundValue"
+                },
+                "cfBackgroundImageOptions": {
+                  "type": "DesignValue",
+                  "valuesByBreakpoint": {
+                    "desktop": {
+                      "scaling": "fill",
+                      "alignment": "left top",
+                      "targetSize": "2000px"
+                    }
+                  }
+                }
+              },
+              "children": [
+                {
+                  "id": "6IJt4Yzz",
+                  "displayName": "Section",
+                  "definitionId": "section",
+                  "patternProperties": {},
+                  "variables": {
+                    "background": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "primary"
+                      }
+                    },
+                    "padding": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "l"
+                      }
+                    },
+                    "divider": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": "none"
+                      }
+                    },
+                    "id": {
+                      "key": "Wn9tbkAL",
+                      "type": "UnboundValue"
+                    },
+                    "cfVisibility": {
+                      "type": "DesignValue",
+                      "valuesByBreakpoint": {
+                        "desktop": true
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "C1TcON0M",
+                      "displayName": "Heading",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xxl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "i28p2boi",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "CzL11C45",
+                      "definitionId": "carousel-video",
+                      "patternProperties": {},
+                      "variables": {
+                        "slides": {
+                          "path": "/9g-7kZ472XQBkhnml-mZ-/fields/slides/~locale",
+                          "type": "BoundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
       },
       "dataSource": {
         "en-US": {
+          "JZkN7NP": {
+            "sys": {
+              "id": "29RmoSX0ra5slBXtk5KXzM",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
+          "JtSxyKC": {
+            "sys": {
+              "id": "6fdNRFZbNXpiXQd6v7fHen",
+              "type": "Link",
+              "linkType": "Asset"
+            }
+          },
+          "Uzc6FQP": {
+            "sys": {
+              "id": "1JoMHQi1j1tApZYAZeMXzD",
+              "type": "Link",
+              "linkType": "Entry"
+            }
+          },
           "0HkUraow": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -10070,13 +10277,6 @@
               "linkType": "Entry"
             }
           },
-          "9g-7kZ472XQBkhnml-mZ-": {
-            "sys": {
-              "id": "20rQYDvS9V3fnwtMyAW0m4",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
           "D06vmzVo": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
@@ -10124,20 +10324,6 @@
               "id": "7Gumifs6ZTcj2G02BUoqFz",
               "type": "Link",
               "linkType": "Entry"
-            }
-          },
-          "JZkN7NP": {
-            "sys": {
-              "id": "29RmoSX0ra5slBXtk5KXzM",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "JtSxyKC": {
-            "sys": {
-              "id": "6fdNRFZbNXpiXQd6v7fHen",
-              "type": "Link",
-              "linkType": "Asset"
             }
           },
           "L1oQ0Cfn": {
@@ -10234,13 +10420,6 @@
           "Ura63qS4": {
             "sys": {
               "id": "7Gumifs6ZTcj2G02BUoqFz",
-              "type": "Link",
-              "linkType": "Entry"
-            }
-          },
-          "Uzc6FQP": {
-            "sys": {
-              "id": "1JoMHQi1j1tApZYAZeMXzD",
               "type": "Link",
               "linkType": "Entry"
             }
@@ -10496,6 +10675,13 @@
               "type": "Link",
               "linkType": "Entry"
             }
+          },
+          "9g-7kZ472XQBkhnml-mZ-": {
+            "sys": {
+              "id": "20rQYDvS9V3fnwtMyAW0m4",
+              "type": "Link",
+              "linkType": "Entry"
+            }
           }
         }
       },
@@ -10576,6 +10762,9 @@
           },
           "7SxgQMWi": {
             "value": false
+          },
+          "7WPQbEGK": {
+            "value": ""
           },
           "8LDk6KB4": {
             "value": ""
@@ -10696,16 +10885,22 @@
             "value": ""
           },
           "W6IG1y86": {
-            "value": "Carousels"
+            "value": "Action Block Carousel"
           },
           "WasTGlxj": {
             "value": "Centered Button"
           },
+          "WelvRTbQ": {},
+          "Wn9tbkAL": {},
           "X4E1tjHt": {
             "value": ""
           },
+          "X9xn8eNy": {},
           "Xsx7dtxc": {
             "value": "With external link buttons"
+          },
+          "YZg578lR": {
+            "value": false
           },
           "ZJnqNzR6": {
             "value": "Image"
@@ -10720,6 +10915,7 @@
           "avmUJimV": {
             "value": "Paragraph Secondary Bold"
           },
+          "bqv4sKJA": {},
           "bvkdCWAp": {
             "value": "Math"
           },
@@ -10795,6 +10991,9 @@
           "pLRLaUbo": {
             "value": ""
           },
+          "q5IUWqtG": {
+            "value": ""
+          },
           "qQFZT2Ct": {
             "value": "Localization - Long Text"
           },
@@ -10841,8 +11040,8 @@
           "xauf2a1R": {
             "value": false
           },
-          "ywmkAQXg": {
-            "value": "Action Block Carousel"
+          "yMDRjVcG": {
+            "value": false
           },
           "yzVjh0Ni": {
             "value": ""
