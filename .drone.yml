@@ -296,7 +296,7 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+      - git clone --branch staging $DRONE_GIT_HTTP_URL . 
 
   - name: cache-staging-clone
     image: plugins/s3-cache
@@ -310,6 +310,10 @@ steps:
         - .
 
 trigger:
+  branch:
+    - "elijah/gzip-drone-artifacts"
+  event:
+    - pull_request
   branch:
     - "staging"
     - "staging-next"
