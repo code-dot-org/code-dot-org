@@ -201,6 +201,7 @@
   "aiChatRateLimitError": "You've sent too many messages in the last minute. Please wait a moment before sending another message.",
   "aiChatTooPersonalUserMessage": "This message has been flagged as too personal.",
   "aiChatUserInputTooLargeMessage": "AI Chat can only process so much information and your last message used too many words. Please clear the chat, or shorten your last message, system prompt, or retrieval(s) to continue chatting.",
+  "aiChatTimeout": "Oops! Your request is taking a bit too long to answer. You can try again, or clear the chat to start fresh. If you attached any files to your message, consider trying with fewer or smaller files.",
   "aiChatMessageUser": "User chat message",
   "aiChatMessageBot": "AI bot chat message",
   "all": "All",

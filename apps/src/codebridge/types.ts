@@ -44,6 +44,7 @@ export type ConfigType = {
     horizontal: React.FunctionComponent<LayoutProps>;
     vertical: React.FunctionComponent<LayoutProps>;
     share?: React.FunctionComponent<LayoutProps>;
+    widget?: React.FunctionComponent<LayoutProps>;
   };
 };
 
@@ -71,6 +72,7 @@ export interface CodebridgeLevelProperties extends LevelProperties {
   miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
+  widgetView?: boolean;
 }
 
 // Python Lab specific property
@@ -82,6 +84,7 @@ export interface MazeCell {
 
 export interface LayoutProps {
   isProjectLevel?: boolean;
+  isWidgetView?: boolean;
 }
 
 export interface ProjectPickerSettings {

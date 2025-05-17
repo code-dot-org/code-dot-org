@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:35:34.000Z",
   "level_num": "custom",
@@ -34,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "Limit your response to one paragraph.",
+      "levelSystemPrompt": "If the user attaches an asset, examine the asset first, then answer their question based on your examination of the uploaded asset.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -66,7 +67,6 @@
     },
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:35:34.548+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level7_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level7_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:35:34.548+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level7_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level7_2024\"},{\"changed_at\":\"2025-05-15 19:14:08 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

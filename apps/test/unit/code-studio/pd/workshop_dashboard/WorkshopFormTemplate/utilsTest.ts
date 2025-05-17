@@ -7,6 +7,7 @@ import {
   WorkshopFormState,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/WorkshopFormTemplate/types';
 import {
+  emptyValue,
   sessionDataToState,
   sessionStateToApi,
   workshopDataToState,
@@ -349,6 +350,7 @@ describe('workshopStateToApi', () => {
       hidden: true,
       name: 'Test Workshop',
       notes: 'Test Notes',
+      organizer_id: 123,
       prereq: 'Test Prereq',
       regional_partner_id: 456,
       registration_link: 'https://test.com',
@@ -397,6 +399,7 @@ describe('workshopStateToApi', () => {
       hidden: false,
       name: null,
       notes: null,
+      organizer_id: null,
       prereq: null,
       regional_partner_id: null,
       registration_link: null,
@@ -445,6 +448,7 @@ describe('workshopStateToApi', () => {
       hidden: false,
       name: null,
       notes: null,
+      organizer_id: null,
       prereq: null,
       regional_partner_id: null,
       registration_link: null,
@@ -458,5 +462,92 @@ describe('workshopStateToApi', () => {
 
     const apiFormat = workshopStateToApi(workshopState);
     expect(apiFormat).toEqual(expectedApiFormat);
+  });
+});
+
+describe('emptyValue', () => {
+  // null and undefined
+  it('should return true for null', () => {
+    expect(emptyValue(null)).toBe(true);
+  });
+
+  it('should return true for undefined', () => {
+    expect(emptyValue(undefined)).toBe(true);
+  });
+
+  // strings
+  it('should return true for an empty string', () => {
+    expect(emptyValue('')).toBe(true);
+  });
+
+  it('should return true for a string with only whitespace', () => {
+    expect(emptyValue('   ')).toBe(true);
+  });
+
+  it('should return false for a non-empty string', () => {
+    expect(emptyValue('hello')).toBe(false);
+  });
+
+  it('should return false for a string with whitespace and characters', () => {
+    expect(emptyValue('  hello  ')).toBe(false);
+  });
+
+  // arrays
+  it('should return true for an empty array', () => {
+    expect(emptyValue([])).toBe(true);
+  });
+
+  it('should return false for an array with elements', () => {
+    expect(emptyValue([1, 2, 3])).toBe(false);
+  });
+
+  it('should return true for an array with all empty elements', () => {
+    expect(emptyValue([null] as unknown as string[])).toBe(true);
+    expect(emptyValue([undefined] as unknown as string[])).toBe(true);
+    expect(emptyValue([''])).toBe(true);
+  });
+
+  // objects
+  it('should return true for an empty object', () => {
+    expect(emptyValue({})).toBe(true);
+  });
+
+  it('should return false for an object with properties', () => {
+    expect(emptyValue({a: 'error'})).toBe(false);
+  });
+
+  it('should return true for an object with all empty property values', () => {
+    expect(emptyValue({a: ''})).toBe(true);
+  });
+
+  // numbers
+  it('should return false for the integer 0', () => {
+    expect(emptyValue(0)).toBe(false);
+  });
+
+  it('should return false for positive integers', () => {
+    expect(emptyValue(123)).toBe(false);
+  });
+
+  it('should return true for negative integers', () => {
+    expect(emptyValue(-123)).toBe(true);
+  });
+
+  it('should return true for floating-point numbers', () => {
+    expect(emptyValue(1.23)).toBe(true);
+  });
+
+  it('should return true for NaN', () => {
+    expect(emptyValue(NaN)).toBe(true);
+    expect(emptyValue(Number('not a number'))).toBe(true);
+  });
+
+  // booleans
+  it('should return false for true', () => {
+    expect(emptyValue(true)).toBe(false);
+  });
+
+  it('should return false for false', () => {
+    expect(emptyValue(false)).toBe(false);
   });
 });
