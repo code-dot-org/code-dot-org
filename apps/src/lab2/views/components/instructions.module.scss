@@ -228,3 +228,18 @@
 .bottomComponent {
   overflow: hidden;
 }
+
+.tabContainer {
+  background-color: $neutral_dark
+}
+
+.tabPanelsContainer {
+  background-color: $neutral_dark;
+  flex: 1;
+  overflow:hidden;
+
+  > div[role="tabpanel"] {
+    overflow: hidden;
+    height: 100%;
+  }
+}

@@ -1,11 +1,16 @@
 import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import Tabs, {TabModel} from '@code-dot-org/component-library/tabs';
 import classNames from 'classnames';
 import React, {useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
-import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
+import {
+  getCurrentLevel,
+  nextLevelId,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
@@ -16,9 +21,11 @@ import {
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import PredictQuestion from './PredictQuestion';
 import PredictSummary from './PredictSummary';
+import RubricView from './rubrics/RubricView';
 import TextToSpeech from './TextToSpeech';
 
 import moduleStyles from './instructions.module.scss';
@@ -36,6 +43,7 @@ interface InstructionsProps {
   className?: string;
   /** Optional component to render at the bottom of the main instructions. */
   bottomComponent?: React.ReactNode;
+  showRubric?: boolean;
 }
 
 /**
@@ -52,6 +60,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   className,
   manageNavigation = true,
   bottomComponent,
+  showRubric = false,
 }) => {
   const instructionsText = useAppSelector(
     state => state.lab.levelProperties?.longInstructions
@@ -79,6 +88,20 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
 
   const {theme} = useTheme();
 
+  // Fix this logic for real
+
+  const isSubmittable = useAppSelector(
+    state => state.lab.levelProperties?.submittable
+  );
+  const hasSubmitted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.submitted
+  );
+  const appType = useAppSelector(state => state.lab.levelProperties?.appName);
+
+  const rubric = useAppSelector(
+    state => state.lab.levelProperties?.rubricData?.rubric
+  );
+
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
     return null;
@@ -89,7 +112,30 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     (!hasConditions || satisfied) &&
     (!predictSettings?.isPredictLevel || predictAnswerLocked);
 
-  return (
+  const navigationButtonText = isSubmittable
+    ? hasSubmitted
+      ? 'Unsubmit'
+      : 'Submit'
+    : hasNextLevel
+    ? commonI18n.continue()
+    : commonI18n.finish();
+
+  const onContinueOrFinish = async () => {
+    if (isSubmittable) {
+      const submit = !hasSubmitted;
+      await dispatch(
+        sendSubmitReport({appType: appType || '', submitted: submit})
+      );
+      // If we just submitted, continue or finish the lesson.
+      if (submit) {
+        dispatch(continueOrFinishLesson());
+      }
+    } else {
+      dispatch(continueOrFinishLesson());
+    }
+  };
+
+  const instructionsPanel = (
     <InstructionsPanel
       text={instructionsText}
       message={message || undefined}
@@ -106,8 +152,54 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       canShowNextButton={canShowNextButton}
       hasNextLevel={hasNextLevel}
       useSecondaryFinishButton={useSecondaryFinishButton}
-      onContinueOrFinish={() => dispatch(continueOrFinishLesson())}
+      onContinueOrFinish={onContinueOrFinish}
+      navigationButtonText={navigationButtonText}
       bottomComponent={bottomComponent}
+    />
+  );
+
+  if (!showRubric || !rubric) {
+    return instructionsPanel;
+  }
+
+  const tabs: TabModel[] = [
+    {
+      value: 'instructions',
+      isIconOnly: true,
+      tooltip: {
+        text: 'Instructions',
+        tooltipId: 'instructions-tooltip',
+        size: 's',
+        direction: 'onRight',
+      },
+      icon: {iconName: 'info-circle'},
+      size: 's',
+      tabContent: instructionsPanel,
+    },
+    {
+      value: 'rubric',
+      isIconOnly: true,
+      tooltip: {
+        text: 'Rubric',
+        tooltipId: 'rubric-tooltip',
+        size: 's',
+        direction: 'onRight',
+      },
+      icon: {iconName: 'book'},
+      size: 's',
+      tabContent: <RubricView rubric={rubric} />,
+    },
+  ];
+
+  return (
+    <Tabs
+      name="instructionalPanel"
+      tabs={tabs}
+      defaultSelectedTabValue="instructions"
+      onChange={() => {}}
+      type="secondary"
+      tabsContainerClassName={moduleStyles.tabContainer}
+      tabPanelsContainerClassName={moduleStyles.tabPanelsContainer}
     />
   );
 };
@@ -138,6 +230,7 @@ interface InstructionsPanelProps {
   hasNextLevel: boolean;
   useSecondaryFinishButton: boolean;
   onContinueOrFinish: () => void;
+  navigationButtonText: string;
   bottomComponent?: React.ReactNode;
 }
 
@@ -167,6 +260,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   hasNextLevel,
   useSecondaryFinishButton,
   onContinueOrFinish,
+  navigationButtonText,
   bottomComponent,
 }) => {
   const vertical = layout === 'vertical';
@@ -311,9 +405,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               {canShowNextButton && (
                 <Button
                   id="instructions-continue-button"
-                  text={
-                    hasNextLevel ? commonI18n.continue() : commonI18n.finish()
-                  }
+                  text={navigationButtonText}
                   onClick={onContinueOrFinish}
                   className={moduleStyles.buttonInstruction}
                   type={showSecondaryFinishButton ? 'secondary' : 'primary'}

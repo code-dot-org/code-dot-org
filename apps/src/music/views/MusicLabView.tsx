@@ -284,6 +284,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
     [blocklyWorkspace]
   );
 
+  const isSubmittable = useAppSelector(
+    state => state.lab.levelProperties?.submittable
+  );
   const renderInstructions = useCallback(
     (position: InstructionsPosition) => {
       const exemplarPlayerInsideInstructions =
@@ -313,7 +316,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
           <PanelContainer
             id="instructions-panel"
             headerContent={musicI18n.panelHeaderInstructions()}
-            hideHeaders={hideHeaders}
+            hideHeaders={isSubmittable || hideHeaders}
           >
             <Instructions
               layout={
@@ -325,6 +328,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
               bottomComponent={
                 exemplarPlayerInsideInstructions && exemplarPlayer
               }
+              showRubric={isSubmittable}
             />
             {!exemplarPlayerInsideInstructions && exemplarPlayer}
           </PanelContainer>
@@ -339,6 +343,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
       onInstructionsTextClick,
       exemplarPlaybackEvents,
       player,
+      isSubmittable,
     ]
   );
 

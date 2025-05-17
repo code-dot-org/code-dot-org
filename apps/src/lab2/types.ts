@@ -15,6 +15,8 @@ import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
 
+import {Rubric} from './views/components/rubrics/types';
+
 export {Theme};
 
 /// ------ USER APP OPTIONS ------ ///
@@ -218,6 +220,10 @@ export interface LevelProperties {
   progressionType?: string;
   type?: string;
   starterAssets?: {[key: string]: string};
+  rubricData?: {
+    rubric: Rubric;
+    canShowTaScoresAlert: boolean;
+  };
 }
 
 // Level configuration data used by project-backed labs that don't require

@@ -195,7 +195,7 @@ class ScriptLevelsController < ApplicationController
     @body_classes = lesson_background ? "background-#{lesson_background}" : @level.properties['background']
 
     @rubric = @script_level.lesson.rubric
-    ai_rubrics_enabled_for_user = @view_as_user&.verified_teacher? || @view_as_user&.teachers&.any?(&:verified_teacher?)
+    ai_rubrics_enabled_for_user = @view_as_user&.verified_instructor? || @view_as_user&.teachers&.any?(&:verified_instructor?)
     if @rubric && ai_rubrics_enabled_for_user
       @rubric_data = {rubric: @rubric.summarize}
       @rubric_data[:canShowTaScoresAlert] = can_show_ta_scores_alert?

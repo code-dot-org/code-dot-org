@@ -12,7 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 19:29:54 UTC",
+    "serialized_at": "2025-05-16 20:36:41 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -855,6 +856,7 @@
       "has_lesson_plan": true,
       "relative_position": 52,
       "properties": {
+        "background": "light"
       },
       "seeding_key": {
         "lesson.key": "lesson-55",
@@ -6388,6 +6390,27 @@
     },
     {
       "chapter": 174,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Submittable Music Level 1"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      },
+      "level_keys": [
+        "Submittable Music Level 1"
+      ]
+    },
+    {
+      "chapter": 175,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6411,7 +6434,7 @@
       ]
     },
     {
-      "chapter": 175,
+      "chapter": 176,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6435,7 +6458,7 @@
       ]
     },
     {
-      "chapter": 176,
+      "chapter": 177,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6459,7 +6482,7 @@
       ]
     },
     {
-      "chapter": 177,
+      "chapter": 178,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6483,7 +6506,7 @@
       ]
     },
     {
-      "chapter": 178,
+      "chapter": 179,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6507,7 +6530,7 @@
       ]
     },
     {
-      "chapter": 179,
+      "chapter": 180,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6531,7 +6554,7 @@
       ]
     },
     {
-      "chapter": 180,
+      "chapter": 181,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -6555,7 +6578,7 @@
       ]
     },
     {
-      "chapter": 181,
+      "chapter": 182,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6579,7 +6602,7 @@
       ]
     },
     {
-      "chapter": 182,
+      "chapter": 183,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6603,7 +6626,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 184,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6627,7 +6650,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 185,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6651,7 +6674,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 186,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6675,7 +6698,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 187,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6699,7 +6722,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 188,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6723,7 +6746,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 189,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -6747,7 +6770,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 190,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -6771,7 +6794,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 191,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -6795,7 +6818,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 192,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -6819,7 +6842,7 @@
       ]
     },
     {
-      "chapter": 192,
+      "chapter": 193,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -6843,49 +6866,7 @@
       ]
     },
     {
-      "chapter": 193,
-      "position": 11,
-      "activity_section_position": 11,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Allthethings Python Lab 11"
-        ],
-        "lesson.key": "lesson-53",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
-      },
-      "level_keys": [
-        "Allthethings Python Lab 11"
-      ]
-    },
-    {
       "chapter": 194,
-      "position": 12,
-      "activity_section_position": 12,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Allthethings Python Lab 12"
-        ],
-        "lesson.key": "lesson-53",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
-      },
-      "level_keys": [
-        "Allthethings Python Lab 12"
-      ]
-    },
-    {
-      "chapter": 195,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6909,7 +6890,7 @@
       ]
     },
     {
-      "chapter": 196,
+      "chapter": 195,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6933,7 +6914,7 @@
       ]
     },
     {
-      "chapter": 197,
+      "chapter": 196,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6957,7 +6938,7 @@
       ]
     },
     {
-      "chapter": 198,
+      "chapter": 197,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6981,7 +6962,7 @@
       ]
     },
     {
-      "chapter": 199,
+      "chapter": 198,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7005,7 +6986,7 @@
       ]
     },
     {
-      "chapter": 200,
+      "chapter": 199,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7029,7 +7010,7 @@
       ]
     },
     {
-      "chapter": 201,
+      "chapter": 200,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -7053,7 +7034,7 @@
       ]
     },
     {
-      "chapter": 202,
+      "chapter": 201,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -7077,7 +7058,7 @@
       ]
     },
     {
-      "chapter": 203,
+      "chapter": 202,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -7101,7 +7082,7 @@
       ]
     },
     {
-      "chapter": 204,
+      "chapter": 203,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -7125,7 +7106,7 @@
       ]
     },
     {
-      "chapter": 205,
+      "chapter": 204,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7149,7 +7130,7 @@
       ]
     },
     {
-      "chapter": 206,
+      "chapter": 205,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -8466,19 +8447,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_artistIntro",
-        "script_level.level_keys": [
-          "2-3 Artist 1 new",
-          "ramp_video_artistIntro"
-        ],
-        "lesson.key": "Swapped Levels",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "2-3 Artist 1 new",
         "script_level.level_keys": [
           "2-3 Artist 1 new",
@@ -8492,7 +8460,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "ramp_video_loopsArtist",
+        "level.key": "ramp_video_artistIntro",
+        "script_level.level_keys": [
+          "2-3 Artist 1 new",
+          "ramp_video_artistIntro"
+        ],
+        "lesson.key": "Swapped Levels",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "40e74dbd-d44a-468e-9e17-a710d06bc3d3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "2-3 Artist Loops 2",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -8505,7 +8486,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist Loops 2",
+        "level.key": "ramp_video_loopsArtist",
         "script_level.level_keys": [
           "2-3 Artist Loops 2",
           "ramp_video_loopsArtist"
@@ -9378,6 +9359,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Submittable Music Level 1",
+        "script_level.level_keys": [
+          "Submittable Music Level 1"
+        ],
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "f9c9c7a9-9f2c-48e1-867b-94d010f2795a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "AI Chat Test Level",
         "script_level.level_keys": [
           "AI Chat Test Level"
@@ -9606,30 +9599,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "Allthethings Python Lab 11",
-        "script_level.level_keys": [
-          "Allthethings Python Lab 11"
-        ],
-        "lesson.key": "lesson-53",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Allthethings Python Lab 12",
-        "script_level.level_keys": [
-          "Allthethings Python Lab 12"
-        ],
-        "lesson.key": "lesson-53",
-        "lesson_group.key": "",
-        "script.name": "allthethings",
-        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "Allthethings Weblab2 1",
         "script_level.level_keys": [
           "Allthethings Weblab2 1"
@@ -9805,15 +9774,109 @@
   ],
   "rubrics": [
     {
+      "level_name": "Submittable Music Level 1",
+      "seeding_key": {
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
       "level_name": "CSD U3 Sprites scene challenge_allthethings",
       "seeding_key": {
         "lesson.key": "lesson-51",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "level_name": "Allthethings Python Lab 7",
+      "seeding_key": {
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "learning_goals": [
+    {
+      "key": "3184f615-e54d-44ff-8767-0e1bd1670244",
+      "position": 1,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others\n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.",
+      "seeding_key": {
+        "learning_goal.key": "3184f615-e54d-44ff-8767-0e1bd1670244",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "52ab2eab-b4df-43e1-9580-060a8f38b8e0",
+      "position": 3,
+      "learning_goal": "Position - Elements and the Coordinate System",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "52ab2eab-b4df-43e1-9580-060a8f38b8e0",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "53b1bc0f-fd08-4778-8516-5defb2a81839",
+      "position": 4,
+      "learning_goal": "Creating a Digital Artifact",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "53b1bc0f-fd08-4778-8516-5defb2a81839",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "573982d2-48b9-4761-bc9a-54f505fd8f8a",
+      "position": 2,
+      "learning_goal": "Modularity - Sprites and Sprite Properties",
+      "ai_enabled": false,
+      "tips": "(2) **Updated after creation**\n  - Sprites are created with these two lines of code: \n    ```\n    var sprite = createSprite(200, 200); \n    sprite.setAnimation(\"animation_1\");\n    ```\n  - After the above two lines, a sprite property listed below should be updated\n    - `rotation`\n    - `scale`\n    - `tint`\n    - `alpha`\n    - `width`\n    - `height`",
+      "seeding_key": {
+        "learning_goal.key": "573982d2-48b9-4761-bc9a-54f505fd8f8a",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "5a4b0a3b-f224-4f38-b5a9-1a3be7a85f61",
+      "position": 3,
+      "learning_goal": "Position - Elements and the Coordinate System",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "5a4b0a3b-f224-4f38-b5a9-1a3be7a85f61",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "683acd33-4c35-4e97-8b47-d34d3fc21a91",
+      "position": 4,
+      "learning_goal": "Creating a Digital Artifact",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "683acd33-4c35-4e97-8b47-d34d3fc21a91",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
     {
       "key": "78189d6e-11b2-44a8-83c8-027de9bed803",
       "position": 1,
@@ -9852,9 +9915,323 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "a1eb5796-77f4-406c-9890-2fce754c5564",
+      "position": 2,
+      "learning_goal": "Modularity - Sprites and Sprite Properties",
+      "ai_enabled": false,
+      "tips": "(2) **Updated after creation**\n  - Sprites are created with these two lines of code: \n    ```\n    var sprite = createSprite(200, 200); \n    sprite.setAnimation(\"animation_1\");\n    ```\n  - After the above two lines, a sprite property listed below should be updated\n    - `rotation`\n    - `scale`\n    - `tint`\n    - `alpha`\n    - `width`\n    - `height`",
+      "seeding_key": {
+        "learning_goal.key": "a1eb5796-77f4-406c-9890-2fce754c5564",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "key": "e2df52c6-4280-43fe-a2cf-b2f6de609f69",
+      "position": 1,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others\n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.",
+      "seeding_key": {
+        "learning_goal.key": "e2df52c6-4280-43fe-a2cf-b2f6de609f69",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "learning_goal_evidence_levels": [
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "3184f615-e54d-44ff-8767-0e1bd1670244",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program has significant sequencing errors, resulting in many elements unintentionally hidden or overlapping others.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "3184f615-e54d-44ff-8767-0e1bd1670244",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program may contain a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "3184f615-e54d-44ff-8767-0e1bd1670244",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well and all elements on the screen appear as intended.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "3184f615-e54d-44ff-8767-0e1bd1670244",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Consists solely of sprites or shapes with no inclusion of text, or it lacks any elements (shapes, sprites, or text) positioned on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "52ab2eab-b4df-43e1-9580-060a8f38b8e0",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "A cumulative total of at least 2 elements (one of which is text) are placed on the screen using the coordinate system (e.g., 1 sprite and 1 line of text or 1 shape and 1 line of text).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "52ab2eab-b4df-43e1-9580-060a8f38b8e0",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 shape, 2 sprites, and 1 line of text are placed on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "52ab2eab-b4df-43e1-9580-060a8f38b8e0",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "52ab2eab-b4df-43e1-9580-060a8f38b8e0",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project guide is not filled out or is unrelated to the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "53b1bc0f-fd08-4778-8516-5defb2a81839",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Some elements are used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "53b1bc0f-fd08-4778-8516-5defb2a81839",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Elements are generally used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "53b1bc0f-fd08-4778-8516-5defb2a81839",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Elements are used as described in the project guide and clearly display a captioned scene.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "53b1bc0f-fd08-4778-8516-5defb2a81839",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No sprites are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "573982d2-48b9-4761-bc9a-54f505fd8f8a",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 1 sprite created. No properties updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "573982d2-48b9-4761-bc9a-54f505fd8f8a",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 sprite created with at least one property updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "573982d2-48b9-4761-bc9a-54f505fd8f8a",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "573982d2-48b9-4761-bc9a-54f505fd8f8a",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Consists solely of sprites or shapes with no inclusion of text, or it lacks any elements (shapes, sprites, or text) positioned on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "5a4b0a3b-f224-4f38-b5a9-1a3be7a85f61",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "A cumulative total of at least 2 elements (one of which is text) are placed on the screen using the coordinate system (e.g., 1 sprite and 1 line of text or 1 shape and 1 line of text).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "5a4b0a3b-f224-4f38-b5a9-1a3be7a85f61",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 shape, 2 sprites, and 1 line of text are placed on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "5a4b0a3b-f224-4f38-b5a9-1a3be7a85f61",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "5a4b0a3b-f224-4f38-b5a9-1a3be7a85f61",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project guide is not filled out or is unrelated to the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "683acd33-4c35-4e97-8b47-d34d3fc21a91",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Some elements are used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "683acd33-4c35-4e97-8b47-d34d3fc21a91",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Elements are generally used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "683acd33-4c35-4e97-8b47-d34d3fc21a91",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Elements are used as described in the project guide and clearly display a captioned scene.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "683acd33-4c35-4e97-8b47-d34d3fc21a91",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
     {
       "understanding": 0,
       "teacher_description": "No sprites used",
@@ -9995,6 +10372,102 @@
         "understanding": 3,
         "learning_goal.key": "a19cc1ca-a845-4dfa-85fc-b6fcebc3da83",
         "lesson.key": "lesson-51",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No sprites are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "a1eb5796-77f4-406c-9890-2fce754c5564",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 1 sprite created. No properties updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "a1eb5796-77f4-406c-9890-2fce754c5564",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 sprite created with at least one property updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "a1eb5796-77f4-406c-9890-2fce754c5564",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "a1eb5796-77f4-406c-9890-2fce754c5564",
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e2df52c6-4280-43fe-a2cf-b2f6de609f69",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program has significant sequencing errors, resulting in many elements unintentionally hidden or overlapping others.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e2df52c6-4280-43fe-a2cf-b2f6de609f69",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program may contain a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e2df52c6-4280-43fe-a2cf-b2f6de609f69",
+        "lesson.key": "lesson-49",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well and all elements on the screen appear as intended.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e2df52c6-4280-43fe-a2cf-b2f6de609f69",
+        "lesson.key": "lesson-49",
         "lesson_group.key": "",
         "script.name": "allthethings"
       }

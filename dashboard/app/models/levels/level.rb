@@ -933,6 +933,12 @@ class Level < ApplicationRecord
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end
+
+    if script_level&.lesson&.rubric
+      rubric_data = {rubric: script_level.lesson.rubric.summarize}
+      rubric_data[:canShowTaScoresAlert] = false #can_show_ta_scores_alert? - do we need this for student view?
+      properties_camelized['rubricData'] = rubric_data
+    end
     properties_camelized
   end
 
