@@ -75,7 +75,7 @@ const PythonlabView: React.FunctionComponent<
   LabProps<CodebridgeLevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const [aiTutorHintQuestion, setAiTutorHintQuestion] = useState<
+  const [aiTutor2HintQuestion, setAiTutor2HintQuestion] = useState<
     string | undefined
   >(undefined);
   const {
@@ -170,9 +170,9 @@ const PythonlabView: React.FunctionComponent<
     restartPyodideIfProgramIsRunning
   );
 
-  // Given a question for the AI Tutor, return the full question to ask, which means
+  // Given a question for the AITutor2, return the full question to ask, which means
   // appending all the relevant context.
-  const getAiTutorFullQuestionFromQuestion = (
+  const getAiTutor2FullQuestionFromQuestion = (
     question: string,
     questionType: 'hint' | 'user'
   ) => {
@@ -200,7 +200,7 @@ const PythonlabView: React.FunctionComponent<
     dispatch: AppDispatch,
     source: MultiFileSource | undefined
   ) => {
-    setAiTutorHintQuestion(undefined);
+    setAiTutor2HintQuestion(undefined);
 
     // Flush any pending saves if we have a project manager on run. The user will likely
     // run their code before navigating away from the page, so switching pages
@@ -231,9 +231,9 @@ const PythonlabView: React.FunctionComponent<
     }
     dispatch(submitPredictResponse({appType: 'pythonlab'}));
 
-    // Set a question for the hint AI Tutor in ValidatedInstructions to ask.
+    // Set a question for the hint AITutor2 in ValidatedInstructions to ask.
     // It will be passed down via the CodebridgeContext.
-    setAiTutorHintQuestion("What's wrong with my code, if anything?");
+    setAiTutor2HintQuestion("What's wrong with my code, if anything?");
   };
 
   return (
@@ -252,9 +252,9 @@ const PythonlabView: React.FunctionComponent<
           sendConsoleInput={sendInput}
           levelProperties={levelProperties}
           projectPickerSettings={projectPickerSettings}
-          aiTutorHintQuestion={aiTutorHintQuestion}
-          getAiTutorFullQuestionFromQuestion={
-            getAiTutorFullQuestionFromQuestion
+          aiTutor2HintQuestion={aiTutor2HintQuestion}
+          getAiTutor2FullQuestionFromQuestion={
+            getAiTutor2FullQuestionFromQuestion
           }
         />
       )}

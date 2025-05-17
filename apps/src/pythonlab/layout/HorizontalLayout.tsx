@@ -6,7 +6,7 @@ import React from 'react';
 
 import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
-import AiTutorUI from '@cdo/apps/lab2/views/components/AiTutorUI';
+import AiTutor2UI from '@cdo/apps/lab2/views/components/AiTutor2UI';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
@@ -26,7 +26,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   isWidgetView,
 }) => {
   const {
-    getAiTutorFullQuestionFromQuestion,
+    getAiTutor2FullQuestionFromQuestion,
     levelProperties: {aiTutor2Available},
   } = useCodebridgeContext();
 
@@ -109,16 +109,16 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
         {aiTutor2Available && (
           <div style={{width: rightmostPanelWidth}}>
             <PanelContainer
-              id="aitutor"
+              id="aitutor2"
               headerContent="AI Tutor"
-              className={moduleStyles.rightestColumn}
+              className={moduleStyles.rightmostColumn}
             >
               <div className={moduleStyles.inside}>
-                <AiTutorUI
+                <AiTutor2UI
                   allowChat={true}
                   type="user"
                   getFullQuestionFromQuestion={
-                    getAiTutorFullQuestionFromQuestion
+                    getAiTutor2FullQuestionFromQuestion
                   }
                 />
               </div>

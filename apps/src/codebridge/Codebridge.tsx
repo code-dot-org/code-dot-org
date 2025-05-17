@@ -40,10 +40,10 @@ type CodebridgeProps = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  askAiTutor?: (question: string, questionType: 'user' | 'hint') => void;
-  aiTutorResponse?: string;
-  aiTutorHintQuestion?: string;
-  getAiTutorFullQuestionFromQuestion?: (
+  askAiTutor2?: (question: string, questionType: 'user' | 'hint') => void;
+  aiTutor2Response?: string;
+  aiTutor2HintQuestion?: string;
+  getAiTutor2FullQuestionFromQuestion?: (
     question: string,
     type: 'user' | 'hint'
   ) => string;
@@ -63,8 +63,8 @@ export const Codebridge = React.memo(
     sendConsoleInput,
     levelProperties,
     projectPickerSettings,
-    aiTutorHintQuestion,
-    getAiTutorFullQuestionFromQuestion,
+    aiTutor2HintQuestion,
+    getAiTutor2FullQuestionFromQuestion,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
       sourceReducer,
@@ -131,8 +131,8 @@ export const Codebridge = React.memo(
           sendConsoleInput,
           levelProperties,
           projectPickerSettings,
-          aiTutorHintQuestion,
-          getAiTutorFullQuestionFromQuestion,
+          aiTutor2HintQuestion,
+          getAiTutor2FullQuestionFromQuestion,
         }}
       >
         <BackpackAPIContext.Provider value={backpackApi}>

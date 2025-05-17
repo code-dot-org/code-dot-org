@@ -26,7 +26,7 @@ import {
   setIsValidating,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import AiTutorUI from '@cdo/apps/lab2/views/components/AiTutorUI';
+import AiTutor2UI from '@cdo/apps/lab2/views/components/AiTutor2UI';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -79,8 +79,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     onRun,
     onStop,
     levelProperties,
-    getAiTutorFullQuestionFromQuestion,
-    aiTutorHintQuestion,
+    getAiTutor2FullQuestionFromQuestion,
+    aiTutor2HintQuestion,
     levelProperties: {aiTutor2Available},
   } = useCodebridgeContext();
   const dialogControl = useDialogControl();
@@ -387,11 +387,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           )}
 
           {aiTutor2Available && (
-            <AiTutorUI
+            <AiTutor2UI
               allowChat={false}
               type={'hint'}
-              question={aiTutorHintQuestion}
-              getFullQuestionFromQuestion={getAiTutorFullQuestionFromQuestion}
+              question={aiTutor2HintQuestion}
+              getFullQuestionFromQuestion={getAiTutor2FullQuestionFromQuestion}
             />
           )}
           {predictSettings?.isPredictLevel && (
