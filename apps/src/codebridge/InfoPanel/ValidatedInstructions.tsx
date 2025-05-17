@@ -81,6 +81,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     levelProperties,
     getAiTutorFullQuestionFromQuestion,
     aiTutorHintQuestion,
+    levelProperties: {aiTutor2Available},
   } = useCodebridgeContext();
   const dialogControl = useDialogControl();
 
@@ -385,13 +386,14 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             </>
           )}
 
-          <AiTutorUI
-            allowChat={false}
-            type={'hint'}
-            question={aiTutorHintQuestion}
-            getFullQuestionFromQuestion={getAiTutorFullQuestionFromQuestion}
-          />
-
+          {aiTutor2Available && (
+            <AiTutorUI
+              allowChat={false}
+              type={'hint'}
+              question={aiTutorHintQuestion}
+              getFullQuestionFromQuestion={getAiTutorFullQuestionFromQuestion}
+            />
+          )}
           {predictSettings?.isPredictLevel && (
             <InstructorsOnly>
               <div className={moduleStyles.bubble}>

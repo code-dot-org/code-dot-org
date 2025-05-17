@@ -26,6 +26,11 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   isWidgetView,
 }) => {
   const {
+    getAiTutorFullQuestionFromQuestion,
+    levelProperties: {aiTutor2Available},
+  } = useCodebridgeContext();
+
+  const {
     leftPanelWidth,
     rightPanelWidth,
     rightTopPanelHeight,
@@ -56,10 +61,8 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
     minRightPanelWidth: MIN_RIGHT_PANEL_WIDTH,
     appName: 'pythonlab',
     heightOffset: isProjectLevel ? PROJECT_FOOTER_HEIGHT : 0,
-    showingRightmostPanel: true,
+    showingRightmostPanel: aiTutor2Available,
   });
-
-  const {getAiTutorFullQuestionFromQuestion} = useCodebridgeContext();
 
   return (
     <div
@@ -103,21 +106,25 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             setOutputHeight={setRightBottomPanelSize}
           />
         </div>
-        <div style={{width: rightmostPanelWidth}}>
-          <PanelContainer
-            id="aitutor"
-            headerContent="AI Tutor"
-            className={moduleStyles.rightestColumn}
-          >
-            <div className={moduleStyles.inside}>
-              <AiTutorUI
-                allowChat={true}
-                type="user"
-                getFullQuestionFromQuestion={getAiTutorFullQuestionFromQuestion}
-              />
-            </div>
-          </PanelContainer>
-        </div>
+        {aiTutor2Available && (
+          <div style={{width: rightmostPanelWidth}}>
+            <PanelContainer
+              id="aitutor"
+              headerContent="AI Tutor"
+              className={moduleStyles.rightestColumn}
+            >
+              <div className={moduleStyles.inside}>
+                <AiTutorUI
+                  allowChat={true}
+                  type="user"
+                  getFullQuestionFromQuestion={
+                    getAiTutorFullQuestionFromQuestion
+                  }
+                />
+              </div>
+            </PanelContainer>
+          </div>
+        )}
       </div>
       {isProjectLevel && <div className={moduleStyles.footerArea} />}
     </div>
