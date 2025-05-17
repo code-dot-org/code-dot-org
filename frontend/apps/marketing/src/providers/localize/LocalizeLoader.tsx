@@ -1,5 +1,3 @@
-import Script from 'next/script';
-
 import {Brand} from '@/config/brand';
 import {getLocalizePath, getProjectId} from '@/providers/localize/config';
 
@@ -9,16 +7,14 @@ import {getLocalizePath, getProjectId} from '@/providers/localize/config';
 const LocalizeLoader = ({brand}: {brand: Brand}) => (
   <>
     {/* Localize script for their widget from our CDN. */}
-    <Script
+    <script
       src={getLocalizePath()}
-      strategy={'beforeInteractive'}
       id="localize-script"
       data-project-key={getProjectId(brand)}
-      async
-    />
+    ></script>
 
     {/* Localize JS initializer */}
-    <Script strategy={'beforeInteractive'}>
+    <script>
       {`
         const script = document.querySelector("script#localize-script");
 
@@ -48,7 +44,7 @@ const LocalizeLoader = ({brand}: {brand: Brand}) => (
           console.warn("Localize was not installed correctly.");
         }
       `}
-    </Script>
+    </script>
   </>
 );
 
