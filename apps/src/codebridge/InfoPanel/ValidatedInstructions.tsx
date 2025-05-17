@@ -43,7 +43,7 @@ import ValidationResults from './ValidationResults';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
-const MINIMUM_VALIDATION_TIME = 1500; // 1 second
+const MINIMUM_VALIDATION_TIME = 1500; // 1.5 seconds
 
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
