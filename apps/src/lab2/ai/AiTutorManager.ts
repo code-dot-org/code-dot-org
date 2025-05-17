@@ -3,6 +3,10 @@ import {PendingChatMessage, AichatContext} from '@cdo/apps/aichat/types';
 import {EMPTY_AI_CUSTOMIZATIONS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {
+  FeedbackData,
+  logUserFeedbackOnStudentEvaluation,
+} from '@cdo/apps/aiEvaluation/aiInteractionFeedbackApi';
+import {
   AiChatModelIds,
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -37,7 +41,9 @@ export default class AiTutorManager {
     };
 
     const aichatContext: AichatContext = {
-      currentLevelId: parseInt(this.currentLevelId || '0'),
+      currentLevelId: this.currentLevelId
+        ? parseInt(this.currentLevelId)
+        : null,
       scriptId: this.scriptId || null,
       channelId: this.channelId,
     };
@@ -54,6 +60,24 @@ export default class AiTutorManager {
       aiCustomizations,
       aichatContext
     );
+
+    const feedbackData: FeedbackData = {
+      aiInteractionType: 'AiTutor',
+      aiInteractionId: messages[0].requestId,
+      thumbsUp: undefined,
+      levelId: this.currentLevelId ? parseInt(this.currentLevelId) : undefined,
+      scriptId: this.scriptId,
+      metadata: {
+        channelId: this.channelId || '',
+        modelId: AiChatModelIds.CHATGPT,
+        systemPrompt: systemPrompts[type],
+        userMessage: message,
+      },
+    };
+
+    logUserFeedbackOnStudentEvaluation(feedbackData).catch(error => {
+      console.error('🤖: Error logging feedback:', error);
+    });
 
     return messages;
   }
