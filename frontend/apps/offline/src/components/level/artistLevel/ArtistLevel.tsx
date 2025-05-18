@@ -75,6 +75,10 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
     controller.current?.run();
   }, [controller, stepping]);
 
+  const skin = skinFor(levelData.artistData?.skinId || 'artist');
+
+  //levelData.blocklyData.startBlocks = levelData.artistData.predrawBlocks;
+
   const onInject = useCallback(() => {
     if (container.current) {
       const predrawCode = levelData.artistData?.predrawBlocks
@@ -98,7 +102,7 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
         },
         instant: false,
         isK1: false,
-        skin: skinFor(levelData.artistData?.skinId || 'artist'),
+        skin,
         container: container.current,
         predrawCode,
         solutionCode,
@@ -135,7 +139,7 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
           />
         )
       }
-      customBlocks={[...blocks, ...(customBlocks || [])]}
+      customBlocks={[...blocks(skin), ...(customBlocks || [])]}
       options={{
         forceInsertTopBlock: 'when_run',
         grayOutUndeletableBlocks: true,

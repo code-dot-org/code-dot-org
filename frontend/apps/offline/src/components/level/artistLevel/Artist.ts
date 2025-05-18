@@ -307,6 +307,7 @@ class Artist {
       this.driver.isPredrawing_ = false;
     }
 
+    this.reset();
     this.driver.display();
   }
 

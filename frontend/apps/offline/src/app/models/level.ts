@@ -317,7 +317,24 @@ export const loadVideo: (key: string) => Promise<VideoDefinition> = async (
   return record;
 };
 
+/**
+ * Which level types are 'concept' levels?
+ */
 export const conceptLevelTypes: string[] = ['StandaloneVideo', 'Panels'];
+
+/**
+ * Clean up JSON and allow whitespace and JavaScript comments.
+ */
+export const sanitizeJSON: (data: string) => string = data =>
+  data
+    // Remove Windows-style newlines for convenience
+    .replaceAll('\r', '')
+    // Strip out line comments
+    .split('\n')
+    .filter(line => !line.match(/^\s*\/\//))
+    .join('\n')
+    // Remove whitespace
+    .trim();
 
 /**
  * Parses a Code.org level file.
@@ -334,7 +351,7 @@ export const parseLevelData: (
   const parser = new new JSDOM().window.DOMParser();
   const xml = parser.parseFromString(xmlString, 'application/xml');
   const config = JSON.parse(
-    xml.querySelector('config')?.textContent || '{}',
+    sanitizeJSON(xml.querySelector('config')?.textContent || '{}'),
   ) as LevelConfiguration;
 
   console.log(path);
@@ -370,7 +387,7 @@ export const parseLevelData: (
   // Parse hint data
   ret.hints = (
     JSON.parse(
-      config.properties?.authored_hints || '[]',
+      sanitizeJSON(config.properties?.authored_hints || '[]'),
     ) as AuthoredHintConfiguration[]
   ).map(hint => {
     const hintData: HintData = {
@@ -395,10 +412,10 @@ export const parseLevelData: (
     ret.mazeData = {
       skinId: config.properties?.skin || 'birds',
       map: config.properties?.maze
-        ? JSON.parse(config.properties?.maze)
+        ? JSON.parse(sanitizeJSON(config.properties?.maze))
         : undefined,
       serializedMaze: config.properties?.serialized_maze
-        ? JSON.parse(config.properties?.serialized_maze)
+        ? JSON.parse(sanitizeJSON(config.properties?.serialized_maze))
         : undefined,
       startDirection: config.properties?.start_direction
         ? parseInt(config.properties?.start_direction)
@@ -439,7 +456,7 @@ export const parseLevelData: (
           | HTMLElement
           | undefined
       )?.innerHTML?.trim(),
-      images: JSON.parse(config.properties?.images || '[]'),
+      images: JSON.parse(sanitizeJSON(config.properties?.images || '[]')),
     };
   }
 
