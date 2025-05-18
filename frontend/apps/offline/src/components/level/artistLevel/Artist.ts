@@ -109,7 +109,7 @@ class Artist {
   constructor(options: ArtistOptions) {
     this.options = options;
     this.pid = null;
-    this.speed = 1000;
+    this.speed = 500;
 
     const {api, skin} = options;
 
@@ -387,7 +387,7 @@ class Artist {
     options: {
       smoothAnimate: boolean;
     },
-  ) {
+  ): boolean {
     let tupleDone = true;
     console.log('PERFORM', action);
 
@@ -747,12 +747,15 @@ class Artist {
   async run() {
     // Ensure all assets are loaded
     await this.preloadAll();
+    console.log('running');
 
     // Animate all steps
     let animating = true;
+    this.shouldAnimate_ = true;
     while (animating) {
       animating = await this.animate();
     }
+    this.shouldAnimate_ = false;
   }
 
   /**
@@ -763,7 +766,9 @@ class Artist {
     await this.preloadAll();
 
     // Animate one step
+    this.shouldAnimate_ = true;
     await this.animate();
+    this.shouldAnimate_ = false;
   }
 
   /**
@@ -797,37 +802,84 @@ class Artist {
    * @return boolean true if there is more to animate, false if finished.
    */
   async animate(): Promise<boolean> {
-    return new Promise<boolean>(resolve => {
-      // Kill any task before we start.
-      if (this.pid) {
-        clearTimeout(this.pid);
+    // Kill any task before we start.
+    if (this.pid) {
+      clearTimeout(this.pid);
+    }
+    this.pid = null;
+
+    console.log('animate', this.log);
+    if (this.log.length === 0) {
+      if (!this.shouldAnimate_) {
+        this.driver.display();
       }
-      this.pid = null;
+      return false;
+    }
 
-      const stepSpeed = this.speed;
+    const stepSpeed = this.speed;
 
-      // Scale the speed non-linearly, to give better precision at the fast end.
-      //var stepSpeed =
-      // (1000 * Math.pow(1 - this.speedSlider.getValue(), 2)) /
-      //  this.skin.speedModifier;
+    // Scale the speed non-linearly, to give better precision at the fast end.
+    //var stepSpeed =
+    // (1000 * Math.pow(1 - this.speedSlider.getValue(), 2)) /
+    //  this.skin.speedModifier;
 
-      if (this.driver) {
-        // when smoothAnimate is true, we divide long steps into partitions of this
-        // size.
-        this.driver.smoothAnimateStepSize =
-          stepSpeed === 0
-            ? FAST_SMOOTH_ANIMATE_STEP_SIZE
-            : SMOOTH_ANIMATE_STEP_SIZE;
+    if (this.driver) {
+      // when smoothAnimate is true, we divide long steps into partitions of this
+      // size.
+      this.driver.smoothAnimateStepSize =
+        stepSpeed === 0
+          ? FAST_SMOOTH_ANIMATE_STEP_SIZE
+          : SMOOTH_ANIMATE_STEP_SIZE;
+    }
+
+    let executeSecondTuple: boolean = false;
+    do {
+      // Unless something special happens, we will just execute a single tuple.
+      executeSecondTuple = false;
+
+      const action = this.log[0];
+
+      if (this.shouldAnimate_) {
+        //const id = action.arguments.id;
+        //this.studioApp_.highlight(String(id));
       }
 
-      if (!this.options.instant) {
+      // Should we execute another tuple in this frame of animation?
+      if (this.skin.consolidateTurnAndMove && this.checkforTurnAndMove_()) {
+        executeSecondTuple = true;
+      }
+
+      // We only smooth animate for Anna & Elsa, and only if there is not another tuple to be done.
+
+      const tupleDone = this.performAction(action, {
+        smoothAnimate: this.skin.smoothAnimate && !executeSecondTuple,
+      });
+
+      if (this.shouldAnimate_) {
+        this.driver.display();
+      }
+
+      if (tupleDone) {
+        this.log.shift();
+        this.resetStepInfo();
+      }
+    } while (executeSecondTuple);
+
+    if (!this.options.instant) {
+      return new Promise<boolean>(resolve => {
         this.pid = setTimeout(() => {
           resolve(true);
         }, stepSpeed);
-      } else {
-        resolve(true);
-      }
-    });
+      });
+    } else {
+      return true;
+    }
+  }
+
+  resetStepInfo() {
+    this.driver.stepStartX = this.driver.x;
+    this.driver.stepStartY = this.driver.y;
+    this.driver.stepDistanceCovered = 0;
   }
 
   /**

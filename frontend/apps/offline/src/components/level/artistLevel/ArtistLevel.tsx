@@ -13,7 +13,10 @@ import FieldColour from '@/components/blockly/plugins/fieldColour';
 import ToolboxTrashcanPlugin from '@/components/blockly/plugins/toolboxTrashcan';
 import ThrasosRenderer from '@/components/blockly/renderers/thrasos';
 import DefaultTheme from '@/components/blockly/themes/default';
-import {getCodeFromBlockXmlSource} from '@/components/blockly/utils';
+import {
+  getCodeFromBlockXmlSource,
+  getAllGeneratedCode,
+} from '@/components/blockly/utils';
 import BlocklyLevel, {BlocklyLevelProps} from '@/components/level/blocklyLevel';
 
 import * as defaultAPI from './api';
@@ -57,22 +60,37 @@ const ArtistLevel: React.FunctionComponent<ArtistLevelProps> = ({
     setStepping(false);
   }, [controller]);
 
+  const execute = useCallback(
+    (step: boolean) => {
+      setStepping(step);
+      controller.current?.evaluate(
+        getAllGeneratedCode({
+          startBlock: 'when_run',
+        }),
+      );
+      setRunning(true);
+      if (!step) {
+        controller.current?.run();
+      }
+    },
+    [controller],
+  );
+
   const onStep = useCallback(() => {
     console.log('onstep', stepping);
     if (!stepping) {
-      controller.current?.evaluate('');
-      controller.current?.step();
+      execute(true);
     } else {
       setRunning(true);
     }
+    (async () => {
+      await controller.current?.step();
+      setRunning(false);
+    })();
   }, [controller, stepping]);
 
   const onRun = useCallback(() => {
-    if (!stepping) {
-      controller.current?.evaluate('');
-    }
-    setRunning(true);
-    controller.current?.run();
+    execute(false);
   }, [controller, stepping]);
 
   const skin = skinFor(levelData.artistData?.skinId || 'artist');
