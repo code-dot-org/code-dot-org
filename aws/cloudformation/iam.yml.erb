@@ -1047,7 +1047,7 @@ roles.each do |name, config| %>
                 Resource: '*'
                 Condition:
                   StringEquals:
-                    aws:ResourceTag/environment-type: <%=environment_type%>
+                    aws:RequestTag/environment-type: <%=environment_type%>
               # ECS resources
               - Effect: Allow
                 Action:
@@ -1068,7 +1068,7 @@ roles.each do |name, config| %>
                   - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/*/marketing-sites-<%=environment_type%>-*"
                 Condition:
                   StringEqualsIfExists:
-                    aws:ResourceTag/environment-type: <%=environment_type%>
+                    aws:RequestTag/environment-type: <%=environment_type%>
               # ELB resources
               - Effect: Allow
                 Action:
@@ -1087,7 +1087,7 @@ roles.each do |name, config| %>
                 Resource: '*'
                 Condition:
                   StringEquals:
-                    aws:ResourceTag/environment-type: <%=environment_type%>
+                    aws:RequestTag/environment-type: <%=environment_type%>
               # CloudFront resources
               - Effect: Allow
                 Action:
@@ -1181,7 +1181,7 @@ roles.each do |name, config| %>
                 Resource: '*'
                 Condition:
                   StringEquals:
-                    aws:ResourceTag/environment-type: <%=environment_type%>
+                    aws:RequestTag/environment-type: <%=environment_type%>
               # Application Autoscaling for ECS services
               - Effect: Allow
                 Action:
