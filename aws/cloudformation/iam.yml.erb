@@ -860,10 +860,10 @@ roles.each do |name, config| %>
   <%
     marketing_sites_environment_type_configuration = {
       development: {
-        base_domain_name: 'dev-code.org'
+        base_domain_name: 'marketing-sites.dev-code.org'
       },
       test: {
-        base_domain_name: 'test-code.org'
+        base_domain_name: 'marketing-sites.test-code.org'
       },
       production: {
         base_domain_name: 'code.org'
@@ -1125,7 +1125,7 @@ roles.each do |name, config| %>
                 Condition:
                   StringLike:
                     'acm:DomainName':
-                      - "*loadbalancer*<%=configuration[:base_domain_name]%>"
+                      - "*<%=configuration[:base_domain_name]%>"
               - Effect: Allow
                 Action:
                   - acm:DescribeCertificate
