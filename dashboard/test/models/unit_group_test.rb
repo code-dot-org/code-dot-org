@@ -1238,11 +1238,12 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(teacher).map(&:name)
     assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(levelbuilder).map(&:name)
 
+    csx1.update!(hide_within_course: true)
     csx2.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
     csx.reload
 
-    assert_equal ['csx1', 'csx3'], csx.units_for_user(nil).map(&:name)
-    assert_equal ['csx1', 'csx3'], csx.units_for_user(teacher).map(&:name)
+    assert_equal ['csx2', 'csx3'], csx.units_for_user(nil).map(&:name)
+    assert_equal ['csx2', 'csx3'], csx.units_for_user(teacher).map(&:name)
     assert_equal ['csx1', 'csx2', 'csx3'], csx.units_for_user(levelbuilder).map(&:name)
   end
 

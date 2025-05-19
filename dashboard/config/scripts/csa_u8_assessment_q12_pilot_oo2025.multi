@@ -3,8 +3,8 @@ name 'CSA U8 Assessment q12_pilot_oo2025'
 wrong 'The array is in sorted order up to position `k`.'
 wrong 'The smallest value is at position `k`.'
 wrong 'The largest value is at position `k`.'
-wrong 'All values in position `0` to `m-1` are greater than `num`.'
-right 'All values in position `0` to `m-1` are less than or equal to `num`.'
+wrong 'All values in position `0` to `m-1` are greater than `n`.'
+right 'All values in position `0` to `m-1` are less than or equal to `n`.'
 
 markdown <<MARKDOWN
 Consider the following instance variable and method.

@@ -1161,6 +1161,8 @@ en:
             csd_survey:
               display_name: Post-Course Survey
           student_description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          lessons: {}
+          name: csd3-2017
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0

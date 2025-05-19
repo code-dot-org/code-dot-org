@@ -57,7 +57,7 @@
   "importFromBackpackDuplicateSupportMessage": "This file already exists in the level's support code. Would you like to import it as {newFileName}?",
   "importToProject": "Import to project",
   "instructionsHeader": "Instructions",
-  "invalidFileUpload": "Cannot upload files of type {fileType}",
+  "invalidFileType": "Cannot support files of type {fileType}.",
   "invalidNameError": "Names must be only letters, numbers, or underscores",
   "loadingEnvironmentTooltip": "Your environment is loading. Please wait.",
   "makeLockedStarter": "Make locked starter file",
@@ -119,6 +119,7 @@
   "validationNotYetPassedFinish": "You must pass tests before finishing.",
   "validationNotYetPassedSubmit": "You must pass tests before submitting.",
   "validationResults": "Validation Results",
+  "validFileTypesInfo": "Valid file types are {validFileTypes}.",
   "verticalLayout": "Vertical layout",
   "viewingOldVersion": "You are viewing an older version",
   "versionRestored": "Version successfully restored"

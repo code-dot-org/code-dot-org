@@ -333,10 +333,6 @@
             {
               "value": "school_admin",
               "text": "School administrator"
-            },
-            {
-              "value": "other",
-              "text": "Other"
             }
           ],
           "hasOther": true

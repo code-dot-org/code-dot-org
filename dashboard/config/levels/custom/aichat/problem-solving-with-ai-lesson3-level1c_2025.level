@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:34:05.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##  🔍Teacher Tip\r\nStudents will see each of these levels separately. We've combined here them for a more streamlined PL experience. \r\n\r\n---\r\n\r\n## Travel Agent - Minimal Context Given\r\n\r\nPractice prompting through the career of a travel agent by giving a simple, unstructured prompt to see how AI makes recommendations without any specific details or examples.\r\n\r\n### Do This:\r\n\r\n1. Try a basic prompt like the one below, or a similar one related to family vacations.\r\n\r\n>Recommend a family vacation destination.\r\n\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how useful or generic the recommendation is.\r\n\r\n---\r\n## Travel Agent - Providing a Single Example\r\n\r\nPractice prompting through the career of a travel agent by adding a single example to help guide the AI's recommendation.\r\n\r\n### Do This:\r\n\r\n1. Prompt AI to recommend a family destination by including **an example** vacation destination.\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how the AI builds on your example to make a more specific or relevant suggestion.\r\n\r\n::: details [**Not sure where to start?**]\r\nHere's an example prompt:\r\n> Recommend a vacation destination for a family of four that enjoys outdoor adventures and cultural experiences. For example: \r\n>\r\n> \"The Bahamas offers beautiful beaches and family-friendly resorts.\" \r\n:::\r\n\r\n---\r\n## Travel Agent - Providing Multiple Examples\r\n\r\nPractice prompting through the career of a travel agent by giving the AI a detailed and structured request that includes multiple expectations.\r\n\r\n### Do This:\r\n\r\n1. Prompt AI to recommend a family destination by including **several examples** vacation destination.\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how the added context improves the accuracy, relevance, and usefulness of the recommendation.\r\n\r\n::: details [**Not sure where to start?**]\r\nHere's an example prompt:\r\n> Recommend a vacation destination for a family of four that enjoys outdoor adventures and cultural experiences. For example: \r\n>\r\n> \"The Bahamas offers beautiful beaches and family-friendly resorts.\" \r\n>\r\n> OR\r\n> \r\n> \"Palm Springs offers many nearby hiking opportunities and mini-golf adventures.\"\r\n>\r\n> OR\r\n> \r\n> \"Thailand offers jungle excursions and lunar themed parties.\"\r\n:::",
+    "long_instructions": "## Travel Agent - Minimal Context Given\r\n\r\nPractice prompting through the career of a travel agent by giving a simple, unstructured prompt to see how AI makes recommendations without any specific details or examples.\r\n\r\n### Do This:\r\n\r\n1. Try a basic prompt like the one below, or a similar one related to family vacations.\r\n\r\n>Recommend a family vacation destination.\r\n\r\n2. Press **Send**.\r\n3. Read the response you get, paying attention to how useful or generic the recommendation is.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -45,7 +46,6 @@
     "thumbnail_url": "https://images.code.org/20ecb1a554684df32056f3488425ec5f-life-support.png",
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:05.144+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level1c_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level1c_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:05.144+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson3-level1c_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson3-level1c_2024\"},{\"changed_at\":\"2025-05-15 16:47:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

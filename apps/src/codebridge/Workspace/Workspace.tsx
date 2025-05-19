@@ -132,6 +132,7 @@ const Workspace: React.FunctionComponent<WorkspaceProps> = ({
             aria-label={i18n.codeEditorDescription()}
             ref={containerRef}
             role="application"
+            id="uitest-codebridge-editor"
           >
             {/* eslint-enable jsx-a11y/no-noninteractive-tabindex */}
             <Editor
