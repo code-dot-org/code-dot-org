@@ -25,7 +25,7 @@ test.describe('All the things UI e2e test', () => {
           JSON.stringify(accessibilityScanResults.violations, null, 2),
         );
 
-        expect(accessibilityScanResults.violations.length).toEqual(2);
+        expect(accessibilityScanResults.violations.length).toEqual(1);
       }
     });
   });
