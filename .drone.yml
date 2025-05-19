@@ -215,11 +215,7 @@ steps:
       restore: true
       debug: true
       pull: true
-    commands:
-        - echo "yes it is possible to run commands on the plugin image"
-        - du -sh ./home/ci/.rbenv
-        - du -sh /home/ci/.rbenv
-        - mv -n ./home/ci/.rbenv /home/ci/.rbenv
+      path: /
 
   - name: get-cached-staging-database
     image: plugins/s3-cache
@@ -232,11 +228,7 @@ steps:
       restore: true
       debug: true
       pull: true
-    commands:
-        - echo "yes it is possible to run commands on the plugin image"
-        - ls .
-        - ls /var/lib/mysql
-        - cp -rn ./var/lib/mysql /var/lib/mysql
+      path: /
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
