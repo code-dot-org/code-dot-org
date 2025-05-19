@@ -304,6 +304,9 @@ steps:
   - name: prepare-ui-tests
     image: codedotorg/code-dot-org:1.15
     pull: always
+    environment:
+      PROPERTIES_ENCRYPTION_KEY:
+        from_secret: PROPERTIES_ENCRYPTION_KEY
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv

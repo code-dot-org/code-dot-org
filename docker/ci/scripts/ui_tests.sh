@@ -7,6 +7,4 @@
 
 source docker/ci/scripts/prepare_ui_tests.sh
 
-[[ -f dashboard/db/ui_test_data.sql ]] && mysql -u root < dashboard/db/ui_test_data.sql
-
 bundle exec rake ci:run_ui_tests
