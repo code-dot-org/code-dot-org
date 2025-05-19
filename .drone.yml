@@ -206,21 +206,29 @@ steps:
   # We cache staging's rbenv and database in the `cache-staging-build-artifacts` pipeline
   - name: get-cached-staging-rbenv
     image: plugins/s3-cache
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
     settings:
       filename: cache-staging-rbenv.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
       pull: true
+      path: /
 
   - name: get-cached-staging-database
     image: plugins/s3-cache
+    volumes:
+      - name: mysql
+        path: /var/lib/mysql
     settings:
       filename: cache-staging-database.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
       pull: true
+      path: /
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
@@ -240,11 +248,13 @@ steps:
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
     shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
+    volumes:
+      - name: rbenv
+        path: /home/ci/.rbenv
+      - name: mysql
+        path: /var/lib/mysql
     commands:
       - sudo chown -R ci:ci .
-      # caches are restored to source directory, so we need to copy them into the right place
-      - cp -rn ./home/ci/.rbenv /home/ci || true
-      - sudo cp -rn ./var/lib/mysql /var/lib || true
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
       - export GIT_COMMIT=$DRONE_COMMIT
       - export CI_BASE_BRANCH=$DRONE_TARGET_BRANCH
@@ -254,6 +264,12 @@ steps:
       - /entrypoint.sh docker/ci/scripts/ui_tests.sh || EXIT_CODE=$?
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
+
+volumes:
+  - name: rbenv
+    temp: {}
+  - name: mysql
+    temp: {}
 
 trigger:
   branch:
