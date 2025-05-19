@@ -4,9 +4,6 @@
       "title": {
         "en-US": "❌ [ENGINEERING ONLY] UI Integration Testing"
       },
-      "directory": {
-        "en-US": "None"
-      },
       "slug": {
         "en-US": "/engineering/all-the-things"
       },
@@ -7674,7 +7671,7 @@
                 "cfHorizontalAlignment": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "center"
+                    "desktop": "start"
                   }
                 },
                 "cfVisibility": {
@@ -7710,7 +7707,7 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "1720px"
+                    "desktop": "1730px"
                   }
                 },
                 "cfMaxWidth": {
