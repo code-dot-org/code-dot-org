@@ -62,7 +62,7 @@ export default class AiTutor2Manager {
     );
 
     const feedbackData: FeedbackData = {
-      aiInteractionType: 'AiTutor2',
+      aiInteractionType: 'AichatRequest',
       aiInteractionId: messages[0].requestId,
       thumbsUp: undefined,
       levelId: this.currentLevelId ? parseInt(this.currentLevelId) : undefined,
