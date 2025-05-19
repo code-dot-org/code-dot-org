@@ -14,7 +14,6 @@ export interface PartialAppOptions {
   isEditingExemplar: boolean;
   isViewingExemplar: boolean;
   publicCaching: boolean;
-  userSharingDisabled: boolean;
 }
 
 /**
