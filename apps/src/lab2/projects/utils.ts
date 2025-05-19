@@ -14,6 +14,7 @@ export interface PartialAppOptions {
   isEditingExemplar: boolean;
   isViewingExemplar: boolean;
   publicCaching: boolean;
+  userSharingDisabled: boolean;
 }
 
 /**
@@ -75,6 +76,18 @@ export function getAppOptionsViewingExemplar(): boolean | undefined {
     return appOptions.isViewingExemplar;
   }
 }
+
+/**
+ * Returns the value of userSharingDisabled provided by App Options, if available.
+ * This can be used to tell if the current user has sharing disabled for advanced projects.
+ */
+export function getAppOptionsUserSharingDisabled(): boolean | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.userSharingDisabled;
+  }
+}
+
 /**
  * Returns if the lab should presented in a share/play-only view,
  * if present in App Options. Only used in standalone project levels.

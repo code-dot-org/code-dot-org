@@ -767,6 +767,7 @@ module LevelsHelper
     end
     app_options[:share] = level_options[:share] if level_options[:share]
     app_options[:public_caching] = @public_caching
+    app_options[:user_sharing_disabled] = current_user&.sharing_disabled?
     app_options.camelize_keys
   end
 
