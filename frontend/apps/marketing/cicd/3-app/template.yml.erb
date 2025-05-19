@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: 2010-09-09
 
-Description: Provision a marketing website (<%="https://${options[:subdomain_name]}.${options[:base_domain_name]}"%>) powered by our Next.js web application server and the Contentful cloud service.
+Description: Provision a marketing website (<%="https://#{options[:subdomain_name]}.#{options[:base_domain_name]}"%>) powered by our Next.js web application server and the Contentful cloud service.
 
 Parameters:
   CloudFrontTLSCertificateArn:
