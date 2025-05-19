@@ -1440,7 +1440,7 @@ module Services
       with_unit_group: false,
       num_rubrics_per_lesson: 1,
       num_learning_goals_per_rubric: 1,
-      num_learning_goal_evidence_levels_per_learning_goal: 2,
+      num_learning_goal_evidence_levels_per_learning_goal: 2
     )
       # Avoid randomly generated characters at the start of the name prefix,
       # to help avoid flaky tests. The name_prefix gets used in various fields,
