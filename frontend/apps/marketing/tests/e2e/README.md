@@ -86,7 +86,7 @@ This will save "All The Things", open up the experience in the associated enviro
 
 **Note**: Normally for a merge to `test` or `production`, you will want to do this after merging your PR.
 
-### ☑️ Step-by-step instructions on how to add or update components on All The Things
+### ✅ How to add or update a component step-by-step
 
 1. Create a new fork (see [Forking](#forking) section above):
 
