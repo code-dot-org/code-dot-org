@@ -287,18 +287,19 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .
+      - git clone --branch $DRONE_SOURCE_BRANCH $DRONE_GIT_HTTP_URL .
+      # - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .
 
-  - name: cache-staging-clone
-    image: plugins/s3-cache
-    settings:
-      filename: cache-staging-clone.tar.gz
-      endpoint: s3://cdo-drone
-      rebuild: true
-      debug: true
-      pull: true
-      mount:
-        - .
+  # - name: cache-staging-clone
+  #   image: plugins/s3-cache
+  #   settings:
+  #     filename: cache-staging-clone.tar.gz
+  #     endpoint: s3://cdo-drone
+  #     rebuild: true
+  #     debug: true
+  #     pull: true
+  #     mount:
+  #       - .
 
   - name: prepare-ui-tests
     image: codedotorg/code-dot-org:1.15
@@ -343,12 +344,21 @@ volumes:
   - name: rbenv
     temp: {}
 
+# trigger:
+#   branch:
+#     - "staging"
+#     - "staging-next"
+#   event:
+#     - push
+
 trigger:
   branch:
-    - "staging"
-    - "staging-next"
+    exclude:
+      - "production"
+      - "test"
+      - "levelbuilder"
   event:
-    - push
+    - pull_request
 ---
 kind: signature
 hmac: c32532882fe8b8b8c24853dece9734ee85fc53fbb7fa866056d4eb2a055c9d87
