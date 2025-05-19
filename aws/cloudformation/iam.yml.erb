@@ -859,9 +859,10 @@ roles.each do |name, config| %>
   # ------------------------------------------------------------
   <%
     marketing_sites_environment_type_configuration = {
-      development: {
-        base_domain_name: 'marketing-sites.dev-code.org'
-      },
+      # TODO: Re-enable the Development Role when we find a better way to constrain which Resources these Roles can act upon.
+      # development: {
+      #   base_domain_name: 'marketing-sites.dev-code.org'
+      # },
       test: {
         base_domain_name: 'marketing-sites.test-code.org'
       },
@@ -1045,9 +1046,6 @@ roles.each do |name, config| %>
                   - ec2:RevokeSecurityGroupEgress
                   - ec2:RevokeSecurityGroupIngress
                 Resource: '*'
-                Condition:
-                  StringEquals:
-                    aws:RequestTag/environment-type: <%=environment_type%>
               # ECS resources
               - Effect: Allow
                 Action:
@@ -1066,9 +1064,6 @@ roles.each do |name, config| %>
                   - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:cluster/*"
                   - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/marketing-sites-<%=environment_type%>-*:*"
                   - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:service/*/marketing-sites-<%=environment_type%>-*"
-                Condition:
-                  StringEqualsIfExists:
-                    aws:RequestTag/environment-type: <%=environment_type%>
               # ELB resources
               - Effect: Allow
                 Action:
@@ -1085,9 +1080,6 @@ roles.each do |name, config| %>
                   - elasticloadbalancing:DeleteTargetGroup
                   - elasticloadbalancing:DeregisterTargets
                 Resource: '*'
-                Condition:
-                  StringEquals:
-                    aws:RequestTag/environment-type: <%=environment_type%>
               # CloudFront resources
               - Effect: Allow
                 Action:
@@ -1107,9 +1099,6 @@ roles.each do |name, config| %>
                   - cloudfront:DeleteCachePolicy
                   - cloudfront:DeleteFunction
                 Resource: '*'
-                Condition:
-                  StringEquals:
-                    aws:ResourceTag/environment-type: <%=environment_type%>
               # Route53 and ACM resources
               - Effect: Allow
                 Action:
@@ -1122,6 +1111,7 @@ roles.each do |name, config| %>
                   - acm:RequestCertificate
                   - acm:DeleteCertificate
                 Resource: '*'
+# TODO: Constrain Request/Delete Certificate to a narrow range of domain names.
 #                Condition:
 #                  StringLike:
 #                    'acm:DomainName':
@@ -1179,9 +1169,6 @@ roles.each do |name, config| %>
                   - elasticfilesystem:DeleteMountTarget
                   - elasticfilesystem:DeleteAccessPoint
                 Resource: '*'
-                Condition:
-                  StringEquals:
-                    aws:RequestTag/environment-type: <%=environment_type%>
               # Application Autoscaling for ECS services
               - Effect: Allow
                 Action:
