@@ -1,13 +1,14 @@
 require 'cdo/throttle'
 
-AICHAT_PREFIX = "aichat/".freeze
-DEFAULT_REQUEST_LIMIT_PER_MIN = 50
-DEFAULT_POLLING_INTERVAL_MS = 1000
-DEFAULT_POLLING_BACKOFF_RATE = 1.2
-
 class AichatRequestsController < ApplicationController
   include AichatSagemakerHelper
   authorize_resource class: false
+
+  AICHAT_REQUEST_COUNT_PREFIX = "aichat/requests/".freeze
+  DEFAULT_REQUEST_LIMIT_PER_MIN = 50
+
+  DEFAULT_POLLING_INTERVAL_MS = 1000
+  DEFAULT_POLLING_BACKOFF_RATE = 1.2
 
   rescue_from CanCan::AccessDenied do
     render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
@@ -22,10 +23,18 @@ class AichatRequestsController < ApplicationController
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   def start_chat_completion
-    return head :too_many_requests if should_throttle?
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
+    end
+
+    return head :too_many_requests if should_throttle_request_count?
+
+    model_id = params[:aichatModelCustomizations][:selectedModelId]
+    if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT] && should_throttle_token_count?(model_id, current_user.id)
+      log_token_throttling(current_user.id)
+
+      return head :too_many_requests
     end
 
     # Filter out non-OK messages (e.g. errors)
@@ -79,10 +88,25 @@ class AichatRequestsController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  private def should_throttle?
-    id = current_user&.id || session.id
+  private def should_throttle_request_count?
+    id = current_user.id
     limit = DCDO.get('aichat_request_limit_per_min', DEFAULT_REQUEST_LIMIT_PER_MIN)
-    Cdo::Throttle.throttle(AICHAT_PREFIX + id.to_s, limit, 60)
+    Cdo::Throttle.throttle(AICHAT_REQUEST_COUNT_PREFIX + id.to_s, limit, 60)
+  end
+
+  # Since we don't know the token count of the current request at the outset,
+  # we check whether the user's most recent request exceeded the daily token limit.
+  private def should_throttle_token_count?(model_id, user_id)
+    throttle_key = AichatOpenaiHelper.token_throttling_key(model_id, user_id)
+    Cdo::Throttle.throttled?(throttle_key)
+  end
+
+  private def log_token_throttling(user_id)
+    log_payload = {
+      event: 'aichat_openai_token_limit_exceeded',
+      userId: current_user.id
+    }
+    CDO.log.info log_payload.to_json.to_s
   end
 
   private def chat_completion_has_required_params?

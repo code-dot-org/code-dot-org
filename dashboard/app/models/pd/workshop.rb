@@ -102,6 +102,8 @@ class Pd::Workshop < ApplicationRecord
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
     absence: {unless: :funded_csf?}
 
+  before_create :set_registration_link
+
   before_save :process_location, if: -> {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
 
@@ -183,6 +185,12 @@ class Pd::Workshop < ApplicationRecord
 
   def sanitize_time_zone
     self.time_zone = time_zone.present? && ActiveSupport::TimeZone[time_zone].present? ? time_zone : nil
+  end
+
+  def set_registration_link
+    if [COURSE_CSD, COURSE_CSP, COURSE_CSA].include?(course) && local_summer?
+      self.registration_link = "/pd/application/teacher"
+    end
   end
 
   # Whether enrollment in this workshop requires an application
@@ -1034,8 +1042,7 @@ class Pd::Workshop < ApplicationRecord
       location_name: location_name,
       fee: fee,
       has_prereq: prereq.present?,
-      requires_application: require_application? || (regional_partner.present? && regional_partner.link_to_partner_application.present?),
-      custom_application_link: regional_partner&.link_to_partner_application,
+      description: description,
       custom_registration_link: registration_link,
       regional_partner_name: regional_partner&.name,
     }

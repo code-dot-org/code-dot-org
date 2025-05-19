@@ -122,5 +122,6 @@
   "validFileTypesInfo": "Valid file types are {validFileTypes}.",
   "verticalLayout": "Vertical layout",
   "viewingOldVersion": "You are viewing an older version",
+  "viewingWidgetView": "You are viewing the workspace in read-only mode",
   "versionRestored": "Version successfully restored"
 }
