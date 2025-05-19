@@ -215,8 +215,7 @@ steps:
       restore: true
       debug: true
       pull: true
-      mount:
-        - /home/ci/.rbenv
+      workdir: /
 
   - name: get-cached-staging-database
     image: plugins/s3-cache
@@ -229,8 +228,7 @@ steps:
       restore: true
       debug: true
       pull: true
-      mount:
-        - /var/lib/mysql
+      workdir: /
 
   - name: ui-tests
     # see: docker/ci/Dockerfile
