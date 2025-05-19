@@ -222,7 +222,7 @@ steps:
       - name: dashboard-database
         path: /drone/src/var/lib/mysql/dashboard_test
     settings:
-      filename: cache-staging-database.tar.gz
+      filename: cache-staging-dashboard-database.tar.gz
       endpoint: s3://cdo-drone
       restore: true
       debug: true
