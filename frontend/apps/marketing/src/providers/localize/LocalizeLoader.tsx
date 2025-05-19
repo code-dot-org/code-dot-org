@@ -1,3 +1,6 @@
+'use client';
+import Script from 'next/script';
+
 import {Brand} from '@/config/brand';
 import {getLocalizePath, getProjectId} from '@/providers/localize/config';
 
@@ -7,24 +10,52 @@ import {getLocalizePath, getProjectId} from '@/providers/localize/config';
 const LocalizeLoader = ({brand}: {brand: Brand}) => (
   <>
     {/* Localize script for their widget from our CDN. */}
-    <script
+    <Script
       src={getLocalizePath()}
       id="localize-script"
       data-project-key={getProjectId(brand)}
-    ></script>
+      onLoad={() => {
+        const script = document.querySelector('script#localize-script');
 
-    {/* Localize JS initializer */}
-    <script>
-      {`
-        const script = document.querySelector("script#localize-script");
+        (function (a) {
+          if (!a.Localize) {
+            (a.Localize as {[key: string]: () => void}) = {};
+            for (
+              let e = [
+                  'translate',
+                  'untranslate',
+                  'phrase',
+                  'initialize',
+                  'translatePage',
+                  'setLanguage',
+                  'getLanguage',
+                  'getSourceLanguage',
+                  'detectLanguage',
+                  'getAvailableLanguages',
+                  'setWidgetLanguages',
+                  'hideLanguagesInWidget',
+                  'untranslatePage',
+                  'bootstrap',
+                  'prefetch',
+                  'on',
+                  'off',
+                  'hideWidget',
+                  'showWidget',
+                ],
+                t = 0;
+              t < e.length;
+              t++
+            )
+              (a.Localize as {[key: string]: () => void})[e[t]] =
+                function () {};
+          }
+        })(window);
 
-        (function(a){if(!a.Localize){a.Localize={};for(var e=["translate","untranslate","phrase","initialize","translatePage","setLanguage","getLanguage","getSourceLanguage","detectLanguage","getAvailableLanguages","setWidgetLanguages","hideLanguagesInWidget","untranslatePage","bootstrap","prefetch","on","off","hideWidget","showWidget"],t=0;t<e.length;t++)a.Localize[e[t]]=function(){};}})(window);
-      
-        if (script && script.hasAttribute("data-project-key")) {
-          const projectId = script.getAttribute("data-project-key");
-          if (projectId !== "") {
+        if (script && script.hasAttribute('data-project-key')) {
+          const projectId = script.getAttribute('data-project-key');
+          if (projectId !== '') {
             Localize.initialize({
-              key: projectId,
+              key: projectId!,
               rememberLanguage: true,
               // Block classes that match developer mode Next.js overlays
               blockedClasses: [
@@ -34,17 +65,15 @@ const LocalizeLoader = ({brand}: {brand: Brand}) => (
                 'error-overlay-pagination',
                 'nextjs-container-build-error-version-status',
               ],
-              showWidget: true,
-            });
+            } as LocalizeJS.Context.Options);
           } else {
-            console.warn("Localize project ID was not valid.");
+            console.warn('Localize project ID was not valid.');
           }
+        } else {
+          console.warn('Localize was not installed correctly.');
         }
-        else {
-          console.warn("Localize was not installed correctly.");
-        }
-      `}
-    </script>
+      }}
+    ></Script>
   </>
 );
 

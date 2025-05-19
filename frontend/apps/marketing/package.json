@@ -66,6 +66,7 @@
     "@testing-library/react": "^16.2.0",
     "@types/fs-extra": "^11.0.4",
     "@types/jest": "^29.5.14",
+    "@types/localizejs-library": "^1.0.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
