@@ -23,6 +23,7 @@ export const getLevelProgressCSVData = (
       relative_position: number;
       name: string;
       id: number;
+      lockable?: boolean;
 
       levels: {
         id: string;
@@ -63,7 +64,9 @@ export const getLevelProgressCSVData = (
         : [
             {
               ...level,
-              levelName: `${lesson.relative_position}.${level.bubbleText}`,
+              levelName: lesson.lockable
+                ? `${lesson.title} ${level.bubbleText}/${lesson.levels.length}`
+                : `${lesson.relative_position}.${level.bubbleText}`,
             },
           ];
     });
@@ -94,6 +97,7 @@ const downloadLevelProgressCSV = () => {
       relative_position: number;
       name: string;
       id: number;
+      lockable: boolean;
 
       levels: {
         id: string;
