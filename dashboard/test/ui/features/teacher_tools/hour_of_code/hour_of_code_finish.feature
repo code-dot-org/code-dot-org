@@ -156,6 +156,9 @@ Scenario: customized dashboard certificate pages with no course name
   And I close my eyes
 
 @eyes
+@skip
+# Disabled 5-19-2025 because of a flake. To be re-enabled when the flake is fixed or investigated.
+# Flake was caused by the twitter icon not appearing.
 Scenario: congrats certificate pages
   Given I am on "http://studio.code.org/congrats"
   And I wait until element "#uitest-certificate" is visible
