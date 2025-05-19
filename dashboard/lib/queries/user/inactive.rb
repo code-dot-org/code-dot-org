@@ -3,11 +3,7 @@ module Queries
     # Retrieve all users who have not signed in since the provided date.
     # For users who have never signed in, created_at will be used instead of current_sign_in_at.
     # Defaults to 42 months, which is 3 years plus 6 months to account for our long session TTL.
-    class Inactive
-      class << self
-        delegate :call, to: :new
-      end
-
+    class Inactive < Queries::Base
       def initialize(scope: ::User.all, inactive_since: 42.months.ago)
         @scope = scope
         @inactive_since = inactive_since

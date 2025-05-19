@@ -233,7 +233,7 @@
       authenticationOptions: current_user.authentication_options.map(&:summarize),
       isGoogleClassroomStudent: current_user.google_classroom_student?,
       isCleverStudent: current_user.clever_student?,
-      dependentStudentsCount: dependent_students_count(current_user.id),
+      dependentStudentsCount: Queries::User::DependentStudentsCount.call(user_id: current_user.id),
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
       lmsName: Queries::Lti.get_lms_name_from_user(current_user),
       verifiedTeacher: current_user.verified_teacher?,
