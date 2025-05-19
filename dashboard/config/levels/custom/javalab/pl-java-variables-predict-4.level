@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2025-05-13T14:56:25.000Z",
   "level_num": "custom",
@@ -20,9 +21,12 @@
     "contained_level_names": [
       "SP-VPL-CSA-22-mod3-variables-practice-1-Predict_2025"
     ],
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "encrypted_examples": [
+
+    ],
+    "ai_tutor_available": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-13T14:56:25.009+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-variables-practice-1_2025\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-variables-practice-1_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-13T14:56:25.009+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSA-22-mod3-variables-practice-1_2025\\\"\"],\"cloned_from\":\"SP-VPL-CSA-22-mod3-variables-practice-1_2025\"},{\"changed_at\":\"2025-05-15 15:46:48 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Javalab>

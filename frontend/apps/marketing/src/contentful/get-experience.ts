@@ -10,20 +10,26 @@ const logger = getLogger('contentful');
 
 export const getExperience = cache(
   async (slug: string, localeCode: string, isEditorMode = false) => {
+    // To make it easier for content editors, all slugs begin with `/` for experiences
+    const contentfulSlug = `/${slug}`;
     const startTime = Date.now();
 
-    return await getExperienceFromContentful(slug, localeCode, isEditorMode)
+    return await getExperienceFromContentful(
+      contentfulSlug,
+      localeCode,
+      isEditorMode,
+    )
       .then(({experience, error}) => {
         const duration = Date.now() - startTime;
 
         logger.info(
-          `Successfully fetched SLUG=${slug}, LOCALE=${localeCode}, IS_EDITOR_MODE=${isEditorMode} in ${duration}ms`,
           {
             operation: 'getExperience',
-            slug,
+            slug: contentfulSlug,
             localeCode,
             duration,
           },
+          `Successfully fetched SLUG=${contentfulSlug}, LOCALE=${localeCode}, IS_EDITOR_MODE=${isEditorMode} in ${duration}ms`,
         );
 
         return {experience, error};
@@ -32,7 +38,6 @@ export const getExperience = cache(
         const duration = Date.now() - startTime;
 
         logger.error(
-          `Error fetching SLUG=${slug}, LOCALE=${localeCode}, IS_EDITOR_MODE=${isEditorMode} in ${duration}ms`,
           {
             operation: 'getExperience',
             slug,
@@ -40,6 +45,7 @@ export const getExperience = cache(
             duration,
             error,
           },
+          `Error fetching SLUG=${slug}, LOCALE=${localeCode}, IS_EDITOR_MODE=${isEditorMode} in ${duration}ms`,
         );
 
         throw error;

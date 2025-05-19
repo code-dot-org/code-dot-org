@@ -140,6 +140,17 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
     MusicRegistry.player.cancelPreviews();
   }, [setCurrentPreviewTick]);
 
+  const allNotes = useMemo(
+    () =>
+      getDisplayNotes(
+        editorType,
+        'chromatic',
+        currentValue.instrument,
+        MusicRegistry.player.getKey()
+      ).sort((a, b) => b.note - a.note), // Sort descending
+    [editorType, currentValue.instrument]
+  );
+
   const displayNotes = useMemo(
     () =>
       getDisplayNotes(
@@ -156,32 +167,56 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
   const interfaceMode =
     editorType === 'drums' ? 'drums' : scaleMode || 'simple';
 
-  const RowLabel = (props: {name: string; note: number; i: number}) => {
-    const [style, label] = {
-      drums: [styles.textLabel, props.name],
-      simple: [styles.label, getPitchName(props.note)],
-      chromatic: [styles.keyLabel, getPitchName(props.note)],
-    }[interfaceMode];
+  const colorsSimple = styles.colorsSimple.split(',');
+  const colorsSimpleDarker = styles.colorsSimpleDarker.split(',');
 
-    return (
-      <button
-        type="button"
-        className={styles['cell-outer']}
-        onClick={() =>
-          MusicRegistry.player.previewNote(props.note, currentValue.instrument)
-        }
-      >
-        <div
-          className={classNames(
-            style,
-            isBlackKey(props.note) && styles.blackKey,
-            styles.innerCell
-          )}
-        >
-          {label.replace('#', '♯')}
-        </div>
-      </button>
-    );
+  const getRowInfo = (name: string, note: number) => {
+    if (interfaceMode === 'drums') {
+      return {style: styles.textLabel, label: name};
+    }
+
+    let color = undefined,
+      backgroundColor = undefined,
+      selectedBackgroundColor = undefined;
+
+    if (interfaceMode === 'simple') {
+      const displayNoteIndex = displayNotes.findIndex(
+        displayNote => displayNote.note === note
+      );
+      if (displayNoteIndex !== -1) {
+        color = 'white';
+        selectedBackgroundColor =
+          colorsSimple[(21 - displayNoteIndex) % colorsSimple.length];
+        backgroundColor =
+          colorsSimpleDarker[
+            (21 - displayNoteIndex) % colorsSimpleDarker.length
+          ];
+      }
+    }
+
+    if (backgroundColor === undefined) {
+      backgroundColor = isBlackKey(note) ? styles.black : styles.white;
+      color = isBlackKey(note) ? styles.white : styles.black;
+    }
+
+    if (selectedBackgroundColor === undefined) {
+      selectedBackgroundColor = styles.selectedColor;
+    }
+
+    const pitchRowClass = displayNotes.find(
+      displayNote => displayNote.note === note
+    )
+      ? styles.pitchRowShowing
+      : styles.pitchRowHidden;
+
+    return {
+      pitchRowClass,
+      style: styles.keyLabel,
+      label: getPitchName(note),
+      backgroundColor,
+      color,
+      selectedBackgroundColor,
+    };
   };
 
   const [scrollStart, scrollEnd] = useMemo(() => {
@@ -256,36 +291,72 @@ const InstrumentGrid: React.FunctionComponent<Props> = ({
         scrollEnd={scrollEnd}
         className={classNames(styles[`sequence-editor-${interfaceMode}`])}
       >
-        {displayNotes.map(({note, name}, i) => (
-          <div className={styles.pitchRow} key={note}>
-            <RowLabel name={name} note={note} i={i} />
-            <div className={styles.cellRow}>
-              {ticks.map(tick => (
-                <Fragment key={tick}>
-                  <button
-                    type="button"
-                    className={styles[`cell-outer-${interfaceMode}`]}
-                    key={tick}
-                    onClick={() => onClickCell(note, tick)}
-                  >
-                    <div
-                      className={classNames(
-                        styles.innerCell,
-                        isSelected(note, tick) && styles.selected,
-                        currentPreviewTick === tick && styles.preview
-                      )}
-                    />
-                  </button>
-                  {
-                    tick % 4 === 0 && (
-                      <div className={styles.spacer} />
-                    ) /* Spacer */
-                  }
-                </Fragment>
-              ))}
+        {allNotes.map(({note, name}, i) => {
+          const {
+            pitchRowClass,
+            style,
+            label,
+            backgroundColor,
+            color,
+            selectedBackgroundColor,
+          } = getRowInfo(name, note);
+
+          return (
+            <div
+              className={classNames(styles.pitchRow, pitchRowClass)}
+              key={note}
+            >
+              <button
+                type="button"
+                className={styles['cell-outer']}
+                onClick={() =>
+                  MusicRegistry.player.previewNote(
+                    note,
+                    currentValue.instrument
+                  )
+                }
+              >
+                <div
+                  className={classNames(style, styles.innerCell)}
+                  style={{backgroundColor, color}}
+                >
+                  {label.replace('#', '♯')}
+                </div>
+              </button>
+
+              <div className={styles.cellRow}>
+                {ticks.map(tick => (
+                  <Fragment key={tick}>
+                    <button
+                      type="button"
+                      className={styles[`cell-outer-${interfaceMode}`]}
+                      key={tick}
+                      onClick={() => onClickCell(note, tick)}
+                    >
+                      <div
+                        className={classNames(
+                          styles.innerCell,
+                          isSelected(note, tick) && styles.selected,
+                          currentPreviewTick === tick && styles.preview
+                        )}
+                        style={{
+                          backgroundColor: isSelected(note, tick)
+                            ? selectedBackgroundColor
+                            : undefined,
+                        }}
+                      />
+                    </button>
+                    {
+                      tick % 4 === 0 && (
+                        <div className={styles.spacer} />
+                      ) /* Spacer */
+                    }
+                  </Fragment>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </EaseIntoView>
       <LoadingOverlay show={isLoading} />
     </div>

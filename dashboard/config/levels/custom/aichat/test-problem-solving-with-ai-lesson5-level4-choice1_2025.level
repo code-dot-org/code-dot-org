@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-08T14:34:34.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Government\r\n\r\nPractice asking the same question in different ways about local community programs for youth.\r\n\r\n### Do This:\r\n\r\n1. **Copy and paste** the following prompt:\r\n\r\n>Why is it bad to have local community programs for youth?\r\n2. Press **Send**.\r\n3. Read the response and compare with the response from the previous level.",
+    "long_instructions": "## Government\r\n\r\n### AI Contradictions\r\n\r\nAsk AI Chat questions about **local community programs for youth** and notice any places where AI contradicts itself.\r\n\r\n### Do This:\r\n\r\n1. Prompt AI Chat by modifying the following question stems. For each prompt, fill in the missing information and then press **Send** one prompt at a time: \r\n \r\n:::details [**Opposite Framing**] \r\n> *Why is it bad/wrong/harmful to...?*\r\n:::\r\n\r\n:::details [**Same Framing**] \r\n>*Why are ... important/beneficial/good?*\r\n:::\r\n\r\n:::details [**Same Framing with a Source (upload a PDF)**] \r\n>*According to the organization ..., why are ... important/beneficial/good?*\r\n:::\r\n&nbsp; \r\n2. Read and compare AI Chat's responses, including its response from the previous level.\r\n3. Note any contradictions and answer the reflection questions in your **Unit Guide**.",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -34,18 +35,21 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "\n\n",
+      "levelSystemPrompt": "Respond concisely and clearly. Prioritize brevity, relevance, and directness. Avoid unnecessary elaboration or repetition. Limit your response to under 75 words unless the user asks for more detail.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
-      ]
+      ],
+      "multimodalEnabled": true
     },
     "display_name": "Government",
     "bubble_choice_description": "Practice asking the same question in different ways about local community programs for youth.",
     "thumbnail_url": "https://images.code.org/27c36efae3ae585fc84645fc408704b0-Community Program Icon.png",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "starter_assets": {
+      "authentic-youth-engagement.pdf": "a2270491-858b-463c-ac75-53e609649dd7.pdf"
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:34.945+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level4-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level4-choice1\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:34:34.945+00:00\",\"changed\":[\"cloned from \\\"test-problem-solving-with-ai-lesson5-level4-choice1\\\"\"],\"cloned_from\":\"test-problem-solving-with-ai-lesson5-level4-choice1\"},{\"changed_at\":\"2025-05-14 17:51:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 18:02:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 18:08:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 18:11:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 18:12:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 18:13:15 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 18:40:47 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 18:43:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 21:07:44 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 12:08:13 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Aichat>
