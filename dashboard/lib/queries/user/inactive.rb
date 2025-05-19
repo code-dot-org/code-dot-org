@@ -16,7 +16,7 @@ module Queries
       end
 
       def call
-        return @scope.none unless @inactive_since.present?
+        return @scope.none if @inactive_since.blank?
         return @scope.all if @inactive_since > Time.current
 
         @scope.where(current_sign_in_at: ..@inactive_since).or(
