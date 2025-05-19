@@ -35,7 +35,7 @@
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "Limit your response to one paragraph.",
+      "levelSystemPrompt": "If you are provided an attached blueprint, first examine the image. Then, use the geometrical formula for rectangles, triangles, and circles, as needed, to calculate the areas of various smaller shapes that make up the larger blueprint. Sum up the square footage that you observe, based on the shapes present in the blueprint.",
       "hidePresentationPanel": true,
       "availableModelIds": [
         "gpt-4o-mini"
@@ -53,6 +53,6 @@
     },
     "name_suffix": "_2025"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:35:33.130+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level4_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level4_2024\"},{\"changed_at\":\"2025-05-14 22:08:59 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 22:10:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:35:33.130+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson8-level4_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson8-level4_2024\"},{\"changed_at\":\"2025-05-14 22:08:59 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-14 22:10:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 18:49:32 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 18:55:43 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-15 19:00:07 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

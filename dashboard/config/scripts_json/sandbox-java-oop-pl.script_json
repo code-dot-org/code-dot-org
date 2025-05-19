@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-14 19:17:18 UTC",
+    "serialized_at": "2025-05-16 20:52:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -79,36 +79,6 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "sandbox-java-oop-pl"
-      }
-    },
-    {
-      "key": "lesson-4",
-      "name": "Constructors and Inheritance",
-      "absolute_position": 4,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "",
-        "script.name": "sandbox-java-oop-pl"
-      }
-    },
-    {
-      "key": "lesson-5",
-      "name": "Methods",
-      "absolute_position": 5,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "sandbox-java-oop-pl"
       }
@@ -829,6 +799,48 @@
       "level_keys": [
         "pl-java-painter-conclude-10"
       ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-overview-1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "6ae93e1f-f46d-4409-82f3-8736a799f43e"
+      },
+      "level_keys": [
+        "pl-java-class-structure-overview-1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-parts-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "6ae93e1f-f46d-4409-82f3-8736a799f43e"
+      },
+      "level_keys": [
+        "pl-java-class-structure-parts-2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1106,6 +1118,30 @@
         "lesson_group.key": "",
         "script.name": "sandbox-java-oop-pl",
         "activity_section.key": "2626a079-8cef-4029-9406-cd1a208ca77e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-overview-1",
+        "script_level.level_keys": [
+          "pl-java-class-structure-overview-1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "6ae93e1f-f46d-4409-82f3-8736a799f43e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-parts-2",
+        "script_level.level_keys": [
+          "pl-java-class-structure-parts-2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "6ae93e1f-f46d-4409-82f3-8736a799f43e"
       }
     }
   ],

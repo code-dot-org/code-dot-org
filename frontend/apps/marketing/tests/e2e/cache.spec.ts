@@ -1,14 +1,13 @@
 import {expect} from '@playwright/test';
 
-import {getStage} from '@/config/stage';
-
 import {test} from './fixtures/base';
 import {AllTheThingsPage} from './pom/all-the-things';
+import {getTestStage} from './utils/stage';
 
 test.describe('Caching Tests', () => {
   test('should cache by default', async ({page, browserName}) => {
     test.skip(browserName !== 'chromium', 'Only runs in Chromium');
-    test.skip(getStage() === 'development', 'Only runs in Docker mode');
+    test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
 
     const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
     const response = await allTheThingsPage.goto();
@@ -24,7 +23,7 @@ test.describe('Caching Tests', () => {
     browserName,
   }) => {
     test.skip(browserName !== 'chromium', 'Only runs in Chromium');
-    test.skip(getStage() === 'development', 'Only runs in Docker mode');
+    test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
 
     const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
     const response = await allTheThingsPage.enableDraftMode(
@@ -53,9 +52,33 @@ test.describe('Caching Tests', () => {
     );
   });
 
+  test('should not render experiences if draft mode is enabled with search param expEditor=true', async ({
+    page,
+    browserName,
+  }) => {
+    test.skip(browserName !== 'chromium', 'Only runs in Chromium');
+    test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
+
+    const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
+    await allTheThingsPage.enableDraftMode(process.env.DRAFT_MODE_TOKEN);
+
+    // Go to the same page with the expEditor=true query param
+    await allTheThingsPage.goto(
+      '/engineering/all-the-things?expEditorMode=true',
+    );
+
+    // Check that <main> exists
+    await expect(page.locator('main')).toHaveCount(1);
+
+    // Check that <main> has nothing except an optional content editor popover.
+    await expect(
+      page.locator('main > *:not(button:has-text("Draft Version"))'),
+    ).toHaveCount(0);
+  });
+
   test('should 401 with an invalid token', async ({page, browserName}) => {
     test.skip(browserName !== 'chromium', 'Only runs in Chromium');
-    test.skip(getStage() === 'development', 'Only runs in Docker mode');
+    test.skip(getTestStage() === 'development', 'Only runs in Docker mode');
 
     const allTheThingsPage = new AllTheThingsPage(page, 'en-US');
     const response = await allTheThingsPage.enableDraftMode('invalid-token');

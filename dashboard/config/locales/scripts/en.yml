@@ -1161,6 +1161,8 @@ en:
             csd_survey:
               display_name: Post-Course Survey
           student_description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          lessons: {}
+          name: csd3-2017
         grade2:
           title: Grade 2
           description: Planning Script for CSF 2.0
@@ -23915,7 +23917,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-k5-music-lab-2025
-          title: " \U0001F3B6 PL FOR LAUNCH Teaching Introduction to Programming with Music Lab  \U0001F3B6 "
+          title: " \U0001F3B6 PL FOR LAUNCH Teaching Programming with Music  \U0001F3B6 "
           description_audience: ''
           description_short: ''
           description: ''
@@ -24138,7 +24140,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-teaching-csd-unit1-2025
-          title: Teaching Problem Solving and Computing
+          title: Preparing to Teach Problem Solving and Computing
           description_audience: ''
           description_short: ''
           description: "##### This professional learning module is designed to help you prepare to teach Code.org's Problem Solving and Computing unit. \n\n##### **In this professional learning module, you will:**\n* ##### Get an introduction to Problem Solving and Computing.\n* ##### Learn the key problem solving frameworks utilized in the unit\n* ##### Practice key concepts included in the unit.\n* ##### Explore end-of-chapter projects.\n\n##### **Suggested time:** 40 minutes"

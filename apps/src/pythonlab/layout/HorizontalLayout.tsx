@@ -9,6 +9,7 @@ import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
 import AiTutor2UI from '@cdo/apps/lab2/views/components/AiTutor2UI';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 
@@ -25,6 +26,9 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
   isProjectLevel,
   isWidgetView,
 }) => {
+  const widgetViewShowCode = useAppSelector(
+    state => state.codebridgeWorkspace.widgetViewShowCode
+  );
   const {
     getAiTutor2FullQuestionFromQuestion,
     levelProperties: {aiTutor2Available},
@@ -48,13 +52,14 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
       name: 'instructions',
     },
     rightTopPanel: {
-      minHeight: isWidgetView ? 0 : MIN_EDITOR_HEIGHT,
+      minHeight: isWidgetView && !widgetViewShowCode ? 0 : MIN_EDITOR_HEIGHT,
       name: 'editor',
     },
     rightBottomPanel: {
-      initialHeight: isWidgetView
-        ? INITIAL_OUTPUT_HEIGHT_WIDGET
-        : INITIAL_OUTPUT_HEIGHT,
+      initialHeight:
+        isWidgetView && !widgetViewShowCode
+          ? INITIAL_OUTPUT_HEIGHT_WIDGET
+          : INITIAL_OUTPUT_HEIGHT,
       minHeight: MIN_OUTPUT_HEIGHT,
       name: 'output',
     },
@@ -90,9 +95,12 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
           className={moduleStyles.flexColumn}
           style={{width: rightPanelWidth}}
         >
-          {!isWidgetView && (
+          {(!isWidgetView || widgetViewShowCode) && (
             <>
-              <Workspace style={{height: rightTopPanelHeight}} />
+              <Workspace
+                style={{height: rightTopPanelHeight}}
+                isWidgetView={isWidgetView}
+              />
               <ResizeBar
                 isVertical={false}
                 separatorProps={rightBottomPanelSeparatorProps}

@@ -397,6 +397,11 @@ module Pd
         stateKey: 'regionalPartnerId',
         label: 'Regional partner'
       },
+      organizer_id: {
+        required: false,
+        stateKey: 'organizerId',
+        label: 'Organizer'
+      },
       facilitators: {
         required: false,
         stateKey: 'facilitators',
