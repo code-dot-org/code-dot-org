@@ -77,7 +77,8 @@ export const workshopStateToApi = (
   name: workshop.name || null,
   notes: workshop.notes || null,
   prereq: workshop.hasPrereq ? workshop.prereq : null,
-  regional_partner_id: workshop.regionalPartnerId ?? null,
+  regional_partner_id: workshop.regionalPartnerId,
+  organizer_id: workshop.organizerId,
   registration_link: workshop.registrationLink || null,
   subject: workshop.subject || null,
   suppress_email: workshop.suppressEmail,
@@ -135,4 +136,38 @@ export const sessionStateToApi = (
   });
 
   return newOrUpdatedSessions.concat(sessionsToDestroy);
+};
+
+export const emptyValue = (
+  value:
+    | null
+    | undefined
+    | string
+    | number
+    | string[]
+    | number[]
+    | boolean
+    | Record<string, string>
+): boolean => {
+  if (value === null) return true;
+  switch (typeof value) {
+    case 'undefined':
+      return true;
+    case 'string':
+      return value.trim() === '';
+    case 'object':
+      if (Array.isArray(value)) {
+        return !value.length || value.every(emptyValue);
+      } else {
+        return (
+          !Object.keys(value).length || Object.values(value).every(emptyValue)
+        );
+      }
+    case 'number':
+      return !Number.isInteger(value) || value < 0;
+    case 'boolean':
+      return false;
+    default:
+      return true;
+  }
 };

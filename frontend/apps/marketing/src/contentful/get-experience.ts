@@ -23,13 +23,13 @@ export const getExperience = cache(
         const duration = Date.now() - startTime;
 
         logger.info(
-          `Successfully fetched SLUG=${contentfulSlug}, LOCALE=${localeCode}, IS_EDITOR_MODE=${isEditorMode} in ${duration}ms`,
           {
             operation: 'getExperience',
             slug: contentfulSlug,
             localeCode,
             duration,
           },
+          `Successfully fetched SLUG=${contentfulSlug}, LOCALE=${localeCode}, IS_EDITOR_MODE=${isEditorMode} in ${duration}ms`,
         );
 
         return {experience, error};
@@ -38,7 +38,6 @@ export const getExperience = cache(
         const duration = Date.now() - startTime;
 
         logger.error(
-          `Error fetching SLUG=${slug}, LOCALE=${localeCode}, IS_EDITOR_MODE=${isEditorMode} in ${duration}ms`,
           {
             operation: 'getExperience',
             slug,
@@ -46,6 +45,7 @@ export const getExperience = cache(
             duration,
             error,
           },
+          `Error fetching SLUG=${slug}, LOCALE=${localeCode}, IS_EDITOR_MODE=${isEditorMode} in ${duration}ms`,
         );
 
         throw error;

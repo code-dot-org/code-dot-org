@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-13 16:21:12 UTC",
+    "serialized_at": "2025-05-16 17:09:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -257,7 +257,7 @@
       "relative_position": 8,
       "properties": {
         "assessment": true,
-        "overview": "This project-based lesson guides students in developing an advocacy campaign addressing digital equity, the digital divide, and net neutrality. Students explore real-world challenges, analyze case studies, and propose actionable solutions using AI-driven technology and policy recommendations. Through research, collaboration, and peer feedback, students refine their message and create a compelling advocacy campaign.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\nThis project-based lesson guides students in developing an advocacy campaign addressing digital equity, the digital divide, and net neutrality. Students explore real-world challenges, analyze case studies, and propose actionable solutions using AI-driven technology and policy recommendations. Through research, collaboration, and peer feedback, students refine their message and create a compelling advocacy campaign.",
         "preparation": "- Print copies of the Persona Fact Sheets for each station\n- Print copies of the Project Planning Guide (one for each group)\n- Print copies of the Gallery Walk Info Tracker (one for each student)\n- Print copies of the Peer Feedback Cards for day 3 (2-4 cards for each student)\n- Consider providing poster boards, markers, and art supplies (for physical campaigns)",
         "student_overview": "In this project, you research real-world Internet access challenges and create an advocacy campaign to raise awareness and propose solutions. Your campaign focuses on the digital divide, net neutrality, and how technology, including AI, can help improve Internet access."
       },
@@ -275,7 +275,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**What vulnerabilities exist in networks, and what strategies can mitigate their impact?**\n\nIn this lesson, students take on the role of cybersecurity analysts to investigate real-world network security threats and identify effective defenses. Through an interactive simulation, they explore vulnerabilities such as phishing, weak passwords, default credentials, and social engineering. After investigating each vulnerability, students propose a mitigation strategy that can be applied in a real-world context.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What vulnerabilities exist in networks, and what strategies can mitigate their impact?**\n\nIn this lesson, students take on the role of cybersecurity analysts to investigate real-world network security threats and identify effective defenses. Through an interactive simulation, they explore vulnerabilities such as phishing, weak passwords, default credentials, and social engineering. After investigating each vulnerability, students propose a mitigation strategy that can be applied in a real-world context.",
         "preparation": "- Preview Level 1 to familiarize yourself with the scenarios, decision points, and key takeaways\n- Label the four corners of the room: Phishing, Weak Passwords, Social Engineering, Default Credentials for the lesson wrap up.",
         "student_overview": "**What vulnerabilities exist in networks, and what strategies can mitigate their impact?**\n\nIn this less, you step into the role of a cyber security analyst in order to investigate real-world network security threats and determine how to defend against them. Through an interactive simulation, you explore common security vulnerabilities—phishing, weak passwords, default credentials, and social engineering—and propose defensive strategies  to help protect against future attacks."
       },
@@ -293,7 +293,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "**What makes AI effective at enhancing network security, and how does it compare to traditional methods?**\n\nThis lesson explores how AI enhances cybersecurity by detecting and responding to threats in real time. Through a hands-on simulation and discussions, students analyze how AI compares to traditional security methods and consider the challenges of implementing AI-driven solutions. The lesson encourages students to think critically about AI’s benefits, limitations, and role in network security.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What makes AI effective at enhancing network security, and how does it compare to traditional methods?**\n\nThis lesson explores how AI enhances cybersecurity by detecting and responding to threats in real time. Through a hands-on simulation and discussions, students analyze how AI compares to traditional security methods and consider the challenges of implementing AI-driven solutions. The lesson encourages students to think critically about AI’s benefits, limitations, and role in network security.",
         "preparation": "- Print and cut out Threat Detected! Cards (one set for each pair of students)\n- Print AI Threat Detection Notetaker Activity Guide (one for each pair of students)",
         "student_overview": "**What makes AI effective at enhancing network security, and how does it compare to traditional methods?**\n\nAI is transforming cybersecurity by detecting threats faster than traditional methods. In this lesson, you investigate how AI-powered tools improve security, their challenges, and how they compare to human decision-making in threat detection."
       },
@@ -312,7 +312,7 @@
       "relative_position": 11,
       "properties": {
         "assessment": true,
-        "overview": "This project-based lesson guides students through conducting a Network Security Risk Assessment, identifying vulnerabilities, and proposing AI-driven security solutions. Students analyze real-world cybersecurity risks, categorize them, and assess their societal and ethical implications before refining their recommendations through peer review. By the end of the project, students communicate their findings in a professional risk assessment report.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\nThis project-based lesson guides students through conducting a Network Security Risk Assessment, identifying vulnerabilities, and proposing AI-driven security solutions. Students analyze real-world cybersecurity risks, categorize them, and assess their societal and ethical implications before refining their recommendations through peer review. By the end of the project, students communicate their findings in a professional risk assessment report.",
         "preparation": "- Print copies of the Network Security Risk Assessment Project Planning Guide (one for each student)",
         "student_overview": "In this project, you take on the role of a network security analyst, identifying security vulnerabilities and recommending AI-driven solutions. You explore real-world cybersecurity threats, analyze their impact, and present your findings in a professional risk assessment report."
       },
@@ -3228,7 +3228,8 @@
       "key": "2c25ba76-d9cb-4b95-af1d-e721627b8579",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Label the four corners of the room: Phishing, Weak Passwords, Social Engineering, Default Credentials. Instruct students to go to the corner that relates to the one vulnerability they mentioned in their question of the day answer. Have students share their answers and compare mitigation strategies. If time allows, have one person from each group share one takeaway from their discussion with the class.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Label the four corners of the room: Phishing, Weak Passwords, Social Engineering, Default Credentials. Instruct students to go to the corner that relates to the one vulnerability they mentioned in their question of the day answer. Have students share their answers and compare mitigation strategies. If time allows, have one person from each group share one takeaway from their discussion with the class.\n",
+        "progression_name": "Student Survey"
       },
       "seeding_key": {
         "activity_section.key": "2c25ba76-d9cb-4b95-af1d-e721627b8579",
@@ -3397,6 +3398,17 @@
       },
       "seeding_key": {
         "activity_section.key": "a51ef2b8-6951-4a8f-aaf6-fe884544c2ab",
+        "lesson_activity.key": "ac9655ee-4aee-4006-bd2c-b0fc60f616cf"
+      }
+    },
+    {
+      "key": "5ddc7fbd-4fa9-4d48-9718-c6dddd545236",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ddc7fbd-4fa9-4d48-9718-c6dddd545236",
         "lesson_activity.key": "ac9655ee-4aee-4006-bd2c-b0fc60f616cf"
       }
     },
@@ -4298,6 +4310,28 @@
     },
     {
       "chapter": 26,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Final Project Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson8-level2_2025"
+        ],
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif4-2025",
+        "activity_section.key": "d68a4cff-fcae-4f46-b17f-f84b66090722"
+      },
+      "level_keys": [
+        "fabric-of-the-internet-and-ai-lesson8-level2_2025"
+      ]
+    },
+    {
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4322,7 +4356,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4347,7 +4381,29 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson9-level3_2025"
+        ],
+        "lesson.key": "Network Security",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif4-2025",
+        "activity_section.key": "2c25ba76-d9cb-4b95-af1d-e721627b8579"
+      },
+      "level_keys": [
+        "fabric-of-the-internet-and-ai-lesson9-level3_2025"
+      ]
+    },
+    {
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4372,7 +4428,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4397,7 +4453,29 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson10-level3_2025"
+        ],
+        "lesson.key": "Emerging Technologies",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif4-2025",
+        "activity_section.key": "5ddc7fbd-4fa9-4d48-9718-c6dddd545236"
+      },
+      "level_keys": [
+        "fabric-of-the-internet-and-ai-lesson10-level3_2025"
+      ]
+    },
+    {
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4422,7 +4500,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4447,7 +4525,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4472,7 +4550,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4497,7 +4575,29 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson11-level5_2025"
+        ],
+        "lesson.key": "Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-2025",
+        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578"
+      },
+      "level_keys": [
+        "fabric-of-the-internet-and-ai-lesson11-level5_2025"
+      ]
+    },
+    {
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4522,7 +4622,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4850,6 +4950,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "fabric-of-the-internet-and-ai-lesson8-level2_2025",
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson8-level2_2025"
+        ],
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif4-2025",
+        "activity_section.key": "d68a4cff-fcae-4f46-b17f-f84b66090722"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson9-level1_2025",
         "script_level.level_keys": [
           "networks-internet-lesson9-level1_2025"
@@ -4874,6 +4986,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "fabric-of-the-internet-and-ai-lesson9-level3_2025",
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson9-level3_2025"
+        ],
+        "lesson.key": "Network Security",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif4-2025",
+        "activity_section.key": "2c25ba76-d9cb-4b95-af1d-e721627b8579"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson10-level1_2025",
         "script_level.level_keys": [
           "networks-internet-lesson10-level1_2025"
@@ -4894,6 +5018,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif4-2025",
         "activity_section.key": "92d85e1b-9da8-437b-91c7-fe5d1cb4f43e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "fabric-of-the-internet-and-ai-lesson10-level3_2025",
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson10-level3_2025"
+        ],
+        "lesson.key": "Emerging Technologies",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif4-2025",
+        "activity_section.key": "5ddc7fbd-4fa9-4d48-9718-c6dddd545236"
       }
     },
     {
@@ -4937,6 +5073,18 @@
         "level.key": "student-eou-survey_linked_page_networks-2025",
         "script_level.level_keys": [
           "student-eou-survey_linked_page_networks-2025"
+        ],
+        "lesson.key": "Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-2025",
+        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "fabric-of-the-internet-and-ai-lesson11-level5_2025",
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson11-level5_2025"
         ],
         "lesson.key": "Network Security Risk Assessment Project",
         "lesson_group.key": "lessonGroup-6",

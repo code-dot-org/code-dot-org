@@ -1672,11 +1672,14 @@ class Unit < ApplicationRecord
     summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
     summary[:unitPublishedState] = unit_group ? published_state : nil
     summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.csd?
+    summary[:allowMajorCurriculumChanges] = allow_major_curriculum_changes?
     summary
   end
 
   def allow_major_curriculum_changes?
-    get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot
+    unit_group.nil? ||
+      [PUBLISHED_STATE.in_development, PUBLISHED_STATE.pilot].include?(unit_group.published_state) ||
+      hide_within_course
   end
 
   def summarize_for_lesson_edit

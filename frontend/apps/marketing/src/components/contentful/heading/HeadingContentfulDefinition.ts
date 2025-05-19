@@ -20,7 +20,7 @@ export const HeadingContentfulComponentDefinition: ComponentDefinition = {
     visualAppearance: {
       displayName: 'Visual Appearance',
       type: 'Text',
-      defaultValue: 'heading-xxl',
+      defaultValue: 'heading-xl',
       group: 'style',
       validations: {
         in: [

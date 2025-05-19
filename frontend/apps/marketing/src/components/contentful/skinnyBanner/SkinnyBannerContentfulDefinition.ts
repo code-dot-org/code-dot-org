@@ -32,6 +32,7 @@ export const SkinnyBannerContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Heading',
       type: 'Text',
       group: 'content',
+      defaultValue: 'Skinny Banner heading goes here',
       validations: {
         required: true,
         bindingSourceType: ['entry', 'manual'],
@@ -41,6 +42,7 @@ export const SkinnyBannerContentfulComponentDefinition: ComponentDefinition = {
       displayName: 'Description',
       type: 'Text',
       group: 'content',
+      defaultValue: 'Skinny Banner description goes here.',
       validations: {
         bindingSourceType: ['entry', 'manual'],
       },

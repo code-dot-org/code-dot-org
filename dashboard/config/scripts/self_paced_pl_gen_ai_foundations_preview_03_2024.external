@@ -29,7 +29,7 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/5587e0a3e25e4642f2da11c4f317800e-3d83c1f988e645b8de16c95ee6709055-Slide22.PNG" alt="character representations shown as a matrix of numbers" width="350px" style="border: 2px solid black; border-radius: 8px; float:right; margin: 20px 20px 20px 20px">
 
-#### During discussions, students will eventually understand that they can compare numbers in each position to determine how similar or different characters are. One powerful insight is that it doesn’t matter what each position represents, only how close or far the numbers are in that same position.
+#### During discussions, students will understand that they can compare numbers in each position to determine how similar or different characters are. One powerful insight is that it doesn’t matter what each position represents, only how close or far the numbers are in that same position.
 
 #### These key concepts helps us generalize the idea of “character traits” to **embeddings** which are the set of numbers used to represent a word in a large-language model.
 

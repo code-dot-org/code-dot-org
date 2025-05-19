@@ -7,7 +7,7 @@
   "user_id": 18914,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Try it out! \r\n\r\nCreate to variables and print them together! \r\n\r\n\r\nnote to us: maybe lets add validation here?",
+    "long_instructions": "##Try it out! \r\n\r\nCreate to variables and print them together! \r\n",
     "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
@@ -21,16 +21,30 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "#Create two strings \n\n\n#Combine them together \n\n\n#Print",
+          "contents": "#Create two strings \nvar1 = \"hello\"\nvar2 = \"world\"\n\n#Combine them together \nvar1 = var1+var2\n\n#Print\nprint(var1)",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true
         }
       },
       "folders": {
-      }
-    }
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "main_test.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestStringCombination(unittest.TestCase):\n    @classmethod\n    def setUpClass(cls):\n        try:\n            with open(\"main.py\", \"r\") as f:\n                cls.content = f.read()\n                cls.tree = ast.parse(cls.content)\n        except FileNotFoundError:\n            raise unittest.SkipTest(\"The file 'main.py' was not found.\")\n        except Exception as e:\n            raise unittest.SkipTest(f\"Error parsing file: {e}\")\n\n    def test_two_string_variables_created(self):\n        \"\"\"Check that two string variables are created.\"\"\"\n        assign_nodes = [\n            node for node in ast.walk(self.tree)\n            if isinstance(node, ast.Assign)\n        ]\n\n        string_assignments = 0\n        for assign in assign_nodes:\n            if isinstance(assign.value, ast.Str):  # e.g., x = \"hello\"\n                string_assignments += 1\n            elif isinstance(assign.value, ast.Constant) and isinstance(assign.value.value, str):  # Python 3.8+\n                string_assignments += 1\n\n        self.assertGreaterEqual(\n            string_assignments, 2,\n            f\"Expected at least 2 string variables, but found {string_assignments}.\"\n        )\n\n    def test_strings_combined(self):\n        \"\"\"Check that two strings are combined (using + operator).\"\"\"\n        binops = [\n            node for node in ast.walk(self.tree)\n            if isinstance(node, ast.BinOp)\n            and isinstance(node.op, ast.Add)\n        ]\n\n        found_concat = False\n        for binop in binops:\n            # Check if both sides are strings or names (assuming vars with strings)\n            if (isinstance(binop.left, (ast.Str, ast.Constant, ast.Name)) and\n                isinstance(binop.right, (ast.Str, ast.Constant, ast.Name))):\n                found_concat = True\n                break\n\n        self.assertTrue(\n            found_concat,\n            \"Expected to find string concatenation using '+', but didn't.\"\n        )\n\n    def test_something_printed(self):\n        \"\"\"Check that something is printed to the console.\"\"\"\n        print_calls = [\n            node for node in ast.walk(self.tree)\n            if isinstance(node, ast.Call)\n            and isinstance(node.func, ast.Name)\n            and node.func.id == \"print\"\n        ]\n\n        self.assertGreaterEqual(\n            len(print_calls), 1,\n            \"Expected at least one call to print(), but none were found.\"\n        )\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    },
+    "widget_view": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2025-05-07 15:11:46 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:12:46 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:12:56 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:13:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-07 15:11:46 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:12:46 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:12:56 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 15:13:12 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-16 16:16:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-16 16:17:01 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

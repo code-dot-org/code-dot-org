@@ -66,12 +66,17 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  rescue_from CanCan::AccessDenied do
+  rescue_from CanCan::AccessDenied do |exception|
     if !current_user && request.format == :html
       # we don't know who you are, you can try to sign in
       authenticate_user!
     elsif rack_env?(:development, :adhoc)
-      raise
+      # log the error and its full stack trace
+      message = "CanCan::AccessDenied: #{exception.message}"
+      stack = exception.backtrace.join("\n")
+      error_with_stack = "#{message}\n#{stack}"
+      Rails.logger.error(error_with_stack)
+      render plain: error_with_stack, status: :forbidden
     else
       # we know who you are, you shouldn't be here
       head :forbidden

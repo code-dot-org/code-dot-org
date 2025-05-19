@@ -106,6 +106,7 @@ class UnitEditor extends React.Component {
     courseOfferingEditorLink: PropTypes.string,
     isCSDCourseOffering: PropTypes.bool,
     isMissingRequiredDeviceCompatibilities: PropTypes.bool,
+    allowMajorCurriculumChanges: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -343,10 +344,7 @@ class UnitEditor extends React.Component {
   };
 
   render() {
-    const allowMajorCurriculumChanges =
-      this.props.initialHideWithinCourse ||
-      this.props.initialPublishedState === PublishedState.in_development ||
-      this.props.initialPublishedState === PublishedState.pilot;
+    const {allowMajorCurriculumChanges} = this.props;
 
     return (
       <div>

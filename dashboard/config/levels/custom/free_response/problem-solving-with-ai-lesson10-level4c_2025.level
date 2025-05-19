@@ -1,12 +1,13 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2025-05-08T14:35:58.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "What contributions did AI bring to refine your human-generated content?",
+    "long_instructions": "What did you struggle with during the AI Remix Challenge?",
     "stay_on_level_after_submit": "false",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -17,8 +18,7 @@
     "skip_sound": true,
     "name_suffix": "_2025"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-08T14:35:58.403+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson10-level4c_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson10-level4c_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2025-05-08T14:35:58.403+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson10-level4c_2024\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson10-level4c_2024\"},{\"changed_at\":\"2025-05-14 17:45:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

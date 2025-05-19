@@ -55,6 +55,7 @@ import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
+import {cleanUp} from './addons/cdoSerializationHelpers';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
@@ -884,12 +885,24 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
 
     // In toolbox mode, automatically clean up the workspace as blocks are moved.
+    // This needs to use Google Blockly's built-in cleanUp method, which arranges
+    // all blocks into a single column.
     if (blocklyWrapper.isToolboxMode) {
       workspace.addChangeListener(event => {
         if (event.type === GoogleBlockly.Events.MOVE) {
           workspace.cleanUp();
         }
       });
+    } else {
+      // Outside of toolbox mode, we need use a custom workspace cleanUp method.
+      // Our version prevents blocks from overlapping, moving the blocks as
+      // minimally as possible.
+      // This command is accessible via the workspace context menu.
+      extendedWorkspaceSvg.cleanUp = function (
+        includeImmovableBlocks?: boolean
+      ) {
+        cleanUp(this, includeImmovableBlocks);
+      };
     }
     // When either the main workspace or the toolbox workspace viewport
     // changes, adjust any callouts so they stay pointing to the appropriate

@@ -13,7 +13,7 @@ class AichatRequestsController < ApplicationController
     render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
   end
 
-  # POST /aichat/start_chat_completion
+  # POST /aichat_request/start_chat_completion
   # Initiate a chat completion request, which is performed asynchronously as an ActiveJob.
   # Returns the ID of the request and a base polling interval + backoff rate.
   # params are
@@ -60,7 +60,7 @@ class AichatRequestsController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  # GET /aichat/chat_request/:id
+  # GET /aichat_request/chat_request/:id
   # Get the chat completion request status and response for the given ID.
   def chat_request
     begin

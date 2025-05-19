@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 
-import Heading from '@/components/heading';
+import Heading from '@/components/contentful/heading';
 
 describe('Heading Component', () => {
   it('should render out all headings', async () => {
