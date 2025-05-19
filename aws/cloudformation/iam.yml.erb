@@ -1122,11 +1122,11 @@ roles.each do |name, config| %>
                   - acm:RequestCertificate
                   - acm:DeleteCertificate
                 Resource: '*'
-                Condition:
-                  StringLike:
-                    'acm:DomainName':
-                      - "*.<%=configuration[:base_domain_name]%>"
-                      - "<%=configuration[:base_domain_name]%>"
+#                Condition:
+#                  StringLike:
+#                    'acm:DomainName':
+#                      - "*.<%#=configuration[:base_domain_name]%>"
+#                      - "<%#=configuration[:base_domain_name]%>"
               - Effect: Allow
                 Action:
                   - acm:DescribeCertificate
