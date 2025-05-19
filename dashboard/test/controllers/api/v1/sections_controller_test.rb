@@ -826,7 +826,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     @teacher.reload
     assert_equal 1, @teacher.scripts.size
-    assert_equal @single_unit_course.default_units.first, returned_section.script
+    assert_equal @single_unit_course.first_unit, returned_section.script
   end
 
   test 'creating a section with a coteacher adds both teachers' do
@@ -1100,7 +1100,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response :success
     section.reload
     assert_equal(@single_unit_course.id, section.course_id)
-    assert_equal(@single_unit_course.default_units.first.id, section.script_id)
+    assert_equal(@single_unit_course.first_unit.id, section.script_id)
   end
 
   test "update: non-matching course_version and script rejected" do
