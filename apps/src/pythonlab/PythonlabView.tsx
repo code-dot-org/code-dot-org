@@ -173,6 +173,7 @@ const PythonlabView: React.FunctionComponent<
   // Set view code to false if level is switched for any levels in widget view.
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
     dispatch(setWidgetViewShowCode(false));
+    setAiTutor2HintQuestion(undefined);
   });
 
   // Given a question for the AITutor2, return the full question to ask, which means

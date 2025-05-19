@@ -77,9 +77,13 @@ const AiTutor2UI: React.FunctionComponent<AiTutor2UIProps> = ({
     if (question) {
       askAiTutor2(question);
     } else {
+      if (type === 'hint') {
+        setResponse(null);
+      }
+
       lastQuestion.current = question;
     }
-  }, [question, askAiTutor2]);
+  }, [question, type, askAiTutor2]);
 
   // If this UI's optional submit button is clicked, then ask the LLM.
   const handleSubmit = useCallback(
