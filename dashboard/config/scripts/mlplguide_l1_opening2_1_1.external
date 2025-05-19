@@ -3,9 +3,8 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Professional Learning Module Overview
+# What's Included in This Module? 
 
-## What's included in this module?
 
 <div style="display: flex; flex-direction: column; align-items: flex-start; width: 70%; padding-left: 10%; padding-right: 20%;">
   <!-- Lesson 1 -->

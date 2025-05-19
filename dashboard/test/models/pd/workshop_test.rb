@@ -1677,6 +1677,18 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_includes workshop.errors.full_messages, 'Description is required'
   end
 
+  test 'registration_link defaults to teacher app link if applications are required' do
+    workshop = create :workshop, course: Pd::Workshop::COURSE_CSD, subject: SUBJECT_SUMMER_WORKSHOP
+
+    assert_equal "/pd/application/teacher", workshop.registration_link
+  end
+
+  test 'registration_link does not default to anything if applications are not required' do
+    workshop = create :workshop, course: Pd::Workshop::COURSE_BUILD_YOUR_OWN, subject: nil, course_offerings: [] << (create :course_offering)
+
+    assert_nil workshop.registration_link
+  end
+
   private def session_on_day(day_offset)
     # 9am-5pm
     session_on(day_offset, 9.hours, 17.hours)

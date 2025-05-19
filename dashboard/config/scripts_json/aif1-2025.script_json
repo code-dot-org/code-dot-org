@@ -22,8 +22,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-14 23:56:41 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2025-05-19 15:30:27 UTC",
+    "hide_within_course": false,
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -1037,7 +1038,13 @@
       "properties": {
         "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show Problem Solving with AI video. ",
         "duration": "3",
-        "name": "Problem Solving with AI Video"
+        "name": "Problem Solving with AI Video",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Teaching Tip\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [Guide to Curriculum Videos](https://docs.google.com/document/d/1Y-kGl_pc2afuSBKhKkdulu53X50mc7T-RQZA4vGLpY4/edit?usp=sharing)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "90a46793-bf47-4dff-9d1c-a6d729cd5a0b",
@@ -1743,7 +1750,7 @@
       "key": "8c430aa8-d867-4746-a588-9204047592c9",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at the Improved AI Predictions slide and note the differences between this slide and the previous slide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why did AI’s predictions change? How does this relate to the neuron activity? \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain that increased context allows AI to make more appropriate predictions. Here, the inclusion of the words “The students” led the AI to make next word predictions related to a school setting.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *neural network*."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students look at the Improved AI Predictions slide and note the differences between this slide and the previous slide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why did AI’s predictions change? How does this relate to the neuron activity? \n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain that increased context allows AI to make more appropriate predictions. Here, the inclusion of the words “The students” led the AI to make next word predictions related to a school setting.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *neural network*."
       },
       "seeding_key": {
         "activity_section.key": "8c430aa8-d867-4746-a588-9204047592c9",
@@ -3049,7 +3056,7 @@
       "key": "9b56a47b-4fd9-4e65-8354-2530b682d9d3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Engage students in critical thinking about AI hallucinations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to take a minute to write a response to the Question of the Day in their Unit Guide. Encourage them to use specific examples from the lesson, such as case studies or AI-generated errors they encountered.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Engage students in critical thinking about AI hallucinations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to take a minute to write a response to the Question of the Day in their Unit Guide. Encourage them to use specific examples from the lesson, such as case studies or AI-generated errors they encountered.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3333,7 +3340,7 @@
       "key": "e0bfe40f-a436-4c25-b158-68b956119a93",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the Product Launch activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to choose a product or app concept designed to help students in school.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct each group member to choose a role and record their choice in their activity guide."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the Product Launch activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to choose a product or app concept designed to help students in school.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct each group member to choose a role and record their choice in their activity guide. The career choices are: copywriter, graphic designer, video director, sound designer."
       },
       "seeding_key": {
         "activity_section.key": "e0bfe40f-a436-4c25-b158-68b956119a93",
@@ -3369,7 +3376,7 @@
       "key": "41cb8dc0-ce1a-48ba-9a30-ceb055a28d36",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 9, Level 1. Students should complete each choice level based on the product they are launching.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 9, Level 1. Students should complete each choice level based on the part of the product they are launching.",
         "progression_name": "Collaborate on a Product Launch"
       },
       "seeding_key": {
@@ -3404,7 +3411,7 @@
       "key": "7e085d41-278e-42c0-a712-8aff76b39686",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 9, Level 3 to complete the formative assessment.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 9, Level 6 to complete the formative assessment.",
         "progression_name": "Check Your Understanding",
         "tips": [
           {
@@ -3833,7 +3840,7 @@
       "key": "36f421ef-6dbd-45a1-9748-91b878f7c317",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that they will answer the Question of the Day today by reading the statements in their Unit Guide about AI and creativity. For each one, students should circle a thumbs up if they agree, thumbs down if they disagree, or thumbs sideways if they’re unsure. Let students know that they can make themselves notes about their reasons behind what they circled in their Unit Guide if they would like.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the next few slides contain the same statements about AI and creativity that they just saw in their Unit Guide. For each one, students should hold up a thumbs up if they agree, thumbs down if they disagree, or thumbs sideways if they’re unsure. After each vote, call on one or two students from different positions (e.g., one thumbs up, one thumbs down, one thumbs sideways) to explain their thinking.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display statement #1: AI is just as creative as humans. Ask students to respond with a thumbs up, down, or sideways. Then call on one student who agreed and one who disagreed to explain their thinking. Invite a third student if someone gave a sideways response to explain what made them unsure.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that they will answer the Question of the Day today by reading the statements in their Unit Guide about AI and creativity. For each one, students should circle a thumbs up if they agree, thumbs down if they disagree, or thumbs sideways if they’re unsure. Let students know that they can make themselves notes about their reasons behind what they circled in their Unit Guide if they would like.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the next few slides contain the same statements about AI and creativity that they just saw in their Unit Guide. For each one, students should hold up a thumbs up if they agree, thumbs down if they disagree, or thumbs sideways if they’re unsure. After each vote, call on one or two students from different positions (e.g., one thumbs up, one thumbs down, one thumbs sideways) to explain their thinking.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display statement #1: AI is just as creative as humans. Ask students to respond with a thumbs up, down, or sideways. Then call on one student who agreed and one who disagreed to explain their thinking. Invite a third student if someone gave a sideways response to explain what made them unsure.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -4011,7 +4018,7 @@
       "key": "b508225c-3b6b-47fc-9234-da643ceb2268",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce foundational concepts to help students evaluate AI-generated content legally and ethically and analyze AI copyright challenges through real-world disputes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *ethics*.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Introduce foundational concepts to help students evaluate AI-generated content legally and ethically and analyze AI copyright challenges through real-world disputes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *ethics*.\n",
         "duration": "10",
         "name": "Vocabulary and Real World Examples",
         "tips": [
@@ -4127,7 +4134,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Timing**: Before students rotate, give them a 10-second countdown to finish writing and posting. After students complete all stations, allow them to revisit their first and second stations to see new responses. (They don’t need to revisit their third station — they just came from it!)\n\n**Use the gif**: While going through the instructions for the stations, it may be helpful to either talk through the gif on the slide or demonstrate the flow to ensure students understand that they will be writing on and putting two sticky notes on each poster.\n- The first sticky note at each station will be used to place on a scale or on a chart after they write their reasons for their placement on that first sticky note\n- The second sticky note at each station will be used to write their answer to the second question and they will place this second sticky note under the question on the poster.\n\nYou can determine whether you would like students to put their names on their sticky notes to track participation. If you decide to have students add their names, it is suggested that they put their names on the back of the sticky notes so that students are more focused on the responses, rather than who wrote what.\n"
+            "markdown": "**Timing**: Before students rotate, give them a 10-second countdown to finish writing and posting. After students complete all stations, allow them to revisit their first and second stations to see new responses. (They don’t need to revisit their third station — they just came from it!)\n\n**Use the GIF**: While going through the instructions for the stations, it may be helpful to either talk through the GIF on the slide or demonstrate the flow to ensure students understand that they will be writing on and putting two sticky notes on each poster.\n- The first sticky note at each station will be used to place on a scale or on a chart after they write their reasons for their placement on that first sticky note\n- The second sticky note at each station will be used to write their answer to the second question and they will place this second sticky note under the question on the poster.\n\nYou can determine whether you would like students to put their names on their sticky notes to track participation. If you decide to have students add their names, it is suggested that they put their names on the back of the sticky notes so that students are more focused on the responses, rather than who wrote what.\n"
           }
         ]
       },
@@ -4165,8 +4172,19 @@
       }
     },
     {
-      "key": "e2e9ee00-8294-4aa5-9d4f-98505a3a697e",
+      "key": "8b1bd6af-9f19-4577-bf79-b9a80474ab2c",
       "position": 11,
+      "properties": {
+        "progression_name": "Ownership, Ethics, and Creativity"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b1bd6af-9f19-4577-bf79-b9a80474ab2c",
+        "lesson_activity.key": "50d1f967-9ccb-488c-bef5-7f804ad3043b"
+      }
+    },
+    {
+      "key": "e2e9ee00-8294-4aa5-9d4f-98505a3a697e",
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** To give students a chance to reflect on the ethical tradeoffs discussed at each station and articulate a value they think should guide how AI interacts with human-created content.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Navigate to Lesson 11, Level 1 on Code Studio in order to answer the free response reflection question.",
         "duration": "5",
@@ -4377,7 +4395,7 @@
       "key": "3a83eab0-ceeb-4e12-a1bd-4f168f158278",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have students form small groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain that now that they have reflected in their Unit Guide, they will share key takeaways with their group. Explain that the \"Pass the Mic\" discussion is designed so that everyone gets a chance to share. Each person will share their answer to the Question of the Day in one or two sentences and then \"pass the mic\" so that everyone has a turn.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share in their groups:\n- Listen for common themes and misconceptions such as:\n   - Are students clearly identifying AI's strengths and weaknesses?\n   - Are students misunderstanding AI's capabilities (e.g., assuming AI \"thinks\" like a human)?\n- Prompt deeper thinking with guiding questions such as:\n   - Did AI ever surprise you with what it could or couldn't do?\n   - Would you trust AI more or less after today's lesson?\n   - Did anyone in your group have a different perspective that made you think differently?\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students take out their Problem Solving with AI Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have students form small groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain that now that they have reflected in their Unit Guide, they will share key takeaways with their group. Explain that the \"Pass the Mic\" discussion is designed so that everyone gets a chance to share. Each person will share their answer to the Question of the Day in one or two sentences and then \"pass the mic\" so that everyone has a turn.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students share in their groups:\n- Listen for common themes and misconceptions such as:\n   - Are students clearly identifying AI's strengths and weaknesses?\n   - Are students misunderstanding AI's capabilities (e.g., assuming AI \"thinks\" like a human)?\n- Prompt deeper thinking with guiding questions such as:\n   - Did AI ever surprise you with what it could or couldn't do?\n   - Would you trust AI more or less after today's lesson?\n   - Did anyone in your group have a different perspective that made you think differently?\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -5944,14 +5962,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "problem-solving-with-ai-lesson9-level1_2025"
+          "problem-solving-with-ai-lesson9-level1a_2025"
         ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson9-level1_2025"
+          "problem-solving-with-ai-lesson9-level1a_2025"
         ],
         "lesson.key": "AI as a Co-Creator",
         "lesson_group.key": "lessonGroup-4",
@@ -5959,13 +5977,88 @@
         "activity_section.key": "41cb8dc0-ce1a-48ba-9a30-ceb055a28d36"
       },
       "level_keys": [
-        "problem-solving-with-ai-lesson9-level1_2025"
+        "problem-solving-with-ai-lesson9-level1a_2025"
       ]
     },
     {
       "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1b_2025"
+        ],
+        "progression": "Collaborate on a Product Launch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level1b_2025"
+        ],
+        "lesson.key": "AI as a Co-Creator",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif1-2025",
+        "activity_section.key": "41cb8dc0-ce1a-48ba-9a30-ceb055a28d36"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson9-level1b_2025"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1c_2025"
+        ],
+        "progression": "Collaborate on a Product Launch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level1c_2025"
+        ],
+        "lesson.key": "AI as a Co-Creator",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif1-2025",
+        "activity_section.key": "41cb8dc0-ce1a-48ba-9a30-ceb055a28d36"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson9-level1c_2025"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level1d_2025"
+        ],
+        "progression": "Collaborate on a Product Launch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level1d_2025"
+        ],
+        "lesson.key": "AI as a Co-Creator",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif1-2025",
+        "activity_section.key": "41cb8dc0-ce1a-48ba-9a30-ceb055a28d36"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson9-level1d_2025"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -5988,8 +6081,8 @@
       ]
     },
     {
-      "chapter": 48,
-      "position": 3,
+      "chapter": 51,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6013,7 +6106,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6038,7 +6131,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6063,7 +6156,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6088,7 +6181,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 55,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6113,7 +6206,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 56,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -6138,8 +6231,33 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 57,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson11-level0-launch_2025"
+        ],
+        "progression": "Ownership, Ethics, and Creativity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson11-level0-launch_2025"
+        ],
+        "lesson.key": "Ownership, Ethics, and Creativity",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif1-2025",
+        "activity_section.key": "8b1bd6af-9f19-4577-bf79-b9a80474ab2c"
+      },
+      "level_keys": [
+        "problem-solving-with-ai-lesson11-level0-launch_2025"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -6163,7 +6281,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6188,7 +6306,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6213,7 +6331,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -6238,7 +6356,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6263,7 +6381,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6288,7 +6406,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6313,7 +6431,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6338,7 +6456,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6906,9 +7024,45 @@
     },
     {
       "seeding_key": {
-        "level.key": "problem-solving-with-ai-lesson9-level1_2025",
+        "level.key": "problem-solving-with-ai-lesson9-level1a_2025",
         "script_level.level_keys": [
-          "problem-solving-with-ai-lesson9-level1_2025"
+          "problem-solving-with-ai-lesson9-level1a_2025"
+        ],
+        "lesson.key": "AI as a Co-Creator",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif1-2025",
+        "activity_section.key": "41cb8dc0-ce1a-48ba-9a30-ceb055a28d36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson9-level1b_2025",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level1b_2025"
+        ],
+        "lesson.key": "AI as a Co-Creator",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif1-2025",
+        "activity_section.key": "41cb8dc0-ce1a-48ba-9a30-ceb055a28d36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson9-level1c_2025",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level1c_2025"
+        ],
+        "lesson.key": "AI as a Co-Creator",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif1-2025",
+        "activity_section.key": "41cb8dc0-ce1a-48ba-9a30-ceb055a28d36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson9-level1d_2025",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson9-level1d_2025"
         ],
         "lesson.key": "AI as a Co-Creator",
         "lesson_group.key": "lessonGroup-4",
@@ -6998,6 +7152,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "aif1-2025",
         "activity_section.key": "ce35322d-fed1-4324-a325-b1d60c3212f9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "problem-solving-with-ai-lesson11-level0-launch_2025",
+        "script_level.level_keys": [
+          "problem-solving-with-ai-lesson11-level0-launch_2025"
+        ],
+        "lesson.key": "Ownership, Ethics, and Creativity",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif1-2025",
+        "activity_section.key": "8b1bd6af-9f19-4577-bf79-b9a80474ab2c"
       }
     },
     {

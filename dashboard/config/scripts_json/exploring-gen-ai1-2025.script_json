@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-14 17:58:38 UTC",
+    "serialized_at": "2025-05-16 18:49:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -100,7 +100,7 @@
     },
     {
       "key": "lesson-10",
-      "name": "1.2 How Smart Is It, Really?",
+      "name": "How Smart Is It, Really?",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -156,7 +156,7 @@
     },
     {
       "key": "lesson-2",
-      "name": "3.2 Is It Biased?",
+      "name": "Is It Biased?",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -231,7 +231,7 @@
     },
     {
       "key": "lesson-3",
-      "name": "6.2 Who's Making the Choices?",
+      "name": "Who's Making the Choices?",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -284,7 +284,7 @@
     },
     {
       "key": "lesson-4",
-      "name": "9.2 Can You Trust the Bot?",
+      "name": "Can You Trust the Bot?",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -888,6 +888,7 @@
       "key": "53fcdf2a-79f0-4333-8e7f-94df308071d5",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -901,6 +902,7 @@
       "key": "781a7a9f-145d-4669-a6be-c11922c8845c",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -914,6 +916,7 @@
       "key": "11e401e4-9adb-41cc-aab3-4f6f4a124275",
       "position": 3,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1050,6 +1053,7 @@
       "key": "945e4ebc-57de-49e8-bdee-28b33165730a",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1063,6 +1067,7 @@
       "key": "3d044815-143d-4cdc-af53-cfd101fc3b8e",
       "position": 2,
       "properties": {
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1076,6 +1081,7 @@
       "key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0",
       "position": 3,
       "properties": {
+        "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -1488,6 +1494,7 @@
       "key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
       "position": 1,
       "properties": {
+        "progression_name": "Warm Up"
       },
       "seeding_key": {
         "activity_section.key": "8d79bd76-42a1-454d-aa4c-3d90127db436",
@@ -1516,8 +1523,19 @@
       }
     },
     {
-      "key": "39705368-cf3f-45bf-b6a7-e92a2985cd6c",
+      "key": "be34adf3-108c-4306-86e5-274258797e37",
       "position": 2,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "be34adf3-108c-4306-86e5-274258797e37",
+        "lesson_activity.key": "97e3dc3e-e919-4220-b459-5d311dc2850e"
+      }
+    },
+    {
+      "key": "39705368-cf3f-45bf-b6a7-e92a2985cd6c",
+      "position": 3,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -1909,6 +1927,17 @@
       }
     },
     {
+      "key": "44c038ee-19f4-4b46-b8d6-599012178a71",
+      "position": 2,
+      "properties": {
+        "progression_name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "44c038ee-19f4-4b46-b8d6-599012178a71",
+        "lesson_activity.key": "c8fa5880-4693-4667-8331-29178ef3cfaf"
+      }
+    },
+    {
       "key": "7b60682a-c5a1-4c00-a1f2-f14f559d5ec4",
       "position": 1,
       "properties": {
@@ -1952,8 +1981,19 @@
       }
     },
     {
-      "key": "6fc8a483-32cb-453e-89ba-a920eccda865",
+      "key": "4ee810a5-d3ea-4bb3-84a8-faaa670776e9",
       "position": 2,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ee810a5-d3ea-4bb3-84a8-faaa670776e9",
+        "lesson_activity.key": "2d3036a3-09c1-4dad-8499-2287364f9208"
+      }
+    },
+    {
+      "key": "6fc8a483-32cb-453e-89ba-a920eccda865",
+      "position": 3,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -2611,6 +2651,17 @@
       }
     },
     {
+      "key": "9c6b6c22-11cb-4b83-acf3-3029e2afbe52",
+      "position": 2,
+      "properties": {
+        "progression_name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c6b6c22-11cb-4b83-acf3-3029e2afbe52",
+        "lesson_activity.key": "53fcdf2a-79f0-4333-8e7f-94df308071d5"
+      }
+    },
+    {
       "key": "fa447aeb-24a4-4bb1-907f-f9536384dd34",
       "position": 1,
       "properties": {
@@ -2644,8 +2695,19 @@
       }
     },
     {
-      "key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742",
+      "key": "8cd2921e-bee1-42c3-85db-98931de7bc60",
       "position": 1,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "8cd2921e-bee1-42c3-85db-98931de7bc60",
+        "lesson_activity.key": "11e401e4-9adb-41cc-aab3-4f6f4a124275"
+      }
+    },
+    {
+      "key": "04b56ae0-c8c6-4f3f-8e47-7ed3234f6742",
+      "position": 2,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -2973,6 +3035,17 @@
       }
     },
     {
+      "key": "803b3c62-cfa7-47b4-8f27-ad118998c4c9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "803b3c62-cfa7-47b4-8f27-ad118998c4c9",
+        "lesson_activity.key": "945e4ebc-57de-49e8-bdee-28b33165730a"
+      }
+    },
+    {
       "key": "bfb79562-c48f-4573-b873-546a9594d3af",
       "position": 1,
       "properties": {
@@ -2983,8 +3056,19 @@
       }
     },
     {
-      "key": "673edd09-89ba-4f27-b1c1-4342c1612c31",
+      "key": "1ba25e19-d093-4a4e-a355-74fb93244766",
       "position": 1,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ba25e19-d093-4a4e-a355-74fb93244766",
+        "lesson_activity.key": "aaafe174-a7c2-4bb1-9b54-274ae7f44de0"
+      }
+    },
+    {
+      "key": "673edd09-89ba-4f27-b1c1-4342c1612c31",
+      "position": 2,
       "properties": {
         "progression_name": "Lesson Recap"
       },
@@ -3642,6 +3726,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L1"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -3661,6 +3748,28 @@
     {
       "chapter": 5,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson1.2-warmup-lv1_2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "8d79bd76-42a1-454d-aa4c-3d90127db436"
+      },
+      "level_keys": [
+        "genai-lesson1.2-warmup-lv1_2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3684,11 +3793,36 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 2,
+      "chapter": 7,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson1.2-wrapup-lv1_2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "be34adf3-108c-4306-86e5-274258797e37"
+      },
+      "level_keys": [
+        "genai-lesson1.2-wrapup-lv1_2025"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L2"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -3706,7 +3840,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3731,7 +3865,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3756,11 +3890,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L3"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -3778,7 +3915,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3803,7 +3940,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3828,7 +3965,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3853,7 +3990,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3878,7 +4015,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -3903,7 +4040,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -3928,7 +4065,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -3953,7 +4090,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3978,11 +4115,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L4"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4000,8 +4140,30 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson3.2-warmup-lv1_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "44c038ee-19f4-4b46-b8d6-599012178a71"
+      },
+      "level_keys": [
+        "genai-lesson3.2-warmup-lv1_2025"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4025,8 +4187,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 2,
+      "chapter": 23,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4050,8 +4212,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 3,
+      "chapter": 24,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4075,11 +4237,36 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 4,
+      "chapter": 25,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson3.2-wrapup-lv1_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "4ee810a5-d3ea-4bb3-84a8-faaa670776e9"
+      },
+      "level_keys": [
+        "genai-lesson3.2-wrapup-lv1_2025"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L5"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4097,7 +4284,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4122,7 +4309,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4147,7 +4334,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4172,11 +4359,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L6"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4194,7 +4384,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4219,7 +4409,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4244,11 +4434,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L7"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4266,7 +4459,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4291,7 +4484,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4316,7 +4509,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4341,11 +4534,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L8"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4363,8 +4559,30 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 38,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson6.2-warmup-lv1_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "9c6b6c22-11cb-4b83-acf3-3029e2afbe52"
+      },
+      "level_keys": [
+        "genai-lesson6.2-warmup-lv1_2025"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4388,8 +4606,8 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 2,
+      "chapter": 40,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4413,8 +4631,8 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 3,
+      "chapter": 41,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4438,11 +4656,36 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 4,
+      "chapter": 42,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson6.2-wrapup-lv1_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "8cd2921e-bee1-42c3-85db-98931de7bc60"
+      },
+      "level_keys": [
+        "genai-lesson6.2-wrapup-lv1_2025"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L9"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4460,7 +4703,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4485,11 +4728,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L10"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4507,7 +4753,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4532,7 +4778,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4557,7 +4803,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4582,7 +4828,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4607,7 +4853,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4632,7 +4878,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4657,7 +4903,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4682,11 +4928,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 53,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L11"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4704,11 +4953,58 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson9.2-warmup-lv1_2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "803b3c62-cfa7-47b4-8f27-ad118998c4c9"
+      },
+      "level_keys": [
+        "genai-lesson9.2-warmup-lv1_2025"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson9.2-wrapup-lv1_2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "1ba25e19-d093-4a4e-a355-74fb93244766"
+      },
+      "level_keys": [
+        "genai-lesson9.2-wrapup-lv1_2025"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L12"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4726,11 +5022,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L13"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4748,7 +5047,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4773,7 +5072,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4798,7 +5097,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4823,11 +5122,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L14"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4845,7 +5147,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4870,11 +5172,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-student-level-L15"
+        ],
         "progression": "Lesson Recap"
       },
       "bonus": false,
@@ -4943,6 +5248,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "genai-lesson1.2-warmup-lv1_2025",
+        "script_level.level_keys": [
+          "genai-lesson1.2-warmup-lv1_2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "8d79bd76-42a1-454d-aa4c-3d90127db436"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "exploring_generative_ai_lesson1_2_level1",
         "script_level.level_keys": [
           "exploring_generative_ai_lesson1_2_level1"
@@ -4951,6 +5268,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "d60e1ddd-b13b-42ea-8740-abb5d6d02fcc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson1.2-wrapup-lv1_2025",
+        "script_level.level_keys": [
+          "genai-lesson1.2-wrapup-lv1_2025"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "be34adf3-108c-4306-86e5-274258797e37"
       }
     },
     {
@@ -5111,6 +5440,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "genai-lesson3.2-warmup-lv1_2025",
+        "script_level.level_keys": [
+          "genai-lesson3.2-warmup-lv1_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "44c038ee-19f4-4b46-b8d6-599012178a71"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "exploring_generative_ai_l32_l1",
         "script_level.level_keys": [
           "exploring_generative_ai_l32_l1"
@@ -5143,6 +5484,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "2b85ad2b-b0fe-41e9-9f89-cde1ffcfc2ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson3.2-wrapup-lv1_2025",
+        "script_level.level_keys": [
+          "genai-lesson3.2-wrapup-lv1_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "4ee810a5-d3ea-4bb3-84a8-faaa670776e9"
       }
     },
     {
@@ -5291,6 +5644,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "genai-lesson6.2-warmup-lv1_2025",
+        "script_level.level_keys": [
+          "genai-lesson6.2-warmup-lv1_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "9c6b6c22-11cb-4b83-acf3-3029e2afbe52"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "genai-choices-comparison",
         "script_level.level_keys": [
           "genai-choices-comparison"
@@ -5323,6 +5688,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "722592d3-fb7f-49a1-84de-1cc17c4bf6c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson6.2-wrapup-lv1_2025",
+        "script_level.level_keys": [
+          "genai-lesson6.2-wrapup-lv1_2025"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "8cd2921e-bee1-42c3-85db-98931de7bc60"
       }
     },
     {
@@ -5455,6 +5832,30 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "exploring-gen-ai1-2025",
         "activity_section.key": "4fd44a06-fca4-48e2-abf7-b54db510e67c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson9.2-warmup-lv1_2025",
+        "script_level.level_keys": [
+          "genai-lesson9.2-warmup-lv1_2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "803b3c62-cfa7-47b4-8f27-ad118998c4c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson9.2-wrapup-lv1_2025",
+        "script_level.level_keys": [
+          "genai-lesson9.2-wrapup-lv1_2025"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "exploring-gen-ai1-2025",
+        "activity_section.key": "1ba25e19-d093-4a4e-a355-74fb93244766"
       }
     },
     {

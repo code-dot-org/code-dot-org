@@ -1,6 +1,7 @@
 // Pythonlab view
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
+import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
@@ -164,6 +165,11 @@ const PythonlabView: React.FunctionComponent<
     LifecycleEvent.LevelLoadStarted,
     restartPyodideIfProgramIsRunning
   );
+
+  // Set view code to false if level is switched for any levels in widget view.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    dispatch(setWidgetViewShowCode(false));
+  });
 
   const onRun = async (
     runTests: boolean,
