@@ -171,9 +171,9 @@ class UnitTest < ActiveSupport::TestCase
 
   test 'get_from_cache raises if called with a family_name' do
     error = assert_raises do
-      Unit.get_from_cache('csd2')
+      Unit.get_from_cache('coursea')
     end
-    assert_equal 'Do not call Unit.get_from_cache with a family_name. Call Unit.get_unit_family_redirect_for_user instead.  Family: csd2', error.message
+    assert_equal 'Do not call Unit.get_from_cache with a family_name. Call Unit.get_unit_family_redirect_for_user instead.  Family: coursea', error.message
   end
 
   test 'get_family_from_cache uses unit_family_cache' do
