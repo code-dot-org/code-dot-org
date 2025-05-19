@@ -29,6 +29,7 @@ ignore_eyes_mismatches: true
 localize_apps: true
 use_my_apps: true
 skip_seed_all: true
+
 # UI test settings and secrets
 override_dashboard: \"localhost-studio.code.org\"
 override_pegasus: \"localhost.code.org\"
