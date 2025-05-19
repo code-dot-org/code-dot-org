@@ -1,5 +1,4 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Typography from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -53,43 +52,61 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
 
   return (
     <div className={moduleStyles.validation}>
-      <div className={moduleStyles.simpleRow}>
-        <Typography
-          semanticTag="h3"
-          visualAppearance="heading-xs"
-          className={moduleStyles.validationTitle}
+      <div className={moduleStyles.section}>
+        <div
+          className={classNames(moduleStyles.column, moduleStyles.columnFirst)}
         >
-          <div>{'Validation Set ' + (index + 1)}</div>
-        </Typography>
-        <div>
-          <button
-            type="button"
-            onClick={() => moveValidation(validation.key, 'up')}
-            className={moduleStyles.moveValidationButton}
-          >
-            <FontAwesome icon="arrow-up" title={undefined} className="icon" />
-          </button>
-          <button
-            type="button"
-            onClick={() => moveValidation(validation.key, 'down')}
-            className={moduleStyles.moveValidationButton}
-          >
-            <FontAwesome icon="arrow-down" title={undefined} className="icon" />
-          </button>
-          <button
-            type="button"
-            onClick={() => duplicateValidation(validation)}
-            className={moduleStyles.duplicateValidationButton}
-          >
-            <FontAwesome icon="copy" title={undefined} className="icon" />
-          </button>
-          <button
-            type="button"
-            onClick={() => deleteValidation(validation.key)}
-            className={moduleStyles.deleteValidationButton}
-          >
-            <FontAwesome icon="trash" title={undefined} className="icon" />
-          </button>
+          {'Info'}
+        </div>
+        <div className={moduleStyles.column}>
+          <input
+            type="text"
+            id="edit-validation-comment"
+            name="comment"
+            className={moduleStyles.comment}
+            placeholder="Optional comment..."
+            value={validation.comment}
+            onChange={e => {
+              validation.comment = e.target.value;
+              onValidationChange(validation);
+            }}
+          />
+        </div>
+        <div className={moduleStyles.column}>
+          <div className={moduleStyles.buttonsRow}>
+            <button
+              type="button"
+              onClick={() => moveValidation(validation.key, 'up')}
+              className={moduleStyles.moveValidationButton}
+            >
+              <FontAwesome icon="arrow-up" title={undefined} className="icon" />
+            </button>
+            <button
+              type="button"
+              onClick={() => moveValidation(validation.key, 'down')}
+              className={moduleStyles.moveValidationButton}
+            >
+              <FontAwesome
+                icon="arrow-down"
+                title={undefined}
+                className="icon"
+              />
+            </button>
+            <button
+              type="button"
+              onClick={() => duplicateValidation(validation)}
+              className={moduleStyles.duplicateValidationButton}
+            >
+              <FontAwesome icon="copy" title={undefined} className="icon" />
+            </button>
+            <button
+              type="button"
+              onClick={() => deleteValidation(validation.key)}
+              className={moduleStyles.deleteValidationButton}
+            >
+              <FontAwesome icon="trash" title={undefined} className="icon" />
+            </button>
+          </div>
         </div>
       </div>
       <div className={moduleStyles.section}>
@@ -162,7 +179,7 @@ const EditValidation: React.FunctionComponent<EditValidationProps> = ({
             <div className={moduleStyles.column}>
               <div className={moduleStyles.row}>
                 <Tooltip
-                  text={<SafeMarkdown markdown={validation.message} />}
+                  text={<SafeMarkdown markdown={validation.message || ''} />}
                   place="right"
                 >
                   <FontAwesomeV6Icon iconName="eye" iconStyle="regular" />

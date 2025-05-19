@@ -55,6 +55,19 @@
   padding-right: 10px;
 }
 
+.comment {
+  width: 530px;
+}
+
+.buttonsRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  gap: 0;
+  height: 100%;
+}
+
 .addConditionButton {
   font-size: 12px;
   height: 24px;
