@@ -27,12 +27,11 @@ def main
     head: 'staging',
     title: 'DTT (Staging > Test) [robo-dtt]'
   )
-  if pr_number.nil?
+  if pr_number.nil?å
     raise Exception.new('DepoyToTest::Unable to find or create a Pull Request that merges the staging branch into the test branch.')
   end
-  
   unless GitHub.merge_pull_request(pr_number)
-    raise Exception.new("DepoyToTest::Failed to merge Pull Request #{pr_number"')
+    raise Exception.new("DepoyToTest::Failed to merge Pull Request #{pr_number}")
   end
 
   ChatClient.message(
