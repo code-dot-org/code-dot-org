@@ -17,6 +17,7 @@ import SectionAvatarEditDialog from '../studioHomepages/teacherHomepageV2/sectio
 
 import moduleStyles from './sections-refresh.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
+import styles from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/sectionAvatars/section-avatars.module.scss';
 
 export default function SingleSectionSetUp({
   sectionNum,
@@ -67,14 +68,15 @@ export default function SingleSectionSetUp({
       {(experiments.isEnabled('teacher-homepage-v2') ||
         DCDO.get('teacher-homepage-v2', false)) && (
         <label className={moduleStyles.typographyLabelTwo}>
-          {i18n.sectionAvatar()}
-          <div className={moduleStyles.avatarContainer}>
+          {i18n.avatar()}
+          <div className={styles.avatarContainer}>
             <SectionAvatar
               color={section.avatar_color || 0}
               emoji={section.avatar_emoji || 0}
+              size={'l'}
             />
             <Button
-              className={moduleStyles.avatarButton}
+              className={styles.avatarButton}
               text={i18n.editAvatar()}
               type={'secondary'}
               color={'gray'}

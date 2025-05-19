@@ -16,11 +16,9 @@ const PickerGrid: React.FC<PickerGridProps> = ({itemList, type}) => {
           </div>
         ))
       : itemList.map((item, index) => (
-          <div
-            key={index}
-            className={styles.gridItem}
-            style={{backgroundColor: item}}
-          />
+          <div key={index} className={styles.gridItem}>
+            <div className={styles.colorBox} style={{backgroundColor: item}} />
+          </div>
         ));
 
   return <div className={styles.pickerGrid}>{gridItems}</div>;

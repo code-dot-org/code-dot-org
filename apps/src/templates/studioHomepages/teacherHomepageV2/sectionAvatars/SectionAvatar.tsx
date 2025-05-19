@@ -7,14 +7,18 @@ import styles from './section-avatars.module.scss';
 interface SectonAvatarProps {
   color: number;
   emoji: number;
-  size: 's' | 'l';
+  size: 's' | 'l' | 'xl';
 }
 
 const SectionAvatar: React.FC<SectonAvatarProps> = ({color, emoji, size}) => {
   return (
     <div
       className={
-        size === 's' ? styles.sectionAvatarSmall : styles.sectionAvatarLarge
+        size === 's'
+          ? styles.sectionAvatarSmall
+          : size === 'l'
+          ? styles.sectionAvatarLarge
+          : styles.sectionAvatarXL
       }
       style={{backgroundColor: COLORS[color]}}
     >
