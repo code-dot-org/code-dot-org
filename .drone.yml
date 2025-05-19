@@ -218,9 +218,6 @@ steps:
 
   - name: get-cached-staging-database
     image: plugins/s3-cache
-    volumes:
-      - name: dashboard-database
-        path: /drone/src/var/lib/mysql/dashboard_test
     settings:
       filename: cache-staging-dashboard-database.tar.gz
       endpoint: s3://cdo-drone
@@ -249,8 +246,6 @@ steps:
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
-      - name: dashboard-database
-        path: /var/lib/mysql/dashboard_test
     commands:
       - sudo chown -R ci:ci .
       # Depended on by CI: https://github.com/code-dot-org/code-dot-org/blob/048e4ddffd52e62fd6a13566ea6ccd38a6701d89/lib/cdo/ci.rb/#L16
@@ -265,8 +260,6 @@ steps:
 
 volumes:
   - name: rbenv
-    temp: {}
-  - name: dashboard-database
     temp: {}
 
 trigger:
@@ -314,11 +307,10 @@ steps:
     volumes:
       - name: rbenv
         path: /home/ci/.rbenv
-      - name: dashboard-database
-        path: /var/lib/mysql/dashboard_test
     commands:
       - sudo chown -R ci:ci .
       - /entrypoint.sh docker/ci/scripts/prepare_ui_tests.sh
+      - mysqldump -u root -B dashboard_test > dashboard/db/ui_test_data.sql
 
   - name: cache-staging-rbenv
     image: plugins/s3-cache
@@ -336,9 +328,6 @@ steps:
 
   - name: cache-staging-database
     image: plugins/s3-cache
-    volumes:
-      - name: dashboard-database
-        path: /var/lib/mysql/dashboard_test
     settings:
       filename: cache-staging-dashboard-database.tar.gz
       endpoint: s3://cdo-drone
@@ -346,12 +335,10 @@ steps:
       debug: true
       pull: true
       mount:
-        - /var/lib/mysql/dashboard_test
+        - dashboard/db/ui_test_data.sql
 
 volumes:
   - name: rbenv
-    temp: {}
-  - name: dashboard-database
     temp: {}
 
 trigger:
