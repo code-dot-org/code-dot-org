@@ -361,7 +361,7 @@
           "language": "py",
           "contents": "from neighborhood import Painter\n\nme = Painter()\n\nme.move()",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true,
           "type": "locked_starter"
         }
@@ -376,7 +376,7 @@
       "id": "2",
       "name": "test.py",
       "language": "py",
-      "contents": "from unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\nclass TestPainterMoveOnce(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and cache the results\"\"\"\n        cls.log = ValidationProtocol().get_neighborhood_log()\n        if not cls.log.painter_logs:\n            cls.painter = None\n        else:\n            cls.painter = cls.log.painter_logs[0]\n\n    def setUp(self):\n        if self.painter is None:\n            self.skipTest(\"No Painter was created. Make sure to create a Painter in your code.\")\n\n    def test_painter_created(self):\n        \"\"\"Check if a Painter object was created\"\"\"\n        self.assertIsNotNone(self.painter, \"Make sure you create a Painter object.\")\n\n    def test_painter_moved_once(self):\n        \"\"\"The Painter should move forward once\"\"\"\n        move_count = self.painter.action_count(\"MOVE\")\n        self.assertEqual(\n            move_count,\n            1,\n            \"The Painter should move exactly once. Did you use the move() function?\"\n        )\n",
+      "contents": "",
       "folderId": "0",
       "active": false,
       "open": false,
@@ -384,6 +384,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-11 22:06:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-11 22:06:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-11 22:06:14 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-11 22:06:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-19 15:02:17 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Pythonlab>

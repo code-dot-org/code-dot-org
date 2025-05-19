@@ -4,6 +4,7 @@ import {expect, Locator} from '@playwright/test';
 import {EXPECTED_LOCALIZATION_STRINGS} from './config/i18n';
 import {test} from './fixtures/base';
 import {AllTheThingsPage} from './pom/all-the-things';
+import {type Section} from './pom/all-the-things';
 import {MarketingPage} from './pom/marketing';
 
 test.describe('All the things UI e2e test', () => {
@@ -267,6 +268,24 @@ test.describe('All the things UI e2e test', () => {
         await eyes.check(testInfo.title, {region: component});
       });
     });
+
+    ['Action Block Carousel', 'Image Carousel', 'Video Carousel'].forEach(
+      carousel => {
+        test.describe(carousel.toLowerCase(), () => {
+          let component: Locator;
+
+          test.beforeEach(() => {
+            component = allTheThingsPage.getSectionLocator(carousel as Section);
+          });
+
+          test('eyes', {tag: '@eyes'}, async ({eyes}, testInfo) => {
+            await eyes.check(testInfo.title, {
+              region: component,
+            });
+          });
+        });
+      },
+    );
 
     test.describe('divider', () => {
       let component: Locator;

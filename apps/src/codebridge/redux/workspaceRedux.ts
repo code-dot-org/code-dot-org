@@ -2,10 +2,12 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 export interface CodebridgeWorkspaceState {
   showLockedFilesBanner: boolean;
+  widgetViewShowCode: boolean;
 }
 
 export const initialState: CodebridgeWorkspaceState = {
   showLockedFilesBanner: false,
+  widgetViewShowCode: false,
 };
 
 // SLICE
@@ -16,9 +18,13 @@ const workspaceSlice = createSlice({
     setShowLockedFilesBanner(state, action: PayloadAction<boolean>) {
       state.showLockedFilesBanner = action.payload;
     },
+    setWidgetViewShowCode(state, action: PayloadAction<boolean>) {
+      state.widgetViewShowCode = action.payload;
+    },
   },
 });
 
-export const {setShowLockedFilesBanner} = workspaceSlice.actions;
+export const {setShowLockedFilesBanner, setWidgetViewShowCode} =
+  workspaceSlice.actions;
 
 export default workspaceSlice.reducer;

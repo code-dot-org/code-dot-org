@@ -5,9 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Boolean Expressions
 
-<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"> 
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 15px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"> 
 
-## Key Term
+### **Key Term**
 
 #### **Boolean Expression** - in programming, an expression that evaluates to True or False.
 </p></div>
