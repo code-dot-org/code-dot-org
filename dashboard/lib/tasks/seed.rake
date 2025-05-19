@@ -292,7 +292,7 @@ namespace :seed do
   # left in the database that do not have a corresponding json file in config/course_offerings.
   # The ui test course offerings must be seeded after so they are not accidentally removed.
   timed_task_with_logging scripts_ui_tests: SCRIPTS_DEPENDENCIES + [:course_offerings_ui_tests] do
-    update_scripts(script_files: UI_TEST_SCRIPTS,  incremental: true)
+    update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
   end
 
   # Seeds only ui test scripts, skipping any dependencies. This is useful for
@@ -300,7 +300,7 @@ namespace :seed do
   # an empty DB. For more context, see
   # https://github.com/code-dot-org/code-dot-org/pull/64792
   timed_task_with_logging reseed_scripts_ui_tests: :environment do
-    update_scripts(script_files: UI_TEST_SCRIPTS, incremental: true)
+    update_scripts(script_files: UI_TEST_SCRIPTS)
   end
 
   timed_task_with_logging scripts_adhoc: SCRIPTS_DEPENDENCIES do
