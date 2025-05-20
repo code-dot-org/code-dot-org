@@ -6,7 +6,7 @@ import React from 'react';
 
 import HorizontalOutput from '@cdo/apps/codebridge/Workspace/HorizontalOutput';
 import {useHorizontalLayout} from '@cdo/apps/lab2/hooks/useHorizontalLayout';
-import AiTutor2UI from '@cdo/apps/lab2/views/components/AiTutor2UI';
+import AiTutor2Chat from '@cdo/apps/lab2/views/components/AiTutor2Chat';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -122,8 +122,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
               className={moduleStyles.rightmostColumn}
             >
               <div className={moduleStyles.inside}>
-                <AiTutor2UI
-                  allowChat={true}
+                <AiTutor2Chat
                   type="user"
                   getFullPrompt={getAiTutor2FullPrompt}
                 />

@@ -2,21 +2,19 @@ import React, {useCallback, useEffect, useRef} from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import AiTutor2Manager from '@cdo/apps/lab2/ai/AiTutor2Manager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import moduleStyles from './AiTutor2UI.module.scss';
+import moduleStyles from './AiTutor2Response.module.scss';
 
-interface AiTutor2UIProps {
-  allowChat?: boolean;
+interface AiTutor2ResponseProps {
   type: 'user' | 'hint';
   question?: string;
   getFullPrompt?: (question: string) => string;
 }
 
-const AiTutor2UI: React.FunctionComponent<AiTutor2UIProps> = ({
-  allowChat,
+// A single response from the AITutor2, answering the provided question.
+const AiTutor2Response: React.FunctionComponent<AiTutor2ResponseProps> = ({
   type,
   question,
   getFullPrompt,
@@ -32,7 +30,7 @@ const AiTutor2UI: React.FunctionComponent<AiTutor2UIProps> = ({
   // as UI is re-rendered.
   const lastQuestion = useRef<string | undefined>(undefined);
 
-  // This UI component will instantiate and use a AITutorManager.
+  // This UI component will instantiate and use an AITutorManager.
   const aiTutor2Manager = useRef<AiTutor2Manager | null>(null);
   if (
     aiTutor2Manager.current === null ||
@@ -52,7 +50,7 @@ const AiTutor2UI: React.FunctionComponent<AiTutor2UIProps> = ({
   // Store the most recent response.  Later we might store a longer history.
   const [response, setResponse] = React.useState<string | null>(null);
 
-  // Ask the LLM something and get a response.
+  // Ask the AiTutor2 something and get a response.
   const askAiTutor2 = useCallback(
     async (message: string) => {
       const fullQuestion = getFullPrompt ? getFullPrompt(message) : message;
@@ -90,34 +88,17 @@ const AiTutor2UI: React.FunctionComponent<AiTutor2UIProps> = ({
     }
   }, [question, type, askAiTutor2]);
 
-  // If this UI's optional submit button is clicked, then ask the LLM.
-  const handleSubmit = useCallback(
-    (userMessage: string) => {
-      askAiTutor2(userMessage);
-    },
-    [askAiTutor2]
-  );
+  if (!response) {
+    return null;
+  }
 
   return (
-    <div className={moduleStyles.container}>
-      {response && (
-        <ChatMessage
-          text={response?.trim()}
-          role={Role.ASSISTANT}
-          customStyles={moduleStyles}
-        />
-      )}
-      {allowChat && (
-        <div className={moduleStyles.userMessageContainer}>
-          <UserMessageEditor
-            onSubmit={handleSubmit}
-            disabled={false}
-            customPlaceholder="Ask A.I. a question..."
-          />
-        </div>
-      )}
-    </div>
+    <ChatMessage
+      text={response?.trim()}
+      role={Role.ASSISTANT}
+      customStyles={moduleStyles}
+    />
   );
 };
 
-export default AiTutor2UI;
+export default AiTutor2Response;

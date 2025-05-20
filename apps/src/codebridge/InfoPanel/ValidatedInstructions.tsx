@@ -26,7 +26,7 @@ import {
   setIsValidating,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import AiTutor2UI from '@cdo/apps/lab2/views/components/AiTutor2UI';
+import AiTutor2Response from '@cdo/apps/lab2/views/components/AiTutor2Response';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -387,8 +387,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           )}
 
           {aiTutor2Available && (
-            <AiTutor2UI
-              allowChat={false}
+            <AiTutor2Response
               type={'hint'}
               question={aiTutor2HintQuestion}
               getFullPrompt={getAiTutor2FullPrompt}
