@@ -12,21 +12,29 @@ markdown <<MARKDOWN
   <div>
     <h4 style="margin-top: 0; font-weight: bold;">Students will:</h4>
     <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt">
-      	<li>Describe how data is transmitted, routed, and reassembled over the Internet.
-Explain the roles of IP addressing, DNS, and redundancy in ensuring efficient communication.</li>
-		<li>Analyze the role of AI in enhancing network security.</li>
+      	<li>Describe how data is transmitted over the Internet.</li>
 		<li>Assess the implications of the digital divide and propose strategies to promote equitable Internet access.</li>
-		<li>Evaluate the ethical considerations of AI in network security and propose responsible solutions.</li>
-		<li>Identify and describe roles in networking and cybersecurity, such as Network Engineers and AI Cybersecurity Specialists.</li>
-		<li>Analyze how these careers contribute to addressing societal challenges and improving technology.</li>
-		<li>Use abstraction, decomposition, and pattern recognition to solve problems related to Internet communication and security.</li>
+        <li>Analyze the role of AI in enhancing network security.</li>
         <li>Propose and evaluate solutions to complex networking challenges, including security risks and accessibility issues.</li>
     </ul>
+  </div>
+  <div>
+    <img src="https://images.code.org/2e1bb1b21f46e5ccc05849706761ff02-Screenshot 2025-05-19 at 3.34.08 PM.png" 
+         alt="Icon with computer and data symbols" 
+         style="border-radius: 10px; width: 300px; height: auto;">
   </div>
 </div>
 
 
-#### This unit consists of 11 lessons, takes about three weeks to complete.
+
+## Unit Calendar 
+
+#### Take a quick look at the lessons included in this unit using the calendar tool.
+
+#### This version of the calendar shows the pacing for 45 minute class periods and can be customized using the drop-down menu to accommodate your schedule. 
+
+#### Check out the <a href="https://studio.code.org/s/aif4-2025" target="blank" rel="noopener noreferrer">calendar feature</a> on top of the unit preview. 
+
 
 <div style="clear:both;"></div>
 
