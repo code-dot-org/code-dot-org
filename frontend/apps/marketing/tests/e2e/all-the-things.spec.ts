@@ -25,7 +25,7 @@ test.describe('All the things UI e2e test', () => {
           JSON.stringify(accessibilityScanResults.violations, null, 2),
         );
 
-        expect(accessibilityScanResults.violations.length).toEqual(2);
+        expect(accessibilityScanResults.violations.length).toEqual(1);
       }
     });
   });
@@ -40,7 +40,8 @@ test.describe('All the things UI e2e test', () => {
       await page.waitForURL('**/en-US/engineering/all-the-things');
     });
 
-    test('should redirect from localeless paths to localized paths using the language cookie', async ({
+    // Re-enable when locales other than English are supported
+    test.skip('should redirect from localeless paths to localized paths using the language cookie', async ({
       page,
       context,
       browserName,

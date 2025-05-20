@@ -1689,6 +1689,19 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert_nil workshop.registration_link
   end
 
+  test 'valid_grades rejects invalid grades' do
+    workshop = build :pd_workshop, grades: ['Other', 'CS 100']
+
+    refute workshop.valid?
+    assert_includes workshop.errors.full_messages, 'Grade levels contains invalid grades: Other, CS 100'
+  end
+
+  test 'valid_grades allows valid grades' do
+    workshop = build :pd_workshop, grades: ['K', '1']
+
+    assert workshop.valid?
+  end
+
   private def session_on_day(day_offset)
     # 9am-5pm
     session_on(day_offset, 9.hours, 17.hours)

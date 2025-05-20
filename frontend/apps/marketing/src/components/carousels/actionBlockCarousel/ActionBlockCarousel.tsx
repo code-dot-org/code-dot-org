@@ -8,6 +8,7 @@ import ActionBlock, {
 } from '@code-dot-org/component-library/actionBlock';
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
+import {showNewTag} from '@/components/actionBlocks/helpers';
 import {externalLinkIconProps} from '@/components/common/constants';
 import {LinkEntry} from '@/types/contentful/entries/Link';
 import {Entry} from '@/types/contentful/Entry';
@@ -20,6 +21,7 @@ type ActionBlockCarouselFields = {
   image: ExperienceAsset;
   primaryLinkRef: LinkEntry;
   secondaryLinkRef: LinkEntry;
+  publishedDate?: EntryFields.Date;
 };
 
 type ActionBlockCarouselEntry = Entry<ActionBlockCarouselFields>;
@@ -58,6 +60,7 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
           image,
           primaryLinkRef,
           secondaryLinkRef,
+          publishedDate,
         } = fields;
 
         return {
@@ -103,6 +106,9 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
                   : undefined
               }
               background={background}
+              tag={
+                publishedDate && showNewTag(publishedDate) ? 'New' : undefined
+              }
             />
           ),
         };

@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-19 16:36:13 UTC",
+    "serialized_at": "2025-05-19 18:00:52 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -688,6 +688,28 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "progression": "Foundations of Generative AI (30 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-04x_2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "fba06010-99e8-48e6-9979-44e7c1ea463e"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-foundations-preview-04x_2024"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "self-paced-pl-gen-ai-foundations-preview-02b_2024"
         ],
@@ -708,9 +730,9 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 9,
-      "activity_section_position": 5,
+      "chapter": 20,
+      "position": 10,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -733,9 +755,9 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 10,
-      "activity_section_position": 6,
+      "chapter": 21,
+      "position": 11,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -758,9 +780,9 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 11,
-      "activity_section_position": 7,
+      "chapter": 22,
+      "position": 12,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -783,9 +805,9 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 12,
-      "activity_section_position": 8,
+      "chapter": 23,
+      "position": 13,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -808,9 +830,9 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 13,
-      "activity_section_position": 9,
+      "chapter": 24,
+      "position": 14,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -833,9 +855,9 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 14,
-      "activity_section_position": 10,
+      "chapter": 25,
+      "position": 15,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -858,8 +880,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 15,
+      "chapter": 26,
+      "position": 16,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -883,8 +905,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 16,
+      "chapter": 27,
+      "position": 17,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -908,8 +930,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 17,
+      "chapter": 28,
+      "position": 18,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -933,7 +955,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -958,7 +980,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -983,7 +1005,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1008,7 +1030,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1030,7 +1052,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -1055,7 +1077,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -1080,7 +1102,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -1105,7 +1127,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -1130,7 +1152,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -1155,7 +1177,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
@@ -1180,7 +1202,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -1205,7 +1227,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -1230,7 +1252,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -1255,7 +1277,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -1280,7 +1302,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 15,
       "activity_section_position": 5,
       "assessment": false,
@@ -1305,7 +1327,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 16,
       "activity_section_position": 6,
       "assessment": false,
@@ -1330,7 +1352,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 17,
       "activity_section_position": 7,
       "assessment": false,
@@ -1355,7 +1377,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
@@ -1380,7 +1402,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 19,
       "activity_section_position": 2,
       "assessment": false,
@@ -1405,7 +1427,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 20,
       "activity_section_position": 1,
       "assessment": false,
@@ -1430,7 +1452,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 21,
       "activity_section_position": 2,
       "assessment": false,
@@ -1455,7 +1477,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 22,
       "activity_section_position": 3,
       "assessment": false,
@@ -1480,7 +1502,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 23,
       "activity_section_position": 1,
       "assessment": false,
@@ -1505,7 +1527,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 24,
       "activity_section_position": 2,
       "assessment": false,
@@ -1530,7 +1552,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 25,
       "activity_section_position": 3,
       "assessment": false,
@@ -1753,6 +1775,18 @@
         "level.key": "self-paced-pl-gen-ai-foundations-preview-01d_2024",
         "script_level.level_keys": [
           "self-paced-pl-gen-ai-foundations-preview-01d_2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "fba06010-99e8-48e6-9979-44e7c1ea463e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-gen-ai-foundations-preview-04x_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-foundations-preview-04x_2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "",

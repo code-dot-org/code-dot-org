@@ -65,52 +65,51 @@ theme: responsive
         </tr>
       </table>
     </td>
-    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
     <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser July '25
+          Хөтөч долдугаар сарын '25
         </th>
         <tr>
-          <td>Chrome 103.x</td>
+          <td>Хром 109</td>
         </tr>
         <tr>
-          <td>Safari 14.x</td>
+          <td>Сафари 16.6</td>
         </tr>
         <tr>
-          <td>Mobile Safari 14.x</td>
+          <td>Мобайл Сафари 16</td>
         </tr>
         <tr>
-          <td>Edge 119.x</td>
+          <td>Зах 128</td>
         </tr>
         <tr>
-          <td>Firefox 98.x</td>
+          <td>Файрокс 115</td>
         </tr>
       </table>
     </td>
     <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform July '25
+          Платформ долдугаар сарын 25
         </th>
         <tr>
-          <td>macOS 10.15</td>
+          <td>Макос 10.15</td>
         </tr>
         <tr>
-          <td>iOS 15.x</td>
+          <td>iOS 16.x</td>
         </tr>
         <tr>
-          <td>Windows 8</td>
+          <td>Виндоус 10</td>
         </tr>
         <tr>
-          <td>Android 8.x</td>
+          <td>Андройд 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
-    -->
   </tr>
 </table>
 
@@ -149,7 +148,6 @@ K-5 курс (Компьютерийн шинжлэх ухааны үндэс) �
 ### Can you play this video?
 
 Та Code.org-ийн онлайн курс эхлэхээсээ өмнө та явах сайн байгаа эсэхийг шалгахын тулд доорх видео нь тоглуулах тест.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

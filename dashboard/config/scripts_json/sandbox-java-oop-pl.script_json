@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-19 14:40:45 UTC",
+    "serialized_at": "2025-05-19 17:55:35 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -233,6 +233,17 @@
       },
       "seeding_key": {
         "activity_section.key": "d0633ae4-6843-419b-b7ed-d6010a8e1925",
+        "lesson_activity.key": "00bdc6f6-15e0-4093-ba9e-40a33e654f84"
+      }
+    },
+    {
+      "key": "7a3c1082-a63e-4d87-a0b9-800898f1be48",
+      "position": 3,
+      "properties": {
+        "progression_name": "Constructors "
+      },
+      "seeding_key": {
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48",
         "lesson_activity.key": "00bdc6f6-15e0-4093-ba9e-40a33e654f84"
       }
     }
@@ -1060,6 +1071,204 @@
       "level_keys": [
         "pl-java-class-design-chk-und-11"
       ]
+    },
+    {
+      "chapter": 35,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-constructors-12"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      },
+      "level_keys": [
+        "pl-java-class-structure-constructors-12"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-no-arg-predict-13"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      },
+      "level_keys": [
+        "pl-java-class-design-no-arg-predict-13"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-no-arg-invest-14"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      },
+      "level_keys": [
+        "pl-java-class-design-no-arg-invest-14"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-constructors-15"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      },
+      "level_keys": [
+        "pl-java-class-structure-constructors-15"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-structure-no-argument-15"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      },
+      "level_keys": [
+        "pl-java-class-structure-no-argument-15"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 17,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-param-constructor-17"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      },
+      "level_keys": [
+        "pl-java-class-design-param-constructor-17"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 18,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ava-class-design-param-constructor-18"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      },
+      "level_keys": [
+        "ava-class-design-param-constructor-18"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 19,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-param-constructor-18"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      },
+      "level_keys": [
+        "pl-java-class-design-param-constructor-18"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 20,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Constructors "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-java-class-design-param-const-chk-und-18"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      },
+      "level_keys": [
+        "pl-java-class-design-param-const-chk-und-18"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1469,6 +1678,114 @@
         "lesson_group.key": "",
         "script.name": "sandbox-java-oop-pl",
         "activity_section.key": "d0633ae4-6843-419b-b7ed-d6010a8e1925"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-constructors-12",
+        "script_level.level_keys": [
+          "pl-java-class-structure-constructors-12"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-no-arg-predict-13",
+        "script_level.level_keys": [
+          "pl-java-class-design-no-arg-predict-13"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-no-arg-invest-14",
+        "script_level.level_keys": [
+          "pl-java-class-design-no-arg-invest-14"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-constructors-15",
+        "script_level.level_keys": [
+          "pl-java-class-structure-constructors-15"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-structure-no-argument-15",
+        "script_level.level_keys": [
+          "pl-java-class-structure-no-argument-15"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-param-constructor-17",
+        "script_level.level_keys": [
+          "pl-java-class-design-param-constructor-17"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ava-class-design-param-constructor-18",
+        "script_level.level_keys": [
+          "ava-class-design-param-constructor-18"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-param-constructor-18",
+        "script_level.level_keys": [
+          "pl-java-class-design-param-constructor-18"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-java-class-design-param-const-chk-und-18",
+        "script_level.level_keys": [
+          "pl-java-class-design-param-const-chk-und-18"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-java-oop-pl",
+        "activity_section.key": "7a3c1082-a63e-4d87-a0b9-800898f1be48"
       }
     }
   ],

@@ -1,6 +1,7 @@
 require 'cdo/firehose'
 
 class Api::V1::SchoolsController < ApplicationController
+  before_action :allow_cdo_cors, only: %i[afe_high_needs zip_search]
   load_resource :school, only: [:show, :afe_high_needs]
 
   # GET /api/v1/schools/<school_district_id>/<school_type>

@@ -7,7 +7,27 @@ markdown <<MARKDOWN
 
 ## What are Career Journeys?
 
-#### To help students see the real-world applications of computer science and music, we've included Career Spotlights in the curriculum. Students solve **authentic problems** inspired by these careers.
+#### To help students see the real-world applications of computer science and music, we've included Career Journeys in the curriculum. Each lesson features a real professional from the music or tech world, helping students see themselves in these creative careers.
+
+## Careers in the Curriculum 
+<!-- This div box wraps around all four images. Change the gap between images and margin around the whole div box here. -->
+<div style="display: flex; justify-content: center; gap: 5%; max-width: 100%; margin: 20px 0px;">
+	<!-- Notice that within the larger div box is four div boxes. Each contains an image and a caption. -->
+    <div style="width: 30%; text-align: center;">
+        <img src="https://images.code.org/1bf1f9c625e1f83821e4fc9fbc7f7f19-image-1739908559016.png" alt="ADD ALT TEXT" style="width: 100%; border-radius:10px;">
+        <p style="font-size: 12pt; margin-top: 5px;">Lesson 1 features Singer/Songwriter Shakira</p>
+    </div>
+    <div style="width: 30%; text-align: center;">
+        <img src="https://images.code.org/5dfa54613ff29b4ea1ec6a66500a8a09-image-1739908567115.png" alt="ADD ALT TEXT" style="width: 100%; border-radius:10px;">
+        <p style="font-size: 12pt; margin-top: 5px;">Lesson 2 features Record Producer Henny tha Bizness </p>
+    </div>
+    <div style="width: 30%; text-align: center;">
+        <img src="https://images.code.org/5a9395b2f8ba9fdd159ef52f376ebad0-image-1739908571781.png" alt="ADD ALT TEXT" style="width: 100%; border-radius:10px;">
+        <p style="font-size: 12pt; margin-top: 5px;">Lesson 3 features Artist, Creator, and Coder Roxanne</p>
+    </div>
+   
+</div>
+
 
 ## Why Do Career Journeys Matter?
 #### Highlighting careers: 
@@ -24,11 +44,4 @@ markdown <<MARKDOWN
 
 
 
-
-
-<div style="display: flex; justify-content: space-between; width: 100%; margin: 20pt auto; padding: 0 5px;">
-  <img src="https://images.code.org/794fce27e2665539fc2ee035962dd389-image-1744653846449.03.30 AM.png" style="border-radius: 5pt; width: 32%;" alt="Image of a woman singing with the text, A record producer is someone who brings the singers, the songwriters, the engineers, the musicians together">
-  <img src="https://images.code.org/34e053cb621b242bb88cccb1f7606df8-image-1744653848780.01.55 AM.png" style="border-radius: 5pt; width: 32%;" alt="A woman codes in front of a screen. The text says, Creative Coding - Roxanne performs music using code.">
-  <img src="https://images.code.org/fafa657031d5f3671fec4180da9f8a7a-image-1744653850201.01.41 AM.png" style="border-radius: 5pt; width: 32%;" alt="An image of a man with the text, Remix Artist - This is Altrice. He's an electronic and remix musical artist.">
-</div>
 MARKDOWN

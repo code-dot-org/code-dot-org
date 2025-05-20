@@ -2747,7 +2747,7 @@
                 "cfHeight": {
                   "type": "DesignValue",
                   "valuesByBreakpoint": {
-                    "desktop": "1194px"
+                    "desktop": "1312px"
                   }
                 },
                 "cfMaxWidth": {
@@ -2888,6 +2888,42 @@
                       "children": []
                     },
                     {
+                      "id": "Io66Ey3G",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "sAMYhNiz",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
                       "id": "zaDFSR3J",
                       "definitionId": "carousel-action-block",
                       "patternProperties": {},
@@ -2926,6 +2962,42 @@
                           "type": "DesignValue",
                           "valuesByBreakpoint": {
                             "desktop": true
+                          }
+                        }
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "mgOOb7aW",
+                      "definitionId": "heading",
+                      "patternProperties": {},
+                      "variables": {
+                        "visualAppearance": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "heading-xl"
+                          }
+                        },
+                        "removeMarginBottom": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": false
+                          }
+                        },
+                        "children": {
+                          "key": "GApUZWyE",
+                          "type": "UnboundValue"
+                        },
+                        "cfVisibility": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": true
+                          }
+                        },
+                        "cfTextAlign": {
+                          "type": "DesignValue",
+                          "valuesByBreakpoint": {
+                            "desktop": "left"
                           }
                         }
                       },
@@ -10800,6 +10872,9 @@
           "FHSW9Y15": {
             "value": ""
           },
+          "GApUZWyE": {
+            "value": "Self-Paced PL Carousel"
+          },
           "GGSUj7T7": {
             "value": ""
           },
@@ -11008,6 +11083,9 @@
           },
           "rqSvSSLH": {
             "value": ""
+          },
+          "sAMYhNiz": {
+            "value": "Curriculum Carousel"
           },
           "tgfqSQxT": {
             "value": "Overline Primary Large"

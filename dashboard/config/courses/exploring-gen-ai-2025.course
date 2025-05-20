@@ -15,6 +15,7 @@
   "properties": {
     "family_name": "exploring-gen-ai",
     "has_numbered_units": true,
+    "has_verified_resources": true,
     "version_year": "2025"
   },
   "resources": [
