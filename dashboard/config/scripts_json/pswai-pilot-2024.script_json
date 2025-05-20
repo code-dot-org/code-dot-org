@@ -5,11 +5,12 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "csaif-problem-solving-with-ai-2025-pilot",
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
@@ -21,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-04-03 15:03:59 UTC",
+    "serialized_at": "2025-05-08 14:29:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -265,6 +266,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "background": "light",
         "overview": "**How do human strengths and AI capabilities interact?**\n\nThis lesson explores how AI can support human creativity through a hands-on remixing challenge. Students interact with AI to refine both their own creative content and AI-generated work, comparing the role of human input in both processes. The lesson emphasizes that while AI can enhance creative work, human judgment is essential for originality, nuance, and meaning.",
         "preparation": "- Prepare copies of the AI Remix Challenge activity guide (one for each student)",
         "student_overview": "**How do human strengths and AI capabilities interact?**\n\nIn this lesson, you explore how AI can support creativity by remixing and refining content. You compare your ideas with AI’s suggestions and decide what makes something truly creative."
@@ -938,7 +940,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "For example:\n- **Opening Statement:** \"A mysterious talking cat started showing up to math class.\"\n- **Student 1:** \"Yes, and he said his name is Whiskers.\"\n- **Student 2:** \"Yes, and he happens to be very good at multiplication.\"\n- **Student 1:** \"Yes, and he has a sister who started showing up to English class.\"\n- **Student 2:** \"Yes, and he has a sister who started showing up to English class.\"\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that prom will be held on a spaceship this year.\"\n- \"Every locker in the main hallway suddenly started playing music.\"\n"
+            "markdown": "For example:\n- **Opening Statement:** \"A mysterious talking cat started showing up to math class.\"\n- **Student 1:** \"Yes, and he said his name is Whiskers.\"\n- **Student 2:** \"Yes, and he happens to be very good at multiplication.\"\n- **Student 1:** \"Yes, and he has a sister who started showing up to English class.\"\n\n(Optional) If you have time to play multiple rounds of the game, here are some additional opening statements:\n- \"The class down the hall just discovered a hidden tunnel beneath the school.\"\n- \"The principal announced that prom will be held on a spaceship this year.\"\n- \"Every locker in the main hallway suddenly started playing music.\"\n"
           }
         ]
       },
@@ -2978,7 +2980,7 @@
       "key": "c38f45d4-95c4-41cd-b0e5-3a592c257797",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Provide students with a structured method to improve AI-generated responses using five key elements of a strong prompt. They will have a chance to test out each method as they work through levels.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the key elements of a prompt. Explain that just like giving instructions to a friend, the more details you provide, the better the response. By specifying what we want AI to do, giving context, and even suggesting a format, we can make AI's responses much more useful.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce \"TaCo FoRT\" as a mnemonic: Task, Context, Format, Reference, Tone.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Provide students with a structured method to improve AI-generated responses using five key elements of a strong prompt. They will have a chance to test out each method as they work through levels.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the key elements of a prompt. Explain that just like giving instructions to a friend, the more details you provide, the better the response. By specifying what we want AI to do, giving context, and even suggesting a format, we can make AI's responses much more useful.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce \"TaCo FoRT\" as a mnemonic: **Ta**sk, **Co**ntext, **Fo**rmat, **R**eference, **T**one.\n",
         "duration": "25",
         "name": "AI Prompting Framework",
         "tips": [
@@ -3053,14 +3055,14 @@
       "key": "785b9e67-a936-4f6c-a8f2-eb08e48d516d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students refine a generic prompt using the Prompting Framework to improve accuracy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 8, Level 7 to complete Levels 7 through 9.\n- **Level #7:** This panel level serves as a review of the key elements of prompt refinement.\n- **Level #8:** Students choose a generic prompt to improve. They use at least three elements (Task, Context, Reference, Format, Tone) and iterate on their prompt until they have one that consistently generates helpful AI output.\n- **Level #9:** Students copy their revised prompt from Level 7 into the free response level. Then they explain why their revised prompt led to a better result than the initial generic prompt.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students refine a generic prompt using the Prompting Framework to improve accuracy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 8, Level 7 to complete Levels 7 through 9.\n- **Level #7:** This panel level serves as a review of the key elements of prompt refinement.\n- **Level #8:** Students choose a generic prompt to improve. They use at least three elements (Task, Context, Reference, Format, Tone) and iterate on their prompt until they have one that consistently generates helpful AI output.\n- **Level #9:** Students copy their revised prompt from Level 8 into the free response level. Then they explain why their revised prompt led to a better result than the initial generic prompt.\n",
         "duration": "10",
         "name": "Check Your Understanding",
         "progression_name": "Check Your Understanding",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "The assessment on Level 8 can be used as a formative assessment of the lesson objectives. As students submit their final revised prompts, circulate and provide quick feedback by:\n- Looking for clear, specific refinements that improved the AI's output.\n- Asking probing questions like:\n   - *\"What made the AI's response better after refining your prompt?\"*\n   - *\"How did adding context change the AI’s response?\"*\n   - *\"Why do you think AI initially struggled with this prompt?\"*\n"
+            "markdown": "The assessment on Level 9 can be used as a formative assessment of the lesson objectives. As students submit their final revised prompts, circulate and provide quick feedback by:\n- Looking for clear, specific refinements that improved the AI's output.\n- Asking probing questions like:\n   - *\"What made the AI's response better after refining your prompt?\"*\n   - *\"How did adding context change the AI’s response?\"*\n   - *\"Why do you think AI initially struggled with this prompt?\"*\n"
           }
         ]
       },
@@ -3073,7 +3075,7 @@
       "key": "d924b5ae-d80e-4280-8fa5-d2cd3c84017e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**Students summarize their learning about AI prompt refinement in a concise, creative, and engaging way.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to take a minute and answer the Question of the Day on a sticky note, providing a specific example of how one of the key element (Task, Context, Format, Reference, Tone) might be used to refine output.\n\nExample Student Responses:\n- **Format:** Write a poem, such as a haiku or limerick\n- **Tone:** Write in a professional tone, as if you are a college admissions counselor\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Prompt deeper thinking with a guiding question:*What strategies did you use in the levels? Give an example of how you added more context or chose a different tone.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students add their sticky notes to the classroom anchor chart.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students summarize their learning about AI prompt refinement in a concise, creative, and engaging way.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to take a minute and answer the Question of the Day on a sticky note, providing a specific example of how one of the key element (Task, Context, Format, Reference, Tone) might be used to refine output.\n\nExample Student Responses:\n- **Format:** Write a poem, such as a haiku or limerick\n- **Tone:** Write in a professional tone, as if you are a college admissions counselor\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Prompt deeper thinking with a guiding question: \n- *What strategies did you use in the levels?* \n- *Give an example of how you added more context or chose a different tone.*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students add their sticky notes to the classroom anchor chart.\n",
         "name": "Key Elements Anchor Chart",
         "tips": [
           {
@@ -3733,7 +3735,8 @@
       "key": "f238865a-4984-4316-aad7-0dc718e6974d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 6 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 6 to complete the End of Lesson Survey.\n",
+        "progression_name": "Student Survey"
       },
       "seeding_key": {
         "activity_section.key": "f238865a-4984-4316-aad7-0dc718e6974d",
@@ -5016,6 +5019,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson3-level4_2024-pilot"
+        ],
         "progression": "Prompting Challenges"
       },
       "bonus": false,
@@ -5138,6 +5144,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson4-level4_2024-pilot"
+        ],
         "progression": "AI vs Human Tasks"
       },
       "bonus": false,
@@ -5385,6 +5394,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level8_2024-pilot"
+        ],
         "progression": "Try Your Own"
       },
       "bonus": false,
@@ -5457,6 +5469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson5-level10_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5579,6 +5594,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level5_2024-pilot"
+        ],
         "progression": "AI Audit Challenge"
       },
       "bonus": false,
@@ -5601,6 +5619,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson6-level5_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5823,6 +5844,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level6_2024-pilot"
+        ],
         "progression": "AI Prompting Framework"
       },
       "bonus": false,
@@ -5920,6 +5944,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson8-level9_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -5967,6 +5994,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level2_2024-pilot"
+        ],
         "progression": "Collaborate on a Product Launch"
       },
       "bonus": false,
@@ -6014,6 +6044,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson9-level3_2024"
+        ],
         "progression": "Student Survey"
       },
       "bonus": false,
@@ -6111,6 +6144,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level4_2024-pilot"
+        ],
         "progression": "AI as the Creator"
       },
       "bonus": false,
@@ -6158,6 +6194,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "problem-solving-with-ai-lesson10-level5_2024"
+        ],
+        "progression": "Student Survey"
       },
       "bonus": false,
       "seeding_key": {

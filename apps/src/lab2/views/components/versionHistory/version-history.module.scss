@@ -1,12 +1,18 @@
-@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
+
+$space-xs: 2px;
+$space-s: 4px;
+$space-m: 6px;
+$space-l: 8px;
+$space-xl: 10px;
 
 .versionHistoryDropdown {
   position: absolute;
   cursor: pointer;
-  border: 1px solid #54595E;
-  background-color: $light_gray_950;
-  scrollbar-color: $light_gray_200 $light_gray_950;
-  color: $white;
+  border: 1px solid var(--borders-neutral-primary);
+  background-color: var(--background-neutral-secondary);
+  scrollbar-color: var(--text-neutral-tertiary) var(--background-neutral-secondary);
+  color: var(--text-neutral-primary);
   width: 400px;
   text-align: left;
   vertical-align: top;
@@ -14,40 +20,53 @@
   right: 0;
 }
 
-.versionHistoryHeader {
-  padding: 12px;
-  border-bottom: 1px solid #54595E;
+.header {
+  padding: $space-m $space-l;
+  border-bottom: 1px solid var(--borders-neutral-primary);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+
+  .heading {
+    margin: $space-s;
+    display: flex;
+    align-items: center;
+  }
 }
 
-.versionHistoryMessage {
+.message {
   margin: 20px;
   font-size: 16px;
 }
 
-.versionHistoryList {
+.list {
   max-height: 300px;
   overflow-y: auto;
 }
 
-.versionHistoryRow {
-  padding: 8px;
+.row {
+  padding: $space-l;
 }
 
-.versionHistoryRow:has(input[type="radio"]:checked) {
-  background-color: $neutral_dark90;
+.row:has(input[type="radio"]:checked) {
+  background-color: var(--background-neutral-tertiary);
 }
 
-.versionHistoryRow:hover {
-  background-color: $neutral_dark90;
+.row:hover {
+  background-color: var(--background-neutral-tertiary);
 }
 
-.versionDropdownFooter {
-  margin-top: 8px;
-  padding: 8px;
+.footer {
   display: flex;
   justify-content: flex-end;
+  gap: $space-s;
+  padding: $space-m;
+  margin-bottom: $space-m;
+  margin-right: $space-xl;
+
+  .footerButton {
+    margin: $space-xs;
+  }
 }
 
 .loadingVersionSpinner {
@@ -58,8 +77,4 @@
 
 .versionLoadError {
   font-size: 14px;
-}
-
-button.actionButton {
-  margin-right: 8px;
 }

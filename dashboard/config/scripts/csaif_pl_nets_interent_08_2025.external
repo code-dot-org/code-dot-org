@@ -1,0 +1,28 @@
+name 'csaif_pl_nets_interent_08_2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Internet
+
+#### **Want to learn more? Watch our How the Internet Works video series**. 
+
+#### If you have time, watching all of the videos in this series will help you to build your knowledge of the Internet; however, the following are featured specifically in this unit.
+
+* #### Wires, Cables, and WiFi, Lesson 2
+* #### IP Addresses and DNS, Lesson 3
+* #### Packets, Routing, and Reliability, Lesson 5
+
+----
+
+##### **Note**: This link opens in a new tab.
+
+<div style="text-align: center; margin-top: 20px;">
+  <a href="https://www.youtube.com/playlist?list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7" target="_blank" rel="noopener noreferrer">
+    <img src="https://images.code.org/7543b16f0c32e11c65188450525a1589-Screenshot 2025-04-21 at 10.22.03 AM.png" 
+         alt="YouTube Video Thumbnail" 
+         style="width: 50%; max-width: 600px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);">
+  </a>
+</div>
+<br>
+MARKDOWN

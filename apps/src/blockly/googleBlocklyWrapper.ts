@@ -3,7 +3,6 @@ import {
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
 import {installAllBlocks as installFieldColourBlocks} from '@blockly/field-colour';
-import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
   ScrollBlockDragger,
@@ -56,6 +55,7 @@ import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
 import CdoRendererZelos from './addons/cdoRendererZelos';
 import {initializeScrollbarPair} from './addons/cdoScrollbar';
+import {cleanUp} from './addons/cdoSerializationHelpers';
 import {getPointerBlockImageUrl} from './addons/cdoSpritePointer';
 import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
@@ -196,14 +196,6 @@ const BlocklyWrapper = function (
   };
 };
 
-/**
- * Note that this can only be called once per page load, as this initializes
- * the navigation controller, and multiple calls to navigationController.init()
- * will throw an error.
- *
- * If this needs to be called multiple times (for example, in tests), call
- * Blockly.navigationController.dispose() before calling this function again.
- */
 function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   registerIfMutator();
   registerLogicCompareMutator();
@@ -435,11 +427,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
 
   blocklyWrapper.JavaScript = javascriptGenerator;
-  blocklyWrapper.LineCursor = LineCursor;
-  blocklyWrapper.navigationController = new NavigationController();
-  // Initialize plugin.
-  blocklyWrapper.navigationController.init();
-  blocklyWrapper.navigationController.cursorType = cdoUtils.getUserCursorType();
 
   // Wrap SNAP_RADIUS property, and in the setter make sure we keep SNAP_RADIUS and CONNECTING_SNAP_RADIUS in sync.
   // See https://github.com/google/blockly/issues/2217
@@ -881,20 +868,6 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       workspace.noFunctionBlockFrame = options.noFunctionBlockFrame;
     }
 
-    blocklyWrapper.navigationController.addWorkspace(workspace);
-
-    blocklyWrapper.getNewCursor = function (type) {
-      switch (type) {
-        case 'basic':
-          return new blocklyWrapper.BasicCursor();
-        case 'line':
-          return new blocklyWrapper.LineCursor();
-        case 'default':
-        default:
-          return new blocklyWrapper.Cursor();
-      }
-    };
-
     // Typically, we need to handle disabling blocks that are not connected to an
     // appropriate top block. A few exceptions exist.
     if (
@@ -912,12 +885,24 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     }
 
     // In toolbox mode, automatically clean up the workspace as blocks are moved.
+    // This needs to use Google Blockly's built-in cleanUp method, which arranges
+    // all blocks into a single column.
     if (blocklyWrapper.isToolboxMode) {
       workspace.addChangeListener(event => {
         if (event.type === GoogleBlockly.Events.MOVE) {
           workspace.cleanUp();
         }
       });
+    } else {
+      // Outside of toolbox mode, we need use a custom workspace cleanUp method.
+      // Our version prevents blocks from overlapping, moving the blocks as
+      // minimally as possible.
+      // This command is accessible via the workspace context menu.
+      extendedWorkspaceSvg.cleanUp = function (
+        includeImmovableBlocks?: boolean
+      ) {
+        cleanUp(this, includeImmovableBlocks);
+      };
     }
     // When either the main workspace or the toolbox workspace viewport
     // changes, adjust any callouts so they stay pointing to the appropriate

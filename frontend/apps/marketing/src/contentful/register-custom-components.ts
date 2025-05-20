@@ -15,18 +15,33 @@ import Button, {ButtonContentfulComponentDefinition} from '@/components/button';
 import ActionBlockCarousel, {
   ActionBlockCarouselContentfulComponentDefinition,
 } from '@/components/carousels/actionBlockCarousel';
+import ImageCarousel, {
+  ImageCarouselContentfulComponentDefinition,
+} from '@/components/carousels/imageCarousel';
 import VideoCarousel, {
   VideoCarouselContentfulComponentDefinition,
 } from '@/components/carousels/videoCarousel';
+import Heading, {
+  HeadingContentfulComponentDefinition,
+} from '@/components/contentful/heading';
+import HeroBanner, {
+  HeroBannerContentfulComponentDefinition,
+} from '@/components/contentful/heroBanner';
+import SkinnyBanner, {
+  SkinnyBannerContentfulComponentDefinition,
+} from '@/components/contentful/skinnyBanner';
+import TabGroup, {
+  TabGroupContentfulComponentDefinition,
+} from '@/components/contentful/tabGroup';
 import Divider, {
   DividerContentfulComponentDefinition,
 } from '@/components/divider';
+import EditorialCard, {
+  EditorialCardContentfulComponentDefinition,
+} from '@/components/editorialCard';
 import FAQAccordion, {
   FAQAccordionContentfulComponentDefinition,
 } from '@/components/faqAccordion';
-import Heading, {
-  HeadingContentfulComponentDefinition,
-} from '@/components/heading';
 import IconHighlight, {
   IconHighlightContentfulComponentDefinition,
 } from '@/components/iconHighlight';
@@ -39,6 +54,9 @@ import Overline, {
 import Paragraph, {
   ParagraphContentfulComponentDefinition,
 } from '@/components/paragraph';
+import RichText, {
+  RichTextContentfulComponentDefinition,
+} from '@/components/richText';
 import Section, {
   SectionContentfulComponentDefinition,
 } from '@/components/section';
@@ -51,9 +69,7 @@ import CurriculumSnapshot, {
 import LabSnapshot, {
   LabSnapshotContentfulComponentDefinition,
 } from '@/components/snapshots/labSnapshot';
-import TabGroup, {
-  TabGroupContentfulComponentDefinition,
-} from '@/components/tabGroup';
+import Spacer, {SpacerContentfulComponentDefinition} from '@/components/spacer';
 import Video, {VideoContentfulComponentDefinition} from '@/components/video';
 
 defineComponents(
@@ -82,6 +98,10 @@ defineComponents(
       },
     },
     {
+      component: EditorialCard,
+      definition: EditorialCardContentfulComponentDefinition,
+    },
+    {
       component: FAQAccordion,
       definition: FAQAccordionContentfulComponentDefinition,
     },
@@ -95,6 +115,13 @@ defineComponents(
     {
       component: Heading,
       definition: HeadingContentfulComponentDefinition,
+    },
+    {
+      component: HeroBanner,
+      definition: HeroBannerContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
     },
     {
       component: IconHighlight,
@@ -112,6 +139,10 @@ defineComponents(
       definition: ImageContentfulComponentDefinition,
     },
     {
+      component: ImageCarousel,
+      definition: ImageCarouselContentfulComponentDefinition,
+    },
+    {
       component: LabSnapshot,
       definition: LabSnapshotContentfulComponentDefinition,
     },
@@ -125,6 +156,10 @@ defineComponents(
       definition: ParagraphContentfulComponentDefinition,
     },
     {
+      component: RichText,
+      definition: RichTextContentfulComponentDefinition,
+    },
+    {
       component: Section,
       definition: SectionContentfulComponentDefinition,
       options: {
@@ -134,6 +169,17 @@ defineComponents(
     {
       component: SimpleList,
       definition: SimpleListContentfulComponentDefinition,
+    },
+    {
+      component: SkinnyBanner,
+      definition: SkinnyBannerContentfulComponentDefinition,
+      options: {
+        wrapContainerWidth: '100%',
+      },
+    },
+    {
+      component: Spacer,
+      definition: SpacerContentfulComponentDefinition,
     },
     {
       component: CurriculumSnapshot,

@@ -96,7 +96,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
               course_offerings: @workshop.course_offerings
             }
           ),
-          workshop_location_for_calendar: @workshop.location_address.presence || @workshop.location_name,
           session_dates: session_dates,
           session_info_for_calendar: session_info_for_calendar,
           enrollment: @enrollment,

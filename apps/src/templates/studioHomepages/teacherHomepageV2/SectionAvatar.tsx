@@ -50,16 +50,17 @@ const COLORS = [
 ];
 
 interface SectonAvatarProps {
-  seed: number;
+  color: number;
+  emoji: number;
 }
 
-const SectionAvatar: React.FC<SectonAvatarProps> = ({seed}) => {
+const SectionAvatar: React.FC<SectonAvatarProps> = ({color, emoji}) => {
   return (
     <div
       className={styles.sectionAvatar}
-      style={{backgroundColor: COLORS[seed % COLORS.length]}}
+      style={{backgroundColor: COLORS[color]}}
     >
-      {EMOJIS[seed % EMOJIS.length]}
+      {EMOJIS[emoji]}
     </div>
   );
 };

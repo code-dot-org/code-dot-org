@@ -1,7 +1,4 @@
-@import '@code-dot-org/component-library-styles/primitiveColors.scss';
-@import '@code-dot-org/component-library-styles/font.scss';
-@import '@code-dot-org/component-library-styles/mixins.scss';
-@import '@code-dot-org/component-library-styles/typography.module.scss';
+@use '@code-dot-org/component-library-styles/mixins.scss' as mixins;
 
 // Breadcrumbs common styles
 .breadcrumbs {
@@ -13,7 +10,7 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
-    color: var(--neutral-base-black);
+    color: var(--text-neutral-primary);
     font-feature-settings:
       'liga' off,
       'clig' off;
@@ -22,7 +19,7 @@
 
     // Current location styles
     &:last-child {
-      color: var(--brand-teal-50);
+      color: var(--text-brand-teal-primary);
       cursor: default;
     }
 
@@ -31,15 +28,23 @@
     :active,
     :visited {
       &:not(:last-child) {
-        color: var(--neutral-gray-80);
+        color: var(--text-neutral-secondary);
+
+        .homeIcon {
+          color: var(--text-neutral-secondary);
+        }
       }
     }
 
     // Focus styles
     &:focus-visible {
-      color: var(--neutral-base-black);
-      outline: 2px solid var(--brand-teal-50);
+      color: var(--text-neutral-primary);
+      outline: 2px solid var(--borders-brand-teal-primary);
       outline-offset: 2px;
+    }
+
+    .homeIcon {
+      color: inherit;
     }
   }
 
@@ -48,16 +53,19 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    color: var(--neutral-black-alpha-70);
+    color: var(--text-neutral-tertiary);
   }
 }
 
 // Breadcrumbs sizes
 .breadcrumbs-l {
   .breadcrumb {
-    @include label-one;
+    @include mixins.label-one;
     margin: 0;
+
+    .homeIcon {
+      font-size: 1rem; // 16px
+    }
   }
 
   i {
@@ -70,8 +78,12 @@
 
 .breadcrumbs-m {
   .breadcrumb {
-    @include label-two;
+    @include mixins.label-two;
     margin: 0;
+
+    .homeIcon {
+      font-size: 0.875rem; // 14px
+    }
   }
 
   i {
@@ -84,8 +96,12 @@
 
 .breadcrumbs-s {
   .breadcrumb {
-    @include label-three;
+    @include mixins.label-three;
     margin: 0;
+
+    .homeIcon {
+      font-size: 0.75rem; // 12px
+    }
   }
 
   i {
@@ -98,8 +114,12 @@
 
 .breadcrumbs-xs {
   .breadcrumb {
-    @include label-four;
+    @include mixins.label-four;
     margin: 0;
+
+    .homeIcon {
+      font-size: 0.625rem; // 10px
+    }
   }
 
   i {

@@ -1,0 +1,21 @@
+name 'self-paced-CSDMusicLab-L1-careerconnections'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Career Spotlights
+
+## What are Career Spotlights?
+
+#### To help students see the real-world applications of computer science and music, we've included Career Spotlights in the curriculum.
+
+#### Each chunk of the curriculum (sequencing, loops, and functions), introduces a **real-world career** related to computer science and/or music to frame the Sythesize lesson (lessons 4, 8, and 12). 
+
+#### Students then apply their new skills with **authentic problems** inspired by these careers.
+
+<div style="display: flex; justify-content: space-between; width: 100%; margin: 20pt auto; padding: 0 5px;">
+  <img src="https://images.code.org/794fce27e2665539fc2ee035962dd389-image-1744653846449.03.30 AM.png" style="border-radius: 5pt; width: 32%;" alt="Image of a woman singing with the text, A record producer is someone who brings the singers, the songwriters, the engineers, the musicians together">
+  <img src="https://images.code.org/34e053cb621b242bb88cccb1f7606df8-image-1744653848780.01.55 AM.png" style="border-radius: 5pt; width: 32%;" alt="A woman codes in front of a screen. The text says, Creative Coding - Roxanne performs music using code.">
+  <img src="https://images.code.org/fafa657031d5f3671fec4180da9f8a7a-image-1744653850201.01.41 AM.png" style="border-radius: 5pt; width: 32%;" alt="An image of a man with the text, Remix Artist - This is Altrice. He's an electronic and remix musical artist.">
+</div>
+MARKDOWN

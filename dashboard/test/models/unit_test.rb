@@ -1638,14 +1638,15 @@ class UnitTest < ActiveSupport::TestCase
     assert_nil unit.course_link
   end
 
-  test "course_link returns nil if unit is in two courses" do
+  test "course_link returns first unit_group course link if unit is in two courses" do
     unit = create :script
     unit_group = create :unit_group, name: 'csp'
     other_unit_group = create :unit_group, name: 'othercsp'
     create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
     create :unit_group_unit, position: 1, unit_group: other_unit_group, script: unit
 
-    assert_nil unit.course_link
+    unit.reload
+    assert_equal '/courses/csp', unit.course_link
   end
 
   test "course_link returns course_path if unit is in one course" do
@@ -2046,8 +2047,8 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test "show_unit_overview_between_lessons" do
-    aiml_6_8 = create :unit, name: 'aiml-6-8', properties: {content_area: "6-8 Curriculum"}
-    aiml_9_12 = create :unit, name: 'aiml-9-12', properties: {content_area: "9-12 Curriculum"}
+    aiml_6_8 = create :unit, name: 'aiml-6-8', properties: {content_area: "curriculum_6_8"}
+    aiml_9_12 = create :unit, name: 'aiml-9-12', properties: {content_area: "curriculum_9_12"}
 
     assert @csd_unit.show_unit_overview_between_lessons?
     assert @csp_unit.show_unit_overview_between_lessons?
@@ -2237,6 +2238,53 @@ class UnitTest < ActiveSupport::TestCase
     student = create :student
 
     assert_nil unit1.next_unit(student)
+  end
+
+  test 'does allow major changes to newly created unit' do
+    unit = create :unit, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+    assert unit.allow_major_curriculum_changes?
+  end
+
+  test 'does allow major changes to unit within in_development course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    @unit_in_unit_group.update!(published_state: nil)
+    @unit_in_unit_group.reload
+    assert @unit_in_unit_group.allow_major_curriculum_changes?
+  end
+
+  test 'does allow major changes to unit within pilot course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
+    @unit_in_unit_group.update!(published_state: nil)
+    @unit_in_unit_group.reload
+    assert @unit_in_unit_group.allow_major_curriculum_changes?
+  end
+
+  test 'does not allow major changes to unit within beta course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta)
+    @unit_in_unit_group.update!(published_state: nil)
+    @unit_in_unit_group.reload
+    refute @unit_in_unit_group.allow_major_curriculum_changes?
+  end
+
+  test 'does not allow major changes to unit within stable course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @unit_in_unit_group.update!(published_state: nil)
+    @unit_in_unit_group.reload
+    refute @unit_in_unit_group.allow_major_curriculum_changes?
+  end
+
+  test 'does not allow major changes to in_development unit within stable course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @unit_in_unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development)
+    @unit_in_unit_group.reload
+    refute @unit_in_unit_group.allow_major_curriculum_changes?
+  end
+
+  test 'does allow major changes to hidden unit within stable course' do
+    @unit_group.update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    @unit_in_unit_group.update!(published_state: nil, hide_within_course: true)
+    @unit_in_unit_group.reload
+    assert @unit_in_unit_group.allow_major_curriculum_changes?
   end
 
   class MigratedScriptCopyTests < ActiveSupport::TestCase
@@ -2627,6 +2675,7 @@ class UnitTest < ActiveSupport::TestCase
     unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
     course_unit_group = create(:unit_group)
     unit_gp_unit = create :unit_group_unit, unit_group: course_unit_group, script: unit_in_course, position: 1
+    unit_in_course.update!(original_unit_group: nil)
     CourseOffering.add_course_offering(course_unit_group)
 
     UnitGroup.any_instance.expects(:write_serialization).never
@@ -2673,6 +2722,15 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.summarize[:hasUnnumberedLessons]
     unit.update!(has_unnumbered_lessons: false)
     refute unit.summarize[:hasUnnumberedLessons]
+  end
+
+  test 'has ai tutor level' do
+    unit_without_ai_tutor = create :unit
+    refute unit_without_ai_tutor.has_ai_tutor_level?
+
+    unit_with_ai_tutor = create :unit, :with_levels
+    unit_with_ai_tutor.levels[0].update!(ai_tutor_available: true)
+    assert unit_with_ai_tutor.has_ai_tutor_level?
   end
 
   private def has_unlaunched_unit?(units)

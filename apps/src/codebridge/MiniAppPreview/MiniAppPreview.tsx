@@ -1,17 +1,21 @@
 import Button from '@code-dot-org/component-library/button';
+import {
+  TooltipProps,
+  WithTooltip,
+} from '@code-dot-org/component-library/tooltip';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ControlButtons from '@codebridge/Console/ControlButtons';
 import {MiniApps} from '@codebridge/constants';
-import classNames from 'classnames';
-import React from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import NeighborhoodPreview from './NeighborhoodPreview';
 
 import moduleStyles from './mini-app-preview.module.scss';
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 
 interface MiniAppPreviewProps {
   maximizeMiniApp: () => void;
@@ -22,6 +26,13 @@ interface MiniAppPreviewProps {
   handleScaling?: boolean;
 }
 
+const tooltipProps: TooltipProps = {
+  text: codebridgeI18n.resetPreview(),
+  size: 'xs',
+  direction: 'onLeft',
+  tooltipId: 'reset-preview-tooltip',
+};
+
 const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   maximizeMiniApp,
   minimizeMiniApp,
@@ -30,14 +41,33 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
   showMaximizeButton = true,
   handleScaling,
 }) => {
-  const {labConfig} = useCodebridgeContext();
+  const {labConfig, levelProperties} = useCodebridgeContext();
+  const [isResetButtonDisabled, setIsResetButtonDisabled] = useState(true);
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+
+  useEffect(() => {
+    setIsResetButtonDisabled(isRunning);
+  }, [isRunning]);
+
+  useEffect(() => {
+    setIsResetButtonDisabled(true);
+  }, [levelProperties.id]);
 
   const miniApp = labConfig?.miniApp?.name;
 
-  const miniAppComponent =
-    miniApp === MiniApps.Neighborhood ? (
-      <NeighborhoodPreview handleScaling={handleScaling} />
-    ) : null;
+  const miniAppComponent = useMemo(() => {
+    if (miniApp === MiniApps.Neighborhood) {
+      return <NeighborhoodPreview handleScaling={handleScaling} />;
+    }
+    return null;
+  }, [handleScaling, miniApp]);
+
+  const resetMiniApp = () => {
+    setIsResetButtonDisabled(true);
+    if (labConfig?.miniApp.name === MiniApps.Neighborhood) {
+      CodebridgeRegistry.getInstance().getNeighborhood()?.reset();
+    }
+  };
 
   return (
     <PanelContainer
@@ -47,24 +77,39 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
       className={moduleStyles.previewContainer}
       headerClassName={moduleStyles.previewHeader}
       rightHeaderContent={
-        showMaximizeButton && (
-          <Button
-            onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
-            icon={{
-              iconStyle: 'solid',
-              iconName: isMaximized ? 'compress' : 'expand',
-            }}
-            size={'xs'}
-            type={'tertiary'}
-            className={classNames(darkModeStyles.tertiaryButton)}
-            isIconOnly={true}
-            ariaLabel={
-              isMaximized
-                ? codebridgeI18n.minimizePreview()
-                : codebridgeI18n.maximizePreview()
-            }
-          />
-        )
+        <>
+          <WithTooltip tooltipProps={tooltipProps}>
+            <Button
+              onClick={resetMiniApp}
+              icon={{
+                iconStyle: 'solid',
+                iconName: 'rotate-left',
+              }}
+              size={'xs'}
+              type={'tertiary'}
+              isIconOnly={true}
+              ariaLabel={codebridgeI18n.resetPreview()}
+              disabled={isResetButtonDisabled}
+            />
+          </WithTooltip>
+          {showMaximizeButton && (
+            <Button
+              onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
+              icon={{
+                iconStyle: 'solid',
+                iconName: isMaximized ? 'compress' : 'expand',
+              }}
+              size={'xs'}
+              type={'tertiary'}
+              isIconOnly={true}
+              ariaLabel={
+                isMaximized
+                  ? codebridgeI18n.minimizePreview()
+                  : codebridgeI18n.maximizePreview()
+              }
+            />
+          )}
+        </>
       }
     >
       <div style={style} className={moduleStyles.miniAppContainer}>

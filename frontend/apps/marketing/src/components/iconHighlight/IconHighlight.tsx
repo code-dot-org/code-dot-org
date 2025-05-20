@@ -6,23 +6,20 @@ import IconHighlight, {
 } from '@code-dot-org/component-library/cms/iconHighlight';
 
 import {fontAwesomeV6BrandIconsMap} from '@/components/common/constants';
-import type {LinkEntry} from '@/contentful/types/entries';
+import {LinkEntry} from '@/types/contentful/entries/Link';
 
 export interface IconHighlightContentfulProps {
   heading: EntryFields.Text;
   text: EntryFields.Text;
   iconName: EntryFields.Text;
-  linkEntry?: LinkEntry;
   linkEntries?: LinkEntry[];
 }
 
 const IconHighlightContentful: React.FunctionComponent<
   IconHighlightContentfulProps
-> = ({heading, text, iconName, linkEntry, linkEntries = []}) => {
+> = ({heading, text, iconName, linkEntries = []}) => {
   const links: IconHighlightLinkProps[] = useMemo(() => {
     const links: LinkEntry[] = linkEntries.filter(Boolean);
-
-    if (!links.length && linkEntry) links.push(linkEntry);
 
     return links.map(linkEntry => ({
       key: linkEntry.sys.id,
@@ -32,7 +29,7 @@ const IconHighlightContentful: React.FunctionComponent<
       target: linkEntry.fields.isThisAnExternalLink ? '_blank' : undefined,
       'aria-label': linkEntry.fields.ariaLabel || undefined,
     }));
-  }, [linkEntry, linkEntries]);
+  }, [linkEntries]);
 
   return (
     <IconHighlight

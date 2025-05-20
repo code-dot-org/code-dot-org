@@ -31,6 +31,14 @@ input.classNameTextField {
   }
 }
 
+.skeletonTextField {
+  width: 100%;
+  box-sizing: border-box;
+  height: 31px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+}
+
 label.typographyLabelTwo {
   @include label-two;
 }
@@ -227,4 +235,12 @@ button.advancedSettingsButton {
 .taImage {
   margin-left: 5px;
   margin-top: -5px;
+}
+
+.avatarContainer {
+  margin-bottom: 20px;
+}
+
+.loadingSpinner {
+  margin-bottom: 16px;
 }

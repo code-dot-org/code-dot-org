@@ -234,6 +234,7 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
+    shm_size: '2gb' # necessary to avoid "invalid session id"/"session deleted because of page crash" errors in Selenium
     commands:
       - sudo chown -R ci:ci .
       # cache is restored to source directory, so we need to copy it into the right place
@@ -316,6 +317,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: bee4dcf20e1a1dcbb6b1dddb9777ff0d9c7b73fda6ae26811edce8227fea5413
+hmac: c32532882fe8b8b8c24853dece9734ee85fc53fbb7fa866056d4eb2a055c9d87
 
 ...

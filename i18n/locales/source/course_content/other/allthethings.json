@@ -3081,23 +3081,27 @@
   },
   "https://studio.code.org/s/allthethings/lessons/52/levels/8": {
     "dsls": {
-      "description": "This Bubble Choice level is currently NOT on lab2, but all the sublevels here should be Lab2 levels",
-      "display_name": "Lab2 BubbleChoice Showcase"
+      "description": "This Bubble Choice level and all sublevels use Lab2.",
+      "display_name": "Lab2 Bubble Choice"
     },
     "sublevels": {
       "AI Chat Sublevel": {
+        "bubble_choice_description": "This is an AI Chat sublevel. ",
         "long_instructions": "# AI Chat 2\r\n\r\n## Sample Instructions\r\n\r\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\r\n\r\n### Do This\r\n\r\nType in a paragraph that you'd like to revise and press the `Submit`(#7435b2) button."
       },
       "Music Sublevel": {
+        "bubble_choice_description": "This is a Music Lab sublevel.",
         "validations": {
           "Music Sublevel_20cb71d4-b13c-4494-8ca0-a234414ec12d": "Nice work.",
           "Music Sublevel_e826dcbb-1947-42a8-b66f-aa676119b013": "Please play one sound."
         }
       },
       "Python Lab Sublevel": {
+        "bubble_choice_description": "This is a Python Lab sublevel.",
         "long_instructions": "## Python Lab Basics\r\n\r\nTry adding some new code."
       },
       "Weblab2 Sublevel": {
+        "bubble_choice_description": "This is a Weblab2 sublevel.",
         "long_instructions": "## Web Lab 2 Basics\r\n\r\nCreate your own web page!"
       }
     }
@@ -3140,6 +3144,97 @@
       },
       "test-free-response-retriable-in-levelgroup": {
         "long_instructions": "What do you think this program does?"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/53/levels/2": {
+    "dsls": {
+      "title": "Activity Guide Levelgroup"
+    },
+    "sublevels": {
+      "test-single-multi-retriable-in-levelgroup": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Nothing will happen.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            },
+            {
+              "text": "The tumbleweed will float to the top of the screen.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            },
+            {
+              "text": "The tumbleweed will begin tumbling.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The tumbleweed will blink on and off.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen after you click \"Run\"?"
+            }
+          ]
+        }
+      },
+      "test-free-response-retriable-in-levelgroup": {
+        "long_instructions": "What do you think this program does?"
+      },
+      "K-1 Plant a Seed Multi 1": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/poke-hole.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/dirty-teeth.png",
+              "correct": true
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png",
+          "questions": [
+            {
+              "text": "Which step should go at the beginning of this algorithm?"
+            }
+          ],
+          "title": "Multiple Choice"
+        }
+      },
+      "K-1 Plant a Seed Multi 2": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/brush-teeth.png",
+              "correct": false
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/cover-seed.png",
+              "correct": true
+            },
+            {
+              "text": "/script_assets/k_1_images/unplugged_images/water-pot.png",
+              "correct": false
+            }
+          ],
+          "content1": "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png",
+          "questions": [
+            {
+              "text": "Which step should fill in the blank for this algorithm?"
+            }
+          ],
+          "title": "Multiple Choice"
+        }
       }
     }
   }

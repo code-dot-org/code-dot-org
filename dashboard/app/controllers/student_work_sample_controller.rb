@@ -81,53 +81,21 @@ class StudentWorkSampleController < ApplicationController
       return render status: :not_found, json: "Unit with id #{unit_id}"
     end
 
-    if student_work_params[:include_ai_evaluations]
-      fetch_student_code_samples_with_evaluations(level, unit_id, num_samples)
-    else
-      fetch_student_code_samples_without_evaluations(level, unit_id, num_samples)
-    end
-  end
-
-  def fetch_student_code_samples_without_evaluations(level, unit_id, num_samples)
-    # We want to pull samples from students who have been assigned to work on the level.
-    sections = Section.where(script_id: unit_id)
-    student_ids = Follower.where(section: sections).pluck(:student_user_id)
+    # Find users who have worked on this level.
+    student_ids = UserLevel.where(level_id: level.id, script_id: unit_id).pluck(:user_id)
     code_samples = []
     have_enough_samples = false
     student_ids.shuffle.each do |student_id|
       unless have_enough_samples
         student_code = get_student_code(student_id, level, unit_id)
         if student_code[:student_code]
-          code_samples << {level_id: level.id, unit_id: unit_id, user_id: student_id, project_id: student_code[:project_id], student_code: student_code[:student_code]}
-        end
-        have_enough_samples = code_samples.length >= num_samples
-      end
-    end
-    render json: code_samples
-  end
-
-  def fetch_student_code_samples_with_evaluations(level, unit_id, num_samples)
-    evaluations = UserLevelEvaluationOld.where(level_id: level.id, script_id: unit_id)
-    if evaluations.empty?
-      return render status: :not_found, json: "There are no evaluations for the level with id #{level.id} in unit with id #{unit_id}"
-    end
-    code_samples = []
-    have_enough_samples = false
-    evaluations.shuffle.each do |evaluation|
-      unless have_enough_samples
-        student_code = get_student_code(evaluation.user_id, level.id, unit_id, evaluation.code_version)
-        if student_code[:student_code]
           code_samples << {
             level_id: level.id,
             unit_id: unit_id,
-            user_id: evaluation.user_id,
+            student_id: student_id,
             project_id: student_code[:project_id],
-            code_version: student_code[:code_version],
-            student_code: student_code[:student_code],
-            ai_evaluation: evaluation.ai_evaluation,
-            ai_reasoning: evaluation.ai_reasoning,
-            evaluation_criteria: evaluation.evaluation_criteria
-          }
+            student_work: student_code[:student_code]
+          }.transform_keys {|key| key.to_s.camelize(:lower)}
         end
         have_enough_samples = code_samples.length >= num_samples
       end
@@ -144,15 +112,19 @@ class StudentWorkSampleController < ApplicationController
     # For project-template-backed levels, we need to use the channel_token for the associated project template level.
     level_id_for_channel_token = level.project_template_level ? level.project_template_level.id : level.id
     channel_token = ChannelToken.where(storage_id: storage_id, level_id: level_id_for_channel_token, script_id: unit_id).last
-    user_level = UserLevel.where(user_id: user_id, level_id: level.id, script_id: unit_id).last
-    if user_level && channel_token
+    if channel_token
       storage_app_id = channel_token.storage_app_id
       channel_id = storage_encrypt_channel_id(storage_id, storage_app_id)
       s3_filename = "#{base_dir}/#{storage_id}/#{storage_app_id}/main.json"
       s3_args = {bucket: bucket, key: s3_filename}
       s3_args[:version_id] = code_version if code_version
-      body = s3.get_object(s3_args)[:body].read
-      student_code = JSON.parse(body)['source'] if body
+      begin
+        body = s3.get_object(s3_args)[:body].read
+      rescue => exception
+        Honeybadger.notify(exception, context: {message: "No code sample found in S3 with with args: #{s3_args}"})
+        return
+      end
+      student_code = body ? JSON.parse(body)['source'] : nil
     end
     {
       project_id: channel_id,
@@ -166,7 +138,6 @@ class StudentWorkSampleController < ApplicationController
       :level_id,
       :unit_id,
       :num_samples,
-      :include_ai_evaluations,
     )
   end
 end

@@ -3,6 +3,9 @@
   "script_names": [
     "vpl-csd-2020"
   ],
+  "original_script_names": [
+    "vpl-csd-2020"
+  ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",

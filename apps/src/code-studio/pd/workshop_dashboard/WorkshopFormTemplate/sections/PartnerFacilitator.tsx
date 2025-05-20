@@ -1,33 +1,64 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {Heading2} from '@code-dot-org/component-library/typography';
 import classNames from 'classnames';
-import React, {ChangeEvent, FC, memo, useCallback, useMemo} from 'react';
+import React, {FC, memo, useCallback, useEffect, useMemo} from 'react';
+import {useSelector} from 'react-redux';
+import {useParams} from 'react-router-dom';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
 import {MultiSelectInput, OptionId} from '../components/MultiSelectInput';
-import {Facilitator, PartnerFacilitatorProps, RegionalPartner} from '../types';
+import {
+  Facilitator,
+  PartnerFacilitatorProps,
+  PotentialOrganizer,
+  RegionalPartner,
+} from '../types';
 
 import commonStyles from '../styles.module.scss';
 
 export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
-  config: {label, fields},
+  config: {fields, label},
   facilitators,
   regionalPartnerId,
   errors,
   dispatchWorkshop,
+  organizerId,
 }) => {
-  const {data: regionalPartners} = useFetch<RegionalPartner[]>(
-    '/api/v1/regional_partners'
+  const {workshopId} = useParams();
+  const {data: organizerData} = useFetch<PotentialOrganizer[]>(
+    workshopId ? `/api/v1/pd/workshops/${workshopId}/potential_organizers` : ''
   );
 
-  const {data: fetchedFacilitators} = useFetch<Facilitator[]>(
-    `/api/v1/pd/course_facilitators?course=${encodeURIComponent(label)}`
+  const {data: facilitatorData} = useFetch<Facilitator[]>(
+    label
+      ? `/api/v1/pd/course_facilitators?course=${encodeURIComponent(label)}`
+      : ''
   );
+
+  const regionalPartnerData = useSelector(
+    ({
+      regionalPartners: {regionalPartners},
+    }: {
+      regionalPartners: {regionalPartners: RegionalPartner[]};
+    }) => regionalPartners
+  );
+
+  useEffect(() => {
+    if (regionalPartnerData?.length === 1) {
+      dispatchWorkshop({
+        type: 'UPDATE_WORKSHOP',
+        payload: {
+          regionalPartnerId: regionalPartnerData[0].id,
+        },
+      });
+    }
+  }, [regionalPartnerData, dispatchWorkshop]);
+
   const regionalPartnerOptions = useMemo(() => {
     const options = [{value: '', text: 'None'}];
 
-    regionalPartners?.forEach(({id, name}) => {
+    regionalPartnerData?.forEach(({id, name}) => {
       options.push({
         value: id.toString(),
         text: name,
@@ -35,17 +66,26 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
     });
 
     return options;
-  }, [regionalPartners]);
+  }, [regionalPartnerData]);
 
   const facilitatorOptions = useMemo(
     () =>
-      fetchedFacilitators?.map(({id, name, email}) => ({
+      facilitatorData?.map(({id, name, email}) => ({
         id,
         label: name,
         secondaryLabel: email,
         searchText: [name, email],
       })) ?? [],
-    [fetchedFacilitators]
+    [facilitatorData]
+  );
+
+  const organizerOptions = useMemo(
+    () =>
+      organizerData?.map(({value, label}) => ({
+        value: value.toString(),
+        text: label,
+      })) ?? [],
+    [organizerData]
   );
 
   const handleFacilitators = useCallback(
@@ -58,21 +98,24 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
     [dispatchWorkshop]
   );
 
-  const handleRegionalPartner = useCallback(
-    (event: ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = useCallback(
+    (e: React.ChangeEvent<HTMLSelectElement>) => {
+      const {name, value} = e.target;
       dispatchWorkshop({
         type: 'UPDATE_WORKSHOP',
         payload: {
-          regionalPartnerId: event.target.value
-            ? Number(event.target.value)
-            : null,
+          [name]: value && !isNaN(Number(value)) ? Number(value) : null,
         },
       });
     },
     [dispatchWorkshop]
   );
 
-  if (!fields.facilitators && !fields.regional_partner_id) {
+  if (
+    !fields.facilitators &&
+    !fields.regional_partner_id &&
+    !fields.organizer_id
+  ) {
     return null;
   }
 
@@ -86,10 +129,10 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
           {fields.regional_partner_id && (
             <SimpleDropdown
               name={fields.regional_partner_id.stateKey}
-              onChange={handleRegionalPartner}
+              onChange={handleChange}
               styleAsFormField={true}
               items={regionalPartnerOptions}
-              selectedValue={regionalPartnerId?.toString() ?? ''}
+              selectedValue={regionalPartnerId?.toString()}
               labelText={fields.regional_partner_id.label}
               size="s"
               dropdownTextThickness="thin"
@@ -115,6 +158,7 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
               )}
             >
               <MultiSelectInput
+                name={fields.facilitators.stateKey}
                 label={fields.facilitators.label}
                 options={facilitatorOptions}
                 selectedOptions={facilitators}
@@ -130,6 +174,30 @@ export const PartnerFacilitator: FC<PartnerFacilitatorProps> = ({
               />
             </div>
           )}
+        </div>
+      )}
+      {fields.organizer_id && !!organizerData?.length && (
+        <div className={commonStyles.row}>
+          <SimpleDropdown
+            name={fields.organizer_id.stateKey}
+            onChange={handleChange}
+            styleAsFormField={true}
+            items={organizerOptions}
+            selectedValue={organizerId?.toString()}
+            labelText={fields.organizer_id.label}
+            size="s"
+            dropdownTextThickness="thin"
+            className={classNames(
+              commonStyles.item,
+              commonStyles.simpleDropdown,
+              {
+                [commonStyles.required]: fields.organizer_id.required,
+                [commonStyles.error]: errors.organizerId,
+              }
+            )}
+            errorMessage={errors.organizerId}
+          />
+          <div className={commonStyles.item} />
         </div>
       )}
     </section>

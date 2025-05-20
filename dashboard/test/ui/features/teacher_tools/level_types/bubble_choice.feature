@@ -1,6 +1,7 @@
 Feature: BubbleChoice
   @no_safari
   @no_mobile
+  @properties_encryption_key
   Scenario: Viewing BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
 
@@ -44,6 +45,7 @@ Feature: BubbleChoice
   # Mobile re-enable ticket: https://codedotorg.atlassian.net/browse/TEACH-1752
   @no_mobile
   @no_firefox
+  @properties_encryption_key
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
 
@@ -55,11 +57,10 @@ Feature: BubbleChoice
     And I wait until element "#ui-close-dialog" is not visible
 
     # Complete the level
-    And I click selector "#instructions-continue-button" to load a new page
+    And I click selector "#instructions-continue-button"
 
     # Make sure you are taken back to the Lab2 BubbleChoice activity page with progress
     And I wait until current URL contains "/lessons/52/levels/8"
-    And I wait for jquery to load
     And I wait until element ".uitest-bubble-choice:eq(0)" is visible
     And element ".uitest-bubble-choice:eq(0) .progress-bubble:first" is visible
     And check that the url contains "/s/allthethings/lessons/52/levels/8"
@@ -84,7 +85,7 @@ Feature: BubbleChoice
     And I wait until element ".teacher-panel" is visible
     # Teacher has not completed level, so make sure it is not shown as complete
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "not_tried"
-    When I click selector ".teacher-panel table td:contains(Alice)" once I see it to load a new page
+    When I click selector ".teacher-panel table td:contains(Alice)" once I see it
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "perfect"
 
     # View progress from BubbleChoice sublevel activity page

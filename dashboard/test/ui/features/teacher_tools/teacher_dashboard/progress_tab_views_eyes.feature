@@ -2,6 +2,7 @@
 @eyes
 Feature: Using the progress tab of the teacher dashboard
 
+  @properties_encryption_key
   Scenario: Toggling between views in progress tab
     When I open my eyes to test "progress tab views"
     Given I create an authorized teacher-associated student named "Sally"

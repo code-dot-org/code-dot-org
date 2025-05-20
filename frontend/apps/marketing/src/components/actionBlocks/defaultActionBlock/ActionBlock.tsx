@@ -5,16 +5,20 @@ import DSCOActionBlock, {
 } from '@code-dot-org/component-library/actionBlock';
 
 import {externalLinkIconProps} from '@/components/common/constants';
-import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
+
+import {showNewTag} from '../helpers';
 
 export type ActionBlockContentfulProps = ActionBlockProps & {
   overline: EntryFields.Text;
   title: EntryFields.Text;
   description: EntryFields.Text;
-  image: ImageAssetEntry;
+  image: ExperienceAsset;
   primaryButton: LinkEntry;
   secondaryButton: LinkEntry;
   background: EntryFields.Text;
+  publishedDate?: EntryFields.Date;
 };
 
 const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
@@ -25,6 +29,7 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
   primaryButton,
   secondaryButton,
   background,
+  publishedDate,
 }) => (
   <DSCOActionBlock
     overline={overline}
@@ -56,6 +61,7 @@ const ActionBlock: React.FC<ActionBlockContentfulProps> = ({
         : undefined
     }
     background={background}
+    tag={publishedDate && showNewTag(publishedDate) ? 'New' : undefined}
   />
 );
 

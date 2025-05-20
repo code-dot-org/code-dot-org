@@ -129,15 +129,43 @@ jobs:
     - name: Synthesize Cloudformation Template
       working-directory: ./aws/cloudformation/standalone/marketing/deployment
       run: |
-        ruby ./deploy.rb
+        ruby ./render.rb --region us-east-2 --stage test
 
-    - name: "[Staging] Deploy Marketing App to AWS"
+    - name: "Download Built Docker Image"
+      run: |
+        docker pull ${{ needs.build-and-push-image.outputs.fullImageUri }}
+        docker create --name temp ${{ needs.build-and-push-image.outputs.fullImageUri }}
+
+    - name: "Extract Static Assets from Docker"
+      run: |
+        docker cp temp:/app/apps/marketing/.next/static/ ./static
+
+    - name: "[Test] Upload Static Assets to S3"
+      env:
+        BASE_DOMAIN: ${{ vars.MARKETING_BASE_DOMAIN }}
+        SUBDOMAIN_NAME: ${{ vars.MARKETING_SUBDOMAIN_NAME }}
+      run: |
+        BUCKET_NAME="$SUBDOMAIN_NAME.$BASE_DOMAIN-static-assets"
+        
+        echo "Uploading static assets to $BUCKET_NAME"
+        
+        aws s3 cp static/ "s3://$BUCKET_NAME/_next/static" --recursive --quiet
+
+    - name: "[Test] Deploy Marketing App to AWS"
       uses: aws-actions/aws-cloudformation-github-deploy@v1
       with:
         name: ${{ vars.MARKETING_CLOUDFORMATION_STACK_NAME }}
         template: ./aws/cloudformation/standalone/marketing/deployment/marketing.yml
-        parameter-overrides: "ContainerImageHashDigest=${{ needs.build-and-push-image.outputs.digest }}"
+        parameter-overrides: "ContainerImageHashDigest=${{ needs.build-and-push-image.outputs.digest }},BaseHostedZoneId=${{ vars.MARKETING_BASE_HOSTED_ZONE_ID }},BaseDomainName=${{ vars.MARKETING_BASE_DOMAIN }},SubdomainName=${{ vars.MARKETING_SUBDOMAIN_NAME }},CloudFrontTLSCertificateArn=${{ vars.MARKETING_CLOUDFRONT_TLS_CERTIFICATE_ARN }}"
         capabilities: CAPABILITY_IAM, CAPABILITY_NAMED_IAM
+
+    - name: "[Test] Invalidate CloudFront Cache"
+      env:
+        CLOUDFRONT_DISTRIBUTION_ID: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+      run: |
+        aws cloudfront create-invalidation \
+          --distribution-id $CLOUDFRONT_DISTRIBUTION_ID \
+          --paths "/*"
 
   ui-tests:
     runs-on: ubuntu-24.04
@@ -165,6 +193,7 @@ jobs:
         with:
           STAGE: test
           CONTENTFUL_SPACE_ID: ${{ vars.CONTENTFUL_SPACE_ID }}
-          CONTENTFUL_TOKEN: ${{ secrets.CONTENTFUL_TOKEN}}
+          CONTENTFUL_DELIVERY_TOKEN: ${{ secrets.CONTENTFUL_DELIVERY_TOKEN}}
           APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY}}
-          MARKETING_BASE_URL: ${{ vars.MARKETING_BASE_URL }}
+          MARKETING_BASE_URL: "https://${{ vars.MARKETING_SUBDOMAIN_NAME }}.${{ vars.MARKETING_BASE_DOMAIN }}"
+          DRAFT_MODE_TOKEN: ${{ secrets.DRAFT_MODE_TOKEN }}

@@ -1,0 +1,31 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-04-18T17:43:18.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Skill Building",
+    "long_instructions": "##Using Scatter Plots\r\n#### When trying to analyze our data, scatter plots can help us gain insight into relationships between attributes.\r\n\r\n<a href=\"https://docs.google.com/spreadsheets/d/1lg67vrIpnXaCe7P-XjqLmf6x91UcEvB-Ikw_rpqJDG8/edit?usp=sharing\" target=\"blank\" rel=\"noopener noreferrer\">Google Sheets Link</a>\r\n\r\n<img src=\"https://images.code.org/59c9b8a356ff4e56ec8c802ba5718b37-image-1684269154206.png\" alt=\"A clipboard with the words TO DO on it. This icon is used to signal an action item for participants.\" width=\"35px\" style=\"border-radius:10px; float:left; margin: 0px 10px 0px 0px;\">\r\n\r\n### **Do This**\r\n#### 1. Make a scatter plot to answer the question: *Are coasters getting faster over time?*\r\n\r\n:::details [🔎**Show Me How**]\r\n>#### 1. Select the \"Top_Speed\" and \"Year_Opened\" columns\r\n>#### 2. Insert --> Chart --> Scatter Plot\r\n:::\r\n\r\n#### 2. Make a scatter plot to answer the question: *Are taller coasters faster?*\r\n\r\n:::details [🔎**Show Me How**]\r\n>#### 1. Select the \"Top_Speed\" and \"Max_Height\" columns\r\n>#### 2. Insert --> Chart --> Scatter Plot\r\n:::\r\n\r\n#### 3. What other questions or attributes are you interested in investigating relationships between?\r\n\r\n\r\n\r\n",
+    "teacher_markdown": "![](https://images.code.org/9a204b20b525e4f5272d2f49d9207cfd-image-1721836085919.png)\r\n\r\nExample student response:\r\n- California and Pennsylvania have the most roller coasters at 18.\r\n\r\nOther questions students may wonder about and investigate include:\r\n- What is the average age of roller coasters in states with the most versus the least roller coasters? Or Do states with more roller coasters have a wider variety of coaster types? Or How does the intensity of roller coasters (as measured by speed, height, or inversions) compare across states with different numbers of coasters?\r\n- Whatever questions students investigate, they should be relevant to the dataset and its attributes. The insights they gain from any new graphs created should be directly related to the questions posed and supported by the data analysis conducted. They should be clear, concise, and logically derived from the data. Teachers should value insights that show unique thinking or new connections.\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_2025",
+    "stay_on_level_after_submit": "false",
+    "encrypted_solution": "GqNVaXO8oI+kx+GerVgtVm3hd/6Ot7OIYNRzCOW28aEQL7DFa7Ydx4obj/OM\n8cr/SkvUKljrzf7iYDddSioQbWsdiys7Ks4/FAPL9zvXDiQJGDcW+nZts1do\n5z07JofhVvsyIIxR6SxAMXQo2HoLqX2YVFO9fVulitGa+fxgzCqXspEjx+VF\nqG1FrLq1fan4qmoc6sdqZW9WJdwM+mH/4ApaiwtFU4v4GzoRsBQVvXyN97l8\nGdGmANu6/8VEv5DsWO0nTxOeM0xW+4/U95X7IhVbMAnTCDCjuFlbraUiTbvf\n/mW8jjVOnqNRUW9gr4MiN9dUm7arF9vcMDHkV9fkAGK+YNbaiEtKiQCCR8qC\n4yQrr1GHd5uCSbDMQhdjFoQjzkUCdbJy5KFx/s1dj6d9WTP4XH+EnKk4KBqj\n4edNmzgZAJ39IZ5NPRLLpgsoBSUvimyER5XzeJHzQ0RgE5P/Nr16PH2Nb0jI\nKDZQ2zEzIi23Mabja6FxqESwah4vVgN31LqzpFdjfx56g9bVOwQXb7JFDMf9\n3fKN7eYVjh+xbCVoJFHuAgfXtl7Y5maeV6zgM55EduHKe2RlGTNRo1JR9VFZ\nr4fO0mwmUWVkcMAadGpfjPtMGmHHX7GP4hMV565g6QJq2z0HC+3Hcxnge1tZ\np7lX36xkkrSwIg/nLAx5t/IEp5Dg5IY7B3jE5AQhIrQgTv9iQlpcwjd5U7hq\n4lP9ep81CPQmxPFPMMZELrTEStyNwn1REInN8HO+SneQoRZ4xtr2VagA5qrM\nmJ96ZLv3sQowJ+ks2Ty3zyPfUZIItCVVndbsIR/rfsQHbTsDgAetFYZ1qKR8\nER6lJ5j7gANEaKf+9VbG/czw9vdQMJI9e1mEczX68DKEA1VRLaNf2cDWTw7I\n6x1s5172XkPG1jwHj8JiLlWbwWjJSwKe3od2PiTsCt89/vZ4rUtnfCt69Dty\n/uCR3CWtbAc/VawhKmCQIsg9UF9G/0/akbQhNPOF4wYIw3VMZoBdYKnaH/A4\ndMZ6eMZYg+rNTcrs2exMBZmBz5HVnsOiMYbDPMN3AnuUCUM+DOEKHfxAmsNs\ng8iybatsWukcwF6Argez7n7iMrWezVHI7HUmDn4rMam2MPl5ewXDK1/TluqM\nKyaSX3BA+4ZA1S0snmhz/4wi2GYyexrnJeO8DsLomoPUNVGPaUtBZ34f9zNg\nBPSWwsQyBREigDIq\n",
+    "bubble_choice_description": "When trying to analyze our data, scatter plots can help us gain insight into relationships between attributes.",
+    "thumbnail_url": "https://images.code.org/804840e599208441709fea3f03b919ef-aascatterplot.png",
+    "display_name": "Scatterplot"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-04-18T17:43:18.169+00:00\",\"changed\":[\"cloned from \\\"data-science-ch1-lesson10-level7_2025\\\"\"],\"cloned_from\":\"data-science-ch1-lesson10-level7_2025\"},{\"changed_at\":\"2025-04-18 20:21:07 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 20:28:32 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 20:28:51 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 20:53:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-04-18 21:17:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

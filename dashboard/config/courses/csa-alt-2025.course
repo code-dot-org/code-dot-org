@@ -7,6 +7,13 @@
     "csa4-alt-2025",
     "csa5-alt-2025"
   ],
+  "original_script_names": [
+    "csa1-alt-2025",
+    "csa2-alt-2025",
+    "csa3-alt-2025",
+    "csa4-alt-2025",
+    "csa5-alt-2025"
+  ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

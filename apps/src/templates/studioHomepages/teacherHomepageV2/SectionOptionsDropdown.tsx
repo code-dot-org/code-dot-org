@@ -1,7 +1,6 @@
-import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
-import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/actionDropdown';
+import {CustomDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useMemo} from 'react';
-import {useNavigate, NavigateFunction} from 'react-router-dom';
 
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
@@ -17,6 +16,8 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, AppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
+import LinkOption from './LinkOption';
+
 import styles from './teacherHomepage.module.scss';
 
 export interface SectionOptionsDropdownProps {
@@ -25,42 +26,6 @@ export interface SectionOptionsDropdownProps {
 }
 
 const CERTIFICATE_URL = '/certificates/batch';
-
-const onSectionSettingsClick = (
-  navigate: NavigateFunction,
-  sectionId: number
-) => {
-  analyticsReporter.sendEvent(
-    EVENTS.SECTION_CARD_SETTINGS_CLICKED,
-    {},
-    PLATFORMS.BOTH
-  );
-  navigate(
-    `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.settings}`
-  );
-};
-
-const onRosterClick = (navigate: NavigateFunction, sectionId: number) => {
-  analyticsReporter.sendEvent(
-    EVENTS.SECTION_CARD_ROSTER_CLICKED,
-    {},
-    PLATFORMS.BOTH
-  );
-  navigate(
-    `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.roster}`
-  );
-};
-
-const onLoginCardsClick = (navigate: NavigateFunction, sectionId: number) => {
-  analyticsReporter.sendEvent(
-    EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED,
-    {},
-    PLATFORMS.BOTH
-  );
-  navigate(
-    `../${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${TEACHER_NAVIGATION_PATHS.loginInfo}`
-  );
-};
 
 const onArchiveClick = (dispatch: AppDispatch, section: Section) => {
   const hideShowEvent = section.hidden
@@ -86,7 +51,6 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
   section,
   onDeleteClickCallback,
 }) => {
-  const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
   const certFormRef = React.useRef<HTMLFormElement>(null);
@@ -113,54 +77,78 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
       );
   }, [section.id]);
 
-  const dropdownOptions: ActionDropdownOption[] = useMemo(() => {
-    const options: ActionDropdownOption[] = [
-      {
-        value: 'sectionSettings',
-        label: i18n.sectionSettings(),
-        icon: {iconName: 'gear', iconStyle: 'solid'},
-        onClick: () => onSectionSettingsClick(navigate, section.id),
-      },
-      {
-        value: 'roster',
-        label: i18n.roster(),
-        icon: {iconName: 'user', iconStyle: 'solid'},
-
-        onClick: () => onRosterClick(navigate, section.id),
-      },
-      {
-        value: 'loginCards',
-        label: i18n.loginCards(),
-        icon: {iconName: 'id-card', iconStyle: 'solid'},
-        onClick: () => onLoginCardsClick(navigate, section.id),
-      },
-      {
-        value: 'certificates',
-        label: i18n.certificates(),
-        icon: {iconName: 'file-certificate', iconStyle: 'solid'},
-        onClick: () => onClickPrintCerts(),
-      },
-      {
-        value: section.hidden ? 'restore' : 'archive',
-        label: section.hidden ? i18n.restoreClassSection() : i18n.archive(),
-        icon: {
-          iconName: section.hidden ? 'window-restore' : 'box-archive',
-          iconStyle: 'solid',
-        },
-        onClick: () => onArchiveClick(dispatch, section),
-      },
+  const dropdownOptions = useMemo(() => {
+    const options = [
+      <LinkOption
+        key={'sectionSettings'}
+        value={TEACHER_NAVIGATION_PATHS.settings}
+        label={i18n.sectionSettings()}
+        iconName={'gear'}
+        url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.settings}`}
+        eventName={EVENTS.SECTION_CARD_SETTINGS_CLICKED}
+        eventOptions={{}}
+      />,
+      <LinkOption
+        key={'roster'}
+        value={TEACHER_NAVIGATION_PATHS.roster}
+        label={i18n.roster()}
+        iconName={'user'}
+        url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.roster}`}
+        eventName={EVENTS.SECTION_CARD_ROSTER_CLICKED}
+        eventOptions={{}}
+      />,
+      <LinkOption
+        key={'loginCards'}
+        value={TEACHER_NAVIGATION_PATHS.loginInfo}
+        label={i18n.loginCards()}
+        iconName={'id-card'}
+        url={`../${TEACHER_NAVIGATION_SECTIONS_URL}/${section.id}/${TEACHER_NAVIGATION_PATHS.loginInfo}`}
+        eventName={EVENTS.SECTION_CARD_LOGIN_CARDS_CLICKED}
+        eventOptions={{}}
+      />,
+      <li key={'certificates'}>
+        <button
+          type="button"
+          className={styles.dropdownMenuItem}
+          onClick={onClickPrintCerts}
+        >
+          <FontAwesomeV6Icon iconName="file-certificate" iconStyle="solid" />
+          <span>{i18n.certificates()}</span>
+        </button>
+      </li>,
+      <li key={'archive'}>
+        <button
+          type="button"
+          className={styles.dropdownMenuItem}
+          onClick={() => onArchiveClick(dispatch, section)}
+        >
+          <FontAwesomeV6Icon
+            iconName={section.hidden ? 'window-restore' : 'box-archive'}
+            iconStyle="solid"
+          />
+          <span>
+            {section.hidden ? i18n.restoreClassSection() : i18n.archive()}
+          </span>
+        </button>
+      </li>,
     ];
 
     if (section.studentCount === 0) {
-      options.push({
-        value: 'delete',
-        label: i18n.delete(),
-        icon: {iconName: 'trash', iconStyle: 'solid'},
-        onClick: () => onDeleteClick(onDeleteClickCallback, section.id),
-      });
+      options.push(
+        <li key={'delete'}>
+          <button
+            type="button"
+            className={styles.dropdownMenuItem}
+            onClick={() => onDeleteClick(onDeleteClickCallback, section.id)}
+          >
+            <FontAwesomeV6Icon iconName="trash" iconStyle="solid" />
+            <span>{i18n.delete()}</span>
+          </button>
+        </li>
+      );
     }
     return options;
-  }, [section, dispatch, navigate, onDeleteClickCallback, onClickPrintCerts]);
+  }, [section, dispatch, onDeleteClickCallback, onClickPrintCerts]);
 
   return (
     <form ref={certFormRef} action={CERTIFICATE_URL} method="POST">
@@ -175,10 +163,12 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
       {studentNames.map((name, index) => (
         <input key={index} type="hidden" name="names[]" value={name} />
       ))}
-      <ActionDropdown
+      <CustomDropdown
         name="section-options-dropdown"
         labelText="Section Options"
         menuPlacement="right"
+        size="m"
+        useDSCOButtonAsTrigger={true}
         triggerButtonProps={{
           isIconOnly: true,
           icon: {
@@ -191,8 +181,9 @@ const SectionOptionsDropdown: React.FC<SectionOptionsDropdownProps> = ({
           className: styles.dropdownButton,
           ariaLabel: i18n.sectionOptionsDropdown(),
         }}
-        options={dropdownOptions}
-      />
+      >
+        <ul>{dropdownOptions}</ul>
+      </CustomDropdown>
     </form>
   );
 };

@@ -29,7 +29,7 @@ markdown <<MARKDOWN
 
 
 <p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
-<p style="line-height: 1.5; margin-left: 30px; margin-right: 10px; font-size: 12pt">The interactive nature of these lessons kept my students actively involved and curious. They loved seeing the immediate results of their work in CODAP, and it sparked so many insightful discussions about what the data was really telling us.
+<p style="line-height: 1.5; margin-left: 30px; margin-right: 10px; font-size: 12pt">The interactive nature of these lessons kept my students actively involved and curious. They loved seeing the immediate results of their work in Google Sheets, and it sparked so many insightful discussions about what the data was really telling us.
 </p>
 <p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
 <p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
@@ -56,14 +56,8 @@ markdown <<MARKDOWN
 ---
 ## Conclusion
 
-#### By the end of this chapter, your students should have a solid understanding of what data science is and have experience analyzing and interpreting data. 
-#### In the next chapter, students will explore data science using Python and the Pandas library to explore and analyze data. 
+#### By the end of this unit, your students should have a solid understanding of what data science is and have experience analyzing and interpreting data. 
 
-#### *Previous Python experience is not necessary to complete the chapter.*
-
-
-
-## Next up - Unit 2: Part 1 - Introduction to Data Science and Python
 
 
 MARKDOWN

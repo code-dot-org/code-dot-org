@@ -7,11 +7,11 @@
 // live elsewhere.
 // The library data should definitely live elsewhere.
 
+import {Theme} from '@code-dot-org/component-library/common/contexts';
 import {ComponentType, LazyExoticComponent} from 'react';
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
-import {Theme} from '@cdo/apps/lab2/views/ThemeWrapper';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
 
@@ -211,11 +211,14 @@ export interface LevelProperties {
   miniApp?: string;
   serializedMaze?: MazeCell[][];
   startDirection?: number;
+  widgetView?: boolean;
+  widgetViewAllowShowCode?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
   isAssessment?: boolean;
   progressionType?: string;
   type?: string;
+  starterAssets?: {[key: string]: string};
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -243,6 +246,7 @@ export interface BubbleChoiceLevelData {
 // Bubble Choice specific property
 export interface BubbleChoiceSublevel {
   display_name: string;
+  description?: string;
   level_id: string;
   thumbnail_url: string;
   url: string;
@@ -280,11 +284,9 @@ export interface Lab2EntryPoint {
    */
   view: LazyExoticComponent<ComponentType<LabProps>>;
   /**
-   * Display theme for this lab. This will likely be configured by user
-   * preferences eventually, but for now this is fixed for each lab. Defaults
-   * to the default theme if not specified.
+   * An array of themes that the lab supports.
    */
-  theme?: Theme;
+  themes: Theme[];
 }
 
 export type LevelData =

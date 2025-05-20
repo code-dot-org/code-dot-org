@@ -732,7 +732,7 @@ module SharedConstants
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2024_v4.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2025_v1.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
@@ -752,6 +752,7 @@ module SharedConstants
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
     USER_INPUT_TOO_LARGE: 'user_input_too_large',
+    MODEL_TIMEOUT: 'model_timeout',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
@@ -797,7 +798,9 @@ module SharedConstants
     # PII detected in the model's output.
     MODEL_PII: 1004,
     # The user input request exceeded the maximum token size allowed.
-    USER_INPUT_TOO_LARGE: 1005
+    USER_INPUT_TOO_LARGE: 1005,
+    # The model took too long to respond.
+    MODEL_TIMEOUT: 1006,
   }
 
   AI_CHAT_MODEL_IDS = {

@@ -1,0 +1,45 @@
+# Marketing Cloudfront TLS Certificate AWS Resources
+# This stack is deployed to us-east-1 only as Cloudfront TLS certificates must be in us-east-1.
+# This template is manually deployed to create/update the Marketing App's AWS resources.
+
+<%
+BASE_DOMAIN_NAME = Config::STAGES[stage.to_sym][:baseDomain]
+%>
+
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: Marketing App Cloudfront TLS Certificate resources (us-east-1)
+
+Parameters:
+  BaseHostedZoneId:
+    Type: String
+    Description: The ID of the Route53 hosted zone for the marketing app. (e.g. the hosted zone id for 'marketingsites.code.org')
+
+Conditions:
+  IsUSEast1: !Equals [!Ref "AWS::Region", "us-east-1"]
+
+Resources:
+<%
+Config::MARKETING_SITES.each do |_, site|
+%>
+  # TLS Cert for the ECS ALB and Cloudfront (must be in us-east-1)
+   <%= site[:shortCode] %>TLSCertificate:
+     Condition: IsUSEast1
+     Type: AWS::CertificateManager::Certificate
+     Properties:
+       DomainName: "<%= site[:subdomain] %>.<%= BASE_DOMAIN_NAME %>"
+       DomainValidationOptions:
+         - DomainName: "<%= site[:subdomain] %>.<%= BASE_DOMAIN_NAME %>"
+           HostedZoneId:
+             Ref: BaseHostedZoneId
+       ValidationMethod: DNS
+<% end %>
+
+Outputs:
+<% Config::MARKETING_SITES.each do |_, site| %>
+  <%= site[:shortCode] %>TLSCertificateArn:
+    Value: !Ref <%= site[:shortCode] %>TLSCertificate
+    Export:
+      Name:
+        'Fn::Sub': '${AWS::StackName}-<%= site[:shortCode] %>TLSCertificateArn'
+<% end %>

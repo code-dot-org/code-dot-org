@@ -10,6 +10,7 @@ export interface StudentAnswer {
   studentDisplayName: string;
   studentWork: string;
   codeVersion?: string;
+  projectId?: string;
 }
 
 export interface AIResponse {
@@ -17,9 +18,14 @@ export interface AIResponse {
   aiReasoning: string;
   evaluationCriteria: string;
   skillEvaluations?: [AIResponse];
+  id: number;
 }
 
-export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {}
+export interface StudentWorkEvaluation extends StudentAnswer, AIResponse {
+  levelId: number;
+  unitId: number;
+  id: number;
+}
 
 export async function evaluateStudentWork(
   studentWorkSample: StudentAnswer,
@@ -35,12 +41,14 @@ export async function evaluateStudentWork(
   let parsedResponse;
   if (response?.content) {
     parsedResponse = JSON.parse(response?.content);
-    logStudentWorkEvaluations(
+    const userLevelEvaluationId = await logStudentWorkEvaluations(
       studentWorkSample,
       parsedResponse,
       levelId,
       unitId
     );
+
+    parsedResponse.id = userLevelEvaluationId;
   }
   return parsedResponse;
 }

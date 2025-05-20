@@ -3,6 +3,9 @@
   "script_names": [
     "outbreak-module"
   ],
+  "original_script_names": [
+    "outbreak-module"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2025-05-07T14:57:31.000Z",
+  "level_num": "custom",
+  "user_id": 18914,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Create your madlib! \r\n\r\nTry taking at least 5 inputs! ",
+    "ai_tutor_available": "true",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "val1 = input()\nval2 = input()\nval3 = input()\nval2 = input()\nval2 = input()\nval2 = input()\nprint(\"Hello world!\")",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "main_test.py",
+      "language": "py",
+      "contents": "import unittest\nimport ast\n\nclass TestUserInteraction(unittest.TestCase):\n\n    def test_at_least_five_inputs_used(self):\n        \"\"\"Check that the program asks for input at least five times.\"\"\"\n        try:\n            with open(\"main.py\", \"r\") as f:\n                content = f.read()\n\n            tree = ast.parse(content)\n\n            # Find all input() calls\n            input_calls = [\n                node for node in ast.walk(tree)\n                if isinstance(node, ast.Call)\n                and isinstance(node.func, ast.Name)\n                and node.func.id == \"input\"\n            ]\n\n            input_count = len(input_calls)\n\n            self.assertGreaterEqual(\n                input_count, 5,\n                f\"Expected at least 5 calls to input(), but found {input_count}.\"\n            )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n    def test_at_least_one_print_used(self):\n        \"\"\"Check that the program prints something to the console.\"\"\"\n        try:\n            with open(\"main.py\", \"r\") as f:\n                content = f.read()\n\n            tree = ast.parse(content)\n\n            # Find all print() calls\n            print_calls = [\n                node for node in ast.walk(tree)\n                if isinstance(node, ast.Call)\n                and isinstance(node.func, ast.Name)\n                and node.func.id == \"print\"\n            ]\n\n            self.assertGreaterEqual(\n                len(print_calls), 1,\n                \"Expected at least one call to print(), but none were found.\"\n            )\n\n        except FileNotFoundError:\n            self.fail(\"The file 'main.py' was not found.\")\n        except Exception as e:\n            self.fail(f\"Error running the test: {e}\")\n\n\n",
+      "folderId": "0",
+      "active": false,
+      "open": false,
+      "type": "validation"
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-05-07 15:55:32 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-07 16:02:49 +0000\",\"changed\":[],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-16 15:58:32 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18914,\"changed_by_email\":\"samantha.schwartz+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

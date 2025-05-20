@@ -2,6 +2,7 @@ district_s,state_s
 Birmingham City Schools,Alabama
 Dale County Schools,Alabama
 Elmore County Public Schools,Alabama
+Montgomery Public School,Alabama
 Montgomery Public Schools,Alabama
 Bering Strait School District,Alaska
 Galena City School District,Alaska
@@ -27,6 +28,7 @@ Benton Schools,Arkansas
 Buffalo Island Central School District,Arkansas
 Lake Hamilton School District,Arkansas
 Newport Special School District,Arkansas
+AeroSTEM Academy,California
 Alameda Unified School District,California
 Alliance Jack H. Skirball Middle School,California
 Alta Loma School District,California
@@ -41,6 +43,7 @@ Garden Grove Unified School District,California
 La Cañada Unified,California
 Los Angeles Unified School District,California
 Los Gatos Union School District,California
+Lynwood Unified School District,California
 Montebello Unified School District,California
 Monterey Peninsula Unified School District,California
 Moreno Valley Unified School District,California
@@ -63,7 +66,10 @@ Pueblo School District 60,Colorado
 Telluride School District No. R-1,Colorado
 Berlin Public Schools,Connecticut
 Bethel School District,Connecticut
+East Granby Public Schools,Connecticut
+East Granby Public Schools,Connecticut
 Hartford Public Schools,Connecticut
+Montville Public Schools,Connecticut
 New Britain School District,Connecticut
 New Canaan Public Schools,Connecticut
 Norwalk Public Schools,Connecticut
@@ -72,6 +78,7 @@ Regional School District 15,Connecticut
 Stamford Public Schools,Connecticut
 Wallingford School District,Connecticut
 Brandywine School District,Delaware
+Broward County Public Schools,Florida
 Divine Savior Academy,Florida
 Duval County Public Schools,Florida
 Madison County School District,Florida
@@ -103,6 +110,7 @@ Blaine County School District,Idaho
 Caldwell School District,Idaho
 Lewiston Independent School District #1,Idaho
 Pocatello Chubbuck School District #25,Idaho
+Ball-Chatham 5,Illinois
 Beecher CUSD200U,Illinois
 Calvary Academy,Illinois
 Carlinville CUSD#1,Illinois
@@ -139,6 +147,7 @@ Monroe County Community School,Indiana
 MSD of Mount Vernon,Indiana
 Plainfield Community School Corporation,Indiana
 South Vermillion Community School Corporation,Indiana
+Southwest Dubois County School Corporation,Indiana
 Southwest Parke Community Schools,Indiana
 St. John the Baptist,Indiana
 Tabernacle Christian School,Indiana
@@ -149,6 +158,7 @@ Denison Community Schools,Iowa
 Dubuque Community School District,Iowa
 George-Little Rock Community School District,Iowa
 Holy Family Catholic Schools,Iowa
+Indianola CSD,Iowa
 Iowa City Community School District,Iowa
 Mid-Prairie Community Schools,Iowa
 North Iowa Community Schools,Iowa
@@ -180,6 +190,7 @@ Morehouse Parish School District,Louisiana
 Natchitoches Parish,Louisiana
 Pelican Educational Foundation,Louisiana
 Rapides Parish Schools,Louisiana
+Terrebonne Parish,Louisiana
 Washington Parish School System,Louisiana
 Winn Parish,Louisiana
 Great Salt Bay School,Maine
@@ -198,12 +209,14 @@ Ipswich Public Schools,Massachusetts
 Maynard Public Schools,Massachusetts
 Melrose Public Schools,Massachusetts
 Natick Public Schools,Massachusetts
+Needham Public Schools,Massachusetts
 Phoenix Charter Academy,Massachusetts
 Plymouth Public Schools,Massachusetts
 Somerville Public Schools,Massachusetts
 Southeastern Massachusetts Educational Collaborative,Massachusetts
 Springfield International Charter School,Massachusetts
 Sudbury Public Schools,Massachusetts
+Advanced Technology Academy,Michigan
 Bedford Public Schools,Michigan
 Bessemer Area Schools,Michigan
 Chippewa Valley Schools,Michigan
@@ -235,11 +248,13 @@ Brooklyn Center Community Schools,Minnesota
 "Fosston Public Schools, ISD 601",Minnesota
 Kasson-Mantorville Schools,Minnesota
 Kingsland Public Schools,Minnesota
+Mahtomedi Public Schools,Minnesota
 Mankato Area Public Schools,Minnesota
 Martin County West Schools,Minnesota
 Mountain Iron-Buhl,Minnesota
 Nicollet Public 507,Minnesota
 Princeton Public Schools,Minnesota
+Shakopee Public Schools,Minnesota
 South Washington County Schools,Minnesota
 St. Louis County Schools ISD 2142,Minnesota
 "Thief River Falls Public Schools, District 564",Minnesota
@@ -270,6 +285,7 @@ Putnam County R-I School District,Missouri
 Riverview Gardens School District,Missouri
 Rockwood School District,Missouri
 Smithton R-VI School District,Missouri
+South Iron R-1 School District,Missouri
 St. Charles R-VI,Missouri
 University City,Missouri
 Wentzville School District,Missouri
@@ -309,6 +325,7 @@ Benjamin Banneker Preparatory Charter School,New Jersey
 Bloomfield Public Schools,New Jersey
 Brick Education Network,New Jersey
 Cape May County Vocational School District,New Jersey
+Cherry Hill Public Schools,New Jersey
 Clinton Township School District,New Jersey
 Dunellen Public Schools,New Jersey
 East Hanover Township School District,New Jersey
@@ -372,6 +389,7 @@ Millbrook Central School District,New York
 Mount Markham Central School District,New York
 New Visions Charter Network IV,New York
 Norwood-Norfolk Central School District,New York
+Odessa-Montour Central School District,New York
 Orchard Park Central School District,New York
 P.S. 354Q,New York
 Pathways in Technology Early College High School,New York
@@ -379,6 +397,8 @@ Plainview-Old Bethpage CSD,New York
 PS 165 Robert E Simon,New York
 Public Schools of the Tarrytowns,New York
 Ravena Coeymans Selkirk CSD,New York
+Red Creek Central School District,New York
+Rochester City School District,New York
 Rocky Point Union Free School District,New York
 Schenectady School District,New York
 South Glens Falls CSD,New York
@@ -389,6 +409,7 @@ West Hempstead,New York
 Zeta Charter Schools,New York
 ALA Johnston,North Carolina
 American Renaissance School,North Carolina
+Cabarrus County Schools,North Carolina
 Cape Fear Center for Inquiry,North Carolina
 Carteret County Public Schools,North Carolina
 Cherokee County Schools,North Carolina
@@ -398,17 +419,20 @@ Currituck County School District,North Carolina
 Davie County Schools,North Carolina
 Duplin County Schools,North Carolina
 Durham Public School,North Carolina
+Franklin County Schools,North Carolina
 Gaston County Schools,North Carolina
 Guilford County Schools,North Carolina
 Guilford Preparatory Academy,North Carolina
 Hoke County Schools,North Carolina
 Johnston County Public Schools,North Carolina
 Martin County Schools,North Carolina
+Moore County Schools,North Carolina
 Providence Day School,North Carolina
 Public Schools of Robeson County,North Carolina
 Road to Hire,North Carolina
 Sugar Creek Charter School,North Carolina
 Telra Institute,North Carolina
+Transylvania County Schools,North Carolina
 Warren County Schools,North Carolina
 Wilson County Schools,North Carolina
 Winston-Salem/Forsyth County Schools,North Carolina
@@ -458,6 +482,7 @@ Horizon Science Academy Cleveland High School,Ohio
 Huber Heights City Schools,Ohio
 Hudson City School District,Ohio
 Indian Hill Exempted Village School District,Ohio
+Lakewood City Schools,Ohio
 New Miami Local,Ohio
 Olentangy Local Schools,Ohio
 Par Excellence STEM Academy,Ohio
@@ -478,6 +503,8 @@ Oklahoma City Public Schools,Oklahoma
 Piedmont Independent School District 22,Oklahoma
 Tulsa Public Schools,Oklahoma
 Wayne Public Schools,Oklahoma
+Culver School District,Oregon
+Pine Eagle School District,Oregon
 Berwick Area School District,Pennsylvania
 Carbon Learning Achievement School,Pennsylvania
 Community Academy of Philadelphia Charter School,Pennsylvania
@@ -489,6 +516,7 @@ Norwin School District,Pennsylvania
 Philadelphia Academy Charter School,Pennsylvania
 Russell Byers Charter School,Pennsylvania
 Salem Christian School,Pennsylvania
+School District of Philadelphia,Pennsylvania
 School District of Springfield Township,Pennsylvania
 Union Area School District,Pennsylvania
 Smithfield Public Schools,Rhode Island
@@ -506,8 +534,10 @@ Bradley County Schools,Tennessee
 Bristol Tennessee City School District,Tennessee
 Cocke County School District,Tennessee
 Dyersburg City School District,Tennessee
+Fayette Academy,Tennessee
 Germantown Municipal School District,Tennessee
 Green Dot Public School,Tennessee
+Greeneville City Schools,Tennessee
 Hickman County Schools,Tennessee
 Humphreys County Board of Education,Tennessee
 Jackson-Madison County School System,Tennessee
@@ -517,10 +547,12 @@ Manchester City School,Tennessee
 McKenzie Special School District,Tennessee
 Memphis Shelby County Schools,Tennessee
 Metro Nashville Public Schools,Tennessee
+Monroe County Schools,Tennessee
 Oak Ridge City School District,Tennessee
 Overton County,Tennessee
 Sevier County School System,Tennessee
 St. Mary's Episcopal School,Tennessee
+Warren County Schools,Tennessee
 All Saints' Episcopal School of Fort Worth,Texas
 Austin Achieve Pflugerville,Texas
 Benavides Independent School District,Texas
@@ -546,6 +578,7 @@ Lubbock-Cooper ISD,Texas
 McGregor Independent School District,Texas
 Mineola Independent School District,Texas
 Prairie Valley Independent School District,Texas
+Rockwall ISD,Texas
 Santa Rosa ISD,Texas
 Southside Independent School District,Texas
 Springtown Independent School District,Texas
@@ -556,6 +589,7 @@ UT Elementary Charter School,Texas
 Westlake Academy,Texas
 Ysleta Independent School District,Texas
 Ignite Entrepreneurship Academy,Utah
+Tooele School District,Utah
 Alleghany Highlands Public Schools,Virginia
 Clarke County Public Schools,Virginia
 "Frederick County Public Schools, (VA)",Virginia
@@ -571,6 +605,7 @@ Marysville School District,Washington
 Omak School District,Washington
 Renton School District,Washington
 Seattle Public Schools,Washington
+Toppenish School District,Washington
 Trillium Academy,Washington
 Calhoun County Schools,West Virginia
 Fayette County Schools,West Virginia
@@ -593,3 +628,6 @@ Venture Academy,Wisconsin
 Converse County School District #2,Wyoming
 Sheridan County School District #2,Wyoming
 Sweetwater County School District #1,Wyoming
+Wyoming Area School District,PA
+Macon County Schools,AL
+Perry Community School District,IA

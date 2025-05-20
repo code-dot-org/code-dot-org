@@ -70,10 +70,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@amplitude/ua-parser-js@npm:0.7.31, @amplitude/ua-parser-js@npm:^0.7.31":
-  version: 0.7.31
-  resolution: "@amplitude/ua-parser-js@npm:0.7.31"
-  checksum: 10/2bec7dd1470c469f905b94a33e07dbd47a1df7546493589cd48324cc343d04066f889ffbb887d5aeac84206b358529433f36741ef0489c3c80afd1ea0ba5d12d
+"@amplitude/ua-parser-js@npm:^0.7.33":
+  version: 0.7.33
+  resolution: "@amplitude/ua-parser-js@npm:0.7.33"
+  checksum: 10/54e0344746cb1fe556f008464599c72de17ebeba012c577137c2a90c9e0915a18588704c60c5ac4138cb3d89973e95132d014ff0896062c98f4e9b3547dda2fe
   languageName: node
   linkType: hard
 
@@ -3691,15 +3691,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/keyboard-navigation@npm:~0.6.9":
-  version: 0.6.9
-  resolution: "@blockly/keyboard-navigation@npm:0.6.9"
-  peerDependencies:
-    blockly: ^11.0.0
-  checksum: 10/a0dc01f1a3401def2b3d83349d63918b6db13aa5428b7457ce34549f102f494cc16a9ae52e6781cd5de3368229b0a2a524f701e4650e5739fde2212aa7c3efd9
-  languageName: node
-  linkType: hard
-
 "@blockly/plugin-cross-tab-copy-paste@npm:~6.0.9":
   version: 6.0.9
   resolution: "@blockly/plugin-cross-tab-copy-paste@npm:6.0.9"
@@ -3766,12 +3757,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/component-library@portal:../frontend/packages/component-library/::locator=blockly-mooc%40workspace%3A."
   dependencies:
-    dompurify: "npm:^3.2.4"
     lodash: "npm:^4.17.21"
     react-player: "npm:^3.0.0-canary.4"
+    react-schemaorg: "npm:^2.0.0"
   peerDependencies:
     classnames: ^2.5.1
-    dompurify: ^3.2.4
     react: ">=16"
     react-dom: ">=16"
     swiper: ^11.0.5
@@ -4596,6 +4586,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^0.7.3":
+  version: 0.7.3
+  resolution: "@floating-ui/core@npm:0.7.3"
+  checksum: 10/c1c615ffd4ef67fff1ba0103466c73a1d505462b017b0c1dfc7f81c31348221a903311a613efc253781586ce635aa499b83985704af271a29b9d782419ae60e4
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:^0.5.2":
+  version: 0.5.4
+  resolution: "@floating-ui/dom@npm:0.5.4"
+  dependencies:
+    "@floating-ui/core": "npm:^0.7.3"
+  checksum: 10/7a102c097c41980184b12e62d282c0e5ef2ea0ff1012328acab68dfae5aa65cd2e2fe6304248bfdcf4479c0d74545965565be7023cc83bb178c979ab8a9af52a
+  languageName: node
+  linkType: hard
+
 "@fortawesome/fontawesome-common-types@npm:^0.2.25":
   version: 0.2.25
   resolution: "@fortawesome/fontawesome-common-types@npm:0.2.25"
@@ -5156,6 +5162,58 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mapbox/search-js-core@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@mapbox/search-js-core@npm:1.0.0"
+  dependencies:
+    "@types/geojson": "npm:^7946.0.8"
+  checksum: 10/5a062392f45f80559eb92e6870a13cede7bcf06b4a5f27e2b3fcf6354029fc4b3e829727f5a6c9452d92fd30a4b94c2c190add87c969aeb0d58284e39629b440
+  languageName: node
+  linkType: hard
+
+"@mapbox/search-js-react@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@mapbox/search-js-react@npm:1.0.0"
+  dependencies:
+    "@mapbox/search-js-core": "npm:^1.0.0"
+    "@mapbox/search-js-web": "npm:^1.0.0"
+    "@types/geojson": "npm:^7946.0.8"
+    "@types/react": "npm:^17.0.43"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 10/93d609605769bf44c76699e25ce50b00186e3c78d665e590a2efa83fd329e5eec1c7cac41289c4fab8daa41983acb8d963dc71302b74ed8733f07b7fd673ddbc
+  languageName: node
+  linkType: hard
+
+"@mapbox/search-js-web@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@mapbox/search-js-web@npm:1.0.0"
+  dependencies:
+    "@floating-ui/dom": "npm:^0.5.2"
+    "@mapbox/search-js-core": "npm:^1.0.0"
+    "@mapbox/sphericalmercator": "npm:^1.2.0"
+    focus-trap: "npm:^6.7.3"
+    no-scroll: "npm:^2.1.1"
+    subtag: "npm:^0.5.0"
+  peerDependencies:
+    mapbox-gl: ">=2.7.0"
+  checksum: 10/59828638d9cf30edc3eb472fcd148d2953d92dcb0fc68bdf5a65f92e894d6187f057c3a4cbe3f0fdb29d875a7996894bdc876c26840dfba4342994376cc901d4
+  languageName: node
+  linkType: hard
+
+"@mapbox/sphericalmercator@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@mapbox/sphericalmercator@npm:1.2.0"
+  bin:
+    bbox: bin/bbox.js
+    to4326: bin/to4326.js
+    to900913: bin/to900913.js
+    xyz: bin/xyz.js
+  checksum: 10/d5c5fdcc2311a7c49da98dbf487f09e4987448ccad53addd5db2651f53d30948a7064bcd46c6e654d939498e5826d3831635414cf90c7c4fd2b9975529f3fbea
+  languageName: node
+  linkType: hard
+
 "@marijn/find-cluster-break@npm:^1.0.0":
   version: 1.0.2
   resolution: "@marijn/find-cluster-break@npm:1.0.2"
@@ -5266,6 +5324,24 @@ __metadata:
   dependencies:
     semver: "npm:^7.3.5"
   checksum: 10/f3a7ab3a31de65e42aeb6ed03ed035ef123d2de7af4deb9d4a003d27acc8618b57d9fb9d259fe6c28ca538032a028f37337264388ba27d26d37fff7dde22476e
+  languageName: node
+  linkType: hard
+
+"@pdf-lib/standard-fonts@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@pdf-lib/standard-fonts@npm:1.0.0"
+  dependencies:
+    pako: "npm:^1.0.6"
+  checksum: 10/0dfcedbd16e3f48afcac321f153d81f49ea6030030fa1e05a07bde359629949e27b3d77b39a5c7b0b0ff8af09912765f62a911cd67d488d4dc0b3c1c5ca106f0
+  languageName: node
+  linkType: hard
+
+"@pdf-lib/upng@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@pdf-lib/upng@npm:1.0.1"
+  dependencies:
+    pako: "npm:^1.0.10"
+  checksum: 10/eecac72f36d51b67acb09f61a7bbb55577ceb6232aa0c1a827aea003126787cede07ad391c0c789ab36164a9a86d1634768c2cf941148743e155de7ed6c34fc3
   languageName: node
   linkType: hard
 
@@ -7454,6 +7530,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/geojson@npm:^7946.0.8":
+  version: 7946.0.16
+  resolution: "@types/geojson@npm:7946.0.16"
+  checksum: 10/34d07421bdd60e7b99fa265441d17ac6e9aef48e3ce22d04324127d0de1daf7fbaa0bd3be1cece2092eb6995f21da84afa5231e24621a2910ff7340bc98f496f
+  languageName: node
+  linkType: hard
+
 "@types/graceful-fs@npm:^4.1.3":
   version: 4.1.9
   resolution: "@types/graceful-fs@npm:4.1.9"
@@ -7835,6 +7918,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-csv@npm:^1.1.10":
+  version: 1.1.10
+  resolution: "@types/react-csv@npm:1.1.10"
+  dependencies:
+    "@types/react": "npm:*"
+  checksum: 10/424b3eefc565e5cc438cce3e64a1a6181be3ae2c9824570283dea7eccd4c31405e9ee88926ab1f8901817df47777fca2fab41e39dcf03c04b53817ba2353ae0d
+  languageName: node
+  linkType: hard
+
 "@types/react-dom@npm:^18.0.11":
   version: 18.0.11
   resolution: "@types/react-dom@npm:18.0.11"
@@ -8067,13 +8159,6 @@ __metadata:
   version: 4.0.5
   resolution: "@types/tough-cookie@npm:4.0.5"
   checksum: 10/01fd82efc8202670865928629697b62fe9bf0c0dcbc5b1c115831caeb073a2c0abb871ff393d7df1ae94ea41e256cb87d2a5a91fd03cdb1b0b4384e08d4ee482
-  languageName: node
-  linkType: hard
-
-"@types/trusted-types@npm:^2.0.7":
-  version: 2.0.7
-  resolution: "@types/trusted-types@npm:2.0.7"
-  checksum: 10/8e4202766a65877efcf5d5a41b7dd458480b36195e580a3b1085ad21e948bc417d55d6f8af1fd2a7ad008015d4117d5fdfe432731157da3c68678487174e4ba3
   languageName: node
   linkType: hard
 
@@ -10024,13 +10109,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"base-64@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "base-64@npm:1.0.0"
-  checksum: 10/d10b64a1fc9b2c5a5f39f1ce1e6c9d1c5b249222bbfa3a0604c592d90623caf74419983feadd8a170f27dc0c3389704f72faafa3e645aeb56bfc030c93ff074a
-  languageName: node
-  linkType: hard
-
 "base64-arraybuffer@npm:^1.0.1":
   version: 1.0.2
   resolution: "base64-arraybuffer@npm:1.0.2"
@@ -10153,7 +10231,6 @@ __metadata:
     "@blockly/field-colour": "npm:^5.0.9"
     "@blockly/field-grid-dropdown": "npm:~5.0.9"
     "@blockly/keyboard-experiment": "npm:^0.0.1"
-    "@blockly/keyboard-navigation": "npm:~0.6.9"
     "@blockly/plugin-cross-tab-copy-paste": "npm:~6.0.9"
     "@blockly/plugin-scroll-options": "npm:~6.0.9"
     "@blockly/theme-dark": "npm:7.0.7"
@@ -10193,6 +10270,7 @@ __metadata:
     "@dsco_/link": "npm:^1.1.2"
     "@lezer/highlight": "npm:^1.2.0"
     "@magenta/music": "npm:^1.23.1"
+    "@mapbox/search-js-react": "npm:^1.0.0"
     "@microbit/microbit-fs": "npm:^0.9.2"
     "@microsoft/immersive-reader-sdk": "npm:^1.1.0"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.11"
@@ -10226,6 +10304,7 @@ __metadata:
     "@types/qrcode.react": "npm:^1.0.5"
     "@types/react": "npm:^18.0.28"
     "@types/react-bootstrap": "npm:^0.32.36"
+    "@types/react-csv": "npm:^1.1.10"
     "@types/react-dom": "npm:^18.0.11"
     "@types/react-router-dom": "npm:^5.3.3"
     "@types/react-select": "npm:^1.2.1"
@@ -10348,6 +10427,7 @@ __metadata:
     object-fit-images: "npm:^3.2.3"
     papaparse: "npm:^5.4.1"
     path-browserify: "npm:^1.0.1"
+    pdf-lib: "npm:^1.17.1"
     pepjs: "npm:^0.4.3"
     pixelmatch: "npm:^5.2.0"
     playground-io: "code-dot-org/playground-io#v0.6.0-cdo.2"
@@ -10356,7 +10436,7 @@ __metadata:
     progress-bar-webpack-plugin: "npm:^2.1.0"
     prop-types: "npm:^15.6.2"
     pusher-js: "npm:4.1.0"
-    pyodide: "npm:^0.25.1"
+    pyodide: "npm:^0.27.5"
     qrcode.react: "npm:^0.8.0"
     qtip2: "npm:2.2.0"
     query-string: "npm:4.1.0"
@@ -13106,18 +13186,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"dompurify@npm:^3.2.4":
-  version: 3.2.4
-  resolution: "dompurify@npm:3.2.4"
-  dependencies:
-    "@types/trusted-types": "npm:^2.0.7"
-  dependenciesMeta:
-    "@types/trusted-types":
-      optional: true
-  checksum: 10/98570c53385518a2f9b617f796926338856acfdd3369c88b5905bddf96bd7d391bf8a5433127155e0046e6faa2bfb767185fcd571b865dfabe624c099e2537f5
-  languageName: node
-  linkType: hard
-
 "domutils@npm:1.5, domutils@npm:1.5.1, domutils@npm:^1.5.1":
   version: 1.5.1
   resolution: "domutils@npm:1.5.1"
@@ -15342,6 +15410,15 @@ canvg@gabelerner/canvg:
     react: ">=16.3.0"
     react-dom: ">=16.3.0"
   checksum: 10/c7dcae701d12694735bffefefa32e6a6090412a134e70b13ce546e955890c71af42e716784123ec8e22fcc3608dbd1de54466aeb9251b39dfb03c9f3c7ffb707
+  languageName: node
+  linkType: hard
+
+"focus-trap@npm:^6.7.3":
+  version: 6.9.4
+  resolution: "focus-trap@npm:6.9.4"
+  dependencies:
+    tabbable: "npm:^5.3.3"
+  checksum: 10/dd64b4522a72836f617a26208cf1f558e0887689f9547b188015079e0f983ca69c29aea70b3ae2a596bc8485643b4c0b35adc653998b8e74af0d0ec6aa004727
   languageName: node
   linkType: hard
 
@@ -21242,6 +21319,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"no-scroll@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "no-scroll@npm:2.1.1"
+  checksum: 10/b6adeb51aae8d1947e249b688f9d34bd7458431900ff924e55626928c8d02165b3c02754dce4048a250de374795afb531dafb2bc6c63bc74b0101b29dc140000
+  languageName: node
+  linkType: hard
+
 "node-abi@npm:^2.7.0":
   version: 2.30.1
   resolution: "node-abi@npm:2.30.1"
@@ -22206,7 +22290,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"pako@npm:~1.0.2, pako@npm:~1.0.5":
+"pako@npm:^1.0.10, pako@npm:^1.0.11, pako@npm:^1.0.6, pako@npm:~1.0.2, pako@npm:~1.0.5":
   version: 1.0.11
   resolution: "pako@npm:1.0.11"
   checksum: 10/1ad07210e894472685564c4d39a08717e84c2a68a70d3c1d9e657d32394ef1670e22972a433cbfe48976cb98b154ba06855dcd3fcfba77f60f1777634bec48c0
@@ -22522,6 +22606,18 @@ canvg@gabelerner/canvg:
   version: 1.1.2
   resolution: "pathe@npm:1.1.2"
   checksum: 10/f201d796351bf7433d147b92c20eb154a4e0ea83512017bf4ec4e492a5d6e738fb45798be4259a61aa81270179fce11026f6ff0d3fa04173041de044defe9d80
+  languageName: node
+  linkType: hard
+
+"pdf-lib@npm:^1.17.1":
+  version: 1.17.1
+  resolution: "pdf-lib@npm:1.17.1"
+  dependencies:
+    "@pdf-lib/standard-fonts": "npm:^1.0.0"
+    "@pdf-lib/upng": "npm:^1.0.1"
+    pako: "npm:^1.0.11"
+    tslib: "npm:^1.11.1"
+  checksum: 10/ea8c2c0c813d89ca359a0c831cb2e8a581c569ed44b074316f917942b5baa101f878ce922f1cb87e6f41a035008ba75b52267480aee5d65a5e68c445ee83bc37
   languageName: node
   linkType: hard
 
@@ -23295,13 +23391,12 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"pyodide@npm:^0.25.1":
-  version: 0.25.1
-  resolution: "pyodide@npm:0.25.1"
+"pyodide@npm:^0.27.5":
+  version: 0.27.5
+  resolution: "pyodide@npm:0.27.5"
   dependencies:
-    base-64: "npm:^1.0.0"
     ws: "npm:^8.5.0"
-  checksum: 10/6a2aa972ce15565089469524231da03706886d3f0c87fa411444c501300d7765f04576d889683a43fcd9fdb1a44c8bafd829bd223057a9dd2c5eec4399672eae
+  checksum: 10/a7ec95d13a14e0b27102963d34c366059be00b286430232cb0b7f548a4e340cd23c18ee9d1bdf87449f4d57b6ea32586e074edb246e0135f720fdbf98ba2043c
   languageName: node
   linkType: hard
 
@@ -24307,6 +24402,17 @@ canvg@gabelerner/canvg:
   peerDependencies:
     react: ">=16.8"
   checksum: 10/d0c79a0f95a88730c0d2bfd098da9d6bdd4d7f08d4e1ddd152b5d013d3c01064afdd6fed57d4d3fa50c42c412e6d00e9217b2abd6cdbf4aaf810b7c33e728400
+  languageName: node
+  linkType: hard
+
+"react-schemaorg@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "react-schemaorg@npm:2.0.0"
+  peerDependencies:
+    react: ">=16.3.0"
+    schema-dts: ">=0.7.4"
+    typescript: ">=3.1.6"
+  checksum: 10/7bccee0982e3d90188a6ca70eef6705ac75961eb43d090b8e8a56ea1c0105c4eb04970996903c2ad5d75933bb7f5d0b087a109f5536ab5c45d44e7d77805a640
   languageName: node
   linkType: hard
 
@@ -27497,6 +27603,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"subtag@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "subtag@npm:0.5.0"
+  checksum: 10/449d8a19a06e491bb1cbc250288bdb8f394f33030f425790e322e4b4631f61b6c15fc530ea5e85b7f9db11f384c32756b192b7fde615f575d1e35a4a9e9727bf
+  languageName: node
+  linkType: hard
+
 "supports-color@npm:^2.0.0":
   version: 2.0.0
   resolution: "supports-color@npm:2.0.0"
@@ -27592,6 +27705,13 @@ canvg@gabelerner/canvg:
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
   checksum: 10/c09a00aadf279d47d0c5c46ca3b6b2fbaeb45f0a184976d599637d412d3a70bbdc043ff33effe1206dea0e36e0ad226cb957112e7ce9a4bf2daedf7fa4f85c53
+  languageName: node
+  linkType: hard
+
+"tabbable@npm:^5.3.3":
+  version: 5.3.3
+  resolution: "tabbable@npm:5.3.3"
+  checksum: 10/5da150c9ac7aaed95f901623214794ffac9472a86009a1762c7b436249d33b157b7d86d93610986090d0fb1ef152f5dec2c201552e0b67ca895ba00c145a51c5
   languageName: node
   linkType: hard
 
@@ -28257,7 +28377,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.13.0, tslib@npm:^1.8.1":
+"tslib@npm:^1.11.1, tslib@npm:^1.13.0, tslib@npm:^1.8.1":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 10/7dbf34e6f55c6492637adb81b555af5e3b4f9cc6b998fb440dac82d3b42bdc91560a35a5fb75e20e24a076c651438234da6743d139e4feabf0783f3cdfe1dddb
@@ -28558,7 +28678,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"ua-parser-js@npm:^0.7.18, ua-parser-js@npm:^0.7.30":
+"ua-parser-js@npm:^0.7.40":
   version: 0.7.40
   resolution: "ua-parser-js@npm:0.7.40"
   bin:

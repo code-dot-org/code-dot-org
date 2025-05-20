@@ -8,20 +8,23 @@ import ActionBlock, {
 } from '@code-dot-org/component-library/actionBlock';
 import DSCOCarousel from '@code-dot-org/component-library/carousel';
 
+import {showNewTag} from '@/components/actionBlocks/helpers';
 import {externalLinkIconProps} from '@/components/common/constants';
-import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
-import {ContentfulEntry} from '@/contentful/types/entries/ContentfulEntry';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {Entry} from '@/types/contentful/Entry';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
 type ActionBlockCarouselFields = {
   actionBlockOverline: EntryFields.Text;
   title: EntryFields.Text;
   shortDescription: EntryFields.Text;
-  image: ImageAssetEntry;
+  image: ExperienceAsset;
   primaryLinkRef: LinkEntry;
   secondaryLinkRef: LinkEntry;
+  publishedDate?: EntryFields.Date;
 };
 
-type ActionBlockCarouselEntry = ContentfulEntry<ActionBlockCarouselFields>;
+type ActionBlockCarouselEntry = Entry<ActionBlockCarouselFields>;
 
 export type ActionBlockCarouselProps = {
   /** Carousel content w/ fields from Contentful */
@@ -57,6 +60,7 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
           image,
           primaryLinkRef,
           secondaryLinkRef,
+          publishedDate,
         } = fields;
 
         return {
@@ -102,6 +106,9 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
                   : undefined
               }
               background={background}
+              tag={
+                publishedDate && showNewTag(publishedDate) ? 'New' : undefined
+              }
             />
           ),
         };
@@ -112,8 +119,8 @@ const ActionBlockCarousel: React.FC<ActionBlockCarouselProps> = ({
   return (
     <DSCOCarousel
       showNavArrows
-      slidesPerView={3}
-      slidesPerGroup={3}
+      slidesPerView={slidesData.length === 2 ? 2 : 3}
+      slidesPerGroup={slidesData.length === 2 ? 2 : 3}
       allowTouchMove
       slides={slidesData}
     />

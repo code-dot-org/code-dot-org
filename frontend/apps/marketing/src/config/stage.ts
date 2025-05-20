@@ -1,11 +1,16 @@
-export type Stage = 'development' | 'test' | 'production';
+import {getEnv} from '@/providers/environment';
+
+export type Stage = 'development' | 'pr' | 'test' | 'production';
 
 export function getStage(): Stage {
-  switch (process.env.STAGE) {
+  const stage = getEnv('NEXT_PUBLIC_STAGE') as Stage;
+
+  switch (stage) {
     case 'development':
     case 'test':
     case 'production':
-      return process.env.STAGE;
+    case 'pr':
+      return stage;
     default:
       return 'development';
   }

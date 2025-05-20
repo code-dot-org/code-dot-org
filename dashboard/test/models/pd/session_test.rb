@@ -12,14 +12,14 @@ class Pd::SessionTest < ActiveSupport::TestCase
     session = build :pd_session, start: Time.now, end: Time.now + 1.day
     refute session.valid?
     assert_equal 1, session.errors.messages.count
-    assert_equal 'End must occur on the same day as the start.', session.errors.full_messages[0]
+    assert_equal 'End must occur on the same day as the start', session.errors.full_messages[0]
   end
 
   test 'starts_before_ends validation error' do
     session = build :pd_session, start: Time.now + 4.hours, end: Time.now
     refute session.valid?
     assert_equal 1, session.errors.messages.count
-    assert_equal 'End must occur after the start.', session.errors.full_messages[0]
+    assert_equal 'End must occur after the start', session.errors.full_messages[0]
   end
 
   test 'valid_meeting_link_format validation error' do
@@ -51,6 +51,65 @@ class Pd::SessionTest < ActiveSupport::TestCase
     )
 
     assert_equal '2016-03-01, 9:00am-5:00pm', session.formatted_date_with_start_and_end_times
+  end
+
+  test 'formatted_location_details for in_person session with location details' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+      location_name: 'The auditorium',
+      location_address: '123 Main St, Denver CO, 12345'
+    )
+
+    assert_equal 'The auditorium, 123 Main St, Denver CO, 12345', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for in_person session with only location_name' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+      location_name: 'The auditorium',
+    )
+
+    assert_equal 'The auditorium', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for in_person session with only location_address' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+      location_address: '123 Main St, Denver CO, 12345'
+    )
+
+    assert_equal '123 Main St, Denver CO, 12345', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for in_person session with no location details' do
+    session = create(
+      :pd_session,
+      session_format: 'in_person',
+    )
+
+    assert_equal 'N/A', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for virtual session with meeting_link' do
+    session = create(
+      :pd_session,
+      session_format: 'virtual',
+      meeting_link: 'example.com',
+    )
+
+    assert_equal 'Virtual meeting: example.com', session.formatted_location_details
+  end
+
+  test 'formatted_location_details for virtual session without meeting_link' do
+    session = create(
+      :pd_session,
+      session_format: 'virtual',
+    )
+
+    assert_equal 'N/A', session.formatted_location_details
   end
 
   test 'soft delete' do

@@ -1,4 +1,4 @@
-@import '@code-dot-org/component-library-styles/colors.scss';
+@use '@code-dot-org/component-library-styles/colors.scss';
 
 // Section common styles
 .section {
@@ -51,5 +51,18 @@
 
   &-l {
     padding-block: 4rem;
+  }
+}
+
+// Section divider
+.hasDivider {
+  padding-bottom: 0;
+
+  .container {
+    margin-bottom: 4rem;
+  }
+
+  hr {
+    max-width: 960px;
   }
 }

@@ -34,6 +34,7 @@ class Level < ApplicationRecord
   belongs_to :game, optional: true
   has_and_belongs_to_many :concepts
   has_and_belongs_to_many :script_levels
+  has_and_belongs_to_many :skills, join_table: 'levels_skills'
   belongs_to :ideal_level_source, class_name: "LevelSource", optional: true # "see the solution" link uses this
   belongs_to :user, optional: true
   has_one :level_concept_difficulty, dependent: :destroy
@@ -241,9 +242,7 @@ class Level < ApplicationRecord
         hash['notes'] = Encryption.decrypt_object(encrypted_notes)
       end
     rescue Encryption::KeyMissingError
-      # developers and adhoc environments must be able to seed levels without properties_encryption_key
-      non_ci_test = rack_env == :test && !CDO.ci && !CDO.chef_managed
-      raise unless rack_env?(:development) || rack_env?(:adhoc) || non_ci_test
+      raise if rack_env?(:production)
       puts "WARNING: level '#{name}' not seeded properly due to missing CDO.properties_encryption_key"
     end
     hash
@@ -874,6 +873,15 @@ class Level < ApplicationRecord
       containedLevels: contained_levels.map {|l| l.summarize_for_lesson_show(can_view_teacher_markdown)},
       status: SharedConstants::LEVEL_STATUS.not_tried,
       thumbnailUrl: thumbnail_url
+    }
+  end
+
+  def summarize_for_sublevel_edit
+    {
+      name: name,
+      id: id,
+      properties: properties,
+      isDslDefined: is_a?(DSLDefined)
     }
   end
 

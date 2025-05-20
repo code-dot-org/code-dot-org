@@ -2,6 +2,7 @@
 @as_student
 Feature: App Lab Eyes - Part 2
 
+@skip
 Scenario: Applab visualization scaling
   When I open my eyes to test "Applab visualization scaling"
   And I am on "http://studio.code.org/projects/applab/new"

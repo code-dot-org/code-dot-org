@@ -20,14 +20,16 @@ import styles from './teacher-navigation.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 const skeletonSectionName = (
-  <span
+  <Typography
+    semanticTag={'h2'}
+    visualAppearance={'overline-two'}
     className={classNames(
       skeletonizeContent.skeletonizeContent,
       styles.skeletonHeaderSectionName
     )}
   >
     SKELETON SECTION NAME
-  </span>
+  </Typography>
 );
 
 const PageHeader: React.FC = () => {

@@ -3,6 +3,9 @@
   "script_names": [
     "csa-magpie-lab"
   ],
+  "original_script_names": [
+    "csa-magpie-lab"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

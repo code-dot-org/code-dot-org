@@ -1,7 +1,6 @@
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 interface StudentWorkRequest {
-  includeAiEvaluations: boolean;
   numSamples: number;
   unitId: number;
   levelId: number;
@@ -20,7 +19,14 @@ export async function fetchStudentCodeSamples(
       body: JSON.stringify(studentWorkRequest),
     });
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      const errorData = await response.json();
+      const msg = `Network response was not ok fetching student code samples: ${JSON.stringify(
+        errorData,
+        null,
+        2
+      )}`;
+      console.error(msg);
+      return null;
     }
     const data = await response.json();
     return data;

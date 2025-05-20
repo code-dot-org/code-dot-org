@@ -22,11 +22,20 @@ import {
 import _ from 'lodash';
 import React, {useState} from 'react';
 
-import {removeSectionOrThrow} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {
+  removeSectionOrThrow,
+  setSectionOrder,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {SectionMap} from '@cdo/apps/templates/teacherDashboard/types/teacherSectionTypes';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import i18n from '@cdo/locale';
+
+import {
+  getFilteredSectionOrderIds,
+  saveSectionOrder,
+} from '../../teacherDashboard/sectionOrderUtils';
+import CoteacherInviteNotification from '../CoteacherInviteNotification';
 
 import {SectionCard} from './SectionCard';
 import {SectionDeleteModal} from './SectionDeleteModal';
@@ -34,6 +43,7 @@ import {SectionDeleteModal} from './SectionDeleteModal';
 import styles from './teacherHomepage.module.scss';
 
 interface SectionListProps {
+  studioUrlPrefix: string;
   showHiddenOnly: boolean;
 }
 
@@ -51,19 +61,26 @@ function moveSection(
   };
 }
 
-export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
+export const SectionList: React.FC<SectionListProps> = ({
+  studioUrlPrefix,
+  showHiddenOnly,
+}) => {
   const dispatch = useAppDispatch();
   const [sectionToDelete, setSectionToDelete] = useState<number>(NO_SECTION_ID);
   const sections: SectionMap = useAppSelector(
     state => state.teacherSections.sections
   );
 
-  const [sortableSectionIds, setSortableSectionIds] = useState<number[]>(
-    Object.entries(sections)
-      .filter(([_id, section]) => section.participantType === 'student')
-      .filter(([_id, section]) => !section.hidden)
-      .map(([id, _section]) => Number(id))
+  const reduxSectionOrder: number[] = useAppSelector(
+    state => state.teacherSections.sectionOrder
   );
+
+  const sectionsAreLoaded = useAppSelector(
+    state => state.teacherSections.asyncLoadComplete
+  );
+
+  const [sortableSectionIds, setSortableSectionIds] =
+    useState<number[]>(reduxSectionOrder);
 
   // Hidden sections are not sortable
   const hiddenSectionIds = React.useMemo(
@@ -77,19 +94,13 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
 
   // Update sortableSectionIds when sections change
   React.useEffect(() => {
-    const filteredSections = Object.entries(sections)
-      .filter(([_id, section]) => section.participantType === 'student')
-      .filter(([_id, section]) => !section.hidden)
-      .map(([id, _section]) => Number(id));
+    const newSectionOrder = getFilteredSectionOrderIds(
+      Object.values(sections),
+      sortableSectionIds
+    );
 
-    const sectionsToAdd = _.difference(filteredSections, sortableSectionIds);
-    const sectionsToRemove = _.difference(sortableSectionIds, filteredSections);
-
-    if (sectionsToAdd.length > 0 || sectionsToRemove.length > 0) {
-      setSortableSectionIds(sectionIds => [
-        ...sectionsToAdd,
-        ...sectionIds.filter(id => !sectionsToRemove.includes(id)),
-      ]);
+    if (_.xor(newSectionOrder, sortableSectionIds).length > 0) {
+      setSortableSectionIds(newSectionOrder);
     }
     // We do not need to add/remove sections when the section order changes, only when the sections from redux change
     // This also prevents flickering when archiving sections
@@ -116,9 +127,14 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
   );
 
   React.useEffect(() => {
-    sortableSectionIds;
-    // TODO(lfm): Update the order of sections in the backend
-  }, [sortableSectionIds]);
+    if (!_.isEqual(sortableSectionIds, reduxSectionOrder)) {
+      dispatch(setSectionOrder(sortableSectionIds, true));
+      // Update the backend with the new order
+      // This is done in `setSectionOrder` only when there are sections to be added or removed.
+      // We need to save manually here because the order is different.
+      saveSectionOrder(sortableSectionIds);
+    }
+  }, [sortableSectionIds, dispatch, reduxSectionOrder]);
 
   const onDeleteClickCallback = (sectionId: number) => {
     setSectionToDelete(sectionId);
@@ -135,7 +151,6 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
         setSectionToDelete(NO_SECTION_ID);
       })
       .catch((error: Error) => {
-        alert(i18n.unexpectedError());
         console.error(error);
         setSectionToDelete(NO_SECTION_ID);
       });
@@ -146,31 +161,39 @@ export const SectionList: React.FC<SectionListProps> = ({showHiddenOnly}) => {
     : sortableSectionIds;
 
   return (
-    <div>
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCenter}
-        onDragEnd={handleDragEnd}
-        modifiers={[restrictToVerticalAxis, restrictToParentElement]}
-      >
-        <SortableContext
-          items={sortableSectionIds}
-          strategy={verticalListSortingStrategy}
-        >
-          <ol className={styles.sectionList}>
-            {sectionIdsToShow.map(id =>
-              sections[id] ? (
-                <SectionCard
-                  id={id}
-                  key={id}
-                  section={sections[id]}
-                  onDeleteClickCallback={onDeleteClickCallback}
-                />
-              ) : null
-            )}
-          </ol>
-        </SortableContext>
-      </DndContext>
+    <div id="ui-test-section-list">
+      {sectionsAreLoaded ? (
+        <>
+          <CoteacherInviteNotification isForPl={false} destructiveLoad={true} />
+          <DndContext
+            sensors={sensors}
+            collisionDetection={closestCenter}
+            onDragEnd={handleDragEnd}
+            modifiers={[restrictToVerticalAxis, restrictToParentElement]}
+          >
+            <SortableContext
+              items={sortableSectionIds}
+              strategy={verticalListSortingStrategy}
+            >
+              <ol className={styles.sectionList}>
+                {sectionIdsToShow.map(id =>
+                  sections[id] ? (
+                    <SectionCard
+                      id={id}
+                      key={id}
+                      section={sections[id]}
+                      onDeleteClickCallback={onDeleteClickCallback}
+                      studioUrlPrefix={studioUrlPrefix}
+                    />
+                  ) : null
+                )}
+              </ol>
+            </SortableContext>
+          </DndContext>
+        </>
+      ) : (
+        <Spinner size="large" />
+      )}
       {sectionToDelete > NO_SECTION_ID && (
         <SectionDeleteModal
           onCloseCallback={onCloseDeleteDialog}

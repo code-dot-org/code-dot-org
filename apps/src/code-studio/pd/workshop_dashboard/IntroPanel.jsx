@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import moment from 'moment';
+import moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
@@ -16,6 +16,7 @@ export default class IntroPanel extends React.Component {
   static propTypes = {
     workshopId: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     workshopState: PropTypes.string,
+    workshopTimezone: PropTypes.string,
     sessions: PropTypes.array,
     isAccountRequiredForAttendance: PropTypes.bool,
     isWorkshopAdmin: PropTypes.bool,
@@ -145,6 +146,7 @@ export default class IntroPanel extends React.Component {
     const {
       workshopId,
       workshopState,
+      workshopTimezone,
       sessions,
       isAccountRequiredForAttendance,
       isWorkshopAdmin,
@@ -160,9 +162,11 @@ export default class IntroPanel extends React.Component {
 
     switch (workshopState) {
       case 'Not Started': {
-        const firstSessionStart = sessions[0].start;
+        const firstSessionStart = sessions[0]?.start;
         let buttonClass = null;
-        if (moment().isSame(moment.utc(firstSessionStart), 'day')) {
+        if (
+          moment().isSame(moment.tz(firstSessionStart, workshopTimezone), 'day')
+        ) {
           buttonClass = 'btn-orange';
         }
         contents = (

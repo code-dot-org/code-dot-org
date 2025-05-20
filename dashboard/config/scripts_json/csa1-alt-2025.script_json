@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSA",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-24 03:39:36 UTC",
+    "serialized_at": "2025-05-13 19:54:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -65,14 +66,14 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-6",
       "user_facing": true,
       "position": 4,
       "properties": {
-        "display_name": "Alternate Lessons"
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa1-alt-2025"
       }
     },
@@ -92,7 +93,7 @@
   "lessons": [
     {
       "key": "Welcome to CSA",
-      "name": "Welcome to CSA",
+      "name": "Lesson 1: Welcome to CSA",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -110,7 +111,7 @@
     },
     {
       "key": "lesson-25",
-      "name": "Introduction to Algorithms",
+      "name": "Lesson 2: Introduction to Algorithms",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -128,7 +129,7 @@
     },
     {
       "key": "Java Lab",
-      "name": "Java Lab",
+      "name": "Lesson 3: Java Lab",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -146,7 +147,7 @@
     },
     {
       "key": "Classes and Objects",
-      "name": "Classes and Objects",
+      "name": "Lesson 4: Classes and Objects",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -164,7 +165,7 @@
     },
     {
       "key": "Instantiating Objects",
-      "name": "Instantiating Objects",
+      "name": "Lesson 5: Instantiating Objects",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -182,7 +183,7 @@
     },
     {
       "key": "Methods",
-      "name": "Methods",
+      "name": "Lesson 6: Methods",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -200,7 +201,7 @@
     },
     {
       "key": "Methods with Parameters",
-      "name": "Methods with Parameters",
+      "name": "Lesson 7: Methods with Parameters",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -218,7 +219,7 @@
     },
     {
       "key": "Inheritance",
-      "name": "Inheritance",
+      "name": "Lesson 8: Inheritance",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -236,7 +237,7 @@
     },
     {
       "key": "Writing Methods",
-      "name": "Writing Methods",
+      "name": "Lesson 9: Writing Methods",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -254,7 +255,7 @@
     },
     {
       "key": "lesson-27",
-      "name": "Programming Style and Feedback",
+      "name": "Lesson 10: Programming Style and Feedback",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -272,7 +273,7 @@
     },
     {
       "key": "Debugging Strategies",
-      "name": "Debugging Strategies",
+      "name": "Lesson 11: Debugging Strategies",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -290,7 +291,7 @@
     },
     {
       "key": "Variables",
-      "name": "Variables",
+      "name": "Lesson 12: Variables",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -309,7 +310,7 @@
     },
     {
       "key": "Operators and Expressions",
-      "name": "Operators and Expressions",
+      "name": "Lesson 13: Operators and Expressions",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -328,7 +329,7 @@
     },
     {
       "key": "Parameterized Constructors",
-      "name": "Parameterized Constructors",
+      "name": "Lesson 14: Parameterized Constructors",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -347,7 +348,7 @@
     },
     {
       "key": "User Input",
-      "name": "User Input",
+      "name": "Lesson 15: User Input",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -365,7 +366,7 @@
     },
     {
       "key": "Printing Objects",
-      "name": "Printing Objects",
+      "name": "Lesson 16: Printing Objects",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -384,7 +385,7 @@
     },
     {
       "key": "lesson-26",
-      "name": "Casting and Range of Variables",
+      "name": "Lesson 17: Casting and Range of Variables",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
@@ -402,7 +403,7 @@
     },
     {
       "key": "Overloaded Methods",
-      "name": "Overloaded Methods",
+      "name": "Lesson 18: Overloaded Methods",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
@@ -421,7 +422,7 @@
     },
     {
       "key": "The Math Class",
-      "name": "The Math Class",
+      "name": "Lesson 19: The Math Class",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
@@ -440,7 +441,7 @@
     },
     {
       "key": "Random",
-      "name": "Random",
+      "name": "Lesson 20: Random",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
@@ -459,7 +460,7 @@
     },
     {
       "key": "Constructors and Inheritance",
-      "name": "Constructors and Inheritance",
+      "name": "Lesson 21: Constructors and Inheritance",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
@@ -478,7 +479,7 @@
     },
     {
       "key": "Substrings",
-      "name": "Substrings",
+      "name": "Lesson 22: Substrings",
       "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
@@ -497,7 +498,7 @@
     },
     {
       "key": "Comparing Strings",
-      "name": "Comparing Strings",
+      "name": "Lesson 23: Comparing Strings",
       "absolute_position": 23,
       "lockable": false,
       "has_lesson_plan": true,
@@ -516,7 +517,7 @@
     },
     {
       "key": "Asphalt Art Project",
-      "name": "Asphalt Art Project",
+      "name": "Project 1a: Asphalt Art Project",
       "absolute_position": 24,
       "lockable": false,
       "has_lesson_plan": true,
@@ -534,12 +535,30 @@
       }
     },
     {
-      "key": "SpiralPainter FRQ",
-      "name": "SpiralPainter FRQ",
+      "key": "Asphalt Art Project [1-Day Version]",
+      "name": "Project 1b: Asphalt Art Project [1-Day Version]",
       "absolute_position": 25,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 25,
+      "properties": {
+        "assessment": true,
+        "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
+        "preparation": "* Review project requirements and rubric\n* Print copies of the Asphalt Art Project Planning Guide handout (one for each student)"
+      },
+      "seeding_key": {
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "SpiralPainter FRQ",
+      "name": "FRQ 1: SpiralPainter FRQ",
+      "absolute_position": 26,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 26,
       "properties": {
         "overview": "**How will I use what I know about classes, objects, and methods to answer a Free Response Question?**\n\nStudents are introduced to AP CSA Free Response Questions (FRQs) and practice decomposition and problem-solving skills to develop solutions to a mock FRQ. Students use annotation strategies to identify the key components of the problem and validate their solutions using Scoring Guidelines.",
         "preparation": "* Print the SpiralPainter FRQ Stations resource\n* Cut out the manipulatives in the SpiralPainter FRQ Stations resource *or* have students make a copy of the SpiralPainter FRQ Digital Manipulatives\n* Create stations around the classroom as indicated on the SpiralPainter FRQ Stations resource\n* (Optional) Gather a blue, orange, and pink colored pencil or marker for each student",
@@ -552,30 +571,27 @@
       }
     },
     {
-      "key": "Asphalt Art Project [1-Day Version]",
-      "name": "Asphalt Art Project [1-Day Version]",
-      "absolute_position": 26,
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 27,
       "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 26,
+      "has_lesson_plan": false,
+      "relative_position": 27,
       "properties": {
-        "assessment": true,
-        "overview": "​​**What do I want to represent using programming and art?**\n\nFor this project, students use the skills they have developed to create asphalt art in The Neighborhood. Students choose a theme or concept for their asphalt art that represents something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their designs.",
-        "preparation": "* Review project requirements and rubric\n* Print copies of the Asphalt Art Project Planning Guide handout (one for each student)"
       },
       "seeding_key": {
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa1-alt-2025"
       }
     },
     {
       "key": "Sandbox: The Neighborhood",
       "name": "Sandbox: The Neighborhood",
-      "absolute_position": 27,
+      "absolute_position": 28,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 27,
+      "relative_position": 28,
       "properties": {
       },
       "seeding_key": {
@@ -587,10 +603,10 @@
     {
       "key": "Sandbox: Console",
       "name": "Sandbox: Console",
-      "absolute_position": 28,
+      "absolute_position": 29,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 28,
+      "relative_position": 29,
       "properties": {
       },
       "seeding_key": {
@@ -602,10 +618,10 @@
     {
       "key": "Sandbox: The Theater",
       "name": "Sandbox: The Theater",
-      "absolute_position": 29,
+      "absolute_position": 30,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 29,
+      "relative_position": 30,
       "properties": {
       },
       "seeding_key": {
@@ -1638,6 +1654,48 @@
       }
     },
     {
+      "key": "87feb1b7-f538-41be-9c36-3b03ea0580da",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "87feb1b7-f538-41be-9c36-3b03ea0580da",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "7d06505a-31d9-4f59-8b1f-5db1316530b4",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
+      "key": "59bace8a-792a-410b-b0ff-01bb3efa4c44",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "59bace8a-792a-410b-b0ff-01bb3efa4c44",
+        "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa1-alt-2025"
+      }
+    },
+    {
       "key": "7cbe8c50-cb5c-493f-9ebf-d3cfe151cabc",
       "position": 1,
       "properties": {
@@ -1680,44 +1738,14 @@
       }
     },
     {
-      "key": "87feb1b7-f538-41be-9c36-3b03ea0580da",
+      "key": "2f43564a-1230-463c-848c-c83b500c92c2",
       "position": 1,
       "properties": {
-        "duration": 10,
-        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "87feb1b7-f538-41be-9c36-3b03ea0580da",
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-alt-2025"
-      }
-    },
-    {
-      "key": "7d06505a-31d9-4f59-8b1f-5db1316530b4",
-      "position": 2,
-      "properties": {
-        "duration": 30,
-        "name": "Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7d06505a-31d9-4f59-8b1f-5db1316530b4",
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa1-alt-2025"
-      }
-    },
-    {
-      "key": "59bace8a-792a-410b-b0ff-01bb3efa4c44",
-      "position": 3,
-      "properties": {
-        "duration": 5,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "59bace8a-792a-410b-b0ff-01bb3efa4c44",
-        "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_activity.key": "2f43564a-1230-463c-848c-c83b500c92c2",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "csa1-alt-2025"
       }
     },
@@ -2847,7 +2875,7 @@
       "key": "cc7e2519-ec69-4cf3-99e8-2a1bcd67e5c1",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses to The Painter handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce UML diagrams.\n\n**Do This:** Explain the components of the `Painter` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the `Painter` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***attribute***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***behavior***",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce UML diagrams.\n\n**Do This:** Explain the components of the `Painter` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the `Painter` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***attribute***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***behavior***",
         "tips": [
           {
             "type": "teachingTip",
@@ -2874,7 +2902,7 @@
       "key": "af6669b1-b080-4d96-b7d0-255d9eecc3d4",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on what you have learned about the `Painter` class, what are some things you could do with a `Painter` object in The Neighborhood?*\n\n**Discussion Goal:** Students suggest using a `Painter` object to navigate a maze or paint designs or murals. Students may share examples of methods they saw in the `Painter` class and suggest how they might use them."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Now that you’ve explored the Painter class and its methods, what are some creative or problem-solving tasks you could use a Painter object to accomplish in The Neighborhood?*\n\n**Discussion Goal:** Students brainstorm creative or problem-solving tasks that a Painter object could complete in The Neighborhood, such as navigating a maze or painting a mural. Students reference methods they explored in the Painter class and consider how those methods could be combined to achieve more complex outcomes."
       },
       "seeding_key": {
         "activity_section.key": "af6669b1-b080-4d96-b7d0-255d9eecc3d4",
@@ -2886,7 +2914,7 @@
       "position": 1,
       "properties": {
         "description": "Classes and objects are key components of a Java program. With classes, we can represent all types of real or imagined objects with attributes and behaviors that are important to our programs. Let's take a moment to review what we have learned so far.",
-        "name": "Question Stems",
+        "name": "Glows, Grows, Want-to-Knows",
         "remarks": true
       },
       "seeding_key": {
@@ -2898,7 +2926,7 @@
       "key": "f6fb0f22-b36b-4008-aaca-bb7d58dc7c8a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What is something you understand well about classes, objects, attributes, or behaviors?*\n- *What is something you’re still unsure about or want more practice with?*\n- *What is a question you still have about how classes and objects work in Java?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on their understanding of classes and objects by identifying concepts they feel confident about and areas where they need more practice. Students also surface lingering questions or misconceptions, supporting peer-to-peer clarification and reinforcing foundational object-oriented programming concepts.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2973,7 +3001,7 @@
       "key": "cf56a07a-b9ca-4916-b5c3-62adf85c5a6a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think about programs and apps you have used before. What classes do you think might make up those programs?*\n\n**Discussion Goal:** Students share examples of programs and apps they use, such as a social media app. Students suggest classes that might make up those programs and apps, such as a `User` or `Post` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompt. \n- Apps and programs we use every day are built using classes—for example, Instagram might include a User class, a Post class, or a Comment class.\n  - *What is an app you use often?*\n  - *What is one class that might be part of that app, and what could it do?*\n\n\n**Discussion Goal:** Students share examples of programs and apps they use, such as a social media app. Students suggest classes that might make up those programs and apps, such as a `User` or `Post` class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3158,7 +3186,7 @@
       "key": "71da91c7-b6c8-4fb4-93d4-4ff9fc71b6d5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the difference between a class and an object?*\n* *What parts of this lesson were similar to things you have encountered in your life?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students explain the difference between a class and an object and connect the house example from the warm up activity. Students suggest examples of things they have encountered similar to a class and objects created from the class. Students share concepts from the lesson that they are confident about and concepts they might be confused about.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the difference between a class and an object?*\n* *What’s something in today’s lesson that helped you understand how Java works a little better?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students explain the difference between a class and an object and connect the house example from the warm up activity. Students suggest examples of things they have encountered similar to a class and objects created from the class. Students share concepts from the lesson that they are confident about and concepts they might be confused about.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4259,7 +4287,7 @@
       "key": "ea00adb8-ded5-4591-a39a-06d3f7240f6f",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***void***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that a subclass can access methods in the superclass, but a superclass cannot access methods in the subclass."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***void***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that a subclass can access methods in the superclass, but a superclass cannot access methods in the subclass."
       },
       "seeding_key": {
         "activity_section.key": "ea00adb8-ded5-4591-a39a-06d3f7240f6f",
@@ -7374,7 +7402,7 @@
       "key": "b894a494-1641-4e0a-ae78-afb86c6a7256",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to recall how subclasses inherit the attributes and methods of the superclass and explain that constructors are not inherited.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think we could assign values to the instance variables declared in the superclass from a subclass constructor?*\n\n**Discussion Goal:** Students suggest ways to assign the values to the instance variables declared in the superclass and may wonder if there is a keyword similar to the `this` keyword that they can use to achieve this.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to recall how subclasses inherit the attributes and methods of the superclass and explain that constructors are not inherited.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If a subclass inherits instance variables from the superclass but not its constructor, what problems might happen when we try to create a subclass object?*\n\n**Discussion Goal:** Students recognize that constructors are used to initialize instance variables. Without inheriting constructors, they may reason that subclass objects could be created without necessary values, leading to incorrect or incomplete objects. Some students might suggest that the subclass would need its own way to pass values to the superclass.",
         "name": "Revisiting Inheritance",
         "tips": [
           {
@@ -7543,7 +7571,7 @@
       "key": "5a2e72b0-e965-42ff-878e-f4b2998d6f12",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Designate four corners or areas in the classroom for each constructor signature. Have students go to the corner they think is the correct constructor for the constructor call.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the correct constructor signature. Have students work with the students at their corner to develop an explanation for why their corner is correct or incorrect. Ask students to share their explanations with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Designate four corners or areas in the classroom for each possible explanation of why we use `super()` in a subclass constructor. Have students go to the corner they believe is correct.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Once in their corners, have students work together to justify their choice. Encourage them to prepare a short explanation of why their answer is correct — or why other options are incorrect — and share out with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Constructor Corners",
         "tips": [
           {
@@ -8514,138 +8542,6 @@
       }
     },
     {
-      "key": "855e955f-200c-40d8-9d3c-107794fe79d9",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Describe one new thing you have learned about Java through this course.*\n\n**Discussion Goal:** Students share concepts and skills they have learned in this unit.",
-        "name": "Introduction to FRQs",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas on the Unit 1 Guide first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "855e955f-200c-40d8-9d3c-107794fe79d9",
-        "lesson_activity.key": "7cbe8c50-cb5c-493f-9ebf-d3cfe151cabc"
-      }
-    },
-    {
-      "key": "825c5cbe-d93f-42db-a744-c4c88d791b68",
-      "position": 2,
-      "properties": {
-        "description": "We will learn about Free Response Questions, FRQs. We will practice an FRQ at the end of each unit to apply the programming skills you learn and solve problems similar to the FRQs on the AP CSA Exam.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "825c5cbe-d93f-42db-a744-c4c88d791b68",
-        "lesson_activity.key": "7cbe8c50-cb5c-493f-9ebf-d3cfe151cabc"
-      }
-    },
-    {
-      "key": "e9d8fdb4-9575-43dc-b929-be3456656ae8",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the structure of an FRQ.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Upcoming units discuss the structure of the AP CSA Exam and FRQs in detail. If students ask questions about the AP CSA Exam, remind them that it is a long way off! Practicing several FRQs as a class better equips students to discuss the AP CSA Exam."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "e9d8fdb4-9575-43dc-b929-be3456656ae8",
-        "lesson_activity.key": "7cbe8c50-cb5c-493f-9ebf-d3cfe151cabc"
-      }
-    },
-    {
-      "key": "f5132b91-60e3-4aeb-b850-e29fb5275743",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the SpiralPainter FRQ handout.\n\n**Do This:** Explain the steps for the activity.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Planning\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Around the World\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the first page of the SpiralPainter FRQ handout. Have students annotate the question at the bottom of the page based on the annotation guide.",
-        "duration": "10",
-        "name": "FRQ Planning"
-      },
-      "seeding_key": {
-        "activity_section.key": "f5132b91-60e3-4aeb-b850-e29fb5275743",
-        "lesson_activity.key": "5a0d59c7-b2f1-4b68-a4fa-099fc29c86f5"
-      }
-    },
-    {
-      "key": "9babf434-6dbb-4918-adeb-12fd5288eafb",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the problem did you highlight pink or underline?*\n* *Can someone help explain these words or concepts?*\n\n**Discussion Goal:** Students share words and concepts they didn't understand and discuss their meanings.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the problem did you highlight blue or star?*\n* *Which parts did you highlight orange or box?*\n* *How do you expect you will use these pieces of information while coding?*\n\n**Discussion Goal:** Students identify components of the problem that will help develop the solution."
-      },
-      "seeding_key": {
-        "activity_section.key": "9babf434-6dbb-4918-adeb-12fd5288eafb",
-        "lesson_activity.key": "5a0d59c7-b2f1-4b68-a4fa-099fc29c86f5"
-      }
-    },
-    {
-      "key": "12a1476a-4113-444a-bfac-2e81f248df98",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Around the World activity with their partners.",
-        "duration": "20",
-        "name": "Around the World",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If there are fewer than six pairs, students may need to move on to complete an additional section before finding a group for a signature.\n\nIf students are stuck on a station, suggest:\n* Writing comments for each \"Do this\" item.\n* Returning to the manipulatives and tracing through their pseudocode again.\n\nDifferentiation Suggestions:\n* Tell pairs who need more time to obtain two signatures instead of three. Have these students focus on completing the constructor and one of the methods.\n* Encourage those who finish early to serve as reviewers."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "12a1476a-4113-444a-bfac-2e81f248df98",
-        "lesson_activity.key": "5a0d59c7-b2f1-4b68-a4fa-099fc29c86f5"
-      }
-    },
-    {
-      "key": "c2026b28-5e66-488f-9e38-3376667a74b3",
-      "position": 4,
-      "properties": {
-        "description": "Great work, everyone! Let's take a look at one potential solution to this problem. You might have a different approach, and that's ok! There are often multiple ways to achieve the same goal.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "c2026b28-5e66-488f-9e38-3376667a74b3",
-        "lesson_activity.key": "5a0d59c7-b2f1-4b68-a4fa-099fc29c86f5"
-      }
-    },
-    {
-      "key": "ccf7e678-4fe9-40b0-90cf-fe562c1815ac",
-      "position": 5,
-      "properties": {
-        "description": "**Do This:** Discuss possible solutions for each station:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Station A solution\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Station B solution\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Station C solution",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "The SpiralPainter FRQ handout can be used as an optional formative assessment."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "ccf7e678-4fe9-40b0-90cf-fe562c1815ac",
-        "lesson_activity.key": "5a0d59c7-b2f1-4b68-a4fa-099fc29c86f5"
-      }
-    },
-    {
-      "key": "87a51db2-a496-4eef-b75d-9ea78bde6681",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your first impression of an FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their first impressions of an FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
-        "duration": "10",
-        "name": "Closing the Loop"
-      },
-      "seeding_key": {
-        "activity_section.key": "87a51db2-a496-4eef-b75d-9ea78bde6681",
-        "lesson_activity.key": "cd90ff7d-e0b6-48f9-a3e4-3e443a83c271"
-      }
-    },
-    {
       "key": "e8dcc45d-7644-415e-b0f7-35d453811ef5",
       "position": 1,
       "properties": {
@@ -8782,6 +8678,160 @@
       "seeding_key": {
         "activity_section.key": "dfaa5a2a-c4a7-4932-a408-62101d7f0fac",
         "lesson_activity.key": "59bace8a-792a-410b-b0ff-01bb3efa4c44"
+      }
+    },
+    {
+      "key": "855e955f-200c-40d8-9d3c-107794fe79d9",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Describe one new thing you have learned about Java through this course.*\n\n**Discussion Goal:** Students share concepts and skills they have learned in this unit.",
+        "name": "Introduction to FRQs",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use the Retrieve-Pair-Share strategy to facilitate this discussion by directing students to write down their thoughts and ideas on the Unit 1 Guide first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "855e955f-200c-40d8-9d3c-107794fe79d9",
+        "lesson_activity.key": "7cbe8c50-cb5c-493f-9ebf-d3cfe151cabc"
+      }
+    },
+    {
+      "key": "825c5cbe-d93f-42db-a744-c4c88d791b68",
+      "position": 2,
+      "properties": {
+        "description": "We will learn about Free Response Questions, FRQs. We will practice an FRQ at the end of each unit to apply the programming skills you learn and solve problems similar to the FRQs on the AP CSA Exam.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "825c5cbe-d93f-42db-a744-c4c88d791b68",
+        "lesson_activity.key": "7cbe8c50-cb5c-493f-9ebf-d3cfe151cabc"
+      }
+    },
+    {
+      "key": "e9d8fdb4-9575-43dc-b929-be3456656ae8",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the structure of an FRQ.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Upcoming units discuss the structure of the AP CSA Exam and FRQs in detail. If students ask questions about the AP CSA Exam, remind them that it is a long way off! Practicing several FRQs as a class better equips students to discuss the AP CSA Exam."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e9d8fdb4-9575-43dc-b929-be3456656ae8",
+        "lesson_activity.key": "7cbe8c50-cb5c-493f-9ebf-d3cfe151cabc"
+      }
+    },
+    {
+      "key": "f5132b91-60e3-4aeb-b850-e29fb5275743",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives and the Question of the Day.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the SpiralPainter FRQ handout.\n\n**Do This:** Explain the steps for the activity.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Planning\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Around the World\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the first page of the SpiralPainter FRQ handout. Have students annotate the question at the bottom of the page based on the annotation guide.",
+        "duration": "10",
+        "name": "FRQ Planning"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5132b91-60e3-4aeb-b850-e29fb5275743",
+        "lesson_activity.key": "5a0d59c7-b2f1-4b68-a4fa-099fc29c86f5"
+      }
+    },
+    {
+      "key": "9babf434-6dbb-4918-adeb-12fd5288eafb",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the problem did you highlight pink or underline?*\n* *Can someone help explain these words or concepts?*\n\n**Discussion Goal:** Students share words and concepts they didn't understand and discuss their meanings.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the problem did you highlight blue or star?*\n* *Which parts did you highlight orange or box?*\n* *How do you expect you will use these pieces of information while coding?*\n\n**Discussion Goal:** Students identify components of the problem that will help develop the solution."
+      },
+      "seeding_key": {
+        "activity_section.key": "9babf434-6dbb-4918-adeb-12fd5288eafb",
+        "lesson_activity.key": "5a0d59c7-b2f1-4b68-a4fa-099fc29c86f5"
+      }
+    },
+    {
+      "key": "12a1476a-4113-444a-bfac-2e81f248df98",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Around the World activity with their partners.",
+        "duration": "20",
+        "name": "Around the World",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If there are fewer than six pairs, students may need to move on to complete an additional section before finding a group for a signature.\n\nIf students are stuck on a station, suggest:\n* Writing comments for each \"Do this\" item.\n* Returning to the manipulatives and tracing through their pseudocode again.\n\nDifferentiation Suggestions:\n* Tell pairs who need more time to obtain two signatures instead of three. Have these students focus on completing the constructor and one of the methods.\n* Encourage those who finish early to serve as reviewers."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "12a1476a-4113-444a-bfac-2e81f248df98",
+        "lesson_activity.key": "5a0d59c7-b2f1-4b68-a4fa-099fc29c86f5"
+      }
+    },
+    {
+      "key": "c2026b28-5e66-488f-9e38-3376667a74b3",
+      "position": 4,
+      "properties": {
+        "description": "Great work, everyone! Let's take a look at one potential solution to this problem. You might have a different approach, and that's ok! There are often multiple ways to achieve the same goal.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c2026b28-5e66-488f-9e38-3376667a74b3",
+        "lesson_activity.key": "5a0d59c7-b2f1-4b68-a4fa-099fc29c86f5"
+      }
+    },
+    {
+      "key": "ccf7e678-4fe9-40b0-90cf-fe562c1815ac",
+      "position": 5,
+      "properties": {
+        "description": "**Do This:** Discuss possible solutions for each station:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Station A solution\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Station B solution\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Station C solution",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "The SpiralPainter FRQ handout can be used as an optional formative assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ccf7e678-4fe9-40b0-90cf-fe562c1815ac",
+        "lesson_activity.key": "5a0d59c7-b2f1-4b68-a4fa-099fc29c86f5"
+      }
+    },
+    {
+      "key": "87a51db2-a496-4eef-b75d-9ea78bde6681",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your first impression of an FRQ?*\n* *What knowledge and skills did you use that you learned in this unit?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students share their first impressions of an FRQ and connect the concepts they learned in the unit to those assessed. Students share what they were confident about and any areas they need additional practice.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson and the Question of the Day.",
+        "duration": "10",
+        "name": "Closing the Loop"
+      },
+      "seeding_key": {
+        "activity_section.key": "87a51db2-a496-4eef-b75d-9ea78bde6681",
+        "lesson_activity.key": "cd90ff7d-e0b6-48f9-a3e4-3e443a83c271"
+      }
+    },
+    {
+      "key": "1af821dd-ed84-402d-9564-459f804af9f0",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "1af821dd-ed84-402d-9564-459f804af9f0",
+        "lesson_activity.key": "2f43564a-1230-463c-848c-c83b500c92c2"
+      }
+    },
+    {
+      "key": "e66fe051-41a8-4f07-b08a-52efac6f9396",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "e66fe051-41a8-4f07-b08a-52efac6f9396",
+        "lesson_activity.key": "2f43564a-1230-463c-848c-c83b500c92c2"
       }
     },
     {
@@ -9210,14 +9260,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSA U1L4-L2-2_alt-2025"
+          "CSA U1L4-L2-2_revised2025"
         ],
         "progression": "Investigate and Modify: Painter Class Methods"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA U1L4-L2-2_alt-2025"
+          "CSA U1L4-L2-2_revised2025"
         ],
         "lesson.key": "Methods",
         "lesson_group.key": "lessonGroup-18",
@@ -9225,7 +9275,7 @@
         "activity_section.key": "efed4d69-39bb-4ce2-b1ae-cf6b6808d826"
       },
       "level_keys": [
-        "CSA U1L4-L2-2_alt-2025"
+        "CSA U1L4-L2-2_revised2025"
       ]
     },
     {
@@ -10510,14 +10560,14 @@
       "assessment": true,
       "properties": {
         "level_keys": [
-          "CSA-UserInput-L5_pilot_alt-2025"
+          "CSA-UserInput-L5_alt-revised-2025"
         ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSA-UserInput-L5_pilot_alt-2025"
+          "CSA-UserInput-L5_alt-revised-2025"
         ],
         "lesson.key": "User Input",
         "lesson_group.key": "lessonGroup-18",
@@ -10525,7 +10575,7 @@
         "activity_section.key": "1c3450ba-a02d-48c5-a72c-0912c418850e"
       },
       "level_keys": [
-        "CSA-UserInput-L5_pilot_alt-2025"
+        "CSA-UserInput-L5_alt-revised-2025"
       ]
     },
     {
@@ -12059,6 +12109,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1 Asphalt Art Project_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -12081,12 +12134,15 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_linked_page_csa1-project2-2025"
+        ],
         "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa1_2025-cb-alt"
+          "student-eou-survey_linked_page_csa1-project2-2025"
         ],
         "lesson.key": "Asphalt Art Project",
         "lesson_group.key": "lessonGroup-2",
@@ -12094,7 +12150,7 @@
         "activity_section.key": "ecfd1fdc-18fd-47f3-a5c5-84a68f60f45a"
       },
       "level_keys": [
-        "Student End of Unit Survey_csa1_2025-cb-alt"
+        "student-eou-survey_linked_page_csa1-project2-2025"
       ]
     },
     {
@@ -12103,6 +12159,34 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "student-eou-survey_csa1-alt-survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csa1-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "1af821dd-ed84-402d-9564-459f804af9f0"
+      },
+      "level_keys": [
+        "student-eou-survey_csa1-alt-survey-2025"
+      ]
+    },
+    {
+      "chapter": 133,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025_2025-cb-alt"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -12111,7 +12195,7 @@
           "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025_2025-cb-alt"
         ],
         "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-alt-2025",
         "activity_section.key": "7faaa623-07ab-433d-b1b7-a52f481487c6"
       },
@@ -12120,11 +12204,14 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 134,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2025-cb-alt"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -12142,11 +12229,14 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 135,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2025-cb-alt"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -12164,11 +12254,14 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 136,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2025-cb-alt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -12185,11 +12278,14 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 137,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2025-cb-alt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -12389,9 +12485,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA U1L4-L2-2_alt-2025",
+        "level.key": "CSA U1L4-L2-2_revised2025",
         "script_level.level_keys": [
-          "CSA U1L4-L2-2_alt-2025"
+          "CSA U1L4-L2-2_revised2025"
         ],
         "lesson.key": "Methods",
         "lesson_group.key": "lessonGroup-18",
@@ -13013,9 +13109,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSA-UserInput-L5_pilot_alt-2025",
+        "level.key": "CSA-UserInput-L5_alt-revised-2025",
         "script_level.level_keys": [
-          "CSA-UserInput-L5_pilot_alt-2025"
+          "CSA-UserInput-L5_alt-revised-2025"
         ],
         "lesson.key": "User Input",
         "lesson_group.key": "lessonGroup-18",
@@ -13769,9 +13865,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csa1_2025-cb-alt",
+        "level.key": "student-eou-survey_linked_page_csa1-project2-2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csa1_2025-cb-alt"
+          "student-eou-survey_linked_page_csa1-project2-2025"
         ],
         "lesson.key": "Asphalt Art Project",
         "lesson_group.key": "lessonGroup-2",
@@ -13781,12 +13877,24 @@
     },
     {
       "seeding_key": {
+        "level.key": "student-eou-survey_csa1-alt-survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csa1-alt-survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-alt-2025",
+        "activity_section.key": "1af821dd-ed84-402d-9564-459f804af9f0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025_2025-cb-alt",
         "script_level.level_keys": [
           "CSA U1 Asphalt Art Project 1-Day_pilot_oo2025_2025-cb-alt"
         ],
         "lesson.key": "Asphalt Art Project [1-Day Version]",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa1-alt-2025",
         "activity_section.key": "7faaa623-07ab-433d-b1b7-a52f481487c6"
       }
@@ -14576,7 +14684,7 @@
     },
     {
       "name": "Classes and Objects",
-      "url": "https://docs.google.com/presentation/d/1zShEU4odisNrMf1__90VklwFDu16Rjysvh-IzF1nRtY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/10wz46H66aYhI-sKgC-IX2wRIOD-07WlyanJ-uvUVKZQ/edit?usp=sharing",
       "key": "classes_and_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -14622,7 +14730,7 @@
     },
     {
       "name": "Constructors and Inheritance",
-      "url": "https://docs.google.com/presentation/d/1AG3dZ85l3CdkKpqQt7jpaEPYZnKzBjWsa48NBmhk6Eo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1NeOHiyCvB7qfShvtPHfcy4j544pwR-GzWRO6WGHeYfc/edit#slide=id.g34e6851f59a_0_0",
       "key": "constructors_and_inheritance",
       "properties": {
         "audience": "Verified Teacher",
@@ -14683,7 +14791,7 @@
     },
     {
       "name": "Debugging Strategies",
-      "url": "https://docs.google.com/presentation/d/1JebRe7kA8gc80b3vrG9zrOZjNtezlIINHuMpAzkz4gk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1AZ69fzh8YayY5ikBj5GIsVeCRrzpiUd6IjY0eyEdYBo/edit?usp=sharing",
       "key": "debugging_strategies",
       "properties": {
         "audience": "Verified Teacher",
@@ -14764,7 +14872,7 @@
     },
     {
       "name": "Instantiating Objects",
-      "url": "https://docs.google.com/presentation/d/14S28Ksj3oLnR8GYbnIlWbdY8KqgHTFpPPcHuWW7mQo8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1wpMXFQtl4B5XjokMvkk2VU1RceU_soEnfMO6H8nwYoY/edit?usp=sharing",
       "key": "instantiating_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -15750,7 +15858,7 @@
     },
     {
       "name": "Writing Methods",
-      "url": "https://docs.google.com/presentation/d/1yST_x1sNq2yOtlmWqqXYT80-WxABrUsuu_S_w12VSWM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1h1xVg0eNuke62f1cbQmodYRgpPd7SkFm0j-Z8GKx9_E/edit?usp=sharing",
       "key": "writing_methods",
       "properties": {
         "audience": "Verified Teacher",

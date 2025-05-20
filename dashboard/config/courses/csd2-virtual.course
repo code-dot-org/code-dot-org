@@ -3,6 +3,9 @@
   "script_names": [
     "csd2-virtual"
   ],
+  "original_script_names": [
+    "csd2-virtual"
+  ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",

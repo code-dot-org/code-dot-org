@@ -50,7 +50,8 @@ export interface WorkshopCourseConfig {
 }
 
 export interface WorkshopFormTemplateProps {
-  config: WorkshopCourseConfig;
+  config?: WorkshopCourseConfig;
+  regionalPartnerData?: RegionalPartner[];
 }
 
 export interface Organizer {
@@ -59,17 +60,31 @@ export interface Organizer {
   email: string;
 }
 
+export interface PotentialOrganizer {
+  value: number;
+  label: string;
+}
+
 export type SessionFormat = 'virtual' | 'in_person';
 
 export interface Session {
   id: number;
   start: string;
   end: string;
-  code?: string;
-  location_address?: string;
-  location_name?: string;
-  meeting_link?: string;
-  session_format?: SessionFormat;
+  code: string;
+  location_address?: string | null;
+  location_name?: string | null;
+  meeting_link?: string | null;
+  session_format: SessionFormat;
+}
+
+export interface SessionRequest extends Omit<Session, 'id' | 'code'> {
+  id?: number;
+}
+
+export interface DestroyedSession {
+  id: number;
+  _destroy: true;
 }
 
 export interface SessionFormState {
@@ -81,30 +96,38 @@ export interface SessionFormState {
   locationName: string;
   meetingLink: string;
   format: SessionFormat;
-  sameAsPrevious: boolean;
 }
 
 export interface Workshop {
   id: number;
-  course: string;
-  name: string;
-  capacity: number;
+  course?: string | null;
+  name?: string | null;
+  capacity?: number | null;
   grades?: string[];
-  description?: string;
-  notes?: string;
+  description?: string | null;
+  notes?: string | null;
   suppress_email?: boolean;
-  regional_partner_id?: number;
+  regional_partner_id?: number | null;
   organizer?: Organizer;
-  facilitators?: number[];
-  subject?: string;
-  fee?: string;
-  prereq?: string;
+  facilitators?: Facilitator[];
+  subject?: string | null;
+  fee?: string | null;
+  prereq?: string | null;
   hidden?: boolean;
-  registration_link?: string;
+  registration_link?: string | null;
   sessions: Session[];
   course_offerings?: number[];
-  participant_group_type?: string;
-  time_zone?: string;
+  participant_group_type?: string | null;
+  time_zone?: string | null;
+}
+
+export interface WorkshopRequest
+  extends Omit<Workshop, 'id' | 'facilitators' | 'organizer'> {
+  id?: number;
+  facilitators: number[];
+  organizer_id: number | null;
+  // TODO: ACQ-3081 remove legacyForm2025 flag
+  legacyForm2025?: boolean | null;
 }
 
 export interface CourseOffering {
@@ -124,7 +147,6 @@ export interface Facilitator {
 }
 
 export interface WorkshopFormState {
-  id?: number;
   course: string;
   capacity: string;
   description: string;
@@ -161,7 +183,10 @@ type BasicsKeys =
   | 'description'
   | 'courseOfferings';
 
-type PartnerFacilitatorKeys = 'facilitators' | 'regionalPartnerId';
+type PartnerFacilitatorKeys =
+  | 'facilitators'
+  | 'regionalPartnerId'
+  | 'organizerId';
 
 type AdditionalInfoKeys = 'fee' | 'participantGroupType' | 'notes';
 
@@ -218,14 +243,14 @@ export interface ScheduleProps
 export interface PublishCancelButtonsProps {
   publish: () => void;
   cancel: () => void;
+  loading: boolean;
 }
 
 export type SessionAction =
   | {type: 'ADD_SESSION'}
   | {type: 'UPDATE_SESSION'; payload: Partial<SessionFormState>; id: string}
   | {type: 'SET_SESSIONS'; payload: SessionFormState[]}
-  | {type: 'DELETE_SESSION'; id: string}
-  | {type: 'UPDATE_SESSION_SAME_AS_PREVIOUS'; id: string};
+  | {type: 'DELETE_SESSION'; id: string};
 
 export type WorkshopAction =
   | {type: 'UPDATE_WORKSHOP'; payload: Partial<WorkshopFormState>}

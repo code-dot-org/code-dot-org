@@ -7,6 +7,7 @@
       "content_area": "curriculum_9_12",
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -14,11 +15,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-11 18:25:05 UTC",
+    "serialized_at": "2025-05-13 19:28:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,8 +35,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Parameters and Return Values",
-        "description": "### Unit Philosophy and Pedagogy\n\n\n\n### Major Assessment and Projects\n\n\n### AP Connections\n\n"
+        "display_name": "Parameters and Return Values"
       },
       "seeding_key": {
         "lesson_group.key": "csp_parameters_return_values",
@@ -58,7 +59,7 @@
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Post-Course Survey"
+        "display_name": "End of Unit Survey"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -69,7 +70,7 @@
   "lessons": [
     {
       "key": "Parameters and Return Explore",
-      "name": "Parameters and Return Explore",
+      "name": "Lesson 1: Parameters and Return Explore",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -89,7 +90,7 @@
     },
     {
       "key": "Parameters and Return Investigate",
-      "name": "Parameters and Return Investigate",
+      "name": "Lesson 2: Parameters and Return Investigate",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -108,7 +109,7 @@
     },
     {
       "key": "Parameters and Return Practice",
-      "name": "Parameters and Return Practice",
+      "name": "Lesson 3: Parameters and Return Practice",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -128,7 +129,7 @@
     },
     {
       "key": "Parameters and Return Make",
-      "name": "Parameters and Return Make",
+      "name": "Lesson 4: Parameters and Return Make",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -147,7 +148,7 @@
     },
     {
       "key": "Libraries Explore",
-      "name": "Libraries Explore",
+      "name": "Lesson 5: Libraries Explore",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -167,7 +168,7 @@
     },
     {
       "key": "Libraries Investigate",
-      "name": "Libraries Investigate",
+      "name": "Lesson 6: Libraries Investigate",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -186,7 +187,7 @@
     },
     {
       "key": "Libraries Practice",
-      "name": "Libraries Practice",
+      "name": "Lesson 7: Libraries Practice",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -205,7 +206,7 @@
     },
     {
       "key": "Project   Make a Library Part 1",
-      "name": "Project   Make a Library Part 1",
+      "name": "Lesson 8: Project  - Make a Library Part 1",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -226,7 +227,7 @@
     },
     {
       "key": "Project   Make a Library Part 2",
-      "name": "Project   Make a Library Part 2",
+      "name": "Lesson 9: Project - Make a Library Part 2",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -247,7 +248,7 @@
     },
     {
       "key": "Project   Make a Library Part 3",
-      "name": "Project   Make a Library Part 3",
+      "name": "Lesson 10: Project - Make a Library Part 3",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -268,7 +269,7 @@
     },
     {
       "key": "Assessment Day",
-      "name": "Assessment Day",
+      "name": "Lesson 11: Assessment Day",
       "absolute_position": 11,
       "lockable": true,
       "has_lesson_plan": true,
@@ -287,16 +288,16 @@
       }
     },
     {
-      "key": "CS Principles Post-Course Survey",
-      "name": "CS Principles Post-Course Survey",
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
       "absolute_position": 12,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 12,
       "properties": {
       },
       "seeding_key": {
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csp7-2025"
       }
@@ -862,13 +863,13 @@
       }
     },
     {
-      "key": "57785448-ec42-4d09-a686-1b610bca9834",
+      "key": "fad6f023-ac05-44f9-9fd1-0bda8628c6b1",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "57785448-ec42-4d09-a686-1b610bca9834",
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_activity.key": "fad6f023-ac05-44f9-9fd1-0bda8628c6b1",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csp7-2025"
       }
@@ -2358,7 +2359,7 @@
       "key": "12e32849-bd58-4f43-81f0-b64f84c8ba3e",
       "position": 6,
       "properties": {
-        "progression_name": "End-of-Unit Survey"
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "12e32849-bd58-4f43-81f0-b64f84c8ba3e",
@@ -2416,20 +2417,25 @@
       }
     },
     {
-      "key": "c1330c87-e102-4abc-bde9-b18e3e982a53",
+      "key": "31799d56-135b-4297-a2b7-5e5443412a59",
       "position": 1,
       "properties": {
-        "progression_name": "Post-Course Survey Instructions",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This level appears at the end of every unit. **Please have your students complete this survey at the end of their final unit!** Students only need to take the survey once at the end of the course.\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well where you can provide your own input. You will be notified via email about the teacher survey.\n\n**Instructions for Unlocking the Survey for Students:** [[google doc](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/view)] [[pdf](https://docs.google.com/document/d/1oo-G0h7EKL9kkZvk48PKkSoRMIVCCN1CB57BN5Km-aQ/export?format=pdf)]\n\nIf students click the link and see an error message about the survey being locked, please follow the steps in the instructions above to unlock the survey for students."
-          }
-        ]
+        "progression_name": "End of Unit Survey"
       },
       "seeding_key": {
-        "activity_section.key": "c1330c87-e102-4abc-bde9-b18e3e982a53",
-        "lesson_activity.key": "57785448-ec42-4d09-a686-1b610bca9834"
+        "activity_section.key": "31799d56-135b-4297-a2b7-5e5443412a59",
+        "lesson_activity.key": "fad6f023-ac05-44f9-9fd1-0bda8628c6b1"
+      }
+    },
+    {
+      "key": "c876b741-9a3d-41e7-bcf4-b3a3850b15cd",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "c876b741-9a3d-41e7-bcf4-b3a3850b15cd",
+        "lesson_activity.key": "fad6f023-ac05-44f9-9fd1-0bda8628c6b1"
       }
     }
   ],
@@ -2440,6 +2446,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q1_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2462,6 +2471,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q2_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2484,6 +2496,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q3_2025"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2506,6 +2521,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L1 CFU Return2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2528,6 +2546,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Investigate Rock_2025"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2550,6 +2571,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Investigate Poetry App_2025"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2572,6 +2596,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L2 CSP CFU Param and Return_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2594,6 +2621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 1_2025"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2616,6 +2646,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 2_2025"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2638,6 +2671,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 4_2025"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2660,6 +2696,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 3_2025"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -2682,6 +2721,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L3 Console Choice_2025"
+        ],
         "progression": "Putting It Together: Console"
       },
       "bonus": false,
@@ -2704,6 +2746,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Investigate Calculator App_2025"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -2726,6 +2771,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Practice App 2_2025"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -2748,6 +2796,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Practice App 3_2025"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -2770,6 +2821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L3 App Choice_2025"
+        ],
         "progression": "Putting It Together: Apps"
       },
       "bonus": false,
@@ -2792,6 +2846,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U73 CFU Param Return AP2022_2025"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -2814,6 +2871,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Make RPS App_2025"
+        ],
         "progression": "Try the Rock Paper Scissors App"
       },
       "bonus": false,
@@ -2836,6 +2896,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Make RPS App Project_2025"
+        ],
         "progression": "Make the Rock Paper Scissors App"
       },
       "bonus": false,
@@ -2858,6 +2921,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 L04 Exit Ticket_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2880,6 +2946,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7L6 States App Investigation_2025"
+        ],
         "progression": "States App"
       },
       "bonus": false,
@@ -2902,6 +2971,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7L6 Pigify App Investigation_2025"
+        ],
         "progression": "Pigify App"
       },
       "bonus": false,
@@ -2924,6 +2996,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L6 CSP CFU Libraries_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2946,6 +3021,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 3_2025"
+        ],
         "progression": "Using Libraries"
       },
       "bonus": false,
@@ -2968,6 +3046,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 5_2025"
+        ],
         "progression": "Using Libraries"
       },
       "bonus": false,
@@ -2990,6 +3071,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 2_2025"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -3012,6 +3096,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 1_2025"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -3034,6 +3121,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 4_2025"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -3056,6 +3146,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U77 CFU Libraries AP2022_2025"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -3078,6 +3171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 1_2025"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -3100,6 +3196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 2_2025"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -3122,6 +3221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Test a Library_2025"
+        ],
         "progression": "Test a Classmate's Library"
       },
       "bonus": false,
@@ -3144,6 +3246,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 3_2025"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -3164,14 +3269,14 @@
       "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "progression": "End-of-Unit Survey"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp7_2025"
+          "student-eou-survey_linked_page-csp7_2025"
         ],
         "lesson.key": "Project   Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
@@ -3179,7 +3284,7 @@
         "activity_section.key": "12e32849-bd58-4f43-81f0-b64f84c8ba3e"
       },
       "level_keys": [
-        "Student End of Unit Survey_csp7_2025"
+        "student-eou-survey_linked_page-csp7_2025"
       ]
     },
     {
@@ -3188,6 +3293,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 7 AP-Style Assessment 2022_2025"
+        ],
         "progression": "Unit 7 Exam"
       },
       "bonus": false,
@@ -3208,22 +3316,22 @@
       "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
-        "progression": "Post-Course Survey Instructions"
+        "progression": "End of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_2025"
+          "student-eou-survey_csp7_2025"
         ],
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csp7-2025",
-        "activity_section.key": "c1330c87-e102-4abc-bde9-b18e3e982a53"
+        "activity_section.key": "31799d56-135b-4297-a2b7-5e5443412a59"
       },
       "level_keys": [
-        "csp-post-survey-2021-markdown-with-link-to-survey_2025"
+        "student-eou-survey_csp7_2025"
       ]
     }
   ],
@@ -3626,9 +3734,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csp7_2025",
+        "level.key": "student-eou-survey_linked_page-csp7_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp7_2025"
+          "student-eou-survey_linked_page-csp7_2025"
         ],
         "lesson.key": "Project   Make a Library Part 3",
         "lesson_group.key": "csp_libraries",
@@ -3650,14 +3758,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp-post-survey-2021-markdown-with-link-to-survey_2025",
+        "level.key": "student-eou-survey_csp7_2025",
         "script_level.level_keys": [
-          "csp-post-survey-2021-markdown-with-link-to-survey_2025"
+          "student-eou-survey_csp7_2025"
         ],
-        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson.key": "End of Unit Survey",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csp7-2025",
-        "activity_section.key": "c1330c87-e102-4abc-bde9-b18e3e982a53"
+        "activity_section.key": "31799d56-135b-4297-a2b7-5e5443412a59"
       }
     }
   ],

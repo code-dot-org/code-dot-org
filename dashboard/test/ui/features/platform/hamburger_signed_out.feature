@@ -23,7 +23,7 @@ Feature: Hamburger dropdown - Signed out
     And element "#educate_entries" is not visible
     And element "#districts" is not visible
     And I see "#stats"
-    And I see "#help-us"
+    And I see "#donate"
     And I see "#incubator"
     And I see "#about_entries"
     And I see "#legal_entries"
@@ -45,7 +45,7 @@ Feature: Hamburger dropdown - Signed out
     And I see "#educate_entries"
     And I see "#districts"
     And I see "#stats"
-    And I see "#help-us"
+    And I see "#donate"
     And I see "#incubator"
     And I see "#about_entries"
     And I see "#legal_entries"
@@ -103,7 +103,7 @@ Feature: Hamburger dropdown - Signed out
       | Learn                  | http://code.org/students                     |
       | Districts              | http://code.org/administrators               |
       | Stats                  | http://code.org/promote                      |
-      | Help Us                | http://code.org/help                         |
+      | Donate                 | http://code.org/donate                       |
       | Incubator              | http://studio.code.org/incubator             |
 
     # The Teach submenu

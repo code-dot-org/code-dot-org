@@ -10,6 +10,16 @@
     "vpl-csp-2023-m7",
     "vpl-csp-2023-m8"
   ],
+  "original_script_names": [
+    "vpl-csp-2023-m1",
+    "vpl-csp-2023-m2",
+    "vpl-csp-2023-m3",
+    "vpl-csp-2023-m4",
+    "vpl-csp-2023-m5",
+    "vpl-csp-2023-m6",
+    "vpl-csp-2023-m7",
+    "vpl-csp-2023-m8"
+  ],
   "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "teacher",

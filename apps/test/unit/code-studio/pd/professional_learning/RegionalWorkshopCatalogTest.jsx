@@ -1,0 +1,298 @@
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import '@testing-library/jest-dom';
+import React from 'react';
+
+import RegionalWorkshopCatalog from '@cdo/apps/code-studio/pd/professional_learning/RegionalWorkshopCatalog';
+import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '@cdo/apps/code-studio/utils';
+
+jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
+  getAuthenticityToken: jest.fn().mockResolvedValue('authToken'),
+}));
+
+const REGIONAL_PARTNER = 'Reggie Partner';
+
+const TEST_SESSION = {
+  id: 1,
+  start: '2025-04-22T13:00:00Z',
+  end: '2025-04-22T21:00:00Z',
+  is_local: false,
+};
+
+const TEST_WORKSHOPS = [
+  {
+    id: 1,
+    course: 'Test Course 1',
+    subject: 'Test Subject',
+    name: 'Regional Seattle Workshop',
+    capacity: 5,
+    num_enrollments: 2,
+    sessions: [TEST_SESSION],
+    format: 'In-Person',
+    location_name: 'Seattle Public School',
+    fee: null,
+    has_prereq: false,
+    description: 'Test description',
+    custom_registration_link: null,
+  },
+  {
+    id: 2,
+    course: 'Test Course 2',
+    subject: 'Test Subject',
+    name: 'National Austin Workshop',
+    capacity: 5,
+    num_enrollments: 4,
+    sessions: [TEST_SESSION],
+    format: 'Virtual',
+    location_name: 'Austin Public School',
+    fee: '$400',
+    has_prereq: true,
+    description: 'Test description',
+    custom_registration_link: null,
+  },
+];
+
+describe('RegionalWorkshopCatalog', () => {
+  it('page defaults to telling the user they need to enter a zip code', () => {
+    render(<RegionalWorkshopCatalog zipFromSchoolInfo="" />);
+    screen.getByText('Enter zip code to see workshops');
+
+    // No regional partner retrieved with an empty zip
+    screen.getByText('Zip code required');
+  });
+
+  it('shows no workshop display when entered zip code yields no workshops', async () => {
+    const zip = '11111';
+    const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: () =>
+        Promise.resolve({
+          regional_workshop_data: {
+            regional_partner: {name: '', additional_info: ''},
+            available_workshops: [],
+          },
+        }),
+    });
+    render(<RegionalWorkshopCatalog zipFromSchoolInfo="" />);
+
+    fireEvent.change(screen.getByRole('textbox', {name: 'zipSearch'}), {
+      target: {value: zip},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'submitZip'}));
+
+    await waitFor(() => {
+      screen.getByText('No workshops found');
+      screen.getByText('No regional partner found');
+      expect(
+        screen.getByRole('link', {
+          name: 'Contact regional partner',
+        })
+      ).toHaveAttribute(
+        'href',
+        '/professional-learning/contact-regional-partner?zip=11111'
+      );
+
+      expect(fetchStub).toHaveBeenCalledWith(`regional_workshop_data/${zip}`, {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': 'authToken',
+        },
+        method: 'GET',
+      });
+      fetchStub.mockRestore();
+    });
+  });
+
+  it('shows workshops available to that zip code', async () => {
+    const zip = '98122';
+
+    const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: () =>
+        Promise.resolve({
+          regional_workshop_data: {
+            regional_partner: {name: REGIONAL_PARTNER},
+            available_workshops: TEST_WORKSHOPS,
+          },
+        }),
+    });
+    render(<RegionalWorkshopCatalog zipFromSchoolInfo="" />);
+
+    fireEvent.change(screen.getByRole('textbox', {name: 'zipSearch'}), {
+      target: {value: zip},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'submitZip'}));
+
+    await waitFor(() => {
+      // Regional Partner name and contact
+      screen.getByText(REGIONAL_PARTNER);
+      expect(
+        screen.getByRole('link', {
+          name: 'Contact',
+        })
+      ).toHaveAttribute(
+        'href',
+        `/professional-learning/contact-regional-partner?zip=${zip}`
+      );
+
+      // Workshop content is displayed
+      screen.getByText('Upcoming workshops');
+      expect(
+        screen.getByRole('link', {
+          name: 'contact your Regional Partner',
+        })
+      ).toHaveAttribute(
+        'href',
+        `/professional-learning/contact-regional-partner?zip=${zip}`
+      );
+      TEST_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
+
+      expect(fetchStub).toHaveBeenCalledWith(`regional_workshop_data/${zip}`, {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': 'authToken',
+        },
+        method: 'GET',
+      });
+      fetchStub.mockRestore();
+    });
+  });
+
+  it('can open and close regional partner info dialog if regional partner is present', async () => {
+    const zip = '98122';
+    const regionalPartnerInfo = 'Test partner info.';
+
+    jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: () =>
+        Promise.resolve({
+          regional_workshop_data: {
+            regional_partner: {
+              name: REGIONAL_PARTNER,
+              additional_info: regionalPartnerInfo,
+            },
+            available_workshops: TEST_WORKSHOPS,
+          },
+        }),
+    });
+    render(<RegionalWorkshopCatalog zipFromSchoolInfo="" />);
+
+    // Button to open dialog starts not enabled
+    expect(screen.getByRole('button', {name: 'partnerInfo'})).toBeDisabled();
+
+    // Button to open dialog only becomes enabled once a zip has been entered and a regional partner is found
+    fireEvent.change(screen.getByRole('textbox', {name: 'zipSearch'}), {
+      target: {value: zip},
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'submitZip'}));
+
+    await waitFor(() => {
+      expect(
+        screen.getByRole('button', {name: 'partnerInfo'})
+      ).not.toBeDisabled();
+    });
+
+    // Can open dialog
+    fireEvent.click(screen.getByRole('button', {name: 'partnerInfo'}));
+    await waitFor(() => {
+      expect(screen.getAllByText(REGIONAL_PARTNER).length).toBe(2);
+      screen.getByText(regionalPartnerInfo);
+    });
+
+    // Can close dialog
+    fireEvent.click(screen.getByRole('button', {name: 'Return to workshops'}));
+    await waitFor(() => {
+      expect(screen.getAllByText(REGIONAL_PARTNER).length).toBe(1);
+      expect(screen.queryByText(regionalPartnerInfo)).toBe(null);
+    });
+  });
+
+  it('immediately shows workshops available to given zip code if provided in url', async () => {
+    const zip = '98122';
+
+    const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: () =>
+        Promise.resolve({
+          regional_workshop_data: {
+            regional_partner: {name: REGIONAL_PARTNER},
+            available_workshops: TEST_WORKSHOPS,
+          },
+        }),
+    });
+    setWindowLocation({search: `?zip=${zip}`});
+    render(<RegionalWorkshopCatalog zipFromSchoolInfo="" />);
+
+    await waitFor(() => {
+      // Regional Partner name and contact
+      screen.getByText(REGIONAL_PARTNER);
+      expect(
+        screen.getByRole('link', {
+          name: 'Contact',
+        })
+      ).toHaveAttribute(
+        'href',
+        `/professional-learning/contact-regional-partner?zip=${zip}`
+      );
+
+      // Workshop content is displayed
+      screen.getByText('Upcoming workshops');
+      TEST_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
+
+      expect(fetchStub).toHaveBeenCalledWith(`regional_workshop_data/${zip}`, {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': 'authToken',
+        },
+        method: 'GET',
+      });
+
+      resetWindowLocation();
+      fetchStub.mockRestore();
+    });
+  });
+
+  it('immediately shows workshops available to given zip code if provided as a parameter', async () => {
+    const zip = '98122';
+
+    const fetchStub = jest.spyOn(window, 'fetch').mockResolvedValue({
+      ok: true,
+      json: () =>
+        Promise.resolve({
+          regional_workshop_data: {
+            regional_partner: {name: REGIONAL_PARTNER},
+            available_workshops: TEST_WORKSHOPS,
+          },
+        }),
+    });
+    render(<RegionalWorkshopCatalog zipFromSchoolInfo={zip} />);
+
+    await waitFor(() => {
+      // Regional Partner name and contact
+      screen.getByText(REGIONAL_PARTNER);
+      expect(
+        screen.getByRole('link', {
+          name: 'Contact',
+        })
+      ).toHaveAttribute(
+        'href',
+        `/professional-learning/contact-regional-partner?zip=${zip}`
+      );
+
+      // Workshop content is displayed
+      screen.getByText('Upcoming workshops');
+      TEST_WORKSHOPS.forEach(ws => screen.getByText(ws.name));
+
+      expect(fetchStub).toHaveBeenCalledWith(`regional_workshop_data/${zip}`, {
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': 'authToken',
+        },
+        method: 'GET',
+      });
+      fetchStub.mockRestore();
+    });
+  });
+});

@@ -12,7 +12,19 @@
     "csa9-2025",
     "csa-postap-se-and-computer-vision-2025"
   ],
-  "published_state": "in_development",
+  "original_script_names": [
+    "csa1-2025",
+    "csa2-2025",
+    "csa3-2025",
+    "csa4-2025",
+    "csa5-2025",
+    "csa6-2025",
+    "csa7-2025",
+    "csa8-2025",
+    "csa9-2025",
+    "csa-postap-se-and-computer-vision-2025"
+  ],
+  "published_state": "beta",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -23,6 +35,16 @@
     "version_year": "2025"
   },
   "resources": [
+    {
+      "name": "25-26 Change Log",
+      "url": "https://docs.google.com/document/d/1kTf-T6FxM_zCPBQhFG0AdGme4VLfZQK1N7yX2YiXzas/edit?usp=sharing",
+      "key": "25-26_change_log",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "25-26_change_log"
+      }
+    },
     {
       "name": "All Resources",
       "url": "/courses/csa-2025/resources",
@@ -54,6 +76,16 @@
       },
       "seeding_key": {
         "resource.key": "all_vocabulary_16"
+      }
+    },
+    {
+      "name": "AP CSA Course and Exam Description (CED)",
+      "url": "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description-effective-fall-2025.pdf",
+      "key": "ap_csa_course_and_exam_description_ced_",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "ap_csa_course_and_exam_description_ced_"
       }
     },
     {

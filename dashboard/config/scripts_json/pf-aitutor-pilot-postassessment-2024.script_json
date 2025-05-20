@@ -5,18 +5,22 @@
     "login_required": true,
     "properties": {
       "content_area": "curriculum_9_12",
-      "curriculum_umbrella": "Foundations of CS and AI",
+      "curriculum_umbrella": "AIF",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "programming-fundamentals-aitutor-2025-pilot",
       "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-02-25 19:45:34 UTC",
+    "serialized_at": "2025-04-23 18:16:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -89,6 +93,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "programming-fundamentals-postassessment_aitutor-2023"
+        ],
         "progression": "End-of-Unit Assessment"
       },
       "bonus": false,

@@ -5,16 +5,23 @@ import DSCOFullWidthActionBlock, {
 } from '@code-dot-org/component-library/actionBlock/fullWidthActionBlock';
 
 import {externalLinkIconProps} from '@/components/common/constants';
-import {ImageAssetEntry, LinkEntry} from '@/contentful/types/entries';
+import {LinkEntry} from '@/types/contentful/entries/Link';
+import {ExperienceAsset} from '@/types/contentful/ExperienceAsset';
 
-export type FullWidthActionBlockContentfulProps = ActionBlockProps & {
-  image: ImageAssetEntry;
+import {showNewTag} from '../helpers';
+
+export type FullWidthActionBlockContentfulProps = Omit<
+  ActionBlockProps,
+  'image'
+> & {
+  image: ExperienceAsset;
   overline: EntryFields.Text;
   title: EntryFields.Text;
   description: EntryFields.Text;
   primaryButton: LinkEntry;
   secondaryButton: LinkEntry;
   background: EntryFields.Text;
+  publishedDate?: EntryFields.Date;
 };
 
 const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
@@ -25,6 +32,7 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
   primaryButton,
   secondaryButton,
   background,
+  publishedDate,
 }) => (
   <DSCOFullWidthActionBlock
     image={{src: `https:${image}`}}
@@ -56,6 +64,7 @@ const FullWidthActionBlock: React.FC<FullWidthActionBlockContentfulProps> = ({
         : undefined
     }
     background={background}
+    tag={publishedDate && showNewTag(publishedDate) ? 'New' : undefined}
   />
 );
 

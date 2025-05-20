@@ -2,9 +2,10 @@ import {Button} from '@code-dot-org/component-library/button';
 import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
+import {getSystemMessage} from '@codebridge/Console/MessageHelpers';
 import {sendCodebridgeAnalyticsEvent} from '@codebridge/utils/analyticsReporterHelper';
 import classNames from 'classnames';
-import React, {useContext, useEffect, useMemo, useRef} from 'react';
+import React, {useEffect, useMemo, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 import {setShowSuggestedPrompts} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
@@ -28,7 +29,6 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
-import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -41,7 +41,6 @@ import commonI18n from '@cdo/locale';
 import MainInstructionsContent from './MainInstructionsContent';
 import ValidationResults from './ValidationResults';
 
-import darkModeStyles from '@cdo/apps/lab2/styles/dark-mode.module.scss';
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
 interface InstructionsProps {
@@ -125,8 +124,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const dispatch = useAppDispatch();
 
-  const {theme} = useContext(ThemeContext);
-
   const vertical = layout === 'vertical';
 
   const onSubmit = () => {
@@ -178,7 +175,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeSystemMessage(codebridgeI18n.cannotTest(), appType);
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.cannotTest(), appType)
+        );
     }
   };
 
@@ -189,7 +188,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     } else {
       CodebridgeRegistry.getInstance()
         .getConsoleManager()
-        ?.writeSystemMessage(codebridgeI18n.cannotStop(), appType);
+        ?.writeConsoleMessage(
+          getSystemMessage(codebridgeI18n.cannotStop(), appType)
+        );
       dispatch(setIsValidating(false));
     }
   };
@@ -295,7 +296,6 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         disabled={shouldValidateBeDisabled}
         iconLeft={{iconStyle: 'solid', iconName: 'clipboard-check'}}
         className={classNames(
-          darkModeStyles.secondaryButton,
           moduleStyles.buttonInstruction,
           moduleStyles.validationButton
         )}
@@ -331,7 +331,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     <div
       id="instructions"
       className={classNames(
-        moduleStyles['instructions-' + theme],
+        moduleStyles.instructions,
         vertical && moduleStyles.vertical,
         'instructions',
         className
@@ -349,7 +349,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             <div
               key={instructionsText}
               id="instructions-text"
-              className={classNames(moduleStyles['bubble-' + theme])}
+              className={moduleStyles.bubble}
             >
               <MainInstructionsContent
                 instructionsText={instructionsText}
@@ -372,14 +372,14 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           {validationResults && (
             <>
               <div ref={validationScrollRef} />
-              <div className={classNames(moduleStyles['bubble-' + theme])}>
+              <div className={moduleStyles.bubble}>
                 <ValidationResults />
               </div>
             </>
           )}
           {predictSettings?.isPredictLevel && (
             <InstructorsOnly>
-              <div className={moduleStyles['bubble-' + theme]}>
+              <div className={moduleStyles.bubble}>
                 <PredictSummary />
               </div>
             </InstructorsOnly>
@@ -388,10 +388,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         {showNavigation && (
           <div
             id="instructions-navigation"
-            className={classNames(
-              moduleStyles['bubble-' + theme],
-              moduleStyles.button
-            )}
+            className={classNames(moduleStyles.bubble, moduleStyles.button)}
           >
             <Button
               text={navigationText}

@@ -6,6 +6,7 @@
     "properties": {
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
+      "has_unnumbered_lessons": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -16,11 +17,12 @@
       "topic_tags": [
         "ai"
       ],
+      "version_year": "2025",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-03-12 21:13:34 UTC",
+    "serialized_at": "2025-05-13 16:33:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -66,12 +68,24 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd7-2025"
       }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd7-2025"
+      }
     }
   ],
   "lessons": [
     {
       "key": "Intro to App Lab",
-      "name": "Intro to App Lab",
+      "name": "Lesson 0: Intro to App Lab",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -90,7 +104,7 @@
     },
     {
       "key": "Introduction to Machine Learning",
-      "name": "Introduction to Machine Learning",
+      "name": "Lesson 1: Introduction to Machine Learning",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
@@ -118,7 +132,7 @@
     },
     {
       "key": "Types of Machine Learning",
-      "name": "Types of Machine Learning",
+      "name": "Lesson 2: Types of Machine Learning",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
@@ -147,7 +161,7 @@
     },
     {
       "key": "Innovations in AI",
-      "name": "Innovations in AI",
+      "name": "Lesson 3: Innovations in AI",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -175,7 +189,7 @@
     },
     {
       "key": "Patterns in Data",
-      "name": "Patterns in Data",
+      "name": "Lesson 4: Patterns in Data",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
@@ -194,7 +208,7 @@
     },
     {
       "key": "Classification Models",
-      "name": "Classification Models",
+      "name": "Lesson 5: Classification Models",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -213,7 +227,7 @@
     },
     {
       "key": "Introduction to AI Lab",
-      "name": "Introduction to AI Lab",
+      "name": "Lesson 6: Introduction to AI Lab",
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
@@ -232,7 +246,7 @@
     },
     {
       "key": "Importing Models in App Lab",
-      "name": "Importing Models in App Lab",
+      "name": "Lesson 7: Importing Models in App Lab",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
@@ -251,7 +265,7 @@
     },
     {
       "key": "Model Cards",
-      "name": "Model Cards",
+      "name": "Lesson 8: Model Cards",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
@@ -270,7 +284,7 @@
     },
     {
       "key": "Saving Models in AI Lab",
-      "name": "Saving Models in AI Lab",
+      "name": "Lesson 9: Saving Models in AI Lab",
       "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
@@ -289,7 +303,7 @@
     },
     {
       "key": "Model Cards in App Lab",
-      "name": "Model Cards in App Lab",
+      "name": "Lesson 10: Model Cards in App Lab",
       "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
@@ -308,7 +322,7 @@
     },
     {
       "key": "Numerical Models",
-      "name": "Numerical Models",
+      "name": "Lesson 11: Numerical Models",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
@@ -327,7 +341,7 @@
     },
     {
       "key": "Numerical Data in AI Lab",
-      "name": "Numerical Data in AI Lab",
+      "name": "Lesson 12: Numerical Data in AI Lab",
       "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
@@ -346,7 +360,7 @@
     },
     {
       "key": "Customizing Apps",
-      "name": "Customizing Apps",
+      "name": "Lesson 13: Customizing Apps",
       "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
@@ -365,7 +379,7 @@
     },
     {
       "key": "AI Code of Ethics",
-      "name": "AI Code of Ethics",
+      "name": "Lesson 14: AI Code of Ethics",
       "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
@@ -384,7 +398,7 @@
     },
     {
       "key": "Project: Make a Machine Learning App",
-      "name": "Project: Make a Machine Learning App",
+      "name": "Lesson 15: Project - Make a Machine Learning App",
       "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
@@ -402,7 +416,7 @@
     },
     {
       "key": "Issue Statements",
-      "name": "Issue Statements",
+      "name": "Lesson 16: Issue Statements",
       "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
@@ -420,7 +434,7 @@
     },
     {
       "key": "Survey Planning",
-      "name": "Survey Planning",
+      "name": "Lesson 17: Survey Planning",
       "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
@@ -438,7 +452,7 @@
     },
     {
       "key": "Survey Data in AI Lab",
-      "name": "Survey Data in AI Lab",
+      "name": "Lesson 18: Survey Data in AI Lab",
       "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
@@ -456,7 +470,7 @@
     },
     {
       "key": "Troubleshooting Models",
-      "name": "Troubleshooting Models",
+      "name": "Lesson 19: Troubleshooting Models",
       "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
@@ -474,7 +488,7 @@
     },
     {
       "key": "Creating an App",
-      "name": "Creating an App",
+      "name": "Lesson 20: Creating an App",
       "absolute_position": 21,
       "lockable": false,
       "has_lesson_plan": true,
@@ -492,7 +506,7 @@
     },
     {
       "key": "Project - Design an AI App",
-      "name": "Project - Design an AI App",
+      "name": "Lesson 21: Project - Design an AI App",
       "absolute_position": 22,
       "lockable": false,
       "has_lesson_plan": true,
@@ -517,6 +531,21 @@
       "seeding_key": {
         "lesson.key": "Project - Design an AI App",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd7-2025"
+      }
+    },
+    {
+      "key": "End of Unit Survey",
+      "name": "End of Unit Survey",
+      "absolute_position": 23,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 23,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csd7-2025"
       }
     }
@@ -1548,6 +1577,18 @@
         "lesson_activity.key": "4820a443-21a7-466a-9ab6-e38d42ba0b6c",
         "lesson.key": "Project - Design an AI App",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csd7-2025"
+      }
+    },
+    {
+      "key": "4dde2b4b-d524-4dde-a331-3b776614d768",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4dde2b4b-d524-4dde-a331-3b776614d768",
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "csd7-2025"
       }
     }
@@ -8068,7 +8109,7 @@
       "properties": {
         "description": "Send students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "Reflection",
-        "progression_name": "End-Of-Unit Survey"
+        "progression_name": "End Of Unit Survey"
       },
       "seeding_key": {
         "activity_section.key": "51a02cf0-645a-4dbc-a546-acee72322716",
@@ -8098,6 +8139,28 @@
         "activity_section.key": "f386c1c5-3ece-472c-9f05-b4cf8f9bdeeb",
         "lesson_activity.key": "4820a443-21a7-466a-9ab6-e38d42ba0b6c"
       }
+    },
+    {
+      "key": "99f1e2de-4c87-4e88-88ec-b47cc86b2564",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "99f1e2de-4c87-4e88-88ec-b47cc86b2564",
+        "lesson_activity.key": "4dde2b4b-d524-4dde-a331-3b776614d768"
+      }
+    },
+    {
+      "key": "f9e04baa-295f-4043-b20e-2cff8da586e1",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Unit Survey Page"
+      },
+      "seeding_key": {
+        "activity_section.key": "f9e04baa-295f-4043-b20e-2cff8da586e1",
+        "lesson_activity.key": "4dde2b4b-d524-4dde-a331-3b776614d768"
+      }
     }
   ],
   "script_levels": [
@@ -8107,6 +8170,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Getting Started_2025"
+        ],
         "progression": "App Lab Intro - Video"
       },
       "bonus": false,
@@ -8129,6 +8195,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Screen Color_2025"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -8151,6 +8220,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Change Text 2_2025"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -8173,6 +8245,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - Full Text_2025"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -8195,6 +8270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Make It Interactive_2025"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -8217,6 +8295,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent intro_2025"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -8239,6 +8320,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - onEvent twoButtons_2025"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -8261,6 +8345,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Images and Sounds_2025"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -8283,6 +8370,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - playSound_2025"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -8305,6 +8395,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Design Mode_2025"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -8327,6 +8420,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddButton_2025"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -8349,6 +8445,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatAddScreen_2025"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -8371,6 +8470,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatSetScreen_2025"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -8393,6 +8495,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "App Lab Intro 8 - Video Share Your App_2025"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -8415,6 +8520,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab Intro 7 - thisOrThatPersonalize_2025"
+        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -8437,6 +8545,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_2025"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -8459,6 +8570,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_2025"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -8481,6 +8595,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_2025"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
@@ -8503,6 +8620,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_2025"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -8525,6 +8645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 unsupervised - 1_2025"
+        ],
         "progression": "Looking for Patterns"
       },
       "bonus": false,
@@ -8547,6 +8670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 supervised - green glass door_2025"
+        ],
         "progression": "Green Glass Door"
       },
       "bonus": false,
@@ -8569,6 +8695,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes random_2025"
+        ],
         "progression": "Shoe Recommender"
       },
       "bonus": false,
@@ -8591,6 +8720,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes decision tree_2025"
+        ],
         "progression": "Improved Shoe Recommender"
       },
       "bonus": false,
@@ -8613,6 +8745,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoe survey_2025"
+        ],
         "progression": "Shoe Recommendation Survey"
       },
       "bonus": false,
@@ -8635,6 +8770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes points_2025"
+        ],
         "progression": "Ultimate Shoe Recommender"
       },
       "bonus": false,
@@ -8657,6 +8795,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab- fruit veggie widget_2025"
+        ],
         "progression": "Fruit and Veggie Explorer"
       },
       "bonus": false,
@@ -8679,6 +8820,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab-shapes v1_2025"
+        ],
         "progression": "Recognizing Shapes"
       },
       "bonus": false,
@@ -8701,6 +8845,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-pizza_2025"
+        ],
         "progression": "Pizza Recommendations"
       },
       "bonus": false,
@@ -8723,6 +8870,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-food choices_2025"
+        ],
         "progression": "You Choose: Restaurant Recommendations"
       },
       "bonus": false,
@@ -8745,6 +8895,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender demo_2025"
+        ],
         "progression": "Book Recommender App"
       },
       "bonus": false,
@@ -8767,6 +8920,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 0_2025"
+        ],
         "progression": "Import a Model"
       },
       "bonus": false,
@@ -8789,6 +8945,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 1_2025"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8811,6 +8970,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 2_2025"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8833,6 +8995,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 3_2025"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8855,6 +9020,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 4_2025"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -8877,6 +9045,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 5_2025"
+        ],
         "progression": "Choice Levels: Customize Your App"
       },
       "bonus": false,
@@ -8899,6 +9070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical app v2 2021-2_2025"
+        ],
         "progression": "Medical Priority App"
       },
       "bonus": false,
@@ -8921,6 +9095,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model cards-book recommender model card_2025"
+        ],
         "progression": "Book Recommender Model Card"
       },
       "bonus": false,
@@ -8943,6 +9120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-1_2025"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -8965,6 +9145,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-2_2025"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -8987,6 +9170,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-3_2025"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -9009,6 +9195,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo1_2025"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -9031,6 +9220,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo2_2025"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -9053,6 +9245,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo3_2025"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -9075,6 +9270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- import app_2025"
+        ],
         "progression": "Importing Your Model"
       },
       "bonus": false,
@@ -9097,6 +9295,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- customize app_2025"
+        ],
         "progression": "Customizing Your App"
       },
       "bonus": false,
@@ -9119,6 +9320,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-zoo model embed_2025"
+        ],
         "progression": "Example App: Zoo Classification"
       },
       "bonus": false,
@@ -9141,6 +9345,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1A_2025"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -9163,6 +9370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-pet model card_2025"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -9185,6 +9395,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1B_2025"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -9207,6 +9420,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-2_2025"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -9229,6 +9445,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-1_2025"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -9251,6 +9470,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-3_2025"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -9273,6 +9495,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-choice parent_2025"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -9295,6 +9520,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-zoo assessment_2025"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -9317,6 +9545,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use models applab-practice choice_2025"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -9339,6 +9570,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-numerical ai lab-safari 1_2025"
+        ],
         "progression": "Safari Model"
       },
       "bonus": false,
@@ -9361,6 +9595,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-numerical data- import app_2025"
+        ],
         "progression": "Safari App"
       },
       "bonus": false,
@@ -9383,6 +9620,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-customize-raspado_2025"
+        ],
         "progression": "Raspado Recommender"
       },
       "bonus": false,
@@ -9405,6 +9645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3A_2025"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9427,6 +9670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditA_2025"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9449,6 +9695,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditB_2025"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9471,6 +9720,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditC_2025"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9493,6 +9745,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3C_2025"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9515,6 +9770,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3D_2025"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9537,6 +9795,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3E_2025"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -9559,6 +9820,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-customize apps-practice choice_2025"
+        ],
         "progression": "You Choose: Improve Your App"
       },
       "bonus": false,
@@ -9581,6 +9845,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-mini project-ai lab 2_2025"
+        ],
         "progression": "Train a Model in AI Lab"
       },
       "bonus": false,
@@ -9603,6 +9870,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-mini project-app lab_2025"
+        ],
         "progression": "Create an App in App Lab"
       },
       "bonus": false,
@@ -9625,6 +9895,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-ch1-pulse-survey_2025"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -9647,6 +9920,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-plan survey-copy form_2025"
+        ],
         "progression": "Create a Google Form"
       },
       "bonus": false,
@@ -9669,6 +9945,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-kim survey_2025"
+        ],
         "progression": "Kim's Survey"
       },
       "bonus": false,
@@ -9691,6 +9970,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-kim data_2025"
+        ],
         "progression": "Kim's Survey Data"
       },
       "bonus": false,
@@ -9713,6 +9995,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-upload csv_2025"
+        ],
         "progression": "AI Lab and Kim's Data"
       },
       "bonus": false,
@@ -9735,6 +10020,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-isaac data_2025"
+        ],
         "progression": "Isaac's Survey Data"
       },
       "bonus": false,
@@ -9757,6 +10045,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-good data-upload isaac csv_2025"
+        ],
         "progression": "AI Lab and Isaac's Data"
       },
       "bonus": false,
@@ -9779,6 +10070,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-bad data-club investigations_2025"
+        ],
         "progression": "Club Datasets"
       },
       "bonus": false,
@@ -9801,6 +10095,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-bad data-loneliness all_2025"
+        ],
         "progression": "Alternative Datasets"
       },
       "bonus": false,
@@ -9823,6 +10120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-import model_2025"
+        ],
         "progression": "Import Your Model"
       },
       "bonus": false,
@@ -9845,6 +10145,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-edit text_2025"
+        ],
         "progression": "Import Your Model"
       },
       "bonus": false,
@@ -9867,6 +10170,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-add theme_2025"
+        ],
         "progression": "Import Your Model"
       },
       "bonus": false,
@@ -9889,6 +10195,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-home screen design_2025"
+        ],
         "progression": "Add a Welcome Screen"
       },
       "bonus": false,
@@ -9911,6 +10220,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-home screen event_2025"
+        ],
         "progression": "Add a Welcome Screen"
       },
       "bonus": false,
@@ -9933,6 +10245,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-club app-choice parent_2025"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -9955,6 +10270,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-club app-review submit_2025"
+        ],
         "progression": "Review Your App"
       },
       "bonus": false,
@@ -9977,6 +10295,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-final project-ai lab_2025"
+        ],
         "progression": "Design an AI App - AI Lab"
       },
       "bonus": false,
@@ -9999,6 +10320,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-final project-app lab_2025"
+        ],
         "progression": "Design an AI App - App Lab"
       },
       "bonus": false,
@@ -10019,14 +10343,14 @@
       "chapter": 88,
       "position": 3,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "progression": "End-Of-Unit Survey"
+        "progression": "End Of Unit Survey"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd7_2025"
+          "student-eou-survey_linked_page-csd7_2025"
         ],
         "lesson.key": "Project - Design an AI App",
         "lesson_group.key": "lessonGroup-3",
@@ -10034,7 +10358,32 @@
         "activity_section.key": "51a02cf0-645a-4dbc-a546-acee72322716"
       },
       "level_keys": [
-        "Student End of Unit Survey_csd7_2025"
+        "student-eou-survey_linked_page-csd7_2025"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "student-eou-survey_csd7survey-2025"
+        ],
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "student-eou-survey_csd7survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd7-2025",
+        "activity_section.key": "99f1e2de-4c87-4e88-88ec-b47cc86b2564"
+      },
+      "level_keys": [
+        "student-eou-survey_csd7survey-2025"
       ]
     }
   ],
@@ -11085,14 +11434,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csd7_2025",
+        "level.key": "student-eou-survey_linked_page-csd7_2025",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csd7_2025"
+          "student-eou-survey_linked_page-csd7_2025"
         ],
         "lesson.key": "Project - Design an AI App",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csd7-2025",
         "activity_section.key": "51a02cf0-645a-4dbc-a546-acee72322716"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "student-eou-survey_csd7survey-2025",
+        "script_level.level_keys": [
+          "student-eou-survey_csd7survey-2025"
+        ],
+        "lesson.key": "End of Unit Survey",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csd7-2025",
+        "activity_section.key": "99f1e2de-4c87-4e88-88ec-b47cc86b2564"
       }
     }
   ],
