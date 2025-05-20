@@ -114,7 +114,7 @@ const HorizontalLayout: React.FunctionComponent<LayoutProps> = ({
             setOutputHeight={setRightBottomPanelSize}
           />
         </div>
-        {aiTutor2Available && (
+        {aiTutor2Available && getAiTutor2FullPrompt && (
           <div style={{width: rightmostPanelWidth}}>
             <PanelContainer
               id="aitutor2"

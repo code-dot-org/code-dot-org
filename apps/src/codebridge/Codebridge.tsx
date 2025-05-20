@@ -44,7 +44,7 @@ type CodebridgeProps = {
   sendConsoleInput?: SendConsoleInputFunction;
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
-  aiTutor2HintQuestion?: string;
+  AiTutor2ResponseView?: React.ReactNode;
   getAiTutor2FullPrompt?: (question: string) => string;
 };
 
@@ -62,7 +62,7 @@ export const Codebridge = React.memo(
     sendConsoleInput,
     levelProperties,
     projectPickerSettings,
-    aiTutor2HintQuestion,
+    AiTutor2ResponseView,
     getAiTutor2FullPrompt,
   }: CodebridgeProps) => {
     const reducerWithCallback = useReducerWithCallback(
@@ -183,7 +183,7 @@ export const Codebridge = React.memo(
           sendConsoleInput,
           levelProperties,
           projectPickerSettings,
-          aiTutor2HintQuestion,
+          AiTutor2ResponseView,
           getAiTutor2FullPrompt,
         }}
       >

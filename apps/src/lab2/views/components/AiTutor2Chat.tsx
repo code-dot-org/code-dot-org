@@ -2,13 +2,13 @@ import React, {useCallback} from 'react';
 
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 
-import AiTutor2Response from './AiTutor2Response';
+import {useAiTutor2} from './aiTutor2/useAiTutor2';
 
 import moduleStyles from './AiTutor2Chat.module.scss';
 
 interface AiTutor2ChatProps {
   type: 'user' | 'hint';
-  getFullPrompt?: (question: string) => string;
+  getFullPrompt: (question: string) => string;
 }
 
 // A free chat with user-initiated input and subsequent response from AITutor2.
@@ -16,21 +16,23 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
   type,
   getFullPrompt,
 }) => {
-  const [question, setQuestion] = React.useState<string | undefined>(undefined);
+  const [askAiTutor, AiTutorResponseView] = useAiTutor2(
+    getFullPrompt,
+    type,
+    true
+  );
 
-  // If the submit button is clicked, then ask AITutor2.
-  const handleSubmit = useCallback((userMessage: string) => {
-    setQuestion(userMessage);
-  }, []);
+  // If the submit button is clicked, then ask the LLM.
+  const handleSubmit = useCallback(
+    (userMessage: string) => {
+      askAiTutor(userMessage);
+    },
+    [askAiTutor]
+  );
 
   return (
     <div className={moduleStyles.container}>
-      <AiTutor2Response
-        type={type}
-        question={question}
-        getFullPrompt={getFullPrompt}
-        shrink={true}
-      />
+      {AiTutorResponseView}
       <div className={moduleStyles.userMessageContainer}>
         <UserMessageEditor
           onSubmit={handleSubmit}
