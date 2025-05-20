@@ -386,6 +386,13 @@ class ScriptLevelsController < ApplicationController
         # depending on this incorrect behavior, and we are trying to deprecate this
         # codepath anyway, the current plan is to not fix this bug.
         script = Unit.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
+        if script
+          # get_unit_family_redirect_for_user returns a fake Unit object,
+          # so we don't need to look up context like UnitGroup or UnitGroupUnit.
+          return {
+            unit: script,
+          }
+        end
       end
       raise ActiveRecord::RecordNotFound unless script
       return Queries::Courses.get_course_context(script.id)
