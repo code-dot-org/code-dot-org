@@ -987,27 +987,45 @@ roles.each do |name, config| %>
                 # marketing-sites-development-code-org-my-feature-branch
                 # marketing-sites-development-code-org-my-other-branch
                 Resource: !Sub "arn:aws:cloudformation:${AWS::Region}:${AWS::AccountId}:stack/marketing-sites-<%=environment_type%>-*"
-              # The Role that provisions marketing site Stacks can only create/pass/attach Roles with policies
-              # constrained by a Permissions Boundary and those Roles can only be assumed by a specific set of services.
-              - Sid: AllowRoleCreationWithBoundary
+              # CREATE new roles & ATTACH/DETACH policies from those roles — but only if they use our permissions boundary policy.
+              - Sid: AllowCreateRoleWithBoundary
                 Effect: Allow
                 Action:
-                  - iam:GetRole
-                  - iam:PassRole
-                  - iam:CreateRole
                   - iam:AttachRolePolicy
-                  - iam:PutRolePolicy
-                  - iam:CreatePolicy
-                  - iam:DeleteRole
+                  - iam:CreateRole
                   - iam:DeleteRolePolicy
                   - iam:DetachRolePolicy
-                  - iam:DeletePolicy
-                  - iam:TagRole
-                Resource: '*'
+                  - iam:PutRolePolicy
+                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-${environment}-*"
                 Condition:
                   StringEquals:
-                    iam:PermissionsBoundary: !Ref MarketingSitesRoleCreationBoundary<%=environment_type.capitalize%>Policy
-                  StringEqualsIfExists:
+                    iam:PermissionsBoundary: !Ref MarketingSitesRoleCreationBoundary${environment}Policy
+            
+              # CREATE/READ/DELETE on your roles and policies (but only operate on existing roles in our namespace)
+              #   these can't use PermissionsBoundary condition
+              - Sid: AllowReadRole
+                Effect: Allow
+                Action:
+                  - CreatePolicy
+                  - DeleteRole
+                  - DeletePolicy
+                  - iam:GetRole
+                  - iam:ListAttachedRolePolicies
+                  - iam:GetRolePolicy
+                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-${environment}-*"
+            
+              # PASS roles into ECS / Application AutoScaling — only our roles/ECS-tasks, and only to ECS
+              - Sid: AllowPassRoleToService
+                Effect: Allow
+                Action: iam:PassRole
+                # which role we allow to be passed
+                Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/marketing-sites-${environment}-*"
+                # Which resource we allow that role to be assigned to (ECS task)
+                ArnLike:
+                  iam:AssociatedResourceARN:
+                    - !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/marketing-sites-<%=environment_type%>-*:*"
+                Condition:
+                  StringEquals:
                     iam:PassedToService:
                       - ecs-tasks.amazonaws.com
                       - application-autoscaling.amazonaws.com
