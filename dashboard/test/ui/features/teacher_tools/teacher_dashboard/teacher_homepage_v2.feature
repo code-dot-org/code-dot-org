@@ -6,7 +6,6 @@ Feature: Using the teacher homepage
     Given I create a teacher named "Teacher Hank"
 
     # This line can be removed when the new teacher homepage is the default
-    Then I use a cookie to mock the DCDO key "teacher-local-nav-v2" as "true"
     And I use a cookie to mock the DCDO key "teacher-homepage-v2" as "true"
     And I sign in as "Teacher Hank" and go home
     And I get levelbuilder access

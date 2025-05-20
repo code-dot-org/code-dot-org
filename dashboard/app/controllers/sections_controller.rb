@@ -17,7 +17,7 @@ class SectionsController < ApplicationController
       id: params[:id]
     )
 
-    if Experiment.enabled?(user: current_user, experiment_name: 'teacher-local-nav-v2') || DCDO.get('teacher-local-nav-v2', false)
+    if DCDO.get('teacher-local-nav-v2', true)
       redirect_to "/teacher_dashboard/sections/#{params[:id]}/settings"
       return
     end
