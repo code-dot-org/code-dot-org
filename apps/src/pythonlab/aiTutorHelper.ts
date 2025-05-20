@@ -21,16 +21,25 @@ const getAiTutor2FullPromptFromData = (
     .map(([_, file]) => file.contents)
     .join('\n');
 
+  const validationContents = validationFile?.contents;
+
+  const validationResults = JSON.stringify(
+    PythonValidationTracker.getInstance().getValidationResults()
+  );
+
   const fullQuestion = [
     question,
     'Here is my code:',
     sourceCode,
-    'Here is the validation code:',
-    validationFile?.contents,
-    'Here are the validation test names along with their result, in JSON:',
-    JSON.stringify(
-      PythonValidationTracker.getInstance().getValidationResults()
-    ),
+    ...(validationContents
+      ? ['Here is the validation code:', validationContents]
+      : []),
+    ...(validationResults
+      ? [
+          'Here are the validation test names along with their results, in JSON:',
+          validationResults,
+        ]
+      : []),
     'And here are the instructions:',
     longInstructions,
   ].join('\n\n');
