@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-05-14T20:40:26.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##AI in My Community: Helpful or Harmful?\r\n###Write Your Video Script\r\nNow it's your turn to write a script for a short video. Your job is to educate viewers about this use of AI and propose a way to make AI more beneficial for all members of the community.\r\n\r\n\r\n###Do This\r\n1. Use **TaCoFoRT** to craft your prompt to AI Chat. Use it as a collaborator on your video script and remember you can use text, images, and documents to prompt it.\r\n2. Go back and forth with AI chat to make the best script you can.\r\n3. Make sure the final script, which should include your input along with AI Chat's input, gets recorded in Part 2 of your Activity Guide.\r\n\r\n\r\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i>  *Need help refining your prompt?* \r\n\r\nMake sure your video script addresses the following issues:\r\n- How do AI’s impacts differ based on who in the community is being prioritized?\r\n- How can AI be designed to benefit more people equitably?\r\n- What responsibilities do people who implement AI technologies have to address these disparities?\r\n- What are the potential environmental impacts of this AI system and how can they be mitigated?",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are a chatbot facilitating a Creative Iteration Activity. Your role is to guide students in refining their own content by asking them questions, providing feedback, and offering suggestions without directly revising the student’s work. Students will be sharing creative works that express their voice and knowledge about an AI related topic such as :\n\nPlease follow these guidelines:\n1. Suggestions for Student Work:\nWhen a student shares their original piece, first ask them which of the following areas they like suggestions for improvement in by responding with this:\n\"Which area would you like suggestions for improvement in?\n* Clarity – Is it easy to understand?\n* Engagement – Does it capture interest?\n* Originality – Does it feel unique?\"\n\n2. Only provide ideas and suggestions for style, format, or tone.\n* Do not directly revise the student’s writing or provide a rewritten version.\n* If the student requests feedback, you may offer options or angles they could consider.\n\n3. Encourage Student Creativity:\n* The student should remain the creator and driver of their work.\n* Remind them they can choose which suggestions (if any) to implement.\n\n4. Respect the Student’s Process:\n* It’s perfectly acceptable for the student to not use any AI suggestions. They should simply note if and why they chose not to incorporate the feedback.\n* Continue to iterate with the student as long as they keep prompting you to provide suggestions or ideas.\n\nIn all your responses:\n* Keep the focus on constructive feedback and possible improvements.\n* Encourage the student to refine their piece in their own words, incorporating their unique perspective.\n* Keep your responses to 3 total suggestions or less, no matter the scope of feedback the student asks for\n\n",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_2025",
+    "display_name": "AI as Co-Pilot",
+    "thumbnail_url": "https://images.code.org/0bcaeb1afe7c7c99a922fd0aae4c29f5-Screenshot 2025-05-14 at 1.47.02 PM.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-05-14T20:40:26.932+00:00\",\"changed\":[\"cloned from \\\"problem-solving-with-ai-lesson12-level4_2025\\\"\"],\"cloned_from\":\"problem-solving-with-ai-lesson12-level4_2025\"},{\"changed_at\":\"2025-05-14 20:40:30 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-05-14 20:43:13 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-05-14 20:48:12 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2025-05-14 20:53:51 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -1,0 +1,48 @@
+name 'gen-ai-student-level-L11'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# ✅ Lesson Recap: Hallucinations and Fabrications
+
+#### After this lesson, you can 
+
+* #### Make recommendations regarding the input and output of a language model to avoid bias and harm
+
+## **Key Terms**
+
+* #### **Hallucinations** - Inaccuracies in a language model's response. These occur when the most probable response isn't accurate or factual
+
+## Resources
+
+### **Videos**
+<!-- Unified container for the grid of cards -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+<!-- Video for https://youtu.be/fmmboPQAQeY -->
+<!-- Youtube code fmmboPQAQeY --->
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://i.ytimg.com/vi/fmmboPQAQeY/1.jpg" alt="Thumbnail image for youtube video AI Auditing with Dr Deborah Raji" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+  <b><a href="https://youtu.be/fmmboPQAQeY" target="_blank">AI Auditing with Dr Deborah Raji</a></b>
+  </p>
+</div>
+
+</div>
+
+### **Activity Guides**
+
+<!-- Unified container for the grid of cards -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 90%; margin: 20px auto;">
+<div style="background-color: #F5F7F8; color: #000000; padding: 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+  <img src="https://drive.google.com/thumbnail?sz=w640&id=1Gxnivw4GVgPYpaeZYHtEhd8YkjlL8YdAs3nADr5MUv4" alt="Document thumbnail" style="width: 150px; height: auto; margin-right: 15px; border-radius: 5px;">
+  <p style="font-size: 14pt; line-height: 1.25;">
+    <a href="https://docs.google.com/document/d/1Gxnivw4GVgPYpaeZYHtEhd8YkjlL8YdAs3nADr5MUv4/template/preview" target="_blank" style="font-weight: bold; text-decoration: none;">AI Auditors</a><br>
+  </p>
+</div>
+
+</div>
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

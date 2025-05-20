@@ -15,6 +15,8 @@ import CalendarEmptyStateIllustration from '@cdo/apps/templates/teacherNavigatio
 import CalendarNotAvailable from '@cdo/apps/templates/teacherNavigation/images/CalendarNotAvailable.svg';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
+import RegionalWorkshopCatalogCard from './RegionalWorkshopCatalogCard';
+
 import style from './regionalWorkshopCatalog.module.scss';
 
 export default function RegionalWorkshopCatalog({zipFromSchoolInfo}) {
@@ -153,20 +155,43 @@ export default function RegionalWorkshopCatalog({zipFromSchoolInfo}) {
             {'.'}
           </BodyTwoText>
           {availableWorkshops && (
-            <div>
-              <ul>
-                {availableWorkshops.map(workshop => (
-                  <li key={workshop.id}>{`Id: ${workshop.id}, Title: ${
-                    workshop.name
-                      ? workshop.name
-                      : workshop.course + ' - ' + workshop.subject
-                  }, Location: ${
-                    workshop.location_name
-                  }, Participant Group Type: ${
-                    workshop.participant_group_type
-                  }`}</li>
-                ))}
-              </ul>
+            <div className={style.wsCardContainer}>
+              {availableWorkshops.map(
+                ({
+                  id,
+                  course,
+                  subject,
+                  name,
+                  capacity,
+                  num_enrollments,
+                  grade_levels,
+                  sessions,
+                  format,
+                  location_name,
+                  fee,
+                  has_prereq,
+                  description,
+                  custom_registration_link,
+                }) => (
+                  <RegionalWorkshopCatalogCard
+                    id={id}
+                    key={id}
+                    course={course}
+                    subject={subject}
+                    name={name}
+                    capacity={capacity}
+                    numEnrollments={num_enrollments}
+                    supportedGradeLevels={grade_levels}
+                    sessions={sessions || []}
+                    format={format}
+                    locationName={location_name}
+                    fee={fee || ''}
+                    hasPrereq={has_prereq}
+                    description={description}
+                    customRegistrationLink={custom_registration_link}
+                  />
+                )
+              )}
             </div>
           )}
         </div>

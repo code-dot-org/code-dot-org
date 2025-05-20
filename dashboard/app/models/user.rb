@@ -90,13 +90,34 @@ require 'services/user'
 class User < ApplicationRecord
   include SerializedProperties
   include SchoolInfoDeduplicator
+  include EmailPreferences
   include LevelProgressable
   include LocaleHelper
   include UserMultiAuthHelper
   include UserPermissionGrantee
+  include PasswordValidations
   include EmailValidations
+  include ProviderFlags
   include PartialRegistration
   include Rails.application.routes.url_helpers
+
+  self.inheritance_column = :user_type
+
+  # :user_type is locked. Use the :permissions property for more granular user permissions.
+  USER_TYPE_OPTIONS = [
+    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
+    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
+  ].freeze
+
+  TYPE_TO_STI_CLASS_MAP = {
+    TYPE_TEACHER => ::Teacher,
+    TYPE_STUDENT => ::Student,
+    'staff' => ::Teacher # Powerschool sends through 'staff' instead of 'teacher'
+  }.freeze
+
+  def self.find_sti_class(type_name)
+    TYPE_TO_STI_CLASS_MAP[type_name]
+  end
 
   # Notes:
   #   data_transfer_agreement_source: Indicates the source of the data transfer
@@ -133,30 +154,12 @@ class User < ApplicationRecord
   MAX_SECRET_RESET_ATTEMPTS = 5
   RESET_SECRETS = 'reset_secrets'.freeze
 
-  # Password Constants
-  PASSWORD_MAX_LENGTH = 128
-  PASSWORD_MIN_LENGTH = 6
-  PASSWORD_STRICT_MIN_LENGTH = 14
-  # Countries that require a 14 character password minimum
-  PASSWORD_STRICT_COUNTRIES = %w[AU NZ].freeze
-
-  # Provider variables
-  PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
-  PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
-  PROVIDER_MIGRATED = 'migrated'.freeze
-
   SYSTEM_DELETED_USERNAME = 'sys_deleted'
 
   # When adding a new version, append to the end of the array
   # using the next increasing natural number.
   TERMS_OF_SERVICE_VERSIONS = [
     1  # (July 2016) Teachers can grant access to labs for U13 students.
-  ].freeze
-
-  # :user_type is locked. Use the :permissions property for more granular user permissions.
-  USER_TYPE_OPTIONS = [
-    TYPE_STUDENT = SharedConstants::USER_TYPES.STUDENT,
-    TYPE_TEACHER = SharedConstants::USER_TYPES.TEACHER,
   ].freeze
 
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
@@ -382,21 +385,6 @@ class User < ApplicationRecord
 
   validates_inclusion_of :educator_role, in: Policies::User::ALLOWED_EDUCATOR_ROLES, if: :educator_role?
 
-  validates_presence_of     :password, if: :password_required?
-  validates_confirmation_of :password, if: :password_required?
-  validates_length_of       :password, minimum: :password_min_length, maximum: :password_max_length, allow_blank: true
-
-  validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
-  validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
-
-  # Validations for adding parent email notifications
-  validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
-  validates_presence_of :parent_email_preference_source, if: :parent_email_preference_opt_in_required?
-
   ## Callback Macros
 
   with_options if: :sponsored? do
@@ -407,8 +395,6 @@ class User < ApplicationRecord
   before_create :update_default_share_setting
 
   before_create :save_show_progress_table_v2
-
-  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
 
   before_validation :enforce_age_or_state_update, on: :update, if: :should_check_age_or_state_update?
 
@@ -458,12 +444,6 @@ class User < ApplicationRecord
     Services::ChildAccount.remove_compliance(self)
   end
 
-  after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
-
-  after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
-
-  after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
-
   after_save :update_and_add_users_school_infos, if: -> {saved_change_to_school_info_id? || (school_info_id.present? && user_school_infos.empty?)}
 
   after_destroy :record_soft_delete
@@ -480,48 +460,6 @@ class User < ApplicationRecord
   include Devise::Models::ManualSessionExpiration
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
-
-  def password_min_length
-    self.class.password_min_length(user_type, country_code)
-  end
-
-  def password_max_length
-    PASSWORD_MAX_LENGTH
-  end
-
-  def save_email_preference
-    if teacher?
-      EmailPreference.upsert!(
-        email: email,
-        opt_in: email_preference_opt_in.casecmp?("yes"),
-        ip_address: email_preference_request_ip,
-        source: email_preference_source,
-        form_kind: email_preference_form_kind,
-      )
-    end
-  end
-
-  # Enables/disables email notifications for the parent.
-  def save_parent_email_preference
-    if student? && parent_email.present?
-      EmailPreference.upsert!(
-        email: parent_email,
-        opt_in: parent_email_preference_opt_in.casecmp?("yes"),
-        ip_address: parent_email_preference_request_ip,
-        source: parent_email_preference_source,
-        form_kind: nil
-      )
-    end
-  end
-
-  # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
-  def save_email_reg_partner_preference
-    user = User.find_by_email_or_hashed_email(email)
-    if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
-      user.share_teacher_email_regional_partner_opt_in = DateTime.now
-      user.save!
-    end
-  end
 
   # Puts teachers directly into the progress table v2 view when new account is created.
   def save_show_progress_table_v2
@@ -613,20 +551,6 @@ class User < ApplicationRecord
   # "sections" previously referred to what is now called :sections_owned.
   def sections
     sections_instructed
-  end
-
-  def parent_email_preference_opt_in_required?
-    # parent_email_preference_opt_in_required is a checkbox which either has the value '0' or '1'
-    # user_type 'student' is the only type which supports have a parent_email associated with it.
-    parent_email_preference_opt_in_required == '1' && user_type == 'student'
-  end
-
-  def parent_email_update_only?
-    parent_email_update_only == '1' && user_type == 'student'
-  end
-
-  def parent_email_preference_setup
-    self.parent_email = parent_email_preference_email
   end
 
   def memoized_teachers
@@ -768,35 +692,6 @@ class User < ApplicationRecord
     else
       AuthenticationOption::OAUTH_CREDENTIAL_TYPES.include?(provider) && encrypted_password.blank?
     end
-  end
-
-  def managing_own_credentials?
-    if provider.blank?
-      true
-    elsif manual?
-      true
-    elsif migrated?
-      authentication_options.any? do |ao|
-        ao.credential_type == AuthenticationOption::EMAIL
-      end
-    else
-      false
-    end
-  end
-
-  def password_required?
-    # If the user is changing their password, then we should run all the password
-    # field verifications.
-    is_changing_password = password.present? || password_confirmation.present?
-    return true if is_changing_password
-
-    # Password is not required if the user is not managing their own account
-    # (i.e., someone is creating their account for them or the user is using OAuth).
-    return false unless managing_own_credentials?
-
-    # Password is required for:
-    # New users with no encrypted_password set
-    !persisted? && encrypted_password.blank?
   end
 
   def username_required?
@@ -1626,22 +1521,6 @@ class User < ApplicationRecord
     current_sign_in_at.present?
   end
 
-  def migrated?
-    provider == PROVIDER_MIGRATED
-  end
-
-  def manual?
-    provider == PROVIDER_MANUAL
-  end
-
-  def sponsored?
-    if migrated?
-      authentication_options.empty? && encrypted_password.blank?
-    else
-      provider == PROVIDER_SPONSORED
-    end
-  end
-
   def should_see_edit_email_link?
     if migrated?
       # Hide from students with no password (i.e., oauth-only and sponsored students)
@@ -2175,14 +2054,14 @@ class User < ApplicationRecord
     user = User.find_by_email_or_hashed_email(params[:email])
 
     if user
-      user.update!(params.merge(user_type: TYPE_TEACHER))
+      user = user.becomes!(Teacher) unless user.instance_of?(Teacher)
+      user.update!(params)
     else
       # initialize new users with name and school
       if params[:ops_first_name] || params[:ops_last_name]
         params[:name] ||= [params[:ops_first_name], params[:ops_last_name]].flatten.join(" ")
       end
       params[:school] ||= params[:ops_school]
-      params[:user_type] = TYPE_TEACHER
       params[:age] ||= 21
 
       # Devise Invitable's invite! skips validation, so we must first validate the email ourselves.
@@ -2190,7 +2069,7 @@ class User < ApplicationRecord
       ValidatesEmailFormatOf.validate_email_format(params[:email]).tap do |result|
         raise ArgumentError, "'#{params[:email]}' #{result.first}" unless result.nil?
       end
-      user = User.invite!(attributes: params)
+      user = Teacher.invite!(attributes: params)
       user.update!(invited_by: invited_by_user)
     end
 
@@ -2219,6 +2098,10 @@ class User < ApplicationRecord
     unless omniauth_user
       omniauth_user = create
       initialize_new_oauth_user(omniauth_user, auth, params)
+
+      sti_class = find_sti_class(omniauth_user.user_type)
+      omniauth_user = omniauth_user.becomes!(sti_class) if sti_class
+
       omniauth_user.save
     end
 
@@ -2290,17 +2173,15 @@ class User < ApplicationRecord
 
   def self.new_with_session(params, session)
     return super unless PartialRegistration.in_progress? session
-    new_from_partial_registration session do |user|
-      Services::User.assign_form_params(user, params)
-    end
-  end
 
-  def self.password_min_length(user_type, country_code)
-    if user_type == TYPE_TEACHER && PASSWORD_STRICT_COUNTRIES.include?(country_code) && DCDO.get('strict-password-country', false)
-      PASSWORD_STRICT_MIN_LENGTH
-    else
-      PASSWORD_MIN_LENGTH
-    end
+    user = new_from_partial_registration(session)
+
+    sti_class = find_sti_class(params[:user_type] || params['user_type'])
+    user = user.becomes!(sti_class) if sti_class && !user.instance_of?(sti_class)
+
+    Services::User.assign_form_params(user, params)
+
+    user
   end
 
   # Override how devise tries to find users by email to reset password

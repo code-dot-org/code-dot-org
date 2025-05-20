@@ -1,0 +1,30 @@
+name 'VPL-CSD-PL Overview-self-paced-unit6b_CSD-PL-24_may2025'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Module Overview
+
+## What's included in this module?
+
+<img src="https://images.code.org/29853488a851de70a5c2e34c9e6f16aa-image-1707522795571.53.06 PM.png" style="float: right; height: 200px; clear: both; margin: 10px 10px 10px 10px; border-radius: 30px" alt="A young student in a library smiles while holding a laptop open to the camera.">
+
+#### This professional learning module is made up of four parts:
+
+### 🏘️ **Introduction to Creating Apps with Devices** - ⭐️ You're here!
+#### This section will introduce you to the Creating Apps for Devices unit. You’ll get a sense of what this unit is all about and begin by setting up your micro:bit.
+
+### 🛠️ **Experiment with Inputs and Outputs**
+#### This section will guide you through using board inputs like buttons and switches to control outputs such as LED lights and buzzers. You’ll explore how to write programs that connect app events to physical hardware responses.
+
+### 📱 **Engage with Prototypes**
+#### This section will give you a chance to explore sample apps and prototypes. You'll see examples of what students will build and gain ideas for supporting their creativity and problem-solving.
+
+### 🧑‍🏫 **Teaching Creating Apps with Devices**
+#### This section will help you prepare for your role as a teacher in the Creating Apps for Devices unit. You’ll explore the authentic computer science practices your students will engage in, and reflect on strategies for differentiation, assessment, and creating an inclusive learning environment.
+
+## Engaging with This Module
+
+#### Feel free to complete as much or as little of this module as is useful for you and your students! Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching this unit. You'll be able to give Code.org your feedback on the last level of this module.
+
+MARKDOWN

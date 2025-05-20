@@ -2,6 +2,7 @@ district_s,state_s
 Birmingham City Schools,Alabama
 Dale County Schools,Alabama
 Elmore County Public Schools,Alabama
+Macon County Schools,Alabama
 Montgomery Public School,Alabama
 Montgomery Public Schools,Alabama
 Bering Strait School District,Alaska
@@ -28,6 +29,7 @@ Benton Schools,Arkansas
 Buffalo Island Central School District,Arkansas
 Lake Hamilton School District,Arkansas
 Newport Special School District,Arkansas
+AeroSTEM Academy,California
 Alameda Unified School District,California
 Alliance Jack H. Skirball Middle School,California
 Alta Loma School District,California
@@ -77,6 +79,7 @@ Regional School District 15,Connecticut
 Stamford Public Schools,Connecticut
 Wallingford School District,Connecticut
 Brandywine School District,Delaware
+Broward County Public Schools,Florida
 Divine Savior Academy,Florida
 Duval County Public Schools,Florida
 Madison County School District,Florida
@@ -108,6 +111,7 @@ Blaine County School District,Idaho
 Caldwell School District,Idaho
 Lewiston Independent School District #1,Idaho
 Pocatello Chubbuck School District #25,Idaho
+Ball-Chatham 5,Illinois
 Beecher CUSD200U,Illinois
 Calvary Academy,Illinois
 Carlinville CUSD#1,Illinois
@@ -144,6 +148,7 @@ Monroe County Community School,Indiana
 MSD of Mount Vernon,Indiana
 Plainfield Community School Corporation,Indiana
 South Vermillion Community School Corporation,Indiana
+Southwest Dubois County School Corporation,Indiana
 Southwest Parke Community Schools,Indiana
 St. John the Baptist,Indiana
 Tabernacle Christian School,Indiana
@@ -154,10 +159,12 @@ Denison Community Schools,Iowa
 Dubuque Community School District,Iowa
 George-Little Rock Community School District,Iowa
 Holy Family Catholic Schools,Iowa
+Indianola CSD,Iowa
 Iowa City Community School District,Iowa
 Mid-Prairie Community Schools,Iowa
 North Iowa Community Schools,Iowa
 Osage Community School,Iowa
+Perry Community School District,Iowa
 Sioux City Community School District,Iowa
 South Winneshiek CSD,Iowa
 Woodbine Community School District,Iowa
@@ -185,6 +192,7 @@ Morehouse Parish School District,Louisiana
 Natchitoches Parish,Louisiana
 Pelican Educational Foundation,Louisiana
 Rapides Parish Schools,Louisiana
+Terrebonne Parish,Louisiana
 Washington Parish School System,Louisiana
 Winn Parish,Louisiana
 Great Salt Bay School,Maine
@@ -391,6 +399,8 @@ Plainview-Old Bethpage CSD,New York
 PS 165 Robert E Simon,New York
 Public Schools of the Tarrytowns,New York
 Ravena Coeymans Selkirk CSD,New York
+Red Creek Central School District,New York
+Rochester City School District,New York
 Rocky Point Union Free School District,New York
 Schenectady School District,New York
 South Glens Falls CSD,New York
@@ -401,6 +411,7 @@ West Hempstead,New York
 Zeta Charter Schools,New York
 ALA Johnston,North Carolina
 American Renaissance School,North Carolina
+Cabarrus County Schools,North Carolina
 Cape Fear Center for Inquiry,North Carolina
 Carteret County Public Schools,North Carolina
 Cherokee County Schools,North Carolina
@@ -410,6 +421,7 @@ Currituck County School District,North Carolina
 Davie County Schools,North Carolina
 Duplin County Schools,North Carolina
 Durham Public School,North Carolina
+Franklin County Schools,North Carolina
 Gaston County Schools,North Carolina
 Guilford County Schools,North Carolina
 Guilford Preparatory Academy,North Carolina
@@ -472,6 +484,7 @@ Horizon Science Academy Cleveland High School,Ohio
 Huber Heights City Schools,Ohio
 Hudson City School District,Ohio
 Indian Hill Exempted Village School District,Ohio
+Lakewood City Schools,Ohio
 New Miami Local,Ohio
 Olentangy Local Schools,Ohio
 Par Excellence STEM Academy,Ohio
@@ -492,6 +505,7 @@ Oklahoma City Public Schools,Oklahoma
 Piedmont Independent School District 22,Oklahoma
 Tulsa Public Schools,Oklahoma
 Wayne Public Schools,Oklahoma
+Culver School District,Oregon
 Pine Eagle School District,Oregon
 Berwick Area School District,Pennsylvania
 Carbon Learning Achievement School,Pennsylvania
@@ -504,8 +518,10 @@ Norwin School District,Pennsylvania
 Philadelphia Academy Charter School,Pennsylvania
 Russell Byers Charter School,Pennsylvania
 Salem Christian School,Pennsylvania
+School District of Philadelphia,Pennsylvania
 School District of Springfield Township,Pennsylvania
 Union Area School District,Pennsylvania
+Wyoming Area School District,Pennsylvania
 Smithfield Public Schools,Rhode Island
 Aiken County Public Schools,South Carolina
 Beaufort County Schools,South Carolina
@@ -539,6 +555,7 @@ Oak Ridge City School District,Tennessee
 Overton County,Tennessee
 Sevier County School System,Tennessee
 St. Mary's Episcopal School,Tennessee
+Warren County Schools,Tennessee
 All Saints' Episcopal School of Fort Worth,Texas
 Austin Achieve Pflugerville,Texas
 Benavides Independent School District,Texas
@@ -575,6 +592,7 @@ UT Elementary Charter School,Texas
 Westlake Academy,Texas
 Ysleta Independent School District,Texas
 Ignite Entrepreneurship Academy,Utah
+Tooele School District,Utah
 Alleghany Highlands Public Schools,Virginia
 Clarke County Public Schools,Virginia
 "Frederick County Public Schools, (VA)",Virginia
@@ -613,5 +631,3 @@ Venture Academy,Wisconsin
 Converse County School District #2,Wyoming
 Sheridan County School District #2,Wyoming
 Sweetwater County School District #1,Wyoming
-Red Creek Central School District,NY
-Lakewood City Schools,OH

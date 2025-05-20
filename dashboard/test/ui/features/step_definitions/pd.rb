@@ -52,6 +52,13 @@ Given(/^I am a program manager$/) do
   GHERKIN
 end
 
+Given(/^I have a regional partner named "([^"]*)" in the zip code "([^"]*)"$/) do |partner_name, zip_code|
+  require_rails_env
+
+  regional_partner = RegionalPartner.find_or_create_by(name: partner_name, group: 1, is_active: true)
+  regional_partner.mappings.find_or_create_by!(zip_code: zip_code.to_s)
+end
+
 Given(/^I have a regional partner with a teacher application$/) do
   response = browser_request(url: '/api/test/create_teacher_application', method: 'POST')
   data = JSON.parse(response)
@@ -572,7 +579,7 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       course: course,
       organizer_id: organizer.id,
       capacity: number.to_i,
-      location_name: 'Buffalo',
+      session_location: 'Buffalo',
       num_sessions: 1,
       sessions_from: Date.new(2018, 4, 1),
       enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0

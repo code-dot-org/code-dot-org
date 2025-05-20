@@ -853,4 +853,20 @@ class CoursesControllerTest < ActionController::TestCase
     assert_equal 2, response_body.length
     assert_equal(['All Resources', 'All Standards'], response_body.map {|r| r['name']})
   end
+
+  test "all: shows all courses " do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    sign_in(create(:levelbuilder))
+    get :all
+    assert_response :success
+    refute_nil assigns(:courses)
+    assert_equal UnitGroup.all, assigns(:courses)
+  end
+
+  test_user_gets_response_for :all, user: nil, response: :redirect
+  test_user_gets_response_for :all, user: :student, response: :forbidden
+  test_user_gets_response_for :all, user: :teacher, response: :forbidden
+  test_user_gets_response_for :all, user: :admin, response: :forbidden
+  test_user_gets_response_for :all, user: :levelbuilder, response: :success
 end

@@ -1,0 +1,40 @@
+{
+  "entryContent": {
+    "fields": {
+      "seoTitle": {
+        "en-US": "⛔️ [ENGINEERING ONLY] UI Integration Testing - SEO"
+      },
+      "seoDescription": {
+        "en-US": "SEO Description"
+      },
+      "openGraphTitle": {
+        "en-US": "OpenGraph Title"
+      },
+      "openGraphDescription": {
+        "en-US": "OpenGraph Description"
+      },
+      "openGraphImage": {
+        "en-US": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Asset",
+            "id": "4hXiOPiRlCXpmtypRNOZqc"
+          }
+        }
+      },
+      "keywords": {
+        "en-US": [
+          "UI Integration Test",
+          "All The Things"
+        ]
+      },
+      "hidePageFromSearchEnginesNoindex": {
+        "en-US": true
+      },
+      "hideLinksFromSearchEnginesNofollow": {
+        "en-US": true
+      }
+    }
+  },
+  "contentType": "seoMetadata"
+}

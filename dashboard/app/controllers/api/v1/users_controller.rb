@@ -74,6 +74,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         ai_differentiation_enabled: !current_user.ai_differentiation_toggled_off?,
         has_completed_ai_differentiation_welcome: current_user.has_completed_ai_differentiation_welcome?,
         educator_role: current_user.educator_role,
+        sharing_disabled: current_user.sharing_disabled,
       }
     else
       render json: {
@@ -110,7 +111,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     render json: {
       user_name: current_user&.name,
       email: current_user&.email,
-      zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip,
+      zip: current_user&.school_info&.school&.zip || current_user&.school_info&.zip&.to_s&.rjust(5, '0'),
     }
   end
 

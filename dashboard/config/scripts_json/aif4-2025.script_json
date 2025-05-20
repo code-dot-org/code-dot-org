@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-06 06:48:43 UTC",
+    "serialized_at": "2025-05-16 17:09:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -257,7 +257,7 @@
       "relative_position": 8,
       "properties": {
         "assessment": true,
-        "overview": "This project-based lesson guides students in developing an advocacy campaign addressing digital equity, the digital divide, and net neutrality. Students explore real-world challenges, analyze case studies, and propose actionable solutions using AI-driven technology and policy recommendations. Through research, collaboration, and peer feedback, students refine their message and create a compelling advocacy campaign.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\nThis project-based lesson guides students in developing an advocacy campaign addressing digital equity, the digital divide, and net neutrality. Students explore real-world challenges, analyze case studies, and propose actionable solutions using AI-driven technology and policy recommendations. Through research, collaboration, and peer feedback, students refine their message and create a compelling advocacy campaign.",
         "preparation": "- Print copies of the Persona Fact Sheets for each station\n- Print copies of the Project Planning Guide (one for each group)\n- Print copies of the Gallery Walk Info Tracker (one for each student)\n- Print copies of the Peer Feedback Cards for day 3 (2-4 cards for each student)\n- Consider providing poster boards, markers, and art supplies (for physical campaigns)",
         "student_overview": "In this project, you research real-world Internet access challenges and create an advocacy campaign to raise awareness and propose solutions. Your campaign focuses on the digital divide, net neutrality, and how technology, including AI, can help improve Internet access."
       },
@@ -275,7 +275,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**What vulnerabilities exist in networks, and what strategies can mitigate their impact?**\n\nIn this lesson, students take on the role of cybersecurity analysts to investigate real-world network security threats and identify effective defenses. Through an interactive simulation, they explore vulnerabilities such as phishing, weak passwords, default credentials, and social engineering. After investigating each vulnerability, students propose a mitigation strategy that can be applied in a real-world context.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What vulnerabilities exist in networks, and what strategies can mitigate their impact?**\n\nIn this lesson, students take on the role of cybersecurity analysts to investigate real-world network security threats and identify effective defenses. Through an interactive simulation, they explore vulnerabilities such as phishing, weak passwords, default credentials, and social engineering. After investigating each vulnerability, students propose a mitigation strategy that can be applied in a real-world context.",
         "preparation": "- Preview Level 1 to familiarize yourself with the scenarios, decision points, and key takeaways\n- Label the four corners of the room: Phishing, Weak Passwords, Social Engineering, Default Credentials for the lesson wrap up.",
         "student_overview": "**What vulnerabilities exist in networks, and what strategies can mitigate their impact?**\n\nIn this less, you step into the role of a cyber security analyst in order to investigate real-world network security threats and determine how to defend against them. Through an interactive simulation, you explore common security vulnerabilities—phishing, weak passwords, default credentials, and social engineering—and propose defensive strategies  to help protect against future attacks."
       },
@@ -293,7 +293,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "**What makes AI effective at enhancing network security, and how does it compare to traditional methods?**\n\nThis lesson explores how AI enhances cybersecurity by detecting and responding to threats in real time. Through a hands-on simulation and discussions, students analyze how AI compares to traditional security methods and consider the challenges of implementing AI-driven solutions. The lesson encourages students to think critically about AI’s benefits, limitations, and role in network security.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What makes AI effective at enhancing network security, and how does it compare to traditional methods?**\n\nThis lesson explores how AI enhances cybersecurity by detecting and responding to threats in real time. Through a hands-on simulation and discussions, students analyze how AI compares to traditional security methods and consider the challenges of implementing AI-driven solutions. The lesson encourages students to think critically about AI’s benefits, limitations, and role in network security.",
         "preparation": "- Print and cut out Threat Detected! Cards (one set for each pair of students)\n- Print AI Threat Detection Notetaker Activity Guide (one for each pair of students)",
         "student_overview": "**What makes AI effective at enhancing network security, and how does it compare to traditional methods?**\n\nAI is transforming cybersecurity by detecting threats faster than traditional methods. In this lesson, you investigate how AI-powered tools improve security, their challenges, and how they compare to human decision-making in threat detection."
       },
@@ -312,7 +312,7 @@
       "relative_position": 11,
       "properties": {
         "assessment": true,
-        "overview": "This project-based lesson guides students through conducting a Network Security Risk Assessment, identifying vulnerabilities, and proposing AI-driven security solutions. Students analyze real-world cybersecurity risks, categorize them, and assess their societal and ethical implications before refining their recommendations through peer review. By the end of the project, students communicate their findings in a professional risk assessment report.",
+        "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\nThis project-based lesson guides students through conducting a Network Security Risk Assessment, identifying vulnerabilities, and proposing AI-driven security solutions. Students analyze real-world cybersecurity risks, categorize them, and assess their societal and ethical implications before refining their recommendations through peer review. By the end of the project, students communicate their findings in a professional risk assessment report.",
         "preparation": "- Print copies of the Network Security Risk Assessment Project Planning Guide (one for each student)",
         "student_overview": "In this project, you take on the role of a network security analyst, identifying security vulnerabilities and recommending AI-driven solutions. You explore real-world cybersecurity threats, analyze their impact, and present your findings in a professional risk assessment report."
       },
@@ -2867,7 +2867,13 @@
       "key": "0786aa16-4fe1-4b99-97bf-671d5af1011a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students should move into their project groups and prepare to discuss insights from the gallery walk. Assign or review team roles (Manager, Summarizer, Recorder, Time Keeper). They will use their notes to identify key issues, examples, and target groups for their advocacy campaign.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to debrief their Gallery Walks with their group. Ensure group Recorders are recording responses in the group’s Project Planning Guide.  \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups are discussing, use probing questions to support groups who may be stuck (e.g., “How does this evidence connect to your focus?”). Check shared notes and provide feedback to strengthen their ideas. Keep groups on track by reminding Time Keepers of the schedule.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to discuss different types of advocacy campaigns with students. Briefly explain each format (e.g., social media video, PSA, infographic) and ask students to consider which format would best suit their message and audience. Encourage them to think about clarity, reach, and impact when selecting a campaign type.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to turn to the Design Sprint page in their Advocacy Project Planning Guide. Instruct them to discuss each prompt as a group and record a common answer. Remind them to use team roles (Manager, Summarizer, Recorder, Time Keeper) to stay organized and ensure everyone contributes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to move beyond identifying problems and focus on action. Ask: ‘What specific change do you want to see? How will your campaign convince others to care about this issue?’ If students struggle with persuasion, suggest they include a real-world example or statistic to strengthen their argument."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students should move into their project groups and prepare to discuss insights from the gallery walk. Assign or review team roles (Manager, Summarizer, Recorder, Time Keeper). They will use their notes to identify key issues, examples, and target groups for their advocacy campaign.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to debrief their Gallery Walks with their group. Ensure group Recorders are recording responses in the group’s Project Planning Guide.  \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups are discussing, use probing questions to support groups who may be stuck (e.g., “How does this evidence connect to your focus?”). Check shared notes and provide feedback to strengthen their ideas. Keep groups on track by reminding Time Keepers of the schedule.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to discuss different types of advocacy campaigns with students. Briefly explain each format (e.g., social media video, PSA, infographic) and ask students to consider which format would best suit their message and audience. Encourage them to think about clarity, reach, and impact when selecting a campaign type.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to turn to the Design Sprint page in their Advocacy Project Planning Guide. Instruct them to discuss each prompt as a group and record a common answer. Remind them to use team roles (Manager, Summarizer, Recorder, Time Keeper) to stay organized and ensure everyone contributes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to move beyond identifying problems and focus on action. Ask: ‘What specific change do you want to see? How will your campaign convince others to care about this issue?’ If students struggle with persuasion, suggest they include a real-world example or statistic to strengthen their argument.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": " If students need more support, consider distributing a Persona Summary Sheet to each group. This quick-reference overview can help students connect real-world challenges to their campaign solutions.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "0786aa16-4fe1-4b99-97bf-671d5af1011a",
@@ -2875,8 +2881,18 @@
       }
     },
     {
-      "key": "6ded7758-8e59-4c0f-8b20-480e5c45a7e0",
+      "key": "458a5b68-db59-4b3f-9b7a-3fbc28c2c118",
       "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "458a5b68-db59-4b3f-9b7a-3fbc28c2c118",
+        "lesson_activity.key": "18413d23-2b33-4a52-b8f2-05ba4d21a839"
+      }
+    },
+    {
+      "key": "6ded7758-8e59-4c0f-8b20-480e5c45a7e0",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What stood out to you the most today? Why does this issue matter? What can we do about it?*\n- Use the Three W's protocol to facilitate this discussion. First, students discuss answers in pairs or small groups. Then , select three or four students to share a takeaway.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on key takeaways from the lesson and connect the digital divide to real-world impacts. Guide them to recognize who is affected, why it matters, and how advocacy can drive change. This discussion will set the stage for their advocacy campaigns by helping them consider how to make their message compelling and actionable.",
         "duration": "10",
@@ -3212,7 +3228,8 @@
       "key": "2c25ba76-d9cb-4b95-af1d-e721627b8579",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Label the four corners of the room: Phishing, Weak Passwords, Social Engineering, Default Credentials. Instruct students to go to the corner that relates to the one vulnerability they mentioned in their question of the day answer. Have students share their answers and compare mitigation strategies. If time allows, have one person from each group share one takeaway from their discussion with the class.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Label the four corners of the room: Phishing, Weak Passwords, Social Engineering, Default Credentials. Instruct students to go to the corner that relates to the one vulnerability they mentioned in their question of the day answer. Have students share their answers and compare mitigation strategies. If time allows, have one person from each group share one takeaway from their discussion with the class.\n",
+        "progression_name": "Student Survey"
       },
       "seeding_key": {
         "activity_section.key": "2c25ba76-d9cb-4b95-af1d-e721627b8579",
@@ -3262,7 +3279,13 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each pair of students a copy of the Threat Detected! Cards and the AI Threat Detection Notetaker activity guide.",
-        "name": "AI Threat Detection"
+        "name": "AI Threat Detection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "For early finishers or advanced groups, provide a set of Tier Two Threat Detected! Cards. These cards introduce more complex or ambiguous scenarios that require deeper analysis of AI limitations, ethical concerns, and the need for human oversight. Encourage students to use the same notetaker and apply their learning from earlier rounds."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "429e491e-6237-41a6-a206-d94e8eda8dae",
@@ -3270,8 +3293,18 @@
       }
     },
     {
-      "key": "b01e8e08-43e8-4d37-b009-dab905b8f9a5",
+      "key": "6d7e2370-b125-4874-b20f-f3b18ce9e87c",
       "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6d7e2370-b125-4874-b20f-f3b18ce9e87c",
+        "lesson_activity.key": "3e8b0e7d-df72-4dd5-8ccd-13cce9038d80"
+      }
+    },
+    {
+      "key": "b01e8e08-43e8-4d37-b009-dab905b8f9a5",
+      "position": 3,
       "properties": {
         "description": "Today, you will act as security analysts, using an AI threat detection system to investigate and respond to security threats. Your goal is to evaluate how AI-based security tools work compared to traditional detection methods. Work with your partner to complete this activity. You will receive one set of AI Threat Detection Cards and you will each have your own Threat Detection Notetaker to fill out individually.",
         "remarks": true
@@ -3283,7 +3316,7 @@
     },
     {
       "key": "9694c474-d555-492d-b038-673570015ba4",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will act as security analysts interacting with an AI threat detection system to analyze and respond to network vulnerabilities. Review the steps for drawing a Threat Detected card, discussing the scenario with the AI Chatbot, recording the results of the discussion on the Activity Guide, and then drawing a new card to repeat the process.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 10, Level 1 to interact with the threat detection chatbot and complete their activity guide. ",
         "progression_name": "Threat Detection Chatbot"
@@ -3295,7 +3328,7 @@
     },
     {
       "key": "92d85e1b-9da8-437b-91c7-fe5d1cb4f43e",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Give students at least 20 minutes to complete as many threat cards as possible in that time. Then, direct student to move on to Level 2 to complete a check for understanding. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Circulate and listen for students who assume AI is always accurate. If students trust the AI’s responses without question, ask: ‘Could AI ever misidentify a threat? How would that impact security?’ Ensure students also consider limitations like false positives, AI bias, and the need for human oversight.",
         "progression_name": "Check for Understanding",
@@ -3317,7 +3350,7 @@
     },
     {
       "key": "99808bea-215b-45a5-8b67-6c7870f5ab82",
-      "position": 5,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -3327,9 +3360,9 @@
     },
     {
       "key": "25834266-8fbf-42fb-b137-d4cd2b0c3043",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Show the model threat detection notes, emphasizing short, clear notes instead of full sentences. Remind students that they don’t need to capture every word from the chatbot, just the gist of its response.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of four. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Instruct students to choose one scenario from their activity and discuss with their group how AI detected the threat and how that compared to traditional methods.**\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Encourage students to move beyond ‘AI is faster’ as their key argument. Ask: ‘Does AI replace human analysts completely? What tasks might still require human decision-making?’ Look for responses that mention AI’s adaptability, scalability, and data processing power while recognizing that human oversight is still necessary.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n- *What patterns did you notice in AI’s responses to each threat?*\n- *How did AI improve security compared to traditional methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students analyze patterns in AI’s responses to security threats and evaluate its strengths and weaknesses. Encourage them to consider what AI does well (speed, data analysis, automation) and where it struggles (bias, detecting new types of threats, false positives). Guide them to recognize that AI is a tool, not a replacement for human decision-making in cybersecurity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain to students that the next slides will have a statement about AI and cybersecurity. Students will hold a thumbs up for True, thumbs down for False, or thumbs sideways for unsure. Once students have held up their answer, you will reveal the correct answer and explain why.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: AI is powerful, but it’s not perfect—some scams still slip through. Hackers continuously adapt their methods, and AI can sometimes generate false positives or miss subtle attacks. Human judgement should be the first line of defense. Remind students that if they are unsure whether something is a scam, take a step back and cross-check with a trusted source, like speaking to the person who sent the message in person.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Social engineering works because it looks convincing—attackers impersonate real people, use familiar logos, and create a sense of urgency. Remind students to always examine the sender details, such as looking to see if the email address matches the school or company’s domain. Other ways you can tell are any red flags, like urgent requests, odd grammar, or messages that ask for personal information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Even responding to a scam email can be dangerous—attackers confirm active accounts based on responses and might target students again. Remind students that when in doubt, use this approach: ‘STOP-THINK-VERIFY’ before interacting with any suspicious message. Never respond to a message with any personal information before verifying that it is actually the person they say they are. The best way to do this is to ask the person in real life."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Show the model threat detection notes, emphasizing short, clear notes instead of full sentences. Remind students that they don’t need to capture every word from the chatbot, just the gist of its response.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of four. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one scenario from their activity and discuss with their group what the AI got right, where it needed human support, and what surprised them about how the AI handled the threat.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:**  Encourage students to move beyond ‘AI is faster’ as their key argument. Ask: ‘Does AI replace human analysts completely? What tasks might still require human decision-making?’ Look for responses that mention AI’s adaptability, scalability, and data processing power while recognizing that human oversight is still necessary.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  Click through the animated slide to display the prompts.\n- *What patterns did you notice in AI’s responses to each threat?*\n- *How did AI improve security compared to traditional methods?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Students analyze patterns in AI’s responses to security threats and evaluate its strengths and weaknesses. Encourage them to consider what AI does well (speed, data analysis, automation) and where it struggles (bias, detecting new types of threats, false positives). Guide them to recognize that AI is a tool, not a replacement for human decision-making in cybersecurity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain to students that the next slides will have a statement about AI and cybersecurity. Students will hold a thumbs up for True, thumbs down for False, or thumbs sideways for unsure. Once students have held up their answer, you will reveal the correct answer and explain why.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: AI is powerful, but it’s not perfect—some scams still slip through. Hackers continuously adapt their methods, and AI can sometimes generate false positives or miss subtle attacks. Human judgement should be the first line of defense. Remind students that if they are unsure whether something is a scam, take a step back and cross-check with a trusted source, like speaking to the person who sent the message in person.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Social engineering works because it looks convincing—attackers impersonate real people, use familiar logos, and create a sense of urgency. Remind students to always examine the sender details, such as looking to see if the email address matches the school or company’s domain. Other ways you can tell are any red flags, like urgent requests, odd grammar, or messages that ask for personal information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide and ask students to choose whether it’s true or false. Once students have indicated their answer, move onto the next slide to reveal and discuss.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Explain why the statement is false: Even responding to a scam email can be dangerous—attackers confirm active accounts based on responses and might target students again. Remind students that when in doubt, use this approach: ‘STOP-THINK-VERIFY’ before interacting with any suspicious message. Never respond to a message with any personal information before verifying that it is actually the person they say they are. The best way to do this is to ask the person in real life."
       },
       "seeding_key": {
         "activity_section.key": "25834266-8fbf-42fb-b137-d4cd2b0c3043",
@@ -3338,7 +3371,7 @@
     },
     {
       "key": "659965b0-39e1-4ac5-b5bc-f92cc79d402a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "progression_name": "Student Survey"
       },
@@ -3369,6 +3402,17 @@
       }
     },
     {
+      "key": "5ddc7fbd-4fa9-4d48-9718-c6dddd545236",
+      "position": 2,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ddc7fbd-4fa9-4d48-9718-c6dddd545236",
+        "lesson_activity.key": "ac9655ee-4aee-4006-bd2c-b0fc60f616cf"
+      }
+    },
+    {
       "key": "41db16bf-4890-440a-beda-afc057e0b54d",
       "position": 1,
       "properties": {
@@ -3385,7 +3429,7 @@
       "key": "34397bf1-56ad-44ba-a853-c4ecfa3c531c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the Network Security Risk Assessment Project Planning Guide. This will guide them through all three days of the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that for the next three days, they will work as network security analysts. This means they will select a company scenario, identify vulnerabilities, assess their societal and ethical impacts, and propose both traditional and AI-driven solutions. Along the way, they will refine their recommendations through peer review.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about the project rubric?*\n- *What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 11, Level 1 to choose a company scenario. Instruct them to complete the graphic organizer on their Project Planning Guide for their chosen company. ",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:**  Give each student a copy of the Network Security Risk Assessment Project Planning Guide. This will guide them through all three days of the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that for the next three days, they will work as network security analysts. This means they will select a company scenario, identify vulnerabilities, assess their societal and ethical impacts, and propose both traditional and AI-driven solutions. Along the way, they will refine their recommendations through peer review.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the project requirements and answer any questions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the project rubric and hold on to any questions they may have.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do you notice about the project rubric?*\n- *What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the tasks they will need to complete for this project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the first example to model what quality assessment looks like for Critical Vulnerabilities and how it connects to the rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example of societal / ethical impact risk assessment to model what quality work looks like and how it connects to the rubric.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk through the example of critical vulnerabilities risk assessment to model what quality work looks like and how it connects to the rubric.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the steps students will take on Day 3.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Lesson 11, Level 1 to choose a company scenario. Instruct them to complete the graphic organizer on their Project Planning Guide for their chosen company. ",
         "duration": "30",
         "name": "Activity",
         "progression_name": "Company Case Study Choices"
@@ -4266,6 +4310,28 @@
     },
     {
       "chapter": 26,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Final Project Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson8-level2_2025"
+        ],
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif4-2025",
+        "activity_section.key": "d68a4cff-fcae-4f46-b17f-f84b66090722"
+      },
+      "level_keys": [
+        "fabric-of-the-internet-and-ai-lesson8-level2_2025"
+      ]
+    },
+    {
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4290,7 +4356,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4315,7 +4381,29 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson9-level3_2025"
+        ],
+        "lesson.key": "Network Security",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif4-2025",
+        "activity_section.key": "2c25ba76-d9cb-4b95-af1d-e721627b8579"
+      },
+      "level_keys": [
+        "fabric-of-the-internet-and-ai-lesson9-level3_2025"
+      ]
+    },
+    {
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4340,7 +4428,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4365,7 +4453,29 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson10-level3_2025"
+        ],
+        "lesson.key": "Emerging Technologies",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif4-2025",
+        "activity_section.key": "5ddc7fbd-4fa9-4d48-9718-c6dddd545236"
+      },
+      "level_keys": [
+        "fabric-of-the-internet-and-ai-lesson10-level3_2025"
+      ]
+    },
+    {
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4390,7 +4500,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4415,7 +4525,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4440,7 +4550,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4465,7 +4575,29 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson11-level5_2025"
+        ],
+        "lesson.key": "Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-2025",
+        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578"
+      },
+      "level_keys": [
+        "fabric-of-the-internet-and-ai-lesson11-level5_2025"
+      ]
+    },
+    {
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4490,7 +4622,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4818,6 +4950,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "fabric-of-the-internet-and-ai-lesson8-level2_2025",
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson8-level2_2025"
+        ],
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif4-2025",
+        "activity_section.key": "d68a4cff-fcae-4f46-b17f-f84b66090722"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson9-level1_2025",
         "script_level.level_keys": [
           "networks-internet-lesson9-level1_2025"
@@ -4842,6 +4986,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "fabric-of-the-internet-and-ai-lesson9-level3_2025",
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson9-level3_2025"
+        ],
+        "lesson.key": "Network Security",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif4-2025",
+        "activity_section.key": "2c25ba76-d9cb-4b95-af1d-e721627b8579"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-internet-lesson10-level1_2025",
         "script_level.level_keys": [
           "networks-internet-lesson10-level1_2025"
@@ -4862,6 +5018,18 @@
         "lesson_group.key": "lessonGroup-5",
         "script.name": "aif4-2025",
         "activity_section.key": "92d85e1b-9da8-437b-91c7-fe5d1cb4f43e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "fabric-of-the-internet-and-ai-lesson10-level3_2025",
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson10-level3_2025"
+        ],
+        "lesson.key": "Emerging Technologies",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "aif4-2025",
+        "activity_section.key": "5ddc7fbd-4fa9-4d48-9718-c6dddd545236"
       }
     },
     {
@@ -4914,6 +5082,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "fabric-of-the-internet-and-ai-lesson11-level5_2025",
+        "script_level.level_keys": [
+          "fabric-of-the-internet-and-ai-lesson11-level5_2025"
+        ],
+        "lesson.key": "Network Security Risk Assessment Project",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "aif4-2025",
+        "activity_section.key": "01bfbb20-4913-4ee8-91d0-bf6fcca02578"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "networks-postassessment_2025",
         "script_level.level_keys": [
           "networks-postassessment_2025"
@@ -4938,6 +5118,30 @@
     }
   ],
   "resources": [
+    {
+      "name": "[EXEMPLAR] Gallery Walk Info Tracker",
+      "url": "https://docs.google.com/document/d/1--4w_KUPZRMk8VwiRSLlfeCHrPEbdprTOP6hdHpuzfY/edit?tab=t.0",
+      "key": "_exemplar_gallery_walk_info_tracker",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_gallery_walk_info_tracker"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Internet Access Advocacy Campaign Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1hzLrhFPAsDBoWE88SmCVV4Q5xXywveldG2BFg8W828U/edit?usp=sharing",
+      "key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide"
+      }
+    },
     {
       "name": "[KEY] AI Networks Chat",
       "url": "https://docs.google.com/document/d/17m_80EDQvotN8ywKsOwArdgbBh_Df1z55c6yK0wp3Qw/edit?usp=sharing",
@@ -5377,6 +5581,18 @@
       }
     },
     {
+      "name": "Persona Summary Sheet",
+      "url": "https://docs.google.com/document/d/1ZkdJWs4XO1cBUAoBIrZ2OOdEsc3hyNRT2XCpP0jiaXo/edit?tab=t.0",
+      "key": "persona_summary_sheet",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "persona_summary_sheet"
+      }
+    },
+    {
       "name": "Role Cards for Challenge 1 and 2",
       "url": "https://docs.google.com/document/d/1ntvGt1aXcCQIlhDMPO3zxYJBFQbVANp5dzRDC092DJs/edit?usp=sharing",
       "key": "role_cards_for_challenge_1_and_2",
@@ -5634,6 +5850,18 @@
     {
       "seeding_key": {
         "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "_exemplar_gallery_walk_info_tracker"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "_exemplar_internet_access_advocacy_campaign_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
         "resource.key": "gallery_walk_info_tracker"
       }
     },
@@ -5659,6 +5887,12 @@
       "seeding_key": {
         "lesson.key": "Internet Access Advocacy Campaign Project",
         "resource.key": "persona_fact_sheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Internet Access Advocacy Campaign Project",
+        "resource.key": "persona_summary_sheet"
       }
     },
     {

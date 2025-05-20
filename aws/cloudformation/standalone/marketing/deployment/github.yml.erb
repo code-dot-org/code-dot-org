@@ -48,6 +48,11 @@ Resources:
               Fn::ImportValue: !Sub "${MarketingApplicationStackName}-FargateServiceTaskDefTaskRoleArn"
           - Effect: Allow
             Action:
+              - 'iam:GetRole'
+            Resource:
+              Fn::ImportValue: !Sub "${MarketingApplicationStackName}-ECSAutoScalingRoleArn"
+          - Effect: Allow
+            Action:
               - 'ecs:RegisterTaskDefinition'
             Resource: !Sub "arn:aws:ecs:${AWS::Region}:${AWS::AccountId}:task-definition/MarketingStackStagingFargateServiceTaskDef:*"
           - Effect: Allow
@@ -76,6 +81,10 @@ Resources:
                 - "${StaticAssetsBucketArn}/*"
                 - StaticAssetsBucketArn:
                     Fn::ImportValue: !Sub "${MarketingApplicationStackName}-StaticAssetsBucketArn"
+          - Effect: Allow
+            Action:
+              - "cloudfront:CreateInvalidation"
+            Resource: !Sub 'arn:aws:cloudfront::${AWS::AccountId}:distribution/${CloudFrontDistribution}'
 
   GithubDeployerAccessKey:
     Type: AWS::IAM::AccessKey

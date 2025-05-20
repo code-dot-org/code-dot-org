@@ -51,12 +51,18 @@ export interface WorkshopCourseConfig {
 
 export interface WorkshopFormTemplateProps {
   config?: WorkshopCourseConfig;
+  regionalPartnerData?: RegionalPartner[];
 }
 
 export interface Organizer {
   id: number;
   name: string;
   email: string;
+}
+
+export interface PotentialOrganizer {
+  value: number;
+  label: string;
 }
 
 export type SessionFormat = 'virtual' | 'in_person';
@@ -119,7 +125,7 @@ export interface WorkshopRequest
   extends Omit<Workshop, 'id' | 'facilitators' | 'organizer'> {
   id?: number;
   facilitators: number[];
-  organizer?: number;
+  organizer_id: number | null;
   // TODO: ACQ-3081 remove legacyForm2025 flag
   legacyForm2025?: boolean | null;
 }
@@ -141,7 +147,6 @@ export interface Facilitator {
 }
 
 export interface WorkshopFormState {
-  id?: number;
   course: string;
   capacity: string;
   description: string;
@@ -178,7 +183,10 @@ type BasicsKeys =
   | 'description'
   | 'courseOfferings';
 
-type PartnerFacilitatorKeys = 'facilitators' | 'regionalPartnerId';
+type PartnerFacilitatorKeys =
+  | 'facilitators'
+  | 'regionalPartnerId'
+  | 'organizerId';
 
 type AdditionalInfoKeys = 'fee' | 'participantGroupType' | 'notes';
 
@@ -205,8 +213,6 @@ export interface BasicsProps
 export interface PartnerFacilitatorProps
   extends SectionProps,
     Pick<WorkshopFormState, PartnerFacilitatorKeys> {
-  regionalPartnerData: RegionalPartner[] | null;
-  facilitatorData: Facilitator[] | null;
   errors: WorkshopErrors;
 }
 

@@ -1,4 +1,4 @@
-@import 'color.scss';
+@import '@code-dot-org/component-library-styles/colors.scss';
 
 $bar-width: 1px;
 $visible-area: 3px;
@@ -9,7 +9,7 @@ $grab-area-offset: calc(($bar-width-grab-area - $visible-area) / 2);
 $negative-grab-area-offset: calc(-1 * $grab-area-offset);
 
 .resizeBar {
-  background-color: $light_gray_800;
+  background-color: var(--background-neutral-quaternary);
   flex-shrink: 0;
   position: relative;
 }
@@ -98,5 +98,5 @@ $negative-grab-area-offset: calc(-1 * $grab-area-offset);
 
 .visible {
   opacity: 1;
-  background-color: $light_gray_800;
+  background-color: var(--background-neutral-quaternary);
 }

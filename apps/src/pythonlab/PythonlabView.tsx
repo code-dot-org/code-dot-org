@@ -1,6 +1,7 @@
 // Pythonlab view
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
+import {setWidgetViewShowCode} from '@codebridge/redux/workspaceRedux';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
@@ -30,11 +31,14 @@ import {
 } from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
+import CodebridgeRegistry from '../codebridge/CodebridgeRegistry';
+
 import ProjectTypePicker from './components/ProjectTypePicker';
 import {
   DEFAULT_PROJECT,
   STANDALONE_CONSOLE_PROJECT,
   STANDALONE_NEIGHBORHOOD_PROJECT,
+  PYTHONLAB_VALID_FILE_TYPES,
 } from './constants';
 import HorizontalLayout from './layout/HorizontalLayout';
 import ShareView from './layout/ShareView';
@@ -56,14 +60,13 @@ const standaloneStartSources: {[key: string]: ProjectSources} = {
 
 const defaultConfig: ConfigType = {
   languageMapping: pythonlabLangMapping,
-  editableFileTypes: ['py', 'csv', 'txt'],
-
+  editableFileTypes: PYTHONLAB_VALID_FILE_TYPES,
   activeLayout: 'horizontal',
-  validMimeTypes: ['text/'],
   layoutComponents: {
     horizontal: HorizontalLayout,
     vertical: VerticalLayout,
     share: ShareView,
+    widget: HorizontalLayout,
   },
   showFileBrowser: true,
 };
@@ -151,6 +154,9 @@ const PythonlabView: React.FunctionComponent<
   const handleProjectTypeChange = (type: 'console' | 'neighborhood') => {
     const project = standaloneStartSources[type];
     dispatch(changeProjectType({newSources: project}));
+    // Clear the console when switching project types.
+    const consoleManager = CodebridgeRegistry.getInstance().getConsoleManager();
+    consoleManager?.clearTerminalLines();
     setShowProjectPicker(false);
   };
 
@@ -159,6 +165,11 @@ const PythonlabView: React.FunctionComponent<
     LifecycleEvent.LevelLoadStarted,
     restartPyodideIfProgramIsRunning
   );
+
+  // Set view code to false if level is switched for any levels in widget view.
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    dispatch(setWidgetViewShowCode(false));
+  });
 
   const onRun = async (
     runTests: boolean,
