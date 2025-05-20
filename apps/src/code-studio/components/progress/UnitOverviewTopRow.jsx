@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 
 import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
-import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
@@ -12,10 +11,6 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Assigned from '@cdo/apps/templates/Assigned';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
 import i18n from '@cdo/locale';
 
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
@@ -37,17 +32,13 @@ class UnitOverviewTopRow extends React.Component {
     assignedSectionId: PropTypes.number,
     studentResources: PropTypes.arrayOf(resourceShape).isRequired,
     unitCalendarLessons: PropTypes.arrayOf(unitCalendarLesson),
-    weeklyInstructionalMinutes: PropTypes.number,
-    showCalendar: PropTypes.bool,
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
-    courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
     courseLink: PropTypes.string,
     isUnitWithLevels: PropTypes.bool,
 
     // redux provided
-    sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
     selectedSectionId: PropTypes.number,
     deeperLearningCourse: PropTypes.bool,
     hasPerLevelResults: PropTypes.bool.isRequired,
@@ -70,7 +61,6 @@ class UnitOverviewTopRow extends React.Component {
 
   render() {
     const {
-      sectionsForDropdown,
       unitAllowsHiddenLessons,
       deeperLearningCourse,
       scriptId,
@@ -79,13 +69,9 @@ class UnitOverviewTopRow extends React.Component {
       isRtl,
       studentResources,
       assignedSectionId,
-      showCalendar,
       unitCalendarLessons,
-      weeklyInstructionalMinutes,
       unitCompleted,
       hasPerLevelResults,
-      courseOfferingId,
-      courseVersionId,
       isUnitWithLevels,
     } = this.props;
 
@@ -136,35 +122,10 @@ class UnitOverviewTopRow extends React.Component {
               {assignedSectionId && <Assigned />}
             </div>
           )}
-
-          <div style={styles.resourcesRow}>
-            {!(
-              showV2TeacherDashboard() &&
-              location.pathname.includes('teacher_dashboard')
-            ) &&
-              showCalendar &&
-              viewAs === ViewType.Instructor && (
-                <UnitCalendarButton
-                  lessons={unitCalendarLessons}
-                  weeklyInstructionalMinutes={weeklyInstructionalMinutes}
-                  scriptId={scriptId}
-                />
-              )}
-          </div>
           <div style={styles.secondRow}>
             {!deeperLearningCourse && viewAs === ViewType.Instructor && (
               <div style={styles.sectionContainer}>
-                {showV2TeacherDashboard() ? (
-                  <StudentSelector />
-                ) : (
-                  <SectionAssigner
-                    sections={sectionsForDropdown}
-                    courseOfferingId={courseOfferingId}
-                    courseVersionId={courseVersionId}
-                    scriptId={scriptId}
-                    forceReload={true}
-                  />
-                )}
+                <StudentSelector />
               </div>
             )}
           </div>
@@ -251,12 +212,6 @@ export const UnconnectedUnitOverviewTopRow = UnitOverviewTopRow;
 
 export default connect((state, ownProps) => ({
   selectedSectionId: state.teacherSections.selectedSectionId,
-  sectionsForDropdown: sectionsForDropdown(
-    state.teacherSections,
-    ownProps.courseOfferingId,
-    ownProps.courseVersionId,
-    state.progress.scriptId
-  ),
   deeperLearningCourse: state.progress.deeperLearningCourse,
   hasPerLevelResults: Object.keys(state.progress.levelResults).length > 0,
   unitCompleted: !!state.progress.unitCompleted,

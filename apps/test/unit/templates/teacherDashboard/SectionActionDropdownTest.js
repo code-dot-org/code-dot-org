@@ -4,7 +4,6 @@ import React from 'react';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import * as TeacherNavFlagUtils from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils.ts';
 
 import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
@@ -149,39 +148,7 @@ describe('SectionActionDropdown', () => {
     expect(wrapper).to.contain('Restore Section');
   });
 
-  it('sends selected user to the new edit page', () => {
-    const wrapper = shallow(
-      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
-    );
-    const sectionId = wrapper.instance().props.sectionData.id;
-    const expectedUrl = '/sections/' + sectionId + '/edit';
-    expect(wrapper).to.contain('Edit Section Details');
-    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
-      expectedUrl
-    );
-  });
-
-  it('sends selected user to the new edit page with redirect for pl section', () => {
-    const wrapper = shallow(
-      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[4]} />
-    );
-    const sectionId = wrapper.instance().props.sectionData.id;
-    const expectedUrl =
-      '/sections/' +
-      sectionId +
-      '/edit?redirectToPage=my-professional-learning';
-    expect(wrapper).to.contain('Edit Section Details');
-    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
-      expectedUrl
-    );
-  });
-
-  it('sends selected user to the new teacher dashboard settings page', () => {
-    jest
-      .spyOn(TeacherNavFlagUtils, 'showV2TeacherDashboard')
-      .mockImplementation(() => {
-        return true;
-      });
+  it('sends selected user to the settings page', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
@@ -195,12 +162,7 @@ describe('SectionActionDropdown', () => {
     jest.restoreAllMocks();
   });
 
-  it('sends selected user to the new teacher dashboard roster page', () => {
-    jest
-      .spyOn(TeacherNavFlagUtils, 'showV2TeacherDashboard')
-      .mockImplementation(() => {
-        return true;
-      });
+  it('sends selected user to the roster page', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );

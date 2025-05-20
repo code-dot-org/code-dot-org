@@ -15,7 +15,6 @@ import i18n from '@cdo/locale';
 
 import {h3Style} from '../../legacySharedComponents/Headings';
 import firehoseClient from '../../metrics/firehose';
-import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 import LessonSelector from './LessonSelector';
 import ProgressViewHeader from './ProgressViewHeader';
@@ -29,7 +28,6 @@ import {
 import UnitSelector from './UnitSelector';
 
 import styleConstants from './progressTables/progress-table-constants.module.scss';
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 import navigationStyles from '@cdo/apps/templates/teacherNavigation/teacher-navigation.module.scss';
 
 const SECTION_PROGRESS = 'SectionProgress';
@@ -214,11 +212,7 @@ class SectionProgress extends Component {
 
     return (
       <div
-        className={
-          showV2TeacherDashboard()
-            ? navigationStyles.widthLockedPage
-            : dashboardStyles.dashboardPage
-        }
+        className={navigationStyles.widthLockedPage}
         // eslint-disable-next-line react/forbid-dom-props
         data-testid="section-progress-v1"
       >

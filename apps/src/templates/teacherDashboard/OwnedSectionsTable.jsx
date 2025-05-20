@@ -15,10 +15,8 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {stringifyQueryParams} from '../../utils';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
-import {showV2TeacherDashboard} from '../teacherNavigation/TeacherNavFlagUtils';
 
 import SectionActionDropdown from './SectionActionDropdown';
 import {sortableSectionShape} from './shapes';
@@ -60,17 +58,12 @@ export const courseLinkFormatter = function (course, {rowData}) {
         <>
           <a
             href={
-              showV2TeacherDashboard()
-                ? assignmentPaths.length > 0 &&
-                  assignmentPaths[0].includes('/s/')
-                  ? teacherDashboardUrl(
-                      rowData.id,
-                      assignmentPaths[0].replace('/s/', '/unit/')
-                    )
-                  : teacherDashboardUrl(rowData.id, assignmentPaths[0])
-                : `${assignmentPaths[0]}${stringifyQueryParams({
-                    section_id: rowData.id,
-                  })}`
+              assignmentPaths.length > 0 && assignmentPaths[0].includes('/s/')
+                ? teacherDashboardUrl(
+                    rowData.id,
+                    assignmentPaths[0].replace('/s/', '/unit/')
+                  )
+                : teacherDashboardUrl(rowData.id, assignmentPaths[0])
             }
             style={tableLayoutStyles.link}
           >
@@ -80,16 +73,10 @@ export const courseLinkFormatter = function (course, {rowData}) {
             <div style={styles.currentUnit}>
               <div>{i18n.currentUnit()}</div>
               <a
-                href={
-                  showV2TeacherDashboard()
-                    ? teacherDashboardUrl(
-                        rowData.id,
-                        assignmentPaths[1].replace('/s/', '/unit/')
-                      )
-                    : `${assignmentPaths[1]}${stringifyQueryParams({
-                        section_id: rowData.id,
-                      })}`
-                }
+                href={teacherDashboardUrl(
+                  rowData.id,
+                  assignmentPaths[1].replace('/s/', '/unit/')
+                )}
                 style={tableLayoutStyles.link}
               >
                 {assignmentNames[1]}
@@ -141,21 +128,18 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
 };
 
 export const studentsFormatter = function (studentCount, {rowData}) {
-  const manageStudentsUrl = showV2TeacherDashboard()
-    ? teacherDashboardUrl(rowData.id, '/roster')
-    : teacherDashboardUrl(rowData.id, '/manage_students');
   const studentHtml =
     rowData.studentCount <= 0 ? (
       <Button
         __useDeprecatedTag
         text={i18n.addStudents()}
-        href={manageStudentsUrl}
+        href={teacherDashboardUrl(rowData.id, '/roster')}
         color={Button.ButtonColor.neutralDark}
       />
     ) : (
       <a
         style={tableLayoutStyles.link}
-        href={manageStudentsUrl}
+        href={teacherDashboardUrl(rowData.id, '/roster')}
         aria-label={i18n.manageStudentsAriaLabel({
           numStudents: studentCount,
         })}

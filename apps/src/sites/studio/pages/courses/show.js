@@ -92,7 +92,6 @@ function showCourseOverview() {
         courseVersionId={courseSummary.course_version_id}
         descriptionStudent={courseSummary.description_student}
         descriptionTeacher={courseSummary.description_teacher}
-        sectionsInfo={scriptData.sections}
         teacherResources={courseSummary.teacher_resources}
         studentResources={courseSummary.student_resources}
         scripts={courseSummary.scripts}

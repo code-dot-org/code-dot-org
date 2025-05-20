@@ -1,5 +1,3 @@
-import {showV2TeacherDashboard} from '@cdo/apps/templates/teacherNavigation/TeacherNavFlagUtils';
-
 const dashboardPrefix = '/teacher_dashboard/sections/';
 
 /**
@@ -20,7 +18,7 @@ export const getUnitUrl = (
   studentId = null,
   unassignedUnitUrl
 ) => {
-  if (showV2TeacherDashboard() && sectionId && unitName) {
+  if (sectionId && unitName) {
     if (studentId) {
       return `/teacher_dashboard/sections/${sectionId}/unit/${unitName}?user_id=${studentId}`;
     } else {

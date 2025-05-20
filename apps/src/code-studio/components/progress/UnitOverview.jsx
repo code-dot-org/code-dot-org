@@ -222,13 +222,10 @@ class UnitOverview extends React.Component {
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             assignedSectionId={assignedSectionId}
-            showCalendar={showCalendar}
-            weeklyInstructionalMinutes={weeklyInstructionalMinutes}
             unitCalendarLessons={unitCalendarLessons}
             isMigrated={isMigrated}
             scriptOverviewPdfUrl={scriptOverviewPdfUrl}
             scriptResourcesPdfUrl={scriptResourcesPdfUrl}
-            courseOfferingId={courseOfferingId}
             courseVersionId={courseVersionId}
             isProfessionalLearningCourse={isProfessionalLearningCourse}
             courseLink={this.props.courseLink}
