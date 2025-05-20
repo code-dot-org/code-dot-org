@@ -4,6 +4,8 @@ import Snapshot, {
   SnapshotItem,
 } from '@code-dot-org/component-library/cms/snapshot';
 
+import {sortArrayInAscendingOrder} from '../helpers';
+
 export interface LabSnapshotProps {
   label?: string;
   ages?: string[];
@@ -43,7 +45,7 @@ const LabSnapshot: React.FunctionComponent<LabSnapshotProps> = ({
         });
     };
 
-    addItem('Ages', 'user', ages);
+    addItem('Ages', 'user', ages?.slice().sort(sortArrayInAscendingOrder));
     addItem('Level', 'arrow-up-wide-short', level);
     addItem('What you can make', 'paintbrush', creation);
     addItem('Devices', 'desktop', devices);
