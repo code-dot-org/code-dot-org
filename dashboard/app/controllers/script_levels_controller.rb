@@ -388,13 +388,7 @@ class ScriptLevelsController < ApplicationController
         script = Unit.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
       end
       raise ActiveRecord::RecordNotFound unless script
-      unit_group = script.unit_group
-      unit_group_unit = script.unit_group_units&.find {|ugu| ugu.unit_group == unit_group}
-      return {
-        unit: script,
-        unit_group: unit_group,
-        unit_group_unit: unit_group_unit,
-      }
+      return Queries::Courses.get_course_context(script.id)
     end
 
     # /courses/.../units/.../lessons/.../levels/... path

@@ -24,7 +24,7 @@ class Queries::Courses
   # Returns `nil` if the script name does not correspond to a valid Unit,
   # UnitGroupUnit, or UnitGroup/Course.
   #
-  # @param unit_name_or_id [String] The name of the Unit used to fetch the course context.
+  # @param unit_name_or_id [String, Integer] The name of the Unit used to fetch the course context.
   # @return [Hash, nil] A hash containing the course and unit group unit,
   #   or `nil` if no valid course context is found.
   #   The hash has the following structure:
