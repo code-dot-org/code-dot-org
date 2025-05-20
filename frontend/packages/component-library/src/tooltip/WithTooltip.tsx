@@ -8,7 +8,7 @@ import {
   ReactNode,
   HTMLAttributes,
   forwardRef,
-  useImperativeHandle
+  useImperativeHandle,
 } from 'react';
 import {createPortal} from 'react-dom';
 
@@ -23,7 +23,7 @@ const tailLengths = {
   l: 12,
   m: 9,
   s: 6,
-  xs: 6
+  xs: 6,
 };
 
 export interface WithTooltipHandle {
@@ -46,7 +46,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
     const tooltipRef = useRef<HTMLDivElement | null>(null);
     const hideTimeoutRef = useRef<number | null>(null);
     const prevDirectionRef = useRef<ComponentPlacementDirection | undefined>(
-      tooltipProps.direction
+      tooltipProps.direction,
     );
     const suppressNextFocusRef = useRef(false);
 
@@ -61,7 +61,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
     const handleShowTooltip = (
       show: boolean,
       event: React.SyntheticEvent<HTMLElement>,
-      isTooltip: boolean = false
+      isTooltip: boolean = false,
     ) => {
       if (suppressNextFocusRef.current && event.type === 'focus') {
         suppressNextFocusRef.current = false;
@@ -89,7 +89,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
         setShowTooltip(false);
         setNodePosition(null);
         suppressNextFocusRef.current = true;
-      }
+      },
     }));
 
     const tailLength = tailLengths[tooltipProps.size || 'm'];
@@ -103,9 +103,9 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
           setPositionedElementStyles: setTooltipStyles,
           setPositionedElementDirection: setActualDirection,
           tailOffset,
-          tailLength
+          tailLength,
         }),
-      [nodePosition, tailLength, actualDirection]
+      [nodePosition, tailLength, actualDirection],
     );
 
     // Effect to update tooltip styles when the tooltip is shown
@@ -154,7 +154,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
     const tooltipStyleProps: React.CSSProperties = {
       visibility: showTooltip ? 'visible' : 'hidden',
       ...tooltipStyles,
-      ...tooltipProps.style
+      ...tooltipProps.style,
     };
 
     // Check if children prop is a valid React element and clone it with ariaDescribedBy attribute
@@ -178,7 +178,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
         onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
           handleHideTooltip();
           children.props.onMouseLeave?.(event);
-        }
+        },
       });
 
     return (
@@ -194,7 +194,7 @@ const WithTooltip = forwardRef<WithTooltipHandle, WithTooltipProps>(
               onMouseEnter={event => handleShowTooltip(true, event, true)}
               onMouseLeave={handleHideTooltip}
             />,
-            document.body
+            document.body,
           )}
       </TooltipOverlay>
     );
