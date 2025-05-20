@@ -86,6 +86,58 @@ This will save "All The Things", open up the experience in the associated enviro
 
 **Note**: Normally for a merge to `test` or `production`, you will want to do this after merging your PR.
 
+### ✅ How to add or update a component step-by-step
+
+1. Create a new fork (see [Forking](#forking) section above):
+
+```bash
+yarn test:ui:fork
+```
+
+2. Make updates on the forked page in Contentful.
+
+3. If you're adding a new component: add the component to the Section Type on `/apps/marketing/tests/e2e/pom/all-the-things.ts` and add unit and Eyes tests to `/apps/marketing/tests/e2e/all-the-things.spec.ts`.
+
+4. Update the `development` snapshot with your forked version; the ID can be found in the url on the forked experience in Contentful:
+
+```bash
+yarn test:ui:update-snapshot --source-entry-id <ID HERE> --environment development
+```
+
+5. Create a PR with the updates from steps 1-4.
+
+6. Once the PR is merged, update your workspace with `staging`.
+
+7. Publish the updated snapshot in the `development` environment:
+
+```bash
+yarn test:ui:publish-snapshot --environment development
+```
+
+8. Open the development output link in the terminal in Contentful, and Publish the experience.
+
+9. Publish the updated snapshot in the `test` environment:
+
+```bash
+yarn test:ui:publish-snapshot --environment test
+```
+
+10. Publish the updated snapshot in the `production` environment:
+
+```bash
+yarn test:ui:publish-snapshot --environment production
+```
+
+11. Eyes diffs will show up in a Marketing-App-Deploy message in the _#infra-marketing-app-staging_ Slack channel.
+
+12. Approve Eyes diffs and rerun failed tests if needed.
+
+13. Publish updated `production` version of the All The Things page in Contentful.
+
+#### ⛔️ Troubleshooting
+
+If tests or builds continue to fail and you need to make updates to the All The Things page to fix something, you will need to follow these steps each time.
+
 ## Resources
 
 - [Playwright Documentation](https://playwright.dev/docs/intro)

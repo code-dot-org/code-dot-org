@@ -65,52 +65,51 @@ theme: responsive
         </tr>
       </table>
     </td>
-    <!-- "coming soon" system requirements, to be updated and made live from March through July.
+    <!-- "coming soon" system requirements, to be updated and made live from March through July. -->
     <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Browser July '25
+          ಬ್ರೌಸರ್ ಜುಲೈ '25
         </th>
         <tr>
-          <td>Chrome 103.x</td>
+          <td>ಕ್ರೋಮ್ 109</td>
         </tr>
         <tr>
-          <td>Safari 14.x</td>
+          <td>ಸಫಾರಿ 16.6</td>
         </tr>
         <tr>
-          <td>Mobile Safari 14.x</td>
+          <td>ಮೊಬೈಲ್ ಸಫಾರಿ 16</td>
         </tr>
         <tr>
-          <td>Edge 119.x</td>
+          <td>ಎಡ್ಜ್ 128</td>
         </tr>
         <tr>
-          <td>Firefox 98.x</td>
+          <td>ಫೈರ್ಫಾಕ್ಸ್ 115</td>
         </tr>
       </table>
     </td>
     <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
       <table>
         <th>
-          Platform July '25
+          ಪ್ಲಾಟ್ಫಾರ್ಮ್ ಜುಲೈ '25
         </th>
         <tr>
-          <td>macOS 10.15</td>
+          <td>ಮ್ಯಾಕೋಸ್ 10.15</td>
         </tr>
         <tr>
-          <td>iOS 15.x</td>
+          <td>ಐಒಎಸ್ 16.x</td>
         </tr>
         <tr>
-          <td>Windows 8</td>
+          <td>ವಿಂಡೋಸ್ 10</td>
         </tr>
         <tr>
-          <td>Android 8.x</td>
+          <td>ಆಂಡ್ರಾಯ್ಡ್ 8</td>
         </tr>
         <tr>
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
     </td>
-    -->
   </tr>
 </table>
 
@@ -149,7 +148,6 @@ Code.org ಮತ್ತು ನಮ್ಮ [ಆನ್‌ಲೈನ್ ಕಲಿಕೆ 
 ### ನೀವು ಈ ವೀಡಿಯೊವನ್ನು ಪ್ಲೇ ಮಾಡಬಹುದೇ?
 
 ನೀವು Code.org ನ ಆನ್‌ಲೈನ್ ಕೋರ್ಸ್‌ಗಳನ್ನು ಪ್ರಾರಂಭಿಸುವ ಮೊದಲು, ನೀವು ಹೋಗಲು ಉತ್ತಮವಾಗಿರುವಿರಿ ಎಂಬುದನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಕೆಳಗಿನ ವೀಡಿಯೊದ ಪ್ಲೇಬ್ಯಾಕ್ ಅನ್ನು ಪರೀಕ್ಷಿಸಿ.
-
 
 <!--
 The following HTML is a copy of video_with_fallback.haml. once this file can be converted to

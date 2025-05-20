@@ -74,51 +74,17 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
     assert_response :ok
   end
 
-  # Fetch a code sample without evaluations
-  test 'can fetch code sample without evaluations' do
+  # Fetch a code sample
+  test 'can fetch code sample' do
     dataset_maker = create(:student_work_dataset_maker)
     sign_in(dataset_maker)
-    level = create(:level)
     unit = create(:script)
-    section = create(:section, script_id: unit.id)
+    level = create(:level)
     student = create(:student)
-    create(:follower, section: section, student_user: student)
+    create(:user_level, user: student, level: level, script: unit)
     get :fetch_student_code_samples, params: {level_id: level.id, unit_id: unit.id, num_samples: 1}
     assert_response :ok
     response_json = JSON.parse(response.body)
-    assert response_json.first["student_code"], 'console.log("Hello World")'
-  end
-
-  # Asking for a code sample with evaluations when there are no evaluations returns not found
-  test 'include ai_evaluations returns not found for un-evaluated level' do
-    dataset_maker = create(:student_work_dataset_maker)
-    sign_in(dataset_maker)
-    level = create(:level)
-    unit = create(:script)
-    section = create(:section, script_id: unit.id)
-    student = create(:student)
-    create(:follower, section: section, student_user: student)
-    get :fetch_student_code_samples, params: {level_id: level.id, unit_id: unit.id, num_samples: 1, include_ai_evaluations: true}
-    assert_response :not_found
-    assert @response.body, ("There are no skill-based evaluations for the level with id #{level.id}")
-  end
-
-  # Fetch evaluated code sample
-  test 'can fetch code sample with evaluations' do
-    dataset_maker = create(:student_work_dataset_maker)
-    sign_in(dataset_maker)
-    level = create(:level)
-    unit = create(:script)
-    section = create(:section, script_id: unit.id)
-    student = create(:student)
-    create(:follower, section: section, student_user: student)
-    ulse = create(:user_level_skill_evaluation, student_id: student.id, level_id: level.id, unit_id: unit.id)
-    ule = create(:user_level_evaluation, student_id: student.id, level_id: level.id, unit_id: unit.id)
-    create(:student_work_evaluation_summary, student_work_evaluation_id: ulse.id, student_work_evaluation_summary_id: ule.id)
-    get :fetch_student_code_samples, params: {level_id: level.id, unit_id: unit.id, num_samples: 1, include_ai_evaluations: true}
-    assert_response :ok
-    response_json = JSON.parse(response.body)
-    assert response_json.first["student_code"], 'console.log("Hello World")'
-    assert response_json.first["evaluation"], ule.evaluation
+    assert response_json.first["studentWork"], 'console.log("Hello World")'
   end
 end

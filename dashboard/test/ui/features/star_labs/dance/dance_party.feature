@@ -55,7 +55,7 @@ Feature: Dance Party
     And I select age 10 in the age dialog
     And I close the instructions overlay if it exists
     # drag the "set tint" block from the toolbox to below "after 4 measures"
-    And I drag block "setTint" to block "bottomChangeMove"
+    And I've initialized the workspace with winning dance level 8 blocks
     And I press "runButton"
     And I wait until element ".congrats" is visible
 

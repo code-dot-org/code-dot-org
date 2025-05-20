@@ -8,46 +8,44 @@ describe('Design System - Link', () => {
   it('renders with correct text when passed as children prop', () => {
     render(<Link href="https://studio.code.org/home">Home</Link>);
 
-    const link = screen.getByRole<HTMLAnchorElement>('link', {name: 'Home'});
+    const link = screen.getByRole('link', {name: 'Home'});
     expect(link).toBeInTheDocument();
-    expect(link.href).toBe('https://studio.code.org/home');
+    expect(link).toHaveAttribute('href', 'https://studio.code.org/home');
   });
 
   it('renders with correct text when passed as text prop', () => {
     render(<Link href="https://studio.code.org/home" text="Home" />);
 
-    const link = screen.getByRole<HTMLAnchorElement>('link', {name: 'Home'});
+    const link = screen.getByRole('link', {name: 'Home'});
     expect(link).toBeInTheDocument();
-    expect(link.href).toBe('https://studio.code.org/home');
+    expect(link).toHaveAttribute('href', 'https://studio.code.org/home');
   });
 
-  it('openInNewTab adds target attribute', () => {
+  it('sets target="_blank" when openInNewTab is true', () => {
     render(
       <Link href="https://studio.code.org/home" openInNewTab>
         Home
       </Link>,
     );
 
-    const link = screen.getByRole<HTMLAnchorElement>('link', {name: 'Home'});
-    expect(link).toBeInTheDocument();
-    expect(link.target).toBe('_blank');
-    expect(link.href).toBe('https://studio.code.org/home');
+    const link = screen.getByRole('link', {name: 'Home'});
+    expect(link).toHaveAttribute('target', '_blank');
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
-  it('external adds rel attribute', () => {
+  it('renders external icon and sets rel attribute when external is true', () => {
     render(
       <Link href="https://studio.code.org/home" external>
         Home
       </Link>,
     );
 
-    const link = screen.getByRole<HTMLAnchorElement>('link', {name: 'Home'});
-    expect(link).toBeInTheDocument();
-    expect(link.rel).toBe('noopener noreferrer');
-    expect(link.href).toBe('https://studio.code.org/home');
+    const link = screen.getByRole('link', {name: 'Home'});
+    expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+    expect(screen.getByTestId('font-awesome-v6-icon')).toBeInTheDocument();
   });
 
-  it('onClick is correctly called when clicked', async () => {
+  it('calls onClick handler correctly', async () => {
     const user = userEvent.setup();
     const spyOnClick = jest.fn();
 
@@ -73,5 +71,16 @@ describe('Design System - Link', () => {
     await user.click(link);
 
     expect(spyOnClick).not.toHaveBeenCalled();
+  });
+
+  it('does not set href when disabled', () => {
+    render(
+      <Link disabled href="https://studio.code.org/home">
+        Disabled
+      </Link>,
+    );
+
+    const link = screen.getByText('Disabled');
+    expect(link).not.toHaveAttribute('href');
   });
 });

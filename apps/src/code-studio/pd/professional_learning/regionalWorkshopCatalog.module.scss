@@ -243,12 +243,15 @@
   }
 
   .buttonContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
     padding: 1.25rem;
     background-color: var(--neutral-gray-5);
     border-top: 1px solid var(--neutral-gray-20);
 
     .wsCardButton {
-      width: 100%;
+      flex-grow: 1;
     }
   }
 }
