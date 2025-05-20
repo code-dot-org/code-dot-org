@@ -101,7 +101,11 @@ class AichatRequestsControllerTest < ActionController::TestCase
   end
 
   test 'start_chat_completion returns too many requests when request is throttled' do
-    Cdo::Throttle.stubs(:throttle).with("aichat/requests/#{@authorized_teacher1.id}", 50, 60).returns(true)
+    Cdo::Throttle.stubs(:throttle).with(
+      "aichat/requests/#{@authorized_teacher1.id}",
+      AichatRequestsController::DEFAULT_REQUEST_LIMIT_PER_MIN,
+      60
+    ).returns(true)
 
     sign_in(@authorized_teacher1)
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
@@ -109,7 +113,11 @@ class AichatRequestsControllerTest < ActionController::TestCase
   end
 
   test 'start_chat_completion returns too many requests when token count exceeds limit' do
-    Cdo::Throttle.stubs(:throttle).with("aichat/requests/#{@authorized_teacher1.id}", 50, 60).returns(false)
+    Cdo::Throttle.stubs(:throttle).with(
+      "aichat/requests/#{@authorized_teacher1.id}",
+      AichatRequestsController::DEFAULT_REQUEST_LIMIT_PER_MIN,
+      60
+    ).returns(false)
     Cdo::Throttle.stubs(:throttled?).with("aichat/tokens/model/gpt-4o-mini/user/#{@authorized_teacher1.id}").returns(true)
 
     sign_in(@authorized_teacher1)
