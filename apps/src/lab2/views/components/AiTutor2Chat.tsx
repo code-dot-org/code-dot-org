@@ -18,7 +18,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
 }) => {
   const [question, setQuestion] = React.useState<string | undefined>(undefined);
 
-  // If the submit button is clicked, then ask the LLM.
+  // If the submit button is clicked, then ask AITutor2.
   const handleSubmit = useCallback((userMessage: string) => {
     setQuestion(userMessage);
   }, []);
@@ -29,6 +29,7 @@ const AiTutor2Chat: React.FunctionComponent<AiTutor2ChatProps> = ({
         type={type}
         question={question}
         getFullPrompt={getFullPrompt}
+        shrink={true}
       />
       <div className={moduleStyles.userMessageContainer}>
         <UserMessageEditor

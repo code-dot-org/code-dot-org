@@ -5,12 +5,14 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import AiTutor2Manager from '@cdo/apps/lab2/ai/AiTutor2Manager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import moduleStyles from './AiTutor2Response.module.scss';
+import moduleStylesFixed from './AiTutor2ResponseFixed.module.scss';
+import moduleStylesShrink from './AiTutor2ResponseShrink.module.scss';
 
 interface AiTutor2ResponseProps {
   type: 'user' | 'hint';
   question?: string;
   getFullPrompt?: (question: string) => string;
+  shrink?: boolean;
 }
 
 // A single response from the AITutor2, answering the provided question.
@@ -18,6 +20,7 @@ const AiTutor2Response: React.FunctionComponent<AiTutor2ResponseProps> = ({
   type,
   question,
   getFullPrompt,
+  shrink = false,
 }) => {
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.lab.scriptId);
@@ -96,7 +99,7 @@ const AiTutor2Response: React.FunctionComponent<AiTutor2ResponseProps> = ({
     <ChatMessage
       text={response?.trim()}
       role={Role.ASSISTANT}
-      customStyles={moduleStyles}
+      customStyles={shrink ? moduleStylesShrink : moduleStylesFixed}
     />
   );
 };

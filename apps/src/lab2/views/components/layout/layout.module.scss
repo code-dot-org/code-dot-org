@@ -52,7 +52,8 @@
   border-left: solid 1px var(--neutral-gray-80);
 
   .inside {
-    padding: 10px;
     height: 100%;
+    padding: 10px 10px 0 10px;
+    overflow: hidden;
   }
 }
