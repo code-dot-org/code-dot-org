@@ -382,18 +382,22 @@ class ScriptLevelsController < ApplicationController
     if params[:script_id]
       script_id = params[:script_id]
       script = Unit.get_from_cache(script_id, raise_exceptions: false)
-      if script.nil? && Unit.family_names.include?(script_id)
-        # Due to a programming error, we have been inadvertently passing user: nil
-        # to Unit.get_unit_family_redirect_for_user . Since end users may be
-        # depending on this incorrect behavior, and we are trying to deprecate this
-        # codepath anyway, the current plan is to not fix this bug.
-        script = Unit.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
-        if script
-          # get_unit_family_redirect_for_user returns a fake Unit object,
-          # so we don't need to look up context like UnitGroup or UnitGroupUnit.
-          return {
-            unit: script,
-          }
+      if script.nil?
+        if Unit.family_names.include?(script_id)
+          # Due to a programming error, we have been inadvertently passing user: nil
+          # to Unit.get_unit_family_redirect_for_user . Since end users may be
+          # depending on this incorrect behavior, and we are trying to deprecate this
+          # codepath anyway, the current plan is to not fix this bug.
+          script = Unit.get_unit_family_redirect_for_user(script_id, user: nil, locale: request.locale)
+        elsif UnitGroup.family_names.include?(script_id)
+          unit_group = UnitGroup.latest_stable_version(script_id, locale: request.locale) ||
+            UnitGroup.latest_stable_version(script_id)
+          if unit_group&.can_be_participant?(current_user)
+            unit_group = UnitGroup.latest_assigned_version(script_id, current_user) || unit_group
+          end
+          if unit_group&.single_unit_course?
+            script = unit_group.units_for_user(current_user).first
+          end
         end
       end
       raise ActiveRecord::RecordNotFound unless script
@@ -662,10 +666,15 @@ class ScriptLevelsController < ApplicationController
   private def redirect_script(script, locale)
     return nil unless script
 
-    # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
-    # none are assigned.
-    redirect_script = Unit.latest_assigned_version(script.family_name, current_user)
-    redirect_script ||= Unit.latest_stable_version(script.family_name, locale: locale)
+    if script.unit_group&.single_unit_course?
+      redirect_script = UnitGroup.latest_assigned_version(script.unit_group.family_name, current_user)&.first_unit
+      redirect_script ||= UnitGroup.latest_stable_version(script.unit_group.family_name, locale: locale)&.first_unit
+    else
+      # Redirect the user to the latest assigned script in this family, or to the latest stable script in this family if
+      # none are assigned.
+      redirect_script = Unit.latest_assigned_version(script.family_name, current_user)
+      redirect_script ||= Unit.latest_stable_version(script.family_name, locale: locale)
+    end
 
     # Do not redirect if we are already on the correct script.
     return nil if redirect_script == script

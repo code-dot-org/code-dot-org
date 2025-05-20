@@ -697,7 +697,7 @@ class Unit < ApplicationRecord
     # Redirect user to the latest assigned unit in this family,
     # if one exists and it is newer than the current unit.
     latest_assigned_version = unit_group&.single_unit_course? ?
-                                UnitGroup.latest_assigned_version(unit_group.family_name, user).first_unit :
+                                UnitGroup.latest_assigned_version(unit_group.family_name, user)&.first_unit :
                                 Unit.latest_assigned_version(family_name, user)
     latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.unit_group&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > current_version_year
