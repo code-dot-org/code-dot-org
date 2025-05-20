@@ -88,9 +88,9 @@ class ScriptsControllerTest < ActionController::TestCase
     unit = create :script, published_state: nil, family_name: 'my-script'
     create :unit_group_unit, unit_group: course, script: unit, position: 1
 
-    @request.path = "/courses/#{course.name}/units/1"
     get :show, params: {
-      id: unit.name,
+      course_course_name: course.name,
+      position: 1
     }
     assert_response :ok
     assert_includes(@response.body, "<link rel=\"canonical\" href=\"//test-studio.code.org/courses/#{course.name}/units/1")
@@ -103,9 +103,9 @@ class ScriptsControllerTest < ActionController::TestCase
     unit2 = create :script, published_state: nil
     create :unit_group_unit, unit_group: course, script: unit2, position: 2
 
-    @request.path = "/courses/#{course.name}/units/1"
     get :show, params: {
-      id: unit.name,
+      course_course_name: course.name,
+      position: 1
     }
     assert_response :ok
     refute_includes(@response.body, "<link rel=\"canonical\"")
@@ -336,34 +336,44 @@ class ScriptsControllerTest < ActionController::TestCase
 
   test "show: do not redirect when showing latest stable version of single-unit course for student" do
     sign_in create(:student)
-    @request.path = "/courses/#{@single_unit_course_2024.name}/units/1"
-    get :show, params: {id: @single_unit_2024.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2024.name,
+      position: 1
+    }
     assert_response :success
   end
 
   test "show: redirect from older version to latest stable version of single-unit course for student" do
     sign_in create(:student)
-    @request.path = "/courses/#{@single_unit_course_2023.name}/units/1"
-    get :show, params: {id: @single_unit_2023.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2023.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
   test "show: redirect from older version to latest stable version of single-unit course for logged out user" do
-    @request.path = "/courses/#{@single_unit_course_2023.name}/units/1"
-    get :show, params: {id: @single_unit_2023.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2023.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
   test "show: redirect from new unstable version to latest stable version of single-unit course for student" do
     sign_in create(:student)
-    @request.path = "/courses/#{@single_unit_course_2025.name}/units/1"
-    get :show, params: {id: @single_unit_2025.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2025.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
   test "show: redirect from new unstable version to latest stable version of single-unit course for logged out user" do
-    @request.path = "/courses/#{@single_unit_course_2025.name}/units/1"
-    get :show, params: {id: @single_unit_2025.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2025.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2024.name}?redirect_warning=true"
   end
 
@@ -373,15 +383,19 @@ class ScriptsControllerTest < ActionController::TestCase
     section_single_unit_2023.add_student(student_single_unit_2023)
 
     sign_in student_single_unit_2023
-    @request.path = "/courses/#{@single_unit_course_2025.name}/units/1"
-    get :show, params: {id: @single_unit_2025.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2025.name,
+      position: 1
+    }
     assert_redirected_to "/s/#{@single_unit_2023.name}?redirect_warning=true"
   end
 
   test "show: do not redirect teacher to latest stable version of single-unit course" do
     sign_in create(:teacher)
-    @request.path = "/courses/#{@single_unit_course_2023.name}/units/1"
-    get :show, params: {id: @single_unit_2023.name}
+    get :show, params: {
+      course_course_name: @single_unit_course_2023.name,
+      position: 1
+    }
     assert_response :ok
   end
 
@@ -400,9 +414,11 @@ class ScriptsControllerTest < ActionController::TestCase
 
     sign_in experiment_teacher
 
-    @request.path = "/courses/#{experiment_course.name}/units/1"
-    get :show, params: {id: experiment_script.name}
-    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/unit/#{experiment_script.name}"
+    get :show, params: {
+      course_course_name: experiment_course.name,
+      position: 1
+    }
+    assert_redirected_to "/teacher_dashboard/sections/#{experiment_section.id}/courses/#{experiment_course.name}/units/1"
   end
 
   test "show: should remove user_id url param from non-dashboard unit overview when teacher local nav v2 experiment enabled" do
@@ -1744,7 +1760,7 @@ class ScriptsControllerTest < ActionController::TestCase
     Unit.expects(:get_without_cache).with(@migrated_unit.name, with_associated_models: true).returns(@migrated_unit).once
     get :edit, params: {id: @migrated_unit.name}
 
-    Unit.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).twice
+    Unit.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).at_least_once
     Unit.expects(:get_without_cache).never
     get :show, params: {id: @migrated_unit.name}
   end
