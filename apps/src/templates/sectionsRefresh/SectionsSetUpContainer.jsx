@@ -56,17 +56,30 @@ const useSections = section => {
         ]
   );
 
-  const updateSection = (sectionIdx, keyToUpdate, val) => {
-    const newSections = sections.map((section, idx) => {
-      if (idx === sectionIdx) {
-        return {
-          ...section,
-          [keyToUpdate]: val,
-        };
-      } else {
-        return section;
-      }
-    });
+  const updateSection = (sectionIdx, keyToUpdate, val, updateList = null) => {
+    let newSections;
+    if (!keyToUpdate && !val) {
+      newSections = sections.map((section, idx) => {
+        if (idx === sectionIdx) {
+          let newSection = section;
+          for (const [key, value] of Object.entries(updateList)) {
+            newSection = {...newSection, [key]: value};
+          }
+          return newSection;
+        }
+      });
+    } else {
+      newSections = sections.map((section, idx) => {
+        if (idx === sectionIdx) {
+          return {
+            ...section,
+            [keyToUpdate]: val,
+          };
+        } else {
+          return section;
+        }
+      });
+    }
     setSections(newSections);
   };
 
@@ -83,8 +96,14 @@ export default function SectionsSetUpContainer({
   isLoading = false,
 }) {
   const [sections, updateSection] = useSections(sectionToBeEdited);
-  const updateSectionAndSetEditInProgress = (sectionIdx, keyToUpdate, val) => {
-    updateSection(sectionIdx, keyToUpdate, val);
+  const updateSectionAndSetEditInProgress = (
+    sectionIdx,
+    keyToUpdate,
+    val,
+    updateList = null
+  ) => {
+    updateSection(sectionIdx, keyToUpdate, val, updateList);
+
     setIsEditInProgress(true);
   };
   const [isCoteacherOpen, setIsCoteacherOpen] = useState(false);
@@ -432,8 +451,8 @@ export default function SectionsSetUpContainer({
       <SingleSectionSetUp
         sectionNum={1}
         section={sections[0]}
-        updateSection={(key, val) =>
-          updateSectionAndSetEditInProgress(0, key, val)
+        updateSection={(key, val, updateList) =>
+          updateSectionAndSetEditInProgress(0, key, val, updateList)
         }
         isNewSection={isNewSection}
         isLoading={isLoading}

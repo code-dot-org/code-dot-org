@@ -16,15 +16,32 @@ import styles from './section-avatars.module.scss';
 
 interface SectionAvatarEditDialogProps {
   closeCallback: () => void;
+  saveCallback: (selectedColor: number, selectedEmoji: number) => void;
   avatarColor: number;
   avatarEmoji: number;
 }
 
 const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
   closeCallback,
+  saveCallback,
   avatarColor,
   avatarEmoji,
 }) => {
+  const [selectedColor, setSelectedColor] = React.useState<number>(
+    avatarColor || 0
+  );
+  const [selectedEmoji, setSelectedEmoji] = React.useState<number>(
+    avatarEmoji || 0
+  );
+
+  const handleSelectColor = (index: number) => {
+    setSelectedColor(index);
+  };
+
+  const handleSelectEmoji = (index: number) => {
+    setSelectedEmoji(index);
+  };
+
   return (
     <CustomDialog
       className={styles.editorDialog}
@@ -39,19 +56,29 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
         <label className={styles.avatarDialogLabels}>
           <BodyTwoText>{i18n.avatar()}</BodyTwoText>
           <SectionAvatar
-            color={avatarColor || 0}
-            emoji={avatarEmoji || 0}
+            color={selectedColor}
+            emoji={selectedEmoji}
             size={'xl'}
           />
         </label>
         <div className={styles.avatarDialogBodyRight}>
           <label className={styles.avatarDialogLabels}>
             <BodyTwoText>{i18n.chooseEmoji()}</BodyTwoText>
-            <PickerGrid itemList={EMOJIS} type={'emoji'} />
+            <PickerGrid
+              itemList={EMOJIS}
+              type={'emoji'}
+              selectCallback={handleSelectEmoji}
+              selected={selectedEmoji}
+            />
           </label>
           <label className={styles.avatarDialogLabels}>
             <BodyTwoText>{i18n.chooseColor()}</BodyTwoText>
-            <PickerGrid itemList={COLORS} type={'color'} />
+            <PickerGrid
+              itemList={COLORS}
+              type={'color'}
+              selectCallback={handleSelectColor}
+              selected={selectedColor}
+            />
           </label>
         </div>
       </div>
@@ -59,14 +86,14 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
       <div className={styles.avatarDialogFooter}>
         <Button
           text={i18n.dialogCancel()}
-          onClick={() => {}}
+          onClick={() => closeCallback()}
           color={'gray'}
           size={'s'}
           type={'secondary'}
         />
         <Button
-          text={i18n.saveAvatar()}
-          onClick={() => {}}
+          text={i18n.selectAvatar()}
+          onClick={() => saveCallback(selectedColor, selectedEmoji)}
           size={'s'}
           type={'primary'}
         />

@@ -38,6 +38,14 @@ export default function SingleSectionSetUp({
     setShowAvatarDialog(false);
   };
 
+  const handleAvatarUpdate = (color, emoji) => {
+    updateSection(undefined, undefined, {
+      avatar_color: color,
+      avatar_emoji: emoji,
+    });
+    setShowAvatarDialog(false);
+  };
+
   return (
     <div>
       <div className={moduleStyles.containerWithMarginTop}>
@@ -101,7 +109,12 @@ export default function SingleSectionSetUp({
         </div>
       )}
       {showAvatarDialog && (
-        <SectionAvatarEditDialog closeCallback={closeCallback} />
+        <SectionAvatarEditDialog
+          closeCallback={closeCallback}
+          saveCallback={handleAvatarUpdate}
+          avatarColor={section.avatar_color}
+          avatarEmoji={section.avatar_emoji}
+        />
       )}
     </div>
   );
