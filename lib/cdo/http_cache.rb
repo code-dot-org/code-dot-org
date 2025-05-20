@@ -79,7 +79,7 @@ class HttpCache
   ]
 
   # A map from script name to script level URL pattern.
-  CACHED_UNITS_MAP = []
+  CACHED_UNITS_MAP = {}
   # TODO: re enable cached unit map after moving to /courses/ paths
   # CACHED_UNITS_MAP = %w(
   #   aquatic
