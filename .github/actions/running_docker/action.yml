@@ -33,7 +33,7 @@ jobs:
 
       - name: Run Unit Tests
         run: |
-          docker run my-ci-image /bin/bash -c "source docker/unit_test.sh"
+          docker run my-ci-image /bin/bash -c "source docker/ci/script/unit_test.sh"
 
       - name: Run UI Tests
         run: |
