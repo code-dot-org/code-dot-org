@@ -1128,10 +1128,12 @@ roles.each do |name, config| %>
                   - s3:CreateBucket
                   - s3:PutBucketPolicy
                   - s3:PutBucketEncryption
+                  - s3:PutEncryptionConfiguration
                   - s3:PutBucketVersioning
                   - s3:GetBucketLocation
                   - s3:PutBucketPublicAccessBlock
                   - s3:PutLifecycleConfiguration
+                  - s3:PutBucketLifecycleConfiguration
                   - s3:PutObject
                   - s3:GetObject
                   - s3:ListBucket
@@ -1139,6 +1141,10 @@ roles.each do |name, config| %>
                   - s3:DeleteBucket
                   - s3:DeleteObject
                   - s3:DeleteBucketPolicy
+                  - s3:GetEncryptionConfiguration
+                  - s3:GetBucketVersioning
+                  - s3:GetBucketPublicAccessBlock
+                  - s3:GetLifecycleConfiguration
                 Resource:
                   # The Next.js S3 bucket For the marketing site `my-feature-branch-code.marketing-sites.dev-code.org` is
                   # named `my-feature-branch-code.marketing-sites.dev-code.org-static-assets` so grant the deployer
