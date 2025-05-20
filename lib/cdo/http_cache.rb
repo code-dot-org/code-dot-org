@@ -79,36 +79,38 @@ class HttpCache
   ]
 
   # A map from script name to script level URL pattern.
-  CACHED_UNITS_MAP = %w(
-    aquatic
-    starwars
-    starwarsblocks
-    mc
-    frozen
-    minecraft
-    hero
-    sports
-    basketball
-    dance-2019
-    dance-ai-2023
-    oceans
-    poem-art-2021
-    hello-world-food-2021
-    hello-world-animals-2021
-    hello-world-retro-2021
-    hello-world-emoji-2021
-    hello-world-space-2022
-    hello-world-soccer-2022
-    music-jam-2024
-    outbreak
-  ).map do |script_name|
-    # Most scripts use the default route pattern.
-    [script_name, "/s/#{script_name}/lessons/*"]
-  end.to_h.merge(
-    # Add the "special case" routes here.
-    'hourofcode' => '/hoc/*',
-    'flappy' => '/flappy/*'
-  ).freeze
+  CACHED_UNITS_MAP = []
+  # TODO: re enable cached unit map after moving to /courses/ paths
+  # CACHED_UNITS_MAP = %w(
+  #   aquatic
+  #   starwars
+  #   starwarsblocks
+  #   mc
+  #   frozen
+  #   minecraft
+  #   hero
+  #   sports
+  #   basketball
+  #   dance-2019
+  #   dance-ai-2023
+  #   oceans
+  #   poem-art-2021
+  #   hello-world-food-2021
+  #   hello-world-animals-2021
+  #   hello-world-retro-2021
+  #   hello-world-emoji-2021
+  #   hello-world-space-2022
+  #   hello-world-soccer-2022
+  #   music-jam-2024
+  #   outbreak
+  # ).map do |script_name|
+  #   # Most scripts use the default route pattern.
+  #   [script_name, "/s/#{script_name}/lessons/*"]
+  # end.to_h.merge(
+  #   # Add the "special case" routes here.
+  #   'hourofcode' => '/hoc/*',
+  #   'flappy' => '/flappy/*'
+  # ).freeze
 
   def self.cached_scripts
     CACHED_UNITS_MAP.keys
