@@ -1,7 +1,7 @@
 class Pd::ProfessionalLearningController < ApplicationController
   PLC_COURSE_ORDERING = ['CSP Support', 'ECS Support', 'CS in Algebra Support', 'CS in Science Support']
 
-  before_action :authenticate_user!, only: [:index, :workshops, :csa, :csd, :csf, :csp, :aif]
+  before_action :authenticate_user!, only: [:index, :csa, :csd, :csf, :csp, :aif]
 
   # GET my-professional-learning
   def index

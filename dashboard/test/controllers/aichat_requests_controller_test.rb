@@ -12,11 +12,11 @@ class AichatRequestsControllerTest < ActionController::TestCase
     @level = create(:level)
     @script = create(:script)
 
-    @default_model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.stringify_keys
+    @default_model_customizations = {temperature: 0.5, retrievalContexts: ['test'], systemPrompt: 'test', selectedModelId: 'gpt-4o-mini'}.stringify_keys
     @default_aichat_context = {
       currentLevelId: @level.id,
       scriptId: @script.id,
-      channelId: "test"
+      channelId: 'test'
     }
 
     @common_params = {
@@ -101,7 +101,17 @@ class AichatRequestsControllerTest < ActionController::TestCase
   end
 
   test 'start_chat_completion returns too many requests when request is throttled' do
-    Cdo::Throttle.stubs(:throttle).returns(true)
+    Cdo::Throttle.stubs(:throttle).with("aichat/requests/#{@authorized_teacher1.id}", 50, 60).returns(true)
+
+    sign_in(@authorized_teacher1)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :too_many_requests
+  end
+
+  test 'start_chat_completion returns too many requests when token count exceeds limit' do
+    Cdo::Throttle.stubs(:throttle).with("aichat/requests/#{@authorized_teacher1.id}", 50, 60).returns(false)
+    Cdo::Throttle.stubs(:throttled?).with("aichat/tokens/model/gpt-4o-mini/user/#{@authorized_teacher1.id}").returns(true)
+
     sign_in(@authorized_teacher1)
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :too_many_requests

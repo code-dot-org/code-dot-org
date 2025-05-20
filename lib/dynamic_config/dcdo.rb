@@ -65,6 +65,8 @@ class DCDOBase < DynamicConfigBase
       'music-lab-banner': DCDO.get('music-lab-banner', false),
       'show-download-progress-csv': DCDO.get('show-download-progress-csv', false),
       modularity: DCDO.get('modularity', false),
+      # Remove this as part of Pegasus cleanup after the move to the CMS
+      'aif-launch': DCDO.get('aif-launch', false),
     }
   end
 end

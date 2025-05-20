@@ -1048,7 +1048,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
 
   test 'organizers can add and remove grade levels' do
     sign_in @workshop_organizer
-    kindergarten = 'k'
+    kindergarten = 'K'
     first_grade = '1'
 
     params = workshop_params.merge(
@@ -1073,7 +1073,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
 
   test 'program manager organizers can add and remove grade levels' do
     sign_in @organizer
-    kindergarten = 'k'
+    kindergarten = 'K'
     first_grade = '1'
 
     params = workshop_params.merge(

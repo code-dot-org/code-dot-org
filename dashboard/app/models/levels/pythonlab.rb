@@ -38,6 +38,7 @@ class Pythonlab < Level
     mini_app
     serialized_maze
     widget_view
+    widget_view_allow_show_code
   )
 
   validate :has_correct_multiple_choice_answer?

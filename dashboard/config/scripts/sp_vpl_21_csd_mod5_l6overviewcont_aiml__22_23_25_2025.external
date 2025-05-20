@@ -51,9 +51,9 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/4c304acbc038a1d9fb7296465ecdc561-image-1641665247851.png" style="float: right; height: 175px; clear: both; margin: 0 20px 0 20px;">
 
-##### The chart to the right does not show a strong relationship between the feature and the label. The data shows that when people got chicken on their salad, around 50% of them disliked their salad and the other 50% liked their salad. This is basically the same as flipping a coin! This kind of relationship can confuse A.I. Bot, since none of the answers show a strong connection to each other.
+#### The chart to the right does not show a strong relationship between the feature and the label. The data shows that when people got chicken on their salad, around 50% of them disliked their salad and the other 50% liked their salad. This is basically the same as flipping a coin! This kind of relationship can confuse A.I. Bot, since none of the answers show a strong connection to each other.
 
-##### This means if A.I. Bot asks you "Did you have chicken on your salad?", the chances that it also predicts whether or not you like the salad is the same as flipping a coin.
+#### This means if A.I. Bot asks you "Did you have chicken on your salad?", the chances that it also predicts whether or not you like the salad is the same as flipping a coin.
 
 </p></div></details>
 
